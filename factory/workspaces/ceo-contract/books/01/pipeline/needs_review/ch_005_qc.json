@@ -1,0 +1,20 @@
+{
+  "foreign_chars": [],
+  "word_count": 1245,
+  "voice_drift": {
+    "flag": true,
+    "details": "The scene at the end of the chapter where Adrian enters Lin Wei's bedroom and begins undressing her violates the 'Spice Level 3' and 'Content Rules' (no romanticization of coercion/non-consent). Furthermore, it contradicts the 'Slow Burn' trope and the established 'Spice Progression' (minimal/intellectual tension) defined in the bible."
+  },
+  "continuity_conflict": {
+    "flag": true,
+    "details": "The story_state lists the current chapter as Chapter 2, but the input is labeled Chapter 5. Additionally, the narrative jumps from the initial meeting in the office (Chapter 2 state) to moving into the estate, skipping the signing/transition phase."
+  },
+  "cliffhanger_strength": 5,
+  "pacing_issue": false,
+  "signature_detail_present": true,
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "voice_drift",
+    "continuity_conflict"
+  ]
+}

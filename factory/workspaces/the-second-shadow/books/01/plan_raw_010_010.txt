@@ -1,0 +1,62 @@
+```json
+{
+  "act": [10, 10],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Choice",
+      "slug": "10-the-choice",
+      "one_line_summary": "Mara confronts her mother, learns the full truth about Ilse's parallel trauma, and makes the final decision to reintegrate with the girl in blue.",
+      "beat_summary": "Mara, with Jude by her side, drives to her mother Lydia's apartment. The confrontation is raw: Lydia initially denies everything, but when Mara presents the locket, the journal, and the memory of Lachlan's fall, Lydia breaks down. She confesses that she pushed Lachlan in self-defense, and that Mara witnessed it. But then Lydia reveals a deeper truth: Aunt Ilse also suffered a psychic split after a childhood trauma, and her 'second shadow' never left her—that is the faceless shadow in the garden. Mara realizes the shadow is not Lachlan, but Ilse's own fractured self, bound to the house. The Girl in Blue appears one last time in Lydia's kitchen, holding Wick. Mara takes the bear, and in a moment of stillness, she accepts the child-self. The girl merges with her, and Mara remembers everything: the drowning of the neighbor boy, the guilt, the split. She chooses to reintegrate, becoming whole. The faceless shadow in the house dissipates. The chapter ends with Mara and Jude returning to the house, where the attic window is now open, and the blue dress is gone. Mara places Wick on the windowsill, and the house falls silent.",
+      "must_happen": [
+        "Mara confronts Lydia and forces a confession about Lachlan's death and her own role in the cover-up",
+        "Lydia reveals that Aunt Ilse also had a psychic split, explaining the faceless shadow",
+        "Mara accepts the Girl in Blue and reintegrates her memory, becoming whole",
+        "The faceless shadow dissolves as a result of Ilse's secret being acknowledged",
+        "[ROMANCE] In the car on the way back to the house, Jude takes Mara's hand and tells her he will stay no matter what; she leans her head on his shoulder"
+      ],
+      "must_not": [
+        "Jude does not reveal any personal connection to the incident",
+        "The Girl in Blue does not disappear without Mara's conscious acceptance",
+        "Mara does not fully resolve Ilse's story—that becomes the hook for Book 2"
+      ],
+      "opens_with": "The door to her mother's apartment opened before Mara could knock, as if Lydia had been waiting for this moment her entire life.",
+      "cliffhanger": "Mara sat alone in the attic, the blue dress folded on her lap, and for the first time since she arrived, the house was perfectly quiet—no creaks, no whispers, no shadows.",
+      "signature_detail_hint": "The blue ribbon from the locket is now tied around Wick's remaining eye, a sign of the reintegration.",
+      "emotional_beat": "Catharsis, acceptance, and a quiet, earned peace between Mara and Jude; the romance feels solid and real.",
+      "spice": 1,
+      "spice_note": "Subtle intimacy: hand-holding in the car, a forehead touch, quiet understanding. No explicit content.",
+      "chapter_task": "Write Chapter 10 (1600–1900 words). This is the Book 1 finale. Must include: the confrontation with Lydia, the reveal about Ilse's parallel split (hook for Book 2), Mara's choice to reintegrate, and the dissipation of the shadow. Must include a romance micro-beat: a quiet moment of connection. The chapter should feel conclusive yet open-ended, with the mystery of Ilse's shadow leading into the next book. End with the silent house and Mara's acceptance.",
+      "carries_to_next": "Book 1 ends with Mara whole but aware that Ilse's story is unfinished; the faceless shadow's origin sets up Book 2.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T001", "T002", "T003", "T004"],
+        "knowledge": {
+          "pov_characters": ["Mara_Vale", "The_Girl_in_Blue", "Aunt_Ilse", "Wick", "Mara_Mother"],
+          "may_know": [
+            "Mara_Vale: Mara has fully remembered the truth: she accidentally drowned a neighbor boy in the pond and her psyche split, creating the girl in blue as a repository of memory and guilt",
+            "Mara_Vale: She has made a concrete choice to reintegrate with the girl (become whole) or flee again (stay fractured)",
+            "Mara_Vale: She also becomes aware that Aunt Ilse experienced a similar phenomenon.",
+            "The_Girl_in_Blue: If Mara chooses reintegration, the girl merges with Mara and ceases to exist separately",
+            "The_Girl_in_Blue: If Mara chooses to flee, the girl remains as a permanent spectral presence in the house, still holding the memory.",
+            "Aunt_Ilse: Mara finds irrefutable evidence (Ilse's diary or testimony from her mother) that Ilse also suffered a traumatic split and her 'second shadow' never left",
+            "Aunt_Ilse: This is the hook for book 2.",
+            "Wick: Wick has been used as a tool to unlock Mara's memories",
+            "Wick: His role as the memory-anchor is fully understood",
+            "Wick: He may retain residual memories.",
+            "Mara_Mother: After Mara's revelations, the mother is forced to confess: she always knew about the drowning and the split, and kept Mara away from Ilse's house to prevent triggering the memories",
+            "Mara_Mother: She is either supportive of Mara's choice or resistant."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

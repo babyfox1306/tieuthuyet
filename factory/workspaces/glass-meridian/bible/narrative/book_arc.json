@@ -1,0 +1,35 @@
+{
+  "book_number": 1,
+  "total_chapters": 50,
+  "target_language": "en",
+  "case_closed": false,
+  "case_open": "The Glass Meridian conspiracy and Lin Wei's family secrets.",
+  "lead_internal_arc": [
+    {
+      "lead": "Lin Wei",
+      "arc": "From a desperate journalist seeking a cure for her mother, Lin Wei evolves into a formidable investigator who actively drives the uncovering of the Glass Meridian's secrets. She learns to trust Adrian, moving from a transactional relationship to a true partnership, while grappling with the realization that her own family history is deeply intertwined with the conspiracy. Her journey is about reclaiming agency and finding strength amidst deception."
+    },
+    {
+      "lead": "Adrian Vale",
+      "arc": "Adrian begins as a cold, calculating figure driven by a need for control and a desire to dismantle the Glass Meridian. Through his forced proximity with Lin Wei, he learns to confront his past guilt and his emotional detachment. He moves from using Lin Wei as a tool to genuinely protecting and valuing her, opening himself up to vulnerability and the possibility of a true alliance born from mutual respect and attraction, ultimately finding a path toward redemption."
+    }
+  ],
+  "act_structure": {
+    "act1_setup": {
+      "chapters": "1-12",
+      "description": "Introduction to Lin Wei's desperation and the contract marriage with Adrian Vale. Establishment of the surface plot (contract, high-society appearances) and the initial hints of the true plot (Adrian's guarded nature, Aurelian Group's shadows). Lin Wei begins her investigation into her mother's medical file, encountering initial resistance and discovering the first threads of the Glass Meridian. The cross-cultural friction and slow-burn micro-beats between Lin Wei and Adrian are established."
+    },
+    "act2_complications": {
+      "chapters": "13-30",
+      "description": "Lin Wei actively uses her journalistic skills to probe deeper into Aurelian Group and its connection to her mother's past. Adrian's motives become more complex as he both protects Lin Wei and uses her investigative access. The Glass Meridian's reach and methods are revealed through escalating threats and obstacles. The relationship between Lin Wei and Adrian shifts from pure transaction to a wary, reluctant alliance, with moments of forced proximity and growing attraction. Key clues are planted for the major reveals."
+    },
+    "act3_crisis": {
+      "chapters": "31-42",
+      "description": "The stakes are raised as Lin Wei and Adrian uncover more about the Glass Meridian's operations and its direct link to Lin Wei's mother's history and Project Phoenix. They face a significant confrontation with a local operation of the Meridian, leading to a critical victory but at a personal cost. Adrian's past guilt and Lin Wei's determination are tested. The emotional core of their relationship solidifies through shared danger, leading to a moment of emotional vulnerability or betrayal that redefines their alliance."
+    },
+    "act4_resolution": {
+      "chapters": "43-50",
+      "description": "Lin Wei and Adrian work to consolidate their victory against the local Meridian link and secure her mother's treatment. They uncover the final pieces of the puzzle regarding Adrian's role and his father's deception. The truth about Lin Wei's mother's connection to Project Phoenix and her status as a victim is revealed. The book concludes with the successful breaking of one Meridian link, the strengthening of Lin Wei and Adrian's real alliance, and the hook for Book 2: the revelation of Lin Wei's mother's deeper involvement and the implication of Lin Wei's own hidden past related to Project Phoenix."
+    }
+  }
+}

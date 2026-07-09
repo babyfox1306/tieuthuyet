@@ -1,0 +1,85 @@
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Key",
+      "slug": "01-the-key",
+      "one_line_summary": "Mara arrives at her aunt’s house, discovers a one-eyed teddy bear in the attic, and meets a mysterious stranger who seems to know her aunt.",
+      "beat_summary": "Mara Vale inherits her Aunt Ilse's house and comes to settle the estate. The house feels wrong—too silent, too cold. In the attic she finds an old teddy bear with one eye missing and a glass eye stuck in the other socket. While holding it, she hears a child's laugh and drops the bear. A shadow moves at the edge of her vision. Outside, a man named Jude Ashford approaches, claiming he was a friend of Ilse's. He offers to help. As he touches her hand to take the keys, she feels an unexpected pull. She decides to stay the night.",
+      "must_happen": [
+        "Mara unlocks the front door and steps into the house",
+        "Mara discovers Wick in the attic and gets a memory flash",
+        "Mara meets Jude for the first time",
+        "[ROMANCE] Jude's hand brushes hers when he hands her the spare key; a brief charged silence."
+      ],
+      "must_not": [
+        "Mara remembers the entire summer",
+        "The Girl in Blue speaks or interacts directly with Jude",
+        "Jude reveals his connection to the victim"
+      ],
+      "opens_with": "The lock turned with a sound like a door sealing shut.",
+      "cliffhanger": "As Mara stands in the hallway, she sees a small figure in blue in the reflection of the hall mirror—but when she turns, no one's there.",
+      "signature_detail_hint": "The crack in the wooden floor that forms an arrow pointing to the wall.",
+      "emotional_beat": "Uneasy attraction mixed with deep unease; Mara can't trust the pull she feels toward Jude.",
+      "spice": 0,
+      "spice_note": "No explicit content.",
+      "chapter_task": "Write Chapter 1 (1600–1900 words). Establish the gothic atmosphere of the house, introduce Wick and The Girl in Blue, and have the initial meeting with Jude. Must include a subtle romance micro-beat: a touch of hands. End on the mirror reflection cliffhanger.",
+      "carries_to_next": "Mara decides to stay; she is curious about both the house and Jude."
+    },
+    {
+      "chapter": 2,
+      "title": "The Girl in Blue",
+      "slug": "02-the-girl-in-blue",
+      "one_line_summary": "Mara’s first night in the house brings supernatural sounds, a glimpse of the blue dress, and an unexpected late-night visit from Jude.",
+      "beat_summary": "Night falls. Mara tries to sleep but hears footsteps in the hall. She goes to investigate and finds an old wardrobe in the spare room; inside hangs a small blue dress that looks new. She touches it and feels a cold draft. The Girl in Blue appears in the doorway, watching. Mara flinches, and the girl disappears. Panicked, she calls her mother who refuses to talk. She texts Jude. He arrives within minutes, concerned. He checks the house, finds nothing. In the kitchen, he makes tea; their shoulders touch. He suggests she leave for a while, but she insists on staying. Before he goes, he squeezes her hand. After he leaves, Mara finds the words 'REMEMBER' scratched into the windowsill.",
+      "must_happen": [
+        "Mara discovers the blue dress in the wardrobe",
+        "Mara sees The Girl in Blue clearly for the first time",
+        "Mara’s mother refuses to speak about the house",
+        "Jude comes over late night to check on her",
+        "[ROMANCE] Jude and Mara share a moment of silent support; he squeezes her hand before leaving."
+      ],
+      "must_not": [
+        "The Girl in Blue speaks",
+        "Mara finds anything concrete about the buried man",
+        "Jude stays overnight"
+      ],
+      "opens_with": "The floorboard outside her room creaked at exactly the same time each night—Mara counted—and on the third creak she knew she wasn't alone.",
+      "cliffhanger": "Under the moonlight, the windowsill reveals the scratched word: REMEMBER.",
+      "signature_detail_hint": "The seam of the blue dress is still stitched with a label from a store that closed thirty years ago.",
+      "emotional_beat": "Fear mingles with a growing sense of protection from Jude; Mara starts to trust him despite her instincts.",
+      "spice": 1,
+      "spice_note": "Subtle romantic tension; a hand squeeze and a moment of near-embrace.",
+      "chapter_task": "Write Chapter 2 (1600–1900 words). Deepen the supernatural mystery, build the connection between Mara and Jude with a tender moment, and reveal the word 'REMEMBER'. End the chapter on a note of unresolved dread.",
+      "carries_to_next": "Mara is determined to understand what happened; Jude offers to help research."
+    },
+    {
+      "chapter": 3,
+      "title": "The Glass Eye",
+      "slug": "03-the-glass-eye",
+      "one_line_summary": "Mara discovers a name inscribed in Wick’s glass eye, triggering a violent memory, and she and Jude find solace in each other’s arms.",
+      "beat_summary": "Mara examines Wick more closely. She works the glass eye loose and finds an engraving inside: 'Lachlan'. A flash of a man's terrified face and a struggle in the basement floods her mind. She screams, drops the bear. The Girl in Blue stands at the door, pointing toward the basement. Jude arrives, summoned by her cry. He finds her shaking, holds her. The overwhelming need for connection leads them to a passionate embrace. Later, they discuss what she saw. Jude suggests Lachlan might be the key to the mystery. That night, Mara sees The Girl in Blue standing at the top of the basement stairs, pointing down.",
+      "must_happen": [
+        "Mara removes the glass eye from Wick and discovers the engraving 'Lachlan'",
+        "Mara experiences a vivid flashback of a man in the basement",
+        "The Girl in Blue points to the basement",
+        "[ROMANCE] Mara and Jude have an explicit sexual encounter following the emotional breakdown",
+        "Jude agrees to help investigate Lachlan"
+      ],
+      "must_not": [
+        "The full memory of the crime is revealed",
+        "The Girl in Blue touches the eye",
+        "Jude indicates prior knowledge of the name"
+      ],
+      "opens_with": "The eye came loose in her palm, and the name—Lachlan—burned into her thoughts.",
+      "cliffhanger": "The Girl in Blue stood at the top of the basement stairs, one finger extended toward the darkness below.",
+      "signature_detail_hint": "The eye itself is heavier than it should be, and the inscription is etched in a neat, small script—not a child’s toy.",
+      "emotional_beat": "Vulnerability, release, and a new determination; the explicit scene marks a shift in their relationship.",
+      "spice": 3,
+      "spice_note": "Explicit scene: Mara and Jude have sex in the living room after the flashback. Focus on emotional connection, comfort, and urgency. Described with moderate detail (breathing, touch, tension release), not graphic. Approximately 40% of the chapter.",
+      "chapter_task": "Write Chapter 3 (1600–1900 words). Pay off C001 (the engraved name) and execute reveal MR01 (the bear is linked to a person named Lachlan, and Mara recalls a traumatic event involving him). Must include the explicit romance scene as required. Balance the thriller pace with the intimacy. End with a clear supernatural/visual cliffhanger pointing to the basement.",
+      "carries_to_next": "Mara and Jude are now partners in the investigation; the basement becomes the next focus."
+    }
+  ]
+}

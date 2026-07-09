@@ -1,0 +1,731 @@
+{
+  "book": 1,
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Key",
+      "one_line_summary": "Mara arrives at her aunt’s house, discovers a one-eyed teddy bear in the attic, and meets a mysterious stranger who seems to know her aunt.",
+      "beat_summary": "Mara Vale inherits her Aunt Ilse's house and comes to settle the estate. The house feels wrong—too silent, too cold. In the attic she finds an old teddy bear with one eye missing and a glass eye stuck in the other socket. While holding it, she hears a child’s laugh and drops the bear. A shadow moves at the edge of her vision. Outside, a man named Jude Ashford approaches, claiming he was a friend of Ilse’s. He offers to help. As he touches her hand to take the keys, she feels an unexpected pull. Later that evening, a charged encounter with Jude in the dimly lit parlor leads to explicit heavy petting—Jude's hands slide inside her shirt, his mouth on her neck, their grinding on the sofa—leaving Mara both aroused and unsettled. She decides to stay the night.",
+      "opens_with": "\"I'm not afraid of you,\" Mara whispered as the key turned with a click like a door sealing shut.",
+      "cliffhanger": "As Mara stands in the hallway, she sees a small figure in blue in the reflection of the hall mirror—but when she turns, no one's there.",
+      "chapter_task": "Write Chapter 1 (1700–1900 words, explicit 18+ content). Establish the gothic atmosphere of the house, introduce Wick and The Girl in Blue, and have the initial meeting with Jude. Include an explicit heat-building romantic encounter (approximately 40% of the chapter) that escalates from touch through heavy petting, with detailed sensory focus: his mouth on her neck, her hands under his clothes, the sounds of their breathing. End on the mirror reflection cliffhanger.",
+      "must_happen": [
+        "Mara unlocks the front door and steps into the house",
+        "Mara discovers Wick in the attic and gets a memory flash",
+        "Mara meets Jude for the first time",
+        "[ROMANCE] Jude's hand brushes hers when he hands her the spare key; a brief charged silence.",
+        "[SPICE] Jude pins Mara against the parlor wall and kisses her with mounting hunger.",
+        "[SPICE] His hands slide inside her shirt, cupping her breasts; she arches into his touch.",
+        "[SPICE] They sink onto the sofa, clothes disheveled, grinding until Mara gasps and clutches him."
+      ],
+      "must_not": [
+        "Mara remembers the entire summer",
+        "The Girl in Blue speaks or interacts directly with Jude",
+        "Jude reveals his connection to the victim"
+      ],
+      "carries_to_next": "Mara decides to stay; she is curious about both the house and Jude.",
+      "spice_level": 3,
+      "spice_note": "This chapter contains explicit 18+ content, including detailed descriptions of heavy petting, kissing, and intimate caresses. Approximately 40% of the chapter focuses on the physical and emotional escalation between Mara and Jude.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara_Vale",
+            "The_Girl_in_Blue",
+            "Aunt_Ilse",
+            "Wick",
+            "Mara_Mother"
+          ],
+          "may_know": [
+            "Mara_Vale: Mara knows she has inherited Aunt Ilse's house",
+            "Mara_Vale: She has no memory of the summer she spent there at age 8, and feels a vague unease upon entering",
+            "Mara_Vale: She does not know about the girl in blue or the bear's significance.",
+            "The_Girl_in_Blue: The girl is the manifested memory of Mara's 8-year-old self",
+            "The_Girl_in_Blue: She knows everything about the summer but cannot speak",
+            "The_Girl_in_Blue: She watches Mara and waits for her to remember",
+            "The_Girl_in_Blue: She is drawn to the bear Wick.",
+            "Aunt_Ilse: Deceased",
+            "Aunt_Ilse: Her secrets are hidden in the house: a diary, letters, objects",
+            "Aunt_Ilse: No one alive knows that she once split her own psyche in the same way.",
+            "Wick: Wick is a one-eyed teddy bear found in the attic",
+            "Wick: He is aged and has a glass eye",
+            "Wick: He holds the memories of the summer through physical contact",
+            "Wick: No one knows his true function.",
+            "Mara_Mother: Mara's mother refuses to discuss the summer or the house",
+            "Mara_Mother: She becomes agitated if Mara asks",
+            "Mara_Mother: She knows the truth but has hidden it to protect Mara's dissociation."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      },
+      "spice": 3
+    },
+    {
+      "chapter": 2,
+      "title": "The Girl in Blue",
+      "slug": "02-the-girl-in-blue",
+      "one_line_summary": "Mara’s first night in the house brings supernatural sounds, a glimpse of the blue dress, and an unexpected late-night visit from Jude.",
+      "beat_summary": "Night falls. Mara tries to sleep but hears footsteps in the hall. She goes to investigate and finds an old wardrobe in the spare room; inside hangs a small blue dress that looks new. She touches it and feels a cold draft. The Girl in Blue appears in the doorway, watching. Mara flinches, and the girl disappears. Panicked, she calls her mother who refuses to talk. She texts Jude. He arrives within minutes, concerned. He checks the house, finds nothing. In the kitchen, he makes tea; their shoulders touch. He suggests she leave for a while, but she insists on staying. Before he goes, he squeezes her hand. After he leaves, Mara finds the words 'REMEMBER' scratched into the windowsill.",
+      "must_happen": [
+        "Mara discovers the blue dress in the wardrobe",
+        "Mara sees The Girl in Blue clearly for the first time",
+        "Mara’s mother refuses to speak about the house",
+        "Jude comes over late night to check on her",
+        "[ROMANCE] Jude and Mara share a moment of silent support; he squeezes her hand before leaving."
+      ],
+      "must_not": [
+        "The Girl in Blue speaks",
+        "Mara finds anything concrete about the buried man",
+        "Jude stays overnight"
+      ],
+      "opens_with": "The floorboard outside her room creaked at exactly the same time each night—Mara counted—and on the third creak she knew she wasn't alone.",
+      "cliffhanger": "Under the moonlight, the windowsill reveals the scratched word: REMEMBER.",
+      "signature_detail_hint": "The seam of the blue dress is still stitched with a label from a store that closed thirty years ago.",
+      "emotional_beat": "Fear mingles with a growing sense of protection from Jude; Mara starts to trust him despite her instincts.",
+      "spice": 1,
+      "spice_note": "Subtle romantic tension; a hand squeeze and a moment of near-embrace.",
+      "chapter_task": "Write Chapter 2 (1600–1900 words). Deepen the supernatural mystery, build the connection between Mara and Jude with a tender moment, and reveal the word 'REMEMBER'. End the chapter on a note of unresolved dread.",
+      "carries_to_next": "Mara is determined to understand what happened; Jude offers to help research.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara_Vale",
+            "The_Girl_in_Blue",
+            "Aunt_Ilse",
+            "Wick",
+            "Mara_Mother"
+          ],
+          "may_know": [
+            "Mara_Vale: Mara knows she has inherited Aunt Ilse's house",
+            "Mara_Vale: She has no memory of the summer she spent there at age 8, and feels a vague unease upon entering",
+            "Mara_Vale: She does not know about the girl in blue or the bear's significance.",
+            "The_Girl_in_Blue: The girl is the manifested memory of Mara's 8-year-old self",
+            "The_Girl_in_Blue: She knows everything about the summer but cannot speak",
+            "The_Girl_in_Blue: She watches Mara and waits for her to remember",
+            "The_Girl_in_Blue: She is drawn to the bear Wick.",
+            "Aunt_Ilse: Deceased",
+            "Aunt_Ilse: Her secrets are hidden in the house: a diary, letters, objects",
+            "Aunt_Ilse: No one alive knows that she once split her own psyche in the same way.",
+            "Wick: Wick is a one-eyed teddy bear found in the attic",
+            "Wick: He is aged and has a glass eye",
+            "Wick: He holds the memories of the summer through physical contact",
+            "Wick: No one knows his true function.",
+            "Mara_Mother: Mara's mother refuses to discuss the summer or the house",
+            "Mara_Mother: She becomes agitated if Mara asks",
+            "Mara_Mother: She knows the truth but has hidden it to protect Mara's dissociation."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 3,
+      "slug": "the-glass-eye",
+      "title": "The Glass Eye",
+      "one_line_summary": "Mara discovers a name inscribed in Wick’s glass eye, triggering a violent memory, and she and Jude find solace in each other’s arms.",
+      "beat_summary": "Driven by the word 'REMEMBER' scratched in the windowsill, Mara takes Wick to the study. She finds a worn journal in which Aunt Ilse mentions a man named Lachlan—someone who helped with the house. A photo falls out: Ilse with a man and Wick, the name 'Lachlan' inscribed on the back. Unease prickles. Mara examines Wick more closely. She works the glass eye loose and finds the engraving 'Lachlan' matches the journal. A flash of a man's terrified face and a struggle in the basement floods her mind. She screams, drops the bear. The Girl in Blue stands at the door, pointing toward the basement. Jude arrives, summoned by her cry. He finds her shaking, holds her. The overwhelming need for connection leads them to a passionate embrace. Later, they discuss what she saw. Jude suggests Lachlan might be the key to the mystery. That night, Mara sees The Girl in Blue standing at the top of the basement stairs, pointing down.",
+      "opens_with": "The eye came loose in her palm, and the name—Lachlan—burned into her thoughts.",
+      "cliffhanger": "The Girl in Blue stood at the top of the basement stairs, one finger extended toward the darkness below.",
+      "chapter_task": "Write Chapter 3 (1600–1900 words). spice_level=3: this chapter must contain an explicit sexual encounter between Mara and Jude, approximately 40% of the word count, with explicit sensory language. Plant clues C001 (journal mention) and C002 (photo with name) early in the chapter. Pay off C001 (engraved name) and execute reveal MR01 (bear linked to Lachlan, flashback). Balance the thriller pace with the intimacy. End with a clear supernatural/visual cliffhanger pointing to the basement.",
+      "must_happen": [
+        "[CLUE C001 plant] Mara discovers a journal entry from Aunt Ilse mentioning 'Lachlan'",
+        "[CLUE C002 plant] Mara finds a photograph of a man with Wick, labeled 'Lachlan' on the back",
+        "[CLUE C001 payoff] Mara removes the glass eye from Wick and discovers the engraving 'Lachlan'",
+        "[REVEAL MR01] Mara experiences a vivid flashback of a man in the basement",
+        "The Girl in Blue points to the basement",
+        "[ROMANCE] Mara and Jude have an explicit sexual encounter following the emotional breakdown",
+        "Jude agrees to help investigate Lachlan"
+      ],
+      "must_not": [
+        "The full memory of the crime is revealed",
+        "The Girl in Blue touches the eye",
+        "Jude indicates prior knowledge of the name"
+      ],
+      "signature_detail_hint": "The glass eye has an imperfection in the glass that, when held up to light, casts a distorted shadow resembling the shape of a key.",
+      "spice": 3,
+      "carries_to_next": "Mara and Jude are now partners in the investigation; the basement becomes the next focus.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C001"
+        ],
+        "reveals": [
+          {
+            "id": "MR01",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C001",
+              "C002"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara_Vale",
+            "The_Girl_in_Blue",
+            "Aunt_Ilse",
+            "Wick",
+            "Mara_Mother"
+          ],
+          "may_know": [
+            "Mara_Vale: Mara knows she has inherited Aunt Ilse's house",
+            "Mara_Vale: She has no memory of the summer she spent there at age 8, and feels a vague unease upon entering",
+            "Mara_Vale: She does not know about the girl in blue or the bear's significance.",
+            "The_Girl_in_Blue: The girl is the manifested memory of Mara's 8-year-old self",
+            "The_Girl_in_Blue: She knows everything about the summer but cannot speak",
+            "The_Girl_in_Blue: She watches Mara and waits for her to remember",
+            "The_Girl_in_Blue: She is drawn to the bear Wick.",
+            "Aunt_Ilse: Deceased",
+            "Aunt_Ilse: Her secrets are hidden in the house: a diary, letters, objects",
+            "Aunt_Ilse: No one alive knows that she once split her own psyche in the same way.",
+            "Wick: Wick is a one-eyed teddy bear found in the attic",
+            "Wick: He is aged and has a glass eye",
+            "Wick: He holds the memories of the summer through physical contact",
+            "Wick: No one knows his true function.",
+            "Mara_Mother: Mara's mother refuses to discuss the summer or the house",
+            "Mara_Mother: She becomes agitated if Mara asks",
+            "Mara_Mother: She knows the truth but has hidden it to protect Mara's dissociation."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 4,
+      "title": "The Basement Door",
+      "slug": "04-the-basement-door",
+      "one_line_summary": "Mara and Jude descend into the locked basement, finding a box that holds the first concrete links to Lachlan.",
+      "beat_summary": "Mara cannot ignore the Girl pointing to the basement. She persuades Jude to go down with her. The basement is cold, cluttered, with a damp smell. Jude finds a loose floorboard; under it is a rusted lockbox. Mara gets the key from a hook in the kitchen. They open the box: inside a photograph of a man and a sealed envelope. The Girl appears in the doorway, holding Wick, watching. Mara feels the cold blue glow from a crack in the floor. She decides they should examine the contents upstairs. They leave the basement, but Mara senses they are not alone.",
+      "must_happen": [
+        "Mara convinces Jude to explore the basement together",
+        "They discover a hidden lockbox under a loose floorboard",
+        "The box contains a photograph and a sealed envelope",
+        "[ROMANCE] In the dark basement, Jude reaches for Mara’s hand to guide her past a fallen shelf; they hold hands until they reach the light"
+      ],
+      "must_not": [
+        "The envelope is not opened in this chapter",
+        "The Girl does not physically touch the box or its contents"
+      ],
+      "opens_with": "The basement door creaked open, and the smell of damp earth curled out like a living thing.",
+      "cliffhanger": "Mara turned the sealed envelope over; written in faded ink on the flap was the name ‘Lachlan.’",
+      "signature_detail_hint": "The photograph shows a black sedan, license plate LAC-1, and a man in a sharp coat with his hand on a child’s shoulder—the child’s face is obscured.",
+      "emotional_beat": "Trust and tension intertwine; Mara is grateful for Jude’s presence but terrified of what they might uncover.",
+      "spice": 1,
+      "spice_note": "Subtle intimacy: handholding in the dark; nearness.",
+      "chapter_task": "Write Chapter 4 (1600–1900 words). Advance the plot by having the characters discover the box but not open it yet. Use the basement setting to create unease. Include a romance micro-beat (handholding). End with the cliffhanger of Lachlan’s name on the envelope. Avoid major reveals.",
+      "carries_to_next": "They are ready to open the envelope and photograph.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara_Vale",
+            "The_Girl_in_Blue",
+            "Aunt_Ilse",
+            "Wick",
+            "Mara_Mother"
+          ],
+          "may_know": [
+            "Mara_Vale: Mara knows she has inherited Aunt Ilse's house",
+            "Mara_Vale: She has no memory of the summer she spent there at age 8, and feels a vague unease upon entering",
+            "Mara_Vale: She does not know about the girl in blue or the bear's significance.",
+            "The_Girl_in_Blue: The girl is the manifested memory of Mara's 8-year-old self",
+            "The_Girl_in_Blue: She knows everything about the summer but cannot speak",
+            "The_Girl_in_Blue: She watches Mara and waits for her to remember",
+            "The_Girl_in_Blue: She is drawn to the bear Wick.",
+            "Aunt_Ilse: Deceased",
+            "Aunt_Ilse: Her secrets are hidden in the house: a diary, letters, objects",
+            "Aunt_Ilse: No one alive knows that she once split her own psyche in the same way.",
+            "Wick: Wick is a one-eyed teddy bear found in the attic",
+            "Wick: He is aged and has a glass eye",
+            "Wick: He holds the memories of the summer through physical contact",
+            "Wick: No one knows his true function.",
+            "Mara_Mother: Mara's mother refuses to discuss the summer or the house",
+            "Mara_Mother: She becomes agitated if Mara asks",
+            "Mara_Mother: She knows the truth but has hidden it to protect Mara's dissociation."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "Lachlan's Letter",
+      "one_line_summary": "Opening the letter and photograph reveals that Lachlan is Mara's father and that Aunt Ilse had reason to fear him, forcing Mara to confront a painful truth.",
+      "beat_summary": "Mara retrieves the sealed envelope (C003) and the photograph (C002) from the basement lockbox. She and Jude break the seal and read Lachlan's threatening letter: he demands Ilse return 'his daughter' and threatens to expose her secrets. Mara studies the photograph, matching the man's face to the fragmentary memory flash she had in Chapter 3. The connection is undeniable—Lachlan is her father. She feels a surge of anger and grief. The Girl in Blue appears, points to Wick, and vanishes. Mara understands: the bear contains the complete memory. She picks up Wick and feels a cold blue light surge. The chapter ends with her resolve to unlock the bear's secret, no matter the cost.",
+      "opens_with": "The seal broke with a sound like a small bone snapping, and Mara’s hands trembled as she unfolded the paper.",
+      "cliffhanger": "Mara lifted Wick from the shelf, and the cold blue light from the floor crack brightened as if the house itself was waiting for her to remember.",
+      "chapter_task": "Write Chapter 5 (1600–1900 words). Pay off C002 (photograph) and C003 (letter). Execute reveal MR02: the combination of the letter (C003) and Mara’s existing memory flash (C004) reveals Lachlan as her father and Ilse’s motive. This is a major plot turn. Must include a romance micro-beat: embrace and emotional vulnerability. End on a note that pushes Mara toward the final memory in the bear.",
+      "must_happen": [
+        "[PAYOFF C003] Mara and Jude open the sealed envelope from the basement and read Lachlan's threatening letter.",
+        "[PAYOFF C002] Mara compares the photograph from the lockbox to her memory flash and identifies the man as her father, confirming Lachlan's identity.",
+        "[CLUE C004] The memory flash from Chapter 3 resurfaces vividly as Mara connects the letter and photo to her aunt's fear.",
+        "The Girl in Blue appears and points to Wick, indicating the bear holds the full truth.",
+        "[ROMANCE] Jude wraps his arms around Mara as she weeps; she turns into his chest, and he holds her through the emotional aftershock."
+      ],
+      "must_not": [
+        "The full memory of what Ilse did is not yet revealed.",
+        "Jude does not reveal any prior knowledge about Lachlan."
+      ],
+      "carries_to_next": "Mara is resolved to unlock the bear's secret, even though it may destroy her.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C002",
+          "C003"
+        ],
+        "reveals": [
+          {
+            "id": "MR02",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C003",
+              "C004"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara_Vale",
+            "The_Girl_in_Blue",
+            "Aunt_Ilse",
+            "Wick",
+            "Mara_Mother"
+          ],
+          "may_know": [
+            "Mara_Vale: Mara knows she has inherited Aunt Ilse's house",
+            "Mara_Vale: She has no memory of the summer she spent there at age 8, and feels a vague unease upon entering",
+            "Mara_Vale: She does not know about the girl in blue or the bear's significance.",
+            "The_Girl_in_Blue: The girl is the manifested memory of Mara's 8-year-old self",
+            "The_Girl_in_Blue: She knows everything about the summer but cannot speak",
+            "The_Girl_in_Blue: She watches Mara and waits for her to remember",
+            "The_Girl_in_Blue: She is drawn to the bear Wick.",
+            "Aunt_Ilse: Deceased",
+            "Aunt_Ilse: Her secrets are hidden in the house: a diary, letters, objects",
+            "Aunt_Ilse: No one alive knows that she once split her own psyche in the same way.",
+            "Wick: Wick is a one-eyed teddy bear found in the attic",
+            "Wick: He is aged and has a glass eye",
+            "Wick: He holds the memories of the summer through physical contact",
+            "Wick: No one knows his true function.",
+            "Mara_Mother: Mara's mother refuses to discuss the summer or the house",
+            "Mara_Mother: She becomes agitated if Mara asks",
+            "Mara_Mother: She knows the truth but has hidden it to protect Mara's dissociation."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "The Second Shadow",
+      "one_line_summary": "Mara tries to reach her mother but fails; a second shadow appears, forcing Mara and Jude to confront a new threat in the garden.",
+      "beat_summary": "The drawer slides open, revealing a bundle of letters tied with ribbon. Mara sets Wick down as the blue glow fades. She calls her mother in desperation—no answer. She leaves a frantic message. Jude stays close. They begin reading a letter, but the room drops into icy silence. A second shadow slithers across the wall, independent of any light. Terror overcomes them; they fall into each other, ripping at clothes. He presses her against the wall and takes her with brutal, explicit hunger—every thrust described in raw detail. Afterward, the Girl in Blue appears holding Wick, now pointing toward the back door. They follow her into the garden, where the shadow coalesces into a faceless silhouette. The shadow raises a hand, pointing at the house. Mara steps forward; Jude yanks her back as a wave of cold blue light erupts around them.",
+      "opens_with": "\"There's more,\" Mara whispered, pulling a bundle of yellowed letters from the open drawer.",
+      "cliffhanger": "The shadow stepped out from behind the oak, and Mara saw it had no face—just a dark silhouette with a hand raised, pointing back at the house.",
+      "chapter_task": "Write Chapter 6 (1600–1900 words). Introduce the second shadow as a new supernatural threat, and escalate the physical relationship with an explicit romance scene (~40% of the chapter). The heat level must be 3: explicit description of penetration and raw, animalistic need. No major revelations; maintain suspense. End with the cliffhanger of the faceless shadow pointing.",
+      "spice_note": "Explicit penile-vaginal intercourse with frantic, animalistic rhythm; detailed description of hunger, grip, and loss of control; the scene occupies ~40% of the chapter.",
+      "must_happen": [
+        "Mara finds another letter in the drawer, linking Lachlan to the house before her birth.",
+        "Mara calls her mother, who doesn’t answer, leaving a desperate voicemail.",
+        "[SPICE] The terror of the second shadow ignites their desire; they tear at each other's clothes and he takes her against the wall — entry, thrusts, and climax described explicitly with raw need.",
+        "[ROMANCE] After the sex, Jude cups her face and presses his forehead to hers, whispering, \"I'm here.\"",
+        "The Girl in Blue appears holding Wick, leading them to the garden.",
+        "The second shadow manifests as a faceless figure pointing at the house."
+      ],
+      "must_not": [
+        "The identity of the shadow is not revealed",
+        "Mara does not retrieve a full memory of the murder"
+      ],
+      "carries_to_next": "The shadow presence marks a turning point; the mystery of the house is becoming dangerous and more tangible, and Mara’s bond with Jude deepens into a desperate physical alliance.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara_Vale",
+            "The_Girl_in_Blue",
+            "Aunt_Ilse",
+            "Wick",
+            "Mara_Mother"
+          ],
+          "may_know": [
+            "Mara_Vale: Mara knows she has inherited Aunt Ilse's house",
+            "Mara_Vale: She has no memory of the summer she spent there at age 8, and feels a vague unease upon entering",
+            "Mara_Vale: She does not know about the girl in blue or the bear's significance.",
+            "The_Girl_in_Blue: The girl is the manifested memory of Mara's 8-year-old self",
+            "The_Girl_in_Blue: She knows everything about the summer but cannot speak",
+            "The_Girl_in_Blue: She watches Mara and waits for her to remember",
+            "The_Girl_in_Blue: She is drawn to the bear Wick.",
+            "Aunt_Ilse: Deceased",
+            "Aunt_Ilse: Her secrets are hidden in the house: a diary, letters, objects",
+            "Aunt_Ilse: No one alive knows that she once split her own psyche in the same way.",
+            "Wick: Wick is a one-eyed teddy bear found in the attic",
+            "Wick: He is aged and has a glass eye",
+            "Wick: He holds the memories of the summer through physical contact",
+            "Wick: No one knows his true function.",
+            "Mara_Mother: Mara's mother refuses to discuss the summer or the house",
+            "Mara_Mother: She becomes agitated if Mara asks",
+            "Mara_Mother: She knows the truth but has hidden it to protect Mara's dissociation."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      },
+      "spice": 3
+    },
+    {
+      "chapter": 7,
+      "slug": "ch7",
+      "title": "The Shadow Points",
+      "one_line_summary": "Mara follows the faceless shadow to a barred window, finds a rusted key, and suspects her mother is lying about the past.",
+      "beat_summary": "The faceless shadow from the garden points at the house. Mara steps forward, ignoring Jude's warning. As she approaches the boarded window on the east side, a strong sense of déjà vu washes over her (C004 plant). The shadow leads her to the window, then dissipates. Through a crack, Mara sees a younger version of herself huddled inside, clutching Wick. The child mouths 'Remember' (C004 payoff). The vision",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C004",
+          "C005",
+          "C006"
+        ],
+        "reveals": [
+          {
+            "id": "MR03",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C005",
+              "C006"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara_Vale",
+            "The_Girl_in_Blue",
+            "Aunt_Ilse",
+            "Wick",
+            "Mara_Mother"
+          ],
+          "may_know": [
+            "Mara_Vale: Mara knows she has inherited Aunt Ilse's house",
+            "Mara_Vale: She has no memory of the summer she spent there at age 8, and feels a vague unease upon entering",
+            "Mara_Vale: She does not know about the girl in blue or the bear's significance.",
+            "The_Girl_in_Blue: The girl is the manifested memory of Mara's 8-year-old self",
+            "The_Girl_in_Blue: She knows everything about the summer but cannot speak",
+            "The_Girl_in_Blue: She watches Mara and waits for her to remember",
+            "The_Girl_in_Blue: She is drawn to the bear Wick.",
+            "Aunt_Ilse: Deceased",
+            "Aunt_Ilse: Her secrets are hidden in the house: a diary, letters, objects",
+            "Aunt_Ilse: No one alive knows that she once split her own psyche in the same way.",
+            "Wick: Wick is a one-eyed teddy bear found in the attic",
+            "Wick: He is aged and has a glass eye",
+            "Wick: He holds the memories of the summer through physical contact",
+            "Wick: No one knows his true function.",
+            "Mara_Mother: Mara's mother refuses to discuss the summer or the house",
+            "Mara_Mother: She becomes agitated if Mara asks",
+            "Mara_Mother: She knows the truth but has hidden it to protect Mara's dissociation."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Attic's Secret",
+      "slug": "08-the-attics-secret",
+      "one_line_summary": "In the attic, Mara and Jude find Ilse's hidden journal and share an intimate moment that deepens their bond.",
+      "beat_summary": "Mara and Jude climb to the attic. The Girl in Blue has vanished, but Wick lies on an old trunk. Mara picks him up, expecting a flash, but feels only cold. They search the attic and Jude discovers a loose floorboard under an old rug. Beneath it is a leather journal belonging to Ilse. The entries detail her fear of Lachlan and her decision to hide something in the house. The final entry reads: 'The girl will remember when she is ready.' It makes Mara determined. The tension and intimacy of the house press on them. Jude pulls her close, and they share a deep kiss that escalates to passionate necking and caress. Afterwards, they feel closer. Mara decides to confront her mother in person. As they leave the attic, they notice the floorboard near the window creaks differently. They examine it and find a small compartment containing a locket with a picture of Lachlan and Lydia together and a lock of hair. The chapter ends with Mara realizing the locket holds the final clue to the summer.",
+      "must_happen": [
+        "Mara and Jude search the attic and find Ilse's hidden journal",
+        "They read entries that reveal Ilse's fear of Lachlan and her plan to protect Mara",
+        "Mara and Jude have a steamy romantic encounter (spice=2)",
+        "They discover a hidden locket containing a photo and a lock of hair",
+        "[ROMANCE] The steamy scene itself, plus a moment after where Jude rests his forehead against Mara's"
+      ],
+      "must_not": [
+        "The journal does not mention the murder or Lydia directly",
+        "Mara does not have a full memory flash yet"
+      ],
+      "opens_with": "The attic stairs groaned under their weight, and the air thickened with the smell of dust and secrets.",
+      "cliffhanger": "Mara pried open the locket with trembling fingers, and the face of her mother — younger, sadder — stared back at her from beside Lachlan's image.",
+      "signature_detail_hint": "The lock of hair is tied with a blue ribbon that matches the Girl's dress exactly.",
+      "emotional_beat": "Emotional vulnerability and trust deepen; steamy intimacy reinforces their bond.",
+      "spice": 2,
+      "spice_note": "Steamy scene: passionate kissing and heavy petting (top clothing open), emotional intensity. Not explicit intercourse.",
+      "chapter_task": "Write Chapter 8 (1600–1900 words). Transition chapter focusing on discovery of Ilse's journal and the locket. Must include a steamy romantic scene (spice=2) integrated into the atmosphere, not separate. Advance the mystery slightly with the locket clue. End with the cliffhanger of seeing the mother's face in the locket.",
+      "carries_to_next": "Mara decides to confront her mother; the locket provides a new lead to track Lydia's past.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara_Vale",
+            "The_Girl_in_Blue",
+            "Aunt_Ilse",
+            "Wick",
+            "Mara_Mother"
+          ],
+          "may_know": [
+            "Mara_Vale: Mara knows she has inherited Aunt Ilse's house",
+            "Mara_Vale: She has no memory of the summer she spent there at age 8, and feels a vague unease upon entering",
+            "Mara_Vale: She does not know about the girl in blue or the bear's significance.",
+            "The_Girl_in_Blue: The girl is the manifested memory of Mara's 8-year-old self",
+            "The_Girl_in_Blue: She knows everything about the summer but cannot speak",
+            "The_Girl_in_Blue: She watches Mara and waits for her to remember",
+            "The_Girl_in_Blue: She is drawn to the bear Wick.",
+            "Aunt_Ilse: Deceased",
+            "Aunt_Ilse: Her secrets are hidden in the house: a diary, letters, objects",
+            "Aunt_Ilse: No one alive knows that she once split her own psyche in the same way.",
+            "Wick: Wick is a one-eyed teddy bear found in the attic",
+            "Wick: He is aged and has a glass eye",
+            "Wick: He holds the memories of the summer through physical contact",
+            "Wick: No one knows his true function.",
+            "Mara_Mother: Mara's mother refuses to discuss the summer or the house",
+            "Mara_Mother: She becomes agitated if Mara asks",
+            "Mara_Mother: She knows the truth but has hidden it to protect Mara's dissociation."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "What the Journal Revealed",
+      "one_line_summary": "Gerald Vance shows up with a warning, and a memory forced by Wick reveals the truth of Lachlan's death.",
+      "beat_summary": "Mara and Jude are downstairs examining the locket when a knock sounds: Gerald Vance, the elderly neighbor, looking uneasy. He says he has been watching the house and warns that 'the past should stay buried.' He mentions he saw Lachlan enter the house the day of the disappearance and never saw him leave. That, combined with the journal, starts to build a fuller picture. Mara insists she must know. She picks up Wick again, and this time she forces herself to hold on. The memory floods: she is eight, hiding in the closet, watching through a crack. Her mother Lydia argues with Lachlan in the attic. He threatens to tell everyone about their affair. Lydia pushes him; he falls through the rotted floor, clutching Wick. The body lands with a sickening crack. Mara's eight-year-old self screams but her mother silences her. The memory ends. Mara staggers. Jude catches her. She now knows that her mother killed Lachlan. But why did Ilse hide it? The Girl in Blue appears, now looking integrated, and whispers 'Not alone.' The shadow form appears behind her, but now it has a face — Lachlan's. The reveal, from the combined memory, the testimonial, the physical presence of the bear, and the psychological integration of the child, is that Lachlan's spirit is trapped, and the key (from chapter 7) will set him free. The chapter ends with Mara vowing to set things right, but the weight of the truth drives her and Jude into a desperate, passionate embrace that turns into a moment of raw intimacy, as if they are clinging to each other against the storm of revelation. Afterward, they lie together, and Mara whispers that she must free him, no matter the cost.",
+      "opens_with": "The knock came at a quarter past nine, and the man on the porch looked like a ghost of guilt made flesh.",
+      "cliffhanger": "The shadow's face was Lachlan's, and its mouth opened in a silent plea as the Girl stood beside Mara, whispering, 'Help him.'",
+      "chapter_task": "Write Chapter 9 (1600–1900 words). Major reveal chapter: pay off clues C007, C008, C009, C010 and execute reveal MR04 (the circumstances of Lachlan's death and the presence of his spirit). Must include the memory flashback and Gerald's testimony. Include a romance micro-beat that escalates into an explicit 18+ scene (spice level 3, approximately 40% of chapter) — a passionate, emotional sexual encounter between Mara and Jude that reflects their deepening bond and the catharsis of truth. End with the cliffhanger of the shadow's face and the Girl's plea.",
+      "spice_note": "Explicit sexual content required (spice level 3). The scene should be emotionally charged, triggered by the revelation, and show physical intimacy as a way for the characters to connect amidst turmoil. Approximately 40% of the chapter words should be dedicated to this explicit romance beat, including foreplay and intercourse. Avoid fade-to-black or implied-only.",
+      "must_happen": [
+        "Gerald Vance arrives and gives a testimonial: he saw Lachlan enter the house and never leave (pay-off C008, providing key evidence for the circumstances of Lachlan's fate)",
+        "Mara holds Wick and triggers a full memory of Lachlan's death (pay-off C010 and C007, revealing the exact moment of the push and fall)",
+        "The Girl in Blue speaks for the first time: 'Not alone' (pay-off C009, confirming Mara's psychological integration and that the spirit is connected to her)",
+        "The shadow shows Lachlan's face, and Mara understands his spirit is bound to the house (reveal MR04, synthesizing clues C007, C008, C009, C010)",
+        "[ROMANCE] Overwhelmed by the truth, Mara and Jude fall into a desperate embrace that evolves into a passionate, explicit love scene — a raw, emotional release that solidifies their commitment before she decides to free Lachlan"
+      ],
+      "must_not": [
+        "Mara does not yet confront her mother directly",
+        "The full resolution of the haunting does not occur",
+        "Jude's own connection to the incident is not revealed"
+      ],
+      "carries_to_next": "Mara now knows the truth of Lachlan's death and has shared an intimate bond with Jude; she must decide whether to reveal it and face her mother, and how to free Lachlan's spirit with the key.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C007",
+          "C008",
+          "C009",
+          "C010"
+        ],
+        "reveals": [
+          {
+            "id": "MR04",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C007",
+              "C008",
+              "C009",
+              "C010"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara_Vale",
+            "The_Girl_in_Blue",
+            "Aunt_Ilse",
+            "Wick",
+            "Mara_Mother"
+          ],
+          "may_know": [
+            "Mara_Vale: Mara knows she has inherited Aunt Ilse's house",
+            "Mara_Vale: She has no memory of the summer she spent there at age 8, and feels a vague unease upon entering",
+            "Mara_Vale: She does not know about the girl in blue or the bear's significance.",
+            "The_Girl_in_Blue: The girl is the manifested memory of Mara's 8-year-old self",
+            "The_Girl_in_Blue: She knows everything about the summer but cannot speak",
+            "The_Girl_in_Blue: She watches Mara and waits for her to remember",
+            "The_Girl_in_Blue: She is drawn to the bear Wick.",
+            "Aunt_Ilse: Deceased",
+            "Aunt_Ilse: Her secrets are hidden in the house: a diary, letters, objects",
+            "Aunt_Ilse: No one alive knows that she once split her own psyche in the same way.",
+            "Wick: Wick is a one-eyed teddy bear found in the attic",
+            "Wick: He is aged and has a glass eye",
+            "Wick: He holds the memories of the summer through physical contact",
+            "Wick: No one knows his true function.",
+            "Mara_Mother: Mara's mother refuses to discuss the summer or the house",
+            "Mara_Mother: She becomes agitated if Mara asks",
+            "Mara_Mother: She knows the truth but has hidden it to protect Mara's dissociation."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      },
+      "spice": 3
+    },
+    {
+      "chapter": 10,
+      "title": "The Choice",
+      "slug": "10-the-choice",
+      "one_line_summary": "Mara confronts her mother, learns the full truth about Ilse's parallel trauma, and makes the final decision to reintegrate with the girl in blue.",
+      "beat_summary": "Mara, with Jude by her side, drives to her mother Lydia's apartment. The confrontation is raw: Lydia initially denies everything, but when Mara presents the locket, the journal, and the memory of Lachlan's fall, Lydia breaks down. She confesses that she pushed Lachlan in self-defense, and that Mara witnessed it. But then Lydia reveals a deeper truth: Aunt Ilse also suffered a psychic split after a childhood trauma, and her 'second shadow' never left her—that is the faceless shadow in the garden. Mara realizes the shadow is not Lachlan, but Ilse's own fractured self, bound to the house. The Girl in Blue appears one last time in Lydia's kitchen, holding Wick. Mara takes the bear, and in a moment of stillness, she accepts the child-self. The girl merges with her, and Mara remembers everything: the drowning of the neighbor boy, the guilt, the split. She chooses to reintegrate, becoming whole. The faceless shadow in the house dissipates. The chapter ends with Mara and Jude returning to the house, where the attic window is now open, and the blue dress is gone. Mara places Wick on the windowsill, and the house falls silent.",
+      "must_happen": [
+        "Mara confronts Lydia and forces a confession about Lachlan's death and her own role in the cover-up",
+        "Lydia reveals that Aunt Ilse also had a psychic split, explaining the faceless shadow",
+        "Mara accepts the Girl in Blue and reintegrates her memory, becoming whole",
+        "The faceless shadow dissolves as a result of Ilse's secret being acknowledged",
+        "[ROMANCE] In the car on the way back to the house, Jude takes Mara's hand and tells her he will stay no matter what; she leans her head on his shoulder"
+      ],
+      "must_not": [
+        "Jude does not reveal any personal connection to the incident",
+        "The Girl in Blue does not disappear without Mara's conscious acceptance",
+        "Mara does not fully resolve Ilse's story—that becomes the hook for Book 2"
+      ],
+      "opens_with": "The door to her mother's apartment opened before Mara could knock, as if Lydia had been waiting for this moment her entire life.",
+      "cliffhanger": "Mara sat alone in the attic, the blue dress folded on her lap, and for the first time since she arrived, the house was perfectly quiet—no creaks, no whispers, no shadows.",
+      "signature_detail_hint": "The blue ribbon from the locket is now tied around Wick's remaining eye, a sign of the reintegration.",
+      "emotional_beat": "Catharsis, acceptance, and a quiet, earned peace between Mara and Jude; the romance feels solid and real.",
+      "spice": 1,
+      "spice_note": "Subtle intimacy: hand-holding in the car, a forehead touch, quiet understanding. No explicit content.",
+      "chapter_task": "Write Chapter 10 (1600–1900 words). This is the Book 1 finale. Must include: the confrontation with Lydia, the reveal about Ilse's parallel split (hook for Book 2), Mara's choice to reintegrate, and the dissipation of the shadow. Must include a romance micro-beat: a quiet moment of connection. The chapter should feel conclusive yet open-ended, with the mystery of Ilse's shadow leading into the next book. End with the silent house and Mara's acceptance.",
+      "carries_to_next": "Book 1 ends with Mara whole but aware that Ilse's story is unfinished; the faceless shadow's origin sets up Book 2.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara_Vale",
+            "The_Girl_in_Blue",
+            "Aunt_Ilse",
+            "Wick",
+            "Mara_Mother"
+          ],
+          "may_know": [
+            "Mara_Vale: Mara has fully remembered the truth: she accidentally drowned a neighbor boy in the pond and her psyche split, creating the girl in blue as a repository of memory and guilt",
+            "Mara_Vale: She has made a concrete choice to reintegrate with the girl (become whole) or flee again (stay fractured)",
+            "Mara_Vale: She also becomes aware that Aunt Ilse experienced a similar phenomenon.",
+            "The_Girl_in_Blue: If Mara chooses reintegration, the girl merges with Mara and ceases to exist separately",
+            "The_Girl_in_Blue: If Mara chooses to flee, the girl remains as a permanent spectral presence in the house, still holding the memory.",
+            "Aunt_Ilse: Mara finds irrefutable evidence (Ilse's diary or testimony from her mother) that Ilse also suffered a traumatic split and her 'second shadow' never left",
+            "Aunt_Ilse: This is the hook for book 2.",
+            "Wick: Wick has been used as a tool to unlock Mara's memories",
+            "Wick: His role as the memory-anchor is fully understood",
+            "Wick: He may retain residual memories.",
+            "Mara_Mother: After Mara's revelations, the mother is forced to confess: she always knew about the drowning and the split, and kept Mara away from Ilse's house to prevent triggering the memories",
+            "Mara_Mother: She is either supportive of Mara's choice or resistant."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    }
+  ],
+  "total_chapters": 10,
+  "title": "The Second Shadow"
+}

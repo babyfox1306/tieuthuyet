@@ -1,0 +1,151 @@
+---
+series: the-second-shadow
+book: 1
+chapter: 5
+title: Lachlan's Letter
+spice: 1
+word_count: 1629
+status: draft
+needs_fix: []
+promoted_at: '2026-07-09T13:20:12Z'
+---
+
+The seal broke with a sound like a small bone snapping, and Mara’s hands trembled as she unfolded the paper. Jude stood beside her, close enough that she felt the heat of his arm, but she didn't look at him. The envelope had been wedged beneath the false bottom of the lockbox, hidden under a stack of yellowed receipts. She hadn't noticed it on first inspection. But Ilse had wanted it found.
+
+The letter was dated August 12, 1989.
+
+“Read it out loud,” Jude said quietly.
+
+Mara cleared her throat. The paper was stiff, the ink faded but legible in a sharp, angry scrawl.
+
+Ilse—You think hiding her in that house changes anything? Lydia tells me everything. She’s terrified of you, you know. Of what you might do if you keep her. But I’m not afraid. That child is mine as much as she is Lydia’s, and I will not let you keep me from her. If you don’t agree to let me see her, I’ll go to the police. I’ll tell them about the arrangement. I’ll tell them what you did that summer. You have a week.
+
+Lachlan
+
+The word that child hit Mara like a fist to the chest. She stopped breathing. Lac— the name echoed in her skull, and suddenly the basement air felt too thick, too damp, too old.
+
+“Mara?” Jude’s hand touched her shoulder. “You okay?”
+
+She wasn’t. Her vision swam. She let the letter drop to the table and pressed her palm against her mouth. That child is mine. Lachlan. The name from the shattered glass eye. The name that had burned behind her eyelids in the attic.
+
+“He’s my father,” she whispered. Not a question.
+
+Jude’s hand tightened, but he didn’t answer. He didn’t have to. The letter said everything.
+
+Mara forced herself to breathe. Get your head straight. She was good at that— compartmentalizing, collapsing the panic into a neat, manageable box. But this box had already been opened. A memory flashed: a man’s face, contorted with rage, one eye fixed and glittering like a marble. She had seen him before. In the glass eye of the bear. In the dark of her childhood.
+
+Ilse had kept her away from him. Kept her away. All those years of silence, of weekends spent with Aunt Ilse instead of birthday parties or sleepovers. The woman had been building a fortress around her, brick by brick, and Mara had never known why.
+
+Until now.
+
+“There’s more,” Jude said, lifting a photograph from the envelope. “It was tucked behind the letter.”
+
+He laid it on the table. Black-and-white, edges scalloped, the kind of print that belonged in a shoebox under someone’s bed. Two figures stood in front of the Vale house: a man with a hard jaw and a woman with a strained smile. Ilse. Young, maybe thirty, with the same dark hair and guarded eyes.
+
+But the man—the man made Mara’s stomach drop.
+
+It was the face from her memory. The same sharp cheekbones, the same slight droop to his left eyelid. He was holding a child on his hip. A little girl in a white dress, her face half-hidden against his shoulder.
+
+Mara recognized that dress. She had worn it in photographs that she had been told were lost.
+
+“Oh, God.” Her fingers brushed the photo. “That’s me. And that’s… that’s him. Lachlan.”
+
+Jude leaned in, his shoulder pressing against hers. “It matches what you saw in the attic?”
+
+“It matches the face in the glass eye.” She could still feel the shard of the eye in her palm, the broken edge digging in. “I saw him screaming. He was angry. And Ilse was crying.”
+
+But there was more to the memory, something clawing at the edges. The letter said I’ll tell them what you did that summer. What had Ilse done? And why had Lachlan been in the attic that night, if he had been threatening her?
+
+Mara picked up the letter again. The paper shook in her grip. “He was trying to take me. He said he was going to the police. He threatened her.”
+
+“And she never let him see you,” Jude said. “She kept you here. Maybe she was protecting you.”
+
+“Protecting me from what?” Mara’s voice cracked. “From my own father? She didn’t even tell me he existed. She took that secret to her grave.”
+
+Jude was silent for a long moment. Then he said, “Maybe she was afraid you’d find out what she did.”
+
+Mara looked up. “What do you mean?”
+
+“The letter says what you did that summer. Not what he did. Not what Lydia did. What Ilse did. Whatever happened that summer, it was bad enough that Lachlan could use it as leverage. And after he died, Ilse kept you away from the house for two decades.”
+
+“She brought me here once. When I was eight.”
+
+“And you don’t remember it.”
+
+“No.” The word tasted bitter. “I don’t remember anything.”
+
+She wanted to scream. To throw the letter across the room. But instead, she felt the cold creep up her spine. The air in the basement had changed, dropping a full degree. The lights flickered.
+
+Jude tensed beside her. “You felt that?”
+
+Mara nodded. Her scarred left hand throbbed, a dull ache that matched the rhythm of the furnace. And then she saw her.
+
+At the foot of the stairs, bathed in blue light that seemed to come from nowhere, stood a small girl. Pale skin, dark hair ringed with kinks, and a blue dress that was too thin for the season. She pointed one finger toward the top of the basement stairs. Toward the hallway that led to the attic.
+
+Toward Wick.
+
+Mara’s throat closed. She had seen the girl twice now—once in the hallway, once in the window. Each time, she had convinced herself it was a trick of the light, an exhaustion-induced hallucination.
+
+But this time, the girl was solid. Her mouth moved, but no sound came out. She pointed again, insistent.
+
+“Who is that?” Jude’s voice was low, steady, but she heard the fear underneath.
+
+“I don’t know.” Mara couldn’t confess the truth. I think I’m losing my mind.
+
+The girl took a step back, then another, her hand still extended toward the upper floor. Then she faded—not like a ghost, but like a photograph dissolving in water. The blue light guttered out.
+
+Mara’s breath hitched. She grabbed Jude’s arm, digging her nails into his sleeve.
+
+“You saw her too, right?” She hated the neediness in her voice. “Tell me you saw her.”
+
+“I saw a girl. In a blue dress.” He pulled her closer, wrapping an arm around her shoulders. “You’re not crazy, Mara.”
+
+“I’m seeing things that aren’t there.”
+
+“Maybe they are there.” He guided her toward the stairs. “And maybe she wants us to follow.”
+
+They climbed out of the basement, through the narrow corridor, into the living room. The cold blue light flickered at the edge of her vision, like a candle being carried into the dark.
+
+“She wants me to go to the attic,” Mara said.
+
+“To the bear.”
+
+“To Wick.” She looked at Jude. “There’s something inside him. Something she wants me to remember.”
+
+He studied her face, his eyes dark and searching. “You don’t have to do that alone.”
+
+“I don’t think I have a choice.”
+
+She started up the second flight of stairs, Jude close behind. The wood groaned under their weight, and the wallpaper seemed to close in on them. At the top, the attic door was ajar.
+
+Mara pushed it open.
+
+The room was exactly as she had left it: dust motes suspended in the weak light, the boxes stacked like rotting teeth, the single window staring out at the cold sky. And there, on the shelf beneath the eaves, sat Wick. The one-eyed bear, his remaining glass eye catching a sliver of light.
+
+Mara crossed the room and lifted him down.
+
+The moment her fingers touched his fur, the temperature plunged. The air thickened, heavy with the smell of old wood and something metallic. And the blue light returned—surging up through the cracks in the floorboards, pooling at her feet, bathing the attic in a cold glow that seemed to hum with anticipation.
+
+The girl appeared again, standing in the corner, her hand still outstretched. This time, her lips shaped a single word:
+
+Remember.
+
+Mara’s arms trembled. The bear was heavier than she remembered, dense and solid. She cradled it against her chest, and she could have sworn she felt a heartbeat—slow, steady, like the radiators in the hall.
+
+Jude stepped close and wrapped his arms around her from behind. His chest pressed against her back, his arms secure over hers, holding her up. She leaned into him, feeling the solid reality of his body, the warmth that cut through the cold.
+
+“I’ve got you,” he murmured.
+
+She wanted to say something sarcastic, something to break the tension, but she couldn’t. Instead, she let the tears come.
+
+It wasn’t just fear. It was grief—for the father she had never known, for the aunt who had carried a terrible secret, for the little girl in the blue dress who had been waiting all these years.
+
+She turned in his arms, pressing her face into his chest. His shirt was soft, his heartbeat steady. He held her through the shaking, his hand stroking her hair.
+
+“I don’t want to remember,” she whispered.
+
+“I know.” His voice was rough. “But you need to.”
+
+She pulled back, looking at him. His eyes were too bright, his jaw tight. He was scared, too. But he wasn’t letting go.
+
+Mara lifted Wick from the shelf, and the cold blue light from the floor crack brightened as if the house itself was waiting for her to remember.

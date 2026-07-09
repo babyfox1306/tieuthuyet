@@ -1,0 +1,247 @@
+```json
+{
+  "act": [
+    25,
+    27
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 25,
+      "title": "The Digital Ghost",
+      "slug": "the-digital-ghost",
+      "one_line_summary": "Lin Wei and Adrian race against time to exploit a vulnerability in Aurelian Group's network, but a betrayal forces them to retreat, planting a new clue.",
+      "beat_summary": "Lin Wei and Adrian, now a united front, attempt to breach Aurelian Group's network to expose the Glass Meridian. They identify a critical vulnerability, but just as they are about to access crucial data, an internal betrayal alerts the Meridian. They are forced to abort the mission and narrowly escape. During the chaos, a data chip (C007) is planted by the betrayer, offering a potential new lead but also a possible trap. The chapter ends with them on the run, the trust between them tested.",
+      "must_happen": [
+        "Lin Wei and Adrian work collaboratively to breach Aurelian Group's network.",
+        "They discover a critical vulnerability that could expose the Glass Meridian.",
+        "[ROMANCE] During the high-stakes infiltration, Adrian physically shields Lin Wei from a system overload, their proximity charged with shared danger and a deepening bond.",
+        "An internal betrayal alerts the Glass Meridian, forcing them to abort the mission.",
+        "They narrowly escape detection, realizing the extent of the infiltration.",
+        "A data chip (C007) is planted, hinting at a new lead or a trap."
+      ],
+      "must_not": [
+        "Lin Wei and Adrian successfully obtaining the primary objective.",
+        "The identity of the betrayer being fully revealed.",
+        "The Glass Meridian's core operations being exposed.",
+        "Adrian revealing his father's direct involvement or knowledge of this betrayal."
+      ],
+      "opens_with": "The sterile hum of Aurelian Group’s servers fills the secure room as Lin Wei and Adrian’s fingers fly across keyboards, the digital gateway to the Glass Meridian shimmering within their grasp.",
+      "cliffhanger": "Alarms blare, escape routes vanish, and Lin Wei and Adrian are forced to flee, leaving behind crucial data and the chilling realization that someone they trusted has just sold them out to the Glass Meridian.",
+      "signature_detail_hint": "The faint scent of a distinctive, expensive perfume lingers in the air, a subtle clue to the betrayer’s presence.",
+      "emotional_beat": "Urgency, violation, and a reinforced reliance on each other.",
+      "spice": 1,
+      "spice_note": "The intense adrenaline and the shared danger create a charged atmosphere, highlighting their protective instincts towards each other.",
+      "chapter_task": "Lin Wei and Adrian attempt to exploit a network vulnerability but are betrayed. They must escape, planting a new clue (C007). Build suspense and highlight the pervasive threat. (1600-1900 words)",
+      "carries_to_next": "Lin Wei and Adrian’s need to identify the betrayer and find a new, safer path to uncover the Glass Meridian’s secrets, while analyzing the new clue (C007).",
+      "narrative": {
+        "clues_plant": [
+          "C007"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Lin Wei",
+            "Adrian Vale",
+            "Ms. Li (Lin Wei's Mother)",
+            "Isabella Vale (Adrian's Father)"
+          ],
+          "may_know": [
+            "Lin Wei: Actively investigating Aurelian Group",
+            "Lin Wei: Has encountered hints of a larger conspiracy and the name 'Glass Meridian'",
+            "Lin Wei: Growing distrust of Adrian but also grudging reliance.",
+            "Adrian Vale: Recognizes Lin Wei is uncovering more than anticipated",
+            "Adrian Vale: Growing protective instincts",
+            "Adrian Vale: Actively working with Lin Wei to break a Meridian link.",
+            "Adrian Vale: He has unconsciously been groomed by his father to either take over or be a pawn in the Meridian's grander scheme.",
+            "Ms. Li (Lin Wei's Mother): Showing slight improvement",
+            "Ms. Li (Lin Wei's Mother): Her medical file remains a focal point.",
+            "Isabella Vale (Adrian's Father): Aware Lin Wei is getting close",
+            "Isabella Vale (Adrian's Father): May attempt to mislead or threaten her indirectly."
+          ],
+          "must_not_know": [
+            "Lin Wei: Her mother was a key researcher in Project Phoenix, not just a victim. Her own birth name is linked to Project Phoenix.",
+            "Ms. Li (Lin Wei's Mother): She was a key researcher in Project Phoenix and holds suppressed memories crucial to its understanding.",
+            "Isabella Vale (Adrian's Father): He orchestrated Adrian's entire upbringing to serve the Glass Meridian, including the 'inheritance' and his supposed fall from grace."
+          ],
+          "effective_milestone": 25
+        },
+        "clue_details": {
+          "C007": {
+            "id": "C007",
+            "content": "A data chip containing fragmented information that could point to a specific target or operation of the Glass Meridian, but its true purpose (trap or lead) is unclear.",
+            "type": "digital artifact",
+            "misdirection": "May lead them to a low-level operative or a dead end.",
+            "true_meaning": "Provides a critical piece of information about the Meridian's next step or a specific asset they are protecting.",
+            "plant_chapter": 25,
+            "payoff_chapter": 28
+          }
+        }
+      }
+    },
+    {
+      "chapter": 26,
+      "title": "Echoes of Betrayal",
+      "slug": "echoes-of-betrayal",
+      "one_line_summary": "On the run, Lin Wei meticulously traces the betrayer's digital footprint, identifying a suspicious executive within Aurelian Group as the mole.",
+      "beat_summary": "Forced into hiding after the failed infiltration, Lin Wei focuses her investigative talents on identifying their betrayer. She meticulously analyzes the digital breadcrumbs left behind, cross-referencing them with Aurelian Group's internal systems and public records. Her investigation points to a mid-level executive, Elias Vance, within Aurelian Group who has been acting as a conduit for the Glass Meridian. Adrian corroborates her findings, confirming Vance's suspicious activities. This chapter solidifies their understanding of how the Meridian operates within legitimate corporations. A romantic beat occurs when Adrian expresses his admiration for Lin Wei's resilience and sharp intellect.",
+      "must_happen": [
+        "Lin Wei uses her journalistic skills to track the betrayer's digital trail.",
+        "She uncovers evidence of a mid-level Aurelian Group executive, Elias Vance, acting as a conduit for the Glass Meridian.",
+        "[ROMANCE] Adrian witnesses Lin Wei's determination and skill under pressure, expressing genuine admiration for her resilience and sharp mind, bridging the gap between them.",
+        "Adrian confirms her findings through his own network, solidifying the link between Vance and the Meridian.",
+        "They realize the Glass Meridian has infiltrated Aurelian Group at multiple levels.",
+        "This discovery provides them with a potential target for further investigation."
+      ],
+      "must_not": [
+        "Lin Wei and Adrian confronting Vance directly.",
+        "Vance being revealed as a high-ranking Glass Meridian operative.",
+        "The full extent of Vance's complicity being revealed.",
+        "Any direct contact with Marcus Thorne at this stage."
+      ],
+      "opens_with": "Huddled in a nondescript safe house, the glow of Lin Wei’s laptop screen illuminating her determined face as she hunts for the digital ghost who betrayed them.",
+      "cliffhanger": "Lin Wei points to a name on the screen, 'Elias Vance,' a seemingly innocuous executive, but the pattern of his communications screams 'Glass Meridian operative.' Adrian nods grimly; their next move is clear, but dangerous.",
+      "signature_detail_hint": "The faint scent of stale coffee and desperation clinging to the digital files Lin Wei pores over, a testament to her relentless pursuit.",
+      "emotional_beat": "Determination and a growing sense of shared purpose, fueled by Adrian's admiration and Lin Wei's resilience.",
+      "spice": 1,
+      "spice_note": "The shared focus on their investigation and Adrian's open admiration for Lin Wei create a charged atmosphere, strengthening their romantic tension.",
+      "chapter_task": "Lin Wei identifies Elias Vance, a key intermediary. Adrian confirms the link. Build their partnership and hint at the next target. (1600-1900 words)",
+      "carries_to_next": "Lin Wei and Adrian’s plan to confront Elias Vance and the potential risks involved.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Lin Wei",
+            "Adrian Vale",
+            "Ms. Li (Lin Wei's Mother)",
+            "Isabella Vale (Adrian's Father)"
+          ],
+          "may_know": [
+            "Lin Wei: Actively investigating Aurelian Group",
+            "Lin Wei: Has encountered hints of a larger conspiracy and the name 'Glass Meridian'",
+            "Lin Wei: Growing distrust of Adrian but also grudging reliance.",
+            "Adrian Vale: Recognizes Lin Wei is uncovering more than anticipated",
+            "Adrian Vale: Growing protective instincts",
+            "Adrian Vale: Actively working with Lin Wei to break a Meridian link.",
+            "Adrian Vale: He has unconsciously been groomed by his father to either take over or be a pawn in the Meridian's grander scheme.",
+            "Ms. Li (Lin Wei's Mother): Showing slight improvement",
+            "Ms. Li (Lin Wei's Mother): Her medical file remains a focal point.",
+            "Isabella Vale (Adrian's Father): Aware Lin Wei is getting close",
+            "Isabella Vale (Adrian's Father): May attempt to mislead or threaten her indirectly."
+          ],
+          "must_not_know": [
+            "Lin Wei: Her mother was a key researcher in Project Phoenix, not just a victim. Her own birth name is linked to Project Phoenix.",
+            "Ms. Li (Lin Wei's Mother): She was a key researcher in Project Phoenix and holds suppressed memories crucial to its understanding.",
+            "Isabella Vale (Adrian's Father): He orchestrated Adrian's entire upbringing to serve the Glass Meridian, including the 'inheritance' and his supposed fall from grace."
+          ],
+          "effective_milestone": 25
+        },
+        "clue_details": {}
+      }
+    },
+    {
+      "chapter": 27,
+      "title": "The Confrontation",
+      "slug": "the-confrontation",
+      "one_line_summary": "Lin Wei and Adrian confront Elias Vance, the suspected mole, leading to a dangerous encounter that reveals Vance's true allegiance and plants a crucial new clue.",
+      "beat_summary": "Lin Wei and Adrian plan and execute a confrontation with Elias Vance, the suspected intermediary, at Aurelian Group. Vance reveals a chilling fanaticism for the Glass Meridian's ideology and attempts to escape or incapacitate them. During the struggle, Vance drops a data chip (C007), hinting at a larger operation. Adrian's ruthless side surfaces as he neutralizes Vance, ensuring their safety and securing the clue. The chapter ends with a charged romantic beat as they process the danger and their growing reliance on each other.",
+      "must_happen": [
+        "Lin Wei and Adrian confront Elias Vance at Aurelian Group.",
+        "Vance reveals his fanaticism for the Glass Meridian's cause.",
+        "A struggle ensues as Vance attempts to escape or attack them.",
+        "[ROMANCE] After Vance is neutralized, Adrian turns to Lin Wei, his eyes blazing with intensity and concern, pulling her into a fierce embrace.",
+        "During the altercation, Vance drops a data chip (C007).",
+        "Adrian demonstrates his capacity for decisive action to protect Lin Wei and secure the clue."
+      ],
+      "must_not": [
+        "Elias Vance being a high-ranking Glass Meridian operative.",
+        "Lin Wei or Adrian being seriously injured.",
+        "The full contents of the data chip being revealed.",
+        "Marcus Thorne being directly involved in this confrontation."
+      ],
+      "opens_with": "The sterile, corporate halls of Aurelian Group become a battleground as Lin Wei and Adrian corner Elias Vance, the air thick with the scent of impending conflict.",
+      "cliffhanger": "With Elias Vance incapacitated and a cryptic data chip in hand, Lin Wei and Adrian exchange a look of grim determination. The chip holds a new key, but the encounter has revealed a chilling truth: the Glass Meridian's influence runs deeper and its followers are more dangerous than they imagined.",
+      "signature_detail_hint": "The almost imperceptible tremor in Vance's hand as he reaches for his concealed weapon, a sign of his desperation.",
+      "emotional_beat": "Adrenaline and relief, followed by a surge of primal attraction and a reinforced sense of their shared mission.",
+      "spice": 2,
+      "spice_note": "The intense adrenaline rush and the primal need for reassurance lead to a passionate, albeit brief, physical encounter between Lin Wei and Adrian, solidifying their bond.",
+      "chapter_task": "Lin Wei and Adrian confront Elias Vance, who reveals his allegiance and drops a new clue (C007). Adrian shows his ruthless side. Build romantic tension after the conflict. (1600-1900 words)",
+      "carries_to_next": "The analysis of the data chip (C007) and the implications of Vance's allegiance for their investigation into the Glass Meridian.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Lin Wei",
+            "Adrian Vale",
+            "Ms. Li (Lin Wei's Mother)",
+            "Isabella Vale (Adrian's Father)"
+          ],
+          "may_know": [
+            "Lin Wei: Actively investigating Aurelian Group",
+            "Lin Wei: Has encountered hints of a larger conspiracy and the name 'Glass Meridian'",
+            "Lin Wei: Growing distrust of Adrian but also grudging reliance.",
+            "Adrian Vale: Recognizes Lin Wei is uncovering more than anticipated",
+            "Adrian Vale: Growing protective instincts",
+            "Adrian Vale: Actively working with Lin Wei to break a Meridian link.",
+            "Adrian Vale: He has unconsciously been groomed by his father to either take over or be a pawn in the Meridian's grander scheme.",
+            "Ms. Li (Lin Wei's Mother): Showing slight improvement",
+            "Ms. Li (Lin Wei's Mother): Her medical file remains a focal point.",
+            "Isabella Vale (Adrian's Father): Aware Lin Wei is getting close",
+            "Isabella Vale (Adrian's Father): May attempt to mislead or threaten her indirectly."
+          ],
+          "must_not_know": [
+            "Lin Wei: Her mother was a key researcher in Project Phoenix, not just a victim. Her own birth name is linked to Project Phoenix.",
+            "Ms. Li (Lin Wei's Mother): She was a key researcher in Project Phoenix and holds suppressed memories crucial to its understanding.",
+            "Isabella Vale (Adrian's Father): He orchestrated Adrian's entire upbringing to serve the Glass Meridian, including the 'inheritance' and his supposed fall from grace."
+          ],
+          "effective_milestone": 25
+        },
+        "clue_details": {}
+      }
+    }
+  ]
+}
+```

@@ -1,0 +1,706 @@
+{
+  "book": 2,
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Key That Turned",
+      "one_line_summary": "Mara arrives at Ilse's house and encounters the first signs of the supernatural within hours.",
+      "beat_summary": "Mara drives up to the isolated house and feels a dread before fitting the key. The key is warm to touch and seems to glow faintly. Inside, dust and the smell of rosewater hang, with an undertone of copper. A radiator knocks three times, then three long, then three short. She explores the living room and sees a child's drawing of a girl in",
+      "narrative": {
+        "clues_plant": [
+          "C001",
+          "C003"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "TH001",
+          "TH002",
+          "TH003"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara Vale",
+            "Asher Croft",
+            "Lydia Vale",
+            "The Girl in Blue",
+            "Aunt Ilse",
+            "Gerald Vance"
+          ],
+          "may_know": [
+            "Mara Vale: No memory of the summer she was 8",
+            "Mara Vale: believes the girl in blue is a ghost",
+            "Mara Vale: aware of the one-eyed bear Wick but not its significance",
+            "Mara Vale: knows she inherited the house from Aunt Ilse.",
+            "Asher Croft: Local historian aware of Ilse Vale's reclusive reputation",
+            "Asher Croft: knows rumors about the house and possible missing persons, but no concrete details.",
+            "Lydia Vale: Knows she pushed Alain to his death and swore Mara to silence",
+            "Lydia Vale: believes the secret is safely buried",
+            "Lydia Vale: Estranged from Mara.",
+            "The Girl in Blue: Carries all of Mara's repressed memories",
+            "The Girl in Blue: knows the full truth of the summer",
+            "The Girl in Blue: Cannot communicate except through proximity and presence.",
+            "Aunt Ilse: Deceased",
+            "Aunt Ilse: Left a hidden journal and clues about her own split and the house's repeating cycle",
+            "Aunt Ilse: Her secrets are gradually unearthed.",
+            "Gerald Vance: Neighbor who heard the crash and screams but kept silent due to payment from Lydia",
+            "Gerald Vance: Lives with guilt."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      },
+      "chapter_task": ". REQUIRED 1600-1900 English words — under 1500 = fail."
+    },
+    {
+      "chapter": 2,
+      "title": "The Photograph",
+      "slug": "ch2-the-photograph",
+      "one_line_summary": "Mara discovers a photograph that proves she was not alone the summer she cannot remember.",
+      "opens_with": "\"Don't turn around.\" The whisper brushed against her neck, cold and smelling of copper.",
+      "beat_summary": "While sorting through Ilse's belongings, Mara pulls out a hidden photograph album. Her hands tremble as she finds a picture: her mother laughing next to a man with a scarred face, holding the one-eyed teddy bear `[CLUE C002]`. On the back, a childish scrawl in blue crayon reads \"He took us\" `[CLUE C006]`. The radiator knocks violently, shaking the floorboards, escalating the supernatural threat. Terrified, she is interrupted by a knock at the door—Julian, the neighbor, brings a sense of safety but also a confusing spark of attraction `[ROMANCE]`.",
+      "must_happen": [
+        "Mara finds the hidden photo album and discovers a photo of her mother standing next to a man with a scarred face, holding the one-eyed teddy bear `[CLUE C002]`.",
+        "On the back of the photo, a childish scrawl in blue crayon reads \"He took us\" `[CLUE C006]`.",
+        "The radiator knocks violently, shaking the floorboards, escalating the supernatural threat.",
+        "A sudden knock on the door interrupts her fear; it's the neighbor, Julian, whose hand lingers on hers a second too long when he returns a dropped parcel `[ROMANCE]`."
+      ],
+      "cliffhanger": "As Mara stares at the photograph, she sees the girl in the blue dress standing in the reflection of the darkened window, watching her.",
+      "signature_detail_hint": "The photograph smells faintly of sulfur and burnt sugar, a scent that triggers a headache but feels intimately familiar.",
+      "chapter_task": "1600-1900 English words.",
+      "spice": 1,
+      "spice_note": "Spice Level 1: Focus on psychological tension and a brief, charged moment with the neighbor (Julian).",
+      "narrative": {
+        "clues_plant": [
+          "C002",
+          "C006"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "TH001",
+          "TH002",
+          "TH003",
+          "TH004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara Vale",
+            "Asher Croft",
+            "Lydia Vale",
+            "The Girl in Blue",
+            "Aunt Ilse",
+            "Gerald Vance"
+          ],
+          "may_know": [
+            "Mara Vale: No memory of the summer she was 8",
+            "Mara Vale: believes the girl in blue is a ghost",
+            "Mara Vale: aware of the one-eyed bear Wick but not its significance",
+            "Mara Vale: knows she inherited the house from Aunt Ilse.",
+            "Asher Croft: Local historian aware of Ilse Vale's reclusive reputation",
+            "Asher Croft: knows rumors about the house and possible missing persons, but no concrete details.",
+            "Lydia Vale: Knows she pushed Alain to his death and swore Mara to silence",
+            "Lydia Vale: believes the secret is safely buried",
+            "Lydia Vale: Estranged from Mara.",
+            "The Girl in Blue: Carries all of Mara's repressed memories",
+            "The Girl in Blue: knows the full truth of the summer",
+            "The Girl in Blue: Cannot communicate except through proximity and presence.",
+            "Aunt Ilse: Deceased",
+            "Aunt Ilse: Left a hidden journal and clues about her own split and the house's repeating cycle",
+            "Aunt Ilse: Her secrets are gradually unearthed.",
+            "Gerald Vance: Neighbor who heard the crash and screams but kept silent due to payment from Lydia",
+            "Gerald Vance: Lives with guilt."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 3,
+      "title": "The Historian",
+      "one_line_summary": "Mara meets Asher Croft for the first time and together they discover the attic's dark secret.",
+      "beat_summary": "Asher Croft arrives at the house, claiming to be a historian researching Ilse’s family. Mara lets him in, suspicious but drawn. He notices the radiator rhythm and grows quiet. She shows him the photograph; he recognises the man but hides it. They explore and find a sealed attic. Inside, a patched floor section stands out. The Girl in Blue appears, unseen by Asher. In the cramped space, Asher leans close to inspect the patch, his breath ghosting Mara's ear, sending a jolt of electric awareness through her that has nothing to do with the ghost. Asher comments on a strange stain on the patched wood ([CLUE C005]). On the wall, a faint handprint appears and then vanishes ([CLUE C010]). The knock pattern triggers a dream-memory in Mara ([PAYOFF C001]). Looking at the photograph, she notices a reflection of the attic window in the man’s eyes ([PAYOFF C002]). From the darkness, the Girl points at Asher and mouths a warning, leaving Mara shaken.",
+      "opens_with": "The knock came three times—loud, deliberate, like a heartbeat counting down.",
+      "cliffhanger": "From the attic darkness, the Girl in Blue points directly at Asher and mouths: 'He is not alone.'",
+      "chapter_task": "Write a 1600-1900 word chapter that introduces Asher with a cool, capable presence, focuses on building romantic tension and attraction (Spice Level 1) through close proximity and charged glances rather than explicit contact, and reveals the attic without giving away the death. The child's warning must create a cliffhanger that complicates the budding connection. Integrate the clue/payoff beats as specified.",
+      "must_happen": [
+        "Asher introduces himself as a historian; Mara invites him in, unsettled by his knowing gaze.",
+        "[ROMANCE] In the cramped attic, Asher's arm brushes against Mara's, sparking a sudden, electric awareness of him that distracts her from the dust.",
+        "Asher identifies a strange chemical stain on the patched floorboards ([CLUE C005]).",
+        "A child's handprint manifests briefly on the wall, fading before Asher turns his head ([CLUE C010]).",
+        "The radiator's specific rhythm unlocks a flash of a dream-memory for Mara ([PAYOFF C001]).",
+        "Examining the photograph, Mara realizes the reflection in the man's eyes matches the attic window ([PAYOFF C002])."
+      ],
+      "must_not_know": [
+        "Mara must not know Asher's true connection to the house or why he is really there.",
+        "Mara must not remember the full events of the lost summer."
+      ],
+      "signature_detail_hint": "Asher has a jagged white scar on his thumb that he rubs unconsciously when he is hiding the truth.",
+      "narrative": {
+        "clues_plant": [
+          "C005",
+          "C010"
+        ],
+        "clues_payoff": [
+          "C001",
+          "C002"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "TH001",
+          "TH002",
+          "TH003",
+          "TH004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara Vale",
+            "Asher Croft",
+            "Lydia Vale",
+            "The Girl in Blue",
+            "Aunt Ilse",
+            "Gerald Vance"
+          ],
+          "may_know": [
+            "Mara Vale: No memory of the summer she was 8",
+            "Mara Vale: believes the girl in blue is a ghost",
+            "Mara Vale: aware of the one-eyed bear Wick but not its significance",
+            "Mara Vale: knows she inherited the house from Aunt Ilse.",
+            "Asher Croft: Local historian aware of Ilse Vale's reclusive reputation",
+            "Asher Croft: knows rumors about the house and possible missing persons, but no concrete details.",
+            "Lydia Vale: Knows she pushed Alain to his death and swore Mara to silence",
+            "Lydia Vale: believes the secret is safely buried",
+            "Lydia Vale: Estranged from Mara.",
+            "The Girl in Blue: Carries all of Mara's repressed memories",
+            "The Girl in Blue: knows the full truth of the summer",
+            "The Girl in Blue: Cannot communicate except through proximity and presence.",
+            "Aunt Ilse: Deceased",
+            "Aunt Ilse: Left a hidden journal and clues about her own split and the house's repeating cycle",
+            "Aunt Ilse: Her secrets are gradually unearthed.",
+            "Gerald Vance: Neighbor who heard the crash and screams but kept silent due to payment from Lydia",
+            "Gerald Vance: Lives with guilt."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 4,
+      "slug": "the-neighbors-warning",
+      "title": "The Neighbor's Warning",
+      "one_line_summary": "Gerald Vance arrives and warns Mara away from the investigation, forcing Asher to reveal Ilse's hidden journal.",
+      "beat_summary": "Gerald Vance storms into the house, his boots tracking mud, and threatens to call the police on Asher. He warns Mara that digging up the past will only hurt her mother, his fingers nervously clicking a battered Zippo lighter with a bullet-hole dent. His eyes dart to the garden window, and he mutters about 'those who came before,' planting a subtle clue. After he leaves, Asher shows Mara the journal found in the pantry. The first pages describe Ilse's fear of Julian Croft. The Girl in Blue watches from the garden. The tension between Mara and Asher ignites into a heavy, desperate make-out session against the bookshelf, fueled by fear and adrenaline, though they stop before going further.",
+      "opens_with": "Gerald's fist hit the doorframe before he stepped into the hall, his boots tracking mud across the clean floor.",
+      "cliffhanger": "Mara opens the journal to the first photograph—a man with tousled hair, the same man from her mother's album—and beneath it, a date inked in Ilse's hand: the day of the fall.",
+      "chapter_task": "Write a 1600–1900-word chapter that introduces Gerald as a suspicious obstacle, uses the journal to escalate the plot, and includes a charged romantic scene (heavy making out, intense physical tension, fading to black) between Mara and Asher that takes up approximately 40% of the chapter, deepening their emotional connection. The hourglass danger of the dead lover's identity must hover over every scene.",
+      "must_happen": [
+        "Gerald Vance confronts Mara and Asher, warning them to stop their investigation.",
+        "Asher reveals he has already found Ilse's hidden journal in the pantry.",
+        "The journal's first pages identify the lover as Julian Croft and his violent temperament.",
+        "[CLUE C004] Gerald's agitated demeanor and cryptic reference to 'those who came before' plants a subtle clue that he witnessed the lover's presence that summer.",
+        "[ROMANCE] When Gerald raises his voice, Asher subtly shifts his stance to shield Mara, his hand brushing her lower back in a protective, possessive gesture that sends a shiver down her spine.",
+        "[SPICE] After Gerald leaves, the tension breaks into passion; Asher pins Mara gently against the wall, kissing her deeply, his hands exploring her waist and hips as the world outside fades, leaving only the heat of his breath and the racing of their hearts."
+      ],
+      "must_not": [
+        "Mara must not learn that Gerald witnessed the lover entering the house that day.",
+        "Asher must not reveal that his surname is Croft."
+      ],
+      "carries_to_next": "The journal is now Mara's primary guide, and the mystery of Julian Croft deepens. The true threat of the past begins to emerge. Gerald's hidden knowledge remains a seed for future revelations.",
+      "signature_detail_hint": "Gerald compulsively clicks a battered Zippo",
+      "narrative": {
+        "clues_plant": [
+          "C004"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "TH001",
+          "TH002",
+          "TH003",
+          "TH004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara Vale",
+            "Asher Croft",
+            "Lydia Vale",
+            "The Girl in Blue",
+            "Aunt Ilse",
+            "Gerald Vance"
+          ],
+          "may_know": [
+            "Mara Vale: No memory of the summer she was 8",
+            "Mara Vale: believes the girl in blue is a ghost",
+            "Mara Vale: aware of the one-eyed bear Wick but not its significance",
+            "Mara Vale: knows she inherited the house from Aunt Ilse.",
+            "Asher Croft: Local historian aware of Ilse Vale's reclusive reputation",
+            "Asher Croft: knows rumors about the house and possible missing persons, but no concrete details.",
+            "Lydia Vale: Knows she pushed Alain to his death and swore Mara to silence",
+            "Lydia Vale: believes the secret is safely buried",
+            "Lydia Vale: Estranged from Mara.",
+            "The Girl in Blue: Carries all of Mara's repressed memories",
+            "The Girl in Blue: knows the full truth of the summer",
+            "The Girl in Blue: Cannot communicate except through proximity and presence.",
+            "Aunt Ilse: Deceased",
+            "Aunt Ilse: Left a hidden journal and clues about her own split and the house's repeating cycle",
+            "Aunt Ilse: Her secrets are gradually unearthed.",
+            "Gerald Vance: Neighbor who heard the crash and screams but kept silent due to payment from Lydia",
+            "Gerald Vance: Lives with guilt."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "The Journal",
+      "one_line_summary": "Mara reads deeper into Ilse's journal, revealing a secret passage and a cache of letters that tie Asher Croft to the dead man.",
+      "beat_summary": "Mara reads Ilse's journal by lamplight. Ilse describes Julian Croft as a manipulative man who threatened to ruin Lydia's reputation. Halfway through, the journal mentions a space behind the fireplace where Ilse hid evidence. Mara and Asher break through the false wall and find a box of letters tied with a black ribbon. The letters are from Julian Croft to his younger brother. Asher opens one and recognizes the handwriting—he is Julian Croft's nephew. [PAYOFF C003] Asher's hand trembles as he reads a letter where Julian mentions a 'bear' that Lydia left behind—Mara's stomach drops, connecting the clue from the attic. [PAYOFF C004] In another letter, Julian writes about a 'neighbor who watches too closely'—Mara realizes Gerald Vance was the one who saw Julian enter the house that day. [PAYOFF C005] A third letter describes a 'knock pattern' Julian used to signal Lydia—three short, three long, three short—Mara recognizes it as the same rhythm from the radiator. [CLUE C008] Asher finds a loose floorboard near the fireplace; beneath it, a child's drawing of a girl with one eye—the same as Mara's teddy bear. [CLUE C011] The journal's final entry mentions a 'hidden key' that Ilse buried in the garden, under the rose bush.",
+      "opens_with": "'If Julian tells, the Vale name will shatter. I must act, but I am afraid.' Mara read the line twice, the lamp casting a long shadow across the page.",
+      "cliffhanger": "Asher's hands trembled as he held the letter. 'Julian Croft is my uncle,' he said, his voice hollow. 'My father never knew what happened to him.' Then he paused, staring at the drawing. 'Mara... this bear. I've seen it before. In a photograph from that summer.'",
+      "chapter_task": "Write a 1600–1900-word chapter that deepens the supernatural/thriller plot via the hidden letters and delivers the major character revelation—Asher is Julian Croft's nephew—while maintaining the fragile romantic thread through a brief, meaningful physical touch in a confined space. Integrate the payoff beats for C003, C004, C005, and plant clues C008 and C011 as specified.",
+      "must_happen": [
+        "The journal reveals the secret hiding place behind the living room fireplace.",
+        "Mara and Asher discover the false wall and retrieve a hidden box of letters.",
+        "[PAYOFF C003] A letter from Julian mentions a 'bear' left behind by Lydia—Mara connects it to her one-eyed teddy bear from the attic.",
+        "[PAYOFF C004] A letter describes a 'neighbor who watches too closely'—Mara realizes Gerald Vance witnessed Julian entering the house that summer.",
+        "[PAYOFF C005] A letter describes a 'knock pattern' (three short, three long, three short)—Mara recognizes it as the radiator rhythm from the first night.",
+        "[CLUE C008] Asher finds a loose floorboard behind the fireplace; beneath it, a child's drawing of a one-eyed girl—matching Mara's teddy bear.",
+        "[CLUE C011] The journal's final entry mentions a 'hidden key' buried under the rose bush in the garden.",
+        "[ROMANCE] In the confined space behind the wall, Mara and Asher work shoulder to shoulder; their hands meet over the box, and the electricity of the touch lingers."
+      ],
+      "must_not": [
+        "Mara must not have a full memory flashback yet (the bear hasn't been found).",
+        "Asher must not voice the full implications of his uncle's disappearance (he needs time to process)."
+      ],
+      "carries_to_next": "Asher's identity is now a barrier between them. Mara must decide if she can trust the man whose family connects to her deepest wound. The hidden key under the rose bush points to the next discovery.",
+      "narrative": {
+        "clues_plant": [
+          "C008",
+          "C011"
+        ],
+        "clues_payoff": [
+          "C003",
+          "C004",
+          "C005"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "TH001",
+          "TH002",
+          "TH003",
+          "TH004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara Vale",
+            "Asher Croft",
+            "Lydia Vale",
+            "The Girl in Blue",
+            "Aunt Ilse",
+            "Gerald Vance"
+          ],
+          "may_know": [
+            "Mara Vale: No memory of the summer she was 8",
+            "Mara Vale: believes the girl in blue is a ghost",
+            "Mara Vale: aware of the one-eyed bear Wick but not its significance",
+            "Mara Vale: knows she inherited the house from Aunt Ilse.",
+            "Asher Croft: Local historian aware of Ilse Vale's reclusive reputation",
+            "Asher Croft: knows rumors about the house and possible missing persons, but no concrete details.",
+            "Lydia Vale: Knows she pushed Alain to his death and swore Mara to silence",
+            "Lydia Vale: believes the secret is safely buried",
+            "Lydia Vale: Estranged from Mara.",
+            "The Girl in Blue: Carries all of Mara's repressed memories",
+            "The Girl in Blue: knows the full truth of the summer",
+            "The Girl in Blue: Cannot communicate except through proximity and presence.",
+            "Aunt Ilse: Deceased",
+            "Aunt Ilse: Left a hidden journal and clues about her own split and the house's repeating cycle",
+            "Aunt Ilse: Her secrets are gradually unearthed.",
+            "Gerald Vance: Neighbor who heard the crash and screams but kept silent due to payment from Lydia",
+            "Gerald Vance: Lives with guilt."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "The Confession",
+      "one_line_summary": "Mara confronts Asher about his hidden agenda, and their raw confession opens the door to genuine intimacy and a shared purpose.",
+      "beat_summary": "The house reacts to the tension—doors slam, cold drafts sweep through the halls. Mara confronts Asher, demanding to know if he came to avenge his uncle. Asher confesses his father sent him to find the truth, but he never expected to care for her. The Girl in Blue appears, sad, pointing to the attic. [CLUE C009] She gestures specifically to a rotted floorboard, guiding them to the hidden box. Mara and Asher decide to trust each other completely. They ascend to the attic and find Ilse's hidden box under that board. Inside is a key and a note: 'For Mara. When you are ready to remember, use this. The bear is not to blame.' [CLUE C007] Among Ilse’s stored childhood trinkets, Mara discovers a crudely drawn picture of a one-eyed bear, confirming the bear was a real object from the past.",
+      "opens_with": "Mara found Asher in the library, holding Julian's letter like it was a loaded weapon. 'Tell me the truth,' she said. 'Did you come here to destroy my family?'",
+      "cliffhanger": "Mara slipped the key into her pocket. 'The bear,' she whispered. 'We have to find the bear before my mother does.' The radiator knocked three times, and in the attic above, a child's footsteps began to pace.",
+      "chapter_task": "Write a 1600–1900-word chapter resolving the trust conflict between Mara and Asher, escalating the supernatural activity, and delivering a major plot clue (the bear is the key). The emotional climax is their embrace; ensure the writing prioritizes vulnerability and the slow-burn romance payoff over melodrama.",
+      "must_happen": [
+        "Supernatural activity escalates as the emotional tension peaks.",
+        "Asher fully confesses his family connection and his initial hidden motive, declaring his loyalty to Mara now.",
+        "Mara and Asher find Ilse's hidden box in the attic, containing a key and a note about the bear.",
+        "[ROMANCE] Mara breaks down, and Asher holds her, a full embrace of vulnerability and forgiveness. The comfort they find in each other solidifies their partnership.",
+        "[CLUE C007] Mara spots a faded childhood drawing of a one-eyed bear among Ilse's belongings, planted as a hint that the bear was a real object tied to the mystery.",
+        "[CLUE C009] The Girl in Blue appears and points directly to the rotted floorboard, guiding the discovery of the box and tying the ghost’s presence to the clue."
+      ],
+      "must_not": [
+        "The full memory of the murder must not return to Mara (reserved for the bear).",
+        "Asher must not know that his uncle was deliberately killed by Lydia (he believes Julian vanished)."
+      ],
+      "carries_to_next": "Mara and Asher are now a united team. The search for the bear—and the full truth—begins. Lydia Vale is the looming threat.",
+      "narrative": {
+        "clues_plant": [
+          "C007",
+          "C009"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "TH001",
+          "TH002",
+          "TH003",
+          "TH004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara Vale",
+            "Asher Croft",
+            "Lydia Vale",
+            "The Girl in Blue",
+            "Aunt Ilse",
+            "Gerald Vance"
+          ],
+          "may_know": [
+            "Mara Vale: No memory of the summer she was 8",
+            "Mara Vale: believes the girl in blue is a ghost",
+            "Mara Vale: aware of the one-eyed bear Wick but not its significance",
+            "Mara Vale: knows she inherited the house from Aunt Ilse.",
+            "Asher Croft: Local historian aware of Ilse Vale's reclusive reputation",
+            "Asher Croft: knows rumors about the house and possible missing persons, but no concrete details.",
+            "Lydia Vale: Knows she pushed Alain to his death and swore Mara to silence",
+            "Lydia Vale: believes the secret is safely buried",
+            "Lydia Vale: Estranged from Mara.",
+            "The Girl in Blue: Carries all of Mara's repressed memories",
+            "The Girl in Blue: knows the full truth of the summer",
+            "The Girl in Blue: Cannot communicate except through proximity and presence.",
+            "Aunt Ilse: Deceased",
+            "Aunt Ilse: Left a hidden journal and clues about her own split and the house's repeating cycle",
+            "Aunt Ilse: Her secrets are gradually unearthed.",
+            "Gerald Vance: Neighbor who heard the crash and screams but kept silent due to payment from Lydia",
+            "Gerald Vance: Lives with guilt."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 7,
+      "title": "The Map in the Drawer",
+      "one_line_summary": "Mara uses Ilse's key to find a hidden map, while Asher's growing proximity unearths a dangerous tenderness.",
+      "beat_summary": "At first light, Mara opens the locked attic drawer with Ilse's key. Inside is a map of the property, annotated by Ilse. Asher traces the pathways, narrating the history. He notices that the root patterns on the map align with the stain on the patched wood from the attic, confirming the cellar's location ([PAYOFF C006]). The Girl in Blue appears behind them, her finger landing on a spot marked 'the old root cellar.' As she points, a faint blue handprint appears on the map, just like the one on the wall ([PAYOFF C007]). Mara feels a pull—she recognizes the angle of the path from the reflection in the photograph ([PAYOFF C008]). The Girl’s mouth moves, silently counting, as the radiator knocks three times, reminding them of the pattern ([PAYOFF C009]). Asher takes her hand, promising they will face whatever is there together. The map feels like a lifeline, or a trap. Headlights sweep the long drive.",
+      "opens_with": "'The garden,' Asher said, holding the faded map against the lamplight. 'Ilse buried something there the night Julian died.'",
+      "cliffhanger": "A pair of headlights swept across the gate. Mara's blood chilled. She knew that car. Lydia was here.",
+      "chapter_task": "Write a 1700-1900 word chapter focusing on discovery and atmospheric tension. The map reveal must feel both hopeful and foreboding. The hand-hold romantic beat should land with emotional weight. The headlights at the end should pivot the chapter sharply into danger. Integrate the four payoffs C006–C009 as described in must_happen.",
+      "must_happen": [
+        "Mara uses Ilse's key to unlock a hidden drawer in the desk, revealing a property map annotated in her aunt's hand.",
+        "Asher cross-references the map's landmarks with dates from Ilse's journal, identifying the 'Old Root Cellar' as a potential site.",
+        "The Girl in Blue appears in the room and points directly at the root cellar on the map, her expression desperate.",
+        "[ROMANCE] Asher takes Mara's trembling hand and squeezes it firmly, forging a silent covenant of trust and shared purpose.",
+        "[PAYOFF C006] Asher notices that the pattern of roots on the map matches the stain on the patched attic wood, confirming the cellar entrance is directly below the stain.",
+        "[PAYOFF C007] As the Girl's finger hovers over the map, a faint blue handprint appears on the parchment, mirroring the handprint on the attic wall.",
+        "[PAYOFF C008] Mara realises that the angle of the root cellar's access path corresponds to the reflection she saw in the man's eyes in the photograph, tying Julian Croft to that spot.",
+        "[PAYOFF C009] The radiator in the room knocks three times, and the Girl’s mouth forms a silent count, confirming that the knock pattern always points to the cellar."
+      ],
+      "must_not": [
+        "Julian Croft's cause of death must not be fully detailed.",
+        "Lydia must not enter the house in this chapter (she only arrives at the cliffhanger)."
+      ],
+      "carries_to_next": "Lydia's arrival forces immediate confrontation, testing the fragile trust between Mara and Asher as the external threat escalates.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C006",
+          "C007",
+          "C008",
+          "C009"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "TH001",
+          "TH002",
+          "TH003",
+          "TH004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara Vale",
+            "Asher Croft",
+            "Lydia Vale",
+            "The Girl in Blue",
+            "Aunt Ilse",
+            "Gerald Vance"
+          ],
+          "may_know": [
+            "Mara Vale: No memory of the summer she was 8",
+            "Mara Vale: believes the girl in blue is a ghost",
+            "Mara Vale: aware of the one-eyed bear Wick but not its significance",
+            "Mara Vale: knows she inherited the house from Aunt Ilse.",
+            "Asher Croft: Local historian aware of Ilse Vale's reclusive reputation",
+            "Asher Croft: knows rumors about the house and possible missing persons, but no concrete details.",
+            "Lydia Vale: Knows she pushed Alain to his death and swore Mara to silence",
+            "Lydia Vale: believes the secret is safely buried",
+            "Lydia Vale: Estranged from Mara.",
+            "The Girl in Blue: Carries all of Mara's repressed memories",
+            "The Girl in Blue: knows the full truth of the summer",
+            "The Girl in Blue: Cannot communicate except through proximity and presence.",
+            "Aunt Ilse: Deceased",
+            "Aunt Ilse: Left a hidden journal and clues about her own split and the house's repeating cycle",
+            "Aunt Ilse: Her secrets are gradually unearthed.",
+            "Gerald Vance: Neighbor who heard the crash and screams but kept silent due to payment from Lydia",
+            "Gerald Vance: Lives with guilt."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Rupture",
+      "one_line_summary": "Lydia's confrontation shatters the peace, fracturing Mara's resolve until Asher's arms become her only refuge.",
+      "beat_summary": "Lydia arrives, making demands and trying to pull Mara away. She threatens Asher. Mara stands up for herself and him. Lydia retreats but leaves a poisonous doubt. Alone with Asher, the adrenaline and emotion overwhelms them. A raw, healing kiss turns into a moment of deep emotional comfort. The Girl in Blue observes from the dark, her expression softening for the first time, [CLUE C012] and she points toward the grandfather clock, which chimes thirteen times—a sign of a concealed space.",
+      "opens_with": "The knock that saved them from the kiss was sharp, imperious—a sound Mara knew from every nightmare of her childhood. 'Mara Vale, open this door.'",
+      "cliffhanger": "Lydia didn't leave. She walked to the far end of the driveway and pulled out her phone. 'It's me. She found the key.' A pause. 'I told you she would. We need to move the bear.'",
+      "chapter_task": "Write a 1600–1900-word chapter that uses Lydia's confrontation as the catalyst for the romance micro-beat to become emotionally charged but sweet. The emotional vulnerability must lead to a raw, healing kiss that underscores their emotional comfort without explicit physical intimacy. The supernatural tension remains with the Girl in Blue watching. End with Lydia's phone call about the bear, raising the stakes for the next chapter.",
+      "must_happen": [
+        "Lydia confronts Mara and Asher, demanding that Mara leave with her and threatening Asher with legal action.",
+        "Mara stands up to her mother for the first time, defending Asher and refusing to abandon the investigation.",
+        "Lydia retreats but, before leaving, whispers a poisonous doubt: 'He is a Croft. They only bring ruin.'",
+        "[ROMANCE] After Lydia leaves, adrenaline and vulnerability collide; Asher cups Mara's face, their kiss raw and healing, a moment of emotional comfort and connection that deepens their bond.",
+        "[CLUE C012] After Lydia's departure, the Girl in Blue manifests near the grandfather clock, which strikes thirteen times, hinting at a hidden compartment relevant to the bear."
+      ],
+      "must_not": [
+        "Mara must not recall the full childhood memory of the bear or the incident.",
+        "The identity of the person Lydia calls at the end must not be revealed.",
+        "Asher must not confess that he already knows the bear is key evidence.",
+        "The final fate of Julian Croft must not be disclosed."
+      ],
+      "carries_to_next": "Lydia's phone call confirms the bear is in danger of being moved or destroyed, forcing Mara and Asher to act quickly. The mystery deepens as they must find the bear before Lydia's collaborator does.",
+      "narrative": {
+        "clues_plant": [
+          "C012"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "TH001",
+          "TH002",
+          "TH003",
+          "TH004",
+          "TH005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara Vale",
+            "Asher Croft",
+            "Lydia Vale",
+            "The Girl in Blue",
+            "Aunt Ilse",
+            "Gerald Vance"
+          ],
+          "may_know": [
+            "Mara Vale: No memory of the summer she was 8",
+            "Mara Vale: believes the girl in blue is a ghost",
+            "Mara Vale: aware of the one-eyed bear Wick but not its significance",
+            "Mara Vale: knows she inherited the house from Aunt Ilse.",
+            "Asher Croft: Local historian aware of Ilse Vale's reclusive reputation",
+            "Asher Croft: knows rumors about the house and possible missing persons, but no concrete details.",
+            "Lydia Vale: Knows she pushed Alain to his death and swore Mara to silence",
+            "Lydia Vale: believes the secret is safely buried",
+            "Lydia Vale: Estranged from Mara.",
+            "The Girl in Blue: Carries all of Mara's repressed memories",
+            "The Girl in Blue: knows the full truth of the summer",
+            "The Girl in Blue: Cannot communicate except through proximity and presence.",
+            "Aunt Ilse: Deceased",
+            "Aunt Ilse: Left a hidden journal and clues about her own split and the house's repeating cycle",
+            "Aunt Ilse: Her secrets are gradually unearthed.",
+            "Gerald Vance: Neighbor who heard the crash and screams but kept silent due to payment from Lydia",
+            "Gerald Vance: Lives with guilt."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "The Eye of the Storm",
+      "one_line_summary": "Mara and Asher dig for the bear, but what surfaces is a false memory—and a warning that the real truth is still inside the house.",
+      "beat_summary": "Dawn breaks with a nervous truce. Mara and Asher arm themselves with shovels. They find the root cellar, digging through the packed earth where the map marked. They recover a rusted lockbox. Inside is not the bear, but a child's blue dress and a chilling note from Ilse: 'The girl wanted out. I couldn't bear it. I put her in the house.' This reveals Ilse's role in hiding the truth (payoff C010). Looking up, the attic window is open, the Girl in Blue holding the exact same lockbox, confirming the house-memory fracture (payoff C011). Her desperate gaze and the duplicate box signal that she is a fragment of Mara's own psyche (payoff C012). The duality of Mara's mind begins to fracture.",
+      "opens_with": "Dawn arrived like a thief, pale and guilty, as Mara pulled on her boots and followed Asher into the garden without a word.",
+      "cliffhanger": "The mud-caked box broke open to reveal a child's dress, blue as cornflowers, and a note in Ilse's trembling hand: 'I couldn't let them bury the truth with him.' Above them, a window screeched open. The Girl in Blue stood in the attic frame, holding the same box—her presence and the duplicate object sealing the payoffs of the clues planted earlier.",
+      "chapter_task": "Write a 1700-1800 word chapter focused on the physical dig and the psychological fracture of the duplicate box. Ensure the three clue payoffs (C010, C011, C012) are clearly dramatized within the beat. The romantic beat should be quiet and steady, contrasting the escalating supernatural chaos.",
+      "must_happen": [
+        "Mara and Asher locate the root cellar on the property and dig up a rusted lockbox.",
+        "The lockbox contains a child's blue dress and a note from Ilse that pays off clue C010 by revealing Ilse's action to hide the girl.",
+        "The Girl in Blue appears in the attic window holding the exact same lockbox, paying off clue C011 (supernatural replication) and C012 (fractured identity).",
+        "[CLUE C010] The note in the lockbox confirms that Ilse deliberately kept the girl hidden in the house, answering the planted question about her involvement.",
+        "[CLUE C011] The duplicate box materialises in the attic window, proving the house can bend reality and that Mara is not simply hallucinating.",
+        "[CLUE C012] The Girl in Blue mirrors Mara's shock, her silent gaze conveying that she is the memory-self Mara has repressed, now forcing a confrontation.",
+        "[ROMANCE] Asher wraps his arm around Mara as she trembles, grounding her in the present as the past threatens to swallow her."
+      ],
+      "must_not": [
+        "The actual bear must not be found in this chapter.",
+        "Mara must not fully reintegrate with the Girl in Blue yet (reserved for the climax)."
+      ],
+      "carries_to_next": "Mara is confronted with the tangible proof of her fractured mind and the reality of the house's supernatural nature. The payoffs of C010–C012 sharpen the mystery: Ilse's concealment, the house's power, and the Girl in Blue's true nature. The search for the real bear is now a race against Lydia and a battle with her own psyche.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C010",
+          "C011",
+          "C012"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "TH001",
+          "TH002",
+          "TH003",
+          "TH004",
+          "TH005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara Vale",
+            "Asher Croft",
+            "Lydia Vale",
+            "The Girl in Blue",
+            "Aunt Ilse",
+            "Gerald Vance"
+          ],
+          "may_know": [
+            "Mara Vale: No memory of the summer she was 8",
+            "Mara Vale: believes the girl in blue is a ghost",
+            "Mara Vale: aware of the one-eyed bear Wick but not its significance",
+            "Mara Vale: knows she inherited the house from Aunt Ilse.",
+            "Asher Croft: Local historian aware of Ilse Vale's reclusive reputation",
+            "Asher Croft: knows rumors about the house and possible missing persons, but no concrete details.",
+            "Lydia Vale: Knows she pushed Alain to his death and swore Mara to silence",
+            "Lydia Vale: believes the secret is safely buried",
+            "Lydia Vale: Estranged from Mara.",
+            "The Girl in Blue: Carries all of Mara's repressed memories",
+            "The Girl in Blue: knows the full truth of the summer",
+            "The Girl in Blue: Cannot communicate except through proximity and presence.",
+            "Aunt Ilse: Deceased",
+            "Aunt Ilse: Left a hidden journal and clues about her own split and the house's repeating cycle",
+            "Aunt Ilse: Her secrets are gradually unearthed.",
+            "Gerald Vance: Neighbor who heard the crash and screams but kept silent due to payment from Lydia",
+            "Gerald Vance: Lives with guilt."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 10,
+      "title": "Wick",
+      "slug": "ch10-wick",
+      "one_line_summary": "Mara finds the one-eyed bear, relives the full memory of Julian's death, and chooses to reintegrate with the Girl in Blue rather than run.",
+      "beat_summary": "The Girl in Blue leads Mara to the real hiding place—a loose floorboard beneath the attic rocking chair. As Mara pulls out Wick, the memory explodes: Julian arguing with Lydia, the struggle on the attic walkway, Lydia's push, the rotted floor giving way, Julian falling with the bear clutched to his chest. Mara screams, and the child-self merges with her in a flash of cold light. When she comes to, Asher holds her on the attic floor. She chooses to keep the memory whole and forgive her eight-year-old self. Lydia is gone; the house settles. But a single knock from the radiator hints at an unresolved thread.",
+      "must_happen": [
+        "Mara locates the one-eyed bear Wick hidden under a loose floorboard in the attic.",
+        "Mara holds Wick and experiences the repressed full memory of Julian Croft's fall.",
+        "The Girl in Blue physically merges with Mara, completing the reintegration and restoring Mara's wholeness.",
+        "[ROMANCE] Asher cradles Mara after the memory shatters her, and she whispers 'I need you,' sealing their trust with a long, tender kiss."
+      ],
+      "must_not": [
+        "Mara must not choose to flee (the choice defines the book ending as reintegration).",
+        "The memory must not be ambiguous; Lydia's push must be clearly shown.",
+        "Asher must not be absent during the memory retrieval (he anchors Mara)."
+      ],
+      "opens_with": "The Girl in Blue did not appear in the mirror this time. She stood at the foot of the attic stairs, her small hand pointing not to the garden, but to the ceiling—at the loose board above the rocking chair.",
+      "cliffhanger": "Asher pulled her close as the house shuddered. 'It's over,' she said. But from the third floor came the radiator's knock: once, twice—and then the third, a beat too late, a rhythm it had never made before.",
+      "signature_detail_hint": "The bear's remaining eye is a mother-of-pearl button, its iridescence catching the sliver of light from the attic window.",
+      "emotional_beat": "Mara's cry of recognition as she sees her mother's face in the memory is not anger, but a child's raw grief—and Asher's steady hand on her back is the only thing tethering her to the present.",
+      "spice": 1,
+      "spice_note": "After the memory integration, a gentle, healing kiss between Mara and Asher that strengthens their bond without explicit content.",
+      "chapter_task": "Write a 1700–1900-word chapter that delivers the resolved central mystery, the emotional catharsis of the memory, and the romantic payoff of the slow-burn trust. The memory flood should be visceral but respect the no-graphic-violence rule. End on a quiet note that leaves the door open for the next book.",
+      "carries_to_next": "Mara is whole but the house's final knock hints that not all secrets are buried. Book 1 closes with the choice concretely made, setting up Mara and Asher's partnership for the larger confrontation ahead.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "TH001",
+          "TH002",
+          "TH003",
+          "TH004",
+          "TH005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Mara Vale",
+            "Asher Croft",
+            "Lydia Vale",
+            "The Girl in Blue",
+            "Aunt Ilse",
+            "Gerald Vance"
+          ],
+          "may_know": [
+            "Mara Vale: Full memory recovered: witnessed Lydia push Alain Dubois to his death, psychically fractured, created the girl in blue containing the trauma",
+            "Mara Vale: Has chosen to reintegrate and now knows the girl is her younger self",
+            "Mara Vale: Bears memory-anchor property confirmed",
+            "Mara Vale: Hints of Ilse's parallel experience.",
+            "Asher Croft: Has collaborated with Mara",
+            "Asher Croft: understands the full summer truth and the girl's nature",
+            "Asher Croft: developing emotional bond with Mara.",
+            "Lydia Vale: Confronted",
+            "Lydia Vale: either admits or continues to deny, but the truth is now known to Mara and Asher",
+            "Lydia Vale: Facing consequences.",
+            "The Girl in Blue: If reintegrated, merges with Mara and ceases to exist as separate entity",
+            "The Girl in Blue: If not, remains in the house waiting.",
+            "Aunt Ilse: Her journal is found and partially decoded, revealing that she experienced a similar trauma and never reintegrated.",
+            "Gerald Vance: Testifies or reveals to Mara and Asher what he heard",
+            "Gerald Vance: corroborates Lydia's involvement."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    }
+  ],
+  "total_chapters": 10,
+  "title": "The Second Shadow"
+}

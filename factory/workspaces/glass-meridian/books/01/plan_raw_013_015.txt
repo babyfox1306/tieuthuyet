@@ -1,0 +1,276 @@
+```json
+{
+  "act": [
+    13,
+    15
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 13,
+      "title": "The Unraveling Thread",
+      "slug": "the-unraveling-thread",
+      "one_line_summary": "Lin Wei, driven by suspicion, begins to actively investigate Adrian's actions, uncovering a hidden digital trail that hints at a clandestine network.",
+      "beat_summary": "Following up on Adrian's evasiveness and her own growing distrust, Lin Wei uses her journalistic skills to discreetly probe his digital footprint. She discovers encrypted communications and unusual financial transactions linked to Aurelian Group's shell companies. Adrian, aware of her probing, allows her to find just enough to keep her occupied, while subtly guiding her attention towards specific, less critical information, creating a controlled environment for her investigation. The tension between them escalates as they dance around the truth.",
+      "must_happen": [
+        "Lin Wei uses her expertise to begin a covert investigation into Adrian's digital activities.",
+        "She discovers encrypted communications and suspicious financial transactions linked to Aurelian Group.",
+        "[ROMANCE] Lin Wei catches Adrian watching her with an unreadable expression as she works late, a silent acknowledgment of their shared, yet opposing, investigations.",
+        "Adrian Vale subtly 'allows' Lin Wei to find certain pieces of information, guiding her investigation away from the core of the Glass Meridian.",
+        "Lin Wei's suspicion of Adrian solidifies, realizing he is actively concealing information."
+      ],
+      "must_not": [
+        "Lin Wei uncovering definitive proof of the Glass Meridian or Project Phoenix.",
+        "Adrian Vale revealing any direct knowledge of the Glass Meridian or its objectives.",
+        "Lin Wei sharing her findings with Adrian.",
+        "Any direct confrontation between Lin Wei and Adrian about her investigation."
+      ],
+      "opens_with": "The sterile glow of Lin Wei's laptop screen reflecting in her determined eyes as she navigates a labyrinth of encrypted files, each click a step further into Adrian Vale's hidden world.",
+      "cliffhanger": "As Lin Wei deciphers a fragment of a coded message, a sudden, urgent summons from Adrian for a 'critical business dinner' forces her to abandon her breakthrough, leaving the digital threads dangling precariously.",
+      "signature_detail_hint": "The faint, almost imperceptible hum of a sophisticated security system emanating from Adrian’s private study, a constant reminder of his hidden layers.",
+      "emotional_beat": "Suspicion and a growing sense of isolation, tinged with a grudging respect for Adrian's strategic mind.",
+      "spice": 1,
+      "spice_note": "The tension is driven by their intellectual cat-and-mouse game and the unspoken emotional undercurrents of their forced proximity.",
+      "chapter_task": "Lin Wei actively investigates Adrian's digital activities, uncovering hints of a conspiracy. Adrian subtly manipulates her findings. Build the tension and distrust between them. (1600-1900 words)",
+      "carries_to_next": "Lin Wei’s determined pursuit of the digital trail and Adrian's calculated efforts to control the flow of information.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Lin Wei",
+            "Adrian Vale",
+            "Ms. Li (Lin Wei's Mother)",
+            "Isabella Vale (Adrian's Father)"
+          ],
+          "may_know": [
+            "Lin Wei: Beginning to suspect Adrian's motives are more complex than stated",
+            "Lin Wei: Aware of Aurelian Group's involvement in her mother's medical file",
+            "Lin Wei: Still unaware of the Glass Meridian.",
+            "Adrian Vale: Observing Lin Wei's investigative skills",
+            "Adrian Vale: Beginning to see her as a valuable asset beyond the initial plan",
+            "Adrian Vale: Still maintaining distance.",
+            "Adrian Vale: He has unconsciously been groomed by his father to either take over or be a pawn in the Meridian's grander scheme.",
+            "Ms. Li (Lin Wei's Mother): Stable but still ill",
+            "Ms. Li (Lin Wei's Mother): May have brief moments of lucidity, but memories are suppressed or fragmented.",
+            "Isabella Vale (Adrian's Father): Continuing to observe and subtly interfere, using Aurelian Group resources."
+          ],
+          "must_not_know": [
+            "Lin Wei: Her mother was a key researcher in Project Phoenix, not just a victim. Her own birth name is linked to Project Phoenix.",
+            "Ms. Li (Lin Wei's Mother): She was a key researcher in Project Phoenix and holds suppressed memories crucial to its understanding.",
+            "Isabella Vale (Adrian's Father): He orchestrated Adrian's entire upbringing to serve the Glass Meridian, including the 'inheritance' and his supposed fall from grace."
+          ],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 14,
+      "title": "A Dangerous Dance",
+      "slug": "a-dangerous-dance",
+      "one_line_summary": "Lin Wei confronts Adrian about his hidden activities, leading to a tense exchange where both reveal fragments of their true selves, blurring the lines between their marriage of convenience and a genuine alliance.",
+      "beat_summary": "Lin Wei can no longer ignore the mounting evidence and Adrian's evasiveness. She confronts him directly, presenting fragments of her findings about the encrypted communications and shell companies. Adrian, cornered, doesn't deny everything but offers a carefully constructed half-truth, hinting at a fight against a larger, unseen enemy without naming the Glass Meridian. This tense dialogue reveals Adrian's protective instincts towards Lin Wei, and Lin Wei's growing defiance. A moment of shared vulnerability leads to a charged, but not explicit, intimate encounter.",
+      "must_happen": [
+        "Lin Wei confronts Adrian with evidence of his hidden activities and financial dealings.",
+        "Adrian Vale deflects direct accusations but admits to operating in a dangerous world, hinting at a larger threat.",
+        "[ROMANCE] Adrian’s defenses crack slightly as he admits his actions are to protect her, a raw vulnerability that draws Lin Wei in.",
+        "A tense, charged conversation where both Lin Wei and Adrian reveal more of their true motivations and fears.",
+        "A moment of shared intimacy, not necessarily sexual, but emotionally profound, born from the shared danger and growing trust.",
+        "Lin Wei begins to see Adrian not just as a contract husband, but as a complex, possibly conflicted, ally."
+      ],
+      "must_not": [
+        "Adrian Vale revealing the name 'Glass Meridian' or Project Phoenix.",
+        "Lin Wei fully understanding the scope of Adrian's mission.",
+        "Any explicit sexual activity, keeping the spice level appropriate for the chapter.",
+        "Lin Wei betraying any of her journalistic principles or revealing her findings to Adrian."
+      ],
+      "opens_with": "The air crackles with unspoken accusations as Lin Wei places a printout of encrypted data on Adrian’s desk, her voice steady but her heart pounding against her ribs.",
+      "cliffhanger": "As they stand in the charged aftermath of their confrontation, Lin Wei’s gaze meets Adrian’s, a silent question hanging between them: is this the beginning of a true partnership, or a more dangerous entanglement?",
+      "signature_detail_hint": "The way Adrian’s tie is slightly askew after their intense conversation, a subtle sign of his unraveling composure.",
+      "emotional_beat": "Confrontation and vulnerability, leading to a deepening attraction and a fragile sense of alliance.",
+      "spice": 2,
+      "spice_note": "The emotional intensity of their confrontation leads to a charged physical intimacy, perhaps a passionate kiss or a close embrace, fueled by adrenaline and newfound trust.",
+      "chapter_task": "Lin Wei confronts Adrian, leading to a tense exchange that reveals underlying motivations and shared danger. Foster a significant romantic beat and solidify their alliance. (1600-1900 words)",
+      "carries_to_next": "The evolving dynamic between Lin Wei and Adrian as they tentatively move forward as allies, and the escalating threats they face.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Lin Wei",
+            "Adrian Vale",
+            "Ms. Li (Lin Wei's Mother)",
+            "Isabella Vale (Adrian's Father)"
+          ],
+          "may_know": [
+            "Lin Wei: Beginning to suspect Adrian's motives are more complex than stated",
+            "Lin Wei: Aware of Aurelian Group's involvement in her mother's medical file",
+            "Lin Wei: Still unaware of the Glass Meridian.",
+            "Adrian Vale: Observing Lin Wei's investigative skills",
+            "Adrian Vale: Beginning to see her as a valuable asset beyond the initial plan",
+            "Adrian Vale: Still maintaining distance.",
+            "Adrian Vale: He has unconsciously been groomed by his father to either take over or be a pawn in the Meridian's grander scheme.",
+            "Ms. Li (Lin Wei's Mother): Stable but still ill",
+            "Ms. Li (Lin Wei's Mother): May have brief moments of lucidity, but memories are suppressed or fragmented.",
+            "Isabella Vale (Adrian's Father): Continuing to observe and subtly interfere, using Aurelian Group resources."
+          ],
+          "must_not_know": [
+            "Lin Wei: Her mother was a key researcher in Project Phoenix, not just a victim. Her own birth name is linked to Project Phoenix.",
+            "Ms. Li (Lin Wei's Mother): She was a key researcher in Project Phoenix and holds suppressed memories crucial to its understanding.",
+            "Isabella Vale (Adrian's Father): He orchestrated Adrian's entire upbringing to serve the Glass Meridian, including the 'inheritance' and his supposed fall from grace."
+          ],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 15,
+      "title": "The Phoenix Rises",
+      "slug": "the-phoenix-rises",
+      "one_line_summary": "Lin Wei and Adrian combine their findings, deciphering the 'Project Phoenix' clues and uncovering a critical piece of information about the conspiracy's origins and its connection to Lin Wei’s mother.",
+      "beat_summary": "Working together, Lin Wei and Adrian pool their discovered clues (C001, C002, C003). Lin Wei’s analytical skills and Adrian’s insider knowledge allow them to finally decipher the coded message and understand the significance of the symbol and photograph. They realize Project Phoenix was not just a research project, but a clandestine operation involving human experimentation, and Lin Wei’s mother was a key researcher, not just a victim. This revelation is a major turning point, solidifying their alliance and revealing the personal stakes for both of them. A significant reveal (R001) occurs here, linking the project directly to the Glass Meridian.",
+      "must_happen": [
+        "Lin Wei and Adrian collaborate, combining their respective clues (C001, C002, C003).",
+        "They successfully decipher the coded message and understand the symbol's meaning.",
+        "[ROMANCE] A moment of intense collaboration where their minds mesh perfectly, a silent acknowledgment of their growing partnership and attraction.",
+        "They uncover the true nature of Project Phoenix: a clandestine operation involving unethical human experimentation.",
+        "Lin Wei's mother is revealed to be a key researcher, not merely a patient.",
+        "MAJOR REVEAL (R001): Project Phoenix is directly tied to the Glass Meridian's foundational activities. (This connects C001 and C003).",
+        "The shared discovery strengthens their alliance and mutual trust."
+      ],
+      "must_not": [
+        "Adrian Vale revealing his father's direct involvement in Project Phoenix, only that it's linked to Aurelian Group's past.",
+        "Lin Wei fully understanding the Glass Meridian's ultimate goal, only its origins.",
+        "Professor Chen being directly involved in this revelation.",
+        "Any premature resolution of the conspiracy."
+      ],
+      "opens_with": "The hum of servers in Adrian’s secure study as Lin Wei and Adrian, side-by-side, pore over a complex web of data, the pieces of a decades-old puzzle finally clicking into place.",
+      "cliffhanger": "Lin Wei stares at the decrypted files, the name 'Project Phoenix' now synonymous with her mother’s hidden past and Adrian’s dangerous present, the true scale of the Glass Meridian's influence dawning on them both.",
+      "signature_detail_hint": "The faint scent of ozone that seems to emanate from the decrypted files themselves, a phantom echo of the volatile research.",
+      "emotional_beat": "Shock and dawning understanding, coupled with a strengthening of their bond and a shared resolve.",
+      "spice": 3,
+      "spice_note": "The intensity of their discovery and the shared vulnerability lead to a passionate, intimate moment, reflecting their deepening connection and the weight of the secrets they now share. The scene should focus on their emotional connection forged through shared danger and revelation, with explicit elements reflecting their characters' passion and relief.",
+      "chapter_task": "Lin Wei and Adrian combine clues to decipher Project Phoenix, revealing its unethical nature and Lin Wei’s mother's role. MAJOR REVEAL (R001) connects Project Phoenix to the Glass Meridian. Solidify their alliance. (1600-1900 words)",
+      "carries_to_next": "The implications of Project Phoenix and its connection to the Glass Meridian, setting the stage for deeper dives into the conspiracy and Adrian's father's role.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C001",
+          "C002",
+          "C003"
+        ],
+        "reveals": [
+          {
+            "id": "R001",
+            "reveal": "Project Phoenix was the precursor to the Glass Meridian's current operations, involving unethical human experimentation and genetic manipulation, with Lin Wei's mother as a key researcher.",
+            "impact": "Establishes the origins of the Glass Meridian and the personal connection for both leads.",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C001",
+              "C003"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Lin Wei",
+            "Adrian Vale",
+            "Ms. Li (Lin Wei's Mother)",
+            "Isabella Vale (Adrian's Father)"
+          ],
+          "may_know": [
+            "Lin Wei: Aware of her mother's role as a researcher in Project Phoenix.",
+            "Lin Wei: Aware of Project Phoenix's unethical nature and its link to the Glass Meridian.",
+            "Lin Wei: Beginning to trust Adrian as an ally.",
+            "Adrian Vale: Aware of Project Phoenix's origins and its connection to Aurelian Group's past.",
+            "Adrian Vale: Aware of Lin Wei's mother's role.",
+            "Adrian Vale: Aware of the Glass Meridian's foundational activities.",
+            "Adrian Vale: Starting to see Lin Wei as a partner, not just a tool.",
+            "Ms. Li (Lin Wei's Mother): Her memories are still suppressed, but the revelation might trigger subconscious recall.",
+            "Isabella Vale (Adrian's Father): Aware of the Project Phoenix revelations and monitoring their progress."
+          ],
+          "must_not_know": [
+            "Lin Wei: The full extent of her mother's involvement or the specific genetic manipulations.",
+            "Lin Wei: The precise identities of all Project Phoenix researchers or the leadership of the Glass Meridian.",
+            "Adrian Vale: His father's exact level of culpability in Project Phoenix.",
+            "Ms. Li (Lin Wei's Mother): The full truth about her past and its implications."
+          ],
+          "effective_milestone": 15
+        },
+        "clue_details": {
+          "C001": {
+            "id": "C001",
+            "content": "A coded message within Lin Wei's mother's medical files.",
+            "type": "coded message",
+            "misdirection": "Appears to be related to experimental treatment protocols.",
+            "true_meaning": "A partial record of Project Phoenix research activities.",
+            "plant_chapter": 3,
+            "payoff_chapter": 15
+          },
+          "C002": {
+            "id": "C002",
+            "content": "A photograph of Lin Wei's mother with unknown scientists and a recurring symbol.",
+            "type": "symbol/photograph",
+            "misdirection": "Seems like an old research team photo.",
+            "true_meaning": "Identifies key personnel and the emblem of Project Phoenix.",
+            "plant_chapter": 5,
+            "payoff_chapter": 15
+          },
+          "C003": {
+            "id": "C003",
+            "content": "A cryptic data fragment found after an attack on Lin Wei.",
+            "type": "data fragment",
+            "misdirection": "Appears to be part of standard corporate data.",
+            "true_meaning": "Contains details linking Project Phoenix to early Glass Meridian operations.",
+            "plant_chapter": 8,
+            "payoff_chapter": 15
+          }
+        }
+      }
+    }
+  ]
+}
+```

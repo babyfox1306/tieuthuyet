@@ -1,0 +1,229 @@
+{
+  "ok": true,
+  "passed": false,
+  "skipped": false,
+  "workspace_id": "the-second-shadow",
+  "book_slug": "01-the-glass-meridian",
+  "checked_at": "2026-07-09T13:26:04.234981+00:00",
+  "chapter_count": 4,
+  "expected_chapters": 10,
+  "target_language": "en",
+  "checks": [
+    {
+      "id": "EG-01",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-02",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-03",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-06",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-08",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-10",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-11",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-12",
+      "severity": "warn",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-01",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-02",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-03",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-06",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-08",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-10",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-11",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-12",
+      "severity": "warn",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-01",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-02",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-03",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-06",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-08",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-10",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-11",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-12",
+      "severity": "warn",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-01",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-02",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-03",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-06",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-08",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-10",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-11",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-12",
+      "severity": "warn",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-04",
+      "severity": "error",
+      "passed": false,
+      "detail": "missing chapters: [2, 4, 6, 7, 8, 9]"
+    },
+    {
+      "id": "EG-05",
+      "severity": "warn",
+      "passed": true
+    },
+    {
+      "id": "EG-07",
+      "severity": "warn",
+      "passed": true
+    },
+    {
+      "id": "EG-09",
+      "severity": "error",
+      "passed": true
+    }
+  ],
+  "errors": 1,
+  "warnings": 0,
+  "summary": "Export gate FAIL — 1 error(s), 0 warning(s)"
+}

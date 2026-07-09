@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.log
+.env
+.env.*
+
+kdp_recon/data/raw_html/
+kdp_recon/data/*.db
+kdp_recon/output/*.csv
+kdp_recon/output/*.md
+
+factory/engine/factory_log.json

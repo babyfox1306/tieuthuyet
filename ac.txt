@@ -1,0 +1,5 @@
+.\factory\run_factory.ps1 plan --book 1
+.\factory\run_factory.ps1 fix-plans --book 1 --no-llm
+# đọc prompts/ → approve-plan
+.\factory\run_factory.ps1 approve-plan
+.\factory\run_factory.ps1 write --from-chapter 1 --to-chapter 5

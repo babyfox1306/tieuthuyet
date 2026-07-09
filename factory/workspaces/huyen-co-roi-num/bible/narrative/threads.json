@@ -1,0 +1,71 @@
+{
+  "description": "Hệ thống threads của book1 Huyền Cơ Rối Núm, thiết kế theo 4 hồi (1-12, 13-28, 29-42, 43-50). Thread chính là cuộc tẩu thoát khỏi ma thần thông qua mối quan hệ đặc biệt với con rối có linh trí. Romance slow burn được lồng ghép trong mưu kế sinh tồn, không tách rời plot chính.",
+  "threads": [
+    {
+      "id": "T01",
+      "name": "Bí ẩn nguồn gốc rối thuật Thẩm gia",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "resolved",
+      "book1_resolution": "Phát hiện rối thuật Thẩm gia thực chất là giao ước với ma thần thượng cổ; Thẩm gia là vật tế hàng trăm năm. Phân thân đầu tiên của ma thần bị tiêu diệt nhờ sự phối hợp giữa Uyển Nhi và Vân Sách.",
+      "book2_promise": "Ma thần thượng cổ vẫn tồn tại, bản thể đang thức tỉnh; Thẩm gia không phải tuyến duy nhất – còn nhiều gia tộc rối thuật khác.",
+      "book1_payoff": "Độc giả biết được sự thật đằng sau quyền năng của nữ chính, lật mặt 'kẻ đứng sau' ở cuối hồi 3, chiến thắng kẻ thù đầu tiên ở hồi 4.",
+      "note": "Thread xương sống của book1, kết nối với mọi bí ẩn khác."
+    },
+    {
+      "id": "T02",
+      "name": "Mối đe dọa từ ma thần thượng cổ",
+      "opened_chapter": 1,
+      "must_payoff_by": 50,
+      "status": "open",
+      "book1_resolution": "Đối đầu và tiêu diệt được phân thân (Gương mặt thứ nhất) của ma thần, nhưng bản thể thực sự chỉ lộ diện và chiếm hữu Uyển Nhi ngay sau đó, tạo cliffhanger.",
+      "book2_promise": "Ma thần chiếm hữu hoàn toàn Uyển Nhi; Vân Sách phải tìm 9 mảnh linh hồn nàng hoặc tiêu diệt cả hai.",
+      "book1_payoff": "Cảm giác chiến thắng tạm thời xen lẫn nỗi sợ hãi khi ma thần xuất hiện ở chương cuối.",
+      "note": "Không giải quyết triệt để trong book1, chỉ kết thúc act 4 bằng trận đánh lớn với phân thân."
+    },
+    {
+      "id": "T03",
+      "name": "Chuyển hóa thân phận của Lục Vân Sách (rối gỗ → người thật)",
+      "opened_chapter": 4,
+      "must_close_by": 48,
+      "status": "resolved",
+      "book1_resolution": "Nhờ nguồn gốc đặc biệt (linh hồn không bị chỉ mệnh ràng buộc) và sự trợ giúp của Thẩm gia tàng thư, Vân Sách lấy lại thể xác thật vào cuối hồi 4, trở thành con người độc lập.",
+      "book2_promise": "Thể xác thật mang dấu ấn ma thần, có thể trở thành chìa khóa hoặc vũ khí trong cuộc chiến sắp tới.",
+      "book1_payoff": "Giây phút Vân Sách chạm vào khuôn mặt thật của mình, đối mặt với Uyển Nhi – cảm xúc vỡ òa.",
+      "note": "Thread gắn liền với milestone cảm xúc của cặp đôi."
+    },
+    {
+      "id": "T04",
+      "name": "Sự ăn mòn linh hồn Thẩm Uyển Nhi",
+      "opened_chapter": 2,
+      "must_payoff_by": 50,
+      "status": "ongoing",
+      "book1_resolution": "Nhờ sự hiện diện và tác động của Vân Sách – biến số duy nhất – sự ăn mòn tạm thời bị đẩy lùi. Uyển Nhi học cách kiềm chế ma thần trong giấc mơ, nhưng không loại bỏ hoàn toàn.",
+      "book2_promise": "Bản thể ma thần chiếm hữu linh hồn nàng, xóa sổ ý thức; Vân Sách phải quyết định cứu hay hủy.",
+      "book1_payoff": "Độc giả cảm nhận được sự giằng xé nội tâm của nữ chính, sự yếu đuối hiếm hoi chỉ lộ ra trước Vân Sách.",
+      "note": "Tạo chiều sâu cho nhân vật chính, tránh mô típ vô địch."
+    },
+    {
+      "id": "T05",
+      "name": "Tuyến tình cảm slow-burn (Uyển Nhi × Vân Sách)",
+      "opened_chapter": 6,
+      "must_payoff_by": 50,
+      "status": "escalating",
+      "book1_resolution": "Từ quan hệ chủ – rối, sang ngang hàng đồng minh, rồi nảy sinh tình cảm lặng thầm qua những hành động hy sinh. Đỉnh điểm là hai người chiến đấu cùng nhau, Vân Sách chấp nhận tan biến để cứu Uyển Nhi (nhưng được cứu). Không có nụ hôn hay lời tỏ tình trực tiếp trong book1.",
+      "book2_promise": "Tình yêu trở thành động lực chính: Vân Sách phải đối mặt với 'kẻ thù' là người mình yêu khi nàng bị ma thần chiếm hữu.",
+      "book1_payoff": "Cảnh Vân Sách chạm trán Uyển Nhi sau khi lấy lại thân xác – ánh mắt và khoảnh khắc im lặng nói lên tất cả.",
+      "note": "Romance không lấn át plot, phát triển qua hành động và hy sinh, đúng thể loại romance_thriller."
+    },
+    {
+      "id": "T06",
+      "name": "Thế lực thế tục và bàn cờ quyền lực (mặt ngoài)",
+      "opened_chapter": 1,
+      "must_close_by": 44,
+      "status": "resolved",
+      "book1_resolution": "Các gia tộc rối đối địch bị Uyển Nhi dùng mưu kế và sức mạnh đè bẹp; sự thật rằng tất cả chỉ là quân cờ của ma thần dần được hé lộ. Cuối cùng, Uyển Nhi giải tán gánh rối, kết thúc cuộc chiến thế tục để đối đầu thế lực siêu nhiên.",
+      "book2_promise": "Những kẻ sống sót có thể liên kết với phe chống ma thần, hoặc trở thành mối nguy mới khi ma thần thức tỉnh.",
+      "book1_payoff": "Cảnh Uyển Nhi đốt sân khấu gánh rối, tuyên bố từ bỏ quyền lực – khoảnh khắc tượng trưng cho khát vọng tự do.",
+      "note": "Thread bề nổi phục vụ surface_case, giúp xây dựng thế giới và tạo đòn bẩy cho plot chính."
+    }
+  ]
+}

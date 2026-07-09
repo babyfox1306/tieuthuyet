@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Story Factory — Dashboard</title>
+  <style>
+    :root {
+      --bg: #0f1117; --panel: #1a1d27; --border: #2d3348; --text: #e8eaef;
+      --muted: #9aa3b5; --accent: #6c9eff; --accent2: #3dd68c; --warn: #ffb020; --err: #ff6b6b;
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+    header { padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); background: var(--panel); display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
+    header h1 { margin: 0; font-size: 1.2rem; }
+    header p { margin: .2rem 0 0; color: var(--muted); font-size: .85rem; }
+    .toolbar { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
+    label { font-size: .8rem; color: var(--muted); }
+    select { background: var(--bg); border: 1px solid var(--border); color: var(--text); border-radius: var(--radius); padding: .45rem .6rem; font: inherit; }
+    nav.tabs { display: flex; gap: .25rem; padding: .75rem 1.5rem 0; border-bottom: 1px solid var(--border); background: var(--panel); }
+    nav.tabs button { background: transparent; border: none; color: var(--muted); padding: .6rem 1rem; cursor: pointer; font: inherit; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+    nav.tabs button.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 600; }
+    main { max-width: 1100px; margin: 0 auto; padding: 1.25rem 1.5rem 2rem; }
+    .tab { display: none; }
+    .tab.active { display: block; }
+    section { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 1rem; }
+    section h2 { margin: 0 0 .75rem; font-size: 1rem; color: var(--accent); }
+    button { border: none; border-radius: var(--radius); padding: .5rem .9rem; font: inherit; cursor: pointer; font-weight: 600; }
+    .btn-primary { background: var(--accent); color: #0f1117; }
+    .btn-success { background: var(--accent2); color: #0f1117; }
+    .btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--text); }
+    .btn-warn { background: var(--warn); color: #0f1117; }
+    .btn-danger { background: var(--err); color: #fff; }
+    button:disabled { opacity: .5; cursor: not-allowed; }
+    .gates { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: .75rem; }
+    .gate { border: 1px solid var(--border); border-radius: var(--radius); padding: .75rem; background: var(--bg); }
+    .gate.ok { border-color: var(--accent2); }
+    .gate.bad { border-color: var(--err); }
+    .gate h3 { margin: 0 0 .35rem; font-size: .85rem; text-transform: uppercase; letter-spacing: .03em; color: var(--muted); }
+    .gate .val { font-size: 1.1rem; font-weight: 600; }
+    .gate .sub { font-size: .75rem; color: var(--muted); margin-top: .25rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .75rem; }
+    #status { padding: .65rem 1rem; border-radius: var(--radius); font-size: .9rem; margin-bottom: 1rem; border: 1px solid var(--border); background: var(--bg); }
+    #status.ok { border-color: var(--accent2); }
+    #status.bad { border-color: var(--err); }
+    #status.warn { border-color: var(--warn); }
+    ul.errors { margin: .35rem 0 0; padding-left: 1.2rem; color: var(--err); font-size: .85rem; }
+    .next-steps { font-size: .9rem; color: var(--muted); }
+    .next-steps strong { color: var(--warn); }
+    .ch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: .5rem; max-height: 420px; overflow-y: auto; }
+    .ch-card { border: 1px solid var(--border); border-radius: 8px; padding: .5rem .6rem; background: var(--bg); cursor: pointer; font-size: .8rem; }
+    .ch-card:hover { border-color: var(--accent); }
+    .ch-card.selected { border-color: var(--accent); background: #1e2438; }
+    .ch-card .num { font-weight: 700; font-size: .95rem; }
+    .ch-card .st { font-size: .7rem; color: var(--muted); margin-top: .15rem; }
+    .ch-card .why { font-size: .65rem; color: var(--warn); margin-top: .2rem; line-height: 1.3; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+    .st-ready { color: var(--accent2); }
+    .st-needs_review { color: var(--warn); }
+    .st-needs_fix { color: var(--err); }
+    .st-missing { color: var(--muted); }
+    .st-catalog { color: var(--accent); }
+    .reader { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    @media (min-width: 800px) { .reader { grid-template-columns: 280px 1fr; } }
+    .prose-box { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; max-height: 55vh; overflow-y: auto; white-space: pre-wrap; font-size: .9rem; line-height: 1.65; }
+    .reason-box { background: #2a1f12; border: 1px solid var(--warn); border-radius: var(--radius); padding: .75rem 1rem; margin-bottom: .75rem; font-size: .85rem; line-height: 1.5; color: #f5d9a8; display: none; }
+    .reason-box strong { color: var(--warn); }
+    .reason-box ul { margin: .35rem 0 0 1.1rem; padding: 0; }
+    .reason-box li { margin: .2rem 0; }
+    .meta-line { font-size: .8rem; color: var(--muted); margin-bottom: .5rem; }
+    .spinner { display: inline-block; width: 1em; height: 1em; border: 2px solid var(--muted); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; vertical-align: middle; margin-right: .35rem; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    iframe.concept-frame { width: 100%; height: 75vh; border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); }
+    .batch-hero { border: 2px solid var(--accent); background: linear-gradient(135deg, #1a2438 0%, #1a1d27 100%); }
+    .batch-hero p { margin: 0 0 .75rem; color: var(--muted); font-size: .9rem; }
+    #batchLog, #chBatchLog { font-size: .8rem; color: var(--muted); max-height: 200px; overflow-y: auto; white-space: pre-wrap; margin-top: .75rem; padding: .75rem; background: var(--bg); border-radius: 8px; border: 1px solid var(--border); }
+    .dialog-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 100; align-items: center; justify-content: center; padding: 1rem; }
+    .dialog-backdrop.open { display: flex; }
+    .dialog { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; max-width: 480px; width: 100%; }
+    .dialog h2 { margin: 0 0 .75rem; font-size: 1.05rem; color: var(--accent); }
+    .dialog p { margin: 0 0 1rem; font-size: .85rem; color: var(--muted); }
+    .dialog .field { margin-bottom: .85rem; }
+    .dialog label { display: block; font-size: .8rem; color: var(--muted); margin-bottom: .3rem; }
+    .dialog input, .dialog select { width: 100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); border-radius: var(--radius); padding: .5rem .65rem; font: inherit; }
+    .dialog .actions { display: flex; gap: .5rem; justify-content: flex-end; margin-top: 1rem; }
+    .mode-hint { font-size: .78rem; color: var(--muted); margin-top: .35rem; }
+    .batch-check { display: flex; align-items: center; gap: .5rem; font-size: .85rem; color: var(--muted); margin-bottom: .75rem; cursor: pointer; }
+    .batch-check input { width: auto; }
+    .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .field input[type=number] { width: 100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); border-radius: var(--radius); padding: .45rem .6rem; font: inherit; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Story Factory</h1>
+      <p>Concept → Pipeline → Viết từng chương → Xuất sách</p>
+    </div>
+    <div class="toolbar">
+      <div>
+        <label for="workspace">Workspace</label><br />
+        <select id="workspace"></select>
+      </div>
+      <div>
+        <label for="book">Book #</label><br />
+        <select id="book"></select>
+      </div>
+      <div>
+        <label for="totalChapters" title="Số chương mục tiêu cho book đang chọn">Số chương</label><br />
+        <div style="display:flex;gap:.35rem;align-items:center">
+          <input id="totalChapters" type="number" min="3" max="200" value="30" style="width:4.5rem;background:var(--bg);border:1px solid var(--border);color:var(--text);border-radius:var(--radius);padding:.45rem .5rem;font:inherit" />
+          <button class="btn-ghost" id="btnSaveChapters" type="button" title="Lưu số chương">Lưu</button>
+        </div>
+      </div>
+      <button class="btn-success" id="btnNewWorkspace" title="Tạo sách / series mới">+ Workspace mới</button>
+      <button class="btn-ghost" id="btnRefresh">↻ Làm mới</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button data-tab="concept" class="active">1. Concept</button>
+    <button data-tab="pipeline">2. Pipeline</button>
+    <button data-tab="chapters">3. Chương</button>
+    <button data-tab="export">4. Xuất sách</button>
+  </nav>
+
+  <main>
+    <div id="status"></div>
+
+    <div id="tab-concept" class="tab active">
+      <p class="meta-line">Điền ý tưởng, chọn ngôn ngữ, sinh narrative. Sau khi xong chuyển sang tab Pipeline.</p>
+      <iframe class="concept-frame" id="conceptFrame" src="/index.html" title="Concept form"></iframe>
+    </div>
+
+    <div id="tab-pipeline" class="tab">
+      <section style="border-color:var(--accent);margin-bottom:.75rem">
+        <h2 style="margin:0 0 .5rem;font-size:.95rem">Bước 0 — Số chương</h2>
+        <p class="meta-line" style="margin:0">Chọn <strong>Book #</strong> và <strong>Số chương</strong> ở header (10 / 20 / 30…), bấm <strong>Lưu</strong> trước khi Plan hoặc viết batch. Mỗi book trong series có thể khác nhau.</p>
+      </section>
+      <section class="batch-hero">
+        <h2>Chạy tự động — viết hàng loạt</h2>
+        <p>AI viết nhiều chương liên tiếp (9router/OmniRoute). Chọn <strong>số chương</strong> ở header (10/20/30…) trước khi plan. Chương lỗi nằm <code>needs_fix</code>, không chặn chương sau.</p>
+        <div class="row2" style="max-width:420px;margin-bottom:.75rem">
+          <div class="field" style="margin:0">
+            <label for="batchFromCh">Từ chương</label>
+            <input id="batchFromCh" type="number" min="1" max="200" value="1" />
+          </div>
+          <div class="field" style="margin:0">
+            <label for="batchToCh">Đến chương</label>
+            <input id="batchToCh" type="number" min="1" max="200" value="30" />
+          </div>
+        </div>
+        <label class="batch-check"><input type="checkbox" id="batchStopOnReview" /> Dừng batch khi QC fail (needs_fix / needs_review)</label>
+        <div class="actions">
+          <button class="btn-success" id="btnBatchPrep">1. Chuẩn bị sách (narrative → plan → prompts)</button>
+          <button class="btn-primary" id="btnBatchWrite">2. Viết hàng loạt</button>
+          <button class="btn-ghost" id="btnBatchContinue">↻ Tiếp tục viết</button>
+          <button class="btn-warn" id="btnBatchFull">Chạy hết (1 + 2)</button>
+          <button class="btn-ghost" id="btnBatchReset" title="Xóa lock khi batch treo sau crash/restart">🔓 Hủy lock batch</button>
+        </div>
+        <div id="batchLog"></div>
+      </section>
+      <section>
+        <h2>Trạng thái cổng (gates)</h2>
+        <div class="gates" id="gates"></div>
+        <p class="next-steps" id="nextSteps"></p>
+      </section>
+      <section>
+        <h2>Hành động pipeline</h2>
+        <p class="meta-line">Chạy tuần tự từ trên xuống. Mỗi bước gọi 9router (có thể mất vài phút).</p>
+        <div class="actions" id="pipelineActions">
+          <button class="btn-primary" data-action="develop-narrative">Sinh narrative (AI)</button>
+          <button class="btn-ghost" data-action="validate-narrative">Kiểm tra narrative</button>
+          <button class="btn-success" data-action="approve-narrative">Duyệt narrative</button>
+          <button class="btn-primary" data-action="architect">Architect (bible)</button>
+          <button class="btn-ghost" data-action="validate-bible">Kiểm tra bible</button>
+          <button class="btn-success" data-action="approve-bible">Duyệt bible</button>
+          <button class="btn-primary" data-action="plan">Plan 50 chương</button>
+          <button class="btn-ghost" data-action="fix-plans">Fix plans</button>
+          <button class="btn-success" data-action="approve-plan">Duyệt plan</button>
+          <button class="btn-ghost" data-action="render-prompts">Tạo prompts (ch_001…)</button>
+        </div>
+      </section>
+    </div>
+
+    <div id="tab-chapters" class="tab">
+      <section class="batch-hero">
+        <h2>Viết hàng loạt — không cần bấm từng chương</h2>
+        <p>Chạy nền — viết độc lập theo plan (không chờ chương trước <code>ready</code>). Chương lỗi để lại, batch vẫn chạy tiếp.</p>
+        <div class="actions">
+          <button class="btn-primary" id="btnChBatchWrite">▶ Viết hàng loạt</button>
+          <button class="btn-ghost" id="btnChBatchContinue">↻ Tiếp tục từ chương kẹt</button>
+        </div>
+        <div id="chBatchLog"></div>
+      </section>
+      <section>
+        <h2>Danh sách chương</h2>
+        <p class="meta-line">Bấm chương để đọc / duyệt. Viết lẻ chỉ khi cần sửa một chương.</p>
+        <div class="reader">
+          <div class="ch-grid" id="chGrid"></div>
+          <div>
+            <div class="meta-line" id="chMeta">Chọn một chương</div>
+            <div class="reason-box" id="reasonBox"></div>
+            <div class="actions" id="chActions" style="margin-bottom:.75rem">
+              <button class="btn-primary" id="btnWrite" disabled>✍ Viết chương (AI)</button>
+              <button class="btn-success" id="btnApprove" disabled>✓ Duyệt → catalog</button>
+              <button class="btn-danger btn-ghost" id="btnDiscard" disabled>✕ Xóa bản nháp</button>
+            </div>
+            <div class="prose-box" id="proseBox">—</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="tab-export" class="tab">
+      <section>
+        <h2>Xuất sách</h2>
+        <p class="meta-line">Cần đủ chương trong catalog. EPUB/DOCX lưu vào <code>catalog/&lt;workspace&gt;/exports/</code></p>
+        <div class="export-btns">
+          <button class="btn-primary" id="btnEpub">📖 Xuất EPUB</button>
+          <button class="btn-primary" id="btnDocx">📄 Xuất DOCX</button>
+          <button class="btn-ghost" id="btnExportGate" title="Quét export gate (EG-01..11) trên catalog">🛡 Export gate</button>
+          <button class="btn-ghost" id="btnRepairCatalog" title="Backup + sửa heading/markdown trong catalog">🔧 Repair catalog</button>
+          <button class="btn-ghost" id="btnQcEpub" title="Chạy W3C EPUBCheck trên file EPUB hiện có">✓ QC EPUB (EPUBCheck)</button>
+        </div>
+        <p class="meta-line" id="exportQcInfo" style="margin-top:.5rem;font-size:.8rem;color:var(--muted)"></p>
+        <p class="meta-line" id="exportInfo" style="margin-top:1rem"></p>
+      </section>
+    </div>
+  </main>
+
+  <div class="dialog-backdrop" id="newWsDialog" role="dialog" aria-labelledby="newWsTitle">
+    <div class="dialog">
+      <h2 id="newWsTitle">Tạo workspace mới</h2>
+      <p>Mỗi workspace = một sách/series riêng trong <code>factory/workspaces/</code>. Không cần Cursor.</p>
+      <div class="field">
+        <label for="newWsTitleInput">Tên truyện (tuỳ chọn)</label>
+        <input id="newWsTitleInput" type="text" placeholder="VD: Midnight Harbor" />
+      </div>
+      <div class="field">
+        <label for="newWsId">ID folder (slug)</label>
+        <input id="newWsId" type="text" placeholder="midnight-harbor" pattern="[a-z][a-z0-9-]*" />
+        <div class="mode-hint">Chữ thường, số, gạch ngang — dùng làm tên thư mục</div>
+      </div>
+      <div class="field">
+        <label for="newWsChapters">Số chương mục tiêu</label>
+        <input id="newWsChapters" type="number" min="3" max="200" value="30" />
+        <div class="mode-hint">VD: 10, 20, 30 — không cố định 50. Có thể đổi sau ở header.</div>
+      </div>
+      <div class="field">
+        <label for="newWsLang">Ngôn ngữ</label>
+        <select id="newWsLang">
+          <option value="en">English</option>
+          <option value="vi">Tiếng Việt</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="newWsMode">Nguồn khởi tạo</label>
+        <select id="newWsMode">
+          <option value="blank">Trống — điền Concept mới (khuyến nghị)</option>
+          <option value="template">Copy từ workspace có sẵn</option>
+        </select>
+      </div>
+      <div class="field" id="newWsTemplateWrap" style="display:none">
+        <label for="newWsTemplate">Copy từ</label>
+        <select id="newWsTemplate"></select>
+        <div class="mode-hint">Copy concept + narrative — chỉ dùng khi muốn biến thể cùng IP</div>
+      </div>
+      <div class="actions">
+        <button class="btn-ghost" type="button" id="btnNewWsCancel">Huỷ</button>
+        <button class="btn-success" type="button" id="btnNewWsCreate">Tạo</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    let selectedCh = null;
+    let pipelineData = null;
+
+    function ws() { return $("workspace").value; }
+    function book() { return parseInt($("book").value || "1", 10); }
+    function apiBody(extra = {}) {
+      return JSON.stringify({ book: book(), ...extra });
+    }
+
+    function showStatus(msg, kind, errors) {
+      const el = $("status");
+      el.className = kind || "";
+      let html = msg;
+      if (errors?.length) html += "<ul class='errors'>" + errors.map(e => `<li>${e}</li>`).join("") + "</ul>";
+      el.innerHTML = html;
+    }
+
+    async function api(path, opts = {}) {
+      const timeoutMs = opts.timeoutMs ?? 120000;
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+      try {
+        const res = await fetch(path, { ...opts, signal: ctrl.signal });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok && !data.gates) throw new Error(data.error || res.statusText);
+        return data;
+      } catch (e) {
+        if (e.name === "AbortError") {
+          throw new Error("Request quá lâu — server có thể đang chạy batch/LLM. Xem log batch hoặc bấm «Hủy lock batch».");
+        }
+        throw e;
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+
+    // Tabs
+    document.querySelectorAll("nav.tabs button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("nav.tabs button").forEach(b => b.classList.remove("active"));
+        document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+        btn.classList.add("active");
+        $("tab-" + btn.dataset.tab).classList.add("active");
+        if (btn.dataset.tab !== "concept") refreshAll();
+      });
+    });
+
+    async function loadWorkspaces(selectId) {
+      const data = await api("/api/workspaces");
+      const sel = $("workspace");
+      const prev = sel.value;
+      sel.innerHTML = "";
+      const list = data.workspaces || [];
+      list.forEach(w => {
+        const o = document.createElement("option");
+        o.value = w; o.textContent = w;
+        sel.appendChild(o);
+      });
+      const tpl = $("newWsTemplate");
+      if (tpl) {
+        tpl.innerHTML = "";
+        list.forEach(w => {
+          const o = document.createElement("option");
+          o.value = w; o.textContent = w;
+          tpl.appendChild(o);
+        });
+      }
+      const pick = selectId || prev || data.default_workspace || list[0] || "";
+      if (pick && list.includes(pick)) sel.value = pick;
+      return data;
+    }
+
+    function slugifyId(s) {
+      return (s || "").toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .slice(0, 40);
+    }
+
+    let newWsIdTouched = false;
+
+    function openNewWorkspaceDialog() {
+      $("newWsTitleInput").value = "";
+      $("newWsId").value = "";
+      $("newWsLang").value = "en";
+      $("newWsChapters").value = "30";
+      $("newWsMode").value = "blank";
+      $("newWsTemplateWrap").style.display = "none";
+      newWsIdTouched = false;
+      $("newWsDialog").classList.add("open");
+      $("newWsTitleInput").focus();
+    }
+
+    function closeNewWorkspaceDialog() {
+      $("newWsDialog").classList.remove("open");
+    }
+
+    $("btnNewWorkspace").addEventListener("click", openNewWorkspaceDialog);
+    $("btnNewWsCancel").addEventListener("click", closeNewWorkspaceDialog);
+    $("newWsDialog").addEventListener("click", (e) => {
+      if (e.target === $("newWsDialog")) closeNewWorkspaceDialog();
+    });
+    $("newWsTitleInput").addEventListener("input", () => {
+      if (!newWsIdTouched) $("newWsId").value = slugifyId($("newWsTitleInput").value);
+    });
+    $("newWsId").addEventListener("input", () => { newWsIdTouched = true; });
+    $("newWsMode").addEventListener("change", () => {
+      $("newWsTemplateWrap").style.display = $("newWsMode").value === "template" ? "block" : "none";
+    });
+
+    $("btnNewWsCreate").addEventListener("click", async () => {
+      const id = slugifyId($("newWsId").value);
+      const title = $("newWsTitleInput").value.trim();
+      const mode = $("newWsMode").value;
+      if (!id || id.length < 3) {
+        showStatus("ID workspace cần ít nhất 3 ký tự (vd. my-romance)", "bad");
+        return;
+      }
+      $("btnNewWsCreate").disabled = true;
+      try {
+        const data = await api("/api/workspaces", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            id,
+            title,
+            target_language: $("newWsLang").value,
+            total_chapters: parseInt($("newWsChapters").value, 10) || 30,
+            mode,
+            template: $("newWsTemplate").value,
+          }),
+        });
+        if (!data.ok) {
+          showStatus("Lỗi tạo workspace: " + (data.error || "failed"), "bad");
+          return;
+        }
+        closeNewWorkspaceDialog();
+        await loadWorkspaces(id);
+        $("conceptFrame").src = "/index.html?ws=" + encodeURIComponent(id);
+        document.querySelector('nav.tabs button[data-tab="concept"]').click();
+        showStatus(`Đã tạo workspace «${id}» — điền Concept rồi chạy Pipeline`, "ok");
+        await refreshAll();
+      } catch (e) {
+        showStatus("Lỗi: " + e.message, "bad");
+      } finally {
+        $("btnNewWsCreate").disabled = false;
+      }
+    });
+
+    function renderGates(d) {
+      const g = d.gates || {};
+      const total = d.total_chapters || g.plan?.total || g.write?.total || 50;
+      if ($("totalChapters")) $("totalChapters").value = total;
+      if ($("batchFromCh")) { $("batchFromCh").max = total; $("batchFromCh").min = 1; }
+      if ($("batchToCh")) {
+        $("batchToCh").max = total;
+        $("batchToCh").min = 1;
+        if (!$("batchToCh").dataset.userSet) $("batchToCh").value = total;
+      }
+      const html = [
+        gateCard("Concept", g.concept?.status, g.concept?.ok),
+        gateCard("Narrative", g.narrative?.status, g.narrative?.ok, g.narrative?.errors),
+        gateCard("Bible", g.bible?.status, g.bible?.ok, g.bible?.errors),
+        gateCard("Plan", g.plan?.status, g.plan?.ok, null, `${d.planned_chapters ?? g.plan?.chapters_planned ?? 0}/${total} ch`),
+        gateCard("Write", `${g.write?.in_catalog || 0} catalog`, (g.write?.in_catalog || 0) > 0, null, `${g.write?.ready || 0} ready`),
+      ].join("");
+      $("gates").innerHTML = html;
+      $("nextSteps").innerHTML = "<strong>Tiếp theo:</strong> " + (d.next_steps || []).join(" → ");
+      const blocked = d.blocked_chapters || [];
+      let exportLine = `Book ${d.book || book()} · ${d.book_slug || ""} · Catalog: ${g.write?.in_catalog || 0}/${g.write?.total || 50} chương · ${d.target_language || "vi"} · ${d.title || ""}`;
+      if (blocked.length) {
+        const bits = blocked.slice(0, 8).map(b => `ch${b.chapter} ${b.status}: ${b.reason_summary || "?"}`);
+        exportLine += ` · Kẹt: ${bits.join(" · ")}`;
+        if (blocked.length > 8) exportLine += ` (+${blocked.length - 8})`;
+      }
+      $("exportInfo").textContent = exportLine;
+    }
+
+    function gateCard(name, val, ok, errors, sub) {
+      const cls = ok ? "ok" : (val === "draft" || val === "missing" ? "" : "bad");
+      let errHtml = "";
+      if (errors?.length) errHtml = `<div class="sub" style="color:var(--err)">${errors[0]}</div>`;
+      return `<div class="gate ${cls}"><h3>${name}</h3><div class="val">${val || "—"}</div>${sub ? `<div class="sub">${sub}</div>` : ""}${errHtml}</div>`;
+    }
+
+    async function loadPipeline() {
+      pipelineData = await api(`/api/pipeline/${ws()}?book=${book()}`);
+      renderGates(pipelineData);
+      const books = pipelineData.books || [];
+      const sel = $("book");
+      const cur = String(pipelineData.book || book());
+      sel.innerHTML = books.length
+        ? books.map(b => `<option value="${b.book}"${String(b.book) === cur ? " selected" : ""}>Book ${b.book}${b.title ? ": " + b.title : ""}</option>`).join("")
+        : `<option value="${cur}">Book ${cur}</option>`;
+    }
+
+    function statusClass(st) {
+      if (st === "ready") return "st-ready";
+      if (st === "needs_review") return "st-needs_review";
+      if (st === "needs_fix") return "st-needs_fix";
+      if (st === "catalog" || st === "in_catalog") return "st-catalog";
+      return "st-missing";
+    }
+
+    function escapeHtml(s) {
+      return String(s || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function renderReasonBox(data) {
+      const box = $("reasonBox");
+      const reasons = data.reasons || [];
+      if (!reasons.length || !["needs_fix", "needs_review"].includes(data.status)) {
+        box.style.display = "none";
+        box.innerHTML = "";
+        return;
+      }
+      const label = data.status === "needs_fix" ? "Cần sửa (machine QC)" : "Cần review (QC AI)";
+      box.style.display = "block";
+      box.innerHTML = `<strong>${label}</strong><ul>${reasons.map(r => `<li>${escapeHtml(r)}</li>`).join("")}</ul>`;
+    }
+
+    async function loadChapters() {
+      const data = await api(`/api/chapters/${ws()}?book=${book()}`);
+      const grid = $("chGrid");
+      grid.innerHTML = "";
+      (data.chapters || []).forEach(ch => {
+        const div = document.createElement("div");
+        div.className = "ch-card" + (selectedCh === ch.chapter ? " selected" : "");
+        const st = ch.in_catalog ? "catalog" : ch.status;
+        const why = (!ch.in_catalog && ch.reason_summary)
+          ? `<div class="why" title="${escapeHtml(ch.reason_summary)}">${escapeHtml(ch.reason_summary)}</div>`
+          : "";
+        div.innerHTML = `<div class="num">Ch ${ch.chapter}</div><div class="st ${statusClass(st)}">${st}${ch.word_count ? " · " + ch.word_count + "w" : ""}</div>${why}`;
+        div.onclick = () => selectChapter(ch.chapter);
+        grid.appendChild(div);
+      });
+    }
+
+    async function selectChapter(ch) {
+      selectedCh = ch;
+      await loadChapters();
+      const data = await api(`/api/chapters/${ws()}/${ch}`);
+      const reasonBit = data.reason_summary ? ` · ${data.reason_summary}` : "";
+      $("chMeta").textContent = `Chương ${ch}: ${data.title || data.plan_summary || ""} · ${data.status} · ${data.word_count || 0} từ${reasonBit}`;
+      renderReasonBox(data);
+      $("proseBox").textContent = data.prose || "(chưa có nội dung — bấm Viết chương)";
+      const canWrite = data.status === "missing" || data.status === "prompt_only" || data.status === "needs_fix";
+      const canApprove = ["needs_review", "needs_fix", "draft", "ready"].includes(data.status) && data.prose;
+      $("btnWrite").disabled = !canWrite && data.status !== "missing";
+      $("btnApprove").disabled = !canApprove;
+      $("btnDiscard").disabled = data.status === "missing";
+    }
+
+    async function runPipeline(action) {
+      if (!confirm(`Chạy bước "${action}"? Có thể mất vài phút (9router).`)) return;
+      showStatus(`<span class="spinner"></span> Đang chạy ${action}…`, "warn");
+      document.querySelectorAll("#pipelineActions button").forEach(b => b.disabled = true);
+      try {
+        const data = await api(`/api/pipeline/${ws()}/step`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: apiBody({ action }),
+        });
+        if (data.ok === false) {
+          showStatus(`Lỗi ${action}: ` + (data.error || "failed"), "bad", data.errors);
+        } else {
+          showStatus(`Xong: ${action}`, "ok", data.errors);
+        }
+        if (data.gates) renderGates(data);
+      } catch (e) {
+        showStatus("Lỗi: " + e.message, "bad");
+      } finally {
+        document.querySelectorAll("#pipelineActions button").forEach(b => b.disabled = false);
+      }
+    }
+
+    document.querySelectorAll("#pipelineActions button").forEach(btn => {
+      btn.addEventListener("click", () => runPipeline(btn.dataset.action));
+    });
+
+    $("btnWrite").addEventListener("click", async () => {
+      if (!selectedCh) return;
+      if (!confirm(`Viết chương ${selectedCh} bằng AI?`)) return;
+      $("btnWrite").disabled = true;
+      showStatus(`<span class="spinner"></span> Đang viết chương ${selectedCh}…`, "warn");
+      try {
+        const data = await api(`/api/chapters/${ws()}/${selectedCh}/write`, { method: "POST", body: apiBody() });
+        if (data.ok === false) showStatus("Lỗi viết: " + data.error, "bad");
+        else {
+          const why = data.reason_summary ? ` — ${data.reason_summary}` : "";
+          showStatus(`Chương ${selectedCh}: ${data.status}${why}`, data.status === "ready" ? "ok" : "warn");
+        }
+        await selectChapter(selectedCh);
+        await loadPipeline();
+      } catch (e) {
+        showStatus("Lỗi: " + e.message, "bad");
+      } finally {
+        $("btnWrite").disabled = false;
+      }
+    });
+
+    $("btnApprove").addEventListener("click", async () => {
+      if (!selectedCh) return;
+      if (!confirm(`Duyệt chương ${selectedCh} vào catalog?`)) return;
+      try {
+        const data = await api(`/api/chapters/${ws()}/${selectedCh}/approve`, { method: "POST", body: apiBody() });
+        if (data.ok) showStatus(`Đã đưa chương ${selectedCh} vào catalog`, "ok");
+        else if (data.already_promoted) showStatus(`Chương ${selectedCh} đã có trong catalog`, "ok");
+        else showStatus("Lỗi: " + (data.error || "approve failed") + (data.export_gate_reasons ? " — " + data.export_gate_reasons.slice(0,2).join("; ") : ""), "bad");
+        await selectChapter(selectedCh);
+        await loadPipeline();
+        await loadChapters();
+      } catch (e) {
+        showStatus("Lỗi: " + e.message, "bad");
+      }
+    });
+
+    $("btnDiscard").addEventListener("click", async () => {
+      if (!selectedCh || !confirm(`Xóa bản nháp chương ${selectedCh}?`)) return;
+      await api(`/api/chapters/${ws()}/${selectedCh}/discard`, { method: "POST", body: apiBody() });
+      showStatus(`Đã xóa chương ${selectedCh}`, "ok");
+      selectedCh = null;
+      $("proseBox").textContent = "—";
+      await loadChapters();
+    });
+
+    async function doExport(target) {
+      showStatus(`<span class="spinner"></span> Đang xuất ${target}…`, "warn");
+      try {
+        const data = await api(`/api/export/${ws()}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: apiBody({ target }),
+        });
+        if (data.ok) {
+          let msg = `Xuất ${target} xong → ${data.export_dir}`;
+          if (data.epub_qc) {
+            const qc = data.epub_qc;
+            const c = qc.counts || {};
+            msg += qc.passed
+              ? ` · EPUBCheck PASS (${c.warnings || 0} warnings)`
+              : ` · EPUBCheck FAIL (${c.errors || 0} errors)`;
+            $("exportQcInfo").textContent = qc.passed
+              ? `EPUBCheck: PASS — EPUB ${qc.epub_version || "?"}`
+              : `EPUBCheck: FAIL — xem ${(data.paths && data.paths[0] || "").replace(/\.epub$/, ".qc.json")}`;
+          }
+          showStatus(msg, data.epub_qc && !data.epub_qc.passed ? "warn" : "ok");
+        } else {
+          let err = data.error || "unknown";
+          if (data.reasons && data.reasons.length) {
+            err += " — " + data.reasons.slice(0, 3).join("; ");
+          } else if (data.export_gate_reasons && data.export_gate_reasons.length) {
+            err += " — " + data.export_gate_reasons.slice(0, 3).join("; ");
+          }
+          showStatus("Lỗi export: " + err, "bad");
+          if (data.export_gate && data.export_gate.summary) {
+            $("exportQcInfo").textContent = data.export_gate.summary;
+          }
+        }
+      } catch (e) {
+        showStatus("Lỗi: " + e.message, "bad");
+      }
+    }
+
+    async function doQcEpub() {
+      showStatus(`<span class="spinner"></span> Đang chạy EPUBCheck…`, "warn");
+      try {
+        const data = await api(`/api/export/${ws()}/qc-epub`, { method: "POST", body: apiBody() });
+        const qc = data.epub_qc || {};
+        const c = qc.counts || {};
+        $("exportQcInfo").textContent = data.summary || "";
+        if (data.ok) {
+          showStatus(`EPUBCheck PASS — ${c.warnings || 0} warnings`, "ok");
+        } else if (qc.ok === false && qc.error) {
+          showStatus("EPUBCheck: " + qc.error, "bad");
+        } else {
+          const msgs = (qc.messages || []).slice(0, 3).map(m => `${m.level}(${m.code})`).join("; ");
+          showStatus(`EPUBCheck FAIL — ${c.errors || 0} errors${msgs ? ": " + msgs : ""}`, "bad");
+        }
+      } catch (e) {
+        showStatus("Lỗi: " + e.message, "bad");
+      }
+    }
+
+    async function doExportGate() {
+      showStatus(`<span class="spinner"></span> Đang chạy export gate…`, "warn");
+      try {
+        const data = await api(`/api/export/${ws()}/export-gate`, { method: "POST", body: apiBody() });
+        const lines = (data.reasons || []).slice(0, 8).join("\n");
+        $("exportQcInfo").textContent = (data.summary || "") + (lines ? "\n" + lines : "");
+        showStatus(data.ok ? data.summary : (data.summary || "Export gate FAIL"), data.ok ? "ok" : "bad");
+      } catch (e) {
+        showStatus("Lỗi: " + e.message, "bad");
+      }
+    }
+
+    async function doRepairCatalog() {
+      if (!confirm("Backup catalog rồi sửa heading/markdown trong tất cả chương?")) return;
+      showStatus(`<span class="spinner"></span> Repair catalog…`, "warn");
+      try {
+        const data = await api(`/api/export/${ws()}/repair-catalog`, { method: "POST", body: apiBody() });
+        showStatus(`Repair xong ${data.fixed} chương — backup: ${data.backup || "?"}`, "ok");
+        await refreshAll();
+      } catch (e) {
+        showStatus("Lỗi: " + e.message, "bad");
+      }
+    }
+
+    $("btnEpub").addEventListener("click", () => doExport("epub"));
+    $("btnDocx").addEventListener("click", () => doExport("docx"));
+    $("btnExportGate").addEventListener("click", doExportGate);
+    $("btnRepairCatalog").addEventListener("click", doRepairCatalog);
+    $("btnQcEpub").addEventListener("click", doQcEpub);
+
+    $("workspace").addEventListener("change", () => {
+      const f = $("conceptFrame");
+      f.src = "/index.html?ws=" + encodeURIComponent(ws());
+      refreshAll();
+    });
+    $("book").addEventListener("change", refreshAll);
+
+    async function saveTotalChapters() {
+      const total = parseInt($("totalChapters").value, 10);
+      if (!total || total < 3 || total > 200) {
+        showStatus("Số chương phải từ 3 đến 200", "bad");
+        return;
+      }
+      $("btnSaveChapters").disabled = true;
+      try {
+        const data = await api(`/api/pipeline/${ws()}/book-config`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: apiBody({ total_chapters: total }),
+        });
+        let msg = `Đã lưu ${total} chương cho Book ${book()}`;
+        if (data.warning) msg += " — " + data.warning;
+        showStatus(msg, data.warning ? "warn" : "ok");
+        $("batchToCh").dataset.userSet = "";
+        await refreshAll();
+      } catch (e) {
+        showStatus("Lỗi: " + e.message, "bad");
+      } finally {
+        $("btnSaveChapters").disabled = false;
+      }
+    }
+    $("btnSaveChapters").addEventListener("click", saveTotalChapters);
+    $("totalChapters").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") saveTotalChapters();
+    });
+
+    let batchPoll = null;
+    let batchWasRunning = false;
+
+    function batchWriteOpts(extra = {}) {
+      return {
+        from_ch: parseInt($("batchFromCh").value, 10) || 1,
+        to_ch: parseInt($("batchToCh").value, 10) || 50,
+        stop_on_review: $("batchStopOnReview").checked,
+        ...extra,
+      };
+    }
+
+    function setBatchButtonsDisabled(disabled) {
+      ["btnBatchPrep", "btnBatchWrite", "btnBatchFull", "btnBatchContinue", "btnChBatchWrite", "btnChBatchContinue"]
+        .forEach(id => { const b = $(id); if (b) b.disabled = disabled; });
+    }
+
+    async function resetBatchLock() {
+      if (!confirm("Xóa lock batch? Chỉ dùng khi batch treo (server restart / crash).")) return;
+      try {
+        const data = await api(`/api/pipeline/${ws()}/batch/reset`, { method: "POST", body: "{}" });
+        renderBatchLog(data, "batchLog");
+        renderBatchLog(data, "chBatchLog");
+        if (data.ok) {
+          showStatus("Đã xóa lock batch — có thể chạy lại", "ok");
+          setBatchButtonsDisabled(false);
+          if (batchPoll) { clearInterval(batchPoll); batchPoll = null; }
+        } else {
+          showStatus("Không xóa được: " + (data.error || "batch đang chạy thật"), "bad");
+        }
+      } catch (e) {
+        showStatus("Lỗi: " + e.message, "bad");
+      }
+    }
+
+    function renderBatchLog(prog, elId) {
+      const el = $(elId || "batchLog");
+      if (!el) return;
+      if (!prog || !prog.log || !prog.log.length) {
+        el.textContent = "";
+        return;
+      }
+      let head = "";
+      if (prog.running) {
+        head = `[DANG CHAY] ${prog.phase || ""} ${prog.step || prog.current_ch ? "ch" + prog.current_ch : ""}\n`;
+      }
+      el.textContent = head + prog.log.join("\n");
+    }
+
+    async function pollBatch() {
+      try {
+        const prog = await api(`/api/pipeline/${ws()}/batch`);
+        renderBatchLog(prog, "batchLog");
+        renderBatchLog(prog, "chBatchLog");
+        if (prog.running) {
+          batchWasRunning = true;
+          setBatchButtonsDisabled(true);
+          showStatus(`<span class="spinner"></span> Batch: ${prog.phase} ${prog.step || ""} ch${prog.current_ch || ""}...`, "warn");
+          if (!batchPoll) startBatchPoll();
+        } else if (batchWasRunning) {
+          batchWasRunning = false;
+          setBatchButtonsDisabled(false);
+          const ok = prog.ok !== false;
+          const issues = prog.issue_chapters || [];
+          if (!ok && prog.failed_ch) {
+            showStatus(`Batch dung ch${prog.failed_ch}: ${prog.error}`, "bad");
+          } else if (issues.length) {
+            showStatus(`Batch xong — ${issues.length} chuong can sua (ch${issues.join(", ch")})`, "warn");
+          } else if (prog.error) {
+            showStatus(prog.error, "bad");
+          } else {
+            showStatus("Batch xong", "ok");
+          }
+          await refreshAll();
+        } else if (prog.log && prog.log.length && prog.error) {
+          showStatus(prog.error, "warn");
+        }
+        if (!prog.running && batchPoll) {
+          clearInterval(batchPoll);
+          batchPoll = null;
+          setBatchButtonsDisabled(false);
+        }
+      } catch (e) {
+        /* ignore poll errors */
+      }
+    }
+
+    function startBatchPoll() {
+      if (batchPoll) clearInterval(batchPoll);
+      batchPoll = setInterval(pollBatch, 2500);
+      pollBatch();
+    }
+
+    async function runBatch(mode, extra = {}) {
+      const labels = { prep: "chuan bi sach", write: "viet hang loat", full: "chay het", continue: "tiep tuc viet" };
+      const opts = mode === "prep" ? {} : batchWriteOpts(extra);
+      const range = opts.from_ch ? ` ch${opts.from_ch}–${opts.to_ch}` : "";
+      if (!confirm(`Chay batch: ${labels[mode] || mode}${range}?\nCo the mat rat lau (9router).`)) return;
+      setBatchButtonsDisabled(true);
+      showStatus(`<span class="spinner"></span> Dang bat dau batch ${labels[mode] || mode}...`, "warn");
+      try {
+        const data = await api(`/api/pipeline/${ws()}/batch`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ mode: mode === "continue" ? "write" : mode, book: book(), ...opts }),
+        });
+        if (data.log) {
+          renderBatchLog({ log: data.log, running: false, ok: data.ok }, "batchLog");
+          renderBatchLog({ log: data.log, running: false, ok: data.ok }, "chBatchLog");
+        }
+        if (mode === "prep" && data.started) {
+          startBatchPoll();
+        } else if (mode === "prep" && data.ok) {
+          showStatus("Chuan bi xong — sang tab Chuong de viet hang loat", "ok");
+          setBatchButtonsDisabled(false);
+          await refreshAll();
+        } else if (data.started) {
+          startBatchPoll();
+        } else if (!data.ok) {
+          const err = data.error || "batch failed";
+          if (err.includes("batch dang chay")) {
+            showStatus(`Lỗi: ${err} — bấm «Hủy lock batch» hoặc refresh trang`, "bad");
+          } else {
+            showStatus("Loi: " + err, "bad");
+          }
+          setBatchButtonsDisabled(false);
+        }
+      } catch (e) {
+        showStatus("Loi: " + e.message, "bad");
+        setBatchButtonsDisabled(false);
+      }
+    }
+
+    $("btnBatchPrep").addEventListener("click", () => runBatch("prep"));
+    $("btnBatchWrite").addEventListener("click", () => runBatch("write"));
+    $("btnBatchFull").addEventListener("click", () => runBatch("full"));
+    $("btnBatchReset").addEventListener("click", resetBatchLock);
+    $("btnBatchContinue").addEventListener("click", () => runBatch("continue", { auto_from: true }));
+    $("btnChBatchWrite").addEventListener("click", () => runBatch("write"));
+    $("btnChBatchContinue").addEventListener("click", () => runBatch("continue", { auto_from: true }));
+
+    $("btnRefresh").addEventListener("click", refreshAll);
+
+    async function refreshAll() {
+      try {
+        await loadPipeline();
+        await loadChapters();
+        if (selectedCh) await selectChapter(selectedCh);
+        showStatus("Đã cập nhật trạng thái", "ok");
+      } catch (e) {
+        showStatus("Lỗi tải: " + e.message, "bad");
+      }
+    }
+
+    (async () => {
+      await loadWorkspaces();
+      $("batchToCh").addEventListener("input", () => { $("batchToCh").dataset.userSet = "1"; });
+      refreshAll();
+      pollBatch();
+    })();
+  </script>
+</body>
+</html>

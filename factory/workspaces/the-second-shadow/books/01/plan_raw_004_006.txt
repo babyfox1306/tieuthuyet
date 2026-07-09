@@ -1,0 +1,80 @@
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Basement Door",
+      "slug": "04-the-basement-door",
+      "one_line_summary": "Mara and Jude descend into the locked basement, finding a box that holds the first concrete links to Lachlan.",
+      "beat_summary": "Mara cannot ignore the Girl pointing to the basement. She persuades Jude to go down with her. The basement is cold, cluttered, with a damp smell. Jude finds a loose floorboard; under it is a rusted lockbox. Mara gets the key from a hook in the kitchen. They open the box: inside a photograph of a man and a sealed envelope. The Girl appears in the doorway, holding Wick, watching. Mara feels the cold blue glow from a crack in the floor. She decides they should examine the contents upstairs. They leave the basement, but Mara senses they are not alone.",
+      "must_happen": [
+        "Mara convinces Jude to explore the basement together",
+        "They discover a hidden lockbox under a loose floorboard",
+        "The box contains a photograph and a sealed envelope",
+        "[ROMANCE] In the dark basement, Jude reaches for Mara’s hand to guide her past a fallen shelf; they hold hands until they reach the light"
+      ],
+      "must_not": [
+        "The envelope is not opened in this chapter",
+        "The Girl does not physically touch the box or its contents"
+      ],
+      "opens_with": "The basement door creaked open, and the smell of damp earth curled out like a living thing.",
+      "cliffhanger": "Mara turned the sealed envelope over; written in faded ink on the flap was the name ‘Lachlan.’",
+      "signature_detail_hint": "The photograph shows a black sedan, license plate LAC-1, and a man in a sharp coat with his hand on a child’s shoulder—the child’s face is obscured.",
+      "emotional_beat": "Trust and tension intertwine; Mara is grateful for Jude’s presence but terrified of what they might uncover.",
+      "spice": 1,
+      "spice_note": "Subtle intimacy: handholding in the dark; nearness.",
+      "chapter_task": "Write Chapter 4 (1600–1900 words). Advance the plot by having the characters discover the box but not open it yet. Use the basement setting to create unease. Include a romance micro-beat (handholding). End with the cliffhanger of Lachlan’s name on the envelope. Avoid major reveals.",
+      "carries_to_next": "They are ready to open the envelope and photograph."
+    },
+    {
+      "chapter": 5,
+      "title": "Lachlan's Letter",
+      "slug": "05-lachlans-letter",
+      "one_line_summary": "Opening the letter and photograph reveals that Lachlan is Mara’s father and that Aunt Ilse had reason to fear him, forcing Mara to confront a painful truth.",
+      "beat_summary": "Mara and Jude stay up late. They open the envelope: it’s a handwritten letter from Lachlan to Ilse, demanding she give Mara back to him and threatening to expose her secrets. The photograph confirms the man is Mara’s father. She connects it to the memory flash from Chapter 3. She is stunned. Jude holds her as she seethes with anger and grief. The Girl appears and points to Wick, then vanishes. Mara understands: the bear contains the full memory. She picks up Wick and feels a surge of cold. The chapter ends with a decision: she must uncover what the bear holds, even if it destroys her.",
+      "must_happen": [
+        "Mara and Jude open the envelope and read Lachlan’s threatening letter",
+        "Mara identifies her father in the photograph, connecting to her memory flash (payoff C002, C003, C004)",
+        "The Girl in Blue points to Wick, signalling the next step",
+        "[ROMANCE] After reading the letter, Jude puts his arms around Mara, holding her as she weeps; she turns and buries her face in his chest"
+      ],
+      "must_not": [
+        "The full memory of what Ilse did is not yet revealed",
+        "Jude does not reveal any prior knowledge about Lachlan"
+      ],
+      "opens_with": "The seal broke with a sound like a small bone snapping, and Mara’s hands trembled as she unfolded the paper.",
+      "cliffhanger": "Mara lifted Wick from the shelf, and the cold blue light from the floor crack brightened as if the house itself was waiting for her to remember.",
+      "signature_detail_hint": "The cross of the ‘t’ in the letter slashes through the paper, as if the writer wanted to wound the words.",
+      "emotional_beat": "Shock, anger, and a growing resolve; Mara relies on Jude's emotional support more than ever.",
+      "spice": 1,
+      "spice_note": "Emotional comfort: a long embrace and whispered reassurances. No explicit content.",
+      "chapter_task": "Write Chapter 5 (1600–1900 words). Pay off C002 (photograph) and C003 (letter). Execute reveal MR02: the combination of the letter (C003) and Mara’s existing memory flash (C004) reveals Lachlan as her father and Ilse’s motive. This is a major plot turn. Must include a romance micro-beat: embrace and emotional vulnerability. End on a note that pushes Mara toward the final memory in the bear.",
+      "carries_to_next": "Mara is resolved to unlock the bear’s secret, even though it may destroy her."
+    },
+    {
+      "chapter": 6,
+      "title": "The Second Shadow",
+      "slug": "06-the-second-shadow",
+      "one_line_summary": "Mara tries to reach her mother but fails; a second shadow appears, forcing Mara and Jude to confront a new threat in the garden.",
+      "beat_summary": "Mara calls her mother but only gets voicemail. She leaves a desperate message. Jude stays with her. They discuss the letter; Mara is anxious. As dusk falls, Mara holds Wick, trying to remember. The room grows cold; a second shadow appears on the wall, moving independently. Jude sees it too but warns it might be a trick. The Girl appears, now with both hands on Wick, and starts walking towards the back door. Mara and Jude follow. In the garden, the second shadow coalesces into a dark human shape at the edge of the trees. The Girl stops, and the shadow steps forward. The chapter ends with Mara stepping toward it, Jude pulling her back, and the cold blue light engulfing them.",
+      "must_happen": [
+        "Mara calls her mother, who doesn’t answer",
+        "The second shadow appears in the room, seen by both Mara and Jude",
+        "The Girl in Blue leads them outside to the garden",
+        "[ROMANCE] In the garden, before the shadow fully appears, Jude takes Mara’s face in his hands and kisses her gently, as if it might be their last moment of peace"
+      ],
+      "must_not": [
+        "The identity of the shadow is not revealed",
+        "Mara does not retrieve a full memory of the murder"
+      ],
+      "opens_with": "The phone rang eight times, each ring a small hammer against Mara’s hope that her mother would pick up.",
+      "cliffhanger": "The shadow stepped out from behind the oak, and Mara saw it had no face—just a dark silhouette with a hand raised, pointing back at the house.",
+      "signature_detail_hint": "The second shadow does not mimic Mara; it moves a half-second late, as though it is tethered to her but learning her motions.",
+      "emotional_beat": "Fear mixes with love; the kiss signifies a deepening bond even as danger escalates.",
+      "spice": 2,
+      "spice_note": "One tender kiss, charged with emotion and foreboding. Not explicit.",
+      "chapter_task": "Write Chapter 6 (1600–1900 words). Introduce the second shadow as a new supernatural threat. Keep the relationship evolving with a romantic kiss. No major revelations; maintain suspense. End with the cliffhanger of the faceless shadow pointing. Must include [ROMANCE] micro-beat: the kiss.",
+      "carries_to_next": "The shadow presence marks a turning point; the mystery of the house is becoming dangerous and more tangible."
+    }
+  ]
+}

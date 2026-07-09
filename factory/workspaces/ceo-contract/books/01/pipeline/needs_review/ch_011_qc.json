@@ -1,0 +1,22 @@
+{
+  "foreign_chars": [
+    "Mandarin"
+  ],
+  "word_count": 1642,
+  "voice_drift": {
+    "flag": false,
+    "details": ""
+  },
+  "continuity_conflict": {
+    "flag": true,
+    "details": "The story_state lists this as Chapter 2, but the input text is labeled Chapter 11. Additionally, the story_state mentions 'Lin Shu-zhen' as the antagonist forcing the contract, whereas the chapter implies Adrian is the primary architect/negotiator."
+  },
+  "cliffhanger_strength": 5,
+  "pacing_issue": false,
+  "signature_detail_present": true,
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "continuity_conflict: Chapter numbering mismatch (Input says 11, state says 2).",
+    "continuity_conflict: Discrepancy in contract negotiation dynamics between story_state and chapter content."
+  ]
+}

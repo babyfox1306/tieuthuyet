@@ -1,0 +1,118 @@
+{
+  "current_book": 1,
+  "current_chapter": 36,
+  "timeline": [
+    "Lin Wei and Adrian confront Elias Vance in his office at Aurelian Group.",
+    "Elias Vance admits to being the internal agent for the Glass Meridian and deliberately leaving the code string for them to find.",
+    "Vance reveals that Aurelian Group is an instrument for the Glass Meridian's purpose of perfecting the human line.",
+    "Vance claims Marcus Thorne 'opened the door' for the Glass Meridian, and he (Vance) has been 'holding it open'.",
+    "Adrian Vale disarms Vance, preventing him from reaching a pistol, and injures his shoulder.",
+    "Adrian states his intention to extract all information from Vance and make him disappear, making the Glass Meridian believe he is dead.",
+    "Lin Wei finds a data chip in Vance's desk drawer, which Vance identifies as containing the Glass Meridian's expansion plans for the Mediterranean corridor, including shipping routes and financial conduits.",
+    "Lin Wei and Adrian Vale continue hacking the Glass Meridian's infrastructure from a secure room at Aurelian Group.",
+    "Adrian reveals he built a backdoor into the encryption protocol he designed at seventeen, allowing them to extend their decryption window by locking the hash chain into a recursive loop.",
+    "They discover Glass Meridian transaction logs routing through a shell bank in Singapore, with originating IPs bouncing through Aurelian's internal network.",
+    "Adrian injects a tracer algorithm mirroring the Glass Meridian's encryption handshake to find their master routing table.",
+    "Lin Wei and Adrian execute their plan to broadcast Marcus Thorne's authorization codes at the Pacific Grand Hotel.",
+    "Thorne watches the broadcast calmly, smiles, and cuts the connection with a hand gesture, stopping the decryption.",
+    "Adrian realizes Thorne has been feeding them false leads, including the encryption handshake and tracer algorithm.",
+    "Marcus Thorne arrives at the café with mercenaries and confronts Adrian and Lin Wei, revealing that Adrian is his son.",
+    "Adrian Vale positions himself to protect Lin Wei as Thorne's mercenaries close in.",
+    "Thorne reveals that he taught Adrian the encryption protocol at seventeen and recognized his handiwork in the recursive loop.",
+    "Thorne explains that Vance's information was curated to lead them exactly where he wanted them to go.",
+    "Thorne reveals he will frame Lin Wei as the primary orchestrator of a corporate espionage attempt, with news outlets running stories to dismiss the files as forgeries.",
+    "Thorne shows a live feed of Lin Wei's mother's empty hospital room, revealing he has moved her to a private facility he controls as leverage."
+  ],
+  "character_status": {
+    "Lin Wei": {
+      "location": "café near Pacific Grand Hotel",
+      "knows": [
+        "Glass Meridian's existence",
+        "Vance is internal agent",
+        "Thorne is head of Glass Meridian",
+        "Thorne is Adrian's father",
+        "Their decryption was stopped by Thorne",
+        "Thorne anticipated their plan and fed them false leads",
+        "They are now cornered with no apparent escape",
+        "Thorne taught Adrian the encryption protocol at seventeen",
+        "Vance's information was curated by Thorne",
+        "Thorne plans to frame her for corporate espionage",
+        "Thorne has taken her mother to a private facility he controls"
+      ],
+      "relationship_other": "working with Adrian, trusts him",
+      "mood": "desperate, cold with shock, realizing she has been outmaneuvered and her mother is used as leverage"
+    },
+    "Adrian Vale": {
+      "location": "café near Pacific Grand Hotel",
+      "knows": [
+        "everything Lin Wei knows",
+        "he built the encryption backdoor at 17",
+        "Thorne taught him",
+        "Thorne is his father",
+        "Thorne recognized his handiwork and used it against them",
+        "Thorne groomed him from childhood to lead the Glass Meridian"
+      ],
+      "relationship_other": "son of Marcus Thorne, now confronting him directly",
+      "mood": "protective, resolute but accepting that his father has outplayed him, raw and dangerous"
+    },
+    "Marcus Thorne": {
+      "location": "café with mercenaries",
+      "knows": [
+        "Adrian's involvement",
+        "their plan",
+        "the backdoor",
+        "Vance's capture",
+        "full extent of Glass Meridian operations",
+        "Adrian's encryption handiwork",
+        "that he has successfully countered their move",
+        "Lin Wei's mother's condition and location",
+        "he will frame Lin Wei for corporate espionage"
+      ],
+      "relationship_other": "father of Adrian, leader of Glass Meridian",
+      "mood": "triumphant, manipulative, in complete control, paternalistic"
+    },
+    "Elias Vance": {
+      "location": "Aurelian Group (captured)",
+      "knows": [
+        "Glass Meridian's plans",
+        "his role as agent",
+        "Thorne's role",
+        "his information was curated by Thorne"
+      ],
+      "relationship_other": "subordinate to Thorne, captured by Adrian",
+      "mood": "injured, possibly fearful"
+    },
+    "Lin Wei's mother (Ms. Li)": {
+      "location": "private facility controlled by Marcus Thorne",
+      "knows": [],
+      "relationship_other": "mother of Lin Wei, used as leverage by Thorne",
+      "mood": "unknown (stable but captive)"
+    }
+  },
+  "open_threads": [
+    "Thorne's plan to frame Lin Wei for corporate espionage",
+    "Lin Wei's mother being held at a private facility by Thorne",
+    "Adrian's potential to take over the Glass Meridian as Thorne's heir",
+    "The Glass Meridian's expansion plans for the Mediterranean corridor (data chip from Vance)",
+    "Thorne's full control over the narrative and media"
+  ],
+  "facts_established": [
+    "Thorne taught Adrian the encryption protocol at seventeen.",
+    "Thorne recognized Adrian's handiwork in the recursive loop.",
+    "Vance's information was curated by Thorne to lead them into a trap.",
+    "Thorne plans to frame Lin Wei as the orchestrator of a corporate espionage attack.",
+    "News outlets will run stories dismissing the broadcast files as forgeries.",
+    "Thorne has taken Lin Wei's mother to a private facility he controls as leverage.",
+    "Thorne groomed Adrian from childhood to lead the Glass Meridian."
+  ],
+  "spice_progression": "Lin Wei and Adrian's plan backfires completely as Thorne reveals he anticipated every move, frames Lin Wei for corporate espionage, and takes her mother hostage, escalating the stakes to a personal and desperate level.",
+  "phrases_used": [
+    "The air crackled with tension",
+    "too predictable",
+    "curated",
+    "reshape the narrative",
+    "the finest care",
+    "raw and dangerous",
+    "groomed you"
+  ]
+}

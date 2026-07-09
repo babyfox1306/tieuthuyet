@@ -1,0 +1,80 @@
+[
+  {
+    "model": "gemini/gemini-3-flash-preview",
+    "word_count": 3075,
+    "issues": [
+      "word_count"
+    ],
+    "opens_hook": true,
+    "cjk": false,
+    "awkward": 0,
+    "score": 3275,
+    "elapsed": 36.5,
+    "completion_tokens": 4106,
+    "total_tokens": 8345
+  },
+  {
+    "model": "groq/qwen/qwen3-32b",
+    "word_count": 1358,
+    "issues": [
+      "word_count",
+      "short"
+    ],
+    "opens_hook": true,
+    "cjk": false,
+    "awkward": 0,
+    "score": 1258,
+    "elapsed": 6.9,
+    "completion_tokens": 1956,
+    "total_tokens": 4981
+  },
+  {
+    "model": "gh/claude-haiku-4.5",
+    "word_count": 1333,
+    "issues": [
+      "word_count",
+      "short"
+    ],
+    "opens_hook": true,
+    "cjk": false,
+    "awkward": 0,
+    "score": 1233,
+    "elapsed": 39.7,
+    "completion_tokens": 3667,
+    "total_tokens": 7300
+  },
+  {
+    "model": "gh/gpt-4o-mini",
+    "word_count": 988,
+    "issues": [
+      "word_count",
+      "short"
+    ],
+    "opens_hook": true,
+    "cjk": false,
+    "awkward": 0,
+    "score": 888,
+    "elapsed": 8.8,
+    "completion_tokens": 1415,
+    "total_tokens": 4440
+  },
+  {
+    "model": "groq/llama-3.3-70b-versatile",
+    "word_count": 512,
+    "issues": [
+      "word_count",
+      "short"
+    ],
+    "opens_hook": true,
+    "cjk": false,
+    "awkward": 0,
+    "score": 412,
+    "elapsed": 3.4,
+    "completion_tokens": 715,
+    "total_tokens": 3734
+  },
+  {
+    "model": "gh/gpt-4o",
+    "error": "Error code: 429 - {'error': {'message': '[github/gpt-4o] [429]: {\"error\":{\"message\":\"Sorry, you\\'ve exceeded your rate limit for utility models. Please review our [Terms of Service](https://docs.githu"
+  }
+]

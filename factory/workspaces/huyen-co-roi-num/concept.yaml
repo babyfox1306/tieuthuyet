@@ -1,0 +1,40 @@
+concept_status: ready
+target_language: vi
+title: Huyen Co Roi Num
+logline: Nữ ma đầu điều khiển vạn thiên quyến thuộc bằng dây tơ máu thực chất chỉ
+  là một con rối bị xích bởi ma thần thượng cổ; biến số duy nhất cứu rỗi nàng lại
+  là con rối gỗ mà nàng tự tay hồi sinh
+author_directive: "- Nhân vật: \n  + Nữ chính (Thẩm Uyển Nhi): Lạnh lùng, tàn nhẫn\
+  \ bên ngoài nhưng giằng xé bên trong. Bị ma thần ăn mòn linh hồn mỗi đêm.\n  + Nam\
+  \ chính (Lục Vân Sách): Ban đầu là phu kéo xe bị sát hại, được hồi sinh thành rối\
+  \ cấp cao, là biến số duy nhất không chịu sự điều khiển của chỉ mệnh.\n- Bối cảnh\
+  \ & Không khí: U tăm, ma mị, đậm chất linh dị cổ đại kết hợp cơ quan thuật.\n- Mạch\
+  \ truyện & Bí ẩn: \n  + Cuộn 1: Bàn cờ chiến - Xây dựng sự tàn khốc của gánh rối\
+  \ và mối quan hệ chủ - rối giữa Uyển Nhi và Vân Sách.\n  + Cuộn 2: Lật mở quá khứ\
+  \ của ma thần phía sau màn đỏ, sự chuyển biến từ lợi dụng sang thấu hiểu.\n  + Cuộn\
+  \ 3: Trận chiến tâm lý, Uyển Nhi giả vờ tiêu hủy Vân Sách để anh thoát kiếp làm\
+  \ rối.\n  + Cuộn 4: Vân Sách quay lại cứu Uyển Nhi, phá tan bàn cờ chúng sinh.\n\
+  - Điểm nhấn/Spice: Tình cảm phát triển qua sự hy sinh thầm lặng, sự tương phản giữa\
+  \ kẻ nắm quyền sinh sát và kiếp sống nô lệ.\n- Điều cấm: Không tẩy trắng ma thần,\
+  \ không cho nữ chính yếu đuối vô lý, không dùng các tình tiết mì ăn liền lặp lại."
+surface_plot: Độc giả tưởng đang đọc một bộ truyện tiên hiệp/linh dị về hành trình
+  trả thù và xưng bá của một nữ ma đầu tàn nhẫn, kẻ biến kẻ thù thành các con rối
+  vô hồn quỳ lạy dưới chân mình.
+true_plot: Thực chất là cuộc tẩu thoát tuyệt vọng của một nạn nhân bị ma thần giật
+  dây, cố tình nuôi dưỡng một con rối có linh trí (nam chính) để anh chặt đứt sợi
+  chỉ mệnh, giải phóng linh hồn cô khỏi kiếp nô lệ.
+must_include:
+- Yếu tố kinh dị cổ phong và cơ quan thuật
+- Tuyến tình cảm lồng ghép trong mưu kế sinh tồn
+- Sự tương phản giữa bức màn đỏ, ma thần quái dị và bàn cờ rối phàm nhân
+must_avoid:
+- Mô-típ nhân vật chính vô địch không có điểm yếu
+- Đầu rơi máu chảy vô nghĩa không phục vụ cốt truyện
+- Tình tiết dông dài, giải thích thiết lập quá nhiều
+ending_book1: Giải mã được nguồn gốc ma thuật rối của Thẩm gia, tiêu diệt được phân
+  thân ma thần đầu tiên và giúp Nam chính lấy lại được thể xác thực sự.
+hook_book2: 'Uyển Nhi bị ma thần thượng cổ chiếm hữu hoàn toàn thể xác sau khi giải
+  cứu Vân Sách; Vân Sách đứng trước lựa chọn: tiêu diệt người mình yêu hay tìm cách
+  thu thập lại 9 mảnh linh hồn bị phân tán của nàng.'
+notes: Giữ nhịp truyện dồn dập, tập trung vào chiều sâu tâm lý nhân vật và tính biểu
+  tượng của "sợi chỉ mệnh".

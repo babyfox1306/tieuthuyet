@@ -1,0 +1,216 @@
+{
+  "description": "Knowledge Matrix for The Glass Meridian, Book 1. Tracks character knowledge progression relative to key plot points and twists, with specific milestones.",
+  "target_language": "en",
+  "milestones": [
+    {
+      "chapter": 1,
+      "description": "Beginning of Book 1. Lin Wei enters the marriage contract out of desperation for her mother's treatment. Adrian initiates the contract for his own hidden agenda. The Glass Meridian is unknown to Lin Wei.",
+      "characters": {
+        "Lin Wei": {
+          "ch1": "Aware of her mother's critical illness and financial desperation. Aware of Adrian Vale as a wealthy CEO. Unaware of Adrian's true motives or the Glass Meridian.",
+          "ch10": "Beginning to suspect Adrian's motives are more complex than stated. Aware of Aurelian Group's involvement in her mother's medical file. Still unaware of the Glass Meridian.",
+          "ch25": "Actively investigating Aurelian Group. Has encountered hints of a larger conspiracy and the name 'Glass Meridian'. Growing distrust of Adrian but also grudging reliance.",
+          "ch36": "Has confirmed the existence of the Glass Meridian and its connection to Aurelian Group and her mother's case. Beginning to understand Adrian's role as an insider fighting the system.",
+          "ch50": "Understands the marriage was a shield, that her mother was a victim of a Glass Meridian trial, and that Adrian is an ally. Knows the Meridian is broken locally but not defeated. Aware of Project Phoenix's existence.",
+          "must_not_know_before": 50,
+          "hidden_truth": "Her mother was a key researcher in Project Phoenix, not just a victim. Her own birth name is linked to Project Phoenix."
+        },
+        "Adrian Vale": {
+          "ch1": "Aware of his plan to use Lin Wei against the Glass Meridian. Aware of his father's complicity and the falsified data. Aware of the Glass Meridian and Project Phoenix.",
+          "ch10": "Observing Lin Wei's investigative skills. Beginning to see her as a valuable asset beyond the initial plan. Still maintaining distance.",
+          "ch25": "Recognizes Lin Wei is uncovering more than anticipated. Growing protective instincts. Actively working with Lin Wei to break a Meridian link.",
+          "ch36": "Has confirmed his father's deep involvement and data falsification. Trust in Lin Wei is growing, shifting from tool to partner.",
+          "ch50": "Accepts the marriage as a real alliance. Has actively fought the Meridian alongside Lin Wei and broken a link. Understands his father's manipulations and his own past complicity.",
+          "must_not_know_before": 1,
+          "hidden_truth": "He has unconsciously been groomed by his father to either take over or be a pawn in the Meridian's grander scheme."
+        },
+        "Ms. Li (Lin Wei's Mother)": {
+          "ch1": "Critically ill, largely unresponsive. Unaware of the extent of the conspiracy or her own past role.",
+          "ch10": "Stable but still ill. May have brief moments of lucidity, but memories are suppressed or fragmented.",
+          "ch25": "Showing slight improvement. Her medical file remains a focal point.",
+          "ch36": "Showing more responsiveness. Unaware of the full truth about Project Phoenix.",
+          "ch50": "Pulled through the critical phase. Her past connection to Project Phoenix is revealed to Lin Wei and Adrian.",
+          "must_not_know_before": 45,
+          "hidden_truth": "She was a key researcher in Project Phoenix and holds suppressed memories crucial to its understanding."
+        },
+        "Isabella Vale (Adrian's Father)": {
+          "ch1": "Actively manipulating events from within the Meridian. Aware of Adrian's plan and Lin Wei's potential.",
+          "ch10": "Continuing to observe and subtly interfere, using Aurelian Group resources.",
+          "ch25": "Aware Lin Wei is getting close. May attempt to mislead or threaten her indirectly.",
+          "ch36": "His direct involvement in data falsification is becoming clearer to Adrian.",
+          "ch50": "His role in the Meridian and manipulation of Adrian is fully revealed.",
+          "must_not_know_before": 35,
+          "hidden_truth": "He orchestrated Adrian's entire upbringing to serve the Glass Meridian, including the 'inheritance' and his supposed fall from grace."
+        }
+      }
+    },
+    {
+      "chapter": 10,
+      "description": "Lin Wei begins to actively investigate Aurelian Group after noticing anomalies in her mother's medical file. Adrian observes her, his initial plan solidifying.",
+      "characters": {
+        "Lin Wei": {
+          "ch1": "Aware of her mother's critical illness and financial desperation. Aware of Adrian Vale as a wealthy CEO. Unaware of Adrian's true motives or the Glass Meridian.",
+          "ch10": "Beginning to suspect Adrian's motives are more complex than stated. Aware of Aurelian Group's involvement in her mother's medical file. Still unaware of the Glass Meridian.",
+          "ch25": "Actively investigating Aurelian Group. Has encountered hints of a larger conspiracy and the name 'Glass Meridian'. Growing distrust of Adrian but also grudging reliance.",
+          "ch36": "Has confirmed the existence of the Glass Meridian and its connection to Aurelian Group and her mother's case. Beginning to understand Adrian's role as an insider fighting the system.",
+          "ch50": "Understands the marriage was a shield, that her mother was a victim of a Glass Meridian trial, and that Adrian is an ally. Knows the Meridian is broken locally but not defeated. Aware of Project Phoenix's existence.",
+          "must_not_know_before": 50,
+          "hidden_truth": "Her mother was a key researcher in Project Phoenix, not just a victim. Her own birth name is linked to Project Phoenix."
+        },
+        "Adrian Vale": {
+          "ch1": "Aware of his plan to use Lin Wei against the Glass Meridian. Aware of his father's complicity and the falsified data. Aware of the Glass Meridian and Project Phoenix.",
+          "ch10": "Observing Lin Wei's investigative skills. Beginning to see her as a valuable asset beyond the initial plan. Still maintaining distance.",
+          "ch25": "Recognizes Lin Wei is uncovering more than anticipated. Growing protective instincts. Actively working with Lin Wei to break a Meridian link.",
+          "ch36": "Has confirmed his father's deep involvement and data falsification. Trust in Lin Wei is growing, shifting from tool to partner.",
+          "ch50": "Accepts the marriage as a real alliance. Has actively fought the Meridian alongside Lin Wei and broken a link. Understands his father's manipulations and his own past complicity.",
+          "must_not_know_before": 1,
+          "hidden_truth": "He has unconsciously been groomed by his father to either take over or be a pawn in the Meridian's grander scheme."
+        },
+        "Ms. Li (Lin Wei's Mother)": {
+          "ch1": "Critically ill, largely unresponsive. Unaware of the extent of the conspiracy or her own past role.",
+          "ch10": "Stable but still ill. May have brief moments of lucidity, but memories are suppressed or fragmented.",
+          "ch25": "Showing slight improvement. Her medical file remains a focal point.",
+          "ch36": "Showing more responsiveness. Unaware of the full truth about Project Phoenix.",
+          "ch50": "Pulled through the critical phase. Her past connection to Project Phoenix is revealed to Lin Wei and Adrian.",
+          "must_not_know_before": 45,
+          "hidden_truth": "She was a key researcher in Project Phoenix and holds suppressed memories crucial to its understanding."
+        },
+        "Isabella Vale (Adrian's Father)": {
+          "ch1": "Actively manipulating events from within the Meridian. Aware of Adrian's plan and Lin Wei's potential.",
+          "ch10": "Continuing to observe and subtly interfere, using Aurelian Group resources.",
+          "ch25": "Aware Lin Wei is getting close. May attempt to mislead or threaten her indirectly.",
+          "ch36": "His direct involvement in data falsification is becoming clearer to Adrian.",
+          "ch50": "His role in the Meridian and manipulation of Adrian is fully revealed.",
+          "must_not_know_before": 35,
+          "hidden_truth": "He orchestrated Adrian's entire upbringing to serve the Glass Meridian, including the 'inheritance' and his supposed fall from grace."
+        }
+      }
+    },
+    {
+      "chapter": 25,
+      "description": "Lin Wei uncovers concrete evidence linking Aurelian Group to the Glass Meridian. Adrian begins to actively protect Lin Wei, blurring the lines of the contract.",
+      "characters": {
+        "Lin Wei": {
+          "ch1": "Aware of her mother's critical illness and financial desperation. Aware of Adrian Vale as a wealthy CEO. Unaware of Adrian's true motives or the Glass Meridian.",
+          "ch10": "Beginning to suspect Adrian's motives are more complex than stated. Aware of Aurelian Group's involvement in her mother's medical file. Still unaware of the Glass Meridian.",
+          "ch25": "Actively investigating Aurelian Group. Has encountered hints of a larger conspiracy and the name 'Glass Meridian'. Growing distrust of Adrian but also grudging reliance.",
+          "ch36": "Has confirmed the existence of the Glass Meridian and its connection to Aurelian Group and her mother's case. Beginning to understand Adrian's role as an insider fighting the system.",
+          "ch50": "Understands the marriage was a shield, that her mother was a victim of a Glass Meridian trial, and that Adrian is an ally. Knows the Meridian is broken locally but not defeated. Aware of Project Phoenix's existence.",
+          "must_not_know_before": 50,
+          "hidden_truth": "Her mother was a key researcher in Project Phoenix, not just a victim. Her own birth name is linked to Project Phoenix."
+        },
+        "Adrian Vale": {
+          "ch1": "Aware of his plan to use Lin Wei against the Glass Meridian. Aware of his father's complicity and the falsified data. Aware of the Glass Meridian and Project Phoenix.",
+          "ch10": "Observing Lin Wei's investigative skills. Beginning to see her as a valuable asset beyond the initial plan. Still maintaining distance.",
+          "ch25": "Recognizes Lin Wei is uncovering more than anticipated. Growing protective instincts. Actively working with Lin Wei to break a Meridian link.",
+          "ch36": "Has confirmed his father's deep involvement and data falsification. Trust in Lin Wei is growing, shifting from tool to partner.",
+          "ch50": "Accepts the marriage as a real alliance. Has actively fought the Meridian alongside Lin Wei and broken a link. Understands his father's manipulations and his own past complicity.",
+          "must_not_know_before": 1,
+          "hidden_truth": "He has unconsciously been groomed by his father to either take over or be a pawn in the Meridian's grander scheme."
+        },
+        "Ms. Li (Lin Wei's Mother)": {
+          "ch1": "Critically ill, largely unresponsive. Unaware of the extent of the conspiracy or her own past role.",
+          "ch10": "Stable but still ill. May have brief moments of lucidity, but memories are suppressed or fragmented.",
+          "ch25": "Showing slight improvement. Her medical file remains a focal point.",
+          "ch36": "Showing more responsiveness. Unaware of the full truth about Project Phoenix.",
+          "ch50": "Pulled through the critical phase. Her past connection to Project Phoenix is revealed to Lin Wei and Adrian.",
+          "must_not_know_before": 45,
+          "hidden_truth": "She was a key researcher in Project Phoenix and holds suppressed memories crucial to its understanding."
+        },
+        "Isabella Vale (Adrian's Father)": {
+          "ch1": "Actively manipulating events from within the Meridian. Aware of Adrian's plan and Lin Wei's potential.",
+          "ch10": "Continuing to observe and subtly interfere, using Aurelian Group resources.",
+          "ch25": "Aware Lin Wei is getting close. May attempt to mislead or threaten her indirectly.",
+          "ch36": "His direct involvement in data falsification is becoming clearer to Adrian.",
+          "ch50": "His role in the Meridian and manipulation of Adrian is fully revealed.",
+          "must_not_know_before": 35,
+          "hidden_truth": "He orchestrated Adrian's entire upbringing to serve the Glass Meridian, including the 'inheritance' and his supposed fall from grace."
+        }
+      }
+    },
+    {
+      "chapter": 36,
+      "description": "Adrian confirms his father's deep complicity and data manipulation. Lin Wei and Adrian solidify their partnership against the Glass Meridian.",
+      "characters": {
+        "Lin Wei": {
+          "ch1": "Aware of her mother's critical illness and financial desperation. Aware of Adrian Vale as a wealthy CEO. Unaware of Adrian's true motives or the Glass Meridian.",
+          "ch10": "Beginning to suspect Adrian's motives are more complex than stated. Aware of Aurelian Group's involvement in her mother's medical file. Still unaware of the Glass Meridian.",
+          "ch25": "Actively investigating Aurelian Group. Has encountered hints of a larger conspiracy and the name 'Glass Meridian'. Growing distrust of Adrian but also grudging reliance.",
+          "ch36": "Has confirmed the existence of the Glass Meridian and its connection to Aurelian Group and her mother's case. Beginning to understand Adrian's role as an insider fighting the system.",
+          "ch50": "Understands the marriage was a shield, that her mother was a victim of a Glass Meridian trial, and that Adrian is an ally. Knows the Meridian is broken locally but not defeated. Aware of Project Phoenix's existence.",
+          "must_not_know_before": 50,
+          "hidden_truth": "Her mother was a key researcher in Project Phoenix, not just a victim. Her own birth name is linked to Project Phoenix."
+        },
+        "Adrian Vale": {
+          "ch1": "Aware of his plan to use Lin Wei against the Glass Meridian. Aware of his father's complicity and the falsified data. Aware of the Glass Meridian and Project Phoenix.",
+          "ch10": "Observing Lin Wei's investigative skills. Beginning to see her as a valuable asset beyond the initial plan. Still maintaining distance.",
+          "ch25": "Recognizes Lin Wei is uncovering more than anticipated. Growing protective instincts. Actively working with Lin Wei to break a Meridian link.",
+          "ch36": "Has confirmed his father's deep involvement and data falsification. Trust in Lin Wei is growing, shifting from tool to partner.",
+          "ch50": "Accepts the marriage as a real alliance. Has actively fought the Meridian alongside Lin Wei and broken a link. Understands his father's manipulations and his own past complicity.",
+          "must_not_know_before": 1,
+          "hidden_truth": "He has unconsciously been groomed by his father to either take over or be a pawn in the Meridian's grander scheme."
+        },
+        "Ms. Li (Lin Wei's Mother)": {
+          "ch1": "Critically ill, largely unresponsive. Unaware of the extent of the conspiracy or her own past role.",
+          "ch10": "Stable but still ill. May have brief moments of lucidity, but memories are suppressed or fragmented.",
+          "ch25": "Showing slight improvement. Her medical file remains a focal point.",
+          "ch36": "Showing more responsiveness. Unaware of the full truth about Project Phoenix.",
+          "ch50": "Pulled through the critical phase. Her past connection to Project Phoenix is revealed to Lin Wei and Adrian.",
+          "must_not_know_before": 45,
+          "hidden_truth": "She was a key researcher in Project Phoenix and holds suppressed memories crucial to its understanding."
+        },
+        "Isabella Vale (Adrian's Father)": {
+          "ch1": "Actively manipulating events from within the Meridian. Aware of Adrian's plan and Lin Wei's potential.",
+          "ch10": "Continuing to observe and subtly interfere, using Aurelian Group resources.",
+          "ch25": "Aware Lin Wei is getting close. May attempt to mislead or threaten her indirectly.",
+          "ch36": "His direct involvement in data falsification is becoming clearer to Adrian.",
+          "ch50": "His role in the Meridian and manipulation of Adrian is fully revealed.",
+          "must_not_know_before": 35,
+          "hidden_truth": "He orchestrated Adrian's entire upbringing to serve the Glass Meridian, including the 'inheritance' and his supposed fall from grace."
+        }
+      }
+    },
+    {
+      "chapter": 50,
+      "description": "Book 1 Climax and Resolution. Lin Wei and Adrian break a Meridian link, save her mother, and forge a true alliance. The revelation of Project Phoenix and Lin Wei's mother's deeper involvement sets up Book 2.",
+      "characters": {
+        "Lin Wei": {
+          "ch1": "Aware of her mother's critical illness and financial desperation. Aware of Adrian Vale as a wealthy CEO. Unaware of Adrian's true motives or the Glass Meridian.",
+          "ch10": "Beginning to suspect Adrian's motives are more complex than stated. Aware of Aurelian Group's involvement in her mother's medical file. Still unaware of the Glass Meridian.",
+          "ch25": "Actively investigating Aurelian Group. Has encountered hints of a larger conspiracy and the name 'Glass Meridian'. Growing distrust of Adrian but also grudging reliance.",
+          "ch36": "Has confirmed the existence of the Glass Meridian and its connection to Aurelian Group and her mother's case. Beginning to understand Adrian's role as an insider fighting the system.",
+          "ch50": "Understands the marriage was a shield, that her mother was a victim of a Glass Meridian trial, and that Adrian is an ally. Knows the Meridian is broken locally but not defeated. Aware of Project Phoenix's existence.",
+          "must_not_know_before": 50,
+          "hidden_truth": "Her mother was a key researcher in Project Phoenix, not just a victim. Her own birth name is linked to Project Phoenix."
+        },
+        "Adrian Vale": {
+          "ch1": "Aware of his plan to use Lin Wei against the Glass Meridian. Aware of his father's complicity and the falsified data. Aware of the Glass Meridian and Project Phoenix.",
+          "ch10": "Observing Lin Wei's investigative skills. Beginning to see her as a valuable asset beyond the initial plan. Still maintaining distance.",
+          "ch25": "Recognizes Lin Wei is uncovering more than anticipated. Growing protective instincts. Actively working with Lin Wei to break a Meridian link.",
+          "ch36": "Has confirmed his father's deep involvement and data falsification. Trust in Lin Wei is growing, shifting from tool to partner.",
+          "ch50": "Accepts the marriage as a real alliance. Has actively fought the Meridian alongside Lin Wei and broken a link. Understands his father's manipulations and his own past complicity.",
+          "must_not_know_before": 1,
+          "hidden_truth": "He has unconsciously been groomed by his father to either take over or be a pawn in the Meridian's grander scheme."
+        },
+        "Ms. Li (Lin Wei's Mother)": {
+          "ch1": "Critically ill, largely unresponsive. Unaware of the extent of the conspiracy or her own past role.",
+          "ch10": "Stable but still ill. May have brief moments of lucidity, but memories are suppressed or fragmented.",
+          "ch25": "Showing slight improvement. Her medical file remains a focal point.",
+          "ch36": "Showing more responsiveness. Unaware of the full truth about Project Phoenix.",
+          "ch50": "Pulled through the critical phase. Her past connection to Project Phoenix is revealed to Lin Wei and Adrian.",
+          "must_not_know_before": 45,
+          "hidden_truth": "She was a key researcher in Project Phoenix and holds suppressed memories crucial to its understanding."
+        },
+        "Isabella Vale (Adrian's Father)": {
+          "ch1": "Actively manipulating events from within the Meridian. Aware of Adrian's plan and Lin Wei's potential.",
+          "ch10": "Continuing to observe and subtly interfere, using Aurelian Group resources.",
+          "ch25": "Aware Lin Wei is getting close. May attempt to mislead or threaten her indirectly.",
+          "ch36": "His direct involvement in data falsification is becoming clearer to Adrian.",
+          "ch50": "His role in the Meridian and manipulation of Adrian is fully revealed.",
+          "must_not_know_before": 35,
+          "hidden_truth": "He orchestrated Adrian's entire upbringing to serve the Glass Meridian, including the 'inheritance' and his supposed fall from grace."
+        }
+      }
+    }
+  ]
+}

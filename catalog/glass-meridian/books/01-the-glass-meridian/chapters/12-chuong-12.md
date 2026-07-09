@@ -1,0 +1,124 @@
+---
+series: glass-meridian
+book: 1
+chapter: 12
+title: After the Ambush
+spice: 1
+word_count: 1211
+status: draft
+needs_fix:
+- short:1211
+promoted_at: '2026-07-08T07:35:22Z'
+---
+
+The glint of metal came first. Then the footsteps—heavy, closing in. Lin Wei spun, her gasp sharp, but before she could react, a dark shape slammed into her assailant with brutal precision.
+
+The knife clattered against the pavement. A sickening crunch of bone against bone followed, and the man who had been lunging at her crumpled like paper. Lin Wei pressed her back against the damp brick wall, her breath coming in ragged bursts as the streetlight flickered overhead, casting jagged shadows across the alley.
+
+Adrian Vale straightened, his chest heaving once before his breathing steadied into perfect control. He turned, and even in the dim light, she could see the menace still clinging to his features—the set of his jaw, the dark intensity in his eyes.
+
+"I told you not to leave the penthouse," he said, his voice flat. No accusation. Just a statement of fact.
+
+Lin Wei's brain screamed at her to run, to argue, to deny. But the adrenaline was still burning through her veins, and the image of the blade flashing toward her throat was fresh. She forced herself to breathe.
+
+"The address from the decryption," she managed, her voice steadier than she expected. "There was a record. An old research facility registered under a subsidiary. I had to see it."
+
+"And you thought coming alone, at midnight, to an abandoned building in the industrial district was a sound strategy?"
+
+"I didn't exactly have time to plan a field trip." She pushed off the wall, her legs shaky. "How did you find me?"
+
+He didn't answer. Instead, he crouched beside the unconscious man, turning him over with a ruthless efficiency that made her skin prickle. His fingers moved quickly, patting down the jacket, checking pockets.
+
+"Who sent you?" Adrian's voice was low, directed at the unconscious form. The man didn't respond.
+
+Lin Wei stepped closer, her journalistic instinct overriding her fear. "He had a knife. Professional. No visible tattoos or identifiers." She scanned the ground, her eyes catching something metallic near a drain grate. "Wait."
+
+She bent and picked up a small black object—a USB drive, unmarked, partially smeared with dirt. A faint symbol was etched into the casing: a jagged geometric shape, identical to the one from her mother's photograph.
+
+Her heart stopped.
+
+"That's the mark," she whispered. "Project Phoenix."
+
+Adrian straightened, his gaze landing on the drive in her hand. For a fraction of a second, something flickered across his face—surprise, recognition, then a hardening she couldn't decipher.
+
+"Give me that." His hand extended, command cloaked in calm.
+
+"No." She closed her fingers around it. "This is evidence. It's why I came here."
+
+"You came here because someone wanted you to come here." He stepped closer, close enough that she caught the faint trace of sandalwood beneath the metallic tang of blood on his jacket. "This was a trap, Lin Wei. You walked into it."
+
+"Then why did you follow?" She lifted her chin, meeting his eyes. "If I'm just a pawn in your game, why risk yourself?"
+
+His jaw tightened. The silence stretched, heavy and charged. He didn't answer.
+
+They stood there, the unconscious man at their feet, the USB drive a burning weight in her palm. The rain began again, a fine mist that clung to her hair and beaded on his shoulders.
+
+"Get in the car," he said finally, turning away.
+
+---
+
+The ride back was silent. Adrian drove with one hand on the wheel, the other resting on his thigh, his knuckles still stained with the assailant's blood. Lin Wei sat in the passenger seat, her fingers curled around the USB drive in her coat pocket, replaying the attack in her head.
+
+He had been fast. Precise. The way he'd neutralized the threat spoke of training, experience—the kind that didn't come from boardroom negotiations.
+
+She stole a glance at him. The cold mask was back in place, but she had seen it slip. In the alley, when he'd looked at her, there had been something raw beneath the ice. Fear, maybe. Or something closer to anger.
+
+"Why didn't you let me die?" she asked, the question slipping out before she could stop it.
+
+His fingers tightened on the wheel. "You're worth more alive than dead."
+
+"To you?"
+
+He didn't answer. The headlights cut through the rain, illuminating the road ahead. She watched his profile—the sharp line of his jaw, the slight clench of his teeth—and for a moment, she saw not the CEO, not the puppet master, but a man whose shadows ran deeper than she had imagined.
+
+When they reached the penthouse, he killed the engine and sat still for a long moment.
+
+"You'll need to clean that cut on your arm," he said, not looking at her.
+
+She glanced down. A thin line of red traced her forearm, a souvenir from the scuffle she hadn't even noticed.
+
+"I'm fine."
+
+"You're bleeding on my leather seat."
+
+She almost laughed. Almost. "Your concern is touching."
+
+He turned then, and his gaze was intense, searching. His hand moved before she could react, fingers brushing her forearm, turning it gently to examine the wound. His touch was light but deliberate, a stark contrast to the violence she had witnessed earlier.
+
+"This will scar if you don't treat it properly." His voice had dropped, quieter now, the ice replaced by something that made her breath catch.
+
+She didn't pull away. She couldn't. Her eyes locked on his, and the world narrowed to the feel of his thumb tracing the edge of the cut, the warmth of his skin against hers.
+
+"Adrian." She said his name without thinking. A question. A plea. She wasn't sure what.
+
+He stiffened. His hand dropped, and the cold mask slid back into place, seamless and impenetrable.
+
+"Inside. Now."
+
+The moment shattered.
+
+---
+
+Later, after she had showered and changed, Lin Wei sat on the edge of the guest bed, dabbing antiseptic on the wound. The USB drive lay on the nightstand beside her, a silent accusation. She still hadn't plugged it in.
+
+She heard a sound at the door and looked up.
+
+Adrian stood in the doorway, his jacket gone, his shirt untucked, sleeves rolled to reveal forearms still streaked with evidence of the fight. He leaned against the frame, arms crossed, and watched her.
+
+But the mask was gone.
+
+In the soft lamplight, his face was unguarded—a complex tapestry of exhaustion, frustration, and something else. Something that looked almost like pain. His eyes moved over her, lingering on the cut, the bruise blooming on her collarbone, and his jaw worked silently.
+
+She froze, the cotton ball still pressed to her arm.
+
+"What are you looking at?" Her voice came out huskier than intended.
+
+He didn't answer for a long breath. Then, quietly, almost to himself: "I told myself I wouldn't care."
+
+The words hung between them, heavy with meaning she didn't fully grasp.
+
+"And do you?" she asked.
+
+His gaze met hers, and for a fleeting second, the ice cracked wide open. She saw conflict, regret, and a fierce protectiveness that contradicted everything she thought she knew about him.
+
+He didn't answer. He simply turned and walked away, leaving her alone with the USB drive, the unanswered questions, and the echo of a mask finally beginning to splinter.

@@ -1,0 +1,21 @@
+{
+  "foreign_chars": [
+    "é"
+  ],
+  "word_count": 1385,
+  "voice_drift": {
+    "flag": false,
+    "details": ""
+  },
+  "continuity_conflict": {
+    "flag": true,
+    "details": "The story_state lists this as Chapter 2, but the input text is labeled Chapter 9. Additionally, the story_state indicates the meeting is currently happening, while the chapter text depicts the meeting concluding and the protagonist leaving the building."
+  },
+  "cliffhanger_strength": 5,
+  "pacing_issue": false,
+  "signature_detail_present": true,
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "continuity_conflict"
+  ]
+}

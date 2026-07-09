@@ -1,0 +1,83 @@
+{
+  "main_mystery": "Why did Adrian Vale choose Lin Wei for the marriage contract, and what is the true connection between Aurelian Group, her mother's illness, and the Glass Meridian?",
+  "truth": "Lin Wei's mother, Lin Mei, was a data analyst on the original Project Phoenix clinical trial under the name Dr. Mei Lin. She discovered that the trial was deliberately engineering immune suppression in certain patient cohorts to create long-term pharmaceutical dependencies, and she fled with a partial data set. Adrian's father, Marcus Vale, laundered the research funds and signed the final authorization documents. Adrian unknowingly co-signed one document as a junior executive. The Glass Meridian has been monitoring Lin Mei for 15 years, waiting to see if she would reveal the stolen data. When Lin Wei began investigating medical corruption as a journalist, the Meridian flagged her as a second-generation risk. Adrian learned of Lin Wei through a Meridian leak and chose her for the marriage contract because her cultural access to Asian medical networks and her mother's hidden past make her the perfect blind spot — the Meridian will not suspect Adrian is using his own wife to infiltrate them. Lin Mei's cancer is a delayed effect of experimental immune suppressants from the trial, not a direct attack. The marriage contract is both Adrian's protection of Lin Wei and his weapon against the organization that destroyed his father and used him as a pawn.",
+  "canonical_reveal_chapter": 43,
+  "red_herrings": [
+    "Adrian Vale is orchestrating Lin Wei's mother's illness for personal gain.",
+    "The marriage contract is purely a financial transaction for Adrian to gain access to Lin Wei's journalistic skills.",
+    "Dr. Evelyn Cross is secretly Lin Wei's half-sister or a former lover of Adrian.",
+    "Project Phoenix was a purely benevolent research project that went wrong.",
+    "Isabelle Raines is a genuine ally to Adrian and has no hidden agenda."
+  ],
+  "major_reveals": [
+    "Lin Wei's mother, Lin Mei, was a key figure in the original Project Phoenix trial and fled with crucial data.",
+    "Adrian Vale's father, Marcus Vale, was directly involved in funding and falsifying data for Project Phoenix.",
+    "Adrian Vale unknowingly co-signed a document related to Project Phoenix.",
+    "Lin Wei's mother's illness is a delayed consequence of the experimental drugs used in Project Phoenix.",
+    "The Glass Meridian is a global network using legitimate institutions to conceal unethical medical experiments.",
+    "Adrian chose Lin Wei specifically because of her mother's connection to Project Phoenix and her investigative skills.",
+    "Lin Wei and Adrian successfully disrupt a local link of the Glass Meridian within Aurelian Group."
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "description": "Lin Wei discovers a discrepancy in her mother's early medical records, specifically mentioning experimental treatments under a pseudonym.",
+      "plant_chapter": 3,
+      "payoff_chapter": 25
+    },
+    {
+      "id": "C002",
+      "description": "Adrian exhibits unusual knowledge of obscure pharmaceutical regulations and historical medical trials when discussing Lin Wei's mother's case with her.",
+      "plant_chapter": 5,
+      "payoff_chapter": 28
+    },
+    {
+      "id": "C003",
+      "description": "Lin Wei receives an anonymous tip referencing 'Project Phoenix' and mentioning 'falsified data' related to Aurelian Group.",
+      "plant_chapter": 8,
+      "payoff_chapter": 36
+    },
+    {
+      "id": "C004",
+      "description": "A former colleague of Lin Wei's mother, Dr. Evelyn Cross, is overly insistent on specific, experimental treatment protocols for Lin Mei, which seem designed to mask symptoms rather than cure.",
+      "plant_chapter": 10,
+      "payoff_chapter": 30
+    },
+    {
+      "id": "C005",
+      "description": "Lin Wei finds a hidden compartment in her mother's old Beijing apartment containing encrypted research notes and an employee ID for Aurelian Group under the name 'Dr. Mei Lin'.",
+      "plant_chapter": 15,
+      "payoff_chapter": 40
+    },
+    {
+      "id": "C006",
+      "description": "Adrian confronts Isabelle Raines about Aurelian Group's historical involvement in early-stage biotech investments, receiving evasive answers.",
+      "plant_chapter": 18,
+      "payoff_chapter": 43
+    },
+    {
+      "id": "C007",
+      "description": "Lin Wei's mother, in a moment of lucidity, whispers about 'running' and 'the dangerous data' before lapsing back into unconsciousness.",
+      "plant_chapter": 22,
+      "payoff_chapter": 35
+    },
+    {
+      "id": "C008",
+      "description": "Adrian discovers a single, overlooked co-signed document from his early days at Aurelian Group that pertains to 'Phase III Trial Funding - Project Phoenix'.",
+      "plant_chapter": 30,
+      "payoff_chapter": 43
+    },
+    {
+      "id": "C009",
+      "description": "Lin Wei's investigative research uncovers a pattern of suppressed medical trials linked to shell corporations that Aurelian Group previously acquired.",
+      "plant_chapter": 35,
+      "payoff_chapter": 45
+    },
+    {
+      "id": "C010",
+      "description": "Victor Hale makes a veiled threat to Adrian, mentioning 'the Phoenix mistakes' and 'unforeseen consequences' if Adrian continues his current path.",
+      "plant_chapter": 38,
+      "payoff_chapter": 48
+    }
+  ]
+}

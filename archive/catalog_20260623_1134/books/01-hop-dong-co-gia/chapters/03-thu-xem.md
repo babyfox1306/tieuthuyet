@@ -1,0 +1,188 @@
+---
+series: ceo-contract
+book: 1
+chapter: 3
+title: Thử Xem
+subtitle: Tiếng gõ cửa lúc 23h47 không phải yêu cầu.
+spice: 3
+word_count: 1933
+status: draft
+needs_fix: []
+promoted_at: '2026-06-23T04:10:26Z'
+---
+
+Tiếng gõ cửa lúc 23h47 không phải yêu cầu.
+
+Diệp Tâm ngẩng đầu khỏi laptop, ngón tay dừng giữa phím. Ba cái gõ đều đặn, cách nhau đúng một giây. Không vội. Không lịch sự.
+
+Cô biết đó là ai.
+
+"Mở."
+
+Giọng nói đàn ông từ ngoài hành lang vọng vào, trầm và ngắn gọn như lệnh. Diệp Tâm cắn má trong, đếm chậm đến ba trong đầu — thói quen cũ mỗi khi muốn chửi thẳng mặt ai đó — rồi đứng dậy kéo cửa.
+
+Hàn Thừa Uyên tựa vai vào khung cửa, áo sơ mi trắng xắn đến khuỷu, cổ tay để lộ chiếc đồng hồ cơ kim loại đang phản chiếu ánh đèn hành lang. Mắt hắn quét một vòng phòng cô, dừng lại ở chiếc laptop mở trên bàn, rồi kéo về phía cô.
+
+"Ngủ chưa?"
+
+"Rõ ràng là chưa." Diệp Tâm tựa người vào cánh cửa, tay ôm ngang ngực. "Có việc?"
+
+Hắn không trả lời. Thay vào đó, ngón tay trỏ và ngón giữa của hắn gõ nhẹ lên khung cửa gỗ — một, hai, ba nhịp — giống như đang tính toán điều gì đó trong đầu.
+
+"Mai mẹ tôi ăn sáng ở đây." Giọng Hàn Thừa Uyên bằng phẳng. "Cô Lâm Vũ Trinh. Người hay hỏi."
+
+Diệp Tâm nhướn mày. "Vậy anh cần tôi thuộc lòng tiểu sử?"
+
+"Không." Hắn dừng động tác gõ, mắt nhìn thẳng vào cô. "Cần em đóng vai tốt hơn hôm nay."
+
+Cô cười khẽ, giọng mỉa mai vọng lên: "Tôi tưởng anh đã kiểm tra kỹ hồ sơ trước khi ký hợp đồng. Giờ mới lo sao?"
+
+"Không phải lo." Hàn Thừa Uyên bước vào trong, vai hắn lướt qua vai cô khi cánh cửa bị đẩy rộng hơn. "Đang thử xem."
+
+Hai chữ cuối cùng phát âm chậm rãi, như đang nhắc lại tin nhắn cô gửi tối qua. Diệp Tâm đứng yên tại chỗ, cơ thể căng lên khi cánh cửa đóng sau lưng hắn với tiếng kẹt nhẹ.
+
+Không khóa. Nhưng không ai định mở lại.
+
+"Thử gì?" Cô giữ giọng bình tĩnh, dù nhịp tim đã bắt đầu đập nhanh hơn. "Diễn xuất trước người thân à?"
+
+Hàn Thừa Uyên quay người, ánh mắt hắn quét từ khuôn mặt cô không trang điểm, xuống chiếc áo thun oversized màu xám và quần đùi cotton ngắn, rồi dừng lại ở đôi bàn chân trần với lớp sơn đỏ tươi trên móng.
+
+"Mẹ tôi không dễ lừa." Hắn nói. "Bà sẽ để ý từng chi tiết. Cách đứng. Cách nhìn. Khoảng cách giữa hai vợ chồng."
+
+Diệp Tâm nhếch môi. "Vậy anh định rút ngắn khoảng cách bây giờ à?"
+
+Hắn không trả lời. Thay vào đó, Hàn Thừa Uyên tiến lại gần, từng bước chân đều đặn trên sàn gỗ tối màu, cho đến khi khoảng cách giữa hai người chỉ còn một gang tay.
+
+"Hợp đồng có ghi rõ." Giọng hắn trầm hơn. "Cư xử như vợ chồng thật."
+
+Cô ngẩng cằm lên, đối mặt với ánh mắt sâu thẳm đó. "Không ghi phải *lên giường* như vợ chồng thật."
+
+"Không ghi là *không được*."
+
+Tim Diệp Tâm đập mạnh một nhịp. Cô cắn má trong, cố giữ nét mặt không đổi màu, nhưng hơi thở đã nông hơn. "Anh đang làm gì?"
+
+Hàn Thừa Uyên không chạm vào cô. Nhưng hắn nghiêng người, mùi hương cỏ xanh lẫn thuốc lá nhạt từ cơ thể hắn ùa vào mũi cô. "Kiểm tra."
+
+"Kiểm tra cái gì?"
+
+"Em có *dám* không."
+
+Câu nói như một cái tát. Diệp Tâm thấy máu nóng dâng lên gáy. Cô ghét bị thách. Ghét kiểu cách hắn đặt câu hỏi như thể cô chỉ là diễn viên không đủ bản lĩnh.
+
+Nhưng cô cũng biết mình đang đứng trước ranh giới nào.
+
+"Anh nghĩ tôi không dám?" Cô hỏi lại, giọng mỉa nhưng hơi run nhẹ ở cuối câu.
+
+Hàn Thừa Uyên không cười. Nhưng một điều gì đó thay đổi trong ánh mắt hắn — có thể là thách thức, có thể là tò mò. "Chưa biết."
+
+Diệp Tâm nuốt nước bọt. Rồi, không để não bộ kịp cân nhắc thêm, cô giơ tay lên nắm lấy cổ áo sơ mi hắn, kéo xuống, và hôn.
+
+Động tác nhanh, gần như giận dữ. Môi cô chạm môi hắn không nhẹ nhàng, mà gần như đâm thẳng vào, như muốn chứng minh điều gì đó.
+
+Nhưng Hàn Thừa Uyên không lùi. Hắn đứng yên một giây — rồi đáp lại.
+
+Bàn tay hắn khoác qua eo cô, kéo cô sát vào ngực hắn trong một cử chỉ kiểm soát tuyệt đối. Nụ hôn chuyển từ chạm môi sang áp lực, từ áp lực sang xâm chiếm. Lưỡi hắn áp vào môi cô, không hỏi, không xin phép.
+
+Diệp Tâm rên khẽ trong cổ họng, tay vẫn siết chặt cổ áo hắn. Cô muốn đẩy hắn ra. Cô muốn kéo hắn lại gần hơn. Hai suy nghĩ đối lập cùng tồn tại trong não, khiến đầu cô quay cuồng.
+
+Hàn Thừa Uyên dừng nụ hôn, nhưng không thả cô ra. Môi hắn rời khỏi môi cô, di chuyển xuống góc hàm, xuống cổ, hơi thở nóng phả lên da cô.
+
+"Em vẫn còn cơ hội." Hắn thì thầm sát tai cô. "Nói dừng lại."
+
+Diệp Tâm thở hổn hển. Móng tay cô đỏ như máu cắm vào vải sơ mi trắng. "Không."
+
+Một chữ. Nhưng đủ.
+
+Hàn Thừa Uyên nhấc cô lên. Tay hắn khỏe, động tác quyết đoán, khiến Diệp Tâm phải vòng chân qua eo hắn để giữ thăng bằng. Lưng cô chạm vào tường mát lạnh, áo thun bị kéo lên, bàn tay hắn nóng rực ép vào da thịt trần.
+
+"Chưa mặc gì bên trong à?" Giọng hắn trầm xuống, gần như chế giễu.
+
+Mặt Diệp Tâm đỏ bừng. Cô cắn môi. "Ở nhà riêng, mặc gì thì tôi thích."
+
+Hắn cười khẽ — một âm thanh cực kỳ hiếm — rồi cúi xuống hôn xuống xương quai xanh cô, răng cắn nhẹ vào da. Diệp Tâm giật mình, móng tay cào vào vai hắn qua lớp vải mỏng.
+
+"Đau không?" Hắn hỏi.
+
+"Không."
+
+"Nói thật."
+
+"Chịu được."
+
+Hàn Thừa Uyên ngẩng lên nhìn cô, mắt sâu thẳm như vực. "Em không phải người dễ chịu."
+
+"Vậy sao?" Diệp Tâm thở hổn hển. "Anh cũng vậy."
+
+Hắn không tranh cãi. Thay vào đó, Hàn Thừa Uyên bế cô sang giường, đặt cô xuống nệm êm, rồi quỳ gối một bên. Áo sơ mi trắng của hắn đã nhàu nát vì bàn tay cô, cúc trên cùng bung ra lộ khối xương quai xanh rắn chắc.
+
+Bàn tay hắn kéo chiếc áo thun cô lên cao hơn, lộ toàn bộ vòng eo thon, làn da trắng, và ngực trần không vải che. Diệp Tâm không che tay, không quay mặt. Cô nhìn thẳng vào mắt hắn, miệng mỉa mai: "Kiểm tra xong chưa?"
+
+"Chưa."
+
+Hắn cúi xuống, môi chạm vào làn da bụng cô, lưỡi vẽ đường lên phía trên. Diệp Tâm cắn môi, ngón tay siết chặt vào ga trải giường trắng, hơi thở đứt quãng.
+
+Khi môi hắn bao lấy một bên ngực cô, cô không nhịn được mà rên lớn, lưng vồng lên khỏi nệm. Hàn Thừa Uyên ấn tay lên bụng cô, giữ cô đừng động, lưỡi liếm và mút chậm rãi, như đang ghi nhớ từng phản ứng của cơ thể cô.
+
+"Anh…" Giọng Diệp Tâm run. "Đừng—"
+
+"Đừng gì?"
+
+"Đừng làm như anh đang… thích việc này."
+
+Hắn ngẩng lên, môi ướt, ánh mắt đậm nguy hiểm. "Ai nói tôi không thích?"
+
+Câu hỏi như một quả bom. Diệp Tâm há hốc mồm, nhưng không kịp đáp lại vì tay hắn đã tuột vào trong quần đùi cô, ngón tay chạm vào nơi ẩm ướt nhất.
+
+"Ướt hết rồi." Hắn nhận xét, giọng bằng phẳng như đang nói chuyện công việc. Nhưng ngón tay hắn không ngừng, lướt chậm qua khe nhạy cảm, mỗi động tác chính xác và có chủ đích.
+
+Diệp Tâm cắn môi đến sưng, hông bị hắn giữ chặt, cơ thể cô run lên từng đợt. "Nếu anh tiếp tục… nói như vậy… tôi sẽ đá anh xuống giường."
+
+Hàn Thừa Uyên cười thật — lần đầu tiên cô thấy hắn cười — rồi kéo quần đùi cô xuống hẳn, ném xuống sàn. Hắn tách đùi cô ra, mắt nhìn xuống không chớp, rồi cúi xuống hôn vào phía trong đùi.
+
+Diệp Tâm thét nhỏ, tay vụt lên bịt miệng mình. Nhưng Hàn Thừa Uyên nắm lấy cổ tay cô, kéo xuống. "Không che."
+
+"Anh điên à?"
+
+"Có thể."
+
+Môi hắn áp lên nơi nhạy cảm nhất của cô, lưỡi xâm nhập không do dự. Diệp Tâm cong người, ngón tay siết chặt vào tóc hắn, không biết đẩy ra hay kéo lại. Khoái cảm ập đến từng đợt, làm cô mất kiểm soát hoàn toàn.
+
+"Hàn Thừa Uyên—"
+
+Hắn không dừng. Ngón tay hắn cắm sâu vào trong khi lưỡi liếm nhịp nhàng bên ngoài, tạo áp lực kép khiến đầu cô quay cuồng. Diệp Tâm rên lớn, đùi run rẩy, cơ thể căng cứng rồi vỡ òa trong một luồng khoái cảm mãnh liệt.
+
+Hắn chỉ ngẩng lên khi cô đã gần hết sức, môi hắn ướt át, ánh mắt hắn tối sầm. "Giờ em tin chưa?"
+
+Diệp Tâm thở hổn hển, mặt đỏ gay, tóc rối bù trên gối. "Tin cái gì?"
+
+"Tôi thích việc này."
+
+Trước khi cô kịp đáp, Hàn Thừa Uyên cởi áo sơ mi, ném xuống sàn, rồi tháo dây nịt. Kim loại kêu leng keng. Cơ thể hắn rắn chắc, vài vết scar mờ trên sườn, cơ bụng cuộn gọn khi hắn cúi xuống hôn lên môi cô một lần nữa.
+
+Lần này nụ hôn chậm hơn. Sâu hơn. Như đang thông báo: *không còn đường lui.*
+
+Khi hắn đẩy vào, Diệp Tâm cắn vào vai hắn, móng tay cào xuống lưng hắn để lại vệt đỏ. Hắn rên khẽ sát tai cô — âm thanh hiếm hoi duy nhất hắn để lộ — rồi bắt đầu di chuyển, chậm rãi lúc đầu, sau đó mạnh hơn, sâu hơn.
+
+Giường kêu cót két. Hơi thở hai người hòa quyện. Diệp Tâm không còn cố giữ mặt lạnh lùng nữa — cô rên, thở hổn hển, gọi tên hắn xen lẫn những từ chửi thề. Hàn Thừa Uyên vẫn ít lời, nhưng bàn tay hắn nói hộ: ôm eo cô, kéo cô lên, thay đổi góc độ để chạm sâu hơn.
+
+Đỉnh điểm lần hai ập đến mạnh hơn lần đầu. Diệp Tâm cắn môi đến chảy máu, cơ thể co giật, nhưng Hàn Thừa Uyên giữ chặt cô, không để cô trốn. Hắn đạt cực khoái vài giây sau, trán ép vào vai cô, hơi thở nóng phả lên da ướt đẫm mồ hôi.
+
+Yên lặng.
+
+Chỉ còn tiếng thở.
+
+Hàn Thừa Uyên rời khỏi cô, nằm xuống bên cạnh, tay che mắt. Diệp Tâm nằm im, nhìn trần nhà, đếm nhịp thở của mình: một, hai, ba, bốn.
+
+Rồi điện thoại rung.
+
+Cô giật mình, ngồi bật dậy, túm chăn che ngực. Màn hình sáng trên bàn đầu giường.
+
+**Lâm Vũ Trinh.**
+
+Diệp Tâm liếc sang Hàn Thừa Uyên. Hắn cũng đang nhìn màn hình, mặt không biểu cảm, nhưng ngón tay gõ nhẹ lên đùi trần — một, hai, ba nhịp.
+
+Điện thoại rung lần thứ hai.
+
+Rồi một tin nhắn hiện lên:
+
+*"Thừa Uyên, sáng mai mẹ đến sớm. 7h. Đừng để mẹ phải đợi ngoài cửa."*

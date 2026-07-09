@@ -1,0 +1,80 @@
+{
+  "act": [7, 9],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Map in the Drawer",
+      "slug": "ch7-the-map-in-the-drawer",
+      "one_line_summary": "Mara uses Ilse's key to find a hidden map, while Asher's growing proximity unearths a dangerous tenderness.",
+      "beat_summary": "At first light, Mara opens the locked attic drawer with Ilse's key. Inside is a map of the property, annotated by Ilse. Asher traces the pathways, narrating the history. The Girl in Blue appears behind them, her finger landing on a spot marked 'the old root cellar.' Mara feels a pull to that spot. Asher takes her hand, promising they will face whatever is there together. The map feels like a lifeline, or a trap. Headlights sweep the long drive.",
+      "must_happen": [
+        "Mara uses Ilse's key to unlock a hidden drawer in the desk, revealing a property map annotated in her aunt's hand.",
+        "Asher cross-references the map's landmarks with dates from Ilse's journal, identifying the 'Old Root Cellar' as a potential site.",
+        "The Girl in Blue appears in the room and points directly at the root cellar on the map, her expression desperate.",
+        "[ROMANCE] Asher takes Mara's trembling hand and squeezes it firmly, forging a silent covenant of trust and shared purpose."
+      ],
+      "must_not": [
+        "Julian Croft's cause of death must not be fully detailed.",
+        "Lydia must not enter the house in this chapter (she only arrives at the cliffhanger)."
+      ],
+      "opens_with": "'The garden,' Asher said, holding the faded map against the lamplight. 'Ilse buried something there the night Julian died.'",
+      "cliffhanger": "A pair of headlights swept across the gate. Mara's blood chilled. She knew that car. Lydia was here.",
+      "signature_detail_hint": "The map is drawn on the back of old wallpaper, the floral pattern matching the guest room's faded design.",
+      "emotional_beat": "A quiet certainty grows between them—Asher is not just a companion, but an anchor in the storm of her past.",
+      "spice": 1,
+      "spice_note": "Micro-beat of handholding, a steadying physical connection born from rising trust and mutual need.",
+      "chapter_task": "Write a 1700-1900 word chapter focusing on discovery and atmospheric tension. The map reveal must feel both hopeful and foreboding. The hand-hold romantic beat should land with emotional weight. The headlights at the end should pivot the chapter sharply into danger.",
+      "carries_to_next": "Lydia's arrival forces immediate confrontation, testing the fragile trust between Mara and Asher as the external threat escalates."
+    },
+    {
+      "chapter": 8,
+      "title": "The Rupture",
+      "slug": "ch8-the-rupture",
+      "one_line_summary": "Lydia's confrontation shatters the peace, fracturing Mara's resolve until Asher's arms become her only refuge.",
+      "beat_summary": "Lydia arrives, making demands and trying to pull Mara away. She threatens Asher. Mara stands up for herself and him. Lydia retreats but leaves a poisonous doubt. Alone with Asher, the adrenaline and emotion overwhelms them. A raw, healing kiss turns into a deeply intimate moment of giving and receiving comfort. The Girl in Blue observes from the dark, her expression softening for the first time.",
+      "must_happen": [
+        "Lydia Vale storms the house, verbally attacking Mara and threatening Asher with legal action.",
+        "Mara steps in front of Asher, directly confronting her mother and refusing to be intimidated.",
+        "Lydia leaves but is overheard making a cryptic phone call about moving 'the object'.",
+        "[ROMANCE] Asher and Mara share a fierce, devouring kiss that deepens into a steamy embrace, a physical release of tension and consolidation of their bond."
+      ],
+      "must_not": [
+        "The full memory of the night Julian fell must not be narrated.",
+        "Mara must not tell Asher she loves him yet (it is too early in the slow burn)."
+      ],
+      "opens_with": "The knock that saved them from the kiss was sharp, imperious—a sound Mara knew from every nightmare of her childhood. 'Mara Vale, open this door.'",
+      "cliffhanger": "Lydia didn't leave. She walked to the far end of the driveway and pulled out her phone. 'It's me. She found the key.' A pause. 'I told you she would. We need to move the bear.'",
+      "signature_detail_hint": "Lydia's earrings are tiny daggers, swinging violently as she gestured, a perfect symbol of her hidden cruelty.",
+      "emotional_beat": "The kiss shatters their careful distance, replacing intellectual curiosity with raw, undeniable need and a desperate search for solace.",
+      "spice": 2,
+      "spice_note": "Steamy chapter. Kissing turns to passionate embrace in the kitchen. Hands roam under clothes (waist, back). Heavy kissing and grinding. Clothes mostly on but thoroughly disheveled. Breasts touched over clothes. Emotional vulnerability is the core driver of the physical intensity. No explicit sex.",
+      "chapter_task": "Write a 1800-1900 word chapter that balances a brutal confrontation with a deeply romantic, steamy payoff. The scene with Lydia must be emotionally charged, not just a plot point. The love scene must feel earned by the tension. Conclude with the phone call hook.",
+      "carries_to_next": "The intimate connection is sealed, but Lydia's phone call reveals the bear is still in play. Mara and Asher must race against her to retrieve it."
+    },
+    {
+      "chapter": 9,
+      "title": "The Eye of the Storm",
+      "slug": "ch9-the-eye-of-the-storm",
+      "one_line_summary": "Mara and Asher dig for the bear, but what surfaces is a false memory—and a warning that the real truth is still inside the house.",
+      "beat_summary": "Dawn breaks with a nervous truce. Mara and Asher arm themselves with shovels. They find the root cellar, digging through the packed earth where the map marked. They recover a rusted lockbox. Inside is not the bear, but a child's blue dress and a chilling note from Ilse: 'The girl wanted out. I couldn't bear it. I put her in the house.' Looking up, the attic window is open, the Girl in Blue holding the exact same lockbox. The duality of Mara's mind begins to fracture.",
+      "must_happen": [
+        "Mara and Asher locate the root cellar on the property and dig up a rusted lockbox.",
+        "The lockbox contains a child's blue dress and a note from Ilse that hints at the fractured psyche.",
+        "The Girl in Blue appears in the attic window holding the exact same lockbox, creating a reality-bending moment.",
+        "[ROMANCE] Asher wraps his arm around Mara as she trembles, grounding her in the present as the past threatens to swallow her."
+      ],
+      "must_not": [
+        "The actual bear must not be found in this chapter.",
+        "Mara must not fully reintegrate with the Girl in Blue yet (reserved for the climax)."
+      ],
+      "opens_with": "Dawn arrived like a thief, pale and guilty, as Mara pulled on her boots and followed Asher into the garden without a word.",
+      "cliffhanger": "The mud-caked box broke open to reveal a child's dress, blue as cornflowers, and a note in Ilse's trembling hand: 'I couldn't let them bury the truth with him.' Above them, a window screeched open. The Girl in Blue stood in the attic frame, holding the same box.",
+      "signature_detail_hint": "A single, small ceramic thimble in the excavation dirt, its blue forget-me-not pattern a ghost of Ilse's loving, terrified hands.",
+      "emotional_beat": "Resolve solidifies into shared purpose, each glance a silent promise that they face the truth together, no matter how fractured it becomes.",
+      "spice": 1,
+      "spice_note": "Affectionate touch (arm around trembling shoulders), intimate grounding gesture, solidifying the quiet, domestic strength of their partnership.",
+      "chapter_task": "Write a 1700-1800 word chapter focused on the physical dig and the psychological fracture of the duplicate box. The romantic beat should be quiet and steady, contrasting the escalating supernatural chaos.",
+      "carries_to_next": "Mara is confronted with the tangible proof of her fractured mind. The search for the real bear is now a race against Lydia and a battle with her own psyche."
+    }
+  ]
+}

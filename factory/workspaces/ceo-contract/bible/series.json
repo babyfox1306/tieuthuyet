@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "series_id": "the-glass-meridian",
+    "genre": "Romance Thriller",
+    "target_language": "en"
+  },
+  "title": "The Glass Meridian",
+  "sub_niche": "Contract Marriage Thriller",
+  "spice_level": 3,
+  "planned_books": 5,
+  "hook_central": "A Chinese investigative journalist enters a year-long marriage contract with a ruthless Western CEO to fund her mother's treatment, only to be ensnared in a global conspiracy that implicates her own family.",
+  "tropes": [
+    "Contract Marriage",
+    "Enemies to Lovers",
+    "Cold CEO",
+    "Investigative Journalist",
+    "Medical Conspiracy",
+    "Cross-Cultural Romance",
+    "Slow Burn",
+    "Hidden Identity",
+    "Family Secrets"
+  ],
+  "leads": {
+    "female": {
+      "name": "Lin Wei",
+      "age": 28,
+      "voice": "Sharp, observant, with a dry wit that surfaces under pressure. Her Mandarin is fluent and nuanced, her English functional but sometimes literal.",
+      "tics": [
+        "Taps her pen against surfaces when deep in thought or stressed.",
+        "Subtly adjusts her glasses when assessing someone."
+      ],
+      "boundary": "She will not be silenced or manipulated. Her loyalty to her mother and her pursuit of truth are non-negotiable. She values integrity and will fight for it, even at great personal cost.",
+      "internal_voice": "A constant analysis of situations, a weighing of risks, and a quiet determination to uncover the truth, often questioning her own judgment when emotions interfere."
+    },
+    "male": {
+      "name": "Adrian Vale",
+      "age": 35,
+      "voice": "Low, precise, with an underlying steeliness. His English is impeccable, his tone often clipped and devoid of unnecessary emotion.",
+      "tics": [
+        "A slight clench of his jaw when displeased or holding back.",
+        "Runs a thumb over the edge of his watch."
+      ],
+      "boundary": "He values control and efficiency above all else. He will eliminate threats and protect his interests, even if it means operating in morally ambiguous territory. He does not tolerate weakness or deception from others.",
+      "wound": "His guilt over his father's actions and his complicity, however unwitting, in the Glass Meridian's schemes. He is estranged from his family and carries the burden of his legacy."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Dr. Evelyn Reed",
+      "relation_to": "Adrian Vale",
+      "relation_type": "Chief Medical Officer of Aurelian Group",
+      "alive": true,
+      "secret": "Secretly a member of the Glass Meridian, tasked with monitoring Adrian and Lin Wei."
+    },
+    {
+      "name": "Li Hua",
+      "relation_to": "Lin Wei",
+      "relation_type": "Mother",
+      "alive": true,
+      "secret": "Her past connection to Project Phoenix and the Glass Meridian, which is the root cause of her illness."
+    },
+    {
+      "name": "Marcus Thorne",
+      "relation_to": "Adrian Vale",
+      "relation_type": "Adrian's former mentor and business partner",
+      "alive": false,
+      "secret": "Was the first to discover the extent of the Glass Meridian's manipulation and tried to expose them, leading to his death."
+    },
+    {
+      "name": "Chen Jia",
+      "relation_to": "Lin Wei",
+      "relation_type": "Colleague and trusted friend",
+      "alive": true,
+      "secret": "Unbeknownst to Lin Wei, Chen Jia is an informant for a rival faction within the Glass Meridian, feeding information about Lin Wei and Adrian."
+    },
+    {
+      "name": "Arthur Vale",
+      "relation_to": "Adrian Vale",
+      "relation_type": "Father",
+      "alive": false,
+      "secret": "Architect of many of the Glass Meridian's early financial schemes and falsified data, deeply involved in Project Phoenix."
+    }
+  ],
+  "central_mystery": {
+    "question": "What is the true nature of the Glass Meridian, and how is it connected to Lin Wei's mother's illness and Adrian Vale's family?",
+    "answer": "The Glass Meridian is a clandestine global organization that manipulates medical research, financial markets, and political systems for profit and control, using advanced data analytics and social engineering. Project Phoenix was an early, unethical human experimentation program run by the Meridian that Lin Wei's mother was indirectly involved in, leading to her current illness and making her a target. Adrian's father was a key player, and Adrian is now caught in a web of his legacy, using Lin Wei, who possesses an unacknowledged connection to Project Phoenix, as both a shield and a weapon against the organization.",
+    "reveal_chapter": 45
+  },
+  "bloodline": {
+    "description": "Lin Wei is of Chinese descent. Adrian Vale is of Western (European) descent. Their families are entirely unconnected by blood or marriage prior to their contract.",
+    "hard_rules": [
+      "Female lead and male lead are not related by blood.",
+      "No shared parentage or sibling relationships between leads.",
+      "No convenient, previously unknown blood relation twist between leads."
+    ],
+    "lead_relation": "Strangers, then contract spouses."
+  },
+  "world_rules": [
+    "The Glass Meridian operates through legitimate-seeming entities: hospitals, research institutes, financial firms, and NGOs.",
+    "Information is the primary weapon and currency.",
+    "Cross-cultural misunderstandings can be exploited or navigated.",
+    "Personal duty and family honor are significant motivators in Lin Wei's world.",
+    "Cold, calculated logic is Adrian's primary mode of operation."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "Lin Wei enters the marriage contract under duress, navigating the initial power dynamics and suspicious environment of Adrian Vale's world. She discovers the Aurelian Group's connection to her mother's medical file and uncovers the existence of the Glass Meridian. Together, they disrupt a local operation, but Lin Wei learns her mother's illness is more than just a medical condition, hinting at a deeper, personal connection to the Meridian's past.",
+      "ending_hook": "Lin Wei finds a hidden file linking her mother's name to 'Project Phoenix,' a term she's never heard, just as Adrian reveals that their contract is only the beginning of a war against an enemy far larger than they imagined."
+    },
+    {
+      "book": 2,
+      "thesis": "Lin Wei and Adrian delve deeper into Project Phoenix, uncovering its unethical nature and its connection to genetic manipulation. They face escalating threats from the Glass Meridian, forcing them to rely on each other more, blurring the lines of their contract. Lin Wei's journalistic skills are crucial in piecing together fragmented clues, while Adrian's resources and ruthlessness protect them.",
+      "ending_hook": "A close ally of Lin Wei is compromised, and a critical piece of evidence about Project Phoenix's true purpose is stolen, revealing that the Meridian is not just about profit, but about control over human evolution."
+    },
+    {
+      "book": 3,
+      "thesis": "The focus shifts to the financial and political arm of the Glass Meridian. Lin Wei and Adrian expose corrupt officials and financial institutions tied to the organization, leading to a dangerous cat-and-mouse game. Their relationship deepens, marked by shared trauma and burgeoning trust, but Adrian's past actions and secrets create friction.",
+      "ending_hook": "Adrian is forced to confront a figure from his past who reveals a devastating truth about his father's role in the Meridian's ultimate goal, a truth that directly implicates Adrian's own future."
+    },
+    {
+      "book": 4,
+      "thesis": "The Glass Meridian retaliates with a full-scale assault, targeting Lin Wei and her mother directly. They must go underground, relying on unconventional allies and Lin Wei's network to fight back. The true nature of the Meridian's endgame—a global pandemic or engineered crisis—begins to emerge, and Lin Wei discovers her own unexpected role in their plans.",
+      "ending_hook": "Lin Wei's mother, in a moment of lucidity, reveals a crucial detail about her past involvement that could be the key to dismantling the Meridian, but it requires a sacrifice Adrian may not be willing to make."
+    },
+    {
+      "book": 5,
+      "thesis": "The final confrontation with the Glass Meridian. Lin Wei and Adrian, now a true alliance, must use all their combined skills and knowledge to expose and dismantle the organization, facing their ultimate adversaries and the moral compromises they've made along the way. The resolution focuses on justice, healing, and the future of their relationship.",
+      "ending_hook": "The Glass Meridian is brought down, but the cost is immense, leaving Lin Wei and Adrian to rebuild their lives and their love amidst the ashes of the conspiracy."
+    }
+  ],
+  "content_rules": [
+    "18+ content is reserved for spice level 3, focusing on charged intimacy, passion, and emotional intensity, with fade-to-black for explicit scenes.",
+    "No depiction of minors in any romantic or sexual context.",
+    "All intimate encounters are consensual and explored with emotional depth."
+  ],
+  "bible_status": "approved"
+}

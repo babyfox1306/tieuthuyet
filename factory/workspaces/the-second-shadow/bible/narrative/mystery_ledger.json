@@ -1,0 +1,172 @@
+{
+  "main_mystery": "What happened the summer Mara was 8 that made her split herself and forget?",
+  "truth": "Mara witnessed her mother Lydia push her lover Alain Dubois off the attic walkway after he threatened to expose their affair. Alain fell through the weakened floor clutching Mara's one-eyed bear (Wick) and died. Lydia forced Mara to swear secrecy, and Mara's psyche fractured, creating a silent child-self (the Girl in Blue) who trapped the memory in the bear. The child now waits for Mara to reclaim the bear so she can remember and become whole.",
+  "canonical_reveal_chapter": 10,
+  "red_herrings": [
+    {
+      "id": "RH001",
+      "description": "Mara finds a newspaper clipping about a child disappearing from the neighborhood the summer she stayed at the house, leading her to suspect the house is haunted by that missing child.",
+      "planted_chapter": 3,
+      "debunked_chapter": 7,
+      "purpose": "Misdirect away from the true nature of the Girl in Blue"
+    },
+    {
+      "id": "RH002",
+      "description": "Gerald tells Mara that Aunt Ilse committed suicide in the attic, making her fear the house's past is violent and that the girl might be Ilse's ghost.",
+      "planted_chapter": 4,
+      "debunked_chapter": 8,
+      "purpose": "Misdirect toward Ilse as victim and away from Mara's own trauma"
+    },
+    {
+      "id": "RH003",
+      "description": "Mara uncovers a locked room filled with old religious artifacts and an inverted cross, hinting at a supernatural exorcism having been performed in the house.",
+      "planted_chapter": 5,
+      "debunked_chapter": 9,
+      "purpose": "Misdirect toward a demonic explanation, away from the psychological truth"
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "MR001",
+      "description": "The Girl in Blue is not a ghost but a projection of Mara's own abandoned childhood self, created when her psyche fractured.",
+      "reveal_chapter": 3,
+      "required_clues": [
+        "C001",
+        "C002"
+      ],
+      "impact": "Shifts the mystery from external haunting to internal psychological fracture; establishes that the girl is tied to Mara's past."
+    },
+    {
+      "id": "MR002",
+      "description": "The one-eyed bear (Wick) is a psychometric memory anchor: holding it triggers forgotten memories of the traumatic event.",
+      "reveal_chapter": 5,
+      "required_clues": [
+        "C003",
+        "C004",
+        "C005"
+      ],
+      "impact": "Confirms the mechanism of the mystery; identifies the bear as the key to recovering the lost summer."
+    },
+    {
+      "id": "MR003",
+      "description": "Mara's mother Lydia pushed her lover Alain Dubois from the attic walkway, and Mara witnessed the fall and subsequent cover-up.",
+      "reveal_chapter": 7,
+      "required_clues": [
+        "C006",
+        "C007",
+        "C008",
+        "C009"
+      ],
+      "impact": "Reveals the core event; Lydia is unmasked as the perpetrator; the why of the split becomes clear."
+    },
+    {
+      "id": "MR004",
+      "description": "The full memory integrates: Mara understands she created the Girl in Blue to survive the trauma and that holding Wick in the attic will complete the reintegration. The second shadow is the child-self approaching merger. Mara must choose to become whole or remain fractured.",
+      "reveal_chapter": 9,
+      "required_clues": [
+        "C010",
+        "C011",
+        "C012"
+      ],
+      "impact": "Complete resolution of the central mystery; sets up the final choice in chapter 10 and the series hook regarding Aunt Ilse."
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "type": "visual",
+      "description": "Mara notices the Girl in Blue only appears when Wick (the bear) is in the room; when she moves the bear to another room, the child vanishes.",
+      "plant_chapter": 1,
+      "payoff_chapter": 3,
+      "note": "First hint that the girl and the bear are linked."
+    },
+    {
+      "id": "C002",
+      "type": "character_behavior",
+      "description": "Mara catches the Girl in Blue mimicking her own hand gestures exactly, like a mirror without the motion delay.",
+      "plant_chapter": 2,
+      "payoff_chapter": 3,
+      "note": "Suggests the girl is a projection of Mara herself."
+    },
+    {
+      "id": "C003",
+      "type": "flashback_trigger",
+      "description": "When Mara first handles Wick, she experiences a brief flash of a woman screaming and a wooden floor cracking, but cannot hold the image.",
+      "plant_chapter": 1,
+      "payoff_chapter": 5,
+      "note": "Establishes the bear's memory-retrieval property."
+    },
+    {
+      "id": "C004",
+      "type": "dialogue",
+      "description": "Asher discovers an old diary entry by Aunt Ilse that describes the bear as 'the keeper of what must not be remembered until the bearer is ready.'",
+      "plant_chapter": 4,
+      "payoff_chapter": 5,
+      "note": "Confirms the bear's role as a deliberate memory anchor."
+    },
+    {
+      "id": "C005",
+      "type": "environmental",
+      "description": "The bear's one glass eye, when held up to cold moonlight, reflects a blurred image of the attic walkway as seen from below.",
+      "plant_chapter": 3,
+      "payoff_chapter": 5,
+      "note": "Visual proof that the bear stores a specific visual memory."
+    },
+    {
+      "id": "C006",
+      "type": "document",
+      "description": "Mara finds a child's drawing (her own, aged 8) hidden behind a loose floorboard: a red-haired woman pushing a man off a ledge while a small girl watches from behind a curtain.",
+      "plant_chapter": 2,
+      "payoff_chapter": 7,
+      "note": "Direct witness evidence drawn by Mara herself."
+    },
+    {
+      "id": "C007",
+      "type": "dialogue",
+      "description": "During a phone call with Lydia, Mara confronts her about the summer; Lydia snaps, 'That man was ruining our family. I did what had to be done. You promised you'd forget.'",
+      "plant_chapter": 6,
+      "payoff_chapter": 7,
+      "note": "Verbal admission of guilt and of Mara's repressed promise."
+    },
+    {
+      "id": "C008",
+      "type": "object_interaction",
+      "description": "Mara finds a locket under the attic floorboards containing a photograph of Lydia and Alain Dubois, dated the summer of her stay.",
+      "plant_chapter": 5,
+      "payoff_chapter": 7,
+      "note": "Proof of the affair and that Alain was present in the house."
+    },
+    {
+      "id": "C009",
+      "type": "testimony",
+      "description": "Neighbor Gerald admits to Asher that he heard a crash and a woman's scream on the last night of Mara's visit, but kept quiet because Lydia paid him.",
+      "plant_chapter": 6,
+      "payoff_chapter": 7,
+      "note": "External corroboration of the event."
+    },
+    {
+      "id": "C010",
+      "type": "character_behavior",
+      "description": "Mara realizes she has always avoided her reflection in dark windows; the Girl in Blue never appears in mirrors at all.",
+      "plant_chapter": 3,
+      "payoff_chapter": 9,
+      "note": "Hints at the psychological split and the child's non-separate nature."
+    },
+    {
+      "id": "C011",
+      "type": "visual",
+      "description": "The second shadow Mara sees at the edge of her vision grows larger and moves closer every time she makes progress remembering; it now takes a childlike shape.",
+      "plant_chapter": 5,
+      "payoff_chapter": 9,
+      "note": "Visual metaphor for the approaching reintegration."
+    },
+    {
+      "id": "C012",
+      "type": "document",
+      "description": "Mara deciphers a final entry in Aunt Ilse's journal: 'The child split to survive. The bear holds the death. Only when she holds it in the attic where it happened will she see the whole. I have kept it ready for her.'",
+      "plant_chapter": 8,
+      "payoff_chapter": 9,
+      "note": "Full explanation of the mechanism and the aunt's role."
+    }
+  ]
+}

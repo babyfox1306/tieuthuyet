@@ -1,0 +1,31 @@
+{
+  "act": [10, 10],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "Wick",
+      "slug": "ch10-wick",
+      "one_line_summary": "Mara finds the one-eyed bear, relives the full memory of Julian's death, and chooses to reintegrate with the Girl in Blue rather than run.",
+      "beat_summary": "The Girl in Blue leads Mara to the real hiding place—a loose floorboard beneath the attic rocking chair. As Mara pulls out Wick, the memory explodes: Julian arguing with Lydia, the struggle on the attic walkway, Lydia's push, the rotted floor giving way, Julian falling with the bear clutched to his chest. Mara screams, and the child-self merges with her in a flash of cold light. When she comes to, Asher holds her on the attic floor. She chooses to keep the memory whole and forgive her eight-year-old self. Lydia is gone; the house settles. But a single knock from the radiator hints at an unresolved thread.",
+      "must_happen": [
+        "Mara locates the one-eyed bear Wick hidden under a loose floorboard in the attic.",
+        "Mara holds Wick and experiences the repressed full memory of Julian Croft's fall.",
+        "The Girl in Blue physically merges with Mara, completing the reintegration and restoring Mara's wholeness.",
+        "[ROMANCE] Asher cradles Mara after the memory shatters her, and she whispers 'I need you,' sealing their trust with a long, tender kiss."
+      ],
+      "must_not": [
+        "Mara must not choose to flee (the choice defines the book ending as reintegration).",
+        "The memory must not be ambiguous; Lydia's push must be clearly shown.",
+        "Asher must not be absent during the memory retrieval (he anchors Mara)."
+      ],
+      "opens_with": "The Girl in Blue did not appear in the mirror this time. She stood at the foot of the attic stairs, her small hand pointing not to the garden, but to the ceiling—at the loose board above the rocking chair.",
+      "cliffhanger": "Asher pulled her close as the house shuddered. 'It's over,' she said. But from the third floor came the radiator's knock: once, twice—and then the third, a beat too late, a rhythm it had never made before.",
+      "signature_detail_hint": "The bear's remaining eye is a mother-of-pearl button, its iridescence catching the sliver of light from the attic window.",
+      "emotional_beat": "Mara's cry of recognition as she sees her mother's face in the memory is not anger, but a child's raw grief—and Asher's steady hand on her back is the only thing tethering her to the present.",
+      "spice": 1,
+      "spice_note": "After the memory integration, a gentle, healing kiss between Mara and Asher that strengthens their bond without explicit content.",
+      "chapter_task": "Write a 1700–1900-word chapter that delivers the resolved central mystery, the emotional catharsis of the memory, and the romantic payoff of the slow-burn trust. The memory flood should be visceral but respect the no-graphic-violence rule. End on a quiet note that leaves the door open for the next book.",
+      "carries_to_next": "Mara is whole but the house's final knock hints that not all secrets are buried. Book 1 closes with the choice concretely made, setting up Mara and Asher's partnership for the larger confrontation ahead."
+    }
+  ]
+}

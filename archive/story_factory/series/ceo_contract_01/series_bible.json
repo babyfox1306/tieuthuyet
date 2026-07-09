@@ -1,0 +1,89 @@
+{
+  "title": "Hợp đồng có giá",
+  "genre": "ngôn tình hiện đại",
+  "sub_niche": "ceo_contract_marriage",
+  "spice_level": 3,
+  "planned_books": 5,
+  "hook_central": "Hợp đồng hôn nhân 1 năm — tiền đổi tên trên giấy, lửa đổi hai con người",
+  "tropes": [
+    "contract marriage",
+    "CEO",
+    "enemies to lovers",
+    "slow burn"
+  ],
+  "world_rules": [
+    "Thành A hiện đại",
+    "tập đoàn Hàn",
+    "gia tộc ép cưới họ Lâm"
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "Giả vợ thật lửa",
+      "ending_hook": "Bí mật Uyên lộ một phần"
+    },
+    {
+      "book": 2,
+      "thesis": "Gia tộc vs tự do",
+      "ending_hook": "DT chọn bỏ hay ở"
+    },
+    {
+      "book": 3,
+      "thesis": "Tình thật hay hợp đồng",
+      "ending_hook": "Đe dọa từ quá khứ"
+    },
+    {
+      "book": 4,
+      "thesis": "Vết thương quá khứ",
+      "ending_hook": "Họ Lâm counter"
+    },
+    {
+      "book": 5,
+      "thesis": "Chọn nhau không hợp đồng",
+      "ending_hook": "HEA"
+    }
+  ],
+  "characters": {
+    "female_lead": {
+      "name": "Diệp Tâm",
+      "age": 24,
+      "voice": "sắc, mỉa, câu dài có logic, không cầu xin",
+      "tics": [
+        "cắn má khi căng",
+        "đếm nhịp",
+        "móng đỏ"
+      ],
+      "lines": [
+        "tự trọng > tiền"
+      ],
+      "internal_voice": "chửi thầm/mỉa"
+    },
+    "male_lead": {
+      "name": "Hàn Thừa Uyên",
+      "age": 30,
+      "voice": "ít lời, câu ngắn nặng, không giải thích",
+      "tics": [
+        "gõ ngón tay tay vịn ghế",
+        "ánh mắt định giá"
+      ],
+      "lines": [
+        "kiểm soát tuyệt đối"
+      ],
+      "wound": "không tin tình cảm, quá khứ chưa lộ"
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Từ Tố Nhi",
+      "role": "mẹ Hàn"
+    },
+    {
+      "name": "Lâm Vũ Trinh",
+      "role": "mẹ cô dâu họ Lâm"
+    },
+    {
+      "name": "Lê Hồng Vân",
+      "role": "mẹ Diệp Tâm ICU"
+    }
+  ]
+}

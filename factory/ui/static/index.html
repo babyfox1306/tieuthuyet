@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Factory — Chỉ đạo câu chuyện</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --panel: #1a1d27;
+      --border: #2d3348;
+      --text: #e8eaef;
+      --muted: #9aa3b5;
+      --accent: #6c9eff;
+      --accent2: #3dd68c;
+      --warn: #ffb020;
+      --err: #ff6b6b;
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--panel);
+    }
+    header h1 { margin: 0 0 .25rem; font-size: 1.25rem; }
+    header p { margin: 0; color: var(--muted); font-size: .9rem; }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+    label { font-size: .85rem; color: var(--muted); }
+    select, input[type=text], textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: var(--radius);
+      padding: .65rem .75rem;
+      font: inherit;
+    }
+    textarea { min-height: 100px; resize: vertical; }
+    textarea.tall { min-height: 180px; }
+    .field { margin-bottom: 1rem; }
+    .field h3 {
+      margin: 0 0 .35rem;
+      font-size: .95rem;
+      font-weight: 600;
+    }
+    .hint { font-size: .8rem; color: var(--muted); margin-bottom: .35rem; }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+    section > h2 {
+      margin: 0 0 1rem;
+      font-size: 1rem;
+      color: var(--accent);
+    }
+    .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 700px) { .row2 { grid-template-columns: 1fr; } }
+    button {
+      border: none;
+      border-radius: var(--radius);
+      padding: .55rem 1rem;
+      font: inherit;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn-primary { background: var(--accent); color: #0f1117; }
+    .btn-success { background: var(--accent2); color: #0f1117; }
+    .btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--text); }
+    .btn-warn { background: var(--warn); color: #0f1117; }
+    button:disabled { opacity: .5; cursor: not-allowed; }
+    #status {
+      padding: .75rem 1rem;
+      border-radius: var(--radius);
+      font-size: .9rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+      background: var(--bg);
+    }
+    #status.ok { border-color: var(--accent2); }
+    #status.bad { border-color: var(--err); }
+    #status.warn { border-color: var(--warn); }
+    ul.errors { margin: .5rem 0 0; padding-left: 1.2rem; color: var(--err); }
+    .meta { font-size: .8rem; color: var(--muted); }
+    .steps {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin-top: .5rem;
+    }
+    .step {
+      padding: .2rem .55rem;
+      border-radius: 999px;
+      font-size: .75rem;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .step.done { border-color: var(--accent2); color: var(--accent2); }
+    .spinner { display: inline-block; width: 1em; height: 1em; border: 2px solid var(--muted); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; vertical-align: middle; margin-right: .35rem; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Story Concept — Chỉ đạo của bạn</h1>
+    <p>Điền form → Lưu nháp → Đánh dấu sẵn sàng → AI sinh narrative (9router)</p>
+  </header>
+  <main>
+    <div class="toolbar">
+      <div>
+        <label for="workspace">Workspace</label><br />
+        <select id="workspace" style="min-width: 200px"></select>
+      </div>
+      <div>
+        <label for="target_language">Ngôn ngữ truyện</label><br />
+        <select id="target_language" style="min-width: 160px">
+          <option value="vi">Tiếng Việt (vi)</option>
+          <option value="en">English (en)</option>
+        </select>
+      </div>
+      <div class="meta" id="meta"></div>
+    </div>
+    <p class="hint" id="langHint" style="margin: -0.5rem 0 1rem; padding: 0 0.25rem;"></p>
+
+    <div id="status">Đang tải…</div>
+
+    <div class="steps" id="steps">
+      <span class="step" id="step1">1. Điền form</span>
+      <span class="step" id="step2">2. Lưu / sẵn sàng (tự khi sinh AI)</span>
+      <span class="step" id="step3">3. AI sinh narrative</span>
+      <span class="step" id="step4">4. Duyệt JSON → approve-narrative</span>
+    </div>
+
+    <form id="form">
+      <section>
+        <h2>Cơ bản</h2>
+        <div class="field">
+          <h3>Tiêu đề (working)</h3>
+          <input type="text" id="title" placeholder="VD: Hợp đồng có giá" />
+        </div>
+        <div class="field">
+          <h3>Logline</h3>
+          <div class="hint">1–2 câu hook — độc giả đọc xong muốn mở chương 1</div>
+          <textarea id="logline"></textarea>
+        </div>
+      </section>
+
+      <section>
+        <h2>Hai lớp truyện</h2>
+        <div class="row2">
+          <div class="field">
+            <h3>Surface plot (vỏ)</h3>
+            <div class="hint">Độc giả tưởng mình đang đọc gì?</div>
+            <textarea id="surface_plot"></textarea>
+          </div>
+          <div class="field">
+            <h3>True plot (lõi)</h3>
+            <div class="hint">Thật ra chuyện gì đang xảy ra?</div>
+            <textarea id="true_plot"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Chỉ đạo chi tiết (quan trọng nhất)</h2>
+        <div class="hint">Nhân vật, bí ẩn, spice, chương khóa, điều cấm… Tối thiểu ~120 ký tự.</div>
+        <textarea id="author_directive" class="tall" placeholder="Viết tự do theo ý bạn…"></textarea>
+      </section>
+
+      <section>
+        <h2>Kết cuốn &amp; hook</h2>
+        <div class="field">
+          <h3>Cuốn 1 trả gì cho reader (case đóng)</h3>
+          <textarea id="ending_book1"></textarea>
+        </div>
+        <div class="field">
+          <h3>Hook mở cuốn 2</h3>
+          <textarea id="hook_book2"></textarea>
+        </div>
+      </section>
+
+      <section>
+        <h2>Phải có / Tránh</h2>
+        <div class="row2">
+          <div class="field">
+            <h3>Must include</h3>
+            <div class="hint">Mỗi dòng một mục</div>
+            <textarea id="must_include" placeholder="Slow burn mỗi chương&#10;Cliffhanger…"></textarea>
+          </div>
+          <div class="field">
+            <h3>Must avoid</h3>
+            <textarea id="must_avoid" placeholder="Cùng huyết thống hai lead&#10;Twist không plant…"></textarea>
+          </div>
+        </div>
+        <div class="field">
+          <h3>Ghi chú thêm</h3>
+          <textarea id="notes"></textarea>
+        </div>
+      </section>
+
+      <div class="toolbar">
+        <button type="button" class="btn-ghost" id="btnCheck">Kiểm tra</button>
+        <button type="button" class="btn-primary" id="btnSave">Lưu nháp</button>
+        <button type="button" class="btn-success" id="btnReady">Đánh dấu sẵn sàng</button>
+        <button type="button" class="btn-warn" id="btnDevelop">AI sinh narrative (9router)</button>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const linesToList = (s) => s.split("\n").map((x) => x.trim()).filter(Boolean);
+    const listToLines = (arr) => (Array.isArray(arr) ? arr.join("\n") : "");
+
+    const LANG_HINTS = {
+      vi: "Ngôn ngữ vi: viết toàn bộ logline, chỉ đạo, plot… bằng tiếng Việt. AI sinh narrative + viết chương bằng tiếng Việt.",
+      en: "Language en: write logline, directive, plots… in English. AI generates narrative + chapters in English.",
+    };
+
+    function formData() {
+      return {
+        target_language: $("target_language").value,
+        title: $("title").value.trim(),
+        logline: $("logline").value.trim(),
+        author_directive: $("author_directive").value.trim(),
+        surface_plot: $("surface_plot").value.trim(),
+        true_plot: $("true_plot").value.trim(),
+        ending_book1: $("ending_book1").value.trim(),
+        hook_book2: $("hook_book2").value.trim(),
+        must_include: linesToList($("must_include").value),
+        must_avoid: linesToList($("must_avoid").value),
+        notes: $("notes").value.trim(),
+      };
+    }
+
+    function fillForm(c) {
+      c = c || {};
+      if (c.target_language) $("target_language").value = c.target_language;
+      $("title").value = c.title || "";
+      $("logline").value = c.logline || "";
+      $("author_directive").value = c.author_directive || "";
+      $("surface_plot").value = c.surface_plot || "";
+      $("true_plot").value = c.true_plot || "";
+      $("ending_book1").value = c.ending_book1 || "";
+      $("hook_book2").value = c.hook_book2 || "";
+      $("must_include").value = listToLines(c.must_include);
+      $("must_avoid").value = listToLines(c.must_avoid);
+      $("notes").value = c.notes || "";
+    }
+
+    function showStatus(msg, kind, errors) {
+      const el = $("status");
+      el.className = kind || "";
+      let html = msg;
+      if (errors && errors.length) {
+        html += "<ul class='errors'>" + errors.map((e) => `<li>${e}</li>`).join("") + "</ul>";
+      }
+      el.innerHTML = html;
+    }
+
+    function updateSteps(data) {
+      const c = data.concept || {};
+      const ready = c.concept_status === "ready";
+      const narr = (data.direction || {}).narrative_status === "approved";
+      $("step1").classList.toggle("done", (c.author_directive || "").length > 80);
+      $("step2").classList.toggle("done", ready);
+      $("step3").classList.toggle("done", narr || false);
+    }
+
+    async function api(path, opts) {
+      const res = await fetch(path, opts);
+      const data = await res.json();
+      if (!res.ok && !data.validation_errors) throw new Error(data.error || JSON.stringify(data));
+      return data;
+    }
+
+    async function loadWorkspaces() {
+      const data = await api("/api/workspaces");
+      const sel = $("workspace");
+      sel.innerHTML = "";
+      (data.workspaces || []).forEach((w) => {
+        const o = document.createElement("option");
+        o.value = w;
+        o.textContent = w;
+        sel.appendChild(o);
+      });
+      if (!data.workspaces.length) {
+        const o = document.createElement("option");
+        o.value = "ceo-contract";
+        o.textContent = "ceo-contract";
+        sel.appendChild(o);
+      }
+    }
+
+    function updateLangHint(code) {
+      $("langHint").textContent = LANG_HINTS[code] || LANG_HINTS.vi;
+    }
+
+    async function loadConcept() {
+      const ws = $("workspace").value;
+      const data = await api(`/api/concept/${ws}`);
+      fillForm(data.concept);
+      const lang = data.target_language || data.direction?.target_language || "vi";
+      $("target_language").value = lang;
+      updateLangHint(lang);
+      const d = data.direction || {};
+      $("meta").textContent = `profile: ${d.narrative_profile || "—"} · narrative: ${d.narrative_status || "draft"} · publish: ${d.publish_strategy || "—"}`;
+      if (data.validation_errors && data.validation_errors.length) {
+        showStatus("Chưa sẵn sàng cho develop-narrative:", "warn", data.validation_errors);
+      } else if (data.concept?.concept_status === "ready") {
+        showStatus("Đã sẵn sàng — có thể bấm <strong>AI sinh narrative</strong>", "ok");
+      } else {
+        showStatus("Điền form và bấm <strong>Lưu nháp</strong> hoặc <strong>Đánh dấu sẵn sàng</strong>", "");
+      }
+      updateSteps(data);
+    }
+
+    $("workspace").addEventListener("change", loadConcept);
+
+    $("target_language").addEventListener("change", () => {
+      const lang = $("target_language").value;
+      updateLangHint(lang);
+      showStatus(
+        lang === "en"
+          ? "Đã chọn English — nhớ viết nội dung form bằng tiếng Anh trước khi Lưu."
+          : "Đã chọn Tiếng Việt — nhớ viết nội dung form bằng tiếng Việt trước khi Lưu.",
+        "warn"
+      );
+    });
+
+    $("btnSave").addEventListener("click", async () => {
+      const ws = $("workspace").value;
+      try {
+        const data = await api(`/api/concept/${ws}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData()),
+        });
+        showStatus("Đã lưu nháp concept.yaml", "ok", data.validation_errors);
+        updateSteps(data);
+      } catch (e) {
+        showStatus("Lỗi lưu: " + e.message, "bad");
+      }
+    });
+
+    $("btnCheck").addEventListener("click", async () => {
+      const ws = $("workspace").value;
+      await api(`/api/concept/${ws}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData()),
+      });
+      const data = await api(`/api/concept/${ws}/check`, { method: "POST", body: "{}" });
+      if (data.ready) showStatus("OK — có thể đánh dấu sẵn sàng", "ok");
+      else showStatus("Chưa đủ:", "bad", data.errors);
+    });
+
+    $("btnReady").addEventListener("click", async () => {
+      const ws = $("workspace").value;
+      $("btnReady").disabled = true;
+      try {
+        const data = await api(`/api/concept/${ws}/ready`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData()),
+        });
+        if (data.ok === false) {
+          showStatus("Chưa đủ điều kiện:", "bad", data.errors);
+        } else {
+          showStatus("concept_status = <strong>ready</strong> — có thể sinh narrative", "ok");
+        }
+        updateSteps(data);
+      } catch (e) {
+        showStatus("Lỗi: " + e.message, "bad");
+      } finally {
+        $("btnReady").disabled = false;
+      }
+    });
+
+    $("btnDevelop").addEventListener("click", async () => {
+      const ws = $("workspace").value;
+      if (!confirm("Gọi 9router sinh bible/narrative/*.json — có thể mất vài phút. Tiếp?")) return;
+      $("btnDevelop").disabled = true;
+      showStatus('<span class="spinner"></span> Đang sinh narrative… đừng đóng tab', "warn");
+      try {
+        const data = await api(`/api/concept/${ws}/develop`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ pass: "all" }),
+        });
+        if (data.ok) {
+          const files = (data.files || []).map((f) => f.split(/[/\\]/).pop()).join(", ");
+          showStatus("Xong! Đã sinh: " + files + "<br>Đọc file JSON → CLI: approve-narrative", "ok");
+        } else {
+          showStatus("Lỗi: " + (data.error || "unknown"), "bad", data.validation_errors);
+        }
+        updateSteps(data);
+      } catch (e) {
+        showStatus("Lỗi: " + e.message, "bad");
+      } finally {
+        $("btnDevelop").disabled = false;
+      }
+    });
+
+    (async () => {
+      await loadWorkspaces();
+      const params = new URLSearchParams(location.search);
+      const wsParam = params.get("ws");
+      if (wsParam) {
+        const sel = $("workspace");
+        for (const o of sel.options) {
+          if (o.value === wsParam) { sel.value = wsParam; break; }
+        }
+      }
+      await loadConcept();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "series_id": "the-glass-meridian",
+    "genre": "romance thriller",
+    "target_language": "en"
+  },
+  "title": "The Glass Meridian",
+  "sub_niche": "marriage of convenience thriller",
+  "spice_level": 3,
+  "planned_books": 5,
+  "hook_central": "A Chinese investigative journalist enters a year-long marriage contract with a dangerous Western CEO to save her dying mother, only to be ensnared in a global medical-financial conspiracy with ties to her own family.",
+  "tropes": [
+    "marriage of convenience",
+    "cold male lead",
+    "strong female lead",
+    "secret society",
+    "medical conspiracy",
+    "corporate espionage",
+    "cross-cultural romance",
+    "slow burn",
+    "fake relationship"
+  ],
+  "leads": {
+    "female": {
+      "name": "Lin Wei",
+      "age": 28,
+      "voice": "Sharp, analytical, with an underlying warmth that she carefully guards. She speaks with a precise, measured tone, often tinged with skepticism.",
+      "tics": [
+        "Taps her pen rhythmically when deep in thought.",
+        "Constantly checks her phone for news alerts and messages."
+      ],
+      "boundary": "She will not compromise her journalistic integrity or her family's well-being for personal gain. She values truth and justice above all else, even when it puts her in danger.",
+      "internal_voice": "A constant stream of observations, deductions, and strategic planning. She questions everything and everyone, always looking for the hidden agenda."
+    },
+    "male": {
+      "name": "Adrian Vale",
+      "age": 35,
+      "voice": "Deep, resonant, and devoid of warmth. His words are carefully chosen, often carrying an implicit threat or command.",
+      "tics": [
+        "Has a subtle, almost imperceptible clench of his jaw when agitated.",
+        "His gaze often lingers a beat too long, assessing."
+      ],
+      "boundary": "He operates in shades of gray, willing to bend or break rules for what he perceives as a greater good or strategic necessity, but he draws the line at direct harm to innocents. Loyalty, once earned, is fiercely protected.",
+      "wound": "Haunted by his father's betrayal and the realization of his complicity in past wrongdoings, he seeks to dismantle the organization that corrupted him."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Lin Mei",
+      "relation_to": "Lin Wei",
+      "relation_type": "mother",
+      "alive": true,
+      "secret": "Her illness is not entirely natural, and she was once involved with Project Phoenix."
+    },
+    {
+      "name": "Professor Chen",
+      "relation_to": "Lin Mei",
+      "relation_type": "attending physician",
+      "alive": true,
+      "secret": "Is subtly feeding information to the Glass Meridian, unaware of their full agenda."
+    },
+    {
+      "name": "Marcus Thorne",
+      "relation_to": "Adrian Vale",
+      "relation_type": "estranged father / former CEO of Aurelian Group",
+      "alive": true,
+      "secret": "Was the architect of the initial Glass Meridian infiltration within Aurelian Group, using falsified data."
+    },
+    {
+      "name": "Sophia Petrova",
+      "relation_to": "Adrian Vale",
+      "relation_type": "former colleague / potential ally or antagonist",
+      "alive": true,
+      "secret": "Possesses critical data on the Glass Meridian's operations, but her motives are unclear."
+    },
+    {
+      "name": "Detective Harding",
+      "relation_to": "Adrian Vale",
+      "relation_type": "former associate / ongoing investigation",
+      "alive": true,
+      "secret": "Is investigating Aurelian Group's suspicious activities, but is being misled by the Glass Meridian."
+    }
+  ],
+  "central_mystery": {
+    "question": "What is the true nature and ultimate goal of the Glass Meridian, and how is it connected to Lin Wei's family and Adrian Vale's past?",
+    "answer": "The Glass Meridian is a clandestine global organization that manipulates medical research, financial markets, and political influence through its control of advanced biotechnologies and falsified data, with the ultimate aim of creating a 'perfected' human lineage. Lin Wei's mother was a key researcher in Project Phoenix, an early, ethically compromised initiative that the Glass Meridian has been secretly continuing and weaponizing. Adrian's father was instrumental in allowing the Meridian to infiltrate Aurelian Group, and Adrian is now using his position to dismantle it from within, with Lin Wei as his unwitting (and later, witting) partner.",
+    "reveal_chapter": 48
+  },
+  "bloodline": {
+    "description": "Lin Wei and Adrian Vale have no shared blood relation. Their families operate in entirely different spheres of influence, one in journalism and academia, the other in international finance and corporate power. The 'connection' is through the Glass Meridian's manipulation of events that intersect their lives.",
+    "hard_rules": [
+      "Female lead and male lead are not blood relatives.",
+      "No incestuous undertones or revealed blood ties between leads.",
+      "No shared parentage or sibling relationships."
+    ],
+    "lead_relation": "strangers"
+  },
+  "world_rules": [
+    "The Glass Meridian operates through legitimate-seeming fronts: research institutes, hospitals, financial firms, and charities.",
+    "Information is the most powerful weapon; data can be manipulated and weaponized.",
+    "International law and corporate loopholes are exploited by the Meridian.",
+    "Trust is a rare commodity, especially between those involved in the Meridian's operations.",
+    "Cultural differences can be both a bridge and a barrier, leading to miscommunication and unique strengths."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "Lin Wei and Adrian Vale enter a marriage of convenience under duress, uncovering the initial layers of the Glass Meridian's influence and its connection to Lin Wei's mother's illness, culminating in a joint effort to expose a local operation and a devastating revelation about Lin Wei's mother's past involvement.",
+      "ending_hook": "Lin Wei discovers her mother's hidden research notes, revealing a cryptic reference to 'Project Phoenix' and a potential connection to the very organization Adrian is fighting, leaving her to question whose side her mother was truly on."
+    },
+    {
+      "book": 2,
+      "thesis": "As Lin Wei and Adrian deepen their investigation into Project Phoenix, they face escalating threats from the Glass Meridian, forcing them to rely on each other while navigating a growing attraction and the dangerous consequences of their alliance.",
+      "ending_hook": "An unexpected betrayal from within their trusted circle leaves Lin Wei and Adrian vulnerable, with key evidence of the Glass Meridian's global network stolen."
+    },
+    {
+      "book": 3,
+      "thesis": "On the run and with their resources dwindling, Lin Wei and Adrian must forge new alliances and delve into the dark history of the Glass Meridian, uncovering the true extent of its control and the identity of its elusive leadership.",
+      "ending_hook": "Adrian is forced to confront his father, leading to a confession that reveals a shocking truth about his own lineage and the Meridian's long-term genetic agenda."
+    },
+    {
+      "book": 4,
+      "thesis": "The stakes are raised as the Glass Meridian targets Lin Wei's mother directly, forcing Lin Wei and Adrian into a desperate race against time to find a cure and expose the organization's ultimate plan before it's too late.",
+      "ending_hook": "A critical piece of the Glass Meridian's technology is activated, threatening millions and forcing Lin Wei and Adrian to make an impossible choice."
+    },
+    {
+      "book": 5,
+      "thesis": "In a final confrontation, Lin Wei and Adrian must dismantle the Glass Meridian from its core, facing down its leaders and exposing its secrets to the world, while navigating the personal cost of their fight and the future of their relationship.",
+      "ending_hook": "The Glass Meridian is defeated, but the scars remain, and Lin Wei and Adrian must decide if their hard-won trust can build a future beyond the shadows."
+    }
+  ],
+  "content_rules": [
+    "18+ content is restricted to spice level 3 and above.",
+    "No depiction of sexual assault or non-consensual sexual acts.",
+    "All intimate scenes must be consensual.",
+    "No underage characters involved in romantic or sexual relationships.",
+    "Focus on emotional intimacy and charged tension over explicit detail for spice level 3."
+  ],
+  "bible_status": "approved"
+}

@@ -1,0 +1,150 @@
+---
+series: glass-meridian
+book: 1
+chapter: 35
+title: The Unraveling Alliance
+spice: 1
+word_count: 1773
+status: draft
+needs_fix:
+- foreign:é
+promoted_at: '2026-07-08T16:49:02Z'
+---
+
+The server room hummed with the sterile glow of cooling fans and status lights, each blink a reminder of the fragile line between discovery and disaster. Lin Wei’s fingers flew across the keyboard, pulling up the fragmented data streams, cross-referencing the two clue strings they’d paid for in blood and betrayal. C008 and C009 sat on the monitor like twin viruses waiting to activate.
+
+“They don’t fit alone,” she said, her voice tight. “But layered together?”
+
+Adrian leaned over her shoulder, his shadow falling across the screen. The faint ozone scent clung to the portable drive—an elusive phantom that seemed to seep from the files themselves. “C008 is a routing marker for a financial transfer. C009 is a personnel movement order. They’re meant to be read as a pair.”
+
+Lin Wei highlighted the overlapping timestamps. “If I merge the two sets, the transaction maps to a specific cohort of researchers. The Glass Meridian isn’t just moving money. They’re repositioning key assets for a final push.”
+
+“Thorne’s signature is embedded in both,” Adrian said, his voice dropping. He pointed to a metadata tag buried in C009. “That authorization code is identical to the one he used when he consolidated company holdings. He’s not just overseeing—he’s executing.”
+
+She zoomed in on the protocol sequence. Twelve names, each linked to a medical facility. “Project Phoenix Phase Three. They’re going active. These scientists are being relocated to a secure location for a live trial.”
+
+“Live trial of what?” Lin Wei spun in her chair to face him. “We know they were selecting candidates for the Ascension Program. But this is different. This is an operational move, not just a candidate selection.”
+
+Adrian stared at the screen, his jaw tightening. “Thorne is desperate. We destroyed Hanfield. We took down Vance. He needs a victory, and he needs it now. He’ll accelerate the timeline, force a breakthrough at any cost.”
+
+“Which means they’ll use the remaining Project Phoenix data to attempt a prototype generation,” Lin Wei said. “But if the subjects are real people—”
+
+“They’re not patients, Lin Wei. They’re test subjects. Disposable. The Meridian will sacrifice them for a single viable outcome.” He turned from the screen, pacing the narrow aisle between server racks. “My father has been waiting for this moment since before I was born. He won’t let a few obstacles stop him.”
+
+She watched him, reading the tension in his shoulders. “Then we can’t let him have the time to execute.”
+
+Adrian stopped, his gaze finding hers. “We don’t have the resources for a full assault. We don’t have backup we can trust. Harding is being misled by the Meridian. Petrova is playing her own game. It’s just us.”
+
+“Then we use the only weapon we have: information.” Lin Wei pulled up a third window, revealing the encrypted communication they’d intercepted from the Glass Meridian’s inner circle. “This message references a coordinating meeting. Tomorrow morning, at the Pacific Grand Hotel. Thorne is attending in person to oversee the final approval.”
+
+Adrian scanned the text. “He’ll be surrounded by Meridian security. We can’t get close without being identified.”
+
+“We don’t need to get close. We need to expose the meeting.” She pulled a digital blueprint onto the screen. “The hotel’s convention center has a central AV system. If we tap into their network and broadcast the file we decrypted—the one showing Thorne’s authorized manipulation of Project Phoenix—we can force the Meridian into a crisis response. They’ll have to abort Phase Three to contain the damage.”
+
+“And Thorne will know exactly who did it. He’ll hunt us down personally.”
+
+Lin Wei met his stare. “He’s already hunting us. The only difference is whether we stay hidden or force him into the open where we can see his next move.”
+
+Adrian was silent for a long moment, then moved closer. He placed his hands on the edge of her chair, boxing her in without touching her. The proximity sent a shiver through her chest that had nothing to do with fear.
+
+“You understand what this means,” he said, his voice barely above a whisper. “If we do this, there’s no going back. We become the primary target. Not Vance. Not the server. We become the only threat Thorne can’t ignore.”
+
+“I’ve been a target since the moment I read my mother’s file,” Lin Wei replied, her voice steady. “At least this way, I choose the battlefield.”
+
+The intensity in his eyes deepened. He reached out, his hand brushing a strand of hair from her face. The gesture was gentle, almost reverent, and it caught her off guard.
+
+“I don’t want to lose you,” he said, and the raw honesty in those words cracked something inside her.
+
+“Then don’t.”
+
+He pulled her to her feet, and before she could speak again, his arms wrapped around her, drawing her against him. The embrace was fierce and full, his heart pounding against hers. She felt the tension in his body—the same weight of fear and purpose that pressed on her own chest. Her hands gripped his jacket, anchoring herself to this moment.
+
+They stood there, locked together, the hum of the servers the only sound. It wasn’t a promise. It wasn’t a declaration. It was a shared breath, a fragile truce with the danger they were about to face.
+
+When they finally pulled apart, the emotion in his eyes had hardened back into resolve.
+
+“We need to move,” he said. “The transmission window for the hotel’s AV system opens at four AM. We have less than three hours to prepare.”
+
+Lin Wei nodded, already pulling up the schematics. “I’ll write the loop that bypasses their security protocol. You handle the physical tap. We’ll need to be inside the convention center for at least five minutes to establish the link.”
+
+“I know a maintenance entrance that won’t set off alarms,” Adrian said. “But once we start broadcasting, every exit will be locked down. We’ll have to go out the way we came, and there might not be time before Thorne’s people arrive.”
+
+She saved the files and disconnected the drive. “Then we make it count. No hesitation. No backup plan. We burn the bridge behind us.”
+
+Adrian handed her a transmitter earpiece. “We stay in constant contact. If I say run, you run. No arguments.”
+
+“Same for you.”
+
+A ghost of a smile flickered across his face, gone as quickly as it appeared.
+
+They moved through the empty streets of Macau under the dim pre-dawn sky. The Pacific Grand Hotel loomed ahead, its glass façade reflecting the sparse streetlights. Lin Wei’s pulse hammered in her throat, but her mind was clear—each step calibrated, every contingency mapped.
+
+Adrian led her to a service door tucked behind a row of trash compactors. He punched in a code from memory, and the lock clicked open.
+
+Inside, the hotel’s bowels hummed with the warmth of laundry machines and kitchen exhaust. They made their way to the central AV control room, a windowless box on the third basement level. Adrian disabled the alarm panel with practiced efficiency, and Lin Wei connected her portable device to the main distribution node.
+
+“Uploading the file now,” she whispered. “The loop will cycle automatically. As soon as the meeting starts, the screens will switch.”
+
+Adrian kept watch at the door, his silhouette tense. “We have three minutes before the system logs the connection. After that, we’re invisible until they replay the logs tomorrow morning.”
+
+“Two minutes,” she said, monitoring the progress bar. “One minute…”
+
+The bar hit one hundred percent, and she disconnected. “We’re out.”
+
+They retraced their steps through the hotel, every shadow feeling like a threat. As they emerged into the alley, the first rays of orange light crept over the horizon.
+
+Adrian grabbed her arm, pulling her into the cover of a delivery truck. He pointed to the hotel’s main entrance. A black sedan had pulled up, and four men in dark suits stepped out, scanning the area.
+
+“Thorne’s early,” he murmured. “He’s bringing additional security.”
+
+Lin Wei’s blood ran cold. “He either knows we’re here, or he’s paranoid about the meeting.”
+
+“Either way, we can’t be seen.” Adrian steered her down a side street, keeping low. “We need to get to our primary observation point before the screens go active.”
+
+They slipped into a café on the opposite corner, its windows offering a direct view of the hotel’s main conference floor. Lin Wei ordered two coffees she had no intention of drinking, while Adrian set up a small camera disguised as a smoking detector.
+
+The minutes crawled. At exactly seven AM, the hotel’s lights flickered once—a sign that the AV system was initializing.
+
+“Any moment now,” she breathed.
+
+She could see the conference room through the café window, the crowd of executives and officials settling into their seats. Marcus Thorne strode to the podium, his silver hair immaculate, his expression confident.
+
+The screens behind him flickered, and for a split second, the room went silent.
+
+Then the decrypted file began to play—the damning evidence of Thorne’s manipulation, the falsified data, the ordered termination of test subjects, the authorization codes tying him directly to the Glass Meridian’s worst atrocities.
+
+The hotel erupted into chaos.
+
+Lin Wei watched as Thorne’s face contorted from shock to fury. He spun, barking orders at his security, but the damage was done. The feed was already streaming to every screen in the hotel, and by extension, to the media contacts Lin Wei had flagged the night before.
+
+“He knows,” Adrian said, his voice grim. “He knows exactly who did this.”
+
+Thorne’s eyes scanned the streets, and for a terrifying second, they locked on the café window—on her.
+
+Lin Wei felt the weight of that gaze like a physical blow.
+
+Adrian grabbed her hand. “We need to move. Now. He’s already sending men.”
+
+They bolted from the café, weaving through the maze of back alleys. The plan had worked. The trap had been sprung.
+
+But the hunt was just beginning.
+
+As they ducked into a waiting van—a prearranged getaway vehicle—Lin Wei looked back. Thorne was on the sidewalk, phone pressed to his ear, his stare fixed on their fleeing car.
+
+The alternative—letting him succeed—had been unthinkable.
+
+And now, they had made sure everyone knew what he was.
+
+But the cost of that knowledge was their safety.
+
+Adrian pulled her into the shadowed interior of the van, his hand still gripping hers.
+
+“It’s not over,” he said. “It never will be until we take him down completely.”
+
+Lin Wei nodded, her heart still racing.
+
+She tightened her hold on his hand.
+
+They had chosen this path together.
+
+And they would see it to the end.

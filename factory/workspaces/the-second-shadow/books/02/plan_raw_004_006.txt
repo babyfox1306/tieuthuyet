@@ -1,0 +1,80 @@
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Neighbor's Warning",
+      "slug": "ch4-the-neighbors-warning",
+      "one_line_summary": "Gerald Vance arrives and warns Mara away from the investigation, forcing Asher to reveal Ilse's hidden journal.",
+      "beat_summary": "Gerald Vance storms into the house and threatens to call the police on Asher for trespassing, warning Mara that digging up the past will only hurt her mother. After he leaves, Asher shows Mara the journal he discovered hidden in the pantry. The first pages describe Ilse's fear of Lydia's volatile lover, Julian Croft. The Girl in Blue watches from the garden window, shaking her head as Gerald departs.",
+      "must_happen": [
+        "Gerald Vance confronts Mara and Asher, warning them to stop their investigation.",
+        "Asher reveals he has already found Ilse's hidden journal in the pantry.",
+        "The journal's first pages identify the lover as Julian Croft and his violent temperament.",
+        "[ROMANCE] Asher places a steadying hand on Mara's shoulder after Gerald's outburst; she doesn't pull away, signaling her growing trust."
+      ],
+      "must_not": [
+        "Mara must not learn that Gerald witnessed the lover entering the house that day.",
+        "Asher must not reveal that his surname is Croft."
+      ],
+      "opens_with": "Gerald's fist hit the doorframe before he stepped into the hall, his boots tracking mud across the clean floor.",
+      "cliffhanger": "Mara opens the journal to the first photograph—a man with tousled hair, the same man from her mother's album—and beneath it, a date inked in Ilse's hand: the day of the fall.",
+      "signature_detail_hint": "Gerald's hands are stained with engine grease, but his pale left ring finger tells the story of a wedding band recently removed.",
+      "emotional_beat": "Mara feels a quiet warmth in the weight of Asher's hand on her shoulder—a foreign comfort she doesn't dare name.",
+      "spice": 1,
+      "spice_note": "A tender hand-on-shoulder micro-beat, conveying safety and the first threads of reliance.",
+      "chapter_task": "Write a 1600–1900-word chapter that introduces Gerald as a suspicious obstacle, uses the journal to escalate the plot, and deepens Mara's emotional reliance on Asher through a single protective touch. The hourglass danger of the dead lover's identity must hover over every scene.",
+      "carries_to_next": "The journal is now Mara's primary guide, and the mystery of Julian Croft deepens. The true threat of the past begins to emerge."
+    },
+    {
+      "chapter": 5,
+      "title": "The Journal",
+      "slug": "ch5-the-journal",
+      "one_line_summary": "Mara reads deeper into Ilse's journal, revealing a secret passage and a cache of letters that tie Asher Croft to the dead man.",
+      "beat_summary": "Mara reads Ilse's journal by lamplight. Ilse describes Julian Croft as a manipulative man who threatened to ruin Lydia's reputation. Halfway through, the journal mentions a space behind the fireplace where Ilse hid evidence. Mara and Asher break through the false wall and find a box of letters tied with a black ribbon. The letters are from Julian Croft to his younger brother. Asher opens one and recognizes the handwriting—he is Julian Croft's nephew.",
+      "must_happen": [
+        "The journal reveals the secret hiding place behind the living room fireplace.",
+        "Mara and Asher discover the false wall and retrieve a hidden box of letters.",
+        "A letter from Julian to his brother confirms Asher's family connection to the dead man.",
+        "[ROMANCE] In the confined space behind the wall, Mara and Asher work shoulder to shoulder; their hands meet over the box, and the electricity of the touch lingers."
+      ],
+      "must_not": [
+        "Mara must not have a full memory flashback yet (the bear hasn't been found).",
+        "Asher must not voice the full implications of his uncle's disappearance (he needs time to process)."
+      ],
+      "opens_with": "'If Julian tells, the Vale name will shatter. I must act, but I am afraid.' Mara read the line twice, the lamp casting a long shadow across the page.",
+      "cliffhanger": "Asher's hands trembled as he held the letter. 'Julian Croft is my uncle,' he said, his voice hollow. 'My father never knew what happened to him.'",
+      "signature_detail_hint": "The letters are bound with a black ribbon, but the bow is a clumsy child's knot—Ilse tied it in a hurry, terrified.",
+      "emotional_beat": "The electric brush of their hands solidifies into a moment of pure connection before the devastating revelation of Asher's identity shatters the intimacy.",
+      "spice": 1,
+      "spice_note": "A charged hand-touch in a tight space; the romantic micro-beat is cut short by the emotional gut-punch of the Croft reveal.",
+      "chapter_task": "Write a 1600–1900-word chapter that deepens the supernatural/thriller plot via the hidden letters and delivers the major character revelation—Asher is Julian Croft's nephew—while maintaining the fragile romantic thread through a brief, meaningful physical touch in a confined space.",
+      "carries_to_next": "Asher's identity is now a barrier between them. Mara must decide if she can trust the man whose family connects to her deepest wound."
+    },
+    {
+      "chapter": 6,
+      "title": "The Confession",
+      "slug": "ch6-the-confession",
+      "one_line_summary": "Mara confronts Asher about his hidden agenda, and their raw confession opens the door to genuine intimacy and a shared purpose.",
+      "beat_summary": "The house reacts to the tension—doors slam, cold drafts sweep through the halls. Mara confronts Asher, demanding to know if he came to avenge his uncle. Asher confesses his father sent him to find the truth, but he never expected to care for her. The Girl in Blue appears, sad, pointing to the attic. Mara and Asher decide to trust each other completely. They ascend to the attic and find Ilse's hidden box under the rotted floor. Inside is a key and a note: 'For Mara. When you are ready to remember, use this. The bear is not to blame.'",
+      "must_happen": [
+        "Supernatural activity escalates as the emotional tension peaks.",
+        "Asher fully confesses his family connection and his initial hidden motive, declaring his loyalty to Mara now.",
+        "Mara and Asher find Ilse's hidden box in the attic, containing a key and a note about the bear.",
+        "[ROMANCE] Mara breaks down, and Asher holds her, a full embrace of vulnerability and forgiveness. The comfort they find in each other solidifies their partnership."
+      ],
+      "must_not": [
+        "The full memory of the murder must not return to Mara (reserved for the bear).",
+        "Asher must not know that his uncle was deliberately killed by Lydia (he believes Julian vanished)."
+      ],
+      "opens_with": "Mara found Asher in the library, holding Julian's letter like it was a loaded weapon. 'Tell me the truth,' she said. 'Did you come here to destroy my family?'",
+      "cliffhanger": "Mara slipped the key into her pocket. 'The bear,' she whispered. 'We have to find the bear before my mother does.' The radiator knocked three times, and in the attic above, a child's footsteps began to pace.",
+      "signature_detail_hint": "Ilse's keychain holds a small brass acorn—a symbol of patience before the oak, a talisman for waiting for the right time.",
+      "emotional_beat": "Mara's walls crumble as Asher's arms wrap around her, the weight of her loneliness lifting for the first time in two decades as she allows herself to be truly held.",
+      "spice": 1,
+      "spice_note": "A full, tender embrace that signifies a major turning point in trust and intimacy. Emotionally charged but not physically explicit.",
+      "chapter_task": "Write a 1600–1900-word chapter resolving the trust conflict between Mara and Asher, escalating the supernatural activity, and delivering a major plot clue (the bear is the key). The emotional climax is their embrace; ensure the writing prioritizes vulnerability and the slow-burn romance payoff over melodrama.",
+      "carries_to_next": "Mara and Asher are now a united team. The search for the bear—and the full truth—begins. Lydia Vale is the looming threat."
+    }
+  ]
+}

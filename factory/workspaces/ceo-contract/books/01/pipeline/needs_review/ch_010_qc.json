@@ -1,0 +1,22 @@
+{
+  "foreign_chars": [
+    "é"
+  ],
+  "word_count": 1385,
+  "voice_drift": {
+    "flag": false,
+    "details": ""
+  },
+  "continuity_conflict": {
+    "flag": true,
+    "details": "The story_state indicates this is Chapter 2, but the input text is labeled 'Chapter 10'. Additionally, the story_state lists the current location as the office meeting, while the chapter concludes with the protagonist leaving the building and encountering a character (Zhao Junlin) not yet introduced in the current story_state timeline."
+  },
+  "cliffhanger_strength": 5,
+  "pacing_issue": false,
+  "signature_detail_present": true,
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "continuity_conflict: Chapter numbering mismatch (Input says 10, State says 2).",
+    "continuity_conflict: The chapter progresses the plot significantly beyond the current story_state (leaving the building, encountering Zhao Junlin)."
+  ]
+}

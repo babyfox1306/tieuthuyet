@@ -1,0 +1,115 @@
+{
+  "description": "Threads for The Glass Meridian, Book 1. Focuses on the marriage contract, Lin Wei's investigation, the Glass Meridian conspiracy, and the slow-burn romance.",
+  "threads": [
+    {
+      "id": "T001",
+      "name": "The Marriage Contract",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "ongoing",
+      "book1_resolution": "The contract is revealed to be a shield, not a purchase of identity, and has evolved into a real alliance.",
+      "book2_promise": "The contract's implications continue as Lin Wei and Adrian navigate their true relationship amidst escalating threats.",
+      "book1_payoff": "The contract's true purpose as a shield is revealed.",
+      "note": "The central spine of the book. Includes hidden clauses and evolves from transactional to alliance."
+    },
+    {
+      "id": "T002",
+      "name": "Lin Wei's Mother's Illness",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "ongoing",
+      "book1_resolution": "Mother is pulled through the critical phase; Lin Wei learns her mother was a victim of a Glass Meridian biotech trial.",
+      "book2_promise": "The full extent of the mother's connection to Project Phoenix and the Glass Meridian is explored.",
+      "book1_payoff": "Revelation of the mother's victim status in a biotech trial.",
+      "note": "The initial motivation for the contract. Becomes a key to the conspiracy."
+    },
+    {
+      "id": "T003",
+      "name": "The Glass Meridian Conspiracy",
+      "opened_chapter": 2,
+      "must_close_by": 50,
+      "status": "ongoing",
+      "book1_resolution": "One local link of the Meridian within Aurelian Group is broken.",
+      "book2_promise": "The larger network and its true goals are further uncovered.",
+      "book1_payoff": "Discovery of the Glass Meridian's existence and reach.",
+      "note": "The overarching antagonist organization."
+    },
+    {
+      "id": "T004",
+      "name": "Adrian's Redemption Arc",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "ongoing",
+      "book1_resolution": "Adrian moves from complicity to active fight against the Meridian, forming a real alliance with Lin Wei.",
+      "book2_promise": "Adrian confronts his past and his father's legacy more directly.",
+      "book1_payoff": "Adrian actively protects Lin Wei and works with her against the Meridian.",
+      "note": "Focuses on his moral grayness and path to atonement."
+    },
+    {
+      "id": "T005",
+      "name": "Lin Wei's Investigation",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "ongoing",
+      "book1_resolution": "Lin Wei actively uses her skills to uncover truths about Aurelian Group and the Meridian.",
+      "book2_promise": "Her investigative work becomes crucial in unraveling Project Phoenix.",
+      "book1_payoff": "Lin Wei's journalistic skills prove vital in uncovering secrets.",
+      "note": "Highlights her agency and unique access."
+    },
+    {
+      "id": "T006",
+      "name": "Slow Burn Romance",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "ongoing",
+      "book1_resolution": "The fake marriage evolves into a real alliance based on trust and mutual protection.",
+      "book2_promise": "The romantic relationship deepens as they face greater dangers together.",
+      "book1_payoff": "Moments of genuine connection and protection that blur the lines of the contract.",
+      "note": "Characterized by micro-beats, suspicion, confrontation, attraction, and reluctant protection."
+    },
+    {
+      "id": "T007",
+      "name": "Cross-Cultural Friction",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "ongoing",
+      "book1_resolution": "Misunderstandings are navigated, leading to greater understanding and a stronger bond.",
+      "book2_promise": "Continued exploration of cultural differences as a source of texture and tension.",
+      "book1_payoff": "Moments where cultural differences create misunderstandings but also unique strengths.",
+      "note": "Used as texture, not caricature; differences in language, values, family duty."
+    },
+    {
+      "id": "T008",
+      "name": "Project Phoenix",
+      "opened_chapter": 30,
+      "must_close_by": 50,
+      "status": "opened",
+      "book1_resolution": "Evidence suggests Lin Wei's mother was connected to the original Project Phoenix file.",
+      "book2_promise": "The true nature and purpose of Project Phoenix become a central focus.",
+      "book1_payoff": "Hint of the mother's deeper involvement beyond victimhood.",
+      "note": "Cross-series myth arc, revealed late in Book 1."
+    },
+    {
+      "id": "T009",
+      "name": "Aurelian Group Connection",
+      "opened_chapter": 2,
+      "must_close_by": 45,
+      "status": "ongoing",
+      "book1_resolution": "Aurelian Group is identified as a local link of the Glass Meridian, and one part is broken.",
+      "book2_promise": "Further investigation into Aurelian Group's role and its global connections.",
+      "book1_payoff": "Identification of Aurelian Group's ties to the Meridian.",
+      "note": "Adrian's company, a key player in the conspiracy."
+    },
+    {
+      "id": "T010",
+      "name": "Hidden Dangers and Protection",
+      "opened_chapter": 5,
+      "must_close_by": 50,
+      "status": "ongoing",
+      "book1_resolution": "Adrian's actions increasingly show he is protecting Lin Wei from the Meridian's reach.",
+      "book2_promise": "The protective dynamic intensifies as threats become more personal.",
+      "book1_payoff": "Adrian intervenes to shield Lin Wei from direct Meridian threats.",
+      "note": "Shows Adrian's developing feelings and commitment."
+    }
+  ]
+}

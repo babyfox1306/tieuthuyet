@@ -1,0 +1,26 @@
+{
+  "foreign_chars": [
+    "Wo",
+    "bu",
+    "shi",
+    "ni",
+    "de",
+    "gongju"
+  ],
+  "word_count": 1485,
+  "voice_drift": {
+    "flag": false,
+    "details": ""
+  },
+  "continuity_conflict": {
+    "flag": true,
+    "details": "The story_state indicates this is Chapter 2, but the input is labeled Chapter 4. Additionally, the story_state lists the location as 'Han Corporation', while the chapter refers to 'Aurelian Group' and 'Adrian Vale' (who is associated with Aurelian in the bible, not Han Corporation). The plot has jumped significantly ahead of the provided story_state."
+  },
+  "cliffhanger_strength": 5,
+  "pacing_issue": false,
+  "signature_detail_present": true,
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "continuity_conflict"
+  ]
+}

@@ -1,0 +1,49 @@
+concept_status: ready
+target_language: en
+title: The Second Shadow
+logline: A woman inherits the aunt's house where she spent one childhood summer she
+  cannot remember — and finds her old one-eyed teddy bear waiting, along with a small
+  girl in a blue dress who watches from the dark and does not want her to leave again.
+author_directive: 'Lead: Mara Vale, 29, restorer of old furniture, estranged from
+  family, no memory of the summer she was 8. Aunt Ilse (deceased) left her the house.
+  The child: "the girl in blue," Mara''s own abandoned 8-year-old self, silent, always
+  at the edge of frame, holding nothing — the bear is what she wants back. The bear
+  ("Wick," one glass eye) is the memory-anchor: whoever holds it remembers. Central
+  mystery (ONE answer): what happened the summer Mara was 8 that made her split herself
+  and forget. Reveal cadence — give a concrete answer every 2-3 chapters, never only
+  "a deeper secret." Slow-burn dread, not gore. POV: third-person limited, locked
+  to Mara — NO first-person narration outside dialogue (cuốn 1 lỗi POV này, khóa cứng
+  từ đầu). Spice level 1 (atmospheric, no explicit). Locked images to honor from source:
+  blue doll-dress, one-eyed bear held low, second shadow at left edge, cracked wooden
+  floor, near-total darkness with cold blue light.'
+surface_plot: 'A classic haunted-house story: a grieving woman alone in a decaying
+  inherited home, hearing footsteps on cracked floorboards at night, glimpsing a child''s
+  ghost at the edge of her vision, trying to survive whatever is haunting the place.'
+true_plot: The child is not a ghost — she is the narrator herself, the part of her
+  childhood she left behind in this house to buy the ability to forget something unbearable
+  that happened one summer. The one-eyed bear is the anchor holding that memory. Every
+  time she remembers more, the "second shadow" comes closer. It isn't trying to hurt
+  her — it is trying to make her stay, because being remembered means being whole
+  again, and being whole means she must finally know what she did that summer.
+must_include:
+- One concrete mystery answer every 2-3 chapters (no endless teasing)
+- The bear "Wick" as physical memory-anchor, consistent one glass eye throughout
+- Third-person limited locked to Mara only
+- Slow psychological dread, atmosphere over shock
+- The girl in blue never speaks (silence is her signature)
+must_avoid:
+- First-person narration outside dialogue (hard rule)
+- Gore / body horror as primary scare
+- Explicit content (keep spice 1)
+- Name drift — lock Mara, Ilse, Wick spelling from the start
+- More than one "true answer" to the central mystery
+ending_book1: Mara learns exactly what happened that summer (the true answer to the
+  mystery) and makes a choice — reintegrate with the girl in blue (become whole, keep
+  the memory) or flee again (stay fractured, stay safe). Book 1 resolves that choice
+  concretely.
+hook_book2: the memory she recovers reveals Aunt Ilse did the same thing decades earlier
+  — the house has done this before, to someone else, and that person never left.
+notes: '10 chapters — test run for the pipeline after Book 1. Purpose: exercise canon
+  guard on a fresh bible (new characters, must run build_canon_registry before write
+  so guard checks Mara/Ilse/Wick, not Lin Wei/Adrian). Watch specifically for POV
+  drift and name consistency — the two Book-1 failures this book is designed to stress-test.'

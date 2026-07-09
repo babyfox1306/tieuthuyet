@@ -1,0 +1,13 @@
+﻿python : Traceback (most recent call last):
+At C:\Users\nhtua\AppData\Local\Temp\ps-script-8c3c839d-5c9f-4016-8472-e9696b5ebb95.ps1:89 char:434
++ ... " -Force }; python factory/engine/run_factory.py status --workspace c ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "D:\duan\KDP Sub-niche Recon\factory\engine\run_factory.py", line 18, in <module>
+    from factory.engine.lib.catalog import (
+  File "D:\duan\KDP Sub-niche Recon\factory\engine\lib\catalog.py", line 296
+    ) -> int:
+    ^
+SyntaxError: unmatched ')'

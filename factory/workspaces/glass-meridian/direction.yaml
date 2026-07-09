@@ -1,0 +1,71 @@
+id: glass-meridian
+pen_name: ''
+target_language: en
+narrative_profile: romance_thriller
+publish_strategy: kdp_ku_exclusive
+narrative_status: approved
+book: 2
+total_chapters: 50
+canon_through: 0
+platform: kdp
+audience: women 18-35, mobile reading, hook-driven serial fiction
+goal: end-of-chapter hooks — international thriller-romance pace
+setting_hub: Singapore
+setting_nodes:
+- Hong Kong
+- Zurich
+- New York
+spice_default: 1
+spice_explicit_chapters:
+- 3
+- 12
+- 18
+- 25
+- 32
+- 40
+- 48
+spice_steamy_chapters:
+- 8
+- 15
+- 22
+- 28
+- 36
+- 44
+arc:
+  act1_setup:
+  - 1
+  - 12
+  act2_complications:
+  - 13
+  - 30
+  act3_crisis:
+  - 31
+  - 42
+  act4_resolution:
+  - 43
+  - 50
+book1_ending: By the end of Book 1, Lin Wei discovers the marriage contract was never
+  a purchase of identity but a shield Adrian Vale built to pull her out of the Glass
+  Meridian's reach. She learns her mother was not an ordinary cancer patient but a
+  surviving victim of a biotech trial Aurelian Group concealed years ago. Adrian was
+  not the one who directly harmed her mother, but he once unknowingly stood inside
+  the system that caused the tragedy. Together they break one link of the Meridian
+  inside Aurelian Group, pull her mother through the critical phase, and accept that
+  the fake marriage has become a real alliance.
+blurb: A Chinese investigative journalist signs a one-year marriage contract with
+  a cold, dangerous Western CEO to save her dying mother — only to discover the marriage
+  is a trap pulling her into a global medical-financial network that has been concealing
+  a secret about her own family.
+tropes:
+- contract marriage
+- CEO
+- slow burn enemies-to-lovers
+- forced proximity
+- international conspiracy
+spice_badge: 16+
+target_platforms:
+- kdp
+spice_level: 3
+plan_status: approved
+bible_status: approved
+book_slug: 02-the-altered-name

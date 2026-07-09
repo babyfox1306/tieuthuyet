@@ -1,0 +1,60 @@
+{
+  "description": "Threads for The Second Shadow book 1 (10 chapters), covering the central summer mystery, the bear anchor, the child manifestation, the slow-burn romance, and the underlying family history. Concrete reveals every 2-3 chapters. Slow dread, no gore.",
+  "threads": [
+    {
+      "id": "TH001",
+      "name": "The Lost Summer",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "open",
+      "book1_resolution": "Mara recovers the full memory: she witnessed her mother Lydia push a lover off the attic walkway after he threatened to expose their affair. Lydia forced her to swear silence, fracturing her psyche. Mara must choose to reintegrate the child-self or flee.",
+      "book2_promise": "The recovered memory reveals that Aunt Ilse underwent the same trauma decades earlier, opening a new mystery about the house's repeating pattern.",
+      "book1_payoff": "The complete answer to what happened that summer is given; Mara makes a concrete choice that closes this thread.",
+      "note": "This thread delivers a concrete revelation every 2-3 chapters, never merely hinting at a deeper secret."
+    },
+    {
+      "id": "TH002",
+      "name": "The One-Eyed Bear (Wick)",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "open",
+      "book1_resolution": "Mara retrieves the bear from the garden (where Lydia buried it) and holds it, triggering the full memory flashback that resolves the central mystery.",
+      "book2_promise": "The bear remains a memento; it may be needed again to unlock Aunt Ilse's buried trauma in later books.",
+      "book1_payoff": "The bear's role as memory-anchor is fulfilled; Mara regains the lost summer.",
+      "note": "The bear has one glass eye throughout; it is the physical keystone of the mystery."
+    },
+    {
+      "id": "TH003",
+      "name": "The Girl in Blue",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "open",
+      "book1_resolution": "Mara confronts the silent girl at the climax. If she chooses reintegration, the girl merges with her; if she flees, the girl remains waiting in the dark.",
+      "book2_promise": "If not reintegrated, the girl will continue to haunt Mara in Book 2. If integrated, an echo may linger as a shadow of healed trauma.",
+      "book1_payoff": "The true nature of the girl is revealed as Mara's eight-year-old self; the emotional catharsis of their final encounter.",
+      "note": "The girl never speaks; she only watches and holds nothing. Her blue dress and near-total darkness with cold blue light are fixed images."
+    },
+    {
+      "id": "TH004",
+      "name": "Slow Burn Romance: Mara and Asher",
+      "opened_chapter": 2,
+      "must_payoff_by": "series end",
+      "status": "open",
+      "book1_resolution": "Mara meets Asher Croft, a local historian drawn to the house's mystery. They form a tentative alliance; a charged emotional connection develops, but no explicit romance (spice level 1).",
+      "book2_promise": "Their relationship deepens as they investigate Aunt Ilse's parallel story together, with increasing trust and intimacy.",
+      "book1_payoff": "First meeting, a shared discovery, and a near-kiss or emotionally resonant moment that cements their bond for future books.",
+      "note": "Slow‑burn pace; no explicit content. Asher's own wound (his brother's drowning) resonates with Mara's fracture."
+    },
+    {
+      "id": "TH005",
+      "name": "Aunt Ilse's Shadow",
+      "opened_chapter": 8,
+      "must_payoff_by": "series end",
+      "status": "open",
+      "book1_resolution": "In the final chapters, Mara discovers a hidden journal or photograph that suggests Aunt Ilse experienced a similar memory split and never reintegrated, spending her life trapped in the house.",
+      "book2_promise": "This thread drives the entire series arc: uncovering the full history of Ilse's summer and what the house demands.",
+      "book1_payoff": "The revelation that the pattern predates Mara, seeding the hook for Book 2.",
+      "note": "The thread is introduced late but becomes central to the series. It ensures the series door opens cleanly."
+    }
+  ]
+}

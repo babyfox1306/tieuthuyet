@@ -1,0 +1,89 @@
+{
+  "description": "Locked chapter plans for this workspace — data, not engine code.",
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "Hợp đồng có giá",
+      "slug": "hop-dong-co-gia",
+      "one_line_summary": "Ký HĐ 1 năm/1 tỷ, 3 điều khoản DT, nhẫn + gọi 1 giờ, mẹ họ Lâm xuất hiện sảnh.",
+      "beat_summary": "DT gặp Uyên ký hợp đồng. Mẹ ICU/nợ viện phí là động lực. Cô đưa 3 điều khoản; hắn đáp nhẫn + điều khoản gọi là đến trong 1 giờ. Ký xong ra sảnh — mẹ họ Lâm xuất hiện.",
+      "must_happen": [
+        "Mở bằng câu thoại sốc: Một tỷ đồng. Ký tên vào đây",
+        "Mẹ DT ICU Lê Hồng Vân, áp lực viện phí",
+        "DT đưa 3 điều khoản (giữ việc, không đóng vai vợ hiền, thư giới thiệu sau 1 năm)",
+        "Uyên đáp nhẫn + gọi là đến trong 1 giờ",
+        "Ký HĐ; cliff: mẹ họ Lâm Vũ Trinh xuất hiện sảnh"
+      ],
+      "must_not": [
+        "Mở bằng tả văn phòng/mùi hương/thời tiết",
+        "DT cầu xin hoặc mềm yếu",
+        "Uyên giải thích dài",
+        "Kết cliff trong phòng ký — phải ra sảnh gặp mẹ Lâm"
+      ],
+      "opens_with": "\"Một tỷ đồng. Ký tên vào đây.\" — không tả cảnh trước đó",
+      "cliffhanger": "Ra sảnh sau khi ký — mẹ họ Lâm Vũ Trinh đã đứng đó chờ",
+      "signature_detail_hint": "Móng đỏ DT gõ kính bàn đếm nhịp; hoặc vết chai tay cô khác vẻ designer",
+      "emotional_beat": "căng",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Viết ch1 hoàn chỉnh 1600-1900 chữ. Tension đàm phán > kể lể. Nội tâm DT mỉa mỗi cảnh căng.",
+      "carries_to_next": "Mẹ họ Lâm đã thấy hai người",
+      "locked": true
+    },
+    {
+      "chapter": 2,
+      "title": "Mẹ Chồng Cao Tay",
+      "slug": "me-chong-cao-tay",
+      "one_line_summary": "Nối sảnh Lâm → về Q2, gặp mẹ Hàn Từ Tố Nhi, phòng riêng, tin nhắn đêm.",
+      "beat_summary": "Tiếp ngay sau mẹ họ Lâm ở sảnh (KHÔNG reset cafe). Về biệt thự Q2. Gặp mẹ Hàn. Đêm DT nhắn về việc — hắn trả lời: Thử xem.",
+      "must_happen": [
+        "Mở nối sảnh ch1 — mẹ Lâm hoặc hậu cảnh đó",
+        "Về biệt thự Q2, phòng riêng",
+        "Gặp Từ Tố Nhi (mẹ Hàn)",
+        "Tin nhắn đêm: DT hỏi không hủy việc — Uyên: Thử xem"
+      ],
+      "must_not": [
+        "Mở cafe random không nối ch1",
+        "Thân mật thể xác",
+        "DT mềm yếu"
+      ],
+      "opens_with": "Móc câu nối trực tiếp từ sảnh — giọng mẹ Lâm hoặc DT phản ứng",
+      "cliffhanger": "Tin nhắn Uyên chỉ 2 chữ: \"Thử xem.\"",
+      "signature_detail_hint": "Quy tắc phòng khách dán tay — hoặc ly trà mẹ Hàn không đụng",
+      "emotional_beat": "căng",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "1600-1900 chữ. Giả vờ vs thật với mẹ Hàn. Kết bằng tin nhắn Thử xem.",
+      "carries_to_next": "Thử xem — setup ch3",
+      "locked": true
+    },
+    {
+      "chapter": 3,
+      "title": "Thử Xem",
+      "slug": "thu-xem",
+      "one_line_summary": "Sau \"Thử xem\" — đêm 18+ đầu tiên; cliff Lâm Vũ Trinh hẹn 7h sáng.",
+      "beat_summary": "Hắn gõ cửa phòng cô sau tin nhắn. Cảnh explicit ~40% chương, đồng thuận, giằng co quyền lực. Kết: điện thoại Lâm Vũ Trinh mai 7h.",
+      "must_happen": [
+        "Mở bằng gõ cửa / tin Thử xem",
+        "Cảnh 18+ explicit đầy đủ ~40-50% chương",
+        "Uyên ít lời trong cảnh; DT vẫn mỉa",
+        "Uyên ngủ phòng khác sau đó",
+        "Cliff: Lâm Vũ Trinh nhắn 7h sáng"
+      ],
+      "must_not": [
+        "Non-con, dưới 18",
+        "DT bánh bèo trong cảnh nóng",
+        "Fade-to-black — phải explicit"
+      ],
+      "opens_with": "Tiếng gõ cửa 23h47 — ba cái, cách nhau đúng một giây",
+      "cliffhanger": "Điện thoại: Lâm Vũ Trinh — Mai 7h, đừng để mẹ thất vọng",
+      "signature_detail_hint": "Đồng hồ cơ Uyên phản chiếu đèn hành lang khi đứng cửa",
+      "emotional_beat": "hút",
+      "spice": 3,
+      "spice_note": "Kiểm tra vợ chồng thật sau Thử xem — giằng co trên giường, ai không chịu thua",
+      "chapter_task": "1700-2000 chữ. Explicit 18+ bắt buộc. Cliff NGOÀI cảnh nóng.",
+      "carries_to_next": "7h sáng mẹ Lâm",
+      "locked": true
+    }
+  ]
+}

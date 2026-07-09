@@ -1,0 +1,45 @@
+id: the-second-shadow
+pen_name: ''
+target_language: en
+narrative_profile: romance_thriller
+publish_strategy: kdp_ku_exclusive
+narrative_status: approved
+book: 1
+total_chapters: 10
+canon_through: 0
+platform: kdp
+audience: women 18-35, mobile reading, hook-driven serial fiction
+goal: end-of-chapter hooks — international thriller-romance pace
+setting_hub: Ilse's inherited house
+setting_nodes: []
+spice_default: 1
+spice_explicit_chapters: []
+spice_steamy_chapters: []
+arc:
+  act1_setup:
+  - 1
+  - 2
+  act2_complications:
+  - 3
+  - 6
+  act3_crisis:
+  - 7
+  - 8
+  act4_resolution:
+  - 9
+  - 10
+book1_ending: Mara learns exactly what happened that summer (the true answer to the
+  mystery) and makes a choice — reintegrate with the girl in blue (become whole, keep
+  the memory) or flee again (stay fractured, stay safe). Book 1 resolves that choice
+  concretely.
+blurb: A woman inherits the aunt's house where she spent one childhood summer she
+  cannot remember — and finds her old one-eyed teddy bear waiting, along with a small
+  girl in a blue dress who watches from the dark and does not want her to leave again.
+tropes: []
+spice_badge: sweet
+target_platforms:
+- kdp
+spice_level: 1
+plan_status: approved
+bible_status: approved
+book_slug: 01-the-second-shadow

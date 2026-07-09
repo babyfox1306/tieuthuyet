@@ -1,0 +1,94 @@
+```json
+{
+  "act": [
+    1,
+    3
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Contract",
+      "slug": "the-contract",
+      "one_line_summary": "Desperate to save her mother, Lin Wei agrees to a marriage of convenience with the formidable Adrian Vale, unaware of the dangerous game she's about to play.",
+      "beat_summary": "Lin Wei is presented with an impossible choice: a marriage contract with Adrian Vale in exchange for her mother's life-saving treatment. She grapples with the betrayal of her journalistic principles and the unsettling intensity of Adrian. Adrian, outwardly cold, observes Lin Wei's dilemma, his own hidden agenda at play. The contract is signed, sealing their fates and initiating their forced proximity.",
+      "must_happen": [
+        "Lin Wei receives the dire prognosis for her mother, Ms. Li.",
+        "[ROMANCE] Lin Wei and Adrian Vale meet for the first time, a tense negotiation over the marriage contract.",
+        "Lin Wei signs the marriage contract under duress, driven by her love for her mother.",
+        "Adrian Vale observes Lin Wei's vulnerability, his own internal conflict hinted at.",
+        "The immediate aftermath of signing – Lin Wei’s shock and Adrian’s calculated composure."
+      ],
+      "must_not": [
+        "Lin Wei agreeing to the contract willingly or without deep emotional conflict.",
+        "Adrian Vale revealing any hint of his true motives or the Glass Meridian.",
+        "Any mention of Project Phoenix or its direct connection to Lin Wei's mother.",
+        "Lin Wei exhibiting overt trust or affection towards Adrian."
+      ],
+      "opens_with": "A sterile hospital room, the hushed tones of doctors delivering a death sentence, and Lin Wei's world shattering.",
+      "cliffhanger": "Lin Wei stares at the signed contract, the weight of her decision crushing her as Adrian Vale's unreadable gaze meets hers, a silent promise of a future she can't comprehend.",
+      "signature_detail_hint": "The unnerving stillness of Adrian Vale’s apartment, a stark contrast to the chaos Lin Wei feels inside.",
+      "emotional_beat": "Desperation and a nascent, unwelcome attraction.",
+      "spice": 1,
+      "spice_note": "Focus on the charged tension and Lin Wei's internal turmoil regarding Adrian's presence.",
+      "chapter_task": "Introduce Lin Wei's desperate situation and the marriage contract. Establish the initial dynamic between Lin Wei and Adrian, highlighting his cold exterior and her vulnerability. Set the stage for their forced proximity. (1600-1900 words)",
+      "carries_to_next": "The immediate consequences of the marriage contract and Lin Wei's displacement into Adrian's world."
+    },
+    {
+      "chapter": 2,
+      "title": "A Gilded Cage",
+      "slug": "a-gilded-cage",
+      "one_line_summary": "Lin Wei navigates her new life as Adrian Vale's wife, finding herself a prisoner in luxury while Adrian begins to subtly probe her.",
+      "beat_summary": "Lin Wei moves into Adrian's opulent but sterile home, feeling like a caged bird. She attempts to maintain her journalistic instincts, observing Adrian and his associates, while Adrian sets subtle tests and observes her reactions. A brief, charged interaction reveals Adrian's controlled nature and Lin Wei's simmering defiance.",
+      "must_happen": [
+        "Lin Wei arrives at Adrian's lavish residence, feeling overwhelmed and out of place.",
+        "Adrian Vale demonstrates his control over Lin Wei's environment and daily routine.",
+        "[ROMANCE] A moment of shared silence where Lin Wei observes Adrian's guarded expression, sensing a depth beneath the cold facade.",
+        "Adrian Vale makes a subtle inquiry about Lin Wei's past or journalistic work, testing her.",
+        "Lin Wei begins to notice oddities in Adrian's household or the people he interacts with."
+      ],
+      "must_not": [
+        "Lin Wei showing any genuine comfort or acceptance of her situation.",
+        "Adrian Vale being overtly kind or revealing any personal vulnerabilities.",
+        "Any direct mention of the Glass Meridian or its operatives by name.",
+        "Lin Wei compromising her journalistic integrity by sharing sensitive information."
+      ],
+      "opens_with": "The imposing gates of Adrian Vale's estate closing behind Lin Wei, a stark symbol of her confinement.",
+      "cliffhanger": "As Lin Wei pores over news feeds, a fleeting, almost imperceptible flicker of recognition crosses Adrian's face when she mentions a specific investigative angle, hinting at a deeper connection.",
+      "signature_detail_hint": "The meticulous arrangement of books in Adrian's study, each spine perfectly aligned, reflecting his controlled persona.",
+      "emotional_beat": "Resentment and suspicion, laced with a growing, unwanted curiosity.",
+      "spice": 0,
+      "spice_note": "No explicit spice, focus on the psychological tension and Lin Wei's internal resistance.",
+      "chapter_task": "Establish Lin Wei's new living situation and her initial attempts to understand Adrian and his world. Show Adrian's subtle manipulations and observations of Lin Wei. Build the sense of unease and confinement. (1600-1900 words)",
+      "carries_to_next": "Lin Wei's increasing suspicion and Adrian's continued, subtle investigation into her life and potential."
+    },
+    {
+      "chapter": 3,
+      "title": "Whispers in the Data",
+      "slug": "whispers-in-the-data",
+      "one_line_summary": "While researching her mother’s condition, Lin Wei stumbles upon a cryptic clue that hints at a conspiracy far larger and more personal than she imagined.",
+      "beat_summary": "Lin Wei uses her journalistic skills to research her mother's illness, digging into medical journals and obscure research papers. She uncovers an anomaly – a coded reference within her mother's old medical files that doesn't align with her known condition. Adrian, observing her, subtly steers her research without revealing his knowledge, planting seeds of doubt and curiosity.",
+      "must_happen": [
+        "Lin Wei accesses her mother's past medical records, seeking answers.",
+        "Lin Wei discovers a peculiar data anomaly or coded message within the records (C001 planted).",
+        "Adrian Vale notices Lin Wei's intense research and subtly guides her towards certain databases or information brokers, feigning helpfulness.",
+        "[ROMANCE] Lin Wei catches Adrian watching her intently as she works, a silent, unnerving scrutiny that makes her skin prickle.",
+        "Lin Wei begins to suspect her mother's illness might be more than it appears."
+      ],
+      "must_not": [
+        "Lin Wei finding definitive answers about the Glass Meridian or Project Phoenix.",
+        "Adrian Vale directly revealing the existence of the Glass Meridian or Project Phoenix.",
+        "Lin Wei sharing her discovery with Adrian, maintaining her suspicion.",
+        "Professor Chen being revealed as anything other than a concerned physician at this stage."
+      ],
+      "opens_with": "The cold glow of a laptop screen illuminating Lin Wei's determined face as she pores over forgotten medical files, a single anomaly catching her eye.",
+      "cliffhanger": "Lin Wei stares at the cryptic string of characters, a chilling premonition dawning – this isn't just about her mother's illness; it's a breadcrumb leading into a darkness she's only beginning to perceive.",
+      "signature_detail_hint": "The faint, almost imperceptible scent of ozone lingering in Adrian's private study, a scent that seems out of place.",
+      "emotional_beat": "Intrigue and growing unease, coupled with a flicker of defiance against Adrian's control.",
+      "spice": 1,
+      "spice_note": "Subtle tension between Lin Wei's determination and Adrian's watchful presence. Focus on the intellectual sparring and the unseen forces at play.",
+      "chapter_task": "Lin Wei begins her own investigation into her mother's illness, uncovering the first clue (C001). Adrian subtly manipulates her research. Establish the growing mystery and Lin Wei's suspicions. (1600-1900 words)",
+      "carries_to_next": "Lin Wei's active pursuit of the cryptic clue and Adrian's calculated involvement in her investigation."
+    }
+  ]
+}
+```

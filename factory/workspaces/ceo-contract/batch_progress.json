@@ -1,0 +1,16 @@
+{
+  "running": false,
+  "phase": "write",
+  "ok": false,
+  "written": 2,
+  "failed_ch": 2,
+  "error": "needs_review",
+  "log": [
+    "Viet chuong 1–50...",
+    "▶ ch1 dang viet...",
+    "✓ ch1: ready",
+    "▶ ch2 dang viet...",
+    "✓ ch2: needs_review",
+    "⏸ dung batch — sua ch2 truoc khi tiep"
+  ]
+}

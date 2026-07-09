@@ -1,0 +1,1 @@
+"""Factory — chapter production pipeline."""

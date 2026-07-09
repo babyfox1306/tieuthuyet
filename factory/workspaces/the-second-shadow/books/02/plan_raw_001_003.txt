@@ -1,0 +1,77 @@
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Key That Turned",
+      "slug": "ch1-the-key-that-turned",
+      "one_line_summary": "Mara arrives at Ilse's house and encounters the first signs of the supernatural within hours.",
+      "beat_summary": "Mara drives up to the isolated house and feels a dread before fitting the key. Inside, dust and the smell of rosewater hang. A radiator knocks unprompted. She explores, finds a child's drawing in a closet—a stick figure in blue. At twilight, through a cracked window, she sees the Girl in Blue staring from the garden. That night, she dreams of a shadowy man holding a one-eyed teddy bear.",
+      "must_happen": [
+        "Mara unlocks and enters the house for the first time.",
+        "She hears the radiator knock three times in a rhythm that later becomes recognizable.",
+        "She glimpses the Girl in Blue reflection in the hallway mirror.",
+        "[ROMANCE] In a dream, a silhouette of a man cradles Wick—she wakes with a sense of loss and longing."
+      ],
+      "must_not": [
+        "Mara must not find the photograph of the man (Chapter 2 reveal).",
+        "She must not learn the source of her scar or the location of the attic walkway."
+      ],
+      "opens_with": "The door swung open before Mara touched it—as if the house had been waiting for her.",
+      "cliffhanger": "From the dark of the garden, the Girl in Blue presses her hand to the glass and mouths: 'Wick.'",
+      "signature_detail_hint": "A cracked window pane in the hallway warps the reflection, missing the crown of her head.",
+      "emotional_beat": "Anxiety mixed with a strange, aching familiarity that unsettles Mara more than outright fear.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1700–1900-word chapter that establishes the house's oppressive atmosphere, introduces the supernatural child, and plants the emotional hook for Mara's buried memory. The dream sequence should create a ghostly connection to the male lead without his physical presence."
+    },
+    {
+      "chapter": 2,
+      "title": "The Photograph",
+      "slug": "ch2-the-photograph",
+      "one_line_summary": "Mara discovers a photograph that proves she was not alone the summer she cannot remember.",
+      "beat_summary": "While sorting through Ilse's belongings, Mara finds a hidden photograph album. In it, a picture of her family includes a man she does not recognize—tousled hair, arm around her mother Lydia. She has no memory of him. Later, in Ilse's study, she finds a business card for 'Asher Croft, Historian' inside a book. Her fingers tingle as she reads the name. That evening, the Girl in Blue appears behind her in the mirror and points at the photograph.",
+      "must_happen": [
+        "Mara discovers the photograph album and sees the unknown man with her family.",
+        "She finds Asher Croft's business card inside a book about local history.",
+        "The Girl in Blue appears in a mirror reflection, pointing at the photograph.",
+        "[ROMANCE] Holding the card, Mara feels a quiet pull of curiosity and a flutter she cannot explain."
+      ],
+      "must_not": [
+        "Mara must not learn the man's identity or his relationship to her mother.",
+        "She must not remember any event from that summer beyond the existence of the photograph."
+      ],
+      "opens_with": "The photograph was tucked so deep in the album that the pages had stuck together, sealed with dust.",
+      "cliffhanger": "As Mara looks up from the photograph, the Girl in Blue stands behind her in the mirror, finger extended toward the man's face.",
+      "signature_detail_hint": "The man's sleeve buttons are off—one silver, one black—a small asymmetry that feels personal.",
+      "emotional_beat": "A rising tide of confusion and the first hint of attraction toward an unknown man (Asher), foreshadowed through an object.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1700–1900-word chapter that reveals the photograph with emotional weight, plants the business card as a romance thread, and uses the mirror appearance to escalate the supernatural tension. Avoid any direct interaction with Asher."
+    },
+    {
+      "chapter": 3,
+      "title": "The Historian",
+      "slug": "ch3-the-historian",
+      "one_line_summary": "Mara meets Asher Croft for the first time and together they discover the attic's dark secret.",
+      "beat_summary": "Asher Croft arrives at the house, claiming to be a historian researching Ilse's family for a project. Mara lets him in, suspicious but drawn. He notices the radiator rhythm and grows quiet. She shows him the photograph; he recognises the man but hides his recognition. They explore the house and find a boarded-up attic. Inside, a section of the floor is rotted and patched. The Girl in Blue appears fleetingly, but only Mara sees her. As Asher kneels to inspect the patch, Mara feels a protective urge she cannot place.",
+      "must_happen": [
+        "Asher Croft is introduced when he knocks on Mara's door.",
+        "He and Mara find the sealed attic and examine the damaged floor.",
+        "The Girl in Blue appears in the attic shadows, mouthing 'don't trust him.'",
+        "[ROMANCE] When Asher kneels, his hand almost brushes hers, and she feels a sudden heat—a mix of alarm and curiosity."
+      ],
+      "must_not": [
+        "Mara must not learn that the patched floor is the exact spot where a death occurred.",
+        "Asher must not reveal that he already knew of the house's secrets (he hides his knowledge)."
+      ],
+      "opens_with": "The knock came three times—loud, deliberate, like a heartbeat counting down.",
+      "cliffhanger": "From the attic darkness, the Girl in Blue points directly at Asher and mouths: 'He is not alone.'",
+      "signature_detail_hint": "Asher carries a carpenter's level with a faded sticker from a London tool shop, a detail that feels both precise and out of place.",
+      "emotional_beat": "Attraction quickly undercut by suspicion—Mara is physically drawn to Asher but the child's warning plants doubt.",
+      "spice": 1,
+      "spice_note": "Tension from proximity and eye contact; no physical contact beyond the near-brush of hands.",
+      "chapter_task": "Write a 1700–1900-word chapter that introduces Asher with a cool, capable presence, includes the first romantic micro-beat (attraction through shared investigation), and reveals the attic without giving away the death. The child's warning must create a cliffhanger that complicates the budding connection."
+    }
+  ]
+}

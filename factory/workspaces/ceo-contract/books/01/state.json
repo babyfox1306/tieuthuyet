@@ -1,0 +1,141 @@
+{
+  "current_book": 1,
+  "current_chapter": 3,
+  "timeline": [
+    "Lin Shu-zhen blackmails Lin Wei with her mother's surgery to force her into a contract marriage with Adrian Vale.",
+    "Lin Wei receives a critical condition update from Dr. Kieran Lowe.",
+    "Lin Wei arrives at Han Corporation headquarters to meet Adrian Vale.",
+    "Lin Wei meets Adrian Vale in his office.",
+    "Adrian Vale presents the contract and reinforces the non-negotiable nature of Article 7.",
+    "Lin Wei challenges Adrian on his choice of her as a candidate, noting his subtle reaction.",
+    "In Adrian Vale's office, Lin Wei recalls Dr. Kieran Lowe warning that her mother has forty-eight hours without experimental treatment.",
+    "Adrian states the core terms as one year, legal marriage, and compliance.",
+    "Lin Wei probes why Adrian wants a journalist involved in his social architecture.",
+    "Adrian says journalists require containment but that Lin Wei's unique perspective is precisely what is required.",
+    "Adrian frames Lin Wei's mother's condition as leverage.",
+    "Lin Wei arrives at the Vale estate with a single suitcase and recognizes the house as a form of confinement rather than hospitality.",
+    "Lin Wei assesses the estate foyer for exit points, security cameras, and approaching footsteps while touching the jade pendant hidden beneath her blouse.",
+    "Adrian confronts Lin Wei for arriving late and reiterates that their life in the house will operate by contract rather than emotion.",
+    "Adrian leads Lin Wei into his study instead of giving her a tour.",
+    "Adrian tells Lin Wei that her mother's medical reports are on his desk, that Mercy General specialists have taken over the case, and that the first payment has cleared.",
+    "Lin Wei reaches for the medical reports, but Adrian grips her wrist and orders her to read them later."
+  ],
+  "character_status": {
+    "Lin Wei": {
+      "location": "Vale estate study",
+      "knows": [
+        "Mother is critical",
+        "Needs 1 million USD for surgery",
+        "Must marry Adrian Vale for 1 year",
+        "Lin Shu-zhen believes her journalist background makes her the perfect silent partner",
+        "Adrian views her as a 'volatile variable' that needs containment",
+        "Her mother needs experimental treatment within forty-eight hours",
+        "Adrian considers her mother's illness leverage",
+        "Adrian claims her unique perspective is precisely required",
+        "Vale estate has visible security cameras and controlled exits",
+        "Her mother's medical reports are in Adrian's study",
+        "Specialists at Mercy General have taken over her mother's case",
+        "The first payment for her mother's treatment has cleared"
+      ],
+      "relationship_other": "Stepdaughter of Lin Shu-zhen; contract wife of Adrian Vale",
+      "mood": "Defiant, anxious, observant, trapped but controlled"
+    },
+    "Lin Shu-zhen": {
+      "location": "ICU waiting room",
+      "knows": [
+        "The terms of the contract",
+        "Lin Wei's desperation",
+        "Lin Wei's mother's treatment depends on the marriage contract"
+      ],
+      "relationship_other": "Stepmother of Lin Wei",
+      "mood": "Cold, calculating"
+    },
+    "Adrian Vale": {
+      "location": "Vale estate study",
+      "knows": [
+        "Lin Wei is the candidate for the contract",
+        "Lin Wei is a journalist who investigates",
+        "Lin Wei is a 'volatile variable'",
+        "Lin Wei's mother has aggressive cancer and needs experimental treatment",
+        "Lin Wei's mother's condition gives him leverage over Lin Wei",
+        "The first payment for Lin Wei's mother's treatment has cleared",
+        "Mercy General specialists have taken over Lin Wei's mother's case",
+        "Lin Wei has arrived at the Vale estate"
+      ],
+      "relationship_other": "Contract husband of Lin Wei",
+      "mood": "Controlled, possessive, analytical, emotionally detached"
+    },
+    "Dr. Kieran Lowe": {
+      "location": "Hospital",
+      "knows": [
+        "Lin Wei's mother's critical condition",
+        "Lin Wei's mother has aggressive cancer",
+        "Lin Wei's mother needs experimental treatment within forty-eight hours"
+      ],
+      "relationship_other": "Lin Wei's contact",
+      "mood": "Urgent"
+    }
+  },
+  "open_threads": [
+    "What is the true nature of Adrian Vale's business?",
+    "Can Lin Wei's mother be saved in time?",
+    "Why did Adrian specifically choose Lin Wei despite her being a journalist?",
+    "What is the secret Adrian is hiding behind his 'controlled planes'?",
+    "What does Adrian need Lin Wei's unique perspective for?",
+    "How far will Adrian use Lin Wei's mother as leverage?",
+    "What does Lin Wei's jade pendant have to do with Adrian or her memory of sandalwood and ozone?",
+    "What information is contained in the encrypted documents on Adrian's desk?",
+    "What restrictions will Lin Wei face inside the Vale estate?",
+    "Why does Adrian stop Lin Wei from immediately reading her mother's medical reports?"
+  ],
+  "facts_established": [
+    "Lin Wei's mother needs 1 million USD for surgery within 48 hours.",
+    "Lin Shu-zhen is manipulating the hospital to prioritize other patients.",
+    "The contract requires a one-year marriage to Adrian Vale.",
+    "Adrian Vale values efficiency and precision above all else.",
+    "Lin Wei is a journalist by trade.",
+    "The contract contains 12 articles, with Article 7 explicitly forbidding personal sentiment.",
+    "Adrian Vale views his life as a series of variables requiring containment.",
+    "Adrian Vale possesses a jade pendant-related interest or awareness.",
+    "Lin Wei's mother has aggressive cancer.",
+    "Dr. Kieran Lowe says Lin Wei's mother needs experimental treatment within forty-eight hours.",
+    "Adrian explicitly describes the marriage terms as one year, legal marriage, and compliance.",
+    "Adrian says journalists require containment.",
+    "Adrian says Lin Wei's unique perspective is precisely what is required.",
+    "Adrian describes Lin Wei's mother's condition as leverage.",
+    "Lin Wei has a nervous habit of tapping a pen.",
+    "Lin Wei moves into the Vale estate with a single suitcase.",
+    "The Vale estate has massive iron gates, imported Italian marble, vaulted ceilings, and security cameras embedded in the crown molding.",
+    "Lin Wei keeps the jade pendant hidden beneath her blouse.",
+    "Adrian smells of sandalwood and ozone, triggering an unclear memory response in Lin Wei.",
+    "Adrian says that in his house they operate on contract terms rather than emotions.",
+    "Adrian has Lin Wei's mother's medical reports in his study.",
+    "Mercy General specialists have taken over Lin Wei's mother's case.",
+    "The first payment for Lin Wei's mother's treatment has cleared.",
+    "Adrian physically stops Lin Wei from touching the medical reports by gripping her wrist."
+  ],
+  "spice_progression": "Tension increases through forced domestic proximity, Adrian's physical closeness, scent memory, and wrist restraint, while intimacy remains coercive and psychological rather than romantic.",
+  "phrases_used": [
+    "The Billion-Dollar Ink",
+    "A simple transaction of value",
+    "A death warrant and a lifeline",
+    "A variable in a complex equation",
+    "Cold, legalistic machinery",
+    "Social architecture",
+    "The Calibration of Consent",
+    "Ritualized detachment",
+    "Theater of marriage",
+    "A gilded cage",
+    "A man carved from ice and ambition",
+    "Variables require containment",
+    "The Golden Cage",
+    "The sound echoing like a gavel",
+    "She wasn't a guest. She was an acquisition.",
+    "A terrifying kind of stillness",
+    "Sandalwood and ozone",
+    "The psychological weight of surrender",
+    "Sentiment is a luxury you cannot afford",
+    "Private vault",
+    "Brutal efficiency of a surgeon"
+  ]
+}

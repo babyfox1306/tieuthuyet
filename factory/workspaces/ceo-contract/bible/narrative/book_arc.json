@@ -1,0 +1,52 @@
+{
+  "book_number": 1,
+  "total_chapters": 50,
+  "target_language": "en",
+  "case_closed": false,
+  "case_open": "The Glass Meridian conspiracy remains active, and the full truth of Project Phoenix and Lin Wei's family connection is yet to be revealed.",
+  "lead_internal_arc": [
+    {
+      "lead": "Lin Wei",
+      "arc_summary": "Starts as a driven investigative journalist seeking financial salvation for her mother, initially viewing the marriage as a purely transactional means to an end. Through forced proximity and Adrian's morally gray actions, she develops suspicion, then reluctant trust, and finally a genuine alliance. Her internal arc is about learning to balance her journalistic skepticism with emotional vulnerability, and discovering that her own family history is deeply intertwined with the conspiracy she's investigating. She evolves from a victim of circumstance to an active participant in dismantling the Glass Meridian, finding strength not just in her investigative skills but in her growing connection with Adrian.",
+      "book1_arc_points": [
+        "Initial desperation and acceptance of the contract.",
+        "Growing suspicion of Adrian and the true purpose of the marriage.",
+        "Active investigation using her journalistic skills and Asian network.",
+        "Discovering her mother's connection to Project Phoenix.",
+        "Forming a reluctant alliance with Adrian based on shared goals and mutual protection.",
+        "Accepting the marriage has become more than a contract."
+      ]
+    },
+    {
+      "lead": "Adrian Vale",
+      "arc_summary": "Begins as a cold, calculating CEO using Lin Wei as a pawn in his war against the Glass Meridian, driven by guilt and a desire for revenge. His initial control over Lin Wei slowly erodes as he witnesses her strength and integrity, and as their forced proximity leads to genuine attraction. His arc is about moving from a place of isolation and self-punishment towards redemption, learning to trust again, and acknowledging his feelings for Lin Wei. He must confront his complicity in the system and actively choose to protect Lin Wei, even if it compromises his mission. He transitions from using her to protecting her, and from seeing her as a tool to seeing her as a partner.",
+      "book1_arc_points": [
+        "Initiating the marriage contract with ulterior motives.",
+        "Maintaining emotional distance and control over Lin Wei.",
+        "Witnessing Lin Wei's investigative prowess and resilience.",
+        "Developing reluctant protection and attraction towards Lin Wei.",
+        "Confronting his own guilt regarding Project Phoenix and Lin Wei's mother.",
+        "Forming a true alliance with Lin Wei, prioritizing her safety and their shared goal.",
+        "Acknowledging the emotional shift in their relationship."
+      ]
+    }
+  ],
+  "act_structure": {
+    "act1_setup": {
+      "chapters": "1-12",
+      "summary": "Introduction of Lin Wei's desperate situation (mother's illness, financial ruin) and the surprising proposal from Adrian Vale. The contract is signed, establishing the surface plot of a marriage of convenience. Lin Wei begins her role as the 'perfect wife' while subtly observing Adrian and his world. Initial cross-cultural friction and micro-beats hint at underlying tension. Lin Wei starts her own quiet investigations into Aurelian Group and her mother's medical history, uncovering the first threads of the Glass Meridian and Project Phoenix. Adrian manipulates situations to keep Lin Wei close and safe, while also using her as a blind spot. Ends with Lin Wei discovering a direct link between Aurelian Group and her mother's file, raising the stakes significantly."
+    },
+    "act2_complications": {
+      "chapters": "13-30",
+      "summary": "Lin Wei's investigations deepen, revealing the global reach and hidden nature of the Glass Meridian. She uses her journalistic skills and network to uncover clues Adrian cannot access. Adrian becomes increasingly protective of Lin Wei, blurring the lines between manipulation and genuine care. Their forced proximity intensifies, leading to more charged micro-beats and growing attraction, often masked by conflict and suspicion. They face external threats from the Meridian, forcing them to rely on each other. Key revelations about Project Phoenix and Adrian's father's involvement emerge. Ends with a significant threat to Lin Wei or her mother, forcing Adrian to take a more direct, risky action against a Meridian operative."
+    },
+    "act3_crisis": {
+      "chapters": "31-42",
+      "summary": "The stakes are at their highest. Lin Wei and Adrian are actively targeted by the Glass Meridian. Lin Wei uncovers concrete evidence linking her mother directly to Project Phoenix as a participant or researcher, not just a patient. Adrian confronts his father's legacy and the extent of his complicity. The emotional core of their relationship is tested through a major betrayal or misunderstanding, possibly orchestrated by the Meridian. They must decide whether to trust each other completely to survive and expose the truth. Ends with a major breakthrough in their investigation, leading them to the final confrontation with a local link of the Meridian, but also revealing a shocking truth about Lin Wei's mother's role."
+    },
+    "act4_resolution": {
+      "chapters": "43-50",
+      "summary": "Lin Wei and Adrian execute a plan to disrupt a key operation or expose a local operative of the Glass Meridian within Aurelian Group, achieving the 'break one link' goal. Lin Wei's mother is pulled through the critical phase of her illness, offering emotional payoff. The truth about Adrian's father's deception and Adrian's own unwitting role is fully revealed. The fake marriage solidifies into a real alliance built on shared experience and mutual respect, though the larger conspiracy remains. The final chapters deliver the promised reader payoff for Book 1: the resolution of the immediate threat, the stabilization of Lin Wei's mother, and the establishment of Lin Wei and Adrian as a united front. The book concludes with the hook for Book 2, revealing Lin Wei's mother's deeper connection to Project Phoenix and hinting at Lin Wei's own altered identity."
+    }
+  }
+}

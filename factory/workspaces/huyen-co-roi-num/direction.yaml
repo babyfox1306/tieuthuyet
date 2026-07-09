@@ -1,0 +1,43 @@
+id: huyen-co-roi-num
+pen_name: ''
+target_language: vi
+narrative_profile: romance_thriller
+publish_strategy: kdp_ku_exclusive
+narrative_status: draft
+book: 1
+total_chapters: 50
+canon_through: 0
+platform: kdp
+audience: women 18-35, mobile reading, hook-driven serial fiction
+goal: end-of-chapter hooks — international thriller-romance pace
+setting_hub: Huyen Co Roi Num — primary setting
+setting_nodes: []
+spice_default: 1
+spice_explicit_chapters: []
+spice_steamy_chapters: []
+arc:
+  act1_setup:
+  - 1
+  - 12
+  act2_complications:
+  - 13
+  - 28
+  act3_crisis:
+  - 29
+  - 42
+  act4_resolution:
+  - 43
+  - 50
+book1_ending: Giải mã được nguồn gốc ma thuật rối của Thẩm gia, tiêu diệt được phân
+  thân ma thần đầu tiên và giúp Nam chính lấy lại được thể xác thực sự.
+blurb: Nữ ma đầu điều khiển vạn thiên quyến thuộc bằng dây tơ máu thực chất chỉ là
+  một con rối bị xích bởi ma thần thượng cổ; biến số duy nhất cứu rỗi nàng lại là
+  con rối gỗ mà nàng tự tay hồi sinh
+tropes: []
+spice_badge: sweet
+target_platforms:
+- kdp
+spice_level: 1
+plan_status: draft
+bible_status: draft
+book_slug: 01-huyen-co-roi-num

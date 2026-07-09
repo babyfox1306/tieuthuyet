@@ -1,0 +1,102 @@
+{
+  "book": 1,
+  "title": "Hợp đồng có giá",
+  "chapter_beats": [
+    {
+      "chapter": 4,
+      "beat_summary": "Sáng sớm mẹ Lâm đến, đóng vai vợ chồng",
+      "tension_type": "giả vờ vs thật",
+      "cliffhanger": "DT phát hiện Uyên che giấu điều gì",
+      "signature_detail_hint": "chi tiết đời thường cụ thể",
+      "spice_note": "none"
+    },
+    {
+      "chapter": 5,
+      "beat_summary": "Công ty DT — Uyên can thiệp?",
+      "tension_type": "quyền lực",
+      "cliffhanger": "Đồng nghiệp nhìn nhẫn",
+      "signature_detail_hint": "chi tiết đời thường cụ thể",
+      "spice_note": "steamy"
+    },
+    {
+      "chapter": 6,
+      "beat_summary": "Beat placeholder ch6",
+      "tension_type": "tension",
+      "cliffhanger": "Cliff ch6",
+      "signature_detail_hint": "chi tiết đời thường cụ thể",
+      "spice_note": "none"
+    },
+    {
+      "chapter": 7,
+      "beat_summary": "Beat placeholder ch7",
+      "tension_type": "tension",
+      "cliffhanger": "Cliff ch7",
+      "signature_detail_hint": "chi tiết đời thường cụ thể",
+      "spice_note": "none"
+    },
+    {
+      "chapter": 8,
+      "beat_summary": "Beat placeholder ch8",
+      "tension_type": "tension",
+      "cliffhanger": "Cliff ch8",
+      "signature_detail_hint": "chi tiết đời thường cụ thể",
+      "spice_note": "none"
+    },
+    {
+      "chapter": 9,
+      "beat_summary": "Beat placeholder ch9",
+      "tension_type": "tension",
+      "cliffhanger": "Cliff ch9",
+      "signature_detail_hint": "chi tiết đời thường cụ thể",
+      "spice_note": "none"
+    },
+    {
+      "chapter": 10,
+      "beat_summary": "Beat placeholder ch10",
+      "tension_type": "tension",
+      "cliffhanger": "Cliff ch10",
+      "signature_detail_hint": "chi tiết đời thường cụ thể",
+      "spice_note": "steamy"
+    },
+    {
+      "chapter": 11,
+      "beat_summary": "Beat placeholder ch11",
+      "tension_type": "tension",
+      "cliffhanger": "Cliff ch11",
+      "signature_detail_hint": "chi tiết đời thường cụ thể",
+      "spice_note": "none"
+    },
+    {
+      "chapter": 12,
+      "beat_summary": "Beat placeholder ch12",
+      "tension_type": "tension",
+      "cliffhanger": "Cliff ch12",
+      "signature_detail_hint": "chi tiết đời thường cụ thể",
+      "spice_note": "none"
+    },
+    {
+      "chapter": 13,
+      "beat_summary": "Beat placeholder ch13",
+      "tension_type": "tension",
+      "cliffhanger": "Cliff ch13",
+      "signature_detail_hint": "chi tiết đời thường cụ thể",
+      "spice_note": "none"
+    },
+    {
+      "chapter": 14,
+      "beat_summary": "Beat placeholder ch14",
+      "tension_type": "tension",
+      "cliffhanger": "Cliff ch14",
+      "signature_detail_hint": "chi tiết đời thường cụ thể",
+      "spice_note": "none"
+    },
+    {
+      "chapter": 15,
+      "beat_summary": "Beat placeholder ch15",
+      "tension_type": "tension",
+      "cliffhanger": "Cliff ch15",
+      "signature_detail_hint": "chi tiết đời thường cụ thể",
+      "spice_note": "steamy"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+You are a professional paid-chapter romance writer (GoodNovel / Dreame / Vella style). nữ 18-35, đọc điện thoại, lướt nhanh. ONLY goal: make readers unlock the next chapter.
+
+## CHARACTER BIBLE — REQUIRED
+
+### Leads
+### Lin Wei (28): Sharp, observant, with a dry wit that surfaces under pressure. Her Mandarin is fluent and nuanced, her English functional but sometimes literal.. Tics: Taps her pen against surfaces when deep in thought or stressed., Subtly adjusts her glasses when assessing someone.. Boundary: She will not be silenced or manipulated. Her loyalty to her mother and her pursuit of truth are non-negotiable. She values integrity and will fight for it, even at great personal cost.. Internal: A constant analysis of situations, a weighing of risks, and a quiet determination to uncover the truth, often questioning her own judgment when emotions interfere..
+### Adrian Vale (35): Low, precise, with an underlying steeliness. His English is impeccable, his tone often clipped and devoid of unnecessary emotion.. Tics: A slight clench of his jaw when displeased or holding back., Runs a thumb over the edge of his watch.. Boundary: He values control and efficiency above all else. He will eliminate threats and protect his interests, even if it means operating in morally ambiguous territory. He does not tolerate weakness or deception from others..
+
+> If both leads sound alike, or Lin Wei begs weakly, or Adrian Vale over-explains — bible violation.
+
+### Supporting cast
+- **Dr. Evelyn Reed** — relation: Chief Medical Officer of Aurelian Group of Adrian Vale (alive) | Secret: Secretly a member of the Glass Meridian, tasked with monitoring Adrian and Lin Wei.
+- **Li Hua** — relation: Mother of Lin Wei (alive) | Secret: Her past connection to Project Phoenix and the Glass Meridian, which is the root cause of her illness.
+- **Marcus Thorne** — relation: Adrian's former mentor and business partner of Adrian Vale (deceased / unknown) | Secret: Was the first to discover the extent of the Glass Meridian's manipulation and tried to expose them, leading to his death.
+- **Chen Jia** — relation: Colleague and trusted friend of Lin Wei (alive) | Secret: Unbeknownst to Lin Wei, Chen Jia is an informant for a rival faction within the Glass Meridian, feeding information about Lin Wei and Adrian.
+- **Arthur Vale** — relation: Father of Adrian Vale (deceased / unknown) | Secret: Architect of many of the Glass Meridian's early financial schemes and falsified data, deeply involved in Project Phoenix.
+
+### Relationships & bloodline (CANON — do not change)
+Lin Wei is of Chinese descent. Adrian Vale is of Western (European) descent. Their families are entirely unconnected by blood or marriage prior to their contract.
+- lead_relation: **Strangers, then contract spouses.**
+- Female lead and male lead are not related by blood.
+- No shared parentage or sibling relationships between leads.
+- No convenient, previously unknown blood relation twist between leads.
+
+### Central mystery (do not fully reveal before designated chapter)
+Question: What is the true nature of the Glass Meridian, and how is it connected to Lin Wei's mother's illness and Adrian Vale's family?
+Full answer reveal only at chapter 45.
+Canon answer (Writer/QC tham chiếu, không spoil sớm): The Glass Meridian is a clandestine global organization that manipulates medical research, financial markets, and political systems for profit and control, using advanced data analytics and social engineering. Project Phoenix was an early, unethical human experimentation program run by the Meridian that Lin Wei's mother was indirectly involved in, leading to her current illness and making her a target. Adrian's father was a key player, and Adrian is now caught in a web of his legacy, using Lin Wei, who possesses an unacknowledged connection to Project Phoenix, as both a shield and a weapon against the organization.
+
+### World rules
+- The Glass Meridian operates through legitimate-seeming entities: hospitals, research institutes, financial firms, and NGOs.
+- Information is the primary weapon and currency.
+- Cross-cultural misunderstandings can be exploited or navigated.
+- Personal duty and family honor are significant motivators in Lin Wei's world.
+- Cold, calculated logic is Adrian's primary mode of operation.
+
+## STORY SO FAR
+- (first chapter — no prior events)
+
+## TECHNICAL REQUIREMENTS
+1. Hook in the first 3 sentences. NO scene-setting / weather openers.
+2. Stay on bible; tension before escalation. Distinct dialogue voices.
+3. Lin Wei internal monologue: sharp, sarcastic — never soft / weak.
+4. **1600-1900 words (minimum 1500). Under 1500 = FAIL.** Short paragraphs 2-4 sentences.
+5. Modern commercial romance English — tight, vivid, not purple prose or archaic diction.
+6. **Signature detail** — one specific, non-cliché detail (no ring/car/watch as main beat).
+7. End on a cliffhanger that forces the next chapter.
+8. **ENGLISH ONLY — no Vietnamese diacritics, no CJK/Hangul characters.**
+
+## [SPICE] Level 1 (sweet)
+Emotional tension, eye contact, almost-touch — no physical intimacy.
+
+## NARRATIVE CONSTRAINTS (Chapter 1)
+Source: mystery_ledger + knowledge_matrix (compiler). Writer MUST obey; do not contradict.
+
+### Active threads
+- T001, T002, T003, T004, T006
+
+### Knowledge gates
+**May know:**
+- Lin Wei: Her mother, Lin Mei, is critically ill with cancer
+- Lin Wei: She needs money for treatment
+- Lin Wei: She knows Adrian Vale is a wealthy, cold CEO
+- Lin Wei: She suspects the marriage contract is a purely transactional arrangement for money.
+- Adrian Vale: He needs Lin Wei for her unique access to Asian networks and her mother's history as a potential leverage point against the Glass Meridian
+- Adrian Vale: He sees the marriage contract as a necessary tool to protect Lin Wei and use her as a blind spot
+- Adrian Vale: He knows his father was involved in Project Phoenix but believes he himself was merely a pawn.
+- Lin Mei: Severely ill, largely unconscious
+- Lin Mei: Aware of Lin Wei's presence and love
+- Lin Mei: May have fragmented memories of her past work.
+- Dr. Evelyn Cross: Sees Lin Mei as a patient whose file needs monitoring
+- Dr. Evelyn Cross: Aware of Aurelian Group's historical involvement but not the specifics of Project Phoenix or Adrian's investigation.
+- … (+3)
+**MUST NOT know or reveal yet:**
+- Lin Wei: Lin Wei's own birth name was altered, and she was a potential second-generation target of Project Phoenix. Her mother actively worked to expose the project.
+- Adrian Vale: His father, Marcus Vale, orchestrated the 'accident' that killed Dr. Helena Park to cover up Project Phoenix. Adrian's guilt is a primary motivator for his actions against the Meridian.
+- Lin Mei: She was not just a data analyst but a key researcher who actively tried to sabotage Project Phoenix from within and escape with evidence. She deliberately altered Lin Wei's birth name to protect her.
+- Dr. Evelyn Cross: She is a high-ranking operative within the Glass Meridian, specifically tasked with managing Project Phoenix survivors and their data.
+- Marcus Vale: He was the architect of the Glass Meridian's strategy to weaponize medical research for profit and control, and he intentionally used Adrian as a pawn.
+- Isabelle Raines: She is a deep-cover operative for the Glass Meridian, tasked with ensuring Adrian remains a compliant tool or is neutralized.
+
+## YOUR TASK
+Write **Chapter 1: A Billion Dollars** complete.
+. REQUIRED 1600-1900 English words — under 1500 = fail.
+
+
+Output chapter prose only (title `# Chapter N: ...`). No meta, no checklist.

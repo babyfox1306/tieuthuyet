@@ -1,0 +1,23 @@
+{
+  "foreign_chars": [],
+  "word_count": 1650,
+  "voice_drift": {
+    "flag": false,
+    "details": ""
+  },
+  "continuity_conflict": {
+    "flag": true,
+    "details": "Major conflict with Series Bible: Male lead is named 'Asher' instead of 'Elias Crane'. The backstory involves a brother 'Julian' being pushed by 'Lydia', contradicting the Bible's established mystery (Ilse's fire/suicide) and Elias's backstory (sister's death). Additionally, finding the bear 'Wick' in Chapter 10 contradicts the Bible which states the bear is found in Book 1."
+  },
+  "cliffhanger_strength": 4,
+  "pacing_issue": false,
+  "signature_detail_present": true,
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "Male lead name is Asher (Bible: Elias Crane)",
+    "Backstory contradicts Bible (Julian/Lydia murder vs Ilse fire/sister death)",
+    "Bear found in Ch 10 instead of Book 1 per Bible arc",
+    "verdict_fail",
+    "continuity_conflict"
+  ]
+}

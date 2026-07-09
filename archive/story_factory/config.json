@@ -1,0 +1,22 @@
+{
+  "base_url": "http://localhost:20128/v1",
+  "api_key": "local",
+  "model": "kr/claude-sonnet-4.5",
+  "throttle_seconds": 4,
+  "spice_level": 3,
+  "min_word_count": 1500,
+  "max_word_count": 2200,
+  "default_series": "ceo_contract_01",
+  "banned_phrases": [
+    "định giá một món hàng",
+    "không vội không nóng"
+  ],
+  "retry_max": 2,
+  "temperature": {
+    "architect": 0.7,
+    "outliner": 0.7,
+    "writer": 0.88,
+    "qc": 0.2,
+    "state_updater": 0.3
+  }
+}

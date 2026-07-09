@@ -1,0 +1,133 @@
+concept_status: ready
+target_language: en
+title: The Glass Meridian
+logline: A Chinese investigative journalist signs a one-year marriage contract with
+  a cold, dangerous Western CEO to save her dying mother — only to discover the marriage
+  is a trap pulling her into a global medical-financial network that has been concealing
+  a secret about her own family.
+author_directive: 'Write Book 1 as a 50-chapter romance-thriller. The spine is the
+  marriage contract between Lin Wei and Adrian Vale, but a layer of conspiracy about
+  the Glass Meridian runs underneath at all times. Tone: tense, modern, cinematic,
+  emotionally charged. Prioritize end-of-chapter hooks and the "just one more chapter"
+  pull.
+
+
+  Lin Wei is never a weak heroine. She is a working Chinese investigative journalist
+  — she observes, doubts, and counterattacks with information. Her cultural and linguistic
+  access to Asian networks is a genuine investigative weapon Adrian does not have,
+  and it is the real reason he needs her, not a contrived one. She takes the contract
+  because she needs money for her mother, but she never becomes the hero''s puppet.
+  Every time she''s forced into a weak position, she must learn a piece of truth or
+  claw back a small advantage.
+
+
+  Adrian Vale is a morally-gray male lead: cold, controlling, dangerous — but never
+  an irredeemable villain. He did NOT directly cause the mother''s illness. His past
+  involvement was signing documents tied to Aurelian Group, but the data at that time
+  had been falsified by his father and the Glass Meridian. His guilt is real. He uses
+  the marriage both to protect Lin Wei and to use her as a blind spot in his plan
+  to strike back at the organization.
+
+
+  Use the cross-cultural gap between the two leads as texture, not caricature: differences
+  in language, values, family duty, and trust become sources of friction, misread
+  signals, and slow-burn tension — never cheap stereotype. Lin Wei''s obligation to
+  her mother and Adrian''s severance from his own bloodline mirror each other.
+
+
+  Romance must be slow burn: cold transaction → suspicion → confrontation → forced
+  proximity → reluctant protection → attraction → emotional betrayal → true alliance.
+  Every chapter needs at least one micro-beat between the two leads: a glance, a touch,
+  a misunderstanding, an act of protection, quiet jealousy, a sharp exchange, or a
+  moment that shakes the boundary of the contract. Do NOT write explicit sex; keep
+  it at 16+/17+ — charged intimacy, kissing, near-touches, fade-to-black if needed.
+
+
+  Mystery must have clear plant/payoff. No twist appears from nowhere. Every major
+  reveal must have at least 2–3 clues planted beforehand. Readers may misread a clue
+  at first, but when the payoff lands they must feel "ah — that detail meant something."
+
+
+  The Glass Meridian must be frightening for its legitimacy and reach, not for theatrical
+  ritual. It hides behind hospitals, research institutes, charities, banks, health
+  data, and family relationships across multiple countries. Do NOT use the real names
+  Freemasons, Illuminati, or any real organization. No robes, no childish ceremonies,
+  no villain monologuing the whole plan.
+
+
+  Book 1 must close one clear case: Lin Wei learns why Adrian Vale chose her, learns
+  Aurelian Group is tied to her mother''s medical file, learns the Glass Meridian
+  exists, and together with Adrian breaks one local link of the organization. But
+  Book 1 does not destroy the whole system. The ending must both pay the reader emotionally
+  and open Book 2 through evidence that Lin Wei''s mother was not merely a victim
+  but was once connected to the original Project Phoenix file.
+
+
+  Avoid cheap melodrama: the male lead never directly causes the mother''s cancer;
+  no too-easy cancer cure; no shared-bloodline twist between the leads; no betrayal
+  purely for shock; the heroine is never repeatedly rescued without actively investigating;
+  no cliff-ending that cheats the reader of the main case. Every chapter must carry
+  surface_event, hidden_function, reader_reward, thread_ids, a clue if any, an emotional_turn,
+  and a next_click_hook.'
+surface_plot: 'Lin Wei, a broke independent investigative journalist whose mother
+  is critically ill, signs a one-year marriage contract with Adrian Vale, the enigmatic
+  CEO of Aurelian Group. On the surface it''s a cold transaction: she gets the money
+  for her mother''s treatment, and in exchange she plays the perfect wife — appearing
+  at elite functions across Singapore and Europe, asking no questions, never interfering
+  in his business. Readers think they''re getting a cross-cultural contract-marriage
+  romance: marry first, fall later, power, money, jealousy.'
+true_plot: 'The marriage is not an emotional deal — it''s a move in a war against
+  the Glass Meridian, a covert international network hiding behind biotech investment
+  funds, private hospitals, health-data companies, and family financial dynasties
+  spanning Singapore, Hong Kong, Zurich and New York. Adrian Vale was once heir to
+  this system but turned against it after discovering concealed medical trials. He
+  chose Lin Wei deliberately: her mother is one of the surviving victims, and Lin
+  Wei — with her access to Asian networks, sources, and records that he as an outsider
+  cannot reach — has the skill to trace evidence he cannot touch himself without breaking
+  his cover.'
+must_include:
+- Slow burn with a lead micro-beat every chapter
+- Cross-cultural friction between Western hero and Chinese heroine as real texture
+- Marriage contract with dangerous hidden clauses
+- Heroine actively investigates using her own networks
+- Morally-gray male lead with a path to redemption
+- Secret international organization hidden behind biotech, hospitals, health data,
+  investment funds
+- Every major reveal planted with clues beforehand
+- A twist or reader reward every 4–5 chapters
+- The mother's medical file as the main thread
+- Project Phoenix as the cross-series myth arc
+- Book 1 breaks one link, not the whole organization
+- End-of-chapter cliffhangers that open a new question
+must_avoid:
+- Shared bloodline between the two leads
+- Male lead directly causing the mother's illness
+- Real names Freemasons / Illuminati / any real org
+- Robed secret society with childish rituals
+- Cross-cultural romance reduced to stereotype
+- Twists with no prior planting
+- Heroine who only waits to be rescued
+- Too-easy or illogical cancer cure
+- Villain monologuing the entire scheme
+- Explicit spice while positioned as 16+
+- Book 1 ending without resolving the main case
+ending_book1: By the end of Book 1, Lin Wei discovers the marriage contract was never
+  a purchase of identity but a shield Adrian Vale built to pull her out of the Glass
+  Meridian's reach. She learns her mother was not an ordinary cancer patient but a
+  surviving victim of a biotech trial Aurelian Group concealed years ago. Adrian was
+  not the one who directly harmed her mother, but he once unknowingly stood inside
+  the system that caused the tragedy. Together they break one link of the Meridian
+  inside Aurelian Group, pull her mother through the critical phase, and accept that
+  the fake marriage has become a real alliance.
+hook_book2: 'The final document recovered from the Phoenix system reveals that Lin
+  Wei''s mother was not just a victim but once held a key to the original file. Inside
+  that file is a deleted name: Lin Wei''s own birth name. This forces her to face
+  the possibility that her identity was altered from childhood — and that the Glass
+  Meridian has lost only a single link, not been defeated.'
+notes: 'Preferred tone: tense, modern, cinematic, hook-heavy — a cold, glamorous elite
+  surface rotting underneath, moving across international settings (Singapore hub,
+  with Hong Kong, Zurich, New York links). Do not write it as pure CEO romance; there
+  must always be investigative pressure and danger. Every chapter must serve at least
+  one of three axes: romance escalation, mystery clue, or threat escalation. If a
+  chapter only has arguing or intimacy without opening new information or shifting
+  the balance of power, that chapter must be revised.'

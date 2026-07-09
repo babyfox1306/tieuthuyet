@@ -1,0 +1,23 @@
+{
+  "description": "Bảng ma trận tri thức cho Huyền Cơ Rối Nhuốm – Quyển 1, theo dõi tiến triển kiến thức của nhân vật chính tại các cột mốc chương, đảm bảo các bí ẩn được hé lộ đúng thời điểm và giữ được hiệu ứng twist.",
+  "target_language": "vi",
+  "milestones": [
+    1,
+    10,
+    25,
+    36,
+    50
+  ],
+  "characters": {
+    "Thẩm Uyển Nhi": {
+      "ch1": "Biết mình là gia chủ Thẩm gia, nắm giữ rối thuật huyền bí. Bắt đầu có những giấc mơ quái dị về bóng tối điều khiển mình. Nghi ngờ sức mạnh của mình có nguồn gốc không trong sáng nhưng chưa rõ bản chất.",
+      "ch10": "Đã hồi sinh Lục Vân Sách (chương 4) và phát hiện anh không chịu ảnh hưởng của chỉ mệnh. Càng tin chắc có thế lực đen tối can thiệp. Bí mật nuôi ý định lợi dụng Vân Sách để phá giải giao ước.",
+      "ch25": "Thu thập nhiều manh mối: lời tiên tri, con rối cổ nói về máu và giao ước, gia phả bị cắt xén. Biết tổ tiên từng kết ước với ma thần, nghi ngờ bản thân là vật tế. Vẫn che giấu thân phận thật sự.",
+      "ch36": "Sắp khám phá thư các bí mật (chương 38) nơi ghi chép toàn bộ giao ước. Đã lên kế hoạch đối phó ma thần, dùng Vân Sách làm chìa khóa. Giấu kín mọi toan tính với anh.",
+      "ch50": "Sau khi tiêu diệt phân thân ma thần, bị bản thể thực sự chiếm hữu hoàn toàn. Ý thức bị phong ấn, không còn tự chủ.",
+      "must_not_know_before": {
+        "Sự tồn tại của giao ước máu giữa Thẩm gia và ma thần (toàn văn)": 38
+      }
+    }
+  }
+}

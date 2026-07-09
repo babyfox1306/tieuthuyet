@@ -1,0 +1,49 @@
+{
+  "current_book": 1,
+  "current_chapter": 3,
+  "timeline": [
+    "ký hợp đồng hôn nhân 1 năm",
+    "đeo nhẫn, mẹ họ Lâm xuất hiện sảnh",
+    "gặp mẹ Hàn Từ Tố Nhi tại cafe",
+    "về biệt thự Q2",
+    "đêm đầu thân mật sau tin Thử xem"
+  ],
+  "character_status": {
+    "Diệp Tâm": {
+      "location": "biệt thự Q2 phòng riêng",
+      "knows": [
+        "hợp đồng giả",
+        "mẹ chồng nghi",
+        "viện phí 18tr/tuần"
+      ],
+      "relationship_uyen": "căng + hút + không thừa nhận",
+      "mood": "cảnh giác"
+    },
+    "Hàn Thừa Uyên": {
+      "location": "biệt thự Q2 phòng khác",
+      "knows": [
+        "DT thách thức",
+        "cần đóng vai trước gia tộc"
+      ],
+      "relationship_dt": "kiểm soát + bị thu hút",
+      "mood": "lạnh, tính toán"
+    }
+  },
+  "open_threads": [
+    "Lâm Vũ Trinh đến 7h sáng",
+    "viện phí mẹ Lê Hồng Vân tuần tới",
+    "DT công việc designer — Uyên bảo hủy sáng mai"
+  ],
+  "facts_established": [
+    "Hợp đồng 1 năm, 1 tỷ",
+    "Uyên ngủ phòng khác sau đêm ch3",
+    "DT mẹ ICU tên Lê Hồng Vân",
+    "Nhẫn đeo khi ra ngoài",
+    "Gọi là đến trong 1 giờ"
+  ],
+  "spice_progression": "ch3 explicit đầu tiên",
+  "phrases_used": [
+    "định giá một món hàng",
+    "không vội không nóng"
+  ]
+}

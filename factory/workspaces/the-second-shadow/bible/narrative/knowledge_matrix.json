@@ -1,0 +1,67 @@
+{
+  "description": "Knowledge matrix for The Second Shadow series tracking character knowledge at key milestones across the planned 50-chapter arc (book1: 10 chapters, subsequent books based on series_arc).",
+  "target_language": "en",
+  "milestones": [
+    1,
+    10,
+    25,
+    36,
+    50
+  ],
+  "characters": {
+    "Mara Vale": {
+      "ch1": "No memory of the summer she was 8; believes the girl in blue is a ghost; aware of the one-eyed bear Wick but not its significance; knows she inherited the house from Aunt Ilse.",
+      "ch10": "Full memory recovered: witnessed Lydia push Alain Dubois to his death, psychically fractured, created the girl in blue containing the trauma. Has chosen to reintegrate and now knows the girl is her younger self. Bears memory-anchor property confirmed. Hints of Ilse's parallel experience.",
+      "ch25": "Piecing together Aunt Ilse's similar trauma and clues left in the house; deeper understanding of the house's repeating pattern; trust in Asher solidifies.",
+      "ch36": "Investigates a second person involved in Ilse's secret; uncovers more of the house's history and its hold on inhabitants; emotional healing progresses.",
+      "ch50": "Fully integrated and at peace; complete knowledge of her own past and Ilse's; the house's secret is fully understood; moves forward with Asher.",
+      "must_not_know_before": "The nature of the girl in blue (projection) not before ch3; bear as memory anchor not before ch5; Lydia's murder not before ch7; full reintegration not before ch9.",
+      "hidden_truth": "At ch10 she knows only the surface of Ilse's story—the full extent of Ilse's own split and the house's deeper secret remains hidden until later books."
+    },
+    "Asher Croft": {
+      "ch1": "Local historian aware of Ilse Vale's reclusive reputation; knows rumors about the house and possible missing persons, but no concrete details.",
+      "ch10": "Has collaborated with Mara; understands the full summer truth and the girl's nature; developing emotional bond with Mara.",
+      "ch25": "Actively helps decode Ilse's journal and physical clues; learns about the house's pattern; relationship with Mara deepens.",
+      "ch36": "Discovers the second person connected to Ilse's past; confronts Lydia's continuing interference; his own guilt over his brother's drowning is touched.",
+      "ch50": "Achieves closure alongside Mara; knows all secrets; builds a new life with Mara outside the house's shadow.",
+      "must_not_know_before": "Must not learn the full truth of Lydia's actions before ch7 (Mara's reveal). Must not uncover Ilse's buried secret before ch8.",
+      "hidden_truth": "The possibility that his brother's drowning is connected to the house is not yet known to him."
+    },
+    "Lydia Vale": {
+      "ch1": "Knows she pushed Alain to his death and swore Mara to silence; believes the secret is safely buried. Estranged from Mara.",
+      "ch10": "Confronted; either admits or continues to deny, but the truth is now known to Mara and Asher. Facing consequences.",
+      "ch25": "Resists Mara's investigation; tries to prevent more of the past from surfacing; reveals more of her desperation.",
+      "ch36": "Becomes fully exposed; possible legal or emotional fallout.",
+      "ch50": "Reckons with past actions; may find a form of forgiveness or permanent estrangement.",
+      "must_not_know_before": "The full details of her crime must not be disclosed to other characters before ch7; her own knowledge is complete from the start.",
+      "hidden_truth": "She may have additional information about Ilse's history that she has never revealed."
+    },
+    "The Girl in Blue": {
+      "ch1": "Carries all of Mara's repressed memories; knows the full truth of the summer. Cannot communicate except through proximity and presence.",
+      "ch10": "If reintegrated, merges with Mara and ceases to exist as separate entity. If not, remains in the house waiting.",
+      "ch25": "In the canonical reintegration path, she has merged; her knowledge is now part of Mara's conscious mind.",
+      "ch36": "N/A (merged).",
+      "ch50": "N/A (resolved).",
+      "must_not_know_before": "Her true nature cannot be revealed to Mara before ch3.",
+      "hidden_truth": "She knows more about Ilse's shadow than she can show, but this is unlocked only during Mara's reintegration."
+    },
+    "Aunt Ilse": {
+      "ch1": "Deceased. Left a hidden journal and clues about her own split and the house's repeating cycle. Her secrets are gradually unearthed.",
+      "ch10": "Her journal is found and partially decoded, revealing that she experienced a similar trauma and never reintegrated.",
+      "ch25": "Her full story becomes clearer; she had a lover and a similar event, but her child-self never merged, causing lifelong stationary haunting.",
+      "ch36": "The second person in her past is identified, deepening the understanding of the house's curse.",
+      "ch50": "Her complete truth is laid bare; her choice to remain split is compared to Mara's choice, providing thematic closure.",
+      "must_not_know_before": "Ilse's exact parallel event must not be fully known before ch8.",
+      "hidden_truth": "The specific identity of her lover and the trigger of her split remain hidden until book 3."
+    },
+    "Gerald Vance": {
+      "ch1": "Neighbor who heard the crash and screams but kept silent due to payment from Lydia. Lives with guilt.",
+      "ch10": "Testifies or reveals to Mara and Asher what he heard; corroborates Lydia's involvement.",
+      "ch25": "Possibly faces consequences or assists further in piecing together Ilse's timeline.",
+      "ch36": "His role in covering up may be legally examined; he provides final details.",
+      "ch50": "Achieves some peace by cooperating fully.",
+      "must_not_know_before": "His testimony cannot be revealed before ch6 (as per clue C009).",
+      "hidden_truth": "He may have seen Ilse's shadow as well during his youth, but has buried that observation."
+    }
+  }
+}

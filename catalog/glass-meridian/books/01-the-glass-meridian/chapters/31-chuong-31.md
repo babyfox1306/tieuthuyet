@@ -1,0 +1,151 @@
+---
+series: glass-meridian
+book: 1
+chapter: 31
+title: The Meridian's Reach
+spice: 1
+word_count: 1659
+status: draft
+needs_fix: []
+promoted_at: '2026-07-08T16:36:24Z'
+---
+
+The flickering neon lights of a foreign city cast long shadows across the room as Lin Wei and Adrian pored over encrypted financial data, the chilling scope of the Glass Meridian's global reach finally laid bare.
+
+The data chip from Vance's desk had survived the Hanfield disaster, tucked into a hidden seam of Lin Wei's jacket. Now it sat plugged into a laptop perched on a wobbly table in a cramped apartment overlooking a back alley in Macau. The smell of frying oil from the street stall below mixed with the ozone still clinging to their clothes.
+
+"Look at this." Lin Wei traced her finger across the screen. "They're not just funding through shell banks. They're systematically manipulating entire markets."
+
+Adrian leaned closer, his shoulder brushing hers. He smelled of sweat and concrete dust from the tunnel escape. His jaw was tight, eyes fixed on the cascading numbers.
+
+She zoomed into the transaction map. "Every quarter, they short a cluster of biotech stocks. Then a regulatory change conveniently passes—new approval fast-track, relaxed compliance standards—and the stocks crash. They buy back at pennies on the dollar and funnel the profit through a chain of holding companies that trace back to the same master accounts."
+
+"Perfectly legal on the surface," Adrian said, his voice flat. "But the timing is too precise. They're either paying for those regulatory changes or they have people inside the agencies."
+
+"Both, probably." Lin Wei's fingers flew across the keyboard, cross-referencing dates. "I'm seeing a pattern in the timing. The market manipulation spikes correspond with what we saw at Hanfield. They're funding the Ascension Program through these cycles."
+
+Adrian was silent for a long moment. Then he sat back, rubbing his eyes. "It's bigger than I thought. I knew they had reach, but this..." He gestured at the screen. "This is a global financial infrastructure. They're not just influencing—they're directing capital flows across continents."
+
+Lin Wei watched him. The harsh light from the screen carved shadows under his eyes. He looked older than thirty-five, the weight of the past days pressing down on him.
+
+"These transactions route through fourteen jurisdictions," she continued, building the map. "Singapore, Luxembourg, Cayman, Dubai, Hong Kong—each one a dead end unless you have the keys. The Meridian isn't just a conspiracy. It's a parallel economy."
+
+Adrian's jaw clenched. "And I helped build parts of it."
+
+She turned to him sharply. "What do you mean?"
+
+He held her gaze, then dropped it. "When I was twenty-three, I designed a transaction protocol for Aurelian's offshore division. It was supposed to streamline cross-border compliance. But I knew, somewhere in the back of my mind, that it could be used to obscure the origin of funds. I told myself I was just making the company more efficient. I didn't ask too many questions."
+
+"You were young."
+
+"So were you when you started chasing stories that your editors buried." His eyes met hers again, raw and unguarded. "The difference is, I kept doing it. Year after year. Every time I saw a pattern that smelled wrong, I found a reason to ignore it. I told myself I'd fix it from the inside. That I could be a check on my father's ambition."
+
+Lin Wei felt a pang of recognition. She had written pieces that were softened, contacts she had protected when she should have exposed them. Compromise was a slow poison.
+
+"Adrian..." She reached across the table, her fingers stopping just short of his. "You didn't create this. You're trying to tear it down now."
+
+"I should have started sooner." He turned his hand palm up, an invitation she could accept or ignore. She let her fingertips rest against his. The contact was brief, almost accidental, but it carried the weight of a confession.
+
+"None of us get to start where we want," she said softly. "Only where we are."
+
+He held her gaze for a heartbeat, then nodded and returned to the screen. "I traced one of these shell accounts to a subsidiary in Zurich. The registered director is a former employee of Petrova's firm."
+
+"Sophia Petrova?"
+
+"She was a senior analyst at Aurelian before I took over. Left under unclear circumstances. But she kept files—she always did. If anyone knows the full architecture of the Meridian's financial network, it's her."
+
+Lin Wei sat back. "Why should we trust her?"
+
+"We shouldn't. Not completely." Adrian's voice hardened. "But she has her own reasons to want the Meridian dismantled. She left because she discovered what the company was channeling funds toward. My father forced her out. She's been off the grid ever since."
+
+"Or she's working for them now, feeding false trails."
+
+"Possible. But she's the only lead we have that isn't burned."
+
+Lin Wei looked at the screen again, the sprawling map of transactions. The Meridian wasn't a single entity—it was a hydra, each head funded by a river of money that crossed borders without leaving visible tracks. Stopping one head meant nothing if the capital kept flowing.
+
+"We need to approach her carefully," she said. "Encrypted channel, no traceable address. If she's compromised, we'll know within hours."
+
+Adrian pulled a burner phone from his jacket. "I have a sequence of codes that she'll recognize. It was a contingency protocol I built when I still hoped to turn Aurelian around."
+
+"A contingency you shared with a former employee?"
+
+"I shared it with her because I trusted her instinct. She didn't want the escape hatch—she wanted the truth. That's why she left."
+
+Lin Wei studied his face. He believed what he was saying. But belief wasn't proof.
+
+"One message," she said. "No details about our location. Test the waters."
+
+Adrian typed quickly, his thumbs moving across the small screen. The reflection of the neon lights outside rippled across his knuckles. He pressed send, then dropped the phone into a bowl of water on the counter.
+
+"Now we wait," he said. "If she responds, we meet on neutral ground. If she doesn't, we burn the number and move again."
+
+Lin Wei leaned against the wall, arms crossed. The exhaustion was bone-deep, but the adrenaline kept her wired. "We've stopped one facility, lost the evidence, and now we're reaching out to a potential ally who might be a trap. This feels like a gamble."
+
+"Every step of this has been a gamble." Adrian turned to face her fully. "But we know more than we did a week ago. We know the Meridian's financial structure. We know they're funding the Ascension Program through market manipulation. And we know they're vulnerable—because we hit Hanfield and they couldn't stop us."
+
+"Couldn't stop you, you mean."
+
+He almost smiled. "We made them react. That's more than anyone else has managed."
+
+The neon sign outside shifted from red to blue, painting the room in a cold wash. Lin Wei looked at the map on the screen, the web of connections spiderwebbing across continents. The scale of it was dizzying. What they had fought at Hanfield was just one node in a network that spanned the globe.
+
+"Sophia might not even be alive," she said quietly.
+
+"She is." Adrian's confidence was absolute. "I would know if she wasn't."
+
+"How?"
+
+"Because she owes me a debt. And she knows I'll collect."
+
+Lin Wei didn't press. The cryptic loyalty between former operatives was a language she had never fully learned. But she had seen enough to trust his instinct on this.
+
+The burner phone in the bowl remained silent.
+
+"We should rest," Adrian said. "We take shifts. If she responds, I'll wake you."
+
+"You first." Lin Wei settled onto the threadbare couch, pulling a jacket over her shoulders. "I want to watch the numbers one more time."
+
+Adrian hesitated, then nodded. He moved to the corner of the room and sat with his back against the wall, gun within reach, eyes half-closed. Within minutes his breathing evened out, but Lin Wei knew he wasn't fully asleep. He was too wired for that.
+
+She turned back to the financial map. The data revealed something else, a pattern she hadn't noticed before. The market manipulation wasn't random—it was targeting companies with specific R&D pipelines. Gene therapies. CRISPR applications. Stem cell research.
+
+They weren't just funding the Ascension Program. They was suppressing competition, buying up patents, consolidating control over the entire field of human enhancement.
+
+Lin Wei's blood ran cold.
+
+If the Meridian controlled the science and the funding, they controlled the future.
+
+She looked at Adrian's sleeping form, the faint lines of tension still visible even in rest. He had built systems that enabled this. But he was also the only person willing to tear them down.
+
+The phone in the water bowl vibrated once, twice, then fell silent.
+
+Lin Wei's heart lurched. She fished the phone out, water dripping onto the floor. The screen was flickering, but a message was visible: a time and coordinate set, encrypted in the coding language Adrian had described.
+
+Sophia was responding.
+
+Adrian was on his feet before she could speak, his eyes already scanning the room. "She answered?"
+
+Lin Wei held up the phone. "She gave us a meeting point."
+
+He took it, reading the coordinates. His expression was unreadable.
+
+"Tomorrow night. A warehouse district in Hong Kong."
+
+"That could be a trap."
+
+"It could be." He pocketed the phone. "But we don't have another choice."
+
+Lin Wei stood, the weight of the decision settling into her shoulders. The Meridian's reach was vast, but they had one thread now, one potential ally who might hold the key to unraveling the entire web.
+
+"Then we go."
+
+Adrian met her eyes. The neon light shifted again, from blue to red.
+
+"Pack light. Take only what fits in a single bag."
+
+Lin Wei turned to gather her things, the coordinates burned into her memory.
+
+The Meridian had its reach. But they had the reach, too—a thread that could pull the whole tapestry apart.
+
+She only hoped Sophia Petrova was willing to pull it with them.

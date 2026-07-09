@@ -1,0 +1,20 @@
+{
+  "foreign_chars": [],
+  "word_count": 1385,
+  "voice_drift": {
+    "flag": true,
+    "details": "The chapter contains an explicit, detailed sexual encounter (the pantry scene). The series_bible explicitly states 'Spice level 3 allows... fade-to-black sex scenes. No explicit sex scenes.' and 'No explicit sex scenes.' This violates the established spice level and content rules."
+  },
+  "continuity_conflict": {
+    "flag": true,
+    "details": "The story_state indicates this is Chapter 2, but the input is labeled 'Chapter 7'. Additionally, the characters are already married and living in the Vale estate, which contradicts the story_state where they are currently in the process of negotiating the contract in an office."
+  },
+  "cliffhanger_strength": 5,
+  "pacing_issue": false,
+  "signature_detail_present": true,
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "Spice level violation: Chapter contains explicit sexual content, violating the 'fade-to-black' rule.",
+    "Continuity conflict: Chapter number and plot progression (already married vs. contract negotiation) do not match story_state."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "foreign_chars": [
+    "Ni",
+    "zhen",
+    "de",
+    "yi",
+    "wei",
+    "zhe",
+    "jiu",
+    "shi",
+    "yi",
+    "chang",
+    "jiao",
+    "yi",
+    "ma"
+  ],
+  "word_count": 1285,
+  "voice_drift": {
+    "flag": false,
+    "details": ""
+  },
+  "continuity_conflict": {
+    "flag": true,
+    "details": "The story_state indicates this is Chapter 2, but the input text is labeled 'Chapter 8'. Additionally, the story_state lists the current location as 'Han Corporation' and the characters as meeting for the first time, whereas this chapter depicts the signing of the contract and the subsequent arrival at the Vale estate, which contradicts the established timeline of the current chapter being the initial meeting."
+  },
+  "cliffhanger_strength": 5,
+  "pacing_issue": false,
+  "signature_detail_present": true,
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "continuity_conflict"
+  ]
+}

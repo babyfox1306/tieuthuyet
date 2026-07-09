@@ -1,0 +1,187 @@
+# Chapter 25: The Digital Ghost
+
+The sterile hum of Aurelian Group’s servers fills the secure room as Lin Wei and Adrian’s fingers fly across keyboards, the digital gateway to the Glass Meridian shimmering within their grasp. The monitor casts pale blue light across Adrian’s face, his jaw tight, eyes fixed on the cascading lines of code that scroll like a waterfall of secrets.
+
+“We’re in the legacy shell,” he says, voice low. “But the Meridian’s partition is behind three more authentication layers. Each one has a tripwire.”
+
+Lin Wei’s pen taps against the console edge—once, twice, three times. “Then we don’t trigger the tripwires. We go through the floor.”
+
+Adrian’s fingers pause. “Explain.”
+
+“Supply chain management protocols. They’re trusted. They move data between departments without raising flags because no one suspects a procurement report of hiding anything subversive.” She pulls up the anomaly they’d traced to Elias Vance. “We piggyback on the same protocol Elias used. Mirror his encryption signature. Whatever he was exfiltrating, we ride the same stream in reverse.”
+
+Adrian studies her for a long moment. Something shifts in his expression—respect, maybe, or reluctant admiration. “You’re suggesting we become ghosts in his own machine.”
+
+“I’m suggesting we use the traitor’s own tool kit against him.”
+
+He turns back to the terminal, and she watches his fingers resume their dance across the keys. There’s a precision to his movements, a muscle memory born from a decade of building these systems before he understood what they were building them for. She wonders how many nights he spent in cold server rooms like this, designing the cages he now tries to break.
+
+“It’ll take forty seconds to repurpose the authentication handshake,” he mutters. “Once we’re inside the Meridian’s vault, we have approximately three minutes before the system runs a cross-check against active sessions. If the cross-check finds two identical signatures…”
+
+“We’re cooked.”
+
+“We’re exposed. And probably dead within the hour.”
+
+Lin Wei pulls her phone from her pocket, opens the encrypted messaging app she’d installed earlier. “Then we make sure we have something to show for it before they find us.”
+
+Adrian’s console emits a soft chime. “Gateway open.”
+
+She leans in, scanning the directory structure that blooms across the screen. Archives. Financial transfers. Project codenames she doesn’t recognize. And there—a thick file labeled with a single symbol: ⌀. The diameter sign. The Glass Meridian’s signature.
+
+“That’s it,” she breathes.
+
+His hand moves to the keyboard, but she catches his wrist.
+
+“Wait. If we access it, the tripwire triggers instantly. We need a decoy.”
+
+Adrian’s gaze meets hers. The air between them tightens. “What kind of decoy?”
+
+“We plant a data chip in the auxiliary server stack. A physical key that simulates a legitimate access request from an external audit terminal. If the system detects the intrusion, it’ll trace back to the chip, not to us.”
+
+He releases a low breath. “You came prepared.”
+
+“I came expecting a trap.” She retrieves a slim chip from the lining of her jacket—matte black, nondescript. “C007. I had a contact at a data forensics lab fabricate it. It’s designed to look like a standard diagnostic tool, but it’s encrypted with a signature the system won’t immediately recognize as hostile.”
+
+Adrian takes the chip, turning it between his fingers. “You trust this contact?”
+
+“I trust their desperation for money.”
+
+“Good enough.” He slides the chip into his palm. “I’ll install it in the AUX-7 rack. You keep monitoring the session. If you see anything anomalous—any deviation in the decryption progress—you pull the plug and we run.”
+
+Lin Wei nods, settling into the rolling chair in front of the main terminal. The screen displays the vault’s contents: rows of folders, dates stretching back fifteen years. She opens the most recent entry.
+
+Her stomach clenches.
+
+The file is a medical report. Patient ID: LME-0041. Mother’s name: Li Mei. Her mother.
+
+The door at the far end of the server room clicks—a sound too soft to be accidental.
+
+Lin Wei’s head snaps up. Adrian freezes, mid-step toward the auxiliary rack.
+
+“Adrian,” she whispers.
+
+He turns, eyes piercing through the dim light. “I heard it.”
+
+Silence stretches. The hum of the servers seems to thicken, pressing against her ears. Then a faint whiff of perfume reaches her—something floral and expensive, with a hint of wood. Not the sterile scent of the server room. A woman’s fragrance.
+
+Someone else is here.
+
+Lin Wei’s pulse hammers against her ribs. She minimizes the medical file, switches the terminal to a diagnostic display—a decoy screen. “We have company.”
+
+Adrian crosses the distance in three silent strides, sliding the chip into the AUX-7 slot before returning to her side. His hand finds her shoulder, a brief, grounding pressure. “Can you mask our entry trail?”
+
+“Already running a scrubber script. It’ll take ninety seconds to wipe all evidence of our session.”
+
+“We don’t have ninety seconds.”
+
+The door mechanism whirs. Someone is entering through the biometric lock.
+
+Lin Wei’s fingers fly across the keyboard, aborting the scrubber and initiating a hard disconnect. The screen flashes red: CONNECTION TERMINATED. Beside it, the chip indicator blinks green—C007 is live, waiting for its next command.
+
+“We go now,” Adrian says, pulling her to her feet.
+
+She grabs her phone, shoves it into her pocket. The footsteps in the corridor grow louder, closer. They move toward the emergency exit at the rear of the server room, a narrow door leading to a service stairwell.
+
+Adrian reaches it first, pressing the bar. The door doesn’t budge.
+
+“Locked,” he says, voice tight.
+
+“Override?”
+
+“Manual lock. Requires a physical key from the inside.”
+
+Lin Wei’s mind races. The main door is the only other exit, but that’s where the footsteps are coming from. They’re cornered.
+
+Then the lights go out.
+
+Blackness swallows the room. The servers’ hum drops to a low groan as backup generators kick in, casting a dim orange glow from emergency strips along the floor.
+
+“Power cut,” Adrian says. “The security system just switched to lockdown mode.”
+
+“Which means someone triggered it remotely.”
+
+“Which means someone knows we’re here.”
+
+The perfume drifts stronger now, carried by the circulation fans. Jasmine. Sandalwood. A memory tugs at Lin Wei’s mind—she’s smelled this before. The gallery opening. A woman in a black dress, standing near the bar, watching the crowd with cold, assessing eyes.
+
+Lin Wei’s blood runs cold. “The woman from the gathering. The one I saw near the fringes of the Meridian’s contacts.”
+
+Adrian’s voice comes through the dark, low and urgent. “She’s here?”
+
+“Her perfume is.”
+
+A metallic click sounds from the main door. The lock disengaging.
+
+“Move,” Adrian orders.
+
+He grabs her hand, dragging her toward the auxiliary rack. The emergency exit is useless, but the AUX-7 stack has a maintenance hatch that leads to the ventilation system. She’d noted it earlier—a possible escape route.
+
+He releases her long enough to wrench the panel open. Cool air rushes out. “Go. I’ll close it behind us.”
+
+Lin Wei crawls into the duct, the metal cold against her palms. Adrian follows, pulling the panel shut just as the main door swings open.
+
+She hears a voice—female, calm, with an edge of amusement. “Don’t bother hiding. I can smell your fear.”
+
+Lin Wei presses a hand over her mouth, stifling her breathing. Beside her, Adrian is still, his shoulder brushing hers in the cramped space.
+
+They wait.
+
+Footsteps cross the server room floor, pause near the AUX-7 rack. A soft hum—someone checking the chip’s indicator.
+
+“Clever,” the voice murmurs. “But you’ve left too many traces, Miss Wei. Your digital ghost is about to become very corporeal.”
+
+The footsteps retreat. The main door clicks shut.
+
+Adrian exhales, a long, controlled breath. “We need to move. She’ll call security in thirty seconds.”
+
+Lin Wei shifts, trying to ignore how close he is, how the darkness amplifies every small sound—his breathing, the rustle of his jacket, the faint beat of her own heart. “Can you navigate from here?”
+
+“I memorized the building schematics weeks ago. There’s a maintenance exit three floors down. We break cover there, then we disappear.”
+
+They crawl in silence, the duct branching and narrowing. At one junction, Adrian pauses, holding up a hand. “Listen.”
+
+Lin Wei hears it: distant sirens, growing closer. Building security responding to the breach.
+
+“They’re sealing the perimeter,” she says.
+
+“We’ll be out before they close the last door.”
+
+They reach a grate above a janitorial closet. Adrian kicks it open, drops down, then reaches up to help her. His hands close around her waist, steadying her descent. For a fraction of a second, they’re pressed together, faces inches apart. She sees the tension in his jaw, the flicker of something unreadable in his eyes.
+
+“Thank you,” she whispers.
+
+“Don’t thank me yet. We’re not out.”
+
+The closet has a side door leading to a loading bay. Adrian peers through the crack, then nods. “Clear.”
+
+They slip out into the bay. A delivery truck is idling near the ramp, driver nowhere in sight.
+
+Adrian’s hand finds her elbow, steering her toward it. “We hitch a ride or we walk into a security cordon.”
+
+Lin Wei nods, climbing into the open cargo hold. The truck is half-full of sterilized equipment—medical supplies. The irony doesn’t escape her. She presses herself against a stack of boxes, Adrian beside her.
+
+The engine rumbles to life as the driver returns. The truck lurches forward, carrying them away from Aurelian Group.
+
+Lin Wei pulls out her phone, opens the remote monitoring app. The chip’s signal is still active, broadcasting from AUX-7. She leaves a marker, a trace for later. Then she powers down the device.
+
+“We left the main data behind,” she says, voice flat.
+
+“We planted the chip. That’s a thread we can pull.”
+
+“But we don’t know if it’s a lead or a trap. And someone—that woman—knew exactly where we were, when we were there.”
+
+Adrian’s silence is heavy.
+
+“There’s a leak,” Lin Wei continues, anger threading through her exhaustion. “Someone we trusted sold us out. Maybe not directly, but they fed enough information to the Meridian for them to anticipate our move.”
+
+“Who knew we were coming here tonight?”
+
+She runs through the shortlist in her mind. Professor Chen. Detective Harding. A few contacts in the data forensics world. Her mother, asleep in her hospital bed, unaware.
+
+“Too many people,” she admits.
+
+“Then we narrow it down. The perfume is a start. If we can trace the woman, we can trace who gave her our timeline.”
+
+Lin Wei closes her eyes, letting the truck’s vibration shake through her bones. She can still smell that perfume, clinging to her clothes.
+
+The chapter ends with the truck turning onto the highway, carrying them into the dark. And somewhere in Aurelian Group’s server rack, the C007 chip flickers, storing every interaction, every query, every whisper of the Glass Meridian’s encrypted traffic—a ghost in the machine, waiting for someone to call it home.

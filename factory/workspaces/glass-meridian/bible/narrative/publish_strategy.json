@@ -1,0 +1,21 @@
+{
+  "publish_strategy": "kdp_ku_exclusive",
+  "target_language": "vi",
+  "primary_channels": [
+    "KDP eBook (EPUB)",
+    "Kindle Unlimited",
+    "KDP paperback (optional)"
+  ],
+  "excluded_while_ku": [
+    "Webnovel — cùng nội dung digital",
+    "GoodNovel — cùng nội dung digital",
+    "Patreon public — cùng nội dung digital"
+  ],
+  "serial_export_note": "export --target vella chỉ tạo txt/chương — KHÔNG đăng Kindle Vella (đã wind-down 02/2025). Dùng cho wide serial nếu đổi strategy sau.",
+  "ai_disclosure": {
+    "status": "ai_generated",
+    "human_review": "required",
+    "disclosure_required_for_kdp": true
+  },
+  "notes": "Nếu muốn test Webnovel trước KU → đổi sang draft_serial_then_kdp hoặc wide_serial và KHÔNG enroll KDP Select cho cùng nội dung."
+}

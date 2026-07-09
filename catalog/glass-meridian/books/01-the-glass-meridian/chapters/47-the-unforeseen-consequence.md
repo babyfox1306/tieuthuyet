@@ -1,0 +1,145 @@
+---
+series: glass-meridian
+book: 1
+chapter: 47
+title: After the Confrontation
+spice: 1
+word_count: 1573
+status: draft
+needs_fix: []
+promoted_at: '2026-07-09T06:11:46Z'
+---
+
+The sterile calm of the hospital room shattered the moment Lin Wei’s phone vibrated on the bedside table. She snatched it up before the second buzz, her eyes scanning the caller ID. Professor Chen. The name turned her blood to ice.
+
+“What happened?”
+
+Her voice was clipped, professional, but her hand trembled against the receiver. The clock on the wall read three in the morning. No one called at this hour with good news.
+
+“Ms. Lin, you need to come to the hospital immediately. Your mother’s vitals crashed twenty minutes ago. We’ve stabilized her, but something induced a severe physiological stress response. Her body is rejecting the treatment protocol.”
+
+Lin Wei’s mind went blank, then sharpened into a razor wire of deduction. The timing. The confrontation with Thorne. The disruption of the entire Glass Meridian network. Every piece of data they had touched, every server they had infiltrated, it had all been part of a larger machine. And the machine had kicked back.
+
+He didn’t just counter our hack. He counterpunched. And he aimed straight at my heart.
+
+“I’m on my way.”
+
+She ended the call and turned. Adrian was already shrugging into his jacket, his face hardening as he caught her expression. He had heard enough.
+
+“The hospital. My mother. Thorne’s disruption hit her treatment. I don’t know how, but the timing is too precise to be coincidence.”
+
+He didn’t ask if she was sure. He didn’t offer empty reassurances. He simply grabbed the keys off the table and nodded once. “Let’s go.”
+
+That single motion, that absolute certainty in his action, was more grounding than any grand speech could ever be. She was drowning in guilt and fury, and he was a rope, taut and dependable.
+
+The drive was a blur of streetlights and sirens. Lin Wei’s knuckles were white against the armrest. Her internal monologue was a vicious cycle of blame. I knew he had long reach. I should have moved her. I should have anticipated a strike on my blind spot. I was so focused on burning his empire that I left the one thing I truly loved exposed.
+
+“Stop it,” Adrian said, his voice low and steady, cutting through the spiral.
+
+“Stop what?”
+
+“Blaming yourself. You didn’t know he could access a private medical network. Neither did I. We can’t predict the depth of his corruption, only counter it. And we will.”
+
+She wanted to argue. The words clawed at her throat. But the absolute logic in his voice was a dam against the flood. She took a shaking breath.
+
+“He targeted her to distract me. To hurt me.”
+
+“Or to send a message,” Adrian amended, his gaze fixed on the road. “He could have killed her remotely. He didn’t. He made her a threat. Which means he needs her alive for something else. Your mother knows something. She always has. Thorne is reminding you that he controls access to that knowledge.”
+
+The hospital doors slid open with a hiss. The smell of antiseptic and the low hum of fluorescent lights did nothing to soothe her frayed nerves. Professor Chen met them in the corridor, his face ashen beneath the harsh lighting.
+
+“Ms. Lin, Mr. Vale. Follow me.”
+
+Lin Mei lay in a private room, her face pale against the pillow, monitors beeping in a slow, steady rhythm that did nothing to reassure. She looked smaller than Lin Wei remembered. Fragile. Like a single wrong word could shatter her.
+
+“What happened exactly?” Lin Wei demanded, her gaze locked on her mother’s still face.
+
+Chen hesitated, his hands clasped tightly in front of him. “Her neural activity spiked dramatically. Then flatlined for seven seconds. We induced a coma to prevent brain damage. It was as if a specific set of biological instructions were triggered remotely.”
+
+“Instructions?”
+
+“We found a signal marker in her blood. A nano-scale trigger, dormant until now. It appears that a specific data packet—the same one that caused the system-wide disruption in your investigation—activated it remotely.” He looked at her with open worry. “I don’t know what the trigger was programmed to do. But I do know that keeping her in this coma is the only safe option for now. Waking her without neutralizing the trigger could cause a fatal immune response.”
+
+Adrian stepped closer, his presence a solid wall at her back. “What are the alternatives?”
+
+Chen sighed, the weight of the confession heavy on his shoulders. “There is an experimental compound. It might neutralize the trigger signal and allow her body to accept the original treatment protocol again. But it is entirely untested on human patients. The risks are severe. Organ failure. Cerebral damage. Death.”
+
+Lin Wei felt the world contract around her. A choice. My mother’s life, or the truth she holds. And either way, I lose.
+
+“What happens if she stays in the coma?” Her voice was barely a whisper.
+
+“We can support her for weeks. Perhaps months. But eventually, her body will fail. The trigger is cumulative. It won’t stop degrading her systems just because she’s unconscious.”
+
+She looked at Adrian. His jaw was tight, his eyes holding a depth of concern that was purely for her. He wasn’t going to make this decision for her. He was waiting, ready to support whatever she chose.
+
+“I can’t lose her, Adrian. But I can’t keep her a prisoner in her own mind either.”
+
+“Then you know which choice is right,” he said softly. “You’re not the kind of person who chooses a cage over a fight. You never have been.”
+
+His words were a mirror. She saw herself reflected in them—the journalist who had chased the truth into the lion’s den, the daughter who had never given up hope, the woman who was now standing at the precipice of the most important decision of her life.
+
+She turned to Chen. “Administer the compound.”
+
+He nodded gravely and left to prepare.
+
+The silence in the room was thick, heavy with unspoken fears. Adrian reached for her hand. His grip was warm, solid, a lifeline in the sterile cold. He didn’t say it would be okay. He didn’t promise victory. He simply stood with her, a partner in the storm.
+
+Lin Wei leaned into him, just for a moment. “Thank you.”
+
+“Don’t thank me yet. We still have to find out exactly what Thorne planted in her, and how to extract it permanently.”
+
+She pulled back, the journalist in her waking from the haze of emotion. “C013.”
+
+Adrian’s eyes sharpened. “The file remnant from the decrypted server.”
+
+“The one we thought was a dead lead. Show it to me now.”
+
+He pulled out his phone, his fingers moving swiftly over the encrypted interface. A document appeared, its edges frayed by the earlier data collapse, the screen glowing a faint azure. A phantom smell of ozone clung to the digital reconstruction, a ghost of the volatile research.
+
+“Project Phoenix: Subject L Viability Analysis. Reference C013. It lists biological markers. Signatures. And a location for secondary experimentation.”
+
+“What location?” Lin Wei’s voice was urgent.
+
+Adrian looked up, his expression dark. “A facility in Singapore. Registered under a shell company linked to Aurelian’s biotech division. But the security measures on this file are different. Higher than Thorne’s personal protocols. This file was hidden from him.”
+
+The realization hit her like a physical blow. “It’s not his file. It’s someone else’s. Someone inside the Glass Meridian who doesn’t want Thorne knowing about this specific research line. My mother wasn’t just a researcher. She was a test subject. The first viable one.”
+
+The door clicked open. Professor Chen returned, holding a syringe filled with a pale blue liquid that seemed to glow faintly under the lights.
+
+“Ms. Lin, are you ready?”
+
+She nodded, not trusting her voice.
+
+Chen injected the compound into the IV line. The monitors flickered, beeped faster, then settled into a new, stronger rhythm. Lin Wei didn’t move. She watched her mother’s chest rise and fall, the faint color returning to her cheeks.
+
+The immediate crisis was averted. But the underlying war was now infinitely more personal.
+
+Her phone buzzed. A text from an unknown number.
+
+She read it aloud, her voice cold and clear. “‘She wakes, we burn the files. Meet us at the facility address. Come alone, or she dies again.’”
+
+Adrian’s hand closed around hers, stopping her before she could reply. “They’re forcing your hand. Using her as bait to draw you into a trap.”
+
+“No,” Lin Wei said, a hard edge creeping into her tone. “They just gave me a new target. We go to Singapore. We find out exactly who is pulling these strings inside the Meridian. And we end this.”
+
+Adrian looked at her, a grim smile touching his lips. “Together.”
+
+The word was a promise. A threat to their enemies. And a lifeline she desperately clung to.
+
+The monitor beeped a steady rhythm. Lin Mei’s hand twitched. A sign of life. Or a counting clock.
+
+“We leave in the morning,” Lin Wei said.
+
+Adrian nodded. “I’ll make the arrangements.”
+
+“No. They said alone.”
+
+“I heard what they said. I’m coming anyway.”
+
+She didn’t argue. She didn’t want to. The truth was, she couldn’t face that facility alone. And he knew it.
+
+“Together,” she whispered.
+
+“Always.”
+
+The fight for her mother’s safety, and the truth about Project Phoenix, had just taken a terrifying, personal turn. And Lin Wei was ready to burn the whole Glass Meridian down to save her.

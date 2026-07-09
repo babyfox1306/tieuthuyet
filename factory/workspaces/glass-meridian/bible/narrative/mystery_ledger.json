@@ -1,0 +1,149 @@
+{
+  "main_mystery": "What is the true nature of the Glass Meridian and its connection to Lin Wei's mother's illness and Adrian Vale's family legacy?",
+  "truth": "The Glass Meridian is a clandestine global network operating through legitimate institutions to control medical research and data for profit and power. Lin Wei's mother was a key researcher in the original Project Phoenix, which the Glass Meridian then corrupted. Adrian's father, a high-ranking member, falsified data to hide his own family's complicity and to manipulate Adrian's inheritance. The marriage contract is Adrian's calculated move to use Lin Wei's unique access and her mother's hidden knowledge as leverage against the Meridian, while simultaneously protecting her from their reach.",
+  "canonical_reveal_chapter": 50,
+  "red_herrings": [
+    "Adrian Vale is solely responsible for Lin Wei's mother's illness.",
+    "The marriage contract is purely a financial transaction for Lin Wei's benefit.",
+    "The Glass Meridian is a ritualistic, cult-like organization.",
+    "Adrian Vale is a willing participant and beneficiary of the Glass Meridian's operations.",
+    "Lin Wei's mother is just an innocent victim with no prior connection to the conspiracy."
+  ],
+  "major_reveals": [
+    {
+      "chapter": 15,
+      "description": "Lin Wei discovers that her mother's medical file has been accessed and manipulated by Aurelian Group.",
+      "required_clues": [
+        "C001",
+        "C003"
+      ]
+    },
+    {
+      "chapter": 28,
+      "description": "Lin Wei and Adrian find evidence that Aurelian Group is a front for the Glass Meridian.",
+      "required_clues": [
+        "C004",
+        "C006",
+        "C007"
+      ]
+    },
+    {
+      "chapter": 35,
+      "description": "Adrian realizes his father falsified data related to his early involvement with the Glass Meridian.",
+      "required_clues": [
+        "C008",
+        "C009"
+      ]
+    },
+    {
+      "chapter": 45,
+      "description": "Lin Wei learns her mother was not just a patient but a researcher involved in the original Project Phoenix.",
+      "required_clues": [
+        "C010",
+        "C011",
+        "C012"
+      ]
+    },
+    {
+      "chapter": 50,
+      "description": "The full truth about the Glass Meridian, Project Phoenix, and the interconnectedness of Lin Wei's mother and Adrian's family is revealed.",
+      "required_clues": [
+        "C013",
+        "C014",
+        "C015"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "description": "A coded message found in Lin Wei's mother's belongings, referencing 'Aurelian' and a medical trial.",
+      "plant_chapter": 3,
+      "payoff_chapter": 15
+    },
+    {
+      "id": "C002",
+      "description": "Adrian's unusual interest in Lin Wei's mother's medical history, beyond what he initially admitted.",
+      "plant_chapter": 5,
+      "payoff_chapter": 15
+    },
+    {
+      "id": "C003",
+      "description": "A discreet financial transfer from an Aurelian Group subsidiary to Lin Wei's mother's hospital.",
+      "plant_chapter": 8,
+      "payoff_chapter": 15
+    },
+    {
+      "id": "C004",
+      "description": "An encrypted communication log found on an Aurelian executive's device, mentioning 'Glass Meridian'.",
+      "plant_chapter": 18,
+      "payoff_chapter": 28
+    },
+    {
+      "id": "C005",
+      "description": "Lin Wei's journalistic instincts lead her to a shell corporation linked to Aurelian Group and international health data.",
+      "plant_chapter": 20,
+      "payoff_chapter": 28
+    },
+    {
+      "id": "C006",
+      "description": "A former employee of Aurelian Group, now in hiding, provides a cryptic warning about a 'Meridian'.",
+      "plant_chapter": 23,
+      "payoff_chapter": 28
+    },
+    {
+      "id": "C007",
+      "description": "Lin Wei uses her linguistic skills to decipher a document referencing 'Glass Meridian' in Mandarin, revealing its Asian connections.",
+      "plant_chapter": 25,
+      "payoff_chapter": 28
+    },
+    {
+      "id": "C008",
+      "description": "Adrian finds discrepancies in his father's old business records, hinting at falsified data.",
+      "plant_chapter": 30,
+      "payoff_chapter": 35
+    },
+    {
+      "id": "C009",
+      "description": "A private investigator hired by Adrian uncovers evidence of Adrian's father manipulating trial data years ago.",
+      "plant_chapter": 32,
+      "payoff_chapter": 35
+    },
+    {
+      "id": "C010",
+      "description": "A recovered research notebook belonging to Lin Wei's mother, detailing 'Project Phoenix' and its experimental treatments.",
+      "plant_chapter": 38,
+      "payoff_chapter": 45
+    },
+    {
+      "id": "C011",
+      "description": "An old colleague of Lin Wei's mother provides details about her involvement in a groundbreaking but controversial medical project.",
+      "plant_chapter": 40,
+      "payoff_chapter": 45
+    },
+    {
+      "id": "C012",
+      "description": "Adrian discovers his father's personal journal, which mentions Lin Wei's mother as a key figure in 'Project Phoenix' and expresses regret over her 'sacrifice'.",
+      "plant_chapter": 42,
+      "payoff_chapter": 45
+    },
+    {
+      "id": "C013",
+      "description": "The full truth about the Glass Meridian's control over global health data and its manipulation for profit and power.",
+      "plant_chapter": 48,
+      "payoff_chapter": 50
+    },
+    {
+      "id": "C014",
+      "description": "The revelation that Adrian's father was central to the Meridian's operations and his manipulation of Adrian.",
+      "plant_chapter": 49,
+      "payoff_chapter": 50
+    },
+    {
+      "id": "C015",
+      "description": "The final confirmation that Lin Wei's mother was a victim and a key player in the original Project Phoenix, and that the Meridian corrupted it.",
+      "plant_chapter": 50,
+      "payoff_chapter": 50
+    }
+  ]
+}

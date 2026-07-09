@@ -1,0 +1,86 @@
+{
+  "act": [7, 9],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Shadow Points",
+      "slug": "07-the-shadow-points",
+      "one_line_summary": "Mara follows the faceless shadow to a barred window, finds a rusted key, and suspects her mother is lying about the past.",
+      "beat_summary": "The faceless shadow from the garden points at the house. Mara steps forward, ignoring Jude's warning. The shadow leads her to a boarded window on the east side, then dissipates. Through a crack, Mara sees a younger version of herself huddled inside, clutching Wick. The child mouths 'Remember'. The vision fades. On the ground lies a rusted key. Jude catches up and they try the key on a nearby door—it doesn't fit. Mara calls her mother to ask about the window. Lydia's answers are evasive, and Mara notices background noise that sounds like Ilse's kitchen floorboard. She realizes her mother is lying about not having been to the house. The insight is a psychological turning point: Mara's trust fractures. Combined, she concludes that her mother is actively hiding something about that summer and that the key must open something secret. They search the house but find no lockbox. The Girl in Blue appears in the attic doorway, holding Wick. They rush up the stairs after her.",
+      "must_happen": [
+        "Mara follows the faceless shadow to the east window",
+        "Mara sees the memory of her child-self through the window (psychological pay-off C004)",
+        "Mara finds a rusted key on the ground (physical pay-off C006)",
+        "Mara calls her mother and detects evasion (behavioral pay-off C005)",
+        "Mara realizes her mother is hiding the truth, combining key and lie (reveal MR03)",
+        "[ROMANCE] Jude takes her hand as they climb the attic stairs, squeezing reassuringly"
+      ],
+      "must_not": [
+        "The shadow does not speak or reveal its identity",
+        "Mara does not retrieve the full memory of the crime",
+        "Jude does not reveal any prior knowledge about the key or window"
+      ],
+      "opens_with": "The faceless shadow raised its arm and pointed, not at Mara this time, but directly at the house—at a window that had been boarded for decades.",
+      "cliffhanger": "The Girl in Blue stood at the top of the attic stairs, Wick cradled in her arms, and for a split second she looked directly at Mara—and smiled.",
+      "signature_detail_hint": "The key is stamped with a tiny star, the same mark Mara remembers from the back of her aunt's closet.",
+      "emotional_beat": "Trust turned to suspicion; the bond with Jude is her only anchor.",
+      "spice": 1,
+      "spice_note": "Subtle romantic tension: hand-holding while climbing stairs, comforting physical presence.",
+      "chapter_task": "Write Chapter 7 (1600–1900 words). Continue from the cliffhanger of Chapter 6: the shadow points. Resolve the shadow's action by leading Mara to the window and the key. Pay off C004 (psychological), C005 (behavioral), C006 (physical) and execute reveal MR03 (Mara deduces mother's involvement). Include a romance micro-beat: hand-holding. End with the Girl's smile on the attic stairs.",
+      "carries_to_next": "Mara and Jude go to the attic to confront the Girl and the bear."
+    },
+    {
+      "chapter": 8,
+      "title": "The Attic's Secret",
+      "slug": "08-the-attics-secret",
+      "one_line_summary": "In the attic, Mara and Jude find Ilse's hidden journal and share an intimate moment that deepens their bond.",
+      "beat_summary": "Mara and Jude climb to the attic. The Girl in Blue has vanished, but Wick lies on an old trunk. Mara picks him up, expecting a flash, but feels only cold. They search the attic and Jude discovers a loose floorboard under an old rug. Beneath it is a leather journal belonging to Ilse. The entries detail her fear of Lachlan and her decision to hide something in the house. The final entry reads: 'The girl will remember when she is ready.' It makes Mara determined. The tension and intimacy of the house press on them. Jude pulls her close, and they share a deep kiss that escalates to passionate necking and caress. Afterwards, they feel closer. Mara decides to confront her mother in person. As they leave the attic, they notice the floorboard near the window creaks differently. They examine it and find a small compartment containing a locket with a picture of Lachlan and Lydia together and a lock of hair. The chapter ends with Mara realizing the locket holds the final clue to the summer.",
+      "must_happen": [
+        "Mara and Jude search the attic and find Ilse's hidden journal",
+        "They read entries that reveal Ilse's fear of Lachlan and her plan to protect Mara",
+        "Mara and Jude have a steamy romantic encounter (spice=2)",
+        "They discover a hidden locket containing a photo and a lock of hair",
+        "[ROMANCE] The steamy scene itself, plus a moment after where Jude rests his forehead against Mara's"
+      ],
+      "must_not": [
+        "The journal does not mention the murder or Lydia directly",
+        "Mara does not have a full memory flash yet"
+      ],
+      "opens_with": "The attic stairs groaned under their weight, and the air thickened with the smell of dust and secrets.",
+      "cliffhanger": "Mara pried open the locket with trembling fingers, and the face of her mother — younger, sadder — stared back at her from beside Lachlan's image.",
+      "signature_detail_hint": "The lock of hair is tied with a blue ribbon that matches the Girl's dress exactly.",
+      "emotional_beat": "Emotional vulnerability and trust deepen; steamy intimacy reinforces their bond.",
+      "spice": 2,
+      "spice_note": "Steamy scene: passionate kissing and heavy petting (top clothing open), emotional intensity. Not explicit intercourse.",
+      "chapter_task": "Write Chapter 8 (1600–1900 words). Transition chapter focusing on discovery of Ilse's journal and the locket. Must include a steamy romantic scene (spice=2) integrated into the atmosphere, not separate. Advance the mystery slightly with the locket clue. End with the cliffhanger of seeing the mother's face in the locket.",
+      "carries_to_next": "Mara decides to confront her mother; the locket provides a new lead to track Lydia's past."
+    },
+    {
+      "chapter": 9,
+      "title": "What the Journal Revealed",
+      "slug": "09-what-the-journal-revealed",
+      "one_line_summary": "Gerald Vance shows up with a warning, and a memory forced by Wick reveals the truth of Lachlan's death.",
+      "beat_summary": "Mara and Jude are downstairs examining the locket when a knock sounds: Gerald Vance, the elderly neighbor, looking uneasy. He says he has been watching the house and warns that 'the past should stay buried.' He mentions he saw Lachlan enter the house the day of the disappearance and never saw him leave. That, combined with the journal, starts to build a fuller picture. Mara insists she must know. She picks up Wick again, and this time she forces herself to hold on. The memory floods: she is eight, hiding in the closet, watching through a crack. Her mother Lydia argues with Lachlan in the attic. He threatens to tell everyone about their affair. Lydia pushes him; he falls through the rotted floor, clutching Wick. The body lands with a sickening crack. Mara's eight-year-old self screams but her mother silences her. The memory ends. Mara staggers. Jude catches her. She now knows that her mother killed Lachlan. But why did Ilse hide it? The Girl in Blue appears, now looking integrated, and whispers 'Not alone.' The shadow form appears behind her, but now it has a face — Lachlan's. The reveal, from the combined memory, the testimonial, the physical presence of the bear, and the psychological integration of the child, is that Lachlan's spirit is trapped, and the key (from chapter 7) will set him free. The chapter ends with Mara vowing to set things right.",
+      "must_happen": [
+        "Gerald Vance arrives and gives a testimonial: he saw Lachlan enter the house and never leave (pay-off C008)",
+        "Mara holds Wick and triggers a full memory of Lachlan's death (pay-off C010 memory and C007 physical)",
+        "The Girl in Blue speaks for the first time: 'Not alone' (pay-off C009 supernatural/psychological)",
+        "The shadow shows Lachlan's face, and Mara understands his spirit is bound to the house (reveal MR04)",
+        "[ROMANCE] After the memory, Jude holds a trembling Mara, whispering that she is not alone; they embrace"
+      ],
+      "must_not": [
+        "Mara does not yet confront her mother directly",
+        "The full resolution of the haunting does not occur",
+        "Jude's own connection to the incident is not revealed"
+      ],
+      "opens_with": "The knock came at a quarter past nine, and the man on the porch looked like a ghost of guilt made flesh.",
+      "cliffhanger": "The shadow's face was Lachlan's, and its mouth opened in a silent plea as the Girl stood beside Mara, whispering, 'Help him.'",
+      "signature_detail_hint": "Gerald's left hand trembles as he hands Mara an old photo of Lachlan and Lydia kissing, as if absolving himself of a lie.",
+      "emotional_beat": "Horror and grief intermix with a new sense of purpose; the romantic bond with Jude is the steady ground.",
+      "spice": 1,
+      "spice_note": "Emotional comfort: long embrace, supportive touch. No explicit content.",
+      "chapter_task": "Write Chapter 9 (1600–1900 words). Major reveal chapter: pay off clues C007, C008, C009, C010 and execute reveal MR04 (the circumstances of Lachlan's death and the presence of his spirit). Must include the memory flashback and Gerald's testimony. Include a romance micro-beat: Jude's supportive embrace. End with the cliffhanger of the shadow's face and the Girl's plea.",
+      "carries_to_next": "Mara now knows the truth of Lachlan's death; she must decide whether to reveal it and face her mother."
+    }
+  ]
+}

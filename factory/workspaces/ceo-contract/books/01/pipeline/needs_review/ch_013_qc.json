@@ -1,0 +1,33 @@
+{
+  "foreign_chars": [
+    "N",
+    "i",
+    "z",
+    "e",
+    "n",
+    "m",
+    "e",
+    "z",
+    "h",
+    "i",
+    "d",
+    "a",
+    "o"
+  ],
+  "word_count": 1482,
+  "voice_drift": {
+    "flag": false,
+    "details": ""
+  },
+  "continuity_conflict": {
+    "flag": true,
+    "details": "The story_state indicates this is Chapter 2, but the input is labeled Chapter 13. Additionally, the story_state lists the current location as the office, but the chapter concludes with the protagonist arriving at the estate and experiencing a blackout, which contradicts the 'current_chapter' progression."
+  },
+  "cliffhanger_strength": 5,
+  "pacing_issue": false,
+  "signature_detail_present": true,
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "continuity_conflict"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "description": "Threads for The Glass Meridian, Book 1. This includes the main romance arc, the investigative threads for Lin Wei, Adrian's counter-conspiracy thread, and the mystery surrounding Lin Wei's mother and Project Phoenix.",
+  "threads": [
+    {
+      "id": "T001",
+      "name": "The Marriage Contract: Transaction to Alliance",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "active",
+      "book1_resolution": "The contract expires, but the fake marriage has solidified into a genuine alliance based on shared danger and growing trust. Lin Wei and Adrian accept their partnership is real.",
+      "book2_promise": "Their alliance will be tested as they continue to fight the Glass Meridian, with the stakes escalating beyond the contract.",
+      "book1_payoff": "Lin Wei and Adrian acknowledge their feelings and commitment to each other beyond the terms of the contract, solidifying their partnership against the Meridian.",
+      "note": "This thread tracks the slow-burn romance arc. Micro-beats are essential in every chapter."
+    },
+    {
+      "id": "T002",
+      "name": "Lin Wei's Investigation: Unraveling the Meridian",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "active",
+      "book1_resolution": "Lin Wei successfully traces a critical link of the Glass Meridian within Aurelian Group, exposing one of its local operations and securing vital information about Project Phoenix.",
+      "book2_promise": "Her investigative skills will be key to deciphering the Phoenix Archive and uncovering deeper layers of the conspiracy.",
+      "book1_payoff": "Lin Wei uses her journalistic skills and Asian network access to uncover a tangible piece of evidence against the Glass Meridian, proving her worth and agency.",
+      "note": "Focus on Lin Wei's active role, using her specific skills. Avoid her being a passive recipient of information."
+    },
+    {
+      "id": "T003",
+      "name": "Adrian's Counter-Conspiracy: Dismantling the Meridian",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "active",
+      "book1_resolution": "Adrian successfully uses Lin Wei as a blind spot to execute a targeted strike against a specific Glass Meridian operation linked to Aurelian Group, weakening their local presence.",
+      "book2_promise": "His fight against the Meridian will continue, requiring him to confront more dangerous elements and potentially his own past.",
+      "book1_payoff": "Adrian achieves a significant tactical victory against the Meridian, demonstrating his competence and commitment to his cause, while also protecting Lin Wei.",
+      "note": "Adrian's actions should be morally gray but ultimately aimed at dismantling the organization. His guilt over Project Phoenix should be a driving force."
+    },
+    {
+      "id": "T004",
+      "name": "Mother's Medical File: The Core Mystery",
+      "opened_chapter": 1,
+      "must_close_by": 40,
+      "status": "active",
+      "book1_resolution": "Lin Wei discovers her mother was not just a patient but a survivor of a concealed biotech trial (Project Phoenix), directly linking her to the Glass Meridian's past activities.",
+      "book2_promise": "The file and her mother's past will reveal Lin Wei's own connection to Project Phoenix and her altered identity.",
+      "book1_payoff": "The central mystery of why Adrian chose Lin Wei is revealed: her mother's patient file is the key to unlocking the Glass Meridian's secrets.",
+      "note": "This is the primary driver for Lin Wei's involvement and Adrian's strategy. Every clue about the file and her mother's health should be significant."
+    },
+    {
+      "id": "T005",
+      "name": "Project Phoenix: The Cross-Series Myth Arc",
+      "opened_chapter": 10,
+      "must_close_by": 50,
+      "status": "active",
+      "book1_resolution": "Lin Wei and Adrian uncover evidence that Project Phoenix was a dangerous, unethical trial, and learn that Lin Wei's mother was a victim of it. The full scope remains hidden.",
+      "book2_promise": "The full truth of Project Phoenix and its victims, including Lin Wei herself, will be revealed.",
+      "book1_payoff": "The existence and nature of Project Phoenix are confirmed, providing a crucial piece of the larger conspiracy puzzle.",
+      "note": "Introduced gradually, with hints and clues building towards the reveal. Must be frightening for its legitimacy and reach, not theatricality."
+    },
+    {
+      "id": "T006",
+      "name": "Cross-Cultural Friction & Understanding",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "active",
+      "book1_resolution": "Lin Wei and Adrian navigate their cultural differences, moving from misunderstanding and suspicion to a grudging respect and reliance on each other's unique perspectives.",
+      "book2_promise": "Their understanding of each other's backgrounds will deepen, becoming a source of strength rather than just friction.",
+      "book1_payoff": "Moments where their cultural differences lead to both conflict and unexpected moments of connection or insight.",
+      "note": "This thread should be woven into the fabric of their interactions, influencing their communication, values, and relationship dynamics."
+    },
+    {
+      "id": "T007",
+      "name": "Glass Meridian Operatives",
+      "opened_chapter": 5,
+      "must_close_by": 45,
+      "status": "active",
+      "book1_resolution": "Lin Wei and Adrian successfully expose and neutralize one local operative or link within Aurelian Group, disrupting a specific part of the Meridian's network.",
+      "book2_promise": "The larger organization remains, and new operatives will emerge as threats.",
+      "book1_payoff": "A tangible victory against a specific Glass Meridian agent or operation, making the threat concrete.",
+      "note": "Focus on legitimacy and reach, not theatrical rituals. Operatives should be hidden behind legitimate institutions."
+    }
+  ]
+}

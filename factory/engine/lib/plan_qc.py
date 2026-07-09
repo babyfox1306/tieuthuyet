@@ -1,0 +1,436 @@
+"""QC chapter_plans trước khi render prompts — ép kỹ thuật ở tầng PLAN."""
+
+from __future__ import annotations
+
+import re
+from pathlib import Path
+from typing import Any
+
+from factory.engine.lib.bible_schema import validate_plan_against_canon
+from factory.engine.lib.language import language_profile, target_language, word_count_patch
+from factory.engine.lib.plan_normalize import (
+    coerce_text_field,
+    coerce_text_list,
+    normalize_chapter_plan,
+    validate_duplicate_beats,
+    validate_plan_language,
+)
+from factory.engine.lib.narrative_compiler import (
+    iter_must_not_know_before,
+    load_knowledge_matrix,
+    load_ledger,
+    min_clues_for_reveal,
+    narrative_compiler_enabled,
+)
+from factory.engine.lib.prompt_builder import spice_for_chapter
+
+# Mở cảnh = FAIL (mâu thuẫn rule Writer)
+SCENE_OPEN_PATTERNS = [
+    r"bước vào",
+    r"đứng trước",
+    r"ngỡ ngàng",
+    r"ngần ngại",
+    r"văn phòng sang",
+    r"mùi hương",
+    r"ánh nắng",
+    r"không khí",
+    r"cánh cổng",
+]
+
+GENERIC_SIGNATURE = ["nhẫn", "xe sang", "đồng hồ", "kim cương", "biệt thự lớn"]
+
+REQUIRED_FIELDS = [
+    "chapter",
+    "title",
+    "slug",
+    "one_line_summary",
+    "beat_summary",
+    "must_happen",
+    "must_not",
+    "opens_with",
+    "cliffhanger",
+    "signature_detail_hint",
+    "spice",
+    "chapter_task",
+]
+
+# Locked chapter plans live in workspace bible/locked_chapter_plans.json (data, not code).
+
+
+def _has_romance_micro_beat(plan: dict) -> bool:
+    mh = plan.get("must_happen", [])
+    if isinstance(mh, list):
+        for item in mh:
+            if str(item).strip().upper().startswith("[ROMANCE]"):
+                return True
+    combined = " ".join(
+        str(plan.get(k, "")) for k in ("beat_summary", "chapter_task", "one_line_summary")
+    ).upper()
+    return "[ROMANCE]" in combined
+
+
+def _ledger_clue_index(ledger: dict[str, Any]) -> dict[str, dict]:
+    return {
+        str(c["id"]): c
+        for c in (ledger.get("clues") or [])
+        if isinstance(c, dict) and c.get("id")
+    }
+
+
+def _plan_narrative_blob(plan: dict) -> str:
+    parts = [
+        str(plan.get(k, ""))
+        for k in (
+            "title",
+            "one_line_summary",
+            "beat_summary",
+            "must_happen",
+            "must_not",
+            "opens_with",
+            "cliffhanger",
+        )
+    ]
+    narr = plan.get("narrative") or {}
+    for rev in narr.get("reveals") or []:
+        if isinstance(rev, dict):
+            parts.append(str(rev.get("reveal", "")))
+        else:
+            parts.append(str(rev))
+    return " ".join(parts).lower()
+
+
+_CLUE_STOPWORDS = frozenset(
+    {
+        "that",
+        "with",
+        "from",
+        "this",
+        "her",
+        "his",
+        "the",
+        "and",
+        "for",
+        "she",
+        "has",
+        "have",
+        "been",
+        "into",
+        "about",
+        "when",
+        "what",
+        "their",
+        "them",
+        "than",
+        "only",
+        "just",
+        "more",
+        "some",
+        "very",
+        "also",
+        "does",
+        "not",
+    }
+)
+
+
+def _plan_beat_blob(plan: dict) -> str:
+    parts: list[str] = []
+    mh = plan.get("must_happen", [])
+    if isinstance(mh, list):
+        parts.extend(str(x) for x in mh)
+    else:
+        parts.append(str(mh))
+    parts.append(str(plan.get("beat_summary", "")))
+    parts.append(str(plan.get("chapter_task", "")))
+    return " ".join(parts).lower()
+
+
+def _significant_words(text: str) -> list[str]:
+    return [
+        w
+        for w in re.findall(r"[a-z]{4,}", text.lower())
+        if w not in _CLUE_STOPWORDS
+    ]
+
+
+def _clue_hint_in_beats(hint: str, beat_blob: str) -> bool:
+    hint_l = hint.lower().strip()
+    if not hint_l:
+        return False
+    if len(hint_l) >= 12 and hint_l[: min(36, len(hint_l))] in beat_blob:
+        return True
+    words = _significant_words(hint_l)
+    if not words:
+        return hint_l in beat_blob
+    hits = sum(1 for w in words[:8] if w in beat_blob)
+    return hits >= 2
+
+
+def _clue_reflected_in_beats(
+    cid: str,
+    clue_beats: dict,
+    clues_idx: dict[str, dict],
+    beat_blob: str,
+) -> bool:
+    if cid.lower() in beat_blob:
+        return True
+    hint = str(clue_beats.get(cid) or clues_idx.get(cid, {}).get("content") or "")
+    return _clue_hint_in_beats(hint, beat_blob)
+
+
+def _clue_planted_before(all_plans: list[dict], clue_id: str, before_ch: int) -> bool:
+    for p in all_plans:
+        ch = int(p.get("chapter") or 0)
+        if ch >= before_ch:
+            continue
+        planted = (p.get("narrative") or {}).get("clues_plant") or []
+        if clue_id in planted:
+            return True
+    return False
+
+
+def _clue_planted_at_or_before(
+    all_plans: list[dict],
+    clue_id: str,
+    ledger: dict[str, Any],
+    payoff_ch: int,
+) -> bool:
+    clues = _ledger_clue_index(ledger)
+    meta = clues.get(clue_id, {})
+    plant_ch = int(meta.get("plant_chapter") or 0)
+    if plant_ch <= 0:
+        return False
+    if plant_ch > payoff_ch:
+        return False
+    for p in all_plans:
+        ch = int(p.get("chapter") or 0)
+        if ch != plant_ch:
+            continue
+        if clue_id in ((p.get("narrative") or {}).get("clues_plant") or []):
+            return True
+    return False
+
+
+def _forbidden_knowledge_at(matrix: dict[str, Any], chapter: int) -> list[tuple[str, str]]:
+    out: list[tuple[str, str]] = []
+    for char_name, data in (matrix.get("characters") or {}).items():
+        if not isinstance(data, dict):
+            continue
+        for fact, before_ch in iter_must_not_know_before(data):
+            if int(before_ch) > chapter:
+                out.append((str(char_name), str(fact)))
+    return out
+
+
+def _fact_appears_in_text(fact: str, text: str) -> bool:
+    fact_l = fact.lower().strip()
+    if len(fact_l) < 8:
+        return fact_l in text
+    # Long facts: match a distinctive substring (first 40 chars or full if shorter)
+    needle = fact_l[: min(40, len(fact_l))]
+    return needle in text
+
+
+def validate_narrative_plan(
+    plan: dict,
+    ws: Path,
+    *,
+    all_plans: list[dict] | None = None,
+    ledger: dict[str, Any] | None = None,
+    matrix: dict[str, Any] | None = None,
+) -> list[str]:
+    """NC-01..NC-07 — only when narrative compiler enabled; skip locked plans."""
+    if not narrative_compiler_enabled(ws):
+        return []
+    if plan.get("locked"):
+        return []
+
+    ch = int(plan.get("chapter") or 0)
+    if ch <= 0:
+        return []
+
+    ledger = ledger if ledger is not None else load_ledger(ws)
+    matrix = matrix if matrix is not None else load_knowledge_matrix(ws)
+    all_plans = all_plans or []
+    narr = plan.get("narrative")
+    if not isinstance(narr, dict):
+        return [f"ch{ch}:missing:narrative"]
+
+    issues: list[str] = []
+    clues_idx = _ledger_clue_index(ledger)
+    plant_scheduled = {cid for cid, c in clues_idx.items() if int(c.get("plant_chapter") or 0) == ch}
+    payoff_scheduled = {cid for cid, c in clues_idx.items() if int(c.get("payoff_chapter") or 0) == ch}
+    actual_plant = set(narr.get("clues_plant") or [])
+    actual_payoff = set(narr.get("clues_payoff") or [])
+
+    # NC-01
+    for cid in plant_scheduled:
+        if cid not in actual_plant:
+            issues.append(f"ch{ch}:NC-01:clue_not_scheduled:{cid}")
+
+    # NC-02
+    for cid in payoff_scheduled:
+        if cid not in actual_payoff:
+            issues.append(f"ch{ch}:NC-02:payoff_not_scheduled:{cid}")
+
+    # NC-03
+    for cid in actual_payoff:
+        meta = clues_idx.get(cid, {})
+        plant_ch = int(meta.get("plant_chapter") or 0)
+        pay_ch = int(meta.get("payoff_chapter") or 0)
+        if plant_ch and pay_ch and pay_ch < plant_ch:
+            issues.append(f"ch{ch}:NC-03:payoff_before_plant:{cid}")
+        elif not _clue_planted_at_or_before(all_plans, cid, ledger, ch):
+            issues.append(f"ch{ch}:NC-03:payoff_unplanted:{cid}")
+
+    # NC-04 / NC-05 — every major_reveal at this chapter
+    plan_reveal_ids = set()
+    for rev in narr.get("reveals") or []:
+        if isinstance(rev, dict):
+            plan_reveal_ids.add(str(rev.get("id", "")))
+        else:
+            plan_reveal_ids.add(str(rev))
+
+    for rev in ledger.get("major_reveals") or []:
+        if not isinstance(rev, dict):
+            continue
+        if int(rev.get("chapter") or 0) != ch:
+            continue
+        rid = str(rev.get("id", ""))
+        if rid and rid not in plan_reveal_ids:
+            issues.append(f"ch{ch}:NC-04:reveal_not_scheduled:{rid}")
+        required = [str(x) for x in (rev.get("required_clues") or [])]
+        weight = str(rev.get("reveal_weight") or "major").lower()
+        min_clues = min_clues_for_reveal(weight)
+        planted_count = 0
+        for cid in required:
+            if not _clue_planted_before(all_plans, cid, ch):
+                issues.append(f"ch{ch}:NC-04:reveal_missing_plant:{rid}:{cid}")
+            else:
+                planted_count += 1
+        if required and planted_count < min_clues:
+            issues.append(
+                f"ch{ch}:NC-05:reveal_insufficient_clues:{rid}:{planted_count}<{min_clues}"
+            )
+
+    # NC-06 — knowledge gates in plan prose / reveals
+    blob = _plan_narrative_blob(plan)
+    for _char, fact in _forbidden_knowledge_at(matrix, ch):
+        if _fact_appears_in_text(fact, blob):
+            issues.append(f"ch{ch}:NC-06:knowledge_violation:{fact[:48]}")
+
+    # NC-07 — clue plant/payoff must appear in story beats (must_happen / beat_summary)
+    beat_blob = _plan_beat_blob(plan)
+    clue_beats = narr.get("clue_beats") or {}
+    for cid in actual_plant:
+        if not _clue_reflected_in_beats(cid, clue_beats, clues_idx, beat_blob):
+            issues.append(f"ch{ch}:NC-07:clue_not_in_beats:{cid}")
+    for cid in actual_payoff:
+        if not _clue_reflected_in_beats(cid, clue_beats, clues_idx, beat_blob):
+            issues.append(f"ch{ch}:NC-07:payoff_not_in_beats:{cid}")
+
+    return issues
+
+
+def validate_plan(
+    plan: dict,
+    direction: dict,
+    *,
+    bible: dict | None = None,
+    all_plans: list[dict] | None = None,
+    ws: Path | None = None,
+) -> list[str]:
+    """Trả list lỗi. Rỗng = pass."""
+    plan = normalize_chapter_plan(plan)
+    issues: list[str] = []
+    ch = plan.get("chapter", 0)
+
+    for field in REQUIRED_FIELDS:
+        if field not in plan or plan[field] in (None, "", []):
+            issues.append(f"ch{ch}:missing:{field}")
+
+    opens = str(plan.get("opens_with", "")).lower()
+    for pat in SCENE_OPEN_PATTERNS:
+        if re.search(pat, opens):
+            issues.append(f"ch{ch}:opens_scene:{pat}")
+
+    task = str(plan.get("chapter_task", "")).lower()
+    if "1500" not in task and "1600" not in task and "1700" not in task:
+        issues.append(f"ch{ch}:task_no_word_target")
+
+    mh = plan.get("must_happen", [])
+    if not isinstance(mh, list) or len(mh) < 3:
+        issues.append(f"ch{ch}:must_happen_lt3")
+
+    spice = plan.get("spice", 1)
+    expected = spice_for_chapter(direction, ch)
+    if spice != expected and not plan.get("locked"):
+        issues.append(f"ch{ch}:spice_mismatch:{spice}!={expected}")
+
+    if spice == 3:
+        if "chưa vượt" in task or "không vượt" in task:
+            issues.append(f"ch{ch}:spice3_but_task_no_explicit")
+        note = str(plan.get("spice_note", ""))
+        if len(note) < 20:
+            issues.append(f"ch{ch}:spice3_note_too_short")
+
+    sig = str(plan.get("signature_detail_hint", "")).lower()
+    if any(g in sig for g in GENERIC_SIGNATURE):
+        issues.append(f"ch{ch}:signature_generic")
+
+    cliff = str(plan.get("cliffhanger", ""))
+    if len(cliff) < 15:
+        issues.append(f"ch{ch}:cliffhanger_weak")
+
+    if not plan.get("locked") and not _has_romance_micro_beat(plan):
+        issues.append(f"ch{ch}:missing_romance_micro_beat")
+
+    if bible:
+        issues.extend(validate_plan_against_canon(plan, bible, all_plans=all_plans))
+
+    lang = target_language(direction)
+    issues.extend(validate_plan_language(plan, lang))
+    if all_plans:
+        issues.extend(validate_duplicate_beats(plan, all_plans))
+
+    if ws is not None:
+        issues.extend(
+            validate_narrative_plan(plan, ws, all_plans=all_plans or [])
+        )
+
+    return issues
+
+
+def validate_all_plans(
+    plans: list[dict],
+    direction: dict,
+    *,
+    bible: dict | None = None,
+    ws: Path | None = None,
+) -> dict[int, list[str]]:
+    out: dict[int, list[str]] = {}
+    for p in plans:
+        ch = p.get("chapter", 0)
+        issues = validate_plan(p, direction, bible=bible, all_plans=plans, ws=ws)
+        if issues:
+            out[ch] = issues
+    return out
+
+
+def apply_canon_plans(plans: list[dict], locked: list[dict]) -> list[dict]:
+    from factory.engine.lib.plan_normalize import normalize_chapter_plan
+
+    by_ch = {p["chapter"]: normalize_chapter_plan(p) for p in plans}
+    for canon in locked:
+        by_ch[canon["chapter"]] = normalize_chapter_plan(dict(canon))
+    return [by_ch[k] for k in sorted(by_ch)]
+
+
+def ensure_task_word_count(plan: dict, direction: dict | None = None, cfg: dict | None = None) -> dict:
+    """Patch nhẹ nếu thiếu mục tiêu chữ."""
+    task = plan.get("chapter_task", "")
+    patch = word_count_patch(language_profile(direction=direction, cfg=cfg))
+    if "1500" not in task and "1600" not in task and "chữ" not in task.lower() and "word" not in task.lower():
+        plan = dict(plan)
+        plan["chapter_task"] = task.rstrip(".") + ". " + patch
+    return plan

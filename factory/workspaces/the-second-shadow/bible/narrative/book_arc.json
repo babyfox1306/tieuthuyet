@@ -1,0 +1,51 @@
+{
+  "book_number": 1,
+  "total_chapters": 10,
+  "target_language": "en",
+  "case_closed": true,
+  "case_open": "Aunt Ilse did the same thing decades earlier — the house has done this before, to someone else, and that person never left.",
+  "lead_internal_arc": {
+    "Mara Vale": "From a guarded, amnesiac woman who avoids emotional attachments and distrusts her own memories, to a person who must choose between reintegration (facing the trauma and becoming whole) or permanent fracture (fleeing again, staying safe but incomplete). By the end, she has recovered the full truth of the summer and made a concrete, life-altering decision.",
+    "Asher Croft": "From a solitary, logically-controlled man who buries his own childhood guilt beneath precision and helpfulness, to someone who opens himself to emotional risk by trusting Mara and investing in her past. His arc in Book 1 is a tentative step toward connection, though his deeper wound (his brother's drowning) remains unresolved for future books."
+  },
+  "act_structure": [
+    {
+      "act": 1,
+      "chapters": [
+        1,
+        2
+      ],
+      "title": "The Key and the Bear",
+      "summary": "Mara arrives at the inherited house, encounters the Girl in Blue in near-darkness, finds the one-eyed bear Wick, and meets neighbor Asher Croft. First concrete mystery answer (Ch2): the bear is a memory anchor — holding it triggers a brief, confusing flash of a man falling."
+    },
+    {
+      "act": 2,
+      "chapters": [
+        3,
+        4,
+        5
+      ],
+      "title": "Footsteps in the Attic",
+      "summary": "Mara (with Asher's growing involvement) discovers Ilse's hidden journal, learns the attic had been sealed after an 'accident,' and finds a cracked floorboard stained dark. Second concrete answer (Ch4): the man who fell was Lydia's lover. Third answer (Ch5): the Girl in Blue is not a ghost but Mara's own child-self, split away to carry the memory and wait for the bear."
+    },
+    {
+      "act": 3,
+      "chapters": [
+        6,
+        7,
+        8
+      ],
+      "title": "The Lover's Fall",
+      "summary": "Mara confronts her mother Lydia, who admits she pushed the man after he threatened to expose their affair. Fourth answer (Ch7): Mara, at age 8, witnessed the fall and was sworn to secrecy. Fifth answer (Ch8): the child-self can only rejoin Mara if she holds the bear and chooses to remember wholly. The Girl in Blue begins to reflect Mara's own movements — the second shadow is almost touching her."
+    },
+    {
+      "act": 4,
+      "chapters": [
+        9,
+        10
+      ],
+      "title": "Reintegration",
+      "summary": "Mara retrieves the bear again and is flooded with the full memory. She faces the final choice: take the child's hand (reintegrate, keep the memory, become whole) or leave the bear and flee (remain fractured, safe). She makes her decision — the book ends with that choice concretely shown. Final answer (Ch10): the full truth of the summer is now known. Hook: a final image of young Ilse standing in the same attic with her own one-eyed bear, revealing the pattern predates Mara."
+    }
+  ]
+}

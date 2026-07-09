@@ -1,0 +1,178 @@
+```json
+{
+  "act": [
+    49,
+    50
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 49,
+      "title": "The Shadow's Echo",
+      "slug": "the-shadows-echo",
+      "one_line_summary": "Following the devastating aftermath of their confrontation with Thorne, Lin Wei and Adrian uncover a hidden faction within the Glass Meridian and a new clue (C014) that points to a personal threat against Lin Wei's mother, forcing a desperate choice.",
+      "beat_summary": "In the wake of their costly victory against Marcus Thorne, Lin Wei and Adrian face unforeseen consequences. These repercussions directly endanger Lin Wei's mother, revealing a hidden truth about her past involvement with Project Phoenix and a new threat from a previously unknown faction within the Glass Meridian. Lin Wei must make a difficult choice that could endanger her mother further or compromise their investigation. Adrian's unwavering support solidifies their bond as they grapple with this deeply personal crisis. A critical clue (C014) is planted, stemming from the fallout of Thorne's disruption, hinting at this hidden faction or a potential solution for Lin Wei’s mother.",
+      "must_happen": [
+        "Lin Wei and Adrian deal with the immediate fallout from confronting Thorne, discovering new threats.",
+        "An unforeseen consequence directly impacts Lin Wei's mother, revealing a new danger and a hidden truth about her past.",
+        "[ROMANCE] Lin Wei grapples with a difficult choice regarding her mother's safety. Adrian offers his unwavering support, his presence a grounding force, solidifying their partnership through this hardship.",
+        "Lin Wei is forced to make a critical decision that carries significant risk, potentially involving a sacrifice.",
+        "A new clue (C014) is discovered, stemming from the fallout of Thorne's disruption, pointing to a hidden faction within the Meridian.",
+        "The chapter ends with them facing a new, immediate threat related to Lin Wei's mother and the clue C014."
+      ],
+      "must_not": [
+        "Lin Wei's mother being harmed or killed.",
+        "Marcus Thorne reappearing or directly influencing events.",
+        "The Glass Meridian's full plan being revealed.",
+        "Any explicit romantic escalation beyond intense emotional connection and unwavering support."
+      ],
+      "opens_with": "The sterile calm of a hospital room is shattered by chilling news of an unforeseen threat, forcing Lin Wei to confront a devastating choice regarding her mother and a shadowy faction within the Meridian.",
+      "cliffhanger": "With a critical decision made and a new, cryptic clue (C014) in hand, Lin Wei and Adrian realize the fight for her mother's safety, the truth about Project Phoenix, and the unraveling of the Glass Meridian's hidden factions has just taken a terrifying, personal turn.",
+      "signature_detail_hint": "The faint, almost imperceptible scent of ozone that seems to emanate from the decrypted files themselves, a phantom echo of the volatile research, now intertwined with a subtle floral note suggesting a new player.",
+      "emotional_beat": "Fear and difficult choices, amplified by their shared reliance and the deepening romantic tension as they face a deeply personal threat and the emergence of a new enemy.",
+      "spice": 1,
+      "spice_note": "The intense emotional weight of the threat to Lin Wei's mother and the need for decisive action create a charged atmosphere, focusing on their intellectual and emotional connection.",
+      "chapter_task": "Lin Wei and Adrian face unforeseen consequences impacting Lin Wei's mother, leading to a difficult choice for Lin Wei. Plant C014, hinting at a hidden faction. Emphasize the escalating personal stakes. (1600-1900 words)",
+      "carries_to_next": "Lin Wei and Adrian’s pursuit of the lead from C014, their efforts to protect Lin Wei's mother from this new threat, and the final confrontation with the core of the Glass Meridian.",
+      "narrative": {
+        "clues_plant": [
+          "C014"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Lin Wei",
+            "Adrian Vale",
+            "Ms. Li (Lin Wei's Mother)",
+            "Isabella Vale (Adrian's Father)"
+          ],
+          "may_know": [
+            "Lin Wei: Has confirmed the existence of the Glass Meridian and its connection to Aurelian Group and her mother's case, and that Thorne's immediate plans were disrupted.",
+            "Lin Wei: Beginning to understand Adrian's role as an insider fighting the system and their shared commitment.",
+            "Adrian Vale: Has confirmed his father's deep involvement and data falsification, and that Thorne escaped.",
+            "Adrian Vale: Trust in Lin Wei is solidifying into a genuine partnership.",
+            "Adrian Vale: He has unconsciously been groomed by his father to either take over or be a pawn in the Meridian's grander scheme.",
+            "Ms. Li (Lin Wei's Mother): Showing more responsiveness, but unaware of the full truth about Project Phoenix.",
+            "Ms. Li (Lin Wei's Mother): She was a key researcher in Project Phoenix and holds suppressed memories crucial to its understanding.",
+            "Isabella Vale (Adrian's Father): His direct involvement in data falsification is becoming clearer to Adrian.",
+            "Isabella Vale (Adrian's Father): He orchestrated Adrian's entire upbringing to serve the Glass Meridian, including the 'inheritance' and his supposed fall from grace."
+          ],
+          "must_not_know": [
+            "Lin Wei: Her mother was a key researcher in Project Phoenix, not just a victim. Her own birth name is linked to Project Phoenix.",
+            "Ms. Li (Lin Wei's Mother): She was a key researcher in Project Phoenix and holds suppressed memories crucial to its understanding."
+          ],
+          "effective_milestone": 48
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 50,
+      "title": "The Meridian's Legacy",
+      "slug": "the-meridians-legacy",
+      "one_line_summary": "In a final, desperate confrontation, Lin Wei and Adrian expose the Glass Meridian's core secrets and dismantle its immediate threat, securing Lin Wei's mother's safety and forging a new future for themselves.",
+      "beat_summary": "Armed with all their gathered intelligence, including the final clues C013, C014, and a newly planted C015, Lin Wei and Adrian launch their ultimate plan to dismantle the Glass Meridian's core operation and expose Marcus Thorne and his hidden faction. This leads to a climactic showdown where they confront the remaining leadership and the architects of Project Phoenix. A major reveal (R004) exposes Thorne's true, shocking goal and its deeply personal connection to Lin Wei and Adrian's past. They make significant sacrifices but achieve a crucial victory, disrupting the Meridian’s immediate plans and ensuring Lin Wei's mother's safety. Thorne escapes, but his power is severely diminished, and the Glass Meridian is fractured, setting the stage for the series' conclusion. The chapter ends with Lin Wei and Adrian choosing to build a future together, their marriage of convenience transformed into a genuine alliance.",
+      "must_happen": [
+        "Lin Wei and Adrian execute their final plan, leveraging all gathered intelligence (C013, C014, C015).",
+        "They confront the remaining Glass Meridian leadership and the architects of Project Phoenix.",
+        "[ROMANCE] In the climactic battle, Adrian makes a definitive choice to protect Lin Wei, demonstrating the depth of his love and commitment, even in the face of his father's ultimate betrayal and the revelation of their shared past.",
+        "A major reveal (R004) exposes Thorne's ultimate goal and its shocking, personal connection to Lin Wei and Adrian's lineage.",
+        "A brutal confrontation ensues, leading to significant sacrifices (e.g., loss of allies, compromise of leverage).",
+        "Marcus Thorne escapes, but his power is significantly diminished, and the Glass Meridian is fractured.",
+        "Lin Wei's mother is secured, and her past role in Project Phoenix is understood.",
+        "Lin Wei and Adrian choose to remain together, their marriage now a genuine alliance.",
+        "MAJOR REVEAL (R004): Thorne's ultimate goal and its personal connection to the leads are revealed."
+      ],
+      "must_not": [
+        "Marcus Thorne being captured or killed.",
+        "The Glass Meridian being completely dismantled.",
+        "Lin Wei or Adrian suffering a permanent, life-altering injury.",
+        "Any explicit romantic escalation beyond a passionate embrace born of shared danger and profound love."
+      ],
+      "opens_with": "The sterile corridors of the Glass Meridian's central hub become a battleground as Lin Wei and Adrian launch their final, desperate assault, the air thick with the scent of ozone and impending conflict.",
+      "cliffhanger": "Marcus Thorne, defeated but unbroken, vanishes into the shadows, his empire in disarray but his threat lingering. Lin Wei and Adrian stand victorious, their marriage contract fulfilled and transformed into a true alliance, but acutely aware that the war against the Glass Meridian has just entered its most dangerous phase, forever changed by the devastating revelation and the scars they carry.",
+      "signature_detail_hint": "The faint, almost imperceptible scent of ozone that seems to emanate from the decrypted files themselves, a phantom echo of the volatile research, now mingled with the scent of danger and a fragile hope.",
+      "emotional_beat": "Triumph and grim resolve, their emotional connection deepening through shared victory, profound love, and the devastating acknowledgment of the ongoing fight and the future they will build together.",
+      "spice": 3,
+      "spice_note": "The intense emotional weight of the climactic battle, the devastating revelation, and their shared love culminates in a passionate, explicit scene that reflects their deep connection and the catharsis of facing their greatest fears and securing their future together.",
+      "chapter_task": "Lin Wei and Adrian confront the Glass Meridian's core operation, leading to a devastating revelation (R004) and a significant victory. Thorne escapes, but his power is diminished. They choose to remain together. Plant C015. (1600-1900 words)",
+      "carries_to_next": "The resolution of Book 1, with Lin Wei and Adrian’s alliance solidified, the Meridian fractured but not defeated, and the promise of future challenges.",
+      "narrative": {
+        "clues_plant": [
+          "C015"
+        ],
+        "clues_payoff": [
+          "C013",
+          "C014",
+          "C015"
+        ],
+        "reveals": [
+          {
+            "id": "",
+            "reveal": "",
+            "impact": "",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C013",
+              "C014",
+              "C015"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Lin Wei",
+            "Adrian Vale",
+            "Ms. Li (Lin Wei's Mother)",
+            "Isabella Vale (Adrian's Father)"
+          ],
+          "may_know": [
+            "Lin Wei: Has confirmed the existence of the Glass Meridian and its connection to Aurelian Group and her mother's case",
+            "Lin Wei: Beginning to understand Adrian's role as an insider fighting the system.",
+            "Adrian Vale: Has confirmed his father's deep involvement and data falsification",
+            "Adrian Vale: Trust in Lin Wei is growing, shifting from tool to partner.",
+            "Adrian Vale: He has unconsciously been groomed by his father to either take over or be a pawn in the Meridian's grander scheme.",
+            "Ms. Li (Lin Wei's Mother): Showing more responsiveness",
+            "Ms. Li (Lin Wei's Mother): Unaware of the full truth about Project Phoenix.",
+            "Ms. Li (Lin Wei's Mother): She was a key researcher in Project Phoenix and holds suppressed memories crucial to its understanding.",
+            "Isabella Vale (Adrian's Father): His direct involvement in data falsification is becoming clearer to Adrian.",
+            "Isabella Vale (Adrian's Father): He orchestrated Adrian's entire upbringing to serve the Glass Meridian, including the 'inheritance' and his supposed fall from grace."
+          ],
+          "must_not_know": [
+            "Lin Wei: Her mother was a key researcher in Project Phoenix, not just a victim. Her own birth name is linked to Project Phoenix."
+          ],
+          "effective_milestone": 50
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

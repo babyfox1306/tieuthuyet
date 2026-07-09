@@ -1,0 +1,115 @@
+{
+  "main_mystery": "Sự thật về 'ma đầu' Thẩm Uyển Nhi và quyền năng rối thuật của Thẩm gia – liệu nàng là người điều khiển hay là một con rối bị thao túng? Nguồn gốc thực sự của sức mạnh đến từ đâu?",
+  "truth": "Rối thuật Thẩm gia thực chất là kết quả của một giao ước máu giữa tổ tiên Thẩm gia và ma thần thượng cổ. Mỗi đời gia chủ Thẩm gia, bao gồm Thẩm Uyển Nhi, đều là 'vật hiến tế' sống, bị ma thần chiếm hữu và điều khiển thông qua sợi chỉ mệnh vô hình. Thẩm Uyển Nhi, tưởng chừng là nữ ma đầu tàn bạo, thực chất là nạn nhân tuyệt vọng, đã âm thầm ấp ủ kế hoạch phá vỡ giao ước. Cố tình hồi sinh Lục Vân Sách – một con rối gỗ vô tri – với hy vọng rằng linh hồn thuần khiết, không bị chỉ mệnh trói buộc của anh sẽ trở thành 'con dao giải phóng' cho nàng.",
+  "canonical_reveal_chapter": 42,
+  "red_herrings": [
+    "Thẩm Uyển Nhi là một ma đầu thực thụ, tận hưởng quyền lực tuyệt đối và không có chút do dự khi sát hại kẻ thù.",
+    "Rối thuật Thẩm gia là bí kíp gia truyền cao thâm, được lưu truyền qua nhiều đời, hoàn toàn không liên quan đến ma quỷ.",
+    "Lục Vân Sách chỉ là một con rối gỗ tầm thường, được Uyển Nhi tạo ra để phục vụ âm mưu thống trị.",
+    "Kẻ thù duy nhất của Thẩm gia là các thế lực thế tục như các gia tộc rối đối địch, không có thế lực siêu nhiên nào đằng sau."
+  ],
+  "major_reveals": [
+    {
+      "chapter": 20,
+      "description": "Vân Sách nhận ra mình không bị ảnh hưởng bởi 'chỉ mệnh' của Uyển Nhi – đây là điều chưa từng có trong rối thuật. Gợi ý thân phận đặc biệt của anh."
+    },
+    {
+      "chapter": 38,
+      "description": "Phát hiện tàng thư bí mật của Thẩm gia: ghi chép về giao ước với ma thần thượng cổ và sự thật rằng mỗi đời gia chủ là vật tế. Ma thần xuất hiện trong giấc mơ tập thể."
+    },
+    {
+      "chapter": 42,
+      "description": "Thẩm Uyển Nhi chủ động thừa nhận với Vân Sách rằng nàng cũng là một con rối bị ma thần điều khiển. Giọt máu trên tay nàng hóa thành tơ đỏ chứng minh lời nói. Tiết lộ kế hoạch dùng anh để cắt đứt sợi chỉ mệnh."
+    },
+    {
+      "chapter": 48,
+      "description": "Nhờ sự trợ giúp của cổ thư và sức mạnh của Vân Sách, Uyển Nhi tiêu diệt được phân thân ma thần đầu tiên. Vân Sách thu thập đủ mảnh linh hồn và lấy lại thân xác thật."
+    },
+    {
+      "chapter": 50,
+      "description": "Ngay sau chiến thắng, bản thể ma thần thượng cổ chiếm hữu hoàn toàn cơ thể Uyển Nhi, xóa bỏ ý thức nàng. Vân Sách đối diện với lựa chọn sinh tử."
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "description": "Giấc mơ của Uyển Nhi: mỗi đêm nàng thấy mình đứng trên sân khấu, tay chân vướng tơ hồng, có bóng tối khổng lồ điều khiển từ phía sau.",
+      "plant_chapter": 2,
+      "payoff_chapter": 42,
+      "associated_thread": "T01",
+      "type": "vision"
+    },
+    {
+      "id": "C002",
+      "description": "Vân Sách không thể bị khống chế bằng lệnh rối thông thường. Uyển Nhi dùng thử mọi ấn quyết đều vô hiệu.",
+      "plant_chapter": 10,
+      "payoff_chapter": 20,
+      "associated_thread": "T03",
+      "type": "event"
+    },
+    {
+      "id": "C003",
+      "description": "Cuốn gia phả Thẩm gia ở thư các cấm, trang cuối cùng bị xé nhưng để lại dấu mực: '... là vật tế'. Chữ viết tay run rẩy.",
+      "plant_chapter": 8,
+      "payoff_chapter": 38,
+      "associated_thread": "T01",
+      "type": "document"
+    },
+    {
+      "id": "C004",
+      "description": "Một con rối cổ trong kho rối của Thẩm gia tự dưng nói: 'Máu... thêm máu... giao ước chưa kết thúc'.",
+      "plant_chapter": 6,
+      "payoff_chapter": 38,
+      "associated_thread": "T01",
+      "type": "dialogue"
+    },
+    {
+      "id": "C005",
+      "description": "Lão ăn mày kỳ lạ nói với Vân Sách: 'Con rối biết yêu sẽ làm đứt dây tơ, nhưng ma vương cũng sẽ thức tỉnh'.",
+      "plant_chapter": 18,
+      "payoff_chapter": 46,
+      "associated_thread": "T02",
+      "type": "prophecy"
+    },
+    {
+      "id": "C006",
+      "description": "Trong lúc hấp hối, một kẻ thù của Uyển Nhi nguyền rủa: 'Ngươi chỉ là rối gỗ bị xích, đừng tưởng mình là chủ'.",
+      "plant_chapter": 12,
+      "payoff_chapter": 42,
+      "associated_thread": "T01",
+      "type": "dialogue"
+    },
+    {
+      "id": "C007",
+      "description": "Vân Sách tìm thấy mảnh ngọc bội gắn trên người khi hồi sinh, khắc tên 'Lục Vân Sách' và một ký hiệu lạ giống mắt quỷ.",
+      "plant_chapter": 6,
+      "payoff_chapter": 48,
+      "associated_thread": "T03",
+      "type": "object"
+    },
+    {
+      "id": "C008",
+      "description": "Uyển Nhi vô thức vuốt ve gáy mỗi khi căng thẳng, hé lộ một vết sẹo hình sợi tơ đỏ ẩn dưới cổ áo.",
+      "plant_chapter": 4,
+      "payoff_chapter": 44,
+      "associated_thread": "T04",
+      "type": "physical_mark"
+    },
+    {
+      "id": "C009",
+      "description": "Trong thư các, Uyển Nhi lén sao chép một bản đồ cổ với các điểm 'mắt xích'. Vân Sách thấy nhưng không hiểu.",
+      "plant_chapter": 14,
+      "payoff_chapter": 40,
+      "associated_thread": "T01",
+      "type": "map"
+    },
+    {
+      "id": "C010",
+      "description": "Trận đấu với gia tộc Từ Thị: Uyển Nhi sử dụng rối thuật mạnh đến mức tay nàng rỉ máu, máu đó hòa vào dây tơ và khiến con rối trở nên hung bạo.",
+      "plant_chapter": 22,
+      "payoff_chapter": 50,
+      "associated_thread": "T01",
+      "type": "event"
+    }
+  ]
+}

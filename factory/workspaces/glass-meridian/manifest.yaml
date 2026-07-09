@@ -1,0 +1,35 @@
+id: glass-meridian
+pen_name: ''
+target_language: en
+spice_level: 3
+publish_strategy: kdp_ku_exclusive
+target_platforms:
+- kdp
+book_slug: 02-the-altered-name
+ai_content:
+  status: ai_generated
+  human_review: required
+  disclosure_required_for_kdp: true
+  generated_components:
+  - outline
+  - prose
+  - blurb
+  human_components:
+  - concept approval
+  - narrative ledger approval
+  - publish_strategy choice
+  - final spot_check
+blurb: A Chinese investigative journalist signs a one-year marriage contract with
+  a cold, dangerous Western CEO to save her dying mother — only to discover the marriage
+  is a trap pulling her into a global medical-financial network that has been concealing
+  a secret about her own family.
+tropes:
+- contract marriage
+- CEO
+- slow burn enemies-to-lovers
+- forced proximity
+spice_badge: 16+
+canon_through: 0
+plan_status: draft
+bible_status: draft
+active_book: 2

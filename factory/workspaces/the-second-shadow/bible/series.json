@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "series_id": "the-second-shadow",
+    "genre": "romance thriller",
+    "target_language": "en"
+  },
+  "title": "The Second Shadow",
+  "sub_niche": "romance_thriller",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "A woman inherits a house where she spent a childhood summer she cannot remember, only to find her old one-eyed teddy bear and a silent girl in a blue dress who watches from the dark—and does not want her to leave again.",
+  "tropes": [
+    "inherited house",
+    "forgotten childhood",
+    "mysterious child",
+    "memory loss",
+    "atmospheric thriller",
+    "slow-burn romance",
+    "psychological thriller",
+    "house with a secret"
+  ],
+  "leads": {
+    "female": {
+      "name": "Mara Vale",
+      "age": 29,
+      "voice": "Understated, deliberate; often pauses before speaking. Her tone carries a quiet weight, as if measuring every word.",
+      "tics": [
+        "touches her scarred hands",
+        "avoids bright light",
+        "rearranges objects symmetrically when anxious"
+      ],
+      "boundary": "Trauma manifests as an obsessive need for control over her environment; she cannot tolerate disorder and resists emotional intimacy for fear of losing herself again.",
+      "internal_voice": "Analytical and dissecting; she views every memory or sensory clue as a puzzle to be solved."
+    },
+    "male": {
+      "name": "Elias Crane",
+      "age": 32,
+      "voice": "Warm, patient, with a subtle Southern drawl; he uses colorful metaphors drawn from carpentry and nature.",
+      "tics": [
+        "runs his hand through his hair when thinking",
+        "whistles old folk tunes under his breath",
+        "avoids eye contact when discussing painful topics"
+      ],
+      "boundary": "Fiercely protective of his privacy because of a past failure as a journalist in the city; he now lives a quiet life and is wary of exposing others' secrets.",
+      "wound": "He lost his younger sister to an unexplained illness when he was a teenager because he was away chasing a story; guilt over that absence still haunts him."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Aunt Ilse Vale",
+      "relation_to": "Mara Vale",
+      "relation_type": "deceased aunt, former owner of the house",
+      "alive": false,
+      "secret": "Ilse was actually Mara's biological mother, not her aunt; she concealed this due to her own mental illness"
+    },
+    {
+      "name": "The Girl in Blue",
+      "relation_to": "Mara Vale",
+      "relation_type": "silent projection of Mara's eight-year-old self",
+      "alive": false,
+      "secret": "She is the fragment of Mara that remained trapped in the memory of that summer; her appearance and actions are driven by the need to reunite Mara with the truth"
+    },
+    {
+      "name": "Henry Thorne",
+      "relation_to": "Mara Vale",
+      "relation_type": "estate lawyer handling Ilse's will",
+      "alive": true,
+      "secret": "He witnessed part of the summer's events but has concealed them due to a promise to Ilse"
+    }
+  ],
+  "central_mystery": {
+    "question": "What really happened during the summer Mara spent at her aunt Ilse's house when she was eight years old, and why can she remember nothing of it?",
+    "answer": "Mara's aunt Ilse was suffering from a terminal degenerative disease and planned to die by setting fire to the house with herself inside. Mara, realizing this, tried to stop her but was too late. To protect Mara from the trauma of watching her aunt burn, Ilse used a hidden trapdoor to push Mara out of the house before the fire fully took hold. Mara survived but sustained severe burns on her hands and arms. The shock of the event, combined with her guilt over not being able to save Ilse, caused Mara's consciousness to split: the 'girl in blue' is the part of her psyche that remained in that burning house, eternally eight years old, refusing to leave until the adult Mara returns and accepts the truth. The one-eyed bear 'Wick' contains a locket with a letter from Ilse explaining everything, and holding it allows Mara to safely integrate the memory.",
+    "reveal_chapter": 248
+  },
+  "bloodline": {
+    "description": "Mara Vale is the biological daughter of Ilse Vale (deceased) and an unknown father; Ilse posed as Mara's aunt to shield her from the stigma of her illness. Elias Crane has no genetic link to the Vale family.",
+    "hard_rules": [
+      "Female lead and male lead are not blood relatives.",
+      "The female lead’s mother (Ilse) is her only known blood relative.",
+      "The girl in blue is a psychic fragment of the female lead, not a separate entity."
+    ],
+    "lead_relation": "stranger"
+  },
+  "world_rules": [
+    "The house's atmosphere responds to Mara's emotional state: warmer when she feels safe, colder when she is anxious.",
+    "The girl in blue only appears in near-darkness or at the edges of shadow; she never steps into full light.",
+    "One-eyed bear Wick is a memory-anchor: whoever holds it gains fragmented memories of the summer.",
+    "Supernatural elements are psychological in origin; there is no external supernatural entity.",
+    "Other characters can perceive the girl in blue only when Mara’s emotional state is extreme or if they have a deep personal connection to the place."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "Mara arrives at the house, discovers the bear, and meets the girl; she begins to recall fragments of that summer while fighting her fear of intimacy with Elias.",
+      "ending_hook": "Mara finds a key hidden inside the bear’s stuffing that fits a locked trunk in the attic."
+    },
+    {
+      "book": 2,
+      "thesis": "Mara and Elias open the trunk and find a journal of Ilse; the girl becomes more active; Mara learns about her aunt’s illness and a hidden lover.",
+      "ending_hook": "Mara reads a passage where Ilse mentions a pact with a shadow figure, making her question whether the girl is truly her own self."
+    },
+    {
+      "book": 3,
+      "thesis": "Mara uncovers a locket with a photo of Ilse and an unknown man; Elias investigates town records; the girl’s presence intensifies, and Mara’s mental stability fractures.",
+      "ending_hook": "Mara discovers that the man in the photo is her own grandfather, implying Ilse was not her aunt but her mother."
+    },
+    {
+      "book": 4,
+      "thesis": "Mara confronts the possibility that Ilse is her biological mother; Elias’s support deepens romantically; the girl in blue begins to communicate through written notes.",
+      "ending_hook": "Mara finds a letter from Ilse admitting she caused the fire deliberately and that all of Mara’s memories of that night are false constructs."
+    },
+    {
+      "book": 5,
+      "thesis": "Mara must integrate the split-off self; the girl in blue leads her to the full truth; romance with Elias culminates; Mara accepts her past and begins to heal.",
+      "ending_hook": "In the final scene, the house stands warm and bathed in sunlight; Mara glimpses the girl in blue in a mirror, smiling, and then the reflection fades."
+    }
+  ],
+  "content_rules": [
+    "Spice level 1: no explicit sexual content; romance develops through emotional intimacy, subtle touch, and tension.",
+    "No minor characters are involved in romantic or sexual scenes.",
+    "All central characters are adults (Mara 29, Elias 32).",
+    "Point of view: third-person limited, strictly locked to Mara’s perspective throughout the entire series.",
+    "No first-person narration appears except within dialogue.",
+    "Depictions of trauma and fire are framed sensitively; no gratuitous gore or graphic violence.",
+    "The mystery must yield a concrete revelation every 2–3 chapters; the narrative never defers with 'just a deeper secret'.",
+    "The iconic visual elements from the source concept are honored: blue doll dress, one-eyed bear held low, a second shadow at the left edge, cracked wooden floor, near-total darkness with cold blue light."
+  ],
+  "bible_status": "approved"
+}

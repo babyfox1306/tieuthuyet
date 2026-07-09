@@ -1,0 +1,251 @@
+```json
+{
+  "act": [
+    28,
+    30
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 28,
+      "title": "The Meridian's Shadow",
+      "slug": "the-meridians-shadow",
+      "one_line_summary": "Lin Wei and Adrian decipher the clues from their recent encounters, uncovering a critical link between Project Phoenix, Aurelian Group's deep-seated corruption, and a chilling new threat.",
+      "beat_summary": "Lin Wei and Adrian consolidate the fragmented clues (C004, C005, C006, C007) gathered from their recent dangerous encounters. They reveal a disturbing pattern: Project Phoenix wasn't just a historical experiment, but a foundational pillar for the Glass Meridian's ongoing genetic manipulation and control. They discover Aurelian Group's deep complicity, not just as a front, but as an active participant in these ethically bankrupt endeavors. A major reveal occurs as they connect the dots, understanding the Meridian's long-term goal of creating a 'perfected' lineage, and realizing the immediate danger they are in. Adrian’s father, Marcus Thorne, is implicated as a key architect.",
+      "must_happen": [
+        "Lin Wei and Adrian meticulously analyze clues C004, C005, C006, and C007.",
+        "They uncover the direct link between Project Phoenix, Aurelian Group, and the Glass Meridian's genetic manipulation agenda.",
+        "[ROMANCE] Amidst the high-stakes revelation, Adrian confesses his deepest fear: that his own lineage is tainted by his father's ambition, and he sees Lin Wei as his anchor to a moral future.",
+        "MAJOR REVEAL (R002): Project Phoenix is revealed as the direct precursor to the Glass Meridian's current 'ascension' program, with Marcus Thorne as a central figure.",
+        "They realize the immediate threat is far greater than they anticipated, targeting a specific group or event.",
+        "This revelation solidifies their resolve and deepens their trust."
+      ],
+      "must_not": [
+        "Adrian Vale revealing his father's full complicity or direct leadership role in the Glass Meridian.",
+        "Lin Wei fully understanding the *how* of the genetic manipulation, only the *what* and *why*.",
+        "Professor Chen being involved in this revelation.",
+        "Any direct confrontation with the Glass Meridian leadership."
+      ],
+      "opens_with": "The sterile glow of Adrian’s secure study, now a war room, as Lin Wei and Adrian piece together the fragmented clues, the dark truth of the Glass Meridian’s ambition finally coming into sharp focus.",
+      "cliffhanger": "As the full scope of the Glass Meridian's 'ascension' program — and Marcus Thorne's role in it — becomes terrifyingly clear, Lin Wei and Adrian realize they are not just fighting a conspiracy, but a legacy that threatens to consume them both.",
+      "signature_detail_hint": "The faint, almost imperceptible scent of ozone that seems to emanate from the decrypted files themselves, a phantom echo of the volatile research.",
+      "emotional_beat": "Grave realization and shared dread, deepening their emotional connection through shared vulnerability and a unified purpose.",
+      "spice": 1,
+      "spice_note": "The intense emotional weight of the revelation and their shared fear creates a charged atmosphere, focusing on their intellectual and emotional connection as they face this new threat.",
+      "chapter_task": "Lin Wei and Adrian combine clues to reveal the Glass Meridian's genetic manipulation agenda and Marcus Thorne's role. MAJOR REVEAL (R002). Establish the immediate threat. (1600-1900 words)",
+      "carries_to_next": "Their urgent need to understand and thwart the Meridian's current 'ascension' plan, and the personal danger they are now in.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C004",
+          "C005",
+          "C006",
+          "C007"
+        ],
+        "reveals": [
+          {
+            "id": "R002",
+            "reveal": "Project Phoenix is the direct precursor to the Glass Meridian's current 'ascension' program, with Marcus Thorne as a central figure.",
+            "impact": "Establishes the immediate threat and the personal stakes for Adrian.",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C004",
+              "C006",
+              "C007"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Lin Wei",
+            "Adrian Vale",
+            "Ms. Li (Lin Wei's Mother)",
+            "Isabella Vale (Adrian's Father)"
+          ],
+          "may_know": [
+            "Lin Wei: Aware of Project Phoenix and its unethical nature.",
+            "Lin Wei: Aware of Aurelian Group's deep complicity.",
+            "Lin Wei: Suspects Marcus Thorne's involvement.",
+            "Lin Wei: Beginning to understand the Glass Meridian's goal of genetic manipulation.",
+            "Adrian Vale: Aware of his father's past and his own internal conflict.",
+            "Adrian Vale: Knows the Glass Meridian's ultimate aim is 'ascension'.",
+            "Adrian Vale: Understands the personal danger they are in.",
+            "Ms. Li (Lin Wei's Mother): Stable but still unaware of the full scope of the conspiracy.",
+            "Isabella Vale (Adrian's Father): Aware of Lin Wei and Adrian's progress, may be planning countermeasures."
+          ],
+          "must_not_know": [
+            "Lin Wei: The full details of her mother's role in Project Phoenix.",
+            "Lin Wei: The exact methods of the 'ascension' program.",
+            "Adrian Vale: The full extent of his father's direct control or leadership within the Glass Meridian.",
+            "Ms. Li (Lin Wei's Mother): The true nature of her past research or her own potential connection to the 'ascension' program."
+          ],
+          "effective_milestone": 28
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 29,
+      "title": "Race Against Time",
+      "slug": "race-against-time",
+      "one_line_summary": "Lin Wei and Adrian must race against time to thwart the Glass Meridian's immediate plan, forcing them to make a difficult choice that could expose them.",
+      "beat_summary": "With the revelation of the Glass Meridian's 'ascension' program and its immediate threat, Lin Wei and Adrian are under immense pressure. They scramble to gather intelligence on the specific target or event the Meridian intends to exploit. This requires them to take significant risks, possibly involving a dangerous infiltration or a high-stakes gamble with limited information. Their actions might necessitate a temporary alliance with an unlikely source or a public display that could compromise their anonymity. The romantic tension is heightened by the shared danger and the need for absolute trust.",
+      "must_happen": [
+        "Lin Wei and Adrian identify the Meridian's immediate target or event related to the 'ascension' program.",
+        "They devise a risky plan to disrupt or expose the operation.",
+        "[ROMANCE] In a moment of intense pressure, Adrian takes Lin Wei's hand, not out of necessity, but as a gesture of unwavering support and commitment, a silent promise of facing the danger together.",
+        "They must make a difficult decision that could expose them to the Meridian or compromise their investigation.",
+        "A near miss or a close call that underscores the urgency of their situation.",
+        "The chapter ends with them poised to execute their plan, the stakes higher than ever."
+      ],
+      "must_not": [
+        "Lin Wei and Adrian successfully stopping the Meridian's plan entirely.",
+        "The full details of the 'ascension' program being revealed.",
+        "Marcus Thorne making a direct appearance.",
+        "Any significant romantic escalation beyond a strong emotional connection and supportive gesture."
+      ],
+      "opens_with": "The ticking clock is a constant, oppressive presence as Lin Wei and Adrian pore over fragmented intelligence, a desperate race against time to intercept the Glass Meridian's next move.",
+      "cliffhanger": "With the Meridian's target identified and their plan in motion, Lin Wei and Adrian brace themselves for the confrontation, knowing that failure means not only their capture but the acceleration of a terrifying future for humanity.",
+      "signature_detail_hint": "The subtle, almost imperceptible tremor in Lin Wei's hand as she reviews the critical data, a sign of her immense pressure and unwavering focus.",
+      "emotional_beat": "Urgency and a heightened sense of shared purpose, amplified by the romantic tension of their mutual reliance.",
+      "spice": 1,
+      "spice_note": "The shared danger and the need for absolute trust create a charged atmosphere, focusing on their emotional connection and Adrian's supportive gestures.",
+      "chapter_task": "Lin Wei and Adrian identify the Meridian's immediate target and devise a risky plan to disrupt it. Emphasize the urgency and their reliance on each other. (1600-1900 words)",
+      "carries_to_next": "The execution of their plan and the immediate consequences of their actions, setting the stage for the next phase of their confrontation with the Glass Meridian.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Lin Wei",
+            "Adrian Vale",
+            "Ms. Li (Lin Wei's Mother)",
+            "Isabella Vale (Adrian's Father)"
+          ],
+          "may_know": [
+            "Lin Wei: Aware of the Meridian's 'ascension' program and its immediate threat.",
+            "Lin Wei: Has a clear understanding of Aurelian Group's complicity.",
+            "Lin Wei: Growing reliance on Adrian.",
+            "Adrian Vale: Aware of his father's role and the danger to Lin Wei.",
+            "Adrian Vale: Actively working to disrupt the Meridian's plans.",
+            "Adrian Vale: His internal conflict is heightened by the urgency.",
+            "Ms. Li (Lin Wei's Mother): Showing slight improvement, but still unaware of the full conspiracy.",
+            "Isabella Vale (Adrian's Father): Aware of their actions, may be orchestrating counter-moves."
+          ],
+          "must_not_know": [
+            "Lin Wei: The specific scientific details of the 'ascension' program.",
+            "Lin Wei: The full extent of her mother's past involvement.",
+            "Adrian Vale: The precise nature of his father's current leadership role.",
+            "Ms. Li (Lin Wei's Mother): Her own potential connection to the 'ascension' program."
+          ],
+          "effective_milestone": 29
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 30,
+      "title": "The Price of Alliance",
+      "slug": "the-price-of-alliance",
+      "one_line_summary": "Lin Wei and Adrian's attempt to thwart the Meridian's plan results in a partial success but a significant sacrifice, forcing them to go deeper underground and planting a new clue (C008).",
+      "beat_summary": "Lin Wei and Adrian execute their risky plan from Chapter 29. They achieve a partial victory, disrupting the Meridian's immediate objective, but at a significant cost. This could involve losing crucial evidence, exposing themselves to a wider threat, or a direct confrontation where one of them is put in grave danger. The sacrifice solidifies their bond but also forces them to abandon their current resources and go into hiding, adopting a more clandestine operational method. A new clue (C008) emerges from the fallout, pointing towards a new direction in their investigation, perhaps related to the Meridian's international network or a specific operative.",
+      "must_happen": [
+        "Lin Wei and Adrian execute their plan to disrupt the Meridian's immediate objective.",
+        "They achieve a partial success, but at a significant cost (e.g., losing evidence, exposure).",
+        "[ROMANCE] In the immediate aftermath of the costly victory, Adrian pulls Lin Wei into a fierce, protective embrace, the shared trauma and relief forging an unbreakable bond between them.",
+        "They are forced to abandon their current safe haven and go deeper underground.",
+        "A new clue (C008) is discovered, offering a new lead but indicating a more complex and dangerous path.",
+        "Their alliance is strengthened by the shared sacrifice and the realization of the Meridian's ruthlessness."
+      ],
+      "must_not": [
+        "Lin Wei and Adrian being captured.",
+        "The Glass Meridian's overall plan being completely thwarted.",
+        "Marcus Thorne making a direct appearance.",
+        "Any explicit romantic escalation beyond a protective embrace and shared emotional vulnerability."
+      ],
+      "opens_with": "The deafening silence after the storm, as Lin Wei and Adrian survey the wreckage of their plan, the hollow victory a bitter taste in their mouths.",
+      "cliffhanger": "Forced into the shadows, with a new, cryptic clue in hand, Lin Wei and Adrian look at each other, the weight of their sacrifice and the daunting road ahead settling upon them. The Glass Meridian is far from defeated.",
+      "signature_detail_hint": "The faint, almost imperceptible scent of ozone that seems to emanate from the decrypted files themselves, a phantom echo of the volatile research.",
+      "emotional_beat": "Costly victory and shared sacrifice, deepening their bond and reinforcing their determination.",
+      "spice": 1,
+      "spice_note": "The emotional intensity of their shared experience and the need for comfort create a charged atmosphere, focusing on their protective instincts and emotional connection.",
+      "chapter_task": "Lin Wei and Adrian partially succeed in disrupting the Meridian's plan but face a significant sacrifice. They go deeper underground, planting a new clue (C008). (1600-1900 words)",
+      "carries_to_next": "Lin Wei and Adrian’s new strategy as they operate from the shadows, pursuing the lead from C008 and facing escalated threats from the Glass Meridian.",
+      "narrative": {
+        "clues_plant": [
+          "C008"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Lin Wei",
+            "Adrian Vale",
+            "Ms. Li (Lin Wei's Mother)",
+            "Isabella Vale (Adrian's Father)"
+          ],
+          "may_know": [
+            "Lin Wei: Aware of the Meridian's 'ascension' program and its immediate threat.",
+            "Lin Wei: Has a clear understanding of Aurelian Group's complicity.",
+            "Lin Wei: Growing reliance on Adrian.",
+            "Adrian Vale: Aware of his father's role and the danger to Lin Wei.",
+            "Adrian Vale: Actively working to disrupt the Meridian's plans.",
+            "Adrian Vale: His internal conflict is heightened by the urgency.",
+            "Ms. Li (Lin Wei's Mother): Showing slight improvement, but still unaware of the full conspiracy.",
+            "Isabella Vale (Adrian's Father): Aware of their actions, may be orchestrating counter-moves."
+          ],
+          "must_not_know": [
+            "Lin Wei: The specific scientific details of the 'ascension' program.",
+            "Lin Wei: The full extent of her mother's past involvement.",
+            "Adrian Vale: The precise nature of his father's current leadership role.",
+            "Ms. Li (Lin Wei's Mother): Her own potential connection to the 'ascension' program."
+          ],
+          "effective_milestone": 30
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

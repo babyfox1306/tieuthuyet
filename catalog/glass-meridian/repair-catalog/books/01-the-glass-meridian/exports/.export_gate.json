@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "passed": true,
+  "skipped": false,
+  "workspace_id": "glass-meridian/repair-catalog",
+  "book_slug": "01-the-glass-meridian",
+  "checked_at": "2026-07-09T06:28:23.613727+00:00",
+  "chapter_count": 0,
+  "expected_chapters": 0,
+  "target_language": "vi",
+  "checks": [],
+  "errors": 0,
+  "warnings": 0,
+  "summary": "Export gate PASS"
+}
