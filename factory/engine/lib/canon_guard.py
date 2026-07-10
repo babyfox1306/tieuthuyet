@@ -1,46 +1,23 @@
-"""Tier 2 — Canon guard (skeleton).
-
-Roadmap: tune rules using real errors from Book 2 writing sessions.
-Do not treat this module as complete — extend CG-* checks as new drift patterns appear.
-
-Must-catch examples (Book 1 regressions):
-  - CG-01: "Ms. Li" when mother's canon name is Lin Mei
-  - CG-02: "Isabella Vale" labeled as Adrian's Father (gender swap; father is Marcus Thorne)
-"""
+"""Tier 2 — Canon guard (registry-driven, blocks promote)."""
 
 from __future__ import annotations
 
 import json
-import re
-from pathlib import Path
 from typing import Any
 
+from factory.engine.lib.canon_prose_qc import (
+    POV_FIRST_PERSON_THRESHOLD,
+    count_first_person_outside_dialogue,
+    find_name_drift_hits,
+    find_spice_marker_hits,
+    is_third_person_limited,
+)
+from factory.engine.lib.canon_registry import (
+    CanonRegistry,
+    build_canon_registry,
+    canon_registry_path,
+)
 from factory.engine.paths import bible_path, workspace_dir
-
-# --- Roadmap (implement incrementally) ---
-CANON_GUARD_ROADMAP = """
-CG-01  Name whitelist / forbidden aliases     [skeleton — Ms. Li]
-CG-02  Relation + gender consistency          [skeleton — Isabella Vale father]
-CG-03  POV / knowledge violations             [planned]
-CG-04  Mystery reveal timing vs plan          [planned]
-"""
-
-# Mother aliases that must NOT appear (canon: Lin Mei)
-_MOTHER_WRONG_NAMES = (
-    re.compile(r"\bMs\.?\s*Li\b", re.IGNORECASE),
-    re.compile(r"\bMrs\.?\s*Li\b", re.IGNORECASE),
-    re.compile(r"\bMother\s+Li\b", re.IGNORECASE),
-)
-
-# Female name wrongly used for Adrian's father
-_ISABELLA_FATHER = re.compile(
-    r"Isabella\s+Vale\s*\([^)]*(?:father|dad|parent)[^)]*\)",
-    re.IGNORECASE,
-)
-_ISABELLA_THORNE_FATHER = re.compile(
-    r"Isabella\s+(?:Vale|Thorne)\s*\([^)]*Adrian['\u2019]?s\s+Father",
-    re.IGNORECASE,
-)
 
 
 def _check(
@@ -68,7 +45,7 @@ def _check(
 
 
 def load_canon_names(workspace_id: str) -> dict[str, Any]:
-    """Character names + relations from bible/series.json."""
+    """Character names + relations from bible/series.json (legacy helper)."""
     ws = workspace_dir(workspace_id)
     path = bible_path(ws)
     if not path.exists():
@@ -100,33 +77,59 @@ def load_canon_names(workspace_id: str) -> dict[str, Any]:
     }
 
 
-def check_cg01_mother_name(body: str, canon: dict[str, Any], chapter: int | None = None) -> dict[str, Any]:
-    mother = canon.get("mother_name", "Lin Mei")
-    for pat in _MOTHER_WRONG_NAMES:
-        m = pat.search(body)
-        if m:
-            return _check(
+def _name_drift_checks(
+    body: str, registry: CanonRegistry, chapter: int | None
+) -> list[dict[str, Any]]:
+    checks: list[dict[str, Any]] = []
+    hits = find_name_drift_hits(body, registry)
+    if not hits:
+        checks.append(_check("CG-01", True, chapter=chapter, detail="no forbidden lead names"))
+        return checks
+    for hit in hits:
+        checks.append(
+            _check(
                 "CG-01",
                 False,
                 chapter=chapter,
-                detail=f"wrong mother name '{m.group(0).strip()}' — canon is {mother}",
-                snippet=m.group(0),
+                detail=f"name drift '{hit['found']}' — canon is {hit['canonical']}",
+                snippet=hit["found"],
             )
-    return _check("CG-01", True, chapter=chapter)
+        )
+    return checks
 
 
-def check_cg02_gender_relation(body: str, chapter: int | None = None) -> dict[str, Any]:
-    for pat in (_ISABELLA_FATHER, _ISABELLA_THORNE_FATHER):
-        m = pat.search(body)
-        if m:
-            return _check(
-                "CG-02",
-                False,
-                chapter=chapter,
-                detail="Isabella Vale is female — Adrian's father is Marcus Thorne",
-                snippet=m.group(0),
-            )
+def _pov_check(body: str, registry: CanonRegistry, chapter: int | None) -> dict[str, Any]:
+    if not is_third_person_limited(registry):
+        return _check("CG-02", True, chapter=chapter, detail="POV mode not third_person_limited")
+    count = count_first_person_outside_dialogue(body)
+    if count >= POV_FIRST_PERSON_THRESHOLD:
+        return _check(
+            "CG-02",
+            False,
+            chapter=chapter,
+            detail=(
+                f"first-person narration outside dialogue "
+                f"({count} hits, threshold {POV_FIRST_PERSON_THRESHOLD})"
+            ),
+        )
     return _check("CG-02", True, chapter=chapter)
+
+
+def _spice_checks(body: str, registry: CanonRegistry, chapter: int | None) -> list[dict[str, Any]]:
+    if registry.spice_max > 1:
+        return [_check("CG-03", True, chapter=chapter, detail="spice_max > 1 — spice check skipped")]
+    markers = find_spice_marker_hits(body)
+    if not markers:
+        return [_check("CG-03", True, chapter=chapter, detail="no explicit spice markers")]
+    return [
+        _check(
+            "CG-03",
+            False,
+            chapter=chapter,
+            detail=f"explicit spice markers at spice_max={registry.spice_max}: {', '.join(markers)}",
+            snippet=markers[0],
+        )
+    ]
 
 
 def run_canon_guard(
@@ -135,13 +138,28 @@ def run_canon_guard(
     *,
     chapter: int | None = None,
     scope: str = "chapter",
+    book: int = 1,
+    registry: CanonRegistry | None = None,
 ) -> dict[str, Any]:
-    """Run skeleton canon checks on prose. scope: chapter | book (future)."""
-    canon = load_canon_names(workspace_id)
-    checks = [
-        check_cg01_mother_name(body, canon, chapter),
-        check_cg02_gender_relation(body, chapter),
-    ]
+    """Run registry-driven canon checks on prose. Blocks promote when registry present."""
+    ws = workspace_dir(workspace_id)
+    if registry is None:
+        if not canon_registry_path(ws).exists():
+            return {
+                "tier": 2,
+                "scope": scope,
+                "passed": True,
+                "errors": 0,
+                "checks": [],
+                "skipped": True,
+            }
+        registry = build_canon_registry(ws, book)
+
+    checks: list[dict[str, Any]] = []
+    checks.extend(_name_drift_checks(body, registry, chapter))
+    checks.append(_pov_check(body, registry, chapter))
+    checks.extend(_spice_checks(body, registry, chapter))
+
     errors = sum(1 for c in checks if not c["passed"] and c["severity"] == "error")
     return {
         "tier": 2,
@@ -149,11 +167,13 @@ def run_canon_guard(
         "passed": errors == 0,
         "errors": errors,
         "checks": checks,
-        "roadmap": CANON_GUARD_ROADMAP.strip(),
+        "skipped": False,
     }
 
 
 def canon_guard_pass(report: dict[str, Any]) -> bool:
+    if report.get("skipped"):
+        return True
     return bool(report.get("passed"))
 
 

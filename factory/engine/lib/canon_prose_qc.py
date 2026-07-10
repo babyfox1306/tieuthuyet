@@ -1,0 +1,105 @@
+"""Deterministic canon prose checks — shared by machine_qc and canon_guard."""
+
+from __future__ import annotations
+
+import re
+from typing import Any
+
+from factory.engine.lib.canon_registry import CanonRegistry, LEAD_ROLES
+
+POV_FIRST_PERSON_THRESHOLD = 3
+
+_FIRST_PERSON_OUTSIDE_RE = re.compile(
+    r"\b(I|I'm|I've|I'll|I'd|my|me|myself)\b",
+    re.IGNORECASE,
+)
+
+# Conservative explicit-content markers for spice_max <= 1 (flag for review).
+_SPICE_EXPLICIT_MARKERS: list[tuple[re.Pattern[str], str]] = [
+    (re.compile(r"\bthrust(?:ing|s|ed)?\b", re.I), "thrust"),
+    (re.compile(r"\bmoan(?:ed|ing|s)?\b", re.I), "moaned"),
+    (re.compile(r"\bgroan(?:ed|ing|s)?\b", re.I), "groaned"),
+    (re.compile(r"\bclimax(?:ed|ing)?\b", re.I), "climax"),
+    (re.compile(r"\borgasm\b", re.I), "orgasm"),
+    (re.compile(r"\binside (?:her|him)\b", re.I), "inside her/him"),
+    (re.compile(r"\b(naked|nude|undress(?:ed|ing)?)\b", re.I), "naked/undress"),
+    (re.compile(r"\bharder,?\s+(?:faster|deeper)\b", re.I), "harder/deeper"),
+]
+
+
+def strip_dialogue_for_pov(text: str) -> str:
+    """Remove quoted dialogue spans before scanning for first-person narration."""
+    body = re.sub(r"^#.*$", "", text, flags=re.M)
+    body = re.sub(r'"[^"\n]*"', " ", body)
+    body = re.sub(r"'[^'\n]*'", " ", body)
+    body = re.sub(r"\u201c[^\u201d]*\u201d", " ", body)
+    body = re.sub(r"\u2018[^\u2019]*\u2019", " ", body)
+    return body
+
+
+def count_first_person_outside_dialogue(text: str) -> int:
+    prose = strip_dialogue_for_pov(text)
+    return len(_FIRST_PERSON_OUTSIDE_RE.findall(prose))
+
+
+def is_third_person_limited(registry: CanonRegistry) -> bool:
+    mode = str(registry.pov_mode or "").strip().lower().replace("-", "_")
+    return mode in ("third_person_limited", "third_person", "3rd_person_limited")
+
+
+def find_name_drift_hits(text: str, registry: CanonRegistry) -> list[dict[str, str]]:
+    """Forbidden lead alias occurrences in prose."""
+    hits: list[dict[str, str]] = []
+    seen: set[tuple[str, str]] = set()
+    lower = text.lower()
+    for role in LEAD_ROLES:
+        char = registry.characters[role]
+        canonical = char.canonical
+        for alias in sorted(char.forbidden_aliases, key=len, reverse=True):
+            a = alias.strip()
+            if not a or char.is_allowed(a):
+                continue
+            if " " in a:
+                pat = re.compile(re.escape(a), re.IGNORECASE)
+            else:
+                pat = re.compile(rf"\b{re.escape(a)}\b", re.IGNORECASE)
+            if pat.search(lower):
+                key = (role, a.lower())
+                if key not in seen:
+                    seen.add(key)
+                    hits.append(
+                        {
+                            "role": role,
+                            "found": a,
+                            "canonical": canonical,
+                        }
+                    )
+    return hits
+
+
+def find_spice_marker_hits(text: str) -> list[str]:
+    found: list[str] = []
+    for pat, label in _SPICE_EXPLICIT_MARKERS:
+        if pat.search(text) and label not in found:
+            found.append(label)
+    return found
+
+
+def canon_prose_issues(text: str, registry: CanonRegistry) -> dict[str, Any]:
+    """Aggregate canon prose violations for machine_qc."""
+    issues: dict[str, Any] = {}
+    drift = find_name_drift_hits(text, registry)
+    if drift:
+        issues["name_drift"] = drift
+    if is_third_person_limited(registry):
+        fp_count = count_first_person_outside_dialogue(text)
+        if fp_count >= POV_FIRST_PERSON_THRESHOLD:
+            issues["pov_violation"] = {
+                "count": fp_count,
+                "threshold": POV_FIRST_PERSON_THRESHOLD,
+            }
+    if registry.spice_max <= 1:
+        markers = find_spice_marker_hits(text)
+        if markers:
+            issues["spice_violation"] = markers
+    return issues

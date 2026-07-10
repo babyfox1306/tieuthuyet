@@ -35,9 +35,18 @@ def load_prior_chapter_excerpt(ws: Path, book: int, ch: int) -> str:
     body = _strip_title(path.read_text(encoding="utf-8"))
     if not body:
         return ""
-    if len(body) <= PRIOR_EXCERPT_MAX:
-        return body
-    return f"...[prior chapter truncated]\n{body[-PRIOR_EXCERPT_MAX:]}"
+    if len(body) > PRIOR_EXCERPT_MAX:
+        body = f"...[prior chapter truncated]\n{body[-PRIOR_EXCERPT_MAX:]}"
+    from factory.engine.lib.canon_registry import (
+        build_canon_registry,
+        canon_registry_path,
+        sanitize_text_for_registry,
+    )
+
+    if canon_registry_path(ws).exists():
+        registry = build_canon_registry(ws, book)
+        body = sanitize_text_for_registry(body, registry)
+    return body
 
 
 def highest_ready_chapter(ws: Path, book: int) -> int:

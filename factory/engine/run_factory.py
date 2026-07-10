@@ -433,6 +433,8 @@ def _draft_chapter_prose(
             phrases_already_used=state.get("phrases_used", []),
             direction=direction,
             cfg=cfg,
+            workspace_id=ws.name,
+            book=book,
         )
         if machine_pass(m_issues):
             return chapter, m_issues
@@ -570,8 +572,18 @@ def cmd_plan(args: argparse.Namespace) -> None:
 
 
 def cmd_approve_plan(args: argparse.Namespace) -> None:
+    from factory.engine.lib.canon_registry import CanonRegistryError, format_conflicts
+
     ws = workspace_dir(args.workspace)
-    approve_plan(ws)
+    direction = load_direction(ws)
+    book = int(getattr(args, "book", None) or direction.get("book") or 1)
+    try:
+        approve_plan(ws, book=book)
+    except CanonRegistryError as exc:
+        print(f"[approve-plan] BLOCKED — {len(exc.conflicts)} canon conflict(s):")
+        for line in format_conflicts(exc.conflicts):
+            print(f"  {line}")
+        return
     print(f"[approve-plan] plan_status=approved -> {ws / 'direction.yaml'}")
 
 
@@ -975,7 +987,8 @@ def main() -> None:
     sub.add_parser("validate-narrative", parents=[parent])
     sub.add_parser("approve-narrative", parents=[parent])
 
-    sub.add_parser("approve-plan", parents=[parent])
+    p_ap = sub.add_parser("approve-plan", parents=[parent])
+    p_ap.add_argument("--book", type=int, default=None, help="book number (default: direction.book)")
 
     p_rp = sub.add_parser("render-prompts", parents=[parent])
     p_rp.add_argument("--book", type=int, default=1)

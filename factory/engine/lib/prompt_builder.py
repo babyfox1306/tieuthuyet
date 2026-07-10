@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 import yaml
 
@@ -28,6 +28,9 @@ from factory.engine.lib.plan_normalize import (
     normalize_chapter_plans,
 )
 from factory.engine.paths import bible_path, book_workspace_dir, load_config, workspace_dir
+
+if TYPE_CHECKING:
+    from factory.engine.lib.canon_registry import CanonRegistry
 
 
 def load_series_bible(ws: Path) -> dict:
@@ -68,6 +71,7 @@ def format_prior_summaries(
     *,
     empty_line: str,
     max_chapters: int | None = 5,
+    registry: CanonRegistry | None = None,
 ) -> str:
     lines = []
     for raw in plans:
@@ -77,10 +81,60 @@ def format_prior_summaries(
             break
         summary = p.get("one_line_summary") or p.get("beat_summary", "")
         if summary:
+            if registry is not None:
+                from factory.engine.lib.canon_registry import sanitize_text_for_registry
+
+                summary = sanitize_text_for_registry(str(summary), registry)
             lines.append(f"- Ch{ch}: {summary}")
     if max_chapters and len(lines) > max_chapters:
         lines = lines[-max_chapters:]
     return "\n".join(lines) if lines else empty_line
+
+
+def render_locked_canon_block(registry: CanonRegistry, *, lang: str = "en") -> str:
+    """Non-negotiable canon rules — must appear above bible / story-so-far in writer prompts."""
+    male = registry.characters["male_lead"]
+    female = registry.characters["female_lead"]
+    male_forbidden = ", ".join(male.forbidden_aliases) if male.forbidden_aliases else "(none)"
+    female_forbidden = (
+        ", ".join(female.forbidden_aliases) if female.forbidden_aliases else "(none)"
+    )
+    if registry.spice_max <= 1:
+        spice_line = (
+            f"Spice: MAX level {registry.spice_max}. "
+            "No on-page explicit sex. Fade to black beyond kiss/tension."
+        )
+    elif registry.spice_max == 2:
+        spice_line = (
+            f"Spice: MAX level {registry.spice_max}. "
+            "Steamy tension/kissing allowed; no explicit sex."
+        )
+    else:
+        spice_line = f"Spice: MAX level {registry.spice_max}."
+
+    pov_mode = registry.pov_mode or "third_person_limited"
+    return f"""## LOCKED CANON — ABSOLUTE, DO NOT VIOLATE
+Male lead: {male.canonical} ONLY. Never write: {male_forbidden}.
+Female lead: {female.canonical} ONLY. Never write: {female_forbidden}.
+POV: {pov_mode}. Third-person limited locked to {female.canonical}. NO first-person ("I/my/me") narration outside quoted dialogue.
+{spice_line}
+If any instruction below conflicts with this block, THIS BLOCK WINS."""
+
+
+def _load_canon_registry_for_prompt(ws: Path, direction: dict) -> CanonRegistry:
+    from factory.engine.lib.canon_registry import build_canon_registry
+
+    book = int(direction.get("book") or 1)
+    return build_canon_registry(ws, book)
+
+
+def _warn_spice_capped(chapter: int, plan_spice: int, capped: int) -> None:
+    from factory.engine.lib.catalog import safe_print
+
+    safe_print(
+        f"  [prompt] WARN ch_{chapter:03d}: plan spice {plan_spice} > registry max "
+        f"{capped} — emitting spice level {capped} for writer (fix plan; approve-plan should catch)"
+    )
 
 
 def build_chapter_prompt(
@@ -97,6 +151,13 @@ def build_chapter_prompt(
     lang = target_language(direction, cfg)
     plan = normalize_chapter_plan(plan)
     prof = language_profile(lang)
+
+    registry: CanonRegistry | None = None
+    locked_canon_block = ""
+    if ws is not None:
+        registry = _load_canon_registry_for_prompt(ws, direction)
+        locked_canon_block = render_locked_canon_block(registry, lang=lang)
+
     reveal_ch: int | None = None
     if ws is not None:
         try:
@@ -107,7 +168,16 @@ def build_chapter_prompt(
         except (OSError, TypeError, ValueError):
             pass
     bible_block = render_bible_block(series_bible or {}, lang=lang, reveal_chapter=reveal_ch)
-    spice = plan.get("spice", spice_for_chapter(direction, chapter))
+
+    plan_spice_raw = plan.get("spice", spice_for_chapter(direction, chapter))
+    try:
+        spice = int(plan_spice_raw)
+    except (TypeError, ValueError):
+        spice = spice_for_chapter(direction, chapter)
+    if registry is not None and spice > registry.spice_max:
+        _warn_spice_capped(chapter, spice, registry.spice_max)
+        spice = registry.spice_max
+
     spice_extra = plan.get("spice_note", "").strip()
     spice_blocks = prof.get("spice", {})
     spice_block = spice_blocks.get(spice, spice_blocks.get(1, ""))
@@ -121,6 +191,7 @@ def build_chapter_prompt(
         chapter,
         empty_line=prof["prior_empty"],
         max_chapters=int(cfg.get("story_so_far_max_chapters", 5) or 0) or None,
+        registry=registry,
     )
     must_not = coerce_text_list(plan.get("must_not", []))
     must_happen = coerce_text_list(plan.get("must_happen", []))
@@ -152,16 +223,20 @@ def build_chapter_prompt(
     cliff_label = "Kết cliffhanger:" if lang == "vi" else "End cliffhanger:"
     write_label = "Viết" if lang == "vi" else "Write"
 
-    parts = [
-        prof["role_header"].format(audience=audience),
-        "",
-        bible_block,
-        "",
-        f"## {prof['prior_heading']}",
-        prior,
-        "",
-        build_tech_rules(prof, min_words=int(cfg.get("min_word_count", 1500)), bible=series_bible),
-    ]
+    parts = [prof["role_header"].format(audience=audience)]
+    if locked_canon_block:
+        parts.extend(["", locked_canon_block])
+    parts.extend(
+        [
+            "",
+            bible_block,
+            "",
+            f"## {prof['prior_heading']}",
+            prior,
+            "",
+            build_tech_rules(prof, min_words=int(cfg.get("min_word_count", 1500)), bible=series_bible),
+        ]
+    )
     if sig:
         sig_heading = "SIGNATURE DETAIL GỢI Ý" if lang == "vi" else "SIGNATURE DETAIL HINT"
         parts.extend(["", f"## {sig_heading}", sig])

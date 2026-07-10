@@ -129,6 +129,19 @@ def _write_workspace(
     if workspace_mode:
         direction["workspace_mode"] = workspace_mode
     (ws / "direction.yaml").write_text(yaml.dump(direction, allow_unicode=True), encoding="utf-8")
+    (ws / "canon_registry.yaml").write_text(
+        """\
+characters:
+  female_lead:
+    canonical: Lin Wei
+    allowed_aliases: []
+  male_lead:
+    canonical: Adrian Vale
+    allowed_aliases: []
+pov_mode: third_person_limited
+""",
+        encoding="utf-8",
+    )
     return ws
 
 

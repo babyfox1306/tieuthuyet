@@ -385,7 +385,15 @@ def fix_plans(ws: Path, book: int, *, use_llm: bool = True) -> tuple[dict[int, l
     return remaining, n
 
 
-def approve_plan(ws: Path) -> None:
+def approve_plan(ws: Path, book: int | None = None) -> None:
+    from factory.engine.lib.canon_registry import CanonRegistryError, validate_plan_against_canon_registry
+
+    direction = load_direction(ws)
+    book_num = int(book if book is not None else direction.get("book") or 1)
+    conflicts = validate_plan_against_canon_registry(ws, book_num)
+    if conflicts:
+        raise CanonRegistryError(conflicts)
+
     path = ws / "direction.yaml"
     data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     data["plan_status"] = "approved"

@@ -484,6 +484,8 @@ def repair_catalog_book(
             direction=direction,
             cfg=cfg,
             target_lang=lang,
+            workspace_id=workspace_id,
+            book=book_num,
         )
         needs_fix = issues_to_needs_fix(m_issues)
         if meta.get("needs_fix") and not needs_fix:
@@ -553,7 +555,14 @@ def promote_chapter(
     spice = spice if spice is not None else (3 if ch_num == 3 else 1)
 
     direction = load_direction(ws)
-    m_issues = machine_qc(text, min_words=cfg["min_word_count"], direction=direction, cfg=cfg)
+    m_issues = machine_qc(
+        text,
+        min_words=cfg["min_word_count"],
+        direction=direction,
+        cfg=cfg,
+        workspace_id=workspace_id,
+        book=book,
+    )
     needs_fix = issues_to_needs_fix(m_issues)
 
     md, meta = text_to_catalog_md(
@@ -581,10 +590,13 @@ def promote_chapter(
 
     from factory.engine.lib.canon_guard import format_canon_guard_reasons, run_canon_guard
 
-    cg = run_canon_guard(workspace_id, body_for_gate, chapter=ch_num)
+    cg = run_canon_guard(workspace_id, body_for_gate, chapter=ch_num, book=book)
     if not cg.get("passed"):
-        for reason in format_canon_guard_reasons(cg)[:3]:
-            safe_print(f"  [canon guard WARN] ch_{ch:03d}: {reason}")
+        reasons = format_canon_guard_reasons(cg)
+        safe_print(f"  [promote blocked] ch_{ch:03d}: canon guard")
+        for reason in reasons[:6]:
+            safe_print(f"    {reason}")
+        return None, reasons
 
     fname = chapter_filename(ch_num, slug)
     existing = find_catalog_chapter_by_number(workspace_id, book_slug, ch_num)
@@ -675,7 +687,14 @@ def migrate_from_scripts(
         extra: list[str] = []
         if with_fixes:
             direction = load_direction(ws)
-            m_issues = machine_qc(text, min_words=cfg["min_word_count"], direction=direction, cfg=cfg)
+            m_issues = machine_qc(
+                text,
+                min_words=cfg["min_word_count"],
+                direction=direction,
+                cfg=cfg,
+                workspace_id=workspace_id,
+                book=1,
+            )
             extra = issues_to_needs_fix(m_issues)
             extra.extend(spec.get("continuity_flags", []))
 
