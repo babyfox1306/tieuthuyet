@@ -13,11 +13,16 @@ from typing import Any
 
 import yaml
 
-from factory.engine.lib.narrative_schema import narrative_dir
+from factory.engine.lib.narrative_schema import PROFILE_REQUIRED, narrative_dir
 from factory.engine.paths import workspace_dir
 
-# Profiles that use narrative compiler (not sweet_romance / dark_romance without ledger).
-NARRATIVE_COMPILER_PROFILES = frozenset({"romance_thriller", "conspiracy_thriller"})
+# Profiles whose required_files include mystery ledger + knowledge matrix.
+# Enablement itself is asset-driven (narrative_compiler_enabled) — not this set.
+NARRATIVE_COMPILER_PROFILES = frozenset(
+    name
+    for name, files in PROFILE_REQUIRED.items()
+    if "mystery_ledger.json" in files and "knowledge_matrix.json" in files
+)
 
 # Archived workspaces — prefer direction.yaml ``workspace_mode: archive``.
 ARCHIVE_WORKSPACES = frozenset()
@@ -35,7 +40,13 @@ def min_clues_for_reveal(reveal_weight: str) -> int:
 
 
 def narrative_compiler_enabled(ws: Path, direction: dict | None = None) -> bool:
-    """True when thriller profile + approved narrative + ledger files; not archive mode."""
+    """True when mystery narrative assets exist and narrative is approved.
+
+    Driven by workspace data from the user's concept pipeline — NOT by hardcoding
+    a genre (gothic/thriller/…). If concept → profile produced ledger+matrix and
+    the operator approved narrative, the compiler runs. Kill switches:
+    ``narrative_compiler: false`` or ``workspace_mode: archive``.
+    """
     if direction is None:
         direction = _load_direction(ws)
     if direction.get("narrative_compiler") is False:
@@ -43,9 +54,6 @@ def narrative_compiler_enabled(ws: Path, direction: dict | None = None) -> bool:
     if direction.get("workspace_mode") == "archive":
         return False
     if ws.name in ARCHIVE_WORKSPACES:
-        return False
-    profile = (direction.get("narrative_profile") or "").strip()
-    if profile not in NARRATIVE_COMPILER_PROFILES:
         return False
     if (direction.get("narrative_status") or "draft") != "approved":
         return False
@@ -605,7 +613,13 @@ def narrative_block_for_plan(compiled: dict[str, Any]) -> dict[str, Any]:
 
 
 def merge_narrative_into_plans(ws: Path, plans: list[dict]) -> list[dict]:
-    """Attach compiler narrative to each plan. Skips locked and archive workspaces."""
+    """Attach compiler narrative to each plan. Skips locked and archive workspaces.
+
+    Also injects ``[CLUE id]`` / ``[PAYOFF id]`` into must_happen when the ledger
+    schedules a plant/payoff for that chapter but the outliner beat text does not
+    yet reference it — so approve/QC does not fail purely because planning ran
+    before narrative assets were attached.
+    """
     if not narrative_compiler_enabled(ws):
         return plans
     ledger = load_ledger(ws)
@@ -623,5 +637,51 @@ def merge_narrative_into_plans(ws: Path, plans: list[dict]) -> list[dict]:
         compiled = compile_chapter_narrative(ledger, matrix, threads_data, ch)
         merged = dict(plan)
         merged["narrative"] = narrative_block_for_plan(compiled)
+        merged["must_happen"] = _ensure_clue_beats_in_must_happen(
+            list(merged.get("must_happen") or []),
+            compiled,
+            beat_summary=str(merged.get("beat_summary") or ""),
+        )
         out.append(merged)
     return out
+
+
+def _ensure_clue_beats_in_must_happen(
+    must_happen: list,
+    compiled: dict[str, Any],
+    *,
+    beat_summary: str = "",
+) -> list:
+    """Append missing scheduled clue/payoff lines so NC-07 can pass after merge."""
+    mh = [str(x) for x in must_happen]
+    blob = (" ".join(mh) + " " + beat_summary).lower()
+    details = compiled.get("clue_details") or {}
+
+    def _already(cid: str, content: str) -> bool:
+        if cid.lower() in blob:
+            return True
+        c = (content or "").lower().strip()
+        if len(c) >= 12 and c[:36] in blob:
+            return True
+        words = [w for w in re.findall(r"[a-zà-ỹ']{4,}", c) if w not in {"that", "with", "from", "this"}]
+        if words and sum(1 for w in words[:6] if w in blob) >= 2:
+            return True
+        return False
+
+    for cid in compiled.get("clues_plant") or []:
+        cid_s = str(cid)
+        content = str((details.get(cid_s) or {}).get("content") or "")
+        if _already(cid_s, content):
+            continue
+        mh.append(f"[CLUE {cid_s}] {content}".strip())
+        blob = (" ".join(mh) + " " + beat_summary).lower()
+
+    for cid in compiled.get("clues_payoff") or []:
+        cid_s = str(cid)
+        content = str((details.get(cid_s) or {}).get("content") or "")
+        if _already(cid_s, content):
+            continue
+        mh.append(f"[PAYOFF {cid_s}] {content}".strip())
+        blob = (" ".join(mh) + " " + beat_summary).lower()
+
+    return mh

@@ -1,0 +1,71 @@
+{
+  "description": "Narrative threads running through Book 1 of The Blue Hour, tracking the central mystery, character arcs, and series set-up. Each thread aligns with the 10-chapter act structure and the directive for concrete partial answers every 2-3 chapters.",
+  "threads": [
+    {
+      "id": "T01",
+      "name": "The Lake House Secret",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "closed",
+      "book1_resolution": "Elena recovers the full memory of Tomas's drowning and her role, accepts the truth, and reintegrates her severed self. The central mystery is fully resolved.",
+      "book2_promise": "",
+      "book1_payoff": "The reader learns exactly what happened at the lake, why Elena split herself, and experiences the catharsis of her reintegration.",
+      "note": "Primary investigative thread driving the entire plot."
+    },
+    {
+      "id": "T02",
+      "name": "The Girl in Blue",
+      "opened_chapter": 2,
+      "must_close_by": 10,
+      "status": "closed",
+      "book1_resolution": "Through reintegration, the girl in blue merges back into Elena's consciousness, ceasing to appear as a separate reflection. The haunting ends.",
+      "book2_promise": "",
+      "book1_payoff": "The final revelation that the girl is Elena's own younger self, and the poignant resolution when Elena 'takes her back' at the water's edge.",
+      "note": "Reflection-only apparition, never speaks. Represents Elena's suppressed childhood self."
+    },
+    {
+      "id": "T03",
+      "name": "The Drowning of Tomas",
+      "opened_chapter": 4,
+      "must_close_by": 9,
+      "status": "closed",
+      "book1_resolution": "The hidden diary/lockbox concretely names Tomas and implicates Elena; full memory recovery by chapter 9 confirms her presence at his drowning.",
+      "book2_promise": "",
+      "book1_payoff": "The core tragedy and guilt are laid bare, enabling the final choice.",
+      "note": "Buried true event; hints appear earlier but concrete evidence surfaces in Act 2."
+    },
+    {
+      "id": "T04",
+      "name": "Elena's Reintegration",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "closed",
+      "book1_resolution": "Elena makes the choice at the water's edge to accept the memory and guilt, becoming whole. Her arc from fragmented to integrated completes.",
+      "book2_promise": "Her new wholeness positions her to face Cora's parallel mystery in Book 2.",
+      "book1_payoff": "Emotional catharsis of choosing to remember and live with the truth, fulfilling the emotional question.",
+      "note": "Internal arc thread; milestones: first flashback (ch1), mid-point realization (ch5), final choice (ch10)."
+    },
+    {
+      "id": "T05",
+      "name": "Diane's Secret",
+      "opened_chapter": 2,
+      "must_close_by": 10,
+      "status": "closed",
+      "book1_resolution": "Diane's unwillingness to explain is broken when the full memory returns; the truth of what Diane knew and why she kept silent is revealed.",
+      "book2_promise": "Elena and Diane may begin to reconcile, leaving room for further exploration if needed.",
+      "book1_payoff": "The reader and Elena understand why Diane tried to keep her away — a mixture of guilt and protection.",
+      "note": "Diane is the living keeper of the secret; her phone calls escalate tension."
+    },
+    {
+      "id": "T06",
+      "name": "Cora's Shadow",
+      "opened_chapter": 9,
+      "must_payoff_by": 10,
+      "status": "carried_over",
+      "book1_resolution": "Cora's final diary entry reveals she also split herself and left a shade. The discovery is made but not resolved.",
+      "book2_promise": "This becomes the central mystery of Book 2: finding and dealing with Cora's second shadow.",
+      "book1_payoff": "Provides a shocking twist that the phenomenon was not unique to Elena, and sets up the sequel.",
+      "note": "Series-level thread; opened in the final act, intentionally unresolved."
+    }
+  ]
+}

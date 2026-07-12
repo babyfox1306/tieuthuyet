@@ -1,0 +1,100 @@
+{
+  "act": [
+    7,
+    9
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "Ash on the Playback Head",
+      "slug": "ash-on-the-playback-head",
+      "one_line_summary": "Nora stops Ruth from burning the archive, salvages a smoke-damaged reel, and hears Agnes name the drowning site without naming the lost child.",
+      "beat_summary": "Continue from Ruth tipping Agnes's reels into the cold fireplace as Nora moves from investigator to protector of the evidence, physically blocking her mother and saving the archive before flame can fully take it. In the struggle, Ruth's denial sharpens into accusation: she says Nora always wanted the tapes to make her innocent, a line that terrifies Nora because it implies guilt without explaining the crime. Nora salvages one smoke-damaged reel fused with ash and salt, cleans it enough to play a fragment, and hears Agnes recording a private inventory after the summer incident: 'Pool wall, low tide, one towel missing, one child silent.' The [ROMANCE] micro-beat must thread through the confrontation: when Ruth shoves past her, Nora braces against the empty space where M.I.A.'s body would have steadied her, feeling the ache of no witness, then chooses to become her own witness. End with the damaged reel producing a timestamp that matches the exact hour Nora cannot remember.",
+      "must_happen": [
+        "Nora physically stops Ruth from burning the reels and rescues the archive from the fireplace, accepting that the evidence matters more than preserving peace with her mother.",
+        "Ruth accuses Nora of wanting the tapes to prove she was innocent, implying Nora's childhood guilt without revealing the drowning, Della's identity, or the twin truth.",
+        "Nora separates smoke-damaged reels from salvageable ones and finds one fused with ash, salt, and fireplace soot from Agnes's final protected batch.",
+        "[ROMANCE] During the confrontation, Nora instinctively leans toward the empty place where M.I.A. would have steadied her after Ruth shoves past, then feels the lonely tension of having no body between her and the truth.",
+        "The salvaged reel plays Agnes's recorded inventory of the aftermath: pool wall, low tide, one towel missing, one child silent, with no child's name spoken.",
+        "Nora matches the reel's timestamp to a blank hour in her own childhood memory and realizes the erased event happened during a precise low-tide window."
+      ],
+      "must_not": [
+        "Do not reveal that the missing or erased child is Della.",
+        "Do not state that Nora had a twin or that Della drowned while Nora watched.",
+        "Do not let Ruth confess the family agreement to erase the child.",
+        "Do not let any supernatural voice speak live; all uncanny material must come through tapes, phone recording hums, or playback artifacts.",
+        "Do not introduce an actual male lead, rescuer, ghost lover, or romantic subplot."
+      ],
+      "opens_with": "\"Touch one match to those reels and I call it evidence destruction, not grief.\"",
+      "cliffhanger": "The smoke-damaged reel clicks past Agnes's inventory and a child's voice, warped almost flat by heat, whispers through the phone recorder: 'Nora stopped counting at seven.'",
+      "signature_detail_hint": "A reel flange has melted into the shape of a thumbprint, but the soot leaves a clean crescent where a child's hair ribbon had been wound around the hub.",
+      "emotional_beat": "Nora's tension with Ruth turns into raw vulnerability as her attraction to the forbidden evidence begins to sound like an accusation against herself.",
+      "spice": 1,
+      "spice_note": "Sweet only: keep the emotional charge in isolation, fear, and the need for witness; no sexual content, no kissing, no romantic subplot, and no living male lead.",
+      "chapter_task": "Write 1600-1900 words. Open in the immediate aftermath of chapter 6 with Ruth threatening the archive in the fireplace. Make the chapter active and claustrophobic: Nora must stop Ruth, preserve the reels, salvage one damaged tape, and extract a concrete clue that points to the low-tide pool incident without revealing the central truth. Include the required [ROMANCE] micro-beat as Nora's tense interior response to M.I.A.'s absence, not as a character entrance.",
+      "carries_to_next": "Nora has saved part of the archive, knows the forgotten event happened at low tide during a specific blank hour, and has a new phrase, 'stopped counting at seven,' to test against the pool tape."
+    },
+    {
+      "chapter": 8,
+      "title": "Seven Seconds Under",
+      "slug": "seven-seconds-under",
+      "one_line_summary": "Nora synchronizes the pool and ash reels, discovers the missing child was recorded beside her at the tidal pool, and loses the archive when Ruth steals the final reel.",
+      "beat_summary": "Nora locks herself in the restoration room after Ruth leaves or is forced out, using the low-tide timestamp to synchronize the ash-damaged reel with the hidden pool tape. The combined audio becomes more coherent than either tape alone: two children count near the tidal pool, one child slips or drops out of rhythm, water hits stone, and young Nora stops counting at seven seconds. Nora's body reacts before her mind can name the memory, with salt drying on her palm scar and the room warming for the length of a child's held breath. The [ROMANCE] micro-beat should appear during the synchronization sequence: Nora rests her shaking hand on the empty second chair where M.I.A. would have sat, feeling a flash of longing for someone to hear the same impossible audio, then keeps listening alone. At the crisis peak, Ruth steals or destroys access to the final intact reel, leaving Nora with only a partial transfer and a recording that now contains the forbidden name clipped to a single initial or breath.",
+      "must_happen": [
+        "Nora uses the low-tide timestamp from the ash reel to synchronize it with the hidden pool tape and create a layered playback of the same childhood moment.",
+        "The combined audio confirms two children were together at the tidal pool and that young Nora stopped counting at seven seconds just before a water impact or sudden silence.",
+        "Nora experiences a physical memory response, such as salt drying in her palm scar, breath locking, or her body counting before her mind can explain why.",
+        "[ROMANCE] While the synced playback runs, Nora touches the empty second chair associated with M.I.A.'s absence and feels tense longing for a witness who could hear the truth with her, then remains alone with the evidence.",
+        "The salt room warms briefly during the held-breath section of the tape and then turns violently cold when the second child's sound drops out.",
+        "Ruth returns, cuts power, steals the final intact reel, or otherwise removes Nora's access to the last full tape before Nora can restore it.",
+        "The partial transfer captures the beginning of the forbidden name as a clipped sound or initial, enough to prove a name exists but not enough to reveal Della yet."
+      ],
+      "must_not": [
+        "Do not reveal the full forbidden name as Della.",
+        "Do not state that the second child is Nora's twin.",
+        "Do not show the drowning in complete memory or explain Nora's role fully before chapter 10.",
+        "Do not let the second child appear visually or speak outside recorded audio.",
+        "Do not resolve Ruth's motive or the family-wide erasure yet."
+      ],
+      "opens_with": "\"Seven seconds is long enough for a child to disappear.\"",
+      "cliffhanger": "The power dies mid-transfer, and when Nora reaches the machine in the dark, the final reel is gone and Ruth's voice on the phone says, 'You do not get to say her name first.'",
+      "signature_detail_hint": "The synchronized tapes share the same tiny background sound: a metal crab bucket tapping three times against pool stone before the water goes silent.",
+      "emotional_beat": "Nora's fear becomes intimate and bodily, sharpened by lonely attraction to the truth and the vulnerable wish for someone beside her as the evidence turns toward memory.",
+      "spice": 1,
+      "spice_note": "Sweet only: maintain emotional intensity, dread, and longing for witness without sexual content, kissing, romantic escalation, or an actual male lead.",
+      "chapter_task": "Write 1600-1900 words. Build the act-three crisis around technical synchronization of the pool tape and ash reel. Deliver a major concrete payoff: two children were at the tidal pool, Nora stopped counting at seven, and the missing child had a forbidden name. Withhold the full name, twin reveal, drowning explanation, and family agreement until chapter 10. Include the required [ROMANCE] micro-beat through M.I.A.'s absence as lonely tension during playback.",
+      "carries_to_next": "Nora has a partial transfer proving the forbidden name exists, but Ruth has taken the final intact reel, forcing Nora to recover the last evidence from Ruth or from Agnes's hidden system."
+    },
+    {
+      "chapter": 9,
+      "title": "The Blue Box Opens",
+      "slug": "the-blue-box-opens",
+      "one_line_summary": "Nora finds the real blue box inside the salt room wall, recovers the final reel Ruth tried to keep from her, and hears Agnes instruct her to bring the truth back to the tidal pool.",
+      "beat_summary": "Begin with Nora pursuing the stolen final reel through the hotel rather than waiting for Ruth to dictate the terms, using the blue enamel on Ruth's key, Agnes's earlier message, and the salt room's impossible cold to re-check the wall behind the cupboard. She finds the actual blue box sealed inside the salt room wall, not in the cupboard, with a mechanism hidden under salt-thick paint and lined with hotel stationery from the erased summer. Inside are Agnes's emergency duplicate of the final reel, a transfer note, and a short recorded instruction: Agnes telling grown Nora that the room will not warm until the child is named where the water took her. The [ROMANCE] micro-beat belongs in the tight physical search: Nora cuts her palm reopening the wall, glances toward the empty doorway where M.I.A. would have stood watch, and feels the painful pull of wanting protection before choosing exposure instead. The chapter must set up chapter 10's full reveal and emotional resolution without delivering it early; end with Nora carrying the final reel to the tidal pool as the tape begins to play the first clear syllable of the lost child's name.",
+      "must_happen": [
+        "Nora uses prior clues, including the blue enamel on Ruth's key and Agnes's recorded blue-box instruction, to search the salt room wall instead of the obvious cupboard.",
+        "She finds the true blue box sealed behind salt-thick paint or a false wall panel in the cold room, proving Agnes built a failsafe against Ruth's destruction.",
+        "The blue box contains Agnes's emergency duplicate of the final reel, a transfer note, and evidence that Agnes expected Nora to reach this point only after hearing the partial name.",
+        "[ROMANCE] While reopening the wall, Nora cuts or scrapes her palm and looks toward the empty doorway where M.I.A. would have stood watch, feeling tense vulnerability and the pull of wanting protection before choosing to continue alone.",
+        "Agnes's recorded instruction tells adult Nora that the room will not warm until the child is named at the place where the water took her, without saying the name or explaining the full event.",
+        "Ruth tries one last time to stop Nora through a call, locked door, or direct confrontation, but Nora refuses to surrender the duplicate reel.",
+        "Nora leaves the hotel for the tidal pool with the final reel and a portable recorder, ready to restore and play the last tape in chapter 10."
+      ],
+      "must_not": [
+        "Do not reveal the name Della in full before chapter 10.",
+        "Do not reveal that Della was Nora's twin or that the family erased her after the drowning.",
+        "Do not let Agnes appear as a ghost or speak outside recorded media.",
+        "Do not complete Nora's recovered memory of the drowning in this chapter.",
+        "Do not introduce any actual male lead or romantic partner."
+      ],
+      "opens_with": "\"The blue box was never missing; Ruth taught me to look in the wrong wound.\"",
+      "cliffhanger": "At the tidal pool, the portable recorder turns by itself, the final reel catches, and the first clear syllable of the erased child's name rises from the speakers before the chapter cuts off.",
+      "signature_detail_hint": "The blue box is padded with old hotel stationery whose embossed letterhead has been rubbed flat everywhere except around two tiny milk teeth taped beneath the lid.",
+      "emotional_beat": "Nora's vulnerability becomes deliberate as lonely tension, dread, and attraction to the final truth pull her from the cold room back toward the water.",
+      "spice": 1,
+      "spice_note": "Sweet only: the chapter's intimacy is emotional and psychological, centered on exposure, fear, and the ache of no witness; no sexual content or romantic subplot.",
+      "chapter_task": "Write 1600-1900 words. Start act-four resolution setup without giving the chapter 10 reveal. Nora must recover the blue box, obtain Agnes's duplicate final reel, understand that the truth must be named at the tidal pool, and choose to go there despite Ruth's interference. Include the required [ROMANCE] micro-beat as restrained tension around M.I.A.'s absent protection, consistent with no living male lead.",
+      "carries_to_next": "Nora has the final reel, Agnes's instruction, and the courage to bring the recording to the tidal pool, where chapter 10 must reveal Della, the twin truth, the drowning, and Nora's choice to say the name aloud."
+    }
+  ]
+}

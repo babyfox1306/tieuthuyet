@@ -25,44 +25,55 @@ from factory.engine.lib.narrative_schema import (
 )
 from factory.engine.paths import bible_path, load_config, workspace_dir
 
-import importlib
-
 from factory.ui import factory_workflow
 
-UI_VERSION = "2026-07-09f"
+UI_VERSION = "2026-07-12b"
+
+_workflow_lock = __import__("threading").Lock()
+_workflow_cache = None  # type: ignore[var-annotated]
 
 
-def _workflow():
-    """Reload engine + workflow mỗi request — UI luôn dùng code mới nhất."""
-    import factory.engine.paths as paths
-    import factory.engine.lib.prose_sanitize as prose_sanitize
-    import factory.engine.lib.machine_qc as machine_qc
-    import factory.engine.lib.export_gate as export_gate
-    import factory.engine.lib.catalog as catalog
+def _workflow(*, force_reload: bool = False):
+    """Return factory_workflow module (stable across concurrent requests).
 
-    importlib.reload(paths)
-    importlib.reload(prose_sanitize)
-    importlib.reload(machine_qc)
-    importlib.reload(export_gate)
-    importlib.reload(catalog)
-    import factory.engine.lib.book_config as book_config
-    importlib.reload(book_config)
-    return factory_workflow
+    Do NOT purge ``sys.modules`` on every request — ThreadingHTTPServer runs
+    overlapping handlers; a purge mid-request causes KeyError /
+    ``NoneType.__dict__`` races (UI: \"Lỗi tải: 'factory.ui.factory_workflow'\").
+
+    After editing engine/UI code: restart the UI server, or POST /api/reload.
+    """
+    global _workflow_cache
+
+    if force_reload:
+        import sys
+
+        with _workflow_lock:
+            for name in list(sys.modules):
+                if name == "factory.ui.factory_workflow" or name.startswith(
+                    "factory.engine.lib."
+                ):
+                    sys.modules.pop(name, None)
+            import factory.ui.factory_workflow as fw  # noqa: F401
+
+            _workflow_cache = fw
+            return fw
+
+    if _workflow_cache is not None:
+        return _workflow_cache
+
+    with _workflow_lock:
+        if _workflow_cache is not None:
+            return _workflow_cache
+        import factory.ui.factory_workflow as fw
+
+        _workflow_cache = fw
+        return fw
 
 
 def _concept_mark_ready(ws: Path) -> tuple[bool, list[str]]:
-    """Mark ready — logic inline so UI server không phụ thuộc module cache cũ."""
-    concept = load_concept(ws)
-    check = concept_content_errors(concept)
-    if check:
-        return False, check
-    concept["concept_status"] = "ready"
-    path = ws / "concept.yaml"
-    path.write_text(
-        yaml.dump(concept, allow_unicode=True, default_flow_style=False, sort_keys=False),
-        encoding="utf-8",
-    )
-    return True, []
+    from factory.engine.lib.concept_cli import concept_mark_ready
+
+    return concept_mark_ready(ws)
 
 UI_DIR = Path(__file__).resolve().parent / "static"
 WORKSPACES_ROOT = ROOT / "factory" / "workspaces"
@@ -90,33 +101,10 @@ def _save_direction(ws: Path, data: dict) -> None:
 
 
 def _sync_workspace_language(ws: Path, lang: str) -> None:
-    """Đồng bộ target_language — concept UI là nơi chọn chính."""
-    lang = normalize_language(lang)
-    direction = _load_direction(ws)
-    if direction:
-        direction["target_language"] = lang
-        _save_direction(ws, direction)
+    """Đồng bộ target_language — UI concept là nơi chọn chính."""
+    from factory.engine.lib.operator_sync import write_language_everywhere
 
-    bible = bible_path(ws)
-    if bible.exists():
-        import json as _json
-
-        data = _json.loads(bible.read_text(encoding="utf-8"))
-        meta = data.setdefault("meta", {})
-        meta["target_language"] = lang
-        bible.write_text(
-            _json.dumps(data, indent=2, ensure_ascii=False),
-            encoding="utf-8",
-        )
-
-    manifest = ws / "manifest.yaml"
-    if manifest.exists():
-        m = yaml.safe_load(manifest.read_text(encoding="utf-8")) or {}
-        m["target_language"] = lang
-        manifest.write_text(
-            yaml.dump(m, allow_unicode=True, default_flow_style=False, sort_keys=False),
-            encoding="utf-8",
-        )
+    write_language_everywhere(ws, lang)
 
 
 def _sync_direction_manifest_from_concept(ws: Path, concept: dict) -> None:
@@ -170,11 +158,12 @@ def create_workspace(body: dict) -> dict:
                 copy_concept=body.get("copy_concept", True),
             )
         else:
+            tc = body.get("total_chapters")
             path = init_blank_workspace(
                 ws_id,
                 title=title,
                 target_language=lang,
-                total_chapters=int(body.get("total_chapters") or 30),
+                total_chapters=int(tc) if tc is not None else None,
             )
     except FileExistsError as exc:
         return {"ok": False, "error": str(exc)}
@@ -186,7 +175,7 @@ def create_workspace(body: dict) -> dict:
     if body.get("total_chapters") is not None:
         from factory.engine.lib.book_config import set_total_chapters
 
-        set_total_chapters(ws_id, 1, int(body.get("total_chapters") or 30))
+        set_total_chapters(ws_id, 1, int(body["total_chapters"]))
 
     return {
         "ok": True,
@@ -250,6 +239,9 @@ def save_concept(ws_id: str, body: dict, *, mark_ready: bool = False) -> dict:
             encoding="utf-8",
         )
         _sync_direction_manifest_from_concept(ws, data)
+        from factory.engine.lib.operator_sync import write_title_everywhere
+
+        write_title_everywhere(ws, data.get("title", ""))
         return concept_to_json(ws_id)
 
     # save draft first then validate for ready
@@ -264,6 +256,9 @@ def save_concept(ws_id: str, body: dict, *, mark_ready: bool = False) -> dict:
         return {"ok": False, "errors": errs, **concept_to_json(ws_id)}
     concept = load_concept(ws)
     _sync_direction_manifest_from_concept(ws, concept)
+    from factory.engine.lib.operator_sync import write_title_everywhere
+
+    write_title_everywhere(ws, concept.get("title", ""))
     return {"ok": True, **concept_to_json(ws_id)}
 
 
@@ -414,6 +409,22 @@ class Handler(BaseHTTPRequestHandler):
         path = parsed.path
         body = self._read_json()
 
+        if path == "/api/reload":
+            try:
+                fw = _workflow(force_reload=True)
+                self._json(
+                    200,
+                    {
+                        "ok": True,
+                        "reloaded": True,
+                        "module": getattr(fw, "__file__", None),
+                        "ui_version": UI_VERSION,
+                    },
+                )
+            except Exception as exc:
+                self._json(500, {"ok": False, "error": str(exc)})
+            return
+
         if path == "/api/workspaces":
             try:
                 self._json(200, create_workspace(body or {}))
@@ -485,6 +496,9 @@ class Handler(BaseHTTPRequestHandler):
             to_ch = int(to_ch) if to_ch is not None else None
             stop_on_review = bool(body.get("stop_on_review", False))
             auto_from = bool(body.get("auto_from", False))
+            write_mode = str(body.get("write_mode") or "supervised").strip().lower()
+            if write_mode not in ("supervised", "auto"):
+                write_mode = "supervised"
             try:
                 wf = _workflow()
                 if mode == "prep":
@@ -497,6 +511,7 @@ class Handler(BaseHTTPRequestHandler):
                         to_ch,
                         stop_on_review=stop_on_review,
                         auto_from=auto_from,
+                        write_mode=write_mode,
                     )
                 elif mode == "full":
                     result = wf.start_batch_full(
@@ -506,6 +521,7 @@ class Handler(BaseHTTPRequestHandler):
                         to_ch,
                         stop_on_review=stop_on_review,
                         auto_from=auto_from,
+                        write_mode=write_mode,
                     )
                 else:
                     self._json(400, {"error": f"unknown mode: {mode}"})

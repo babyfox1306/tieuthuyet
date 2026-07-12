@@ -14,19 +14,6 @@ _FIRST_PERSON_OUTSIDE_RE = re.compile(
     re.IGNORECASE,
 )
 
-# Conservative explicit-content markers for spice_max <= 1 (flag for review).
-_SPICE_EXPLICIT_MARKERS: list[tuple[re.Pattern[str], str]] = [
-    (re.compile(r"\bthrust(?:ing|s|ed)?\b", re.I), "thrust"),
-    (re.compile(r"\bmoan(?:ed|ing|s)?\b", re.I), "moaned"),
-    (re.compile(r"\bgroan(?:ed|ing|s)?\b", re.I), "groaned"),
-    (re.compile(r"\bclimax(?:ed|ing)?\b", re.I), "climax"),
-    (re.compile(r"\borgasm\b", re.I), "orgasm"),
-    (re.compile(r"\binside (?:her|him)\b", re.I), "inside her/him"),
-    (re.compile(r"\b(naked|nude|undress(?:ed|ing)?)\b", re.I), "naked/undress"),
-    (re.compile(r"\bharder,?\s+(?:faster|deeper)\b", re.I), "harder/deeper"),
-]
-
-
 def strip_dialogue_for_pov(text: str) -> str:
     """Remove quoted dialogue spans before scanning for first-person narration."""
     body = re.sub(r"^#.*$", "", text, flags=re.M)
@@ -77,16 +64,14 @@ def find_name_drift_hits(text: str, registry: CanonRegistry) -> list[dict[str, s
     return hits
 
 
-def find_spice_marker_hits(text: str) -> list[str]:
-    found: list[str] = []
-    for pat, label in _SPICE_EXPLICIT_MARKERS:
-        if pat.search(text) and label not in found:
-            found.append(label)
-    return found
-
-
 def canon_prose_issues(text: str, registry: CanonRegistry) -> dict[str, Any]:
-    """Aggregate canon prose violations for machine_qc."""
+    """Aggregate canon prose violations for machine_qc.
+
+    Spice/content boundaries are NOT keyword-scanned here — they are enforced
+    by injecting concept must_avoid / spice_max into the writer LOCKED CANON
+    block at generation time. Keyword lists cannot tell "floorboards groaned"
+    from an intimate scene.
+    """
     issues: dict[str, Any] = {}
     drift = find_name_drift_hits(text, registry)
     if drift:
@@ -98,8 +83,4 @@ def canon_prose_issues(text: str, registry: CanonRegistry) -> dict[str, Any]:
                 "count": fp_count,
                 "threshold": POV_FIRST_PERSON_THRESHOLD,
             }
-    if registry.spice_max <= 1:
-        markers = find_spice_marker_hits(text)
-        if markers:
-            issues["spice_violation"] = markers
     return issues

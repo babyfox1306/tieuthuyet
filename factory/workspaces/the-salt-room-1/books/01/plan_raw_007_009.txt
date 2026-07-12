@@ -1,0 +1,214 @@
+{
+  "act": [
+    7,
+    9
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Name Agnes Hid",
+      "slug": "the-name-agnes-hid",
+      "one_line_summary": "Nora restores Agnes's damaged labels and learns the erased child was Della Vance, her twin sister, while Ruth's reaction proves the name was never forgotten.",
+      "beat_summary": "Open with the restored tape forcing a second name out of the scrape where Agnes's label had been damaged. Quiet wrongness comes first when Nora notices the salt room's cold is now strongest around the archive box rather than the room itself, as if the evidence has carried the temperature with it. Nora pays off C002 by matching the scratched photograph to Agnes's hidden log and understanding the erased face belonged to Della Vance, not an unknown guest or distant cousin. She pays off C005 when the rubbed-out second initial on Agnes's tape index resolves into D for Della, proving Agnes recorded both girls and hid the name in a way that preserved it. Plant and pay off C009 cleanly: Agnes's log names Nora Vance and Della Vance as twin girls, age seven, assigned to the salt room. Plant C010 through Ruth's immediate recognition of Della's name before Nora explains what she found, but do not prove Ruth's active role yet. The required romance-marked beat remains canon-compliant: with no male lead, Nora feels the sharp absence of someone to hold her steady, and that ache turns into vulnerable resolve as she says her twin's name aloud to the empty room.",
+      "must_happen": [
+        "Pay off C002: Nora identifies the scratched-out child in the family photograph as Della Vance through Agnes's log, restored label, or cross-referenced archive note.",
+        "Pay off C005: Nora restores or deciphers the rubbed-out second initial on Agnes's tape index and confirms it was D for Della, hidden beside Nora's name.",
+        "Plant and pay off C009: Nora finds Agnes's record naming Nora Vance and Della Vance as twin sisters, both seven, connected to the salt room.",
+        "Plant C010: Ruth hears or sees Della's name and reacts with recognition before Nora tells her what the archive proves, showing Ruth has always known Della existed without yet proving active erasure.",
+        "[ROMANCE] No male lead exists in canon, so write the required romance-slot micro-beat as absence and vulnerability: Nora reaches for the comfort of another steady body or voice, finds no one there, and says Della's name aloud because the truth must become the only witness.",
+        "Nora speaks Della Vance's name as fact for the first time and records the room tone afterward, capturing only tape hiss and her own uneven breathing."
+      ],
+      "must_not": [
+        "Do not reveal that Della drowned in the tidal pool, that Nora stood frozen and silent, or that the tidal pool is the death site.",
+        "Do not prove Ruth actively helped erase Della; Ruth may recognize the name and panic, but the proof lands in Chapter 8.",
+        "Do not let Della appear visually, speak live, touch Nora, or act as an attacking ghost.",
+        "Do not introduce or hint at the third child voice or Agnes preserving evidence of another erased child."
+      ],
+      "opens_with": "\"Della,\" the tape said from inside the wound where the name had been scraped away.",
+      "cliffhanger": "When Nora sends Ruth a photo of Agnes's log, Ruth replies with a single voice message: \"You were never supposed to learn her name.\"",
+      "signature_detail_hint": "Agnes's hidden log uses two different pencil pressures on the same line: Nora's name written lightly, Della's pressed so hard the letters are readable from the page beneath.",
+      "emotional_beat": "Nora's dread becomes intimate vulnerability as the emptiness beside her takes a name, and the absence of comfort sharpens the tension instead of softening it.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; keep the charge in grief, isolation, and the forbidden intimacy of a restored twin bond.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Deliver the Chapter 7 identity payoff exactly: Della Vance is named as Nora's twin sister, age seven, through Agnes's preserved archive. Pay off C002, C005, and C009; plant C010 through Ruth's recognition. Do not reveal the drowning, Nora's frozen silence, the tidal pool's true meaning, Ruth's active participation, or any third child voice. Include one quiet wrongness before overt dread and include the required [ROMANCE] absence beat without inventing a male lead or romance subplot.",
+      "carries_to_next": "Nora now knows Della was her twin, and Ruth's recognition of the name pushes Nora to prove who maintained the erasure.",
+      "narrative": {
+        "clues_plant": [
+          "C009",
+          "C010"
+        ],
+        "clues_payoff": [
+          "C002",
+          "C005",
+          "C009"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T006",
+          "T007",
+          "T008"
+        ],
+        "clue_beats": {
+          "C002": "Match the scratched photograph to Agnes's named log so the erased face is concretely identified as Della Vance.",
+          "C005": "Use Nora's restoration skills to recover the hidden D initial beside her own on Agnes's tape index.",
+          "C009": "Make Agnes's record explicit: Nora Vance and Della Vance, twins, age seven, assigned to the salt room.",
+          "C010": "Let Ruth recognize Della's name too quickly, planting that she has maintained the lie."
+        },
+        "knowledge": {
+          "may_know": [
+            "Nora Vance: Della's name",
+            "Nora Vance: that Della was her twin sister",
+            "Nora Vance: that Agnes preserved proof of Della",
+            "Ruth Vance: that Ruth recognizes Della's name"
+          ],
+          "must_not_know": [
+            "Nora Vance: that Della drowned in the tidal pool",
+            "Nora Vance: that Nora stood frozen and silent during the drowning",
+            "Nora Vance: that Ruth actively helped erase Della",
+            "Nora Vance: that there is a third erased child voice"
+          ]
+        }
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Woman Who Taught Silence",
+      "slug": "the-woman-who-taught-silence",
+      "one_line_summary": "Nora confronts Ruth with Della's name and uncovers proof that Ruth actively helped erase Della from the family, while Agnes's final pool recording waits unopened.",
+      "beat_summary": "Open with Ruth ordering Nora to destroy anything with Della's name on it, turning recognition into active pressure. Quiet wrongness comes first when Nora finds that every family document after the lost summer has the same blank spacing where Della's name should have altered the line, as if silence became a formatting rule. Pay off C010 through Ruth's knowledge: she does not ask who Della is, only how much Nora has restored. Plant and pay off C011 when Nora discovers Ruth's handwriting on altered labels, photograph sleeves, or a family instruction note telling others not to say Della's name, proving Ruth actively participated in the erasure and trained the household into silence. Plant C012 by locating the final damaged reel tied to the tidal pool, labeled in Agnes's system as a recording from the last moments before the truth, but do not play enough to reveal drowning or Nora's frozen silence. The required romance-marked beat remains non-romantic and canonical: Nora's need for a protective presence spikes during Ruth's confrontation, but no male lead exists, so she stands alone with one hand flat on the tape deck, choosing evidence over the comfort Ruth offers if she will forget.",
+      "must_happen": [
+        "Pay off C010: Ruth proves she has always known Della existed by reacting to the name with specific fear, control, or familiarity rather than confusion.",
+        "Plant and pay off C011: Nora finds direct evidence in Ruth's handwriting, voice, or archived instruction that Ruth helped remove Della from photographs, labels, speech, and family memory.",
+        "Plant C012: Nora finds Agnes's final damaged reel or reel note connected to the tidal pool and marked as containing the moments before the hidden truth, but she does not yet restore or understand the fatal event.",
+        "[ROMANCE] No male lead exists in canon, so write the required romance-slot micro-beat as absence under threat: Nora feels the instinctive need for someone to step between her and Ruth's pressure, but she anchors herself on the tape deck and lets the evidence protect her instead.",
+        "Ruth offers Nora a softer version of forgetting, framing silence as mercy, and Nora refuses because comfort that falsifies evidence violates her core boundary.",
+        "The salt room's cold follows Nora into the archive after Ruth leaves or hangs up, linking the erasure to family silence rather than an attacking ghost."
+      ],
+      "must_not": [
+        "Do not reveal that Della drowned in the tidal pool or that Nora stood frozen and silent during the drowning.",
+        "Do not play C012 far enough to expose the final moments; it must be planted for Chapter 10 payoff.",
+        "Do not claim Ruth's silence specifically followed Della's drowning yet; Nora can know active erasure, but not the death context.",
+        "Do not show Della visually, allow live speech, physical touch from the dead, or any third child voice."
+      ],
+      "opens_with": "\"Burn it,\" Ruth said, and Nora knew her mother had not asked whose name was on the tape.",
+      "cliffhanger": "Nora opens Agnes's final reel box and finds Ruth's handwriting on the inner flap: \"Do not let Nora hear the pool take.\"",
+      "signature_detail_hint": "Ruth's old correction fluid has cracked into tiny white islands over Della's name, but the pressure marks underneath remain dark enough for Nora to read with a pencil rubbing.",
+      "emotional_beat": "Nora's vulnerability hardens into defiance as Ruth offers comfort in exchange for silence, and the tension comes from refusing the person who taught her how to forget.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; the emotional intensity is family confrontation, coercive comfort, and Nora's isolated refusal.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Pay off C010 and C011 by proving Ruth knew Della existed and actively helped erase her from family records and speech. Plant C012 as the final damaged pool reel without revealing the drowning, Nora's frozen silence, or the complete death context. Keep Della present only through recorded sound and artifacts. Include one quiet wrongness before overt dread and include the required [ROMANCE] absence beat without inventing a male lead or romance subplot.",
+      "carries_to_next": "Nora has proof Ruth maintained the erasure and now holds Agnes's final pool reel, but the tape is too damaged to play without a risky restoration.",
+      "narrative": {
+        "clues_plant": [
+          "C011",
+          "C012"
+        ],
+        "clues_payoff": [
+          "C010",
+          "C011"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T006",
+          "T007",
+          "T008",
+          "T009"
+        ],
+        "clue_beats": {
+          "C010": "Ruth's first response to Della's name must show recognition, not confusion.",
+          "C011": "Use Ruth's handwriting, voice, or explicit family instruction to prove she actively participated in erasing Della.",
+          "C012": "Introduce the final pool reel as dangerous, damaged evidence of the moments before the full truth, held back for Chapter 10."
+        },
+        "knowledge": {
+          "may_know": [
+            "Nora Vance: that Ruth actively helped erase Della",
+            "Ruth Vance: that Ruth actively participated in erasing Della",
+            "Nora Vance: that Agnes's final damaged reel is tied to the tidal pool"
+          ],
+          "must_not_know": [
+            "Nora Vance: that Della drowned in the tidal pool",
+            "Nora Vance: that Nora stood frozen and silent during the drowning",
+            "Nora Vance: that there is a third erased child voice",
+            "Ruth Vance: that Ruth's silence followed Della's drowning"
+          ]
+        }
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "The Tape That Wanted Her",
+      "slug": "the-tape-that-wanted-her",
+      "one_line_summary": "Nora prepares Agnes's final pool reel and discovers it is keyed to her own lost memory, forcing her toward the tidal pool before she knows what happened there.",
+      "beat_summary": "Open with the final reel refusing to thread until Nora says Della's name beside it. Quiet wrongness comes first when Nora's restoration software creates a file timestamped from the summer she was seven, though the laptop clock is correct. Nora plants C013 by discovering the final tape is not only an audio record but an intentional memory key: Agnes marked it so Nora would have to choose restoration over destruction before the truth could surface. Plant C014 through sensory fragments embedded in the damaged tape: Nora hears her own seven-year-old breathing, Della nearby, water against stone, and Agnes counting levels, enough to show Nora was present at the crucial event but not enough to reveal drowning or her frozen silence. Ruth tries to stop Nora again, making the emotional pressure acute, while Nora refuses to destroy the reel. The required romance-marked beat stays within canon: no male lead enters, and Nora's lonely desire for someone to take her hand becomes a tense physical ritual as she steadies her own fingers on the splicing block and chooses to carry Della's name forward alone. End with Nora taking the restored-but-unplayed final file toward the tidal pool.",
+      "must_happen": [
+        "Plant C013: Nora discovers Agnes designed the final tape as a memory key that requires Nora's active choice to restore, preserve, and listen rather than destroy or forget.",
+        "Plant C014: Nora restores partial fragments proving her seven-year-old self was present near Della and the tidal pool during the crucial lost event, without revealing drowning or frozen silence.",
+        "Nora uses her professional restoration process on the most fragile reel, making the technical risk feel like a moral risk because the tape may be the last intact evidence of Della.",
+        "[ROMANCE] No male lead exists in canon, so write the required romance-slot micro-beat as self-contained vulnerability: Nora wants a hand over hers at the splicing block, finds only her own shaking fingers, and lets that absence become determination instead of romance.",
+        "Ruth attempts one last prevention tactic, such as pleading, threatening family collapse, or claiming Nora will hate herself if she listens, but Nora refuses to destroy the evidence.",
+        "Nora prepares to take the final restored file or portable recorder to the tidal pool, still unaware that the pool is where Della drowned."
+      ],
+      "must_not": [
+        "Do not reveal that Della drowned in the tidal pool; that payoff belongs in Chapter 10.",
+        "Do not reveal that Nora stood frozen and silent during Della's drowning; C014 is only planted here.",
+        "Do not pay off C012, C013, or C014 in this chapter; keep the final memory locked for Chapter 10.",
+        "Do not introduce the third child voice, Agnes's wider archive of erased children, or the Book 2 hook early.",
+        "Do not let Della appear visually, speak live, touch Nora, or act as an attacking ghost."
+      ],
+      "opens_with": "\"Say her name first,\" Agnes's dead recorder clicked, and the blank reel tightened under Nora's hand.",
+      "cliffhanger": "At the tidal pool gate, Nora's portable recorder starts playing by itself, and seven-year-old Nora's voice whispers, \"I was there.\"",
+      "signature_detail_hint": "The final reel has a splice made with old surgical paper tape, thin enough to show Agnes's handwritten arrow beneath the adhesive: LISTEN WHERE IT HAPPENED.",
+      "emotional_beat": "Nora's tension and vulnerability peak as she chooses the terror of memory over the seduction of being comforted back into silence.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; keep the intensity in dread, grief, memory pressure, and Nora's solitary choice.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Plant C013 and C014 clearly without paying them off: the final tape is keyed to Nora's choice to remember, and partial audio proves child Nora was present near Della and the tidal pool during the crucial event. Do not reveal the drowning, Nora's frozen silence, Ruth's silence after the drowning, the third child voice, or Agnes's wider archive. Include one quiet wrongness before overt dread and include the required [ROMANCE] absence beat without inventing a male lead or romance subplot.",
+      "carries_to_next": "Nora reaches the tidal pool with the final restored file ready to play, setting up the Chapter 10 recovery of Della's drowning, Nora's frozen silence, and Nora's choice to say Della's name aloud.",
+      "narrative": {
+        "clues_plant": [
+          "C013",
+          "C014"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T006",
+          "T007",
+          "T008",
+          "T009"
+        ],
+        "clue_beats": {
+          "C013": "Make Agnes's final tape function as a deliberate memory key that Nora must choose to preserve and listen to.",
+          "C014": "Let fragmented audio place seven-year-old Nora at the tidal pool with Della, but stop before drowning or frozen silence becomes knowable."
+        },
+        "knowledge": {
+          "may_know": [
+            "Nora Vance: that the final tape is tied to her own lost memory",
+            "Nora Vance: that her seven-year-old self was present near Della and the tidal pool during the crucial hidden event",
+            "Nora Vance: that Ruth actively helped erase Della"
+          ],
+          "must_not_know": [
+            "Nora Vance: that Della drowned in the tidal pool",
+            "Nora Vance: that Nora stood frozen and silent during the drowning",
+            "Nora Vance: that there is a third erased child voice",
+            "Agnes Vance: that Agnes knew the tidal pool recording held the final answer"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -33,10 +33,15 @@ chapter_task, carries_to_next
 8. one_line_summary: 1 câu — chương sau đọc như "## ĐÃ XẢY RA".
 9. Nối prior_plans — KHÔNG reset bối cảnh.
 
-## ROMANCE TRONG THRILLER (BẮT BUỘC — mọi cuốn)
-Đây là **romance** có nền thriller/gia tộc/bí ẩn — cốt nguy hiểm giữ nguyên, nhưng reader romance phải được "ăn" từng chương.
+## ROMANCE TRONG THRILLER
+Đây là **romance** có nền thriller/gia tộc/bí ẩn — trừ khi canon **không có male lead**.
 
-**MỖI chapter_plan, kể cả chương action/thriller/spice=0, PHẢI có ≥1 micro-beat tình cảm giữa female_lead và male_lead** (đọc tên từ series_bible.leads):
+**Nếu male_lead = Unassigned / no male lead / M.I.A. (đọc từ series_bible / canon_registry):**
+- CẤM bịa love interest, caretaker romance, hoặc bác sĩ hiện diện vật lý (vd. Dr. Mateo / Noah / Hale).
+- Mỗi chapter vẫn có ≥1 mục `[ROMANCE]` **hoặc** `[ISOLATION]` dạng absence only (empty corridor, no hand to take, phone-only attending).
+- Chỉ dùng supporting cast đã khai trong concept/bible. Dr. Ovid (nếu có) = phone-only, không romantic, không bước vào phòng.
+
+**Nếu có male lead thật:** MỖI chapter_plan PHẢI có ≥1 micro-beat tình cảm giữa female_lead và male_lead:
 - Ghi rõ trong **must_happen** (ít nhất 1 mục bắt đầu bằng `[ROMANCE]`).
 - Nhắc lại ngắn trong **beat_summary** — xen vào lúc căng nguy, không tách cảnh riêng vô lý.
 - Micro-beat = một trong: ánh mắt/khoảnh khắc nhìn nhau; chạm tay/vai/lưng khi nguy hiểm; một câu hớ hê lộ cảm xúc thật; im lặng hiểu nhau giữa hỗn loạn; bảo vệ cơ thể trước kẻ thù (không cần thân mật).
@@ -47,4 +52,4 @@ chapter_task, carries_to_next
 ## ARC
 act1_setup → act2_complications → act3_crisis → act4_resolution. Book kết đúng book1_ending trong direction.
 
-Trước khi trả JSON, tự rà từng chapter_plan: 9 quy tắc kỹ thuật + **mỗi ch có [ROMANCE] micro-beat giữa 2 lead**.
+Trước khi trả JSON, tự rà từng chapter_plan: 9 quy tắc kỹ thuật + romance/isolation đúng theo có/không male lead.

@@ -1,0 +1,47 @@
+id: the-paper-oracle
+pen_name: ''
+target_language: en
+publish_strategy: kdp_ku_exclusive
+narrative_status: approved
+book: 1
+canon_through: 0
+platform: kdp
+audience: women 18-35, mobile reading, hook-driven serial fiction
+goal: end-of-chapter hooks — international thriller-romance pace
+setting_hub: The Paper Oracle — primary setting
+setting_nodes: []
+spice_default: 1
+spice_explicit_chapters: []
+spice_steamy_chapters: []
+book1_ending: 'Iris understands the machine reflects her own hand, not the future.
+  Facing a slip with HER OWN name, she breaks the loop: she stops resisting, accepts
+  a death she cannot prevent rather than causing one by fighting, and burns the machine.
+  She survives. The machine goes silent. Her year-old guilt is resolved — she finally
+  knows the truth about that death.'
+blurb: A night-shift nurse in a 1994 coastal ER finds a label printer that spits out
+  a patient's name and time of death before they walk through the door — and the first
+  slip names a child who arrives thirty-five minutes early.
+tropes: []
+spice_badge: sweet
+target_platforms:
+- kdp
+spice_level: 1
+plan_status: approved
+bible_status: approved
+book_slug: 01-the-paper-oracle
+total_chapters: 10
+arc:
+  act1_setup:
+  - 1
+  - 2
+  act2_complications:
+  - 3
+  - 6
+  act3_crisis:
+  - 7
+  - 8
+  act4_resolution:
+  - 9
+  - 10
+narrative_profile: Psychological thriller with supernatural and medical procedural
+  elements; slow-burn suspense; locked single POV; tone of dread and restraint.

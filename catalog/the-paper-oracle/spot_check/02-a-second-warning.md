@@ -1,0 +1,189 @@
+---
+series: the-paper-oracle
+book: 1
+chapter: 2
+title: A Second Warning
+spice: 1
+word_count: 1827
+status: draft
+needs_fix: []
+promoted_at: '2026-07-12T07:05:51Z'
+---
+
+"Don't print," Iris whispered, but the machine screamed awake before her hand could reach the plug.
+
+The sound was high-pitched, a mechanical shriek that cut through the low hum of the ER at 03:55. The gray plastic box vibrated on the counter, its internal gears grinding with a violence that made the coffee in her cup ripple. Iris froze, her fingers hovering inches from the smooth, seamless casing she had inspected only minutes ago.
+
+There was no cord. She had checked. She had held it in her hands. It was a sealed, battery-less tomb of plastic.
+
+And yet, it was whirring. A fresh white slip began to feed from the black jaw of the feeder, inching forward with a slow, deliberate inevitability.
+
+Iris glanced at the trauma bays. Dr. Reyes was finishing the paperwork on Lena Zarate. The girl was gone. The room was dark. The clock on the wall ticked over to 03:56.
+
+The machine finished its job with a sharp snick.
+
+Iris stared at the label. It sat perfectly aligned on the roller, the thermal ink dark and stark against the white paper.
+
+ARTHUR BELL — 04:12.
+
+She tore it free. The paper was warm, almost hot, radiating a heat that seeped into her fingertips.
+
+"Arthur Bell," she murmured. The name meant nothing to her. No one on the board. No ambulance called in.
+
+She checked her wrist. Two fingers pressed against the radial bone. Thump-thump. Too fast. She was letting a glitch get to her. It was a fluke. A random thermal printing error triggered by a power surge in the old building. Lena Zarate was a tragedy, a statistical anomaly of severe asthma presenting late. The name on the first slip was a coincidence. It had to be.
+
+She crumpled the new slip in her fist, intending to throw it in the biohazard bin, but stopped. Her fingers uncurled. She smoothed the paper out against the counter. It was undeniable proof of the malfunction. If she showed this to the charge nurse, maybe they would finally send the thing to biomedical engineering.
+
+The automatic doors at the end of the hall slid open with a heavy thud.
+
+Two paramedics wheeled in a gurney, moving fast but not running. The man on the stretcher was clutching his chest, his face the color of wet concrete.
+
+"Sixty-five-year-old male, chest pain started twenty minutes ago at home," the younger paramedic shouted, veering toward Triage 1. "BP is one-fifty over ninety, pulse is irregular. We gave him nitro and aspirin in the truck. He's complaining of indigestion."
+
+Iris stepped out from behind the desk, her clipboard in hand, the slip of paper hidden inside her palm. "Name?"
+
+"Arthur Bell," the patient gasped, his voice thin and reedy. He winced, his eyes squeezing shut as a wave of pain rolled over him. "Just... just give me something for the gas."
+
+Iris stopped. The air in the room seemed to thicken, turning to syrup. She looked down at the paper in her hand.
+
+ARTHUR BELL — 04:12.
+
+The clock read 03:58.
+
+She looked at the patient. He looked stable. Talking. Complaining of gas. A classic atypical presentation, perhaps, but he was conscious. He had a blood pressure. Dr. Reyes had just finished with the Zarate girl; he was likely in the break room filling out death forms.
+
+"Room 3," Iris said, her voice sharper than she intended. "Put him in Room 3. Put him on the monitor immediately. I want a twelve-lead EKG, portable chest, and full labs. Draw the cardiac enzymes."
+
+The paramedics paused. "Room 3 is for criticals, ma'am. He's stable—"
+
+"Now," Iris snapped. She moved to the head of the gurney, pushing the rail down to help steer him. "Do not make me repeat myself. Room 3. Cardiac monitor."
+
+She could feel the eyes of the desk clerk on her back, but she didn't care. Protocol said a stable chest pain went to Observation or Fast Track. Protocol said wait for the doctor.
+
+Protocol had gotten Lena Zarate killed.
+
+They wheeled Arthur Bell into Room 3. Iris hooked up the leads herself, her fingers moving with practiced speed. She peeled the adhesive backs and pressed the sensors to his hairy chest, watching the green line jump on the monitor.
+
+Sinus rhythm. Normal rate.
+
+"I'm telling you, it's just heartburn," Arthur groaned, shifting his head against the pillow. "I had chili dogs for dinner."
+
+Iris ignored him. She slapped the pulse oximeter on his finger. Oxygen saturation 98 percent. She started an IV line in his antecubital vein, her hand steady despite the racing of her own heart.
+
+She was changing the variables.
+
+The slip had said 04:12. It was currently 04:01.
+
+If she treated him now—if she identified the MI before it happened, got the heparin, got the thrombolytics, prepared the cath lab team—she could break the pattern. The machine printed a name and a time based on probability, perhaps. It was a predictive algorithm, a crude AI that guessed the worst-case scenario.
+
+She was not going to let the worst-case scenario happen.
+
+She hit the call button.
+
+"Dr. Hale," she said into the intercom. "I need you in Room 3. I have a possible STEMI coming."
+
+"Copy," the voice answered. It was Dr. Rowan Hale, the overnight attending. He was younger than Reyes, sharper, less prone to nostalgia. He would listen.
+
+Iris stood back and looked at the monitor. Still sinus. But she saw it—the subtle elevation in the T-waves. The machine hadn't lied about Lena. It might not be lying about Arthur.
+
+She pulled the slip from her pocket and looked at it again. Fourteen minutes. She had fourteen minutes to save him.
+
+Dr. Hale arrived exactly two minutes later, scrolling through a chart. He smelled like antiseptic and stale coffee. "What have we got, Iris? Desk said he walked in?"
+
+"He's complaining of indigestion, but look at the leads," Iris said, pointing to the screen. "V1 through V4 are worrying me. And the history is classic for a silent MI in a diabetic."
+
+Hale narrowed his eyes, squinting at the monitor. He leaned closer, his shoulder brushing against hers. "I don't know, Iris. It looks like early repolarization. His vitals are rock solid."
+
+"It's not gas," she insisted, her voice low and intense. "My gut says this is the big one. I want the nitroglycerin paste, morphine if he needs it, and I want the lab to run the stat trop on the i-STAT. Now."
+
+Hale studied her face. He saw the tension in her jaw, the way her hands were clenched at her sides. He didn't ask why she was so sure. He trusted her clinical instinct, even if she was acting erratic tonight.
+
+"Okay," he said softly. "You win. Let's treat it like an MI until proven otherwise. Page the cardiologist on call. Tell him we might be activating the cath lab."
+
+"I already did," Iris lied smoothly.
+
+Hale raised an eyebrow but didn't argue. He turned to the patient. "Mr. Bell, we're going to keep you here for observation. You might be having a heart attack."
+
+Arthur Bell let out a dry, wheezing laugh. "A heart attack? I feel fine. Just a little burn."
+
+04:05.
+
+Iris moved to the bedside, adjusting the flow of oxygen. She checked her watch. Every second felt like a physical weight dragging at her eyelids. She had intervened. She had acted before the system even registered him as high risk. The machine was just a printer. It was just plastic and heat.
+
+She fixed the sheet around the patient's legs, tucking him in. She smoothed the blanket. She was in control. This was a hospital. They saved people here. That was the job.
+
+"I'm going to get the morphine," she said to Hale.
+
+She moved to the medication dispenser, typing in her code. Her fingers fumbled on the keypad. 1-2-3-4. Enter. The drawer slid open.
+
+She reached for the vial of morphine and a syringe. Her hands were shaking. Just a tremor, a fine vibration of the tendons.
+
+She turned back to the bed.
+
+"V-tach!" Hale shouted.
+
+The sound tore through the room, a harsh, monotone drone from the cardiac monitor. The green line had flattened into a chaotic, jagged sawtooth pattern.
+
+Iris dropped the syringe.
+
+It shattered on the linoleum floor, glass skittering under the gurney. The sound was lost in the sudden commotion.
+
+Arthur Bell's eyes rolled back in his head. His back arched off the bed, a rigid, terrifying spasm.
+
+"He's coding!" Hale yelled, hitting the code blue button. "Iris, get the cart! Start compressions!"
+
+The room exploded into motion. The crash cart slammed through the door, pushed by the nursing supervisor. Iris moved like a machine herself, her training overriding her terror.
+
+She vaulted onto the bed, interlacing her hands over Arthur Bell's sternum. One, two, three, four. Hard compressions. The ribcage gave under her palms, a sickening but necessary sensation.
+
+"Airway!" Hale barked.
+
+"Bagging," someone else said.
+
+Iris counted in her head. Fifteen compressions, two breaths. The smell of the patient's chili dog breath mixed with the sharp scent of the latex gloves. Sweat pricked at her hairline.
+
+The clock on the wall ticked. 04:08.
+
+She was losing him. She had done everything right. She had brought him in early. She had hooked him up to the monitor. She had advocated for him.
+
+Why was he dying?
+
+"Epi one milligram IV," Hale ordered.
+
+Iris didn't stop compressions. A nurse jammed the syringe into the port and pushed the plunger.
+
+"Still in V-tach," the monitor announced. The same jagged scream.
+
+"Charge to two hundred," Hale said, grabbing the paddles.
+
+Iris leaned back, her chest heaving. She wiped sweat from her forehead with the back of her arm. Her scrub top stuck to her skin.
+
+"Clear!"
+
+Thump.
+
+Arthur Bell's body jumped. The smell of ozone filled the air.
+
+The monitor whined for a moment longer, then snapped into a chaotic rhythm.
+
+"V-fib. No pulse," Hale said. "Resume compressions."
+
+Iris jumped back on the bed. The force of her thrusts made the gurney shudder. She looked at the clock. 04:10.
+
+Two minutes.
+
+She wasn't going to make it. The realization hit her with the cold clarity of ice water. The label hadn't been a warning — it had been a verdict. And she had just tried to rewrite it with her own hands.
+
+The monitor flatlined at 04:12.
+
+Iris stepped back from the bed, her gloves slick with sweat and something else she didn't want to name. She looked at the clock. 04:12. Exactly. To the minute.
+
+She pulled the crumpled slip from her pocket and smoothed it against her thigh. ARTHUR BELL — 04:12. The paper was warm. She had been holding it too long. Or maybe the machine had just printed another one.
+
+She turned toward the desk. The printer sat silent, its paper tray empty.
+
+But the red light on its front panel was blinking.
+
+Slow. Steady.
+
+Like a pulse.

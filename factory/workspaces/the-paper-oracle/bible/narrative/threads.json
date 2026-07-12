@@ -1,0 +1,38 @@
+{
+  "description": "Threads for The Paper Oracle Book 1: slow-burn psychological thriller with three narrative threads — the central mystery of the machine, Iris's internal guilt arc, and the legacy of Marguerite Vole.",
+  "threads": [
+    {
+      "id": "T001",
+      "name": "The Nature of the Paper Oracle",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "resolved",
+      "book1_resolution": "Iris learns the machine is not prophetic; it reflects her clinical hand. The final slip bears her own name, and she breaks the cycle by ceasing to fight — choosing acceptance over resistance.",
+      "book2_promise": "The next morning, an identical printer arrives from the hospital where Marguerite worked 30 years ago, still sealed, already bearing a slip. The pattern is not over.",
+      "book1_payoff": "Iris burns the machine, achieving moral resolution and closure on the guilt that haunted her, but the appearance of the new machine undercuts full relief.",
+      "note": "Central mystery. Each clue plants a layer: ch1 (first slip), ch3 (handwriting hint), ch6 (logbook), ch8-9 (core reveal)."
+    },
+    {
+      "id": "T002",
+      "name": "Iris's Burden of Guilt",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "resolved",
+      "book1_resolution": "Iris confronts the death from a year ago that she filed as 'unavoidable.' The machine's truth reveals she had a choice. She accepts that she cannot prevent every death, and that her resistance was causing them. She forgives herself.",
+      "book2_promise": "Iris's newfound acceptance will be tested if the new machine forces her to relive the same spiral. Her pulse-tic may return.",
+      "book1_payoff": "The moment Iris presses two fingers to her wrist for the last time, then releases — symbolizing letting go of the compulsive need to measure her own life against death.",
+      "note": "Emotional arc. Tic appears at ch1 (baseline), escalates through ch4-5, resolves at ch10."
+    },
+    {
+      "id": "T003",
+      "name": "Marguerite's Shadow",
+      "opened_chapter": 3,
+      "must_close_by": 10,
+      "status": "resolved",
+      "book1_resolution": "Marguerite's history as a nurse in the same room 30 years ago is revealed: the same machine, the same pattern, her choice to leave nursing rather than face the truth. Iris uses her story to choose the opposite path — to stay and accept.",
+      "book2_promise": "If Marguerite's memory returns, she may know more about where the first machine came from — and the hospital that shipped the new one.",
+      "book1_payoff": "Iris understands Marguerite's escape as a warning, but she refuses to quit; her choice to burn the machine honors Marguerite's warning without repeating her flight.",
+      "note": "Supporting mystery. First fragment ch3 ('your handwriting'), logbook detail ch6, parallel decision ch9-10."
+    }
+  ]
+}

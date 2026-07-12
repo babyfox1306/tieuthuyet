@@ -1,0 +1,194 @@
+{
+  "act": [
+    4,
+    6
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Door Outside Records",
+      "slug": "the-door-outside-records",
+      "one_line_summary": "Iris escapes the person outside records with the hidden Vole engraving in mind, then follows the hospital’s old staffing trail toward a sealed memory-care corridor.",
+      "beat_summary": "The footsteps outside records stop with someone trying the locked handle, forcing Iris to crouch in the dark with the printer drawer half-open and the scraped brass rivet exposed. She slips out through the adjoining chart room, avoids being caught by security, and returns the printer to the ER before anyone can notice it missing. While checking the old staffing ledgers, she finds that a nurse named Vole vanished from active duty after a night-shift incident in 1963 and was later moved into the hospital’s long-term memory-care wing under a confidentiality flag. [ROMANCE] Because there is no true male lead in this canon, the required emotional micro-beat is framed as Iris confronting the pointed absence of anyone she can trust, including the nonexistent Unassigned, which sharpens her vulnerability rather than creating a romance. The chapter ends when the printer produces no patient name, only a blank label with the pressure groove of the word VOLE embossed beneath the surface.",
+      "must_happen": [
+        "Iris hides the printer drawer and evades the person at the records-room door without identifying them, preserving the paranoia from Chapter 3.",
+        "Iris returns the machine to the ER before the charge desk notices it missing, but she sees the scraped brass rivet now looks freshly polished, as if the machine wants the engraving found.",
+        "Iris searches paper staffing ledgers and finds a 1963 nurse listed only as M. Vole, transferred after an unspecified night-shift incident to a hospital-affiliated memory-care ward.",
+        "[ROMANCE] Iris has no actual male lead to connect with, so the beat must show vulnerability through absence: she almost reaches for help, thinks of the impossible placeholder 'Unassigned,' and realizes there is no one beside her in the corridor."
+      ],
+      "must_not": [
+        "Do not identify Marguerite Vole by full name yet; Iris may only find M. Vole and a transfer trail.",
+        "Do not reveal that the machine reflects Iris’s own clinical choices or that her year-old patient death was preventable.",
+        "Do not let the machine speak, display text on a screen, or print anything beyond paper labels."
+      ],
+      "opens_with": "The handle turned once from the other side, stopped, then turned again harder.",
+      "cliffhanger": "The printer spits out a blank label; when Iris rubs her thumb across it, the hidden pressure marks spell VOLE even though no ink has touched the paper.",
+      "signature_detail_hint": "The old staffing ledger uses pasted paper tabs reinforced with yellowed surgical tape, and one tab has been peeled up and re-stuck so many times that lint is trapped under the adhesive.",
+      "emotional_beat": "Iris’s dread turns intimate and isolating, with vulnerability sharpened by the tension of having no one to trust.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write 1600-1900 words in locked third-person limited from Iris’s POV, continuing directly from the footsteps outside records. Keep the tension procedural and restrained: evasion, paper records, the M. Vole transfer clue, and the return to the ER. Include the required no-romance-canon emotional micro-beat as loneliness and vulnerability, not sexual or romantic content. End on the embossed VOLE label.",
+      "carries_to_next": "Iris now has a route to the memory-care wing and a reason to believe Vole is alive or at least deliberately hidden.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Callahan",
+            "Marguerite Vole"
+          ],
+          "may_know": [
+            "Iris Callahan: A second slip prints and its prediction comes true despite her efforts",
+            "Iris Callahan: She begins to suspect the machine may be supernatural or fate-driven, but still believes she can outrun it.",
+            "Marguerite Vole: No direct scene",
+            "Marguerite Vole: Her presence remains unknown to the reader."
+          ],
+          "must_not_know": [
+            "Iris Callahan: The patient who died a year ago was preventable; Iris had a choice she did not recognize. Her pulse-check tic is a physical manifestation of guilt and the need to verify her own agency.",
+            "Marguerite Vole: Marguerite's memory loss may be partially willful—a self-protective erasure of the trauma the machine caused. She still carries guilt but cannot access it fully."
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "Your Handwriting",
+      "slug": "your-handwriting",
+      "one_line_summary": "Iris reaches Marguerite Vole, hears the warning that the machine prints her handwriting, and realizes her earlier attempt to beat a slip may have helped cause the death.",
+      "beat_summary": "Iris uses a supply corridor and an old access code to reach the memory-care wing, where she finds Marguerite Vole under a shortened patient listing and realizes the woman is not simply a former nurse but someone the hospital quietly kept close. Marguerite’s memory flickers between lucidity and confusion; she recognizes the raised label stock before Iris says anything and whispers, 'It only ever prints your handwriting.' Iris connects that fragment to the Chapter 2 cardiac case: her early monitoring, her insistence on intervention, and the exact timing may not have defied the slip but helped build the path to it, paying off C006 without solving the central mystery. [ROMANCE] With no true male lead present, Iris’s required emotional beat is the tense absence of Unassigned as she steadies herself alone, pressing two fingers to her wrist because there is no hand to take. The chapter ends when Marguerite grips Iris’s sleeve and says the machine never wanted patients first; it wanted nurses.",
+      "must_happen": [
+        "Iris finds Marguerite Vole in the memory-care wing under a partial or administrative listing, confirming the trail from the M. Vole ledger without yet explaining the machine’s origin.",
+        "Marguerite reacts physically to the label paper and says the key fragment: 'It only ever prints your handwriting.'",
+        "Pay off C006 by having Iris revisit the Chapter 2 cardiac case and realize her attempt to outmaneuver the printed time may have shaped the chain of clinical decisions that ended at 04:12.",
+        "[ROMANCE] Because the canon has no male lead, show the required micro-beat through Iris’s vulnerable awareness that Unassigned is absent and unavailable; she steadies herself alone rather than turning the scene romantic."
+      ],
+      "must_not": [
+        "Do not reveal that the machine reflects Iris’s choices in full; Iris may suspect intervention matters but must remain uncertain whether the machine dictates events or mirrors them.",
+        "Do not allow Marguerite to deliver a coherent exposition dump; her memory must stay fragmented.",
+        "Do not reveal that Iris’s year-old patient death was preventable."
+      ],
+      "opens_with": "'If anyone asks, you never came through this door,' the orderly said, and punched in a code Iris had not given him.",
+      "cliffhanger": "Marguerite clamps her thin hand around Iris’s sleeve and says, clear as a chart note, 'It did not start with the patients. It started with us.'",
+      "signature_detail_hint": "Marguerite keeps hospital meal tickets folded into perfect paper cranes, each one labeled with a room number that no longer exists.",
+      "emotional_beat": "The tension becomes personal and vulnerable as Iris sees her own clinical certainty beginning to incriminate her.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write 1600-1900 words centered on Iris entering memory care, finding Marguerite, and extracting one terrifying fragment rather than a full explanation. Pay off C006 through Iris’s clinical reconstruction of the second death and her dawning fear that intervention can trigger the outcome. Include the required no-romance-canon emotional micro-beat as isolation and vulnerability, with no sexual content. End on Marguerite’s warning that the machine targets nurses.",
+      "carries_to_next": "Iris leaves memory care with Marguerite’s phrase in her head and a new fear that the machine may be tied to the person making the decisions, not to fate alone.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C006"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Callahan",
+            "Marguerite Vole"
+          ],
+          "may_know": [
+            "Iris Callahan: She has attempted to resist a prediction and inadvertently caused a death",
+            "Iris Callahan: Realizes that intervention can trigger the outcome, but still uncertain if the machine dictates events or merely reflects choices.",
+            "Marguerite Vole: Has spoken a key fragment: 'It only ever prints your handwriting.' This hints that the machine is tied to the specific nurse, not an external force",
+            "Marguerite Vole: She cannot yet articulate more."
+          ],
+          "must_not_know": [
+            "Iris Callahan: The patient who died a year ago was preventable; Iris had a choice she did not recognize. Her pulse-check tic is a physical manifestation of guilt and the need to verify her own agency.",
+            "Marguerite Vole: Marguerite's memory loss may be partially willful—a self-protective erasure of the trauma the machine caused. She still carries guilt but cannot access it fully."
+          ],
+          "effective_milestone": 5
+        },
+        "clue_beats": {
+          "C006": "Reconstruct the Chapter 2 death as a sequence of Iris’s own anticipatory interventions, making her realize the machine’s printed time may have become true because she tried to beat it."
+        }
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "The Carbon Copy",
+      "slug": "the-carbon-copy",
+      "one_line_summary": "Iris steals Marguerite’s old carbon-copy triage sheet and sees that the machine once imitated another nurse’s hand, proving the pattern existed before her without yet revealing why.",
+      "beat_summary": "Back in the ER, Iris tries to work a normal shift while Marguerite’s phrase repeats against every decision she makes. A new patient arrives with ambiguous symptoms, and the printer remains silent, making the quiet worse than another prediction. Iris returns to memory care during a medication pass and finds Marguerite guarding a brittle carbon-copy triage sheet from 1963: the object clue C003, bearing a patient name, a time, and letterforms that look like handwriting pressed through a machine. The major reveal R002 lands carefully: the machine has done this before to another nurse, and Marguerite’s trauma is tied to it, but Iris still does not know the mechanism or the truth about her own year-old death. [ROMANCE] With no real male lead in the story, the required emotional micro-beat stays non-romantic: Iris imagines how different the corridor would feel if Unassigned existed beside her, then rejects the fantasy and moves alone. The chapter ends when the ER printer, far below in another wing, prints while Iris is still holding the 1963 carbon copy.",
+      "must_happen": [
+        "Plant C003 as a physical object: a brittle 1963 carbon-copy triage sheet Marguerite has hidden among her meal-ticket paper cranes.",
+        "Use C003 to trigger R002: Iris realizes the machine’s pattern predates her and has already attached itself to at least one nurse before, making Marguerite a survivor or witness rather than a random patient.",
+        "Marguerite has a partially lucid moment that suggests her memory loss may be self-protective, but she cannot fully explain what she erased or why.",
+        "[ROMANCE] Since there is no true male lead, frame the required micro-beat as Iris’s brief, vulnerable awareness of the absent Unassigned beside her, intensifying isolation without adding a love interest."
+      ],
+      "must_not": [
+        "Do not pay off C003 yet; its true meaning must remain reserved for Chapter 8.",
+        "Do not reveal that Iris’s year-old patient death was preventable.",
+        "Do not let Iris conclude the machine is simply prophetic or fully choice-reflective; she should be trapped between both possibilities."
+      ],
+      "opens_with": "The printer stayed silent for the first two hours, and that was worse.",
+      "cliffhanger": "While Iris stands in memory care with the 1963 carbon copy in her hand, a nurse from the ER calls upstairs and says, 'Your printer just printed again, and this one has your initials in the margin.'",
+      "signature_detail_hint": "The carbon paper has left violet smudges in the creases, and when Iris unfolds it, the old pressure marks rise like bruises under her thumb.",
+      "emotional_beat": "Attraction is absent by design, but the scene carries tension and vulnerability as Iris faces the pattern alone and feels the cost of having no one beside her.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write 1600-1900 words escalating from silence in the ER to the discovery of C003 in memory care. Plant the carbon-copy triage sheet clearly as an object clue but do not pay it off. Deliver R002 as a major but limited reveal: the machine’s pattern existed before Iris and damaged Marguerite. Include the required no-romance-canon emotional micro-beat as vulnerable isolation, with no sexual or romantic content. End with the ER printer producing a new slip while Iris is away from it.",
+      "carries_to_next": "Iris must return to the ER with the 1963 carbon copy and face a new printout that seems to implicate her initials directly.",
+      "narrative": {
+        "clues_plant": [
+          "C003"
+        ],
+        "clues_payoff": [],
+        "reveals": [
+          {
+            "id": "R002",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C003"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Callahan",
+            "Marguerite Vole"
+          ],
+          "may_know": [
+            "Iris Callahan: She has attempted to resist a prediction and inadvertently caused a death",
+            "Iris Callahan: Realizes that intervention can trigger the outcome, but still uncertain if the machine dictates events or merely reflects choices.",
+            "Marguerite Vole: Has spoken a key fragment: 'It only ever prints your handwriting.' This hints that the machine is tied to the specific nurse, not an external force",
+            "Marguerite Vole: She cannot yet articulate more.",
+            "Marguerite Vole: Marguerite's memory loss may be partially willful—a self-protective erasure of the trauma the machine caused. She still carries guilt but cannot access it fully."
+          ],
+          "must_not_know": [
+            "Iris Callahan: The patient who died a year ago was preventable; Iris had a choice she did not recognize. Her pulse-check tic is a physical manifestation of guilt and the need to verify her own agency."
+          ],
+          "effective_milestone": 5
+        },
+        "clue_beats": {
+          "C003": "The carbon-copy triage sheet should be tactile and specific: a 1963 duplicate form with pressure marks that mimic handwritten letters, stored by Marguerite as if it is both evidence and a confession.",
+          "R002": "Iris may understand that Marguerite faced the same machine-pattern decades earlier, but she must not yet understand that the machine reflects the nurse’s own choices."
+        }
+      }
+    }
+  ]
+}

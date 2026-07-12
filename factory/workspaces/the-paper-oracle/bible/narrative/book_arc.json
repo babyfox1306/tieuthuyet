@@ -1,0 +1,53 @@
+{
+  "book_number": 1,
+  "total_chapters": 10,
+  "target_language": "en",
+  "case_closed": true,
+  "case_open": "A night-shift nurse in a 1994 coastal ER discovers a label printer that prints the name and time of death of a patient before they arrive. The first slip names a child who arrives 35 minutes early. Is the machine supernatural, or is it something else?",
+  "lead_internal_arc": [
+    {
+      "character": "Iris Callahan",
+      "starting_state": "A practical, protocol-driven night-shift nurse, haunted by a patient's death she filed as 'unavoidable'. She trusts only what she can measure and avoids emotional involvement.",
+      "ending_state": "She accepts that the machine reflects her own choices, not fate. She stops fighting and takes responsibility for her decisions, finally resolving her guilt and gaining agency.",
+      "arc_type": "From denial to acceptance of responsibility"
+    }
+  ],
+  "act_structure": [
+    {
+      "act": 1,
+      "name": "Setup",
+      "chapters": [
+        1,
+        2
+      ],
+      "summary": "Iris begins her shift. The machine prints a name + 03:47; she discards it. At 03:12 a father carries in a child with that name. End of ch1: 35 minutes left. In ch2, she tries to warn, but a second patient dies at their printed time. Doubt: is the machine warning her, or aiming her?"
+    },
+    {
+      "act": 2,
+      "name": "Complications",
+      "chapters": [
+        3,
+        6
+      ],
+      "summary": "Iris realizes every name is a patient she personally triaged. Marguerite mutters 'it only ever prints your handwriting.' In ch4-5, Iris tries to resist, rerouting a patient; her refusal causes the death. In ch6, she finds Marguerite's old logbook: same machine, same pattern 30 years ago—Marguerite tried to outrun it and stopped nursing."
+    },
+    {
+      "act": 3,
+      "name": "Crisis",
+      "chapters": [
+        7,
+        8
+      ],
+      "summary": "Iris tests the machine by doing nothing—no names print, confirming it responds to her choices, not fate. Core reveal (ch8): the machine reflects her hand. Last year's death was also her choice. Then a slip prints: IRIS CALLAHAN and a time."
+    },
+    {
+      "act": 4,
+      "name": "Resolution",
+      "chapters": [
+        9,
+        10
+      ],
+      "summary": "Iris stops resisting. She accepts a death she cannot prevent instead of causing one by fighting, and burns the machine. It goes silent. She survives, her guilt resolved. At dawn, an identical printer is delivered, factory-sealed, shipped from the hospital where Marguerite worked—it already has a slip printed."
+    }
+  ]
+}

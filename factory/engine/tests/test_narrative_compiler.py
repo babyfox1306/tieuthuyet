@@ -112,13 +112,23 @@ def _write_workspace(
     narrative_status: str = "approved",
     profile: str = "romance_thriller",
     workspace_mode: str | None = None,
+    with_mystery_assets: bool | None = None,
 ) -> Path:
     ws = root / workspace_id
     nd = ws / "bible" / "narrative"
     nd.mkdir(parents=True, exist_ok=True)
-    (nd / "mystery_ledger.json").write_text(json.dumps(SAMPLE_LEDGER, indent=2), encoding="utf-8")
-    (nd / "knowledge_matrix.json").write_text(json.dumps(SAMPLE_MATRIX, indent=2), encoding="utf-8")
-    (nd / "threads.json").write_text(json.dumps(SAMPLE_THREADS, indent=2), encoding="utf-8")
+    # Default: write mystery assets unless profile does not require them.
+    if with_mystery_assets is None:
+        from factory.engine.lib.narrative_schema import required_files
+
+        req = required_files(profile)
+        with_mystery_assets = (
+            "mystery_ledger.json" in req and "knowledge_matrix.json" in req
+        )
+    if with_mystery_assets:
+        (nd / "mystery_ledger.json").write_text(json.dumps(SAMPLE_LEDGER, indent=2), encoding="utf-8")
+        (nd / "knowledge_matrix.json").write_text(json.dumps(SAMPLE_MATRIX, indent=2), encoding="utf-8")
+        (nd / "threads.json").write_text(json.dumps(SAMPLE_THREADS, indent=2), encoding="utf-8")
     direction = {
         "id": workspace_id,
         "narrative_profile": profile,
@@ -305,6 +315,15 @@ class TestWorkspaceIntegration(unittest.TestCase):
                 root, workspace_id="sweet-ws", profile="sweet_romance"
             )
             self.assertFalse(narrative_compiler_enabled(ws_sweet))
+
+            # Any profile: if concept pipeline produced mystery assets + approved → ON.
+            ws_any = _write_workspace(
+                root,
+                workspace_id="any-mystery",
+                profile="sweet_romance",
+                with_mystery_assets=True,
+            )
+            self.assertTrue(narrative_compiler_enabled(ws_any))
 
     def test_workspace_mode_archive_disables_compiler(self):
         with tempfile.TemporaryDirectory() as tmp:

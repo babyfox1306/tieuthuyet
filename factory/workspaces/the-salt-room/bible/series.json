@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "series_id": "the-salt-room",
+    "genre": "gothic_psychological_horror",
+    "target_language": "en"
+  },
+  "title": "The Salt Room",
+  "sub_niche": "gothic_psychological_horror",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "A sound restorer inherits her grandmother's shuttered seaside hotel and finds one room that stays cold in every season — a room she swears she never entered, though a child's voice on the old tapes keeps saying her name.",
+  "tropes": [
+    "gothic atmosphere",
+    "psychological horror",
+    "family secrets",
+    "unreliable memory",
+    "haunted recording",
+    "missing twin",
+    "slow burn dread",
+    "intergenerational trauma"
+  ],
+  "leads": {
+    "female": {
+      "name": "Nora Vance",
+      "age": 29,
+      "voice": "Measured, analytical, often trailing off into silence",
+      "tics": [
+        "rubs her thumb over a scar on her palm when anxious",
+        "counts seconds in a room before speaking"
+      ],
+      "boundary": "Refuses to acknowledge anything she can't verify with evidence, stoic on the surface but porous underneath.",
+      "internal_voice": "analytic, cataloging details, occasionally breaking into fragments of half-remembered sound"
+    },
+    "male": {
+      "name": "M.I.A.",
+      "age": 18,
+      "voice": "N/A",
+      "tics": [
+        "Absent from the narrative; no male lead exists in this story."
+      ],
+      "boundary": "No male lead appears in this series. All character focus remains on Nora and the female family line."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Agnes Vance",
+      "relation_to": "Nora Vance",
+      "relation_type": "grandmother (deceased)",
+      "alive": false,
+      "secret": "Preserved the reel-to-reel tapes that prove Della's existence; refused to fully erase her granddaughter."
+    },
+    {
+      "name": "Ruth Vance",
+      "relation_to": "Nora Vance",
+      "relation_type": "mother",
+      "alive": true,
+      "secret": "Complicit in the family-wide erasure of Della after the drowning; destroyed photographs and hid the truth."
+    },
+    {
+      "name": "Della Vance",
+      "relation_to": "Nora Vance",
+      "relation_type": "twin sister (deceased, manifests only through recorded audio)",
+      "alive": false,
+      "secret": "Her recorded voice is the central supernatural element; she drowned in the tidal pool while Nora watched."
+    }
+  ],
+  "central_mystery": {
+    "question": "What happened the summer Nora was seven? Who is the child's voice on the tapes? Why is the salt room always cold?",
+    "answer": "Della Vance was Nora's twin sister. Della drowned in the hotel's tidal pool while Nora watched, frozen. The family – led by Ruth – agreed to erase Della's existence to survive the grief. Nora repressed the memory. Grandmother Agnes preserved reel-to-reel tapes as the only proof of Della, including her voice calling Nora's name. The cold room is the physical trace of the erased person, waiting to be acknowledged. The child's voice Nora first hears is her own childhood recording; the tapes contain two children (Nora and Della), and Della's voice is also present, saying Nora's name.",
+    "reveal_chapter": 10
+  },
+  "bloodline": {
+    "description": "Nora Vance is the only child of Ruth Vance, granddaughter of Agnes Vance. Her twin sister Della was erased from family records after drowning at age seven. No father or other blood relatives are present in the story. The male lead is absent, so no blood relation exists between the listed leads.",
+    "hard_rules": [
+      "female_lead and male_lead are not blood related (male lead does not exist in story).",
+      "Nora and Della are blood twins; Della is deceased.",
+      "No incest, no underage themes."
+    ],
+    "lead_relation": "stranger (male lead is absent)"
+  },
+  "world_rules": [
+    "Della manifests ONLY through recorded sound — tapes, phone recording hums, static that resolves into a child's voice. She never appears visually or speaks live.",
+    "The salt room remains cold as long as the truth is repressed. It occupies the same physical space as the erased person.",
+    "The tapes are the physical vessel of erased memory. Each tape holds fragments of the summer when Nora and Della existed together.",
+    "The hotel is shuttered and isolated; the tidal pool is the site of the drowning and the emotional heart of the mystery.",
+    "Gothic dread is built through quiet wrongness (salt crusting dry windowsills, a breath beneath Nora's own, warmth for the length of a lullaby). Gore and shock are not used."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "Nora inherits the hotel and begins uncovering the truth through the tapes. The summer of her seventh birthday is reconstructed piece by piece.",
+      "ending_hook": "Nora restores the final tape and says Della's name aloud for the first time, choosing to remember. The cold room wavers, but the attic yields a locked trunk with more reels."
+    },
+    {
+      "book": 2,
+      "thesis": "Settling into the town, Nora begins restoring the hotel and confronts the aftermath of memory. The cold room hides deeper family secrets.",
+      "ending_hook": "A tape recorded after Agnes's death surfaces, dated the week before she died, containing a message that suggests the erasure was not total."
+    },
+    {
+      "book": 3,
+      "thesis": "Nora delves into her mother's past and the family's pattern of rewriting history. New tapes reveal Ruth's role in suppressing the truth and a hidden grief.",
+      "ending_hook": "Ruth arrives at the hotel, demanding Nora stop digging. A childhood photo of two girls with one face scratched out is left under Nora's door."
+    },
+    {
+      "book": 4,
+      "thesis": "Confrontation with Ruth forces Nora to choose between forgiveness and complete truth. The cold room's influence strengthens as a storm isolates the hotel.",
+      "ending_hook": "The storm opens a hidden compartment in the salt room containing a journal that names Nora's father — a man the family swore never existed."
+    },
+    {
+      "book": 5,
+      "thesis": "Nora reconciles the full history: her mother's trauma, her grandmother's grief, and her own survival. The hotel is transformed into a memorial for Della.",
+      "ending_hook": "As Nora leaves the hotel, a final tape plays only static — but within the static, two children's voices are heard laughing without fear."
+    }
+  ],
+  "content_rules": [
+    "18+ content only when spice_level >= 3; this series is spice 1, so no explicit scenes.",
+    "No underage characters involved in any romantic or sexual context.",
+    "All intimate or tense moments must fade to black; no love interest or romantic subplot.",
+    "No more than one true answer to the central mystery; the truth is singular and revealed by chapter 10."
+  ],
+  "bible_status": "approved"
+}

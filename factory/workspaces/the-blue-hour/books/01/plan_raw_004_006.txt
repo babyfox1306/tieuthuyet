@@ -1,0 +1,85 @@
+```json
+{
+  "act": [
+    4,
+    6
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Brass Inheritance",
+      "slug": "ch04-the-brass-inheritance",
+      "one_line_summary": "Julian returns at dawn to find the aftermath of the night's haunting and helps Elena unlock the attic trunk, revealing the first written proof of her past.",
+      "beat_summary": "Julian finds Elena sleepless and clutching the bear, the key on the table. He is furious at the state of the house—wet footprints on the carpet, the smell of algae—but gentle with her. They take the key to the attic, where an old steamer trunk sits under a sheet. The key fits, and the trunk pops open, releasing a cloud of dust and the scent of old paper and dried lake water. Inside is a child's diary.",
+      "must_happen": [
+        "Julian arrives at dawn and immediately checks Elena for injuries, his hands lingering on her shoulders longer than necessary.",
+        "They discover the key fits the lock of the heavy iron-bound trunk in the attic corner.",
+        "Elena opens the trunk to find a collection of childhood items, primarily a leather-bound diary with a blue ribbon bookmark.",
+        "[ROMANCE] While dusting off the trunk, Elena accidentally inhales a cloud of dust and coughs; Julian steps into her space, his chest against her back as he steadies her, his warmth grounding her trembling frame."
+      ],
+      "must_not": [
+        "Julian must not reveal that he knew exactly what the key would open.",
+        "The diary must not be fully readable yet; only specific phrases stand out."
+      ],
+      "opens_with": "You're still here, Julian said, his voice rough with sleep or worry, framed by the gray light of dawn flooding the ruined hallway.",
+      "cliffhanger": "Elena opens the diary to the first page and sees her own childish handwriting scrawling over and over: 'I made the water take him.'",
+      "signature_detail_hint": "The brass key is cold to the touch, but when inserted into the lock, the metal becomes warm, vibrating like a struck tuning fork.",
+      "emotional_beat": "Relief mixed with dread — Elena feels safe with Julian, but the trunk's contents promise to destroy that safety.",
+      "spice": 1,
+      "spice_note": "Focus on the intimacy of shared breath and the physical comfort of his presence in the cold attic. The tension is protective and soft.",
+      "chapter_task": "Write 1600-1900 words focusing on the aftermath of the haunting and the joint discovery of the diary in the attic.",
+      "carries_to_next": "The diary provides the first concrete evidence of the repressed memory, shifting the mystery from abstract haunting to specific guilt."
+    },
+    {
+      "chapter": 5,
+      "title": "Entries in Ash",
+      "slug": "ch05-entries-in-ash",
+      "one_line_summary": "Elena reads the diary entries describing a 'game' played with a boy named Tomas, while Julian struggles to maintain his rational facade.",
+      "beat_summary": "Elena sits by the window reading the diary. The entries describe 'The Breath-Holding Game' and a boy named Tomas who was 'too loud.' Julian tries to explain away the entries as a child's imagination, but his fear is palpable. The house reacts to the reading—lights flicker, the temperature drops. Elena confronts Julian about who lived here before, sensing he knows more than he says.",
+      "must_happen": [
+        "Elena reads a passage describing how 'the blue girl' watches them play from the reeds.",
+        "Julian paces the room, checking his pocket watch obsessively as the shadows lengthen.",
+        "A glass of water on the table ripples and spills without being touched, soaking the diary pages.",
+        "[ROMANCE] Elena, frightened by the moving water, reaches out for Julian; he interlaces his fingers with hers, squeezing tight, his thumb rubbing over her knuckles in a silent promise of protection."
+      ],
+      "must_not": [
+        "Julian must not admit to the previous tenant's death or suicide.",
+        "Elena must not recall the actual moment of Tomas's death, only the context of the game."
+      ],
+      "opens_with": "It wasn't a ghost, Elena read aloud, her voice trembling in the silent room; it was a punishment we agreed to.",
+      "cliffhanger": "As Julian reads a specific line over Elena's shoulder, the mirror above the fireplace cracks violently down the center, and the sound of rushing water fills the room.",
+      "signature_detail_hint": "The ink on the diary pages is not black, but a rusty, dried brown that smells faintly of iron when rubbed.",
+      "emotional_beat": "Suspicion and reliance — Elena questions Julian's honesty but clings to him as her only shield against the house's reaction.",
+      "spice": 1,
+      "spice_note": "Emotional intimacy is key here—the comfort of hand-holding and the tension of secrets kept between lovers.",
+      "chapter_task": "Write 1600-1900 words focusing on the disturbing content of the diary and the escalating poltergeist activity.",
+      "carries_to_next": "The house's violent reaction to the diary forces them to acknowledge the danger is active and escalating."
+    },
+    {
+      "chapter": 6,
+      "title": "High Water Mark",
+      "slug": "ch06-high-water-mark",
+      "one_line_summary": "The haunting escalates into a physical flood; Julian attempts to evacuate Elena, but the house refuses to let them leave.",
+      "beat_summary": "The sound of rushing water becomes deafening. Water begins to seep up from the floorboards, not from outside, but from within the house. Julian grabs Elena, shouting that they have to leave. They scramble for the door, but the hallway has elongated, the front door miles away. They are forced to retreat to the upper landing as the water rises impossibly fast.",
+      "must_happen": [
+        "Water rises rapidly from the floorboards, clear and cold, smelling of deep lake weeds.",
+        "Julian physically lifts Elena over a rising patch of water, his hands firm on her waist.",
+        "The furniture in the living room begins to float, circling them like sharks.",
+        "[ROMANCE] Trapped on the landing with water rising below, Julian presses Elena against the wall to shield her from falling debris, his face inches from hers, breath mingling with hers in the damp air."
+      ],
+      "must_not": [
+        "They must not successfully exit the house.",
+        "The water must not actually be a real flood from the lake; it must be supernatural."
+      ],
+      "opens_with": "Run, Julian barked, the word cracking like a whip as the floorboards beneath their feet began to weep.",
+      "cliffhanger": "They reach the top of the stairs, but the water below has risen to the ceiling, and in the reflection of the black water, they see the Girl in Blue swimming upwards toward them.",
+      "signature_detail_hint": "The water rising is silent, lacking the roar of a real flood, moving like a silent, predatory beast.",
+      "emotional_beat": "Panic and desperation — the romance is fueled by the instinct to survive together, heightening every touch and glance.",
+      "spice": 1,
+      "spice_note": "The physical proximity is driven by danger—pressed against walls, lifting each other—creating high tension without sexual release.",
+      "chapter_task": "Write 1600-1900 words focusing on the kinetic horror of the rising water and the failed evacuation.",
+      "carries_to_next": "Trapped upstairs with the entity manifesting strongly, leading into the crisis of Act 3."
+    }
+  ]
+}
+```

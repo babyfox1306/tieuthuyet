@@ -1,0 +1,67 @@
+{
+  "current_book": 1,
+  "current_chapter": 1,
+  "timeline": [
+    "Nora arrives at the Saltwood Hotel and unlocks the door with a stiff key.",
+    "She pauses for three seconds before entering, a habit from foreclosure inspections.",
+    "She enters the lobby, observing the chandelier with missing crystals and faded wallpaper.",
+    "She notices a pink salt crust on the baseboard and windowsills, and touches it.",
+    "She recalls the lawyer's statement about the inheritance and the condition to visit.",
+    "She explores the kitchen and dining room, finding more pink salt crust.",
+    "She reflects on her grandmother Agnes and the vague summer memories.",
+    "She climbs to the second floor and discovers the west corridor.",
+    "At the far end of the west corridor, she finds a white door covered in thick frost, with a dramatic drop in temperature."
+  ],
+  "character_status": {
+    "Nora Vance": {
+      "location": "West corridor, facing the frost-covered door.",
+      "knows": [
+        "She inherited the Saltwood Hotel from her grandmother Agnes Vance.",
+        "The hotel is located on a cliff above a tidal cove.",
+        "The hotel has a pink salt crust on baseboards and windowsills.",
+        "There is a door in the west corridor covered in frost.",
+        "Her scar on her palm tingles when near the hotel.",
+        "Her mother Ruth is reluctant to discuss the hotel.",
+        "She spent a summer at the hotel as a child but has fragmented memories."
+      ],
+      "relationship_other": "Mother Ruth Vance is distant and refuses to speak about the hotel; Grandmother Agnes Vance is deceased, left the hotel with a clause suggesting Nora visit first.",
+      "mood": "Cautious, curious, tense"
+    }
+  },
+  "open_threads": [
+    "What is behind the frost-covered door in the west corridor?",
+    "Why is there a pink salt crust in the hotel?",
+    "Why does Nora's scar tingle?",
+    "What happened during the summer Nora spent here as a child?",
+    "Why did Agnes Vance specifically leave the hotel to Nora and suggest she visit?",
+    "What is the history of the hotel and the grandmother's past?",
+    "Why is the west corridor door frosted while the rest of the hotel is damp and warm?"
+  ],
+  "facts_established": [
+    "Nora Vance has inherited the Saltwood Hotel from her grandmother Agnes Vance.",
+    "The hotel is on a cliff above a tidal cove.",
+    "The lobby has a chandelier with missing crystals and faded blue wallpaper.",
+    "A pink salt crust is present on the baseboard and windowsills; it is gritty and cold.",
+    "The key to the hotel was stiff in the lock.",
+    "The kitchen is gutted; the dining room has long tables and stacked chairs.",
+    "Nora has a scar on her palm that tingles in the hotel.",
+    "Nora's mother Ruth has no interest in returning to the hotel.",
+    "Nora spent part of her childhood at the hotel but remembers little.",
+    "The lawyer mentioned a clause suggesting Nora visit the property first.",
+    "The west corridor ends in a white door covered with thick, crystalline frost.",
+    "The air around the frost-covered door is significantly colder than the rest of the hotel."
+  ],
+  "spice_progression": "The inheritance of an eerie seaside hotel quickly reveals unnatural elements: pink salt crust, a tingling scar, and a mysteriously frozen door, setting a tone of occult or supernatural mystery.",
+  "phrases_used": [
+    "cold hit her before the smell",
+    "breath for two decades",
+    "bruise healing badly",
+    "pink salt crust",
+    "dried blush ground fine",
+    "copper and brine",
+    "scar on her palm tingled",
+    "frost-covered door",
+    "west corridor",
+    "the salt room"
+  ]
+}

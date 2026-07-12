@@ -1,0 +1,19 @@
+{
+  "word_count": 1895,
+  "target_language": "en",
+  "markdown": [
+    "*That's me.*",
+    "*Elena. June. I passed it on.*",
+    "*For the one who comes after*",
+    "*The mirrors in this house are not for seeing. They are for keeping.*",
+    "*Diane broke the third mirror today. I heard the crash from the kitchen,",
+    "*If you are reading this, you are already whole. The lake takes its due,",
+    "*But warn the one who comes after. The mirror doesn't just hold the past",
+    "*I do not know if the woman I see in town is my daughter or her reflecti"
+  ],
+  "pov_violation": {
+    "count": 19,
+    "threshold": 3
+  },
+  "missing_quotes": true
+}

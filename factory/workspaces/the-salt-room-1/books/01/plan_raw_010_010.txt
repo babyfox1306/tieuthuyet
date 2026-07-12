@@ -1,0 +1,100 @@
+{
+  "act": [
+    10,
+    10
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Name at the Water",
+      "slug": "the-name-at-the-water",
+      "one_line_summary": "Nora restores Agnes's final tape at the tidal pool, remembers that Della drowned while Nora stood frozen, says Della's name aloud, and hears a third erased child beneath the solved recording.",
+      "beat_summary": "Open with seven-year-old Nora's recorded voice saying she was there as the portable recorder plays at the tidal pool gate. Quiet wrongness comes first when the pool water stays still while the recorder captures wave wash, two child breaths, and Agnes's old level count. Pay off C008 by making Nora understand the tidal pool was the place Agnes's codes kept circling because it was where Della drowned and where Agnes knew the recording held the truth. Pay off C012, C013, and C014 as the final tape unlocks Nora's memory: Della was her twin, Della slipped or fell into the tidal pool, Nora froze in terror and silence, and the family later turned that silence into erasure. Ruth's role resolves as Nora understands the erasure followed the drowning and was maintained as mercy that became violence against memory. The required romance-marked beat remains canon-compliant and non-romantic: with no male lead, Nora's need for someone to hold her steady becomes a raw absence beside her at the water, and she chooses the harder intimacy of naming Della aloud alone. Plant and pay off C015 only after the central mystery is fully solved, when the last restored room tone reveals a third child's voice beneath Della's, saying an unfamiliar name that opens the next book without changing Della's answer.",
+      "must_happen": [
+        "Pay off C008: Nora understands Agnes's tidal pool codes pointed to the actual site of Della's drowning and that Agnes knew the pool recording held the final answer.",
+        "Pay off C012: Nora plays or restores the final pool reel enough to hear the last moments before and during Della's drowning, with Agnes's recording method preserving the truth.",
+        "Pay off C013: The final tape functions as Agnes intended, forcing Nora to choose preservation and memory over destruction before the full truth becomes accessible.",
+        "Pay off C014: Nora fully recovers that she was present when Della drowned, froze in terror, and survived afterward by forgetting what the family taught her not to say.",
+        "Resolve Ruth's role by making Nora understand Ruth and the family erased Della from speech, photographs, labels, and daily memory after the drowning because they believed silence would save Nora.",
+        "[ROMANCE] No male lead exists in canon, so write the required romance-slot micro-beat as absence and vulnerability: Nora reaches for the steadiness of another hand at the tidal pool, finds only cold air and the recorder strap cutting into her palm, and lets that loneliness become the courage to say Della's name aloud.",
+        "Nora says \"Della Vance\" aloud at the tidal pool, choosing grief, evidence, and wholeness instead of continuing the family silence.",
+        "Plant and pay off C015 after the Della mystery is solved: the final restored room tone reveals another child's recorded voice beneath Della's, belonging to neither Nora nor Della and saying a name Nora has never heard."
+      ],
+      "must_not": [
+        "Do not leave the Book 1 central mystery ambiguous; Della's identity, drowning, Nora's frozen silence, the salt room's cold, Ruth's erasure, and Agnes's preservation of proof must be answered.",
+        "Do not let Della appear visually, speak live in person, touch Nora, or become an attacking ghost; all presence must remain recorded sound, memory, and physical evidence.",
+        "Do not make the third child voice compete with or revise the Della solution; it must arrive only after Nora has solved Della's story and chosen to name her.",
+        "Do not invent a male lead, love interest, romantic rescue, or romance subplot in the resolution."
+      ],
+      "opens_with": "\"I was there,\" seven-year-old Nora whispered from the recorder, and the locked tidal pool gate clicked open.",
+      "cliffhanger": "After Nora says Della's name and the final tape seems to end, Agnes's restored room tone uncovers a third child's voice beneath the hiss, whispering an unfamiliar name: \"Elsie.\"",
+      "signature_detail_hint": "The tidal pool gate key has salt packed inside its hollow stem, and when Nora turns it, the grains pour out in a thin white line across her palm like spilled tape oxide.",
+      "emotional_beat": "Nora's dread breaks into grief, vulnerability, and tense self-recognition as she stops wanting comfort that requires forgetting and chooses the pain of remembering Della whole.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; the emotional force comes from grief, memory recovery, family truth, and Nora's solitary act of naming her twin.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Deliver the full Book 1 resolution: restore the final pool tape, pay off C008, C012, C013, C014, and C015 in the locked timing, reveal Della's drowning and Nora's frozen silence, resolve Ruth's erasure after the drowning, and have Nora say Della's name aloud at the tidal pool. Keep Della present only through recorded sound and recovered memory, include one quiet wrongness before the overt memory break, include the required [ROMANCE] absence beat without inventing a male lead or romance subplot, and end with the third child voice as the Book 2 hook after Della's mystery is fully solved.",
+      "carries_to_next": "Nora has chosen grief over forgetting and solved Della's haunting, but Agnes's archive now contains proof of another erased child whose name Nora does not know.",
+      "narrative": {
+        "clues_plant": [
+          "C015"
+        ],
+        "clues_payoff": [
+          "C008",
+          "C012",
+          "C013",
+          "C014",
+          "C015"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010"
+        ],
+        "clue_beats": {
+          "C008": "At the tidal pool, Nora matches Agnes's location codes, the map ring, and the final reel label to the physical site and understands the pool was never a symbol; it was the place where Della died.",
+          "C012": "The restored pool reel plays the recorded final moments: Agnes's level count, the children's voices, water against stone, the sudden break in Della's breath, and the silence where Nora does not move.",
+          "C013": "The tape only becomes intelligible after Nora chooses to preserve it and listen at the pool, proving Agnes built it as a memory key rather than a simple archive item.",
+          "C014": "Nora's recovered memory joins the audio evidence: she sees herself at seven, frozen and silent as Della drowns, and understands why forgetting became survival.",
+          "C015": "Once Nora names Della and the solved tape settles into room tone, a deeper restored layer reveals a third child's voice beneath Della's, saying the unfamiliar name that points to Agnes's wider archive."
+        },
+        "knowledge": {
+          "pov_characters": [
+            "Nora Vance",
+            "Agnes Vance",
+            "Della Vance",
+            "Ruth Vance",
+            "The third child voice"
+          ],
+          "may_know": [
+            "Nora Vance: Nora fully recovers the truth: Della Vance was her twin sister.",
+            "Nora Vance: Della drowned in the tidal pool while Nora stood frozen and silent.",
+            "Nora Vance: Afterward, Ruth Vance and the family erased Della from speech, photographs, and memory to survive the grief.",
+            "Nora Vance: Nora restores the final tape at the tidal pool and says Della's name aloud, choosing grief and wholeness instead of continued forgetting.",
+            "Nora Vance: After the central mystery is solved, Nora hears a third child's voice beneath Della's on the final tape, opening the Book 2 mystery.",
+            "Agnes Vance: Agnes's final tape and instruction to restore it at the tidal pool reveal that she preserved the truth of Della's drowning for Nora to recover when ready.",
+            "Agnes Vance: After Nora solves Della's mystery, Agnes's archive also reveals a second hidden child voice, proving Agnes erased or concealed more than one child from the family record.",
+            "Della Vance: Della's full fate is revealed: she drowned in the tidal pool when she and Nora were seven.",
+            "Della Vance: Her voice on the tapes is the sound of an erased sister, not a random hotel ghost.",
+            "Della Vance: Nora speaks Della's name aloud, restoring her place in memory and resolving the central haunting.",
+            "Ruth Vance: Ruth is understood as complicit in the erasure after Della's drowning.",
+            "Ruth Vance: Ruth helped maintain the silence because she believed Nora would recover faster if Della's name disappeared from the house and family.",
+            "Ruth Vance: Ruth's role in Della's erasure is resolved, though she may know more about Agnes's older secrets for Book 2.",
+            "The third child voice: After Nora restores the final tape, recovers the full memory of Della's drowning, and says Della's name aloud, the last seconds of the recording reveal another child's voice beneath Della's.",
+            "The third child voice: The voice belongs to neither Nora nor Della and says a name Nora has never heard.",
+            "The third child voice: This opens Book 2 without changing Book 1's solved answer."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        }
+      }
+    }
+  ]
+}

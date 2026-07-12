@@ -91,8 +91,43 @@ def format_prior_summaries(
     return "\n".join(lines) if lines else empty_line
 
 
-def render_locked_canon_block(registry: CanonRegistry, *, lang: str = "en") -> str:
+def _content_boundaries_for_prompt(ws: Path | None, series_bible: dict | None) -> list[str]:
+    """Operator content boundaries from concept.must_avoid (+ bible content_rules)."""
+    lines: list[str] = []
+    seen: set[str] = set()
+
+    def _add(raw: object) -> None:
+        text = str(raw or "").strip()
+        if not text:
+            return
+        key = text.lower()
+        if key in seen:
+            return
+        seen.add(key)
+        lines.append(text)
+
+    if ws is not None:
+        from factory.engine.lib.narrative_schema import load_concept
+
+        concept = load_concept(ws)
+        for item in concept.get("must_avoid") or []:
+            _add(item)
+    for item in (series_bible or {}).get("content_rules") or []:
+        _add(item)
+    return lines
+
+
+def render_locked_canon_block(
+    registry: CanonRegistry,
+    *,
+    lang: str = "en",
+    content_boundaries: list[str] | None = None,
+    world_rules: list[str] | None = None,
+    supporting_constraints: list[str] | None = None,
+) -> str:
     """Non-negotiable canon rules — must appear above bible / story-so-far in writer prompts."""
+    from factory.engine.lib.canon_registry import is_absent_male_lead
+
     male = registry.characters["male_lead"]
     female = registry.characters["female_lead"]
     male_forbidden = ", ".join(male.forbidden_aliases) if male.forbidden_aliases else "(none)"
@@ -113,12 +148,56 @@ def render_locked_canon_block(registry: CanonRegistry, *, lang: str = "en") -> s
         spice_line = f"Spice: MAX level {registry.spice_max}."
 
     pov_mode = registry.pov_mode or "third_person_limited"
-    return f"""## LOCKED CANON — ABSOLUTE, DO NOT VIOLATE
-Male lead: {male.canonical} ONLY. Never write: {male_forbidden}.
-Female lead: {female.canonical} ONLY. Never write: {female_forbidden}.
-POV: {pov_mode}. Third-person limited locked to {female.canonical}. NO first-person ("I/my/me") narration outside quoted dialogue.
-{spice_line}
-If any instruction below conflicts with this block, THIS BLOCK WINS."""
+    boundaries = [str(b).strip() for b in (content_boundaries or []) if str(b).strip()]
+    if boundaries:
+        bound_heading = "Content boundaries (MUST AVOID):" if lang != "vi" else "Ranh giới nội dung (CẤM):"
+        bound_block = bound_heading + "\n" + "\n".join(f"- {b}" for b in boundaries)
+    else:
+        bound_block = ""
+
+    rules = [str(r).strip() for r in (world_rules or []) if str(r).strip()]
+    if rules:
+        rules_heading = "World rules (HARD):" if lang != "vi" else "Luật thế giới (CỨNG):"
+        rules_block = rules_heading + "\n" + "\n".join(f"- {r}" for r in rules)
+    else:
+        rules_block = ""
+
+    support = [str(s).strip() for s in (supporting_constraints or []) if str(s).strip()]
+    if support:
+        support_heading = (
+            "Supporting cast (HARD):" if lang != "vi" else "Cast phụ (CỨNG):"
+        )
+        support_block = support_heading + "\n" + "\n".join(f"- {s}" for s in support)
+    else:
+        support_block = ""
+
+    parts = [
+        "## LOCKED CANON — ABSOLUTE, DO NOT VIOLATE",
+        f"Male lead: {male.canonical} ONLY. Never write: {male_forbidden}.",
+        f"Female lead: {female.canonical} ONLY. Never write: {female_forbidden}.",
+        (
+            f"POV: {pov_mode}. Third-person limited locked to {female.canonical}. "
+            'NO first-person ("I/my/me") narration outside quoted dialogue.'
+        ),
+        spice_line,
+    ]
+    if is_absent_male_lead(male.canonical):
+        parts.append(
+            "NO male lead exists. Do NOT invent a love interest, caretaker romance, "
+            "physically-present romantic doctor, or [ROMANCE] subplot with an invented man. "
+            "Emotional tension stays with mystery/isolation only. "
+            "Do NOT invent named doctors beyond declared supporting cast."
+            if lang != "vi"
+            else "KHÔNG có male lead. CẤM bịa love interest / bác sĩ romantic / [ROMANCE]."
+        )
+    if support_block:
+        parts.append(support_block)
+    if bound_block:
+        parts.append(bound_block)
+    if rules_block:
+        parts.append(rules_block)
+    parts.append("If any instruction below conflicts with this block, THIS BLOCK WINS.")
+    return "\n".join(parts)
 
 
 def _load_canon_registry_for_prompt(ws: Path, direction: dict) -> CanonRegistry:
@@ -156,7 +235,21 @@ def build_chapter_prompt(
     locked_canon_block = ""
     if ws is not None:
         registry = _load_canon_registry_for_prompt(ws, direction)
-        locked_canon_block = render_locked_canon_block(registry, lang=lang)
+        boundaries = _content_boundaries_for_prompt(ws, series_bible)
+        world_rules = [
+            str(r).strip()
+            for r in ((series_bible or {}).get("world_rules") or [])
+            if str(r).strip()
+        ]
+        from factory.engine.lib.canon_registry import phone_only_cast_constraints
+
+        locked_canon_block = render_locked_canon_block(
+            registry,
+            lang=lang,
+            content_boundaries=boundaries,
+            world_rules=world_rules,
+            supporting_constraints=phone_only_cast_constraints(ws),
+        )
 
     reveal_ch: int | None = None
     if ws is not None:
@@ -167,7 +260,17 @@ def build_chapter_prompt(
                 reveal_ch = int(rc)
         except (OSError, TypeError, ValueError):
             pass
-    bible_block = render_bible_block(series_bible or {}, lang=lang, reveal_chapter=reveal_ch)
+    if reveal_ch is None and series_bible:
+        try:
+            reveal_ch = int((series_bible.get("central_mystery") or {}).get("reveal_chapter") or 0) or None
+        except (TypeError, ValueError):
+            reveal_ch = None
+    bible_block = render_bible_block(
+        series_bible or {},
+        lang=lang,
+        reveal_chapter=reveal_ch,
+        chapter=chapter,
+    )
 
     plan_spice_raw = plan.get("spice", spice_for_chapter(direction, chapter))
     try:
@@ -234,7 +337,7 @@ def build_chapter_prompt(
             f"## {prof['prior_heading']}",
             prior,
             "",
-            build_tech_rules(prof, min_words=int(cfg.get("min_word_count", 1500)), bible=series_bible),
+            build_tech_rules(prof, min_words=int(cfg.get("min_word_count", 1250)), bible=series_bible),
         ]
     )
     if sig:

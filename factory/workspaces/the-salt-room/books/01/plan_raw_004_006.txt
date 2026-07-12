@@ -1,0 +1,93 @@
+{
+  "act": [
+    4,
+    6
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Other Name",
+      "slug": "the-other-name",
+      "one_line_summary": "Nora confronts Ruth about the pool tape, learns the family kept a forbidden name out of every record, and finds the salt room has recorded her while empty.",
+      "beat_summary": "Ruth comes to the hotel instead of merely calling, not to comfort Nora but to demand the pool reel and insist Agnes made illness out of ordinary grief. Nora refuses to hand it over and pushes on the phrase 'the other name,' forcing Ruth into a controlled panic that confirms there was a name the family agreed never to say, though she will not identify whose. In the argument's tightest moment, include the required emotional micro-beat around Nora and M.I.A.: Nora feels the empty place beside her like a missing shield, then meets Ruth's anger alone, turning loneliness into resolve. After Ruth leaves, Nora reviews the pool tape's waveform and discovers a second layer recorded in the salt room while no one was inside: Agnes saying, 'If she asks for the other name, give her the blue box.'",
+      "must_happen": [
+        "Ruth arrives at or enters the hotel with a key she should not still have and demands that Nora return the hidden pool reel without playing any more of it.",
+        "Nora challenges Ruth about the phrase 'the other name,' and Ruth's reaction confirms the family suppressed a specific name without revealing Della, a twin, or the drowning.",
+        "Ruth claims Agnes's tapes are grief-contaminated evidence and tries to reframe Nora's investigation as a relapse into childhood confusion.",
+        "[ROMANCE] During Ruth's pressure, Nora registers the absence of M.I.A. as the missing body that would have stood between her and her mother's command; the micro-beat must stay interior, tense, and lonely, with no male character appearing.",
+        "After Ruth leaves, Nora detects a hidden audio layer on the pool reel that was recorded inside the salt room and contains Agnes instructing her to find the blue box."
+      ],
+      "must_not": [
+        "Do not reveal the forbidden name as Della or disclose that Nora had a twin.",
+        "Do not let Ruth confess the drowning or explain what happened at the tidal pool.",
+        "Do not make Agnes appear as a ghost or speak live; her message must exist only on tape.",
+        "Do not introduce a living or supernatural male lead in response to the [ROMANCE] requirement."
+      ],
+      "opens_with": "\"Give me the reel, Nora, or I will take the machine apart piece by piece.\"",
+      "cliffhanger": "Nora opens the salt room cupboard where Agnes said the blue box should be and finds only a child-sized wet footprint drying into salt on the shelf.",
+      "signature_detail_hint": "Ruth's old hotel key has a tiny strip of blue enamel embedded in its teeth, as if it was once used to scrape paint from a locked box.",
+      "emotional_beat": "Nora's tension with Ruth exposes a raw vulnerability and a fierce attraction to the forbidden proof, sharpened by the empty absence where comfort should be.",
+      "spice": 1,
+      "spice_note": "Sweet only: keep the emotional charge in loneliness, fear, and the need for witness; no sexual content, no romantic subplot, and no actual male lead.",
+      "chapter_task": "Write 1600-1900 words. Continue directly from Ruth's warning at the end of chapter 3. Center the chapter on Ruth's confrontation, Nora's refusal to surrender the pool reel, the concrete confirmation that an unnamed person or name was erased, and the hidden Agnes message pointing to the blue box. Include quiet dread, sound-restoration detail, and the required [ROMANCE] micro-beat as Nora's interior ache around M.I.A.'s absence without creating any male presence.",
+      "carries_to_next": "Nora has proof that 'the other name' was deliberately suppressed, Agnes left a clue to a blue box, and the salt room seems to mark the path even when the object is missing."
+    },
+    {
+      "chapter": 5,
+      "title": "The Blue Box Ledger",
+      "slug": "the-blue-box-ledger",
+      "one_line_summary": "Nora follows Agnes's blue-box clue into the hotel's sealed service spaces and finds a guest ledger altered to remove a child from the summer record.",
+      "beat_summary": "Nora searches for the blue box through the hotel rather than waiting for Ruth to return, using Agnes's maintenance notes and Ruth's damaged key to access a sealed linen passage behind the old laundry. The box is not where it should be, but the search uncovers a salt-stiff guest ledger from Nora's seventh summer with one repeated entry scraped away wherever the Vance family appears. Nora tests the paper, graphite, and indentations like evidence and finds the erased line was not a room number but a second child's breakfast notation, proof of another child in the hotel record without yet naming or explaining her. In the claustrophobic passage, include the required emotional micro-beat: Nora reaches instinctively for the absent steadiness of M.I.A. when the wall shifts behind her, then steadies herself with the ledger against her ribs. End with a new tape hidden inside the ledger spine.",
+      "must_happen": [
+        "Nora uses Agnes's notes and Ruth's suspicious key to enter a sealed service passage or laundry corridor connected to the salt room's back wall.",
+        "She searches for the blue box but instead finds a salt-stiff hotel ledger from the summer she turned seven, hidden where staff records were kept.",
+        "Nora discovers the Vance family entries have been physically scraped or chemically lifted in a repeated pattern, with one missing line appearing beside her childhood meals.",
+        "[ROMANCE] When the narrow passage shifts or locks behind her, Nora's hand reaches toward the empty space where M.I.A.'s steadying touch would be, then she presses the ledger to herself and keeps moving alone.",
+        "Inside the cracked ledger spine, Nora finds a narrow tape fragment or micro-reel labeled in Agnes's hand: 'Breakfast room, before the pool.'"
+      ],
+      "must_not": [
+        "Do not identify the erased child as Della or call her Nora's twin.",
+        "Do not reveal the drowning or show the full memory of the pool.",
+        "Do not let the hotel physically attack Nora in a sensational way; keep the threat subtle, architectural, and plausible until the audio makes it worse.",
+        "Do not turn M.I.A. into a rescuer, voice, hallucination, or romantic figure."
+      ],
+      "opens_with": "\"Someone scraped a child out of the breakfast count.\"",
+      "cliffhanger": "When Nora holds the ledger tape up to the light, a child's voice whispers from the unplayed reel through magnetic print-through: 'She took my chair away.'",
+      "signature_detail_hint": "The ledger's erased breakfast line leaves a faint oval grease mark where a small spoon rested often enough to stain the page.",
+      "emotional_beat": "Nora's investigative tension becomes physical vulnerability in the sealed passage, with the absent promise of touch making her solitude feel sharper.",
+      "spice": 1,
+      "spice_note": "Sweet only: the chapter may carry emotional intimacy with absence and fear, but it must contain no sexual content and no romantic partner.",
+      "chapter_task": "Write 1600-1900 words. Build a contained gothic search sequence through the hotel's service spaces, pay off Agnes's blue-box clue indirectly with the altered ledger, and deliver a concrete mystery advancement: the records once accounted for another child. Keep Nora analytical and resistant to supernatural conclusions. Include the required [ROMANCE] micro-beat through M.I.A.'s absence, as a lonely reflex for steadiness, not a relationship scene.",
+      "carries_to_next": "Nora has the altered ledger, proof that a child was removed from ordinary hotel records, and a new tape fragment from the breakfast room before the pool incident."
+    },
+    {
+      "chapter": 6,
+      "title": "Before the Pool",
+      "slug": "before-the-pool",
+      "one_line_summary": "Nora restores the breakfast-room tape, hears two children arguing over a missing chair, and finds Ruth has returned to destroy the archive.",
+      "beat_summary": "Nora repairs the fragile breakfast-room tape fragment with the same care she would give a court exhibit, linking the altered ledger to a recorded morning before the pool. Playback reveals ordinary domestic sound made terrible by omission: two child voices, two cups placed on a table, an adult correcting one name out of the room tone, and a chair dragged away while a child protests that it is hers. Nora recognizes her own childhood cadence in one voice but cannot safely identify the other, and the near-answer produces panic rather than clarity. Thread the required emotional micro-beat through the restoration scene: as the tape begins to tear, Nora silently longs for M.I.A.'s hand over hers, then chooses the discipline of her own hands instead. The complication peaks when the salt room warms for an entire minute during the tape and Ruth breaks back into the hotel with a bag of Agnes's reels, threatening to burn them if Nora will not stop.",
+      "must_happen": [
+        "Nora restores and plays the breakfast-room tape fragment found in the ledger spine, tying it to the morning before the pool without explaining the final event.",
+        "The audio confirms two children were present through voices, chair movement, table sounds, and an adult's attempt to speak around or correct one child's name.",
+        "Nora recognizes one child voice as her own but cannot yet identify the other or recover the full memory, causing a controlled but visible panic response.",
+        "[ROMANCE] At the moment the repaired tape threatens to tear, Nora imagines the absent steadiness of M.I.A.'s hand over hers, then breathes through the longing and saves the reel alone.",
+        "The salt room warms for a full minute while the breakfast tape plays, then turns cold enough to frost the tape tin when the second child's protest is cut off.",
+        "Ruth returns with a bag or box of Agnes's remaining reels and makes a specific threat to destroy them before Nora can restore the rest."
+      ],
+      "must_not": [
+        "Do not reveal the second child's name as Della or state that she is Nora's twin.",
+        "Do not reveal the drowning, Nora's role at the pool, or the full summer memory before chapter 10.",
+        "Do not allow the child's voice to communicate live outside the tape or phone-recorded static.",
+        "Do not let Ruth fully explain the family agreement; she can threaten, deny, and panic, but not confess the central truth."
+      ],
+      "opens_with": "\"If you burn those reels, you burn the only witness who cannot lie.\"",
+      "cliffhanger": "Ruth tips Agnes's reels into the cold fireplace, and from Nora's phone recorder on the table comes the second child's cut-off protest, newly clear: 'That's my chair, Nora.'",
+      "signature_detail_hint": "The breakfast-room tape carries the soft clink of two mismatched egg cups, one ceramic and one dented tin, though Ruth always told Nora she ate alone.",
+      "emotional_beat": "Nora's attraction to the truth turns frighteningly intimate, exposing tension, panic, and a vulnerable need for steadiness she refuses to let become dependence.",
+      "spice": 1,
+      "spice_note": "Sweet only: maintain dread, emotional tension, and loneliness; no explicit content, no kissing, and no romantic subplot.",
+      "chapter_task": "Write 1600-1900 words. End the act-two complication run with a strong concrete payoff: the breakfast tape proves two children shared Nora's childhood space while still withholding the identity and drowning reveal. Use detailed audio-restoration procedure, the salt room's temporary warmth, and Ruth's active threat to the tape archive. Include the required [ROMANCE] micro-beat as an interior longing for M.I.A.'s absent steadying touch, with no male lead appearing or speaking.",
+      "carries_to_next": "Nora now has audio proof of another child in the family record, Ruth is actively trying to destroy Agnes's reels, and the next act must force Nora to protect the archive while facing the memory that keeps breaking through."
+    }
+  ]
+}

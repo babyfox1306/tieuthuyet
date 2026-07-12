@@ -1,0 +1,109 @@
+concept_status: ready
+target_language: en
+title: The Paper Oracle
+logline: A night-shift nurse in a 1994 coastal ER finds a label printer that spits
+  out a patient's name and time of death before they walk through the door — and the
+  first slip names a child who arrives thirty-five minutes early.
+author_directive: 'LEAD (single, female): Iris Callahan, 26, only night-shift nurse
+  at a small coastal-town ER, 1994. Voice: dry, practical, counts by protocol so she
+  doesn''t have to feel. Tic: presses two fingers to her own wrist to check her pulse
+  when afraid. Boundary: trusts only what she can measure — exactly what the machine
+  breaks. Wound: a patient died on her watch a year ago; she filed it "unavoidable"
+  and isn''t sure that was true.
+
+
+  SIGNATURE HARD-RULE (immutable): The machine communicates ONLY through printed paper.
+  No text screen, no voice, no apparition — it never speaks. Every answer is physical:
+  held, torn, burned. Each slip = one name + one time, nothing else. The machine never
+  explains.
+
+
+  CENTRAL MYSTERY (ONE answer): Does the machine foresee, or choose? → It is NOT prophetic;
+  it prints the name of the person Iris will unknowingly let die through a clinical
+  decision that night. It reflects her hand, not the future. Revealed ch8-9, never
+  contradicted.
+
+
+  CAST (NO male lead, NO love interest):
+
+  - Marguerite Vole: retired nurse who worked THIS room 30 years ago, now a memory-loss
+  patient upstairs. Speaks in fragments. Knows what the machine is. Mirror of Iris''s
+  future.
+
+  - Dr. Ovid: attending physician, present ONLY by phone, flat clinical voice. NOT
+  romantic — a source of dread, embodies system pressure to decide fast.
+
+  - Lena: the girl in Room 3, first patient whose name printed before arrival — the
+  ch1 detonator. A plot element, never sexualized.
+
+
+  POV: third-person limited, locked to Iris every chapter. No head-hopping.
+
+  SPICE: level 1. No sexual content, no eroticization. Tone: dread and restraint,
+  never titillation.
+
+
+  CHAPTER / REVEAL LADDER:
+
+  Ch1: Iris on shift. Machine prints a name + 03:47. She discards it. At 03:12 a father
+  carries in a child — same name. Ends: 35 minutes left. Believe the paper?
+
+  Ch2: She tries to warn/prepare. Child stabilizes — but someone ELSE on a second
+  slip dies at their printed time. Doubt: warning her, or aiming her?
+
+  Ch3 [REVEAL 1]: Every name so far is a patient SHE personally triaged. Marguerite
+  mutters "it only ever prints your handwriting."
+
+  Ch4-5: Iris fights a prediction — reroutes a patient, refuses the machine. That
+  refusal causes the death. Her resistance is the mechanism.
+
+  Ch6 [REVEAL 2]: Marguerite''s old logbook — 30 years ago, same machine, same pattern;
+  Marguerite tried to outrun it and stopped nursing.
+
+  Ch7: Iris tests it cold — does nothing, lets a night pass by protocol. No one on
+  a slip dies. Proof: it responds to her choices, not fate.
+
+  Ch8-9 [CORE REVEAL]: The machine reflects her hand. It named last year''s death
+  too — she DID have a choice. Then a slip prints: IRIS CALLAHAN, and a time.
+
+  Ch10: She stops fighting. Accepts one death she cannot prevent instead of causing
+  one by resisting. Burns the machine. It goes silent.'
+surface_plot: 'A haunted-machine ghost story: an old printer in a dying ER predicts
+  who will die, and the nurse races each night to beat its predictions and save people.'
+true_plot: The machine isn't prophetic. It prints the name of whoever the nurse will
+  let die that night through a clinical decision. It doesn't see the future — it reflects
+  her own hand. Every prediction she tries to fight, she causes by fighting it. The
+  final slip prints her own name.
+must_include:
+- Slow burn every chapter
+- Cliffhanger at the end of every chapter
+- Machine communicates only through printed paper
+- Each slip = one name + one time, nothing else
+- Iris checks her own pulse when afraid (recurring tic)
+- One reveal fragment every 2-3 chapters, laddered
+- Every named victim is a patient Iris personally triaged
+- 'Tone: dread and restraint, spice level 1 throughout'
+must_avoid:
+- Any sexual or explicit content — spice stays level 1
+- No sex scenes, no nudity, no eroticized description
+- Invented male lead or romantic love interest
+- Dr. Ovid being treated as a romantic figure
+- Machine speaking aloud or via text screen (paper-only)
+- Any character under 18 in any suggestive context
+- Twist not planted in an earlier chapter
+- Central mystery resolving to more than one answer
+- Shared bloodline between any two leads
+- Machine explaining itself in words
+ending_book1: 'Iris understands the machine reflects her own hand, not the future.
+  Facing a slip with HER OWN name, she breaks the loop: she stops resisting, accepts
+  a death she cannot prevent rather than causing one by fighting, and burns the machine.
+  She survives. The machine goes silent. Her year-old guilt is resolved — she finally
+  knows the truth about that death.'
+hook_book2: The next morning an identical label printer is delivered to the ER — still
+  sealed in its box, shipped from the very hospital where Marguerite worked 30 years
+  ago. It isn't plugged in. It has already printed one slip.
+notes: '10 chapters. Setting: 1994 coastal-town ER, night shift, analog — no internet,
+  no cellphones. Cold neon, film-grain dread. Standalone Book 1 with closed case +
+  one hook line for Book 2. After creating workspace, write canon_registry.yaml FIRST
+  (Iris Callahan canonical; Dr. Ovid = supporting, NOT love interest; forbid prior-book
+  names: Nora, Della, Agnes, Ruth, Elena, Mara, Cora) before develop-narrative.'

@@ -1,0 +1,258 @@
+{
+  "book": 1,
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Wood That Knows",
+      "slug": "ch01-the-wood-that-knows",
+      "one_line_summary": "Elena arrives at the inherited lake house to find a caretaker who fears the dusk and a childhood toy that seems to be waiting for her.",
+      "beat_summary": "Elena arrives at the dilapidated lake house and immediately feels the wrongness in the silence. She meets Julian Vane, the estate caretaker, who is intense and seemingly wary of her presence. Inside, she finds Pip, the one-eyed bear from her fragmented memories. While unpacking, she catches a glimpse of a girl in a blue dress in the hallway mirror, but when she turns, the hallway is empty.",
+      "must_happen": [
+        "Elena steps onto the porch and finds the front door unlocked, swinging slightly despite no wind.",
+        "Julian Vane intercepts her before she enters the main hall, issuing a sharp warning about the structure of the house.",
+        "Elena finds Pip the bear on a dusty shelf in the attic; touching the bear triggers a sudden, intense sensation of drowning.",
+        "[ROMANCE] Julian steadies Elena when she stumbles on a rotting floorboard, his grip lingering on her arm a second too long, sending a jolt of tension through her."
+      ],
+      "must_not": [
+        "Elena must not remember the specific details of the summer Tomas died yet.",
+        "Julian must not enter the house after sunset."
+      ],
+      "opens_with": "Don't touch the railing, Julian said, his voice low and rough, cutting through the humid silence before Elena had even fully stepped onto the porch.",
+      "cliffhanger": "Elena looks into the hallway mirror to fix her hair and sees a small girl in a blue dress standing directly behind her shoulder, though the hallway is physically empty.",
+      "signature_detail_hint": "The wood grain of the banister feels warm and pulsing under her fingers, like the slow beat of a hidden heart.",
+      "emotional_beat": "Tension — the air between Elena and Julian is thick with unspoken warnings and an immediate, dangerous attraction.",
+      "spice": 1,
+      "spice_note": "Keep the interaction charged with lingering touches and intense eye contact, but no physical intimacy beyond steadying or accidental brushes.",
+      "chapter_task": "Write 1600-1900 words focusing on the sensory details of the house and the immediate friction between Elena and Julian.",
+      "carries_to_next": "The sighting of the girl establishes the haunting, and Julian's warning sets the rules for the night."
+    },
+    {
+      "chapter": 2,
+      "title": "The Geometry of Shadows",
+      "slug": "ch02-the-geometry-of-shadows",
+      "one_line_summary": "Julian explains the rules of the house while Elena begins to suspect her reflection is moving independently of her body.",
+      "beat_summary": "Julian attempts to explain the 'quirks' of the house—the sounds, the drafts—without admitting to the supernatural. Elena explores the ground floor, noticing that mirrors seem to be placed intentionally to catch her eye. She finds a diary page fragment referencing 'the game.' Julian prepares to leave as dusk approaches, clearly anxious about the time.",
+      "must_happen": [
+        "Julian clears his throat awkwardly before explaining that he never stays in the house after dark, blaming 'bad wiring.'",
+        "Elena catches her reflection in the dining room glass blinking a split second before she does.",
+        "Julian fixes a loose shutter, his arm brushing against Elena's shoulder as she hands him a tool, creating a moment of shared proximity.",
+        "[ROMANCE] While discussing the house's history, Julian stares at Elena with a mixture of pity and fierce protectiveness, his gaze dropping to her lips before he catches himself."
+      ],
+      "must_not": [
+        "The Girl in Blue must not appear anywhere other than a reflective surface.",
+        "Julian must not reveal his past failure with the previous tenant."
+      ],
+      "opens_with": "The house doesn't creak, Elena observed, running her hand along the wall; it breathes.",
+      "cliffhanger": "As Julian reaches his car to leave, the front door of the house slams shut from the inside, trapping Elena alone inside as the sky turns bruised purple.",
+      "signature_detail_hint": "The shadows in the room stretch towards Elena like elongated fingers, regardless of where the light source actually is.",
+      "emotional_beat": "Attraction mixed with fear — Elena wants to ask Julian to stay, not just because of the ghost, but because of the safety he represents.",
+      "spice": 1,
+      "spice_note": "Focus on the 'almost' — the tension in the air when they stand close, the heat of his presence contrasted with the cold house.",
+      "chapter_task": "Write 1600-1900 words emphasizing the psychological creepiness of the mirrors and deepening the dynamic between the leads.",
+      "carries_to_next": "Elena is now isolated inside the house for the night, raising the stakes."
+    },
+    {
+      "chapter": 3,
+      "title": "The Weight of Water",
+      "slug": "ch03-the-weight-of-water",
+      "one_line_summary": "Alone in the Blue Hour, Elena confronts the girl in the mirror and discovers a physical clue hidden within the bear.",
+      "beat_summary": "Trapped inside, Elena tries to rationalize the slammed door. The Blue Hour begins, and the atmosphere shifts from oppressive to actively hostile. She retreats to the living room with Pip. The Girl in Blue appears in the window glass, mouthing words Elena can't hear. In a panic, Elena tears at Pip's ear and finds the brass key sewn inside.",
+      "must_happen": [
+        "Elena tries to open the front door but finds the handle wet and slippery, smelling of algae and lake water.",
+        "The Girl in Blue appears in the reflection of the darkened window, pressing her hand against the glass as if trying to step out.",
+        "Elena discovers a hard lump inside Pip's ear and rips the stitching to find a small, brass key.",
+        "[ROMANCE] Elena instinctively grabs her phone to call Julian, not for the ghost, but just to hear his voice, finding comfort in his concern when he answers immediately."
+      ],
+      "must_not": [
+        "Elena must not successfully leave the house.",
+        "Julian must not be able to physically come back to help her yet due to the distance/rules."
+      ],
+      "opens_with": "The sky outside turned the color of a bruised plum, and the silence in the house suddenly dropped, heavy and suffocating.",
+      "cliffhanger": "Elena holds up the brass key, and in the reflection of the key's metal, she sees the Girl in Blue standing right beside her, close enough to touch.",
+      "signature_detail_hint": "The temperature in the room doesn't just get cold; it becomes humid, filling Elena's lungs with the taste of stale lake water.",
+      "emotional_beat": "Vulnerability — Elena is terrified, and her connection to Julian becomes her emotional lifeline.",
+      "spice": 1,
+      "spice_note": "The intimacy here is emotional and auditory—the desperate need to hear a human voice (Julian's) amidst the horror.",
+      "chapter_task": "Write 1600-1900 words focusing on the isolation of the Blue Hour and the visceral horror of the haunting.",
+      "carries_to_next": "The discovery of the key moves the plot from passive haunting to active investigation."
+    },
+    {
+      "chapter": 4,
+      "title": "The Brass Inheritance",
+      "slug": "ch04-the-brass-inheritance",
+      "one_line_summary": "Julian returns at dawn to find the aftermath of the night's haunting and helps Elena unlock the attic trunk, revealing the first written proof of her past.",
+      "beat_summary": "Julian finds Elena sleepless and clutching the bear, the key on the table. He is furious at the state of the house—wet footprints on the carpet, the smell of algae—but gentle with her. They take the key to the attic, where an old steamer trunk sits under a sheet. The key fits, and the trunk pops open, releasing a cloud of dust and the scent of old paper and dried lake water. Inside is a child's diary.",
+      "must_happen": [
+        "Julian arrives at dawn and immediately checks Elena for injuries, his hands lingering on her shoulders longer than necessary.",
+        "They discover the key fits the lock of the heavy iron-bound trunk in the attic corner.",
+        "Elena opens the trunk to find a collection of childhood items, primarily a leather-bound diary with a blue ribbon bookmark.",
+        "[ROMANCE] While dusting off the trunk, Elena accidentally inhales a cloud of dust and coughs; Julian steps into her space, his chest against her back as he steadies her, his warmth grounding her trembling frame."
+      ],
+      "must_not": [
+        "Julian must not reveal that he knew exactly what the key would open.",
+        "The diary must not be fully readable yet; only specific phrases stand out."
+      ],
+      "opens_with": "You're still here, Julian said, his voice rough with sleep or worry, framed by the gray light of dawn flooding the ruined hallway.",
+      "cliffhanger": "Elena opens the diary to the first page and sees her own childish handwriting scrawling over and over: 'I made the water take him.'",
+      "signature_detail_hint": "The brass key is cold to the touch, but when inserted into the lock, the metal becomes warm, vibrating like a struck tuning fork.",
+      "emotional_beat": "Relief mixed with dread — Elena feels safe with Julian, but the trunk's contents promise to destroy that safety.",
+      "spice": 1,
+      "spice_note": "Focus on the intimacy of shared breath and the physical comfort of his presence in the cold attic. The tension is protective and soft.",
+      "chapter_task": "Write 1600-1900 words focusing on the aftermath of the haunting and the joint discovery of the diary in the attic.",
+      "carries_to_next": "The diary provides the first concrete evidence of the repressed memory, shifting the mystery from abstract haunting to specific guilt."
+    },
+    {
+      "chapter": 5,
+      "title": "Entries in Ash",
+      "slug": "ch05-entries-in-ash",
+      "one_line_summary": "Elena reads the diary entries describing a 'game' played with a boy named Tomas, while Julian struggles to maintain his rational facade.",
+      "beat_summary": "Elena sits by the window reading the diary. The entries describe 'The Breath-Holding Game' and a boy named Tomas who was 'too loud.' Julian tries to explain away the entries as a child's imagination, but his fear is palpable. The house reacts to the reading—lights flicker, the temperature drops. Elena confronts Julian about who lived here before, sensing he knows more than he says.",
+      "must_happen": [
+        "Elena reads a passage describing how 'the blue girl' watches them play from the reeds.",
+        "Julian paces the room, checking his pocket watch obsessively as the shadows lengthen.",
+        "A glass of water on the table ripples and spills without being touched, soaking the diary pages.",
+        "[ROMANCE] Elena, frightened by the moving water, reaches out for Julian; he interlaces his fingers with hers, squeezing tight, his thumb rubbing over her knuckles in a silent promise of protection."
+      ],
+      "must_not": [
+        "Julian must not admit to the previous tenant's death or suicide.",
+        "Elena must not recall the actual moment of Tomas's death, only the context of the game."
+      ],
+      "opens_with": "It wasn't a ghost, Elena read aloud, her voice trembling in the silent room; it was a punishment we agreed to.",
+      "cliffhanger": "As Julian reads a specific line over Elena's shoulder, the mirror above the fireplace cracks violently down the center, and the sound of rushing water fills the room.",
+      "signature_detail_hint": "The ink on the diary pages is not black, but a rusty, dried brown that smells faintly of iron when rubbed.",
+      "emotional_beat": "Suspicion and reliance — Elena questions Julian's honesty but clings to him as her only shield against the house's reaction.",
+      "spice": 1,
+      "spice_note": "Emotional intimacy is key here—the comfort of hand-holding and the tension of secrets kept between lovers.",
+      "chapter_task": "Write 1600-1900 words focusing on the disturbing content of the diary and the escalating poltergeist activity.",
+      "carries_to_next": "The house's violent reaction to the diary forces them to acknowledge the danger is active and escalating."
+    },
+    {
+      "chapter": 6,
+      "title": "High Water Mark",
+      "slug": "ch06-high-water-mark",
+      "one_line_summary": "The haunting escalates into a physical flood; Julian attempts to evacuate Elena, but the house refuses to let them leave.",
+      "beat_summary": "The sound of rushing water becomes deafening. Water begins to seep up from the floorboards, not from outside, but from within the house. Julian grabs Elena, shouting that they have to leave. They scramble for the door, but the hallway has elongated, the front door miles away. They are forced to retreat to the upper landing as the water rises impossibly fast.",
+      "must_happen": [
+        "Water rises rapidly from the floorboards, clear and cold, smelling of deep lake weeds.",
+        "Julian physically lifts Elena over a rising patch of water, his hands firm on her waist.",
+        "The furniture in the living room begins to float, circling them like sharks.",
+        "[ROMANCE] Trapped on the landing with water rising below, Julian presses Elena against the wall to shield her from falling debris, his face inches from hers, breath mingling with hers in the damp air."
+      ],
+      "must_not": [
+        "They must not successfully exit the house.",
+        "The water must not actually be a real flood from the lake; it must be supernatural."
+      ],
+      "opens_with": "Run, Julian barked, the word cracking like a whip as the floorboards beneath their feet began to weep.",
+      "cliffhanger": "They reach the top of the stairs, but the water below has risen to the ceiling, and in the reflection of the black water, they see the Girl in Blue swimming upwards toward them.",
+      "signature_detail_hint": "The water rising is silent, lacking the roar of a real flood, moving like a silent, predatory beast.",
+      "emotional_beat": "Panic and desperation — the romance is fueled by the instinct to survive together, heightening every touch and glance.",
+      "spice": 1,
+      "spice_note": "The physical proximity is driven by danger—pressed against walls, lifting each other—creating high tension without sexual release.",
+      "chapter_task": "Write 1600-1900 words focusing on the kinetic horror of the rising water and the failed evacuation.",
+      "carries_to_next": "Trapped upstairs with the entity manifesting strongly, leading into the crisis of Act 3."
+    },
+    {
+      "chapter": 7,
+      "title": "The Weight of Memory",
+      "slug": "ch07-the-weight-of-memory",
+      "one_line_summary": "Elena is forced to face the Girl in Blue in the flooded attic, where the repressed memory of the drowning game fractures her sanity and nearly drags her under.",
+      "beat_summary": "The supernatural flood chases Elena and Julian to the attic, where the Girl in Blue rises from the water. The Girl speaks words that trigger the full sensory memory of the breath-holding game and Tomas's blue face. Elena breaks down, trying to drown herself in the guilt, but Julian physically restrains her, forcing her to breathe. As suddenly as it rose, the water recedes, leaving a single diary page wedged in the rafters.",
+      "must_happen": [
+        "The Girl in Blue manifests fully from the floodwater, speaking in a child's whisper: 'You left him. You hid.'",
+        "Elena is overwhelmed by the visceral memory of the game—Tomas's panicked eyes, the counting, the waiting.",
+        "Elena tries to step into deeper water to join the girl, but Julian holds her back.",
+        "[ROMANCE] Julian turns Elena's face to his, his hands framing her cheeks, his voice raw as he says, 'Look at me. You are here. You are real. Don't you dare leave me in this house alone.'"
+      ],
+      "must_not": [
+        "The full memory of the moment of Tomas's death must remain fragmented.",
+        "Julian must not be able to fight the Girl in Blue with force."
+      ],
+      "opens_with": "\"The water didn't stop at the landing,\" Julian hissed, pulling Elena back by the waist as a dark, oily tide began to lap at the top of the attic stairs.",
+      "cliffhanger": "As the water drains completely, leaving no trace of dampness, a single page of paper hangs from a crack in the beam, written in adult handwriting: *You buried the key. Now bury the guilt.*",
+      "signature_detail_hint": "The water in the attic leaves no wetness on the wood, only the lingering smell of ozone and deep earth.",
+      "emotional_beat": "Devastation and fierce protection. Elena shatters, and Julian becomes the anchor that holds her to the present.",
+      "spice": 1,
+      "spice_note": "The intimacy is the raw, desperate touch of a person holding another back from the abyss. Focus on the pressure of his hands, the hot whisper of his voice against her skin, the way he refuses to let go.",
+      "chapter_task": "Write 1600-1900 words focusing on the visceral horror of the memory intrusion and the raw, protective instinct of Julian.",
+      "carries_to_next": "The discovery of the diary page deepens the mystery and points the way to the final confrontation."
+    },
+    {
+      "chapter": 8,
+      "title": "The Dock at Dusk",
+      "slug": "ch08-the-dock-at-dusk",
+      "one_line_summary": "Finding a hidden diary page that points to the lake, Elena and Julian must decide if they will run from the house or confront the truth at the water's edge.",
+      "beat_summary": "Elena wakes on the attic floor in the gray dawn. She reads the diary page. It describes a ritual or a choice to be made at the lake at sunset. Julian admits the previous tenant found the same page and chose to burn it—and drowned that night. Elena knows she cannot leave or the cycle repeats. She must go to the lake. Julian prepares a fire on the shore, a lifeline back. The Blue Hour approaches.",
+      "must_happen": [
+        "Elena interprets the diary page as a final instruction: meet the girl at the exact spot where Tomas died.",
+        "Julian confesses the story of the previous tenant, clearing the air between them.",
+        "Elena lights a candle in the house and vows to return, claiming the house's power is broken.",
+        "[ROMANCE] As they walk to the dock, Julian threads his fingers through Elena's, stopping her. He cups her face gently and presses a soft, lingering kiss to her forehead, his unspoken prayer for her return."
+      ],
+      "must_not": [
+        "Elena must not achieve integration or peace yet.",
+        "The house must not physically attack them until they reach the lake."
+      ],
+      "opens_with": "\"We can't stay here,\" Elena said, her voice hollow as she stared at the diary page, \"the house is just a shell. The answer is out there.\"",
+      "cliffhanger": "Elena steps onto the dock as the sun dips into the horizon, and a soft blue light pulses beneath the wooden slats, thrumming in time with her heart.",
+      "signature_detail_hint": "The blue light under the dock pulses in a steady rhythm, and when Elena's bare foot touches the water, she feels warm, summer air instead of cold water.",
+      "emotional_beat": "Quiet resolve and shared fear. The bond between them is forged in the decision to face the worst together.",
+      "spice": 1,
+      "spice_note": "Trust and tenderness. The physical intimacy is the shared safety of his hand, the gentle press of his lips. It is a promise.",
+      "chapter_task": "Write 1600-1900 words focusing on the calm after the storm and the weight of the choice to confront the trauma directly.",
+      "carries_to_next": "Sets the stage for the final, full memory recovery in chapter 9."
+    },
+    {
+      "chapter": 9,
+      "title": "The Surface Breaks",
+      "slug": "ch09-the-surface-breaks",
+      "one_line_summary": "Elena submerses herself in the lake to meet the Girl in Blue and reclaim the full, devastating memory of the day Tomas died, finally choosing to become whole.",
+      "beat_summary": "Elena enters the water. She sinks down to the bottom where the Girl in Blue waits. The memory plays out in full: the game, the challenge, the moment Tomas stopped moving. Elena stayed hidden out of fear, letting her win the game. She didn't push him, but she didn't save him. Elena accepts the guilt. She takes the girl's hand. They merge. Elena surfaces. Julian is in the water, having come after her. He drags her to shore. She is crying and whole. She whispers the truth, and he holds her. The blue light is gone.",
+      "must_happen": [
+        "Elena sees the full, unedited memory of the drowning—her choice to hide in the reeds.",
+        "Elena speaks to the Girl in Blue, forgiving her and taking her back: 'You are not the monster. You are the part of me that survived. I need you.'",
+        "Elena and the girl merge completely. The water becomes clear and dark.",
+        "[ROMANCE] Julian pulls her onto the shore, wrapping her in his coat, holding her against his chest. She cries, and he rocks her, whispering that she is safe, she is forgiven, she is loved."
+      ],
+      "must_not": [
+        "The Girl in Blue must not remain separate. The central mystery must be fully answered.",
+        "Julian must not let her go until she is warm."
+      ],
+      "opens_with": "\"I have to go in,\" Elena said, her voice steady for the first time since she arrived, her hand resting on the wet wood of the dock.",
+      "cliffhanger": "As they pack the car to leave, Elena finds a photograph in Pip's other ear—a picture of her mother, Diane, as a young girl at the lake house, standing next to a woman labeled 'Cora.' On the back, in Diane's handwriting: *It wasn't your fault, Lena. It was mine. I passed it on.*",
+      "signature_detail_hint": "When Elena takes the girl's hand at the bottom of the lake, she doesn't feel cold water in her lungs; she feels the dry, warm air of the summer day she couldn't remember.",
+      "emotional_beat": "Catharsis and wholeness. A deep, painful peace. The relief of being fully known and accepted by Julian and herself.",
+      "spice": 1,
+      "spice_note": "The ultimate emotional payoff. The physicality is the desperate embrace of two people who just survived hell together. Soft, exhausted kisses. The safe harbor of his arms.",
+      "chapter_task": "Write 1600-1900 words portraying the emotional and psychological resolution of the mystery, ensuring the full memory sequence is clear and cathartic.",
+      "carries_to_next": "The mystery of Book 1 is solved, but Diane's letter opens the door for Book 2."
+    },
+    {
+      "chapter": 10,
+      "title": "The Lily and the Letter",
+      "slug": "ch10-the-lily-and-the-letter",
+      "one_line_summary": "In the strange quiet after the lake, Elena reads Cora's hidden letter, learns the true scope of the March legacy, and makes a pact with Julian to find her mother before the third mirror claims her.",
+      "beat_summary": "The chapter opens with Elena in the living room, the photograph of Diane and Cora in her hands. She feels the weight of Diane's guilt pressing down on the fragile wholeness she just achieved. Julian finds a hidden box of Cora's journals under the floorboards in the attic. At the kitchen table, Julian makes Elena promise to let him stay by her side. She agrees, her hand in his. Together they pack the last of her things. Elena says goodbye to the house, finding a strange peace in its ordinary silence. While Julian loads the car, she discovers a letter tucked into the back of one of Cora's journals, addressed to her. The letter warns her about her mother's history with mirrors and a third 'self' that Diane fractured long before Elena was born. The Blue Hour has passed. The house is just a house. The real journey is just beginning.",
+      "must_happen": [
+        "Elena reads Diane's inscription 'I passed it on' on the back of the photograph, fully comprehending the deliberate setup of her inheritance.",
+        "Julian clears the attic and finds Cora's hidden journals, proving the March women's dissociation is a multi-generational curse.",
+        "[ROMANCE] At the kitchen table, Julian cups Elena's cheek and makes her promise to let him stay. He kisses her softly, sealing a vow that he will not let her face her family's darkness alone.",
+        "Elena places Pip in the trunk, the bear's one eye catching the light. The memory it holds is no longer poison, just a scar she can live with.",
+        "Elena finds Cora's letter, folded into a dried lily, warning that Diane broke a mirror long ago and split a third self—a darkness that is still hunting the family line."
+      ],
+      "must_not": [
+        "The Girl in Blue must not reappear as a separate entity; Elena's integration is stable and complete.",
+        "Elena must not feel completely safe; the letter from Cora must introduce a new, deeper dread that sets up the overarching series conflict."
+      ],
+      "opens_with": "\"I passed it on,\" Elena read aloud, the tintype trembling in her fingers. The words were light cursive on aged paper, but they carried the full weight of a curse breaking open in the morning stillness.",
+      "cliffhanger": "Elena opens the lily-shaped letter. Cora's final words coil in her chest: \"Your mother is not who she pretends to be. She split the third mirror when she was fifteen. Find her before she finds you. The reflection can walk out on its own.\" Underneath the script, Cora has drawn a map to an address Elena has never seen, marked with an X.",
+      "signature_detail_hint": "The letter is folded into the shape of a water lily, the petals dry and fragile, and when Elena unfolds it, the creases are stained with old perfume—lavender, the same scent that lingers in the lake house's empty closets, as if Cora herself breathed the word onto the page.",
+      "emotional_beat": "Bitter resolve mingling with the first true safety of partnership. Elena is no longer alone in her fractured history, but the path ahead crawls with the dread of her mother's secrets.",
+      "spice": 1,
+      "spice_note": "The intimacy is the quiet safety of being wrapped in his arms, the soft kiss of a promise, the shared breathing of two people who have survived the dark together. No explicit content, only the profound comfort of touch and trust.",
+      "chapter_task": "Write 1600-1900 words focusing on the quiet, heavy aftermath of the trauma and the deliberate setup for Book 2. Ensure the romantic resolution with Julian feels earned and anchoring, contrasting with the cold dread of Diane's secret.",
+      "carries_to_next": "Introduces the overarching series mystery of the March family curse, the 'third mirror,' and the hunt for Diane. Elena and Julian leave the lake house together, forming a partnership against the shadow her mother cast over her life."
+    }
+  ],
+  "total_chapters": 10,
+  "title": "The Blue Hour"
+}

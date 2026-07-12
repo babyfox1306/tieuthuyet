@@ -19,7 +19,8 @@ class FormatReasonsTests(unittest.TestCase):
 
     def test_machine_foreign(self):
         reasons = format_machine_reasons({"foreign_chars": ["中", "文"], "word_count": 2000})
-        self.assertTrue(reasons[0].startswith("ký tự ngoại ngữ:"))
+        self.assertTrue(any(r.startswith("ký tự ngoại ngữ:") for r in reasons))
+        self.assertTrue(any("format_fix" in r for r in reasons))
 
     def test_qc_continuity_with_details(self):
         qc = {

@@ -1,0 +1,38 @@
+{
+  "description": "Three threads drive the narrative of The Salt Room: the discovery and restoration of the tapes revealing the forgotten sister; the physical mystery of the cold room; and Nora's gradual recovery of the suppressed memory of the summer she was seven. Each thread delivers partial answers and culminates in the final chapter's choice.",
+  "threads": [
+    {
+      "id": "T001",
+      "name": "The Tapes of Della",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "active",
+      "book1_resolution": "Nora restores the final tape and says Della's name aloud, fully recovering the memory of her twin's drowning and the family's erasure. The central mystery is answered.",
+      "book2_promise": "The last tape reveals a second child's voice beneath Della's, hinting that Agnes Vance erased more than one child from the family record.",
+      "book1_payoff": "Emotional catharsis as Nora chooses to grieve and remember; concrete answers to the tape mystery.",
+      "note": "Partial concrete answers are delivered in chapters 3, 5, 7, and 9."
+    },
+    {
+      "id": "T002",
+      "name": "The Cold Room",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "active",
+      "book1_resolution": "Nora understands the cold room as the physical trace of Della's erased existence—the shape of a person edited out of a family. After acknowledging Della, the room briefly warms, then goes cold again as the third voice emerges.",
+      "book2_promise": "The cold room reactivates with the third child's presence, setting up a new haunting.",
+      "book1_payoff": "Revelation of the cold room's cause; atmospheric resonance.",
+      "note": "The cold room is the central atmospheric symbol."
+    },
+    {
+      "id": "T003",
+      "name": "Recovered Memory",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "active",
+      "book1_resolution": "Nora remembers the full truth of the summer she was seven: Della's drowning in the tidal pool, her own frozen silence, and the family's agreement to erase Della. Nora becomes whole by choosing to grieve.",
+      "book2_promise": "The recovered memory reveals gaps in the grandmother's history, pointing to another erased individual.",
+      "book1_payoff": "Nora's internal arc completes; emotional payoff from acceptance.",
+      "note": "Memory recovery is paced across the book, triggered by tapes and artifacts."
+    }
+  ]
+}

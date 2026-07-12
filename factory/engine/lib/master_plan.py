@@ -19,6 +19,7 @@ from factory.engine.lib.prompt_builder import (
 )
 from factory.engine.lib.plan_qc import (
     apply_canon_plans,
+    apply_deterministic_plan_fixes,
     ensure_task_word_count,
     validate_plan,
 )
@@ -103,8 +104,8 @@ def build_plan_fixer_payload(
         "direction": slim_direction,
     }
     if narrative_compiler_enabled(ws):
-        narr = plan.get("narrative") or {}
-        knowledge = narr.get("knowledge") or {}
+        narr = plan.get("narrative") if isinstance(plan.get("narrative"), dict) else {}
+        knowledge = narr.get("knowledge") if isinstance(narr.get("knowledge"), dict) else {}
         narrative_issues = [i for i in issues if ":NC-" in i]
         body["narrative_issues"] = narrative_issues
         body["narrative_fix_hints"] = {
@@ -142,6 +143,8 @@ def fix_plan_with_llm(ws: Path, book: int, plan: dict, issues: list[str]) -> dic
     )
     raw, _ = call_9router("plan_fixer", payload, max_tokens=4096, direction=direction)
     fixed = parse_json_response(raw)
+    if not isinstance(fixed, dict):
+        raise RuntimeError("plan_fixer returned non-object JSON")
     if "chapter" not in fixed:
         fixed["chapter"] = plan["chapter"]
     fixed.pop("narrative", None)
@@ -159,26 +162,44 @@ def qc_and_fix_plans(ws: Path, book: int, *, use_llm: bool = True) -> dict[int, 
     plans = apply_canon_plans(data.get("chapter_plans", []), locked)
     plans = merge_narrative_into_plans(ws, plans)
     remaining: dict[int, list[str]] = {}
+    total = len([p for p in plans if not p.get("locked")])
+    done = 0
 
     for i, p in enumerate(plans):
         if p.get("locked"):
             continue
-        p = ensure_task_word_count(normalize_chapter_plan(p), direction)
+        done += 1
+        ch = int(p.get("chapter") or 0)
+        p = apply_deterministic_plan_fixes(p, direction)
         issues = validate_plan(p, direction, bible=bible, all_plans=plans, ws=ws)
         if issues and use_llm:
+            safe_print(
+                f"[fix-plans] ch{ch} ({done}/{total}): {len(issues)} issue(s) → plan_fixer…"
+            )
             try:
                 p = normalize_chapter_plan(
                     merge_narrative_into_plans(ws, [fix_plan_with_llm(ws, book, p, issues)])[0]
                 )
+                p = apply_deterministic_plan_fixes(p, direction)
                 issues = validate_plan(p, direction, bible=bible, all_plans=plans, ws=ws)
-            except Exception:
-                pass
+                if issues:
+                    safe_print(f"[fix-plans] ch{ch}: still {len(issues)} issue(s) after fixer")
+                else:
+                    safe_print(f"[fix-plans] ch{ch}: fixed")
+            except Exception as exc:
+                safe_print(f"[fix-plans] ch{ch}: fixer failed — {exc}")
+        elif issues:
+            safe_print(f"[fix-plans] ch{ch} ({done}/{total}): {len(issues)} issue(s) (no LLM)")
         plans[i] = p
         if issues:
-            remaining[p.get("chapter", 0)] = issues
+            remaining[ch] = issues
 
     data["chapter_plans"] = plans
     save_master_plan(ws, book, data)
+    if remaining:
+        safe_print(f"[fix-plans] remaining: {len(remaining)} chapter(s)")
+    else:
+        safe_print("[fix-plans] all chapters pass QC")
     return remaining
 
 
@@ -306,7 +327,20 @@ def _fetch_act_plans(
                 f"Không parse được plan ch{act_from}-{act_to} sau repair. "
                 f"Xem {raw_path} và chạy lại: plan --acts {act_from}-{act_to}"
             ) from exc2
-    new_plans = normalize_chapter_plans(merge_narrative_into_plans(ws, result.get("chapter_plans", [])))
+    if not isinstance(result, dict):
+        raise RuntimeError(
+            f"Plan ch{act_from}-{act_to} không phải JSON object. Xem {raw_path}"
+        )
+    chapter_plans = result.get("chapter_plans")
+    if not isinstance(chapter_plans, list):
+        # Some models return a bare list of chapter plans
+        if isinstance(result.get("chapters"), list):
+            chapter_plans = result["chapters"]
+        else:
+            raise RuntimeError(
+                f"Plan ch{act_from}-{act_to} thiếu chapter_plans[]. Xem {raw_path}"
+            )
+    new_plans = normalize_chapter_plans(merge_narrative_into_plans(ws, chapter_plans))
     return new_plans, log
 
 
@@ -335,13 +369,59 @@ def plan_act(ws: Path, book: int, act_from: int, act_to: int, act_name: str) -> 
     return merged, log2
 
 
-def plan_book(ws: Path, book: int, *, acts: str = "all", chunk_size: int = 3) -> tuple[Path, int]:
+def clear_master_plan_for_replan(ws: Path, book: int) -> Path:
+    """Wipe chapter_plans + plan_raw_* and set plan_status=draft so plan_book regenerates."""
+    path = master_plan_path(ws, book)
+    book_dir = book_workspace_dir(ws, book)
+    book_dir.mkdir(parents=True, exist_ok=True)
+
+    data: dict = {"book": book, "chapter_plans": []}
+    if path.exists():
+        try:
+            prev = json.loads(path.read_text(encoding="utf-8"))
+            if isinstance(prev, dict):
+                for key in ("title", "total_chapters", "acts"):
+                    if key in prev:
+                        data[key] = prev[key]
+        except (json.JSONDecodeError, OSError):
+            pass
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    for raw in book_dir.glob("plan_raw_*.txt"):
+        try:
+            raw.unlink()
+        except OSError:
+            pass
+
+    direction_path = ws / "direction.yaml"
+    if direction_path.exists():
+        direction = yaml.safe_load(direction_path.read_text(encoding="utf-8")) or {}
+        direction["plan_status"] = "draft"
+        direction_path.write_text(
+            yaml.dump(direction, allow_unicode=True, default_flow_style=False, sort_keys=False),
+            encoding="utf-8",
+        )
+    return path
+
+
+def plan_book(
+    ws: Path,
+    book: int,
+    *,
+    acts: str = "all",
+    chunk_size: int = 3,
+    force_replan: bool = False,
+) -> tuple[Path, int]:
     direction = load_direction(ws)
     bible = load_series_bible(ws)
     if not bible_is_approved(bible, direction):
         raise RuntimeError(
             "Bible chưa approved. Chạy: validate-bible → (duyệt canon) → approve-bible"
         )
+
+    if force_replan:
+        clear_master_plan_for_replan(ws, book)
+        safe_print("[plan] force_replan — đã xóa chapter_plans + plan_raw_*, plan_status=draft")
 
     if acts != "all":
         a, b = acts.split("-", 1)
@@ -371,10 +451,14 @@ def plan_book(ws: Path, book: int, *, acts: str = "all", chunk_size: int = 3) ->
     data["chapter_plans"] = merge_narrative_into_plans(ws, data.get("chapter_plans", []))
     save_master_plan(ws, book, data)
 
-    remaining = qc_and_fix_plans(ws, book)
+    # Deterministic QC only here — LLM fix is a separate step (UI fix-plans / CLI).
+    # Avoids silent N× plan_fixer calls that look like a hang after plan_raw_*.
+    safe_print("[plan] deterministic QC (spice/word-count)…")
+    remaining = qc_and_fix_plans(ws, book, use_llm=False)
     if remaining:
-        print(f"[plan] plan_qc remaining issues: {len(remaining)} chapters")
+        print(f"[plan] plan_qc remaining issues: {len(remaining)} chapters (chạy fix-plans nếu cần)")
     save_master_plan(ws, book, load_master_plan(ws, book))
+    safe_print("[plan] render prompts…")
     n = render_all_prompts(ws, book)
     return master_plan_path(ws, book), n
 
@@ -387,17 +471,44 @@ def fix_plans(ws: Path, book: int, *, use_llm: bool = True) -> tuple[dict[int, l
 
 def approve_plan(ws: Path, book: int | None = None) -> None:
     from factory.engine.lib.canon_registry import CanonRegistryError, validate_plan_against_canon_registry
+    from factory.engine.lib.plan_qc import apply_deterministic_plan_fixes, validate_all_plans
 
     direction = load_direction(ws)
     book_num = int(book if book is not None else direction.get("book") or 1)
     conflicts = validate_plan_against_canon_registry(ws, book_num)
+
+    # Full plan QC must also pass — names/spice alone are not enough.
+    bible = load_series_bible(ws)
+    data = load_master_plan(ws, book_num)
+    plans = normalize_chapter_plans(data.get("chapter_plans", []))
+    # Attach compiler narrative before QC (plans may predate compiler enablement).
+    plans = merge_narrative_into_plans(ws, plans)
+    plans = [apply_deterministic_plan_fixes(p, direction) for p in plans]
+    data["chapter_plans"] = plans
+    save_master_plan(ws, book_num, data)
+
+    remaining = validate_all_plans(plans, direction, bible=bible, ws=ws)
+    for ch, issues in sorted(remaining.items()):
+        for issue in issues:
+            conflicts.append(
+                {
+                    "code": "plan_qc_fail",
+                    "source": f"master_plan.json:ch{ch}",
+                    "value": issue,
+                    "expected": "plan QC pass before approve",
+                }
+            )
+
     if conflicts:
         raise CanonRegistryError(conflicts)
 
     path = ws / "direction.yaml"
-    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-    data["plan_status"] = "approved"
-    path.write_text(yaml.dump(data, allow_unicode=True, default_flow_style=False, sort_keys=False), encoding="utf-8")
+    data_dir = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    data_dir["plan_status"] = "approved"
+    path.write_text(
+        yaml.dump(data_dir, allow_unicode=True, default_flow_style=False, sort_keys=False),
+        encoding="utf-8",
+    )
 
 
 def plan_is_approved(ws: Path) -> bool:

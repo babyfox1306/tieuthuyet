@@ -1,0 +1,12 @@
+characters:
+  female_lead:
+    canonical: Nora Vance
+    allowed_aliases:
+    - Nora
+    forbidden_aliases: []
+  male_lead:
+    canonical: M.I.A.
+    allowed_aliases: []
+    forbidden_aliases: []
+pov_mode: third_person_limited
+spice_max: 1

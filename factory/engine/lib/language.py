@@ -44,7 +44,7 @@ LANGUAGE_PROFILES: dict[str, dict[str, Any]] = {
         "output_instruction": (
             "Chỉ output nội dung chương (có tiêu đề `# Chương N: ...`). Không meta, không checklist."
         ),
-        "word_count_patch": "BẮT BUỘC 1600-1900 chữ <<language_label>> — dưới 1500 = fail.",
+        "word_count_patch": "Target 1600-1900 chữ <<language_label>> — dưới 1250 = fail.",
         "spice": {
             1: "## [SPICE] Mức 1 (sweet)\nCăng thẳng tình cảm, ánh mắt, gần chạm — không thân mật thể xác.",
             2: "## [SPICE] Mức 2 (steamy)\nHôn, sức hút cơ thể, căng đến giới hạn — dừng trước cảnh giường hoặc fade-to-black.",
@@ -77,7 +77,7 @@ LANGUAGE_PROFILES: dict[str, dict[str, Any]] = {
         "output_instruction": (
             "Output chapter prose only (title `# Chapter N: ...`). No meta, no checklist."
         ),
-        "word_count_patch": "REQUIRED 1600-1900 <<language_label>> words — under 1500 = fail.",
+        "word_count_patch": "Target 1600-1900 <<language_label>> words — under 1250 = fail.",
         "spice": {
             1: "## [SPICE] Level 1 (sweet)\nEmotional tension, eye contact, almost-touch — no physical intimacy.",
             2: "## [SPICE] Level 2 (steamy)\nKissing, body tension, stop before explicit bed scene or fade-to-black.",
@@ -125,7 +125,7 @@ def find_foreign_chars(text: str, lang: str | None = None, *, direction: dict | 
     return sorted(found)
 
 
-def tech_rules_block(profile: dict, *, min_words: int = 1500) -> str:
+def tech_rules_block(profile: dict, *, min_words: int = 1250) -> str:
     tw = profile["target_words"]
     wu = profile["word_unit"]
     return f"""## {profile.get("tech_heading", "TECHNICAL REQUIREMENTS")}
@@ -140,7 +140,7 @@ def tech_rules_block(profile: dict, *, min_words: int = 1500) -> str:
 9. **PLAIN TEXT ONLY — no markdown.** Do NOT use `*italics*`, `**bold**`, backticks, or `#` headings in body prose. Internal thoughts, journal lines, and sound effects are normal sentences — no asterisk emphasis."""
 
 
-def tech_rules_block_vi(profile: dict, *, min_words: int = 1500) -> str:
+def tech_rules_block_vi(profile: dict, *, min_words: int = 1250) -> str:
     """Vietnamese section headers for vi profile."""
     if profile.get("tech_heading") != "YÊU CẦU KỸ THUẬT":
         return tech_rules_block(profile, min_words=min_words)
@@ -166,7 +166,7 @@ def apply_lead_placeholders(text: str, bible: dict | None) -> str:
     return text.replace("<<female_lead>>", fl).replace("<<male_lead>>", ml)
 
 
-def build_tech_rules(profile: dict, *, min_words: int = 1500, bible: dict | None = None) -> str:
+def build_tech_rules(profile: dict, *, min_words: int = 1250, bible: dict | None = None) -> str:
     if profile.get("word_unit") == "chữ":
         block = tech_rules_block_vi(profile, min_words=min_words)
     else:
@@ -191,7 +191,7 @@ ROLE_PLACEHOLDERS = (
 
 def render_role_template(template: str, direction: dict | None, cfg: dict | None) -> str:
     prof = language_profile(direction=direction, cfg=cfg)
-    min_w = int((cfg or {}).get("min_word_count", 1500))
+    min_w = int((cfg or {}).get("min_word_count", 1250))
     replacements = {
         "<<language_label>>": prof["label"],
         "<<prose_style_rule>>": prof["prose_style_rule"],

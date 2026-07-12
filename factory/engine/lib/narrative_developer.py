@@ -121,12 +121,34 @@ def develop_pass(ws: Path, pass_name: str) -> Path:
         direction=direction,
     )
     data = parse_json_response(raw)
+    if isinstance(data, dict):
+        from factory.engine.lib.chapter_derivation import normalize_narrative_pass
+
+        data = normalize_narrative_pass(pass_name, data, total_chapters, book)
     if pass_name == "book_arc" and isinstance(data, dict):
         data["total_chapters"] = total_chapters
         data["book_number"] = book
     out = nd / PASS_TO_FILE[pass_name]
     out.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     sync_book_arc_total_chapters(ws, book, total_chapters)
+    if pass_name == "kernel":
+        from factory.engine.lib.workspace_metadata import sync_narrative_profile_to_direction
+
+        sync_narrative_profile_to_direction(ws)
+    # Catch invented doctors before they poison plan/state.
+    from factory.engine.lib.canon_registry import find_invented_doctors, collect_allowed_cast_names
+    from factory.engine.lib.catalog import safe_print
+
+    invented = find_invented_doctors(
+        json.dumps(data, ensure_ascii=False),
+        collect_allowed_cast_names(ws, book),
+    )
+    if invented:
+        safe_print(
+            f"  narrative/{PASS_TO_FILE[pass_name]} CANON WARN — invented doctors: "
+            + ", ".join(invented)
+            + " (must match concept/bible cast; do not propagate)"
+        )
     _set_narrative_draft(ws)
     return out
 
@@ -162,4 +184,7 @@ def develop_narrative(workspace_id: str, *, pass_name: str = "all") -> list[Path
         written.append(develop_pass(ws, pass_name))
 
     sync_book_arc_total_chapters(ws, book, total_chapters)
+    from factory.engine.lib.workspace_metadata import sync_narrative_profile_to_direction
+
+    sync_narrative_profile_to_direction(ws)
     return written

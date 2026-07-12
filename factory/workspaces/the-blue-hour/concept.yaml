@@ -1,0 +1,135 @@
+concept_status: ready
+target_language: en
+title: The Blue Hour
+logline: A woman returns to the lake house where she spent one childhood summer she
+  cannot remember, and finds a one-eyed bear waiting for her — along with a small
+  girl in a blue dress who only appears in mirrors, who never speaks, and who does
+  not want her to leave a second time.
+author_directive: '=== LOCKED CANON — DO NOT VIOLATE ===
+
+  NAMES (exact spelling, no variants ever):
+
+  - Female lead: Elena March (28, furniture restorer, estranged from family, no memory
+  of the summer she was 8). Allowed: Elena, Ms. March. FORBIDDEN any other name.
+
+  - The aunt (deceased): Cora March. Allowed: Cora, Aunt Cora.
+
+  - The girl in blue: never named directly in narration — referred to only as "the
+  girl in blue" / "the child." She is Elena''s severed 8-year-old self.
+
+  - The bear: "Pip" — one glass eye, threadbare, a small brass key sewn into one ear.
+  Memory-vessel.
+
+  - The mother (living, estranged): Diane March.
+
+  - The drowned one (past): a boy, "Tomas," age 9 that summer — Elena''s summer playmate.
+
+
+  POV: THIRD-PERSON LIMITED, locked to Elena ONLY, entire book. NO first-person ("I/my/me")
+  narration outside quoted dialogue. This is absolute.
+
+
+  SPICE: LEVEL 1. Slow-burn emotional tension only. NO on-page sex. NO explicit content.
+  Any romantic charge fades to black at a touch or a held look. This is a gothic psychological
+  horror, not a romance — heat would break the dread. HARD RULE.
+
+
+  === ATMOSPHERE (the product''s real value) ===
+
+  This book sells on DREAD, not shock. Build slow. Every chapter should carry at least
+  one image of quiet wrongness before anything overt happens: a mirror that reflects
+  a half-second late, wet child''s footprints drying in reverse, the smell of pond
+  water in a dry room, the bear found downstairs when it was left in the attic. The
+  girl in blue appears ONLY in reflections (mirrors, dark windows, still water, a
+  spoon, a phone screen) — never directly in the room. She never speaks; her signature
+  is silence and stillness. Horror comes from recognition, not gore. The scariest
+  idea: the thing haunting Elena is Elena.
+
+
+  === MYSTERY DISCIPLINE ===
+
+  Central mystery = ONE answer: what Elena did at the lake the summer she was 8, and
+  why she split herself to forget it. Reveal cadence: give a CONCRETE partial answer
+  every 2–3 chapters (a name, a photo, a diary line, a recovered fragment) — never
+  only "a deeper secret." No endless teasing. The full truth lands in the final act,
+  but the reader must feel steadily rewarded, not strung along.
+
+
+  === KEY BEATS (flexible, but hit these) ===
+
+  - Elena finds Pip (the bear); first touch = first fractured flashback (rain, a man''s
+  voice, a wet thump).
+
+  - The girl in blue first seen in a mirror, pointing.
+
+  - Diane (mother) warns her by phone to leave, refuses to explain — "there was never
+  a girl. Only you."
+
+  - A hidden object (diary / lockbox / photo) names Tomas and hints Elena was there
+  when he drowned.
+
+  - Midpoint: Elena realizes the girl is herself, not a stranger.
+
+  - The choice: reintegrate (remember, become whole, carry the guilt) or flee again
+  (stay safe, stay fractured, leave the girl in the dark forever).
+
+
+  === FORBIDDEN ===
+
+  - No first-person narration outside dialogue.
+
+  - No explicit sex / no spice above 1.
+
+  - No gore or body-horror as the primary scare — dread over splatter.
+
+  - No name drift — Elena, Cora, Pip, Diane, Tomas stay fixed.
+
+  - The girl in blue never speaks aloud and never appears outside a reflection.
+
+  - No more than ONE true answer to the central mystery.'
+surface_plot: A grieving woman alone in a decaying inherited lake house, hunting for
+  the reason her late aunt left it to her. Doors that were locked open at night. Footsteps
+  cross the attic overhead when no one is there. A child's ghost watches from every
+  reflective surface. On the surface it reads as a classic haunting — the house is
+  holding something, and it wants her.
+true_plot: The girl in blue is not a ghost and not a stranger. She is the narrator's
+  own eight-year-old self — the part she severed and left behind in this house the
+  summer she was eight, in order to survive a single unbearable thing she did at the
+  water's edge. The one-eyed bear is the vessel that holds that severed memory; whoever
+  holds it begins to remember. The girl is not trying to harm her — she is trying
+  to make her stay and become whole again, because being remembered means being reunited,
+  and being reunited means the narrator must finally know, and own, what happened
+  the day someone drowned. The haunting is not an attack. It is a part of herself
+  asking to come home.
+must_include:
+- One concrete partial answer to the mystery every 2–3 chapters
+- The girl in blue appears ONLY in reflections, never speaks
+- Pip the bear as physical memory-vessel, one glass eye, consistent throughout
+- Third-person limited locked to Elena
+- Slow gothic dread, atmosphere over shock
+- The drowning of Tomas as the buried true event
+- Diane (mother) as the living keeper of the secret
+must_avoid:
+- First-person narration outside dialogue (hard rule)
+- Any explicit sexual content / spice above level 1
+- Gore or body-horror as the main scare
+- Name drift — Elena / Cora / Pip / Diane / Tomas stay fixed
+- The girl in blue speaking aloud or appearing outside reflections
+- More than one true answer to the central mystery
+- Insta-romance or a sex scene breaking the dread (this killed the previous draft)
+ending_book1: 'Elena recovers the full memory of the day Tomas drowned — what she
+  did, what she failed to do, and the guilt she buried by splitting herself. She makes
+  her choice at the water''s edge: she takes the girl in blue back, becomes whole,
+  and chooses to live knowing. The central mystery is fully answered; her arc resolves.'
+hook_book2: In Cora's final diary entry, Elena finds proof her aunt did the exact
+  same thing decades earlier — split herself, hid a bear, left a child in the dark.
+  But Cora's second shadow was never taken back. It is still in the house. And now
+  that Elena is whole, it has started appearing in her reflection, wearing Cora's
+  face.
+notes: '30 chapters, English, KDP-ready gothic psychological horror. This is a real
+  product, not a test throwaway — write it to publish. Purpose is also to prove the
+  canon framework: names, POV, and spice are locked hard above. After creating the
+  workspace, WRITE canon_registry.yaml FIRST (Elena March / and forbid all prior-draft
+  names) before develop-narrative, so all three canon gates enforce from chapter 1.
+  Watch specifically that the girl-in-blue''s "silence + reflection only" rule holds
+  — that constraint is what makes the horror work.'

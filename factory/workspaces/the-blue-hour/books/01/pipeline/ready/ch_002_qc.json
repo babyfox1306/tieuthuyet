@@ -1,0 +1,17 @@
+{
+  "foreign_chars": [],
+  "word_count": 1935,
+  "voice_drift": {
+    "flag": false,
+    "details": ""
+  },
+  "continuity_conflict": {
+    "flag": false,
+    "details": ""
+  },
+  "cliffhanger_strength": 8,
+  "pacing_issue": false,
+  "signature_detail_present": true,
+  "verdict": "PASS",
+  "fail_reasons": []
+}

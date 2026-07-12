@@ -1,0 +1,65 @@
+{
+  "description": "Knowledge matrix tracking what each character knows, learns, or hides across the five milestone chapters (based on total_chapters=10) of The Blue Hour Book 1. Reflects the gradual revelation of the central mystery and the hidden truths that drive the plot.",
+  "target_language": "en",
+  "milestones": [
+    1,
+    2,
+    5,
+    7,
+    10
+  ],
+  "characters": {
+    "Elena March": {
+      "ch1": "Arrives at lake house; finds Pip; experiences first fragmented flashback (rain, man's voice, wet thump) but no context.",
+      "ch2": "Sees the girl in blue in a mirror for the first time; begins to believe the house is haunted by a child ghost.",
+      "ch5": "Realizes the girl in blue is her own eight-year-old self (REV003); understands she fractured her psyche to forget something.",
+      "ch7": "Has recovered several clues (diary, drawing, Diane's words) but the full memory of the drowning remains buried; the smell of pond water is constant.",
+      "ch10": "Fully remembers the day Tomas drowned (ch9); makes the choice to reintegrate at the water's edge; discovers Cora's parallel story via her diary (ch10). Central truth known and accepted.",
+      "must_not_know_before": {
+        "The girl is herself": 5,
+        "Full memory of Tomas's drowning": 9
+      },
+      "hidden_truth": "Elena was present when Tomas drowned at age 8; her actions/inaction caused his death. She has split herself to avoid the guilt."
+    },
+    "Diane March": {
+      "ch1": "Receives Elena's call about being at the lake house; warns her to leave but refuses to explain why.",
+      "ch2": "Second phone call: 'There was never a girl. Only you.' Implies Elena's past is buried within herself.",
+      "ch5": "Brief conversation after Elena's realization; Diane admits she knew about Elena's fragmentation but stayed silent out of misguided protection.",
+      "ch7": "No contact; Elena attempts to call but Diane doesn't answer.",
+      "ch10": "Elena calls Diane after the reintegration; they begin a tentative reconciliation. Diane reveals her own guilt in not helping Elena face the truth sooner.",
+      "must_not_know_before": {},
+      "hidden_truth": "Diane knew about Elena's psychic split and the drowning of Tomas. She kept the secret because she couldn't bear to see Elena suffer the guilt, and was complicit in the cover-up."
+    },
+    "Cora March": {
+      "ch1": "Deceased; her bequeathal of the lake house to Elena is the inciting incident. The reason she left it is unknown.",
+      "ch2": "Elena begins to wonder about Cora's secrets as she explores the house.",
+      "ch5": "Still only known as the eccentric aunt who loved the lake. No deeper knowledge yet.",
+      "ch7": "Elena finds Cora's locked desk drawer but cannot open it yet.",
+      "ch10": "Elena opens the desk drawer (or reads Cora's journal) and learns that Cora also split herself after a tragedy, leaving a shadow self unreconciled. This shadow still lingers in the house.",
+      "must_not_know_before": {
+        "Cora also split herself": 10
+      },
+      "hidden_truth": "Cora underwent the same psychic splitting as Elena, but she never reintegrated. Her second shadow—the girl in Cora's reflection—remains trapped in the house, setting up the Book 2 threat."
+    },
+    "The Girl in Blue": {
+      "ch1": "Does not appear physically, but is implicitly represented by Pip and the atmosphere.",
+      "ch2": "First appearance in a mirror, silently pointing toward something (later known to be Pip/the truth).",
+      "ch5": "Elena recognizes her as her own 8-year-old self; the girl's expression shifts from ominous to pleading.",
+      "ch7": "Appears more frequently; her reflection gestures become more desperate, trying to get Elena to remember fully.",
+      "ch10": "When Elena chooses to reintegrate, the girl in blue smiles for the first time and merges back into Elena's reflection, disappearing as a separate entity.",
+      "must_not_know_before": {},
+      "hidden_truth": "She is not a ghost but the 8-year-old Elena, separated during the traumatic event. She holds the complete memory of Tomas's drowning and wants to be reunited with Elena so they can both become whole."
+    },
+    "Tomas": {
+      "ch1": "Not mentioned; his existence is completely forgotten by Elena.",
+      "ch2": "First subtle hint: a child's wet footprints found on the stairs, but not linked to a name.",
+      "ch5": "Revealed as a name in Elena's diary: 'Tomas.' Elena remembers having a playmate that summer, but not his death.",
+      "ch7": "Elena has pieced together that a boy drowned, but does not recall her role.",
+      "ch10": "Full memory of Tomas's drowning: the game, his slip, Elena's failed attempt to save him, and her flight. His death is the core of the trauma.",
+      "must_not_know_before": {
+        "Elena's involvement in his death": 9
+      },
+      "hidden_truth": "Tomas drowned while playing with Elena by the lake. He slipped on wet rocks; Elena tried to help but couldn't. Overcome with guilt, she psychically severed the memory."
+    }
+  }
+}

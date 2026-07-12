@@ -1,0 +1,31 @@
+{
+  "description": "Knowledge matrix for The Paper Oracle Book 1: tracks knowledge progression for Iris Callahan and Marguerite Vole across key chapter milestones, aligning with the central mystery and emotional arc.",
+  "target_language": "en",
+  "milestones": [
+    1,
+    2,
+    5,
+    7,
+    10
+  ],
+  "characters": {
+    "Iris Callahan": {
+      "ch1": "Knows the machine exists but dismisses the first slip as a coincidence or malfunction. Feels unease but relies on protocol. The memory of a patient's death a year ago lingers but is suppressed.",
+      "ch2": "A second slip prints and its prediction comes true despite her efforts. She begins to suspect the machine may be supernatural or fate-driven, but still believes she can outrun it.",
+      "ch5": "She has attempted to resist a prediction and inadvertently caused a death. Realizes that intervention can trigger the outcome, but still uncertain if the machine dictates events or merely reflects choices.",
+      "ch7": "After a night of complete inaction, no slip is fulfilled. She hypothesizes that the machine responds to her decisions, not predetermined fate. Begins to see herself as the mechanism.",
+      "ch10": "Full understanding: the machine reflects her clinical hand, not the future. She accepts responsibility for past and present, breaks the cycle by ceasing to resist, and burns the machine.",
+      "must_not_know_before": 8,
+      "hidden_truth": "The patient who died a year ago was preventable; Iris had a choice she did not recognize. Her pulse-check tic is a physical manifestation of guilt and the need to verify her own agency."
+    },
+    "Marguerite Vole": {
+      "ch1": "Not yet encountered by Iris. Her knowledge is locked in fragmented memory; she exists in the hospital's memory care wing, unaware of the machine's activity.",
+      "ch2": "No direct scene. Her presence remains unknown to the reader.",
+      "ch5": "Has spoken a key fragment: 'It only ever prints your handwriting.' This hints that the machine is tied to the specific nurse, not an external force. She cannot yet articulate more.",
+      "ch7": "Her old logbook has been discovered, revealing the same pattern from 30 years ago. She quit nursing rather than confront the truth. Her parallel to Iris is established.",
+      "ch10": "Her story serves as a cautionary tale. Iris understands that Marguerite's escape was a flight from responsibility, while Iris chooses to confront and end it.",
+      "must_not_know_before": 6,
+      "hidden_truth": "Marguerite's memory loss may be partially willful—a self-protective erasure of the trauma the machine caused. She still carries guilt but cannot access it fully."
+    }
+  }
+}

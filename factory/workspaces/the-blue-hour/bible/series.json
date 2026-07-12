@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "series_id": "the-blue-hour-series",
+    "genre": "Gothic Psychological Horror",
+    "target_language": "en"
+  },
+  "title": "The Blue Hour",
+  "sub_niche": "The Blue Hour",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "A woman returns to the lake house where she spent one childhood summer she cannot remember, and finds a one-eyed bear waiting for her — along with a small girl in a blue dress who only appears in mirrors, who never speaks, and who does not want her to leave a second time.",
+  "tropes": [
+    "Gothic Horror",
+    "Repressed Memory",
+    "Doppelganger",
+    "Haunted Objects",
+    "Psychological Split"
+  ],
+  "leads": {
+    "female": {
+      "name": "Elena March",
+      "age": 28,
+      "voice": "She spoke to the furniture, not the people; wood didn't ask why her hands shook.",
+      "tics": [
+        "Rubbing her thumb against the grain of wood",
+        "Avoiding her own eyes in mirrors"
+      ],
+      "boundary": "Refuses to discuss her childhood before age nine; maintains physical distance from others to prevent them from seeing her fractures.",
+      "internal_voice": "If I don't look, it isn't there."
+    },
+    "male": {
+      "name": "Julian Vane",
+      "age": 34,
+      "voice": "He spoke into the silence, his voice a low rumble that never quite drowned out the sound of the lake.",
+      "tics": [
+        "Checks his pocket watch compulsively",
+        "Clears his throat before speaking about the past"
+      ],
+      "boundary": "Will not enter the lake house after dusk; refuses to speculate on ghosts, only facts.",
+      "wound": "He failed to save a previous tenant from the house's influence."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Cora March",
+      "relation_to": "Elena March",
+      "relation_type": "deceased aunt",
+      "alive": false,
+      "secret": "Left the house to Elena specifically to force the memory to surface."
+    },
+    {
+      "name": "Diane March",
+      "relation_to": "Elena March",
+      "relation_type": "estranged mother",
+      "alive": true,
+      "secret": "Saw what happened the summer Tomas died and did nothing to stop Elena's dissociation."
+    },
+    {
+      "name": "Tomas",
+      "relation_to": "Elena March",
+      "relation_type": "childhood acquaintance",
+      "alive": false,
+      "secret": "The drowning was an accident exacerbated by a game of 'holding breath' they played."
+    },
+    {
+      "name": "The Girl in Blue",
+      "relation_to": "Elena March",
+      "relation_type": "fragmented self",
+      "alive": false,
+      "secret": "She is the keeper of the guilt and wants to be reintegrated."
+    },
+    {
+      "name": "Pip",
+      "relation_to": "Elena March",
+      "relation_type": "memory vessel",
+      "alive": false,
+      "secret": "Contains a small brass key sewn into its ear that unlocks the attic diary."
+    }
+  ],
+  "central_mystery": {
+    "question": "What did Elena do at the lake the summer she was eight, and why did she split herself to forget?",
+    "answer": "Elena was present when Tomas, a nine-year-old boy, drowned in the lake. Although she was only eight, her actions or inaction contributed to his death. The resulting guilt was so unbearable that her psyche unconsciously severed the part of her that held the memory and the emotion, leaving that 'child' behind in the lake house as a separate entity—the girl in blue. The bear Pip is a tactile anchor for the suppressed memory; touching it triggers fragmented recollections. The girl in blue is not a ghost but Elena's own fragmented childhood self, haunting her until she can integrate and accept the truth. The central mystery is fully resolved in Book 1.",
+    "reveal_chapter": 9
+  },
+  "bloodline": {
+    "description": "Elena is the daughter of Diane March and the niece of Cora March. The March women have a history of repression.",
+    "hard_rules": [
+      "female_lead and male_lead KHÔNG cùng huyết thống",
+      "Elena and Julian are strangers/acquaintances."
+    ],
+    "lead_relation": "strangers"
+  },
+  "world_rules": [
+    "The Girl in Blue appears ONLY in reflections (mirrors, water, glass) and never directly.",
+    "Silence is a language; the horror builds through quiet wrongness, not shock.",
+    "Objects (Pip) can hold psychic residue and trigger physical flashbacks.",
+    "The Blue Hour (twilight) is when the barrier between the conscious and subconscious thins."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "Elena returns to the lake house, confronts the girl in the mirror, and recovers the memory of Tomas's death.",
+      "ending_hook": "Elena reintegrates her fractured self but discovers a letter from Diane implying the lake house was not the first place this happened."
+    },
+    {
+      "book": 2,
+      "thesis": "Elena attempts to live a normal life but finds that the ' Girl in Blue' has merged with her, bringing new, violent impulses.",
+      "ending_hook": "She realizes Diane is hiding a second, darker secret involving Cora's death."
+    },
+    {
+      "book": 3,
+      "thesis": "Elena tracks Diane to their ancestral home to uncover the origin of the March family madness.",
+      "ending_hook": "Diane reveals that Aunt Cora didn't die of natural causes but was consumed by her own reflection."
+    },
+    {
+      "book": 4,
+      "thesis": "The haunting shifts from the lake to the city, targeting Julian as he tries to help Elena.",
+      "ending_hook": "Julian is pulled into a reflection, forcing Elena to enter the mirror world to save him."
+    },
+    {
+      "book": 5,
+      "thesis": "Elena must navigate the mirror world to rescue Julian and destroy the generational curse of the March women.",
+      "ending_hook": "Elena shatters the glass, freeing herself and Julian, but losing the ability to see her own reflection forever."
+    }
+  ],
+  "content_rules": [
+    "18+ chỉ khi spice>=3",
+    "không trẻ vị thành niên",
+    "đồng thuận",
+    "No on-page sex",
+    "No gore",
+    "Dread over shock"
+  ],
+  "bible_status": "approved"
+}

@@ -13,6 +13,8 @@ def _flagged(obj: Any) -> bool:
 
 def qc_fail_reasons(qc: dict[str, Any]) -> list[str]:
     """Hard-fail reasons from LLM QC JSON."""
+    if not isinstance(qc, dict):
+        return ["qc_not_object"]
     reasons: list[str] = []
     if qc.get("verdict") != "PASS":
         reasons.append("verdict_fail")
@@ -22,6 +24,11 @@ def qc_fail_reasons(qc: dict[str, Any]) -> list[str]:
         reasons.append("voice_drift")
     if qc.get("pacing_issue"):
         reasons.append("pacing_issue")
+    # Concept-driven content boundary checks (spice / must_avoid)
+    if qc.get("spice_ok") is False:
+        reasons.append("spice_exceeds_max")
+    if qc.get("content_boundary_ok") is False:
+        reasons.append("content_boundary_violation")
     return reasons
 
 
@@ -33,6 +40,8 @@ def _detail_of(obj: Any) -> str:
 
 def format_qc_reasons(qc: dict[str, Any]) -> list[str]:
     """Human-readable why a chapter landed in needs_review."""
+    if not isinstance(qc, dict):
+        return ["QC response không phải JSON object"]
     reasons: list[str] = []
     seen: set[str] = set()
 
@@ -60,6 +69,17 @@ def format_qc_reasons(qc: dict[str, Any]) -> list[str]:
         if not tag or tag in ("verdict_fail", "continuity_conflict", "voice_drift", "pacing_issue"):
             continue
         add(tag)
+
+    if qc.get("spice_ok") is False:
+        add("nội dung vượt spice_max (spice_exceeds_max)")
+    if qc.get("content_boundary_ok") is False:
+        # look for detail in fail_reasons
+        detail = ""
+        for raw in qc.get("fail_reasons") or []:
+            if "content_boundary" in str(raw).lower():
+                detail = str(raw)
+                break
+        add("vi phạm ranh giới nội dung (content_boundary_violation)", detail)
 
     if not reasons and qc.get("verdict") != "PASS":
         add("QC FAIL", "verdict không PASS")

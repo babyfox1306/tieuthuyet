@@ -1,0 +1,973 @@
+{
+  "book": 1,
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "slug": "the-room-that-answered",
+      "title": "The Room That Answered",
+      "one_line_summary": "Nora Vance inherits Agnes's shuttered seaside hotel, finds the cold salt room, and hears an old tape release a child's voice saying her name.",
+      "beat_summary": "Open on a tape playback anomaly: a damaged voice says Nora's name through the speaker after she has already touched the stop switch, before Nora understands whether the sound came from the tape, the machine, or the room tone she recorded. Then move into her first hours inside the closed Vance Hotel as a professional sound restorer trying to treat the inheritance like inventory rather than a homecoming. Quiet wrongness comes first: a room-tone recording she makes in the corridor drops into an unnatural hush outside the salt room, though the rest of the hotel carries ordinary settling noise. Nora finds Agnes's labeled tape box and a cold room she swears she has never entered, but every practical explanation feels slightly misaligned: the salt on the threshold is dry despite damp sea air, and the brass key leaves a white chill mark on her palm. [CLUE C001] On the first playback of one of Agnes's old tapes, a degraded child's voice emerges from static and says \"Nora\" from inside the recording; Nora must not know who the child is, why the voice knows her, or what missing part of her past the sound touches. Because canon has no male lead, the required romance-marked beat is handled as gothic emotional tension rather than a love subplot: Nora almost reaches for imagined comfort, then chooses the evidence instead, sharpening her isolation without inventing a man. End with the unplugged tape deck registering sound it should not be able to capture.",
+      "opens_with": "\"Nora,\" the tape whispered from the speaker after Nora had already pressed Stop.",
+      "cliffhanger": "Nora unplugs the tape deck and watches the reels sit dead, but the headphones still fill with seven soft clicks, one wet inhale, and a tiny recorded voice beginning to say her name again.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Build slow dread through sound, silence, tape mechanics, and the salt room's impossible cold. Include one quiet wrongness before the overt scare, plant C001 clearly, and preserve the no-romance canon while marking the required absence beat without inventing a male lead.",
+      "must_happen": [
+        "Nora receives or reviews the legal transfer of Agnes Vance's shuttered seaside hotel and frames the visit as a technical cataloging job, not a homecoming.",
+        "Nora sets up basic audio restoration equipment in the hotel and records room tone, noticing the corridor outside the salt room has a dead, padded silence unlike the rest of the building.",
+        "Nora notices a strange physical detail near the salt room: dry salt on the threshold despite damp sea air, and/or a brass key that leaves a white chill mark on her palm.",
+        "[CLUE C001] Nora plays one of Agnes's old tapes and hears a degraded child's recorded voice say \"Nora\" from the static; do not identify the child, explain the relationship, connect the voice to a specific incident, or imply a live physical presence.",
+        "[ROMANCE] No male lead exists in canon, so write this as a romance-slot absence beat only: Nora's hand hovers near her phone as if she could call someone to steady her, but there is no one allowed into this part of her life, and the ache of wanting comfort turns into tension with the evidence.",
+        "Nora tries to stop the playback, then unplugs the tape deck, but the headphones or recorder still catch several impossible clicks and a breathlike sound after the reels are still."
+      ],
+      "must_not": [
+        "Do not reveal any later-book family identity, hidden relationship, childhood incident, final location, or adult role in the erasure.",
+        "Do not give the child a confirmed name, history, cause of absence, or explanation for knowing Nora.",
+        "Do not show the child's figure visually, let the child speak live in the room, let the child touch Nora, move objects as a ghostly attack, or make the salt room an attacking ghost.",
+        "Do not invent a male lead, love interest, flirtation, or romance subplot despite the required romance-marked structural beat.",
+        "Do not make Nora fully remember any buried childhood event; she may only sense an absence around a blocked-off period of her past.",
+        "Do not imply Agnes's archive already proves the central mystery; the tape can be unsettling evidence, not an answer."
+      ],
+      "signature_detail_hint": "The salt room's cold leaves a powdery white handprint on warm brass for exactly seven seconds before vanishing.",
+      "carries_to_next": "Nora must investigate why Agnes kept the salt room sealed and why a child's recorded voice knows her name.",
+      "narrative": {
+        "clues_plant": [
+          "C001"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Nora Vance",
+            "Agnes Vance",
+            "Della Vance",
+            "Ruth Vance",
+            "The third child voice"
+          ],
+          "may_know": [
+            "Nora Vance: Nora knows she is twenty-nine, estranged from her family, a professional audio and tape restorer, and the inheritor of Agnes Vance's shuttered seaside hotel",
+            "Nora Vance: She believes she spent childhood summers there but has no memory of the summer she was seven",
+            "Nora Vance: She finds Agnes's tapes and hears a child's recorded voice say her name, but she does not yet know who the child is or why the salt room feels impossible.",
+            "Agnes Vance: Agnes is known to Nora only as her deceased grandmother and the former keeper of the shuttered seaside hotel",
+            "Agnes Vance: Through the tapes Agnes left behind, she appears secretive, deliberate, and connected to the cold salt room",
+            "Agnes Vance: Nora does not yet understand that Agnes preserved the tapes as evidence.",
+            "Della Vance: Della is not known by name",
+            "Della Vance: Her presence is perceived only as a child's voice emerging from recorded static and saying Nora's name",
+            "Della Vance: She does not appear visually and does not speak live in the room.",
+            "Ruth Vance: Ruth is known as Nora's living mother and part of the family from which Nora is estranged",
+            "Ruth Vance: Her connection to the erased summer is not yet explicit.",
+            "The third child voice: No knowledge",
+            "The third child voice: The story must not suggest a second true answer to the main Della mystery at this stage."
+          ],
+          "must_not_know": [
+            "Nora Vance: Della's name",
+            "Nora Vance: that Della was her twin sister",
+            "Nora Vance: that Della drowned in the tidal pool",
+            "Nora Vance: that Nora stood frozen and silent during the drowning",
+            "Nora Vance: that Ruth actively helped erase Della",
+            "Nora Vance: that there is a third erased child voice",
+            "Agnes Vance: that Agnes preserved proof of Della",
+            "Agnes Vance: that Agnes knew the tidal pool recording held the final answer",
+            "Agnes Vance: that Agnes's archive contains evidence of another erased child",
+            "Della Vance: Della's name spoken as fact",
+            "Della Vance: Della's identity as Nora's twin",
+            "Della Vance: Della's drowning",
+            "Della Vance: Della's final moments at the tidal pool",
+            "Ruth Vance: that Ruth recognizes Della's name",
+            "Ruth Vance: that Ruth actively participated in erasing Della",
+            "Ruth Vance: that Ruth's silence followed Della's drowning",
+            "Ruth Vance: whether Ruth knows about the third child voice",
+            "The third child voice: existence of a third child voice",
+            "The third child voice: that Agnes erased more than one child",
+            "The third child voice: the unfamiliar name spoken by the third voice"
+          ],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      },
+      "spice": 1
+    },
+    {
+      "chapter": 2,
+      "slug": "the-scratched-child",
+      "title": "The Scratched Child",
+      "one_line_summary": "Nora finds a family photograph with one child's face violently scratched out and realizes the hotel is preserving an erasure, not merely a haunting.",
+      "beat_summary": "Open with the stopped tape counter clicking again as Nora stands before the salt room door that has opened one inch, forcing her to continue from the impossible playback instead of resetting the investigation. She refuses to step fully into the salt room yet and treats the hotel as evidence, moving through Agnes's curated rooms with the tape case in her hand and the recorded child's voice still trapped in her memory as audio, not a live presence. Quiet wrongness appears in the hotel register: room numbers are written cleanly except for one page where a child's height mark or marginal note has been scraped off so hard the paper has thinned. Nora searches Agnes's private sitting room and finds a family photograph altered by hand. [CLUE C002] One child's face has been scratched away with a hard point while the rest of the image remains intact, making the damage feel deliberate and human rather than supernatural. [CLUE C003] Nora notices the defaced child stood close beside the girl Nora recognizes as her younger self, their shoulders nearly touching in a formal seaside pose, but she does not understand the relationship or attach a name to the absence. The romance-marked beat remains non-romantic and canonical: with no partner to steady her, Nora feels the reflex to lean into warmth and finds only the cold table edge and tape case under her thumb. End when Ruth calls and reacts too quickly to Nora mentioning old photographs and the scraped-out child, warning her away from the room without proving what Ruth knows.",
+      "opens_with": "The tape counter clicked from 007 to 008 in Nora's hand, though the machine behind her was still unplugged.",
+      "cliffhanger": "When Nora says, \"Someone scratched a child out of Agnes's photograph,\" Ruth stops breathing for one full second, then whispers, \"Do not sleep in that room tonight,\" before the line goes dead and Nora sees the salt room key taped to the back of the damaged frame.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Continue directly from the salt room door opening one inch and the dead tape counter advancing. Make the photograph discovery tactile and specific, plant C002 and C003 without payoff, and keep the dread psychological and audio-bound rather than visual or gory. Include the required romance-marked absence beat while respecting the canon rule that there is no male lead and no romance subplot.",
+      "signature_detail_hint": "A strip of old transparent tape on the back of the photograph has trapped a single grain of dry salt and one short black thread under its yellowed edge.",
+      "must_happen": [
+        "Nora continues from the salt room door opening one inch and the dead tape counter advancing, treating the hotel as evidence rather than resetting into a normal investigation.",
+        "Nora does not see or hear any live child in the room; the only impossible contact remains the stopped recorder, the advancing counter, and the memory of the recorded voice from the tape.",
+        "Nora examines Agnes's papers and finds a hotel register or household inventory that feels curated around absence, with one child's height mark or margin note physically scraped away but not explained.",
+        "[CLUE C002] Nora discovers an old family photograph where one child's face has been deliberately scratched out by a hard point, leaving the rest of the image intact and making the damage feel human rather than supernatural.",
+        "[CLUE C003] Nora notices the scratched-out child stood directly beside the girl she recognizes as young Nora, close enough that their clothing, posture, or shoulder line suggests deliberate placement in the photograph without revealing the relationship.",
+        "[ROMANCE] No male lead exists in canon, so the required romance-slot micro-beat must be an absence beat: Nora feels the reflex to lean into someone else's warmth, finds only the cold table edge and the tape case under her thumb, and the lack of a partner intensifies her isolation rather than creating romance.",
+        "Nora finds the salt room key hidden on or behind the photograph frame, linking Agnes's damaged family record to the room that answered on tape.",
+        "Ruth calls or leaves a message; when Nora mentions Agnes's photographs and the child scratched out of one image, Ruth becomes controlled and urges Nora not to disturb old things, but her exact role remains unproven."
+      ],
+      "must_not": [
+        "Do not reveal the erased child's name, the erased child's exact relationship to Nora, any drowning, or Nora's role in any childhood incident.",
+        "Do not confirm Ruth's active participation; she may sound evasive, frightened, or practiced, but Nora cannot know the truth yet.",
+        "Do not imply the scratched photograph is a visual manifestation; it is only altered physical evidence.",
+        "Do not introduce any additional child voice, apparition, or alternate answer to the central mystery.",
+        "Do not let any child appear, touch Nora, speak live, or manifest visually; supernatural contact remains limited to recorded audio and impossible tape behavior."
+      ],
+      "carries_to_next": "Nora now knows someone was removed from the visible family record, and Ruth's warning pushes her toward the salt room instead of away from it.",
+      "narrative": {
+        "clues_plant": [
+          "C002",
+          "C003"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Nora Vance",
+            "Agnes Vance",
+            "Della Vance",
+            "Ruth Vance",
+            "The third child voice"
+          ],
+          "may_know": [
+            "Nora Vance: Nora knows someone physically altered a family photograph by scratching out one child's face",
+            "Nora Vance: She understands the hotel mystery is tied to family erasure rather than only to a vague haunting",
+            "Nora Vance: She also notices that the missing child appears to have been standing close to her, but she does not yet know the child's name, relation, or fate.",
+            "Agnes Vance: Agnes's house and hotel begin to feel curated around absence",
+            "Agnes Vance: The scratched photograph suggests someone in the family, possibly under Agnes's roof, allowed or concealed the erasure of a child",
+            "Agnes Vance: Agnes's exact motive remains unclear.",
+            "Della Vance: Della remains unnamed, but the scratched-out child in the family photograph becomes the first visible evidence that someone was removed from the family record",
+            "Della Vance: This visual evidence is not Della manifesting",
+            "Della Vance: it is an altered object Nora discovers.",
+            "Ruth Vance: The scratched photograph implies an adult participated in hiding a child from the family record, but Ruth's role remains unproven",
+            "Ruth Vance: Nora may suspect family silence without yet knowing Ruth's direct involvement.",
+            "The third child voice: No knowledge",
+            "The third child voice: The altered photograph points toward Della's erasure, not a separate child yet."
+          ],
+          "must_not_know": [
+            "Nora Vance: Della's name",
+            "Nora Vance: that Della was her twin sister",
+            "Nora Vance: that Della drowned in the tidal pool",
+            "Nora Vance: that Nora stood frozen and silent during the drowning",
+            "Nora Vance: that Ruth actively helped erase Della",
+            "Nora Vance: that there is a third erased child voice",
+            "Agnes Vance: that Agnes preserved proof of Della",
+            "Agnes Vance: that Agnes knew the tidal pool recording held the final answer",
+            "Agnes Vance: that Agnes's archive contains evidence of another erased child",
+            "Della Vance: Della's name spoken as fact",
+            "Della Vance: Della's identity as Nora's twin",
+            "Della Vance: Della's drowning",
+            "Della Vance: Della's final moments at the tidal pool",
+            "Ruth Vance: that Ruth recognizes Della's name",
+            "Ruth Vance: that Ruth actively participated in erasing Della",
+            "Ruth Vance: that Ruth's silence followed Della's drowning",
+            "Ruth Vance: whether Ruth knows about the third child voice",
+            "The third child voice: existence of a third child voice",
+            "The third child voice: that Agnes erased more than one child",
+            "The third child voice: the unfamiliar name spoken by the third voice"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      },
+      "spice": 1
+    },
+    {
+      "chapter": 3,
+      "slug": "two-beds-in-the-cold",
+      "title": "Two Beds in the Cold",
+      "one_line_summary": "Nora enters the salt room, finds physical signs that her childhood space may have been shared, and uncovers tape markings that pair her initial with a rubbed-out second initial without identifying the other child.",
+      "beat_summary": "Open with Nora forcing the salt room door wider after her recorder plays back a click she did not hear in the hallway. Continue directly from Ruth's warning and the salt room key Agnes hid behind the damaged photograph, so Nora enters because the evidence is narrowing around this sealed room. Quiet wrongness arrives before the scare: the room is cold enough to fog Nora's breath, but a glass of water left at the threshold stays liquid and room temperature. Inside, Nora plants C004 through doubled childhood traces: two shallow bed impressions in the salt-stiff carpet, two faded hooks at child height, paired height marks with one line scraped nearly flat, and matching objects that make no sense in a room she believed belonged only to her. She then plants C005 by finding old tape labels or index cards where Nora's initial sits beside another initial that has been rubbed out until it is unreadable; the marks suggest a second child subject may have been cataloged, but Nora cannot identify the child, prove who made the system, or know what the missing initial means. The romance-marked beat stays canonical and non-romantic: Nora's body registers a need to be held or believed, but with no male lead and no safe witness, she braces herself against the doorframe and chooses the hard intimacy of truth. End when a restored tape fragment catches two children breathing in rhythm, but only Nora's name is clear.",
+      "opens_with": "Nora shoved the salt room door open as the recorder played back a click that had not existed in the hallway.",
+      "cliffhanger": "On the restored fragment, Agnes's recorded voice says, \"Left cot, again,\" then a second child's breath answers in rhythm with Nora's before the tape snarls over the next word.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Make the salt room investigative and sensory through sound, tape drag, cold, breath, and physical artifacts. Continue from Ruth's warning and the hidden salt room key without resetting the tension. Plant C004 and C005 clearly, include one quiet wrongness before overt dread, and preserve all knowledge restrictions while using the required romance-marked absence beat without creating a male lead.",
+      "signature_detail_hint": "A child's comb has salt crystals grown only between its teeth, as if someone once dragged it through wet hair and then sealed it in a dry drawer for years.",
+      "must_happen": [
+        "Nora continues from Ruth's warning and the salt room key hidden behind the scratched photograph, choosing to enter the sealed room because the evidence now points there.",
+        "Nora enters the salt room after a recorder-only playback anomaly and documents the temperature difference with practical audio-restoration precision, treating the cold as evidence rather than supernatural spectacle.",
+        "A quiet wrongness comes before overt dread: Nora's breath fogs in the room, but a glass of water at the threshold remains liquid and room temperature.",
+        "[CLUE C004] Nora finds physical signs that her childhood sleeping space may have been shared by another child: twin bed marks in the salt-stiff carpet, paired hooks at child height, doubled height lines with one scraped nearly flat, or two matching childhood objects.",
+        "[CLUE C005] Nora discovers an old tape index or labels where Nora's initial is preserved beside a second initial that has been rubbed out, overwritten, salted, or otherwise hidden; Nora cannot read it, identify it, or know what the missing initial means.",
+        "[ROMANCE] No male lead exists in canon, so use the required romance-slot beat as controlled vulnerability: Nora has a sharp bodily wish for someone to believe her before she believes herself, but the empty doorway gives nothing back, forcing her tension inward instead of toward a romantic partner.",
+        "Nora restores a short fragment from an old tape and hears two children breathing or humming together on the recording, but only Nora's name is intelligible."
+      ],
+      "must_not": [
+        "Do not reveal the hidden child's name, exact family relationship, cause of absence, final location, or Nora's role in any past incident.",
+        "Do not pay off C004 or C005 yet; they must remain planted for later chapters.",
+        "Do not let any child appear visually, speak live in the salt room, move objects in front of Nora, or become an attacking ghost.",
+        "Do not confirm who created the paired labels, what the rubbed-out initial stands for, or whether the archive was intentionally preserving proof.",
+        "Do not introduce or imply any additional erased child beyond the unknown second presence suggested by the planted clues."
+      ],
+      "carries_to_next": "Nora carries forward proof that her childhood room may have held two children and that the tape archive contains a deliberately obscured second initial she cannot yet identify.",
+      "narrative": {
+        "clues_plant": [
+          "C004",
+          "C005"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Nora Vance",
+            "Agnes Vance",
+            "Della Vance",
+            "Ruth Vance",
+            "The third child voice"
+          ],
+          "may_know": [
+            "Nora Vance: Nora knows someone physically altered a family photograph by scratching out one child's face",
+            "Nora Vance: She understands the hotel mystery is tied to family erasure rather than only to a vague haunting",
+            "Nora Vance: She also notices that the missing child appears to have been standing close to her, but she does not yet know the child's name, relation, or fate.",
+            "Agnes Vance: Agnes's house and hotel begin to feel curated around absence",
+            "Agnes Vance: The scratched photograph suggests someone in the family, possibly under Agnes's roof, allowed or concealed the erasure of a child",
+            "Agnes Vance: Agnes's exact motive remains unclear.",
+            "Della Vance: Della remains unnamed, but the scratched-out child in the family photograph becomes the first visible evidence that someone was removed from the family record",
+            "Della Vance: This visual evidence is not Della manifesting",
+            "Della Vance: it is an altered object Nora discovers.",
+            "Ruth Vance: The scratched photograph implies an adult participated in hiding a child from the family record, but Ruth's role remains unproven",
+            "Ruth Vance: Nora may suspect family silence without yet knowing Ruth's direct involvement.",
+            "The third child voice: No knowledge",
+            "The third child voice: The altered photograph points toward Della's erasure, not a separate child yet."
+          ],
+          "must_not_know": [
+            "Nora Vance: Della's name",
+            "Nora Vance: that Della was her twin sister",
+            "Nora Vance: that Della drowned in the tidal pool",
+            "Nora Vance: that Nora stood frozen and silent during the drowning",
+            "Nora Vance: that Ruth actively helped erase Della",
+            "Nora Vance: that there is a third erased child voice",
+            "Agnes Vance: that Agnes preserved proof of Della",
+            "Agnes Vance: that Agnes knew the tidal pool recording held the final answer",
+            "Agnes Vance: that Agnes's archive contains evidence of another erased child",
+            "Della Vance: Della's name spoken as fact",
+            "Della Vance: Della's identity as Nora's twin",
+            "Della Vance: Della's drowning",
+            "Della Vance: Della's final moments at the tidal pool",
+            "Ruth Vance: that Ruth recognizes Della's name",
+            "Ruth Vance: that Ruth actively participated in erasing Della",
+            "Ruth Vance: that Ruth's silence followed Della's drowning",
+            "Ruth Vance: whether Ruth knows about the third child voice",
+            "The third child voice: existence of a third child voice",
+            "The third child voice: that Agnes erased more than one child",
+            "The third child voice: the unfamiliar name spoken by the third voice"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      },
+      "spice": 1
+    },
+    {
+      "chapter": 4,
+      "slug": "the-space-beside-her",
+      "title": "The Space Beside Her",
+      "one_line_summary": "Nora compares the scratched photograph with the salt room's doubled traces and realizes the missing child shared her childhood room, though the child's identity and what happened remain hidden.",
+      "beat_summary": "Open with Nora forcing the restored file to play past the tape snap, only for the waveform to split into two recorded child breaths while the salt room gives back no present sound at all. Quiet wrongness comes first when the salt room dust has settled around two missing pillow shapes, though only one narrow bed remains assembled. Nora compares the scratched photograph to the paired hooks, doubled height marks, and bed impressions from the salt room, paying off C003 and C004 by recognizing that the scratched-out child was not a random guest or distant relative but had occupied the same protected domestic space and routines Nora was taught to remember as hers alone. She plants C006 by finding a damaged Agnes tape log for a session marked for two girls, with the second identifying mark abraded away before Nora can read it. The romance-marked beat stays faithful to the no-romance canon: Nora reaches for the absent comfort of being held or believed, then grips the tape case instead, turning attraction-to-comfort into raw vulnerability while no male lead is invented. End with Agnes's recorded voice asking both children to speak in turn, but the second recorded answer is buried under a deliberate scrape of noise before any name or relationship can be understood.",
+      "opens_with": "\"Play past the break,\" Nora told the machine, and the waveform split into two recorded breaths.",
+      "cliffhanger": "Agnes's recorded voice says, \"Now both of you, one at a time,\" and when the second child begins to answer on the tape, a harsh scraping noise cuts across the syllable where the name should have been.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Continue directly from Nora carrying the salt room evidence and the damaged Agnes tapes forward, without resetting the hotel tension. Pay off C003 and C004 concretely through Nora's comparison of photograph, room evidence, and recorded audio traces without revealing the second girl's name, relationship to Nora, the later childhood incident, any adult's confirmed role, or any additional hidden voice. Plant C006 clearly as a damaged archive clue that two girls were recorded in the same session, while preserving all knowledge restrictions. Include one quiet wrongness before overt dread and include the required [ROMANCE] absence beat without inventing a male lead or romance subplot.",
+      "signature_detail_hint": "A brittle strip of old masking tape is stuck to the reel tin with tiny salt crystals grown through the adhesive, forming raised white beads exactly along the outline of a vanished handwritten initial.",
+      "must_happen": [
+        "Pay off C003: Nora compares the scratched photograph with the room evidence and concludes the scratched-out child stood beside young Nora because they shared the same protected domestic space, not because the child was a background relative, guest, or stranger.",
+        "Pay off C004: Nora confirms through doubled bed traces, paired hooks, two pillow-dust outlines, and two sets of height marks that her childhood space in the salt room had been arranged for two children, though she still does not know why her memory contains only one.",
+        "Plant C006: Nora finds Agnes's damaged tape log, index card, or reel note for a session marked as two girls recorded together; the second girl's identifying mark has been scratched, salted, or abraded away before Nora can read a name.",
+        "[ROMANCE] No male lead exists in canon, so write the required romance-slot beat as absence and vulnerability: Nora instinctively wants another person's arms or steady voice, finds only the cold tape case under her thumb, and the ache makes her more exposed to the evidence rather than creating a love subplot.",
+        "Nora uses her audio-restoration skills to isolate two overlapping recorded child breaths or partial syllables, proving the archival session held two children without revealing the second child's name, identity, relationship to Nora, fate, or any additional voice."
+      ],
+      "must_not": [
+        "Do not reveal the second girl's name, exact relationship to Nora, or the later childhood event that explains her absence.",
+        "Do not confirm any adult's active role in the erasure; Nora may suspect family silence but cannot know who participated or why.",
+        "Do not make the second girl appear visually, speak live, touch Nora, move objects, or act as an attacking ghost.",
+        "Do not introduce or imply any additional hidden child voice beyond the two recorded child traces already under investigation.",
+        "Do not state that Agnes preserved proof deliberately or knew where the final answer was; Nora may only read damaged archive evidence without knowing Agnes's motive."
+      ],
+      "carries_to_next": "Nora now knows the scratched-out child shared her room and at least one recorded session, pushing her to restore the tape where both girls can be heard together without yet knowing who the second child was.",
+      "narrative": {
+        "clues_plant": [
+          "C006"
+        ],
+        "clues_payoff": [
+          "C003",
+          "C004"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Nora Vance",
+            "Agnes Vance",
+            "Della Vance",
+            "Ruth Vance",
+            "The third child voice"
+          ],
+          "may_know": [
+            "Nora Vance: Nora knows someone physically altered a family photograph by scratching out one child's face",
+            "Nora Vance: She understands the hotel mystery is tied to family erasure rather than only to a vague haunting",
+            "Nora Vance: She also notices that the missing child appears to have been standing close to her, but she does not yet know the child's name, relation, or fate.",
+            "Agnes Vance: Agnes's house and hotel begin to feel curated around absence",
+            "Agnes Vance: The scratched photograph suggests someone in the family, possibly under Agnes's roof, allowed or concealed the erasure of a child",
+            "Agnes Vance: Agnes's exact motive remains unclear.",
+            "Della Vance: Della remains unnamed, but the scratched-out child in the family photograph becomes the first visible evidence that someone was removed from the family record",
+            "Della Vance: This visual evidence is not Della manifesting",
+            "Della Vance: it is an altered object Nora discovers.",
+            "Ruth Vance: The scratched photograph implies an adult participated in hiding a child from the family record, but Ruth's role remains unproven",
+            "Ruth Vance: Nora may suspect family silence without yet knowing Ruth's direct involvement.",
+            "The third child voice: No knowledge",
+            "The third child voice: The altered photograph points toward Della's erasure, not a separate child yet."
+          ],
+          "must_not_know": [
+            "Nora Vance: Della's name",
+            "Nora Vance: that Della was her twin sister",
+            "Nora Vance: that Della drowned in the tidal pool",
+            "Nora Vance: that Nora stood frozen and silent during the drowning",
+            "Nora Vance: that Ruth actively helped erase Della",
+            "Nora Vance: that there is a third erased child voice",
+            "Agnes Vance: that Agnes preserved proof of Della",
+            "Agnes Vance: that Agnes knew the tidal pool recording held the final answer",
+            "Agnes Vance: that Agnes's archive contains evidence of another erased child",
+            "Della Vance: Della's name spoken as fact",
+            "Della Vance: Della's identity as Nora's twin",
+            "Della Vance: Della's drowning",
+            "Della Vance: Della's final moments at the tidal pool",
+            "Ruth Vance: that Ruth recognizes Della's name",
+            "Ruth Vance: that Ruth actively participated in erasing Della",
+            "Ruth Vance: that Ruth's silence followed Della's drowning",
+            "Ruth Vance: whether Ruth knows about the third child voice",
+            "The third child voice: existence of a third child voice",
+            "The third child voice: that Agnes erased more than one child",
+            "The third child voice: the unfamiliar name spoken by the third voice"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      },
+      "spice": 1
+    },
+    {
+      "chapter": 5,
+      "slug": "the-voice-inside-her-summer",
+      "title": "The Voice Inside Her Summer",
+      "one_line_summary": "Nora restores the two-child recording and confirms that one voice belongs to her own recorded childhood, while the second girl remains unnamed and dangerously familiar.",
+      "beat_summary": "Open with the restored tape speaking over Nora's headphones in her own childhood rhythm, making her stop breathing until the recorded breath continues without her. Quiet wrongness appears when Nora's restoration software repeatedly labels two recorded child voices as one speaker because their pitch, timing, and breath patterns almost match. Pay off C001 by having Nora prove the voice from the first tape is a recorded fragment of herself as a child, not a live haunting, visible ghost, or outside presence. Pay off C006 when the two-girl recording becomes clear enough to show Agnes once recorded Nora with an unnamed second girl in the same session, while the damaged label still withholds the second identity. Plant and pay off C007 in the same chapter: Nora isolates a call-and-response game where the second girl echoes Nora's words with private familiarity, showing emotional closeness and mirroring without revealing the girl's name, twinhood, drowning, the tidal pool, Nora's silence, Ruth's active role, or any third child voice. The required [ROMANCE] beat is handled only as non-romantic absence: in the most frightening playback, Nora wants a living witness beside her, but no partner or romantic comfort exists, so the need turns into isolation and sharper focus on the evidence. End when Ruth calls before Nora has described the restored section and recognizes Agnes's old counting rhythm.",
+      "opens_with": "\"That is my breath,\" Nora said, and the child in the headphones breathed on without her.",
+      "cliffhanger": "Before Nora can explain what she restored, Ruth hears three seconds of Agnes's counting rhythm through the phone and says, \"Stop it before the second answer plays,\" proving she knows this tape pattern without revealing why.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Deliver the concrete midpoint audio payoff: Nora knows the voice saying her name is a recorded fragment of herself as a child, and that Agnes once recorded her with an unnamed second girl. Pay off C001, C006, and C007 exactly without revealing the second girl's name, twinhood, drowning, tidal pool, Nora's frozen silence, Ruth's active participation, or any third child voice. Keep all manifestations audio-only through tapes, headphones, waveform analysis, room tone, and phone sound; no visible ghost, live child voice, physical touch from the dead, or moving objects. Include one quiet wrongness before the overt scare and include the required [ROMANCE] micro-beat strictly as non-romantic absence without inventing a male lead, flirtation, attraction, or romance subplot.",
+      "must_happen": [
+        "Pay off C001: Nora determines through waveform comparison, breath timing, and Agnes's room-tone markers that the child's voice saying \"Nora\" on the first tape is a recorded fragment of Nora herself as a child, not a live voice, visible ghost, or outside haunting.",
+        "Pay off C006: Nora restores enough of Agnes's two-girl recording to confirm Nora and an unnamed second girl were captured in the same archived session before the reel label and index card were damaged.",
+        "Plant and pay off C007: Nora isolates a childhood call-and-response game, shared phrase, or synchronized humming pattern in which the second girl echoes Nora with private familiarity, proving closeness and mirroring while keeping the girl's identity unknown.",
+        "[ROMANCE] No male lead exists in canon, so write this only as an absence beat: during the most frightening playback, Nora has a sharp non-romantic need for one living witness to hear and steady the truth with her, but she touches the cold headphone cup instead and returns to the evidence alone.",
+        "Ruth reacts too quickly to Agnes's counting rhythm, the call-and-response structure, or the tape handling method, making Nora more suspicious while still withholding proof of Ruth's active role.",
+        "Nora notices the restoration software assigns both child voices the same speaker tag, then manually separates them by tiny differences in consonants, breath catches, and distance from Agnes's microphone.",
+        "Nora keeps the investigation continuous from the salt room and damaged two-girl tape log, cross-checking the restored file against the prior photograph, paired room traces, and Agnes's abraded index card rather than treating the discovery as a new mystery."
+      ],
+      "must_not": [
+        "Do not reveal the second girl's name, that she was Nora's twin, that she drowned, that the tidal pool matters, or that Nora froze during the death.",
+        "Do not confirm Ruth recognizes the second girl's name or actively erased the child; her fear and evasiveness may increase but proof comes later.",
+        "Do not introduce a visible ghost, live child voice, physical touch from the dead, moving objects caused by the dead, or an attacking supernatural force.",
+        "Do not introduce the third child voice or any competing answer to the main mystery.",
+        "Do not state that Agnes intentionally preserved proof, knew the final answer, or understood the full meaning of the tapes; show only the surviving archive materials and Nora's technical interpretation.",
+        "Do not create a male lead, love interest, flirtation, romantic attraction, or romance subplot."
+      ],
+      "signature_detail_hint": "A strip of splicing tape has a single grain of salt sealed under the adhesive, making a tiny white click in the waveform every time it passes the playback head.",
+      "carries_to_next": "Nora carries forward the knowledge that the voice is part of her own recorded childhood and that Agnes recorded her with an unnamed second girl, while Ruth's reaction points her toward a hidden location record Agnes's archive has not yet explained.",
+      "narrative": {
+        "clues_plant": [
+          "C007"
+        ],
+        "clues_payoff": [
+          "C001",
+          "C006",
+          "C007"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Nora Vance",
+            "Agnes Vance",
+            "Della Vance",
+            "Ruth Vance",
+            "The third child voice"
+          ],
+          "may_know": [
+            "Nora Vance: Nora realizes the recordings are connected to her own childhood voice and that there were two girls in the lost summer: herself and another child",
+            "Nora Vance: She understands the haunting is not external to her life",
+            "Nora Vance: She still does not know the other girl's full identity, that the girl was her twin sister Della, or that the tidal pool was where the tragedy happened.",
+            "Agnes Vance: Agnes's tapes are no longer just atmospheric relics",
+            "Agnes Vance: they are the only reliable pathway into Nora's erased childhood",
+            "Agnes Vance: By this point, Agnes seems to have recorded more than ordinary hotel sounds, preserving traces of two girls that the family story removed.",
+            "Della Vance: Della is understood in partial form as the second girl in the recordings from Nora's childhood",
+            "Della Vance: Nora realizes there were two children, and one voice belongs inside her own lost summer, but Della's name and twin relationship are not yet fully confirmed.",
+            "Ruth Vance: As Nora realizes there were two girls in the recordings, Ruth's evasions and family silence become more suspicious",
+            "Ruth Vance: Nora still does not have proof that Ruth knew Della's name or helped erase her.",
+            "The third child voice: No knowledge",
+            "The third child voice: The midpoint revelation must focus on Nora realizing there were two girls: Nora and Della."
+          ],
+          "must_not_know": [
+            "Nora Vance: Della's name",
+            "Nora Vance: that Della was her twin sister",
+            "Nora Vance: that Della drowned in the tidal pool",
+            "Nora Vance: that Nora stood frozen and silent during the drowning",
+            "Nora Vance: that Ruth actively helped erase Della",
+            "Nora Vance: that there is a third erased child voice",
+            "Agnes Vance: that Agnes preserved proof of Della",
+            "Agnes Vance: that Agnes knew the tidal pool recording held the final answer",
+            "Agnes Vance: that Agnes's archive contains evidence of another erased child",
+            "Della Vance: Della's name spoken as fact",
+            "Della Vance: Della's identity as Nora's twin",
+            "Della Vance: Della's drowning",
+            "Della Vance: Della's final moments at the tidal pool",
+            "Ruth Vance: that Ruth recognizes Della's name",
+            "Ruth Vance: that Ruth actively participated in erasing Della",
+            "Ruth Vance: that Ruth's silence followed Della's drowning",
+            "Ruth Vance: whether Ruth knows about the third child voice",
+            "The third child voice: existence of a third child voice",
+            "The third child voice: that Agnes erased more than one child",
+            "The third child voice: the unfamiliar name spoken by the third voice"
+          ],
+          "effective_milestone": 5
+        },
+        "clue_beats": {}
+      },
+      "spice": 1
+    },
+    {
+      "chapter": 6,
+      "slug": "the-map-under-salt",
+      "title": "The Map Under Salt",
+      "one_line_summary": "Nora finds Agnes's hidden location key for the hotel recordings and realizes the most damaged two-girl tapes share one outdoor code she does not yet understand.",
+      "beat_summary": "Open with Ruth ordering Nora not to follow Agnes's location codes, which immediately tells Nora the codes matter. Quiet wrongness comes first when Nora finds that the hotel map has one outdoor area rubbed almost blank, though salt crystals cling to the paper in a perfect ring. Nora searches Agnes's archive for the codes attached to the two-girl tapes and plants C008 by uncovering a hidden location key, reel note, or map mark that repeatedly points toward the tidal pool without explaining what happened there. Nora must not understand the pool's true meaning yet; she only knows Agnes attached the most damaged recordings to that location and marked those reels with unusual caution. The romance-marked beat remains canon-compliant: Nora feels the old pull toward comfort after Ruth's fear, but with no male lead and no romance subplot, she steadies herself against the map cabinet and lets the need to be believed become determination. End when Nora plays a location-tagged fragment and hears wave wash under Agnes's voice counting down to a recording session Nora has no memory of.",
+      "opens_with": "\"Do not follow Agnes's codes,\" Ruth said, which was how Nora knew there were codes.",
+      "cliffhanger": "The location-tagged fragment ends with Agnes saying, \"Pool record, marker seven,\" and beneath her voice one child gives a single breathless laugh before the tape drops into absolute silence.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Plant C008 clearly by linking Agnes's damaged two-girl recordings to one coded outdoor pool location through codes, maps, or reel notes, but do not reveal what happened there or why the place matters. Maintain slow gothic dread with one quiet wrongness before the overt scare, keep the erased child unnamed and unseen, and include the required [ROMANCE] absence beat without inventing a male lead or romance subplot.",
+      "signature_detail_hint": "A brittle flake of dried seaweed is pressed flat beneath the map varnish exactly over the rubbed-out pool mark, as if someone laminated the coastline before admitting the paper had changed.",
+      "must_happen": [
+        "[CLUE C008] Nora discovers Agnes's hidden location key, hotel map annotation, reel code, or archive note that links the most damaged childhood recordings to the tidal pool without explaining the reason.",
+        "Nora connects the two-girl tapes from Chapter 5 to Agnes's location system and realizes Agnes cataloged not only sounds but where each recording was captured.",
+        "Ruth tries to stop Nora from following the location codes, through a call, message, or in-person confrontation, but does not confess, name the second girl, explain the pool code, or reveal any family role in the erasure.",
+        "[ROMANCE] No male lead exists in canon, so write the required romance-slot beat as absence under pressure: Nora wants someone at her back when Ruth's fear becomes contagious, but she braces herself alone and chooses the hard intimacy of evidence over comforting denial.",
+        "Nora restores a short location-tagged fragment containing wave wash, Agnes's controlled countdown, and one child sound that cuts off before any context is clear."
+      ],
+      "must_not": [
+        "Do not pay off C008; Nora cannot know what happened at the pool location or why Agnes marked the pool-tagged recordings.",
+        "Do not reveal the second girl's name, exact family relationship to Nora, hidden summer event, Nora's childhood reaction, or Ruth's active role in the family erasure.",
+        "Do not make the pool evidence a full memory or flashback; keep it as coded evidence and sensory fragments.",
+        "Do not introduce any additional child voice or imply Agnes removed more than the already established second child from the record.",
+        "Do not state that Agnes intentionally preserved proof or knew the final answer was in the archive."
+      ],
+      "carries_to_next": "Nora has the coded path to the old pool location but not its meaning, setting up the next act's pressure around the erased child's identity and Ruth's deeper involvement.",
+      "narrative": {
+        "clues_plant": [
+          "C008"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T005",
+          "T006",
+          "T007",
+          "T008"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Nora Vance",
+            "Agnes Vance",
+            "Della Vance",
+            "Ruth Vance",
+            "The third child voice"
+          ],
+          "may_know": [
+            "Nora Vance: Nora realizes the recordings are connected to her own childhood voice and that there were two girls in the lost summer: herself and another child",
+            "Nora Vance: She understands the haunting is not external to her life",
+            "Nora Vance: She still does not know the other girl's full identity, that the girl was her twin sister Della, or that the tidal pool was where the tragedy happened.",
+            "Agnes Vance: Agnes's tapes are no longer just atmospheric relics",
+            "Agnes Vance: they are the only reliable pathway into Nora's erased childhood",
+            "Agnes Vance: By this point, Agnes seems to have recorded more than ordinary hotel sounds, preserving traces of two girls that the family story removed.",
+            "Della Vance: Della is understood in partial form as the second girl in the recordings from Nora's childhood",
+            "Della Vance: Nora realizes there were two children, and one voice belongs inside her own lost summer, but Della's name and twin relationship are not yet fully confirmed.",
+            "Ruth Vance: As Nora realizes there were two girls in the recordings, Ruth's evasions and family silence become more suspicious",
+            "Ruth Vance: Nora still does not have proof that Ruth knew Della's name or helped erase her.",
+            "The third child voice: No knowledge",
+            "The third child voice: The midpoint revelation must focus on Nora realizing there were two girls: Nora and Della."
+          ],
+          "must_not_know": [
+            "Nora Vance: Della's name",
+            "Nora Vance: that Della was her twin sister",
+            "Nora Vance: that Della drowned in the tidal pool",
+            "Nora Vance: that Nora stood frozen and silent during the drowning",
+            "Nora Vance: that Ruth actively helped erase Della",
+            "Nora Vance: that there is a third erased child voice",
+            "Agnes Vance: that Agnes preserved proof of Della",
+            "Agnes Vance: that Agnes knew the tidal pool recording held the final answer",
+            "Agnes Vance: that Agnes's archive contains evidence of another erased child",
+            "Della Vance: Della's name spoken as fact",
+            "Della Vance: Della's identity as Nora's twin",
+            "Della Vance: Della's drowning",
+            "Della Vance: Della's final moments at the tidal pool",
+            "Ruth Vance: that Ruth recognizes Della's name",
+            "Ruth Vance: that Ruth actively participated in erasing Della",
+            "Ruth Vance: that Ruth's silence followed Della's drowning",
+            "Ruth Vance: whether Ruth knows about the third child voice",
+            "The third child voice: existence of a third child voice",
+            "The third child voice: that Agnes erased more than one child",
+            "The third child voice: the unfamiliar name spoken by the third voice"
+          ],
+          "effective_milestone": 5
+        },
+        "clue_beats": {}
+      },
+      "spice": 1
+    },
+    {
+      "chapter": 7,
+      "slug": "the-name-agnes-hid",
+      "title": "The Name Agnes Hid",
+      "one_line_summary": "Nora restores Agnes's damaged labels and learns the erased child was Della Vance, a second girl recorded beside her in the salt room, while Ruth's reaction proves the name was never forgotten.",
+      "beat_summary": "Open with the restored tape pulling the name Della out of the scrape where Agnes's label had been damaged. Quiet wrongness comes first when Nora notices the cold is strongest around the archive box rather than the salt room walls, as if the evidence has carried the room's temperature with it. Nora pays off C002 by matching the scratched photograph to Agnes's hidden log and understanding the erased face belonged to Della Vance, not an unknown guest or distant cousin. She pays off C005 when the rubbed-out second initial on Agnes's tape index resolves into D for Della, proving Agnes recorded both girls and hid the name in a way that preserved it. Plant and pay off C009 cleanly: Agnes's log names Nora Vance and Della Vance as the two seven-year-old girls assigned to the salt room, close enough in the records that Nora understands Della was not peripheral to her childhood. Plant C010 through Ruth's immediate recognition of Della's name before Nora explains what she found, but do not prove Ruth's active role yet. The required romance-marked beat remains canon-compliant: with no male lead, Nora feels the sharp absence of someone to hold her steady, and that ache turns into vulnerable resolve as she says Della's name aloud to the empty room.",
+      "opens_with": "\"Della,\" the tape said from inside the wound where the name had been scraped away.",
+      "cliffhanger": "When Nora sends Ruth a photo of Agnes's log with Della's name visible beside Nora's, Ruth replies with a single voice message: \"You were never supposed to learn her name.\"",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Deliver the Chapter 7 identity payoff: the erased child is named as Della Vance through Agnes's preserved archive, and Della is tied directly to Nora's seven-year-old salt room records. Pay off C002, C005, and C009; plant C010 through Ruth's recognition. Do not reveal the final summer incident, Nora's blocked response to it, the true meaning of the pool code, Ruth's active participation, or any additional child voice. Include one quiet wrongness before overt dread and include the required [ROMANCE] absence beat without inventing a male lead or romance subplot.",
+      "must_happen": [
+        "[CLUE C002] Nora identifies the scratched-out child in the family photograph as Della Vance through Agnes's log, restored label, or cross-referenced archive note.",
+        "[CLUE C005] Nora restores or deciphers the rubbed-out second initial on Agnes's tape index and confirms it was D for Della, hidden beside Nora's name.",
+        "[CLUE C009] Nora finds Agnes's record naming Nora Vance and Della Vance as the two seven-year-old girls connected to the salt room, recorded together in the archive and treated as a matched childhood pair without explaining what finally happened to Della.",
+        "[CLUE C010] Ruth hears or sees Della's name and reacts with recognition before Nora tells her what the archive proves, showing Ruth has always known Della existed without yet proving active erasure.",
+        "[ROMANCE] No male lead exists in canon, so write the required romance-slot micro-beat as absence and vulnerability: Nora reaches for the comfort of another steady body or voice, finds no one there, and says Della's name aloud because the truth must become the only witness.",
+        "Nora speaks Della Vance's name as fact for the first time and records the room tone afterward, capturing only tape hiss and her own uneven breathing."
+      ],
+      "must_not": [
+        "Do not reveal the final event of Della's childhood, Nora's blocked response during that event, or the true meaning of the pool-linked recordings.",
+        "Do not prove Ruth actively helped erase Della; Ruth may recognize the name and panic, but the proof lands later.",
+        "Do not let Della appear visually, speak live, touch Nora, move objects, or act as an attacking ghost.",
+        "Do not introduce or hint at any additional child voice or any second true answer to the central erasure."
+      ],
+      "signature_detail_hint": "A strip of old masking tape has preserved a clean, unsalted rectangle on Agnes's index card, and when Nora lifts it, the hidden ink is darker than everything around it.",
+      "carries_to_next": "Nora now knows the erased child was Della Vance, and Ruth's recognition of the name pushes Nora to prove who maintained the erasure.",
+      "narrative": {
+        "clues_plant": [
+          "C009",
+          "C010"
+        ],
+        "clues_payoff": [
+          "C002",
+          "C005",
+          "C009"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T006",
+          "T007",
+          "T008"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Nora Vance",
+            "Agnes Vance",
+            "Della Vance",
+            "Ruth Vance",
+            "The third child voice"
+          ],
+          "may_know": [
+            "Nora Vance: Nora learns the erased child was Della Vance, recorded by Agnes as Nora's twin sister when both girls were seven",
+            "Nora Vance: Nora understands that the salt room was connected to both girls and that Agnes preserved evidence of Della's existence",
+            "Nora Vance: She still does not have the full memory of Della's drowning or the complete scope of Ruth's complicity.",
+            "Nora Vance: Della's name",
+            "Nora Vance: that Della was her twin sister",
+            "Agnes Vance: Agnes's log identifies Della Vance beside Nora Vance and records them as twins aged seven",
+            "Agnes Vance: Agnes is revealed as the person who preserved Della's name and proof of her existence, even if she also hid that proof inside labels, logs, and damaged reels.",
+            "Agnes Vance: that Agnes preserved proof of Della",
+            "Della Vance: Della Vance is named",
+            "Della Vance: Nora learns Della was her twin sister, age seven, recorded beside Nora in Agnes's log",
+            "Della Vance: Della remains present only through old recordings, tape hiss, hum, and restored audio artifacts.",
+            "Della Vance: Della's name spoken as fact",
+            "Della Vance: Della's identity as Nora's twin",
+            "Ruth Vance: When Della's name surfaces, Ruth's reaction reveals recognition before Nora fully explains the discovery",
+            "Ruth Vance: Ruth's knowledge becomes a major pressure point, but the complete proof of her complicity lands after this milestone.",
+            "Ruth Vance: that Ruth recognizes Della's name",
+            "The third child voice: No knowledge",
+            "The third child voice: The reveal of Della as Nora's twin must remain clean and specific."
+          ],
+          "must_not_know": [
+            "Nora Vance: that Della drowned in the tidal pool",
+            "Nora Vance: that Nora stood frozen and silent during the drowning",
+            "Nora Vance: that Ruth actively helped erase Della",
+            "Nora Vance: that there is a third erased child voice",
+            "Agnes Vance: that Agnes knew the tidal pool recording held the final answer",
+            "Agnes Vance: that Agnes's archive contains evidence of another erased child",
+            "Della Vance: Della's drowning",
+            "Della Vance: Della's final moments at the tidal pool",
+            "Ruth Vance: that Ruth actively participated in erasing Della",
+            "Ruth Vance: that Ruth's silence followed Della's drowning",
+            "Ruth Vance: whether Ruth knows about the third child voice",
+            "The third child voice: existence of a third child voice",
+            "The third child voice: that Agnes erased more than one child",
+            "The third child voice: the unfamiliar name spoken by the third voice"
+          ],
+          "effective_milestone": 7
+        },
+        "clue_beats": {}
+      },
+      "spice": 1
+    },
+    {
+      "chapter": 8,
+      "slug": "the-woman-who-taught-silence",
+      "title": "The Woman Who Taught Silence",
+      "one_line_summary": "Nora confronts Ruth with Della's name and uncovers proof that Ruth actively helped erase Della from the family, while a damaged tidal-pool reel remains unopened.",
+      "beat_summary": "Open with Ruth ordering Nora to destroy anything with Della's name on it, turning recognition into active pressure. Quiet wrongness comes first when Nora finds that every family document after the lost summer has the same blank spacing where Della's name should have altered the line, as if silence became a formatting rule. [CLUE C010] Ruth pays off her recognition by not asking who Della is; she asks how much Nora has restored, which labels she has read, and whether anyone outside the family has heard the name. [CLUE C011] Nora finds Ruth's handwriting on altered photograph sleeves, relabeled tape boxes, and a family instruction note telling staff and relatives to remove Della's name from speech, proving Ruth actively participated in the erasure and trained the household into silence. [CLUE C012] Nora locates a damaged reel tied to the tidal pool through Agnes's location code and a practical restoration warning on the box, but she does not play enough to learn what the recording contains or what happened there. The required romance-marked beat remains non-romantic and canonical: Nora's need for a protective presence spikes during Ruth's confrontation, but no male lead exists, so she stands alone with one hand flat on the tape deck, choosing evidence over the comfort Ruth offers if she will forget.",
+      "opens_with": "\"Burn it,\" Ruth said, and Nora knew her mother had not asked whose name was on the tape.",
+      "cliffhanger": "Nora opens the damaged tidal-pool reel box and finds Ruth's handwriting on the inner flap: \"If Nora asks for this one, call me before she hears it.\"",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Pay off C010 and C011 by proving Ruth knew Della existed and actively helped erase her from family records and speech. Plant C012 as a damaged tidal-pool reel without revealing what happened in that recording, why the pool matters, or why Nora's memory resists the end of that summer. Keep Della present only through recorded sound, labels, documents, and artifacts. Include one quiet wrongness before overt dread and include the required [ROMANCE] absence beat without inventing a male lead or romance subplot.",
+      "signature_detail_hint": "A brittle strip of hotel label tape has been typed over so many times that the old letters rise through the new ones like Braille when Nora runs a cotton-gloved thumb across it.",
+      "must_happen": [
+        "[CLUE C010] Ruth proves she has always known Della existed by reacting to the name with specific fear, control, and familiarity rather than confusion; she asks what Nora restored and who else has heard the name.",
+        "[CLUE C011] Nora finds direct evidence in Ruth's handwriting, voice, or archived instruction that Ruth helped remove Della from photographs, labels, speech, and family memory.",
+        "[CLUE C012] Nora finds Agnes's damaged tidal-pool reel, reel note, or location-coded box marked for careful restoration, but she does not restore enough to understand its contents or the event attached to it.",
+        "[ROMANCE] No male lead exists in canon, so write the required romance-slot micro-beat as absence under threat: Nora feels the instinctive need for someone to step between her and Ruth's pressure, but she anchors herself on the tape deck and lets the evidence protect her instead.",
+        "Ruth offers Nora a softer version of forgetting, framing silence as mercy, and Nora refuses because comfort that falsifies evidence violates her core boundary.",
+        "Nora notices the archive records after the lost summer share identical blank spacing where Della's name was removed, making the erasure feel procedural before it becomes overtly frightening.",
+        "After Ruth leaves or hangs up, Nora documents the cold in the archive as room tone, tape hiss, and condensation on equipment rather than a visible or attacking supernatural presence."
+      ],
+      "must_not": [
+        "Do not reveal what happened to Della at the tidal pool or why Nora's memory blocks the end of that summer.",
+        "Do not play C012 far enough to expose the final event; it must remain planted for Chapter 10 payoff.",
+        "Do not claim Ruth's silence followed Della's drowning or any specific incident yet; Nora can know active erasure, but not the full cause.",
+        "Do not imply Agnes knew the tidal-pool recording held the final answer; the label can show location and restoration caution only.",
+        "Do not show Della visually, allow live speech, physical touch from the dead, moving objects caused by the dead, or any third child voice."
+      ],
+      "carries_to_next": "Nora has proof Ruth maintained the erasure and now holds a damaged tidal-pool reel, but the tape is too fragile to play without a risky restoration.",
+      "narrative": {
+        "clues_plant": [
+          "C011",
+          "C012"
+        ],
+        "clues_payoff": [
+          "C010",
+          "C011"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T006",
+          "T007",
+          "T008",
+          "T009"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Nora Vance",
+            "Agnes Vance",
+            "Della Vance",
+            "Ruth Vance",
+            "The third child voice"
+          ],
+          "may_know": [
+            "Nora Vance: Nora learns the erased child was Della Vance, recorded by Agnes as Nora's twin sister when both girls were seven",
+            "Nora Vance: Nora understands that the salt room was connected to both girls and that Agnes preserved evidence of Della's existence",
+            "Nora Vance: She still does not have the full memory of Della's drowning or the complete scope of Ruth's complicity.",
+            "Nora Vance: Della's name",
+            "Nora Vance: that Della was her twin sister",
+            "Nora Vance: that Ruth actively helped erase Della",
+            "Agnes Vance: Agnes's log identifies Della Vance beside Nora Vance and records them as twins aged seven",
+            "Agnes Vance: Agnes is revealed as the person who preserved Della's name and proof of her existence, even if she also hid that proof inside labels, logs, and damaged reels.",
+            "Agnes Vance: that Agnes preserved proof of Della",
+            "Della Vance: Della Vance is named",
+            "Della Vance: Nora learns Della was her twin sister, age seven, recorded beside Nora in Agnes's log",
+            "Della Vance: Della remains present only through old recordings, tape hiss, hum, and restored audio artifacts.",
+            "Della Vance: Della's name spoken as fact",
+            "Della Vance: Della's identity as Nora's twin",
+            "Ruth Vance: When Della's name surfaces, Ruth's reaction reveals recognition before Nora fully explains the discovery",
+            "Ruth Vance: Ruth's knowledge becomes a major pressure point, but the complete proof of her complicity lands after this milestone.",
+            "Ruth Vance: that Ruth recognizes Della's name",
+            "Ruth Vance: that Ruth actively participated in erasing Della",
+            "The third child voice: No knowledge",
+            "The third child voice: The reveal of Della as Nora's twin must remain clean and specific."
+          ],
+          "must_not_know": [
+            "Nora Vance: that Della drowned in the tidal pool",
+            "Nora Vance: that Nora stood frozen and silent during the drowning",
+            "Nora Vance: that there is a third erased child voice",
+            "Agnes Vance: that Agnes knew the tidal pool recording held the final answer",
+            "Agnes Vance: that Agnes's archive contains evidence of another erased child",
+            "Della Vance: Della's drowning",
+            "Della Vance: Della's final moments at the tidal pool",
+            "Ruth Vance: that Ruth's silence followed Della's drowning",
+            "Ruth Vance: whether Ruth knows about the third child voice",
+            "The third child voice: existence of a third child voice",
+            "The third child voice: that Agnes erased more than one child",
+            "The third child voice: the unfamiliar name spoken by the third voice"
+          ],
+          "effective_milestone": 7
+        },
+        "clue_beats": {}
+      },
+      "spice": 1
+    },
+    {
+      "chapter": 9,
+      "slug": "the-tape-that-wanted-her",
+      "title": "The Tape That Wanted Her",
+      "one_line_summary": "Nora prepares Agnes's final pool reel and discovers it is keyed to her own lost memory, forcing her toward the tidal pool before she understands what happened there.",
+      "beat_summary": "Open with Agnes's recorder clicking on by itself and playing a clipped instruction in Agnes's voice: \"Say her name first.\" Nora's hands freeze over the splicing block because the final reel is too fragile for any mistake. Quiet wrongness comes first when Nora's restoration software creates a working file timestamped from the summer she was seven, though the laptop clock is correct and the original metadata should be unreadable. [CLUE C013] Nora discovers the final tape is not merely a damaged audio record but a memory key built around Nora's active choice: the reel will not yield a stable signal until she preserves the damaged sections, logs Della's name, and commits to listening instead of erasing. [CLUE C014] Nora restores sensory audio fragments embedded in the damaged tape: her own seven-year-old breathing, Della's recorded nearness, water against stone, Agnes counting levels, and a location tone that matches the tidal pool, enough to prove child Nora was present near Della and the pool without revealing what happened, how Della's final moments unfolded, or Nora's full childhood response. Ruth tries to stop Nora again, making the emotional pressure acute, while Nora refuses to destroy the reel. The required romance-marked beat stays within canon: no male lead enters, and Nora's lonely desire for someone to take her hand becomes a tense physical ritual as she steadies her own fingers on the splicing block and chooses to carry Della's name forward alone. End with Nora taking the restored-but-unplayed final file toward the tidal pool, still ignorant of the truth waiting in the recording.",
+      "opens_with": "\"Say her name first,\" Agnes's recorder clicked, and Nora's knife stopped a breath above the final reel.",
+      "cliffhanger": "At the tidal pool gate, Nora's portable recorder wakes with a burst of old room tone, then plays Agnes's voice counting, \"Pool marker seven,\" before a child's breath catches beside Della's name.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Plant C013 and C014 clearly without paying them off: the final tape is keyed to Nora's choice to remember, and partial audio proves child Nora was present near Della and the tidal pool during the crucial lost event. Do not reveal the exact event, Della's final moments, Nora's full childhood response, Ruth's post-event role, the third child voice, or Agnes's wider archive. Do not state that Agnes knew the pool recording held the final answer; show only that she built a restoration choice into the reel. Keep all uncanny manifestation audio-based: recorded voices, hiss, room tone, software anomalies, metadata glitches, and playback artifacts only. Include one quiet wrongness before overt dread and include the required [ROMANCE] absence beat without inventing a male lead or romance subplot.",
+      "must_happen": [
+        "[CLUE C013] Nora discovers Agnes designed the final tape as a memory key that requires Nora's active choice to restore, preserve, log Della's name, and listen rather than destroy or forget.",
+        "[CLUE C014] Nora restores partial fragments proving her seven-year-old self was present near Della and the tidal pool during the crucial lost event, without revealing what happened, Della's final moments, or Nora's full childhood response.",
+        "Nora uses her professional restoration process on the most fragile reel, making the technical risk feel like a moral risk because the tape may be the last intact evidence connected to Della.",
+        "[ROMANCE] No male lead exists in canon, so write the required romance-slot micro-beat as self-contained vulnerability: Nora wants a hand over hers at the splicing block, finds only her own shaking fingers, and lets that absence become determination instead of romance.",
+        "Ruth attempts one last prevention tactic, such as pleading, threatening family collapse, or claiming Nora will hate herself if she listens, but Nora refuses to destroy the evidence.",
+        "Nora hears only audio fragments from the final reel: her own child-breath, Della's recorded nearness, water against stone, Agnes checking levels, and a gap where the tape has been deliberately overhandled.",
+        "Nora notices a quiet wrongness when the restored work file receives a timestamp from the summer she was seven, even though the laptop clock is correct and the reel metadata should not be intact.",
+        "Nora prepares to take the final restored file or portable recorder to the tidal pool, still unaware of what the pool means."
+      ],
+      "must_not": [
+        "Do not reveal the exact event at the tidal pool; that payoff belongs in Chapter 10.",
+        "Do not reveal Della's final moments or state that Della drowned.",
+        "Do not reveal Nora's complete childhood response during the final pool memory; C014 is only planted here.",
+        "Do not pay off C012, C013, or C014 in this chapter; keep the final memory locked for Chapter 10.",
+        "Do not state or imply that Agnes knew the tidal pool recording held the final answer.",
+        "Do not introduce the third child voice, Agnes's wider archive of erased children, or the Book 2 hook early.",
+        "Do not let Della appear visually, speak live, touch Nora, or act as an attacking ghost.",
+        "Do not allow supernatural manifestation outside audio, recording equipment, playback artifacts, metadata glitches, or restoration-software anomalies."
+      ],
+      "carries_to_next": "Nora reaches the tidal pool with the final restored file ready to play, setting up the Chapter 10 recovery of the full pool memory, Nora's buried role in it, and Nora's choice to say Della's name aloud.",
+      "narrative": {
+        "clues_plant": [
+          "C013",
+          "C014"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T006",
+          "T007",
+          "T008",
+          "T009"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Nora Vance",
+            "Agnes Vance",
+            "Della Vance",
+            "Ruth Vance",
+            "The third child voice"
+          ],
+          "may_know": [
+            "Nora Vance: Nora learns the erased child was Della Vance, recorded by Agnes as Nora's twin sister when both girls were seven",
+            "Nora Vance: Nora understands that the salt room was connected to both girls and that Agnes preserved evidence of Della's existence",
+            "Nora Vance: She still does not have the full memory of Della's drowning or the complete scope of Ruth's complicity.",
+            "Nora Vance: Della's name",
+            "Nora Vance: that Della was her twin sister",
+            "Nora Vance: that Ruth actively helped erase Della",
+            "Agnes Vance: Agnes's log identifies Della Vance beside Nora Vance and records them as twins aged seven",
+            "Agnes Vance: Agnes is revealed as the person who preserved Della's name and proof of her existence, even if she also hid that proof inside labels, logs, and damaged reels.",
+            "Agnes Vance: that Agnes preserved proof of Della",
+            "Della Vance: Della Vance is named",
+            "Della Vance: Nora learns Della was her twin sister, age seven, recorded beside Nora in Agnes's log",
+            "Della Vance: Della remains present only through old recordings, tape hiss, hum, and restored audio artifacts.",
+            "Della Vance: Della's name spoken as fact",
+            "Della Vance: Della's identity as Nora's twin",
+            "Ruth Vance: When Della's name surfaces, Ruth's reaction reveals recognition before Nora fully explains the discovery",
+            "Ruth Vance: Ruth's knowledge becomes a major pressure point, but the complete proof of her complicity lands after this milestone.",
+            "Ruth Vance: that Ruth recognizes Della's name",
+            "Ruth Vance: that Ruth actively participated in erasing Della",
+            "The third child voice: No knowledge",
+            "The third child voice: The reveal of Della as Nora's twin must remain clean and specific."
+          ],
+          "must_not_know": [
+            "Nora Vance: that Della drowned in the tidal pool",
+            "Nora Vance: that Nora stood frozen and silent during the drowning",
+            "Nora Vance: that there is a third erased child voice",
+            "Agnes Vance: that Agnes knew the tidal pool recording held the final answer",
+            "Agnes Vance: that Agnes's archive contains evidence of another erased child",
+            "Della Vance: Della's drowning",
+            "Della Vance: Della's final moments at the tidal pool",
+            "Ruth Vance: that Ruth's silence followed Della's drowning",
+            "Ruth Vance: whether Ruth knows about the third child voice",
+            "The third child voice: existence of a third child voice",
+            "The third child voice: that Agnes erased more than one child",
+            "The third child voice: the unfamiliar name spoken by the third voice"
+          ],
+          "effective_milestone": 7
+        },
+        "clue_beats": {}
+      },
+      "spice": 1,
+      "signature_detail_hint": "\"Say her name first,\" Agnes's recorder clicked, and Nora's knife stopped a breath above the final reel."
+    },
+    {
+      "chapter": 10,
+      "slug": "the-name-at-the-water",
+      "title": "The Name at the Water",
+      "one_line_summary": "Nora restores Agnes's final tape at the tidal pool, remembers that Della drowned while Nora stood frozen, says Della's name aloud, and hears a third erased child beneath the solved recording.",
+      "beat_summary": "Open with seven-year-old Nora's recorded voice saying she was there as the portable recorder plays at the tidal pool gate, leaving adult Nora frozen with her hand on the latch. Quiet wrongness comes first through audio only: the live tidal pool is almost silent, but the recorder captures wave wash, two child breaths, and Agnes's old level count under the present hiss. Pay off C008 by making Nora understand the tidal pool was the place Agnes's codes kept circling because it was where Della drowned and where Agnes knew the recording held the truth. Pay off C012, C013, and C014 as the final tape unlocks Nora's memory: Della was her twin, Della slipped or fell into the tidal pool, Nora froze in terror and silence, and the family later turned that silence into erasure. Ruth's role resolves as Nora understands the erasure followed the drowning and was maintained as mercy that became violence against memory. The required romance-marked beat remains canon-compliant and non-romantic: with no male lead, Nora's need for someone to hold her steady becomes a raw absence beside her at the water, and she chooses the harder intimacy of naming Della aloud alone. Plant and pay off C015 only after the central mystery is fully solved, when the last restored room tone reveals a third child's voice beneath Della's, saying an unfamiliar name that opens the next book without changing Della's answer.",
+      "opens_with": "\"I was there,\" seven-year-old Nora whispered from the recorder, and Nora froze with her hand on the locked tidal pool gate.",
+      "cliffhanger": "After Nora says Della's name and the final tape seems to end, Agnes's restored room tone uncovers a third child's voice beneath the hiss, belonging to neither twin, whispering the unfamiliar name \"Elsie\" before the recorder stamps the file with an archive code Nora has never seen.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Deliver the full Book 1 resolution: restore the final pool tape, pay off C008, C012, C013, C014, and C015 in the locked timing, reveal Della's drowning and Nora's frozen silence, resolve Ruth's erasure after the drowning, and have Nora say Della's name aloud at the tidal pool. Keep Della present only through recorded sound and recovered memory, include one quiet wrongness before the overt memory break, include the required [ROMANCE] absence beat without inventing a male lead or romance subplot, and end with the third child voice as the Book 2 hook after Della's mystery is fully solved.",
+      "signature_detail_hint": "A strip of salt-stiffened red recording leader is tied to the tidal pool gate with a child's hair ribbon, and when Nora unwinds it, the oxide side has Agnes's tiny pencil tick marks counting backward from seven.",
+      "must_happen": [
+        "[CLUE C008] Nora understands Agnes's tidal pool codes pointed to the actual site of Della's drowning and that Agnes knew the pool recording held the final answer.",
+        "[CLUE C012] Nora plays or restores the final pool reel enough to hear the last moments before and during Della's drowning, with Agnes's recording method preserving the truth through recorded sound only.",
+        "[CLUE C013] The final tape functions as Agnes intended, forcing Nora to choose preservation and memory over destruction before the full truth becomes accessible.",
+        "[CLUE C014] Nora fully recovers that she was present when Della drowned, froze in terror, and survived afterward by forgetting what the family taught her not to say.",
+        "Resolve Ruth's role by making Nora understand Ruth and the family erased Della from speech, photographs, labels, and daily memory after the drowning because they believed silence would save Nora.",
+        "[ROMANCE] No male lead exists in canon, so write the required romance-slot micro-beat as absence and vulnerability: Nora reaches for the steadiness of another hand at the tidal pool, finds only cold air and the recorder strap cutting into her palm, and lets that loneliness become the courage to say Della's name aloud.",
+        "Nora says \"Della Vance\" aloud at the tidal pool, choosing grief, evidence, and wholeness instead of continuing the family silence.",
+        "[CLUE C015] Plant and pay off C015 after the Della mystery is solved: the final restored room tone reveals another child's recorded voice beneath Della's, belonging to neither Nora nor Della and saying a name Nora has never heard."
+      ],
+      "must_not": [
+        "Do not leave the Book 1 central mystery ambiguous; Della's identity, drowning, Nora's frozen silence, the salt room's cold, Ruth's erasure, and Agnes's preservation of proof must be answered.",
+        "Do not let Della appear visually, speak live in person, touch Nora, open gates, move objects, or become an attacking ghost; all presence must remain recorded sound, recovered memory, and physical evidence.",
+        "Do not create uncanny physical manifestations at the tidal pool; wrongness must stay in recorded sound, playback artifacts, room tone, memory recovery, or restoration evidence.",
+        "Do not make the third child voice compete with or revise the Della solution; it must arrive only after Nora has solved Della's story and chosen to name her.",
+        "Do not invent a male lead, love interest, romantic rescue, or romance subplot in the resolution."
+      ],
+      "carries_to_next": "Nora has chosen grief over forgetting and solved Della's haunting, but Agnes's archive now contains proof of another erased child whose name Nora does not know.",
+      "narrative": {
+        "clues_plant": [
+          "C015"
+        ],
+        "clues_payoff": [
+          "C008",
+          "C012",
+          "C013",
+          "C014",
+          "C015"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Nora Vance",
+            "Agnes Vance",
+            "Della Vance",
+            "Ruth Vance",
+            "The third child voice"
+          ],
+          "may_know": [
+            "Nora Vance: Nora fully recovers the truth: Della Vance was her twin sister",
+            "Nora Vance: Della drowned in the tidal pool while Nora stood frozen and silent",
+            "Nora Vance: afterward, Ruth Vance and the family erased Della from speech, photographs, and memory to survive the grief",
+            "Nora Vance: Nora restores the final tape at the tidal pool and says Della's name aloud, choosing grief and wholeness instead of continued forgetting",
+            "Nora Vance: After the central mystery is solved, Nora hears a third child's voice beneath Della's on the final tape, opening the Book 2 mystery.",
+            "Nora Vance: Della's name",
+            "Nora Vance: that Della was her twin sister",
+            "Nora Vance: that Della drowned in the tidal pool",
+            "Nora Vance: that Nora stood frozen and silent during the drowning",
+            "Nora Vance: that Ruth actively helped erase Della",
+            "Nora Vance: that there is a third erased child voice",
+            "Agnes Vance: Agnes's final tape and instruction to restore it at the tidal pool reveal that she preserved the truth of Della's drowning for Nora to recover when ready",
+            "Agnes Vance: After Nora solves Della's mystery, Agnes's archive also reveals a second hidden child voice, proving Agnes erased or concealed more than one child from the family record.",
+            "Agnes Vance: that Agnes preserved proof of Della",
+            "Agnes Vance: that Agnes knew the tidal pool recording held the final answer",
+            "Agnes Vance: that Agnes's archive contains evidence of another erased child",
+            "Della Vance: Della's full fate is revealed: she drowned in the tidal pool when she and Nora were seven",
+            "Della Vance: Her voice on the tapes is the sound of an erased sister, not a random hotel ghost",
+            "Della Vance: Nora speaks Della's name aloud, restoring her place in memory and resolving the central haunting.",
+            "Della Vance: Della's name spoken as fact",
+            "Della Vance: Della's identity as Nora's twin",
+            "Della Vance: Della's drowning",
+            "Della Vance: Della's final moments at the tidal pool",
+            "Ruth Vance: Ruth is understood as complicit in the erasure after Della's drowning",
+            "Ruth Vance: She helped maintain the silence because she believed Nora would recover faster if Della's name disappeared from the house and family",
+            "Ruth Vance: Ruth's role in Della's erasure is resolved, though she may know more about Agnes's older secrets for Book 2.",
+            "Ruth Vance: that Ruth recognizes Della's name",
+            "Ruth Vance: that Ruth actively participated in erasing Della",
+            "Ruth Vance: that Ruth's silence followed Della's drowning",
+            "Ruth Vance: whether Ruth knows about the third child voice",
+            "The third child voice: After Nora restores the final tape, recovers the full memory of Della's drowning, and says Della's name aloud, the last seconds of the recording reveal another child's voice beneath Della's",
+            "The third child voice: The voice belongs to neither Nora nor Della and says a name Nora has never heard",
+            "The third child voice: This opens Book 2 without changing Book 1's solved answer.",
+            "The third child voice: existence of a third child voice",
+            "The third child voice: that Agnes erased more than one child",
+            "The third child voice: the unfamiliar name spoken by the third voice"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      },
+      "spice": 1
+    }
+  ],
+  "total_chapters": 10,
+  "title": "The Salt Room 1",
+  "status": "draft",
+  "created_at": "2026-07-11T10:47:46.974682+00:00"
+}

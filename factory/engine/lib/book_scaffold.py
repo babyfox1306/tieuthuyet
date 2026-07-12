@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -36,13 +35,6 @@ def list_series_books(workspace_id: str) -> list[dict[str, Any]]:
     cfg = load_config()
     ws = workspace_dir(workspace_id)
     seen: dict[int, dict[str, Any]] = {}
-
-    for key, slug in (cfg.get("book_slugs") or {}).items():
-        try:
-            num = int(key)
-        except (TypeError, ValueError):
-            continue
-        seen[num] = {"book": num, "slug": slug, "source": "config"}
 
     books_cat = catalog_series_dir(workspace_id) / "books"
     if books_cat.exists():
@@ -125,45 +117,12 @@ def init_book(
         (book_ws / "pipeline" / bucket).mkdir(parents=True, exist_ok=True)
 
     plan_path = book_ws / "master_plan.json"
-    if not plan_path.exists():
-        hook = ""
-        if book == 2:
-            hook = str(concept.get("hook_book2") or "")
-        plan = {
-            "book": book,
-            "title": title,
-            "total_chapters": total,
-            "status": "draft",
-            "book2_hook": hook,
-            "chapter_plans": [],
-            "created_at": datetime.now(timezone.utc).isoformat(),
-        }
-        plan_path.write_text(json.dumps(plan, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    # master_plan + catalog book.yaml are created at concept--ready / set_total_chapters.
 
-    # Catalog
     book_dir = book_catalog_dir(workspace_id, slug)
+    book_dir.mkdir(parents=True, exist_ok=True)
     (book_dir / "chapters").mkdir(parents=True, exist_ok=True)
     (book_dir / "exports").mkdir(parents=True, exist_ok=True)
-    by_path = book_dir / "book.yaml"
-    if not by_path.exists():
-        lang = direction.get("target_language", "en")
-        book_yaml = {
-            "book": book,
-            "slug": slug,
-            "title": title,
-            "series": workspace_id,
-            "language": lang,
-            "total_chapters": total,
-            "keywords_kdp": ["romance thriller", "marriage of convenience", "conspiracy"],
-            "categories_kdp": ["Fiction > Romance > Suspense"],
-            "kindle_unlimited": True,
-        }
-        if book == 2 and concept.get("hook_book2"):
-            book_yaml["hook"] = concept["hook_book2"]
-        by_path.write_text(
-            yaml.dump(book_yaml, allow_unicode=True, default_flow_style=False, sort_keys=False),
-            encoding="utf-8",
-        )
 
     # Carry series canon pointer into direction when starting book 2+
     if book >= 2:
@@ -184,16 +143,6 @@ def init_book(
             yaml.dump(direction, allow_unicode=True, default_flow_style=False, sort_keys=False),
             encoding="utf-8",
         )
-
-    if update_config:
-        cfg_path = Path(__file__).resolve().parents[1] / "config.json"
-        cfg = load_config()
-        slugs = dict(cfg.get("book_slugs") or {})
-        slugs[str(book)] = slug
-        cfg["book_slugs"] = slugs
-        cfg["active_book"] = book
-        cfg["book_slug"] = slug
-        cfg_path.write_text(json.dumps(cfg, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     return {
         "workspace_id": workspace_id,

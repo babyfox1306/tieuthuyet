@@ -1,0 +1,17 @@
+{
+  "word_count": 2326,
+  "target_language": "en",
+  "markdown": [
+    "*The machine prints your handwriting.*",
+    "*Patient resting comfortably. No acute distress.*",
+    "*M. Vole.*",
+    "*October 14, 1963. The machine printed the name of the boy in Room 2. I ",
+    "*October 21, 1963. Another name. I tried to fight it. I called Dr. Ovid—",
+    "*October 28, 1963. I am tired. I feel like I am writing the script for t",
+    "*November 5, 1963. The machine printed a name. Elizabeth Small. Time: 03"
+  ],
+  "pov_violation": {
+    "count": 17,
+    "threshold": 3
+  }
+}

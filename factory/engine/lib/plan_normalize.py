@@ -102,7 +102,17 @@ def normalize_chapter_plan(plan: dict[str, Any]) -> dict[str, Any]:
     out.pop("chapter_plan", None)
     if "spice" not in out and out.get("spice_note"):
         out["spice"] = 3
-    return _coerce_plan_fields(out)
+    out = _coerce_plan_fields(out)
+    # Slug is mechanical — never block approve for missing slug when title exists.
+    if not str(out.get("slug") or "").strip():
+        title = str(out.get("title") or "").strip()
+        ch = out.get("chapter") or 0
+        if title:
+            slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+            out["slug"] = slug or f"chapter-{ch}"
+        elif ch:
+            out["slug"] = f"chapter-{ch}"
+    return out
 
 
 def normalize_chapter_plans(plans: list[dict[str, Any]]) -> list[dict[str, Any]]:

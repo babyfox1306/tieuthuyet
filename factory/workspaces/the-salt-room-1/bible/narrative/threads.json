@@ -1,0 +1,115 @@
+{
+  "description": "Threads for Book 1 of The Salt Room 1. The book is gothic psychological horror with no romance subplot, no male lead, and no explicit content. Every thread supports Nora Vance's locked third-person-limited investigation into the tapes, the cold salt room, and the erased truth of Della Vance. Della manifests only through recorded sound, never visually and never live in person.",
+  "threads": [
+    {
+      "id": "T001",
+      "name": "The inherited hotel and Agnes Vance's tapes",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "closed_book1",
+      "book1_resolution": "Nora understands that Agnes preserved the reel-to-reel tapes as proof Della existed after the family erased her from photographs, speech, and memory.",
+      "book2_promise": "The final restored tape suggests Agnes also preserved evidence of another erased child, opening the next mystery without changing the answer to Della's death.",
+      "book1_payoff": "The tapes stop being merely eerie objects and become the physical vessel of Nora's erased memory and Della's only remaining presence.",
+      "note": "Concrete partial answers should surface through tape labels, playback artifacts, and Agnes's preservation choices in chapters 1, 3, 5, 7, and 10."
+    },
+    {
+      "id": "T002",
+      "name": "The child's voice saying Nora's name",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "closed_book1",
+      "book1_resolution": "Nora learns the child's voice is connected to recordings from the summer she was seven and that the voice belongs within her own lost childhood with Della.",
+      "book2_promise": "A second child's voice beneath Della's on the final tape points toward a separate erased history for Book 2.",
+      "book1_payoff": "The first haunting question is answered: the voice is not a random spirit in the hotel but the sound of a sister Nora was made to forget.",
+      "note": "Della must only manifest through recorded sound: reel-to-reel tapes, static, phone-recording hum, degraded playback, or restored audio. She never appears visually and never speaks live."
+    },
+    {
+      "id": "T003",
+      "name": "The cold salt room Nora cannot remember",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "closed_book1",
+      "book1_resolution": "Nora recovers that the salt room belonged to both girls and that its impossible cold marks the family absence created by Della's erasure, not an attacking entity.",
+      "book2_promise": "After Nora says Della's name and the central haunting resolves, the salt room goes cold again in response to the third child's voice on the tape.",
+      "book1_payoff": "The room's wrongness becomes emotionally legible: it is the space where Nora's memory, Della's existence, and Agnes's evidence were sealed away.",
+      "note": "Each chapter should include one quiet wrongness before overt dread: salt on dry glass, mismatched temperature, a second breath on tape, or warmth lasting only through a lullaby."
+    },
+    {
+      "id": "T004",
+      "name": "The erased family photograph",
+      "opened_chapter": 2,
+      "must_close_by": 5,
+      "status": "closed_book1",
+      "book1_resolution": "Nora finds a family photograph with one child's face scratched out, proving the family image has been physically altered and that Nora was not the only child in the frame.",
+      "book2_promise": "The method of erasure establishes a family pattern that can later extend beyond Della without contradicting Book 1's central answer.",
+      "book1_payoff": "The scratched-out child gives the reader a concrete partial answer: someone was removed from the visible family record.",
+      "note": "The photograph should not reveal Della fully at once; it should confirm deliberate erasure and push Nora toward the two-child truth at the midpoint."
+    },
+    {
+      "id": "T005",
+      "name": "The second child's toothbrush and shared room evidence",
+      "opened_chapter": 3,
+      "must_close_by": 6,
+      "status": "closed_book1",
+      "book1_resolution": "Nora finds domestic proof of two children: a second toothbrush, duplicate childhood objects, or room details that make no sense for only one child.",
+      "book2_promise": "The evidence teaches Nora to read absence as documentation, preparing her to recognize another erased child after Book 1.",
+      "book1_payoff": "The mystery advances from a vague haunting to a concrete contradiction in the family story: Nora's childhood environment was built for two.",
+      "note": "This thread supports the requirement for partial answers every 2-3 chapters and should feed directly into the midpoint realization."
+    },
+    {
+      "id": "T006",
+      "name": "Ruth Vance's living complicity",
+      "opened_chapter": 3,
+      "must_close_by": 10,
+      "status": "closed_book1",
+      "book1_resolution": "Nora realizes Ruth knew Della existed and participated in the family agreement to erase her after the drowning, choosing silence as a survival mechanism.",
+      "book2_promise": "Ruth may know more about Agnes's earlier erasures, but Book 1 resolves her role in Della's erasure clearly.",
+      "book1_payoff": "The family betrayal becomes specific: Nora's missing memory was protected and reinforced by the living parent who refused to name Della.",
+      "note": "Ruth's evasions should create dread through denial and omission, not melodrama. She must not introduce a second true answer to the central mystery."
+    },
+    {
+      "id": "T007",
+      "name": "Midpoint revelation: there were two girls",
+      "opened_chapter": 5,
+      "must_payoff_by": 5,
+      "status": "closed_book1",
+      "book1_resolution": "At the midpoint, Nora realizes the recordings preserve her own childhood voice and that there were two girls in the summer she cannot remember: Nora and Della.",
+      "book2_promise": "This teaches Nora that restored audio can reveal identities hidden under family silence, which becomes essential when a third voice appears at the end.",
+      "book1_payoff": "The book delivers a major concrete partial answer at chapter 5: the haunting is bound to Nora's own lost childhood and a twin sister's erased presence.",
+      "note": "This is not the final reveal of the drowning; it is the identity shift that reframes every earlier clue."
+    },
+    {
+      "id": "T008",
+      "name": "The tidal pool memory",
+      "opened_chapter": 6,
+      "must_close_by": 10,
+      "status": "closed_book1",
+      "book1_resolution": "Nora recovers the full memory that Della drowned in the tidal pool while Nora stood frozen and silent, and that this trauma became the center of the family's erasure.",
+      "book2_promise": "The tidal pool remains a threshold location, but Book 2's hook comes from the third voice on the tape rather than reopening Della's death.",
+      "book1_payoff": "The central mystery receives its full answer: what happened when Nora was seven, why Della vanished from memory, and why Nora could not enter the truth without restored sound.",
+      "note": "The drowning should be dreadful and emotionally precise, not graphic. Gore and body horror are not the scare."
+    },
+    {
+      "id": "T009",
+      "name": "Nora's choice: restore the final tape or keep forgetting",
+      "opened_chapter": 8,
+      "must_close_by": 10,
+      "status": "closed_book1",
+      "book1_resolution": "At the tidal pool, Nora restores the final tape and says Della's name aloud, choosing memory, grief, and wholeness over burning the tapes and preserving the blank place.",
+      "book2_promise": "Because Nora chooses restoration rather than destruction, the final tape survives long enough to reveal the second hidden child voice.",
+      "book1_payoff": "Nora's internal arc resolves through action: she stops collaborating with the family silence and gives Della back her name.",
+      "note": "This is the emotional climax. The narration remains third-person limited to Nora and must not shift into first person outside dialogue."
+    },
+    {
+      "id": "T010",
+      "name": "Book 2 door: the third voice beneath Della",
+      "opened_chapter": 10,
+      "must_payoff_by": 10,
+      "status": "open_series",
+      "book1_resolution": "The Book 1 mystery is already closed before this thread opens: Della was Nora's twin, Della drowned, and the family erased her.",
+      "book2_promise": "On the last restored tape, beneath Della's voice, Nora hears a second child's voice that is neither Nora nor Della. The third voice says a name Nora has never heard, and the salt room goes cold again.",
+      "book1_payoff": "The hook expands the family-erasure premise without undermining or replacing the solved Della mystery.",
+      "note": "This thread must not imply a different explanation for Della's haunting. It is a new mystery planted in the final seconds after Book 1's core answer is complete."
+    }
+  ]
+}

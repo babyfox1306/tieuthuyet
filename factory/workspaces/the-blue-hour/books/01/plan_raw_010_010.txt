@@ -1,0 +1,31 @@
+{
+  "act": [10, 10],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Lily and the Letter",
+      "slug": "ch10-the-lily-and-the-letter",
+      "one_line_summary": "In the strange quiet after the lake, Elena reads Cora's hidden letter, learns the true scope of the March legacy, and makes a pact with Julian to find her mother before the third mirror claims her.",
+      "beat_summary": "The chapter opens with Elena in the living room, the photograph of Diane and Cora in her hands. She feels the weight of Diane's guilt pressing down on the fragile wholeness she just achieved. Julian finds a hidden box of Cora's journals under the floorboards in the attic. At the kitchen table, Julian makes Elena promise to let him stay by her side. She agrees, her hand in his. Together they pack the last of her things. Elena says goodbye to the house, finding a strange peace in its ordinary silence. While Julian loads the car, she discovers a letter tucked into the back of one of Cora's journals, addressed to her. The letter warns her about her mother's history with mirrors and a third 'self' that Diane fractured long before Elena was born. The Blue Hour has passed. The house is just a house. The real journey is just beginning.",
+      "must_happen": [
+        "Elena reads Diane's inscription 'I passed it on' on the back of the photograph, fully comprehending the deliberate setup of her inheritance.",
+        "Julian clears the attic and finds Cora's hidden journals, proving the March women's dissociation is a multi-generational curse.",
+        "[ROMANCE] At the kitchen table, Julian cups Elena's cheek and makes her promise to let him stay. He kisses her softly, sealing a vow that he will not let her face her family's darkness alone.",
+        "Elena places Pip in the trunk, the bear's one eye catching the light. The memory it holds is no longer poison, just a scar she can live with.",
+        "Elena finds Cora's letter, folded into a dried lily, warning that Diane broke a mirror long ago and split a third self—a darkness that is still hunting the family line."
+      ],
+      "must_not": [
+        "The Girl in Blue must not reappear as a separate entity; Elena's integration is stable and complete.",
+        "Elena must not feel completely safe; the letter from Cora must introduce a new, deeper dread that sets up the overarching series conflict."
+      ],
+      "opens_with": "\"I passed it on,\" Elena read aloud, the tintype trembling in her fingers. The words were light cursive on aged paper, but they carried the full weight of a curse breaking open in the morning stillness.",
+      "cliffhanger": "Elena opens the lily-shaped letter. Cora's final words coil in her chest: \"Your mother is not who she pretends to be. She split the third mirror when she was fifteen. Find her before she finds you. The reflection can walk out on its own.\" Underneath the script, Cora has drawn a map to an address Elena has never seen, marked with an X.",
+      "signature_detail_hint": "The letter is folded into the shape of a water lily, the petals dry and fragile, and when Elena unfolds it, the creases are stained with old perfume—lavender, the same scent that lingers in the lake house's empty closets, as if Cora herself breathed the word onto the page.",
+      "emotional_beat": "Bitter resolve mingling with the first true safety of partnership. Elena is no longer alone in her fractured history, but the path ahead crawls with the dread of her mother's secrets.",
+      "spice": 1,
+      "spice_note": "The intimacy is the quiet safety of being wrapped in his arms, the soft kiss of a promise, the shared breathing of two people who have survived the dark together. No explicit content, only the profound comfort of touch and trust.",
+      "chapter_task": "Write 1600-1900 words focusing on the quiet, heavy aftermath of the trauma and the deliberate setup for Book 2. Ensure the romantic resolution with Julian feels earned and anchoring, contrasting with the cold dread of Diane's secret.",
+      "carries_to_next": "Introduces the overarching series mystery of the March family curse, the 'third mirror,' and the hunt for Diane. Elena and Julian leave the lake house together, forming a partnership against the shadow her mother cast over her life."
+    }
+  ]
+}

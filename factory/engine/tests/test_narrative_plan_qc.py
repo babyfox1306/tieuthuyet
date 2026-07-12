@@ -49,6 +49,12 @@ class TestNarrativePlanQC(unittest.TestCase):
 
     def test_nc07_clue_not_in_beats(self):
         plans = merge_narrative_into_plans(self.ws, [_full_plan(1)])
+        # Strip compiler-injected [CLUE …] beats so NC-07 can fire
+        plans[0]["must_happen"] = [
+            x
+            for x in (plans[0].get("must_happen") or [])
+            if "[CLUE " not in str(x).upper()
+        ]
         issues = validate_narrative_plan(plans[0], self.ws, all_plans=plans)
         self.assertTrue(any("NC-07:clue_not_in_beats:C001" in i for i in issues))
 
@@ -69,6 +75,16 @@ class TestNarrativePlanQC(unittest.TestCase):
         plans = [p3, p8]
         issues = validate_narrative_plan(p8, self.ws, all_plans=plans)
         self.assertTrue(any("NC-02:payoff_not_scheduled:C002" in i for i in issues))
+
+    def test_nc04_same_chapter_plant_allowed(self):
+        """Clue planted at-or-before reveal chapter counts (incl. same chapter)."""
+        p3 = merge_narrative_into_plans(self.ws, [_full_plan(3)])[0]
+        p7 = merge_narrative_into_plans(self.ws, [_full_plan(7)])[0]
+        p8 = merge_narrative_into_plans(self.ws, [_full_plan(8)])[0]
+        # R001@8 needs C002 (plant ch3) + C005 (plant ch7)
+        issues = validate_narrative_plan(p8, self.ws, all_plans=[p3, p7, p8])
+        nc04 = [i for i in issues if "NC-04" in i]
+        self.assertEqual(nc04, [], issues)
 
     def test_nc04_reveal_missing_prior_clue(self):
         p8 = merge_narrative_into_plans(self.ws, [_full_plan(8)])[0]

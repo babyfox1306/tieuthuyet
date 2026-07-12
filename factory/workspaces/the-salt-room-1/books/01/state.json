@@ -1,0 +1,125 @@
+{
+  "current_book": 1,
+  "current_chapter": 6,
+  "timeline": [
+    "Nora arrives at Agnes Vance's shuttered hotel with playback equipment.",
+    "Nora listens to and digitizes tapes; hears her name whispered after stopping the tape.",
+    "Nora explores the hotel and notices the dead sound quality in the back corridor.",
+    "Nora discovers the Salt Room at the end of the corridor, where the air is sharply cold and salt is dusted across the threshold.",
+    "At the Salt Room threshold, Nora sees the tape counter click from 007 to 008 while the machine is unplugged.",
+    "Nora notices the Salt Room door has opened one inch despite being locked moments earlier.",
+    "Nora inspects the salt ridge and finds it carefully laid with no footprints or smears.",
+    "Nora hears the unplugged tape counter click again to 009.",
+    "Nora backs away from the Salt Room without crossing the salt or turning her back on the door.",
+    "Nora finds a hidden key behind the scratched photograph and a folded tag labeled SALT ROOM in Agnes's handwriting.",
+    "Ruth calls Nora and warns her not to sleep in the Salt Room tonight, then the call ends.",
+    "Nora opens the Salt Room door with the hidden key and records evidence from the hallway.",
+    "Nora's recorder plays back a click at second eleven that Nora did not hear in the hallway.",
+    "Nora places a recorder and a glass of tap water just outside the salt ridge as a baseline test.",
+    "Nora photographs and records the Salt Room threshold, salt ridge, door-width gap, floorboards, and hinge scratch.",
+    "Nora steps over the salt threshold into the Salt Room.",
+    "Cold closes around Nora's ankles immediately after she crosses the threshold.",
+    "Nora's breath fogs inside the Salt Room while the glass of water outside the threshold remains unchanged.",
+    "Nora extracts a fragment from a damaged tape splice and isolates two distinct breaths; spectral comparison confirms the second breath belongs to a different child.",
+    "Nora measures the scratched photograph and finds the erased child is two inches shorter, dressed identically; Agnes wrote 'Girls, first week' on the back.",
+    "Nora enters the Salt Room and discovers two sets of pencil height marks on the wall above the first bed frame: one at her height with initial N, another two inches lower with initial sanded away.",
+    "Nora examines the second bed area, finding a rug outline, worn floor, three parallel scratches on the wall, and concentrated cold that causes her breath to fog more heavily there.",
+    "Nora records a voice memo concluding the room was arranged for two children, with one child erased from all surface evidence.",
+    "Nora exits the Salt Room, closing the door; the cold releases gradually.",
+    "Nora identifies the whisper on Tape 1 as her own childhood voice through formant analysis, recognizing the breathing pattern as Agnes's exercise.",
+    "Nora re-examines the back corridor and discovers that the salt at the Salt Room threshold has spread, with fine grains tracking into the hallway as if someone walked through them, despite Nora not touching the salt.",
+    "Nora examines a",
+    "Nora completes her examination of the damaged tape splice and discovers the original splice of Tape 3, revealing two girls' voices and the name Della.",
+    "Ruth calls Nora back and tells her to burn the evidence — the tape, labels, index cards.",
+    "Nora confronts Ruth about knowing Della's name and her role in the cover-up.",
+    "Ruth admits she knew about Della and was trying to protect Nora from carrying a dead twin.",
+    "Nora states she doesn't remember drowning or a funeral, but the room remembers.",
+    "Ruth offers to tell a comforting version of events, but the offer hangs as a falsified story.",
+    "Ruth calls Nora again, warning her not to follow Agnes's codes and mentioning a guest map hidden under the counter; she tells Nora to burn the map.",
+    "Nora reflects on her loneliness and the desire for a partner.",
+    "Nora walks through the corridor to the Salt Room, noticing the salt tracked out from the threshold.",
+    "Nora enters the Salt Room and decides to search for the guest map in the filing cabinet.",
+    "The drawer of the filing cabinet is stuck due to humidity; Nora braces to open it."
+  ],
+  "character_status": {
+    "Nora": {
+      "location": "Salt Room",
+      "knows": [
+        "Della is her twin sister who died",
+        "Ruth and Agnes conspired to erase Della",
+        "Tape 3 original splice contains Della's name",
+        "Her childhood voice whispers on Tape 1",
+        "Agnes used codes in numbers and patterns",
+        "There is a guest map hidden under the counter",
+        "Ruth wants the map burned",
+        "Ruth believes a strange sequence or mark on the map should be left alone"
+      ],
+      "relationship_other": "confronting her mother's lies and now seeking the map despite Ruth's warnings",
+      "mood": "determined, isolated, aching"
+    },
+    "Ruth": {
+      "location": "off-site, communicating by phone",
+      "knows": [
+        "Agnes hid things in numbers and patterns",
+        "Agnes kept a guest map under the counter",
+        "The guest map may contain a mark or sequence Nora should not follow",
+        "Nora is investigating Agnes's materials despite warnings"
+      ],
+      "relationship_other": "terrified mother trying to stop Nora from uncovering Agnes's coded secrets",
+      "mood": "panicked, urgent, secretive"
+    },
+    "Agnes Vance": {
+      "location": "absent; presence remains through the hotel, tapes, notebooks, codes, and Salt Room",
+      "knows": [
+        "She labeled and archived tapes by date and room number",
+        "She used numbers and patterns to hide information",
+        "She kept a guest map under the counter"
+      ],
+      "relationship_other": "dead grandmother whose systems continue directing Nora's investigation",
+      "mood": "unknown"
+    }
+  },
+  "open_threads": [
+    "The guest map hidden under the counter may reveal Agnes's secrets, possibly connected to Della or the tapes.",
+    "Ruth's urgent demand to burn the map suggests dangerous knowledge.",
+    "Della's erasure from all records and the nature of her death.",
+    "The whispering on Tape 1 and its connection to Nora's childhood.",
+    "What happened in the Salt Room involving two children.",
+    "Agnes's codes, numbers, patterns, and possible marks on the map remain undeciphered.",
+    "The bottom drawer of the filing cabinet is stuck before Nora can retrieve what may be inside."
+  ],
+  "facts_established": [
+    "Ruth warned Nora not to follow Agnes's codes.",
+    "Agnes used to hide things in numbers and patterns.",
+    "There is a guest map that Agnes kept under the counter.",
+    "Ruth told Nora to burn the map.",
+    "The salt from the Salt Room has been tracked into the hallway.",
+    "The drawer of the filing cabinet is stuck due to humidity.",
+    "Nora felt a hollow ache and wish for a partner.",
+    "Ruth said a sequence that does not look like the others or a mark on the map should be left alone.",
+    "The hotel foyer has boarded windows and smells of old wood and cold ocean draft.",
+    "Agnes's Salt Room shelves contain reels of magnetic tape, yellowed plastic cases, and notebooks in Agnes's handwriting.",
+    "Nora's digital interface is set up on the Salt Room worktable.",
+    "Ruth's call about the map ended immediately after she told Nora to burn it.",
+    "Nora used a flat forensic voice while speaking to Ruth about the labels and reels.",
+    "The corridor carpet is worn down to the weave.",
+    "The air grows colder as Nora approaches the Salt Room."
+  ],
+  "spice_progression": "Nora's investigation deepens as Ruth's panic confirms that Agnes's codes and the hidden guest map matter. Nora's emotional isolation sharpens alongside her determination to pursue the evidence alone in the Salt Room.",
+  "phrases_used": [
+    "Do not follow Agnes's codes",
+    "She used to hide things in the numbers",
+    "If you find a sequence that doesn't look like the others",
+    "Burn it",
+    "Romance was a luxury for people who lived in houses that didn't whisper",
+    "waiting room silence",
+    "salt preserved things, but it also burned the earth so nothing could grow",
+    "terrified clarity",
+    "a ghost of a bar",
+    "like an infection",
+    "chaotic archive of audio history",
+    "brittle as dried varnish",
+    "sole point of contact",
+    "meat locker"
+  ]
+}

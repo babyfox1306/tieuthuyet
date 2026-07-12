@@ -1,0 +1,79 @@
+{
+  "word_count": 1817,
+  "target_language": "en",
+  "markdown": [
+    "*It only ever prints your handwriting.*",
+    "*her*",
+    "*It followed me here.*",
+    "*It.*",
+    "*Vole.*",
+    "*Vole, 1963*",
+    "*through*",
+    "*DOROTHY VANCE — 21:47.*"
+  ],
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 15,
+        "snippet": "*It only ever prints your handwriting.*"
+      },
+      {
+        "line": 25,
+        "snippet": "*her*"
+      },
+      {
+        "line": 27,
+        "snippet": "*It followed me here.*"
+      },
+      {
+        "line": 29,
+        "snippet": "*It.*"
+      },
+      {
+        "line": 65,
+        "snippet": "*Vole.*"
+      },
+      {
+        "line": 67,
+        "snippet": "*Vole, 1963*"
+      },
+      {
+        "line": 77,
+        "snippet": "*through*"
+      },
+      {
+        "line": 83,
+        "snippet": "*DOROTHY VANCE — 21:47.*"
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*It only ever prints your handwriting.*",
+        "*her*",
+        "*It followed me here.*",
+        "*It.*",
+        "*Vole.*",
+        "*Vole, 1963*",
+        "*through*",
+        "*DOROTHY VANCE — 21:47.*"
+      ]
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 10,
+    "short_expands": 0,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 10
+  }
+}

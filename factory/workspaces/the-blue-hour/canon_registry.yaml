@@ -1,0 +1,24 @@
+characters:
+  female_lead:
+    canonical: Elena March
+    allowed_aliases:
+    - Elena
+    forbidden_aliases:
+    - Mara
+    - Mara Vale
+    - Ilse
+  male_lead:
+    canonical: Julian Vane
+    allowed_aliases:
+    - Julian
+    forbidden_aliases:
+    - Elias
+    - Elias Crane
+    - Jude
+    - Jude Croft
+    - Asher
+    - Asher Croft
+    - Isaac
+    - Isaac Vance
+pov_mode: third_person_limited
+spice_max: 1

@@ -1,0 +1,23 @@
+{
+  "book_number": 1,
+  "total_chapters": 10,
+  "target_language": "en",
+  "case_closed": "The central mystery is fully answered: Della exists as Nora's twin sister who drowned in the tidal pool while Nora watched, and the family erased all evidence of her to survive grief. Nora recovers the memory, restores the final tape, and speaks Della's name, choosing grief and wholeness over erasure.",
+  "case_open": "Who is the child whose voice appears on the grandmother's tapes? Why does the salt room stay cold and locked? And why does Nora remember nothing of the summer she was seven?",
+  "lead_internal_arc": [
+    {
+      "character": "Nora Vance",
+      "internal_arc": "Begins as a fragmented adult estranged from her past and unable to recall a crucial summer, isolated and numb. Through the tapes and the cold room, she progressively confronts hidden guilt, recovers her full memory of Della's drowning, and finally accepts the loss — achieving emotional wholeness and the ability to grieve."
+    },
+    {
+      "character": "Della Vance",
+      "internal_arc": "Though deceased, Della's arc moves from an erased presence only audible on decaying tapes to a fully acknowledged sister restored to family memory by Nora's courage. Her voice shifts from haunting to pleading, and finally to a released echo once Nora names her, completing the arc of being remembered."
+    }
+  ],
+  "act_structure": [
+    "act1_setup",
+    "act2_complications",
+    "act3_crisis",
+    "act4_resolution"
+  ]
+}

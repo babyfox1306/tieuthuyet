@@ -1,0 +1,166 @@
+{
+  "book_number": 1,
+  "total_chapters": 10,
+  "target_language": "en",
+  "case_closed": true,
+  "case_open": "The central Book 1 mystery is closed: Nora Vance learns that the recorded child's voice is bound to the erased existence of her twin sister, Della Vance, who drowned in the hotel's tidal pool when Nora was seven. The series door remains open through a final tape layer revealing a second erased child whose voice is neither Nora nor Della.",
+  "lead_internal_arc": [
+    {
+      "character": "Nora Vance",
+      "role": "primary lead and sole POV character",
+      "starting_wound": "Nora is estranged from her family and built her life around restoring damaged sound while accepting a damaged silence inside herself: she has no memory of the summer she was seven and does not question the absence until the hotel and tapes force it into audibility.",
+      "false_belief": "Forgetting is survival, and the gaps in her family history are safer left unrestored.",
+      "external_goal": "Restore Agnes Vance's reel-to-reel tapes, understand why the salt room stays cold, and determine why a child's recorded voice keeps saying her name.",
+      "internal_need": "Nora must accept that grief is not the enemy; the true horror is the family silence that erased Della and split Nora from her own past.",
+      "arc_progression": {
+        "act1": "Nora returns to the shuttered seaside hotel as an audio restorer, treating the tapes as a technical problem and the cold room as an inherited disturbance. The first playback breaks that distance when a child says her name.",
+        "act2": "Each restored fragment gives Nora a concrete partial answer: the scratched-out child in a photograph, the second toothbrush, Agnes's log, and recordings that prove the voice belongs to a real child connected to Nora. Her resistance shifts from disbelief to fear of what remembering will cost.",
+        "act3": "At the midpoint aftermath and crisis, Nora understands that the child's voice is tied to her own childhood and that there were two girls. Ruth's evasions confirm the erasure was deliberate, not accidental. Nora faces the moral terror that her family chose silence over Della.",
+        "act4": "Nora restores the final tape at the tidal pool, recovers the full memory of Della's drowning, says Della's name aloud, and chooses grief and wholeness over burning the evidence and continuing the family erasure."
+      },
+      "ending_state": "Nora is not healed cleanly, but she is whole enough to remember. She knows who Della was, what happened, why the salt room stayed cold, and why Agnes preserved the tapes. Her Book 1 arc resolves through chosen grief.",
+      "pov_rule": "Third-person limited locked to Nora only; no first-person narration outside quoted dialogue."
+    },
+    {
+      "character": "Ruth Vance",
+      "role": "secondary family lead, living antagonist of silence",
+      "starting_wound": "Ruth survived Della's drowning by consenting to the family's erasure of Della and by raising Nora inside a controlled absence.",
+      "false_belief": "If Della is never named, Nora can be spared the full weight of the drowning and Ruth can survive her own guilt.",
+      "external_goal": "Keep Nora from fully restoring the tapes and from reopening the summer Agnes preserved in sound.",
+      "internal_need": "Ruth must confront that protection became harm, and that erasing Della also erased part of Nora.",
+      "arc_progression": {
+        "act1": "Ruth's absence, guarded calls, or evasive messages frame the family silence before she gives Nora anything useful.",
+        "act2": "Ruth denies, minimizes, and redirects when Nora finds physical proof of a second child, revealing complicity through avoidance rather than confession.",
+        "act3": "Under pressure from Nora's discoveries, Ruth's story fractures. She confirms enough to prove Della existed but still frames the erasure as mercy.",
+        "act4": "Ruth cannot stop Nora from restoring the final tape. Her Book 1 function resolves as the human face of the erasure: not a monster, but a mother who chose silence and made Nora pay for it."
+      },
+      "ending_state": "Ruth's lie is exposed and her control over Nora's memory breaks. She remains emotionally unresolved, carrying consequences into the series without reopening the Book 1 answer.",
+      "pov_rule": "Ruth is never a POV character; her arc is inferred only through Nora's limited perception, dialogue, recordings, documents, and behavior."
+    }
+  ],
+  "act_structure": [
+    {
+      "act": 1,
+      "name": "Inheritance and First Playback",
+      "chapters": [
+        1,
+        2
+      ],
+      "function": "Set the shuttered seaside hotel, establish Nora's work with damaged sound, introduce Agnes's tapes, and make the salt room's wrongness concrete without explaining it.",
+      "chapter_beats": [
+        {
+          "chapter": 1,
+          "surface_plot": "Nora arrives at Agnes Vance's closed hotel to assess the inherited property and the boxes of reel-to-reel tapes left behind.",
+          "quiet_wrongness": "Salt crusts a dry interior windowsill far from any open sea air.",
+          "mystery_progress": "Nora finds the tapes and understands Agnes deliberately preserved them, not merely stored them.",
+          "cliffhanger_pull": "One labeled tape carries Nora's childhood nickname in Agnes's handwriting, though Nora has no memory of recording there."
+        },
+        {
+          "chapter": 2,
+          "surface_plot": "Nora sets up a restoration station and plays the first damaged tape.",
+          "quiet_wrongness": "The salt room remains cold even when the rest of the hotel warms in afternoon sun.",
+          "mystery_progress": "A child's voice on the tape says Nora's name, creating the first concrete proof that the haunting is tied to recorded sound.",
+          "cliffhanger_pull": "Under the child's voice, Nora hears a second breath matching her own breathing pattern before the tape snaps."
+        }
+      ],
+      "act_turn": "Nora can no longer treat the hotel as property or the tapes as ordinary restoration work; the recordings know her."
+    },
+    {
+      "act": 2,
+      "name": "The Erased Child",
+      "chapters": [
+        3,
+        6
+      ],
+      "function": "Deepen the haunting through audio only, deliver concrete partial answers every two to three chapters, and move Nora from denial toward the recognition that a second child existed.",
+      "chapter_beats": [
+        {
+          "chapter": 3,
+          "surface_plot": "Nora investigates the salt room and tries to match the child's voice to the tape archive.",
+          "quiet_wrongness": "The locked room is warm only for the exact length of a lullaby on one tape, then turns cold again.",
+          "mystery_progress": "Nora finds a family photograph where one child's face has been scratched out beside her own.",
+          "cliffhanger_pull": "The tape's static resolves into a child's whisper of 'again,' but only after Nora records the room on her phone."
+        },
+        {
+          "chapter": 4,
+          "surface_plot": "Nora searches Agnes's storage rooms and hotel records for proof of who the scratched-out child was.",
+          "quiet_wrongness": "A second toothbrush sits fossilized with salt in a bathroom cabinet that should have been empty for decades.",
+          "mystery_progress": "A hotel inventory references two child-sized beds assigned to the salt room during the summer Nora was seven.",
+          "cliffhanger_pull": "Ruth calls before Nora can ask, warning her not to play anything from that summer."
+        },
+        {
+          "chapter": 5,
+          "surface_plot": "Nora confronts Ruth indirectly while restoring a tape marked only with the date of the midsummer tide.",
+          "quiet_wrongness": "Nora's fresh recording of the hallway captures a child's hum that was not present in the room live.",
+          "mystery_progress": "Agnes's log mentions 'the girls' and notes that one voice went missing after the tidal pool incident.",
+          "cliffhanger_pull": "The restored tape plays a child's voice saying, 'Nora made me promise,' then cuts to the sound of water."
+        },
+        {
+          "chapter": 6,
+          "surface_plot": "Nora compares her own childhood speech patterns to the old recordings and returns to the salt room with better equipment.",
+          "quiet_wrongness": "The tape machine runs for several seconds after Nora unplugs it, producing only a soft double breath.",
+          "mystery_progress": "Midpoint revelation: Nora realizes one recorded child is her own seven-year-old voice, and there were two girls in the room, not one.",
+          "cliffhanger_pull": "A damaged reel ends with Agnes saying Della Vance's name before the audio warps into tidal water."
+        }
+      ],
+      "act_turn": "The haunting stops being a question of whether the hotel contains a presence and becomes the question of why Nora's family erased Della."
+    },
+    {
+      "act": 3,
+      "name": "The Family Silence Breaks",
+      "chapters": [
+        7,
+        8
+      ],
+      "function": "Force Nora to confront the human conspiracy behind the supernatural dread and narrow the mystery to the drowned twin, the tidal pool, and the final tape.",
+      "chapter_beats": [
+        {
+          "chapter": 7,
+          "surface_plot": "Nora pressures Ruth with the name Della Vance and the restored evidence.",
+          "quiet_wrongness": "During Ruth's call, Nora's phone recording captures Della's name beneath Ruth's silence, though no one speaks it aloud in the room.",
+          "mystery_progress": "Ruth confirms by omission and panic that Della was real and that the family agreed never to speak of her after the summer Nora was seven.",
+          "cliffhanger_pull": "Ruth says Agnes kept 'the last one' and begs Nora to burn it before the tide turns."
+        },
+        {
+          "chapter": 8,
+          "surface_plot": "Nora finds the final tape hidden in the salt room and follows Agnes's notes toward the tidal pool.",
+          "quiet_wrongness": "The salt room door unlocks from the inside while Nora is standing outside it, but no figure appears and no live voice speaks.",
+          "mystery_progress": "Nora learns the salt room was shared by Nora and Della, and Agnes preserved the tapes as proof against the family erasure.",
+          "cliffhanger_pull": "The final tape contains Nora's seven-year-old voice at the tidal pool saying Della's name, then cuts off before the drowning."
+        }
+      ],
+      "act_turn": "Nora has enough truth to choose: destroy the tapes and keep the family silence, or restore the final recording and remember the full event."
+    },
+    {
+      "act": 4,
+      "name": "The Tidal Pool and the Name",
+      "chapters": [
+        9,
+        10
+      ],
+      "function": "Resolve the Book 1 mystery completely, pay off the salt room, Della's audio-only manifestation, Agnes's tapes, and Nora's erased memory, then open the series door with a new recorded voice.",
+      "chapter_beats": [
+        {
+          "chapter": 9,
+          "surface_plot": "Nora brings the final tape and restoration equipment to the tidal pool as the tide shifts.",
+          "quiet_wrongness": "Every ambient sound drops out on Nora's recorder except the old tape hiss and one child's breathing.",
+          "mystery_progress": "The final tape restores enough for Nora to remember the drowning: Della in the tidal pool, Nora frozen and silent, Agnes recording the aftermath, and Ruth choosing erasure.",
+          "cliffhanger_pull": "The tape reaches the exact moment Nora must either stop it and burn the evidence or let Della's name play through."
+        },
+        {
+          "chapter": 10,
+          "surface_plot": "Nora lets the tape play, says Della's name aloud, and returns to the salt room changed.",
+          "quiet_wrongness": "The salt room warms after Della's name is spoken, not with comfort but with the absence of a held breath finally released.",
+          "mystery_progress": "The central mystery is fully answered: the voice, the cold room, the erased twin, Nora's memory gap, and Agnes's preservation of the tapes all align into one truth.",
+          "cliffhanger_pull": "On the last restored tape, beneath Della's voice, a second child who is neither Nora nor Della says an unknown name as the salt room goes cold again."
+        }
+      ],
+      "act_turn": "Nora chooses grief over forgetting, closes Della's mystery, and discovers Agnes's archive contains another erased child."
+    }
+  ],
+  "assumptions": [
+    "Because the directive forbids a romance subplot and invented male lead, the second internal arc is assigned to Ruth Vance as a secondary family lead rather than a romantic or co-lead figure.",
+    "Della Vance is not treated as a visual character or live speaker in the act structure; every manifestation is through recorded sound, tape hiss, phone recordings, static, breath, or restored audio.",
+    "The phrase 'lead_internal_arc (2 leads)' is satisfied without violating the no-romance rule by using Nora as the only POV protagonist and Ruth as the second major character arc visible from Nora's perspective."
+  ]
+}

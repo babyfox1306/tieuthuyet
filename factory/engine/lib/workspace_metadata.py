@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 from typing import Any
@@ -15,7 +16,89 @@ _TEMPLATE_SETTING_HUB = "Singapore"
 _TEMPLATE_SETTING_NODES = ["Hong Kong", "Zurich", "New York"]
 _TEMPLATE_SPICE_EXPLICIT = [3, 12, 18, 25, 32, 40, 48]
 _TEMPLATE_SPICE_STEAMY = [8, 15, 22, 28, 36, 44]
+_TEMPLATE_GOAL_ROMANCE_EN = "end-of-chapter hooks — international thriller-romance pace"
+_TEMPLATE_GOAL_ROMANCE_VI = "unlock chương sau — cliffhanger mỗi ch"
+_TEMPLATE_GOAL_GOTHIC_EN = (
+    "slow dread — quiet wrongness each chapter, concrete mystery payoff every 2–3 chapters"
+)
+_TEMPLATE_AUDIENCE_EN = "women 18-35, mobile reading, hook-driven serial fiction"
+_TEMPLATE_AUDIENCE_VI = "nữ 18-35, đọc điện thoại, lướt nhanh"
 _SPICE_BADGES = {1: "sweet", 2: "steamy", 3: "16+"}
+
+
+def load_kernel_narrative_profile(ws: Path) -> str | None:
+    path = ws / "bible" / "narrative" / "kernel.json"
+    if not path.exists():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        profile = str(data.get("narrative_profile") or "").strip()
+        return profile or None
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
+def infer_narrative_profile_from_concept(concept: dict) -> str | None:
+    """Derive narrative_profile from concept text — no hardcoded romance default."""
+    blob = "\n".join(
+        str(concept.get(k) or "")
+        for k in ("author_directive", "notes", "surface_plot", "true_plot", "title", "logline")
+    ).lower()
+    if not blob.strip():
+        return None
+    if "not a romance" in blob or "gothic" in blob or "psychological horror" in blob:
+        return "gothic_psychological_horror"
+    if "conspiracy" in blob and "thriller" in blob:
+        return "conspiracy_thriller"
+    if "romance" in blob and "thriller" in blob:
+        return "romance_thriller"
+    if "horror" in blob:
+        return "gothic_psychological_horror"
+    return None
+
+
+def resolve_narrative_profile(ws: Path, concept: dict | None = None) -> str | None:
+    """Kernel wins, then concept inference."""
+    profile = load_kernel_narrative_profile(ws)
+    if profile:
+        return profile
+    concept = concept if concept is not None else _load_concept(ws)
+    return infer_narrative_profile_from_concept(concept)
+
+
+def is_template_goal(direction: dict) -> bool:
+    goal = str(direction.get("goal") or "").strip()
+    return goal in (_TEMPLATE_GOAL_ROMANCE_EN, _TEMPLATE_GOAL_ROMANCE_VI)
+
+
+def default_goal_for_profile(profile: str | None, lang: str) -> str | None:
+    if profile == "gothic_psychological_horror":
+        return _TEMPLATE_GOAL_GOTHIC_EN
+    if profile in ("romance_thriller", "conspiracy_thriller"):
+        return _TEMPLATE_GOAL_ROMANCE_EN if lang == "en" else _TEMPLATE_GOAL_ROMANCE_VI
+    return None
+
+
+def sync_narrative_profile_to_direction(ws: Path, *, concept: dict | None = None) -> str | None:
+    """Write narrative_profile from kernel/concept → direction (after develop-narrative kernel pass)."""
+    concept = concept if concept is not None else _load_concept(ws)
+    direction = load_direction(ws)
+    profile = resolve_narrative_profile(ws, concept)
+    if not profile:
+        return None
+    lang = str(direction.get("target_language") or concept.get("target_language") or "en")
+    changed = False
+    if direction.get("narrative_profile") != profile:
+        direction["narrative_profile"] = profile
+        changed = True
+    goal = default_goal_for_profile(profile, lang)
+    if goal and (not direction.get("goal") or is_template_goal(direction)):
+        direction["goal"] = goal
+        changed = True
+    if changed:
+        _save_yaml(ws / "direction.yaml", direction)
+        sync_manifest_from_direction(ws)
+    return profile
 
 
 def _load_concept(ws: Path) -> dict[str, Any]:
@@ -73,14 +156,9 @@ def infer_spice_level(concept: dict) -> int:
 
 
 def parse_chapter_count_from_concept(concept: dict) -> int | None:
-    notes = str(concept.get("notes") or "")
-    m = re.search(r"(\d{1,3})\s+chapters?\b", notes, re.IGNORECASE)
-    if m:
-        return int(m.group(1))
-    m = re.search(r"(\d{1,3})\s+chương", notes, re.IGNORECASE)
-    if m:
-        return int(m.group(1))
-    return None
+    from factory.engine.lib.operator_sync import parse_chapter_count_from_concept as _parse
+
+    return _parse(concept)
 
 
 def infer_setting_from_concept(concept: dict) -> tuple[str, list[str]]:
@@ -88,8 +166,12 @@ def infer_setting_from_concept(concept: dict) -> tuple[str, list[str]]:
         str(concept.get(k) or "")
         for k in ("logline", "author_directive", "surface_plot", "true_plot", "title")
     ).lower()
+    if "lake" in text and "house" in text:
+        title = (concept.get("title") or "Story").strip()
+        return f"{title} — lake house", []
     if "house" in text and any(w in text for w in ("inherit", "inherited", "aunt", "estate")):
-        return "Ilse's inherited house", []
+        title = (concept.get("title") or "Story").strip()
+        return f"{title} — inherited house", []
     if "singapore" in text or "hong kong" in text:
         nodes = [n for n in ("Hong Kong", "Zurich", "New York") if n.lower().split()[0] in text]
         return "Singapore", nodes or list(_TEMPLATE_SETTING_NODES)
@@ -165,29 +247,30 @@ def sync_direction_from_concept(
         direction["spice_badge"] = _SPICE_BADGES.get(spice, "sweet")
         changed.append("spice_level")
 
+    # Chapter count: operator sets via UI (direction.yaml). Concept save must not override.
     total = int(direction.get("total_chapters") or 0)
-    from_notes = parse_chapter_count_from_concept(concept)
-    if from_notes and from_notes != total:
-        total = from_notes
-        direction["total_chapters"] = total
-        changed.append("total_chapters")
 
-    if total < 3:
-        total = 30
-        direction["total_chapters"] = total
+    if total >= 3:
+        explicit, steamy = spice_chapter_lists(total, spice)
+        if list(direction.get("spice_explicit_chapters") or []) != explicit:
+            direction["spice_explicit_chapters"] = explicit
+            changed.append("spice_explicit_chapters")
+        if list(direction.get("spice_steamy_chapters") or []) != steamy:
+            direction["spice_steamy_chapters"] = steamy
+            changed.append("spice_steamy_chapters")
 
-    explicit, steamy = spice_chapter_lists(total, spice)
-    if list(direction.get("spice_explicit_chapters") or []) != explicit:
-        direction["spice_explicit_chapters"] = explicit
-        changed.append("spice_explicit_chapters")
-    if list(direction.get("spice_steamy_chapters") or []) != steamy:
-        direction["spice_steamy_chapters"] = steamy
-        changed.append("spice_steamy_chapters")
-
-    arc = scale_act_arc(total)
-    if direction.get("arc") != arc:
-        direction["arc"] = arc
-        changed.append("arc")
+        arc = scale_act_arc(total)
+        if direction.get("arc") != arc:
+            direction["arc"] = arc
+            changed.append("arc")
+    else:
+        explicit, steamy = [], []
+        if list(direction.get("spice_explicit_chapters") or []) != explicit:
+            direction["spice_explicit_chapters"] = explicit
+            changed.append("spice_explicit_chapters")
+        if list(direction.get("spice_steamy_chapters") or []) != steamy:
+            direction["spice_steamy_chapters"] = steamy
+            changed.append("spice_steamy_chapters")
 
     if force_setting or is_template_setting(direction) or not direction.get("setting_hub"):
         hub, nodes = infer_setting_from_concept(concept)
@@ -197,6 +280,16 @@ def sync_direction_from_concept(
         if list(direction.get("setting_nodes") or []) != nodes:
             direction["setting_nodes"] = nodes
             changed.append("setting_nodes")
+
+    profile = resolve_narrative_profile(ws, concept)
+    if profile and direction.get("narrative_profile") != profile:
+        direction["narrative_profile"] = profile
+        changed.append("narrative_profile")
+        lang = str(direction.get("target_language") or lang)
+        goal = default_goal_for_profile(profile, lang)
+        if goal and (not direction.get("goal") or is_template_goal(direction)):
+            direction["goal"] = goal
+            changed.append("goal")
 
     if not preserve_gate_status:
         for key in ("plan_status", "bible_status", "narrative_status"):

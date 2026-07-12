@@ -1,0 +1,68 @@
+{
+  "act": [
+    10,
+    10
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Choice That Remains",
+      "slug": "the-choice-that-remains",
+      "one_line_summary": "Iris treats the final emergency without obeying the machine’s trap, survives 05:19, accepts the preventable death in her past, and burns the printer until it falls silent.",
+      "beat_summary": "The final chapter continues from 05:16 as a cyanotic patient is rushed into the ER and the printer feeds its last label. Iris sees the trap clearly: if she lets her own printed time dictate the room, she will turn the emergency into the mechanism that kills her or someone else. She gives measured, ordinary care, refuses to flee, refuses to overcorrect, and accepts when the patient’s condition cannot be reversed despite correct treatment. [ROMANCE] With no true male lead in the canon, the emotional micro-beat remains the absence of Unassigned: at the height of fear, Iris briefly wants a steadying hand at her back, finds only empty air, and chooses to stand on her own without inventing romance. At 05:19, Iris is still alive. The printer does not triumph; it only sits there with paper in its teeth. Iris finally names the year-old death as preventable without letting the admission destroy her, then carries the machine to the hospital incinerator and burns it. The book closes with the machine silent, Iris no longer checking her pulse, and one charred slip surviving in the ash with her name and no readable date.",
+      "must_happen": [
+        "Continue directly from Chapter 9: at 05:16 a real emergency arrives through the ambulance bay while the printer feeds a new label and Iris’s own printed time approaches.",
+        "Iris treats the emergency using standard clinical procedure rather than fear-driven intervention, explicitly refusing to flee, self-medicate, call an unnecessary code for herself, or redirect the room around her own predicted death.",
+        "The patient’s outcome forces Iris to accept a death she cannot prevent this time, distinguishing ethical restraint from the year-old choice she hid behind protocol.",
+        "At 05:19, Iris survives because she does not let panic turn her into the machine’s mechanism.",
+        "Iris internally accepts that the patient from a year ago was preventable and that her pulse-check tic was her body measuring the guilt she refused to name.",
+        "Iris removes the printer from the ER and burns it in the hospital incinerator, breaking the loop and leaving the machine silent.",
+        "[ROMANCE] Because there is no actual male lead, show Iris’s vulnerable tension through absence: she reaches for the impossible steadiness of Unassigned, finds no hand or shoulder there, and anchors herself without creating a romance or love interest."
+      ],
+      "must_not": [
+        "Do not contradict the central reveal by implying the machine predicts fate or independently chooses victims.",
+        "Do not kill Iris, and do not let her survive through a coincidence, rescue, or supernatural intervention.",
+        "Do not introduce a male lead, romantic partner, sexual content, nudity, or eroticized description.",
+        "Do not have the machine speak, display text on a screen, explain itself, or print anything beyond paper labels with names and times.",
+        "Do not erase Iris’s responsibility for the year-old death; resolution comes through acceptance, not absolution without cost."
+      ],
+      "opens_with": "'Move or lose him,' the paramedic snapped, and the stretcher hit Iris’s hip hard enough to bruise.",
+      "cliffhanger": "After the printer burns silent, Iris turns away from the incinerator, then sees one charred label lying outside the ash drawer: IRIS CALLAHAN, with the date burned clean away.",
+      "signature_detail_hint": "Inside the incinerator room, the warning placard has been repaired with strips of old label tape, and the tape curls away from the metal as the heat rises.",
+      "emotional_beat": "Dread resolves into vulnerability, guilt, and hard-won self-trust as Iris feels the pull of panic and chooses responsibility instead.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write 1600-1900 words as the final resolution chapter in locked third-person limited from Iris’s POV. Continue directly from the Chapter 9 emergency at 05:16, keep the medical action realistic and restrained, and show Iris surviving 05:19 by refusing fear-driven choices. Resolve the year-old guilt through acceptance of responsibility, not melodrama. Include the required no-romance-canon [ROMANCE] micro-beat as vulnerable absence around Unassigned, with no sexual or romantic content. End with Iris burning the machine, the silence afterward, and the surviving charred slip bearing her name with the date gone.",
+      "carries_to_next": "The machine is destroyed and Iris’s immediate guilt is resolved, but the surviving slip with her name and no readable date leaves the series open for the next manifestation of the pattern.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Callahan",
+            "Marguerite Vole"
+          ],
+          "may_know": [
+            "Iris Callahan: Full understanding: the machine reflects her clinical hand, not the future",
+            "Iris Callahan: She accepts responsibility for past and present, breaks the cycle by ceasing to resist, and burns the machine.",
+            "Iris Callahan: The patient who died a year ago was preventable; Iris had a choice she did not recognize. Her pulse-check tic is a physical manifestation of guilt and the need to verify her own agency.",
+            "Marguerite Vole: Her story serves as a cautionary tale",
+            "Marguerite Vole: Iris understands that Marguerite's escape was a flight from responsibility, while Iris chooses to confront and end it.",
+            "Marguerite Vole: Marguerite's memory loss may be partially willful—a self-protective erasure of the trauma the machine caused. She still carries guilt but cannot access it fully."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}

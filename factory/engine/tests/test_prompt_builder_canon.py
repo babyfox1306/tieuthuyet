@@ -84,6 +84,20 @@ def _write_ws(root: Path) -> Path:
     ws = root / "canon-prompt-test"
     ws.mkdir()
     (ws / "canon_registry.yaml").write_text(CANON_YAML, encoding="utf-8")
+    (ws / "concept.yaml").write_text(
+        yaml.dump(
+            {
+                "title": "Canon Prompt Test",
+                "must_avoid": [
+                    "Any explicit sexual content / spice above level 1",
+                    "Gore or body-horror as the main scare",
+                ],
+                "must_include": [],
+            },
+            allow_unicode=True,
+        ),
+        encoding="utf-8",
+    )
     (ws / "direction.yaml").write_text(
         yaml.dump(
             {
@@ -108,6 +122,7 @@ def _write_ws(root: Path) -> Path:
                     "male": {"name": "Elias Crane"},
                 },
                 "supporting_cast": [],
+                "content_rules": ["No on-page sex", "Dread over shock"],
             }
         ),
         encoding="utf-8",
@@ -224,6 +239,28 @@ class TestBuildChapterPromptCanon(unittest.TestCase):
             self.assertIn("Jude", prompt)  # in Never write: forbidden list
             self.assertIn("Elias Crane arrives", prompt)
             self.assertNotIn("Jude arrives", prompt)
+
+    def test_concept_must_avoid_in_locked_canon(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = _write_ws(Path(tmp))
+            prompt = build_chapter_prompt(
+                BASE_PLAN,
+                prior_plans=[],
+                direction=self._direction(),
+                chapter=2,
+                series_bible=json.loads((ws / "bible" / "series.json").read_text()),
+                ws=ws,
+            )
+            self.assertIn("Content boundaries (MUST AVOID):", prompt)
+            self.assertIn("Any explicit sexual content / spice above level 1", prompt)
+            self.assertIn("Gore or body-horror as the main scare", prompt)
+            self.assertIn("Dread over shock", prompt)
+            # Boundaries sit inside LOCKED CANON, before bible
+            locked = prompt.index("LOCKED CANON")
+            bounds = prompt.index("Content boundaries (MUST AVOID):")
+            bible = prompt.index("CHARACTER BIBLE")
+            self.assertLess(locked, bounds)
+            self.assertLess(bounds, bible)
 
     def test_spice_capped_with_warning(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

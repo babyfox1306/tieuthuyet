@@ -5,6 +5,7 @@ from __future__ import annotations
 import unittest
 
 from factory.engine.lib.call_9router import (
+    _format_gateway_error,
     _is_auto_model,
     _should_try_next_model,
     resolve_priority_chain,
@@ -93,6 +94,15 @@ class TestModelRouting(unittest.TestCase):
         }
         chain = resolve_priority_chain(cfg, "writer")
         self.assertEqual(chain, ["auto"])
+
+    def test_html_404_gateway_hint(self):
+        msg = _format_gateway_error(
+            RuntimeError("Error code: 404 - <!DOCTYPE html>Skip to content Page not found"),
+            base_url="http://localhost:20128/v1",
+            models=["auto"],
+        )
+        self.assertIn("OmniRoute gateway broken", msg)
+        self.assertIn("probe-models", msg)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,49 @@
+id: the-salt-room-1
+pen_name: ''
+target_language: en
+publish_strategy: kdp_ku_exclusive
+narrative_status: approved
+book: 1
+canon_through: 0
+platform: kdp
+audience: women 18-35, mobile reading, hook-driven serial fiction
+goal: slow dread — quiet wrongness each chapter, concrete mystery payoff every 2–3
+  chapters
+setting_hub: The Salt Room 1 — primary setting
+setting_nodes: []
+spice_default: 1
+spice_explicit_chapters: []
+spice_steamy_chapters: []
+book1_ending: 'Nora recovers the full memory of the summer she was seven: Della was
+  her twin, Della drowned in the tidal pool while Nora stood frozen and silent, and
+  afterward the whole family agreed to erase Della to survive the grief. Nora makes
+  her choice at the tidal pool — she restores the final tape and says Della''s name
+  aloud for the first time in twenty years, choosing to grieve and become whole rather
+  than keep forgetting. The central mystery is fully answered: who the voice was,
+  why the room stayed cold, why Nora had no memory. Her arc resolves.'
+blurb: A sound restorer inherits her grandmother's shuttered seaside hotel and finds
+  one room that stays cold in every season — a room she swears she never entered,
+  though a child's voice on the old tapes keeps saying her name.
+tropes: []
+spice_badge: sweet
+target_platforms:
+- kdp
+spice_level: 1
+plan_status: approved
+bible_status: approved
+book_slug: 01-the-salt-room-1
+total_chapters: 10
+arc:
+  act1_setup:
+  - 1
+  - 2
+  act2_complications:
+  - 3
+  - 6
+  act3_crisis:
+  - 7
+  - 8
+  act4_resolution:
+  - 9
+  - 10
+narrative_profile: gothic_psychological_horror

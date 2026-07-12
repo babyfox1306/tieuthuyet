@@ -289,8 +289,18 @@ def validate_bible(bible: dict) -> list[str]:
     return errors
 
 
-def render_bible_block(bible: dict, *, lang: str = "vi", reveal_chapter: int | None = None) -> str:
-    """Render character bible block for Writer prompts — đọc từ series.json."""
+def render_bible_block(
+    bible: dict,
+    *,
+    lang: str = "vi",
+    reveal_chapter: int | None = None,
+    chapter: int | None = None,
+) -> str:
+    """Render character bible block for Writer prompts — đọc từ series.json.
+
+    When ``chapter`` is before the designated reveal chapter, the full mystery
+    answer is REDACTED so the writer cannot copy-spoil from the prompt.
+    """
     f_lead = female_lead(bible)
     m_lead = male_lead(bible)
     fn, mn = f_lead.get("name", "?"), m_lead.get("name", "?")
@@ -309,6 +319,10 @@ def render_bible_block(bible: dict, *, lang: str = "vi", reveal_chapter: int | N
         )
         alive_yes, alive_no = "còn sống", "đã mất / không xác nhận"
         reveal_note = "Chỉ tiết lộ đầy đủ đáp án tại chương"
+        answer_redacted = (
+            "Đáp án canon: [REDACTED — chưa tới chương reveal. "
+            "Không spoiler / không bịa đáp án.]"
+        )
     else:
         heading = "## CHARACTER BIBLE — REQUIRED"
         leads_heading = "### Leads"
@@ -322,6 +336,10 @@ def render_bible_block(bible: dict, *, lang: str = "vi", reveal_chapter: int | N
         )
         alive_yes, alive_no = "alive", "deceased / unknown"
         reveal_note = "Full answer reveal only at chapter"
+        answer_redacted = (
+            "Canon answer: [REDACTED — before reveal chapter. "
+            "Do not spoil or invent the answer.]"
+        )
 
     def fmt_lead(lead: dict) -> str:
         tics = ", ".join(str(t) for t in (lead.get("tics") or []))
@@ -364,22 +382,45 @@ def render_bible_block(bible: dict, *, lang: str = "vi", reveal_chapter: int | N
     cm = bible.get("central_mystery", {})
     if cm:
         reveal = reveal_chapter if reveal_chapter is not None else cm.get("reveal_chapter", "?")
+        try:
+            reveal_int = int(reveal)
+        except (TypeError, ValueError):
+            reveal_int = None
+        redact = (
+            chapter is not None
+            and reveal_int is not None
+            and int(chapter) < reveal_int
+        )
         lines.extend(
             [
                 "",
                 mystery_heading,
                 f"{'Câu hỏi' if lang == 'vi' else 'Question'}: {cm.get('question', '')}",
                 f"{reveal_note} {reveal}.",
-                f"{'Đáp án canon' if lang == 'vi' else 'Canon answer'} (Writer/QC tham chiếu, không spoil sớm): "
-                f"{cm.get('answer', '')}",
             ]
         )
+        if redact:
+            lines.append(answer_redacted)
+        else:
+            lines.append(
+                f"{'Đáp án canon' if lang == 'vi' else 'Canon answer'} "
+                f"(Writer/QC reference): {cm.get('answer', '')}"
+            )
 
+    # World rules live in LOCKED CANON (HARD). Pointer only — avoid duplicating soft copy.
     wr = bible.get("world_rules", [])
     if wr:
-        lines.extend(["", rules_heading])
-        for r in wr:
-            lines.append(f"- {r}")
+        lines.extend(
+            [
+                "",
+                rules_heading,
+                (
+                    "(See LOCKED CANON — World rules HARD. Do not contradict.)"
+                    if lang != "vi"
+                    else "(Xem LOCKED CANON — Luật thế giới CỨNG. Không được trái.)"
+                ),
+            ]
+        )
 
     return "\n".join(lines)
 
@@ -414,6 +455,50 @@ def _plan_text_blob(plan: dict) -> str:
         if isinstance(v, list):
             parts.extend(str(x) for x in v)
     return " ".join(parts).lower()
+
+
+_PROHIBITION_LINE_RE = re.compile(
+    r"(?i)\b(?:do not|don't|never|without|must not|forbid(?:den)?|withhold|"
+    r"no\s+(?:visual|ghost|apparition|male lead|romance|romantic))\b"
+)
+
+
+def _strip_prohibition_clauses(text: str) -> str:
+    """Drop sentences that only forbid an action (avoid false positives on must_not)."""
+    keep: list[str] = []
+    for chunk in re.split(r"(?<=[.!;?\n])\s+", str(text or "")):
+        s = chunk.strip()
+        if not s:
+            continue
+        if _PROHIBITION_LINE_RE.search(s):
+            continue
+        keep.append(s)
+    return " ".join(keep)
+
+
+def _plan_affirmative_blob(plan: dict) -> str:
+    """Plan text that asserts beats — excludes must_not and prohibition clauses."""
+    parts: list[str] = []
+    for key in (
+        "title",
+        "one_line_summary",
+        "beat_summary",
+        "opens_with",
+        "cliffhanger",
+        "chapter_task",
+        "signature_detail_hint",
+        "spice_note",
+        "carries_to_next",
+    ):
+        v = plan.get(key, "")
+        if isinstance(v, str):
+            parts.append(_strip_prohibition_clauses(v))
+        elif isinstance(v, list):
+            parts.extend(_strip_prohibition_clauses(str(x)) for x in v)
+    for item in plan.get("must_happen") or []:
+        parts.append(_strip_prohibition_clauses(str(item)))
+    # Intentionally omit must_not — "Do not reveal X" is not a reveal of X.
+    return " ".join(p for p in parts if p).lower()
 
 
 def _both_leads_near(text: str, name_a: str, name_b: str, window: int = 80) -> bool:
@@ -495,27 +580,98 @@ def validate_plan_against_canon(
             if len(types) > 1:
                 issues.append(f"ch{ch}:canon:identity_drift_across_plans:{name}:{sorted(types)}")
 
-    # 3 & 4. Mystery single-version + reveal timing
+    # 3 & 4. Mystery single-version + reveal timing (affirmative beats only).
     cm = bible.get("central_mystery", {})
     answer = str(cm.get("answer", "")).strip()
     reveal_ch = int(cm.get("reveal_chapter", 999) or 999)
+    blob = _plan_affirmative_blob(plan)
     if answer:
         ans_lower = answer.lower()
-        # early full reveal
         if ch < reveal_ch and len(ans_lower) > 20:
-            # check substantial substring (first 30 chars) appears
-            snippet = ans_lower[: min(30, len(ans_lower))]
+            snippet = ans_lower[: min(40, len(ans_lower))]
             if snippet in blob:
                 issues.append(f"ch{ch}:canon:mystery_reveal_too_early:before_ch{reveal_ch}")
-        # contradiction heuristic: plan states opposite of answer keywords
-        neg_patterns = [
-            (r"không phải", answer),
-            (r"thực ra là", answer),
-            (r"sự thật là", answer),
-        ]
+            else:
+                # Cast/first names appear in every mystery plant — exclude from fingerprint.
+                name_stop = {
+                    str(female_lead(bible).get("name") or "").lower().split()[0]
+                    if female_lead(bible).get("name")
+                    else "",
+                    str(male_lead(bible).get("name") or "").lower().split()[0]
+                    if male_lead(bible).get("name")
+                    else "",
+                }
+                for c in cast:
+                    if isinstance(c, dict) and c.get("name"):
+                        parts_n = str(c["name"]).lower().split()
+                        name_stop.update(parts_n)
+                stop = {
+                    "the", "and", "was", "were", "that", "with", "from", "her", "his",
+                    "she", "who", "had", "for", "are", "this", "they", "been", "have",
+                    "into", "only", "also", "while", "after", "before", "their", "them",
+                    "a", "an", "of", "to", "in", "on", "as", "by", "or", "it", "is",
+                    "name", "child", "children", "voice", "room", "hotel", "family",
+                    "summer", "years", "year", "said", "says", "including", "through",
+                } | {n for n in name_stop if n}
+                tokens = [
+                    t for t in re.findall(r"[a-zà-ỹ']{5,}", ans_lower)
+                    if t not in stop
+                ]
+                uniq: list[str] = []
+                seen: set[str] = set()
+                for t in tokens:
+                    if t not in seen:
+                        seen.add(t)
+                        uniq.append(t)
+                # Need a dense cluster of distinctive answer tokens — planting clues is OK.
+                hits = sum(1 for t in uniq[:16] if t in blob)
+                if hits >= 7:
+                    issues.append(
+                        f"ch{ch}:canon:mystery_reveal_too_early:before_ch{reveal_ch}"
+                        f":token_hits_{hits}"
+                    )
         if ch < reveal_ch:
-            for neg, _ in neg_patterns:
+            for neg in (r"không phải", r"thực ra là", r"sự thật là"):
                 if re.search(neg, blob) and cm.get("question", "").lower()[:15] in blob:
                     issues.append(f"ch{ch}:canon:mystery_alternate_reveal_before_ch{reveal_ch}")
 
+    issues.extend(validate_plan_world_rules(plan, bible))
+    return issues
+
+
+_AUDIO_ONLY_RULE_RE = re.compile(
+    r"only through recorded|never appears visually|never\s+(?:appears?|speaks?).{0,40}live|"
+    r"manifests?\s+only\s+through|no\s+visual\s+(?:ghost|apparition|manifest)",
+    re.IGNORECASE,
+)
+
+# Affirmative physical/live manifestation — not "do not appear visually".
+_PHYSICAL_MANIFEST_PATTERNS = (
+    r"\b(?:ghost|spirit|apparition|dead (?:girl|child|twin)|della)\b.{0,40}\b"
+    r"(?:hand on|touches?|appears? (?:beside|before|behind|visually)|stands? beside)\b",
+    r"\b(?:hand on (?:her |his )?(?:shoulder|arm|wrist|back))\b.{0,30}\b"
+    r"(?:ghost|spirit|apparition|cold|no one (?:is|was) there)\b",
+    r"\bphysical (?:apparition|manifest(?:ation)?)\b",
+    r"\b(?:child(?:'s)?|girl(?:'s)?|ghost(?:'s)?)\s+(?:hand|fingers)\s+"
+    r"(?:on|touch(?:es|ing)?|grip(?:s|ped)?)\b",
+    r"\bspeaks?\s+(?:beside her|from the (?:empty )?room|from the dark)\b",
+    r"\blive (?:voice|speech)\s+(?:not on|outside|without)\s+(?:the\s+)?(?:tape|recording)\b",
+    r"\bvisual (?:apparition|ghost)\b",
+)
+
+
+def validate_plan_world_rules(plan: dict, bible: dict) -> list[str]:
+    """Hard heuristics from bible.world_rules — fail plan beats that contradict them."""
+    issues: list[str] = []
+    ch = plan.get("chapter", 0)
+    rules = [str(r) for r in (bible.get("world_rules") or []) if str(r).strip()]
+    if not rules:
+        return issues
+    blob = _plan_affirmative_blob(plan)
+    audio_only = any(_AUDIO_ONLY_RULE_RE.search(r) for r in rules)
+    if audio_only:
+        for pat in _PHYSICAL_MANIFEST_PATTERNS:
+            if re.search(pat, blob, re.IGNORECASE):
+                issues.append(f"ch{ch}:world_rule:audio_only_manifestation_violated")
+                break
     return issues

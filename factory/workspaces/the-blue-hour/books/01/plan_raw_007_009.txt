@@ -1,0 +1,80 @@
+{
+  "act": [7, 9],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Weight of Memory",
+      "slug": "ch07-the-weight-of-memory",
+      "one_line_summary": "Elena is forced to face the Girl in Blue in the flooded attic, where the repressed memory of the drowning game fractures her sanity and nearly drags her under.",
+      "beat_summary": "The supernatural flood chases Elena and Julian to the attic, where the Girl in Blue rises from the water. The Girl speaks words that trigger the full sensory memory of the breath-holding game and Tomas's blue face. Elena breaks down, trying to drown herself in the guilt, but Julian physically restrains her, forcing her to breathe. As suddenly as it rose, the water recedes, leaving a single diary page wedged in the rafters.",
+      "must_happen": [
+        "The Girl in Blue manifests fully from the floodwater, speaking in a child's whisper: 'You left him. You hid.'",
+        "Elena is overwhelmed by the visceral memory of the game—Tomas's panicked eyes, the counting, the waiting.",
+        "Elena tries to step into deeper water to join the girl, but Julian holds her back.",
+        "[ROMANCE] Julian turns Elena's face to his, his hands framing her cheeks, his voice raw as he says, 'Look at me. You are here. You are real. Don't you dare leave me in this house alone.'"
+      ],
+      "must_not": [
+        "The full memory of the moment of Tomas's death must remain fragmented.",
+        "Julian must not be able to fight the Girl in Blue with force."
+      ],
+      "opens_with": "\"The water didn't stop at the landing,\" Julian hissed, pulling Elena back by the waist as a dark, oily tide began to lap at the top of the attic stairs.",
+      "cliffhanger": "As the water drains completely, leaving no trace of dampness, a single page of paper hangs from a crack in the beam, written in adult handwriting: *You buried the key. Now bury the guilt.*",
+      "signature_detail_hint": "The water in the attic leaves no wetness on the wood, only the lingering smell of ozone and deep earth.",
+      "emotional_beat": "Devastation and fierce protection. Elena shatters, and Julian becomes the anchor that holds her to the present.",
+      "spice": 1,
+      "spice_note": "The intimacy is the raw, desperate touch of a person holding another back from the abyss. Focus on the pressure of his hands, the hot whisper of his voice against her skin, the way he refuses to let go.",
+      "chapter_task": "Write 1600-1900 words focusing on the visceral horror of the memory intrusion and the raw, protective instinct of Julian.",
+      "carries_to_next": "The discovery of the diary page deepens the mystery and points the way to the final confrontation."
+    },
+    {
+      "chapter": 8,
+      "title": "The Dock at Dusk",
+      "slug": "ch08-the-dock-at-dusk",
+      "one_line_summary": "Finding a hidden diary page that points to the lake, Elena and Julian must decide if they will run from the house or confront the truth at the water's edge.",
+      "beat_summary": "Elena wakes on the attic floor in the gray dawn. She reads the diary page. It describes a ritual or a choice to be made at the lake at sunset. Julian admits the previous tenant found the same page and chose to burn it—and drowned that night. Elena knows she cannot leave or the cycle repeats. She must go to the lake. Julian prepares a fire on the shore, a lifeline back. The Blue Hour approaches.",
+      "must_happen": [
+        "Elena interprets the diary page as a final instruction: meet the girl at the exact spot where Tomas died.",
+        "Julian confesses the story of the previous tenant, clearing the air between them.",
+        "Elena lights a candle in the house and vows to return, claiming the house's power is broken.",
+        "[ROMANCE] As they walk to the dock, Julian threads his fingers through Elena's, stopping her. He cups her face gently and presses a soft, lingering kiss to her forehead, his unspoken prayer for her return."
+      ],
+      "must_not": [
+        "Elena must not achieve integration or peace yet.",
+        "The house must not physically attack them until they reach the lake."
+      ],
+      "opens_with": "\"We can't stay here,\" Elena said, her voice hollow as she stared at the diary page, \"the house is just a shell. The answer is out there.\"",
+      "cliffhanger": "Elena steps onto the dock as the sun dips into the horizon, and a soft blue light pulses beneath the wooden slats, thrumming in time with her heart.",
+      "signature_detail_hint": "The blue light under the dock pulses in a steady rhythm, and when Elena's bare foot touches the water, she feels warm, summer air instead of cold water.",
+      "emotional_beat": "Quiet resolve and shared fear. The bond between them is forged in the decision to face the worst together.",
+      "spice": 1,
+      "spice_note": "Trust and tenderness. The physical intimacy is the shared safety of his hand, the gentle press of his lips. It is a promise.",
+      "chapter_task": "Write 1600-1900 words focusing on the calm after the storm and the weight of the choice to confront the trauma directly.",
+      "carries_to_next": "Sets the stage for the final, full memory recovery in chapter 9."
+    },
+    {
+      "chapter": 9,
+      "title": "The Surface Breaks",
+      "slug": "ch09-the-surface-breaks",
+      "one_line_summary": "Elena submerses herself in the lake to meet the Girl in Blue and reclaim the full, devastating memory of the day Tomas died, finally choosing to become whole.",
+      "beat_summary": "Elena enters the water. She sinks down to the bottom where the Girl in Blue waits. The memory plays out in full: the game, the challenge, the moment Tomas stopped moving. Elena stayed hidden out of fear, letting her win the game. She didn't push him, but she didn't save him. Elena accepts the guilt. She takes the girl's hand. They merge. Elena surfaces. Julian is in the water, having come after her. He drags her to shore. She is crying and whole. She whispers the truth, and he holds her. The blue light is gone.",
+      "must_happen": [
+        "Elena sees the full, unedited memory of the drowning—her choice to hide in the reeds.",
+        "Elena speaks to the Girl in Blue, forgiving her and taking her back: 'You are not the monster. You are the part of me that survived. I need you.'",
+        "Elena and the girl merge completely. The water becomes clear and dark.",
+        "[ROMANCE] Julian pulls her onto the shore, wrapping her in his coat, holding her against his chest. She cries, and he rocks her, whispering that she is safe, she is forgiven, she is loved."
+      ],
+      "must_not": [
+        "The Girl in Blue must not remain separate. The central mystery must be fully answered.",
+        "Julian must not let her go until she is warm."
+      ],
+      "opens_with": "\"I have to go in,\" Elena said, her voice steady for the first time since she arrived, her hand resting on the wet wood of the dock.",
+      "cliffhanger": "As they pack the car to leave, Elena finds a photograph in Pip's other ear—a picture of her mother, Diane, as a young girl at the lake house, standing next to a woman labeled 'Cora.' On the back, in Diane's handwriting: *It wasn't your fault, Lena. It was mine. I passed it on.*",
+      "signature_detail_hint": "When Elena takes the girl's hand at the bottom of the lake, she doesn't feel cold water in her lungs; she feels the dry, warm air of the summer day she couldn't remember.",
+      "emotional_beat": "Catharsis and wholeness. A deep, painful peace. The relief of being fully known and accepted by Julian and herself.",
+      "spice": 1,
+      "spice_note": "The ultimate emotional payoff. The physicality is the desperate embrace of two people who just survived hell together. Soft, exhausted kisses. The safe harbor of his arms.",
+      "chapter_task": "Write 1600-1900 words portraying the emotional and psychological resolution of the mystery, ensuring the full memory sequence is clear and cathartic.",
+      "carries_to_next": "The mystery of Book 1 is solved, but Diane's letter opens the door for Book 2."
+    }
+  ]
+}

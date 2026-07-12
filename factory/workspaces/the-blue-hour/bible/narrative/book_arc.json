@@ -1,0 +1,29 @@
+{
+  "book_number": 1,
+  "total_chapters": 10,
+  "target_language": "en",
+  "case_closed": true,
+  "case_open": true,
+  "lead_internal_arc": {
+    "Elena March": "From a fragmented, avoidant woman haunted by a blank childhood summer to a whole person who confronts the guilt of Tomas's drowning, chooses to reintegrate her severed self, and accepts the weight of living with the full truth.",
+    "The Girl in Blue": "From a silent, trapped reflection — the abandoned eight-year-old self — yearning to be remembered and reunited, to being acknowledged and reintegrated into Elena, allowing both to become one complete soul."
+  },
+  "act_structure": {
+    "act1_setup": [
+      1,
+      2
+    ],
+    "act2_complications": [
+      3,
+      6
+    ],
+    "act3_crisis": [
+      7,
+      8
+    ],
+    "act4_resolution": [
+      9,
+      10
+    ]
+  }
+}

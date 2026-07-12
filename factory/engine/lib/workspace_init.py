@@ -11,6 +11,8 @@ import yaml
 from factory.engine.lib.workspace_metadata import (
     infer_setting_from_concept,
     infer_spice_level,
+    resolve_narrative_profile,
+    default_goal_for_profile,
     scale_act_arc,
     spice_chapter_lists,
     sync_manifest_from_direction,
@@ -62,9 +64,9 @@ def init_blank_workspace(
     *,
     title: str = "",
     target_language: str = "en",
-    total_chapters: int = 50,
+    total_chapters: int | None = None,
 ) -> Path:
-    """New story — empty concept, no narrative/bible/plan (fill via UI Concept tab)."""
+    """New story — empty concept only. Chapter count comes from concept when ready."""
     err = validate_workspace_id(new_id)
     if err:
         raise ValueError(err)
@@ -119,43 +121,43 @@ def init_workspace_from_template(
     return dst
 
 
-def _write_default_direction(ws: Path, ws_id: str, *, total_chapters: int = 50) -> None:
+def _write_default_direction(ws: Path, ws_id: str, *, total_chapters: int | None = None) -> None:
     concept = {}
     cp = ws / "concept.yaml"
     if cp.exists():
         concept = yaml.safe_load(cp.read_text(encoding="utf-8")) or {}
     lang = concept.get("target_language") or "en"
-    from_notes = None
     from factory.engine.lib.workspace_metadata import parse_chapter_count_from_concept
 
     from_notes = parse_chapter_count_from_concept(concept)
     total = from_notes or total_chapters
     spice = infer_spice_level(concept)
     hub, nodes = infer_setting_from_concept(concept)
-    explicit, steamy = spice_chapter_lists(total, spice)
+    explicit, steamy = spice_chapter_lists(total, spice) if total else ([], [])
+    profile = resolve_narrative_profile(ws, concept)
+    goal = default_goal_for_profile(profile, lang)
     data = {
         "id": ws_id,
         "pen_name": "",
         "target_language": lang,
-        "narrative_profile": "romance_thriller",
         "publish_strategy": "kdp_ku_exclusive",
         "narrative_status": "draft",
         "book": 1,
-        "total_chapters": total,
         "canon_through": 0,
         "platform": "kdp",
         "audience": "women 18-35, mobile reading, hook-driven serial fiction"
         if lang == "en"
         else "nữ 18-35, đọc điện thoại, lướt nhanh",
-        "goal": "end-of-chapter hooks — international thriller-romance pace"
-        if lang == "en"
-        else "unlock chương sau — cliffhanger mỗi ch",
+        "goal": goal or (
+            "end-of-chapter hooks — international thriller-romance pace"
+            if lang == "en"
+            else "unlock chương sau — cliffhanger mỗi ch"
+        ),
         "setting_hub": hub,
         "setting_nodes": nodes,
         "spice_default": spice,
         "spice_explicit_chapters": explicit,
         "spice_steamy_chapters": steamy,
-        "arc": scale_act_arc(total),
         "book1_ending": concept.get("ending_book1", ""),
         "blurb": concept.get("logline", ""),
         "tropes": [],
@@ -166,6 +168,11 @@ def _write_default_direction(ws: Path, ws_id: str, *, total_chapters: int = 50) 
         "bible_status": "draft",
         "book_slug": f"01-{ws_id}",
     }
+    if profile:
+        data["narrative_profile"] = profile
+    if total and total >= 3:
+        data["total_chapters"] = total
+        data["arc"] = scale_act_arc(total)
     (ws / "direction.yaml").write_text(
         yaml.dump(data, allow_unicode=True, default_flow_style=False, sort_keys=False),
         encoding="utf-8",

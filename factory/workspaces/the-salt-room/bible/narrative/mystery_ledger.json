@@ -1,0 +1,104 @@
+{
+  "main_mystery": "What happened the summer Nora was seven? Who is the child's voice on the tapes? Why is the salt room always cold?",
+  "truth": "Della Vance was Nora's twin sister. Della drowned in the hotel's tidal pool while Nora watched, frozen. The family – led by Ruth – agreed to erase Della's existence to survive the grief. Nora repressed the memory. Grandmother Agnes preserved reel-to-reel tapes as the only proof of Della, including her voice calling Nora's name. The cold room is the physical trace of the erased person, waiting to be acknowledged. The child's voice Nora first hears is her own childhood recording; the tapes contain two children (Nora and Della), and Della's voice is also present, saying Nora's name.",
+  "canonical_reveal_chapter": 10,
+  "red_herrings": [
+    {
+      "id": "RH01",
+      "description": "A faded newspaper clipping about a young girl who drowned near the hotel in the 1920s, leading Nora to suspect the haunting is from a long-dead stranger, not connected to her own past.",
+      "plant_chapter": 2,
+      "debunked_chapter": 6,
+      "false_lead": "Suggests a historical ghost story unrelated to Nora's family."
+    },
+    {
+      "id": "RH02",
+      "description": "A cryptic note from Agnes: 'Some memories cost everything to keep.' Nora interprets this as a warning that the truth is dangerous or that she should stop restoring the tapes. Actually, it refers to the emotional cost of preserving Della's memory while everyone else chose erasure.",
+      "plant_chapter": 4,
+      "debunked_chapter": 10,
+      "false_lead": "Misleading interpretation that the truth will harm Nora, rather than heal her."
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "MR01",
+      "description": "Second child's toothbrush – Nora finds a child's toothbrush concealed in the cold-room bathroom, proving that a second child lived in the hotel.",
+      "chapter": 3,
+      "significance": "First concrete evidence that Nora was not an only child during the summer that was erased."
+    },
+    {
+      "id": "MR02",
+      "description": "Two voices on the same tape – Restoration of a longer reel reveals two distinct child voices playing together. Nora recognizes one as her own but cannot place the other.",
+      "chapter": 5,
+      "significance": "Confirms the existence of a second child on the recordings and connects Nora's own childhood voice to the mystery."
+    },
+    {
+      "id": "MR03",
+      "description": "Nora realizes the child's voice is her own – By comparing her adult voice with the tape, Nora recognizes the voice as her seven-year‑old self. She understands she was one of the two children and that the other voice must be her twin.",
+      "chapter": 6,
+      "significance": "Shifts the mystery from 'what child is this?' to 'who was the other child?' and forces Nora to accept she has a twin."
+    },
+    {
+      "id": "MR04",
+      "description": "The name 'Della' – Nora discovers a tape labeled 'Della' in Agnes's handwriting. Playing it, she hears a child calling her name ('Nora') – this is Della's voice. Nora now knows her sister's name.",
+      "chapter": 7,
+      "significance": "Uncovers the sister's identity and brings the emotional reality of the loss within reach."
+    },
+    {
+      "id": "MR05",
+      "description": "Full memory of the drowning – Nora recovers the complete memory of the summer: Della drowning in the tidal pool while Nora stood frozen, and the family's subsequent erasure of Della. She confronts Ruth, who confesses the cover‑up.",
+      "chapter": 9,
+      "significance": "Central mystery fully revealed; sets up Nora's final choice in chapter 10."
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "description": "The salt room – always cold, door occasionally swollen shut. Crystalized salt forms on windowsills even in July. Nora has no memory of ever entering this room as a child.",
+      "plant_chapter": 1,
+      "payoff_chapter": 10,
+      "notes": "The cold is the physical trace of Della's erased presence. Acknowledging Della briefly warms the room; then a third voice brings the cold back."
+    },
+    {
+      "id": "C002",
+      "description": "First tape playback – From the first reel Nora restores, a child's voice says 'Nora' clearly. The voice feels unreal, unrecognizable.",
+      "plant_chapter": 1,
+      "payoff_chapter": 6,
+      "notes": "Payoff: Nora realizes this is her own childhood voice. The voice is hers, recorded in the summer of the drowning."
+    },
+    {
+      "id": "C003",
+      "description": "Family photograph with one child scratched out – In Agnes's room, a framed photo shows Nora as a child with a blurred/scratched figure beside her. The missing face matches the size of a seven‑year‑old.",
+      "plant_chapter": 2,
+      "payoff_chapter": 4,
+      "notes": "Payoff: Despite the erasure, Nora can now see the intended second child; she remembers the photo being taken with a girl she calls 'my sister'."
+    },
+    {
+      "id": "C004",
+      "description": "Second child's toothbrush – In a locked drawer inside the cold room's bathroom, Nora finds a new‑looking child's toothbrush, mint‑green, beside an identical blue one (her own).",
+      "plant_chapter": 3,
+      "payoff_chapter": 3,
+      "notes": "Immediate payoff: partial answer that a second child lived there; also triggers a faint memory of brushing teeth with someone."
+    },
+    {
+      "id": "C005",
+      "description": "Agnes's logbook – The hotel ledger for summer of that year shows two children's names (Nora, Della) with 'Della' crossed out and the page partly torn. Marginalia: 'Forgive me, D.'",
+      "plant_chapter": 4,
+      "payoff_chapter": 7,
+      "notes": "Payoff: Della's name is confirmed; the 'D' is Agnes's vow to preserve the truth."
+    },
+    {
+      "id": "C006",
+      "description": "Tape labeled 'The Last Day' – A sealed reel marked with a date and warning 'Do not play'. Nora feels compelled to restore it.",
+      "plant_chapter": 8,
+      "payoff_chapter": 10,
+      "notes": "Payoff: The tape contains the moments before Della's drowning and the sounds of the accident itself. Playing it completes Nora's memory and leads to her choice."
+    },
+    {
+      "id": "C007",
+      "description": "Child's drawing in the hotel's storage – A crayon drawing of two girls holding hands over the words 'N & D Forever'. The drawing is hidden inside a hollow book in the library.",
+      "plant_chapter": 7,
+      "payoff_chapter": 10,
+      "notes": "Payoff: Nora sees it and instantly recalls making the drawing with Della; it triggers the full memory of the drowning."
+    }
+  ]
+}

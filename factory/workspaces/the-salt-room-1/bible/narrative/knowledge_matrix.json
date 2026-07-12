@@ -1,0 +1,83 @@
+{
+  "description": "Knowledge matrix for Book 1 of The Salt Room 1. The story is gothic psychological horror, not romance. POV remains third-person limited locked to Nora Vance only. Della Vance manifests only through recorded sound and never appears visually or speaks live in person. The central mystery has one answer: Della was Nora's twin, drowned in the tidal pool when they were seven, and was erased by the family afterward.",
+  "target_language": "en",
+  "milestones": [
+    1,
+    2,
+    5,
+    7,
+    10
+  ],
+  "characters": {
+    "Nora Vance": {
+      "ch1": "Nora knows she is twenty-nine, estranged from her family, a professional audio and tape restorer, and the inheritor of Agnes Vance's shuttered seaside hotel. She believes she spent childhood summers there but has no memory of the summer she was seven. She finds Agnes's tapes and hears a child's recorded voice say her name, but she does not yet know who the child is or why the salt room feels impossible.",
+      "ch2": "Nora knows someone physically altered a family photograph by scratching out one child's face. She understands the hotel mystery is tied to family erasure rather than only to a vague haunting. She also notices that the missing child appears to have been standing close to her, but she does not yet know the child's name, relation, or fate.",
+      "ch5": "Nora realizes the recordings are connected to her own childhood voice and that there were two girls in the lost summer: herself and another child. She understands the haunting is not external to her life. She still does not know the other girl's full identity, that the girl was her twin sister Della, or that the tidal pool was where the tragedy happened.",
+      "ch7": "Nora learns the erased child was Della Vance, recorded by Agnes as Nora's twin sister when both girls were seven. Nora understands that the salt room was connected to both girls and that Agnes preserved evidence of Della's existence. She still does not have the full memory of Della's drowning or the complete scope of Ruth's complicity.",
+      "ch10": "Nora fully recovers the truth: Della Vance was her twin sister; Della drowned in the tidal pool while Nora stood frozen and silent; afterward, Ruth Vance and the family erased Della from speech, photographs, and memory to survive the grief. Nora restores the final tape at the tidal pool and says Della's name aloud, choosing grief and wholeness instead of continued forgetting. After the central mystery is solved, Nora hears a third child's voice beneath Della's on the final tape, opening the Book 2 mystery.",
+      "must_not_know_before": {
+        "Della's name": 7,
+        "that Della was her twin sister": 7,
+        "that Della drowned in the tidal pool": 10,
+        "that Nora stood frozen and silent during the drowning": 10,
+        "that Ruth actively helped erase Della": 8,
+        "that there is a third erased child voice": 10
+      },
+      "hidden_truth": "Nora once had a twin sister named Della Vance. When they were seven, Della drowned in the hotel's tidal pool while Nora froze, and the family chose to erase Della so Nora and Ruth could survive the grief."
+    },
+    "Agnes Vance": {
+      "ch1": "Agnes is known to Nora only as her deceased grandmother and the former keeper of the shuttered seaside hotel. Through the tapes Agnes left behind, she appears secretive, deliberate, and connected to the cold salt room. Nora does not yet understand that Agnes preserved the tapes as evidence.",
+      "ch2": "Agnes's house and hotel begin to feel curated around absence. The scratched photograph suggests someone in the family, possibly under Agnes's roof, allowed or concealed the erasure of a child. Agnes's exact motive remains unclear.",
+      "ch5": "Agnes's tapes are no longer just atmospheric relics; they are the only reliable pathway into Nora's erased childhood. By this point, Agnes seems to have recorded more than ordinary hotel sounds, preserving traces of two girls that the family story removed.",
+      "ch7": "Agnes's log identifies Della Vance beside Nora Vance and records them as twins aged seven. Agnes is revealed as the person who preserved Della's name and proof of her existence, even if she also hid that proof inside labels, logs, and damaged reels.",
+      "ch10": "Agnes's final tape and instruction to restore it at the tidal pool reveal that she preserved the truth of Della's drowning for Nora to recover when ready. After Nora solves Della's mystery, Agnes's archive also reveals a second hidden child voice, proving Agnes erased or concealed more than one child from the family record.",
+      "must_not_know_before": {
+        "that Agnes preserved proof of Della": 7,
+        "that Agnes knew the tidal pool recording held the final answer": 10,
+        "that Agnes's archive contains evidence of another erased child": 10
+      },
+      "hidden_truth": "Agnes preserved the tapes as the physical vessel of erased family memory. She kept Della's existence alive in sound after the rest of the family removed her from visible and spoken history, and her archive contains at least one further erased child beyond Della."
+    },
+    "Della Vance": {
+      "ch1": "Della is not known by name. Her presence is perceived only as a child's voice emerging from recorded static and saying Nora's name. She does not appear visually and does not speak live in the room.",
+      "ch2": "Della remains unnamed, but the scratched-out child in the family photograph becomes the first visible evidence that someone was removed from the family record. This visual evidence is not Della manifesting; it is an altered object Nora discovers.",
+      "ch5": "Della is understood in partial form as the second girl in the recordings from Nora's childhood. Nora realizes there were two children, and one voice belongs inside her own lost summer, but Della's name and twin relationship are not yet fully confirmed.",
+      "ch7": "Della Vance is named. Nora learns Della was her twin sister, age seven, recorded beside Nora in Agnes's log. Della remains present only through old recordings, tape hiss, hum, and restored audio artifacts.",
+      "ch10": "Della's full fate is revealed: she drowned in the tidal pool when she and Nora were seven. Her voice on the tapes is the sound of an erased sister, not a random hotel ghost. Nora speaks Della's name aloud, restoring her place in memory and resolving the central haunting.",
+      "must_not_know_before": {
+        "Della's name spoken as fact": 7,
+        "Della's identity as Nora's twin": 7,
+        "Della's drowning": 10,
+        "Della's final moments at the tidal pool": 10
+      },
+      "hidden_truth": "Della Vance was Nora's twin sister. She drowned in the tidal pool at age seven and was erased from the family afterward. In Book 1, Della's signature is audio only: tapes, static, hum, recorded breath, and degraded playback."
+    },
+    "Ruth Vance": {
+      "ch1": "Ruth is known as Nora's living mother and part of the family from which Nora is estranged. Her connection to the erased summer is not yet explicit.",
+      "ch2": "The scratched photograph implies an adult participated in hiding a child from the family record, but Ruth's role remains unproven. Nora may suspect family silence without yet knowing Ruth's direct involvement.",
+      "ch5": "As Nora realizes there were two girls in the recordings, Ruth's evasions and family silence become more suspicious. Nora still does not have proof that Ruth knew Della's name or helped erase her.",
+      "ch7": "When Della's name surfaces, Ruth's reaction reveals recognition before Nora fully explains the discovery. Ruth's knowledge becomes a major pressure point, but the complete proof of her complicity lands after this milestone.",
+      "ch10": "Ruth is understood as complicit in the erasure after Della's drowning. She helped maintain the silence because she believed Nora would recover faster if Della's name disappeared from the house and family. Ruth's role in Della's erasure is resolved, though she may know more about Agnes's older secrets for Book 2.",
+      "must_not_know_before": {
+        "that Ruth recognizes Della's name": 7,
+        "that Ruth actively participated in erasing Della": 8,
+        "that Ruth's silence followed Della's drowning": 10,
+        "whether Ruth knows about the third child voice": 10
+      },
+      "hidden_truth": "Ruth knew Della existed and helped enforce the family agreement to stop using Della's name after the drowning. Her silence was framed as protection, but it became an active erasure of one daughter from the surviving daughter's life."
+    },
+    "The third child voice": {
+      "ch1": "No knowledge. The story must not suggest a second true answer to the main Della mystery at this stage.",
+      "ch2": "No knowledge. The altered photograph points toward Della's erasure, not a separate child yet.",
+      "ch5": "No knowledge. The midpoint revelation must focus on Nora realizing there were two girls: Nora and Della.",
+      "ch7": "No knowledge. The reveal of Della as Nora's twin must remain clean and specific.",
+      "ch10": "After Nora restores the final tape, recovers the full memory of Della's drowning, and says Della's name aloud, the last seconds of the recording reveal another child's voice beneath Della's. The voice belongs to neither Nora nor Della and says a name Nora has never heard. This opens Book 2 without changing Book 1's solved answer.",
+      "must_not_know_before": {
+        "existence of a third child voice": 10,
+        "that Agnes erased more than one child": 10,
+        "the unfamiliar name spoken by the third voice": 10
+      },
+      "hidden_truth": "Agnes's archive contains evidence of another erased child. This is a series hook only and must not undermine the truth that Della was Nora's twin and drowned in the tidal pool."
+    }
+  }
+}

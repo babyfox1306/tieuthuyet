@@ -1,0 +1,168 @@
+"""Architect bible generation with validate-and-retry."""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from typing import Any
+
+from factory.engine.lib.bible_schema import validate_bible
+from factory.engine.lib.call_9router import call_9router, parse_json_response
+from factory.engine.lib.narrative_schema import load_concept, narrative_dir
+from factory.engine.lib.prompt_builder import load_direction
+from factory.engine.paths import bible_path, load_config
+
+
+def _save_bible(ws: Path, bible: dict[str, Any]) -> None:
+    path = bible_path(ws)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(bible, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def _load_mystery_ledger(ws: Path) -> dict[str, Any]:
+    path = narrative_dir(ws) / "mystery_ledger.json"
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8")) or {}
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def seed_central_mystery_from_ledger(bible: dict[str, Any], ledger: dict[str, Any]) -> bool:
+    """Fill missing central_mystery from narrative mystery_ledger when present."""
+    if not ledger:
+        return False
+    cm = bible.get("central_mystery")
+    if isinstance(cm, dict) and (cm.get("question") or "").strip() and (cm.get("answer") or "").strip():
+        return False
+    question = (ledger.get("main_mystery") or "").strip()
+    answer = (ledger.get("truth") or "").strip()
+    reveal = ledger.get("canonical_reveal_chapter")
+    if not question or not answer:
+        return False
+    bible["central_mystery"] = {
+        "question": question,
+        "answer": answer,
+        "reveal_chapter": int(reveal) if reveal is not None else 1,
+    }
+    return True
+
+
+def build_architect_payload(ws: Path, *, cfg: dict | None = None) -> dict[str, Any]:
+    cfg = cfg or load_config()
+    direction = load_direction(ws)
+    concept = load_concept(ws)
+    ledger = _load_mystery_ledger(ws)
+    payload: dict[str, Any] = {
+        "genre": direction.get("narrative_profile") or "fiction",
+        "sub_niche": direction.get("narrative_profile") or concept.get("title") or "series",
+        "spice_level": int(direction.get("spice_level") or cfg.get("spice_level") or 1),
+        "planned_books": 5,
+        "target_language": direction.get("target_language")
+        or concept.get("target_language")
+        or "en",
+        "total_chapters": int(direction.get("total_chapters") or 0) or None,
+        "concept_title": concept.get("title"),
+        "concept_logline": concept.get("logline"),
+        "author_directive": (concept.get("author_directive") or "")[:4000],
+        "ending_book1": concept.get("ending_book1"),
+        "must_include": concept.get("must_include") or [],
+        "must_avoid": concept.get("must_avoid") or [],
+    }
+    if ledger:
+        payload["mystery_ledger"] = {
+            "main_mystery": ledger.get("main_mystery"),
+            "truth": ledger.get("truth"),
+            "canonical_reveal_chapter": ledger.get("canonical_reveal_chapter"),
+        }
+        payload["instruction"] = (
+            "central_mystery MUST match mystery_ledger "
+            "(question=main_mystery, answer=truth, reveal_chapter=canonical_reveal_chapter). "
+            "Output COMPLETE JSON including central_mystery + bloodline + series_arc."
+        )
+    return payload
+
+
+def generate_bible_with_retry(
+    ws: Path,
+    *,
+    max_attempts: int | None = None,
+    max_tokens: int = 12288,
+) -> dict[str, Any]:
+    """Call architect, validate, retry with error feedback until schema passes or attempts exhausted."""
+    cfg = load_config()
+    if max_attempts is None:
+        max_attempts = int(cfg.get("architect_validate_retries", 3))
+    max_attempts = max(1, max_attempts)
+
+    direction = load_direction(ws)
+    ledger = _load_mystery_ledger(ws)
+    base_payload = build_architect_payload(ws, cfg=cfg)
+
+    last_errors: list[str] = []
+    last_bible: dict[str, Any] = {}
+    attempts_log: list[dict[str, Any]] = []
+
+    for attempt in range(1, max_attempts + 1):
+        payload = dict(base_payload)
+        if last_errors:
+            payload["previous_validation_errors"] = last_errors
+            payload["retry_instruction"] = (
+                "Previous bible FAILED validate-bible. Fix ALL listed errors. "
+                "Return a COMPLETE series.json — especially central_mystery "
+                "{question, answer, reveal_chapter}, bloodline, series_arc."
+            )
+            # Keep a compact hint of what was missing, not the whole truncated dump
+            if last_bible:
+                payload["previous_keys_present"] = sorted(last_bible.keys())
+
+        raw, log = call_9router(
+            "architect",
+            json.dumps(payload, ensure_ascii=False),
+            max_tokens=max_tokens,
+            direction=direction,
+        )
+        bible = parse_json_response(raw)
+        if not isinstance(bible, dict):
+            last_errors = ["architect:response_not_object"]
+            attempts_log.append(
+                {"attempt": attempt, "errors": last_errors, "usage": log.get("usage")}
+            )
+            continue
+
+        seeded = seed_central_mystery_from_ledger(bible, ledger)
+        bible["bible_status"] = "draft"
+        last_bible = bible
+        errors = validate_bible(bible)
+        attempts_log.append(
+            {
+                "attempt": attempt,
+                "errors": list(errors),
+                "seeded_central_mystery": seeded,
+                "usage": log.get("usage"),
+            }
+        )
+        if not errors:
+            _save_bible(ws, bible)
+            return {
+                "ok": True,
+                "bible": bible,
+                "attempts": attempt,
+                "attempts_log": attempts_log,
+                "errors": [],
+            }
+
+        last_errors = errors
+
+    # Persist best effort so operator can inspect
+    if last_bible:
+        _save_bible(ws, last_bible)
+
+    return {
+        "ok": False,
+        "bible": last_bible,
+        "attempts": max_attempts,
+        "attempts_log": attempts_log,
+        "errors": last_errors,
+    }

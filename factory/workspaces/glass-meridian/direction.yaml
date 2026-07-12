@@ -67,5 +67,5 @@ target_platforms:
 - kdp
 spice_level: 3
 plan_status: approved
-bible_status: approved
+bible_status: draft
 book_slug: 02-the-altered-name

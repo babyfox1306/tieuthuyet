@@ -1,0 +1,9 @@
+{
+  "word_count": 1052,
+  "target_language": "en",
+  "short": 1052,
+  "pov_violation": {
+    "count": 4,
+    "threshold": 3
+  }
+}

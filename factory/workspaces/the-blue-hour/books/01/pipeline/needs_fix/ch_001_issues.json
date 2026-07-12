@@ -1,0 +1,11 @@
+{
+  "word_count": 2617,
+  "target_language": "en",
+  "pov_violation": {
+    "count": 17,
+    "threshold": 3
+  },
+  "spice_violation": [
+    "groaned"
+  ]
+}

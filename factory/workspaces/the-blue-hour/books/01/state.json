@@ -1,0 +1,61 @@
+{
+  "current_book": 1,
+  "current_chapter": 3,
+  "timeline": [
+    "Elena arrives at the isolated lake house inherited from Aunt Cora.",
+    "Julian Vane appears suddenly from the shadows, warns her not to touch the railing; the grain of the wood seems to vibrate.",
+    "Julian explains the porch is structurally compromised and that contractors were supposed to cordon it off.",
+    "Elena mentions Aunt Cora stopped answering the phone; Julian becomes evasive and does not respond.",
+    "Elena moves to the front door; the heavy oak door swings inward with a slow creak, despite no wind.",
+    "Elena realizes the door is unlocked; Julian confirms he locked it yesterday.",
+    "Julian states that he checks the perimeter regularly and the house needs maintenance.",
+    "Elena enters the house and observes that it doesn't creak but breathes with a rhythmic expansion of timber.",
+    "Elena explores the interior, refuses to unpack, walks the perimeter, checks locks and floorboards.",
+    "Elena sees Julian outside on a ladder beneath the dining room window, wrestling with a loose shutter.",
+    "Elena grabs a heavy iron screwdriver and steps onto the porch to confront Julian.",
+    "Elena warns Julian he will split the wood; Julian responds that it is already split from rot.",
+    "Julian says he can replace the shutter next week but it needs to hold against the wind tonight.",
+    "Elena provokes Julian, asking if he is afraid of a draft; Julian says the wind looks for a way in.",
+    "Elena passes the screwdriver to Julian, their fingers briefly brushing against each other.",
+    "Julian leaves the property; his taillights disappear into the tree line.",
+    "Elena is alone in the hallway; the silence drops heavy and suffocating.",
+    "The air pressure in the vestibule shifts, pressing against Elena's eardrums.",
+    "Elena tries to calm herself, telling herself it's just an old house.",
+    "Elena approaches the front door to check the lock; the brass handle is dripping wet.",
+    "She recoils and smells the handle; the fluid smells of lake rot, algae, decay, and drowning.",
+    "The humidity in the hall spikes; the air tastes of stale lake water.",
+    "Elena closes her eyes in denial; the floorboards emit a low humming sound.",
+    "Elena flees to the parlor; the large windows look like black maws in the dark.",
+    "The sun sets completely."
+  ],
+  "character_status": {
+    "Elena": {
+      "location": "Parlor",
+      "knows": [
+        "The house was left to her by Aunt Cora",
+        "Aunt Cora stopped answering the phone",
+        "The porch railing is compromised and the wood seems to vibrate (Julian warns)",
+        "Julian has a nervous tic with his watch chain",
+        "The front door swung open by itself with no wind",
+        "Julian claims he locked the door yesterday",
+        "Julian checks the perimeter regularly",
+        "Julian's gaze seems to see the fractures in her psyche",
+        "The house does not creak but breathes with rhythmic expansion of timber",
+        "Shadows in the house stretch towards her regardless of light source",
+        "The wind here looks for a way in (Julian claims)",
+        "Julian is afraid of the wind or something about the house",
+        "Julian's hands are calloused from work",
+        "Julian is fixing a loose shutter beneath the dining room window",
+        "The shutter is already split from rot",
+        "Julian plans to replace the shutter next week",
+        "The interior smells of lake water and old varnish",
+        "The touch of Julian's fingers is rough",
+        "Julian left the property in his car, his taillights disappearing into the trees.",
+        "The front door handle was wet with a fluid that smells of lake rot, algae, decay, and drowning.",
+        "The humidity in the hallway spiked and the air tasted of stale lake water.",
+        "The floorboards emitted a low humming sound when I closed my eyes.",
+        "The silence of the house seemed to"
+      ]
+    }
+  }
+}

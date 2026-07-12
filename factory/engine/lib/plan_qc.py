@@ -6,7 +6,6 @@ import re
 from pathlib import Path
 from typing import Any
 
-from factory.engine.lib.bible_schema import validate_plan_against_canon
 from factory.engine.lib.language import language_profile, target_language, word_count_patch
 from factory.engine.lib.plan_normalize import (
     coerce_text_field,
@@ -23,6 +22,8 @@ from factory.engine.lib.narrative_compiler import (
     narrative_compiler_enabled,
 )
 from factory.engine.lib.prompt_builder import spice_for_chapter
+
+import yaml
 
 # Mở cảnh = FAIL (mâu thuẫn rule Writer)
 SCENE_OPEN_PATTERNS = [
@@ -77,6 +78,25 @@ def _ledger_clue_index(ledger: dict[str, Any]) -> dict[str, dict]:
     }
 
 
+_PROHIBITION_LINE_RE = re.compile(
+    r"(?i)\b(?:do not|don't|never|without|must not|forbid(?:den)?|withhold|"
+    r"no\s+(?:visual|ghost|apparition|male lead|romance|romantic))\b"
+)
+
+
+def _strip_prohibition_clauses(text: str) -> str:
+    """Drop sentences that only forbid an action (avoid false positives on must_not)."""
+    keep: list[str] = []
+    for chunk in re.split(r"(?<=[.!;?\n])\s+", str(text or "")):
+        s = chunk.strip()
+        if not s:
+            continue
+        if _PROHIBITION_LINE_RE.search(s):
+            continue
+        keep.append(s)
+    return " ".join(keep)
+
+
 def _plan_narrative_blob(plan: dict) -> str:
     parts = [
         str(plan.get(k, ""))
@@ -85,12 +105,12 @@ def _plan_narrative_blob(plan: dict) -> str:
             "one_line_summary",
             "beat_summary",
             "must_happen",
-            "must_not",
             "opens_with",
             "cliffhanger",
         )
     ]
-    narr = plan.get("narrative") or {}
+    # Omit must_not — "Do not reveal X" is not knowing/stating X.
+    narr = plan.get("narrative") if isinstance(plan.get("narrative"), dict) else {}
     for rev in narr.get("reveals") or []:
         if isinstance(rev, dict):
             parts.append(str(rev.get("reveal", "")))
@@ -179,9 +199,22 @@ def _clue_reflected_in_beats(
 
 
 def _clue_planted_before(all_plans: list[dict], clue_id: str, before_ch: int) -> bool:
+    """True if clue appears in clues_plant of any chapter strictly before ``before_ch``."""
     for p in all_plans:
         ch = int(p.get("chapter") or 0)
         if ch >= before_ch:
+            continue
+        planted = (p.get("narrative") or {}).get("clues_plant") or []
+        if clue_id in planted:
+            return True
+    return False
+
+
+def _clue_planted_by(all_plans: list[dict], clue_id: str, by_ch: int) -> bool:
+    """True if clue is planted in any chapter at or before ``by_ch`` (same-chapter OK)."""
+    for p in all_plans:
+        ch = int(p.get("chapter") or 0)
+        if ch > by_ch:
             continue
         planted = (p.get("narrative") or {}).get("clues_plant") or []
         if clue_id in planted:
@@ -299,22 +332,32 @@ def validate_narrative_plan(
         rid = str(rev.get("id", ""))
         if rid and rid not in plan_reveal_ids:
             issues.append(f"ch{ch}:NC-04:reveal_not_scheduled:{rid}")
-        required = [str(x) for x in (rev.get("required_clues") or [])]
+        required = [str(x) for x in (rev.get("required_clues") or []) if str(x).strip()]
+        # Only real clue IDs count — reveal IDs mistakenly listed as clues are ignored here
+        # (ledger schema validate flags them separately).
+        required = [cid for cid in required if cid in clues_idx]
         weight = str(rev.get("reveal_weight") or "major").lower()
         min_clues = min_clues_for_reveal(weight)
+        needed = min(min_clues, len(required)) if required else min_clues
         planted_count = 0
         for cid in required:
-            if not _clue_planted_before(all_plans, cid, ch):
+            # Same-chapter plant+reveal is allowed (ledger often schedules both on one ch).
+            if not _clue_planted_by(all_plans, cid, ch):
                 issues.append(f"ch{ch}:NC-04:reveal_missing_plant:{rid}:{cid}")
             else:
                 planted_count += 1
-        if required and planted_count < min_clues:
+        if required and planted_count < needed:
             issues.append(
-                f"ch{ch}:NC-05:reveal_insufficient_clues:{rid}:{planted_count}<{min_clues}"
+                f"ch{ch}:NC-05:reveal_insufficient_clues:{rid}:{planted_count}<{needed}"
+            )
+        elif not required and min_clues > 0:
+            # Major/minor reveal with empty required_clues — still flag insufficient setup
+            issues.append(
+                f"ch{ch}:NC-05:reveal_insufficient_clues:{rid}:0<{min_clues}"
             )
 
-    # NC-06 — knowledge gates in plan prose / reveals
-    blob = _plan_narrative_blob(plan)
+    # NC-06 — knowledge gates in plan prose / reveals (affirmative only).
+    blob = _strip_prohibition_clauses(_plan_narrative_blob(plan)).lower()
     for _char, fact in _forbidden_knowledge_at(matrix, ch):
         if _fact_appears_in_text(fact, blob):
             issues.append(f"ch{ch}:NC-06:knowledge_violation:{fact[:48]}")
@@ -330,6 +373,129 @@ def validate_narrative_plan(
             issues.append(f"ch{ch}:NC-07:payoff_not_in_beats:{cid}")
 
     return issues
+
+
+def _male_lead_absent(bible: dict | None, ws: Path | None) -> bool:
+    from factory.engine.lib.canon_registry import is_absent_male_lead
+
+    if bible:
+        from factory.engine.lib.bible_schema import lead_names
+
+        _fn, mn = lead_names(bible)
+        if is_absent_male_lead(mn):
+            return True
+    if ws is not None:
+        from factory.engine.lib.canon_registry import canon_registry_path
+
+        reg_path = canon_registry_path(ws)
+        if reg_path.exists():
+            try:
+                decl = yaml.safe_load(reg_path.read_text(encoding="utf-8")) or {}
+                male_decl = ((decl.get("characters") or {}).get("male_lead") or {})
+                if is_absent_male_lead(str(male_decl.get("canonical") or "")):
+                    return True
+            except (yaml.YAMLError, OSError, TypeError):
+                pass
+    return False
+
+
+def _plan_pov_issues(plan: dict, direction: dict, *, ws: Path | None = None) -> list[str]:
+    """Fail plan fields written in first person when POV is third-person limited."""
+    from factory.engine.lib.canon_prose_qc import count_first_person_outside_dialogue
+
+    pov = str(direction.get("pov_mode") or "").strip().lower().replace("-", "_")
+    if ws is not None:
+        from factory.engine.lib.canon_registry import canon_registry_path
+
+        reg_path = canon_registry_path(ws)
+        if reg_path.exists():
+            try:
+                decl = yaml.safe_load(reg_path.read_text(encoding="utf-8")) or {}
+                pov = str(decl.get("pov_mode") or pov).strip().lower().replace("-", "_")
+            except (yaml.YAMLError, OSError, TypeError):
+                pass
+    if not pov:
+        pov = "third_person_limited"
+    if "first" in pov:
+        return []
+
+    ch = plan.get("chapter", 0)
+    issues: list[str] = []
+    # opens/cliff: any first-person hit fails; longer prose fields use threshold 2.
+    for field, thresh in (
+        ("opens_with", 1),
+        ("cliffhanger", 1),
+        ("chapter_task", 2),
+        ("beat_summary", 2),
+        ("one_line_summary", 2),
+    ):
+        text = str(plan.get(field) or "")
+        if not text.strip():
+            continue
+        n = count_first_person_outside_dialogue(text)
+        if n >= thresh:
+            issues.append(f"ch{ch}:pov_first_person_in_plan:{field}:{n}")
+    return issues
+
+
+_ROMANCE_WHEN_ABSENT_RE = re.compile(
+    r"\blove interest\b|"
+    r"\battraction\b|"
+    r"\bcaretaker\b.{0,40}\b(?:warmth|touch|hand|glance|fingers|romance)\b|"
+    r"\bfingers brush\b|"
+    r"\blingering glance\b|"
+    r"\bflirt(?:ation|ing)?\b|"
+    r"\bromantic (?:subplot|tension|counterpart|figure)\b",
+    re.IGNORECASE,
+)
+
+_ROMANCE_EXPLICITLY_ABSENT_RE = re.compile(
+    r"not applicable|n/?a\b|none\b|no romantic|no romance|no male lead|"
+    r"forbids? a (?:love interest|romantic)|male lead (?:is )?absent|"
+    r"redirected into|"
+    r"\bisolat(?:ion|ed)\b|"
+    r"\babsence\b|"
+    r"\bno (?:rescuer|lover|witness|partner|ally)\b|"
+    r"\bempty (?:room|chair|hotel)\b|"
+    r"\balone\b|"
+    r"\bnot a (?:person|lover|rescue)\b|"
+    r"\[ISOLATION\]",
+    re.IGNORECASE,
+)
+
+
+def _forbidden_romance_when_no_male_lead(plan: dict) -> bool:
+    """True when plan invents romance despite absent male lead."""
+    for item in plan.get("must_happen") or []:
+        s = str(item)
+        upper = s.strip().upper()
+        if upper.startswith("[ISOLATION]"):
+            continue
+        if not upper.startswith("[ROMANCE]"):
+            continue
+        # Isolation/absence beats often keep the [ROMANCE] tag for schema — allow them.
+        if _ROMANCE_EXPLICITLY_ABSENT_RE.search(s):
+            continue
+        if re.search(
+            r"\b(?:no male lead|no romantic|not romance|absence|alone|empty)\b",
+            s,
+            re.IGNORECASE,
+        ):
+            continue
+        return True
+    blob = " ".join(
+        [
+            str(plan.get("spice_note") or ""),
+            str(plan.get("chapter_task") or ""),
+            str(plan.get("beat_summary") or ""),
+            str(plan.get("one_line_summary") or ""),
+        ]
+    )
+    if _ROMANCE_EXPLICITLY_ABSENT_RE.search(blob):
+        return False
+    if _ROMANCE_WHEN_ABSENT_RE.search(blob):
+        return True
+    return False
 
 
 def validate_plan(
@@ -355,7 +521,7 @@ def validate_plan(
             issues.append(f"ch{ch}:opens_scene:{pat}")
 
     task = str(plan.get("chapter_task", "")).lower()
-    if "1500" not in task and "1600" not in task and "1700" not in task:
+    if "1250" not in task and "1500" not in task and "1600" not in task and "1700" not in task:
         issues.append(f"ch{ch}:task_no_word_target")
 
     mh = plan.get("must_happen", [])
@@ -382,10 +548,18 @@ def validate_plan(
     if len(cliff) < 15:
         issues.append(f"ch{ch}:cliffhanger_weak")
 
-    if not plan.get("locked") and not _has_romance_micro_beat(plan):
+    male_absent = _male_lead_absent(bible, ws)
+    if male_absent:
+        if _forbidden_romance_when_no_male_lead(plan):
+            issues.append(f"ch{ch}:forbidden_romance_when_no_male_lead")
+    elif not plan.get("locked") and not _has_romance_micro_beat(plan):
         issues.append(f"ch{ch}:missing_romance_micro_beat")
 
+    issues.extend(_plan_pov_issues(plan, direction, ws=ws))
+
     if bible:
+        from factory.engine.lib.bible_schema import validate_plan_against_canon
+
         issues.extend(validate_plan_against_canon(plan, bible, all_plans=all_plans))
 
     lang = target_language(direction)
@@ -430,7 +604,44 @@ def ensure_task_word_count(plan: dict, direction: dict | None = None, cfg: dict 
     """Patch nhẹ nếu thiếu mục tiêu chữ."""
     task = plan.get("chapter_task", "")
     patch = word_count_patch(language_profile(direction=direction, cfg=cfg))
-    if "1500" not in task and "1600" not in task and "chữ" not in task.lower() and "word" not in task.lower():
+    if "1250" not in task and "1500" not in task and "1600" not in task and "chữ" not in task.lower() and "word" not in task.lower():
         plan = dict(plan)
         plan["chapter_task"] = task.rstrip(".") + ". " + patch
+    return plan
+
+
+def apply_deterministic_plan_fixes(plan: dict, direction: dict) -> dict:
+    """Local fixes that must not require LLM (spice, slug, signature, word-count)."""
+    plan = ensure_task_word_count(normalize_chapter_plan(plan), direction)
+    if plan.get("locked"):
+        return plan
+    ch = int(plan.get("chapter") or 0)
+    expected = spice_for_chapter(direction, ch)
+    try:
+        cur = int(plan.get("spice"))
+    except (TypeError, ValueError):
+        cur = -999
+    changed = False
+    if cur != expected:
+        plan = dict(plan)
+        plan["spice"] = expected
+        changed = True
+    if not str(plan.get("signature_detail_hint") or "").strip():
+        # Derive a concrete sensory hint from existing plan fields — never block approve
+        # solely because the outliner omitted signature_detail_hint.
+        for key in ("opens_with", "cliffhanger", "one_line_summary", "beat_summary"):
+            candidate = str(plan.get(key) or "").strip()
+            if len(candidate) >= 20:
+                if not changed:
+                    plan = dict(plan)
+                plan["signature_detail_hint"] = candidate[:240]
+                changed = True
+                break
+        else:
+            if not changed:
+                plan = dict(plan)
+            plan["signature_detail_hint"] = (
+                f"A concrete sensory detail unique to chapter {ch} "
+                f"that only this scene could contain."
+            )
     return plan

@@ -119,6 +119,25 @@ def _is_quota_error(exc: Exception) -> bool:
     return _should_try_next_model(exc)
 
 
+def _format_gateway_error(exc: Exception | None, *, base_url: str, models: list[str]) -> str:
+    """Humanize OmniRoute/9router failures (esp. HTML 404 dashboard pages)."""
+    raw = str(exc or "unknown error")
+    low = raw.lower()
+    if "<!doctype html" in low or "page not found" in low or "skip to content" in low:
+        return (
+            f"OmniRoute gateway broken or chat route missing at {base_url} "
+            f"(got HTML 404 instead of JSON). "
+            f"Tried models {models}. "
+            f"Fix: open {base_url.rstrip('/v1').rstrip('/')}/ → login → add provider "
+            f"credentials → create API key → put key in config.json api_key → "
+            f"restart OmniRoute (start omni.bat) → run probe-models. "
+            f"Also check /v1/models is non-empty."
+        )
+    if len(raw) > 400:
+        return raw[:400] + "…"
+    return raw
+
+
 def list_models(base_url: str | None = None, api_key: str | None = None) -> list[str]:
     cfg = load_config()
     client = OpenAI(
@@ -209,11 +228,16 @@ def call_9router(
                 if _should_try_next_model(exc):
                     break  # next model in priority chain
                 time.sleep(2 * (attempt + 1))
-    raise RuntimeError(f"All models failed ({models}): {last_err}")
+    hint = _format_gateway_error(last_err, base_url=cfg["base_url"], models=models)
+    raise RuntimeError(f"All models failed ({models}): {hint}")
 
 
 def parse_json_response(text: str) -> dict[str, Any]:
-    """Parse LLM JSON — strip fences, trailing commas, then json-repair fallback."""
+    """Parse LLM JSON object — strip fences, trailing commas, then json-repair fallback.
+
+    Always returns a dict. Non-object JSON (string/list/number) raises JSONDecodeError
+    so callers never hit ``'str' object has no attribute 'get'``.
+    """
     text = text.strip()
     if text.startswith("```"):
         parts = text.split("```", 2)
@@ -221,6 +245,7 @@ def parse_json_response(text: str) -> dict[str, Any]:
             text = parts[1]
             if text.startswith("json"):
                 text = text[4:]
+            text = text.strip()
     start = text.find("{")
     end = text.rfind("}")
     candidates: list[str] = []
@@ -232,11 +257,27 @@ def parse_json_response(text: str) -> dict[str, Any]:
     candidates.append(text)
 
     last_err: json.JSONDecodeError | None = None
-    for raw in candidates:
+
+    def _load_object(raw: str) -> dict[str, Any] | None:
+        nonlocal last_err
         try:
-            return json.loads(raw)
+            data = json.loads(raw)
         except json.JSONDecodeError as exc:
             last_err = exc
+            return None
+        if isinstance(data, dict):
+            return data
+        last_err = json.JSONDecodeError(
+            f"Expected JSON object, got {type(data).__name__}",
+            raw,
+            0,
+        )
+        return None
+
+    for raw in candidates:
+        data = _load_object(raw)
+        if data is not None:
+            return data
 
     try:
         import json_repair
@@ -244,7 +285,12 @@ def parse_json_response(text: str) -> dict[str, Any]:
         for raw in candidates:
             try:
                 fixed = json_repair.repair_json(raw)
-                return json.loads(fixed)
+                if isinstance(fixed, dict):
+                    return fixed
+                if isinstance(fixed, str):
+                    data = _load_object(fixed)
+                    if data is not None:
+                        return data
             except (json.JSONDecodeError, ValueError, TypeError):
                 continue
     except ImportError:
@@ -252,4 +298,4 @@ def parse_json_response(text: str) -> dict[str, Any]:
 
     if last_err is not None:
         raise last_err
-    return json.loads(text)
+    raise json.JSONDecodeError("Expected JSON object", text, 0)

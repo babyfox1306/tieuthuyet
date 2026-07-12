@@ -1,0 +1,92 @@
+{
+  "act": [
+    1,
+    3
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Room That Would Not Warm",
+      "slug": "the-room-that-would-not-warm",
+      "one_line_summary": "Nora Vance inherits Agnes's shuttered seaside hotel, finds the salt room impossibly cold, and hears a child's voice say her name on an old tape.",
+      "beat_summary": "Nora arrives at the inherited hotel with keys, legal papers, and the discipline of a sound restorer trying to treat grief as inventory; the first pressure point comes when the salt room stays cold despite the rest of the building holding normal stale warmth. While cataloging Agnes's preserved reel-to-reel equipment, Nora finds a tape labeled only with a date from the summer she turned seven and, after cleaning the heads, hears static resolve into a child's voice saying, 'Nora.' In the middle of the dread, include a restrained emotional micro-beat around Nora and the absent male lead marker M.I.A.: Nora notices the blank place where a man's name would usually belong in an inherited story and feels a sharp, private vulnerability rather than comfort. End with the tape capturing a second breath under Nora's own.",
+      "must_happen": [
+        "Nora takes legal possession of Agnes Vance's shuttered seaside hotel and begins treating the building as evidence rather than home.",
+        "She discovers the salt room remains unnaturally cold after confirming nearby rooms are not, using practical checks instead of accepting a haunting explanation.",
+        "Nora finds Agnes's reel-to-reel machine and a tape dated from Nora's seventh summer, then restores enough audio to hear a child's voice say her name.",
+        "[ROMANCE] Nora registers the absence of any true male lead, M.I.A., as a hollow space beside her in the inherited narrative; the moment must read as vulnerable tension, not a new character entrance or romantic subplot.",
+        "A dry windowsill inside the cold room shows salt crust arranged in a shape like tiny finger marks, though the window has been sealed for years."
+      ],
+      "must_not": [
+        "Do not reveal that the child's voice belongs to Della or that Nora had a twin.",
+        "Do not show Della visually or let any supernatural voice speak live outside recorded sound.",
+        "Do not make Nora accept the haunting as fact; she must keep seeking verifiable causes.",
+        "Do not introduce an actual male love interest or contradict the bible's rule that the male lead is absent."
+      ],
+      "opens_with": "\"Don't play that one after dark,\" the dead woman's handwriting warned from the tape box.",
+      "cliffhanger": "The restored tape catches Nora whispering, 'I didn't go in there,' followed by a child's voice answering from the static, 'You did.'",
+      "signature_detail_hint": "A hotel guest ledger page has been stiffened by salt until it crackles like thin glass, but only around the blank line where one room number should be.",
+      "emotional_beat": "Nora's controlled grief fractures into attraction-to-danger and vulnerability as the child's voice knows her before she knows herself.",
+      "spice": 1,
+      "spice_note": "Sweet only: no sexual or romantic scene; keep the required emotional micro-beat restrained, interior, and tied to absence rather than physical intimacy.",
+      "chapter_task": "Write 1600-1900 words. Open on the warning label, keep the prose hook-driven and concrete, establish Nora's analytical voice, the hotel, the cold salt room, Agnes's tapes, and the first recorded voice. Include quiet dread, one practical investigation sequence, and the required [ROMANCE] micro-beat without creating a living male lead or romantic subplot.",
+      "carries_to_next": "Nora has the tape, proof that the room and the recording know something she does not, and a reason to search Agnes's catalog for more reels from the same summer."
+    },
+    {
+      "chapter": 2,
+      "title": "Two Breaths on One Tape",
+      "slug": "two-breaths-on-one-tape",
+      "one_line_summary": "Nora cleans the first recording, finds evidence of two children breathing on it, and learns Ruth lied about what was kept from Agnes's house.",
+      "beat_summary": "Nora spends the morning restoring the damaged reel and separating hiss, room tone, and voiceprint, only to discover the recording holds two different child-breath patterns even though she remembers being an only child. Ruth calls before Nora can ask directly, warning her not to sleep in the hotel and insisting Agnes kept nothing worth preserving; Nora compares that denial to the shelves of labeled tapes and hears the family lie forming in real time. The dread is threaded with a small emotional micro-beat: Nora reaches for the blankness represented by M.I.A., wanting a witness beside her, then catches herself and chooses the evidence instead. The chapter should pay off the first tape with a concrete new clue but withhold the twin answer.",
+      "must_happen": [
+        "Nora cleans the first tape enough to isolate two separate child-breath patterns beneath the spoken fragments.",
+        "Ruth phones Nora and pressures her to leave the hotel, claiming Agnes's recordings are meaningless clutter and should not be played.",
+        "Nora finds a storage index written by Agnes that lists several reels from the same seventh-summer period, but one entry has been scraped nearly unreadable.",
+        "[ROMANCE] In a tense pause after Ruth's call, Nora looks toward the empty chair where M.I.A. would be if this were a different kind of story, feeling the ache of wanting a witness while refusing to invent one.",
+        "The salt room briefly warms only for the length of a warped lullaby on the tape, then drops cold again when the song cuts off."
+      ],
+      "must_not": [
+        "Do not let Ruth confess the erasure, the drowning, or Della's identity.",
+        "Do not reveal that there were twins; the two-child evidence must remain ambiguous.",
+        "Do not allow the voice to answer Nora in real time; all uncanny communication must come through playback.",
+        "Do not turn the M.I.A. absence into a living man, ghost lover, or romantic plotline."
+      ],
+      "opens_with": "\"There are two lungs on this tape,\" Nora said to the empty room.",
+      "cliffhanger": "When Nora rewinds the lullaby, the scraped index entry becomes legible enough to show one word: 'POOL.'",
+      "signature_detail_hint": "Agnes used red sewing thread as tape repair leader, tied in a tiny square knot that clicks softly every time it passes the playback head.",
+      "emotional_beat": "Nora's tension sharpens into lonely vulnerability as the evidence suggests she was not alone, yet every living person insists she was.",
+      "spice": 1,
+      "spice_note": "Sweet only: the emotional charge is isolation, longing for witness, and restrained vulnerability; no sexual content.",
+      "chapter_task": "Write 1600-1900 words. Focus on tactile sound restoration, Ruth's controlled denial, the discovery of two breath patterns, and the first concrete link to the tidal pool. Keep the chapter claustrophobic and investigative. Include the required [ROMANCE] micro-beat as an ache around M.I.A.'s absence, not as a new relationship.",
+      "carries_to_next": "Nora now has Agnes's index, a missing tape entry connected to the pool, and Ruth's warning as evidence that someone wants the recordings destroyed."
+    },
+    {
+      "chapter": 3,
+      "title": "The Pool Tape",
+      "slug": "the-pool-tape",
+      "one_line_summary": "Nora follows Agnes's damaged index to the tidal pool, finds a hidden reel sealed in salt-stiff cloth, and hears a child's recording count down to something she cannot remember.",
+      "beat_summary": "Nora searches the hotel using Agnes's index and the word 'POOL,' moving from interior evidence to the tidal pool outside the shuttered building. At the pool, she finds a salt-stiff cloth packet wedged behind a loose stone, containing a small reel that Agnes hid away from the main archive. Back inside, Nora plays only a fragment before the machine threatens to chew the tape: two children count seconds, one giggles, and one says Nora's name as if warning her. During the most dangerous handling of the brittle reel, include the emotional micro-beat with Nora and M.I.A. as a moment of lonely tension: she steadies her shaking hand against the empty side of the worktable where help should be, then commits to the work alone. End on a concrete escalation from Ruth.",
+      "must_happen": [
+        "Nora follows the damaged index clue to the tidal pool and recognizes the location with physical panic before memory supplies any reason.",
+        "She discovers a hidden reel sealed in salt-stiff cloth behind a loose poolside stone, proving Agnes concealed evidence outside the formal tape archive.",
+        "Nora plays a short fragment of the pool tape and hears two children counting seconds before one voice says Nora's name in a warning tone.",
+        "[ROMANCE] As the brittle reel nearly tears, Nora braces her hand beside the empty workspace associated with M.I.A.'s absence, a tense micro-beat of wanting steadying contact while refusing to invent comfort.",
+        "Ruth arrives at the hotel door or leaves an immediate message revealing she knows Nora found something near the pool."
+      ],
+      "must_not": [
+        "Do not reveal the drowning or that Nora watched it happen.",
+        "Do not name Della as the second child or identify her as Nora's twin.",
+        "Do not make the tidal pool sequence gory or shock-heavy; dread must stay quiet and psychological.",
+        "Do not create a male lead presence; M.I.A. remains absence only, with no dialogue, body, or agency."
+      ],
+      "opens_with": "\"If this tape snaps, whatever Agnes hid dies twice,\" Nora whispered.",
+      "cliffhanger": "Ruth's message plays through Nora's phone speaker: 'Put back what you took from the pool before it starts calling you by the other name.'",
+      "signature_detail_hint": "The hidden reel is wrapped in a child's faded swim ribbon, its fabric hardened into a crescent by years of salt.",
+      "emotional_beat": "Nora's attraction to the forbidden evidence collides with fear, loneliness, and the vulnerable need for someone to steady her before she breaks the only proof.",
+      "spice": 1,
+      "spice_note": "Sweet only: maintain emotional tension and bodily vulnerability without romance escalation or sexual content.",
+      "chapter_task": "Write 1600-1900 words. Transition from setup into complications by moving Nora from the hotel archive to the tidal pool and back to the tape machine. Deliver a concrete mystery payoff with the hidden pool reel and Ruth's knowledge, while withholding the true answer until later chapters. Include the required [ROMANCE] micro-beat as restrained emotional absence around M.I.A., consistent with no actual male lead.",
+      "carries_to_next": "Nora knows the pool is central, Ruth knows she found the hidden reel, and the phrase 'the other name' becomes the next mystery thread."
+    }
+  ]
+}

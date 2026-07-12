@@ -1,0 +1,122 @@
+{
+  "current_book": 1,
+  "current_chapter": 3,
+  "timeline": [
+    "02:10 AM: Label printer spontaneously prints 'LENA ZARATE – 03:47'",
+    "02:47 AM: Iris checks the slip again, dismisses it as a glitch",
+    "03:12 AM: Ambulance arrives with 8-year-old Lena Zarate in respiratory distress",
+    "03:12 AM: Code team works the airway; Iris reaches the tray alone — no attending on the floor",
+    "03:55 AM: Label printer activates without a power source, prints 'ARTHUR BELL — 04:12'",
+    "03:55 AM: Iris watches the machine print, tries to reach for the plug that doesn't exist",
+    "03:56 AM: Lena Zarate is confirmed deceased",
+    "03:56 AM: Iris finds the Arthur Bell label warm after printing",
+    "03:56 AM: Ambulance arrives with Arthur Bell, a 65-year-old male with chest pain",
+    "03:58 AM: Iris admits Arthur Bell to critical Room 3 based on the label",
+    "03:58 AM: Paramedics express concern that Room 3 is for criticals, but Iris insists",
+    "CANON: Dr. Ovid = phone contact only, not physically present, not romantic",
+    "04:00 AM: Iris discovers a blank label with her name embossed from the printer",
+    "04:10 AM: Iris visits the archive; Mr. Hanley initially refuses but reveals the printer was not hospital property; mentions an older nurse from the 1960s who used a similar machine and was later transferred to memory care wing three floors below ground",
+    "04:10 AM: Hanley retrieves a folder with a pink plastic cafeteria token from 1963 stamped with a lighthouse; he lies about not remembering the nurse's name",
+    "04:10 AM: Hanley states the printer was in storage for twenty years and someone recently moved it to Room 3, suggesting someone wanted Iris to find it"
+  ],
+  "character_status": {
+    "Iris Callahan": {
+      "location": "Archive",
+      "knows": [
+        "Label printer printed 'LENA ZARATE – 03:47' without input",
+        "Patient Lena Zarate arrived 35 minutes before the time on the label",
+        "Lena Zarate died",
+        "The label printer has no cord and no battery compartment",
+        "Label printer printed 'ARTHUR BELL — 04:12'",
+        "The Arthur Bell label was warm after printing",
+        "Arthur Bell arrived shortly after the label printed",
+        "Arthur Bell was not on the board and no ambulance had called in before the label printed",
+        "She admitted Arthur Bell to critical care based on the label warning",
+        "She initially considered discarding the second label but decided to keep it",
+        "The printer has no hospital purchase order, asset tag, or serial number",
+        "An older similar machine existed in the 1960s, used by a night-shift nurse who was later transferred to memory care wing below ground",
+        "A pink plastic cafeteria token from 1963 with a lighthouse stamp is associated with that nurse",
+        "Hanley is lying about not remembering the nurse's name",
+        "Someone moved the printer from storage to Room 3 recently, intending for Iris to find it",
+        "A blank label with her name embossed from the printer"
+      ],
+      "relationship_other": "Reports to Dr. Ovid by phone only — not romantic; no male lead / love interest on the floor",
+      "mood": "Determined, suspicious, frustrated by Hanley's evasiveness, intrigued by the token and the nurse"
+    },
+    "Lena Zarate": {
+      "location": "Morgue",
+      "knows": [],
+      "relationship_other": "Deceased Patient",
+      "mood": "N/A"
+    },
+    "Arthur Bell": {
+      "location": "Critical Care Room 3",
+      "knows": [],
+      "relationship_other": "Patient admitted based on label warning",
+      "mood": "Critical condition"
+    },
+    "Mr. Hanley": {
+      "location": "Archive",
+      "knows": [
+        "The printer was never hospital property",
+        "A similar machine was used by a night-shift nurse in the 1960s",
+        "The nurse was transferred to memory care wing three floors below ground",
+        "The printer had been in storage for twenty years before being moved to Room 3",
+        "Someone moved the printer to Room 3 for Iris to find",
+        "The identity of the 1960s nurse"
+      ],
+      "relationship_other": "Archive clerk withholding information from Iris",
+      "mood": "Fearful, defensive, evasive"
+    }
+  },
+  "open_threads": [
+    "Origin and purpose of the label printer",
+    "How does the printer predict patients and times?",
+    "Who is the night-shift nurse from the 1960s? Why was she transferred to memory care?",
+    "Significance of the 1963 lighthouse cafeteria token",
+    "Who moved the printer to Room 3 and wants Iris to discover its secrets?",
+    "Meaning of the blank label with Iris's name (no time)",
+    "Why is Hanley lying about the nurse's identity?",
+    "What happened to the previous nurse using the machine?"
+  ],
+  "facts_established": [
+    "Dr. Ovid is attending by phone only — never physically present, never romantic",
+    "No male lead / invented romantic doctor (Mateo/Noah/Reyes/Hale forbidden)",
+    "The label printer has no hospital purchase order, asset tag, or serial number",
+    "A similar machine existed in the 1960s, used by a nurse on the night shift",
+    "A pink plastic cafeteria token from 1963 stamped with a lighthouse is associated with that nurse",
+    "The nurse was transferred to a memory care ward three floors below ground level",
+    "Someone deliberately moved the printer from storage to Room 3 for Iris to find",
+    "Hanley is lying about not remembering the nurse's name",
+    "Iris received a blank label embossed with her name from the printer",
+    "The older similar machine had a brass rivet on the back that someone painted over",
+    "The printer had been gathering dust in storage for twenty years before being moved to Room 3"
+  ],
+  "spice_progression": "Iris investigates the printer's origins, discovering it has no official record and is linked to a mysterious nurse from the 1960s; Hanley's evasiveness and the appearance of a 1963 lighthouse token deepen the conspiracy, suggesting the machine was deliberately left for Iris.",
+  "phrases_used": [
+    "spontaneously prints",
+    "no cord, no battery",
+    "warm after printing",
+    "not on the board",
+    "no ambulance called in",
+    "unplugged machine",
+    "Stop asking about that printer",
+    "It wasn't ours.",
+    "No purchase order. No asset tag. No serial number.",
+    "A brass rivet on the back",
+    "Transferred.",
+    "Memory care wing.",
+    "Three floors below ground level.",
+    "pink plastic cafeteria token",
+    "lighthouse",
+    "1963",
+    "Someone wanted you to find it.",
+    "blank slip",
+    "the label printer has no hospital records",
+    "the blank label with her name",
+    "like a gravestone waiting for a date",
+    "hospital dust",
+    "the living didn't bother him down here",
+    "a wall dropping into place"
+  ]
+}

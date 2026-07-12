@@ -79,5 +79,56 @@ class WorkspaceMetadataTests(unittest.TestCase):
             self.assertEqual(m["plan_status"], "approved")
 
 
+    def test_concept_notes_do_not_override_operator_total(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "the-blue-hour"
+            ws.mkdir()
+            (ws / "concept.yaml").write_text(
+                yaml.dump({"notes": "30 chapters"}, allow_unicode=True),
+                encoding="utf-8",
+            )
+            (ws / "direction.yaml").write_text(
+                yaml.dump({"book": 1, "total_chapters": 10}, allow_unicode=True),
+                encoding="utf-8",
+            )
+            (ws / "manifest.yaml").write_text("id: the-blue-hour\n", encoding="utf-8")
+            sync_direction_from_concept(ws)
+            d = yaml.safe_load((ws / "direction.yaml").read_text(encoding="utf-8"))
+            self.assertEqual(d["total_chapters"], 10)
+
+    def test_sync_sets_narrative_profile_from_concept(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "the-blue-hour"
+            ws.mkdir()
+            concept = {
+                "target_language": "en",
+                "logline": "Lake house gothic dread.",
+                "author_directive": "Gothic psychological horror — not a romance.",
+                "notes": "30 chapters",
+            }
+            (ws / "concept.yaml").write_text(
+                yaml.dump(concept, allow_unicode=True), encoding="utf-8"
+            )
+            (ws / "direction.yaml").write_text(
+                yaml.dump(
+                    {
+                        "id": "the-blue-hour",
+                        "book": 1,
+                        "total_chapters": 30,
+                        "narrative_profile": "romance_thriller",
+                        "goal": "end-of-chapter hooks — international thriller-romance pace",
+                    },
+                    allow_unicode=True,
+                ),
+                encoding="utf-8",
+            )
+            (ws / "manifest.yaml").write_text("id: the-blue-hour\n", encoding="utf-8")
+            result = sync_direction_from_concept(ws)
+            self.assertIn("narrative_profile", result["changed"])
+            d = yaml.safe_load((ws / "direction.yaml").read_text(encoding="utf-8"))
+            self.assertEqual(d["narrative_profile"], "gothic_psychological_horror")
+            self.assertIn("dread", d["goal"].lower())
+
+
 if __name__ == "__main__":
     unittest.main()

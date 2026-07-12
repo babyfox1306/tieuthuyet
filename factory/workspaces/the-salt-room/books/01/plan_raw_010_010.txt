@@ -1,0 +1,41 @@
+{
+  "act": [
+    10,
+    10
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "Della's Name",
+      "slug": "dellas-name",
+      "one_line_summary": "Nora restores the final tape at the tidal pool, remembers that Della was her twin who drowned while Nora stood frozen, and says Della's name aloud to end the room's cold silence.",
+      "beat_summary": "Nora reaches the tidal pool with Agnes's duplicate final reel and the portable recorder as Ruth makes one last attempt to stop her, not with comfort but with the old command to leave the dead unnamed. Nora threads the reel by the water and restores the damaged audio in fragments: two seven-year-old girls counting, the forbidden name becoming clear as Della, Agnes calling both children by the same birthday, and the moment when Della slips into the tidal pool while young Nora freezes after seven seconds. The full memory returns without gore: Nora watching, silent and terrified; Ruth and the family later destroying photographs, records, and language until Nora could survive as an only child; Agnes preserving the tapes because erasure was another death. In the chapter's emotional micro-beat, Nora glances to the empty place where M.I.A. would have been a witness and feels the last lonely tension of wanting someone to hold the truth with her, then chooses to hold it herself by speaking to Della through the recording. Nora says Della Vance aloud at the pool, grieves her twin, and the salt room's cold wavers back at the hotel, but the final movement reveals the attic has yielded a locked trunk with more reels.",
+      "must_happen": [
+        "Nora plays and restores the final reel at the tidal pool, using her sound-restoration discipline even as the memory begins breaking through.",
+        "The final tape clearly reveals the erased child's name as Della Vance and establishes that Della and Nora were twin sisters who shared the same seventh birthday.",
+        "Nora recovers the central memory: Della drowned in the tidal pool while Nora stood frozen and silent, stopping her count at seven seconds.",
+        "The family erasure is made explicit: Ruth and the others destroyed photographs, altered records, removed Della's name from speech, and trained Nora's memory around the wound to survive the grief.",
+        "Agnes's role is clarified: she preserved the reel-to-reel tapes because they proved Della existed and because Nora would one day need evidence stronger than denial.",
+        "[ROMANCE] At the pool, Nora looks toward the empty space where M.I.A. would have stood as witness, feels a sharp vulnerable longing to not be alone with the truth, then releases that absence and chooses to say Della's name herself.",
+        "Nora says 'Della Vance' aloud at the tidal pool for the first time in twenty years, choosing grief and wholeness over the family's silence.",
+        "The salt room's impossible cold wavers or partially warms after Della is named, proving the acknowledgment has changed the haunting without turning it into a neat cure.",
+        "After Nora returns or receives the final sign, the attic yields a locked trunk containing more reels, creating the series hook beyond the resolved central mystery."
+      ],
+      "must_not": [
+        "Do not leave the central mystery ambiguous; chapter 10 must fully answer who the voice was, why the room stayed cold, why Nora had no memory, and what happened the summer she was seven.",
+        "Do not make Della appear visually or speak live outside recorded sound; all supernatural presence must remain mediated by tape, recorder hum, static, or playback.",
+        "Do not use gore, shock violence, or a sensational drowning scene; the horror should come from memory, silence, and erased grief.",
+        "Do not introduce an actual male lead, rescuer, lover, ghost partner, or romantic subplot.",
+        "Do not make Ruth's actions harmless; her grief can be human, but the erasure must remain morally consequential."
+      ],
+      "opens_with": "\"Say it once, Nora, and you will have to remember all of it,\" Ruth said.",
+      "cliffhanger": "After Nora speaks Della's name and the cold room finally wavers, a thud comes from the sealed attic and Agnes's old trunk is found open just enough to show another stack of labeled reels inside.",
+      "signature_detail_hint": "The final reel's leader is patched with a strip of waterproof birthday-cake ribbon, its waxy surface still carrying two tiny crescent bites where children tested the icing before anyone lit the candles.",
+      "emotional_beat": "Nora's terror and lonely vulnerability turn into intimate grief as the attraction to forbidden proof becomes love for the sister she was taught to forget.",
+      "spice": 1,
+      "spice_note": "Sweet only: no sexual content, no kissing, and no romantic subplot; the emotional intensity is grief, vulnerability, and the ache of absent witness as Nora chooses to remember Della.",
+      "chapter_task": "Write 1600-1900 words. Deliver the act-four resolution and full book-one payoff. Open on Ruth's last warning at the tidal pool, then center the chapter on Nora restoring the final reel, hearing Della's name, recovering the full memory of the drowning, understanding Ruth's and Agnes's opposing choices, and saying Della Vance aloud. Keep the prose concrete, gothic, and sound-driven. Include the required [ROMANCE] micro-beat through M.I.A.'s absence as Nora's final lonely longing for a witness, without creating any male lead or romantic scene. End with Nora's arc resolved and the central mystery answered, then use the attic trunk of additional reels as the next-book hook.",
+      "carries_to_next": "Nora has remembered Della, named her twin, and broken the first silence around the salt room, but Agnes's locked trunk of additional reels suggests the family erasure reaches beyond this one recovered death."
+    }
+  ]
+}

@@ -9,7 +9,6 @@ from factory.engine.lib.canon_prose_qc import (
     POV_FIRST_PERSON_THRESHOLD,
     count_first_person_outside_dialogue,
     find_name_drift_hits,
-    find_spice_marker_hits,
     is_third_person_limited,
 )
 from factory.engine.lib.canon_registry import (
@@ -115,23 +114,6 @@ def _pov_check(body: str, registry: CanonRegistry, chapter: int | None) -> dict[
     return _check("CG-02", True, chapter=chapter)
 
 
-def _spice_checks(body: str, registry: CanonRegistry, chapter: int | None) -> list[dict[str, Any]]:
-    if registry.spice_max > 1:
-        return [_check("CG-03", True, chapter=chapter, detail="spice_max > 1 — spice check skipped")]
-    markers = find_spice_marker_hits(body)
-    if not markers:
-        return [_check("CG-03", True, chapter=chapter, detail="no explicit spice markers")]
-    return [
-        _check(
-            "CG-03",
-            False,
-            chapter=chapter,
-            detail=f"explicit spice markers at spice_max={registry.spice_max}: {', '.join(markers)}",
-            snippet=markers[0],
-        )
-    ]
-
-
 def run_canon_guard(
     workspace_id: str,
     body: str,
@@ -141,7 +123,11 @@ def run_canon_guard(
     book: int = 1,
     registry: CanonRegistry | None = None,
 ) -> dict[str, Any]:
-    """Run registry-driven canon checks on prose. Blocks promote when registry present."""
+    """Run registry-driven canon checks on prose. Blocks promote when registry present.
+
+    Spice/content boundaries are enforced at generation time via LOCKED CANON
+    (concept must_avoid + spice_max), not by keyword-scanning prose.
+    """
     ws = workspace_dir(workspace_id)
     if registry is None:
         if not canon_registry_path(ws).exists():
@@ -158,7 +144,6 @@ def run_canon_guard(
     checks: list[dict[str, Any]] = []
     checks.extend(_name_drift_checks(body, registry, chapter))
     checks.append(_pov_check(body, registry, chapter))
-    checks.extend(_spice_checks(body, registry, chapter))
 
     errors = sum(1 for c in checks if not c["passed"] and c["severity"] == "error")
     return {

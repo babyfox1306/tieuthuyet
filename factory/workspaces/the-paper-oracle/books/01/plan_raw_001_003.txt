@@ -1,0 +1,79 @@
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The First Slip",
+      "slug": "the-first-slip",
+      "one_line_summary": "Night-shift nurse Iris Callahan dismisses a stray label printing the name of a child and a time—until the child arrives thirty-five minutes early and dies exactly at 03:47.",
+      "beat_summary": "A slow night in the ER. Iris’s label printer activates on its own, producing a slip with 'Lena Zarate – 03:47'. She dismisses it as a malfunction, but when Lena arrives early with respiratory distress, she fights to save the child. Despite her best efforts, Lena arrests and dies at the exact printed time. Overcome by déjà vu, Iris checks her own pulse, haunted by a patient death from a year ago that she filed as 'unavoidable.'",
+      "must_happen": [
+        "The label printer churns out a slip reading 'LENA ZARATE – 03:47' with no user input, planting clue C001.",
+        "Lena Zarate arrives in the ER thirty-five minutes before the printed time and is rapidly deteriorating.",
+        "Iris and the team fail to revive Lena; she dies at 03:47 as predicted.",
+        "Iris experiences a memory of the patient who died a year ago, planting C005, and presses two fingers to her own wrist to check her pulse."
+      ],
+      "must_not": [
+        "Iris must not conclude the machine is supernatural; she only feels uneasy.",
+        "No mention of Marguerite Vole or any prior nurse connected to the machine."
+      ],
+      "opens_with": "The label printer hummed to life at 2:10 a.m. — a solitary chirp that sliced through the ER’s quiet lull. Iris Callahan glanced up, expecting a doctor’s order, but the machine coughed out a single label, adhesive side curling like a leaf.",
+      "cliffhanger": "Iris reaches behind the counter to unplug the printer — and finds no cord. The machine isn’t connected to any power source.",
+      "signature_detail_hint": "The label paper has a faint chemical smell, and the printed letters are slightly raised, as if embossed rather than inked.",
+      "emotional_beat": "A deep unease undercuts Iris’s clinical demeanor, mixing with old guilt she has kept buried behind charts and protocol.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write 1600–1900 words establishing the hospital atmosphere, Iris’s clinical habits, the first impossible slip, and the suppressed guilt. Plant C001 (incident) and C005 (memory). End with the revelation that the printer has no power cord.",
+      "carries_to_next": "Iris pockets the slip, unsettled but still rationalizing; the memory of last year’s death resurfaces more vividly."
+    },
+    {
+      "chapter": 2,
+      "title": "A Second Warning",
+      "slug": "a-second-warning",
+      "one_line_summary": "When a second label prints and comes true despite Iris's attempts to intervene, she can no longer pretend the machine is ordinary.",
+      "beat_summary": "Iris returns for her next night shift, trying to convince herself the first slip was a coincidence. But as she passes the machine, it spits out another label: a sixty-year-old man with chest pain, time 04:12. She places the man in a monitored bed early, but he goes into sudden cardiac arrest at 04:12, defying all medical intervention. Staring at the second slip, Iris feels the first cold brush of fear. The machine has power — she sees the cord now, plugged in, but still her suspicion that it might be sensing something unspeakable begins to form. She hides both slips in her locker.",
+      "must_happen": [
+        "The printer produces a second label for an older male patient, with a time that proves accurate despite Iris's advanced care, planting clue C006.",
+        "Iris explicitly tries to beat the predicted time by starting the patient on a cardiac monitor and alerting the team, but the death occurs exactly as printed.",
+        "Iris realizes the machine is not a mere malfunction; she begins to entertain the possibility of the supernatural.",
+        "Iris checks the printer’s power cable and sees it is now fully plugged in, deepening her confusion."
+      ],
+      "must_not": [
+        "Iris must not have any contact with Marguerite Vole or learn of her existence.",
+        "No explanation for the printer’s origin is given yet; it remains mysterious."
+      ],
+      "opens_with": "The label printer sat silent and dark when Iris clocked in. She avoided looking at it for the first hour, until the patients quieted and her thoughts drifted back to the first slip. Then the hum came again — a low thrum building to the screech of machine on paper.",
+      "cliffhanger": "Iris unlocks her locker to hide the new slip, and finds the first slip she placed there is gone. In its place is a fresh label, blank, but with a faint emboss of her own name — she can feel it under her fingertip.",
+      "signature_detail_hint": "The printer’s paper roll is slightly misaligned, leaving a faint line of pressure along the margin of each slip; it’s a detail that might indicate the mechanism is damaged or that it’s custom-made.",
+      "emotional_beat": "Iris’s clinical calm gives way to dread and a sense of being watched; she becomes acutely aware of how little she controls.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write 1600–1900 words escalating the tension from the first slip. Plant C006 through the detailed failure to prevent the death. Show Iris's internal slide from denial to fear. End with the missing slip and the suggestion of her name embossed, leading to the third chapter.",
+      "carries_to_next": "Iris is convinced the machine is actively targeting her; she begins investigating its origin, carrying the blank embossed slip."
+    },
+    {
+      "chapter": 3,
+      "title": "The Manufacturer's Mark",
+      "slug": "the-manufacturers-mark",
+      "one_line_summary": "Iris finds an elderly medical records clerk who remembers a similar printer from decades ago, but his vague answer only deepens the mystery, and she makes a connection that changes everything she thought she knew.",
+      "beat_summary": "Iris decides to investigate the hospital archives for information on the printer. She encounters an older clerk, Mr. Hanley, who remembers seeing a similar machine in the 1960s, used by a nurse who was 'too fascinated with it.' The conversation seems innocent, but Iris catches a detail: the nurse was transferred to the memory care wing. The clerk quickly changes subject. That night, Iris returns to the printer and examines its casing. There is no manufacturer’s logo, no serial number — only a single brass rivet painted over. Peeling the paint, she finds a tiny etching: 'Vole, 1963.' Her pulse skyrockets: a person’s name. The machine had an owner. She tells herself it’s just a maintenance stamp, but she knows the truth: the machine is not hospital property. Someone placed it here for her.",
+      "must_happen": [
+        "Iris speaks to Mr. Hanley, the night records clerk, who gives a vague recollection about an old nurse with a label printer, planting clue C002 (dialogue).",
+        "Iris examines the machine and finds no identifiable markings except a hidden engraving 'Vole, 1963', which she discovers after scraping paint.",
+        "The reader experiences a major reveal (R001): through combining the initial incident (C001) and the clerk’s dialogue (C002), Iris deduces the machine predates the hospital’s standard equipment and was deliberately placed — it is not a coincidence."
+      ],
+      "must_not": [
+        "Marguerite Vole is not named explicitly; the engraving says 'Vole' and the clerk’s story is too vague to identify her.",
+        "The central mystery (machine reflects Iris’s choices) is not revealed; only that the machine had a previous owner."
+      ],
+      "opens_with": "Iris found the night records clerk hunched over a beige terminal older than she was. He didn’t glance up when she asked about the label printer; he only said, 'That old thing? I remember a nurse from before my time who had one.'",
+      "cliffhanger": "Iris peels back the paint on the printer’s base and reads 'Vole, 1963.' She hears footsteps approaching — someone is coming down the dark corridor — and she instinctively hides the machine in the drawer, turning off the light. The steps stop outside the door.",
+      "signature_detail_hint": "The engraving is done by hand, not machine, with uneven stabs from a stylus, as if someone sat down and painstakingly scratched the letters while waiting.",
+      "emotional_beat": "Iris’s fear sharpens into a need for answers; the name 'Vole' feels like a key she doesn’t yet know how to turn, and the approaching footsteps spike her paranoia.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write 1600–1900 words focusing on Iris’s investigation and the first breakthrough — the name 'Vole.' Plant C002 through the clerk’s dialogue. Use that dialogue together with the C001 incident to trigger R001: the machine is not a random occurrence. Build suspense with the footsteps at the end.",
+      "carries_to_next": "Iris now knows the machine belonged to someone named Vole, and someone is watching; she resolves to find out who Vole is."
+    }
+  ]
+}

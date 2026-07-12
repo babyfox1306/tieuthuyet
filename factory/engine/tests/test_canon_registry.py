@@ -221,6 +221,7 @@ characters:
                         "target_language": "en",
                         "spice_default": 1,
                         "plan_status": "draft",
+                        "pov_mode": "third_person_limited",
                     },
                     allow_unicode=True,
                 ),
@@ -235,6 +236,12 @@ characters:
                             "male": {"name": "Elias Crane"},
                         },
                         "supporting_cast": [],
+                        "world_rules": [],
+                        "central_mystery": {
+                            "question": "Who?",
+                            "answer": "A long answer that should not appear early.",
+                            "reveal_chapter": 10,
+                        },
                     }
                 ),
                 encoding="utf-8",
@@ -254,11 +261,15 @@ characters:
                                 "slug": "arrival",
                                 "one_line_summary": "Mara meets Elias.",
                                 "beat_summary": "Elias Crane helps Mara Vale settle in.",
-                                "must_happen": ["a", "b", "c"],
+                                "must_happen": [
+                                    "Mara arrives at the house.",
+                                    "Elias greets her at the door.",
+                                    "[ROMANCE] Their hands brush when he takes her bag.",
+                                ],
                                 "must_not": ["x", "y"],
-                                "opens_with": "Keys in hand.",
-                                "cliffhanger": "A shadow moves.",
-                                "signature_detail_hint": "cracked floorboard",
+                                "opens_with": "Keys turned in her palm.",
+                                "cliffhanger": "A shadow moved behind the glass door.",
+                                "signature_detail_hint": "cracked floorboard under the rug",
                                 "spice": 1,
                                 "chapter_task": "Write chapter 1 (1600-1900 words).",
                             }
@@ -277,6 +288,222 @@ characters:
             _copy_second_shadow_fixture(ws)
             registry = build_canon_registry(ws, book=1)
             self.assertEqual(registry.book_slug, "01-the-second-shadow")
+
+
+class AbsentMaleLeadCanonTests(unittest.TestCase):
+    """Gothic / no-ML books: male_lead=M.I.A. must not treat twin/supporting as male lead."""
+
+    def _write_mia_workspace(
+        self,
+        ws: Path,
+        *,
+        plan_blob: str = "Nora finds Della on the tape.",
+        include_finn: bool = False,
+    ) -> None:
+        ws.mkdir(parents=True)
+        (ws / "canon_registry.yaml").write_text(
+            """\
+characters:
+  female_lead:
+    canonical: Nora Vance
+    allowed_aliases: []
+  male_lead:
+    canonical: M.I.A.
+    allowed_aliases: []
+pov_mode: third_person_limited
+spice_max: 1
+""",
+            encoding="utf-8",
+        )
+        (ws / "direction.yaml").write_text(
+            yaml.dump(
+                {
+                    "id": "mia-test",
+                    "book": 1,
+                    "book_slug": "01-mia-test",
+                    "total_chapters": 1,
+                    "target_language": "en",
+                    "spice_default": 1,
+                    "plan_status": "draft",
+                },
+                allow_unicode=True,
+            ),
+            encoding="utf-8",
+        )
+        (ws / "bible").mkdir()
+        (ws / "bible" / "series.json").write_text(
+            json.dumps(
+                {
+                    "leads": {
+                        "female": {"name": "Nora Vance", "age": 29},
+                        "male": {"name": "M.I.A.", "age": 18},
+                    },
+                    "supporting_cast": [
+                        {"name": "Della Vance", "relation_to": "Nora Vance"},
+                        {"name": "Ruth Vance", "relation_to": "Nora Vance"},
+                    ],
+                }
+            ),
+            encoding="utf-8",
+        )
+        narr = ws / "bible" / "narrative"
+        narr.mkdir()
+        (narr / "book_arc.json").write_text(
+            json.dumps(
+                {
+                    "lead_internal_arc": [
+                        {"character": "Nora Vance", "internal_arc": "recovers memory"},
+                        {"character": "Della Vance", "internal_arc": "is remembered"},
+                    ]
+                }
+            ),
+            encoding="utf-8",
+        )
+        summary = plan_blob
+        if include_finn:
+            summary = plan_blob + " The tape names Finn Clark as her father."
+        book_dir = ws / "books" / "01"
+        book_dir.mkdir(parents=True)
+        (book_dir / "master_plan.json").write_text(
+            json.dumps(
+                {
+                    "book": 1,
+                    "total_chapters": 1,
+                    "chapter_plans": [
+                        {
+                            "chapter": 1,
+                            "title": "Tape",
+                            "slug": "tape",
+                            "one_line_summary": summary,
+                            "beat_summary": summary,
+                            "must_happen": ["a", "b", "c"],
+                            "must_not": ["x", "y"],
+                            "opens_with": "Salt on the sill.",
+                            "cliffhanger": "A second voice.",
+                            "signature_detail_hint": "reel hiss",
+                            "spice": 1,
+                            "chapter_task": "Write chapter 1 (1700-1900 words).",
+                        }
+                    ],
+                }
+            ),
+            encoding="utf-8",
+        )
+
+    def test_mia_does_not_treat_twin_as_male_lead(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "mia-clean"
+            self._write_mia_workspace(ws)
+            registry = build_canon_registry(ws, book=1)
+            self.assertEqual(registry.characters["male_lead"].canonical, "M.I.A.")
+            self.assertNotIn("narrative/*.json", registry.source_male_lead_names)
+            self.assertNotIn("master_plan.json", registry.source_male_lead_names)
+            forbidden = {_norm(x) for x in registry.characters["male_lead"].forbidden_aliases}
+            self.assertNotIn("della vance", forbidden)
+            self.assertNotIn("della", forbidden)
+            conflicts = validate_plan_against_canon_registry(ws, book=1)
+            codes = {c["code"] for c in conflicts}
+            self.assertNotIn("male_lead_cross_source_mismatch", codes)
+            self.assertNotIn("forbidden_lead_name_in_plan", codes)
+
+    def test_mia_flags_invented_plan_male_but_not_della(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "mia-finn"
+            self._write_mia_workspace(ws, include_finn=True)
+            registry = build_canon_registry(ws, book=1)
+            self.assertEqual(
+                registry.source_male_lead_names.get("master_plan.json"), "Finn Clark"
+            )
+            forbidden = {_norm(x) for x in registry.characters["male_lead"].forbidden_aliases}
+            self.assertIn("finn clark", forbidden)
+            self.assertNotIn("della", forbidden)
+            conflicts = validate_plan_against_canon_registry(ws, book=1)
+            codes = {c["code"] for c in conflicts}
+            self.assertIn("male_lead_source_mismatch", codes)
+            della_hits = [
+                c
+                for c in conflicts
+                if c["code"] == "forbidden_lead_name_in_plan" and "Della" in str(c["value"])
+            ]
+            self.assertEqual(della_hits, [])
+            finn_hits = [
+                c
+                for c in conflicts
+                if c["code"] == "forbidden_lead_name_in_plan" and "Finn" in str(c["value"])
+            ]
+            self.assertTrue(finn_hits)
+
+    def test_is_absent_male_lead_helpers(self) -> None:
+        from factory.engine.lib.canon_registry import is_absent_male_lead
+
+        self.assertTrue(is_absent_male_lead("M.I.A."))
+        self.assertTrue(is_absent_male_lead("N/A"))
+        self.assertTrue(is_absent_male_lead("none"))
+        self.assertTrue(is_absent_male_lead("Unassigned (no male lead)"))
+        self.assertTrue(is_absent_male_lead("Unassigned"))
+        self.assertFalse(is_absent_male_lead("Elias Crane"))
+
+    def test_invented_doctor_not_in_allowlist(self) -> None:
+        from factory.engine.lib.canon_registry import find_invented_doctors
+
+        allowed = {"Dr. Ovid", "Ovid", "Iris Callahan", "Iris"}
+        hits = find_invented_doctors(
+            "Beside Iris, Dr. Mateo Reyes reaches for the tray. Later Dr. Ovid calls.",
+            allowed,
+        )
+        self.assertEqual(hits, ["Dr. Mateo Reyes"])
+
+    def test_story_state_rejects_mateo(self) -> None:
+        from factory.engine.lib.canon_registry import validate_story_state_cast
+
+        ws = Path(__file__).resolve().parents[2] / "workspaces" / "the-paper-oracle"
+        if not ws.exists():
+            self.skipTest("the-paper-oracle workspace missing")
+        poisoned = {
+            "timeline": ["03:12 AM: Dr. Mateo Reyes arrives to assist"],
+            "character_status": {
+                "Iris Callahan": {
+                    "relationship_other": "Subordinate to Dr. Reyes",
+                }
+            },
+        }
+        conflicts = validate_story_state_cast(ws, poisoned, book=1)
+        codes = {c["code"] for c in conflicts}
+        self.assertIn("invented_doctor_in_story_state", codes)
+
+class ReplanClearTests(unittest.TestCase):
+    def test_clear_master_plan_for_replan(self) -> None:
+        from factory.engine.lib.master_plan import clear_master_plan_for_replan
+
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "replan-ws"
+            ws.mkdir()
+            (ws / "direction.yaml").write_text(
+                yaml.dump({"id": "replan-ws", "book": 1, "plan_status": "approved"}),
+                encoding="utf-8",
+            )
+            book_dir = ws / "books" / "01"
+            book_dir.mkdir(parents=True)
+            plan_path = book_dir / "master_plan.json"
+            plan_path.write_text(
+                json.dumps(
+                    {
+                        "book": 1,
+                        "title": "Keep Title",
+                        "total_chapters": 10,
+                        "chapter_plans": [{"chapter": 1, "title": "Old"}],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (book_dir / "plan_raw_001_003.txt").write_text("raw", encoding="utf-8")
+            clear_master_plan_for_replan(ws, 1)
+            data = json.loads(plan_path.read_text(encoding="utf-8"))
+            self.assertEqual(data.get("chapter_plans"), [])
+            self.assertEqual(data.get("title"), "Keep Title")
+            self.assertFalse((book_dir / "plan_raw_001_003.txt").exists())
+            direction = yaml.safe_load((ws / "direction.yaml").read_text(encoding="utf-8"))
+            self.assertEqual(direction.get("plan_status"), "draft")
 
 
 def _norm(s: str) -> str:

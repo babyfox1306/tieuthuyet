@@ -203,13 +203,16 @@ class TestMachineQcCanonNet(unittest.TestCase):
             self.assertFalse(machine_pass(issues))
             self.assertIn("name_drift", issues)
 
-    def test_spice_markers_flagged_at_max_1(self) -> None:
+    def test_spice_markers_not_flagged_by_keyword(self) -> None:
+        """Keyword spice scan removed — ambient 'groaned' must not fail machine QC."""
         reg = _registry_elias()
         from factory.engine.lib.canon_prose_qc import canon_prose_issues
 
-        text = "They moved together, thrusting harder until she moaned against his shoulder."
-        issues = canon_prose_issues(text, reg)
-        self.assertIn("spice_violation", issues)
+        ambient = "The floorboards groaned under her weight as she entered."
+        intimate = "They moved together, thrusting harder until she moaned against his shoulder."
+        for text in (ambient, intimate):
+            issues = canon_prose_issues(text, reg)
+            self.assertNotIn("spice_violation", issues)
 
     def test_clean_third_person_passes(self) -> None:
         reg = _registry_elias()

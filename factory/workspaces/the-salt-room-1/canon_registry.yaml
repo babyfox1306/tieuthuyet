@@ -1,0 +1,13 @@
+characters:
+  female_lead:
+    canonical: Nora Vance
+    allowed_aliases:
+    - Nora
+    forbidden_aliases: []
+  male_lead:
+    canonical: No male lead
+    allowed_aliases:
+    - 'No'
+    forbidden_aliases: []
+pov_mode: third_person_limited
+spice_max: 1

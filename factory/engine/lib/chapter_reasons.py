@@ -44,20 +44,30 @@ def chapter_block_info(ws: Path, book: int, status: str, ch: int) -> dict[str, A
 
     if status == "needs_review":
         qc = _load_json(pipeline_dir(ws, book, "needs_review") / f"ch_{ch:03d}_qc.json")
-        if not qc:
+        issues = _load_json(pipeline_dir(ws, book, "needs_review") / f"ch_{ch:03d}_issues.json")
+        reasons: list[str] = []
+        if qc:
+            reasons.extend(format_qc_reasons(qc) or [])
+            # Content-cap reports put human strings directly in fail_reasons
+            if qc.get("source") == "machine_content_cap" and not reasons:
+                for raw in qc.get("fail_reasons") or []:
+                    if isinstance(raw, str) and raw.strip():
+                        reasons.append(raw.strip())
+        if issues and not reasons:
+            reasons = format_machine_reasons(issues)
+        if not qc and not issues:
             return {
                 "reasons": ["không có file QC — chạy lại write hoặc kiểm tra pipeline"],
                 "reason_summary": "thiếu qc.json",
                 "issues": None,
                 "qc": None,
             }
-        reasons = format_qc_reasons(qc)
         if not reasons:
             reasons = ["QC FAIL (không rõ chi tiết)"]
         return {
             "reasons": reasons,
             "reason_summary": "; ".join(reasons),
-            "issues": None,
+            "issues": issues,
             "qc": qc,
         }
 

@@ -617,7 +617,7 @@ def _gate_cfg(cfg: dict | None) -> dict[str, Any]:
         "dup_title": str(cfg.get("export_gate_dup_title", "warn")).lower(),
         "near_dup": str(cfg.get("export_gate_near_dup", "warn")).lower(),
         "min_publish_words": int(
-            cfg.get("min_publish_words") or cfg.get("min_word_count", 1500)
+            cfg.get("min_publish_words") or cfg.get("min_word_count", 1250)
         ),
         "on_promote": bool(cfg.get("export_gate_on_promote", True)),
         "publish_mode": bool(cfg.get("export_gate_publish_mode", False)),

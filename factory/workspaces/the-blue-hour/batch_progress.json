@@ -1,0 +1,32 @@
+{
+  "running": true,
+  "phase": "write",
+  "write_mode": "auto",
+  "from_ch": 1,
+  "to_ch": 10,
+  "written": 0,
+  "issue_chapters": [],
+  "skipped_chapters": [],
+  "log": [
+    "Viet chuong 1–10 (AUTO — retry den ready (toi da 30/chuong))",
+    "▶ ch1 dang viet...",
+    "⚠ ch1: needs_fix — ký tự ngoại ngữ: é; POV first-person outside dialogue (3 hits)",
+    "  → ký tự ngoại ngữ: é",
+    "  → POV first-person outside dialogue (3 hits)",
+    "↻ ch1 retry 2/30 (truoc do: needs_fix)",
+    "⚠ ch1: needs_fix — markdown trong prose: *Elena —*, *You will not remember. You have made sure of that. But the house rememb; POV first-person outside dialogue (4 hits)",
+    "  → markdown trong prose: *Elena —*, *You will not remember. You have made sure of that. But the house rememb",
+    "  → POV first-person outside dialogue (4 hits)",
+    "↻ ch1 retry 3/30 (truoc do: needs_fix)",
+    "⚠ ch1: needs_fix — quá ngắn (988 từ)",
+    "  → quá ngắn (988 từ)",
+    "↻ ch1 retry 4/30 (truoc do: needs_fix)",
+    "⚠ ch1: needs_fix — quá ngắn (1302 từ); markdown trong prose: *One Mississippi. Two Mississippi.*",
+    "  → quá ngắn (1302 từ)",
+    "  → markdown trong prose: *One Mississippi. Two Mississippi.*",
+    "↻ ch1 retry 5/30 (truoc do: needs_fix)"
+  ],
+  "current_ch": 1,
+  "attempt": 5,
+  "updated_at": "2026-07-11T04:32:09.750383+00:00"
+}

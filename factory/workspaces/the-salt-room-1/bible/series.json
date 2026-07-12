@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "series_id": "the-salt-room",
+    "genre": "gothic_psychological_horror",
+    "target_language": "en"
+  },
+  "title": "The Salt Room 1",
+  "sub_niche": "gothic_psychological_horror",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "A sound restorer inherits her grandmother's shuttered seaside hotel and discovers that one cold room, a stack of old tapes, and a child's recorded voice are all guarding the sister her family erased.",
+  "tropes": [
+    "haunted inheritance",
+    "erased twin",
+    "unreliable memory",
+    "seaside gothic",
+    "family secrets",
+    "recorded haunting",
+    "cold room",
+    "grief as haunting"
+  ],
+  "leads": {
+    "female": {
+      "name": "Nora Vance",
+      "age": 29,
+      "voice": "Nora speaks with careful precision, as if every word has to pass through a filter before it is allowed out. Under stress, her sentences shorten and she falls back on technical language from audio restoration.",
+      "tics": [
+        "presses her thumb to the ridge of an old tape case when thinking",
+        "counts room tones under her breath",
+        "rewinds conversations in her mind as if they were damaged audio",
+        "avoids saying family names until forced"
+      ],
+      "boundary": "Nora will not accept comfort that requires her to lie, forget, or smooth over evidence.",
+      "internal_voice": "Her thoughts are forensic and sensory: hiss, breath, salt, tape drag, silence. She distrusts emotional certainty but trusts small physical artifacts."
+    },
+    "male": {
+      "name": "No male lead",
+      "age": 29,
+      "voice": "There is no male romantic or narrative lead in this series. The required lead slot is intentionally marked absent so the canon remains centered on Nora, Agnes, Ruth, and Della.",
+      "tics": [
+        "not applicable"
+      ],
+      "boundary": "No romance subplot, no second lead, and no male character may displace Nora's locked point of view or the family horror.",
+      "wound": "Not applicable; the story is gothic psychological horror, not romance."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Agnes Vance",
+      "relation_to": "Nora Vance",
+      "relation_type": "grandmother",
+      "alive": false,
+      "secret": "Agnes secretly preserved the tapes that prove Della Vance existed, even after the family erased Della from photographs, speech, and daily memory."
+    },
+    {
+      "name": "Della Vance",
+      "relation_to": "Nora Vance",
+      "relation_type": "twin sister",
+      "alive": false,
+      "secret": "Della drowned in the tidal pool when she and Nora were seven. She manifests only through recorded sound and never appears visually or speaks live."
+    },
+    {
+      "name": "Ruth Vance",
+      "relation_to": "Nora Vance",
+      "relation_type": "mother",
+      "alive": true,
+      "secret": "Ruth helped erase Della from family history after the drowning and taught Nora's grief to become silence."
+    },
+    {
+      "name": "The Vance Hotel",
+      "relation_to": "Nora Vance",
+      "relation_type": "inherited family property",
+      "alive": false,
+      "secret": "The shuttered seaside hotel holds the physical traces of Della's erasure: scratched photographs, duplicated childhood objects, room logs, and the salt room where the twins once slept."
+    }
+  ],
+  "central_mystery": {
+    "question": "What happened during the summer Nora Vance was seven, why does she have no memory of it, and why does a child's voice on Agnes Vance's old tapes keep saying Nora's name from inside the cold salt room?",
+    "answer": "Della Vance was Nora Vance's twin sister. When they were seven, Della drowned in the hotel's tidal pool while Nora stood frozen and silent. Afterward, Ruth Vance and the family erased Della from photographs, speech, and family memory to survive the grief, while Agnes Vance secretly preserved the tapes as the only proof Della existed. Della's presence manifests only through recorded sound, never as a visible figure and never as a live voice. The salt room was the twins' room, and its cold is the emotional shape of Della's erasure rather than an attacking ghost.",
+    "reveal_chapter": 10
+  },
+  "bloodline": {
+    "description": "Nora Vance and Della Vance are twin sisters by blood. Agnes Vance is Nora and Della's grandmother. Ruth Vance is Nora and Della's mother. There is no male lead and no romantic bloodline issue; the story's core blood relationship is between the erased twin sisters and the living women who concealed the loss.",
+    "hard_rules": [
+      "female_lead and male_lead are NOT blood relatives",
+      "No male romantic lead exists in canon",
+      "Nora Vance and Della Vance are twin sisters by blood",
+      "Della Vance is dead before the present timeline begins",
+      "Della manifests only through recorded sound",
+      "Della never appears as a visible figure",
+      "Della never speaks live or in person",
+      "Ruth Vance is living and complicit in the erasure",
+      "Agnes Vance is deceased and preserved the tapes as proof"
+    ],
+    "lead_relation": "no_male_lead"
+  },
+  "world_rules": [
+    "Point of view is third-person limited, locked to Nora Vance only.",
+    "No first-person narration appears outside quoted dialogue.",
+    "The horror is built from recognition, memory damage, family silence, and physical evidence rather than gore.",
+    "Every chapter must include one quiet wrongness before any overt scare.",
+    "Della Vance can manifest only through recorded sound: tape playback, degraded static, phone recordings, humming captured after the fact, or old audio equipment.",
+    "Della Vance never appears visually, never stands in a room, never touches Nora, and never speaks live.",
+    "The tapes are the physical vessel of the erased memory.",
+    "The salt room is cold because it holds the emotional shape of erasure, not because Della is an attacking ghost.",
+    "A concrete partial answer must surface every two to three chapters.",
+    "No twist may contradict the fixed truth of Della's drowning and family erasure.",
+    "No forbidden prior-draft names may be used."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "Nora returns to the Vance hotel, restores Agnes's tapes, and learns that the child's recorded voice belongs to Della, the twin sister erased from Nora's memory after the drowning.",
+      "ending_hook": "Nora says Della's name aloud at the tidal pool and chooses grief over forgetting, but one final restored room tone reveals Agnes recorded other family silences in the hotel."
+    },
+    {
+      "book": 2,
+      "thesis": "Nora remains at the hotel to catalog Agnes's archive and discovers that Della's erasure was not the only truth the family trained itself not to hear.",
+      "ending_hook": "A mislabeled reel captures Ruth confessing to someone off-microphone, but the other voice has been carefully cut out."
+    },
+    {
+      "book": 3,
+      "thesis": "Nora confronts Ruth's living version of the past and learns how grief became a family system, with every woman preserving one truth and destroying another.",
+      "ending_hook": "A restored tape contains the sound of Agnes locking the salt room long after Della's death, proving she knew more about Nora's missing memories than she admitted."
+    },
+    {
+      "book": 4,
+      "thesis": "Nora follows Agnes's recordings through the abandoned guest rooms and finds the hotel itself was used as a machine for keeping certain losses private.",
+      "ending_hook": "The final ledger points Nora back to the tidal pool, where the earliest recording was made before the drowning, not after."
+    },
+    {
+      "book": 5,
+      "thesis": "Nora completes the archive, separates memory from punishment, and decides what must be preserved, what must be released, and what must never again be erased.",
+      "ending_hook": "The Vance hotel opens its doors for the last time, not as a haunting to escape, but as a record Nora refuses to falsify."
+    }
+  ],
+  "content_rules": [
+    "18+ content only if spice>=3",
+    "Spice level is 1: no explicit sexual content",
+    "No romance subplot",
+    "No invented male lead",
+    "No minors in sexual situations",
+    "Consent is mandatory for any adult intimacy implied off-page",
+    "Any adult tension fades to black",
+    "Dread over gore",
+    "No gore or body horror as the primary scare",
+    "No first-person narration outside quoted dialogue"
+  ],
+  "bible_status": "approved"
+}

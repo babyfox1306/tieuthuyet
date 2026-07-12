@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "series_id": "improved-build-test",
+    "genre": "gothic romance",
+    "target_language": "en"
+  },
+  "leads": {
+    "female": {
+      "name": "Elinor Hale",
+      "age": 26,
+      "voice": "Thoughtful, quiet, curious, with a dry sense of humor.",
+      "tics": [
+        "Twists a strand of hair when thinking",
+        "Traces the edges of old books",
+        "Bites her lower lip when nervous"
+      ],
+      "boundary": "Hates being lied to; will withdraw if someone is dishonest."
+    },
+    "male": {
+      "name": "Thomas Hale",
+      "age": 30,
+      "voice": "Warm, steady, gentle, with a hint of melancholy.",
+      "tics": [
+        "Runs a hand through his dark hair",
+        "Adjusts his glasses when focused",
+        "Stares out the window when thinking"
+      ],
+      "boundary": "Will not talk about his family's past without trust."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Martha Higgins",
+      "relation_to": "Elinor Hale",
+      "relation_type": "neighbor",
+      "alive": true,
+      "secret": "She knows more about Elinor's grandmother than she admits."
+    },
+    {
+      "name": "Old Lighthouse Keeper",
+      "relation_to": "Elinor Hale",
+      "relation_type": "distant relative",
+      "alive": false
+    }
+  ],
+  "central_mystery": {
+    "question": "What happened to the French sailor Elinor's grandmother helped?",
+    "answer": "He was her secret love; he died in a storm, but they had a child together — Thomas's grandfather.",
+    "reveal_chapter": 10
+  },
+  "bloodline": {
+    "description": "Elinor and Thomas share a distant connection through the lighthouse keeper's family, but no direct blood relation.",
+    "hard_rules": [
+      "No time travel",
+      "The lighthouse is always a central setting",
+      "The mystery must be resolved through old letters and journals"
+    ],
+    "lead_relation": "distant relative"
+  },
+  "world_rules": [
+    "The lighthouse fog whispers secrets only those with Hale blood can hear",
+    "Old letters in the attic glow faintly when touched by a Hale",
+    "The lighthouse keeper's journal can only be read by candlelight"
+  ]
+}

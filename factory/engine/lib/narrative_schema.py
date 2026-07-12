@@ -22,6 +22,13 @@ PROFILE_REQUIRED: dict[str, list[str]] = {
         "knowledge_matrix.json",
         "conspiracy.json",
     ],
+    "gothic_psychological_horror": [
+        "kernel.json",
+        "book_arc.json",
+        "threads.json",
+        "mystery_ledger.json",
+        "knowledge_matrix.json",
+    ],
     "progression_fantasy": ["kernel.json", "book_arc.json", "power_system.json"],
     "dark_romance": ["kernel.json", "book_arc.json", "threads.json"],
 }
@@ -83,18 +90,40 @@ def validate_narrative_assets(ws: Path, direction: dict) -> list[str]:
         ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
         clues = ledger.get("clues") or []
         seen: set[str] = set()
+        clue_ids: set[str] = set()
         for c in clues:
             cid = c.get("id")
             if not cid:
                 errors.append("mystery_ledger:clue_missing_id")
                 continue
+            cid = str(cid)
             if cid in seen:
                 errors.append(f"mystery_ledger:duplicate_clue:{cid}")
             seen.add(cid)
+            clue_ids.add(cid)
             plant = int(c.get("plant_chapter") or 0)
             payoff = int(c.get("payoff_chapter") or 0)
             if plant and payoff and payoff < plant:
                 errors.append(f"mystery_ledger:payoff_before_plant:{cid}")
+
+        reveal_ids: set[str] = set()
+        for rev in ledger.get("major_reveals") or []:
+            if not isinstance(rev, dict):
+                continue
+            rid = str(rev.get("id") or "").strip()
+            if rid:
+                reveal_ids.add(rid)
+
+        for rev in ledger.get("major_reveals") or []:
+            if not isinstance(rev, dict):
+                continue
+            rid = str(rev.get("id") or "").strip() or "?"
+            required = [str(x).strip() for x in (rev.get("required_clues") or []) if str(x).strip()]
+            for cid in required:
+                if cid in reveal_ids:
+                    errors.append(f"mystery_ledger:required_clue_is_reveal:{rid}:{cid}")
+                elif cid not in clue_ids:
+                    errors.append(f"mystery_ledger:required_clue_unknown:{rid}:{cid}")
 
     threads_path = nd / "threads.json"
     if threads_path.exists():
@@ -120,7 +149,8 @@ def load_concept(ws: Path) -> dict[str, Any]:
     path = ws / "concept.yaml"
     if not path.exists():
         return {}
-    return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return data if isinstance(data, dict) else {}
 
 
 PLACEHOLDER_MARKERS = (

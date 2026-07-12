@@ -65,21 +65,25 @@ def resolve_book_slug(
     *,
     cfg: dict | None = None,
 ) -> str:
-    """Map book number → catalog slug (config.book_slugs, catalog scan, fallback)."""
+    """Map book number → catalog slug from workspace direction.yaml, then catalog scan."""
+    from factory.engine.lib.prompt_builder import load_direction
+
     cfg = cfg or load_config()
     book = int(book or cfg.get("active_book") or 1)
-    slugs = cfg.get("book_slugs") or {}
-    if str(book) in slugs:
-        return str(slugs[str(book)])
+    ws = workspace_dir(workspace_id)
+    direction = load_direction(ws)
+    active_book = int(direction.get("book") or 1)
+    dir_slug = str(direction.get("book_slug") or "").strip()
+    if book == active_book and dir_slug:
+        return dir_slug
+
     books_dir = catalog_series_dir(workspace_id) / "books"
+    prefix = f"{book:02d}-"
     if books_dir.exists():
-        prefix = f"{book:02d}-"
         for p in sorted(books_dir.iterdir()):
             if p.is_dir() and p.name.startswith(prefix):
                 return p.name
-    if book == 1:
-        return str(cfg.get("book_slug", "01-hop-dong-co-gia"))
-    raise ValueError(f"No catalog slug for workspace={workspace_id} book={book}")
+    return f"{book:02d}-{workspace_id}"
 
 
 def resolve_book_number(book_slug: str) -> int:

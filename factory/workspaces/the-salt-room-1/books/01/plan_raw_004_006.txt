@@ -1,0 +1,165 @@
+{
+  "act": [
+    4,
+    6
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Space Beside Her",
+      "slug": "the-space-beside-her",
+      "one_line_summary": "Nora compares the scratched photograph with the salt room's doubled traces and realizes the erased child was not incidental but had shared Nora's childhood space.",
+      "beat_summary": "Open with Nora forcing the restored audio to play past the snap, only for a second child's breath to line up with hers in the waveform. Quiet wrongness comes first when Nora notices the salt room dust has settled around two missing pillow shapes, though only one bed remains. She compares the scratched photograph to the paired hooks, doubled height marks, and bed impressions from the salt room, paying off C003 and C004 by recognizing that the erased child stood beside her because the child belonged beside her, in the same room and the same childhood. She plants C006 by finding an Agnes tape log for a session labeled as two girls recorded together before one name was later abraded away. The romance-marked beat stays faithful to the no-romance canon: Nora reaches for the absent comfort of being held or believed, then grips the tape case instead, turning attraction-to-comfort into raw vulnerability while no male lead is invented. End with Agnes's recorded voice asking both children to speak in turn, but the second answer is buried under a deliberate scrape of noise.",
+      "must_happen": [
+        "Pay off C003: Nora compares the scratched photograph with the room evidence and understands the erased child was standing beside young Nora as a paired child, not as a background relative or guest.",
+        "Pay off C004: Nora confirms through doubled bed traces, paired hooks, and two sets of height marks that her childhood space in the salt room was shared with another child.",
+        "Plant C006: Nora finds Agnes's tape log, index card, or reel note indicating that Nora and the unnamed second girl were recorded together before one identity was later damaged or obscured.",
+        "[ROMANCE] No male lead exists in canon, so write the required romance-slot beat as absence and vulnerability: Nora instinctively wants another person's arms or steady voice, finds only the cold tape case under her thumb, and the ache makes her more exposed to the evidence rather than creating a love subplot.",
+        "Nora uses her audio-restoration skills to isolate two overlapping child breaths or syllables, proving the recording session held two children without revealing the second child's name."
+      ],
+      "must_not": [
+        "Do not reveal the second girl's name, twin relationship, drowning, tidal pool, or Nora's frozen silence.",
+        "Do not confirm Ruth's active role in erasure; Nora may suspect family silence but cannot know Ruth's participation.",
+        "Do not make the second girl appear visually, speak live, touch Nora, or act as an attacking ghost.",
+        "Do not mention or imply the third child voice."
+      ],
+      "opens_with": "\"Play past the break,\" Nora told the machine, and the machine breathed back with two small lungs.",
+      "cliffhanger": "Agnes's recorded voice says, \"Now both of you, one at a time,\" and when the second child begins to answer, the tape fills with the harsh sound of someone scraping the name away.",
+      "signature_detail_hint": "The tape log's paper has a thumb-sized translucent stain where salt water once dried, making one erased initial visible only when Nora tilts it against the lamp.",
+      "emotional_beat": "Nora's tension and vulnerability sharpen as she realizes the emptiness beside her may have been made, not born.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; keep the charge in dread, isolation, and the painful absence of comfort.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Pay off C003 and C004 concretely through Nora's comparison of photograph, room evidence, and audio traces. Plant C006 clearly as proof that two girls were recorded together, while preserving all knowledge restrictions. Include one quiet wrongness before overt dread and include the required [ROMANCE] absence beat without inventing a male lead or romance subplot.",
+      "carries_to_next": "Nora now knows the erased child shared her room and recordings, pushing her to restore the tape where both girls can be heard together.",
+      "narrative": {
+        "clues_plant": [
+          "C006"
+        ],
+        "clues_payoff": [
+          "C003",
+          "C004"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006"
+        ],
+        "clue_beats": {
+          "C003": "Nora reads the scratched photograph beside the salt room evidence and understands the erased child occupied the place directly beside her.",
+          "C004": "The doubled traces in the salt room stop being random and become evidence of a shared childhood space.",
+          "C006": "Agnes's tape log or reel note shows two girls were recorded together before one identity was damaged."
+        }
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "The Voice Inside Her Summer",
+      "slug": "the-voice-inside-her-summer",
+      "one_line_summary": "Nora restores the two-child recording and realizes the voice saying her name belongs inside her own lost childhood, to a second girl emotionally close enough to mirror her.",
+      "beat_summary": "Open with the restored tape speaking over Nora's headphones in her own childhood rhythm, making the present room feel suddenly too crowded. Quiet wrongness appears when Nora's restoration software labels two child voices as one speaker because their pitch, timing, and breath patterns are nearly matched. Pay off C001 by proving the voice from the first tape belongs to Nora's erased childhood rather than to an outside haunting, and pay off C006 when the two-girl recording becomes audible enough to confirm Agnes captured Nora with the unnamed second child before the erasure. Plant and pay off C007 in the same chapter: Nora isolates a call-and-response game where one girl echoes Nora's words with intimate familiarity, proving the second girl was emotionally close enough to mirror her without revealing name, twinhood, drowning, or the tidal pool. The romance-marked beat remains non-romantic: Nora feels the old bodily longing to be chosen and held in panic, but no partner exists in canon, so the only answering closeness is the second child's recorded breath. End when Ruth arrives at or calls the hotel and recognizes the rhythm of the tape before Nora tells her what is on it.",
+      "must_happen": [
+        "Pay off C001: Nora determines that the child's voice saying her name on the first tape belongs to her own erased childhood and is connected to the lost summer, not an external haunting.",
+        "Pay off C006: Nora restores enough of Agnes's two-girl recording to confirm Nora and the unnamed second girl were recorded together before the family record was damaged.",
+        "Plant and pay off C007: Nora isolates a childhood echo game, shared phrase, or synchronized humming pattern showing the second girl knew Nora intimately and mirrored her emotionally.",
+        "[ROMANCE] No male lead exists in canon, so the required romance-slot micro-beat must be absence-focused: Nora's chest aches with the need for someone to hold the truth with her, but the only closeness that answers is the second child's breath in the headphones, intensifying vulnerability without creating romance.",
+        "Ruth reacts too quickly to the tape's rhythm, phrase, or Agnes's recording method, making Nora more suspicious while still withholding proof of Ruth's active role."
+      ],
+      "must_not": [
+        "Do not reveal the second girl's name, that she was Nora's twin, that she drowned, that the tidal pool matters, or that Nora froze during the death.",
+        "Do not confirm Ruth recognizes the name or actively erased the child; her fear and evasiveness may increase but proof comes later.",
+        "Do not introduce a visible ghost, live child voice, physical touch from the dead, or an attacking supernatural force.",
+        "Do not introduce the third child voice or any competing answer to the main mystery."
+      ],
+      "opens_with": "\"That is my breath,\" Nora said, and the child in the headphones breathed with her.",
+      "cliffhanger": "Before Nora names what she has restored, Ruth whispers over the phone, \"Turn that off before it teaches you the rest,\" proving she knows the tape is dangerous.",
+      "signature_detail_hint": "The waveform of the two children looks almost braided on Nora's screen, with one voice tucked so closely under the other that the software keeps stitching them into a single speaker.",
+      "emotional_beat": "The midpoint lands on dread, attraction-to-comfort, and vulnerability as Nora realizes the haunting is intimate because it comes from inside her own lost life.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; the emotional intensity comes from isolation, childhood closeness, and Nora's need for a witness.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Deliver the concrete midpoint payoff: Nora knows there were two girls in her lost summer and that the voice saying her name belongs inside her own childhood. Pay off C001, C006, and C007 exactly without revealing the second girl's name, twinhood, drowning, tidal pool, Nora's frozen silence, or Ruth's active participation. Include one quiet wrongness before the overt scare and include the required [ROMANCE] absence beat without inventing a male lead.",
+      "carries_to_next": "Nora carries forward the knowledge that the voice is part of her own erased childhood, while Ruth's reaction points her toward a hidden location record Agnes did not want found too early.",
+      "narrative": {
+        "clues_plant": [
+          "C007"
+        ],
+        "clues_payoff": [
+          "C001",
+          "C006",
+          "C007"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007"
+        ],
+        "clue_beats": {
+          "C001": "The first tape's voice is proven to come from Nora's erased childhood recordings.",
+          "C006": "The two-girl recording confirms Agnes captured Nora and the unnamed second girl together.",
+          "C007": "A mirrored phrase, echo game, or synchronized hum proves the second girl was emotionally close enough to Nora to feel like a missing counterpart."
+        }
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "The Map Under Salt",
+      "slug": "the-map-under-salt",
+      "one_line_summary": "Nora finds Agnes's hidden location key for the hotel recordings and unknowingly plants the tidal pool as the place where the final truth waits.",
+      "beat_summary": "Open with Ruth ordering Nora not to follow Agnes's location codes, which immediately tells Nora the codes matter. Quiet wrongness comes first when Nora finds that the hotel map has one outdoor area rubbed almost blank, though salt crystals cling to the paper in a perfect ring. Nora searches Agnes's archive for the codes attached to the two-girl tapes and plants C008 by uncovering a hidden location key, reel note, or map mark that points repeatedly toward the tidal pool without explaining why. Nora must not understand the tidal pool as a drowning site yet; she only knows Agnes tied the most damaged recordings to that location and treated it as dangerous evidence. The romance-marked beat remains canon-compliant: Nora feels the old pull toward comfort after Ruth's fear, but with no male lead and no romance subplot, she steadies herself against the map cabinet and lets the need to be believed become determination. End when Nora plays a location-tagged fragment and hears waves under Agnes's voice counting down to a recording session she has no memory of.",
+      "must_happen": [
+        "Plant C008: Nora discovers Agnes's hidden location key, hotel map annotation, reel code, or archive note that links the most damaged childhood recordings to the tidal pool.",
+        "Nora connects the two-girl tapes from Chapter 5 to Agnes's location system and realizes Agnes cataloged not only sounds but where each memory was captured.",
+        "Ruth tries to stop Nora from following the location codes, through a call, message, or in-person confrontation, but does not confess or reveal the second girl's name.",
+        "[ROMANCE] No male lead exists in canon, so write the required romance-slot beat as absence under pressure: Nora wants someone at her back when Ruth's fear becomes contagious, but she braces herself alone and chooses the hard intimacy of evidence over comforting denial.",
+        "Nora restores a short location-tagged fragment containing wave wash, Agnes's controlled voice, and a child sound that cuts off before any fatal context is clear."
+      ],
+      "must_not": [
+        "Do not pay off C008; Nora cannot know the tidal pool is the drowning site or that Agnes knew the recordings held the full truth.",
+        "Do not reveal the second girl's name, twin relationship, drowning, Nora's frozen silence, or Ruth's active participation in erasure.",
+        "Do not make the tidal pool scene a full memory or flashback; keep it as coded evidence and sensory fragments.",
+        "Do not introduce the third child voice or imply Agnes erased more than one child yet."
+      ],
+      "opens_with": "\"Do not follow Agnes's codes,\" Ruth said, which was how Nora knew there were codes.",
+      "cliffhanger": "The location-tagged fragment ends with Agnes saying, \"Pool record, final take,\" and beneath her voice a child laughs once before the tape drops into absolute silence.",
+      "signature_detail_hint": "Agnes's hotel map has a ring of salt crystals fused to the paper around the tidal pool label, as if a wet glass sat there for twenty years and never dried clean.",
+      "emotional_beat": "Nora's fear becomes tense determination, and her vulnerability centers on wanting a witness while refusing the comfort of anyone who asks her to stop listening.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; keep the tension in family pressure, forbidden evidence, and Nora's isolation.",
+      "chapter_task": "Write 1600-1900 words in third-person limited, locked to Nora. Plant C008 clearly by linking Agnes's damaged recordings to the tidal pool through codes, maps, or reel notes, but do not reveal what happened there. Maintain slow gothic dread with one quiet wrongness before the overt scare, keep Della unnamed and unseen, and include the required [ROMANCE] absence beat without inventing a male lead or romance subplot.",
+      "carries_to_next": "Nora has the coded path to the tidal pool but not its meaning, setting up the next act's pressure around the erased child's identity and Ruth's deeper involvement.",
+      "narrative": {
+        "clues_plant": [
+          "C008"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T005",
+          "T006",
+          "T007",
+          "T008"
+        ],
+        "clue_beats": {
+          "C008": "Agnes's hidden location key or map repeatedly points the damaged two-girl recordings toward the tidal pool, but Nora does not yet know why."
+        }
+      }
+    }
+  ]
+}

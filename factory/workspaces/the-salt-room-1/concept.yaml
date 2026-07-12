@@ -1,0 +1,104 @@
+concept_status: ready
+target_language: en
+title: The Salt Room 1
+logline: A sound restorer inherits her grandmother's shuttered seaside hotel and finds
+  one room that stays cold in every season — a room she swears she never entered,
+  though a child's voice on the old tapes keeps saying her name.
+author_directive: 'NAMES (locked spelling, no variants):
+
+  - Female lead: Nora Vance (29, audio/tape restorer, estranged from family, no memory
+  of the summer she was 7)
+
+  - Grandmother (deceased): Agnes Vance
+
+  - Twin sister (drowned that summer): Della Vance — never appears visually, only
+  through recorded sound
+
+  - The mother (living, complicit in erasure): Ruth Vance
+
+  FORBID all prior-draft names: Elena, Mara, Cora, Diane, Tomas, Pip, Julian, Elias,
+  Asher, Jude.
+
+
+  POV: third-person limited, locked to Nora ONLY. NO first-person (I/my/me) narration
+  outside quoted dialogue. Absolute.
+
+
+  SPICE: level 1. Gothic psychological horror, NOT romance. No love interest. Any
+  tension fades to black. HARD RULE.
+
+
+  THE SISTER''S RULE (core horror mechanic): Della manifests ONLY through recorded
+  sound — tapes, a hum on a phone recording, static resolving into a child''s voice.
+  She NEVER appears as a visible figure in the room and NEVER speaks live/in person.
+  Her signature is AUDIO, silence-made-sound. This is the locked constraint that makes
+  the dread work.
+
+
+  MYSTERY (one answer): what happened the summer Nora was 7 — Della drowned in the
+  tidal pool, Nora was there, and the family erased Della to survive the grief. Reveal
+  a CONCRETE partial answer every 2-3 chapters (a tape, a photo with a face scratched
+  out, a second child''s toothbrush, a line in Agnes''s log). No endless teasing.
+
+
+  ATMOSPHERE: dread over gore. Every chapter carries one quiet wrongness before anything
+  overt — salt crusting a dry windowsill, a tape that plays a second breath under
+  Nora''s own, the cold room warm for exactly the length of one lullaby. Horror from
+  recognition, not shock. The scariest idea: the thing haunting Nora is the sister
+  the whole family agreed never existed.
+
+
+  KEY BEATS: Nora finds the tapes → first playback, a child says her name. The cold
+  room she can''t remember. A family photo, one child scratched out. Midpoint: Nora
+  realizes the voice is her own childhood, and there were TWO of them. The choice
+  at the tidal pool: restore the last tape and say Della''s name aloud (become whole,
+  grieve) or burn the tapes and keep forgetting.
+
+
+  FORBIDDEN: first-person outside dialogue; explicit content / spice above 1; gore
+  as primary scare; name drift; Della appearing as a visible figure or speaking live;
+  more than one true answer; any invented male lead / romance subplot.'
+surface_plot: 'A woman alone in a decaying coastal hotel, restoring the reel-to-reel
+  tapes her late grandmother left behind. One room resists everything — always cold,
+  locked from the inside. On the tapes, a child she doesn''t recognize keeps speaking
+  to her. It reads as a straight haunting: the hotel holds something, and the salt
+  room is where it lives.'
+true_plot: The child's voice is her own — recordings from the summer she was seven,
+  the summer her twin sister drowned in the hotel's tidal pool, the summer she chose
+  to forget she ever had a sister. The salt room was theirs. Her grandmother preserved
+  the tapes as the only proof the sister existed, because everyone else agreed to
+  erase her. The cold isn't an attack — it's the shape of a person edited out of a
+  family, waiting for the one who could put her back.
+must_include:
+- One concrete partial answer to the mystery every 2-3 chapters
+- Della manifests ONLY through recorded sound, never seen, never live
+- Slow gothic dread, atmosphere over shock
+- Third-person limited locked to Nora
+- The tapes as the physical vessel of the erased memory
+- Cliffhanger pull each chapter
+must_avoid:
+- First-person narration outside dialogue
+- Any explicit content / spice above level 1
+- Invented male lead or romance subplot (no second lead)
+- Gore or body-horror as the main scare
+- Name drift — Nora / Agnes / Della / Ruth stay fixed
+- Della appearing visually or speaking in person
+- More than one true answer to the mystery
+- Twist that isn't planted earlier
+ending_book1: 'Nora recovers the full memory of the summer she was seven: Della was
+  her twin, Della drowned in the tidal pool while Nora stood frozen and silent, and
+  afterward the whole family agreed to erase Della to survive the grief. Nora makes
+  her choice at the tidal pool — she restores the final tape and says Della''s name
+  aloud for the first time in twenty years, choosing to grieve and become whole rather
+  than keep forgetting. The central mystery is fully answered: who the voice was,
+  why the room stayed cold, why Nora had no memory. Her arc resolves.'
+hook_book2: On the last restored tape, beneath Della's voice, there is a second child's
+  voice — one that is neither Nora nor Della. Agnes, the grandmother, erased more
+  than one child from this family. And in the final seconds of the recording, that
+  third voice says a name Nora has never heard — but the salt room has just gone cold
+  again.
+notes: '10 chapters, English, KDP gothic psychological horror. Written to publish,
+  not throwaway. Locked hard: names, POV, spice, and the audio-only rule for Della.
+  After creating the workspace, write canon_registry.yaml FIRST (Nora Vance canonical,
+  forbid all prior-draft names) before develop-narrative so all three canon gates
+  enforce from chapter 1.'

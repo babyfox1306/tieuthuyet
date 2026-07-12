@@ -17,7 +17,9 @@ def state_path(ws: Path, book: int) -> Path:
 def load_state(ws: Path, book: int = 1) -> dict:
     path = state_path(ws, book)
     if path.exists():
-        return json.loads(path.read_text(encoding="utf-8"))
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if isinstance(data, dict):
+            return data
     return {
         "current_book": book,
         "current_chapter": 0,
@@ -82,6 +84,8 @@ def update_state_after_pass(
     raw, _ = call_9router("state_updater", payload, max_tokens=8192, direction=direction)
     try:
         new_state = _parse_state_response(raw, ws, book, direction)
+        if not isinstance(new_state, dict):
+            raise json.JSONDecodeError("state_updater returned non-object", str(raw)[:200], 0)
     except json.JSONDecodeError:
         err_path = book_workspace_dir(ws, book) / "pipeline" / "ready" / f"ch_{chapter_num:03d}_state_raw.txt"
         err_path.parent.mkdir(parents=True, exist_ok=True)
@@ -89,5 +93,60 @@ def update_state_after_pass(
         new_state = _fallback_state_bump(state, chapter_num, book)
     new_state.setdefault("current_book", book)
     new_state.setdefault("current_chapter", chapter_num)
+
+    from factory.engine.lib.canon_registry import (
+        format_conflicts,
+        validate_story_state_cast,
+    )
+    from factory.engine.lib.catalog import safe_print
+
+    cast_conflicts = validate_story_state_cast(ws, new_state, book)
+    if cast_conflicts:
+        # Drop invented doctors from timeline / relationships; keep chapter bump.
+        safe_print(
+            "  state_updater CANON — invented cast blocked:\n  "
+            + "\n  ".join(format_conflicts(cast_conflicts))
+        )
+        allowed_blob = " ".join(c.get("value", "") for c in cast_conflicts)
+        timeline = list(new_state.get("timeline") or [])
+        new_state["timeline"] = [
+            t
+            for t in timeline
+            if not any(
+                str(c.get("value") or "") in str(t)
+                for c in cast_conflicts
+                if c.get("code", "").startswith("invented_doctor")
+            )
+        ]
+        status = new_state.get("character_status")
+        if isinstance(status, dict):
+            cleaned: dict = {}
+            for key, val in status.items():
+                if any(
+                    str(c.get("value") or "") == str(key)
+                    for c in cast_conflicts
+                    if c.get("code") == "invented_cast_in_story_state"
+                ):
+                    continue
+                if isinstance(val, dict):
+                    rel = str(val.get("relationship_other") or "")
+                    if any(str(c.get("value") or "") in rel for c in cast_conflicts):
+                        val = dict(val)
+                        # Prefer declared attending if relationship mentioned a doctor.
+                        if "Dr." in rel or "doctor" in rel.lower():
+                            val["relationship_other"] = (
+                                "Reports to Dr. Ovid by phone only — not romantic"
+                            )
+                        else:
+                            val["relationship_other"] = rel
+                cleaned[key] = val
+            new_state["character_status"] = cleaned
+        new_state.setdefault("facts_established", [])
+        if isinstance(new_state["facts_established"], list):
+            new_state["facts_established"].append(
+                "CANON: invented doctors stripped from state; "
+                f"blocked={allowed_blob[:120]}"
+            )
+
     save_state(ws, book, new_state)
     return new_state

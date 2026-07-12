@@ -1,0 +1,60 @@
+{
+  "description": "Knowledge matrix for The Salt Room Book 1 (10 chapters). Maps the progression of understanding for Nora Vance and the key characters surrounding the mystery of Della Vance and the cold room.",
+  "target_language": "en",
+  "milestones": [
+    1,
+    2,
+    5,
+    7,
+    10
+  ],
+  "characters": {
+    "Nora Vance": {
+      "ch1": "Nora arrives at the Saltwood Hotel, inherits it after Agnes's death. She finds a locked cold room that she cannot remember ever entering. She discovers a collection of reel-to-reel tapes and restores one; she hears a child's voice saying 'Nora.' She has no memory of spending the summer here at age seven.",
+      "ch2": "Nora explores the hotel further. She finds a faded newspaper clipping about a girl who drowned near the hotel in the 1920s. In Agnes's room, she uncovers a family photograph from the summer when she was seven; one child's face is scratched out. She begins to suspect a haunting tied to a stranger.",
+      "ch5": "Nora recovers the full restoration of a longer reel. She hears two distinct child voices playing together; she recognizes one as her own. She also finds a second child's toothbrush hidden in the cold room's bathroom, confirming that another child lived there. She now understands she had a companion, but does not yet know her name.",
+      "ch7": "Nora discovers a tape labeled 'Della' and plays it; she hears her sister's voice calling her name. She also finds Agnes's logbook with two names: Nora and Della, with Della crossed out. She now knows her sister's name. She begins to accept that she had a twin.",
+      "ch10": "Nora recovers the complete memory of the drowning. She understands her twin Della died in the tidal pool while Nora stood frozen. She chooses to restore the final tape, says Della's name aloud, and acknowledges her sister. The tape's final seconds reveal a third child's voice under Della's, hinting at another erased child. The cold room briefly warms, then goes cold again.",
+      "must_not_know_before": [
+        "The identity of the second voice as her own before chapter 5.",
+        "The name Della before chapter 7.",
+        "The full memory of the drowning before chapter 9.",
+        "The existence of a third erased child before chapter 10."
+      ],
+      "hidden_truth": "Nora witnessed Della's drowning and did nothing. She repressed the memory to survive, and the guilt has shaped her estranged life. She must choose to remember and grieve to become whole."
+    },
+    "Della Vance": {
+      "ch1": "Della's recorded voice speaks Nora's name on the first tape. The cold room is the physical trace of her erased presence.",
+      "ch2": "Her presence continues to manifest through the cold room and the tapes.",
+      "ch5": "The longer tape reveals two children playing; Della's voice is the second one. She is established as Nora's forgotten companion.",
+      "ch7": "Her existence is confirmed by the labeled tape and the logbook; she is identified as Nora's twin.",
+      "ch10": "Nora says Della's name aloud, fully acknowledging her. Della's recorded voice now carries an overtone of peace, but a third voice emerges beneath it.",
+      "must_not_know_before": [
+        "Her identity as Nora's twin should not be explicit before chapter 5."
+      ],
+      "hidden_truth": "Della drowned because she reached for Nora and Nora's hand slipped. She does not blame Nora; she only wants to be remembered and known."
+    },
+    "Agnes Vance": {
+      "ch1": "Agnes has passed away, leaving the hotel and a collection of tapes to Nora. She is initially known as the grandmother who ran the hotel and died of old age.",
+      "ch2": "Nora discovers that Agnes kept many records and preserved the hotel's history. The family photograph with a scratched-out child suggests Agnes knew more.",
+      "ch5": "Agnes's logbook is still partially hidden. The presence of a second toothbrush in the cold room indicates she maintained Della's existence in secret.",
+      "ch7": "Agnes's tape labeled 'Della' proves she purposely preserved Della's voice and identity. The logbook shows she kept the truth, even as others erased.",
+      "ch10": "Agnes's hidden motive becomes clearer: she not only preserved Della but possibly also another child. The third voice on the last tape suggests Agnes had another secret that she took to her grave.",
+      "must_not_know_before": [
+        "The extent of Agnes's knowledge about a third child should not be hinted before chapter 10."
+      ],
+      "hidden_truth": "Agnes suspected there was always another erased child in the family tree, and she left the tapes as a trail to that truth."
+    },
+    "Ruth Vance": {
+      "ch1": "Ruth is Nora's estranged mother, living away from the hotel. She is not present in chapter 1, but her character is mentioned.",
+      "ch2": "Ruth remains absent. Nora's search for answers increases her sense of abandonment.",
+      "ch5": "Ruth is still distant. Nora's discoveries start to challenge the family story.",
+      "ch7": "Nora contacts Ruth, who continues to deflect. Ruth claims there was only one child. The confrontation escalates.",
+      "ch10": "By the end, Ruth confesses the cover-up: the family agreed to erase Della. She reveals her guilt but also her conviction that it was necessary for Nora's survival.",
+      "must_not_know_before": [
+        "Ruth's full confession should not occur before chapter 9."
+      ],
+      "hidden_truth": "Ruth erased Della to protect Nora from the trauma, but her own guilt and fear of losing both daughters drove the lie. She still believes it was the right choice."
+    }
+  }
+}

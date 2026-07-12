@@ -139,7 +139,7 @@
       </section>
       <section class="batch-hero">
         <h2>Chạy tự động — viết hàng loạt</h2>
-        <p>AI viết nhiều chương liên tiếp (9router/OmniRoute). Chọn <strong>số chương</strong> ở header (10/20/30…) trước khi plan. Chương lỗi nằm <code>needs_fix</code>, không chặn chương sau.</p>
+        <p>AI viết nhiều chương liên tiếp (9router/OmniRoute). Chọn <strong>số chương</strong> ở header trước khi plan.</p>
         <div class="row2" style="max-width:420px;margin-bottom:.75rem">
           <div class="field" style="margin:0">
             <label for="batchFromCh">Từ chương</label>
@@ -150,7 +150,14 @@
             <input id="batchToCh" type="number" min="1" max="200" value="30" />
           </div>
         </div>
-        <label class="batch-check"><input type="checkbox" id="batchStopOnReview" /> Dừng batch khi QC fail (needs_fix / needs_review)</label>
+        <div class="field" style="margin:0 0 .75rem;max-width:420px">
+          <label for="batchWriteMode">Chế độ viết</label>
+          <select id="batchWriteMode">
+            <option value="supervised" selected>Giám sát — lỗi để lại, bạn sửa tay</option>
+            <option value="auto">Tự động — chương lỗi retry đến khi ready + catalog</option>
+          </select>
+        </div>
+        <label class="batch-check" id="batchStopWrap"><input type="checkbox" id="batchStopOnReview" /> Dừng batch khi QC fail (chỉ chế độ giám sát)</label>
         <div class="actions">
           <button class="btn-success" id="btnBatchPrep">1. Chuẩn bị sách (narrative → plan → prompts)</button>
           <button class="btn-primary" id="btnBatchWrite">2. Viết hàng loạt</button>
@@ -175,7 +182,9 @@
           <button class="btn-primary" data-action="architect">Architect (bible)</button>
           <button class="btn-ghost" data-action="validate-bible">Kiểm tra bible</button>
           <button class="btn-success" data-action="approve-bible">Duyệt bible</button>
-          <button class="btn-primary" data-action="plan">Plan 50 chương</button>
+          <button class="btn-primary" data-action="init-canon-registry" title="Tạo canon_registry.yaml từ concept + bible (bắt buộc trước approve-plan)">Tạo canon registry</button>
+          <button class="btn-primary" data-action="plan" title="Sinh plan cho chương còn thiếu (không ghi đè plan đã có)">Plan chương</button>
+          <button class="btn-ghost" data-action="replan" title="Xóa master_plan hiện tại và sinh lại toàn bộ từ đầu">Tạo lại plan</button>
           <button class="btn-ghost" data-action="fix-plans">Fix plans</button>
           <button class="btn-success" data-action="approve-plan">Duyệt plan</button>
           <button class="btn-ghost" data-action="render-prompts">Tạo prompts (ch_001…)</button>
@@ -186,7 +195,7 @@
     <div id="tab-chapters" class="tab">
       <section class="batch-hero">
         <h2>Viết hàng loạt — không cần bấm từng chương</h2>
-        <p>Chạy nền — viết độc lập theo plan (không chờ chương trước <code>ready</code>). Chương lỗi để lại, batch vẫn chạy tiếp.</p>
+        <p>Dùng cùng <strong>Chế độ viết</strong> ở tab Pipeline (Giám sát / Tự động). Tự động = retry đến ready.</p>
         <div class="actions">
           <button class="btn-primary" id="btnChBatchWrite">▶ Viết hàng loạt</button>
           <button class="btn-ghost" id="btnChBatchContinue">↻ Tiếp tục từ chương kẹt</button>
@@ -292,22 +301,36 @@
       el.innerHTML = html;
     }
 
+    // Status/refresh: 2 phút. LLM (develop / write / batch / export): không abort phía browser.
+    const API_TIMEOUT_MS = 120000;
+    const LLM_TIMEOUT_MS = 0; // 0 = đợi đến khi server trả — sinh narrative vài phút là bình thường
+
     async function api(path, opts = {}) {
-      const timeoutMs = opts.timeoutMs ?? 120000;
+      const timeoutMs = opts.timeoutMs !== undefined ? opts.timeoutMs : API_TIMEOUT_MS;
+      const { timeoutMs: _ignored, ...fetchOpts } = opts;
       const ctrl = new AbortController();
-      const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+      const timer =
+        timeoutMs > 0 ? setTimeout(() => ctrl.abort(), timeoutMs) : null;
       try {
-        const res = await fetch(path, { ...opts, signal: ctrl.signal });
+        const headers = {
+          "Content-Type": "application/json",
+          ...(fetchOpts.headers || {}),
+        };
+        const res = await fetch(path, { ...fetchOpts, headers, signal: ctrl.signal });
         const data = await res.json().catch(() => ({}));
+        // Prefer structured error payloads (ok:false) over throwing — callers check data.ok
+        if (!res.ok && data && data.ok === false) return data;
         if (!res.ok && !data.gates) throw new Error(data.error || res.statusText);
         return data;
       } catch (e) {
         if (e.name === "AbortError") {
-          throw new Error("Request quá lâu — server có thể đang chạy batch/LLM. Xem log batch hoặc bấm «Hủy lock batch».");
+          throw new Error(
+            "Request quá lâu (timeout UI). Nếu đang chạy AI: đợi terminal server; nếu treo: restart UI hoặc «Hủy lock batch»."
+          );
         }
         throw e;
       } finally {
-        clearTimeout(timer);
+        if (timer) clearTimeout(timer);
       }
     }
 
@@ -439,6 +462,7 @@
         gateCard("Concept", g.concept?.status, g.concept?.ok),
         gateCard("Narrative", g.narrative?.status, g.narrative?.ok, g.narrative?.errors),
         gateCard("Bible", g.bible?.status, g.bible?.ok, g.bible?.errors),
+        gateCard("Canon", g.canon?.status, g.canon?.ok),
         gateCard("Plan", g.plan?.status, g.plan?.ok, null, `${d.planned_chapters ?? g.plan?.chapters_planned ?? 0}/${total} ch`),
         gateCard("Write", `${g.write?.in_catalog || 0} catalog`, (g.write?.in_catalog || 0) > 0, null, `${g.write?.ready || 0} ready`),
       ].join("");
@@ -522,19 +546,27 @@
       selectedCh = ch;
       await loadChapters();
       const data = await api(`/api/chapters/${ws()}/${ch}`);
+      const displayStatus = data.in_catalog || data.status === "catalog" ? "catalog" : data.status;
       const reasonBit = data.reason_summary ? ` · ${data.reason_summary}` : "";
-      $("chMeta").textContent = `Chương ${ch}: ${data.title || data.plan_summary || ""} · ${data.status} · ${data.word_count || 0} từ${reasonBit}`;
+      $("chMeta").textContent = `Chương ${ch}: ${data.title || data.plan_summary || ""} · ${displayStatus} · ${data.word_count || 0} từ${reasonBit}`;
       renderReasonBox(data);
       $("proseBox").textContent = data.prose || "(chưa có nội dung — bấm Viết chương)";
       const canWrite = data.status === "missing" || data.status === "prompt_only" || data.status === "needs_fix";
-      const canApprove = ["needs_review", "needs_fix", "draft", "ready"].includes(data.status) && data.prose;
+      const canApprove =
+        !data.in_catalog &&
+        data.status !== "catalog" &&
+        ["needs_review", "needs_fix", "draft", "ready"].includes(data.status) &&
+        data.prose;
       $("btnWrite").disabled = !canWrite && data.status !== "missing";
       $("btnApprove").disabled = !canApprove;
-      $("btnDiscard").disabled = data.status === "missing";
+      $("btnDiscard").disabled = data.status === "missing" || data.status === "catalog" || data.in_catalog;
     }
 
     async function runPipeline(action) {
-      if (!confirm(`Chạy bước "${action}"? Có thể mất vài phút (9router).`)) return;
+      const confirmMsg = action === "replan"
+        ? "TẠO LẠI PLAN: xóa toàn bộ chapter_plans hiện tại và sinh lại từ đầu (gọi 9router). Không hoàn tác. Tiếp tục?"
+        : `Chạy bước "${action}"? Có thể mất vài phút (9router).`;
+      if (!confirm(confirmMsg)) return;
       showStatus(`<span class="spinner"></span> Đang chạy ${action}…`, "warn");
       document.querySelectorAll("#pipelineActions button").forEach(b => b.disabled = true);
       try {
@@ -542,6 +574,7 @@
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: apiBody({ action }),
+          timeoutMs: LLM_TIMEOUT_MS,
         });
         if (data.ok === false) {
           showStatus(`Lỗi ${action}: ` + (data.error || "failed"), "bad", data.errors);
@@ -566,7 +599,11 @@
       $("btnWrite").disabled = true;
       showStatus(`<span class="spinner"></span> Đang viết chương ${selectedCh}…`, "warn");
       try {
-        const data = await api(`/api/chapters/${ws()}/${selectedCh}/write`, { method: "POST", body: apiBody() });
+        const data = await api(`/api/chapters/${ws()}/${selectedCh}/write`, {
+          method: "POST",
+          body: apiBody(),
+          timeoutMs: LLM_TIMEOUT_MS,
+        });
         if (data.ok === false) showStatus("Lỗi viết: " + data.error, "bad");
         else {
           const why = data.reason_summary ? ` — ${data.reason_summary}` : "";
@@ -585,10 +622,27 @@
       if (!selectedCh) return;
       if (!confirm(`Duyệt chương ${selectedCh} vào catalog?`)) return;
       try {
-        const data = await api(`/api/chapters/${ws()}/${selectedCh}/approve`, { method: "POST", body: apiBody() });
-        if (data.ok) showStatus(`Đã đưa chương ${selectedCh} vào catalog`, "ok");
-        else if (data.already_promoted) showStatus(`Chương ${selectedCh} đã có trong catalog`, "ok");
-        else showStatus("Lỗi: " + (data.error || "approve failed") + (data.export_gate_reasons ? " — " + data.export_gate_reasons.slice(0,2).join("; ") : ""), "bad");
+        const data = await api(`/api/chapters/${ws()}/${selectedCh}/approve`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: apiBody(),
+        });
+        if (data.ok) {
+          const st = data.in_catalog || data.status === "catalog" ? "catalog" : data.status;
+          showStatus(
+            data.already_promoted
+              ? `Chương ${selectedCh} đã có trong catalog`
+              : `Đã đưa chương ${selectedCh} vào catalog (${st})`,
+            "ok"
+          );
+        } else {
+          showStatus(
+            "Lỗi: " +
+              (data.error || "approve failed") +
+              (data.export_gate_reasons ? " — " + data.export_gate_reasons.slice(0, 2).join("; ") : ""),
+            "bad"
+          );
+        }
         await selectChapter(selectedCh);
         await loadPipeline();
         await loadChapters();
@@ -613,6 +667,7 @@
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: apiBody({ target }),
+          timeoutMs: LLM_TIMEOUT_MS,
         });
         if (data.ok) {
           let msg = `Xuất ${target} xong → ${data.export_dir}`;
@@ -715,6 +770,7 @@
           body: apiBody({ total_chapters: total }),
         });
         let msg = `Đã lưu ${total} chương cho Book ${book()}`;
+        if (data.needs_develop_narrative) msg += " — chạy develop-narrative lại (act_structure lệch)";
         if (data.warning) msg += " — " + data.warning;
         showStatus(msg, data.warning ? "warn" : "ok");
         $("batchToCh").dataset.userSet = "";
@@ -734,12 +790,25 @@
     let batchWasRunning = false;
 
     function batchWriteOpts(extra = {}) {
+      const writeMode = ($("batchWriteMode") && $("batchWriteMode").value) || "supervised";
       return {
         from_ch: parseInt($("batchFromCh").value, 10) || 1,
         to_ch: parseInt($("batchToCh").value, 10) || 50,
-        stop_on_review: $("batchStopOnReview").checked,
+        stop_on_review: writeMode === "supervised" && $("batchStopOnReview").checked,
+        write_mode: writeMode,
         ...extra,
       };
+    }
+
+    function syncWriteModeUI() {
+      const auto = ($("batchWriteMode") || {}).value === "auto";
+      const wrap = $("batchStopWrap");
+      if (wrap) wrap.style.opacity = auto ? "0.45" : "1";
+      if ($("batchStopOnReview")) $("batchStopOnReview").disabled = auto;
+    }
+    if ($("batchWriteMode")) {
+      $("batchWriteMode").addEventListener("change", syncWriteModeUI);
+      syncWriteModeUI();
     }
 
     function setBatchButtonsDisabled(disabled) {
@@ -827,7 +896,10 @@
       const labels = { prep: "chuan bi sach", write: "viet hang loat", full: "chay het", continue: "tiep tuc viet" };
       const opts = mode === "prep" ? {} : batchWriteOpts(extra);
       const range = opts.from_ch ? ` ch${opts.from_ch}–${opts.to_ch}` : "";
-      if (!confirm(`Chay batch: ${labels[mode] || mode}${range}?\nCo the mat rat lau (9router).`)) return;
+      const modeHint = opts.write_mode === "auto"
+        ? "\nChe do TU DONG: chuong loi se retry den khi ready."
+        : "\nChe do GIAM SAT: loi de lai / dung theo checkbox.";
+      if (!confirm(`Chay batch: ${labels[mode] || mode}${range}?${modeHint}\nCo the mat rat lau (9router).`)) return;
       setBatchButtonsDisabled(true);
       showStatus(`<span class="spinner"></span> Dang bat dau batch ${labels[mode] || mode}...`, "warn");
       try {
@@ -835,6 +907,7 @@
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ mode: mode === "continue" ? "write" : mode, book: book(), ...opts }),
+          timeoutMs: LLM_TIMEOUT_MS,
         });
         if (data.log) {
           renderBatchLog({ log: data.log, running: false, ok: data.ok }, "batchLog");

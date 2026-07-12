@@ -12,6 +12,7 @@ from factory.engine.lib.narrative_schema import (
     concept_validation_errors,
     load_concept,
 )
+from factory.engine.lib.prompt_builder import load_direction
 from factory.engine.paths import workspace_dir
 
 def _out(msg: str) -> None:
@@ -94,6 +95,7 @@ def concept_check(ws: Path) -> list[str]:
 
 
 def concept_mark_ready(ws: Path) -> tuple[bool, list[str]]:
+    from factory.engine.lib.book_config import sync_chapter_count_from_concept
     from factory.engine.lib.workspace_metadata import sync_direction_from_concept
 
     concept = load_concept(ws)
@@ -103,6 +105,7 @@ def concept_mark_ready(ws: Path) -> tuple[bool, list[str]]:
     concept["concept_status"] = "ready"
     _save_concept(ws, concept)
     sync_direction_from_concept(ws, preserve_gate_status=True, force_setting=True)
+    sync_chapter_count_from_concept(ws, book=int(load_direction(ws).get("book") or 1))
     return True, []
 
 

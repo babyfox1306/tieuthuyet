@@ -1,0 +1,34 @@
+id: the-blue-hour
+book: 1
+blurb: A woman returns to the lake house where she spent one childhood summer she
+  cannot remember, and finds a one-eyed bear waiting for her — along with a small
+  girl in a blue dress who only appears in mirrors, who never speaks, and who does
+  not want her to leave a second time.
+book1_ending: 'Elena recovers the full memory of the day Tomas drowned — what she
+  did, what she failed to do, and the guilt she buried by splitting herself. She makes
+  her choice at the water''s edge: she takes the girl in blue back, becomes whole,
+  and chooses to live knowing. The central mystery is fully answered; her arc resolves.'
+target_language: en
+spice_level: 1
+spice_default: 1
+spice_badge: sweet
+total_chapters: 10
+arc:
+  act1_setup:
+  - 1
+  - 2
+  act2_complications:
+  - 3
+  - 6
+  act3_crisis:
+  - 7
+  - 8
+  act4_resolution:
+  - 9
+  - 10
+setting_hub: Ilse's inherited house
+narrative_status: approved
+spice_explicit_chapters: []
+spice_steamy_chapters: []
+bible_status: approved
+plan_status: approved

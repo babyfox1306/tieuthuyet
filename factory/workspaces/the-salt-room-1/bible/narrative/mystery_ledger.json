@@ -1,0 +1,290 @@
+{
+  "main_mystery": "What happened during the summer Nora Vance was seven, why does she have no memory of it, and why does a child's voice on Agnes Vance's old tapes keep saying Nora's name from inside the cold salt room?",
+  "truth": "Della Vance was Nora Vance's twin sister. When they were seven, Della drowned in the hotel's tidal pool while Nora stood frozen and silent. Afterward, Ruth Vance and the family erased Della from photographs, speech, and family memory to survive the grief, while Agnes Vance secretly preserved the tapes as the only proof Della existed. Della's presence manifests only through recorded sound, never as a visible figure and never as a live voice. The salt room was the twins' room, and its cold is the emotional shape of Della's erasure rather than an attacking ghost.",
+  "canonical_reveal_chapter": 10,
+  "red_herrings": [
+    {
+      "id": "RH001",
+      "name": "The hotel is haunted by an unknown child",
+      "plant_chapter": 1,
+      "payoff_chapter": 5,
+      "surface_read": "The child's voice on the tapes seems to belong to a spirit trapped in the shuttered seaside hotel.",
+      "truth_reframed": "The voice is tied to Nora's own lost childhood and to Della, the twin sister erased from Nora's memory.",
+      "note": "The haunting stays rooted in recorded sound and memory, not a visible apparition."
+    },
+    {
+      "id": "RH002",
+      "name": "Agnes Vance locked something dangerous inside the salt room",
+      "plant_chapter": 2,
+      "payoff_chapter": 7,
+      "surface_read": "The cold room, locked from the inside, suggests Agnes hid a threatening presence there.",
+      "truth_reframed": "Agnes preserved evidence there: tapes, labels, and traces of two girls. The room is not a prison for a monster but a sealed archive of Della's existence.",
+      "note": "The room's dread comes from recognition and absence, not physical attack."
+    },
+    {
+      "id": "RH003",
+      "name": "Ruth Vance is protecting Nora from a supernatural danger",
+      "plant_chapter": 3,
+      "payoff_chapter": 8,
+      "surface_read": "Ruth's refusals and evasions suggest she fears the hotel because something in it may harm Nora.",
+      "truth_reframed": "Ruth fears Nora remembering Della, the drowning, and the family's decision to erase a child from their lives.",
+      "note": "Ruth is complicit in the erasure but not the creator of a second answer to the mystery."
+    },
+    {
+      "id": "RH004",
+      "name": "Nora herself may have invented the child's voice",
+      "plant_chapter": 4,
+      "payoff_chapter": 6,
+      "surface_read": "Because Nora restores damaged audio for a living, the distorted tapes could seem like projection, pareidolia, or professional obsession.",
+      "truth_reframed": "The tapes contain concrete historical recordings from the summer Nora was seven, including evidence of two girls in the same room.",
+      "note": "The story remains psychological horror, but the clues provide real evidence rather than endless ambiguity."
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "R001",
+      "name": "The tape knows Nora",
+      "reveal_chapter": 1,
+      "reveal": "On first playback, a child's recorded voice says Nora's name, proving the tapes are not ordinary hotel archive material.",
+      "required_clues": [
+        "C001"
+      ],
+      "impact": "Opens the central mystery and establishes that sound is the haunting's only channel."
+    },
+    {
+      "id": "R002",
+      "name": "A child has been removed from the family record",
+      "reveal_chapter": 2,
+      "reveal": "Nora finds a family photograph with one child's face scratched out, confirming deliberate erasure rather than simple forgetting.",
+      "required_clues": [
+        "C002",
+        "C003"
+      ],
+      "impact": "Turns the haunting into a family mystery with physical evidence."
+    },
+    {
+      "id": "R003",
+      "name": "The room was built for two children",
+      "reveal_chapter": 4,
+      "reveal": "Nora finds domestic evidence that her childhood room held two children, including a second toothbrush and paired belongings.",
+      "required_clues": [
+        "C004",
+        "C005"
+      ],
+      "impact": "Provides a concrete partial answer: Nora was not the only child in that summer's household."
+    },
+    {
+      "id": "R004",
+      "name": "The recorded child is connected to Nora's own childhood",
+      "reveal_chapter": 5,
+      "reveal": "Nora realizes the voice on the damaged tapes includes her own childhood voice and that there were two girls in the recordings.",
+      "required_clues": [
+        "C001",
+        "C004",
+        "C006",
+        "C007"
+      ],
+      "impact": "Midpoint shift: the haunting is no longer external but bound to Nora's erased memory."
+    },
+    {
+      "id": "R005",
+      "name": "Della Vance existed",
+      "reveal_chapter": 7,
+      "reveal": "Agnes's log and tape labels identify Della Vance as the other child, confirming Nora had a twin sister whose name was removed from the family story.",
+      "required_clues": [
+        "C002",
+        "C005",
+        "C008",
+        "C009"
+      ],
+      "impact": "Gives the erased child her name while preserving the final question of what happened to her."
+    },
+    {
+      "id": "R006",
+      "name": "Ruth participated in the erasure",
+      "reveal_chapter": 8,
+      "reveal": "Nora understands that Ruth Vance knew Della existed and helped maintain the silence after the drowning.",
+      "required_clues": [
+        "C010",
+        "C011"
+      ],
+      "impact": "Makes the betrayal living and specific: Nora's blank memory was reinforced by her mother."
+    },
+    {
+      "id": "R007",
+      "name": "Della drowned in the tidal pool while Nora froze",
+      "reveal_chapter": 10,
+      "reveal": "Nora restores the final tape at the tidal pool and recovers the full memory: Della drowned while Nora stood frozen and silent, and the family erased Della afterward.",
+      "required_clues": [
+        "C006",
+        "C008",
+        "C012",
+        "C013",
+        "C014"
+      ],
+      "impact": "Closes Book 1's central mystery with one concrete answer."
+    },
+    {
+      "id": "R008",
+      "name": "Agnes erased more than one child",
+      "reveal_chapter": 10,
+      "reveal": "After Della's mystery is resolved, the last restored tape carries a second child's voice beneath Della's, a voice that is neither Nora nor Della.",
+      "required_clues": [
+        "C015"
+      ],
+      "impact": "Opens the Book 2 mystery without changing the solved truth of Della's death."
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "plant_chapter": 1,
+      "payoff_chapter": 5,
+      "clue": "During the first reel-to-reel playback, a child's voice emerges from static and says Nora's name with intimate familiarity.",
+      "surface_meaning": "A child ghost in the hotel knows Nora.",
+      "true_meaning": "The recording belongs to Nora's erased childhood and points toward Della, whose only manifestation is through recorded sound.",
+      "delivery": "reel-to-reel tape playback",
+      "quiet_wrongness": "A second breath sounds under Nora's own breathing on the tape."
+    },
+    {
+      "id": "C002",
+      "plant_chapter": 2,
+      "payoff_chapter": 7,
+      "clue": "Nora finds a family photograph where one child's face has been scratched out while the rest of the image remains intact.",
+      "surface_meaning": "Someone in the family was hated or feared.",
+      "true_meaning": "Della was deliberately removed from the visible family record.",
+      "delivery": "altered family photograph",
+      "quiet_wrongness": "Salt crusts the dry photo frame though the room has no open window."
+    },
+    {
+      "id": "C003",
+      "plant_chapter": 2,
+      "payoff_chapter": 4,
+      "clue": "The scratched-out child's hand remains visible, holding Nora's hand at the edge of the photograph.",
+      "surface_meaning": "The missing child was close to Nora.",
+      "true_meaning": "The erased child was not incidental; she stood beside Nora as a paired child.",
+      "delivery": "visual detail in photograph",
+      "quiet_wrongness": "The glass over the missing face is colder than the rest of the frame."
+    },
+    {
+      "id": "C004",
+      "plant_chapter": 3,
+      "payoff_chapter": 4,
+      "clue": "In the salt room, Nora finds a second child's toothbrush hardened with age behind a cabinet panel.",
+      "surface_meaning": "Another child once used the room.",
+      "true_meaning": "Nora's childhood space was shared with Della.",
+      "delivery": "domestic object",
+      "quiet_wrongness": "The room warms only for the length of a faint lullaby on a damaged tape, then turns cold again."
+    },
+    {
+      "id": "C005",
+      "plant_chapter": 3,
+      "payoff_chapter": 7,
+      "clue": "A tape box is labeled with two sets of initials, but one set has been scraped nearly blank.",
+      "surface_meaning": "Agnes reused or corrected an old label.",
+      "true_meaning": "Agnes recorded both girls and later hid Della's initials to protect the evidence without exposing it too easily.",
+      "delivery": "tape-box label",
+      "quiet_wrongness": "The scraped label leaves white dust like dried salt on Nora's fingertips."
+    },
+    {
+      "id": "C006",
+      "plant_chapter": 4,
+      "payoff_chapter": 5,
+      "clue": "A restored tape captures two children laughing, and one of them has Nora's childhood cadence.",
+      "surface_meaning": "Nora may have been recorded with a visiting child.",
+      "true_meaning": "Nora and Della were recorded together before Della was erased.",
+      "delivery": "restored audio",
+      "quiet_wrongness": "When Nora pauses the tape, one syllable seems to continue for half a second inside the machine noise."
+    },
+    {
+      "id": "C007",
+      "plant_chapter": 5,
+      "payoff_chapter": 5,
+      "clue": "Nora recognizes a phrase on the tape as something she still says under stress, then hears another child answer as if they shared a private rhythm.",
+      "surface_meaning": "The recording is personally connected to Nora.",
+      "true_meaning": "The voice on the tape belongs inside Nora's own childhood, and the second girl was emotionally close enough to mirror her.",
+      "delivery": "audio recognition",
+      "quiet_wrongness": "The salt room door clicks from inside at the exact moment the second child answers on the tape."
+    },
+    {
+      "id": "C008",
+      "plant_chapter": 6,
+      "payoff_chapter": 10,
+      "clue": "Agnes's log refers to a recording made near the tidal pool and marks it with the phrase 'after the girls stopped singing.'",
+      "surface_meaning": "Agnes was documenting eerie hotel sounds after a childhood incident.",
+      "true_meaning": "The tidal pool is the site of Della's drowning, and Agnes knew the recordings held the truth.",
+      "delivery": "Agnes's handwritten log",
+      "quiet_wrongness": "The page feels damp though the book has been stored in a dry drawer."
+    },
+    {
+      "id": "C009",
+      "plant_chapter": 7,
+      "payoff_chapter": 7,
+      "clue": "A log entry names Della Vance beside Nora Vance and records them as twins aged seven.",
+      "surface_meaning": "Nora had a relative or childhood companion named Della.",
+      "true_meaning": "Della was Nora's twin sister, erased from the family story.",
+      "delivery": "Agnes's log",
+      "quiet_wrongness": "The room goes silent enough that Nora can hear the tape hiss before the machine is switched on."
+    },
+    {
+      "id": "C010",
+      "plant_chapter": 7,
+      "payoff_chapter": 8,
+      "clue": "Ruth reacts to Della's name before Nora explains where she found it.",
+      "surface_meaning": "Ruth recognizes the name but wants to avoid discussing family pain.",
+      "true_meaning": "Ruth has always known Della existed and has been maintaining the erasure.",
+      "delivery": "phone call with Ruth",
+      "quiet_wrongness": "Nora's phone recording of the call catches a low hum under Ruth's silence."
+    },
+    {
+      "id": "C011",
+      "plant_chapter": 8,
+      "payoff_chapter": 8,
+      "clue": "A tape captures adult Ruth saying they should stop using Della's name because Nora will recover faster if the house does too.",
+      "surface_meaning": "Ruth was trying to protect Nora from trauma.",
+      "true_meaning": "Ruth actively participated in erasing Della and training the family into silence.",
+      "delivery": "restored tape of adult voices",
+      "quiet_wrongness": "Della's recorded child-voice is not heard here, but the tape hiss briefly shapes the rhythm of a child's breathing."
+    },
+    {
+      "id": "C012",
+      "plant_chapter": 8,
+      "payoff_chapter": 10,
+      "clue": "Nora restores a damaged section where one child calls from near the tidal pool and the other fails to answer.",
+      "surface_meaning": "The girls had an accident or argument near the water.",
+      "true_meaning": "The final moments before Della's drowning were recorded, with Nora present and unable to act.",
+      "delivery": "damaged reel segment",
+      "quiet_wrongness": "The cold in the salt room recedes only while the water sounds play."
+    },
+    {
+      "id": "C013",
+      "plant_chapter": 9,
+      "payoff_chapter": 10,
+      "clue": "Nora finds the final tape sealed in salt-stiff cloth with Agnes's instruction to restore it only at the tidal pool.",
+      "surface_meaning": "Agnes believed the location mattered to the haunting.",
+      "true_meaning": "The final tape is keyed to Nora's memory of Della's drowning and the choice to remember rather than destroy the evidence.",
+      "delivery": "hidden tape and written instruction",
+      "quiet_wrongness": "The cloth is dry but leaves a wet ring on the table."
+    },
+    {
+      "id": "C014",
+      "plant_chapter": 9,
+      "payoff_chapter": 10,
+      "clue": "The final tape contains a child's voice saying Della's name, then Nora's childhood voice going silent as water overtakes the recording.",
+      "surface_meaning": "The tape captured the worst moment of the old tragedy.",
+      "true_meaning": "Nora was present when Della drowned, froze in terror, and later survived by forgetting.",
+      "delivery": "final restored tape",
+      "quiet_wrongness": "The tape machine plays steadily despite salt crystals forming around its metal edges."
+    },
+    {
+      "id": "C015",
+      "plant_chapter": 10,
+      "payoff_chapter": 10,
+      "clue": "After Nora says Della's name aloud and the central memory resolves, the last seconds of the restored tape reveal another child's voice beneath Della's, neither Nora nor Della.",
+      "surface_meaning": "The tape contains another impossible remnant.",
+      "true_meaning": "Agnes preserved evidence of more than one erased child, opening the Book 2 mystery while leaving Della's story solved.",
+      "delivery": "final tape underlayer",
+      "quiet_wrongness": "The salt room goes cold again only after the third voice says a name Nora has never heard."
+    }
+  ]
+}

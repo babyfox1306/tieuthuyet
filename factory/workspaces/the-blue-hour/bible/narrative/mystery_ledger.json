@@ -1,0 +1,135 @@
+{
+  "main_mystery": "What did Elena do at the lake the summer she was eight, and why did she split herself to forget?",
+  "truth": "Elena was present when Tomas, a nine-year-old boy, drowned in the lake. Although she was only eight, her actions or inaction contributed to his death. The resulting guilt was so unbearable that her psyche unconsciously severed the part of her that held the memory and the emotion, leaving that 'child' behind in the lake house as a separate entity—the girl in blue. The bear Pip is a tactile anchor for the suppressed memory; touching it triggers fragmented recollections. The girl in blue is not a ghost but Elena's own fragmented childhood self, haunting her until she can integrate and accept the truth. The central mystery is fully resolved in Book 1.",
+  "canonical_reveal_chapter": 9,
+  "red_herrings": [
+    {
+      "id": "RH01",
+      "description": "The girl in blue is the ghost of a child who drowned in the lake long ago, unrelated to Elena.",
+      "introduced_chapter": 2,
+      "debunked_chapter": 5
+    },
+    {
+      "id": "RH02",
+      "description": "Pip the bear is cursed or haunted by a malignant spirit, causing the eerie events in the house.",
+      "introduced_chapter": 3,
+      "debunked_chapter": 9
+    },
+    {
+      "id": "RH03",
+      "description": "Aunt Cora was involved in a child's death and the house is filled with the vengeful remnants of her actions.",
+      "introduced_chapter": 4,
+      "debunked_chapter": 10
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "REV001",
+      "description": "Diane reveals that no girl ever existed, only Elena. This directly contradicts the ghost story and hints at Elena's fractured identity.",
+      "chapter": 3,
+      "required_clues": []
+    },
+    {
+      "id": "REV002",
+      "description": "Elena finds a hidden diary naming a boy named Tomas and alluding to a drowning accident at the lake during that summer.",
+      "chapter": 4,
+      "required_clues": [
+        "C002"
+      ]
+    },
+    {
+      "id": "REV003",
+      "description": "Elena recognizes the girl in the mirror as her own eight-year-old self, realizing they are one being separated by memory and guilt.",
+      "chapter": 5,
+      "required_clues": [
+        "C004",
+        "C005",
+        "C007"
+      ]
+    },
+    {
+      "id": "REV004",
+      "description": "Elena fully recovers the memory of Tomas's drowning: the rainy afternoon, the game by the water, Tomas slipping, Elena's attempt to save him that failed, and the terror that caused her to 'leave herself' behind.",
+      "chapter": 9,
+      "required_clues": [
+        "C001",
+        "C003",
+        "C006",
+        "C008"
+      ]
+    },
+    {
+      "id": "REV005",
+      "description": "Elena reads Cora's final diary entry, learning that her aunt underwent the same psychic split decades ago and left a shadow self unreconciled, setting up the sequel.",
+      "chapter": 10,
+      "required_clues": [
+        "C009"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "description": "Pip, a one-eyed cloth bear with a brass key sewn into its ear. The bear is a physical vessel for Elena's suppressed memory; touching it triggers fragmented memories.",
+      "plant_chapter": 1,
+      "payoff_chapter": 9,
+      "note": "Pip is found in the attic initially, but later appears downstairs. His single glass eye is a motif of partial sight/truth."
+    },
+    {
+      "id": "C002",
+      "description": "A small brass key discovered sewn into Pip's ear. It fits a locked steel box in the attic.",
+      "plant_chapter": 1,
+      "payoff_chapter": 4,
+      "note": "Elena first notices the key while holding Pip in Chapter 1, but only uses it in Chapter 4."
+    },
+    {
+      "id": "C003",
+      "description": "Elena's first flashback after touching Pip: the sound of rain, a man's urgent voice calling a name, and a wet, heavy thump. This fragment is the earliest recovered piece of the traumatic memory.",
+      "plant_chapter": 1,
+      "payoff_chapter": 9,
+      "note": "Partial immediate effect, but full context not revealed until Chapter 9."
+    },
+    {
+      "id": "C004",
+      "description": "The girl in blue appears for the first time in a mirror, silently pointing at something behind Elena (later understood to be Pip or the truth). She never speaks and only exists in reflections.",
+      "plant_chapter": 2,
+      "payoff_chapter": 5,
+      "note": "Her pointing is a recurring gesture; initially ambiguous, later seen as a direction toward the truth."
+    },
+    {
+      "id": "C005",
+      "description": "Diane March's phone call: 'There was never a girl. Only you.' She refuses to explain further and implores Elena to leave the house. This is a direct verbal clue to the truth.",
+      "plant_chapter": 3,
+      "payoff_chapter": 5,
+      "note": "This line is key to REV003; it dismantles the ghost interpretation."
+    },
+    {
+      "id": "C006",
+      "description": "An old diary hidden in a locked steel box, written by Elena herself as a child but with pages missing. It mentions a boy named Tomas and describes 'the worst thing that happened by the water,' but breaks off before the details.",
+      "plant_chapter": 4,
+      "payoff_chapter": 9,
+      "note": "The diary provides the name and confirms the drowning, but the missing pages are only filled in by the recovered memory."
+    },
+    {
+      "id": "C007",
+      "description": "A child's drawing found inside the lockbox: two stick figures by a blue expanse, one figure colored in blue with a skirt, the other with a red cap. The blue figure is crying.",
+      "plant_chapter": 4,
+      "payoff_chapter": 5,
+      "note": "The blue figure represents Elena's separated self; the red-capped figure is likely Tomas."
+    },
+    {
+      "id": "C008",
+      "description": "The recurring smell of pond water in dry rooms (attic, hallway, Elena’s bedroom). It intensifies when the girl appears or when memories surface.",
+      "plant_chapter": 2,
+      "payoff_chapter": 9,
+      "note": "Ambient atmospheric clue; its source is identified as the memory of the lake bottom when Tomas drowned."
+    },
+    {
+      "id": "C009",
+      "description": "Cora March's personal journal, found in a sealed desk drawer, describing how she 'cleaved herself in two' after a tragedy and how 'the child in the mirror' remained in the house. The final entry is dated a week before her death.",
+      "plant_chapter": 8,
+      "payoff_chapter": 10,
+      "note": "This opens the series-level mystery and provides the parallel to Elena's experience. It is discovered in Act 3 but its full implication is realized in Act 4."
+    }
+  ]
+}

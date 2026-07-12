@@ -15,9 +15,10 @@ Input JSON gồm:
 4. Phải có **surface plot** (vỏ) và **true plot** (lõi) rõ ràng ở kernel.
 5. Mystery: mỗi clue có plant_chapter + payoff_chapter; reveal lớn có required_clues.
 6. Thread: mỗi thread có opened_chapter, status, book1_resolution hoặc book2_promise.
-7. Knowledge: milestone ch1/ch10/ch25/ch36/ch50 — must_not_know_before cho twist lớn.
-8. Không blood_relative giữa hai lead romance.
-9. Thiếu thông tin trong chỉ đạo → suy luận hợp lý trong genre, nhưng ghi rõ trong field nếu assumption.
+7. Knowledge: milestones derived from `total_chapters` (5 slots: ~2%, 20%, 50%, 72%, 100% of N). Character keys `ch{milestone}` — never use fixed [1,10,25,36,50].
+8. Mọi số chương (plant, payoff, reveal, thread close, act bounds) PHẢI nằm trong [1, total_chapters]. Đọc `total_chapters` từ input — không hardcode 50.
+9. Không blood_relative giữa hai lead romance.
+10. Thiếu thông tin trong chỉ đạo → suy luận hợp lý trong genre, nhưng ghi rõ trong field nếu assumption.
 
 ## PASS = kernel
 Xuất object kernel.json:
@@ -39,6 +40,7 @@ Khớp central_mystery trong series_bible nếu có.
 
 ## PASS = knowledge_matrix
 Xuất knowledge_matrix.json:
-description, target_language, milestones [1,10,25,36,50], characters { tên: { ch1, ch10, ch25, ch36, ch50, must_not_know_before, hidden_truth } }
+description, target_language, milestones (derive 5 ints from total_chapters — see rule 7), characters { tên: { ch{m1}, ch{m2}, … must_not_know_before, hidden_truth } }
+Mỗi key ch{N} chỉ dùng N từ milestones[].
 
 Trả đúng một JSON object cho pass được yêu cầu — không bọc thêm key wrapper trừ khi schema pass yêu cầu.

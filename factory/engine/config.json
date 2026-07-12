@@ -37,20 +37,18 @@
   "avoid_models_by_role": {},
   "throttle_seconds": 4,
   "spice_level": 3,
-  "min_word_count": 1500,
+  "min_word_count": 1250,
   "max_word_count": 2200,
   "writer_max_tokens": 16384,
   "writer_short_retries": 2,
+  "writer_length_max_retries": 3,
+  "writer_content_max_retries": 2,
+  "writer_auto_max_retries": 10,
   "write_mode": "parallel",
   "story_so_far_max_chapters": 5,
   "default_target_language": "vi",
   "default_workspace": "glass-meridian",
   "active_book": 2,
-  "book_slug": "02-the-altered-name",
-  "book_slugs": {
-    "1": "01-the-glass-meridian",
-    "2": "02-the-altered-name"
-  },
   "auto_backup_on_promote": true,
   "auto_backup_on_export": true,
   "banned_phrases": [
@@ -58,6 +56,7 @@
     "không vội không nóng"
   ],
   "retry_max": 2,
+  "architect_validate_retries": 3,
   "epubcheck_jar": "F:/phanmem/epubcheck-5.3.0/epubcheck.jar",
   "epub_qc_fail_on_warnings": false,
   "export_gate_enabled": true,
@@ -65,7 +64,7 @@
   "export_gate_dup_title": "warn",
   "export_gate_near_dup": "warn",
   "export_gate_on_promote": true,
-  "min_publish_words": 1500,
+  "min_publish_words": 1250,
   "temperature": {
     "architect": 0.7,
     "outliner": 0.7,

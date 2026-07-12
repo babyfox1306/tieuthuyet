@@ -58,13 +58,17 @@ class TestCanonGuard(unittest.TestCase):
         failed_ids = [c["id"] for c in report["checks"] if not c["passed"]]
         self.assertIn("CG-02", failed_ids)
 
-    def test_cg03_catches_spice_markers(self) -> None:
+    def test_cg03_spice_keyword_scan_removed(self) -> None:
+        """Ambient 'groaned' / intimate verbs must NOT fail canon guard via regex."""
         reg = _registry_with_forbidden()
-        body = "Elias Crane pulled her close, thrusting harder as she moaned."
+        body = (
+            "The floorboards groaned under Lin Wei's weight. "
+            "Adrian Vale pulled her close, thrusting harder as she moaned."
+        )
         report = run_canon_guard("guard-test", body, chapter=3, registry=reg)
-        self.assertFalse(report["passed"])
         failed_ids = [c["id"] for c in report["checks"] if not c["passed"]]
-        self.assertIn("CG-03", failed_ids)
+        self.assertNotIn("CG-03", failed_ids)
+        self.assertTrue(report["passed"])
 
 
 if __name__ == "__main__":

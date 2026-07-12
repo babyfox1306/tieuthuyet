@@ -204,26 +204,22 @@ def cmd_approve_narrative(args: argparse.Namespace) -> None:
 
 
 def cmd_architect(args: argparse.Namespace) -> None:
-    cfg = load_config()
+    from factory.engine.lib.bible_architect import generate_bible_with_retry
+
     ws = workspace_dir(args.workspace)
     ws.mkdir(parents=True, exist_ok=True)
-    direction = load_direction(ws)
-    user = json.dumps(
-        {
-            "genre": "ngôn tình hiện đại",
-            "sub_niche": args.niche,
-            "spice_level": args.spice or cfg["spice_level"],
-            "planned_books": args.books,
-            "target_language": direction.get("target_language", cfg.get("default_target_language", "vi")),
-        },
-        ensure_ascii=False,
-    )
-    raw, log = call_9router("architect", user, max_tokens=8192, direction=direction)
-    bible = parse_json_response(raw)
-    bible["bible_status"] = "draft"
-    save_json(bible_path(ws), bible)
-    print(f"[architect] OK -> {bible_path(ws)} ({log.get('usage', {})})")
-    print("[architect] Chạy tiếp: validate-bible → approve-bible → plan")
+    result = generate_bible_with_retry(ws)
+    if result.get("ok"):
+        print(
+            f"[architect] OK -> {bible_path(ws)} "
+            f"(attempts={result.get('attempts')})"
+        )
+        print("[architect] Chạy tiếp: validate-bible → approve-bible → plan")
+        return
+    print(f"[architect] FAIL after {result.get('attempts')} attempts:")
+    for e in result.get("errors") or []:
+        safe_print(f"  - {e}")
+    raise SystemExit(1)
 
 
 def cmd_validate_bible(args: argparse.Namespace) -> None:
@@ -271,6 +267,19 @@ def cmd_approve_bible(args: argparse.Namespace) -> None:
             encoding="utf-8",
         )
     print(f"[approve-bible] bible_status=approved -> {path}")
+    from factory.engine.lib.canon_registry import scaffold_canon_registry
+
+    canon = scaffold_canon_registry(ws, force=False)
+    safe_print(f"[approve-bible] canon: {canon.get('message')}")
+
+
+def cmd_init_canon_registry(args: argparse.Namespace) -> None:
+    from factory.engine.lib.canon_registry import scaffold_canon_registry
+
+    ws = workspace_dir(args.workspace)
+    result = scaffold_canon_registry(ws, force=bool(getattr(args, "force", False)))
+    safe_print(f"[init-canon-registry] {result.get('message')}")
+    print(f"[init-canon-registry] -> {result.get('path')}")
 
 
 def cmd_outline(args: argparse.Namespace) -> None:
@@ -356,6 +365,30 @@ def load_chapter_plan(ws: Path, book: int, ch: int) -> dict:
 def build_qc_payload(ws: Path, book: int, chapter: str, chapter_num: int) -> str:
     direction = load_direction(ws)
     prior = load_prior_chapter_excerpt(ws, book, chapter_num)
+
+    # Collect concept-driven content boundaries for LLM QC comprehension check
+    must_avoid: list[str] = []
+    try:
+        from factory.engine.lib.narrative_schema import load_concept
+        concept = load_concept(ws)
+        for item in concept.get("must_avoid") or []:
+            if str(item).strip():
+                must_avoid.append(str(item).strip())
+    except Exception:
+        pass
+
+    # Also pull content_rules from bible
+    try:
+        bible = load_json(bible_path(ws))
+        for item in (bible or {}).get("content_rules") or []:
+            entry = str(item).strip()
+            if entry and entry not in must_avoid:
+                must_avoid.append(entry)
+    except Exception:
+        bible = {}
+
+    spice_max = int(direction.get("spice_max") or direction.get("spice_level") or 3)
+
     return json.dumps(
         {
             "chapter_number": chapter_num,
@@ -364,13 +397,15 @@ def build_qc_payload(ws: Path, book: int, chapter: str, chapter_num: int) -> str
             "story_state": load_state(ws, book),
             "prior_chapter_excerpt": prior,
             "target_language": direction.get("target_language"),
+            "spice_max": spice_max,
+            "content_boundaries": must_avoid,
         },
         ensure_ascii=False,
     )
 
 
 def _expand_short_patch(cfg: dict, word_count: int, attempt: int) -> str:
-    min_w = int(cfg.get("min_word_count", 1500))
+    min_w = int(cfg.get("min_word_count", 1250))
     target = cfg.get("max_word_count", 2200)
     lang = cfg.get("default_target_language", "en")
     if lang == "vi":
@@ -383,6 +418,25 @@ def _expand_short_patch(cfg: dict, word_count: int, attempt: int) -> str:
         f"\n\n[REVISION — attempt {attempt + 1}] Previous draft was only {word_count} words. "
         f"REQUIRED minimum {min_w} words (target 1600–1900, cap ~{target}). "
         "Expand with dialogue, internal monologue, and sensory detail — do NOT summarize or skip scenes."
+    )
+
+
+def _length_full_rewrite_patch(cfg: dict, word_count: int, attempt: int) -> str:
+    """Stronger than expand suffix — demand a full new draft at min length."""
+    min_w = int(cfg.get("min_word_count", 1250))
+    lang = cfg.get("default_target_language", "en")
+    if lang == "vi":
+        return (
+            f"\n\n[VIẾT LẠI TOÀN BỘ — length {attempt + 1}] "
+            f"Bản trước CHỈ {word_count}/{min_w} chữ — KHÔNG ĐẠT. "
+            f"Viết LẠI CẢ CHƯƠNG từ đầu, tối thiểu {min_w} chữ. "
+            "Cấm bản ngắn / tóm tắt. Mỗi beat trong plan phải có scene đầy đủ."
+        )
+    return (
+        f"\n\n[FULL REWRITE — length attempt {attempt + 1}] "
+        f"Previous draft was ONLY {word_count}/{min_w} words — REJECTED. "
+        f"Rewrite the ENTIRE chapter from scratch, minimum {min_w} words. "
+        "No short summaries. Every plan beat must be a full scene."
     )
 
 
@@ -399,28 +453,138 @@ def _markdown_patch(lang: str, attempt: int, samples: list[str]) -> str:
     )
 
 
+def _pov_patch(lang: str, attempt: int, count: int) -> str:
+    if lang == "vi":
+        return (
+            f"\n\n[VIẾT LẠI — lần {attempt + 1}] Bản trước dùng ngôi thứ nhất ngoài thoại "
+            f"({count} hits). Viết lại toàn bộ ở ngôi thứ BA limited. "
+            'CẤM narration "tôi/tớ/mình" ngoài đoạn hội thoại trong ngoặc kép.'
+        )
+    return (
+        f"\n\n[REVISION — attempt {attempt + 1}] Previous draft used first-person narration "
+        f"outside dialogue ({count} hits). Rewrite entirely in THIRD-PERSON limited. "
+        'NO "I/my/me" narration outside quoted dialogue.'
+    )
+
+
+def _foreign_chars_patch(lang: str, attempt: int, samples: list[str]) -> str:
+    sample = ", ".join(samples[:5]) if samples else "non-target script"
+    if lang == "vi":
+        return (
+            f"\n\n[VIẾT LẠI — lần {attempt + 1}] Bản trước có ký tự ngoại ngữ ({sample}). "
+            "Xóa hết; chỉ dùng chữ của ngôn ngữ đích."
+        )
+    return (
+        f"\n\n[REVISION — attempt {attempt + 1}] Previous draft had foreign characters ({sample}). "
+        "Remove them; write only in the target language script."
+    )
+
+
+def _content_fail_patch(lang: str, attempt: int, issues: dict) -> str:
+    """Revision hint for content_fail retries (POV, name drift, etc.)."""
+    bits: list[str] = []
+    if "pov_violation" in issues:
+        pv = issues.get("pov_violation") or {}
+        count = int(pv.get("count") or 0) if isinstance(pv, dict) else 0
+        bits.append(_pov_patch(lang, attempt, count).strip())
+    if "name_drift" in issues:
+        hits = issues.get("name_drift") or []
+        samples = []
+        for h in hits[:4]:
+            if isinstance(h, dict):
+                samples.append(f"{h.get('found')}→{h.get('canonical')}")
+        sample = ", ".join(samples) or "forbidden alias"
+        if lang == "vi":
+            bits.append(
+                f"[VIẾT LẠI — lần {attempt + 1}] Name drift ({sample}). "
+                "Chỉ dùng tên canonical trong LOCKED CANON; xóa mọi alias cấm."
+            )
+        else:
+            bits.append(
+                f"[REVISION — attempt {attempt + 1}] Name drift ({sample}). "
+                "Use ONLY canonical names from LOCKED CANON; remove forbidden aliases."
+            )
+    if "repeat" in issues:
+        phrases = ", ".join(str(p) for p in (issues.get("repeat") or [])[:3])
+        bits.append(
+            f"[REVISION — attempt {attempt + 1}] Remove banned repeated phrases: {phrases}."
+        )
+    # Generic content leftovers
+    other = [
+        k
+        for k in (issues.get("classification") or {}).get("content_fail", {})
+        if k not in ("pov_violation", "name_drift", "repeat")
+    ]
+    if other and not bits:
+        keys = ", ".join(other[:5])
+        bits.append(
+            f"[REVISION — attempt {attempt + 1}] Fix content violations: {keys}. "
+            "Obey LOCKED CANON / bible rules exactly."
+        )
+    return "\n\n" + "\n".join(bits) if bits else ""
+
+
 def _draft_chapter_prose(
     ws: Path,
     book: int,
     ch: int,
     cfg: dict,
     direction: dict,
+    *,
+    auto: bool = False,
 ) -> tuple[str, dict]:
-    """Call writer with expand-retries when machine_qc reports short."""
+    """Call writer; short → expand then full rewrite; format_only → no rewrite; content capped.
+
+    auto=True → content + length full rewrites use writer_auto_max_retries (default 10).
+    """
+    from factory.engine.lib.machine_qc import (
+        classify_machine_issues,
+        has_content_fail,
+        is_format_only_issues,
+    )
+
     base_payload = build_writer_payload(ws, book, ch, cfg)
     max_tokens = int(cfg.get("writer_max_tokens", 16384))
     short_retries = int(cfg.get("writer_short_retries", 2))
-    markdown_retries = int(cfg.get("writer_markdown_retries", 1))
+    # Full rewrites when expand patches still leave chapter under min (default 3).
+    length_max = int(cfg.get("writer_length_max_retries", 3))
+    if length_max < 1:
+        length_max = 1
+    content_max = int(cfg.get("writer_content_max_retries", 2))
+    if content_max < 1:
+        content_max = 1
+    if auto:
+        auto_max = int(cfg.get("writer_auto_max_retries", 10))
+        if auto_max < 1:
+            auto_max = 1
+        content_max = auto_max
+        length_max = auto_max
+
     chapter = ""
     m_issues: dict = {}
     expand_suffix = ""
-    markdown_suffix = ""
+    content_suffix = ""
     lang = target_language(direction, cfg)
+    content_attempts = 0
+    short_used = 0
+    length_rewrites = 0
 
-    for attempt in range(short_retries + 1):
+    max_rounds = content_max + short_retries + length_max + 2
+
+    def _meta() -> dict:
+        return {
+            "content_attempts": content_attempts,
+            "max_content_retries": content_max,
+            "short_expands": short_used,
+            "max_short_retries": short_retries,
+            "length_rewrites": length_rewrites,
+            "max_length_retries": length_max,
+        }
+
+    for _round in range(max_rounds):
         raw, _ = call_9router(
             "writer",
-            base_payload + expand_suffix + markdown_suffix,
+            base_payload + expand_suffix + content_suffix,
             max_tokens=max_tokens,
             direction=direction,
         )
@@ -436,19 +600,75 @@ def _draft_chapter_prose(
             workspace_id=ws.name,
             book=book,
         )
+        cls = classify_machine_issues(m_issues)
+        m_issues["classification"] = cls
+        m_issues["retry_meta"] = _meta()
+
         if machine_pass(m_issues):
             return chapter, m_issues
-        if "markdown" in m_issues and markdown_suffix == "" and markdown_retries > 0:
-            samples = [str(s) for s in (m_issues.get("markdown") or [])]
-            print(f"  ch_{ch:03d} MARKDOWN — retry {attempt + 1}")
-            markdown_suffix = _markdown_patch(lang, attempt, samples)
-            continue
-        if "short" not in m_issues or attempt >= short_retries:
-            return chapter, m_issues
-        wc = int(m_issues.get("word_count") or word_count_vi(chapter))
-        print(f"  ch_{ch:03d} SHORT ({wc} words) — expand retry {attempt + 1}/{short_retries}")
-        expand_suffix = _expand_short_patch(cfg, wc, attempt + 1)
 
+        # Length ALWAYS first — never treat short like format hand-fix / never stop early
+        if cls["has_length"]:
+            wc = int(m_issues.get("word_count") or word_count_vi(chapter))
+            if short_used < short_retries:
+                short_used += 1
+                print(
+                    f"  ch_{ch:03d} SHORT ({wc} words) — expand "
+                    f"{short_used}/{short_retries}"
+                )
+                expand_suffix = _expand_short_patch(cfg, wc, short_used)
+                content_suffix = ""
+                m_issues["retry_meta"] = _meta()
+                continue
+            if length_rewrites < length_max:
+                length_rewrites += 1
+                print(
+                    f"  ch_{ch:03d} SHORT ({wc} words) — FULL REWRITE "
+                    f"{length_rewrites}/{length_max} (expand chưa đủ)"
+                )
+                expand_suffix = ""
+                content_suffix = _length_full_rewrite_patch(cfg, wc, length_rewrites - 1)
+                m_issues["retry_meta"] = _meta()
+                continue
+            safe_print(
+                f"  ch_{ch:03d} LENGTH_CAP — vẫn {wc} < min sau "
+                f"{short_used} expand + {length_rewrites} rewrite — "
+                "needs_fix (KHÔNG cho qua ready; không phải lỗi dấu *)"
+            )
+            return chapter, m_issues
+
+        # Format-only (length OK) → stop; operator hand-fixes * / quotes (save tokens)
+        if is_format_only_issues(m_issues) or (
+            cls["has_format"] and not cls["has_content"]
+        ):
+            safe_print(
+                f"  ch_{ch:03d} FORMAT_FIX — no rewrite "
+                f"({', '.join(cls['format_fix'].keys())})"
+            )
+            return chapter, m_issues
+
+        # Content fail → regenerate up to writer_content_max_retries
+        if has_content_fail(m_issues):
+            content_attempts += 1
+            m_issues["retry_meta"] = _meta()
+            m_issues["retry_meta"]["content_attempts"] = content_attempts
+            if content_attempts >= content_max:
+                safe_print(
+                    f"  ch_{ch:03d} CONTENT_CAP — stop after {content_attempts}/{content_max} "
+                    f"({', '.join(cls['content_fail'].keys())})"
+                )
+                return chapter, m_issues
+            print(
+                f"  ch_{ch:03d} CONTENT — retry {content_attempts}/{content_max} "
+                f"({', '.join(cls['content_fail'].keys())})"
+            )
+            content_suffix = _content_fail_patch(lang, content_attempts - 1, m_issues)
+            expand_suffix = ""
+            continue
+
+        return chapter, m_issues
+
+    m_issues["retry_meta"] = _meta()
     return chapter, m_issues
 
 
@@ -460,7 +680,14 @@ def write_one_chapter(
     workspace_id: str,
     *,
     force: bool = False,
+    auto: bool = False,
 ) -> tuple[int, str]:
+    from factory.engine.lib.machine_qc import (
+        classify_machine_issues,
+        has_content_fail,
+        is_format_only_issues,
+    )
+
     direction = load_direction(ws)
     beat = load_chapter_plan(ws, book, ch)
     if chapter_pipeline_path(ws, book, "ready", ch).exists():
@@ -473,13 +700,40 @@ def write_one_chapter(
     _clear_chapter_pipeline(ws, book, ch)
 
     print(f"  ch_{ch:03d} writing...")
-    chapter, m_issues = _draft_chapter_prose(ws, book, ch, cfg, direction)
+    chapter, m_issues = _draft_chapter_prose(
+        ws, book, ch, cfg, direction, auto=auto
+    )
     time.sleep(cfg.get("throttle_seconds", 4))
 
     if not machine_pass(m_issues):
+        cls = m_issues.get("classification") or classify_machine_issues(m_issues)
+        reasons = format_machine_reasons(m_issues)
+
+        # Content exhausted → needs_review (operator decides). Format/length → needs_fix.
+        if has_content_fail(m_issues) and not is_format_only_issues(m_issues):
+            # Prefer content-only path to review; if also format, still review with both notes
+            chapter_pipeline_path(ws, book, "needs_review", ch).write_text(
+                chapter, encoding="utf-8"
+            )
+            save_machine_issues(issues_path(ws, book, "needs_review", ch), m_issues)
+            meta = m_issues.get("retry_meta") or {}
+            qc = {
+                "verdict": "FAIL",
+                "fail_reasons": reasons,
+                "source": "machine_content_cap",
+                "content_retries": meta.get("content_attempts"),
+                "max_content_retries": meta.get("max_content_retries"),
+                "classification": cls,
+            }
+            save_json(qc_report_path(ws, book, "needs_review", ch), qc)
+            safe_print(
+                f"  ch_{ch:03d} NEEDS_REVIEW (content_fail) — "
+                + ("; ".join(reasons) or str(list(cls.get("content_fail", {}))))
+            )
+            return ch, "needs_review"
+
         chapter_pipeline_path(ws, book, "needs_fix", ch).write_text(chapter, encoding="utf-8")
         save_machine_issues(issues_path(ws, book, "needs_fix", ch), m_issues)
-        reasons = format_machine_reasons(m_issues)
         safe_print(f"  ch_{ch:03d} NEEDS_FIX — {'; '.join(reasons) or list(m_issues.keys())}")
         return ch, "needs_fix"
 
@@ -516,8 +770,17 @@ def write_one_chapter(
         print(
             f"  ch_{ch:03d} READY (state deferred — chưa đủ chuỗi ready 1..{ch - 1}; sửa gap rồi reconcile)"
         )
-    promote_chapter(workspace_id, book, ch, auto=True)
-    print(f"  ch_{ch:03d} READY + auto-promoted (~{word_count_vi(chapter)} words)")
+    promote_out, promote_reasons = promote_chapter(workspace_id, book, ch, auto=True)
+    if promote_out is None and promote_reasons:
+        safe_print(
+            f"  ch_{ch:03d} READY nhưng promote bị chặn — "
+            + "; ".join(promote_reasons[:3])
+        )
+        print(f"  ch_{ch:03d} READY (chưa catalog — bấm Duyệt sau khi sửa) (~{word_count_vi(chapter)} words)")
+    elif promote_out is None:
+        print(f"  ch_{ch:03d} READY (catalog đã có hoặc thiếu ready file) (~{word_count_vi(chapter)} words)")
+    else:
+        print(f"  ch_{ch:03d} READY + auto-promoted (~{word_count_vi(chapter)} words)")
     return ch, "ready"
 
 
@@ -561,8 +824,11 @@ def cmd_plan(args: argparse.Namespace) -> None:
         print("[plan] BLOCKED — bible chưa approved. Chạy: validate-bible → approve-bible")
         print("        Hoặc: plan --force (không khuyến khích)")
         return
+    force_replan = bool(getattr(args, "replan", False))
     try:
-        path, n_prompts = plan_book(ws, args.book, acts=args.acts)
+        path, n_prompts = plan_book(
+            ws, args.book, acts=args.acts, force_replan=force_replan
+        )
     except RuntimeError as exc:
         print(f"[plan] BLOCKED — {exc}")
         return
@@ -716,7 +982,9 @@ def cmd_qc_export_gate(args: argparse.Namespace) -> None:
 
 def cmd_qc_epub(args: argparse.Namespace) -> None:
     cfg = load_config()
-    book_slug = args.book_slug or cfg.get("book_slug", "01-hop-dong-co-gia")
+    book_slug = args.book_slug or resolve_book_slug(
+        args.workspace, int(cfg.get("active_book") or 1), cfg=cfg
+    )
     if args.epub:
         epub = Path(args.epub)
         if not epub.is_absolute():
@@ -965,9 +1233,20 @@ def main() -> None:
     p_plan.add_argument("--book", type=int, default=1)
     p_plan.add_argument("--acts", default="all", help="all hoặc 4-12")
     p_plan.add_argument("--force", action="store_true", help="bỏ qua bible approved")
+    p_plan.add_argument(
+        "--replan",
+        action="store_true",
+        help="xóa chapter_plans hiện tại và sinh lại toàn bộ (Tạo lại plan)",
+    )
 
     sub.add_parser("validate-bible", parents=[parent])
     sub.add_parser("approve-bible", parents=[parent])
+    p_icr = sub.add_parser("init-canon-registry", parents=[parent])
+    p_icr.add_argument(
+        "--force",
+        action="store_true",
+        help="ghi đè canon_registry.yaml nếu đã có",
+    )
 
     p_dn = sub.add_parser("develop-narrative", parents=[parent])
     p_dn.add_argument(
@@ -1085,6 +1364,7 @@ def main() -> None:
         "architect": cmd_architect,
         "validate-bible": cmd_validate_bible,
         "approve-bible": cmd_approve_bible,
+        "init-canon-registry": cmd_init_canon_registry,
         "develop-narrative": cmd_develop_narrative,
         "concept": cmd_concept,
         "validate-narrative": cmd_validate_narrative,

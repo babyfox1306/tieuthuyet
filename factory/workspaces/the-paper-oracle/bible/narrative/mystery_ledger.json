@@ -1,0 +1,115 @@
+{
+  "main_mystery": "Does the machine foresee, or choose?",
+  "truth": "The machine is not prophetic. It prints the name of the patient Iris Callahan will unknowingly let die through a clinical decision that night. It reflects her hand, not the future. The machine responds to her choices, not fate.",
+  "canonical_reveal_chapter": 8,
+  "red_herrings": [
+    {
+      "id": "RH001",
+      "description": "The machine is a supernatural entity or ghost that can predict the future.",
+      "planted_chapter": 1,
+      "debunked_chapter": 8
+    },
+    {
+      "id": "RH002",
+      "description": "The machine is a warning system from the future that can be outrun if Iris acts fast enough.",
+      "planted_chapter": 2,
+      "debunked_chapter": 5
+    },
+    {
+      "id": "RH003",
+      "description": "The machine is cursed by the hospital's past or connected to a malevolent force.",
+      "planted_chapter": 6,
+      "debunked_chapter": 8
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "R001",
+      "chapter": 3,
+      "description": "Every name printed so far corresponds to a patient Iris personally triaged. Marguerite mutters: 'It only ever prints your handwriting.'",
+      "required_clues": [
+        "C001",
+        "C002"
+      ]
+    },
+    {
+      "id": "R002",
+      "chapter": 6,
+      "description": "Marguerite's old logbook reveals the same machine 30 years ago with the same pattern; she quit nursing rather than confront the truth.",
+      "required_clues": [
+        "C001",
+        "C003"
+      ]
+    },
+    {
+      "id": "R003",
+      "chapter": 8,
+      "description": "The machine reflects Iris's choices: when she does nothing, no slip is fulfilled. It prints the name of the person she will let die by her clinical decision. It named last year's death too — she had a choice.",
+      "required_clues": [
+        "C004",
+        "C005",
+        "C006"
+      ]
+    },
+    {
+      "id": "R004",
+      "chapter": 9,
+      "description": "The machine prints IRIS CALLAHAN with a time. Iris stops fighting, accepts the death she cannot prevent, and burns the machine. The loop is broken.",
+      "required_clues": [
+        "C001",
+        "C004",
+        "C005"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "type": "incident",
+      "description": "First slip prints 'Lena' and '03:47' before the girl arrives. Iris discards it; the child arrives at 03:12.",
+      "plant_chapter": 1,
+      "payoff_chapter": 8,
+      "note": "Establishes the machine's pattern; later understood as Iris's own triage decision that will lead to the predicted outcome."
+    },
+    {
+      "id": "C002",
+      "type": "dialogue",
+      "description": "Marguerite Vole: 'It only ever prints your handwriting.'",
+      "plant_chapter": 3,
+      "payoff_chapter": 8,
+      "note": "First hint that the machine is tied to Iris personally, not fate."
+    },
+    {
+      "id": "C003",
+      "type": "object",
+      "description": "Marguerite's old logbook shows the same machine 30 years ago, same pattern: each slip matched a patient the nurse triaged. She quit nursing afterward.",
+      "plant_chapter": 6,
+      "payoff_chapter": 8,
+      "note": "Confirms historical consistency and that the machine's behavior repeats with a different nurse."
+    },
+    {
+      "id": "C004",
+      "type": "test",
+      "description": "Iris does nothing, lets a night pass by protocol — no slip is fulfilled. Evidence that the machine responds to her choices.",
+      "plant_chapter": 7,
+      "payoff_chapter": 8,
+      "note": "Direct evidence that the machine is not fate-based; it reflects her inaction."
+    },
+    {
+      "id": "C005",
+      "type": "memory",
+      "description": "Iris recalls the patient who died a year ago on her shift; she filed it 'unavoidable.' The machine later reveals she had a choice.",
+      "plant_chapter": 1,
+      "payoff_chapter": 8,
+      "note": "Links past guilt to current mystery; payoff when truth shows she caused that death too."
+    },
+    {
+      "id": "C006",
+      "type": "incident",
+      "description": "A second slip prints another patient's name and time after Iris tries to warn Lena's father. The patient dies at the printed time despite Iris's efforts.",
+      "plant_chapter": 2,
+      "payoff_chapter": 5,
+      "note": "Shows that trying to intervene directly may not change the outcome; plants doubt that the machine can be outrun. Payoff when Iris's resistance in ch4-5 causes death."
+    }
+  ]
+}

@@ -29,8 +29,6 @@ from factory.engine.lib.narrative_schema import (
     validate_narrative_assets,
 )
 from factory.engine.lib.prompt_builder import prompt_path, render_all_prompts
-from factory.engine.lib.write_guards import best_effort_catch_up_state, state_chain_complete
-from factory.engine.lib.state_updater import update_state_after_pass
 from factory.engine.paths import (
     bible_path,
     book_catalog_dir,
@@ -67,13 +65,18 @@ def _catalog_is_clean(workspace_id: str, book: int, ch: int) -> bool:
     return catalog_chapter_is_clean(meta)
 
 
+def _chapter_done(status: str) -> bool:
+    """True when chapter is publish-clean (catalog) or pipeline-ready awaiting approve."""
+    return status in ("catalog", "ready")
+
+
 def _chapter_status(ws: Path, book: int, ch: int, *, workspace_id: str | None = None) -> str:
     wid = workspace_id or ws.name
     cat_path = _catalog_chapter_path(wid, book, ch)
     if cat_path:
         meta, _ = parse_markdown(cat_path)
         if catalog_chapter_is_clean(meta):
-            return "ready"
+            return "catalog"
         return "needs_fix"
     for bucket in ("ready", "needs_review", "needs_fix", "draft"):
         if chapter_pipeline_path(ws, book, bucket, ch).exists():
@@ -99,7 +102,7 @@ def _chapter_text(ws: Path, book: int, ch: int) -> tuple[str | None, str]:
     try:
         slug = resolve_book_slug(wid, book, cfg=cfg)
     except ValueError:
-        slug = cfg.get("book_slug", "01-hop-dong-co-gia")
+        slug = f"{book:02d}-{wid}"
     cat_dir = book_catalog_dir(ws.name, slug) / "chapters"
     if cat_dir.exists():
         for f in sorted(cat_dir.glob("*.md")):
@@ -132,13 +135,18 @@ def pipeline_status(workspace_id: str, book: int | None = None) -> dict[str, Any
     if plan_path.exists():
         planned = len(json.loads(plan_path.read_text(encoding="utf-8")).get("chapter_plans", []))
 
-    counts = {b: 0 for b in ("ready", "needs_review", "needs_fix", "draft", "prompt_only", "missing")}
+    counts = {
+        b: 0
+        for b in ("catalog", "ready", "needs_review", "needs_fix", "draft", "prompt_only", "missing")
+    }
     in_catalog = 0
     blocked: list[dict[str, Any]] = []
     for ch in range(1, total + 1):
         st = _chapter_status(ws, book, ch, workspace_id=workspace_id)
         counts[st] = counts.get(st, 0) + 1
-        if promoted_marker(ws, book, ch).exists() or _catalog_has_chapter(workspace_id, book, ch):
+        if st == "catalog" or promoted_marker(ws, book, ch).exists() or _catalog_has_chapter(
+            workspace_id, book, ch
+        ):
             in_catalog += 1
         if st in ("needs_fix", "needs_review"):
             block = chapter_block_info(ws, book, st, ch)
@@ -156,6 +164,10 @@ def pipeline_status(workspace_id: str, book: int | None = None) -> dict[str, Any
     if bible_path(ws).exists():
         bible_errors = validate_bible(json.loads(bible_path(ws).read_text(encoding="utf-8")))
 
+    from factory.engine.lib.canon_registry import canon_registry_path
+
+    canon_exists = canon_registry_path(ws).exists()
+
     gates = {
         "concept": {
             "status": concept.get("concept_status", "missing"),
@@ -171,6 +183,10 @@ def pipeline_status(workspace_id: str, book: int | None = None) -> dict[str, Any
             "ok": bible_path(ws).exists() and not bible_errors,
             "errors": bible_errors[:5],
         },
+        "canon": {
+            "status": "ready" if canon_exists else "missing",
+            "ok": canon_exists,
+        },
         "plan": {
             "status": direction.get("plan_status", "draft"),
             "ok": plan_is_approved(ws),
@@ -178,23 +194,31 @@ def pipeline_status(workspace_id: str, book: int | None = None) -> dict[str, Any
             "total": total,
         },
         "write": {
-            "ready": counts["ready"],
+            "ready": counts["ready"] + counts["catalog"],
             "in_catalog": in_catalog,
             "total": total,
         },
     }
 
     next_steps: list[str] = []
+    written = counts["ready"] + counts["catalog"]
     if not gates["concept"]["ok"]:
         next_steps.append("concept: điền form → sẵn sàng")
     elif not gates["narrative"]["ok"]:
         next_steps.append("narrative: sinh AI → duyệt → approve-narrative")
     elif not gates["bible"]["ok"]:
         next_steps.append("bible: architect → validate → approve-bible")
+    elif not gates["canon"]["ok"]:
+        next_steps.append("canon: tạo canon_registry.yaml (init-canon-registry)")
     elif not gates["plan"]["ok"]:
-        next_steps.append("plan: plan → fix-plans → approve-plan")
-    elif counts["ready"] < total:
-        next_steps.append(f"write: viết chương ({counts['ready']}/{total} ready)")
+        next_steps.append("plan: plan → (replan nếu lệch) → fix-plans → approve-plan")
+    elif in_catalog < total:
+        if counts["ready"] > 0:
+            next_steps.append(
+                f"approve: duyệt → catalog ({in_catalog}/{total}; {counts['ready']} ready chờ duyệt)"
+            )
+        else:
+            next_steps.append(f"write: viết chương ({written}/{total} ready)")
     else:
         next_steps.append("export: EPUB/DOCX")
 
@@ -234,7 +258,7 @@ def _catalog_chapter_path(workspace_id: str, book: int, ch: int) -> Path | None:
     try:
         slug = resolve_book_slug(workspace_id, book, cfg=cfg)
     except ValueError:
-        slug = cfg.get("book_slug", "01-hop-dong-co-gia")
+        slug = f"{book:02d}-{workspace_id}"
     cat_dir = book_catalog_dir(workspace_id, slug) / "chapters"
     if not cat_dir.exists():
         return None
@@ -273,7 +297,8 @@ def chapter_get(workspace_id: str, ch: int, book: int = 1) -> dict:
     ws = workspace_dir(workspace_id)
     text, source = _chapter_text(ws, book, ch)
     plan = load_chapter_plan(ws, book, ch)
-    status = _chapter_status(ws, book, ch)
+    status = _chapter_status(ws, book, ch, workspace_id=workspace_id)
+    in_cat = status == "catalog" or _catalog_has_chapter(workspace_id, book, ch)
     block = chapter_block_info(ws, book, status, ch)
     prompt = ""
     pp = prompt_path(ws, book, ch)
@@ -282,6 +307,7 @@ def chapter_get(workspace_id: str, ch: int, book: int = 1) -> dict:
     return {
         "chapter": ch,
         "status": status,
+        "in_catalog": in_cat,
         "source": source,
         "title": plan.get("title", ""),
         "plan_summary": plan.get("one_line_summary", ""),
@@ -308,18 +334,29 @@ def chapter_write(workspace_id: str, ch: int, book: int = 1) -> dict:
 
 
 def chapter_approve(workspace_id: str, ch: int, book: int = 1) -> dict:
-    """User đọc xong → duyệt vào catalog (kể cả needs_review)."""
+    """User đọc xong → duyệt vào catalog (kể cả needs_review).
+
+    Promote first; state catch-up is best-effort AFTER so LLM hangs never block Duyệt.
+    """
     ws = workspace_dir(workspace_id)
     cat_existing = _catalog_chapter_path(workspace_id, book, ch)
-    if promoted_marker(ws, book, ch).exists() or cat_existing:
+    # Only short-circuit when the catalog file actually exists.
+    # Stale .promoted markers without a catalog file must re-promote.
+    if cat_existing:
+        marker = promoted_marker(ws, book, ch)
+        if not marker.exists():
+            marker.write_text(datetime.now(timezone.utc).isoformat(), encoding="utf-8")
         meta = chapter_get(workspace_id, ch, book)
         return {
             "ok": True,
             "already_promoted": True,
             "message": "chương đã có trong catalog",
-            "catalog_path": str(cat_existing) if cat_existing else None,
+            "catalog_path": str(cat_existing),
             **meta,
         }
+    marker = promoted_marker(ws, book, ch)
+    if marker.exists() and not cat_existing:
+        marker.unlink(missing_ok=True)
 
     text = None
     for bucket in ("needs_review", "needs_fix", "draft"):
@@ -333,12 +370,8 @@ def chapter_approve(workspace_id: str, ch: int, book: int = 1) -> dict:
     if not ready.exists():
         return {"ok": False, "error": "không có chương để duyệt — viết trước"}
     text = text or ready.read_text(encoding="utf-8")
-    best_effort_catch_up_state(ws, book, ch + 1)
-    if state_chain_complete(ws, book, ch):
-        try:
-            update_state_after_pass(ws, ch, text, book=book)
-        except Exception:
-            pass
+
+    # Catalog first — never wait on state_updater / OmniRoute (that hung Duyệt forever).
     out, block_reasons = promote_chapter(workspace_id, book, ch, auto=False)
     meta = chapter_get(workspace_id, ch, book)
     if out is None:
@@ -360,6 +393,24 @@ def chapter_approve(workspace_id: str, ch: int, book: int = 1) -> dict:
             "export_gate_reasons": block_reasons,
             **meta,
         }
+
+    # Lightweight state bump only (no LLM). Full catch-up is optional offline.
+    try:
+        from factory.engine.lib.state_updater import load_state, save_state
+
+        st = load_state(ws, book)
+        cur = int(st.get("current_chapter") or 0)
+        if ch > cur:
+            st["current_chapter"] = ch
+            st["current_book"] = book
+            save_state(ws, book, st)
+    except Exception as exc:
+        safe_print = __import__(
+            "factory.engine.lib.catalog", fromlist=["safe_print"]
+        ).safe_print
+        safe_print(f"  [approve] WARN state bump failed: {exc}")
+
+    meta = chapter_get(workspace_id, ch, book)
     return {
         "ok": True,
         "catalog_path": str(out),
@@ -410,30 +461,29 @@ def run_pipeline_step(workspace_id: str, action: str, book: int = 1) -> dict:
             return {"ok": True, **pipeline_status(workspace_id, book)}
 
         if action == "architect":
-            concept = load_concept(ws)
-            user = json.dumps(
-                {
-                    "genre": "romance thriller",
-                    "sub_niche": direction.get("narrative_profile", "romance_thriller"),
-                    "spice_level": cfg["spice_level"],
-                    "planned_books": 5,
-                    "target_language": direction.get("target_language", "vi"),
-                    "concept_title": concept.get("title"),
-                    "concept_logline": concept.get("logline"),
-                    "author_directive": (concept.get("author_directive") or "")[:4000],
-                },
-                ensure_ascii=False,
-            )
-            raw, _ = call_9router("architect", user, max_tokens=8192, direction=direction)
-            bible = parse_json_response(raw)
-            bible["bible_status"] = "draft"
-            save_json(bible_path(ws), bible)
+            from factory.engine.lib.bible_architect import generate_bible_with_retry
+
+            result = generate_bible_with_retry(ws)
+            direction = _load_direction(ws)
             direction["bible_status"] = "draft"
             (ws / "direction.yaml").write_text(
                 yaml.dump(direction, allow_unicode=True, default_flow_style=False, sort_keys=False),
                 encoding="utf-8",
             )
-            return {"ok": True, **pipeline_status(workspace_id, book)}
+            if not result.get("ok"):
+                return {
+                    "ok": False,
+                    "error": "architect failed validate-bible after retries",
+                    "errors": result.get("errors") or [],
+                    "attempts": result.get("attempts"),
+                    "attempts_log": result.get("attempts_log"),
+                    **pipeline_status(workspace_id, book),
+                }
+            return {
+                "ok": True,
+                "attempts": result.get("attempts"),
+                **pipeline_status(workspace_id, book),
+            }
 
         if action == "validate-bible":
             bible = json.loads(bible_path(ws).read_text(encoding="utf-8"))
@@ -452,9 +502,26 @@ def run_pipeline_step(workspace_id: str, action: str, book: int = 1) -> dict:
                 yaml.dump(direction, allow_unicode=True, default_flow_style=False, sort_keys=False),
                 encoding="utf-8",
             )
-            return {"ok": True, **pipeline_status(workspace_id, book)}
+            from factory.engine.lib.canon_registry import scaffold_canon_registry
+
+            canon = scaffold_canon_registry(ws, force=False)
+            return {
+                "ok": True,
+                "canon_registry": canon,
+                **pipeline_status(workspace_id, book),
+            }
+
+        if action == "init-canon-registry":
+            from factory.engine.lib.canon_registry import scaffold_canon_registry
+
+            result = scaffold_canon_registry(ws, force=False)
+            return {**result, **pipeline_status(workspace_id, book)}
 
         if action == "plan":
+            from factory.engine.lib.canon_registry import canon_registry_path, scaffold_canon_registry
+
+            if not canon_registry_path(ws).exists():
+                scaffold_canon_registry(ws, force=False)
             if direction.get("narrative_profile") and not narrative_is_approved(direction):
                 return {"ok": False, "error": "narrative chưa approved"}
             bible = json.loads(bible_path(ws).read_text(encoding="utf-8"))
@@ -463,6 +530,20 @@ def run_pipeline_step(workspace_id: str, action: str, book: int = 1) -> dict:
             plan_book(ws, book)
             fix_plans(ws, book, use_llm=True)
             return {"ok": True, **pipeline_status(workspace_id, book)}
+
+        if action == "replan":
+            from factory.engine.lib.canon_registry import canon_registry_path, scaffold_canon_registry
+
+            if not canon_registry_path(ws).exists():
+                scaffold_canon_registry(ws, force=False)
+            if direction.get("narrative_profile") and not narrative_is_approved(direction):
+                return {"ok": False, "error": "narrative chưa approved"}
+            bible = json.loads(bible_path(ws).read_text(encoding="utf-8"))
+            if not bible_is_approved(bible, direction):
+                return {"ok": False, "error": "bible chưa approved"}
+            plan_book(ws, book, force_replan=True)
+            fix_plans(ws, book, use_llm=True)
+            return {"ok": True, "replanned": True, **pipeline_status(workspace_id, book)}
 
         if action == "fix-plans":
             fix_plans(ws, book, use_llm=True)
@@ -572,6 +653,7 @@ def _prep_steps(status: dict, *, prompts_ready: bool = False) -> list[str]:
     if (
         g.get("narrative", {}).get("ok")
         and g.get("bible", {}).get("ok")
+        and g.get("canon", {}).get("ok")
         and g.get("plan", {}).get("ok")
         and prompts_ready
     ):
@@ -581,6 +663,8 @@ def _prep_steps(status: dict, *, prompts_ready: bool = False) -> list[str]:
         steps.extend(["develop-narrative", "validate-narrative", "approve-narrative"])
     if g.get("bible", {}).get("status") != "approved":
         steps.extend(["architect", "validate-bible", "approve-bible"])
+    if not g.get("canon", {}).get("ok"):
+        steps.append("init-canon-registry")
     planned = int(g.get("plan", {}).get("chapters_planned", 0))
     total = int(g.get("plan", {}).get("total", 50))
     if planned < total or not g.get("plan", {}).get("ok"):
@@ -675,9 +759,9 @@ def start_batch_prep(workspace_id: str, book: int = 1) -> dict:
 
 
 def _first_incomplete_chapter(ws: Path, book: int, from_ch: int, to_ch: int) -> int:
-    """First chapter in range that still needs writing (not ready)."""
+    """First chapter in range that still needs writing (not ready/catalog)."""
     for ch in range(from_ch, to_ch + 1):
-        if _chapter_status(ws, book, ch) != "ready":
+        if not _chapter_done(_chapter_status(ws, book, ch)):
             return ch
     return from_ch
 
@@ -689,26 +773,57 @@ def _run_batch_write_loop(
     to_ch: int,
     *,
     stop_on_review: bool = False,
+    write_mode: str = "supervised",
 ) -> None:
+    """Write chapters.
+
+    supervised — leave needs_fix/needs_review; optional stop_on_review.
+    auto — content/length retries up to writer_auto_max_retries (default 10);
+    format_fix never rewritten.
+    """
     ws = workspace_dir(workspace_id)
     cfg = load_config()
-    direction = _load_direction(ws)
     total = get_total_chapters(workspace_id, book)
     to_ch = min(to_ch, total)
-    log: list[str] = [
-        f"Viet chuong {from_ch}–{to_ch}..."
-        + (" (dung khi QC fail)" if stop_on_review else " (chay het — loi de lai trong pipeline)")
-    ]
+    auto = str(write_mode or "supervised").strip().lower() == "auto"
+    if auto:
+        content_max = int(cfg.get("writer_auto_max_retries", 10))
+    else:
+        content_max = int(cfg.get("writer_content_max_retries", 2))
+    if content_max < 1:
+        content_max = 1
+
+    import json
+    import time
+
+    from factory.engine.lib.machine_qc import is_format_only_issues
+    from factory.engine.lib.write_guards import WriteBlockedError
+    from factory.engine.paths import pipeline_dir
+
+    mode_label = (
+        f"AUTO — retry toi da {content_max}/chuong (content+length); "
+        "format_fix khong rewrite"
+        if auto
+        else (
+            "giam sat — dung khi QC fail"
+            if stop_on_review
+            else "giam sat — loi de lai, chay het"
+        )
+    )
+    log: list[str] = [f"Viet chuong {from_ch}–{to_ch} ({mode_label})"]
+    chapter_retry_counts: dict[int, int] = {}
     _write_batch_progress(
         ws,
         {
             "running": True,
             "phase": "write",
+            "write_mode": "auto" if auto else "supervised",
             "from_ch": from_ch,
             "to_ch": to_ch,
             "current_ch": from_ch,
             "written": 0,
             "log": log,
+            "chapter_retry_counts": chapter_retry_counts,
         },
     )
     written = 0
@@ -717,101 +832,288 @@ def _run_batch_write_loop(
     issue_chapters: list[int] = []
     skipped_chapters: list[int] = []
     err_msg = ""
-    try:
-        from factory.engine.lib.write_guards import WriteBlockedError
 
-        for ch in range(from_ch, to_ch + 1):
-            st = _chapter_status(ws, book, ch, workspace_id=workspace_id)
-            if st == "ready":
-                skipped_ready += 1
-                log.append(f"⊘ ch{ch}: da co (ready) — bo qua")
-                _write_batch_progress(
-                    ws,
-                    {
-                        "running": True,
-                        "phase": "write",
-                        "current_ch": ch,
-                        "written": written,
-                        "issue_chapters": issue_chapters,
-                        "log": list(log),
-                    },
+    def _progress(**extra: object) -> None:
+        payload = {
+            "running": True,
+            "phase": "write",
+            "write_mode": "auto" if auto else "supervised",
+            "from_ch": from_ch,
+            "to_ch": to_ch,
+            "written": written,
+            "issue_chapters": list(issue_chapters),
+            "skipped_chapters": list(skipped_chapters),
+            "log": list(log),
+            "chapter_retry_counts": dict(chapter_retry_counts),
+        }
+        payload.update(extra)
+        _write_batch_progress(ws, payload)
+
+    def _load_issues(bucket: str, ch: int) -> dict:
+        path = pipeline_dir(ws, book, bucket) / f"ch_{ch:03d}_issues.json"
+        if not path.exists():
+            return {}
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            return data if isinstance(data, dict) else {}
+        except (json.JSONDecodeError, OSError):
+            return {}
+
+    def _should_skip_auto_retry(ch: int, st: str) -> str | None:
+        """Return stop reason if auto mode must not rewrite this chapter again."""
+        if st == "needs_fix":
+            issues = _load_issues("needs_fix", ch)
+            cls = (issues or {}).get("classification") or {}
+            # Chỉ format (dấu * / quotes…) → user sửa tay, KHÔNG rewrite cả chương
+            if not issues or is_format_only_issues(issues) or cls.get("format_only"):
+                return (
+                    "format_only (vd. dấu *) — needs_fix, user sửa tay, "
+                    "AUTO không rewrite (tiết kiệm token)"
                 )
-                continue
-            if st in ("needs_review", "needs_fix", "draft"):
-                log.append(f"↻ ch{ch}: viet lai (dang {st})")
-            if not prompt_path(ws, book, ch).exists():
-                skipped_chapters.append(ch)
-                log.append(f"⊘ ch{ch}: thieu prompt — bo qua, tiep tuc")
-                if stop_on_review:
-                    failed_ch = ch
-                    err_msg = "thieu prompt"
-                    break
-                continue
-            log.append(f"▶ ch{ch} dang viet...")
-            _write_batch_progress(
-                ws,
-                {
-                    "running": True,
-                    "phase": "write",
-                    "current_ch": ch,
-                    "written": written,
-                    "issue_chapters": issue_chapters,
-                    "log": list(log),
-                },
+            if cls.get("has_length") or "short" in (issues or {}):
+                return (
+                    "length_fail — dưới min từ (đã thử expand/rewrite trong write); "
+                    "KHÔNG cho qua ready — bấm Viết lại để thử thêm, không phải sửa dấu *"
+                )
+            return "needs_fix — AUTO dừng, không rewrite tiếp"
+        if st == "needs_review":
+            issues = _load_issues("needs_review", ch)
+            meta = issues.get("retry_meta") or {}
+            qc_path = pipeline_dir(ws, book, "needs_review") / f"ch_{ch:03d}_qc.json"
+            qc: dict = {}
+            if qc_path.exists():
+                try:
+                    raw = json.loads(qc_path.read_text(encoding="utf-8"))
+                    if isinstance(raw, dict):
+                        qc = raw
+                except (json.JSONDecodeError, OSError):
+                    pass
+            used = int(
+                meta.get("content_attempts")
+                or qc.get("content_retries")
+                or chapter_retry_counts.get(ch)
+                or content_max
             )
-            try:
-                _, status = write_one_chapter(ws, book, ch, cfg, workspace_id)
-                block = chapter_block_info(ws, book, status, ch)
-                status_label = format_status_with_reason(status, block.get("reason_summary", ""))
-                log.append(f"✓ ch{ch}: {status_label}")
-                if status not in ("skipped",):
-                    written += 1
-                if status in ("needs_fix", "needs_review"):
-                    issue_chapters.append(ch)
-                    for reason in block.get("reasons") or []:
-                        log.append(f"  → {reason}")
-                    if stop_on_review:
+            if used >= content_max or qc.get("source") == "machine_content_cap":
+                return (
+                    f"content_fail cap {used}/{content_max} — STOP, operator quyết định"
+                )
+        return None
+
+    def _write_until_ready(ch: int) -> str:
+        """Write once. Format → needs_fix (no rewrite). Content retries happen inside write_one_chapter."""
+        nonlocal written
+
+        st = _chapter_status(ws, book, ch, workspace_id=workspace_id)
+        if _chapter_done(st):
+            return "skipped"
+
+        # Never auto-rewrite chapters already waiting for the operator
+        if auto and st in ("needs_fix", "needs_review"):
+            stop = _should_skip_auto_retry(ch, st)
+            if stop:
+                log.append(f"⏸ ch{ch}: {stop}")
+                return st
+            # Legacy needs_review without cap marker: still don't infinite-loop
+            log.append(f"⏸ ch{ch}: {st} — STOP (operator; khong auto-rewrite)")
+            return st
+
+        chapter_retry_counts[ch] = chapter_retry_counts.get(ch, 0) + 1
+        attempt_n = chapter_retry_counts[ch]
+        force = st in ("needs_fix", "needs_review", "draft")
+        log.append(
+            f"▶ ch{ch} dang viet... "
+            f"(write #{attempt_n}; content cap {content_max} ben trong writer)"
+        )
+        _progress(current_ch=ch, attempt=attempt_n, chapter_retry_counts=chapter_retry_counts)
+        try:
+            _, status = write_one_chapter(
+                ws, book, ch, cfg, workspace_id, force=force, auto=auto
+            )
+        except WriteBlockedError as exc:
+            log.append(f"⊘ ch{ch}: blocked — {exc}")
+            return "blocked"
+        except Exception as exc:
+            log.append(f"✗ ch{ch}: {exc}")
+            if not auto:
+                raise
+            return "error"
+
+        block = chapter_block_info(ws, book, status, ch)
+        status_label = format_status_with_reason(status, block.get("reason_summary", ""))
+        # Pull content retry count from issues if present
+        issues = _load_issues(
+            "needs_review" if status == "needs_review" else "needs_fix", ch
+        )
+        meta = issues.get("retry_meta") or {}
+        c_att = meta.get("content_attempts")
+        retry_bit = f" [content_retries={c_att}/{content_max}]" if c_att is not None else ""
+
+        if status == "skipped":
+            log.append(f"⊘ ch{ch}: da ready — bo qua")
+            return "skipped"
+        if status == "ready":
+            written += 1
+            log.append(f"✓ ch{ch}: ready + catalog{retry_bit}")
+            return "ready"
+
+        log.append(f"⚠ ch{ch}: {status_label}{retry_bit}")
+        for reason in block.get("reasons") or []:
+            log.append(f"  → {reason}")
+        if status == "needs_fix":
+            issues_nf = _load_issues("needs_fix", ch)
+            if is_format_only_issues(issues_nf) or (issues_nf.get("classification") or {}).get(
+                "format_only"
+            ):
+                log.append(
+                    f"⏸ ch{ch}: chỉ lỗi format (vd. *) → needs_fix — "
+                    "user sửa tay, AUTO không rewrite"
+                )
+            elif (issues_nf.get("classification") or {}).get("has_length"):
+                log.append(
+                    f"⏸ ch{ch}: dưới min từ → needs_fix — "
+                    "KHÔNG cho qua ready (đã expand trong write)"
+                )
+            else:
+                log.append(f"⏸ ch{ch}: needs_fix — STOP")
+        elif status == "needs_review":
+            log.append(
+                f"⏸ ch{ch}: needs_review — STOP "
+                f"(content cap {content_max}; operator quyết định)"
+            )
+        return status
+
+    try:
+        pending = list(range(from_ch, to_ch + 1))
+        sweep = 0
+        while pending:
+            sweep += 1
+            if sweep > 1:
+                if not auto:
+                    break
+                log.append(f"--- AUTO sweep #{sweep}: con {len(pending)} chuong chua ready")
+                _progress(current_ch=pending[0], sweep=sweep)
+
+            still_bad: list[int] = []
+            for ch in pending:
+                st = _chapter_status(ws, book, ch, workspace_id=workspace_id)
+                if _chapter_done(st):
+                    skipped_ready += 1
+                    log.append(f"⊘ ch{ch}: da co ({st}) — bo qua")
+                    _progress(current_ch=ch)
+                    continue
+                if not prompt_path(ws, book, ch).exists():
+                    skipped_chapters.append(ch)
+                    log.append(f"⊘ ch{ch}: thieu prompt — bo qua")
+                    if stop_on_review and not auto:
                         failed_ch = ch
-                        err_msg = status_label
-                        log.append(f"⏸ dung batch — sua ch{ch} truoc khi tiep")
+                        err_msg = "thieu prompt"
+                        pending = []
                         break
-                    log.append(f"⚠ ch{ch}: {status} — de lai, tiep tuc")
-            except WriteBlockedError as exc:
-                skipped_chapters.append(ch)
-                log.append(f"⊘ ch{ch}: blocked — {exc}")
-                log.append("  bo qua, tiep tuc chuong sau")
-            except Exception as exc:
-                skipped_chapters.append(ch)
-                log.append(f"✗ ch{ch}: {exc}")
+                    continue
+                if st in ("needs_review", "needs_fix") and auto:
+                    stop = _should_skip_auto_retry(ch, st)
+                    log.append(f"⏸ ch{ch}: {stop or (st + ' — STOP')}")
+                    if ch not in issue_chapters:
+                        issue_chapters.append(ch)
+                    _progress(current_ch=ch)
+                    continue
+                if st == "draft" and sweep == 1:
+                    log.append(f"↻ ch{ch}: viet lai (dang draft)")
+
+                try:
+                    status = _write_until_ready(ch)
+                except WriteBlockedError as exc:
+                    skipped_chapters.append(ch)
+                    log.append(f"⊘ ch{ch}: blocked — {exc}")
+                    continue
+                except Exception as exc:
+                    skipped_chapters.append(ch)
+                    log.append(f"✗ ch{ch}: {exc}")
+                    if stop_on_review and not auto:
+                        failed_ch = ch
+                        err_msg = str(exc)
+                        pending = []
+                        break
+                    if auto:
+                        still_bad.append(ch)
+                    continue
+
+                if status in ("ready", "skipped"):
+                    if ch in issue_chapters:
+                        issue_chapters = [x for x in issue_chapters if x != ch]
+                    continue
+                if status == "blocked":
+                    skipped_chapters.append(ch)
+                    continue
+                if ch not in issue_chapters:
+                    issue_chapters.append(ch)
+                # needs_fix / needs_review: do NOT re-queue for another sweep rewrite
+                if status in ("needs_fix", "needs_review"):
+                    continue
+                if auto:
+                    still_bad.append(ch)
+                    continue
                 if stop_on_review:
                     failed_ch = ch
-                    err_msg = str(exc)
+                    err_msg = status
+                    log.append(f"⏸ dung batch — sua ch{ch} truoc khi tiep")
+                    pending = []
                     break
-                log.append(f"  bo qua, tiep tuc chuong sau")
-        else:
+                log.append(f"⚠ ch{ch}: {status} — de lai, tiep tuc")
+
+            if not auto:
+                break
+            # Only retry chapters that errored mid-write (not format/content caps)
+            pending = [
+                ch
+                for ch in still_bad
+                if not _chapter_done(_chapter_status(ws, book, ch, workspace_id=workspace_id))
+                and _chapter_status(ws, book, ch, workspace_id=workspace_id)
+                not in ("needs_fix", "needs_review")
+            ]
+            if not pending:
+                break
+            if sweep >= 3:
+                log.append(
+                    f"✗ AUTO dung sweep — van loi: ch{', ch'.join(map(str, pending))}"
+                )
+                issue_chapters = sorted(set(issue_chapters + pending))
+                failed_ch = pending[0]
+                err_msg = f"auto exhausted on ch{pending[0]}"
+                break
+
+        if failed_ch is None:
             parts = [f"{written} ch da viet"]
             if skipped_ready:
                 parts.append(f"{skipped_ready} ready (bo qua)")
             if issue_chapters:
-                parts.append(f"{len(issue_chapters)} can sua: ch{', ch'.join(map(str, issue_chapters))}")
+                parts.append(
+                    f"{len(set(issue_chapters))} can sua: ch{', ch'.join(map(str, sorted(set(issue_chapters))))}"
+                )
             if skipped_chapters:
-                parts.append(f"{len(skipped_chapters)} bo qua: ch{', ch'.join(map(str, skipped_chapters))}")
+                parts.append(
+                    f"{len(skipped_chapters)} bo qua: ch{', ch'.join(map(str, skipped_chapters))}"
+                )
+            if auto and not issue_chapters:
+                parts.append("AUTO: tat ca ready + catalog")
             log.append(f"--- Ket thuc batch: {'; '.join(parts)}")
     except Exception as exc:
         err_msg = str(exc)
         log.append(f"✗ batch write: {err_msg}")
     finally:
         batch_state.unregister_thread(workspace_id)
-        completed_range = failed_ch is None
+        completed_range = failed_ch is None and not issue_chapters
         _write_batch_progress(
             ws,
             {
                 "running": False,
                 "phase": "write",
-                "ok": completed_range,
+                "write_mode": "auto" if auto else "supervised",
+                "ok": completed_range if auto else failed_ch is None,
                 "written": written,
                 "failed_ch": failed_ch,
-                "issue_chapters": issue_chapters,
+                "issue_chapters": sorted(set(issue_chapters)),
                 "skipped_chapters": skipped_chapters,
                 "error": err_msg,
                 "log": log,
@@ -827,6 +1129,7 @@ def start_batch_write(
     *,
     stop_on_review: bool = False,
     auto_from: bool = False,
+    write_mode: str = "supervised",
 ) -> dict:
     ws = workspace_dir(workspace_id)
     prog = get_batch_progress(workspace_id)
@@ -845,11 +1148,17 @@ def start_batch_write(
     if auto_from:
         from_ch = _first_incomplete_chapter(ws, book, from_ch, to_ch)
     from_ch = max(1, min(from_ch, to_ch))
+    mode = "auto" if str(write_mode).strip().lower() == "auto" else "supervised"
 
     def _target() -> None:
         try:
             _run_batch_write_loop(
-                workspace_id, book, from_ch, to_ch, stop_on_review=stop_on_review
+                workspace_id,
+                book,
+                from_ch,
+                to_ch,
+                stop_on_review=stop_on_review and mode != "auto",
+                write_mode=mode,
             )
         finally:
             batch_state.unregister_thread(workspace_id)
@@ -863,7 +1172,8 @@ def start_batch_write(
         "phase": "write",
         "from_ch": from_ch,
         "to_ch": to_ch,
-        "stop_on_review": stop_on_review,
+        "write_mode": mode,
+        "stop_on_review": stop_on_review and mode != "auto",
     }
 
 
@@ -875,6 +1185,7 @@ def start_batch_full(
     *,
     stop_on_review: bool = False,
     auto_from: bool = False,
+    write_mode: str = "supervised",
 ) -> dict:
     ws = workspace_dir(workspace_id)
     prog = get_batch_progress(workspace_id)
@@ -882,20 +1193,25 @@ def start_batch_full(
         if _batch_is_active(workspace_id):
             return {"ok": False, "error": "batch dang chay — doi xong hoac bam Huy lock", **prog}
         reset_batch_lock(workspace_id)
+    mode = "auto" if str(write_mode).strip().lower() == "auto" else "supervised"
 
     def _full() -> None:
         try:
             prep = run_batch_prep(workspace_id, book)
             if not prep.get("ok"):
                 return
-            direction = _load_direction(ws)
             total = get_total_chapters(workspace_id, book)
             end = min(to_ch or total, total)
             start = from_ch
             if auto_from:
                 start = _first_incomplete_chapter(ws, book, from_ch, end)
             _run_batch_write_loop(
-                workspace_id, book, start, end, stop_on_review=stop_on_review
+                workspace_id,
+                book,
+                start,
+                end,
+                stop_on_review=stop_on_review and mode != "auto",
+                write_mode=mode,
             )
         finally:
             batch_state.unregister_thread(workspace_id)
@@ -903,7 +1219,7 @@ def start_batch_full(
     t = threading.Thread(target=_full, daemon=True)
     batch_state.register_thread(workspace_id, t)
     t.start()
-    return {"ok": True, "started": True, "phase": "full"}
+    return {"ok": True, "started": True, "phase": "full", "write_mode": mode}
 
 
 def update_book_config(
