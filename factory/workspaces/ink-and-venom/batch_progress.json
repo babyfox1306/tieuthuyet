@@ -1,0 +1,30 @@
+{
+  "running": true,
+  "phase": "write",
+  "write_mode": "supervised",
+  "from_ch": 1,
+  "to_ch": 12,
+  "written": 0,
+  "issue_chapters": [],
+  "skipped_chapters": [],
+  "log": [
+    "Viet chuong 1–12 (giam sat — loi de lai, chay het)",
+    "⊘ ch1: da co (catalog) — bo qua",
+    "⊘ ch2: da co (catalog) — bo qua",
+    "⊘ ch3: da co (catalog) — bo qua",
+    "⊘ ch4: da co (catalog) — bo qua",
+    "⊘ ch5: da co (catalog) — bo qua",
+    "⊘ ch6: da co (catalog) — bo qua",
+    "⊘ ch7: da co (catalog) — bo qua",
+    "⊘ ch8: da co (catalog) — bo qua",
+    "⊘ ch9: da co (catalog) — bo qua",
+    "⊘ ch10: da co (catalog) — bo qua",
+    "▶ ch11 dang viet... (write #1; content cap 2 ben trong writer)"
+  ],
+  "chapter_retry_counts": {
+    "11": 1
+  },
+  "current_ch": 11,
+  "attempt": 1,
+  "updated_at": "2026-07-14T15:42:16.477762+00:00"
+}

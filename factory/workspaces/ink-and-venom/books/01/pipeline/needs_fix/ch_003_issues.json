@@ -1,0 +1,49 @@
+{
+  "word_count": 2076,
+  "target_language": "en",
+  "markdown": [
+    "*you will heal*",
+    "*adapt*",
+    "*They watch.*"
+  ],
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 61,
+        "snippet": "*you will heal*"
+      },
+      {
+        "line": 61,
+        "snippet": "*adapt*"
+      },
+      {
+        "line": 173,
+        "snippet": "*They watch.*"
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*you will heal*",
+        "*adapt*",
+        "*They watch.*"
+      ]
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 0,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}

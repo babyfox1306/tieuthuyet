@@ -1,0 +1,179 @@
+---
+series: ink-and-venom
+book: 1
+chapter: 2
+title: The Dead Woman's Studio
+spice: 1
+word_count: 1506
+status: draft
+needs_fix: []
+promoted_at: '2026-07-14T14:40:04Z'
+---
+
+The drawing inside the cabinet showed Elara's wrist with black roots already growing through it. Not the faint threadlines she had seen in her own skin that morning. These were thick, branching, pulsing with a darkness that had eaten the surrounding flesh into grey ash.
+
+She had found the cabinet behind an empty easel in the attic studio. The glass door was grimy, the latch stiff. When she finally pulled it open, the smell of turpentine and dried pigment rushed out like a held breath.
+
+A jam jar of cloudy brush water sat on the shelf above. It had dried into a perfect tide-ring map of the room, the concentric stains marking weeks of stillness. The deepest ring was directly above the center of the floor, where a single floor tile sat slightly raised from its neighbors.
+
+She pulled the drawing out. The paper was soft at the creases, worn through in places by a hand that had pressed too hard. The wrist in the image was her wrist. Same narrow bones. Same outline of blue veins at the base of the palm. But the black roots in the drawing were far ahead of reality, coiled around the tendons, climbing into the fingertips like dark ivy.
+
+She heard the door open behind her.
+
+"You found her work."
+
+Dr. Finch stood in the doorway. He held a cup of tea in both hands, the liquid dark and perfectly still. No steam rose from it.
+
+"Beatrice Wren," he said. "A gifted but unstable patient. She had the use of this space during her treatment."
+
+"What happened to her?"
+
+"Her body rejected the therapy." He raised the cup to his lips and drank. His throat moved. His face showed nothing—no wince, no register of heat or bitterness. He simply lowered the cup and continued. "The clinic concluded she was resistant."
+
+"This isn't a self-portrait," Elara said. "This is a warning."
+
+"Artists see patterns everywhere, Miss Sennewald. That is both your gift and your liability."
+
+He took another sip. The tea had to be cold. She had watched him carry it for twenty minutes without drinking, and now he swallowed it like water at room temperature. A normal man would have winced. He simply held the cup, his thumb tracing the rim, his eyes moving past her to the drawing.
+
+"I will leave you to acclimatize. Nurse Cora will bring your first round of the supplement this evening."
+
+He left. The door clicked shut.
+
+Elara looked back at the drawing. The roots were darker than India ink. They had edges, fibrous threads, as if they were actively burrowing into the paper.
+
+A shift in the light.
+
+She looked up. A ripple of iridescence moved across the far wall. It slid over the plaster, spilled across the window frame, pooled without weight or sound. Not silver. Not white. The color of a fish's belly turning in dark water.
+
+She stared at it. "What are you?"
+
+The shimmer did not respond. It simply drifted, catching the grey alpine light and bending it into something that did not belong to the visible spectrum. It touched the edge of the cabinet, the leg of an easel, the surface of the jam jar.
+
+It did not speak. It did not reach for her. It was only what it appeared to be: a residue, a half-erased line left behind by a hand that had already left the room.
+
+She held her breath and watched it settle over the loose floor tile, then fade into stillness.
+
+She unfolded the note that had been tucked under the jam jar.
+
+The paper opened into another drawing: a human figure, head thrown back, neck exposed. Black roots burst from both arms, diving into the chest, branching around the heart like dark veins. The face was not finished, but the mouth was open in a silent line.
+
+A shadow fell over the page.
+
+She looked up. A young man stood in the doorway, grey robe, dark circles, hands empty.
+
+"You're her," he said. "The new one."
+
+"Who are you?"
+
+"Tobias." He did not step closer. His eyes were fixed on the drawing in her hands. "I drew that. Last week. Before she stopped answering the door."
+
+He was afraid. She could see it in the way he gripped his own wrist.
+
+"Beatrice drew things too," he said. "All of them black. All of them inside the body. And then the threads appeared on her skin."
+
+He raised his sleeve, showing her a bandage on his forearm. "I tried to stop it. But they said I was hysterical."
+
+"They?"
+
+"The clinic. The doctors. They said the therapy was working. They said the black lines were pain pathways closing."
+
+He looked at her wrist. "What did they tell you?"
+
+"A protein isolate. Alpine microflora."
+
+Tobias laughed, a sound without humor. "They always have a name for it."
+
+He stepped closer. His eyes were very direct, urgent, the grey of a river before ice breaks. "Have you looked at your wrists? I mean really looked?"
+
+She had. She did not answer.
+
+"The lines are spreading," he said softly. "Faster than they tell you they will."
+
+Footsteps in the corridor. Sharp. Rhythmic. A nurse's gait.
+
+Tobias moved.
+
+He closed the distance between them in a single stride, his body pressing into the narrow space beside the cabinet, blocking the drawing from the view of the door. His sleeve brushed her bare wrist.
+
+The black threads "responded".
+
+A deep, unfamiliar pulse, synchronous with his proximity. She felt the warmth of his arm, the slight tremor in his hand as he pressed the drawing flat against her palm.
+
+"Hide it," he breathed.
+
+His eyes met hers. Grey, clear, frantic with a message he could not say aloud. He was a stranger, and she was letting him stand inside her guard.
+
+"You saw the light," he whispered. "You know it wasn't dust."
+
+He held her gaze. His thumb pressed once, hard, against her palm. A warning. A promise.
+
+Nurse Cora appeared in the doorway. "Mr. Rehn. You are not on the schedule for this floor."
+
+Tobias did not step back immediately. He held Elara's eyes for a fraction of a second longer.
+
+Then he slipped past Cora, robes brushing the doorframe, and vanished into the corridor.
+
+Elara's hand was still curled around the drawing. Her wrist burned where his sleeve had touched it.
+
+Cora watched her with flat eyes. "Did he give you something?"
+
+"Tobias showed me a drawing."
+
+"Art is permitted. Correspondence is not." Cora held out her hand. "Any notes, letters, or sketches you have created or received must be submitted to the therapy archive."
+
+"I don't have any letters."
+
+Cora's gaze moved through the room, scanning the easels, the jam jar, the loose tile. She did not react to the shimmer. She did not seem to see it.
+
+"Someone will escort you to dinner at six."
+
+The door locked behind her.
+
+Elara stood alone in the studio. The silence was thick, punctured only by the distant groan of the mountain settling.
+
+She looked at the shimmer.
+
+"Beatrice," she said, testing the name aloud.
+
+Nothing. The light did not change.
+
+She held out her hand. Her fingers passed through the iridescence. She felt nothing. No cold. No warmth. No current. No presence.
+
+Just light. Indifferent light.
+
+She was alone in a room that remembered its dead owner, and the dead owner had nothing to say.
+
+She looked down at her exposed wrist.
+
+The black threads had darkened in the hour since she entered the studio. They were bolder now, closer to the surface, floating beneath the skin like ink suspended in water. She touched them with her fingertip. The skin felt different there—dense, packed with something that gave it a faint, unfamiliar resistance.
+
+She pressed her wrist against the fabric of her dress. The wool felt rough, almost abrasive, against the altered skin. Her nerves were too sharp. The mountain light through the window was too bright. The silence was too loud.
+
+Every sense she had was amplifying, turning the world into a texture she could not escape.
+
+She looked at the figure in Tobias's drawing. The black roots climbing toward the heart. The open mouth.
+
+It was exactly what her body was becoming.
+
+The afternoon light crawled across the floor. She tucked the drawing inside her dress, against her ribs.
+
+She had to get out. She had to understand.
+
+She walked to the door. Her hand closed over the metal handle. The cold bit into her palm.
+
+As the door swung open, the shimmer moved.
+
+A single, sudden streak of iridescence. Fast. Sharp. It slammed across the baseboard, gathered over the loose floor tile, and vanished.
+
+Not gradually. Like a light switched off.
+
+Elara froze.
+
+She stared at the place where it had concentrated.
+
+A hairline scratch. No wider than a needle. Cut into the aged wood of the baseboard where the shimmer had pooled.
+
+It was shaped exactly like a downward arrow.
+
+And it pointed directly at the gap beneath the loose floor tile.

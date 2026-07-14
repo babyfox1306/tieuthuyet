@@ -1,10 +1,37 @@
 {
   "current_book": 1,
-  "current_chapter": 0,
-  "timeline": [],
-  "character_status": {},
-  "open_threads": [],
-  "facts_established": [],
-  "spice_progression": "",
-  "phrases_used": []
+  "current_chapter": 10,
+  "timeline": [
+    "Dr. Finch unlocks a hidden door in the wall with an iron key and leads Elara down a spiral stairway that descends into the mountain",
+    "Elara counts the steps: forty-seven, sixty-two, eighty-three",
+    "At the bottom, the stair opens into a vast cathedral-high cavity carved into the mountain, containing rows of glass-and-iron vats connected by thick black tubing",
+    "The vats hold a black fluid that swirls with visible, life-like movement",
+    "Finch stands beside a vat and calls the 'protein isolate' a useful fiction",
+    "Elara examines glass cases embedded in the stone walls: a preserved human arm split lengthwise to show black vascular channels replacing nerves and blood vessels",
+    "A charcoal drawing by Tobias hangs beside the arm, matching the anatomy exactly",
+    "A second glass case holds full-body transverse sections showing black structures in the spine, brainstem, and heart",
+    "A third case contains a diagram of the sanatorium with its tunnels drawn in the same branching pattern, converging on a single dark chamber marked with a salt symbol",
+    "Elara realizes the black fluid is living parasitic tissue from an organism beneath the mountain, and the therapy is designed to replace human wiring with this biomass",
+    "Finch confirms that the treatment is not for pain but to feed something",
+    "Elara speaks without shaking, out of anger",
+    "Dr. Finch orders Nurse Cora to prepare Elara for completion in the lower mineral room",
+    "The organism inside Elara responds to Finch's command with a wet pulse that is not her heartbeat",
+    "Elara's hidden salt under the bandage burns the black threads, causing them to flinch and restoring some normal sensation",
+    "The iridescent shimmer appears on the mineral walls, tracing seams and scratches to reveal an escape route away from the treatment frame",
+    "Finch explains that the final stage will make her whole and remove pain and loneliness",
+    "Elara refuses the final stage flatly, saying 'No'"
+  ],
+  "character_status": {
+    "Elara Sennewald": {
+      "location": "lower mineral room (final stage chamber)",
+      "knows": [
+        "she is a pain patient receiving experimental therapy",
+        "the injection fluid is black and cold",
+        "Dr. Finch is the administering physician",
+        "Nurse Cora is the attending nurse",
+        "a young patient watched her from the doorway",
+        "the drawing shows her wrist with advanced black roots that match the injection"
+      ]
+    }
+  }
 }

@@ -1,0 +1,43 @@
+{
+  "word_count": 1276,
+  "target_language": "en",
+  "markdown": [
+    "*Use it. Use the salt.*",
+    "*Exactly.*"
+  ],
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 103,
+        "snippet": "*Use it. Use the salt.*"
+      },
+      {
+        "line": 135,
+        "snippet": "*Exactly.*"
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*Use it. Use the salt.*",
+        "*Exactly.*"
+      ]
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 0,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}
