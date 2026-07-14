@@ -47,6 +47,8 @@ def build_outliner_payload(
     prior: list[dict],
 ) -> dict:
     """Assemble Outliner request body; adds narrative_constraints when compiler on."""
+    from factory.engine.lib.canon_registry import locked_canon_names_payload
+
     body: dict = {
         "series_bible": bible,
         "direction": direction,
@@ -56,6 +58,9 @@ def build_outliner_payload(
         "prior_plans": prior,
         "canon_through": direction.get("canon_through", 3),
     }
+    locked = locked_canon_names_payload(ws, book)
+    if locked:
+        body["locked_canon_names"] = locked
     if narrative_compiler_enabled(ws):
         body["narrative_constraints"] = compile_act_constraints(ws, act_from, act_to)
     return body
@@ -280,6 +285,9 @@ OUTLINER_MAX_TOKENS = 24576
 def _fetch_act_plans(
     ws: Path, book: int, act_from: int, act_to: int, act_name: str
 ) -> tuple[list[dict], dict]:
+    from factory.engine.lib.canon_registry import sync_bible_leads_from_registry
+
+    sync_bible_leads_from_registry(ws, book)
     direction = load_direction(ws)
     bible = json.loads(bible_path(ws).read_text(encoding="utf-8"))
     current = load_master_plan(ws, book)
@@ -412,6 +420,9 @@ def plan_book(
     chunk_size: int = 3,
     force_replan: bool = False,
 ) -> tuple[Path, int]:
+    from factory.engine.lib.canon_registry import sync_bible_leads_from_registry
+
+    sync_bible_leads_from_registry(ws, book)
     direction = load_direction(ws)
     bible = load_series_bible(ws)
     if not bible_is_approved(bible, direction):

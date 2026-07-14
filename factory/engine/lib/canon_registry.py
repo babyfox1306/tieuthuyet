@@ -137,28 +137,76 @@ def canon_registry_path(ws: Path) -> Path:
 
 
 
+# Honorifics that must never become a lead "first name" / alias token.
+_LEAD_HONORIFIC_RE = re.compile(
+    r"^(?:Dr|Mr|Mrs|Ms|Miss|Prof|Professor|Sir|Dame|Lady|Lord)\.?\s+",
+    re.IGNORECASE,
+)
+_LEAD_HONORIFIC_PREFIX = (
+    r"(?:(?:Dr|Mr|Mrs|Ms|Miss|Prof|Professor|Sir|Dame|Lady|Lord)\.?\s+)?"
+)
+# 1–4 capitalized name tokens (given + optional middle + surname).
+_LEAD_NAME_TOKEN = r"[A-Z][a-zA-Z'.\-]+"
+_LEAD_NAME_CORE = rf"{_LEAD_NAME_TOKEN}(?:\s+{_LEAD_NAME_TOKEN}){{0,3}}"
+# Full capture may keep the honorific in the canonical string (e.g. Dr. Alistair Finch).
+_LEAD_NAME_CAPTURE = rf"({_LEAD_HONORIFIC_PREFIX}{_LEAD_NAME_CORE})"
+# Stop before age parenthetical, clause comma, or end.
+_LEAD_NAME_STOP = r"(?=\s*[\(,;]|\s*$)"
+
+
+def strip_lead_honorific(name: str) -> str:
+    """Remove leading Dr./Mr./… so honorifics never become alias tokens."""
+    return _LEAD_HONORIFIC_RE.sub("", str(name or "").strip()).strip()
+
+
+def lead_name_aliases(canonical: str) -> list[str]:
+    """Given/surname aliases from canonical — never includes Dr./Mr./… alone."""
+    bare = strip_lead_honorific(canonical)
+    if not bare:
+        return []
+    parts = bare.split()
+    out: list[str] = []
+    if bare != str(canonical or "").strip():
+        out.append(bare)
+    for part in parts:
+        if part and part not in out:
+            out.append(part)
+    return out
+
+
 def _parse_lead_from_concept_text(text: str, *, side: str) -> str | None:
-    """Pull 'Female lead: Name' / 'Male lead: Name' from author_directive."""
+    """Pull 'Female lead: Name' / 'Male lead: Name' from author_directive.
+
+    Captures optional honorific + 1–4 name tokens; stops at ``(`` so ages are
+    excluded. Honorifics stay on the canonical string when present, but are
+    stripped when deriving aliases (see ``lead_name_aliases``).
+    """
     if side == "female":
-        patterns = (
-            r"(?<![A-Za-z])Female\s+lead:\s*([A-Z][a-zA-Z'.\-]+(?:\s+[A-Z][a-zA-Z'.\-]+)?)",
-            r"(?<![A-Za-z])female_lead\s*[:=]\s*([A-Z][a-zA-Z'.\-]+(?:\s+[A-Z][a-zA-Z'.\-]+)?)",
+        labels = (
+            rf"(?<![A-Za-z])Female\s+lead:\s*{_LEAD_NAME_CAPTURE}{_LEAD_NAME_STOP}",
+            rf"(?<![A-Za-z])female_lead\s*[:=]\s*{_LEAD_NAME_CAPTURE}{_LEAD_NAME_STOP}",
         )
     else:
-        patterns = (
-            r"(?<![A-Za-z])Male\s+lead:\s*([A-Z][a-zA-Z'.\-]+(?:\s+[A-Z][a-zA-Z'.\-]+)?)",
-            r"(?<![A-Za-z])male_lead\s*[:=]\s*([A-Z][a-zA-Z'.\-]+(?:\s+[A-Z][a-zA-Z'.\-]+)?)",
+        labels = (
+            rf"(?<![A-Za-z])Male\s+lead:\s*{_LEAD_NAME_CAPTURE}{_LEAD_NAME_STOP}",
+            rf"(?<![A-Za-z])male_lead\s*[:=]\s*{_LEAD_NAME_CAPTURE}{_LEAD_NAME_STOP}",
         )
-    skip = {"none", "n/a", "na", "tbd", "unknown", "n.a."}
-    for pat in patterns:
+    skip = {"none", "n/a", "na", "tbd", "unknown", "n.a.", "male lead", "female lead"}
+    for pat in labels:
         m = re.search(pat, text)  # case-sensitive so Name stays Title Case
         if not m:
             m = re.search(pat, text, re.IGNORECASE)
-        if m:
-            name = m.group(1).strip().rstrip(".,;")
-            if name.lower() in skip or not name[0].isupper():
-                continue
-            return name
+        if not m:
+            continue
+        name = m.group(1).strip().rstrip(".,;")
+        bare = strip_lead_honorific(name)
+        check = bare.lower() if bare else name.lower()
+        if check in skip or not name or not name[0].isupper():
+            continue
+        # Reject honorific-only captures (e.g. bare "Dr.")
+        if not bare:
+            continue
+        return name
     return None
 
 
@@ -217,18 +265,16 @@ def scaffold_canon_registry(
     spice = int(direction.get("spice_level") or direction.get("spice_default") or 1)
     pov = str(direction.get("pov_mode") or "third_person_limited").strip()
 
-    f_first = _first_token(f_name)
-    m_first = _first_token(m_name)
     data: dict[str, Any] = {
         "characters": {
             "female_lead": {
                 "canonical": f_name,
-                "allowed_aliases": [f_first] if f_first and f_first != f_name else [],
+                "allowed_aliases": lead_name_aliases(f_name),
                 "forbidden_aliases": [],
             },
             "male_lead": {
                 "canonical": m_name,
-                "allowed_aliases": [m_first] if m_first and m_first != m_name else [],
+                "allowed_aliases": lead_name_aliases(m_name),
                 "forbidden_aliases": [],
             },
         },
@@ -247,6 +293,77 @@ def scaffold_canon_registry(
         "female_lead": f_name,
         "male_lead": m_name,
         "message": f"Created canon_registry.yaml — {f_name} / {m_name}",
+    }
+
+
+def locked_canon_names_payload(ws: Path, book: int = 1) -> dict[str, Any] | None:
+    """Outliner LOCKED-NAMES block from canon_registry (None if registry missing)."""
+    if not canon_registry_path(ws).exists():
+        return None
+    registry = build_canon_registry(ws, book)
+    female = registry.characters["female_lead"]
+    male = registry.characters["male_lead"]
+    return {
+        "female_lead": female.canonical,
+        "male_lead": male.canonical,
+        "female_aliases": list(female.allowed_aliases),
+        "male_aliases": list(male.allowed_aliases),
+        "instruction": (
+            "LOCKED CANON NAMES — use these lead names VERBATIM in every "
+            "chapter_plan field (summaries, must_happen, knowledge keys, etc.). "
+            "Do not shorten, expand, invent, or substitute surnames/titles. "
+            "Allowed aliases are short forms only; prefer the canonical full name."
+        ),
+    }
+
+
+def sync_bible_leads_from_registry(ws: Path, book: int = 1) -> dict[str, Any]:
+    """Write series.json lead names from canon_registry so approve sources agree.
+
+    No-op when registry is missing. Returns {updated, female, male}.
+    """
+    if not canon_registry_path(ws).exists():
+        return {"updated": False, "reason": "no_canon_registry"}
+
+    from factory.engine.paths import bible_path
+
+    path = bible_path(ws)
+    if not path.exists():
+        return {"updated": False, "reason": "no_series_json"}
+
+    registry = build_canon_registry(ws, book)
+    f_name = registry.characters["female_lead"].canonical
+    m_name = registry.characters["male_lead"].canonical
+    data = json.loads(path.read_text(encoding="utf-8"))
+    leads = data.setdefault("leads", {})
+    if not isinstance(leads, dict):
+        leads = {}
+        data["leads"] = leads
+    female = leads.setdefault("female", {})
+    male = leads.setdefault("male", {})
+    if not isinstance(female, dict):
+        female = {}
+        leads["female"] = female
+    if not isinstance(male, dict):
+        male = {}
+        leads["male"] = male
+
+    changed = False
+    if str(female.get("name") or "").strip() != f_name:
+        female["name"] = f_name
+        changed = True
+    if str(male.get("name") or "").strip() != m_name:
+        male["name"] = m_name
+        changed = True
+
+    if changed:
+        path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    return {
+        "updated": changed,
+        "female": f_name,
+        "male": m_name,
+        "path": str(path),
     }
 
 

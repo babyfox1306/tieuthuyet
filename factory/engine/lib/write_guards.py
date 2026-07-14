@@ -16,6 +16,11 @@ class WriteBlockedError(RuntimeError):
 PRIOR_EXCERPT_MAX = 2500
 
 
+def _state_current_chapter(state: dict) -> int:
+    """Safe int from state — key may exist as null (JSON null)."""
+    return int(state.get("current_chapter") or 0)
+
+
 def is_sequential_writes(cfg: dict | None = None) -> bool:
     cfg = cfg or load_config()
     return str(cfg.get("write_mode", "parallel")).lower() == "sequential"
@@ -83,10 +88,10 @@ def state_chain_complete(ws: Path, book: int, ch: int) -> bool:
 def best_effort_catch_up_state(ws: Path, book: int, target_ch: int) -> int:
     """Replay state_updater for contiguous ready prefix — never block on gaps."""
     if target_ch <= 1:
-        return int(load_state(ws, book).get("current_chapter", 0))
+        return _state_current_chapter(load_state(ws, book))
     hi = contiguous_ready_prefix(ws, book, target_ch)
     state = load_state(ws, book)
-    cur = int(state.get("current_chapter", 0))
+    cur = _state_current_chapter(state)
     if hi <= cur:
         return cur
     for c in range(cur + 1, hi + 1):
@@ -102,7 +107,7 @@ def catch_up_state_before_write(ws: Path, book: int, target_ch: int) -> None:
         return
     needed = target_ch - 1
     state = load_state(ws, book)
-    cur = int(state.get("current_chapter", 0))
+    cur = _state_current_chapter(state)
     if cur >= needed:
         return
     for c in range(cur + 1, needed + 1):

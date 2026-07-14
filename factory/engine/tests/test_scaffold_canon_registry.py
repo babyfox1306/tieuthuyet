@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -10,9 +11,15 @@ from unittest.mock import patch
 import yaml
 
 from factory.engine.lib.canon_registry import (
+    _parse_lead_from_concept_text,
+    lead_name_aliases,
+    locked_canon_names_payload,
     resolve_lead_names_for_registry,
     scaffold_canon_registry,
+    sync_bible_leads_from_registry,
+    validate_plan_against_canon_registry,
 )
+from factory.engine.lib.master_plan import build_outliner_payload
 
 
 class ScaffoldCanonRegistryTests(unittest.TestCase):
@@ -71,6 +78,111 @@ class ScaffoldCanonRegistryTests(unittest.TestCase):
                 f, m = resolve_lead_names_for_registry(ws)
             self.assertEqual(f, "Elena March")
             self.assertEqual(m, "Male Lead")
+
+    def test_titled_three_token_male_keeps_surname(self) -> None:
+        raw = "Male lead: Dr. Alistair Finch (29), clinic director."
+        self.assertEqual(
+            _parse_lead_from_concept_text(raw, side="male"),
+            "Dr. Alistair Finch",
+        )
+        aliases = lead_name_aliases("Dr. Alistair Finch")
+        self.assertIn("Finch", aliases)
+        self.assertIn("Alistair", aliases)
+        self.assertNotIn("Dr.", aliases)
+        self.assertNotIn("Dr", aliases)
+
+    def test_scaffold_dr_alistair_finch_no_cross_source_mismatch(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "ws"
+            ws.mkdir()
+            (ws / "concept.yaml").write_text(
+                yaml.dump(
+                    {
+                        "author_directive": (
+                            "Female lead: Elara Sennewald (24).\n"
+                            "Male lead: Dr. Alistair Finch (29), clinic director."
+                        ),
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (ws / "direction.yaml").write_text(
+                "spice_level: 1\npov_mode: third_person_limited\ntotal_chapters: 1\n",
+                encoding="utf-8",
+            )
+            (ws / "bible").mkdir()
+            (ws / "bible" / "series.json").write_text(
+                json.dumps(
+                    {
+                        "leads": {
+                            "female": {"name": "Elara Sennewald"},
+                            "male": {"name": "Dr. Alistair Finch"},
+                        }
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (ws / "books" / "01").mkdir(parents=True)
+            (ws / "books" / "01" / "master_plan.json").write_text(
+                json.dumps(
+                    {
+                        "book": 1,
+                        "total_chapters": 1,
+                        "chapter_plans": [
+                            {
+                                "chapter": 1,
+                                "title": "Arrival",
+                                "one_line_summary": "Elara meets Dr. Alistair Finch.",
+                                "beat_summary": "Dr. Alistair Finch offers treatment.",
+                                "must_happen": ["a", "b", "c"],
+                                "must_not": ["x", "y"],
+                                "opens_with": '"Sit," Finch said.',
+                                "cliffhanger": "Black thread moves.",
+                                "spice": 1,
+                                "chapter_task": "1600 words",
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            result = scaffold_canon_registry(ws)
+            self.assertTrue(result["created"])
+            self.assertEqual(result["male_lead"], "Dr. Alistair Finch")
+            data = yaml.safe_load((ws / "canon_registry.yaml").read_text(encoding="utf-8"))
+            male = data["characters"]["male_lead"]
+            self.assertEqual(male["canonical"], "Dr. Alistair Finch")
+            aliases = male["allowed_aliases"]
+            self.assertIn("Finch", aliases)
+            self.assertIn("Alistair", aliases)
+            self.assertNotIn("Dr.", aliases)
+
+            sync = sync_bible_leads_from_registry(ws, book=1)
+            self.assertEqual(sync["male"], "Dr. Alistair Finch")
+
+            conflicts = validate_plan_against_canon_registry(ws, book=1)
+            codes = {c["code"] for c in conflicts}
+            self.assertNotIn("male_lead_cross_source_mismatch", codes)
+            self.assertNotIn("male_lead_source_mismatch", codes)
+            self.assertNotIn("forbidden_lead_name_in_plan", codes)
+
+            locked = locked_canon_names_payload(ws, book=1)
+            self.assertIsNotNone(locked)
+            assert locked is not None
+            self.assertEqual(locked["male_lead"], "Dr. Alistair Finch")
+            body = build_outliner_payload(
+                ws,
+                1,
+                1,
+                1,
+                "act1",
+                bible={"leads": {"male": {"name": "Dr. Alistair Finch"}}},
+                direction={"target_language": "en"},
+                prior=[],
+            )
+            self.assertIn("locked_canon_names", body)
+            self.assertEqual(body["locked_canon_names"]["male_lead"], "Dr. Alistair Finch")
 
 
 if __name__ == "__main__":

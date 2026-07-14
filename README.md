@@ -10,7 +10,39 @@ Repo gồm **hai hệ thống độc lập** dùng chung môi trường Python:
 
 Triết lý: **recon tìm ngách** → **Narrative OS hiểu truyện** → **Canon registry khóa tên/cast** → **factory viết trong khung** → **catalog + export gate** → KDP.
 
-**Dòng dark đang chạy (KDP):** bút danh **Reynard Frost** — `Docs/pen_names_data.txt`. Workspaces: `the-paper-oracle`, `the-salt-room-1` (gothic/horror). Romance CEO vẫn `glass-meridian` / `ceo-contract` (tách pen name khi publish).
+**Dòng dark đang chạy (KDP):** bút danh **Reynard Frost** — `Docs/pen_names_data.txt`. Workspaces: `the-paper-oracle`, `the-salt-room-1`, `the-black-arteries`, `ink-and-venom` (gothic/horror). Romance CEO vẫn `glass-meridian` / `ceo-contract` (tách pen name khi publish).
+
+---
+
+## Bản vá gần đây (patch log)
+
+> Ghi các sửa engine / vận hành như **bản vá**, kèm ngày giờ (UTC+7) và lý do. Chi tiết kiến trúc: `spec_kdp_subniche_recon.md`.
+
+### 2026-07-14 ~20:20–20:40 — Canon registry + outliner tên lead
+
+| | |
+|--|--|
+| **Files** | `factory/engine/lib/canon_registry.py`, `master_plan.py`, `roles/outliner.txt`, `tests/test_scaffold_canon_registry.py` |
+| **Lý do** | `Male lead: Dr. Alistair Finch (29)` bị scaffold thành `Dr. Alistair` (regex max 2 token + `Dr.` thành alias). Outliner chỉ đọc bible → re-plan lệch registry → `approve-plan` báo `male_lead_cross_source_mismatch` / `forbidden_lead_name_in_plan`. |
+| **Vá** | Parser bắt honorific + 1–4 token, dừng trước `(age)`; alias không còn `Dr.`; inject `locked_canon_names` vào outliner; `sync_bible_leads_from_registry` trước plan/replan. |
+| **Operator** | Workspace đã lệch: sửa `canon_registry.yaml` hoặc `init-canon-registry --force`, rồi duyệt plan lại. |
+
+### 2026-07-14 ~20:30 — ink-and-venom registry + ch9 plan
+
+| | |
+|--|--|
+| **Files** | `factory/workspaces/ink-and-venom/canon_registry.yaml`, `books/01/master_plan.json` (ch9) |
+| **Lý do** | Registry cũ cắt tên; ch9 `must_happen` chỉ còn `["["]` (JSON outliner/fixer bị truncate nhưng parse/`json_repair` vẫn lưu) → `plan_qc_fail` `must_happen_lt3` / `missing:must_not`. |
+| **Vá** | Canonical `Dr. Alistair Finch` + alias Finch/Alistair; viết lại `must_happen`/`must_not`/carries ch9 từ beat còn lại. |
+| **Ghi chú** | `plan_raw_007_009.txt` thường còn bản đủ — so raw trước khi re-plan đè master. |
+
+### 2026-07-14 (trước đó trong phiên) — Dialogue quotes / isolation
+
+| | |
+|--|--|
+| **Files** | `factory/engine/lib/machine_qc.py`, `tests/test_machine_qc_classify.py` (+ wire `chapter`/`plan` từ `run_factory` / `catalog`) |
+| **Lý do** | Heuristic đếm dấu ngoặc kép → FAIL chương isolation (1 dòng thoại opener, còn lại nội tâm/catalogue). |
+| **Vá** | Không FAIL vì sparse quotes; chỉ bắt dialogue-tag ngoài ngoặc; plan/direction có `[ISOLATION]` / isolation → tắt cảnh báo quotes. |
 
 ---
 
@@ -517,10 +549,12 @@ Ví dụ: `quá ngắn (1347 từ)` · `đứt mạch (continuity): ...`
 
 ### Plan JSON / normalize
 
-- `plan_raw_XXX_YYY.txt` — raw Outliner
+- `plan_raw_XXX_YYY.txt` — raw Outliner (đối chiếu khi master bị lệch)
 - `normalize-plan` — sửa wrapper lồng + must_happen nested
 - `knowledge_matrix`: `must_not_know_before` hỗ trợ **dict** hoặc **int + hidden_truth**
 - Lỗi `sequence item N: expected str` → chạy `normalize-plan` hoặc `fix-plans`
+- **`must_happen: ["["]` / thiếu `must_not` sau re-plan** — JSON bị cắt nhưng vẫn lưu; xem **Bản vá 2026-07-14** (ink-and-venom ch9). Sửa tay field từ `beat_summary`/`plan_raw_*` rồi `approve-plan`
+- **`male_lead_cross_source_mismatch` / tên `Dr. X` bị cắt** — xem **Bản vá 2026-07-14** (parser + `locked_canon_names`); không re-plan mang tính “may mắn”
 
 ### Chương quá ngắn (`needs_fix`)
 

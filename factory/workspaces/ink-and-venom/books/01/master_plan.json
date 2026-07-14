@@ -853,8 +853,24 @@
       "cliffhanger": "Finch lifts the mineral-room lamp, and in its white glare Elara sees the black network in his chest pulse once as the same pulse answers from beneath her own ribs.",
       "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Stage the chapter in the lower mineral rooms and deliver the fixed central reveal through witnessed evidence, not omniscient exposition. Pay off C002, C007, C013, C014, C015, and C016 clearly; confirm Finch as transformed antagonist; connect venom, black threads, Tobias's drawings, patient disappearances, Beatrice's shimmer, sensory changes, and salt into one answer; end on Finch's chest pulse answering from Elara's ribs.",
       "must_happen": [
-        "["
+        "Pay off C002: in the lower mineral apparatus Elara sees the so-called venom move as viable living biomass rather than inert medicine.",
+        "Pay off C007: Tobias's charcoal anatomy aligns with preserved clinic records of nerves and blood vessels being replaced by black vascular structures.",
+        "Pay off C013 and C014: Dr. Alistair Finch reveals enough of his grey transformed chest and cold altered body for Elara to understand he is already converted, not merely ill.",
+        "Pay off C015: Elara recognizes the current-like pattern inside Finch as the organism's bio-electrical network, matching what she briefly glimpsed in chapter 8.",
+        "Pay off C016: clinic body maps and tunnel diagrams show the same branching pattern leading to a subterranean source beneath the sanatorium.",
+        "Deliver the fixed central truth in Elara's limited POV: the venom is ancient sentient subterranean biomass that replaces human nervous and circulatory systems to fold patients into a collective consciousness; alpine salt can halt but not reverse the change.",
+        "[ISOLATION] Finch offers painless unity as medical salvation while Beatrice's shimmer trembles silently at the chamber edge and Tobias exists only in drawings — Elara must refuse without rescue.",
+        "[ROMANCE][ISOLATION] The only hands that reach for Elara are Finch's cold ones, offering conversion rather than comfort; no lover, attraction, or caretaker romance appears."
       ],
+      "must_not": [
+        "Do not reverse Elara's transformation with salt; salt may interrupt or halt only.",
+        "Do not confirm the full extent of Nurse Cora's partial conversion as an escape obstacle; hold that for chapter 12.",
+        "Do not show the final mountain escape with Tobias's sketchbook and a vial of venom.",
+        "Do not frame Finch as a romantic interest, lover, protector, or seductive caretaker.",
+        "Do not let Beatrice speak, touch, smell, write words, or appear as a human ghost."
+      ],
+      "carries_to_next": "Elara knows the organism truth and that Finch is already transformed; his chest pulse answered from her ribs, and the final stage of conversion is now an imminent survival crisis rather than a mystery.",
+      "emotional_beat": "Isolation and body horror: Elara faces the offer of painless unity alone, with no romantic comfort and only the cold calculus of remaining herself.",
       "narrative": {
         "clues_plant": [],
         "clues_payoff": [
@@ -930,7 +946,7 @@
       },
       "slug": "what-the-venom-is",
       "spice": 1,
-      "signature_detail_hint": "\"You wanted the door beneath the mountain,\" Finch said, and unlocked it before Elara could run."
+      "signature_detail_hint": "In the mineral-room lamp glare, Finch's grey chest shows a solid mass threaded with black vascular current that pulses once in time with the beat under Elara's ribs."
     },
     {
       "chapter": 10,

@@ -3,11 +3,14 @@ characters:
     canonical: Elara Sennewald
     allowed_aliases:
     - Elara
+    - Sennewald
     forbidden_aliases: []
   male_lead:
-    canonical: Dr. Alistair
+    canonical: Dr. Alistair Finch
     allowed_aliases:
-    - Dr.
+    - Alistair Finch
+    - Alistair
+    - Finch
     forbidden_aliases: []
 pov_mode: third_person_limited
 spice_max: 1
