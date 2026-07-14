@@ -1,0 +1,96 @@
+{
+  "act": [
+    1,
+    3
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The First Black Thread",
+      "slug": "the-first-black-thread",
+      "one_line_summary": "Clara Vance arrives to catalogue the drowned Victorian observatory, notices two wrong black traces in the waterlogged records, and refuses to treat any written thing as expendable.",
+      "beat_summary": "Open on Clara catching a ledger before it slips into black-streaked water, then establish her locked third-limited point of view as she inventories the flooded observatory with professional restraint. Plant C001 as a thin black line crossing one star chart where ordinary ink should have bled outward, and plant C002 as a matching branch on a pane of observatory glass that Clara rationalizes as mildew or flood residue. Thread Eleanor through absence only: Clara finds old labels in Eleanor's hand and feels the corridor offer no answer, no voice, no hand to take. The chapter should make Clara's preservation boundary concrete when she saves damaged pages instead of discarding them, while keeping the ink ambiguous, passive-seeming, silent, scentless, and not yet confirmed alive.",
+      "must_happen": [
+        "Clara begins her formal catalogue of the half-submerged Victorian observatory, assigning provisional numbers to ledgers, glass plates, star charts, and water-damaged folders.",
+        "Plant C001: Clara finds a black thread crossing a soaked star chart in a pattern too narrow and vascular for ordinary ink bleed, but she records it as contamination rather than life.",
+        "Plant C002: Clara sees a similar black branch on the inside of a fogged observatory pane, aligned with the star chart below, and explains it to herself as mildew, mineral staining, or flood rot.",
+        "Clara winds her brass pocket watch when the silence becomes too exact, then straightens labels and page corners even while standing in stagnant water.",
+        "[ISOLATION] Eleanor is present only through absence: an old folder label in her hand, an empty corridor beyond it, and Clara's reflexive expectation of a sisterly answer that never comes.",
+        "Clara refuses to discard a ruined written record, stating through action that even corrupted paper deserves preservation until properly assessed."
+      ],
+      "must_not": [
+        "Do not confirm that the black ink is active, alive, intelligent, or drawn toward records in chapter 1.",
+        "Do not reveal or imply with certainty that Eleanor became the ink or that the archive is her vessel.",
+        "Do not give Eleanor a voice, whisper, breath, scent, footsteps, independent ghost form, or any audible manifestation.",
+        "Do not introduce a male lead, male antagonist, romantic interest, caretaker romance, or doctor figure."
+      ],
+      "opens_with": "\"Do not let the ledger touch the black water,\" Clara told herself, and caught it one second before the current took the names.",
+      "cliffhanger": "On the final page Clara saves, the black thread stops at Eleanor Vance's surname as if the stain has reached the exact entry it wanted.",
+      "signature_detail_hint": "A drowned brass label-holder has trapped a tiny air bubble behind its glass, and the bubble trembles beside the black stain though the room is otherwise still.",
+      "emotional_beat": "Clara's grief stays disciplined until Eleanor's name appears under her thumb, making absence feel intimate, accusatory, and unbearably close.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; the chapter uses grief, isolation, and professional obsession as the emotional charge.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV, slow gothic psychological horror. Build dread through catalogue precision, water damage, paper texture, glass, metal, and Clara's controlled rituals. Include C001 and C002 clearly as visual clues without explaining them. End on the specific visual cliffhanger of the stain stopping at Eleanor's surname.",
+      "carries_to_next": "Clara has two matching black traces filed as contamination, Eleanor's name has been visually touched by the stain, and the next chapter can pay off C001 and C002 by showing directed movement."
+    },
+    {
+      "chapter": 2,
+      "title": "Directed Stains",
+      "slug": "directed-stains",
+      "one_line_summary": "Clara proves the black stains are not passive decay when the branches move through paper, glass, and water toward the records she tries to preserve.",
+      "beat_summary": "Begin with a black branch crossing dry paper above the waterline while Clara watches, forcing the payoff of C001 and C002 into a major reveal: the stains are active and moving in directed patterns toward written records. Clara tests and observes without understanding the deeper rule, still treating the phenomenon as contamination rather than Eleanor or a parasite. Plant C003 through a metal fastener or submerged instrument that oxidizes too quickly near the ink but do not explain the metal rule yet, and plant C005 by showing preserved records causing more branching without confirming that preservation itself feeds the system. Keep Eleanor visual and ambiguous, never a speaking ghost; the emotional pressure comes from Clara facing the empty room alone as every saved page becomes a possible attractor.",
+      "must_happen": [
+        "Pay off C001: the black thread on the star chart changes position or extends while Clara compares it to her prior catalogue note, proving the mark is not ordinary ink bleed.",
+        "Pay off C002: the black branch on the observatory glass realigns toward the same record Clara has lifted from the water, tying paper, glass, and water into one directed pattern.",
+        "Reveal R001: Clara understands the black stains are not passive decay because they move across surfaces and angle toward written records she attempts to preserve.",
+        "Plant C003: a corroded metal clip, screw, or small astronomical fitting near the ink throws off brief metallic flecks as it oxidizes unnaturally fast, which Clara logs as chemical damage.",
+        "Plant C005: when Clara separates several salvageable pages into a dry folder, the nearest black threads gather more densely around that folder, but she does not yet understand this as feeding on preservation.",
+        "[ISOLATION] Clara reaches for help by habit and finds only a silent landing, a dead speaking tube, and her own wet sleeve where another hand should have been."
+      ],
+      "must_not": [
+        "Do not reveal before chapter 6 that Clara's preservation of records specifically nourishes the ink-root system.",
+        "Do not reveal before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+        "Do not allow the ink to communicate in words, write new verbal messages, speak, whisper, breathe, or produce scent.",
+        "Do not introduce romance, a male lead, a male antagonist, or any physical doctor/caretaker presence."
+      ],
+      "opens_with": "\"That mark was not there when I numbered the page,\" Clara said, and the black line lengthened under her pencil.",
+      "cliffhanger": "The folder of rescued records slides backward across the table without a sound, stopping beneath the glass dome where black branches have arranged themselves around it like roots around a buried heart.",
+      "signature_detail_hint": "A rusted star-sighting screw sheds bright metallic dust into the floodwater, each fleck flashing once before the black surface swallows it.",
+      "emotional_beat": "Clara's control tightens into lonely vulnerability as her sacred act of rescue begins to look like a summons she cannot admit she performed.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; tension comes from isolation, dread, and Clara's fear that her professional instincts are worsening the danger.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Pay off C001 and C002 with concrete visual movement and deliver R001 clearly, while planting C003 and C005 without premature explanation. Maintain slow atmospheric horror, silent visual manifestations, and Clara's procedural narration under stress. End on the folder moving beneath the glass dome and the roots visually surrounding it.",
+      "carries_to_next": "Clara now knows the ink is active and directed toward records, has logged unexplained metal oxidation and record-centered branching, and enters chapter 3 trying to map the contamination without knowing what it feeds on."
+    },
+    {
+      "chapter": 3,
+      "title": "The Ashless Room",
+      "slug": "the-ashless-room",
+      "one_line_summary": "Clara maps the observatory's directed black contamination, plants evidence of a future sunlight rule and a deeper trapped route beneath the archive, and ends with Eleanor's absence pressed into a visual pattern she cannot explain.",
+      "beat_summary": "Open with Clara pinning a moving record under a paperweight as black veins reach for its margins. She creates a contamination map of paper, glass, and water, using her archivist procedures to keep panic contained. Plant C004 by exposing one thin branch to a narrow shaft of daylight or reflected sun so it stiffens, pales, or leaves brittle charcoal-like residue without making the rule explicit yet. Plant C012 as a long-delayed clue: beneath a warped floor grate or collapsed catalogue cabinet, Clara glimpses black vascular routes descending into peat-stained water below the observatory, suggesting a source or route far deeper than the room. Include [ISOLATION] as absence only, with Eleanor evoked by childhood handwriting or a familiar catalogue habit but never confirmed as the ink. The chapter should expand dread and mystery without paying off C003, C004, C005, or C012 yet.",
+      "must_happen": [
+        "Clara drafts a contamination map showing active black marks on paper, glass, and water, marking each surface by catalogue number rather than admitting the room feels organized against her.",
+        "Plant C004: a narrow strip of daylight or reflected sun touches a black thread and leaves a brittle charcoal fleck or frozen-looking segment that Clara notices but cannot interpret yet.",
+        "Plant C012: Clara finds a warped floor grate, collapsed cabinet base, or submerged shaft where black vascular lines descend into peat-dark water below the observatory, implying the contamination has deeper routes.",
+        "Clara handles the moving records with preservation tools, weights, blotting paper, and labels, escalating her effort to save the archive despite the danger.",
+        "[ISOLATION] Clara finds an old note or label in Eleanor's familiar hand and places it in a protective sleeve, then realizes there is no living witness to tell her whether she is preserving evidence or grief.",
+        "The active ink remains silent, scentless, and visual only, behaving through branching, alignment, surface spread, and stillness rather than speech or personhood."
+      ],
+      "must_not": [
+        "Do not pay off C004 or explain the sunlight rule yet; only plant the observation.",
+        "Do not pay off C012 or reveal the parasite's deeper origin, route, or connection to Eleanor.",
+        "Do not confirm that preservation feeds the ink-root system before chapter 6.",
+        "Do not confirm that Eleanor is the ink before chapter 9, and do not let Eleanor speak, sound, smell, or appear as a ghost.",
+        "Do not introduce any male lead, romance line, male antagonist, or caretaker figure."
+      ],
+      "opens_with": "\"Stay where I put you,\" Clara snapped, and drove the paperweight down before the ledger crawled another inch.",
+      "cliffhanger": "At the bottom of the newly exposed grate, black veins pulse around a submerged catalogue drawer labeled in Eleanor's handwriting, and every label inside faces upward at once.",
+      "signature_detail_hint": "A strip of old blue glass from the observatory dome stains the daylight greenish for one second before the black thread under it hardens into a crumb of charcoal.",
+      "emotional_beat": "Clara's attraction is not romantic but compulsive: a dangerous pull toward the records, sharpened by vulnerability, grief, and the need to make Eleanor's absence orderly.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; emotional intensity is gothic, obsessive, and grief-driven.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Escalate from discovery to methodical mapping while planting C004 and C012 exactly as unresolved visual clues. Preserve continuity from chapters 1-2: Clara knows the stains are active and directed, but not what they are, what feeds them, or how Eleanor is involved. End on the submerged drawer labeled in Eleanor's handwriting beneath the grate.",
+      "carries_to_next": "Clara carries a contamination map, a logged daylight anomaly, a glimpse of deeper black routes under the floor, and the image of Eleanor's labeled drawer into chapter 4, where C003 and C004 can begin paying off."
+    }
+  ]
+}

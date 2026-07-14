@@ -1,0 +1,319 @@
+---
+series: the-black-arteries
+book: 1
+chapter: 4
+title: Charcoal Under Sun
+spice: 1
+word_count: 3880
+status: draft
+needs_fix: []
+promoted_at: '2026-07-13T14:13:16Z'
+---
+
+"Let go," Clara ordered, and the forceps bloomed orange rust around her fingers.
+
+The metal had been clean three seconds ago. Stainless enough for field work, narrow enough for separating vellum from rot, expensive enough that Clara had once considered insuring the kit separately from her own teeth. Now corrosion raced up both arms of the forceps in feathered bursts, orange, brown, then black, as if years had been poured over them in a spoonful.
+
+She did not let go.
+
+That, she realized with admirable professional distance, was either discipline or idiocy. The two had always shared a drawer.
+
+The black thread clinging to the tip of the forceps tightened around the metal. It did not pull like a living muscle. It simply adhered and advanced, a vascular line crawling from the edge of the exposed floor grate to the tool she held, then to the damp paper scrap pinned beneath it.
+
+The scrap had been caught in the grate, half under the bent iron lip, half floating in the shallow water that filmed the archive floor. On its upper corner, barely legible beneath water bloom, sat a familiar slant of handwriting.
+
+Eleanor's drawer label. Eleanor's hand. Eleanor's absence arranged into a filing problem with teeth.
+
+Clara tightened her grip until her knuckles went pale. "Absolutely not."
+
+The forceps answered by shedding light.
+
+Tiny metallic flecks snapped off the oxidizing surface and drifted down into the stagnant water, bright as filings from a broken star. They winked once, twice, and vanished into the brown depth between the floorboards. The rust spread faster where the black touched it, a stain of age blooming with impossible speed.
+
+Clara released the paper, not the tool. The scrap slid back against the grate. The black thread loosened from the forceps and flattened, rejoining the network beneath the floorboards as if nothing had happened.
+
+Only then did Clara fling the ruined forceps onto the stone lip of a catalogue plinth.
+
+They landed without drama. No clatter worth noting, only a dull tap swallowed by damp. Their jaws had fused crookedly, webbed in rust. A bright rind of oxidized dust ringed the tips, and where moisture gathered underneath, coppery flecks trembled in the film of water.
+
+Clara stared at her fingers.
+
+No black. No visible burn. No neat, medically useful symptom to write down. Just the faint grit of rust on the pads of her thumb and forefinger, and the intimate knowledge that the archive had found a new category of misconduct.
+
+"Metal," she said, because saying the heading first kept conclusions on a leash. "Rapid oxidation on contact or near contact. Seconds, not hours. Produces particulate metallic reflection in standing water."
+
+Her voice did not echo. The observatory swallowed speech as efficiently as it swallowed paper. That was almost considerate. If the building had thrown her words back, she might have mistaken them for company.
+
+Clara wound her brass pocket watch once, twice, three times. The crown bit into her thumb. The tiny resistance steadied her better than breathing. Breath was unreliable in a place where every surface seemed to be waiting for moisture.
+
+The exposed grate gaped in front of her, a rectangle of black iron ribs under the lifted floor panel. Water moved below it, though no current should have existed. Thin black veins threaded through the submerged beams, branching upward over glass shards, paper scraps, and the underside of the catalogue cabinets. They all angled, subtly but unmistakably, toward the drawers she had disturbed.
+
+One drawer remained half open at knee height.
+
+VANCE, ELEANOR M. OBSERVATIONAL NOTES. 1894-1896.
+
+The label was swollen, the paper puckered beneath its ink. Clara had spent all of chapterless hours avoiding the exact curve of the V, as if refusing to look straight at it could turn it into someone else's handwriting. It had not obliged.
+
+Ash drifted around the drawer front in the thin water film, gray and weightless, not falling from above but collecting where disturbed paper had blackened earlier under some accidental exposure near the cracked upper panes. The ash made no pattern Clara could trust. It circled the drawer label, gathered at the brass pull, then separated into loose islands.
+
+Warning, accusation, coincidence.
+
+Three ugly options. No witnesses. No hand to point. No voice to clarify. The archive remained professionally silent, which was more than could be said for most committee meetings, but considerably less reassuring.
+
+Clara crouched and pulled her field notebook from the oilcloth satchel. The pages had begun to cockle despite the waxed cover. She hated that. The world could collapse into vascular ink and drowned architecture, but page warp remained offensive on a personal level.
+
+Her contamination map filled two spreads: gallery cases, meridian corridor, lower catalogue stacks, exposed grate, dome stair, water level marks, and the black directional lines she had traced in pencil. She had drawn arrows where the threads climbed glass. Crosshatching where paper had softened into dark organic branching. A question mark beside the narrow stair glimpsed beneath the grate.
+
+Now she added a column down the right side.
+
+METAL RESPONSE.
+
+She underlined it once. No decoration. No drama. Drama was what happened when records were left unsorted.
+
+Below it, she wrote: steel forceps oxidized within seconds at contact with black filament. Orange-brown bloom. Surface failure. Metallic flecks visible in water. Avoid metal contact where possible. Test nonmetal tools.
+
+She stopped before writing alive.
+
+Not because she disbelieved it. Because the word would make her think less clearly. Alive belonged to biology, theology, and coroners. She had a flooded observatory, active stains, and a sister's handwriting in a drawer that should have contained only old notes. Material problem. Hazardous material problem. Hostile, yes. Directed, yes. But still matter. Still subject to rule.
+
+Everything was subject to rule eventually. Even grief, if one refused to open the box.
+
+Clara recapped the pencil and glanced toward the fractured upper dome.
+
+A narrow strip of daylight entered through a split in the Victorian glass high above, then struck the cracked prism lodged in the frame of the old spectroscope assembly. The prism had probably belonged to the instrument bench before the flood shifted half the room into a museum of bad decisions. Its triangular body was chipped along one edge, clotted with dust, and wedged between a brass arc and a warped mahogany support.
+
+The daylight passing through it divided weakly across the far wall: greenish yellow, bruised violet, a red so thin it looked embarrassed to exist. But at the prism's broken edge, one blade of plain white light fell past the colors and touched the floor near the meridian line.
+
+The black veins avoided that strip.
+
+Clara had noticed the avoidance in chapterless fragments of panic: a clean gap on the wet boards, a thread bending around pale light, the odd brittle smear near the drawer. She had catalogued it as C003? No, she corrected herself irritably, not a catalogue number, not yet. A clue was not a record until tested.
+
+"Fine," she said. "Sunlight gets its turn."
+
+Her satchel contained linen tape, bone folder, blotting paper, glassine sleeves, two pencils, a scalpel she now distrusted, and an ivory paper knife inherited from an archivist who believed tools should outlive empires. The ivory knife would be safer than metal, perhaps. She selected it and mouthed the chamber number she had assigned the room.
+
+A-04. Lower dome archive. Subsection grate.
+
+The ritual tasted like dust.
+
+She approached the spectroscope bench by stepping only on exposed stone and higher boards. Water pressed around the soles of her boots. Under the surface, black roots lay against the floor as dark as spilled India ink, thick in some places, hairline in others. They did not thrash. They did not hurry. Their patience was worse.
+
+At the bench, Clara used the ivory knife to pry loose a shard of old observatory glass from the broken frame. The piece came free with a gritty reluctance. It was curved, smoked at the edge, and cold enough to numb her fingertips through the linen glove.
+
+She checked the glove. No ink.
+
+"Standards maintained," she muttered. "A triumph."
+
+The shard caught the narrow blade of daylight. It trembled across her palm, first scattering into sickly color, then collapsing into a white strip when she tilted the curve. The colored bands washed over the black veins without visible effect. Violet slid across a thread. Nothing. Green touched a branching knot. Nothing. Red lay over a wet paper scrap. Nothing except the paper seeming more ruined than before, which hardly counted as news.
+
+Only the plain white edge of the beam mattered.
+
+Clara angled the shard lower. The white light sharpened, no wider than a ribbon cut from an envelope, and landed on a black vascular thread climbing the base of the catalogue cabinet.
+
+The thread stopped.
+
+There was no sound. No hiss. No theatrical recoil. It simply fixed in place, every tiny branch held mid-reach. The surface dulled from wet black to matte black, then to a gray-black crust. Within the beam, the thread stiffened as if winter had passed through it in a line. Its smallest capillaries curled inward.
+
+Clara did not breathe until the first piece broke.
+
+A segment the length of her fingernail cracked across its width, lifted from the wood, and crumbled into charcoal dust. The ash did not fall so much as loosen, drifting in the damp air before settling onto the water below. A second segment followed. Then a third. The white beam cut a clean wound through the branch, leaving both ends still glossy and black beyond the light.
+
+Direct contact only.
+
+Not heat, then. Not ordinary drying. Sunlight, and only where it touched.
+
+Clara's heart beat so hard her collar seemed too tight. Hope presented itself like an overeager intern: uninvited, underqualified, already holding the wrong box.
+
+She crushed it.
+
+A rule was not safety. A rule was a way not to die in the next five minutes.
+
+She shifted the shard, widening the beam along the cabinet base. More of the black vein froze, blackened, and broke into charcoal ash. The ash collected in the water as pale islands and dark grit. The neighboring threads remained active. One moved along the shadowed underside of the cabinet, circling the damaged section with the slow confidence of ivy finding a new wall.
+
+"Only exposed roots," Clara said. "Direct sunlight. No general sterilization. No effect from refracted color."
+
+She could work with that.
+
+The thought was ridiculous enough to calm her. Of course she could work with that. Give Clara Vance a nightmare and a note column, and she would become briefly unbearable in the cause of method.
+
+She returned to the map and added another heading beside the first.
+
+SUNLIGHT RESPONSE.
+
+The pencil dug through damp paper fibers. She wrote small to save space, the way she had in university margins when refusing to purchase a second notebook before absolutely necessary.
+
+White solar beam via curved glass immobilizes black vascular thread. Exposed section stiffens, blackens, crumbles to charcoal ash. Colored prism bands ineffective. Adjacent shadowed material remains active. Test repeatability. Preserve sample.
+
+Preserve sample.
+
+The phrase steadied her and condemned her in equal measure.
+
+Clara looked at the ash drifting near the cabinet base. Loose, degraded, no longer textual, no longer structured. It was residue. Still, it had been part of the active stain seconds earlier. If she left it, she would lose evidence. If she collected it, she would be doing exactly what she had always done: saving the dangerous thing because destruction felt like sacrilege.
+
+She selected a glassine sleeve and hesitated.
+
+Glassine was for paper fragments, not ash. Ash required vials, folded packets, controlled humidity. Half her kit was unsuitable; the other half was now suspect because metal behaved like it had offended time personally.
+
+The drawer labeled Eleanor waited in the corner of her vision.
+
+Clara refused to look at it directly while she prepared the sleeve. That was childish. It was also efficient. One could be both.
+
+With the ivory knife, she eased a sun-charred fragment from the edge of a paper scrap caught on the cabinet base. Not ash only, then. Better. A portion of the page had blackened where the root crossed it, stiffened under the white light, and separated in a brittle flake. It retained a ragged paper edge, the ghost of a ruled line, and a burned vascular imprint like leaf veins pressed into coal.
+
+She slid it into the archival sleeve.
+
+Then, because evidence required comparison, she rescued an unburned page fragment from the water beside the plinth. It had been part of an observing log, the ink faded but still legible in places: declination, cloud interference, instrument correction. No names. No revelation. Just data, which felt suddenly luxurious.
+
+Clara blotted it between two sheets, used the bone folder to flatten the corner, and placed it in a second sleeve. She set both sleeves on an upturned enamel tray from the instrument bench. The tray had a chipped blue rim and a painted manufacturer's mark almost erased by mildew. Its center dipped slightly, making a shallow basin of reflected light.
+
+The black threads beneath the nearest floorboard changed direction.
+
+Clara noticed because she had trained herself to notice misfiled things at twenty paces. A line that had been angling toward the open drawer now bent beneath the tray. Another paused along the glassy surface of standing water, then branched toward the protected sleeves. A third slid up the underside of the plinth, stopping short of the loose ash scattered in the water.
+
+The ash remained untouched.
+
+It floated in a near-perfect scatter, gray and black fragments drifting in lazy separation. The threads did not enter it. Did not gather it. Did not reclaim it. Instead they favored the sleeve, the page fragment sealed inside, the neat human impulse to save a thing from rot.
+
+Clara's mouth went dry.
+
+Do not conclude. Do not decorate ignorance with theory. Observation first.
+
+She wrote it down with fingers that wanted to shake and were denied permission.
+
+Nearby black threads show preference for sleeved charred fragment and sleeved unburned page over loose ash. Loose ash ignored. Cause unknown.
+
+Cause unknown.
+
+She underlined unknown so hard the pencil point snapped.
+
+"Elegant," Clara said. "Very scholarly."
+
+She used the broken point anyway, dark smudging beneath her glove. Her standards were deteriorating at a measurable rate.
+
+The drawer with Eleanor's label shifted in the shallow light as clouds moved somewhere above the cracked dome. The label remained legible. Eleanor M. Vance. Observational Notes. 1894-1896.
+
+No, Clara thought. Not shifted. The light shifted. The drawer did not move. The distinction mattered unless she intended to start losing arguments to furniture.
+
+Ash drifted around the drawer pull in an uneven ring. The brass handle, dulled green with age, had not yet been touched by the black. Or perhaps the black avoided it because of the metal. Or perhaps the metal had already been tested before she arrived and the result had been filed under Not Clara's Business, a category the universe seemed determined to expand.
+
+She needed another metal observation.
+
+The ruined forceps were one example. One example was an anecdote wearing a lab coat. She scanned the instrument bench and found a small brass fitting half submerged beside the spectroscope mount, then a rusted star-sighting screw lodged in a crack near the meridian rail. Brass might behave differently. Iron already rusted, but speed could still be measured visually.
+
+She chose the screw first, because sacrificing an already corroded object offended her less. Using the ivory knife, she nudged it toward a black thread crossing the wet stone.
+
+Before contact, a tremor of oxidation brightened along the screw's exposed spiral. Orange flared through old brown, sudden as a match. The black thread did not need to wrap it. Proximity was enough. Within seconds, flakes lifted from the screw in glittering motes. They drifted into the water and scattered light from the prism's sickly colors, tiny sparks drowning without a sound.
+
+Clara watched until the screw collapsed into layered rust.
+
+"Near contact confirmed," she said. Her voice had flattened into procedural cadence. Good. Panic hated forms.
+
+She added to the map: star-sighting screw oxidized before direct contact at less than one centimeter from filament. Metallic flecks released. Black filament unchanged.
+
+Then the brass fitting.
+
+She expected green corrosion, perhaps blackening. Instead, the fitting flashed bright at its edges, a brief gold fever, then dulled into brown and turquoise bloom. Minute flakes spun away from it, catching the white beam before sinking. The black thread beside it thickened slightly at the edge, then continued past as if the metal had never been the point.
+
+Metal was not food, not exactly. Not a barrier either. More like weather the black caused by existing too close.
+
+Clara stopped herself. Too much metaphor. Metaphor was where fear put on a nice dress and asked to be treated as insight.
+
+She straightened the map's lower corner, though the page was damp and would not stay flat. Then she aligned the two sleeves on the enamel tray, charred fragment to the left, unburned page to the right. Labels next. Always labels. Without labels, civilization became a pile of damp anecdotes.
+
+She wrote on two slips:
+
+Sample A-04-SUN-1: charred page/root fragment, direct white sunlight exposure.
+
+Sample A-04-PAP-1: unburned rescued observing log fragment, water exposure.
+
+Her handwriting looked controlled. That pleased her in a grim, petty way.
+
+The black threads continued to angle toward the tray.
+
+Not fast. Not enough to justify running, though her body offered that option repeatedly and with enthusiasm. The nearest vein climbed a sliver of broken glass, branching across its surface in ink-thin tributaries. Another moved beneath the water skin, turning the reflection of the dome into a cracked black map.
+
+Clara lifted the glass shard and redirected the white beam across their path.
+
+The vein in the beam froze and crumbled. Its severed ends remained beyond the light, glossy and waiting. Charcoal dust loosened and drifted over the water, settling into gray commas around the protected sleeves.
+
+The threads behind the cut bent around the light.
+
+"Of course," Clara said. "It has routing capacity. Marvelous. The building is damp, homicidal, and better at logistics than the acquisitions department."
+
+Her sarcasm steadied her for exactly two breaths.
+
+Then the beam shifted as the sun moved behind the broken dome ribs. The white strip narrowed. The frozen root stopped crumbling where light left it. At the edge of shadow, the black remained black.
+
+That was the limit. Sunlight was a scalpel, not a cure. It could cut exposed threads. It could not reach beneath floorboards, behind cabinets, inside soaked paper stacks, under the archive's skin. The observatory was mostly shadow, mostly water, mostly record.
+
+And Clara was standing in it with two preserved samples the black seemed to prefer over ash.
+
+She should leave them.
+
+The thought struck cleanly enough to hurt.
+
+Leave the sleeves. Step back. Let the threads take the protected materials, if taking was what they meant to do. Evidence was not worth becoming part of the archive's inventory.
+
+Her hand moved before the thought completed, sliding both sleeves farther from the approaching veins.
+
+There. Decision made. Predictably terrible.
+
+Clara had no patience for moral theatrics, especially from herself. She was not brave. She was not noble. She was an archivist, which meant she had been trained to believe that a damaged page was still a page and that future knowledge depended on present stubbornness. Destroying text was failure. Abandoning it was failure in a cheaper coat.
+
+The archive offered an elegant new problem: survival might require exactly that failure.
+
+"Not today," she told the room.
+
+No answer came. No creak in reply. No whisper from the drawer. Eleanor remained an absence with a label, ash gathering around the handwriting she had left behind and refusing to explain whether it accused Clara of cowardice or begged her to stop.
+
+Clara closed the Eleanor drawer halfway with the ivory knife, careful not to touch the label. Halfway was ridiculous. Open invited contamination. Closed pretended the problem could be filed away. Halfway, then. A compromise worthy of a committee and therefore probably doomed.
+
+The black threads below the grate shifted when the drawer moved.
+
+Clara froze.
+
+Under the exposed floor, the network had thickened while she worked. Lines she had mapped as separate now braided together through the submerged beams. They crossed beneath the iron grate, climbed the underside of the lifted floor panel, and spread toward the enamel tray where her two sleeves sat.
+
+But the ash from the sunlight test lay all around them.
+
+Untouched.
+
+A perfect negligence. Ash near the cabinet. Ash drifting by the drawer. Ash caught in the shallow eddies along the plinth. The black did not enter it, did not darken it, did not gather even the pieces that had once been root.
+
+Protected fragments, yes. Loose residue, no.
+
+Observation, Clara reminded herself. Not conclusion. Not yet.
+
+She tucked the unburned page sleeve into the outer pocket of her satchel, between blotting sheets. The charred fragment sleeve she kept in hand. It was too brittle to risk bending, and the vascular imprint on its surface had preserved the exact branching structure destroyed by the beam. Evidence of sunlight response. Evidence of paper involvement. Evidence of something she did not want to name.
+
+She added one more note to the contamination map, writing against the softening paper with a stubbornness that bordered on spite.
+
+Procedural defense: use direct white sunlight where accessible to immobilize/cut exposed threads. Avoid metal instruments. Prefer ivory, glass, bone, gloved manual handling. Maintain sample separation. Do not assume safety.
+
+The final sentence looked sane.
+
+That was comforting, if one ignored every circumstance surrounding it.
+
+The white beam slipped across the floor again, weakened by the prism's crack. Sickly colors crawled over the water. Only the plain edge held power, a thin blade that turned one black filament to charcoal before sliding off and leaving the rest alive with direction.
+
+Clara reached for the tray.
+
+Below the grate, every vein stopped.
+
+Not froze. Not sunlight. Stopped with attention.
+
+Her fingers tightened around the sleeve containing the sun-charred fragment. The unburned page rested in the satchel at her hip, protected, labeled, saved. The loose ash floated around her boots in gray islands. The Eleanor drawer sat half closed, handwriting bisected by shadow.
+
+Clara lifted the sleeve an inch.
+
+The entire underfloor network changed.
+
+Black vascular lines that had been angled toward the drawer, toward the waterlogged stacks, toward the rescued unburned page in her satchel, turned as one beneath the grate. They bent toward her raised hand, precise and silent. The roots nearest the sunlight wound around its edge, avoiding the white blade, but their direction remained fixed on the sealed charred fragment.
+
+The ash at her feet did not move. No thread crossed into it. No branch gathered it. A clean circle opened in the drifting residue, untouched and exact.
+
+Clara's breath caught, then disciplined itself into a thin, useless line.
+
+She lifted the sleeve higher.
+
+When Clara lifts the sleeve containing the sun-charred fragment, every black vein under the floor bends toward it, leaving the loose ash behind in a perfect untouched circle.

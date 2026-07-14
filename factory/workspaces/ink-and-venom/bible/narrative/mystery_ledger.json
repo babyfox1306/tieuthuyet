@@ -1,0 +1,327 @@
+{
+  "main_mystery": "What is the so-called venom therapy at the Styrian Alp Sanatorium, and why are Elara's body, senses, and inherited studio changing after treatment begins?",
+  "truth": "The venom is the viable biomass of an ancient sentient subterranean organism. It consumes and replaces human nervous and circulatory systems with ink-like black vascular structures in order to fold patients into a collective consciousness. Dr. Alistair Finch is already transformed and runs the clinic to provide the organism with new hosts. The treatment can halt pain because it replaces the body's ordinary sensory pathways, but the price is irreversible conversion. Beatrice, a patient who died before Elara arrived, resisted full absorption enough to manifest only as dancing iridescent metallic-shimmer light in the studio; she never speaks, never touches, and never has a scent.",
+  "canonical_reveal_chapter": 9,
+  "red_herrings": [
+    {
+      "id": "RH001",
+      "name": "Ordinary experimental side effects",
+      "introduced_chapter": 1,
+      "resolved_chapter": 5,
+      "misleading_surface": "Finch frames the black threads, cold skin, and pain relief as predictable vascular reactions to a revolutionary chronic-pain treatment.",
+      "true_function": "The symptoms are early evidence of the organism replacing Elara's circulatory and nervous systems."
+    },
+    {
+      "id": "RH002",
+      "name": "Beatrice as a speaking ghost",
+      "introduced_chapter": 2,
+      "resolved_chapter": 6,
+      "misleading_surface": "Elara initially tries to interpret the metallic shimmer as a haunting that might eventually communicate in words.",
+      "true_function": "Beatrice is not a conventional ghost and never speaks, touches, or carries scent. Her remnant can only make silent visual displays because what remains of her is trapped at the edge of absorption."
+    },
+    {
+      "id": "RH003",
+      "name": "Tobias as unstable or jealous of recovery",
+      "introduced_chapter": 3,
+      "resolved_chapter": 7,
+      "misleading_surface": "Tobias's charcoal drawings and anxious warnings can be dismissed as pain, fear, or resentment toward patients who are improving.",
+      "true_function": "Tobias understood the treatment was transformation and used drawings to warn Elara when direct speech was unsafe or unlikely to be believed."
+    },
+    {
+      "id": "RH004",
+      "name": "Alpine salt as a folk remedy",
+      "introduced_chapter": 4,
+      "resolved_chapter": 10,
+      "misleading_surface": "The clinic's strict control of a specific alpine salt looks like dietary eccentricity, superstition, or mineral balancing.",
+      "true_function": "The salt is the only known method to halt the transformation. It can never reverse what has already been replaced."
+    },
+    {
+      "id": "RH005",
+      "name": "Finch as merely chronically ill",
+      "introduced_chapter": 1,
+      "resolved_chapter": 9,
+      "misleading_surface": "Finch's greyish skin, cold tea habit, and physical stillness suggest overwork, illness, or a doctor's private medical burden.",
+      "true_function": "Finch is already converted; his chest is a solid grey mass with black vascular threads beneath, proving he is an agent of the organism rather than a healer."
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "R001",
+      "name": "The treatment changes more than pain",
+      "reveal_chapter": 3,
+      "required_clues": [
+        "C001",
+        "C002",
+        "C004"
+      ],
+      "reveal": "Elara realizes the venom is not only dulling pain. It is altering her vascular appearance, temperature, and sensory processing, especially her response to pure light, sound, and texture.",
+      "reader_payoff": "The first concrete payoff confirms the therapy is physically invasive, not just psychologically unsettling."
+    },
+    {
+      "id": "R002",
+      "name": "Beatrice's shimmer is a warning system",
+      "reveal_chapter": 6,
+      "required_clues": [
+        "C003",
+        "C006",
+        "C008"
+      ],
+      "reveal": "The iridescent metallic shimmer in the inherited studio repeatedly points Elara toward hidden marks, drawings, and patterns connected to Beatrice's fate. It is silent visual guidance, not speech or touch.",
+      "reader_payoff": "The studio manifestations become purposeful while preserving the rule that Beatrice never speaks, touches, or carries scent."
+    },
+    {
+      "id": "R003",
+      "name": "Cure means disappearance into the process",
+      "reveal_chapter": 7,
+      "required_clues": [
+        "C005",
+        "C007",
+        "C009"
+      ],
+      "reveal": "Tobias's mid-book disappearance after being declared cured proves that recovery at the sanatorium means removal from ordinary life, not healing.",
+      "reader_payoff": "The book reframes patient success stories as evidence of conversion and containment."
+    },
+    {
+      "id": "R004",
+      "name": "The salt can halt transformation",
+      "reveal_chapter": 8,
+      "required_clues": [
+        "C010",
+        "C011",
+        "C012"
+      ],
+      "reveal": "Elara learns the clinic controls a specific alpine salt because it can halt the organism's advance, though it cannot reverse replaced tissue.",
+      "reader_payoff": "The escape mechanism is established before the final act and tied to a physical rule rather than luck."
+    },
+    {
+      "id": "R005",
+      "name": "Finch is already transformed",
+      "reveal_chapter": 9,
+      "required_clues": [
+        "C013",
+        "C014",
+        "C015"
+      ],
+      "reveal": "Elara sees Finch's chest: a solid grey mass threaded with black vascular structures. His cold tea, grey skin, and clinical calm are signs of conversion.",
+      "reader_payoff": "The antagonist's body proves the therapy's endpoint and removes any possibility that Finch is an innocent doctor."
+    },
+    {
+      "id": "R006",
+      "name": "The single central answer",
+      "reveal_chapter": 9,
+      "required_clues": [
+        "C002",
+        "C004",
+        "C007",
+        "C009",
+        "C013",
+        "C015",
+        "C016"
+      ],
+      "reveal": "The ink is the viable biomass of an ancient sentient subterranean organism that consumes and replaces human nervous and circulatory systems to build a collective consciousness.",
+      "reader_payoff": "All mystery elements converge into one answer: the black threads, sensory changes, patient disappearances, Finch's body, Beatrice's shimmer, and the clinic's salt control are aspects of the same organism."
+    },
+    {
+      "id": "R007",
+      "name": "Cora is partly converted",
+      "reveal_chapter": 12,
+      "required_clues": [
+        "C017",
+        "C018",
+        "C019"
+      ],
+      "reveal": "Nurse Cora's rigid obedience has a biological component: she is partly converted and physically tied to the clinic's protocol, even without fully understanding the organism's truth.",
+      "reader_payoff": "The escape gains an immediate embodied obstacle and shows that staff can become extensions of the system."
+    },
+    {
+      "id": "R008",
+      "name": "Escape is survival, not restoration",
+      "reveal_chapter": 12,
+      "required_clues": [
+        "C020",
+        "C021",
+        "C022"
+      ],
+      "reveal": "Elara rejects the final stage and escapes with Tobias's sketchbook and a vial of venom, but her veins remain black, her body is colder and painless, and the transformation is halted rather than reversed.",
+      "reader_payoff": "Book 1 closes the immediate threat while preserving body-horror consequence and series dread."
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "plant_chapter": 1,
+      "payoff_chapter": 3,
+      "clue": "After the first venom treatment, Elara sees faint black threads branching beneath the white skin of her wrists and rubs them to warm herself.",
+      "surface_interpretation": "A strange but tolerable vascular side effect of experimental pain therapy.",
+      "true_meaning": "The organism has begun building replacement vascular structures inside her body."
+    },
+    {
+      "id": "C002",
+      "plant_chapter": 1,
+      "payoff_chapter": 9,
+      "clue": "Finch describes the venom as a living delivery medium rather than a standard drug, then quickly corrects himself into colder medical language.",
+      "surface_interpretation": "A doctor's imprecise shorthand for a cutting-edge biological treatment.",
+      "true_meaning": "The so-called medicine is literally living biomass."
+    },
+    {
+      "id": "C003",
+      "plant_chapter": 2,
+      "payoff_chapter": 6,
+      "clue": "In Beatrice's inherited studio, iridescent metallic-shimmer light dances across a blank patch of wall when Elara approaches the easel.",
+      "surface_interpretation": "Reflection from snow, glass, or residual migraine aura.",
+      "true_meaning": "Beatrice's remnant is directing Elara's attention through silent visual display."
+    },
+    {
+      "id": "C004",
+      "plant_chapter": 3,
+      "payoff_chapter": 3,
+      "clue": "Direct pure light makes Elara's treated skin prickle and burn, while the scrape of charcoal and weave of cloth become painfully vivid.",
+      "surface_interpretation": "A neurological side effect caused by pain treatment.",
+      "true_meaning": "Her sensory system is being rewired toward the organism's light allergy and heightened sound-and-texture perception."
+    },
+    {
+      "id": "C005",
+      "plant_chapter": 3,
+      "payoff_chapter": 7,
+      "clue": "Tobias reacts with fear when a staff member congratulates another patient on being nearly cured.",
+      "surface_interpretation": "Jealousy or despair from a patient whose own pain has not improved.",
+      "true_meaning": "Tobias knows 'cured' patients disappear into the transformation process."
+    },
+    {
+      "id": "C006",
+      "plant_chapter": 4,
+      "payoff_chapter": 6,
+      "clue": "The metallic shimmer in the studio pools over ash-like residue near the baseboard, then vanishes when Elara looks away.",
+      "surface_interpretation": "A trick of alpine light and dust.",
+      "true_meaning": "Beatrice is marking physical evidence left by the conversion process."
+    },
+    {
+      "id": "C007",
+      "plant_chapter": 4,
+      "payoff_chapter": 9,
+      "clue": "Tobias's charcoal drawings show human figures with black root systems replacing the heart, spine, and veins.",
+      "surface_interpretation": "Macabre patient art shaped by pain and fear.",
+      "true_meaning": "Tobias has recorded the organism's replacement of the nervous and circulatory systems."
+    },
+    {
+      "id": "C008",
+      "plant_chapter": 5,
+      "payoff_chapter": 6,
+      "clue": "Elara finds no voice, footprint, perfume, breath, or touch connected to the shimmer, only shifting metallic light that repeats around Beatrice's old worktable.",
+      "surface_interpretation": "Proof the shimmer may be imagined.",
+      "true_meaning": "Beatrice's manifestation is strictly visual because she is a remnant resisting absorption, not a conventional apparition."
+    },
+    {
+      "id": "C009",
+      "plant_chapter": 5,
+      "payoff_chapter": 7,
+      "clue": "A corridor patient declared cured leaves behind bedding dusted with grey ash and a thin black stain that follows the mattress seams like veins.",
+      "surface_interpretation": "Poor cleaning after a medical transfer.",
+      "true_meaning": "The patient's body has been advanced or removed as part of conversion into the collective."
+    },
+    {
+      "id": "C010",
+      "plant_chapter": 4,
+      "payoff_chapter": 8,
+      "clue": "Cora locks away a tin of coarse alpine salt and records each grainy dose more carefully than the venom injections.",
+      "surface_interpretation": "A dietary restriction or mineral supplement for fragile patients.",
+      "true_meaning": "The salt is a controlled inhibitor that can halt the organism's advance."
+    },
+    {
+      "id": "C011",
+      "plant_chapter": 6,
+      "payoff_chapter": 8,
+      "clue": "When salt spills near Elara's treated hand, the black threads under her skin tighten away from it and her pain flickers back for a moment.",
+      "surface_interpretation": "Coincidence, skin irritation, or anxiety response.",
+      "true_meaning": "The organism recoils from the salt because it interrupts the conversion."
+    },
+    {
+      "id": "C012",
+      "plant_chapter": 7,
+      "payoff_chapter": 8,
+      "clue": "Tobias's sketchbook includes repeated white crystalline marks drawn across black branching lines, always labeled with mountain contours instead of words.",
+      "surface_interpretation": "Symbolic contrast between snow and darkness.",
+      "true_meaning": "Tobias encoded the alpine salt's ability to halt the black vascular spread."
+    },
+    {
+      "id": "C013",
+      "plant_chapter": 1,
+      "payoff_chapter": 9,
+      "clue": "Finch's skin has a permanent greyish cast that never flushes in cold rooms or after exertion.",
+      "surface_interpretation": "Fatigue, illness, or the cost of overwork.",
+      "true_meaning": "His body has already been remade into grey transformed tissue."
+    },
+    {
+      "id": "C014",
+      "plant_chapter": 2,
+      "payoff_chapter": 9,
+      "clue": "Finch repeatedly sips cold tea without seeming to notice its temperature or taste.",
+      "surface_interpretation": "An eccentric personal habit.",
+      "true_meaning": "His altered body no longer responds to ordinary warmth and taste the way a human body should."
+    },
+    {
+      "id": "C015",
+      "plant_chapter": 8,
+      "payoff_chapter": 9,
+      "clue": "In a burst of sensory distortion, Elara glimpses black current moving beneath Finch's shirt like a map instead of a pulse.",
+      "surface_interpretation": "A hallucination caused by venom, panic, or light sensitivity.",
+      "true_meaning": "Her altered senses are beginning to perceive the organism's bio-electrical network inside Finch."
+    },
+    {
+      "id": "C016",
+      "plant_chapter": 8,
+      "payoff_chapter": 9,
+      "clue": "In a restricted treatment room, Elara sees diagrams of underground rootlike networks paired with patient nervous systems and circulatory charts.",
+      "surface_interpretation": "Research notes comparing mineral veins, roots, and anatomy as medical metaphor.",
+      "true_meaning": "The clinic knows the subterranean organism maps itself onto human nerves and blood vessels."
+    },
+    {
+      "id": "C017",
+      "plant_chapter": 5,
+      "payoff_chapter": 12,
+      "clue": "Cora pauses mid-procedure as if listening to a sound under the floor, then resumes the protocol with a blank expression.",
+      "surface_interpretation": "Stress, fatigue, or institutional obedience.",
+      "true_meaning": "Cora is partly linked to the organism's collective signals."
+    },
+    {
+      "id": "C018",
+      "plant_chapter": 8,
+      "payoff_chapter": 12,
+      "clue": "Elara notices a thin black line vanish beneath Cora's cuff when pure light spills through the infirmary window.",
+      "surface_interpretation": "A shadow, bruise, or ink stain from medical work.",
+      "true_meaning": "Cora is partly converted and hides early black vascular threading."
+    },
+    {
+      "id": "C019",
+      "plant_chapter": 10,
+      "payoff_chapter": 12,
+      "clue": "Cora protects the salt cabinet with more fear than loyalty, whispering that missed protocol lets the body remember pain.",
+      "surface_interpretation": "A nurse terrified of punishment from Finch.",
+      "true_meaning": "She knows, at least bodily, that salt interrupts the organism and that pain returns when conversion is slowed."
+    },
+    {
+      "id": "C020",
+      "plant_chapter": 10,
+      "payoff_chapter": 12,
+      "clue": "Beatrice's shimmer traces a route through service corridors only when Elara holds Tobias's sketchbook open to a drawing of black veins cut by white crystals.",
+      "surface_interpretation": "Elara is imposing meaning on light while desperate.",
+      "true_meaning": "Beatrice is guiding Elara toward the salt-assisted escape path using the only visual language available to her."
+    },
+    {
+      "id": "C021",
+      "plant_chapter": 11,
+      "payoff_chapter": 12,
+      "clue": "After ingesting the alpine salt, Elara's pain returns in sharp flashes, but the spreading black threads stop climbing toward her throat.",
+      "surface_interpretation": "The salt shocks her system but may be dangerous.",
+      "true_meaning": "The salt halts the transformation without reversing existing alteration."
+    },
+    {
+      "id": "C022",
+      "plant_chapter": 12,
+      "payoff_chapter": 12,
+      "clue": "In the snow beyond the clinic, Elara sees her own black veins stark under white skin as she carries Tobias's sketchbook and a vial of venom.",
+      "surface_interpretation": "A final scar from surviving the sanatorium.",
+      "true_meaning": "She has escaped the immediate threat but remains permanently altered and partly connected to the thing she fled."
+    }
+  ]
+}

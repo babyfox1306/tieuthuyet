@@ -64,7 +64,7 @@ She slid the blade in. There was blood. Too much blood.
 
 "Suction," she said calmly.
 
-The nurse cleared the field. Iris saw the vocal cords. They were moving, edematous, threatening to spasm. She had one shot. If she forced the tube, she could rupture a membrane. If she waited, he would hypoxiate.
+The nurse cleared the field. Iris saw the vocal cords. They were moving, edematous, threatening to spasm. She had one shot. If she forced the tube, she could rupture a membrane. If she waited, he would go hypoxic.
 
 A year ago, she would have waited. She would have checked the monitor one more time, agonized over the millimeters of mercury. She would have chosen passivity in the guise of caution.
 

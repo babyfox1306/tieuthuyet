@@ -8,7 +8,9 @@ Repo gồm **hai hệ thống độc lập** dùng chung môi trường Python:
 | **`factory/`** | Sản xuất truyện theo chương (narrative → bible → plan → write → QC → catalog) | `.\factory\run_factory.ps1` hoặc **UI** `factory/ui/server.py` |
 | **`catalog/`** | Bản giao hàng sạch — chỉ chương đã promote, export KDP/serial | đọc / upload tay |
 
-Triết lý: **recon tìm ngách** → **Narrative OS hiểu truyện** → **factory viết trong khung** → **catalog publish**.
+Triết lý: **recon tìm ngách** → **Narrative OS hiểu truyện** → **Canon registry khóa tên/cast** → **factory viết trong khung** → **catalog + export gate** → KDP.
+
+**Dòng dark đang chạy (KDP):** bút danh **Reynard Frost** — `Docs/pen_names_data.txt`. Workspaces: `the-paper-oracle`, `the-salt-room-1` (gothic/horror). Romance CEO vẫn `glass-meridian` / `ceo-contract` (tách pen name khi publish).
 
 ---
 
@@ -42,9 +44,10 @@ Luôn activate `.venv` trước khi chạy Python.
 
 **Dashboard — viết hàng loạt:**
 - Tab **Pipeline**: Chuẩn bị sách → Viết hàng loạt / Tiếp tục / Chạy hết
-- Tab **Chương**: đọc prose, xem **hộp lý do** khi `needs_fix` / `needs_review`, duyệt vào catalog
-- **Hủy lock batch** (`🔓`): khi batch treo sau crash/restart server (lock `running: true` còn sót)
-- Batch log hiện lý do từng chương fail (vd. `needs_fix — quá ngắn (1347 từ)`)
+- **Chế độ viết:** `supervised` (để lỗi cho operator) | `auto` (content/length retry tới `writer_auto_max_retries`, mặc định **10**; **format-only** `*` / quotes → `needs_fix`, không rewrite cả chương)
+- Tab **Chương**: đọc prose, hộp lý do `needs_fix` / `needs_review`, **Duyệt → catalog** (promote trước, không treo LLM `state_updater`)
+- **Hủy lock batch** (`🔓`): khi batch treo sau crash/restart server
+- Batch log phân biệt: `FORMAT_FIX` · `SHORT/LENGTH` · `CONTENT_CAP`
 
 ---
 
@@ -69,40 +72,31 @@ KDP Sub-niche Recon/
 │   │   ├── tests/run_zones.py
 │   │   └── lib/
 │   │       ├── narrative_compiler.py   # Story Brain → constraints/chương
-│   │       ├── plan_qc.py              # Plan QC + NC-01..NC-07
+│   │       ├── canon_registry.py       # SSOT tên lead + cast allowlist + approve-plan
+│   │       ├── canon_guard.py          # Forbidden lead aliases lúc promote
+│   │       ├── plan_qc.py              # Plan QC + NC-01..NC-07 + absent-ML romance
+│   │       ├── machine_qc.py           # format_fix / content_fail / length buckets
+│   │       ├── export_gate.py          # EG-01..EG-12 trước promote/export
 │   │       ├── plan_normalize.py       # Unwrap plan, flatten must_happen
 │   │       ├── write_guards.py         # State gate, prior excerpt
 │   │       ├── qc_eval.py              # QC hard-fail continuity/voice
 │   │       ├── chapter_reasons.py      # Lý do needs_fix / needs_review (UI + batch log)
-│   │       ├── master_plan.py, prompt_builder.py, call_9router.py, …
+│   │       ├── master_plan.py, prompt_builder.py (LOCKED CANON), call_9router.py, …
 │   └── workspaces/
-│       ├── ceo-contract/     # EN thriller — plan 50ch, pipeline legacy
-│       └── glass-meridian/   # EN clean run (default_workspace)
-│           ├── direction.yaml    # narrative_profile, publish_strategy, gates
-│           ├── concept.yaml
-│           ├── bible/
-│           │   ├── series.json
-│           │   └── narrative/    # kernel, ledger, threads, knowledge_matrix
-│           └── books/01/
-│               ├── master_plan.json
-│               ├── prompts/ch_NNN.txt
-│               ├── state.json
-│               └── pipeline/{draft,needs_fix,needs_review,ready}/
+│       ├── the-paper-oracle/   # EN gothic — Reynard Frost (KDP ready)
+│       ├── the-salt-room-1/    # EN gothic — Reynard Frost
+│       ├── glass-meridian/     # EN thriller-romance (default_workspace)
+│       └── ceo-contract/       # EN thriller — legacy pipeline
 │
-├── catalog/ceo-contract/       # Delivery zone
-│   ├── series.yaml
-│   ├── spot_check/             # Bản đọc nhanh khi review
-│   └── books/01-hop-dong-co-gia/
-│       ├── book.yaml
-│       ├── chapters/           # Markdown đã promote
-│       └── exports/            # vella | kdp | epub
-│
-├── archive/                    # Backup catalog, scripts cũ, story_factory cũ
-├── scripts/                    # DEPRECATED — prompt tay thời đầu (tham chiếu)
-├── start omni.bat              # Khởi động OmniRoute (port 20128)
-├── run.ps1                     # Recon CLI
+├── catalog/<series>/           # Delivery — chapters + cover.png + exports/epub/
+├── Docs/pen_names_data.txt     # Bút danh theo thể loại (Reynard Frost = dark)
+├── archive/                    # Backup catalog khi export/promote
+├── start omni.bat
+├── run.ps1
 └── requirements.txt
 ```
+
+> Cấu trúc chi tiết cũ (ceo-contract nested tree) vẫn đúng về mặt ý tưởng; ưu tiên workspace dark/KDP ở trên.
 
 ---
 
@@ -140,23 +134,28 @@ architect → validate-bible → approve-bible
   render-prompts ──► prompts/ch_NNN.txt
        │
        ▼
-  approve-plan
+  approve-plan   ← validate_plan_against_canon_registry (cast allowlist, spice, lead names)
 ```
+
+`canon_registry.yaml` (operator SSOT) + `LOCKED CANON` trong mọi writer prompt: lead names, absent-ML, supporting cast phone-only (vd. Dr. Ovid), content boundaries từ concept.
 
 ### Pha 2: Viết từng chương
 
 ```
-prompts/ch_NNN.txt + state.json + excerpt chương trước (ready)
+prompts/ch_NNN.txt + state.json (+ excerpt khi sequential)
        │
        ▼
-  write (Writer) — chặn nếu ch N-1 chưa ready
+  write (Writer)
        │
-       ├── machine_qc → needs_fix
-       ├── LLM qc (hard-fail continuity/voice_drift) → needs_review
-       └── PASS → ready/ → state_updater → auto-promote → catalog/
+       ├── machine_qc classify:
+       │     length   → expand rồi full rewrite (auto: tới writer_auto_max_retries)
+       │     format   → needs_fix, KHÔNG rewrite (* / quotes) — sửa tay
+       │     content  → retry capped → needs_review
+       ├── LLM qc → needs_review
+       └── PASS → ready/ → Duyệt/promote → catalog/ (+ cover.png khi export)
 ```
 
-Batch UI: chỉ skip `ready`; rewrite `needs_fix` / `needs_review`; dừng khi fail (tuỳ chọn). Mỗi chương kẹt hiện **lý do rõ** (quá ngắn, đứt mạch continuity, v.v.) — tab Chương, batch log, `MORNING.md`.
+Batch UI: `supervised` vs `auto`. Auto **không** infinite-rewrite `needs_fix` format-only.
 
 ### Plan vs Prompt — ép kỹ thuật ở đâu?
 
@@ -293,20 +292,17 @@ File: `factory/workspaces/<workspace>/direction.yaml` (vd. `glass-meridian`)
 
 | Field | Ý nghĩa |
 |-------|---------|
-| **`target_language`** | **`vi`** hoặc **`en`** — đổi 1 dòng, cả pipeline nhảy ngôn ngữ (prompt, roles, QC ký tự lạ) |
-| `total_chapters` | Số chương book (vd: 50) |
+| **`pen_name`** | Bút danh KDP — **bắt buộc trước export**. Dark: `Reynard Frost` (`Docs/pen_names_data.txt`) |
+| **`target_language`** | **`vi`** hoặc **`en`** — đổi 1 dòng, cả pipeline nhảy ngôn ngữ |
+| `total_chapters` | Số chương book |
 | `canon_through` | Chương đã chốt canon — Outliner không plan lại từ đầu |
 | `plan_status` | `draft` \| `approved` |
-| `narrative_profile` | `romance_thriller`, `sweet_romance`, … |
+| `narrative_profile` | `romance_thriller`, `sweet_romance`, gothic/no-ML, … |
 | `narrative_status` | `draft` \| `approved` — compiler OFF cho đến khi approved |
 | `publish_strategy` | `kdp_ku_exclusive` \| `wide_serial` |
-| `workspace_mode` | `archive` trong direction → tắt compiler (legacy workspace) |
-| `spice_default` | Mức 1 (sweet) cho chương thường |
-| `spice_explicit_chapters` | Danh sách chương spice 3 (18+) |
-| `spice_steamy_chapters` | Danh sách chương spice 2 |
-| `arc` | act1_setup … act4_resolution — range chương |
-| `book1_ending` | Kết book 1 — Outliner phải hướng tới |
-| `audience`, `goal`, `blurb`, `tropes` | Đưa vào prompt Writer |
+| `workspace_mode` | `archive` → tắt compiler (legacy) |
+| `spice_default` / `spice_*_chapters` | Mức spice theo chương |
+| `arc`, `book1_ending`, `audience`, `goal`, `blurb` | Prompt Writer / Outliner |
 
 Chỉnh direction → chạy lại `plan` (hoặc `plan --acts 13-30` cho một act).
 
@@ -334,18 +330,14 @@ Sau khi đổi `target_language`: `render-prompts` (hoặc `fix-plans`) rồi `w
 
 ## Plan QC (`plan_qc.py`)
 
-**Kỹ thuật:** opens_with mở cảnh, must_happen < 3, spice mismatch, signature generic, thiếu `[ROMANCE]`, legacy VN trên EN workspace.
+**Kỹ thuật:** opens_with, must_happen < 3, spice mismatch, signature generic, cliffhanger yếu.
 
-**Narrative (NC-01..NC-07)** — khi compiler bật:
+**Romance / absent male lead:**
+- Có ML thật → thiếu `[ROMANCE]` = fail
+- `Unassigned (no male lead)` / M.I.A. → **cấm** invent love interest / bác sĩ hiện diện; dùng `[ISOLATION]` / absence beat
+- Cast allowlist: `Dr. X` trong plan/state phải khớp concept/bible (vd. chỉ **Dr. Ovid**, phone-only)
 
-| Rule | Nội dung |
-|------|----------|
-| NC-01 | Clue plant theo ledger |
-| NC-02 | Clue payoff đúng ch |
-| NC-03 | Payoff không trước plant |
-| NC-04/05 | Major reveal đủ clue trước |
-| NC-06 | Knowledge gate — không leak fact sớm |
-| NC-07 | Clue phải xuất hiện trong beats |
+**Narrative (NC-01..NC-07)** — khi compiler bật: clue plant/payoff, knowledge gate, beats.
 
 **Locked plans:** `bible/locked_chapter_plans.json` (`locked: true`).
 
@@ -359,48 +351,62 @@ Sau khi đổi `target_language`: `render-prompts` (hoặc `fix-plans`) rồi `w
 
 | Key | Mặc định | Ý nghĩa |
 |-----|----------|---------|
-| `min_word_count` | 1500 | Dưới ngưỡng → `needs_fix` |
+| `min_word_count` | **1250** | Dưới ngưỡng → length fail (không cho qua ready) |
+| `min_publish_words` | **1250** | EG-08 export/promote |
 | `max_word_count` | 2200 | Gợi ý trần |
-| `banned_phrases` | list | Cụm sáo, lặp |
-| `throttle_seconds` | 4 | Nghỉ giữa call 9router |
-| `model_routing` | flexible | OmniRoute auto |
-| `model_priority_groups` | auto variants | Xem § Vai AI |
-| `default_workspace` | glass-meridian | Workspace mặc định CLI/UI |
+| `writer_short_retries` | 2 | Expand patch khi short |
+| `writer_length_max_retries` | 3 | Full rewrite khi expand chưa đủ (supervised) |
+| `writer_content_max_retries` | 2 | POV / name drift / bible (supervised) |
+| `writer_auto_max_retries` | **10** | Auto mode: content + length full rewrite |
+| `write_mode` | `parallel` | Parallel chapters vs sequential state gate |
+| `banned_phrases` | list | Cụm sáo |
+| `throttle_seconds` | 4 | Nghỉ giữa call |
+| `default_workspace` | glass-meridian | CLI/UI mặc định |
+
+**Buckets `machine_qc.classify_machine_issues`:**
+
+| Bucket | Ví dụ | Hành vi auto |
+|--------|-------|----------------|
+| `format_fix` | `*italic*`, missing quotes | `needs_fix` — **STOP**, sửa tay |
+| `length` | short < min | expand → full rewrite → mới `needs_fix` |
+| `content_fail` | POV I/my, name drift | retry tới cap → `needs_review` |
 
 ---
 
 ## Catalog & promote
 
-Khi chương **PASS** QC:
+Khi chương **PASS** QC (hoặc operator **Duyệt**):
 
-1. Lưu `pipeline/ready/ch_NNN.txt`
-2. Cập nhật `state.json`
-3. **Auto-promote** → `catalog/<series>/books/<slug>/chapters/NN-slug.md`
-4. Copy `spot_check/` để đọc nhanh
-5. Export EPUB/DOCX/serial
+1. `pipeline/ready/ch_NNN.txt`
+2. `promote_chapter` — export-gate subset (EG-01/02/03/06/08/10/11/12) + canon_guard
+3. `catalog/<series>/books/<slug>/chapters/` + `spot_check/`
+4. Export EPUB: gate full EG-01..12 → `dc:creator` = `pen_name` → optional `--cover cover.png`
 
-### Title chain (hệ thống — không phụ thuộc cuốn sách)
+### Pen name + cover (KDP)
 
-Nguồn title theo thứ tự ưu tiên:
-
-```
-# heading trong prose  →  master_plan.json (chapter_plans)  →  title catalog (nếu không generic)  →  fallback
+```yaml
+# direction.yaml + manifest.yaml + series.yaml
+pen_name: Reynard Frost   # dark fiction — xem Docs/pen_names_data.txt
 ```
 
-- **Promote** (`text_to_catalog_md`) và **repair-catalog** ghi title đúng vào frontmatter
-- **Export** (`resolve_chapter_display`) — TOC/H1 không bao giờ hiện bare `Chapter N` khi plan có tên thật
-- **Export gate EG-09** — chặn generic title khi `master_plan` có title canonical
+```
+catalog/<series>/books/<slug>/cover.png   # hoặc cover.jpg
+.\factory\run_factory.ps1 export --workspace the-paper-oracle --target epub --cover catalog/the-paper-oracle/books/01-the-paper-oracle/cover.png
+```
+
+**Không mở `archive/.../exports/epub/`** — đó là backup trước export; bản mới nằm dưới `catalog/.../exports/epub/`.
+
+### Title chain
+
+```
+# heading prose → master_plan title → catalog title → fallback
+```
 
 ```powershell
-.\factory\run_factory.ps1 repair-catalog --workspace glass-meridian   # normalize catalog in-place (có backup)
-.\factory\run_factory.ps1 qc-export-gate --workspace glass-meridian  # EG-01..09, không export
-.\factory\run_factory.ps1 promote --workspace glass-meridian --book 1
-.\factory\run_factory.ps1 export --target epub
+.\factory\run_factory.ps1 repair-catalog --workspace the-paper-oracle
+.\factory\run_factory.ps1 qc-export-gate --workspace the-paper-oracle
+.\factory\run_factory.ps1 export --workspace the-paper-oracle --target epub --cover path\to\cover.png
 ```
-
-UI: nút **Repair catalog** + **Export gate** trên tab Export (`factory/ui/server.py`).
-
-`pen_name` trong `manifest.yaml` để trống — điền tay trước khi publish.
 
 ---
 
@@ -434,21 +440,21 @@ DB và CSV nằm trong `recon/` (xem `recon/config.py`).
 
 ## Workspaces
 
-### `glass-meridian` (khuyến nghị — clean run)
+### `the-paper-oracle` / `the-salt-room-1` (KDP dark — Reynard Frost)
 
-- **EN** international thriller-romance, Singapore hub
-- Leads: Lin Wei × Adrian Vale, Glass Meridian conspiracy
-- `narrative_profile: romance_thriller`, narrative files đầy đủ
-- `default_workspace` trong `config.json`
-- Chạy full pipeline từ narrative → plan → write
+- EN gothic / psychological dread, spice 1, **no male lead**
+- `pen_name: Reynard Frost`, cover + EPUB đã gắn author
+- Cast cứng: concept/bible only (vd. Dr. Ovid = phone-only)
 
-### `ceo-contract` (legacy / archive data)
+### `glass-meridian` (default_workspace — thriller-romance)
 
-- EN plan 50 ch, narrative approved, compiler ON
-- Pipeline ch1–13 có prose cũ (trước pipeline guards) — cần reset hoặc rewrite tuần tự
-- Dùng tham chiếu hoặc `workspace_mode: archive` nếu chỉ export catalog cũ
+- EN international thriller-romance
+- `narrative_profile: romance_thriller`
+- Tách bút danh romance khi publish (không dùng Reynard Frost)
 
-Bible: `factory/workspaces/<id>/bible/series.json`
+### `ceo-contract` (legacy)
+
+- EN plan 50 ch — tham chiếu / archive data
 
 ---
 
@@ -480,6 +486,17 @@ Bible: `factory/workspaces/<id>/bible/series.json`
 - **`All models failed (... gh/gpt-4o ... No active credentials for provider: github)`** — toàn chain fail; lỗi cuối thường là GitHub. Sửa: reconnect credential trong Omni **hoặc** bỏ `gh/*` khỏi `model_priority_groups` (config hiện chỉ dùng `auto/fast`, `auto`, `auto/best-fast`)
 - **`moi` — Unable to determine provider** — không dùng alias này; Omni không nhận
 - Token usage: `factory/engine/factory_log.json` (`prompt_tokens`, `completion_tokens` mỗi call)
+
+### Duyệt treo / “bấm Duyệt không qua”
+
+- Cũ: `chapter_approve` gọi `state_updater` (LLM) **trước** promote → treo OmniRoute
+- Hiện: **promote trước**, chỉ bump `current_chapter` local — không chờ LLM
+- Restart UI sau khi pull code; nếu vẫn fail → đọc toast `export gate chặn promote: EG-…`
+
+### Chương cụt / EG-01 / KDP spelling
+
+- EG-01: body kết giữa câu → sửa catalog md rồi export lại
+- KDP Quality: sửa từ bịa (vd. `hypoxiate` → `go hypoxic`) trong `catalog/.../chapters/` rồi `export --cover`
 
 ### Batch treo / `batch dang chay`
 
@@ -534,4 +551,4 @@ Factory dùng `safe_print` cho log tiếng Việt. File luôn UTF-8.
 
 ## Tóm tắt một dòng
 
-**Recon** tìm sub-niche → **Narrative OS** (ledger/compiler) → **Factory** plan (NC rules) → prompt → viết (guards + QC) → **Catalog** KDP/serial.
+**Recon** tìm sub-niche → **Narrative OS** → **Canon registry / LOCKED CANON** → **Factory** (format≠length≠content retries) → **Catalog + EG-01..12 + pen_name/cover** → KDP.

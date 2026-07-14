@@ -1,0 +1,196 @@
+{
+  "act": [
+    10,
+    12
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Final Stage",
+      "slug": "the-final-stage",
+      "one_line_summary": "After Finch revealed the organism and her own answering pulse, Elara resisted the scheduled final stage, planted salt against her skin as a private weapon, and followed Beatrice's shimmer toward a possible escape route.",
+      "beat_summary": "Open with Finch ordering Cora to prepare Elara for the final stage while the pulse under Elara's ribs answers the mineral-room apparatus. Elara now knows the venom is living subterranean biomass and that Finch is a transformed host, so the horror shifts from investigation to survival: Finch frames completion as relief, unity, and the end of pain, while Elara understands it as the loss of bodily self. Plant C019 by making Elara deliberately press or swallow a hidden pinch of alpine salt, causing the black vascular threads to tighten, recoil, and bring back a blade of human pain that proves her body knows salt interrupts the organism. Plant C020 when Beatrice's silent metallic shimmer appears beyond the mineral room and repeatedly flashes along salt-white seams, ventilation grates, and old service marks that imply an escape path without speech, touch, scent, or words. [ISOLATION] Elara has no rescuer, no romantic comfort, and no trustworthy human hand; her only guidance is pain, salt, Tobias's absent drawings, and a dead woman's constrained light.",
+      "must_happen": [
+        "Plant C019: Elara uses a hidden pinch of alpine salt on her wrist, tongue, or beneath a bandage, and the black threads recoil while old pain returns sharply enough to confirm that her body recognizes salt as interruption.",
+        "Plant C020: Beatrice's metallic shimmer appears only as silent visual light and marks a sequence of salt-white seams, service scratches, or mineral stains leading away from Finch's intended treatment route.",
+        "Finch announces or implies that Elara's final stage will begin soon, presenting absorption into the collective as the compassionate completion of her pain treatment.",
+        "Elara hides Tobias's sketchbook pages or a copied salt diagram under her clothing, using his drawings as evidence and a practical map after his disappearance.",
+        "Cora prepares restraints, dosage instruments, or transfer protocols with intensified precision, but her full partial conversion remains unconfirmed in this chapter.",
+        "Elara's body horror escalates when the pulse beneath her ribs briefly synchronizes with the mineral apparatus, then stutters painfully when the salt takes effect.",
+        "[ISOLATION] Elara refuses Finch's offer of painless unity internally and chooses painful separateness, with no romance, no attraction, and no caretaker rescue."
+      ],
+      "must_not": [
+        "Do not pay off C019 or C020 yet; show the salt reaction and shimmer route as planted survival tools, with final use held for chapter 12.",
+        "Do not reveal the full extent of Cora's partial conversion or make her the final embodied obstacle before chapter 12.",
+        "Do not show the final escape image of Elara in the winter mountains with Tobias's sketchbook and a vial of venom.",
+        "Do not frame Finch's offer as romantic, seductive, protective, or emotionally intimate in a desirable way.",
+        "Do not let Beatrice speak, touch, smell, write words, or appear as a human ghost."
+      ],
+      "opens_with": "\"Prepare her for completion,\" Finch said, and the thing beneath Elara's ribs answered him.",
+      "cliffhanger": "As Cora wheels the restraint frame toward Elara, Beatrice's shimmer strikes a salt-white crack in the mineral wall and lights a narrow service hatch that should have been invisible.",
+      "signature_detail_hint": "The final-stage restraint frame is padded with old linen stamped by tiny black calibration marks that look less like measurements than a copied vascular pattern.",
+      "emotional_beat": "Elara's vulnerability hardens into painful defiance: the promise of relief tempts the exhausted part of her, but the return of pain proves she is still separate enough to choose.",
+      "spice": 1,
+      "spice_note": "Keep all intensity psychological, gothic, and bodily; medical closeness must read as coercive horror, with no romance, no attraction, and no erotic framing.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Continue directly from the chapter 9 pulse cliffhanger in the lower mineral rooms. Shift from revelation into crisis survival; plant C019 through Elara's salt-induced recoil and pain return; plant C020 through Beatrice's strictly visual shimmer marking a possible salt-assisted escape path. Keep Cora's full conversion withheld, keep Finch coercive rather than romantic, and end on the shimmer revealing the hidden service hatch.",
+      "carries_to_next": "Elara has rejected Finch's final stage internally, has a hidden salt tactic that hurts but interrupts the black spread, and has seen Beatrice's shimmer mark a possible route out before Cora can secure her.",
+      "narrative": {
+        "clues_plant": [
+          "C019",
+          "C020"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "clue_beats": {
+          "C019": "Make the salt reaction bodily and private: recoil, pain, and a moment of regained human sensation without final proof of escape.",
+          "C020": "Use Beatrice's shimmer as silent directional light along physical escape markers only, never as language or touch."
+        }
+      }
+    },
+    {
+      "chapter": 11,
+      "title": "Salt in the Mouth",
+      "slug": "salt-in-the-mouth",
+      "one_line_summary": "Elara broke away from the final-stage preparation, learned that salt can slow but not undo the conversion, and reached Tobias's hidden sketchbook and a venom vial while Finch sealed the clinic around her.",
+      "beat_summary": "Open with Elara biting down on stolen alpine salt as Cora's hand closes on the restraint buckle. Elara uses the pain and recoil from chapter 10 to break the procedure long enough to slip through the shimmer-marked service hatch, moving through old maintenance passages, salt storage niches, and record shelves that connect the studio, lower corridors, and mineral rooms. Plant C021 by showing the salt halt the advancing black lines at her wrist and ribs without restoring what is already blackened: her skin stays cold, the painless altered areas remain wrong, and each dose of salt brings back only partial, brutal human pain. Beatrice's shimmer continues as silent visual guidance, pushing Elara toward Tobias's hidden sketchbook and a small sealed venom vial stored as evidence or dosage reserve. Finch's voice follows through speaking tubes or corridor glass, calm and certain that she cannot survive outside the process. [ISOLATION] Elara has tools but no comfort; Tobias is gone, Beatrice cannot explain, Marta is unreachable, and every choice requires hurting herself to remain separate.",
+      "must_happen": [
+        "Plant C021: Elara tests or relies on alpine salt and realizes it halts the spread temporarily but does not reverse existing black veins, coldness, numbness, or altered sensory perception.",
+        "Elara escapes the immediate final-stage restraint by using salt pain, her knowledge of Finch's apparatus, and the service hatch marked by Beatrice's shimmer.",
+        "Beatrice's shimmer guides Elara visually through maintenance scratches, mineral stains, and salt deposits, remaining silent, scentless, touchless, and nonverbal.",
+        "Elara retrieves Tobias's sketchbook from a hidden ward cache, studio recess, or lower-record shelf, preserving his drawings as evidence and a survival guide.",
+        "Elara finds and steals a small sealed vial of venom from a dosage cabinet, mineral-room tray, or research drawer, understanding it as dangerous proof rather than medicine.",
+        "Finch locks down corridors or speaks through the clinic's old communication system, insisting that Elara's pain is unnecessary and her resistance is a symptom.",
+        "Elara's body horror escalates when salt stops one black line at her wrist while another remains permanently dark beneath the skin, making incompleteness undeniable.",
+        "[ISOLATION] Elara accepts that escape will not restore her original body and keeps moving without romance, rescue, or reassurance."
+      ],
+      "must_not": [
+        "Do not pay off C021 until chapter 12; this chapter plants the non-reversal rule through experience but does not deliver final aftermath.",
+        "Do not reveal Cora's full partial conversion or make her the final physical obstacle yet.",
+        "Do not show the final image of Elara escaped into the winter mountains.",
+        "Do not let Beatrice communicate through words, touch, scent, written language, or a full ghostly body.",
+        "Do not turn Tobias into a present rescuer or romantic figure; he remains absent except through his sketchbook."
+      ],
+      "opens_with": "Elara bit the salt until blood filled her mouth, and the black line climbing her throat stopped.",
+      "cliffhanger": "At the end of the service passage, Elara pulls Tobias's sketchbook and a sealed venom vial from a salt-crusted drawer just as Cora's shadow bends across the only exit.",
+      "signature_detail_hint": "The service passage walls are tagged with obsolete patient route symbols scratched into salt crust, including one mark shaped like a closed eyelid split by a black mineral vein.",
+      "emotional_beat": "Hope becomes harsher than fear because Elara understands survival may mean choosing pain, coldness, and permanent alteration over Finch's painless surrender.",
+      "spice": 1,
+      "spice_note": "Keep the chapter non-explicit and non-romantic; focus on bodily autonomy, pain, dread, and escape pressure inside the medical gothic setting.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Continue from the hidden service hatch cliffhanger. Stage a tense flight through service passages and salt-controlled spaces; plant C021 by proving salt halts but does not reverse the change; have Elara recover Tobias's sketchbook and a sealed vial of venom for the book ending; keep Beatrice's shimmer strictly visual; end with Cora blocking the exit without fully revealing her conversion yet.",
+      "carries_to_next": "Elara has Tobias's sketchbook, a vial of venom, a limited supply of alpine salt, and the devastating knowledge that salt cannot make her unchanged, while Cora now stands between her and the outside route.",
+      "narrative": {
+        "clues_plant": [
+          "C021"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "clue_beats": {
+          "C021": "Show the non-reversal rule through Elara's body: salt stops motion and restores pain in places, but blackened vessels and altered cold tissue remain."
+        }
+      }
+    },
+    {
+      "chapter": 12,
+      "title": "Black Veins in the Snow",
+      "slug": "black-veins-in-the-snow",
+      "one_line_summary": "Elara used salt, Beatrice's shimmer, Tobias's sketchbook, and the stolen venom vial to fight past partly converted Cora and escape into the winter mountains permanently altered and still connected to the organism.",
+      "beat_summary": "Open with Cora catching Elara by the wrist and revealing black threading beneath her own skin moving in answer to the floor pulse. Pay off C017 and C018 by confirming Cora is partly converted and linked to the organism's signals: she hears or feels the collective before sound reaches the corridor, protects the salt controls with biological urgency, and becomes the immediate embodied obstacle to escape. Pay off C019, C020, and C021 as Elara uses painful salt doses to interrupt the black spread, follows Beatrice's silent shimmer along the escape path, and accepts that salt halts without restoring her altered body. Plant and pay off C022 in the ending: Elara rejects the final stage, fights past Cora, carries Tobias's sketchbook and the venom vial into the winter mountains, and survives with black veins, cold painless tissue, and a new recognition of the mountain's electrical pulse. Finch remains behind, not definitively destroyed, his clinic threat escaped but not erased. [ISOLATION] The book closes with freedom without comfort: no romance, no rescue, no restored body, only Elara's chosen separateness and the dread that part of her now recognizes what she fled.",
+      "must_happen": [
+        "Pay off C017: Cora reacts to the organism's collective signal before ordinary sound or movement occurs, proving her body is partly linked to the signals beneath the sanatorium.",
+        "Pay off C018: Elara sees Cora's hidden black vascular threading clearly at wrist, throat, or shoulder, confirming Cora is partly converted rather than merely obedient.",
+        "Pay off C019: Elara uses salt during the confrontation and escape, feeling pain return as the organism's advance is interrupted inside her body.",
+        "Pay off C020: Beatrice's shimmer guides Elara along the salt-assisted escape path through silent visual flashes only, never speaking, touching, smelling, writing, or appearing as a body.",
+        "Pay off C021: Elara understands in action that salt halts the transformation but does not reverse existing black veins, coldness, or altered sensory perception.",
+        "Plant and pay off C022: Elara escapes the immediate clinic threat but remains permanently altered and partly connected to the organism she fled.",
+        "Elara fights past partly converted Cora using salt, the environment, and her refusal of restraint rather than killing with splatter or receiving rescue.",
+        "Elara escapes into the winter mountains carrying Tobias's sketchbook and a sealed vial of venom, leaving Finch and the clinic behind but not conclusively destroyed.",
+        "[ISOLATION] The final emotional note is freedom without romance or comfort: Elara has no hand to take, only evidence, pain, black veins, and the mountain's pulse."
+      ],
+      "must_not": [
+        "Do not reverse Elara's transformation or restore her original body.",
+        "Do not kill Finch definitively or resolve the wider organism threat; he and the clinic are left behind as ongoing danger.",
+        "Do not let Beatrice speak, touch, smell, write words, or appear as a full ghostly body during the escape.",
+        "Do not introduce romance, attraction, seduction, or a love interest in the ending.",
+        "Do not lose Tobias's sketchbook or the venom vial; both must leave the clinic with Elara."
+      ],
+      "opens_with": "Cora caught Elara's wrist, and the black veins under both their skins turned toward each other.",
+      "cliffhanger": "In the snow beyond the sanatorium, Elara opens her black-veined hand around Tobias's sketchbook and the venom vial as the mountain's hidden current answers from under her skin.",
+      "signature_detail_hint": "Cora's hidden conversion is visible through a split uniform cuff where the starch has crystallized into tiny salt grains stuck to black vascular threads beneath translucent skin.",
+      "emotional_beat": "Freedom lands as vulnerability rather than relief: Elara has escaped Finch's control, but the attraction of painless unity has been replaced by a colder terror that part of her body already understands the mountain.",
+      "spice": 1,
+      "spice_note": "Keep the finale sweet/non-explicit and non-romantic; intensity should come from bodily autonomy, pursuit, pain, dread, and the cost of survival.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Deliver the Book 1 ending exactly: Elara rejects the final stage, uses alpine salt and Beatrice's shimmer to navigate, fights past partly converted Cora, and escapes into the winter mountains carrying Tobias's sketchbook and a vial of venom. Pay off C017, C018, C019, C020, C021, and C022 clearly. Keep Finch behind rather than defeated, keep Beatrice strictly visual, keep the salt as halt-not-reversal, and end on Elara black-veined, colder, painless, free, and still partly connected to the mountain's electrical pulse.",
+      "carries_to_next": "Elara is outside Finch's immediate control with Tobias's sketchbook and a venom vial, but her body remains altered and the mountain's pulse inside her points toward the wider clinic network and Book 2.",
+      "narrative": {
+        "clues_plant": [
+          "C022"
+        ],
+        "clues_payoff": [
+          "C017",
+          "C018",
+          "C019",
+          "C020",
+          "C021",
+          "C022"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "clue_beats": {
+          "C017": "Cora anticipates pulses, doors, or floor vibrations before Elara can hear them, proving her link to collective signals.",
+          "C018": "Show Cora's black vascular threading plainly during the physical confrontation.",
+          "C019": "Salt use interrupts Elara's black spread and brings pain back during escape.",
+          "C020": "Beatrice's shimmer pays off as the visual guide through the correct salt-marked route.",
+          "C021": "Elara escapes still black-veined and cold because salt halts but does not reverse.",
+          "C022": "Final image makes survival and permanent alteration simultaneous."
+        }
+      }
+    }
+  ]
+}

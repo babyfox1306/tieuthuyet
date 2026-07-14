@@ -1,0 +1,87 @@
+{
+  "word_count": 1616,
+  "target_language": "en",
+  "markdown": [
+    "*Sky Catalogue, 1887–1892, Shelf E-4.*",
+    "*Obs-001*",
+    "*Obs-004*",
+    "*Vascular,*",
+    "*Like capillaries.*",
+    "*Obs-004: black contamination, possibly chemical reaction with floodwate",
+    "*in*",
+    "*Mildew,*"
+  ],
+  "missing_quotes": true,
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 5,
+        "snippet": "*Sky Catalogue, 1887–1892, Shelf E-4.*"
+      },
+      {
+        "line": 13,
+        "snippet": "*Obs-001*"
+      },
+      {
+        "line": 21,
+        "snippet": "*Obs-004*"
+      },
+      {
+        "line": 25,
+        "snippet": "*Vascular,*"
+      },
+      {
+        "line": 25,
+        "snippet": "*Like capillaries.*"
+      },
+      {
+        "line": 29,
+        "snippet": "*Obs-004: black contamination, possibly chemical reaction with floodwate"
+      },
+      {
+        "line": 47,
+        "snippet": "*in*"
+      },
+      {
+        "line": 51,
+        "snippet": "*Mildew,*"
+      }
+    ],
+    "missing_quotes": [
+      {
+        "line": 0,
+        "snippet": "(whole chapter has only 0 quote marks — dialogue likely unquoted)"
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*Sky Catalogue, 1887–1892, Shelf E-4.*",
+        "*Obs-001*",
+        "*Obs-004*",
+        "*Vascular,*",
+        "*Like capillaries.*",
+        "*Obs-004: black contamination, possibly chemical reaction with floodwate",
+        "*in*",
+        "*Mildew,*"
+      ],
+      "missing_quotes": true
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 1,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}

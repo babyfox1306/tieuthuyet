@@ -1,0 +1,161 @@
+{
+  "act": [
+    4,
+    6
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Scrape Beneath the Paint",
+      "slug": "the-scrape-beneath-the-paint",
+      "one_line_summary": "Elara followed Beatrice's silent shimmer to scraped evidence in the studio wall, found Tobias's anatomical charcoal warnings, and saw the clinic's alpine salt handled like a restricted medicine.",
+      "beat_summary": "Open with Elara pressing her ear to the studio floor as the knock below answers the pulse in her wrist again. The metallic shimmer in Beatrice's studio flashes over the scratched arrow from chapter 2 and leads Elara to use Beatrice's worn palette knife on a patch of thick white paint, where she uncovers ash-dark residue and fine black filaments embedded beneath the wall surface, planting C006 as physical evidence of conversion without yet explaining it. Tobias slips her folded charcoal pages that show nerves and blood vessels replaced by branching black root-systems, planting C007 as disturbing art that may be medical record or obsession. During a controlled meal or treatment corridor scene, Elara notices Oskar Lenz delivering coarse alpine salt under a falsified kitchen inventory while Cora reacts with unusual vigilance, planting C010 without revealing that salt halts conversion. [ISOLATION] Elara has clues but no safe ally: Beatrice can only shimmer, Tobias will not stay, Marta's letters remain filtered, and Finch's calm turns every question back into a symptom.",
+      "must_happen": [
+        "Plant C006: Beatrice's metallic shimmer silently highlights the scratched arrow and a repainted patch in the studio; when Elara scrapes it, she finds ash-like residue and hair-fine black filaments trapped under the paint.",
+        "Plant C007: Tobias gives or hides charcoal drawings showing a human arm, spine, and chest overlaid with black branching systems that resemble both roots and vascular anatomy, but Elara cannot yet know they are accurate records of replacement.",
+        "Plant C010: Elara sees Oskar Lenz deliver a small sack of coarse alpine salt listed as kitchen stock, while Cora treats it as more controlled than food and refuses Elara's casual question about it.",
+        "Elara's body horror escalates when the black lines in her wrists seem to tug toward the scraped residue, and the studio floor vibration makes her teeth ache without restoring pain.",
+        "Finch interrupts before Elara can openly confront Tobias, frames her fixation on drawings and wall marks as nervous overstimulation, and suggests adjusting her next venom dose.",
+        "[ISOLATION] Elara realizes every possible witness is compromised or unreachable: the shimmer has no voice, Tobias flees staff, and her mother can only receive clinic-reviewed letters."
+      ],
+      "must_not": [
+        "Do not reveal that the venom is living biomass, an ancient organism, or part of a collective consciousness.",
+        "Do not pay off C006, C007, or C010 in this chapter; keep the residue, drawings, and salt suspicious but unexplained.",
+        "Do not let Beatrice speak, touch Elara, write words, smell of anything, or appear as a human ghost.",
+        "Do not imply Tobias is a romantic interest or that Elara feels attraction to him.",
+        "Do not confirm Finch is transformed or reveal his chest."
+      ],
+      "opens_with": "Something knocked under the floor, and the black thread in Elara's wrist knocked back.",
+      "cliffhanger": "When Elara shakes the scraped ash from Beatrice's palette knife, the black threads under her wrist rise toward the skin like tiny roots scenting soil.",
+      "signature_detail_hint": "A bent tin salt scoop in the kitchen ledger room has tally marks cut into its handle, each notch packed with white grains that glitter like crushed bone.",
+      "emotional_beat": "Suspicion hardens into lonely defiance as Elara's vulnerability becomes practical: if no one will tell her what is happening to her body, she will collect evidence like a drawing built from shadows.",
+      "spice": 1,
+      "spice_note": "Keep intensity psychological and bodily, with clinical coercion, fear, and isolation; no erotic framing, no romance, and no attraction.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Continue directly from the chapter 3 floor-knock cliffhanger; plant C006, C007, and C010 through concrete visual and tactile evidence; make the studio feel like refuge and trap; preserve Beatrice as strictly silent shimmer; end on the black wrist threads reacting to the scraped ash.",
+      "carries_to_next": "Elara carries hidden ash residue, Tobias's unsettling drawings, and a new suspicion that the clinic's alpine salt matters, while Finch prepares to tighten treatment oversight.",
+      "narrative": {
+        "clues_plant": [
+          "C006",
+          "C007",
+          "C010"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "clue_beats": [
+          "C006: Use the shimmer to visually mark a physical spot on Beatrice's studio wall, then let Elara uncover residue and embedded black filaments without knowing their source.",
+          "C007: Make Tobias's charcoal pages precise enough to disturb Elara but not yet trustworthy enough to confirm the organism's replacement process.",
+          "C010: Show alpine salt as institutionally controlled through falsified inventory and Cora's vigilance, not through explanation."
+        ],
+        "knowledge_guardrails": [
+          "Elara may suspect the cure is dangerous and invasive, but she must not know the single central answer yet.",
+          "The reader must not know the exact nature of the organism or Finch's full transformation.",
+          "Beatrice's shimmer may seem meaningful, but do not yet confirm purposeful guidance until chapter 6."
+        ]
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "The Patient Who Was Cured",
+      "slug": "the-patient-who-was-cured",
+      "one_line_summary": "Elara witnessed a supposedly cured patient's disappearance, proved Beatrice's shimmer remains only visual, and noticed Cora listening to something beneath the sanatorium before any human sound arrived.",
+      "beat_summary": "Open with a sedated patient being wheeled past Elara with their uncovered hand threaded black almost to the knuckles. Finch announces or allows the staff to imply that the patient has been declared cured, but the patient is moved away from ordinary discharge routes toward a lower corridor, planting C009 as a disappearance disguised as medical success. In the studio, Elara tests Beatrice's shimmer with spoken questions, charcoal marks, breath on glass, and an outstretched hand; the shimmer answers only by light and movement, never voice, touch, scent, or written language, planting C008 and reinforcing the rules around Beatrice. Cora pauses mid-protocol before a distant vibration begins, tilting her head as though hearing a signal before anyone else can, planting C017 as an unsettling bodily link without confirming partial conversion. [ISOLATION] Elara is surrounded by bodies being managed, moved, and renamed as healed, but there is no trustworthy person beside her when she realizes cure may mean removal.",
+      "must_happen": [
+        "Plant C009: Elara sees a patient declared cured being moved after hours toward a restricted lower route rather than outside discharge, with black threading visible under the patient's pale hand or neck.",
+        "Plant C008: Elara deliberately tests Beatrice's shimmer in the studio and confirms it remains strictly visual: no speech, no touch, no scent, no written words, no full apparition.",
+        "Plant C017: Cora stops before a floor vibration or distant pipe-sound begins, listening with her whole body as if receiving a signal, then resumes protocol too smoothly.",
+        "Finch presents the cured patient's removal as progress and rest, using soft medical language that makes Elara's alarm sound irrational.",
+        "Elara's sensory transformation escalates as she briefly loses ordinary color distinction around the sedated patient's skin, seeing charcoal-dark lines more clearly than flesh.",
+        "Tobias reacts with visible terror to the word cured but refuses to explain in front of staff, leaving Elara with only his expression and a hurried warning mark.",
+        "[ISOLATION] Elara drafts a letter to Marta about the patient but realizes the clinic will read it first, forcing her to hide evidence in drawings rather than words."
+      ],
+      "must_not": [
+        "Do not pay off C009 by explaining where the patient is taken or what fully happens to cured patients.",
+        "Do not pay off C008 until chapter 6; plant the strict visual limitation but do not yet state that the shimmer is purposeful guidance.",
+        "Do not pay off C017 or confirm that Cora is partly converted or linked to the collective.",
+        "Do not reveal the lower mineral rooms' full connection to the organism.",
+        "Do not create romantic tension, caretaker intimacy, or seduction between Elara and Finch or any other character."
+      ],
+      "opens_with": "\"Cured patients do not need their rooms anymore,\" Nurse Cora said, and the hand on the stretcher twitched black beneath the sheet.",
+      "cliffhanger": "At the mouth of the lower corridor, the cured patient's dangling fingers uncurl, and every black line beneath Elara's wrists points toward them like compass needles.",
+      "signature_detail_hint": "The cured patient's discharge tag is made of stiff cream card punched with three square holes instead of a name, as if identity has been replaced by filing geometry.",
+      "emotional_beat": "Dread turns intimate in the worst way: Elara recognizes her own possible future in another patient's silent body and feels the vulnerability of being next in a system that calls disappearance healing.",
+      "spice": 1,
+      "spice_note": "Use psychological closeness to medical threat and bodily fear only; maintain the sweet/non-explicit rule with no romance and no eroticization of coercion.",
+      "chapter_task": "Write 1600-1900 words in third-limited Elara POV. Build the chapter around the contradiction between the word cured and the visual horror of removal; plant C008, C009, and C017 exactly; keep Beatrice's shimmer silent and nonphysical; end with the cured patient's black-threaded hand visually pulling Elara toward the lower corridor.",
+      "carries_to_next": "Elara now suspects cure means disappearance, has tested the limits of Beatrice's shimmer, and has seen Cora behave as if her body hears the clinic before her ears should.",
+      "narrative": {
+        "clues_plant": [
+          "C008",
+          "C009",
+          "C017"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "clue_beats": [
+          "C008: Let Elara test Beatrice's shimmer methodically so the reader understands its limits before chapter 6 confirms its guidance.",
+          "C009: Stage the cured patient as a visual contradiction: labeled healed but moved like evidence toward the lower levels.",
+          "C017: Give Cora one eerie anticipatory listening moment tied to vibration or hidden sound, then let her cover it with routine."
+        ],
+        "knowledge_guardrails": [
+          "Elara may fear cure means removal, but she must not know the collective or conversion destination.",
+          "Cora's behavior can suggest bodily wrongness but must not prove partial conversion.",
+          "Tobias's fear should intensify C005 but must not pay it off before chapter 7."
+        ]
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "The Language of Shimmer",
+      "slug": "the-language-of-shimmer",
+      "one_line_summary": "Elara confirmed Beatrice's shimmer is purposeful visual guidance, connected the studio ash to conversion evidence, and discovered that alpine salt makes the black threads in her skin recoil.",
+      "beat_summary": "Open with Elara cutting into the studio wall again as the shimmer strikes the blade three times in warning. This chapter pays off C003, C006, and C008: Elara recognizes that Beatrice's shimmer is not random light but deliberate visual direction, that the wall residue and ash-like traces are physical evidence left by the conversion process, and that Beatrice can only guide through silent, scentless, touchless light rather than ghostly speech. Tobias's drawings align with what the shimmer marks, making Elara understand they matter without yet revealing the full organism truth. Cora's restricted salt handling leads Elara to steal or spill a few grains of alpine salt onto her wrist or the ash sample, planting C011 when the black threads under her skin contract away from it like ink retreating from a blade. [ISOLATION] The closest thing Elara has to help is a dead woman's impossible light and a frightened patient's drawings, while Finch's coming dosage adjustment makes her own body feel like evidence under custody.",
+      "must_happen": [
+        "Pay off C003: Elara observes the shimmer repeatedly directing her attention to specific marks, objects, and hidden evidence, and concludes it is purposeful visual guidance rather than random reflection or hallucination.",
+        "Pay off C006: The shimmer-marked ash, wall filaments, and scraped studio evidence connect as physical traces left by the same conversion process affecting Elara's wrists, though the organism itself remains unrevealed.",
+        "Pay off C008: Elara understands Beatrice's presence is strictly visual and constrained; the shimmer never speaks, touches, smells, writes words, or becomes a body even when Elara begs for clearer help.",
+        "Plant C011: A few grains of alpine salt fall onto Elara's black-threaded wrist, ash sample, or contaminated palette knife, and the black lines visibly recoil or tighten away from the salt.",
+        "Elara hides the salt reaction from Cora and Finch, realizing that a restricted kitchen material may be more important than any medicine they admit to using.",
+        "Finch schedules or implies a stronger next treatment because Elara's recalibration is progressing, turning her discovery into a race against dosage.",
+        "Tobias's charcoal drawings visually match the shimmer-marked evidence closely enough that Elara stops dismissing them as illness, but she still does not know the full biological truth.",
+        "[ISOLATION] Elara's breakthrough gives her no comfort: her only guide is light from a dead patient, her only ally is terrified, and her body reacts before she understands why."
+      ],
+      "must_not": [
+        "Do not reveal that the venom is living biomass from an ancient sentient subterranean organism.",
+        "Do not reveal that Finch is already transformed or show his transformed chest.",
+        "Do not fully explain the alpine salt as an inhibitor yet; C011 must be planted only and paid off in chapter 8.",
+        "Do not pay off Tobias's full knowledge or confirm his drawings as anatomically accurate records until chapter 9.",
+        "Do not allow Beatrice to communicate through words, touch, scent, facial expression, or a human-shaped ghost."
+      ],
+      "opens_with": "The shimmer struck the palette knife once, twice, three times, and Elara froze before the wall could bleed black dust.",
+      "cliffhanger": "A single grain of alpine salt clings to Elara's wrist, and beneath it the black threads pull back in a clean white circle of skin that should not still exist.",
+      "signature_detail_hint": "The sanatorium's salt is stored in folded paper cones sealed with violet wax stamped not with a crest but with a tiny anatomical drawing of a nerve fork.",
+      "emotional_beat": "Hope arrives as tension instead of comfort: Elara feels a dangerous flicker of agency, but it exposes how vulnerable she is to Finch's next dose and to the thing already threaded through her.",
+      "spice": 1,
+      "spice_note": "Keep the intimacy entirely psychological: Elara's relationship is with evidence, fear, and her changing body, with no romance, attraction, or erotic content.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Pay off C003, C006, and C008 through repeated visual logic rather than exposition; plant C011 with a clear, startling salt reaction; keep the central organism truth withheld; end on the impossible white circle where the black threads recoil from salt.",
+      "carries_to_next": "Elara now knows Beatrice's shimmer is purposeful but limited, suspects the ash and drawings point to invasive bodily change, and has discovered an unexplained salt reaction that will drive her search toward restricted stores and Tobias's deeper warning.",
+      "narrative": {
+        "clues_plant": [
+          "C011"
+        ],
+        "clues_payoff": [
+          "C003",
+          "C006",
+          "C008"
+        ],
+        "reveals": [],
+        "clue_beats": [
+          "C003: Confirm guidance through repeated visual targeting of objects and marks, not through words or supernatural exposition.",
+          "C006: Link the wall ash, filaments, shimmer markings, and Elara's wrist threads as evidence of one conversion process without naming its source.",
+          "C008: Make Elara consciously understand the shimmer's strict limits: visual only, no touch, no scent, no speech, no human apparition.",
+          "C011: Show salt causing a physical recoil in the black threads or contaminated residue, but do not explain why."
+        ],
+        "knowledge_guardrails": [
+          "After this chapter, Elara may know the shimmer is purposeful and that the cure is dangerous, but she still must not know the organism's identity.",
+          "The salt may appear important, but its function as a controlled inhibitor must wait for chapter 8.",
+          "Finch remains medically threatening and authoritative, never romantic."
+        ]
+      }
+    }
+  ]
+}

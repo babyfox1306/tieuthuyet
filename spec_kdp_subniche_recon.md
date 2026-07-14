@@ -4,8 +4,8 @@
 > **README.md** = hướng dẫn vận hành hàng ngày (lệnh, workflow, troubleshooting).  
 > Hai file phải khớp nhau; khi đổi máy → cập nhật spec trước, README sau.
 
-**Repo:** `d:\duan\KDP Sub-niche Recon`  
-**Cập nhật:** 2026-07
+**Repo:** `tieuthuyet` / GitHub `babyfox1306/tieuthuyet_v2`  
+**Cập nhật:** 2026-07-12
 
 ---
 
@@ -33,13 +33,14 @@ EXPORT                    ← EPUB/DOCX (KDP) | serial txt (Webnovel/RR…)
 | **`factory/`** | Sản xuất series theo chương (narrative → bible → plan → write → QC) | `.\factory\run_factory.ps1` hoặc `factory/ui/server.py` |
 | **`catalog/`** | Bản giao hàng sạch — chỉ chương đã promote | đọc / export / upload |
 
-**Triết lý:** recon tìm ngách → **chốt publish strategy** → **Story Brain** (Narrative OS) → factory viết trong khung → catalog là nguồn sự thật khi publish.
+**Triết lý:** recon tìm ngách → **chốt publish strategy** → **Story Brain** + **canon registry** → factory viết trong khung (format≠length≠content) → catalog + EG-01..12 + pen_name/cover → KDP.
 
-**Factory hiện tại** = **Narrative OS compiler** (deterministic) + **plan merge/QC** (NC-01..07) + **pipeline guards** (normalize, state gate, QC hard-fail) + write engine.  
-**LLM gateway:** OmniRoute (`start omni.bat`, port 20128) với `model_routing: flexible` — chain mặc định: `auto/fast` → `auto` → `auto/best-fast` (không dùng `moi` / `gh/*` trừ khi provider đã cấu hình).  
-**Test máy:** `.\factory\run_checks.ps1` — zone tests, không cần API.
+**Factory hiện tại** = Narrative OS compiler + **canon registry** (approve-plan cast allowlist, LOCKED CANON) + plan QC (NC + absent-ML) + **machine_qc buckets** (format / length / content) + export gate **EG-01..EG-12** + EPUB `dc:creator` từ `pen_name` + cover.  
+**LLM gateway:** OmniRoute (`start omni.bat`, port 20128), `model_routing: flexible`.  
+**Pen names:** `Docs/pen_names_data.txt` — dark primary **Reynard Frost** (The Paper Oracle, The Salt Room).  
+**Test máy:** `.\factory\run_checks.ps1`.
 
-> **Không tạo máy viết truyện. Tạo máy hiểu truyện trước, rồi mới cho viết.** — compiler + NC rules đã implement; runtime knowledge sync vẫn roadmap.
+> **Không tạo máy viết truyện. Tạo máy hiểu truyện + khóa canon trước, rồi mới cho viết.** Invented cast phải chết ở plan/state — không phát hiện ở ch3 sau 10 lần rewrite.
 
 ---
 
@@ -65,7 +66,8 @@ EXPORT                    ← EPUB/DOCX (KDP) | serial txt (Webnovel/RR…)
 
 Quét top listing đa nền tảng, lọc sub-niche thoả: demand cao + cung yếu + KU-friendly + AI-writable.  
 Output = **decision matrix** → chọn series + **publish_strategy**.  
-Workspaces hiện có: **`glass-meridian`** (EN clean, `default_workspace`) và **`ceo-contract`** (legacy pipeline data).
+Workspaces KDP dark: **`the-paper-oracle`**, **`the-salt-room-1`** (`pen_name: Reynard Frost`).  
+Thriller-romance: **`glass-meridian`** (`default_workspace`), **`ceo-contract`** (legacy).
 
 ### 3.2 Sub-niches quét (15)
 
@@ -163,6 +165,20 @@ ai_content:
 ```
 
 `export` / promote cảnh báo nếu thiếu `ai_content.status`.
+
+### 4.4 Pen name & cover (KDP delivery)
+
+| Artefact | Rule |
+|----------|------|
+| `Docs/pen_names_data.txt` | SSOT bút danh theo thể loại |
+| Dark (horror/gothic/thriller) | **Reynard Frost** — Primary |
+| Romance / thiếu nhi / erotica | **Tách** tên — không dùng Frost |
+| `direction.yaml` + `manifest.yaml` + `series.yaml` | `pen_name` bắt buộc trước export |
+| EPUB | `dc:creator` = `resolve_pen_name()` |
+| Cover | `catalog/<series>/books/<slug>/cover.png` (hoặc `.jpg`); `export --cover …` |
+| Archive | `archive/catalog_*` = backup — **không** upload bản archive |
+
+Checklist KDP: pen name đúng dòng · AI disclosure · title không số thừa · cover thumbnail đọc được · không dùng tên nhân vật làm bút danh.
 
 ---
 
@@ -389,7 +405,7 @@ Giữ schema hiện tại: `leads`, `supporting_cast`, `central_mystery` (answer
 | Tầng | Tên | Khi chạy | Công cụ | Fail = chặn? |
 |------|-----|----------|---------|--------------|
 | **1** | **Export / promote gate** | Trước `promote` (catalog) và trước `export` | `export_gate.py` — deterministic | **Có** — không ghi EPUB/DOCX/serial |
-| **2** | **Canon consistency guard** | Lúc `write` / trước promote | `series.json`, `knowledge_matrix`, compiler | **Có** ở pipeline (roadmap) |
+| **2** | **Canon consistency guard** | `approve-plan` + write prompt + promote | `canon_registry.yaml`, bible cast, LOCKED CANON | **Có** — invented `Dr. X` / romance khi absent-ML |
 | **3** | **Narrative health report** | Sau khi đủ chương / trước publish tay | LLM + compiler metrics | **Không** — báo cáo cho mắt người |
 
 **Per-chapter pipeline (hiện có)** — nằm *trước* tầng 1, không thay thế tầng 1:
@@ -399,16 +415,19 @@ Giữ schema hiện tại: `leads`, `supporting_cast`, `central_mystery` (answer
 | Plan tech | `plan_qc.py` | opens_with, spice, romance beat, legacy VN on EN |
 | Plan narrative | `plan_qc.py` NC-* | Clue/knowledge khi compiler ON |
 | Narrative assets | `narrative_schema.py` | validate-narrative (kernel, ledger, threads) |
-| Machine | `machine_qc.py` + `prose_sanitize.py` | Word count, foreign chars, banned phrase, **markdown artifacts** → `needs_fix` |
-| LLM + hard-fail | `qc_eval.py` + `roles/qc.txt` | Verdict + **bắt buộc** fail nếu continuity_conflict / voice_drift → `format_qc_reasons()` |
-| Block reasons | `chapter_reasons.py` | `chapter_block_info()` — API/UI/MORNING đọc lý do kẹt |
-| Write guards | `write_guards.py` | Ch N-1 phải `ready`; prior chapter excerpt; state catch-up |
-| Runtime | `state_updater` | Cập nhật `state.json` chỉ khi QC PASS |
-| EPUB structure | `epub_qc.py` | W3C EPUBCheck — cấu trúc OPF/spine (sau khi build EPUB) |
+| Machine | `machine_qc.py` | **Buckets:** `format_fix` (* / quotes) → needs_fix no rewrite; `length` → expand+rewrite; `content_fail` (POV/name) → capped retry → needs_review |
+| Canon | `canon_registry.py` + `prompt_builder` LOCKED CANON | approve-plan cast allowlist; absent-ML; supporting phone-only constraints |
+| Canon guard | `canon_guard.py` | Forbidden lead aliases lúc promote |
+| LLM + hard-fail | `qc_eval.py` + `roles/qc.txt` | continuity / voice_drift → needs_review |
+| Block reasons | `chapter_reasons.py` | UI/MORNING |
+| Write guards | `write_guards.py` | parallel mặc định; sequential = prior ready |
+| Approve | `factory_workflow.chapter_approve` | **Promote trước**; không treo `state_updater` |
+| EPUB | `catalog.export_epub` | `dc:creator` = pen_name; `--cover` |
+| EPUB structure | `epub_qc.py` | EPUBCheck |
 
 > **EPUBCheck ≠ export gate.** EPUBCheck PASS không có nghĩa reader không thấy bản nháp (`# Chapter` lặp, marker leak, chương cụt). Tầng 1 bắt lỗi *đọc được*; EPUBCheck bắt lỗi *file hợp lệ*.
 
-Chi tiết tầng 1: **§6.10**. Tầng 2–3: **§6.11** (khung, roadmap).
+Chi tiết tầng 1: **§6.10** (EG-01..**EG-12**). Tầng 2: **§6.11** (canon registry **đã có**; narrative health report vẫn roadmap).
 
 ### 6.6 Model routing (OmniRoute)
 
@@ -451,14 +470,14 @@ load catalog chapters
 Gate report: `exports/<target>/.export_gate.json` (hoặc cạnh slug epub).
 
 ```powershell
-.\factory\run_factory.ps1 export --target epub --cover path\to\cover.jpg
+.\factory\run_factory.ps1 export --target epub --cover catalog/the-paper-oracle/books/01-the-paper-oracle/cover.png
 .\factory\run_factory.ps1 export --target docx
 .\factory\run_factory.ps1 export --target vella   # legacy alias → serial txt
-.\factory\run_factory.ps1 qc-export-gate --workspace glass-meridian   # chỉ quét, không export (roadmap)
-.\factory\run_factory.ps1 qc-epub --workspace glass-meridian            # EPUBCheck trên EPUB hiện có
+.\factory\run_factory.ps1 qc-export-gate --workspace the-paper-oracle
+.\factory\run_factory.ps1 qc-epub --workspace the-paper-oracle
 ```
 
-Config EPUBCheck (`config.json`): `epubcheck_jar`, `epub_qc_fail_on_warnings` (mặc định `false`).
+Config: `epubcheck_jar`, `epub_qc_fail_on_warnings`, `min_publish_words: 1250`, `writer_auto_max_retries: 10`.
 
 ### 6.8 Factory CLI
 
@@ -484,7 +503,9 @@ Config EPUBCheck (`config.json`): `epubcheck_jar`, `epub_qc_fail_on_warnings` (m
 | plan | merge narrative into plans |
 | plan_qc | NC-01..07 |
 | guards | normalize, write_guards, qc_eval, model routing |
-| export_gate | EG-01..09 deterministic (§6.10) |
+| export_gate | EG-01..**12** deterministic |
+| canon | `is_absent_male_lead`, cast allowlist, invented doctor |
+| machine_qc | format vs length vs content classify |
 | epub_qc | EPUBCheck parse + integration |
 | integration | compiler → plan → prompt E2E |
 
@@ -548,27 +569,30 @@ def format_export_gate_reasons(report: dict) -> list[str]: ...
 
 Hook trong `catalog.py`:
 
-- `promote_chapter()` — subset **EG-01, EG-02, EG-03, EG-06, EG-08, EG-09** (per chapter)
-- `export_book()` — **full book** EG-01..09 trước `export_epub` / `export_docx` / `export_vella`
+- `promote_chapter()` — subset **EG-01, EG-02, EG-03, EG-06, EG-08, EG-10, EG-11, EG-12**
+- `export_book()` — **full book** EG-01..**12**
 - **`write` — không hook**
 
-#### 6.10.4 Rules (EG-01 .. EG-09)
+#### 6.10.4 Rules (EG-01 .. EG-12)
 
 Mỗi rule trả `CheckResult`: `{id, severity, passed, chapter?, detail, snippet?}`.
 
 | ID | Severity | Mô tả | Thuật toán |
 |----|----------|-------|------------|
-| **EG-01** | error | Chương cụt giữa câu | Ký tự **cuối** body (sau trim) phải thuộc: `. ! ? … ) ] » — –` hoặc dấu đóng dialogue `" ' "` `'` (`\u201D` `\u2019`). **Em-dash `—` và en-dash `–` = PASS** (ngắt chủ ý). **FAIL:** kết bằng `,`, ASCII `-` (U+002D), **bất kỳ chữ cái** (a–z, A–Z), hoặc đoạn cuối có ngoặc kép mở chưa đóng. |
-| **EG-02** | error | Marker / template leak | Regex trên body (không scan frontmatter): `\bT\d{3}\b`, `\*\*Cliffhanger:\*\*`, `thread_ids`, `scene_type\s*:`, `must_happen\s*:`, `carries_to_next`, `<!--`, `NARRATIVE CONSTRAINTS`, `Write \*\*Chapter`. **Không** cấm `C\d{3}` (clue_id hợp lệ). |
-| **EG-03** | error | Header bẩn / lặp | (a) Dòng body match `^#\s*(Chapter\|Chương)\s+\d+` → FAIL (heading markdown chưa strip). (b) `subtitle` frontmatter trùng nội dung dòng đầu body (sau normalize `#`). (c) `target_language=en` mà `title` match `^Chương\s+\d+$` → FAIL. (d) Export renderer: subtitle không được bắt đầu bằng `#`. |
-| **EG-04** | error | Thiếu số chương | Đọc `chapter` từ frontmatter; sort; expect `1..N` liên tục (`N` = `book.yaml` `chapter_count` hoặc max plan). FAIL liệt kê gap (vd. thiếu 47). |
-| **EG-05** | warn → error* | Trùng title EN | Hai chương cùng `subtitle` hoặc cùng dòng `# Chapter N: Title` sau normalize. *Mặc định `warn`; config `export_gate_dup_title: error`. |
-| **EG-06** | error | Markdown / template trong prose | `prose_sanitize.find_markdown_artifacts()` — `**bold**`, `*italic*`, backtick, `##`, `**Cliffhanger:**`. Strip tại promote (`sanitize_prose`); fail nếu còn sót. |
-| **EG-07** | warn | Chương trùng nội dung (near-dup) | Hash 500 từ đầu body (normalize lower, bỏ whitespace). Cặp similarity ≥ 0.92 → **warn** mặc định; `export_gate_near_dup: error` để chặn. |
-| **EG-08** | error | Body quá ngắn cho publish | `word_count` frontmatter hoặc đếm lại `< min_publish_words` (default 800 — thấp hơn pipeline `min_word_count` 1500 để bắt chương lọt promote). |
-| **EG-09** | error | Generic catalog title | `title` match `^Chapter\s+N$` (EN) hoặc `^Chương\s+N$` (VI) **và** `master_plan` / `outline` có title thật cho chương đó → FAIL. Bắt lỗi metadata trước khi reader thấy TOC “Chapter 16”. |
+| **EG-01** | error | Chương cụt giữa câu | Ký tự cuối body ∈ `. ! ? … ) ] » — –` / đóng dialogue. **FAIL:** `,`, ASCII `-`, chữ cái trailing |
+| **EG-02** | error | Marker / template leak | `T001`, `**Cliffhanger:**`, `must_happen:`, … |
+| **EG-03** | error | Header bẩn / lặp | `# Chapter` trong body; subtitle trùng; title VN trên EN |
+| **EG-04** | error | Thiếu số chương | Expect `1..N` liên tục (`book.yaml` total_chapters) |
+| **EG-05** | warn→error* | Trùng title | `export_gate_dup_title` |
+| **EG-06** | error | Markdown trong prose | `*italic*`, `**bold**`, backtick |
+| **EG-07** | warn | Near-dup chương | hash 500 từ đầu |
+| **EG-08** | error | Body quá ngắn publish | `< min_publish_words` (**1250**) |
+| **EG-09** | error | Generic catalog title vs plan title | bare `Chapter N` khi plan có tên |
+| **EG-10** | error | CJK trên bản EN | fullwidth/CJK trong body |
+| **EG-11** | error | Generic title (per-chapter promote) | tương tự EG-09, hook promote |
+| **EG-12** | error/warn | Frontmatter `needs_fix` còn flags | kể cả khi body đã sạch — phải clear meta |
 
-**Pass book:** mọi check `severity=error` đều `passed=true`. `warn` không chặn trừ khi `export_gate_strict: true`.
+**Pass book:** mọi `severity=error` đều `passed=true`. `warn` không chặn trừ `export_gate_strict`.
 
 #### 6.10.5 Report schema
 
@@ -623,8 +647,9 @@ File: `catalog/<series>/books/<slug>/exports/.export_gate.json`
 | `export_gate_strict` | `false` | WARN cũng chặn export |
 | `export_gate_dup_title` | `warn` | `warn` \| `error` |
 | `export_gate_near_dup` | `warn` | EG-07 |
-| `min_publish_words` | `800` | EG-08 |
-| `export_gate_on_promote` | `true` | Chạy subset per-chapter khi promote |
+| `min_publish_words` | `1250` | EG-08 |
+| `export_gate_on_promote` | `true` | Subset per-chapter khi promote |
+| `writer_auto_max_retries` | `10` | Auto write: content + length |
 
 #### 6.10.8 CLI & UI
 
@@ -662,77 +687,64 @@ UI (roadmap):
 
 ---
 
-### 6.11 Canon guard & narrative health (Tầng 2–3) — **khung, chưa implement**
+### 6.11 Canon guard & narrative health — **canon DONE; health roadmap**
 
-> Tách riêng để **không** nhồi vào export gate. Chi phí fix và thời điểm bắt khác tầng 1.
+#### 6.11.1 Tầng 2 — Canon (**implemented**)
 
-#### 6.11.1 Tầng 2 — Canon consistency guard (lúc viết)
+| Cơ chế | File | Hành vi |
+|--------|------|---------|
+| `canon_registry.yaml` | workspace root | Operator SSOT lead names, spice_max, pov |
+| `is_absent_male_lead` | `canon_registry.py` | Nhận `Unassigned (no male lead)` / M.I.A. |
+| Cast allowlist | `collect_allowed_cast_names` | Invented `Dr. X` trong plan / narrative / `state.json` → conflict |
+| `approve-plan` | `validate_plan_against_canon_registry` | Chặn plan có bác sĩ bịa / spice vượt |
+| LOCKED CANON | `prompt_builder.render_locked_canon_block` | Inject mọi writer prompt; supporting phone-only |
+| `plan_fixer` / `outliner` | roles | Absent-ML → isolation, không invent romance doctor |
+| `state_updater` | strip invented doctors | Không poison story_state |
+| `canon_guard` | promote | Forbidden lead aliases |
 
-| ID | Nội dung | Nguồn canon | Fail |
-|----|----------|-------------|------|
-| CG-01 | Tên riêng khớp bible | `series.json` `characters[].names` | Block write / needs_fix |
-| CG-02 | Fact role mâu thuẫn | `knowledge_matrix`, character `role` | Block nếu câu assert fact forbidden |
-| CG-03 | Clue plant/payoff | `mystery_ledger` | Compiler NC đã một phần; bổ sung runtime |
-| CG-04 | Spice chapter vs policy | `direction.yaml` `spice_from_chapter` | ch15 lovemaking khi policy 16+ |
+**Nguyên tắc:** invented characters chết ở **plan/state**, không phát hiện ở chương 3 sau retry writer.
 
-**Hook:** `write_chapter` payload + `machine_qc` mở rộng hoặc `canon_guard.py` riêng **trước** LLM QC.
-
-**Ví dụ glass-meridian:** mẹ Lin Mei / Li Mei / Mei Lin — regex không bắt được; cần đối chiếu `series.json`.
-
-#### 6.11.2 Tầng 3 — Narrative health report (cuốn, không chặn cứng)
+#### 6.11.2 Tầng 3 — Narrative health report (roadmap)
 
 Báo cáo cho editor — **không** block export mặc định.
 
 | Metric | Cách đo | Ghi chú |
 |--------|---------|---------|
-| Scene diversity | `scene_type` histogram / compiler tracking | **Cảnh báo** khi lặp, không `max per N` cứng |
-| Tease vs payoff | `mystery_ledger` — clue mở không payoff trong 5 ch | Bổ sung NC: cấm tease kéo dài |
-| POV drift | Regex `I/my` ngoài dialogue + LLM confirm | Một phần template leak, một phần hợp lệ |
-| Romance breath | `must_happen` domestic beat thiếu trong plan | Plan gap, không phải writer bug |
-| Book promise | kernel `promise` vs ending plan | LLM summary |
+| Scene diversity | `scene_type` histogram | Cảnh báo khi lặp |
+| Tease vs payoff | ledger clue mở không payoff | NC bổ sung |
+| POV drift | Regex `I/my` + LLM | machine_qc đã một phần |
+| Book promise | kernel vs ending | LLM summary |
 
-**Output:** `exports/narrative_health.json` + section trong MORNING / UI.
-
-**CLI roadmap:** `qc-narrative-health --workspace <id>`.
+**Output (roadmap):** `exports/narrative_health.json` + `qc-narrative-health` CLI.
 
 ---
 
 ## 7. Workspaces
 
-### 7.1 `glass-meridian` (**khuyến nghị — clean run**)
+### 7.1 `the-paper-oracle` / `the-salt-room-1` (**KDP dark — Reynard Frost**)
+
+| Field | Giá trị |
+|-------|--------|
+| `target_language` | `en` |
+| `pen_name` | **Reynard Frost** |
+| Thể loại | Gothic / psychological dread, spice 1 |
+| Male lead | `Unassigned (no male lead)` |
+| Cast | Concept/bible only (Ovid = phone-only) |
+| Delivery | `cover.png` + EPUB `dc:creator` |
+
+### 7.2 `glass-meridian` (`default_workspace` — thriller-romance)
 
 | Field | Giá trị |
 |-------|--------|
 | `target_language` | `en` |
 | `narrative_profile` | `romance_thriller` |
 | `publish_strategy` | `kdp_ku_exclusive` |
-| `narrative_status` | `draft` (chạy approve sau develop) |
-| Thể loại | International CEO contract + Glass Meridian conspiracy |
-| Setting | Singapore hub; HK, Zurich, NYC |
 | Leads | Lin Wei × Adrian Vale |
-| Narrative | `kernel`, `mystery_ledger`, `threads`, `knowledge_matrix` (dict format) |
-| `default_workspace` | `config.json` |
+| Pen name | **Tách** khỏi Reynard Frost khi publish romance |
 
-### 7.2 `ceo-contract` (legacy)
+### 7.3 `ceo-contract` (legacy)
 
-| Field | Giá trị |
-|-------|--------|
-| `narrative_profile` | `romance_thriller` |
-| `narrative_status` | `approved` — compiler ON |
-| `plan_status` | `approved` — master_plan 50 ch |
-| Book 1 | 50 chương |
-| **Publish target** | KDP EPUB + KU |
-| Leads | EN names in bible (legacy VN in early prose/plan) |
-| `knowledge_matrix` | int `must_not_know_before` + `hidden_truth` |
-| Pipeline | ch1–2 `ready` (prose cũ, pre-guards); ch3+ needs_fix/review |
-| Catalog slug | `01-hop-dong-co-gia` |
-
-**Khuyến nghị:** dùng `glass-meridian` cho run mới; `ceo-contract` tham chiếu hoặc reset pipeline trước khi viết tiếp.
-
-### 7.3 Narrative data (ceo-contract — đã có)
-
-- `bible/narrative/kernel.json`, `threads.json`, `mystery_ledger.json`, `knowledge_matrix.json`, `book_arc.json`
-- `locked_chapter_plans.json` nếu có
+EN plan 50 ch — tham chiếu / archive. Khuyến nghị không dùng làm clean KDP run.
 
 ---
 
@@ -754,7 +766,13 @@ Báo cáo cho editor — **không** block export mặc định.
 - [x] Publish Strategy Gate (direction.yaml)
 - [x] Narrative OS + profile table
 - [x] AI disclosure metadata
-- [x] README + spec sync (2026-07)
+- [x] README + spec sync (2026-07-12)
+- [x] Pen names SSOT (`Docs/pen_names_data.txt`) + EPUB `dc:creator`
+- [x] Canon registry + cast allowlist + absent-ML
+- [x] machine_qc format/length/content + auto retries (10)
+- [x] Export gate EG-01..**12** + promote subset
+- [x] Approve không treo state_updater
+- [x] Dark KDP: Paper Oracle + Salt Room (+ cover)
 
 ### Phase 1 — Narrative data
 
@@ -783,10 +801,12 @@ Báo cáo cho editor — **không** block export mặc định.
 - [x] Model chain: chỉ `auto/fast`, `auto`, `auto/best-fast` (bỏ `moi`, `gh/*`)
 - [x] Zone tests
 - [x] EPUBCheck integration (`epub_qc.py`, `qc-epub`, `.qc.json`)
-- [x] **Export gate** (`export_gate.py` EG-01..08) — §6.10
-- [x] Export renderer: strip `# Chapter` heading, title EN (`prepare_chapter_for_export`)
-- [ ] `qc-export-gate` / export gate UI (CLI có; UI roadmap)
-- [ ] Canon guard (`canon_guard.py`) — §6.11.1
+- [x] **Export gate** EG-01..**12** — §6.10
+- [x] Export renderer: strip `# Chapter`, title EN
+- [x] Canon registry / LOCKED CANON / cast allowlist — §6.11.1
+- [x] machine_qc buckets + writer_auto_max_retries
+- [x] Pen name + cover → EPUB
+- [x] Export gate UI (`Export gate` trên dashboard)
 - [ ] Narrative health report — §6.11.2
 
 ### Phase 5 — Runtime sync (roadmap)
@@ -818,7 +838,10 @@ Báo cáo cho editor — **không** block export mặc định.
 | User không biết vì sao chương kẹt | `reason_summary` + `issues.json` / `_qc.json` + UI reason box |
 | Reader thấy bản nháp (header lặp, marker leak) | **Export gate** §6.10 — trước EPUBCheck |
 | EPUBCheck PASS nhưng nội dung xấu | Tách tầng: `epub_qc` = structure; `export_gate` = readable prose |
-| Tên/fact mâu thuẫn muộn | Canon guard lúc viết §6.11 — không để tới export |
+| Tên/fact mâu thuẫn muộn | Canon registry + LOCKED CANON + cast allowlist §6.11.1 |
+| Plan invent romance doctor (absent-ML) | `is_absent_male_lead` + plan_fixer isolation + invent QC |
+| Approve treo OmniRoute | Promote trước; không LLM `state_updater` trước catalog |
+| EPUB không có author/cover | `pen_name` + `cover.png` trước export |
 
 ---
 
@@ -831,8 +854,10 @@ Báo cáo cho editor — **không** block export mặc định.
 | `factory/workspaces/<id>/direction.yaml` | publish_strategy, narrative_profile, spice, arc |
 | `factory/workspaces/<id>/bible/narrative/` | Story Brain per series |
 | `factory/workspaces/<id>/bible/series.json` | Character canon |
-| `factory/engine/lib/export_gate.py` | Export gate EG-01..08 (roadmap) |
+| `factory/engine/lib/export_gate.py` | Export gate EG-01..**12** |
+| `factory/engine/lib/canon_registry.py` | Cast allowlist, absent-ML, approve-plan |
 | `factory/engine/lib/epub_qc.py` | W3C EPUBCheck wrapper |
+| `Docs/pen_names_data.txt` | Bút danh theo thể loại (Reynard Frost = dark) |
 | `start omni.bat` | Khởi động OmniRoute gateway |
 | `factory/run_checks.ps1` | Zone tests (64+) |
 | `recon/output/subniche_decision_matrix.md` | Kết quả recon |
@@ -841,6 +866,7 @@ Báo cáo cho editor — **không** block export mặc định.
 
 ## 12. Tóm tắt một dòng
 
-**Recon** đo demand → **Publish Strategy** → **Narrative OS** (compiler + NC rules) → **Factory** (guards + QC) → **Catalog** → **Export gate** → **KDP / serial**.
+**Recon** → **Publish strategy** → **Narrative OS** → **Canon registry** → **Factory** (format≠length≠content) → **Catalog + EG-01..12 + pen_name/cover** → KDP (Reynard Frost = dark).
 
-**Factory chuẩn đã có compiler spine + pipeline guards + EPUBCheck.** Việc tiếp theo: **export gate (§6.10)**, sửa renderer header, canon guard, chạy clean trên `glass-meridian`.
+**Done:** compiler, NC rules, canon cast allowlist, auto/supervised write, export gate 12 rules, EPUB author+cover.  
+**Next:** narrative health report; AI `ai_content` metadata enforce.

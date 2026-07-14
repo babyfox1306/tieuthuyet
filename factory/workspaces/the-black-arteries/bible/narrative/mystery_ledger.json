@@ -1,0 +1,274 @@
+{
+  "main_mystery": "What is the black ink threading through the flooded Victorian observatory, and why does it seems to recognize Clara Vance and Eleanor Vance's records?",
+  "truth": "The black ink is the preserved memory and physical mass of Eleanor Vance merged with an ancient bog parasite. Eleanor did not simply vanish; she dissolved herself into the estate's forbidden records to preserve them. The parasite converted paper, water, glass traces, and Eleanor's body into a vascular archive that feeds on records Clara refuses to destroy. Eleanor can manifest only as black branching stains across paper, glass, or water. She never speaks, never makes a sound, and has no scent.",
+  "canonical_reveal_chapter": 9,
+  "red_herrings": [
+    {
+      "id": "RH001",
+      "name": "Ordinary flood rot",
+      "introduced_chapter": 1,
+      "resolved_chapter": 2,
+      "mislead": "The first black stains appear to be mildew, rot, or water damage caused by years of stagnant flooding.",
+      "disproof": "The stains move against the waterline and branch toward specific written records rather than spreading randomly like decay."
+    },
+    {
+      "id": "RH002",
+      "name": "Leaking archival ink",
+      "introduced_chapter": 2,
+      "resolved_chapter": 4,
+      "mislead": "Clara initially suspects dissolved ink from old ledgers, star charts, and labels has bled into the floodwater.",
+      "disproof": "The substance reacts physically to sunlight, freezing into brittle charcoal roots instead of fading or diluting like ordinary ink."
+    },
+    {
+      "id": "RH003",
+      "name": "Chemical contamination from the observatory equipment",
+      "introduced_chapter": 3,
+      "resolved_chapter": 6,
+      "mislead": "The oxidizing brass, iron fittings, and metallic flecks of light suggest an unusual mineral or chemical contamination in the flooded rooms.",
+      "disproof": "The ink selectively consumes paper into organic vascular roots and grows stronger around preserved records, which a simple chemical spill could not do."
+    },
+    {
+      "id": "RH004",
+      "name": "A conventional haunting by Eleanor",
+      "introduced_chapter": 5,
+      "resolved_chapter": 9,
+      "mislead": "Patterns near Eleanor-linked records tempt Clara to believe her sister's ghost is trying to communicate from the observatory.",
+      "disproof": "The chapter 9 reveal confirms there is no speaking ghost and no separate spirit explanation. Eleanor's memory and physical mass are materially preserved inside the parasite-ink, which can only manifest visually as silent, scentless stains."
+    },
+    {
+      "id": "RH005",
+      "name": "The archive trying to save itself",
+      "introduced_chapter": 6,
+      "resolved_chapter": 10,
+      "mislead": "The roots appear to protect ledgers and glass plates from collapse, implying the archive has become a self-preserving organism independent of Eleanor.",
+      "disproof": "After the truth is revealed, Clara understands the preservation impulse comes from Eleanor's desperate choice fused with the bog parasite's hunger; saving records now means feeding the entity."
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "R001",
+      "chapter": 2,
+      "title": "The stains are active",
+      "reveal": "The black stains are not passive decay. They branch through paper, glass, and water in directed patterns, moving toward written records Clara attempts to preserve.",
+      "required_clues": [
+        "C001",
+        "C002"
+      ],
+      "payoff": "Clara's catalogue work becomes dangerous because the archive is attracting the substance rather than merely suffering from it."
+    },
+    {
+      "id": "R002",
+      "chapter": 4,
+      "title": "Sunlight wounds the roots",
+      "reveal": "Sunlight freezes the vascular roots into brittle charcoal that crumbles into drifting ash.",
+      "required_clues": [
+        "C003",
+        "C004"
+      ],
+      "payoff": "The black substance has a consistent physical rule, giving Clara her first practical way to damage it."
+    },
+    {
+      "id": "R003",
+      "chapter": 6,
+      "title": "The archive feeds the network",
+      "reveal": "Every preserved record strengthens the ink-root system. Paper dissolves into organic vascular roots, and records Clara protects become conduits instead of safe objects.",
+      "required_clues": [
+        "C005",
+        "C006",
+        "C007"
+      ],
+      "payoff": "Clara's professional boundary against destroying written records is turned against her."
+    },
+    {
+      "id": "R004",
+      "chapter": 8,
+      "title": "The ink recognizes Eleanor",
+      "reveal": "The ink does not respond to all records equally. It concentrates around Eleanor's documents, name traces, and sister-linked artifacts, suggesting the missing woman is materially connected to the black substance.",
+      "required_clues": [
+        "C008",
+        "C009",
+        "C010"
+      ],
+      "payoff": "The mystery narrows from environmental horror to Clara's personal loss, without introducing a second answer or a speaking ghost."
+    },
+    {
+      "id": "R005",
+      "chapter": 9,
+      "title": "Eleanor became the ink",
+      "reveal": "The single central answer is revealed: Eleanor Vance dissolved herself into the forbidden records to preserve them and merged with an ancient bog parasite. The ink is Eleanor's preserved memory and physical mass fused with the parasite.",
+      "required_clues": [
+        "C002",
+        "C004",
+        "C006",
+        "C008",
+        "C010",
+        "C011"
+      ],
+      "payoff": "Clara finally understands why preserving the archive feeds the entity and why destroying it would also destroy what remains of Eleanor."
+    },
+    {
+      "id": "R006",
+      "chapter": 12,
+      "title": "The case closes, but the mark remains",
+      "reveal": "Clara drowns the observatory beneath the peat bog, ending the archive's feeding structure, but black vein-marks remain permanently etched into her hands.",
+      "required_clues": [
+        "C012",
+        "C013",
+        "C014"
+      ],
+      "payoff": "The central case is closed while lingering dread survives as a visual consequence on Clara's body."
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "name": "Ink above the waterline",
+      "plant_chapter": 1,
+      "payoff_chapter": 2,
+      "clue": "Clara notices black branching stains on a pane of observatory glass above the stagnant floodwater, too high to be simple seepage.",
+      "surface_interpretation": "Old damp has crawled up the glass through condensation and neglect.",
+      "true_interpretation": "The ink can move across glass surfaces and is reaching beyond the water toward preserved records.",
+      "visual_signature": "Black ink branching like veins across cloudy glass."
+    },
+    {
+      "id": "C002",
+      "name": "The stain leans toward the catalogue",
+      "plant_chapter": 1,
+      "payoff_chapter": 2,
+      "clue": "When Clara opens her catalogue ledger, a thread of black in the water angles toward the fresh written page.",
+      "surface_interpretation": "A draft or slight current shifts the stagnant water.",
+      "true_interpretation": "Written records feed and attract the parasite-ink, especially when Clara commits preservation to paper.",
+      "visual_signature": "A thin black artery stretching through still water toward new handwriting."
+    },
+    {
+      "id": "C003",
+      "name": "The ash at the sunlit sill",
+      "plant_chapter": 2,
+      "payoff_chapter": 4,
+      "clue": "Clara finds brittle black residue on a windowsill where pale sunlight falls across a root-like stain.",
+      "surface_interpretation": "Soot, old coal dust, or dried rot has collected near the window.",
+      "true_interpretation": "Sunlight freezes the roots into brittle charcoal that crumbles into ash.",
+      "visual_signature": "Drifting black ash under a blade of weak daylight."
+    },
+    {
+      "id": "C004",
+      "name": "Roots halt in sunlight",
+      "plant_chapter": 3,
+      "payoff_chapter": 4,
+      "clue": "A vascular thread spreading across a damp star chart stops abruptly where a crack of sunlight touches the paper.",
+      "surface_interpretation": "The paper is drier at the edge and slows the stain.",
+      "true_interpretation": "Sunlight physically immobilizes and chars the ink-root structure.",
+      "visual_signature": "Black roots frozen into charcoal filaments along a bright line."
+    },
+    {
+      "id": "C005",
+      "name": "Paper becomes tissue",
+      "plant_chapter": 2,
+      "payoff_chapter": 6,
+      "clue": "A waterlogged page does not merely tear; it softens into fibrous, organic strands beneath the ink.",
+      "surface_interpretation": "Wet paper pulp has separated into fibers.",
+      "true_interpretation": "The ink dissolves paper into living vascular roots that become part of the parasite's feeding network.",
+      "visual_signature": "Ledger paper loosening into vein-like roots."
+    },
+    {
+      "id": "C006",
+      "name": "Preserved pages thicken the roots",
+      "plant_chapter": 4,
+      "payoff_chapter": 6,
+      "clue": "The more carefully Clara separates, dries, and labels a set of records, the darker and thicker the nearby roots become.",
+      "surface_interpretation": "Handling the material spreads contamination from page to page.",
+      "true_interpretation": "Clara's preservation work feeds the entity by supplying records and attention to the archive network.",
+      "visual_signature": "Black vascular roots swelling around neat archival labels."
+    },
+    {
+      "id": "C007",
+      "name": "The rejected scrap starves",
+      "plant_chapter": 5,
+      "payoff_chapter": 6,
+      "clue": "A torn scrap Clara almost discards dries into inert gray flakes while the records she saves remain wet with black branching veins.",
+      "surface_interpretation": "The smaller scrap dries faster because it is thin.",
+      "true_interpretation": "Records denied preservation provide less nourishment; the entity depends on Clara's refusal to destroy written material.",
+      "visual_signature": "A dead gray scrap beside a living black-rooted ledger."
+    },
+    {
+      "id": "C008",
+      "name": "Eleanor's name darkens first",
+      "plant_chapter": 5,
+      "payoff_chapter": 8,
+      "clue": "On a damaged index, the ink gathers around the letters of Eleanor Vance's name before touching any other line.",
+      "surface_interpretation": "The ink pools where the old handwriting is thickest.",
+      "true_interpretation": "The parasite-ink carries Eleanor's preserved memory and reacts to traces of her identity.",
+      "visual_signature": "Black veins circling a silent name."
+    },
+    {
+      "id": "C009",
+      "name": "The sister pattern",
+      "plant_chapter": 6,
+      "payoff_chapter": 8,
+      "clue": "The branching stains repeatedly form a mirrored split around paired objects from Clara and Eleanor's childhood records, never producing words or sound.",
+      "surface_interpretation": "Clara is projecting grief onto random stains.",
+      "true_interpretation": "Eleanor's preserved memory is shaping the ink visually, limited to silent stain patterns rather than speech or scent.",
+      "visual_signature": "Twin black branches dividing around two archived keepsakes."
+    },
+    {
+      "id": "C010",
+      "name": "The missing body implied by mass",
+      "plant_chapter": 7,
+      "payoff_chapter": 9,
+      "clue": "Clara calculates that the volume of black substance in the observatory is far greater than leaked ink or rot could explain, and it gathers most densely near Eleanor's last known worktable.",
+      "surface_interpretation": "Floodwater has concentrated years of sediment in the observatory.",
+      "true_interpretation": "Part of the ink's physical mass is Eleanor's transformed body merged with the bog parasite.",
+      "visual_signature": "A heavy black pool beneath the table where Eleanor vanished."
+    },
+    {
+      "id": "C011",
+      "name": "The bog sample lives like the ink",
+      "plant_chapter": 7,
+      "payoff_chapter": 9,
+      "clue": "A sealed sample of ancient bog matter near the forbidden records shows the same vascular branching as the black ink when touched by damp paper.",
+      "surface_interpretation": "The sample contaminated nearby archive materials.",
+      "true_interpretation": "The ancient bog parasite is the biological host with which Eleanor merged to preserve herself and the records.",
+      "visual_signature": "Bog-dark filaments waking beneath wet paper."
+    },
+    {
+      "id": "C012",
+      "name": "Metal flecks in Clara's watch",
+      "plant_chapter": 3,
+      "payoff_chapter": 10,
+      "clue": "After Clara winds her brass pocket watch near contaminated water, its casing oxidizes and sheds tiny metallic flecks of light.",
+      "surface_interpretation": "The damp has corroded the old brass.",
+      "true_interpretation": "Metal submerged in or exposed to the ink oxidizes instantly and throws off metallic flecks of light, proving the substance is physically active and close to Clara.",
+      "visual_signature": "Bright metallic flecks glimmering against black water."
+    },
+    {
+      "id": "C013",
+      "name": "The roots retreat from destruction",
+      "plant_chapter": 10,
+      "payoff_chapter": 12,
+      "clue": "When Clara damages a contaminated record after the truth is known, nearby roots recoil and char where light reaches them.",
+      "surface_interpretation": "The structure is drying and collapsing naturally.",
+      "true_interpretation": "Destroying records starves and wounds the Eleanor-parasite network, making Clara's final drowning of the observatory possible.",
+      "visual_signature": "Black roots shrinking into charcoal ash around a torn page."
+    },
+    {
+      "id": "C014",
+      "name": "Veins in Clara's hands",
+      "plant_chapter": 11,
+      "payoff_chapter": 12,
+      "clue": "After prolonged contact with contaminated records and floodwater, faint black lines appear beneath the skin of Clara's hands.",
+      "surface_interpretation": "Bruising, ink stains, or cold-darkened veins from the flooded observatory.",
+      "true_interpretation": "The parasite's memory has marked Clara even after the observatory is drowned, leaving dread without reopening the solved mystery.",
+      "visual_signature": "Permanent black vein-marks etched into Clara's hands."
+    },
+    {
+      "id": "C015",
+      "name": "No voice in the stain",
+      "plant_chapter": 5,
+      "payoff_chapter": 9,
+      "clue": "Whenever Clara expects Eleanor's presence to announce itself, there is only visual movement: branching ink, darkened names, and shifting water surfaces, with no voice, no sound, and no scent.",
+      "surface_interpretation": "Either Eleanor is absent, or Clara is imagining the connection.",
+      "true_interpretation": "Eleanor exists only as part of the ink's visual manifestation and cannot speak, make sound, or produce scent.",
+      "visual_signature": "A silent black stain spreading where a voice should be."
+    }
+  ]
+}

@@ -599,6 +599,7 @@ def _draft_chapter_prose(
             cfg=cfg,
             workspace_id=ws.name,
             book=book,
+            chapter=ch,
         )
         cls = classify_machine_issues(m_issues)
         m_issues["classification"] = cls

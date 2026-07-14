@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "series_id": "the-black-arteries",
+    "genre": "gothic_psychological_horror",
+    "target_language": "en"
+  },
+  "title": "The Black Arteries",
+  "sub_niche": "gothic_psychological_horror",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "An archivist cataloguing a flooded Victorian observatory discovers the black ink threading through its stagnant water is the liquefied memory of her missing sister — and every record she refuses to destroy feeds it.",
+  "tropes": [
+    "haunted archive",
+    "flooded Victorian ruin",
+    "missing sister",
+    "forbidden records",
+    "body-as-archive horror",
+    "slow atmospheric dread",
+    "unreliable preservation instinct",
+    "gothic estate decay",
+    "visual-only haunting",
+    "sacrifice of knowledge"
+  ],
+  "leads": {
+    "female": {
+      "name": "Clara Vance",
+      "age": 26,
+      "voice": "Clara's narration is precise, restrained, and archivist-like, describing terror through cataloguing language, measurements, paper texture, water damage, and dates. Under stress, her sentences become clipped and procedural, as if order can keep panic from touching her.",
+      "tics": [
+        "winds her brass pocket watch whenever anxiety rises",
+        "straightens labels, folders, and page corners even in dangerous rooms",
+        "silently mouths catalogue numbers before entering a new chamber",
+        "checks her fingertips for ink stains after touching any record"
+      ],
+      "boundary": "Clara will never willingly destroy a written record, even if the record is corrupted, dangerous, or personally damning; to her, destroying text is a moral failure worse than fear.",
+      "internal_voice": "She thinks of people as entries, rooms as inventories, and grief as an unsorted box she refuses to open. Her terror sharpens when preservation and survival become mutually exclusive."
+    },
+    "male": {
+      "name": "No male lead exists",
+      "age": 18,
+      "voice": "There is no male lead, no male antagonist, and no romantic counterpart in this series bible. This field exists only to satisfy schema structure and must not be treated as a character to cast, develop, or reference in scenes.",
+      "tics": [
+        "not applicable; no male lead exists"
+      ],
+      "boundary": "No romance line, no male lead, no invented man as antagonist or love interest, and no scene may imply Clara has a male narrative counterpart.",
+      "wound": "Not applicable; no male lead exists."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Eleanor Vance",
+      "relation_to": "Clara Vance",
+      "relation_type": "sister",
+      "alive": false,
+      "secret": "Eleanor is not a speaking ghost or a conventional corpse; she manifests only as black ink branching across paper, glass, or water surfaces. She never makes a sound, never speaks, never produces a scent, and her preserved memory and physical mass are merged with an ancient bog parasite."
+    }
+  ],
+  "central_mystery": {
+    "question": "What is the black ink threading through the flooded Victorian observatory, and why does it seems to recognize Clara Vance and Eleanor Vance's records?",
+    "answer": "The black ink is the preserved memory and physical mass of Eleanor Vance merged with an ancient bog parasite. Eleanor did not simply vanish; she dissolved herself into the estate's forbidden records to preserve them. The parasite converted paper, water, glass traces, and Eleanor's body into a vascular archive that feeds on records Clara refuses to destroy. Eleanor can manifest only as black branching stains across paper, glass, or water. She never speaks, never makes a sound, and has no scent.",
+    "reveal_chapter": 9
+  },
+  "bloodline": {
+    "description": "Clara Vance and Eleanor Vance are biological sisters. There is no male lead in the story, and therefore no romantic or lead-pair bloodline exists. Clara has no male counterpart, no male antagonist, and no love interest. Any future character introduced must not become a male lead or romantic lead.",
+    "hard_rules": [
+      "female_lead and male_lead do not share blood because no male lead exists",
+      "Clara Vance and Eleanor Vance are sisters, but Eleanor is not a romantic lead",
+      "lead_relation must never be blood_relative, sibling, or parent_child",
+      "do not invent a male lead to satisfy romance structure",
+      "do not invent a male antagonist or love interest",
+      "Eleanor Vance must never speak, make sound, or produce scent"
+    ],
+    "lead_relation": "none_no_male_lead"
+  },
+  "world_rules": [
+    "The point of view is third-limited and locked to Clara Vance for the entire book.",
+    "The tone is pure atmospheric gothic psychological horror with no romance line.",
+    "The ink dissolves paper into organic vascular roots.",
+    "Metal submerged in the ink oxidizes instantly and throws off metallic flecks of light.",
+    "Sunlight freezes the roots into brittle charcoal that crumbles.",
+    "Eleanor Vance manifests only as a stain: black ink branching across paper, glass, or water surfaces.",
+    "Eleanor Vance never speaks, never makes a sound, and never produces a scent.",
+    "The recurring signature image is black ink, vascular roots, and drifting ash.",
+    "Every chapter must sustain a slow atmospheric burn and end on a visual cliffhanger.",
+    "Revelations must arrive steadily every two to three chapters, with the central truth revealed in chapter 9.",
+    "The archive is dangerous because records are nourishment; Clara's refusal to destroy written material directly strengthens the entity.",
+    "The flooded Victorian observatory must feel stagnant, rotting, and over-preserved, with water, glass, paper, and metal behaving as corrupted memory surfaces."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "Clara Vance enters the flooded Victorian observatory to catalogue damaged records and discovers that preservation itself can become predatory. Across twelve chapters, she follows black ink, vascular roots, oxidized metal light, and ash until she learns that Eleanor's preserved memory and physical mass have merged with an ancient bog parasite. Clara's defining boundary is tested: save the archive by feeding the entity, or drown it forever by sacrificing the records she once believed sacred.",
+      "ending_hook": "Clara chooses to drown the observatory beneath the peat bog, walking away with black vein-marks etched permanently into her hands. The case closes, but the marks remain as proof that the archive did not entirely release her."
+    },
+    {
+      "book": 2,
+      "thesis": "The black vein-marks on Clara's hands begin reacting to unrelated documents beyond the drowned observatory, forcing her to confront the possibility that the parasite's vascular archive had older routes through estate ledgers, parish books, and drowned land deeds. The horror shifts from one ruin to a wider geography of preserved rot while Clara struggles not to become the new carrier of everything she tried to sink.",
+      "ending_hook": "A clean sheet of archival paper blackens beneath Clara's untouched hands, forming roots that point toward a second buried collection far from the bog."
+    },
+    {
+      "book": 3,
+      "thesis": "Clara traces the parasite's history through institutions built on erased losses, discovering that every attempt to preserve forbidden knowledge has given the black ink another body to inhabit. Eleanor remains silent and scentless, appearing only as impossible branching stains that guide or accuse without ever clarifying which. Clara must decide whether memory without mercy deserves survival.",
+      "ending_hook": "Sunlight turns a hidden room of roots into charcoal, but the drifting ash settles into Clara's catalogue notes and rearranges itself into Eleanor's childhood handwriting."
+    },
+    {
+      "book": 4,
+      "thesis": "The parasite begins corrupting the principles of archiving itself: copies replace originals, dates revise themselves, and inventories list people before they vanish from memory. Clara's obsession with preservation becomes indistinguishable from infection as she tries to separate Eleanor's remaining memory from the ancient bog organism without granting either full control.",
+      "ending_hook": "Clara opens her brass pocket watch and finds its inner gears packed with black organic roots ticking in perfect silence."
+    },
+    {
+      "book": 5,
+      "thesis": "Clara returns to the drowned origin point to end the vascular archive completely, accepting that some records must be lost so the living can remain whole. The final conflict is not romantic or heroic but moral: whether a woman who built herself around preservation can choose oblivion when preservation has become a form of consumption.",
+      "ending_hook": "The last visible ink freezes under sunrise into brittle charcoal, crumbles across Clara's marked hands, and leaves one final blank page behind."
+    }
+  ],
+  "content_rules": [
+    "Spice level is 1: no explicit sexual content",
+    "No romance line at all",
+    "No 18+ erotic content",
+    "No minors in sexual situations",
+    "Consent is required for any adult intimacy if ever referenced, but the canon contains no romance or intimacy arc",
+    "No invented male lead",
+    "No invented male antagonist or love interest",
+    "No blood relation between romantic leads because there are no romantic leads",
+    "Psychological horror should emphasize atmosphere, dread, decay, and moral pressure rather than gore",
+    "Eleanor must never speak, never make any sound, and never have a scent"
+  ],
+  "bible_status": "approved"
+}

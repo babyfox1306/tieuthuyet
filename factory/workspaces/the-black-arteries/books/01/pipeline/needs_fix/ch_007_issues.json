@@ -1,0 +1,61 @@
+{
+  "word_count": 1283,
+  "target_language": "en",
+  "markdown": [
+    "*crisped*",
+    "*Reflected UV induces contraction of vascular contamination without carb",
+    "*Vance.*",
+    "*C010: Negative register, Vance entry. The record is absent, but the sha",
+    "*C011: Filaments recovered from beneath register plate. Structure consis"
+  ],
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 15,
+        "snippet": "*crisped*"
+      },
+      {
+        "line": 21,
+        "snippet": "*Reflected UV induces contraction of vascular contamination without carb"
+      },
+      {
+        "line": 39,
+        "snippet": "*Vance.*"
+      },
+      {
+        "line": 49,
+        "snippet": "*C010: Negative register, Vance entry. The record is absent, but the sha"
+      },
+      {
+        "line": 59,
+        "snippet": "*C011: Filaments recovered from beneath register plate. Structure consis"
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*crisped*",
+        "*Reflected UV induces contraction of vascular contamination without carb",
+        "*Vance.*",
+        "*C010: Negative register, Vance entry. The record is absent, but the sha",
+        "*C011: Filaments recovered from beneath register plate. Structure consis"
+      ]
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 0,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}

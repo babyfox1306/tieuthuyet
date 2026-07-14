@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "series_id": "ink-and-venom",
+    "genre": "gothic_psychological_horror",
+    "target_language": "en"
+  },
+  "title": "Ink and Venom",
+  "sub_niche": "gothic_psychological_horror",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "At an isolated alpine sanatorium for chronic pain, a young artist discovers that the revolutionary venom therapy is not healing her body but replacing it with an ancient ink-like vascular intelligence, while the silent shimmer left by a dead patient tries to guide her toward escape.",
+  "tropes": [
+    "isolated sanatorium",
+    "medical gothic",
+    "unreliable cure",
+    "body horror transformation",
+    "silent dead witness",
+    "forbidden clinic records",
+    "authority as threat",
+    "artist heroine",
+    "winter mountain escape",
+    "collective consciousness horror"
+  ],
+  "leads": {
+    "female": {
+      "name": "Elara Sennewald",
+      "age": 24,
+      "voice": "Elara observes the world through texture, line, temperature, and negative space, often translating fear into the language of drawing before she admits it plainly. Her narration is restrained, wary, and sensory, with flashes of dry precision when pain or panic threatens to overwhelm her.",
+      "tics": [
+        "rubs her wrists to warm them when frightened or cold",
+        "presses two fingers to her temples when pain sharpens",
+        "silently counts windowpanes, tiles, or ceiling seams when she feels trapped",
+        "studies people's hands before trusting their faces"
+      ],
+      "boundary": "Elara can endure pain, humiliation, and uncertainty, but she will fight if someone restrains her, locks her inside an enclosed medical device, or takes away her ability to choose what happens to her body.",
+      "internal_voice": "She thinks in charcoal, ash, skin, and pressure: every room becomes a composition, every threat a line darkening under the surface."
+    },
+    "male": {
+      "name": "Dr. Alistair Finch",
+      "age": 29,
+      "voice": "Finch speaks with calm clinical softness, never raising his voice, using measured reassurance and elegant omissions to make coercion sound like care. He frames every horror as progress and every objection as a symptom.",
+      "tics": [
+        "sips cold tea that has gone untouched for too long",
+        "checks the pulse at his own wrist without seeming aware of it",
+        "stands too still in bright rooms",
+        "pauses before mirrors but never looks directly into them"
+      ],
+      "boundary": "Finch will not allow a patient to leave once he believes the organism has accepted them; he treats refusal as a temporary disturbance to be managed, not a right.",
+      "wound": "His own transformation left his skin permanently greyish and his chest a solid grey mass threaded with black vascular growth; he has converted his fear of death into devotion to the organism's continuity."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Beatrice Wren",
+      "relation_to": "Elara Sennewald",
+      "relation_type": "dead former patient",
+      "alive": false,
+      "secret": "She resisted full absorption enough to leave a silent visual remnant in the inherited art studio, appearing only as dancing iridescent metallic-shimmer light that never speaks, never touches, and has no scent."
+    },
+    {
+      "name": "Nurse Cora Vale",
+      "relation_to": "Dr. Alistair Finch",
+      "relation_type": "clinic nurse",
+      "alive": true,
+      "secret": "She administers the venom according to protocol without understanding its full nature, but her body is already partly converted beneath her uniform."
+    },
+    {
+      "name": "Tobias Rehn",
+      "relation_to": "Elara Sennewald",
+      "relation_type": "fellow patient",
+      "alive": true,
+      "secret": "He knows the therapy is a transformation and tries to warn Elara through charcoal drawings before he is declared cured and disappears mid-book."
+    },
+    {
+      "name": "Marta Sennewald",
+      "relation_to": "Elara Sennewald",
+      "relation_type": "mother",
+      "alive": true,
+      "secret": "She believes the sanatorium is Elara's last humane chance at relief and does not know the clinic has intercepted or rewritten patient correspondence."
+    },
+    {
+      "name": "Dr. Hannes Kreutler",
+      "relation_to": "Dr. Alistair Finch",
+      "relation_type": "former research partner",
+      "alive": false,
+      "secret": "His sealed notes identified the alpine salt as the only known way to halt conversion, and Finch hid his death as a mountaineering accident."
+    },
+    {
+      "name": "Sister Anka Roth",
+      "relation_to": "Nurse Cora Vale",
+      "relation_type": "night attendant",
+      "alive": true,
+      "secret": "She moves sedated patients to the lower mineral rooms after midnight and believes the sound beneath the floors is the mountain settling."
+    },
+    {
+      "name": "Mr. Oskar Lenz",
+      "relation_to": "Styrian Alp Sanatorium",
+      "relation_type": "groundskeeper",
+      "alive": true,
+      "secret": "He delivers alpine salt to Finch under a falsified kitchen inventory and has seen patients return from the lower tunnels no longer recognizing color."
+    }
+  ],
+  "central_mystery": {
+    "question": "What is the so-called venom therapy at the Styrian Alp Sanatorium, and why are Elara's body, senses, and inherited studio changing after treatment begins?",
+    "answer": "The venom is the viable biomass of an ancient sentient subterranean organism. It consumes and replaces human nervous and circulatory systems with ink-like black vascular structures in order to fold patients into a collective consciousness. Dr. Alistair Finch is already transformed and runs the clinic to provide the organism with new hosts. The treatment can halt pain because it replaces the body's ordinary sensory pathways, but the price is irreversible conversion. Beatrice, a patient who died before Elara arrived, resisted full absorption enough to manifest only as dancing iridescent metallic-shimmer light in the studio; she never speaks, never touches, and never has a scent.",
+    "reveal_chapter": 9
+  },
+  "bloodline": {
+    "description": "Elara Sennewald and Dr. Alistair Finch share no blood relation, adoption relation, or family line. Elara is a patient from outside the clinic's founding circle; Finch is the sanatorium director and antagonist who controls her treatment. Beatrice, Tobias, Cora, and the clinic staff are social, medical, or institutional connections only, not blood relatives of either lead.",
+    "hard_rules": [
+      "female_lead and male_lead are NOT blood relatives",
+      "female_lead and male_lead are NOT siblings, cousins, parent and child, aunt or uncle and niece or nephew, or any concealed family relation",
+      "lead_relation must remain institutional antagonist and patient, never romantic and never familial",
+      "no supporting reveal may make Elara and Finch related by blood",
+      "Beatrice is not Elara's ancestor, sibling, or hidden blood relative",
+      "the central threat is biological assimilation, not incest, inherited madness, or a family curse"
+    ],
+    "lead_relation": "patient_and_antagonist_doctor"
+  },
+  "world_rules": [
+    "The story is third-limited and locked to Elara Sennewald for the entire book; no other point of view may reveal information she has not witnessed, inferred, drawn, or physically encountered.",
+    "The venom therapy is the viable biomass of an ancient sentient subterranean organism, not a drug, parasite metaphor, hallucination, curse, or psychological delusion.",
+    "The venom replaces human nervous and circulatory systems with black ink-like vascular structures that first appear as threadlike shadows under pale skin.",
+    "The therapy can halt pain because it replaces ordinary sensory pathways, but it cannot restore the original body once replacement has occurred.",
+    "Transformation can be halted but never reversed only by ingesting a specific alpine salt controlled by the clinic.",
+    "Patients undergoing conversion become allergic to direct pure light and develop hypersensitivity to sound and texture.",
+    "A fully transformed patient sees the world as a grid of bio-electrical current rather than color.",
+    "Beatrice manifests only as dancing iridescent metallic-shimmer light in the art studio; she never speaks, never touches, never produces scent, and never appears as a full ghostly body.",
+    "Finch's pull over Elara is authority, false comfort, and the promise of a pain-free body; there is no romance, attraction, seduction, or caretaker-romance between them.",
+    "Every chapter must escalate body horror through a visible, tactile, auditory, or neurological change in Elara's body or environment.",
+    "Every chapter ends on a visual cliffhanger tied to black threads under white skin, metallic shimmer, ash, altered light, medical confinement, or the lower mountain rooms.",
+    "Reveals must arrive every two to three chapters, with the full central answer fixed for chapter 9.",
+    "The sanatorium intercepts, delays, or alters patient correspondence under the pretext of nervous rest.",
+    "The lower mineral rooms connect the clinic to the subterranean organism through old alpine salt passages and sealed research chambers."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "Elara enters the Styrian Alp Sanatorium seeking relief from chronic pain and discovers that venom therapy is transforming her into part of a subterranean collective intelligence. Her survival depends on trusting silent visual evidence, resisting Finch's authority, and accepting that escape will not make her unchanged.",
+      "ending_hook": "Elara rejects the final stage of transformation, uses alpine salt and Beatrice's shimmer to navigate the clinic, fights past a partly converted Cora, and escapes into the winter mountains with Tobias's sketchbook and a vial of venom. She is free of Finch's immediate control, but her veins remain black, her body is colder and painless, and something inside her recognizes the mountain's electrical pulse."
+    },
+    {
+      "book": 2,
+      "thesis": "Elara hides in a lowland city where light, sound, and human touch become increasingly unbearable, while Tobias's sketchbook reveals that the organism has other clinics and older routes beneath Europe.",
+      "ending_hook": "A charcoal map in Tobias's final pages matches the bio-electrical grid Elara now sees in darkness, pointing to a sealed salt archive beneath an abandoned spa town where another escaped patient may still be alive."
+    },
+    {
+      "book": 3,
+      "thesis": "Elara searches the abandoned spa archive for a way to keep the conversion halted and learns that the alpine salt was once used by miners who negotiated with the organism before the clinic turned it into medicine.",
+      "ending_hook": "The archive proves that Finch was not the first director but the latest host in a chain of grey-skinned custodians, and one surviving custodian sends Elara a vial of salt stained black from the inside."
+    },
+    {
+      "book": 4,
+      "thesis": "Elara follows the contaminated salt trail into the mountain villages that fed patients to the sanatorium for generations, forcing her to decide whether exposing the truth will save people or wake the collective faster.",
+      "ending_hook": "When pure winter light fails to burn her and instead fractures into currents only she can read, Elara realizes her halted transformation has made her something the collective did not predict."
+    },
+    {
+      "book": 5,
+      "thesis": "Elara returns to the alpine source with the venom vial, Tobias's drawings, and the salt archive, aiming to sever the clinic network while resisting the collective's offer of painless unity.",
+      "ending_hook": "Elara collapses the clinic's access tunnels and breaks Finch's custodial chain, but the final image is her black-veined hand drawing a map of a deeper organism beneath the first, suggesting survival has only revealed the next layer."
+    }
+  ],
+  "content_rules": [
+    "No explicit sexual content",
+    "No romance of any kind",
+    "No attraction, seduction, romantic tension, or caretaker-romance between Elara and Finch",
+    "No love interest for Elara",
+    "All major characters involved in medical threat, coercion, or intimacy-coded scenes must be adults",
+    "No minors in sexual, romantic, erotic, or body-horror medical exploitation scenes",
+    "Consent must be treated seriously; medical coercion is horror and abuse, not romance",
+    "Spice level 1 means atmosphere, dread, and psychological intimacy only, with no explicit 18+ content",
+    "Beatrice must never speak, touch, smell, or communicate through words",
+    "The central mystery must have one fixed answer and must not split into competing explanations",
+    "Finch is the antagonist and clinic director, not a romantic lead",
+    "Body horror may be intense but should remain gothic and psychological rather than splatter-focused"
+  ],
+  "bible_status": "approved"
+}

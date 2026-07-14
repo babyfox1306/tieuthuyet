@@ -69,6 +69,45 @@ def _apply_canon_registry_checks(
     issues.update(canon_prose_issues(text, registry))
 
 
+_QUOTE_CHARS = ('"', "“", "”", "«", "»")
+_DIALOGUE_TAG_VERBS_RE = re.compile(
+    r"\b(?:"
+    r"said|asked|whispered|muttered|replied|shouted|cried|answered|snapped|"
+    r"murmured|called|yelled|hissed|growled|"
+    r"nói|hỏi|cười|thì thầm|lẩm bẩm|đáp|trả lời"
+    r")\b",
+    re.IGNORECASE,
+)
+_TAG_DIALOGUE_LINE_RE = re.compile(
+    r"(?:"
+    # "...speech..., she said" / "...speech..., Clara whispered"
+    r",\s*(?:cô|anh|hắn|nàng|ông|bà|ta|y|[Ss]he|[Hh]e|[Tt]hey|[Ii]t|[A-Z][\w'-]*)\s+"
+    r"(?i:nói|hỏi|cười|thì thầm|lẩm bẩm|đáp|trả lời|said|asked|whispered|"
+    r"muttered|replied|shouted|cried|answered|snapped|murmured)\b"
+    r"|"
+    # "She said ..." / "Clara whispered ..." (proper name keeps capital; verbs case-insensitive)
+    r"\b(?:[Ss]he|[Hh]e|[Tt]hey|[Ii]t|cô|anh|hắn|nàng|ông|bà|ta|y|[A-Z][\w'-]*)\s+"
+    r"(?i:said|asked|whispered|muttered|replied|shouted|cried|answered|snapped|"
+    r"murmured|nói|hỏi|thì thầm|lẩm bẩm|đáp|trả lời)\b"
+    r")"
+)
+# Plan/direction signals that sparse dialogue is intentional — never fail on quote count.
+_LOW_DIALOGUE_SIGNAL_RE = re.compile(
+    r"\[ISOLATION\]|"
+    r"\bisolat(?:ion|ed)\b|"
+    r"\bsolo[- ](?:pov|point of view|character)\b|"
+    r"\bsingle[- ]character\b|"
+    r"\babsence(?:[- ]only)?\b|"
+    r"\bnear[- ]zero dialogue\b|"
+    r"\b(?:no|minimal|little)\s+dialogue\b|"
+    r"\binternal (?:narration|monologue)\b|"
+    r"\bcatalog(?:ue)? notes\b|"
+    r"\bno (?:spoken|external) (?:dialogue|speech)\b|"
+    r"\bunassigned\s*\(\s*no male lead\s*\)",
+    re.IGNORECASE,
+)
+
+
 def _line_locations(text: str, predicate) -> list[dict[str, Any]]:
     """Return {line, snippet} for lines matching predicate(line_strip)."""
     out: list[dict[str, Any]] = []
@@ -83,24 +122,97 @@ def _line_locations(text: str, predicate) -> list[dict[str, Any]]:
     return out
 
 
-def find_missing_dialogue_quote_hits(text: str) -> list[dict[str, Any]]:
-    """Locate lines that look like dialogue without quotation marks."""
+def _has_quote_mark(s: str) -> bool:
+    return any(q in s for q in _QUOTE_CHARS)
+
+
+def _text_outside_quotes(text: str) -> str:
+    """Strip paired quote spans so dialogue tags inside speech are ignored."""
+    out = re.sub(r'"[^"\n]*"', " ", text)
+    out = re.sub(r"“[^”\n]*”", " ", out)
+    out = re.sub(r"«[^»\n]*»", " ", out)
+    return out
+
+
+def _count_dialogue_tags_outside_quotes(text: str) -> int:
+    return len(_DIALOGUE_TAG_VERBS_RE.findall(_text_outside_quotes(text)))
+
+
+def _quote_mark_count(text: str) -> int:
+    return sum(text.count(q) for q in ('"', "“", "”"))
+
+
+def _plan_direction_blob(plan: dict | None, direction: dict | None) -> str:
+    parts: list[str] = []
+    if isinstance(plan, dict):
+        for key in (
+            "must_happen",
+            "must_not",
+            "spice_note",
+            "chapter_task",
+            "beat_summary",
+            "one_line_summary",
+            "emotional_beat",
+            "opens_with",
+            "cliffhanger",
+        ):
+            val = plan.get(key)
+            if isinstance(val, list):
+                parts.extend(str(x) for x in val if x is not None)
+            elif val is not None and str(val).strip():
+                parts.append(str(val))
+    if isinstance(direction, dict):
+        for key in (
+            "goal",
+            "blurb",
+            "narrative_profile",
+            "male_lead",
+            "female_lead",
+            "pov",
+        ):
+            val = direction.get(key)
+            if val is not None and str(val).strip():
+                parts.append(str(val))
+        tropes = direction.get("tropes")
+        if isinstance(tropes, list):
+            parts.extend(str(t) for t in tropes if t is not None)
+    return "\n".join(parts)
+
+
+def expects_low_dialogue(
+    plan: dict | None = None,
+    direction: dict | None = None,
+) -> bool:
+    """True when plan/direction signals isolation or intentional solo / low dialogue."""
+    return bool(_LOW_DIALOGUE_SIGNAL_RE.search(_plan_direction_blob(plan, direction)))
+
+
+def find_missing_dialogue_quote_hits(
+    text: str,
+    *,
+    plan: dict | None = None,
+    direction: dict | None = None,
+) -> list[dict[str, Any]]:
+    """Locate structurally unquoted dialogue (never fail on raw quote count alone).
+
+    Sparse quotation marks are normal for isolation / solo-POV chapters. Those
+    signal via plan ``[ISOLATION]`` / isolation language — suppress entirely.
+    Otherwise only flag dangling dialogue-tag verbs (or dash speech) outside quotes.
+    """
+    if expects_low_dialogue(plan, direction):
+        return []
+
     hits: list[dict[str, Any]] = []
 
     def is_dash_dialogue(line_strip: str) -> bool:
         if not line_strip.startswith(("-", "—", "–")):
             return False
-        return not any(q in line_strip for q in ('"', "“", "”"))
+        return not _has_quote_mark(line_strip)
 
     def is_tag_dialogue(line_strip: str) -> bool:
-        if not re.search(
-            r",\s*(cô|anh|hắn|nàng|ông|bà|ta|y|she|he|they|it)\s*"
-            r"(nói|hỏi|cười|thì thầm|lẩm bẩm|đáp|trả lời|said|asked|whispered|muttered|replied|shouted|cried)\b",
-            line_strip,
-            re.IGNORECASE,
-        ):
+        if _has_quote_mark(line_strip):
             return False
-        return not any(q in line_strip for q in ('"', "“", "”"))
+        return bool(_TAG_DIALOGUE_LINE_RE.search(line_strip))
 
     hits.extend(_line_locations(text, is_dash_dialogue))
     if len(hits) < 8:
@@ -110,28 +222,57 @@ def find_missing_dialogue_quote_hits(text: str) -> list[dict[str, Any]]:
             if len(hits) >= 8:
                 break
 
-    total_quotes = sum(text.count(q) for q in ('"', "“", "”"))
-    if total_quotes < 4 and not hits:
+    # Real case: many dialogue-tag verbs outside quotes and zero quote marks.
+    total_quotes = _quote_mark_count(text)
+    outside_tags = _count_dialogue_tags_outside_quotes(text)
+    if total_quotes == 0 and outside_tags >= 3 and not hits:
         hits.append(
             {
                 "line": 0,
-                "snippet": f"(whole chapter has only {total_quotes} quote marks — dialogue likely unquoted)",
-            }
-        )
-    elif total_quotes < 4 and hits:
-        hits.append(
-            {
-                "line": 0,
-                "snippet": f"(total quotes in chapter: {total_quotes})",
+                "snippet": (
+                    f"({outside_tags} dialogue-tag verbs outside quotes, "
+                    f"0 quote marks)"
+                ),
             }
         )
     return hits
 
 
-def find_missing_dialogue_quotes(text: str) -> bool:
-    """Return True if dialogue is detected but has no quotation marks."""
-    return bool(find_missing_dialogue_quote_hits(text))
+def find_sparse_quote_warnings(
+    text: str,
+    *,
+    plan: dict | None = None,
+    direction: dict | None = None,
+) -> list[str]:
+    """Soft WARN only — never feeds needs_fix / missing_quotes.
 
+    Sparse quotes alone do not warn (isolation chapters are legitimate).
+    Emits at most a soft note when many dialogue tags sit outside quotes
+    while quote marks are sparse but non-zero (structural hits already cover
+    the zero-quote case as a format issue).
+    """
+    if expects_low_dialogue(plan, direction):
+        return []
+    total_quotes = _quote_mark_count(text)
+    outside_tags = _count_dialogue_tags_outside_quotes(text)
+    if 0 < total_quotes < 4 and outside_tags >= 3:
+        return [
+            f"sparse quotes ({total_quotes}) with {outside_tags} "
+            f"dialogue-tag verbs outside quotation marks"
+        ]
+    return []
+
+
+def find_missing_dialogue_quotes(
+    text: str,
+    *,
+    plan: dict | None = None,
+    direction: dict | None = None,
+) -> bool:
+    """Return True if structurally unquoted dialogue is detected."""
+    return bool(
+        find_missing_dialogue_quote_hits(text, plan=plan, direction=direction)
+    )
 
 def find_stray_whitespace_hits(text: str) -> list[dict[str, Any]]:
     """Trailing spaces / tabs on lines (operator-fixable)."""
@@ -175,6 +316,7 @@ def classify_machine_issues(issues: dict) -> dict[str, Any]:
         "classification",
         "retry_meta",
         "format_locations",
+        "warnings",
     }
     for k, v in issues.items():
         if k not in known and not str(k).startswith("_"):
@@ -219,6 +361,8 @@ def machine_qc(
     cfg: dict | None = None,
     workspace_id: str | None = None,
     book: int = 1,
+    chapter: int | None = None,
+    plan: dict | None = None,
 ) -> dict:
     issues: dict = {}
     lang = target_lang or target_language(direction, cfg)
@@ -244,9 +388,24 @@ def machine_qc(
     _apply_canon_registry_checks(
         issues, text, workspace_id=workspace_id, book=book
     )
-    quote_hits = find_missing_dialogue_quote_hits(text)
+
+    resolved_plan = plan
+    if resolved_plan is None and workspace_id and chapter:
+        from factory.engine.lib.catalog import chapter_beat_from_plan
+
+        resolved_plan = chapter_beat_from_plan(workspace_id, book, chapter)
+
+    quote_hits = find_missing_dialogue_quote_hits(
+        text, plan=resolved_plan, direction=direction
+    )
     if quote_hits:
         issues["missing_quotes"] = True
+
+    soft_warnings = find_sparse_quote_warnings(
+        text, plan=resolved_plan, direction=direction
+    )
+    if soft_warnings:
+        issues["warnings"] = list(issues.get("warnings") or []) + soft_warnings
 
     format_locations: dict[str, list] = {}
     if markdown:

@@ -1,0 +1,1244 @@
+{
+  "book": 1,
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The First Injection",
+      "one_line_summary": "Elara Sennewald arrived at the Styrian Alp Sanatorium, accepted Dr. Alistair Finch's venom therapy, and found faint black threads under her wrist skin after her pain briefly vanished.",
+      "beat_summary": "Open on Nurse Cora locking Elara's treatment chair before Elara can object, then move through the sanatorium's controlled admissions ritual: confiscated letters, restricted art supplies, Finch's soft clinical authority, his greyish skin, and his untouched cold tea. As Cora tightens the strap, Elara catches Tobias's gaze from the threshold; the mutual glance is brief but unsettling. The injection brings a terrifying absence of pain and a false moment of grace, but later, alone, Elara rubs her wrists and sees threadlike black shadows beneath white skin. [ROMANCE] A strange man's eyes from across the room—no comfort, only a reminder that she is alone among strangers. [ISOLATION] Her mother is reachable only through clinic-handled correspondence, Tobias is only a watchful stranger, and there is no hand she can trust when relief begins to feel like a trap.",
+      "opens_with": "\"Please do not tighten that,\" Elara said, and Nurse Cora tightened the strap anyway.",
+      "cliffhanger": "Elara lifts her wrist to the washbasin mirror and watches a black thread beneath her skin fork neatly into two thinner lines.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Establish the alpine sanatorium as controlled, elegant, and quietly coercive; make the first injection frighteningly calm; plant C001, C002, and C013 clearly through observed physical detail; include the [ROMANCE] micro-beat—a glance with Tobias during the restraint—to hint at future connection; end on the black threads under Elara's wrist skin.",
+      "must_happen": [
+        "Cora straps Elara into the treatment chair with procedural calm, making Elara's boundary around medical restraint immediately active.",
+        "[ROMANCE] As Cora tightens the strap, Elara meets the eyes of a young man—Tobias—watching from the doorway; the look is unreadable but lingers a second too long.",
+        "Plant C001: after the first treatment, Elara sees faint black threadlike shadows under the pale skin of her wrists and initially accepts them as bruising or vascular side effects.",
+        "Plant C002: the venom in the syringe appears ink-dark, slightly viscous, and almost self-leveling before Cora injects it, but no one calls it alive.",
+        "Plant C013: Finch's skin reads subtly grey in bright clinical light, and his stillness feels wrong without confirming why.",
+        "Finch presents himself as gentle, precise, and medically authoritative, promising pain relief while carefully avoiding honest explanation.",
+        "The clinic intercepts Elara's ordinary autonomy: her outgoing letter to Marta is taken for review under the policy of nervous rest.",
+        "[ISOLATION] Elara experiences the first pain-free interval alone in a locked clinic room, with no family, friend, or romantic comfort present."
+      ],
+      "must_not": [
+        "Do not reveal that the venom is living biomass from an ancient subterranean organism.",
+        "Do not confirm Finch is transformed or show his chest.",
+        "Do not create romantic tension, attraction, caretaker intimacy, or seduction between Elara and Finch.",
+        "Do not make Beatrice appear, speak, touch, smell, or guide Elara yet.",
+        "Do not explain the black wrist threads as anything beyond an unsettling side effect.",
+        "Do not elaborate on Tobias's backstory or motives; keep the glance purely surface-level."
+      ],
+      "carries_to_next": "Elara has begun treatment, her pain has briefly vanished, the clinic controls her communication, she has noticed Tobias's watchful presence, and the black wrist threads set up her move into Beatrice Wren's former art studio.",
+      "narrative": {
+        "clues_plant": [
+          "C001",
+          "C002",
+          "C013"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T005",
+          "T006",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elara Sennewald",
+            "Dr. Alistair Finch",
+            "Beatrice",
+            "Nurse Cora",
+            "Tobias",
+            "The Ancient Subterranean Organism",
+            "The Reader"
+          ],
+          "may_know": [
+            "Elara Sennewald: Elara knows she has checked into the isolated Styrian Alp Sanatorium because chronic pain has narrowed her life and her art",
+            "Elara Sennewald: She believes Dr",
+            "Elara Sennewald: Alistair Finch's venom therapy may offer relief",
+            "Elara Sennewald: She notices Finch's greyish skin, his cold tea habit, Nurse Cora's strict protocol, and faint black threads under the white skin of her wrists after treatment, but accepts the clinic's explanation that these are side effects",
+            "Elara Sennewald: She does not know the venom is alive",
+            "Elara Sennewald: She rubs her wrists and temples to warm them, especially when afraid or cold.",
+            "Dr. Alistair Finch: Finch knows the venom is not a conventional medicine and presents it to Elara as controlled experimental therapy for chronic pain",
+            "Dr. Alistair Finch: He understands how to use clinical calm, authority, and false comfort to keep patients compliant",
+            "Dr. Alistair Finch: He knows his own greyish skin and cold tea habit may appear strange, but he treats them as irrelevant eccentricities or signs of overwork.",
+            "Beatrice: Beatrice is known only as a dead former patient whose room or studio Elara will inherit",
+            "Beatrice: Elara has no direct knowledge of what happened to her",
+            "Beatrice: The narrative must not imply Beatrice can speak, touch, smell, or manifest as a conventional ghost.",
+            "Nurse Cora: Cora knows the clinic protocol and administers venom with precision",
+            "Nurse Cora: She treats dosage, timing, light exposure, and restricted materials as procedural necessities",
+            "Nurse Cora: She does not appear to know the full truth behind the organism",
+            "Nurse Cora: To Elara, Cora reads as disciplined, opaque, and possibly complicit through obedience.",
+            "Tobias: Tobias exists as another patient within the clinic's patient community, but Elara does not yet understand his relevance",
+            "Tobias: He is not a love interest",
+            "Tobias: Any connection with Elara is friendship, warning, shared vulnerability, and witness.",
+            "The Ancient Subterranean Organism: The organism is hidden behind the language of venom therapy",
+            "The Ancient Subterranean Organism: Its first visible sign in Elara is the faint black threading beneath her skin and the easing of pain",
+            "The Ancient Subterranean Organism: It must not be named or fully explained yet.",
+            "The Reader: The reader knows only what Elara can observe: a pain clinic, experimental venom therapy, Finch's unsettling authority, Cora's protocol, Elara's first black threads, and the promise of relief",
+            "The Reader: The reader should feel quiet wrongness, not receive exposition."
+          ],
+          "must_not_know": [
+            "Elara Sennewald: ['The full single answer to the central mystery: that the ink is living biomass from an ancient sentient subterranean organism.', 'That Finch is already transformed and runs the clinic to supply new hosts.', 'That fully transformed patients perceive the world as bio-electrical current instead of color.']",
+            "Elara Sennewald: [\"The full extent of Cora's partial conversion as an embodied obstacle during the escape.\", 'Whether the halted transformation inside Elara will remain dormant outside the clinic.']",
+            "Dr. Alistair Finch: [\"The reader must not know Finch's chest is a solid grey mass with black vascular threads until Elara sees it.\", 'The reader must not know with certainty that Finch is transformed until the chapter 9 reveal.']",
+            "Beatrice: ['That the shimmer is purposeful guidance rather than random light or hallucination.']",
+            "Beatrice: [\"That Beatrice's remnant is connected to failed or resisted absorption by the organism.\"]",
+            "Nurse Cora: ['That Cora is definitively partly converted.', 'That her rigid protocol is partly biological rather than only institutional obedience.']",
+            "Tobias: [\"That Tobias's fear of being cured is based on knowledge of disappearance, not jealousy or instability.\"]",
+            "Tobias: [\"That his black rootlike drawings are anatomically accurate evidence of the organism's replacement process.\"]",
+            "The Ancient Subterranean Organism: [\"That the venom is the organism's viable biomass.\", 'That the organism is ancient, sentient, subterranean, and building a collective consciousness.', 'That all major phenomena share this one cause.']",
+            "The Reader: [\"The exact nature of the organism and Finch's full transformation.\"]",
+            "The Reader: [\"The final escape image of Elara black-veined in the snow with Tobias's sketchbook and the vial of venom.\"]"
+          ],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      },
+      "slug": "the-first-injection",
+      "spice": 1,
+      "signature_detail_hint": "\"Please do not tighten that,\" Elara said, and Nurse Cora tightened the strap anyway."
+    },
+    {
+      "chapter": 2,
+      "title": "The Dead Woman's Studio",
+      "one_line_summary": "After her first injection, Elara inherited Beatrice Wren's former art studio, saw silent metallic shimmer behave like impossible light, and encountered Tobias's disturbing charcoal warnings while Finch watched her reaction too closely.",
+      "beat_summary": "Open with Elara finding a charcoal drawing of her own wrist taped inside the studio cabinet before she has told anyone about the black threads. Cora assigns Beatrice Wren's former studio as if dead patients routinely leave useful rooms behind, while Finch evades questions about Beatrice with elegant omissions and another cup of cold tea. In the studio, Elara sees dancing iridescent metallic-shimmer light skim across the wall, silent and scentless, never touching her and never forming a body. Tobias appears at the corridor edge and leaves behind charcoal images of branching black structures, altered hands, and a figure staring at colorless windows. [ROMANCE] When Cora's keys scrape in the lock outside and Elara nearly drops the charcoal, Tobias steps close enough to cover the drawing with his sleeve; their wrists almost touch, his glance sharp with warning rather than comfort, and the nearness vanishes before it can become safety. [ISOLATION] The shimmer offers no voice, Tobias gives no safe explanation, and Finch's attention replaces comfort with surveillance.",
+      "opens_with": "The drawing inside the cabinet showed Elara's wrist with black roots already growing through it.",
+      "cliffhanger": "As Elara shuts the studio door, the metallic shimmer flashes once across Beatrice's old baseboard, and Elara sees that a hairline scratch shaped like a downward arrow is cut directly above a loose floor tile.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV, continuing directly from the aftermath of the first injection and the discovery of black threads under her wrist skin. Build the studio as a gothic refuge that is also evidence; plant C003 and C014 without payoff; keep Beatrice strictly visual and silent; introduce Tobias through charcoal warnings and one restrained [ROMANCE] micro-beat of dangerous proximity; end with the shimmer exposing a possible downward clue without confirming what it wants or whether it has intent.",
+      "signature_detail_hint": "A jam jar of cloudy brush water on Beatrice's old shelf has dried into a perfect tide-ring map of the room, with one darker stain over the loose floor tile.",
+      "must_happen": [
+        "Elara enters Beatrice Wren's former studio after the first injection, still checking the faint black threads under her wrist skin and still aware that the clinic now controls her letters and movements.",
+        "[CLUE C003] Beatrice's shimmer appears only as dancing iridescent metallic light in the inherited studio, silent, scentless, bodiless, and never tactile; it skims the wall and happens to catch on a hidden scratch, cabinet seam, or baseboard mark without confirming intelligence or intent.",
+        "[CLUE C014] Finch carries or sips cold tea that has clearly gone untouched too long, and he shows no ordinary reaction to its temperature or taste while asking Elara what she has noticed in the room.",
+        "Elara learns Beatrice Wren was the previous patient connected to the studio, but Cora and Finch keep the details sterile and incomplete, speaking of Beatrice as a file, not a woman.",
+        "Tobias is introduced as a fellow patient who communicates uneasily through charcoal drawings rather than direct confession, appearing at the corridor edge as if he has been waiting for Elara to find the studio.",
+        "Tobias leaves or reveals a charcoal image that resembles black branching beneath skin, but Elara cannot yet trust whether it is warning, obsession, or illness.",
+        "[ROMANCE] When Cora approaches the studio door, Tobias moves close enough to shield the charcoal drawing from view; Elara feels the near-brush of his sleeve against her wrist, meets his urgent gaze, and senses a dangerous, unspoken alliance before he withdraws.",
+        "Elara's altered body horror escalates through heightened sensitivity to paper texture, charcoal dust, cold metal drawer pulls, and the faint pressure of her own pulse under the black wrist threads.",
+        "[ISOLATION] Elara tests the shimmer by whispering and holding out a hand, but receives no speech, no touch, no scent, and no human comfort.",
+        "[ISOLATION] Even after Tobias's brief intervention, Elara is left alone with the evidence: no trustworthy hand to hold, no explanation she can safely believe, and only the cold corridor waiting beyond the studio door."
+      ],
+      "must_not": [
+        "Do not reveal that Beatrice's shimmer is purposeful guidance or tied to resisted absorption.",
+        "Do not let Beatrice speak, touch, smell, write words, or appear as a conventional ghost.",
+        "Do not confirm Tobias knows cured patients disappear.",
+        "Do not turn Tobias into a caretaker, rescuer, or declared love interest yet; keep the [ROMANCE] beat subtle, tense, and rooted in danger.",
+        "Do not confirm Finch's cold tea habit is caused by his altered body.",
+        "Do not reveal that Tobias's black rootlike drawings are anatomically accurate evidence of the organism's replacement process.",
+        "Do not reveal that the venom is living biomass from an ancient sentient subterranean organism.",
+        "Do not confirm Finch is transformed or imply certainty about the cause of his grey stillness."
+      ],
+      "carries_to_next": "Elara now has a private studio linked to Beatrice, an ambiguous shimmer, Tobias's charcoal warnings, a charged but unsafe moment of proximity with Tobias, and growing sensory changes that will sharpen during the next treatment cycle.",
+      "narrative": {
+        "clues_plant": [
+          "C003",
+          "C014"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elara Sennewald",
+            "Dr. Alistair Finch",
+            "Beatrice",
+            "Nurse Cora",
+            "Tobias",
+            "The Ancient Subterranean Organism",
+            "The Reader"
+          ],
+          "may_know": [
+            "Elara Sennewald: Elara inherits Beatrice's old art studio and observes dancing iridescent metallic-shimmer light there",
+            "Elara Sennewald: She does not hear a voice, feel a touch, or smell anything connected to it",
+            "Elara Sennewald: She knows Tobias is troubled and communicates uneasily through charcoal images, but she cannot yet trust his fear as evidence",
+            "Elara Sennewald: She remains vulnerable to Finch's authority because the treatment promises a pain-free body.",
+            "Dr. Alistair Finch: Finch knows Beatrice died before Elara arrived and that her studio may contain traces or evidence of resistance",
+            "Dr. Alistair Finch: He does not explain Beatrice honestly",
+            "Dr. Alistair Finch: He monitors Elara's reaction to the treatment and relies on Cora to administer protocol without needing full disclosure",
+            "Dr. Alistair Finch: His influence over Elara is medical and institutional, never romantic.",
+            "Beatrice: Beatrice manifests only as dancing iridescent metallic-shimmer light in the studio",
+            "Beatrice: Elara observes the shimmer visually but receives no voice, no scent, no physical contact, and no direct language",
+            "Beatrice: The shimmer appears tied to the studio and to Beatrice's remaining resistance.",
+            "Nurse Cora: Cora knows which rooms, supplies, and patient movements are restricted",
+            "Nurse Cora: She avoids explaining Beatrice and follows Finch's authority",
+            "Nurse Cora: She remains practical rather than openly cruel, which helps hide the biological horror under institutional routine.",
+            "Tobias: Elara begins to recognize Tobias's charcoal drawings as strange and disturbing",
+            "Tobias: Tobias knows more than he can safely explain directly",
+            "Tobias: His art contains black branching systems, altered bodies, and visual warnings about the treatment.",
+            "The Ancient Subterranean Organism: The organism's effects appear indirectly through Beatrice's visual shimmer, the clinic's silences, and the altered atmosphere of the studio",
+            "The Ancient Subterranean Organism: The reader may suspect haunting or medical side effects, but not the full biological truth.",
+            "The Reader: The reader sees Beatrice's shimmer only as Elara sees it: silent, visual, metallic, and ambiguous",
+            "The Reader: No narration should confirm speech, scent, touch, or ghostly omniscience",
+            "The Reader: Tobias's drawings begin to seed unease."
+          ],
+          "must_not_know": [
+            "Elara Sennewald: ['The full single answer to the central mystery: that the ink is living biomass from an ancient sentient subterranean organism.', 'That Finch is already transformed and runs the clinic to supply new hosts.', 'That fully transformed patients perceive the world as bio-electrical current instead of color.']",
+            "Elara Sennewald: [\"The full extent of Cora's partial conversion as an embodied obstacle during the escape.\", 'Whether the halted transformation inside Elara will remain dormant outside the clinic.']",
+            "Dr. Alistair Finch: [\"The reader must not know Finch's chest is a solid grey mass with black vascular threads until Elara sees it.\", 'The reader must not know with certainty that Finch is transformed until the chapter 9 reveal.']",
+            "Beatrice: ['That the shimmer is purposeful guidance rather than random light or hallucination.']",
+            "Beatrice: [\"That Beatrice's remnant is connected to failed or resisted absorption by the organism.\"]",
+            "Nurse Cora: ['That Cora is definitively partly converted.', 'That her rigid protocol is partly biological rather than only institutional obedience.']",
+            "Tobias: [\"That Tobias's fear of being cured is based on knowledge of disappearance, not jealousy or instability.\"]",
+            "Tobias: [\"That his black rootlike drawings are anatomically accurate evidence of the organism's replacement process.\"]",
+            "The Ancient Subterranean Organism: [\"That the venom is the organism's viable biomass.\", 'That the organism is ancient, sentient, subterranean, and building a collective consciousness.', 'That all major phenomena share this one cause.']",
+            "The Reader: [\"The exact nature of the organism and Finch's full transformation.\"]",
+            "The Reader: [\"The final escape image of Elara black-veined in the snow with Tobias's sketchbook and the vial of venom.\"]"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      },
+      "slug": "the-dead-woman-s-studio",
+      "spice": 1
+    },
+    {
+      "chapter": 3,
+      "title": "Colorless Pain",
+      "one_line_summary": "Elara's black wrist threads spread and her senses turned violently strange under light and sound, proving the treatment is changing her body while Tobias warned that being declared cured is something to fear.",
+      "beat_summary": "Open with Elara convulsing at breakfast when a spoon strikes porcelain and the sound tears through her skull like wire. The chapter escalates from small sensory wrongness into undeniable bodily alteration: pure window light hurts, fabric texture becomes unbearable, and the black threads beneath her wrists no longer resemble bruises. Pay off C001 by making Elara understand the lines are actively branching inside her, not fading, and plant/pay off C004 through immediate light allergy and sound-texture hypersensitivity. Tobias corners her near the studio long enough to mutter that the cured patients do not come back the same, then hides the warning inside a charcoal drawing when Cora approaches. [ISOLATION] Finch offers calm explanations instead of truth, Tobias retreats before he can protect her, and Beatrice's shimmer remains only a silent visual disturbance. [ROMANCE] In the worst of the sensory assault, Elara reaches for a hand that is not there — the corridor stays empty, and no voice breaks the hum of the clinic.",
+      "opens_with": "The spoon hit porcelain, and Elara's body forgot how to remain human.",
+      "cliffhanger": "Under the covered window, Elara peels back her sleeve and sees the black threads in her wrist pulse once in perfect time with a low answering knock from somewhere beneath the floor.",
+      "chapter_task": "Write 1600-1900 words in third-limited Elara POV. Escalate body horror through light, sound, texture, and visible black branching; explicitly pay off C001 and C004 while planting C005; keep Tobias frightened but not fully explanatory; end on the wrist pulse answering the sound beneath the floor. Ensure no romantic presence or touch; the absence of a steadying hand should be felt.",
+      "must_happen": [
+        "Pay off C001: Elara compares the wrist threads to the previous night and realizes they have branched into a deliberate vascular pattern rather than healing bruises.",
+        "Plant and pay off C004: direct pure light burns or nauseates Elara, ordinary sound becomes painfully sharp, and fabric texture against her skin feels neurologically magnified.",
+        "Plant C005: Tobias warns Elara, directly or through charcoal, that being declared cured is dangerous and that patients who leave the visible wards are not simply discharged.",
+        "Finch reframes Elara's light and sound sensitivity as expected recalibration while avoiding any explanation that would reveal the organism.",
+        "Cora enforces protocol by reducing light exposure, changing dosage timing, or restricting Elara's movement, making care feel indistinguishable from containment.",
+        "Elara's ability to draw is affected: charcoal lines seem to pulse or misalign with what her eyes see, suggesting her perception is being rewired.",
+        "[ISOLATION] Elara tries to use Tobias's fear as proof, but he pulls away when staff appear, leaving her with evidence she cannot safely show anyone.",
+        "[ROMANCE] During peak sensory overload, Elara's fingers close on empty air — no one comes to hold her hand, and the clinic's silence offers no comfort."
+      ],
+      "must_not": [
+        "Do not reveal the organism, collective consciousness, subterranean source, or full medical truth.",
+        "Do not pay off C005 early by explaining exactly what Tobias knows about cured patients.",
+        "Do not confirm Cora is partly converted or biologically linked to protocol.",
+        "Do not show fully transformed perception as a bio-electrical grid.",
+        "Do not turn Finch's attention into romance, attraction, or intimate rescue."
+      ],
+      "carries_to_next": "Elara now knows the treatment is physically changing her, suspects Tobias's warnings matter, and has a new subterranean sound clue pulling the story toward restricted rooms and deeper clinic evidence.",
+      "narrative": {
+        "clues_plant": [
+          "C004",
+          "C005"
+        ],
+        "clues_payoff": [
+          "C001",
+          "C004"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elara Sennewald",
+            "Dr. Alistair Finch",
+            "Beatrice",
+            "Nurse Cora",
+            "Tobias",
+            "The Ancient Subterranean Organism",
+            "The Reader"
+          ],
+          "may_know": [
+            "Elara Sennewald: Elara inherits Beatrice's old art studio and observes dancing iridescent metallic-shimmer light there",
+            "Elara Sennewald: She does not hear a voice, feel a touch, or smell anything connected to it",
+            "Elara Sennewald: She knows Tobias is troubled and communicates uneasily through charcoal images, but she cannot yet trust his fear as evidence",
+            "Elara Sennewald: She remains vulnerable to Finch's authority because the treatment promises a pain-free body.",
+            "Dr. Alistair Finch: Finch knows Beatrice died before Elara arrived and that her studio may contain traces or evidence of resistance",
+            "Dr. Alistair Finch: He does not explain Beatrice honestly",
+            "Dr. Alistair Finch: He monitors Elara's reaction to the treatment and relies on Cora to administer protocol without needing full disclosure",
+            "Dr. Alistair Finch: His influence over Elara is medical and institutional, never romantic.",
+            "Beatrice: Beatrice manifests only as dancing iridescent metallic-shimmer light in the studio",
+            "Beatrice: Elara observes the shimmer visually but receives no voice, no scent, no physical contact, and no direct language",
+            "Beatrice: The shimmer appears tied to the studio and to Beatrice's remaining resistance.",
+            "Nurse Cora: Cora knows which rooms, supplies, and patient movements are restricted",
+            "Nurse Cora: She avoids explaining Beatrice and follows Finch's authority",
+            "Nurse Cora: She remains practical rather than openly cruel, which helps hide the biological horror under institutional routine.",
+            "Tobias: Elara begins to recognize Tobias's charcoal drawings as strange and disturbing",
+            "Tobias: Tobias knows more than he can safely explain directly",
+            "Tobias: His art contains black branching systems, altered bodies, and visual warnings about the treatment.",
+            "The Ancient Subterranean Organism: The organism's effects appear indirectly through Beatrice's visual shimmer, the clinic's silences, and the altered atmosphere of the studio",
+            "The Ancient Subterranean Organism: The reader may suspect haunting or medical side effects, but not the full biological truth.",
+            "The Reader: The reader sees Beatrice's shimmer only as Elara sees it: silent, visual, metallic, and ambiguous",
+            "The Reader: No narration should confirm speech, scent, touch, or ghostly omniscience",
+            "The Reader: Tobias's drawings begin to seed unease."
+          ],
+          "must_not_know": [
+            "Elara Sennewald: ['The full single answer to the central mystery: that the ink is living biomass from an ancient sentient subterranean organism.', 'That Finch is already transformed and runs the clinic to supply new hosts.', 'That fully transformed patients perceive the world as bio-electrical current instead of color.']",
+            "Elara Sennewald: [\"The full extent of Cora's partial conversion as an embodied obstacle during the escape.\", 'Whether the halted transformation inside Elara will remain dormant outside the clinic.']",
+            "Dr. Alistair Finch: [\"The reader must not know Finch's chest is a solid grey mass with black vascular threads until Elara sees it.\", 'The reader must not know with certainty that Finch is transformed until the chapter 9 reveal.']",
+            "Beatrice: ['That the shimmer is purposeful guidance rather than random light or hallucination.']",
+            "Beatrice: [\"That Beatrice's remnant is connected to failed or resisted absorption by the organism.\"]",
+            "Nurse Cora: ['That Cora is definitively partly converted.', 'That her rigid protocol is partly biological rather than only institutional obedience.']",
+            "Tobias: [\"That Tobias's fear of being cured is based on knowledge of disappearance, not jealousy or instability.\"]",
+            "Tobias: [\"That his black rootlike drawings are anatomically accurate evidence of the organism's replacement process.\"]",
+            "The Ancient Subterranean Organism: [\"That the venom is the organism's viable biomass.\", 'That the organism is ancient, sentient, subterranean, and building a collective consciousness.', 'That all major phenomena share this one cause.']",
+            "The Reader: [\"The exact nature of the organism and Finch's full transformation.\"]",
+            "The Reader: [\"The final escape image of Elara black-veined in the snow with Tobias's sketchbook and the vial of venom.\"]"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      },
+      "slug": "colorless-pain",
+      "spice": 1,
+      "signature_detail_hint": "The spoon hit porcelain, and Elara's body forgot how to remain human."
+    },
+    {
+      "chapter": 4,
+      "title": "The Scrape Beneath the Paint",
+      "one_line_summary": "Elara followed Beatrice's silent shimmer to scraped evidence in the studio wall, found Tobias's anatomical charcoal warnings, and saw the clinic's alpine salt handled like a restricted medicine.",
+      "beat_summary": "Open with Elara pressing her ear to the studio floor as the knock below answers the pulse in her wrist again. The metallic shimmer in Beatrice's studio flashes over the scratched arrow from chapter 2 and leads Elara to use Beatrice's worn palette knife on a patch of thick white paint, where she uncovers ash-dark residue and fine black filaments embedded beneath the wall surface, planting C006 as physical evidence of conversion without yet explaining it. Tobias slips her folded charcoal pages that show nerves and blood vessels replaced by branching black root-systems, planting C007 as disturbing art that may be medical record or obsession. During a controlled meal or treatment corridor scene, Elara notices Oskar Lenz delivering coarse alpine salt under a falsified kitchen inventory while Cora reacts with unusual vigilance, planting C010 without revealing that salt halts conversion. [ISOLATION] Elara has clues but no safe ally: Beatrice can only shimmer, Tobias will not stay, Marta's letters remain filtered, Finch's calm turns every question back into a symptom, and no hand reaches for hers in the cold studio. [ROMANCE] When Tobias slips away after leaving the drawings, Elara's fingers tighten on the charcoal page, the absence of his touch a hollow reminder that she is alone among strangers.",
+      "opens_with": "Something knocked under the floor, and the black thread in Elara's wrist knocked back.",
+      "cliffhanger": "When Elara shakes the scraped ash from Beatrice's palette knife, the black threads under her wrist rise toward the skin like tiny roots scenting soil.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Continue directly from the chapter 3 floor-knock cliffhanger; plant C006, C007, and C010 through concrete visual and tactile evidence; make the studio feel like refuge and trap; preserve Beatrice as strictly silent shimmer; end on the black wrist threads reacting to the scraped ash.",
+      "must_happen": [
+        "Plant C006: Beatrice's metallic shimmer silently highlights the scratched arrow and a repainted patch in the studio; when Elara scrapes it, she finds ash-like residue and hair-fine black filaments trapped under the paint.",
+        "Plant C007: Tobias gives or hides charcoal drawings showing a human arm, spine, and chest overlaid with black branching systems that resemble both roots and vascular anatomy, but Elara cannot yet know they are accurate records of replacement.",
+        "Plant C010: Elara sees Oskar Lenz deliver a small sack of coarse alpine salt listed as kitchen stock, while Cora treats it as more controlled than food and refuses Elara's casual question about it.",
+        "Elara's body horror escalates when the black lines in her wrists seem to tug toward the scraped residue, and the studio floor vibration makes her teeth ache without restoring pain.",
+        "Finch interrupts before Elara can openly confront Tobias, frames her fixation on drawings and wall marks as nervous overstimulation, and suggests adjusting her next venom dose.",
+        "[ISOLATION] Elara realizes every possible witness is compromised or unreachable: the shimmer has no voice, Tobias flees staff, her mother can only receive clinic-reviewed letters, and there is no romantic presence to trust.",
+        "[ROMANCE] In the quiet after Tobias leaves the studio, Elara brushes her own fingers along her wrist where another's hand might rest — but the touch is only her own, and the cold air offers nothing more."
+      ],
+      "must_not": [
+        "Do not reveal that the venom is living biomass, an ancient organism, or part of a collective consciousness.",
+        "Do not pay off C006, C007, or C010 in this chapter; keep the residue, drawings, and salt suspicious but unexplained.",
+        "Do not let Beatrice speak, touch Elara, write words, smell of anything, or appear as a human ghost.",
+        "Do not imply Tobias is a romantic interest or that Elara feels attraction to him.",
+        "Do not confirm Finch is transformed or reveal his chest."
+      ],
+      "carries_to_next": "Elara carries hidden ash residue, Tobias's unsettling drawings, and a new suspicion that the clinic's alpine salt matters, while Finch prepares to tighten treatment oversight.",
+      "narrative": {
+        "clues_plant": [
+          "C006",
+          "C007",
+          "C010"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elara Sennewald",
+            "Dr. Alistair Finch",
+            "Beatrice",
+            "Nurse Cora",
+            "Tobias",
+            "The Ancient Subterranean Organism",
+            "The Reader"
+          ],
+          "may_know": [
+            "Elara Sennewald: Elara inherits Beatrice's old art studio and observes dancing iridescent metallic-shimmer light there",
+            "Elara Sennewald: She does not hear a voice, feel a touch, or smell anything connected to it",
+            "Elara Sennewald: She knows Tobias is troubled and communicates uneasily through charcoal images, but she cannot yet trust his fear as evidence",
+            "Elara Sennewald: She remains vulnerable to Finch's authority because the treatment promises a pain-free body.",
+            "Dr. Alistair Finch: Finch knows Beatrice died before Elara arrived and that her studio may contain traces or evidence of resistance",
+            "Dr. Alistair Finch: He does not explain Beatrice honestly",
+            "Dr. Alistair Finch: He monitors Elara's reaction to the treatment and relies on Cora to administer protocol without needing full disclosure",
+            "Dr. Alistair Finch: His influence over Elara is medical and institutional, never romantic.",
+            "Beatrice: Beatrice manifests only as dancing iridescent metallic-shimmer light in the studio",
+            "Beatrice: Elara observes the shimmer visually but receives no voice, no scent, no physical contact, and no direct language",
+            "Beatrice: The shimmer appears tied to the studio and to Beatrice's remaining resistance.",
+            "Nurse Cora: Cora knows which rooms, supplies, and patient movements are restricted",
+            "Nurse Cora: She avoids explaining Beatrice and follows Finch's authority",
+            "Nurse Cora: She remains practical rather than openly cruel, which helps hide the biological horror under institutional routine.",
+            "Tobias: Elara begins to recognize Tobias's charcoal drawings as strange and disturbing",
+            "Tobias: Tobias knows more than he can safely explain directly",
+            "Tobias: His art contains black branching systems, altered bodies, and visual warnings about the treatment.",
+            "The Ancient Subterranean Organism: The organism's effects appear indirectly through Beatrice's visual shimmer, the clinic's silences, and the altered atmosphere of the studio",
+            "The Ancient Subterranean Organism: The reader may suspect haunting or medical side effects, but not the full biological truth.",
+            "The Reader: The reader sees Beatrice's shimmer only as Elara sees it: silent, visual, metallic, and ambiguous",
+            "The Reader: No narration should confirm speech, scent, touch, or ghostly omniscience",
+            "The Reader: Tobias's drawings begin to seed unease."
+          ],
+          "must_not_know": [
+            "Elara Sennewald: ['The full single answer to the central mystery: that the ink is living biomass from an ancient sentient subterranean organism.', 'That Finch is already transformed and runs the clinic to supply new hosts.', 'That fully transformed patients perceive the world as bio-electrical current instead of color.']",
+            "Elara Sennewald: [\"The full extent of Cora's partial conversion as an embodied obstacle during the escape.\", 'Whether the halted transformation inside Elara will remain dormant outside the clinic.']",
+            "Dr. Alistair Finch: [\"The reader must not know Finch's chest is a solid grey mass with black vascular threads until Elara sees it.\", 'The reader must not know with certainty that Finch is transformed until the chapter 9 reveal.']",
+            "Beatrice: ['That the shimmer is purposeful guidance rather than random light or hallucination.']",
+            "Beatrice: [\"That Beatrice's remnant is connected to failed or resisted absorption by the organism.\"]",
+            "Nurse Cora: ['That Cora is definitively partly converted.', 'That her rigid protocol is partly biological rather than only institutional obedience.']",
+            "Tobias: [\"That Tobias's fear of being cured is based on knowledge of disappearance, not jealousy or instability.\"]",
+            "Tobias: [\"That his black rootlike drawings are anatomically accurate evidence of the organism's replacement process.\"]",
+            "The Ancient Subterranean Organism: [\"That the venom is the organism's viable biomass.\", 'That the organism is ancient, sentient, subterranean, and building a collective consciousness.', 'That all major phenomena share this one cause.']",
+            "The Reader: [\"The exact nature of the organism and Finch's full transformation.\"]",
+            "The Reader: [\"The final escape image of Elara black-veined in the snow with Tobias's sketchbook and the vial of venom.\"]"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      },
+      "slug": "the-scrape-beneath-the-paint",
+      "spice": 1,
+      "signature_detail_hint": "Something knocked under the floor, and the black thread in Elara's wrist knocked back."
+    },
+    {
+      "chapter": 5,
+      "title": "The Patient Who Was Cured",
+      "one_line_summary": "Elara witnesses a sedated patient being taken to the lower corridor despite being declared cured, tests Beatrice's shimmer and finds it responds only to light, and notices Cora listening to a sound beneath the sanatorium before any human ear could detect it.",
+      "beat_summary": "Open with Elara in the corridor as a gurney passes carrying a patient whose uncovered hand is threaded with black nearly to the knuckles. Finch allows the staff to imply the patient has been cured, but the gurney is taken toward the lower corridor rather than the exit, planting C009 — a disappearance disguised as medical success. [ROMANCE] In the sudden silence after the gurney passes, Elara's fingers curl toward empty air, a reflex for a comfort that does not exist. In the studio, Elara tests Beatrice's shimmer with spoken questions, charcoal marks, breath on glass, and finally an outstretched hand; the shimmer answers only by light and never touches her, planting C008 as purely visual phenomenon. Later, in the treatment wing, Elara rounds a corner to find Cora with her palm flat against the wall, her eyes unfocused, listening. No footstep, no voice, no machinery sound has preceded the moment — planting C017 as the subterranean sound that Cora is attuned to beyond natural hearing. The chapter closes with Elara pressing her ear to the same spot after Cora leaves and hearing only a low rhythmic pulse that matches the tempo of her wrist threads.",
+      "opens_with": "The black threads on the gurney patient's hand reached his fingernails, and Elara understood — this was a cured man leaving the clinic for the lower floor.",
+      "cliffhanger": "Alone in the corridor, Elara presses her ear to the cold wall where Cora stood, catches a pulse that matches her wrist threads, and realizes the whole clinic's silence is listening for something waiting beneath.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Plant C009 through the patient's redirection to the lower corridor; plant C008 through Elara's failed attempts to elicit a response from the shimmer beyond light; plant C017 through Cora's uncharacteristic stillness and the unexplained sound detection. Include the [ROMANCE] absence micro-beat as Elara reaches for comfort that cannot come. End on the cliffhanger of the matching pulse and the implication of a listening organism. Maintain the gothic medical atmosphere and Elara's growing isolation.",
+      "must_happen": [
+        "[CLUE C009] A sedated patient is wheeled through the corridor with black threads visible to the knuckles; despite being called cured, the gurney is taken toward the lower level and away from the exit.",
+        "[ROMANCE] After the gurney passes, Elara is alone in the sudden quiet and her hand reaches for another's comfort, but the corridor offers only empty air and the lingering sound of wheels.",
+        "[CLUE C008] Elara isolates herself in the studio and tries to make the metallic shimmer respond to speech, gesture, or touch; the shimmer remains silent and untouchable, reflecting only light.",
+        "[CLUE C017] Elara witnesses Cora standing still with her palm against the corridor wall, clearly listening to something inaudible to Elara, and the timing suggests Cora detected a sound before any normal physical arrival.",
+        "After Cora leaves, Elara replicates the posture and hears a low rhythmic pulse through the wall that synchronizes with her own black wrist threads.",
+        "Elara attempts to ask Finch about the cured patient's destination but is redirected with calm evasiveness and a suggestion that her art therapy is more productive than gossip.",
+        "Tobias does not appear in this chapter, reinforcing Elara's isolation; the only witness to Cora's listening is Elara alone."
+      ],
+      "must_not": [
+        "Do not reveal that the shimmer is purposeful guidance or linked to the organism.",
+        "Do not confirm that the patient on the gurney has been fully converted or that the lower corridor leads to eventual disappearance.",
+        "Do not reveal that Cora's awareness of the subterranean sound is caused by partial conversion.",
+        "Do not confirm that the pulse in the wall is the organism or that the wrist threads are part of a collective consciousness.",
+        "Do not allow Tobias to appear; his absence deepens the loneliness.",
+        "Do not explain the medical purpose of the salt or connect it directly to the shimmer.",
+        "Do not show Finch's chest or any physical transformation beyond grey skin."
+      ],
+      "narrative": {
+        "clues_plant": [
+          "C008",
+          "C009",
+          "C017"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elara Sennewald",
+            "Dr. Alistair Finch",
+            "Beatrice",
+            "Nurse Cora",
+            "Tobias",
+            "The Ancient Subterranean Organism",
+            "The Reader"
+          ],
+          "may_know": [
+            "Elara Sennewald: Elara inherits Beatrice's old art studio and observes dancing iridescent metallic-shimmer light there",
+            "Elara Sennewald: She does not hear a voice, feel a touch, or smell anything connected to it",
+            "Elara Sennewald: She knows Tobias is troubled and communicates uneasily through charcoal images, but she cannot yet trust his fear as evidence",
+            "Elara Sennewald: She remains vulnerable to Finch's authority because the treatment promises a pain-free body.",
+            "Dr. Alistair Finch: Finch knows Beatrice died before Elara arrived and that her studio may contain traces or evidence of resistance",
+            "Dr. Alistair Finch: He does not explain Beatrice honestly",
+            "Dr. Alistair Finch: He monitors Elara's reaction to the treatment and relies on Cora to administer protocol without needing full disclosure",
+            "Dr. Alistair Finch: His influence over Elara is medical and institutional, never romantic.",
+            "Beatrice: Beatrice manifests only as dancing iridescent metallic-shimmer light in the studio",
+            "Beatrice: Elara observes the shimmer visually but receives no voice, no scent, no physical contact, and no direct language",
+            "Beatrice: The shimmer appears tied to the studio and to Beatrice's remaining resistance.",
+            "Nurse Cora: Cora knows which rooms, supplies, and patient movements are restricted",
+            "Nurse Cora: She avoids explaining Beatrice and follows Finch's authority",
+            "Nurse Cora: She remains practical rather than openly cruel, which helps hide the biological horror under institutional routine.",
+            "Tobias: Elara begins to recognize Tobias's charcoal drawings as strange and disturbing",
+            "Tobias: Tobias knows more than he can safely explain directly",
+            "Tobias: His art contains black branching systems, altered bodies, and visual warnings about the treatment.",
+            "The Ancient Subterranean Organism: The organism's effects appear indirectly through Beatrice's visual shimmer, the clinic's silences, and the altered atmosphere of the studio",
+            "The Ancient Subterranean Organism: The reader may suspect haunting or medical side effects, but not the full biological truth.",
+            "The Reader: The reader sees Beatrice's shimmer only as Elara sees it: silent, visual, metallic, and ambiguous",
+            "The Reader: No narration should confirm speech, scent, touch, or ghostly omniscience",
+            "The Reader: Tobias's drawings begin to seed unease."
+          ],
+          "must_not_know": [
+            "Elara Sennewald: ['The full single answer to the central mystery: that the ink is living biomass from an ancient sentient subterranean organism.', 'That Finch is already transformed and runs the clinic to supply new hosts.', 'That fully transformed patients perceive the world as bio-electrical current instead of color.']",
+            "Elara Sennewald: [\"The full extent of Cora's partial conversion as an embodied obstacle during the escape.\", 'Whether the halted transformation inside Elara will remain dormant outside the clinic.']",
+            "Dr. Alistair Finch: [\"The reader must not know Finch's chest is a solid grey mass with black vascular threads until Elara sees it.\", 'The reader must not know with certainty that Finch is transformed until the chapter 9 reveal.']",
+            "Beatrice: ['That the shimmer is purposeful guidance rather than random light or hallucination.']",
+            "Beatrice: [\"That Beatrice's remnant is connected to failed or resisted absorption by the organism.\"]",
+            "Nurse Cora: ['That Cora is definitively partly converted.', 'That her rigid protocol is partly biological rather than only institutional obedience.']",
+            "Tobias: [\"That Tobias's fear of being cured is based on knowledge of disappearance, not jealousy or instability.\"]",
+            "Tobias: [\"That his black rootlike drawings are anatomically accurate evidence of the organism's replacement process.\"]",
+            "The Ancient Subterranean Organism: [\"That the venom is the organism's viable biomass.\", 'That the organism is ancient, sentient, subterranean, and building a collective consciousness.', 'That all major phenomena share this one cause.']",
+            "The Reader: [\"The exact nature of the organism and Finch's full transformation.\"]",
+            "The Reader: [\"The final escape image of Elara black-veined in the snow with Tobias's sketchbook and the vial of venom.\"]"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      },
+      "slug": "the-patient-who-was-cured",
+      "spice": 1,
+      "signature_detail_hint": "The black threads on the gurney patient's hand reached his fingernails, and Elara understood — this was a cured man leaving the clinic for the lower floor."
+    },
+    {
+      "chapter": 6,
+      "title": "The Language of Shimmer",
+      "one_line_summary": "Elara confirmed Beatrice's shimmer is purposeful visual guidance, connected the studio ash to conversion evidence, and discovered that alpine salt makes the black threads in her skin recoil.",
+      "beat_summary": "Open with Elara cutting into the studio wall again as Beatrice's metallic shimmer strikes the palette knife three times in warning. Continue directly from the lower-corridor dread and Cora's unnatural vigilance in chapter 5: Elara returns to the studio with hidden ash residue, Tobias's charcoal warnings, and the memory of a cured patient being taken downward instead of discharged. The shimmer remains strictly silent, scentless, and visual, but its repeated flashes prove it can guide Elara's hand with intent; it steers her away from the first cut and toward a second, older seam in Beatrice's wall. Elara compares the ash-dark residue and hair-fine black filaments beneath the paint with what she saw in the cured patient's hand and with Tobias's drawings, realizing the studio wall was used to hide evidence of bodily alteration without yet knowing the source. When a pinch of coarse alpine salt spills from a restricted kitchen packet onto her wrist, the black threads beneath her skin recoil from it like burned roots, planting C011 without explaining why salt matters. [ROMANCE][ISOLATION] In the dangerous hush after the reaction, Elara reaches for steadiness and finds only the empty corridor, no trusted hand, no lover, and Tobias absent behind locked patient rules.",
+      "opens_with": "The palette knife jerked in Elara's grip as silver light struck the blade once, twice, three times.",
+      "cliffhanger": "Elara hides the salt-stung wrist under her sleeve just as Cora unlocks the studio door and says, staring at the exact wall seam Beatrice marked, \"Dr. Finch wants to know what you cut out of there.\"",
+      "chapter_task": "Write 1600-1900 English words in tight third-limited Elara POV. Continue from chapter 5's cured-patient disappearance and Cora's lower-corridor vigilance; do not reset the setting or Elara's suspicions. Pay off C003, C006, and C008 through concrete visual evidence and Elara's deductions while keeping Beatrice only a silent metallic shimmer. Plant C011 with the alpine salt reaction as an alarming physical clue, not a full explanation. Include the [ROMANCE]/[ISOLATION] absence beat: in danger, Elara has no trusted hand to take and no romantic rescuer. End on Cora catching that Elara has disturbed the marked wall.",
+      "must_happen": [
+        "[PAYOFF C003] Beatrice's shimmer repeatedly strikes Elara's palette knife and then flashes over a different wall seam, proving to Elara that the light is not random reflection but purposeful visual guidance.",
+        "[PAYOFF C008] Elara tests the shimmer with a whispered question, charcoal marks, breath on glass, and an outstretched hand; it never speaks, touches, smells, or forms a body, answering only by directing light.",
+        "[PAYOFF C006] Elara reopens the painted studio seam and finds ash-dark residue and hair-fine black filaments matching the hidden wall evidence from chapter 4, then connects them to the cured patient's black-threaded hand without learning the organism's source.",
+        "[CLUE C011] A few grains of restricted coarse alpine salt spill onto Elara's exposed wrist, and the black threads beneath her skin visibly recoil from the salt before settling again.",
+        "Elara remembers Cora guarding the salt and the lower corridor too carefully, making her suspect the clinic treats ordinary alpine salt as a controlled substance.",
+        "Finch's presence is felt through orders and surveillance rather than romance: he sends Cora to inspect the studio after Elara's scraping noises are reported.",
+        "[ROMANCE][ISOLATION] When the salt reaction frightens her, Elara instinctively looks for someone to steady her, but the corridor is empty, Tobias is nowhere in reach, and no trusted hand comes.",
+        "Elara hides a tiny fold of salt and ash residue in her art supplies, choosing evidence over confession because every official channel in the sanatorium is compromised."
+      ],
+      "must_not": [
+        "Do not reveal that the venom is living biomass from an ancient sentient subterranean organism.",
+        "Do not reveal that Finch is already transformed or show his chest.",
+        "Do not confirm that fully transformed patients perceive the world as bio-electrical current instead of color.",
+        "Do not reveal that Beatrice's remnant is connected to failed or resisted absorption by the organism.",
+        "Do not confirm Cora is partly converted or that her protocol is biological rather than institutional.",
+        "Do not explain exactly why alpine salt affects the black threads; show only the recoil as a physical clue.",
+        "Do not imply Tobias is a romantic partner or create romantic touch with him.",
+        "Do not let Beatrice speak, touch Elara, write words, smell of anything, or appear as a conventional ghost."
+      ],
+      "signature_detail_hint": "The coarse alpine salt grains are grey-white and damp at the edges, leaving tiny star-shaped wet marks on black thread shadows under Elara's skin.",
+      "carries_to_next": "Elara now has proof that Beatrice's shimmer guides visually, that the studio wall hid evidence linked to bodily alteration, and that alpine salt makes her black threads recoil; Cora has caught her at the disturbed seam and Finch's scrutiny will tighten.",
+      "narrative": {
+        "clues_plant": [
+          "C011"
+        ],
+        "clues_payoff": [
+          "C003",
+          "C006",
+          "C008"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elara Sennewald",
+            "Dr. Alistair Finch",
+            "Beatrice",
+            "Nurse Cora",
+            "Tobias",
+            "The Ancient Subterranean Organism",
+            "The Reader"
+          ],
+          "may_know": [
+            "Elara Sennewald: Elara knows her body is changing beyond ordinary side effects: pure light hurts, sound and texture are becoming too vivid, black threads have deepened under her skin, and salt causes the black lines to react",
+            "Elara Sennewald: She understands the studio shimmer is purposeful visual guidance tied to Beatrice, but she still does not know exactly what Beatrice became",
+            "Elara Sennewald: She has found enough ash, drawings, and shimmer-marked evidence to suspect the cure is dangerous rather than healing.",
+            "Dr. Alistair Finch: Finch knows Elara's sensory changes and black vascular markings indicate successful conversion",
+            "Dr. Alistair Finch: He understands that Tobias is a risk because Tobias has interpreted the treatment through drawings",
+            "Dr. Alistair Finch: He continues to frame escalating symptoms as part of progress and pain relief, while restricting access to the salt and deeper treatment areas.",
+            "Beatrice: Elara understands the shimmer is purposeful visual guidance",
+            "Beatrice: Beatrice's remnant points toward ash-like residue, hidden marks, drawings, and other evidence",
+            "Beatrice: Beatrice still never speaks, never touches, and never produces scent",
+            "Beatrice: Her guidance must remain visual, indirect, and constrained.",
+            "Beatrice: ['That the shimmer is purposeful guidance rather than random light or hallucination.']",
+            "Nurse Cora: Cora continues to administer treatment and guard clinic controls, including the salt, without fully articulating why they matter",
+            "Nurse Cora: Her pauses, listening behavior, and rigidity suggest a bodily connection to something below or within the clinic, but Elara cannot yet prove partial conversion.",
+            "Tobias: Elara understands Tobias's drawings are not merely pain-born imagery",
+            "Tobias: They align with the shimmer's guidance, ash traces, black veins, and the clinic's controlled materials",
+            "Tobias: Tobias is afraid of patients being declared cured because he knows cure means disappearance into transformation.",
+            "The Ancient Subterranean Organism: The organism's pattern is emerging: black vascular branching, ash-like residue, light allergy, sound and texture hypersensitivity, reaction to salt, and patient disappearance",
+            "The Ancient Subterranean Organism: These clues should point toward one converging answer without revealing it completely.",
+            "The Reader: The reader has enough evidence to understand the treatment is physically invasive and that Beatrice's shimmer is guiding Elara",
+            "The Reader: The reader should suspect the clinic's cure is dangerous and that salt matters, but the exact organism truth is still withheld."
+          ],
+          "must_not_know": [
+            "Elara Sennewald: ['The full single answer to the central mystery: that the ink is living biomass from an ancient sentient subterranean organism.', 'That Finch is already transformed and runs the clinic to supply new hosts.', 'That fully transformed patients perceive the world as bio-electrical current instead of color.']",
+            "Elara Sennewald: [\"The full extent of Cora's partial conversion as an embodied obstacle during the escape.\", 'Whether the halted transformation inside Elara will remain dormant outside the clinic.']",
+            "Dr. Alistair Finch: [\"The reader must not know Finch's chest is a solid grey mass with black vascular threads until Elara sees it.\", 'The reader must not know with certainty that Finch is transformed until the chapter 9 reveal.']",
+            "Beatrice: [\"That Beatrice's remnant is connected to failed or resisted absorption by the organism.\"]",
+            "Nurse Cora: ['That Cora is definitively partly converted.', 'That her rigid protocol is partly biological rather than only institutional obedience.']",
+            "Tobias: [\"That Tobias's fear of being cured is based on knowledge of disappearance, not jealousy or instability.\"]",
+            "Tobias: [\"That his black rootlike drawings are anatomically accurate evidence of the organism's replacement process.\"]",
+            "The Ancient Subterranean Organism: [\"That the venom is the organism's viable biomass.\", 'That the organism is ancient, sentient, subterranean, and building a collective consciousness.', 'That all major phenomena share this one cause.']",
+            "The Reader: [\"The exact nature of the organism and Finch's full transformation.\"]",
+            "The Reader: [\"The final escape image of Elara black-veined in the snow with Tobias's sketchbook and the vial of venom.\"]"
+          ],
+          "effective_milestone": 6
+        },
+        "clue_beats": {}
+      },
+      "slug": "the-language-of-shimmer",
+      "spice": 1
+    },
+    {
+      "chapter": 7,
+      "title": "The Lower Discharge",
+      "one_line_summary": "Elara learned Tobias's fear of cured patients was justified when she found proof that discharge means removal into a deeper transformation, and Tobias left her a coded salt warning before vanishing from the ward.",
+      "beat_summary": "Open with Tobias shoving Elara behind a linen press as a cured patient's stretcher passes downward with black-threaded skin exposed under the sheet. Pay off C005 and C009 by letting Elara witness enough of the lower discharge route to understand Tobias feared cure because patients disappear into an advanced transformation process rather than leave the sanatorium healed. Tobias gives her a frantic charcoal page filled with salt crystals drawn over branching black vessels, planting C012 without yet explaining it. Finch and Cora close ranks with soft clinical language and locked doors, while Elara's altered senses make the black lines in the removed patient's body seem to answer her own wrists. [ISOLATION] Tobias can warn but not stay, Beatrice's shimmer is confined to silent light, Marta is unreachable through honest letters, and no one stands between Elara and the treatment schedule Finch is tightening. [ROMANCE] As Tobias disappears down the corridor, Elara's hand reaches out instinctively for comfort, but finds only the cold wall and the silent shimmer of Beatrice; no lover, no romantic presence appears to soften her isolation.",
+      "opens_with": "\"Do not let them call you cured,\" Tobias hissed, and dragged Elara behind the linen press as the stretcher wheels started down.",
+      "cliffhanger": "At the locked lower stair, Tobias's charcoal page slips under Elara's sleeve, and the drawn salt crystals glow white against a black vessel pattern that exactly matches the veins climbing her arm.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Continue from Elara's salt discovery and growing suspicion; pay off C005 and C009 through concrete lower-discharge evidence; plant C012 with Tobias's coded salt drawing; keep the organism truth withheld; end on the charcoal salt code matching Elara's own black vascular pattern.",
+      "must_happen": [
+        "[CLUE C005] Pay off C005: Tobias admits, in a rushed whisper or through a desperate charcoal sequence, that cured patients do not leave safely and that his fear has always been about disappearance into the clinic's transformation process.",
+        "[CLUE C009] Pay off C009: Elara sees the cured patient's removal continue below the ordinary discharge route, with black vascular threading advanced enough to prove the patient is being processed rather than released.",
+        "[CLUE C012] Plant C012: Tobias gives Elara a coded charcoal drawing where jagged alpine salt crystals interrupt black branching vessels, but he is stopped before he can explain exactly how to use it.",
+        "Finch reframes the lower discharge as a necessary rest phase and turns Elara's alarm into evidence that her next venom dose must be supervised more closely.",
+        "Cora seals the lower corridor with practiced precision and reacts more strongly to Tobias's drawing than to Elara's questions, making the salt symbol feel dangerous.",
+        "Elara's body horror escalates when the black lines beneath her wrists angle toward the lower corridor and then spasm away from the salt shapes in Tobias's drawing.",
+        "[ISOLATION] Tobias is removed from Elara's reach by staff before he can become a safe ally, leaving her with a coded page, Beatrice's distant shimmer, and no human protection.",
+        "[ROMANCE] After Tobias is taken, Elara looks around for anyone to steady her, but the corridor remains empty; no romantic figure offers a hand or a word, underscoring her absolute solitude."
+      ],
+      "must_not": [
+        "Do not reveal that the venom is living biomass from an ancient sentient subterranean organism.",
+        "Do not confirm Finch's transformed chest or fully explain his grey skin and cold tea.",
+        "Do not pay off C012 until chapter 8; keep Tobias's salt code planted but not decoded.",
+        "Do not confirm Tobias's black root drawings as anatomically accurate records until chapter 9.",
+        "Do not create romance, attraction, seduction, or caretaker intimacy between Elara and Finch, Tobias, or anyone else."
+      ],
+      "carries_to_next": "Elara has proof that cure means disappearance, Tobias has been cut off from her, and his coded salt drawing pushes her toward decoding the restricted alpine salt before Finch's stronger treatment.",
+      "narrative": {
+        "clues_plant": [
+          "C012"
+        ],
+        "clues_payoff": [
+          "C005",
+          "C009"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elara Sennewald",
+            "Dr. Alistair Finch",
+            "Beatrice",
+            "Nurse Cora",
+            "Tobias",
+            "The Ancient Subterranean Organism",
+            "The Reader"
+          ],
+          "may_know": [
+            "Elara Sennewald: Elara knows her body is changing beyond ordinary side effects: pure light hurts, sound and texture are becoming too vivid, black threads have deepened under her skin, and salt causes the black lines to react",
+            "Elara Sennewald: She understands the studio shimmer is purposeful visual guidance tied to Beatrice, but she still does not know exactly what Beatrice became",
+            "Elara Sennewald: She has found enough ash, drawings, and shimmer-marked evidence to suspect the cure is dangerous rather than healing.",
+            "Dr. Alistair Finch: Finch knows Elara's sensory changes and black vascular markings indicate successful conversion",
+            "Dr. Alistair Finch: He understands that Tobias is a risk because Tobias has interpreted the treatment through drawings",
+            "Dr. Alistair Finch: He continues to frame escalating symptoms as part of progress and pain relief, while restricting access to the salt and deeper treatment areas.",
+            "Beatrice: Elara understands the shimmer is purposeful visual guidance",
+            "Beatrice: Beatrice's remnant points toward ash-like residue, hidden marks, drawings, and other evidence",
+            "Beatrice: Beatrice still never speaks, never touches, and never produces scent",
+            "Beatrice: Her guidance must remain visual, indirect, and constrained.",
+            "Beatrice: ['That the shimmer is purposeful guidance rather than random light or hallucination.']",
+            "Nurse Cora: Cora continues to administer treatment and guard clinic controls, including the salt, without fully articulating why they matter",
+            "Nurse Cora: Her pauses, listening behavior, and rigidity suggest a bodily connection to something below or within the clinic, but Elara cannot yet prove partial conversion.",
+            "Tobias: Elara understands Tobias's drawings are not merely pain-born imagery",
+            "Tobias: They align with the shimmer's guidance, ash traces, black veins, and the clinic's controlled materials",
+            "Tobias: Tobias is afraid of patients being declared cured because he knows cure means disappearance into transformation.",
+            "Tobias: [\"That Tobias's fear of being cured is based on knowledge of disappearance, not jealousy or instability.\"]",
+            "The Ancient Subterranean Organism: The organism's pattern is emerging: black vascular branching, ash-like residue, light allergy, sound and texture hypersensitivity, reaction to salt, and patient disappearance",
+            "The Ancient Subterranean Organism: These clues should point toward one converging answer without revealing it completely.",
+            "The Reader: The reader has enough evidence to understand the treatment is physically invasive and that Beatrice's shimmer is guiding Elara",
+            "The Reader: The reader should suspect the clinic's cure is dangerous and that salt matters, but the exact organism truth is still withheld."
+          ],
+          "must_not_know": [
+            "Elara Sennewald: ['The full single answer to the central mystery: that the ink is living biomass from an ancient sentient subterranean organism.', 'That Finch is already transformed and runs the clinic to supply new hosts.', 'That fully transformed patients perceive the world as bio-electrical current instead of color.']",
+            "Elara Sennewald: [\"The full extent of Cora's partial conversion as an embodied obstacle during the escape.\", 'Whether the halted transformation inside Elara will remain dormant outside the clinic.']",
+            "Dr. Alistair Finch: [\"The reader must not know Finch's chest is a solid grey mass with black vascular threads until Elara sees it.\", 'The reader must not know with certainty that Finch is transformed until the chapter 9 reveal.']",
+            "Beatrice: [\"That Beatrice's remnant is connected to failed or resisted absorption by the organism.\"]",
+            "Nurse Cora: ['That Cora is definitively partly converted.', 'That her rigid protocol is partly biological rather than only institutional obedience.']",
+            "Tobias: [\"That his black rootlike drawings are anatomically accurate evidence of the organism's replacement process.\"]",
+            "The Ancient Subterranean Organism: [\"That the venom is the organism's viable biomass.\", 'That the organism is ancient, sentient, subterranean, and building a collective consciousness.', 'That all major phenomena share this one cause.']",
+            "The Reader: [\"The exact nature of the organism and Finch's full transformation.\"]",
+            "The Reader: [\"The final escape image of Elara black-veined in the snow with Tobias's sketchbook and the vial of venom.\"]"
+          ],
+          "effective_milestone": 6
+        },
+        "clue_beats": {}
+      },
+      "slug": "the-lower-discharge",
+      "spice": 1,
+      "signature_detail_hint": "\"Do not let them call you cured,\" Tobias hissed, and dragged Elara behind the linen press as the stretcher wheels started down."
+    },
+    {
+      "chapter": 8,
+      "title": "The Salt Room Ledger",
+      "one_line_summary": "Elara decoded Tobias's salt warning, proved alpine salt can halt the black spread, and found clinic records mapping human nerves like tunnels while Finch's body began to register as a hidden electrical pattern.",
+      "beat_summary": "Open with Elara grinding stolen alpine salt into her wrist until the black threads recoil and her old pain flashes back like a blade. Pay off C010, C011, and C012 by making her connect the falsified kitchen salt, the recoil reaction, and Tobias's coded drawing into one usable fact: the alpine salt can interrupt or halt the black vascular spread, though not reverse what has already changed. Beatrice's shimmer guides Elara to a restricted ledger or salt room record where anatomical diagrams overlay human nerves with lower tunnel maps, planting C016. During an encounter with Finch, Elara's altered senses catch a faint current-like pattern under his grey stillness, planting C015 without confirming his full transformation. She also glimpses Cora hiding early black threading beneath a cuff or collar, planting C018 while withholding final confirmation. [ISOLATION] Every discovery gives Elara leverage but no comfort: salt brings pain back, Beatrice cannot explain, Tobias is gone, and Finch now knows she is learning too fast. [ROMANCE] The empty corridor offers no hand to hold, and the closest presence is the silent shimmer of a dead woman.",
+      "opens_with": "Elara crushed the stolen salt into her wrist, and the black veins screamed without making a sound.",
+      "cliffhanger": "Behind Finch's calm reflection in the salt-room glass, Elara sees a faint grid of current moving under his grey skin, and every line in the ledger points toward the sealed mineral rooms below.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Pay off C010, C011, and C012 by proving alpine salt halts the black spread; plant C015, C016, and C018 through visual evidence only; keep Beatrice's communication strictly silent and visual; do not reveal the full organism truth until chapter 9; end on Finch's hidden current pattern and the ledger pointing below.",
+      "must_happen": [
+        "Pay off C010: Elara confirms the falsified alpine salt inventory matters because the salt is controlled as an inhibitor, not ordinary kitchen stock.",
+        "Pay off C011: Salt applied to Elara's wrist, ash sample, or contaminated tool makes the black lines recoil and briefly restores sharp human pain, proving it interrupts the conversion.",
+        "Pay off C012: Elara decodes Tobias's charcoal salt symbols as instructions or evidence that alpine salt can halt the black vascular spread.",
+        "Plant C015: In Finch's presence, Elara's altered perception catches a faint bio-electrical current pattern beneath his grey skin or through his still chest posture, but she does not yet know what she is seeing.",
+        "Plant C016: Elara finds a clinic ledger, diagram, or salt-room chart showing lower tunnel routes overlaid with diagrams of nerves and blood vessels, proving the clinic maps the same branching pattern onto human bodies.",
+        "Plant C018: Elara glimpses Cora conceal early black vascular threading at her wrist, throat, or shoulder, but the moment is partial enough that Elara cannot prove the full extent of Cora's conversion.",
+        "Beatrice's shimmer silently directs Elara through visual flashes only, never speaking, touching, smelling, writing words, or appearing as a body.",
+        "[ISOLATION] The salt gives Elara a tool but also returns enough pain to leave her shaking alone, with no safe person to help her decide how much of herself to hurt in order to remain herself.",
+        "[ROMANCE][ISOLATION] Elara's hand reaches for no one; the empty doorway and the clinical chill of the salt room remind her that no lover awaits, no romantic connection will break her solitude—she must carry her discoveries alone."
+      ],
+      "must_not": [
+        "Do not reveal the full central answer that the venom is living biomass from an ancient sentient subterranean organism; hold that for chapter 9.",
+        "Do not reveal Finch's transformed chest or state with certainty that he is already transformed.",
+        "Do not confirm Cora's full partial conversion as an embodied escape obstacle; plant only the hidden threading for chapter 12 payoff.",
+        "Do not make the salt reverse Elara's transformation; it may halt or interrupt, not restore original tissue.",
+        "Do not introduce romance, attraction, seduction, or any love-interest dynamic."
+      ],
+      "carries_to_next": "Elara now knows salt can interrupt the conversion, has seen records linking body maps to lower tunnels, has glimpsed possible alteration in Cora, and has begun perceiving something unnatural inside Finch that will break open the central truth.",
+      "narrative": {
+        "clues_plant": [
+          "C015",
+          "C016",
+          "C018"
+        ],
+        "clues_payoff": [
+          "C010",
+          "C011",
+          "C012"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elara Sennewald",
+            "Dr. Alistair Finch",
+            "Beatrice",
+            "Nurse Cora",
+            "Tobias",
+            "The Ancient Subterranean Organism",
+            "The Reader"
+          ],
+          "may_know": [
+            "Elara Sennewald: Elara knows her body is changing beyond ordinary side effects: pure light hurts, sound and texture are becoming too vivid, black threads have deepened under her skin, and salt causes the black lines to react",
+            "Elara Sennewald: She understands the studio shimmer is purposeful visual guidance tied to Beatrice, but she still does not know exactly what Beatrice became",
+            "Elara Sennewald: She has found enough ash, drawings, and shimmer-marked evidence to suspect the cure is dangerous rather than healing.",
+            "Dr. Alistair Finch: Finch knows Elara's sensory changes and black vascular markings indicate successful conversion",
+            "Dr. Alistair Finch: He understands that Tobias is a risk because Tobias has interpreted the treatment through drawings",
+            "Dr. Alistair Finch: He continues to frame escalating symptoms as part of progress and pain relief, while restricting access to the salt and deeper treatment areas.",
+            "Beatrice: Elara understands the shimmer is purposeful visual guidance",
+            "Beatrice: Beatrice's remnant points toward ash-like residue, hidden marks, drawings, and other evidence",
+            "Beatrice: Beatrice still never speaks, never touches, and never produces scent",
+            "Beatrice: Her guidance must remain visual, indirect, and constrained.",
+            "Beatrice: ['That the shimmer is purposeful guidance rather than random light or hallucination.']",
+            "Nurse Cora: Cora continues to administer treatment and guard clinic controls, including the salt, without fully articulating why they matter",
+            "Nurse Cora: Her pauses, listening behavior, and rigidity suggest a bodily connection to something below or within the clinic, but Elara cannot yet prove partial conversion.",
+            "Tobias: Elara understands Tobias's drawings are not merely pain-born imagery",
+            "Tobias: They align with the shimmer's guidance, ash traces, black veins, and the clinic's controlled materials",
+            "Tobias: Tobias is afraid of patients being declared cured because he knows cure means disappearance into transformation.",
+            "Tobias: [\"That Tobias's fear of being cured is based on knowledge of disappearance, not jealousy or instability.\"]",
+            "The Ancient Subterranean Organism: The organism's pattern is emerging: black vascular branching, ash-like residue, light allergy, sound and texture hypersensitivity, reaction to salt, and patient disappearance",
+            "The Ancient Subterranean Organism: These clues should point toward one converging answer without revealing it completely.",
+            "The Reader: The reader has enough evidence to understand the treatment is physically invasive and that Beatrice's shimmer is guiding Elara",
+            "The Reader: The reader should suspect the clinic's cure is dangerous and that salt matters, but the exact organism truth is still withheld."
+          ],
+          "must_not_know": [
+            "Elara Sennewald: ['The full single answer to the central mystery: that the ink is living biomass from an ancient sentient subterranean organism.', 'That Finch is already transformed and runs the clinic to supply new hosts.', 'That fully transformed patients perceive the world as bio-electrical current instead of color.']",
+            "Elara Sennewald: [\"The full extent of Cora's partial conversion as an embodied obstacle during the escape.\", 'Whether the halted transformation inside Elara will remain dormant outside the clinic.']",
+            "Dr. Alistair Finch: [\"The reader must not know Finch's chest is a solid grey mass with black vascular threads until Elara sees it.\", 'The reader must not know with certainty that Finch is transformed until the chapter 9 reveal.']",
+            "Beatrice: [\"That Beatrice's remnant is connected to failed or resisted absorption by the organism.\"]",
+            "Nurse Cora: ['That Cora is definitively partly converted.', 'That her rigid protocol is partly biological rather than only institutional obedience.']",
+            "Tobias: [\"That his black rootlike drawings are anatomically accurate evidence of the organism's replacement process.\"]",
+            "The Ancient Subterranean Organism: [\"That the venom is the organism's viable biomass.\", 'That the organism is ancient, sentient, subterranean, and building a collective consciousness.', 'That all major phenomena share this one cause.']",
+            "The Reader: [\"The exact nature of the organism and Finch's full transformation.\"]",
+            "The Reader: [\"The final escape image of Elara black-veined in the snow with Tobias's sketchbook and the vial of venom.\"]"
+          ],
+          "effective_milestone": 6
+        },
+        "clue_beats": {}
+      },
+      "slug": "the-salt-room-ledger",
+      "spice": 1,
+      "signature_detail_hint": "Elara crushed the stolen salt into her wrist, and the black veins screamed without making a sound."
+    },
+    {
+      "chapter": 9,
+      "title": "What the Venom Is",
+      "one_line_summary": "Elara discovered the venom is living biomass from an ancient subterranean organism, confirmed Finch is already transformed, and understood Tobias's drawings, Finch's cold body, and the clinic's nerve maps as one single horror.",
+      "beat_summary": "Open with Finch catching Elara at the sealed mineral-room door and calmly opening it for her instead of dragging her away. In the lower research chamber, Elara's accumulated clues converge: pay off C002 when she sees the so-called venom moving as viable living biomass in the old mineral apparatus; pay off C007 when Tobias's charcoal anatomy matches preserved records of nerves and blood vessels being replaced; pay off C013 and C014 when Finch reveals enough of his grey transformed chest and altered cold body to prove he is not merely ill; pay off C015 when Elara recognizes the current pattern inside him as the organism's bio-electrical network; and pay off C016 when the clinic's body maps and tunnel diagrams show the subterranean source. The central truth lands in Elara's limited POV: the venom is ancient sentient subterranean biomass that replaces human nervous and circulatory systems to fold patients into a collective consciousness, while salt can halt but not reverse the change. [ROMANCE] No lover appears in the chamber; the only hands that reach for Elara are Finch's cold ones, offering not comfort but conversion. [ISOLATION] Finch offers painless unity as medical salvation, Beatrice's shimmer trembles silently at the chamber edge, Tobias is absent except through his accurate drawings, and Elara must reject comfort without any rescue.",
+      "opens_with": "\"You wanted the door beneath the mountain,\" Finch said, and unlocked it before Elara could run.",
+      "cliffhanger": "Finch lifts the mineral-room lamp, and in its white glare Elara sees the black network in his chest pulse once as the same pulse answers from beneath her own ribs.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Stage the chapter in the lower mineral rooms and deliver the fixed central reveal through witnessed evidence, not omniscient exposition. Pay off C002, C007, C013, C014, C015, and C016 clearly; confirm Finch as transformed antagonist; connect venom, black threads, Tobias's drawings, patient disappearances, Beatrice's shimmer, sensory changes, and salt into one answer; end on Finch's chest pulse answering from Elara's ribs.",
+      "must_happen": [
+        "["
+      ],
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C002",
+          "C007",
+          "C013",
+          "C014",
+          "C015",
+          "C016"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elara Sennewald",
+            "Dr. Alistair Finch",
+            "Beatrice",
+            "Nurse Cora",
+            "Tobias",
+            "The Ancient Subterranean Organism",
+            "The Reader"
+          ],
+          "may_know": [
+            "Elara Sennewald: Elara learns the central truth: the venom is viable biomass from an ancient sentient subterranean organism that consumes and replaces human nerves and blood vessels to fold patients into a collective consciousness",
+            "Elara Sennewald: She sees Finch's chest revealed as a solid grey mass threaded with black vascular structures and understands he is already transformed, not merely ill",
+            "Elara Sennewald: She knows the alpine salt can halt the change but cannot reverse what has already been replaced.",
+            "Elara Sennewald: ['The full single answer to the central mystery: that the ink is living biomass from an ancient sentient subterranean organism.', 'That Finch is already transformed and runs the clinic to supply new hosts.', 'That fully transformed patients perceive the world as bio-electrical current instead of color.']",
+            "Dr. Alistair Finch: Finch's secret becomes visible to Elara: his chest is a solid grey mass with black vascular threads beneath",
+            "Dr. Alistair Finch: He knows he is already transformed and functions as an agent of the organism",
+            "Dr. Alistair Finch: He understands the central truth of the venom and the purpose of the clinic: to cultivate new hosts for the collective consciousness.",
+            "Dr. Alistair Finch: [\"The reader must not know Finch's chest is a solid grey mass with black vascular threads until Elara sees it.\", 'The reader must not know with certainty that Finch is transformed until the chapter 9 reveal.']",
+            "Beatrice: After the central reveal, Elara can infer that Beatrice was consumed by the same organism but resisted full absorption enough to leave a visual remnant",
+            "Beatrice: Beatrice's shimmer is not a second answer to the mystery",
+            "Beatrice: it is a consequence of the same organism and the same conversion process.",
+            "Beatrice: ['That the shimmer is purposeful guidance rather than random light or hallucination.']",
+            "Beatrice: [\"That Beatrice's remnant is connected to failed or resisted absorption by the organism.\"]",
+            "Nurse Cora: After Finch's reveal and the truth of the organism, Cora's protocol-bound behavior can be reinterpreted as more than staff obedience",
+            "Nurse Cora: Elara may suspect Cora is compromised, but the full physical confirmation is held for the final escape.",
+            "Tobias: After the central reveal, Tobias's drawings are confirmed as a record of the organism's replacement of the heart, spine, nerves, and veins",
+            "Tobias: His knowledge was accurate, but he was removed before he could fully guide Elara in person.",
+            "Tobias: [\"That Tobias's fear of being cured is based on knowledge of disappearance, not jealousy or instability.\"]",
+            "Tobias: [\"That his black rootlike drawings are anatomically accurate evidence of the organism's replacement process.\"]",
+            "The Ancient Subterranean Organism: The organism is revealed as the single central answer: viable ancient biomass that consumes and replaces human nervous and circulatory systems to build a collective consciousness",
+            "The Ancient Subterranean Organism: Fully transformed perception is organized around bio-electrical current rather than color.",
+            "The Ancient Subterranean Organism: [\"That the venom is the organism's viable biomass.\", 'That the organism is ancient, sentient, subterranean, and building a collective consciousness.', 'That all major phenomena share this one cause.']",
+            "The Reader: The reader receives the concrete central payoff: one answer explains the venom, black threads, sensory changes, patient disappearances, Finch's body, Beatrice's shimmer, and the salt",
+            "The Reader: Finch is confirmed as antagonist and transformed host, with no romantic framing.",
+            "The Reader: [\"The exact nature of the organism and Finch's full transformation.\"]"
+          ],
+          "must_not_know": [
+            "Elara Sennewald: [\"The full extent of Cora's partial conversion as an embodied obstacle during the escape.\", 'Whether the halted transformation inside Elara will remain dormant outside the clinic.']",
+            "Nurse Cora: ['That Cora is definitively partly converted.', 'That her rigid protocol is partly biological rather than only institutional obedience.']",
+            "The Reader: [\"The final escape image of Elara black-veined in the snow with Tobias's sketchbook and the vial of venom.\"]"
+          ],
+          "effective_milestone": 9
+        },
+        "clue_beats": {}
+      },
+      "slug": "what-the-venom-is",
+      "spice": 1,
+      "signature_detail_hint": "\"You wanted the door beneath the mountain,\" Finch said, and unlocked it before Elara could run."
+    },
+    {
+      "chapter": 10,
+      "title": "The Final Stage",
+      "one_line_summary": "After Finch revealed the organism and her own answering pulse, Elara resisted the scheduled final stage, planted salt against her skin as a private weapon, and followed Beatrice's shimmer toward a possible escape route.",
+      "beat_summary": "Open with Finch ordering Cora to prepare Elara for the final stage while the pulse under Elara's ribs answers the mineral-room apparatus. [ROMANCE] In the cold room Elara's fingers curl toward empty air, a reflex for a hand that never comes — no lover, no rescuer, only the sting of salt and the distant shimmer of a dead woman. The horror shifts from investigation to survival: Finch frames completion as relief, unity, and the end of pain, while Elara understands it as the loss of bodily self. Plant C019 by making Elara deliberately press or swallow a hidden pinch of alpine salt, causing the black vascular threads to tighten, recoil, and bring back a blade of human pain that proves her body knows salt interrupts the organism. Plant C020 when Beatrice's silent metallic shimmer appears beyond the mineral room and repeatedly flashes along salt-white seams, ventilation grates, and old service marks that imply an escape path without speech, touch, scent, or words. [ISOLATION] Elara has no rescuer, no romantic comfort, and no trustworthy human hand; her only guidance is pain, salt, Tobias's absent drawings, and a dead woman's constrained light.",
+      "opens_with": "\"Prepare her for completion,\" Finch said, and the thing beneath Elara's ribs answered him.",
+      "cliffhanger": "As Cora wheels the restraint frame toward Elara, Beatrice's shimmer strikes a salt-white crack in the mineral wall and lights a narrow service hatch that should have been invisible.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Continue directly from the chapter 9 pulse cliffhanger in the lower mineral rooms. Shift from revelation into crisis survival; plant C019 through Elara's salt-induced recoil and pain return; plant C020 through Beatrice's strictly visual shimmer marking a possible salt-assisted escape path. Keep Cora's full conversion withheld, keep Finch coercive rather than romantic, and end on the shimmer revealing the hidden service hatch.",
+      "must_happen": [
+        "Plant C019: Elara uses a hidden pinch of alpine salt on her wrist, tongue, or beneath a bandage, and the black threads recoil while old pain returns sharply enough to confirm that her body recognizes salt as interruption.",
+        "Plant C020: Beatrice's metallic shimmer appears only as silent visual light and marks a sequence of salt-white seams, service scratches, or mineral stains leading away from Finch's intended treatment route.",
+        "Finch announces or implies that Elara's final stage will begin soon, presenting absorption into the collective as the compassionate completion of her pain treatment.",
+        "Elara hides Tobias's sketchbook pages or a copied salt diagram under her clothing, using his drawings as evidence and a practical map after his disappearance.",
+        "Cora prepares restraints, dosage instruments, or transfer protocols with intensified precision, but her full partial conversion remains unconfirmed in this chapter.",
+        "Elara's body horror escalates when the pulse beneath her ribs briefly synchronizes with the mineral apparatus, then stutters painfully when the salt takes effect.",
+        "[ROMANCE][ISOLATION] Elara refuses Finch's offer of painless unity internally and chooses painful separateness, with no romance, no attraction, and no caretaker rescue.",
+        "[ROMANCE] Elara instinctively reaches for a human hand as the restraint frame locks into reach, but finds only the cold metal and the hidden salt — no lover, no touch of comfort, no romantic presence appears to soften her solitude.",
+        "[ISOLATION] As the restraint frame locks into reach, Elara's open palm meets only cold metal and hidden salt—no hand reaches for hers, and she must confront the final stage utterly alone, without the barest human comfort or reassurance."
+      ],
+      "must_not": [
+        "Do not pay off C019 or C020 yet; show the salt reaction and shimmer route as planted survival tools, with final use held for chapter 12.",
+        "Do not reveal the full extent of Cora's partial conversion or make her the final embodied obstacle before chapter 12.",
+        "Do not show the final escape image of Elara in the winter mountains with Tobias's sketchbook and a vial of venom.",
+        "Do not frame Finch's offer as romantic, seductive, protective, or emotionally intimate in a desirable way.",
+        "Do not let Beatrice speak, touch, smell, write words, or appear as a human ghost."
+      ],
+      "carries_to_next": "Elara has rejected Finch's final stage internally, has a hidden salt tactic that hurts but interrupts the black spread, and has seen Beatrice's shimmer mark a possible route out before Cora can secure her.",
+      "narrative": {
+        "clues_plant": [
+          "C019",
+          "C020"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elara Sennewald",
+            "Dr. Alistair Finch",
+            "Beatrice",
+            "Nurse Cora",
+            "Tobias",
+            "The Ancient Subterranean Organism",
+            "The Reader"
+          ],
+          "may_know": [
+            "Elara Sennewald: Elara learns the central truth: the venom is viable biomass from an ancient sentient subterranean organism that consumes and replaces human nerves and blood vessels to fold patients into a collective consciousness",
+            "Elara Sennewald: She sees Finch's chest revealed as a solid grey mass threaded with black vascular structures and understands he is already transformed, not merely ill",
+            "Elara Sennewald: She knows the alpine salt can halt the change but cannot reverse what has already been replaced.",
+            "Elara Sennewald: ['The full single answer to the central mystery: that the ink is living biomass from an ancient sentient subterranean organism.', 'That Finch is already transformed and runs the clinic to supply new hosts.', 'That fully transformed patients perceive the world as bio-electrical current instead of color.']",
+            "Dr. Alistair Finch: Finch's secret becomes visible to Elara: his chest is a solid grey mass with black vascular threads beneath",
+            "Dr. Alistair Finch: He knows he is already transformed and functions as an agent of the organism",
+            "Dr. Alistair Finch: He understands the central truth of the venom and the purpose of the clinic: to cultivate new hosts for the collective consciousness.",
+            "Dr. Alistair Finch: [\"The reader must not know Finch's chest is a solid grey mass with black vascular threads until Elara sees it.\", 'The reader must not know with certainty that Finch is transformed until the chapter 9 reveal.']",
+            "Beatrice: After the central reveal, Elara can infer that Beatrice was consumed by the same organism but resisted full absorption enough to leave a visual remnant",
+            "Beatrice: Beatrice's shimmer is not a second answer to the mystery",
+            "Beatrice: it is a consequence of the same organism and the same conversion process.",
+            "Beatrice: ['That the shimmer is purposeful guidance rather than random light or hallucination.']",
+            "Beatrice: [\"That Beatrice's remnant is connected to failed or resisted absorption by the organism.\"]",
+            "Nurse Cora: After Finch's reveal and the truth of the organism, Cora's protocol-bound behavior can be reinterpreted as more than staff obedience",
+            "Nurse Cora: Elara may suspect Cora is compromised, but the full physical confirmation is held for the final escape.",
+            "Tobias: After the central reveal, Tobias's drawings are confirmed as a record of the organism's replacement of the heart, spine, nerves, and veins",
+            "Tobias: His knowledge was accurate, but he was removed before he could fully guide Elara in person.",
+            "Tobias: [\"That Tobias's fear of being cured is based on knowledge of disappearance, not jealousy or instability.\"]",
+            "Tobias: [\"That his black rootlike drawings are anatomically accurate evidence of the organism's replacement process.\"]",
+            "The Ancient Subterranean Organism: The organism is revealed as the single central answer: viable ancient biomass that consumes and replaces human nervous and circulatory systems to build a collective consciousness",
+            "The Ancient Subterranean Organism: Fully transformed perception is organized around bio-electrical current rather than color.",
+            "The Ancient Subterranean Organism: [\"That the venom is the organism's viable biomass.\", 'That the organism is ancient, sentient, subterranean, and building a collective consciousness.', 'That all major phenomena share this one cause.']",
+            "The Reader: The reader receives the concrete central payoff: one answer explains the venom, black threads, sensory changes, patient disappearances, Finch's body, Beatrice's shimmer, and the salt",
+            "The Reader: Finch is confirmed as antagonist and transformed host, with no romantic framing.",
+            "The Reader: [\"The exact nature of the organism and Finch's full transformation.\"]"
+          ],
+          "must_not_know": [
+            "Elara Sennewald: [\"The full extent of Cora's partial conversion as an embodied obstacle during the escape.\", 'Whether the halted transformation inside Elara will remain dormant outside the clinic.']",
+            "Nurse Cora: ['That Cora is definitively partly converted.', 'That her rigid protocol is partly biological rather than only institutional obedience.']",
+            "The Reader: [\"The final escape image of Elara black-veined in the snow with Tobias's sketchbook and the vial of venom.\"]"
+          ],
+          "effective_milestone": 9
+        },
+        "clue_beats": {}
+      },
+      "slug": "the-final-stage",
+      "spice": 1,
+      "signature_detail_hint": "\"Prepare her for completion,\" Finch said, and the thing beneath Elara's ribs answered him."
+    },
+    {
+      "chapter": 11,
+      "title": "Salt in the Mouth",
+      "one_line_summary": "Elara broke away from the final-stage preparation, learned that salt can slow but not undo the conversion, and reached Tobias's hidden sketchbook and a venom vial while Finch sealed the clinic around her.",
+      "beat_summary": "Open with Elara biting down on stolen alpine salt as Cora's hand closes on the restraint buckle. Elara uses the pain and recoil from chapter 10 to break the procedure long enough to slip through the shimmer-marked service hatch, moving through old maintenance passages, salt storage niches, and record shelves that connect the studio, lower corridors, and mineral rooms. Plant C021 by showing the salt halt the advancing black lines at her wrist and ribs without restoring what is already blackened: her skin stays cold, the painless altered areas remain wrong, and each dose of salt brings back only partial, brutal human pain. Beatrice's shimmer continues as silent visual guidance, pushing Elara toward Tobias's hidden sketchbook and a small sealed venom vial stored as evidence or dosage reserve. Finch's voice follows through speaking tubes or corridor glass, calm and certain that she cannot survive outside the process. [ISOLATION] Elara has tools but no comfort; Tobias is gone, Beatrice cannot explain, Marta is unreachable, and every choice requires hurting herself to remain separate. [ROMANCE] In the narrow service tunnel her hand finds only salt grit and metal—no grip reaching back, no warmth to anchor her.",
+      "opens_with": "Elara bit the salt until blood filled her mouth, and the black line climbing her throat stopped.",
+      "cliffhanger": "At the end of the service passage, Elara pulls Tobias's sketchbook and a sealed venom vial from a salt-crusted drawer just as Cora's shadow bends across the only exit.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Continue from the hidden service hatch cliffhanger. Stage a tense flight through service passages and salt-controlled spaces; plant C021 by proving salt halts but does not reverse the change; have Elara recover Tobias's sketchbook and a sealed vial of venom for the book ending; keep Beatrice's shimmer strictly visual; include a moment where Elara moves through the dark alone, her hand reaching for an absent anchor; end with Cora blocking the exit without fully revealing her conversion yet.",
+      "must_happen": [
+        "Plant C021: Elara tests or relies on alpine salt and realizes it halts the spread temporarily but does not reverse existing black veins, coldness, numbness, or altered sensory perception.",
+        "Elara escapes the immediate final-stage restraint by using salt pain, her knowledge of Finch's apparatus, and the service hatch marked by Beatrice's shimmer.",
+        "Beatrice's shimmer guides Elara visually through maintenance scratches, mineral stains, and salt deposits, remaining silent, scentless, touchless, and nonverbal.",
+        "Elara retrieves Tobias's sketchbook from a hidden ward cache, studio recess, or lower-record shelf, preserving his drawings as evidence and a survival guide.",
+        "Elara finds and steals a small sealed vial of venom from a dosage cabinet, mineral-room tray, or research drawer, understanding it as dangerous proof rather than medicine.",
+        "Finch locks down corridors or speaks through the clinic's old communication system, insisting that Elara's pain is unnecessary and her resistance is a symptom.",
+        "Elara's body horror escalates when salt stops one black line at her wrist while another remains permanently dark beneath the skin, making incompleteness undeniable.",
+        "[ISOLATION] Elara accepts that escape will not restore her original body and keeps moving without romance, rescue, or reassurance.",
+        "[ROMANCE] Crawling through the salt-dusted tunnel, Elara's fingers search for a handhold and find only cold stone—no hand catches hers, and she pulls herself forward alone."
+      ],
+      "must_not": [
+        "Do not pay off C021 until chapter 12; this chapter plants the non-reversal rule through experience but does not deliver final aftermath.",
+        "Do not reveal Cora's full partial conversion or make her the final physical obstacle yet.",
+        "Do not show the final image of Elara escaped into the winter mountains.",
+        "Do not let Beatrice communicate through words, touch, scent, written language, or a full ghostly body.",
+        "Do not turn Tobias into a present rescuer or romantic figure; he remains absent except through his sketchbook."
+      ],
+      "carries_to_next": "Elara has Tobias's sketchbook, a vial of venom, a limited supply of alpine salt, and the devastating knowledge that salt cannot make her unchanged, while Cora now stands between her and the outside route.",
+      "narrative": {
+        "clues_plant": [
+          "C021"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elara Sennewald",
+            "Dr. Alistair Finch",
+            "Beatrice",
+            "Nurse Cora",
+            "Tobias",
+            "The Ancient Subterranean Organism",
+            "The Reader"
+          ],
+          "may_know": [
+            "Elara Sennewald: Elara learns the central truth: the venom is viable biomass from an ancient sentient subterranean organism that consumes and replaces human nerves and blood vessels to fold patients into a collective consciousness",
+            "Elara Sennewald: She sees Finch's chest revealed as a solid grey mass threaded with black vascular structures and understands he is already transformed, not merely ill",
+            "Elara Sennewald: She knows the alpine salt can halt the change but cannot reverse what has already been replaced.",
+            "Elara Sennewald: ['The full single answer to the central mystery: that the ink is living biomass from an ancient sentient subterranean organism.', 'That Finch is already transformed and runs the clinic to supply new hosts.', 'That fully transformed patients perceive the world as bio-electrical current instead of color.']",
+            "Dr. Alistair Finch: Finch's secret becomes visible to Elara: his chest is a solid grey mass with black vascular threads beneath",
+            "Dr. Alistair Finch: He knows he is already transformed and functions as an agent of the organism",
+            "Dr. Alistair Finch: He understands the central truth of the venom and the purpose of the clinic: to cultivate new hosts for the collective consciousness.",
+            "Dr. Alistair Finch: [\"The reader must not know Finch's chest is a solid grey mass with black vascular threads until Elara sees it.\", 'The reader must not know with certainty that Finch is transformed until the chapter 9 reveal.']",
+            "Beatrice: After the central reveal, Elara can infer that Beatrice was consumed by the same organism but resisted full absorption enough to leave a visual remnant",
+            "Beatrice: Beatrice's shimmer is not a second answer to the mystery",
+            "Beatrice: it is a consequence of the same organism and the same conversion process.",
+            "Beatrice: ['That the shimmer is purposeful guidance rather than random light or hallucination.']",
+            "Beatrice: [\"That Beatrice's remnant is connected to failed or resisted absorption by the organism.\"]",
+            "Nurse Cora: After Finch's reveal and the truth of the organism, Cora's protocol-bound behavior can be reinterpreted as more than staff obedience",
+            "Nurse Cora: Elara may suspect Cora is compromised, but the full physical confirmation is held for the final escape.",
+            "Tobias: After the central reveal, Tobias's drawings are confirmed as a record of the organism's replacement of the heart, spine, nerves, and veins",
+            "Tobias: His knowledge was accurate, but he was removed before he could fully guide Elara in person.",
+            "Tobias: [\"That Tobias's fear of being cured is based on knowledge of disappearance, not jealousy or instability.\"]",
+            "Tobias: [\"That his black rootlike drawings are anatomically accurate evidence of the organism's replacement process.\"]",
+            "The Ancient Subterranean Organism: The organism is revealed as the single central answer: viable ancient biomass that consumes and replaces human nervous and circulatory systems to build a collective consciousness",
+            "The Ancient Subterranean Organism: Fully transformed perception is organized around bio-electrical current rather than color.",
+            "The Ancient Subterranean Organism: [\"That the venom is the organism's viable biomass.\", 'That the organism is ancient, sentient, subterranean, and building a collective consciousness.', 'That all major phenomena share this one cause.']",
+            "The Reader: The reader receives the concrete central payoff: one answer explains the venom, black threads, sensory changes, patient disappearances, Finch's body, Beatrice's shimmer, and the salt",
+            "The Reader: Finch is confirmed as antagonist and transformed host, with no romantic framing.",
+            "The Reader: [\"The exact nature of the organism and Finch's full transformation.\"]"
+          ],
+          "must_not_know": [
+            "Elara Sennewald: [\"The full extent of Cora's partial conversion as an embodied obstacle during the escape.\", 'Whether the halted transformation inside Elara will remain dormant outside the clinic.']",
+            "Nurse Cora: ['That Cora is definitively partly converted.', 'That her rigid protocol is partly biological rather than only institutional obedience.']",
+            "The Reader: [\"The final escape image of Elara black-veined in the snow with Tobias's sketchbook and the vial of venom.\"]"
+          ],
+          "effective_milestone": 9
+        },
+        "clue_beats": {}
+      },
+      "slug": "salt-in-the-mouth",
+      "spice": 1,
+      "signature_detail_hint": "Elara bit the salt until blood filled her mouth, and the black line climbing her throat stopped."
+    },
+    {
+      "chapter": 12,
+      "title": "Black Veins in the Snow",
+      "one_line_summary": "Elara used salt, Beatrice's shimmer, Tobias's sketchbook, and the stolen venom vial to fight past partly converted Cora and escape into the winter mountains permanently altered and still connected to the organism.",
+      "beat_summary": "Open with Cora catching Elara by the wrist and revealing black threading beneath her own skin moving in answer to the floor pulse. Pay off C017 and C018 by confirming Cora is partly converted and linked to the organism's signals: she hears or feels the collective before sound reaches the corridor, protects the salt controls with biological urgency, and becomes the immediate embodied obstacle to escape. Pay off C019, C020, and C021 as Elara uses painful salt doses to interrupt the black spread, follows Beatrice's silent shimmer along the escape path, and accepts that salt halts without restoring her altered body. Plant and pay off C022 in the ending: Elara rejects the final stage, fights past Cora, carries Tobias's sketchbook and the venom vial into the winter mountains, and survives with black veins, cold painless tissue, and a new recognition of the mountain's electrical pulse. Finch remains behind, not definitively destroyed, his clinic threat escaped but not erased. [ROMANCE][ISOLATION] At the most dangerous moment, when Cora's grip tightens and Elara nearly falls, there is no lover's hand, no rescuer, and no warm body to catch her; she steadies herself on the salt-burned wall and chooses separateness alone. The book closes with freedom without comfort: no romance, no rescue, no restored body, only Elara's chosen separateness and the dread that part of her now recognizes what she fled.",
+      "opens_with": "Cora caught Elara's wrist, and the black veins under both their skins turned toward each other.",
+      "cliffhanger": "In the snow beyond the sanatorium, Elara opens her black-veined hand around Tobias's sketchbook and the sealed venom vial, and the mountain's hidden current answers from under her skin as if it knows exactly where she is going next.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Deliver the Book 1 ending exactly: Elara rejects the final stage, uses alpine salt and Beatrice's shimmer to navigate, fights past partly converted Cora, and escapes into the winter mountains carrying Tobias's sketchbook and a vial of venom. Pay off C017, C018, C019, C020, C021, and C022 clearly. Keep Finch behind rather than defeated, keep Beatrice strictly visual, keep the salt as halt-not-reversal, and end on Elara black-veined, colder, painless, free, and still partly connected to the mountain's electrical pulse.",
+      "must_happen": [
+        "Pay off C017: Cora reacts to the organism's collective signal before ordinary sound or movement occurs, proving her body is partly linked to the signals beneath the sanatorium.",
+        "Pay off C018: Elara sees Cora's hidden black vascular threading clearly at wrist, throat, or shoulder, confirming Cora is partly converted rather than merely obedient.",
+        "Pay off C019: Elara uses salt during the confrontation and escape, feeling pain return as the organism's advance is interrupted inside her body.",
+        "Pay off C020: Beatrice's shimmer guides Elara along the salt-assisted escape path through silent visual flashes only, never speaking, touching, smelling, writing, or appearing as a body.",
+        "Pay off C021: Elara understands in action that salt halts the transformation but does not reverse existing black veins, coldness, or altered sensory perception.",
+        "Plant and pay off C022: Elara escapes the immediate clinic threat but remains permanently altered and partly connected to the organism she fled.",
+        "Elara fights past partly converted Cora using salt, the environment, and her refusal of restraint rather than killing with splatter or receiving rescue.",
+        "Elara escapes into the winter mountains carrying Tobias's sketchbook and a sealed vial of venom, leaving Finch and the clinic behind but not conclusively destroyed.",
+        "[ROMANCE][ISOLATION] During the physical struggle with Cora, Elara reaches instinctively for support and finds only an empty corridor, cold rail, and salt grit under her palm; no romantic protector or love interest appears, and the absence hardens her choice to save herself.",
+        "[ISOLATION] The final emotional note is freedom without romance or comfort: Elara has no hand to take, only evidence, pain, black veins, and the mountain's pulse."
+      ],
+      "must_not": [
+        "Do not reverse Elara's transformation or restore her original body.",
+        "Do not kill Finch definitively or resolve the wider organism threat; he and the clinic are left behind as ongoing danger.",
+        "Do not let Beatrice speak, touch, smell, write words, or appear as a full ghostly body during the escape.",
+        "Do not introduce romance, attraction, seduction, or a love interest in the ending.",
+        "Do not lose Tobias's sketchbook or the venom vial; both must leave the clinic with Elara."
+      ],
+      "carries_to_next": "Elara is outside Finch's immediate control with Tobias's sketchbook and a venom vial, but her body remains altered and the mountain's pulse inside her points toward the wider clinic network and Book 2.",
+      "narrative": {
+        "clues_plant": [
+          "C022"
+        ],
+        "clues_payoff": [
+          "C017",
+          "C018",
+          "C019",
+          "C020",
+          "C021",
+          "C022"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elara Sennewald",
+            "Dr. Alistair Finch",
+            "Beatrice",
+            "Nurse Cora",
+            "Tobias",
+            "The Ancient Subterranean Organism",
+            "The Reader"
+          ],
+          "may_know": [
+            "Elara Sennewald: Elara knows the final stage would complete her absorption into the organism's collective",
+            "Elara Sennewald: She uses alpine salt and Beatrice's silent shimmer to navigate out, fights past a partly converted Cora, and escapes into the winter mountains with Tobias's sketchbook and a vial of venom",
+            "Elara Sennewald: She knows she has survived but is permanently altered: colder, painless, black-veined, and not fully restored to who she was before.",
+            "Elara Sennewald: ['The full single answer to the central mystery: that the ink is living biomass from an ancient sentient subterranean organism.', 'That Finch is already transformed and runs the clinic to supply new hosts.', 'That fully transformed patients perceive the world as bio-electrical current instead of color.']",
+            "Elara Sennewald: [\"The full extent of Cora's partial conversion as an embodied obstacle during the escape.\", 'Whether the halted transformation inside Elara will remain dormant outside the clinic.']",
+            "Dr. Alistair Finch: Finch knows Elara has rejected the final stage and escaped with dangerous evidence: Tobias's sketchbook and a vial of venom",
+            "Dr. Alistair Finch: He remains behind at the clinic rather than being definitively defeated",
+            "Dr. Alistair Finch: He knows Elara's body is altered and may still be relevant to the organism's reach beyond the sanatorium.",
+            "Dr. Alistair Finch: [\"The reader must not know Finch's chest is a solid grey mass with black vascular threads until Elara sees it.\", 'The reader must not know with certainty that Finch is transformed until the chapter 9 reveal.']",
+            "Beatrice: Beatrice's shimmer helps Elara navigate the escape route in coordination with Tobias's sketchbook and the alpine salt",
+            "Beatrice: Her role pays off as silent visual guidance that helps Elara survive",
+            "Beatrice: Beatrice's personal interiority remains mostly unknowable because she cannot communicate in words or touch.",
+            "Beatrice: ['That the shimmer is purposeful guidance rather than random light or hallucination.']",
+            "Beatrice: [\"That Beatrice's remnant is connected to failed or resisted absorption by the organism.\"]",
+            "Nurse Cora: Cora is revealed as partly converted and becomes an immediate obstacle as Elara flees",
+            "Nurse Cora: She protects the clinic's process and salt controls with fear and biological compulsion",
+            "Nurse Cora: Elara fights past her rather than saving her or receiving a full explanation from her.",
+            "Nurse Cora: ['That Cora is definitively partly converted.', 'That her rigid protocol is partly biological rather than only institutional obedience.']",
+            "Tobias: Tobias is absent after being declared cured, but his sketchbook becomes essential evidence and a survival tool",
+            "Tobias: Elara escapes carrying it, preserving his warning and leaving open what more the drawings may reveal later.",
+            "Tobias: [\"That Tobias's fear of being cured is based on knowledge of disappearance, not jealousy or instability.\"]",
+            "Tobias: [\"That his black rootlike drawings are anatomically accurate evidence of the organism's replacement process.\"]",
+            "The Ancient Subterranean Organism: The organism fails to fully claim Elara in Book 1 because she ingests alpine salt and rejects the final stage, but it has already permanently altered her",
+            "The Ancient Subterranean Organism: A vial of venom leaves the clinic with her, keeping the wider threat open.",
+            "The Ancient Subterranean Organism: [\"That the venom is the organism's viable biomass.\", 'That the organism is ancient, sentient, subterranean, and building a collective consciousness.', 'That all major phenomena share this one cause.']",
+            "The Reader: The reader receives Book 1 closure: Elara escapes using salt, shimmer, and Tobias's sketchbook, carrying evidence and venom",
+            "The Reader: The immediate clinic threat is escaped, but the body-horror consequence remains because Elara is permanently altered.",
+            "The Reader: [\"The exact nature of the organism and Finch's full transformation.\"]",
+            "The Reader: [\"The final escape image of Elara black-veined in the snow with Tobias's sketchbook and the vial of venom.\"]"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 12
+        },
+        "clue_beats": {}
+      },
+      "slug": "black-veins-in-the-snow",
+      "spice": 1,
+      "signature_detail_hint": "Cora caught Elara's wrist, and the black veins under both their skins turned toward each other."
+    }
+  ],
+  "title": "Ink and Venom",
+  "total_chapters": 12
+}

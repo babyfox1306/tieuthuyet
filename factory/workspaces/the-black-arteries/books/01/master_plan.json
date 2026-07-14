@@ -1,0 +1,1188 @@
+{
+  "book": 1,
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The First Black Thread",
+      "slug": "the-first-black-thread",
+      "one_line_summary": "Clara Vance arrives to catalogue the drowned Victorian observatory, notices two wrong black traces in the waterlogged records, and refuses to treat any written thing as expendable.",
+      "beat_summary": "Open on Clara catching a ledger before it slips into black-streaked water, then establish her locked third-limited point of view as she inventories the flooded observatory with professional restraint. Plant C001 as a thin black line crossing one star chart where ordinary ink should have bled outward, and plant C002 as a matching branch on a pane of observatory glass that Clara rationalizes as mildew or flood residue. Thread Eleanor through absence only: Clara finds old labels in Eleanor's hand and feels the corridor offer no answer, no voice, no hand to take. The chapter should make Clara's preservation boundary concrete when she saves damaged pages instead of discarding them, while keeping the ink ambiguous, passive-seeming, silent, scentless, and not yet confirmed alive.",
+      "must_happen": [
+        "Clara begins her formal catalogue of the half-submerged Victorian observatory, assigning provisional numbers to ledgers, glass plates, star charts, and water-damaged folders.",
+        "Plant C001: Clara finds a black thread crossing a soaked star chart in a pattern too narrow and vascular for ordinary ink bleed, but she records it as contamination rather than life.",
+        "Plant C002: Clara sees a similar black branch on the inside of a fogged observatory pane, aligned with the star chart below, and explains it to herself as mildew, mineral staining, or flood rot.",
+        "Clara winds her brass pocket watch when the silence becomes too exact, then straightens labels and page corners even while standing in stagnant water.",
+        "[ISOLATION] Eleanor is present only through absence: an old folder label in her hand, an empty corridor beyond it, and Clara's reflexive expectation of a sisterly answer that never comes.",
+        "Clara refuses to discard a ruined written record, stating through action that even corrupted paper deserves preservation until properly assessed."
+      ],
+      "must_not": [
+        "Do not confirm that the black ink is active, alive, intelligent, or drawn toward records in chapter 1.",
+        "Do not reveal or imply with certainty that Eleanor became the ink or that the archive is her vessel.",
+        "Do not give Eleanor a voice, whisper, breath, scent, footsteps, independent ghost form, or any audible manifestation.",
+        "Do not introduce a male lead, male antagonist, romantic interest, caretaker romance, or doctor figure."
+      ],
+      "opens_with": "\"Do not let the ledger touch the black water,\" Clara told herself, and caught it one second before the current took the names.",
+      "cliffhanger": "On the final page Clara saves, the black thread stops at Eleanor Vance's surname as if the stain has reached the exact entry it wanted.",
+      "signature_detail_hint": "A drowned brass label-holder has trapped a tiny air bubble behind its glass, and the bubble trembles beside the black stain though the room is otherwise still.",
+      "emotional_beat": "Clara's grief stays disciplined until Eleanor's name appears under her thumb, making absence feel intimate, accusatory, and unbearably close.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; the chapter uses grief, isolation, and professional obsession as the emotional charge.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV, slow gothic psychological horror. Build dread through catalogue precision, water damage, paper texture, glass, metal, and Clara's controlled rituals. Include C001 and C002 clearly as visual clues without explaining them. End on the specific visual cliffhanger of the stain stopping at Eleanor's surname.",
+      "carries_to_next": "Clara has two matching black traces filed as contamination, Eleanor's name has been visually touched by the stain, and the next chapter can pay off C001 and C002 by showing directed movement.",
+      "narrative": {
+        "clues_plant": [
+          "C001",
+          "C002"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T008",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Clara Vance",
+            "Eleanor Vance",
+            "The black ink / ancient bog parasite",
+            "The drowned observatory archive"
+          ],
+          "may_know": [
+            "Clara Vance: Clara arrives at the half-submerged Victorian manor as a meticulous archivist assigned to catalogue the drowned observatory",
+            "Clara Vance: She knows Eleanor is missing and carries a professional boundary: she will never destroy any written record",
+            "Clara Vance: She notices black stains in water, glass, and paper but initially reads them as flood damage, mildew, ink bleed, or rot",
+            "Clara Vance: She winds her brass pocket watch when anxious",
+            "Clara Vance: She does not know the stains are alive, linked to Eleanor, or feeding on preservation.",
+            "Eleanor Vance: Eleanor is known to Clara only as her missing sister",
+            "Eleanor Vance: Clara does not have direct access to Eleanor's consciousness, voice, memories, or intentions",
+            "Eleanor Vance: Eleanor is absent as a person and present only through records, traces, and Clara's grief",
+            "Eleanor Vance: Any apparent sign of her must remain visual and ambiguous.",
+            "The black ink / ancient bog parasite: The black substance appears as stains, threads, or vascular branching in stagnant water, on glass, and across paper",
+            "The black ink / ancient bog parasite: Its true nature is hidden",
+            "The black ink / ancient bog parasite: It should be perceived through Clara's limited observations as wrongness within the flooded archive, not as an explained monster.",
+            "The drowned observatory archive: The archive is Clara's assignment: a flooded Victorian observatory full of ledgers, glass plates, star charts, labels, and forbidden records",
+            "The drowned observatory archive: It appears to be a damaged collection in need of rescue",
+            "The drowned observatory archive: Clara treats it as a professional and moral obligation."
+          ],
+          "must_not_know": [
+            "Clara Vance: Clara must not know in chapter 1 that the ink is active and drawn toward records; she may only observe wrongness and rationalize it.",
+            "Clara Vance: Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+            "Clara Vance: Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "Clara Vance: Clara must not fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy.",
+            "Eleanor Vance: The narrative must not confirm before chapter 9 that Eleanor became the ink. Earlier chapters may imply association through visual clues only.",
+            "Eleanor Vance: Eleanor must never gain a speaking role, scent-based presence, audible manifestation, or independent ghost form at any point.",
+            "The black ink / ancient bog parasite: Before chapter 2, the ink must not be confirmed as active.",
+            "The black ink / ancient bog parasite: Before chapter 6, the ink must not be confirmed to feed specifically on Clara's preservation of records.",
+            "The black ink / ancient bog parasite: Before chapter 9, the ink must not be confirmed as Eleanor merged with the ancient bog parasite.",
+            "The drowned observatory archive: Before chapter 6, the archive must not be fully understood as nourishment for the ink-root network.",
+            "The drowned observatory archive: Before chapter 9, the archive must not be fully understood as Eleanor's vessel.",
+            "The drowned observatory archive: Before chapter 12, the archive must not be safely neutralized or restored."
+          ],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 2,
+      "title": "Directed Stains",
+      "slug": "directed-stains",
+      "one_line_summary": "Clara proves the black stains are not passive decay when the branches move through paper, glass, and water toward the records she tries to preserve.",
+      "beat_summary": "Begin with a black branch crossing dry paper above the waterline while Clara watches, forcing the payoff of C001 and C002 into a major reveal: the stains are active and moving in directed patterns toward written records. Clara tests and observes without understanding the deeper rule, still treating the phenomenon as contamination rather than Eleanor or a parasite. Plant C003 through a metal fastener or submerged instrument that oxidizes too quickly near the ink but do not explain the metal rule yet, and plant C005 by showing preserved records causing more branching without confirming that preservation itself feeds the system. Keep Eleanor visual and ambiguous, never a speaking ghost; the emotional pressure comes from Clara facing the empty room alone as every saved page becomes a possible attractor.",
+      "must_happen": [
+        "Pay off C001: the black thread on the star chart changes position or extends while Clara compares it to her prior catalogue note, proving the mark is not ordinary ink bleed.",
+        "Pay off C002: the black branch on the observatory glass realigns toward the same record Clara has lifted from the water, tying paper, glass, and water into one directed pattern.",
+        "Reveal R001: Clara understands the black stains are not passive decay because they move across surfaces and angle toward written records she attempts to preserve.",
+        "Plant C003: a corroded metal clip, screw, or small astronomical fitting near the ink throws off brief metallic flecks as it oxidizes unnaturally fast, which Clara logs as chemical damage.",
+        "Plant C005: when Clara separates several salvageable pages into a dry folder, the nearest black threads gather more densely around that folder, but she does not yet understand this as feeding on preservation.",
+        "[ISOLATION] Clara reaches for help by habit and finds only a silent landing, a dead speaking tube, and her own wet sleeve where another hand should have been."
+      ],
+      "must_not": [
+        "Do not reveal before chapter 6 that Clara's preservation of records specifically nourishes the ink-root system.",
+        "Do not reveal before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+        "Do not allow the ink to communicate in words, write new verbal messages, speak, whisper, breathe, or produce scent.",
+        "Do not introduce romance, a male lead, a male antagonist, or any physical doctor/caretaker presence."
+      ],
+      "opens_with": "\"That mark was not there when I numbered the page,\" Clara said, and the black line lengthened under her pencil.",
+      "cliffhanger": "The folder of rescued records slides backward across the table without a sound, stopping beneath the glass dome where black branches have arranged themselves around it like roots around a buried heart.",
+      "signature_detail_hint": "A rusted star-sighting screw sheds bright metallic dust into the floodwater, each fleck flashing once before the black surface swallows it.",
+      "emotional_beat": "Clara's control tightens into lonely vulnerability as her sacred act of rescue begins to look like a summons she cannot admit she performed.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; tension comes from isolation, dread, and Clara's fear that her professional instincts are worsening the danger.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Pay off C001 and C002 with concrete visual movement and deliver R001 clearly, while planting C003 and C005 without premature explanation. Maintain slow atmospheric horror, silent visual manifestations, and Clara's procedural narration under stress. End on the folder moving beneath the glass dome and the roots visually surrounding it.",
+      "carries_to_next": "Clara now knows the ink is active and directed toward records, has logged unexplained metal oxidation and record-centered branching, and enters chapter 3 trying to map the contamination without knowing what it feeds on.",
+      "narrative": {
+        "clues_plant": [
+          "C003",
+          "C005"
+        ],
+        "clues_payoff": [
+          "C001",
+          "C002"
+        ],
+        "reveals": [
+          {
+            "id": "R001",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C001",
+              "C002"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T008",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Clara Vance",
+            "Eleanor Vance",
+            "The black ink / ancient bog parasite",
+            "The drowned observatory archive"
+          ],
+          "may_know": [
+            "Clara Vance: Clara understands the black stains are not behaving like ordinary decay",
+            "Clara Vance: She sees directed movement: ink above the waterline, black branching across glass, and threads angling toward written records",
+            "Clara Vance: She begins to suspect the archive is contaminated by something active, though she still frames it as a material problem rather than Eleanor's transformed presence",
+            "Clara Vance: She does not yet know the rules of sunlight, metal, paper conversion, or the parasite.",
+            "Clara Vance: Clara must not know in chapter 1 that the ink is active and drawn toward records; she may only observe wrongness and rationalize it.",
+            "Eleanor Vance: Eleanor remains unseen and unheard",
+            "Eleanor Vance: The active black stains may begin to suggest a presence, but Clara cannot yet connect them to Eleanor with certainty",
+            "Eleanor Vance: Eleanor must not speak, whisper, breathe, write new verbal messages, create sound, or produce scent",
+            "Eleanor Vance: Her presence, if any, is limited to black branching stains on surfaces.",
+            "The black ink / ancient bog parasite: The ink is revealed to be active rather than passive decay",
+            "The black ink / ancient bog parasite: It can move across surfaces and angle toward written records",
+            "The black ink / ancient bog parasite: It remains silent and scentless",
+            "The black ink / ancient bog parasite: It should not display intelligence through speech or conventional messages",
+            "The black ink / ancient bog parasite: its behavior is visual and physical.",
+            "The black ink / ancient bog parasite: Before chapter 2, the ink must not be confirmed as active.",
+            "The drowned observatory archive: The archive becomes a site of directed contamination",
+            "The drowned observatory archive: Records are not merely victims of water damage",
+            "The drowned observatory archive: they attract the spreading black substance",
+            "The drowned observatory archive: Clara begins to understand that cataloguing the archive may expose new dangers."
+          ],
+          "must_not_know": [
+            "Clara Vance: Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+            "Clara Vance: Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "Clara Vance: Clara must not fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy.",
+            "Eleanor Vance: The narrative must not confirm before chapter 9 that Eleanor became the ink. Earlier chapters may imply association through visual clues only.",
+            "Eleanor Vance: Eleanor must never gain a speaking role, scent-based presence, audible manifestation, or independent ghost form at any point.",
+            "The black ink / ancient bog parasite: Before chapter 6, the ink must not be confirmed to feed specifically on Clara's preservation of records.",
+            "The black ink / ancient bog parasite: Before chapter 9, the ink must not be confirmed as Eleanor merged with the ancient bog parasite.",
+            "The drowned observatory archive: Before chapter 6, the archive must not be fully understood as nourishment for the ink-root network.",
+            "The drowned observatory archive: Before chapter 9, the archive must not be fully understood as Eleanor's vessel.",
+            "The drowned observatory archive: Before chapter 12, the archive must not be safely neutralized or restored."
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 3,
+      "title": "The Ashless Room",
+      "slug": "the-ashless-room",
+      "one_line_summary": "Clara maps the observatory's directed black contamination, plants evidence of a future sunlight rule and a deeper trapped route beneath the archive, and ends with Eleanor's absence pressed into a visual pattern she cannot explain.",
+      "beat_summary": "Open with Clara pinning a moving record under a paperweight as black veins reach for its margins. She creates a contamination map of paper, glass, and water, using her archivist procedures to keep panic contained. Plant C004 by exposing one thin branch to a narrow shaft of daylight or reflected sun so it stiffens, pales, or leaves brittle charcoal-like residue without making the rule explicit yet. Plant C012 as a long-delayed clue: beneath a warped floor grate or collapsed catalogue cabinet, Clara glimpses black vascular routes descending into peat-stained water below the observatory, suggesting a source or route far deeper than the room. Include [ISOLATION] as absence only, with Eleanor evoked by childhood handwriting or a familiar catalogue habit but never confirmed as the ink. The chapter should expand dread and mystery without paying off C003, C004, C005, or C012 yet.",
+      "must_happen": [
+        "Clara drafts a contamination map showing active black marks on paper, glass, and water, marking each surface by catalogue number rather than admitting the room feels organized against her.",
+        "Plant C004: a narrow strip of daylight or reflected sun touches a black thread and leaves a brittle charcoal fleck or frozen-looking segment that Clara notices but cannot interpret yet.",
+        "Plant C012: Clara finds a warped floor grate, collapsed cabinet base, or submerged shaft where black vascular lines descend into peat-dark water below the observatory, implying the contamination has deeper routes.",
+        "Clara handles the moving records with preservation tools, weights, blotting paper, and labels, escalating her effort to save the archive despite the danger.",
+        "[ISOLATION] Clara finds an old note or label in Eleanor's familiar hand and places it in a protective sleeve, then realizes there is no living witness to tell her whether she is preserving evidence or grief.",
+        "The active ink remains silent, scentless, and visual only, behaving through branching, alignment, surface spread, and stillness rather than speech or personhood."
+      ],
+      "must_not": [
+        "Do not pay off C004 or explain the sunlight rule yet; only plant the observation.",
+        "Do not pay off C012 or reveal the parasite's deeper origin, route, or connection to Eleanor.",
+        "Do not confirm that preservation feeds the ink-root system before chapter 6.",
+        "Do not confirm that Eleanor is the ink before chapter 9, and do not let Eleanor speak, sound, smell, or appear as a ghost.",
+        "Do not introduce any male lead, romance line, male antagonist, or caretaker figure."
+      ],
+      "opens_with": "\"Stay where I put you,\" Clara snapped, and drove the paperweight down before the ledger crawled another inch.",
+      "cliffhanger": "At the bottom of the newly exposed grate, black veins pulse around a submerged catalogue drawer labeled in Eleanor's handwriting, and every label inside faces upward at once.",
+      "signature_detail_hint": "A strip of old blue glass from the observatory dome stains the daylight greenish for one second before the black thread under it hardens into a crumb of charcoal.",
+      "emotional_beat": "Clara's attraction is not romantic but compulsive: a dangerous pull toward the records, sharpened by vulnerability, grief, and the need to make Eleanor's absence orderly.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; emotional intensity is gothic, obsessive, and grief-driven.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Escalate from discovery to methodical mapping while planting C004 and C012 exactly as unresolved visual clues. Preserve continuity from chapters 1-2: Clara knows the stains are active and directed, but not what they are, what feeds them, or how Eleanor is involved. End on the submerged drawer labeled in Eleanor's handwriting beneath the grate.",
+      "carries_to_next": "Clara carries a contamination map, a logged daylight anomaly, a glimpse of deeper black routes under the floor, and the image of Eleanor's labeled drawer into chapter 4, where C003 and C004 can begin paying off.",
+      "narrative": {
+        "clues_plant": [
+          "C004",
+          "C012"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T008",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Clara Vance",
+            "Eleanor Vance",
+            "The black ink / ancient bog parasite",
+            "The drowned observatory archive"
+          ],
+          "may_know": [
+            "Clara Vance: Clara understands the black stains are not behaving like ordinary decay",
+            "Clara Vance: She sees directed movement: ink above the waterline, black branching across glass, and threads angling toward written records",
+            "Clara Vance: She begins to suspect the archive is contaminated by something active, though she still frames it as a material problem rather than Eleanor's transformed presence",
+            "Clara Vance: She does not yet know the rules of sunlight, metal, paper conversion, or the parasite.",
+            "Clara Vance: Clara must not know in chapter 1 that the ink is active and drawn toward records; she may only observe wrongness and rationalize it.",
+            "Eleanor Vance: Eleanor remains unseen and unheard",
+            "Eleanor Vance: The active black stains may begin to suggest a presence, but Clara cannot yet connect them to Eleanor with certainty",
+            "Eleanor Vance: Eleanor must not speak, whisper, breathe, write new verbal messages, create sound, or produce scent",
+            "Eleanor Vance: Her presence, if any, is limited to black branching stains on surfaces.",
+            "The black ink / ancient bog parasite: The ink is revealed to be active rather than passive decay",
+            "The black ink / ancient bog parasite: It can move across surfaces and angle toward written records",
+            "The black ink / ancient bog parasite: It remains silent and scentless",
+            "The black ink / ancient bog parasite: It should not display intelligence through speech or conventional messages",
+            "The black ink / ancient bog parasite: its behavior is visual and physical.",
+            "The black ink / ancient bog parasite: Before chapter 2, the ink must not be confirmed as active.",
+            "The drowned observatory archive: The archive becomes a site of directed contamination",
+            "The drowned observatory archive: Records are not merely victims of water damage",
+            "The drowned observatory archive: they attract the spreading black substance",
+            "The drowned observatory archive: Clara begins to understand that cataloguing the archive may expose new dangers."
+          ],
+          "must_not_know": [
+            "Clara Vance: Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+            "Clara Vance: Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "Clara Vance: Clara must not fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy.",
+            "Eleanor Vance: The narrative must not confirm before chapter 9 that Eleanor became the ink. Earlier chapters may imply association through visual clues only.",
+            "Eleanor Vance: Eleanor must never gain a speaking role, scent-based presence, audible manifestation, or independent ghost form at any point.",
+            "The black ink / ancient bog parasite: Before chapter 6, the ink must not be confirmed to feed specifically on Clara's preservation of records.",
+            "The black ink / ancient bog parasite: Before chapter 9, the ink must not be confirmed as Eleanor merged with the ancient bog parasite.",
+            "The drowned observatory archive: Before chapter 6, the archive must not be fully understood as nourishment for the ink-root network.",
+            "The drowned observatory archive: Before chapter 9, the archive must not be fully understood as Eleanor's vessel.",
+            "The drowned observatory archive: Before chapter 12, the archive must not be safely neutralized or restored."
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 4,
+      "title": "Charcoal Under Sun",
+      "slug": "charcoal-under-sun",
+      "one_line_summary": "Clara proves that sunlight freezes the black vascular roots into brittle charcoal ash while fresh metal near the ink oxidizes in impossible flashes.",
+      "beat_summary": "Open with a black root tightening around Clara's metal forceps and throwing off bright flecks before she can pull the rescued folder free. Pay off C003 by having metal near the ink oxidize unnaturally fast, leaving glittering rust and light-like particles in the floodwater, and pay off C004 when Clara deliberately angles reflected daylight from the fractured observatory glass onto a living black branch. Reveal R002: sunlight freezes the vascular roots into brittle charcoal that crumbles into drifting ash, giving Clara her first partial defense without making the archive safe. Plant C006 by having Clara place one sun-charred page fragment into a protective sleeve beside an unburned saved page, then note that the protected fragment remains oddly attractive to nearby black threads while loose ash is ignored. Keep Eleanor as visual absence only: the ash briefly settles around an old Eleanor-labeled drawer but never forms words, sound, scent, or a ghost. The chapter ends with Clara realizing the sunlit ash is useful but limited, because the deeper roots beneath the floor remain untouched.",
+      "must_happen": [
+        "Pay off C003: Clara's metal forceps, a rusted star-sighting screw, or a small brass fitting touches or nears the black ink and oxidizes within seconds, shedding bright metallic flecks into the stagnant water.",
+        "Pay off C004: Clara uses a shard of old observatory glass, a mirror plate, or a tilted dome fragment to direct a narrow beam of daylight onto a black vascular thread and watches it stiffen, blacken, and crumble into charcoal ash.",
+        "Reveal R002 clearly: Clara understands that sunlight freezes the vascular roots into brittle charcoal that crumbles into drifting ash, though only where light directly touches them.",
+        "Plant C006: Clara preserves a sun-charred page fragment in an archival sleeve beside an unburned rescued page and observes that nearby black threads favor the protected materials while loose ash is left untouched, without yet understanding the feeding rule.",
+        "Clara adds a sunlight column and a metal-oxidation note to her contamination map, treating the discovery as a procedural defense rather than comfort.",
+        "[ISOLATION] Eleanor remains an absence: ash drifts around the drawer labeled in Eleanor's handwriting, and Clara has no voice, hand, or witness to confirm whether the pattern is warning, accusation, or coincidence."
+      ],
+      "must_not": [
+        "Do not reveal before chapter 6 that preservation itself feeds the ink-root system; C006 must remain an unresolved observation.",
+        "Do not reveal before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+        "Do not let sunlight destroy the entire network or make the observatory safe; it only damages exposed roots in direct light.",
+        "Do not allow Eleanor to speak, whisper, breathe, smell, appear as a ghost, or communicate in written words.",
+        "Do not introduce a male lead, male antagonist, romance line, doctor, caretaker, or any invented supporting cast."
+      ],
+      "opens_with": "\"Let go,\" Clara ordered, and the forceps bloomed orange rust around her fingers.",
+      "cliffhanger": "When Clara lifts the sleeve containing the sun-charred fragment, every black vein under the floor bends toward it, leaving the loose ash behind in a perfect untouched circle.",
+      "signature_detail_hint": "A cracked prism from the observatory's spectroscope splits one strip of daylight into sickly colors, but only the plain white edge of the beam turns the root to charcoal.",
+      "emotional_beat": "Clara feels a brief, dangerous attraction to control itself, then vulnerability returns when the ash gathers near Eleanor's label and gives her no answer.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; the emotional charge is isolation, grief, and Clara's frightening relief at finding a partial rule.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Continue directly from chapter 3 with the exposed grate, Eleanor-labeled drawer, contamination map, and Clara's knowledge that the stains are active and directed. Pay off C003 and C004 with concrete visual tests, deliver R002 clearly, and plant C006 without explaining the preservation-feeding rule. Maintain silent, scentless, visual-only manifestations and end on the specific cliffhanger of veins turning toward the sleeved charred fragment while loose ash is ignored.",
+      "carries_to_next": "Clara now knows sunlight can freeze exposed roots into charcoal ash and metal oxidizes near the ink, but she has also logged the unresolved fact that protected page fragments still attract the veins.",
+      "narrative": {
+        "clues_plant": [
+          "C006"
+        ],
+        "clues_payoff": [
+          "C003",
+          "C004"
+        ],
+        "reveals": [
+          {
+            "id": "R002",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C003",
+              "C004"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Clara Vance",
+            "Eleanor Vance",
+            "The black ink / ancient bog parasite",
+            "The drowned observatory archive"
+          ],
+          "may_know": [
+            "Clara Vance: Clara understands the black stains are not behaving like ordinary decay",
+            "Clara Vance: She sees directed movement: ink above the waterline, black branching across glass, and threads angling toward written records",
+            "Clara Vance: She begins to suspect the archive is contaminated by something active, though she still frames it as a material problem rather than Eleanor's transformed presence",
+            "Clara Vance: She does not yet know the rules of sunlight, metal, paper conversion, or the parasite.",
+            "Clara Vance: Clara must not know in chapter 1 that the ink is active and drawn toward records; she may only observe wrongness and rationalize it.",
+            "Eleanor Vance: Eleanor remains unseen and unheard",
+            "Eleanor Vance: The active black stains may begin to suggest a presence, but Clara cannot yet connect them to Eleanor with certainty",
+            "Eleanor Vance: Eleanor must not speak, whisper, breathe, write new verbal messages, create sound, or produce scent",
+            "Eleanor Vance: Her presence, if any, is limited to black branching stains on surfaces.",
+            "The black ink / ancient bog parasite: The ink is revealed to be active rather than passive decay",
+            "The black ink / ancient bog parasite: It can move across surfaces and angle toward written records",
+            "The black ink / ancient bog parasite: It remains silent and scentless",
+            "The black ink / ancient bog parasite: It should not display intelligence through speech or conventional messages",
+            "The black ink / ancient bog parasite: its behavior is visual and physical.",
+            "The black ink / ancient bog parasite: Before chapter 2, the ink must not be confirmed as active.",
+            "The drowned observatory archive: The archive becomes a site of directed contamination",
+            "The drowned observatory archive: Records are not merely victims of water damage",
+            "The drowned observatory archive: they attract the spreading black substance",
+            "The drowned observatory archive: Clara begins to understand that cataloguing the archive may expose new dangers."
+          ],
+          "must_not_know": [
+            "Clara Vance: Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+            "Clara Vance: Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "Clara Vance: Clara must not fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy.",
+            "Eleanor Vance: The narrative must not confirm before chapter 9 that Eleanor became the ink. Earlier chapters may imply association through visual clues only.",
+            "Eleanor Vance: Eleanor must never gain a speaking role, scent-based presence, audible manifestation, or independent ghost form at any point.",
+            "The black ink / ancient bog parasite: Before chapter 6, the ink must not be confirmed to feed specifically on Clara's preservation of records.",
+            "The black ink / ancient bog parasite: Before chapter 9, the ink must not be confirmed as Eleanor merged with the ancient bog parasite.",
+            "The drowned observatory archive: Before chapter 6, the archive must not be fully understood as nourishment for the ink-root network.",
+            "The drowned observatory archive: Before chapter 9, the archive must not be fully understood as Eleanor's vessel.",
+            "The drowned observatory archive: Before chapter 12, the archive must not be safely neutralized or restored."
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "The Sleeved Pages",
+      "slug": "the-sleeved-pages",
+      "one_line_summary": "Clara tries to protect selected records after learning the sunlight rule, but the black roots gather around her safest archival choices and expose three new patterns she cannot yet interpret.",
+      "beat_summary": "Open with a sealed archival sleeve swelling as if the page inside has taken a breath, though no sound or breath is present. Clara sets up a controlled salvage station in a sunlit strip, separating loose scraps, sleeved fragments, Eleanor-linked labels, and waterlogged ledgers while believing she is imposing order after the sunlight discovery. Plant C007 by showing that the black veins thicken most around pages Clara has cleaned, numbered, sleeved, and placed in safe order, while unhandled scraps remain comparatively untouched. Plant C008 by showing a star chart, glass plate, or water surface branching into a pattern that resembles vascular routes beneath the estate rather than simple stains, but do not pay it off until chapter 8. Plant C015 through an Eleanor-linked record: perhaps a childhood catalogue label, an old accession slip, or a page bearing Eleanor's hand that draws black branching in a way that frames her name visually without confirming she is the ink. Keep the chapter oppressive and procedural, with [ISOLATION] focused on Clara's private rituals and the absence of anyone to stop her preservation instinct.",
+      "must_happen": [
+        "Plant C007: Clara notices that pages she has cleaned, numbered, flattened, sleeved, and protected gather thicker black branching than loose scraps she has left unprocessed.",
+        "Plant C008: a star chart, submerged glass plate, or surface of still water displays black vascular branching that mirrors a route beneath the observatory or toward the peat-dark lower levels, but Clara records it only as a repeating structural pattern.",
+        "Plant C015: Clara finds an Eleanor-linked record such as a childhood label, accession slip, drawer tag, or page in Eleanor's hand, and black branches frame or avoid the name in a precise visual pattern without forming words.",
+        "Clara uses the chapter 4 sunlight rule practically, keeping several roots pinned in a narrow beam until they charcoal and crumble, but the darker roots outside the light continue spreading.",
+        "[ISOLATION] Clara mouths catalogue numbers and reaches for Eleanor's remembered opinion only in her own mind; the corridor, water, and glass give her no voice, no touch, and no answer.",
+        "Clara's preservation boundary tightens: even after seeing protected pages attract roots, she cannot bring herself to discard or burn the records and instead improves their housing."
+      ],
+      "must_not": [
+        "Do not pay off C007 or state the feeding rule before chapter 6.",
+        "Do not pay off C008 before chapter 8 or explain the full meaning of the route-like branching.",
+        "Do not pay off C015 before chapter 9 or confirm Eleanor's transformation.",
+        "Do not let the ink write a verbal message, speak, make sound, produce scent, or act through a human-like ghost form.",
+        "Do not introduce a male lead, romance line, male antagonist, caretaker, doctor, or any new physical helper."
+      ],
+      "opens_with": "\"The sleeve is swelling,\" Clara said, and the page inside pressed black veins against the plastic like fingers against glass.",
+      "cliffhanger": "The Eleanor-labeled slip inside Clara's safest folder turns face-up by itself, and black branches on the glass plate above it arrange into the same route she saw descending beneath the grate.",
+      "signature_detail_hint": "A strip of archival linen tape floats loose in the water, perfectly white except for one black vein running down its woven center like a thread pulled through cloth.",
+      "emotional_beat": "Clara's vulnerability sharpens into compulsive attraction toward the protected pages, because every safer enclosure makes Eleanor's absence feel more orderly and more dangerous.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; the chapter's intensity comes from obsessive preservation, dread, and solitary grief.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Build from chapter 4's sunlight reveal: Clara should use daylight as a limited tool while setting up a controlled salvage station. Plant C007, C008, and C015 clearly as unresolved visual clues. Do not reveal that preserved records feed the roots yet, and do not confirm Eleanor's nature. Keep every manifestation silent, scentless, and visual. End on the Eleanor-labeled slip turning face-up beneath a matching route-like pattern on glass.",
+      "carries_to_next": "Clara has gathered evidence that protected records attract thicker branching, route-like patterns repeat across glass and water, and Eleanor-linked material is visually singled out, setting up chapter 6's feeding reveal without solving Eleanor's identity.",
+      "narrative": {
+        "clues_plant": [
+          "C007",
+          "C008",
+          "C015"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Clara Vance",
+            "Eleanor Vance",
+            "The black ink / ancient bog parasite",
+            "The drowned observatory archive"
+          ],
+          "may_know": [
+            "Clara Vance: Clara understands the black stains are not behaving like ordinary decay",
+            "Clara Vance: She sees directed movement: ink above the waterline, black branching across glass, and threads angling toward written records",
+            "Clara Vance: She begins to suspect the archive is contaminated by something active, though she still frames it as a material problem rather than Eleanor's transformed presence",
+            "Clara Vance: She does not yet know the rules of sunlight, metal, paper conversion, or the parasite.",
+            "Clara Vance: Clara must not know in chapter 1 that the ink is active and drawn toward records; she may only observe wrongness and rationalize it.",
+            "Eleanor Vance: Eleanor remains unseen and unheard",
+            "Eleanor Vance: The active black stains may begin to suggest a presence, but Clara cannot yet connect them to Eleanor with certainty",
+            "Eleanor Vance: Eleanor must not speak, whisper, breathe, write new verbal messages, create sound, or produce scent",
+            "Eleanor Vance: Her presence, if any, is limited to black branching stains on surfaces.",
+            "The black ink / ancient bog parasite: The ink is revealed to be active rather than passive decay",
+            "The black ink / ancient bog parasite: It can move across surfaces and angle toward written records",
+            "The black ink / ancient bog parasite: It remains silent and scentless",
+            "The black ink / ancient bog parasite: It should not display intelligence through speech or conventional messages",
+            "The black ink / ancient bog parasite: its behavior is visual and physical.",
+            "The black ink / ancient bog parasite: Before chapter 2, the ink must not be confirmed as active.",
+            "The drowned observatory archive: The archive becomes a site of directed contamination",
+            "The drowned observatory archive: Records are not merely victims of water damage",
+            "The drowned observatory archive: they attract the spreading black substance",
+            "The drowned observatory archive: Clara begins to understand that cataloguing the archive may expose new dangers."
+          ],
+          "must_not_know": [
+            "Clara Vance: Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+            "Clara Vance: Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "Clara Vance: Clara must not fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy.",
+            "Eleanor Vance: The narrative must not confirm before chapter 9 that Eleanor became the ink. Earlier chapters may imply association through visual clues only.",
+            "Eleanor Vance: Eleanor must never gain a speaking role, scent-based presence, audible manifestation, or independent ghost form at any point.",
+            "The black ink / ancient bog parasite: Before chapter 6, the ink must not be confirmed to feed specifically on Clara's preservation of records.",
+            "The black ink / ancient bog parasite: Before chapter 9, the ink must not be confirmed as Eleanor merged with the ancient bog parasite.",
+            "The drowned observatory archive: Before chapter 6, the archive must not be fully understood as nourishment for the ink-root network.",
+            "The drowned observatory archive: Before chapter 9, the archive must not be fully understood as Eleanor's vessel.",
+            "The drowned observatory archive: Before chapter 12, the archive must not be safely neutralized or restored."
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "What Preservation Feeds",
+      "slug": "what-preservation-feeds",
+      "one_line_summary": "Clara discovers that every record she preserves strengthens the black ink-root system, turning her archival ethics into the engine of the observatory's growth.",
+      "beat_summary": "Open with Clara cutting open a protective sleeve and finding the saved page inside softened into living vascular strands. Pay off C005, C006, and C007 by comparing the folder of rescued records from chapter 2, the sun-charred sleeved fragment from chapter 4, and the carefully protected pages from chapter 5: all preserved materials have fed thicker roots, while loose ash and neglected scraps are comparatively ignored. Reveal R003 with full force: every preserved record strengthens the ink-root system, paper dissolves into organic vascular roots, and records Clara protects become conduits instead of safe objects. Clara tests the rule reluctantly by moving one unprocessed scrap near the roots and one newly sleeved page beside it, watching the protected page draw violent branching while the scrap remains almost untouched. Plant C009 when Clara finds an old observatory inventory or lower-level notation indicating that some records were deliberately withheld, buried, or submerged beneath the peat-dark floor, suggesting a hidden collection for chapter 8 without identifying the parasite or Eleanor. End with Clara physically unable to destroy a dangerous page even after understanding what it feeds, making her boundary the chapter's horror.",
+      "must_happen": [
+        "Pay off C005: Clara returns to the rescued folder from chapter 2 and sees that the pages she separated and saved have become a dense center of black vascular growth.",
+        "Pay off C006: the sun-charred fragment Clara preserved in a sleeve has not remained inert; black roots have laced its protected edges while loose charcoal ash nearby is untouched.",
+        "Pay off C007: Clara compares carefully cleaned, numbered, and sleeved pages with neglected scraps and realizes the protected records consistently draw stronger branching.",
+        "Reveal R003 clearly: Clara understands that every preserved record strengthens the ink-root system, paper dissolves into organic vascular roots, and protected records become conduits rather than safe objects.",
+        "Plant C009: Clara finds a lower-observatory inventory mark, submerged shelf notation, or peat-stained accession reference indicating a deliberately hidden or buried set of records beneath the main archive, without revealing its full meaning before chapter 8.",
+        "[ISOLATION] Clara stands alone with the terrible solution in her hands: no one tells her to burn the page, no one forgives her if she does, and no one stops her when she protects it anyway."
+      ],
+      "must_not": [
+        "Do not reveal before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+        "Do not pay off C008 or C009 in chapter 6; C009 must remain a planted lead toward chapter 8.",
+        "Do not let Clara suddenly become willing to destroy written records; her inability to do so must remain intact and painful.",
+        "Do not neutralize the archive, solve the central mystery, or make sunlight a complete answer.",
+        "Do not give Eleanor a voice, sound, scent, ghost body, written message, or direct communication.",
+        "Do not introduce romance, a male lead, male antagonist, doctor, caretaker, or new helper."
+      ],
+      "opens_with": "\"This page is growing veins,\" Clara said, and the sleeve split wetly down its sealed edge.",
+      "cliffhanger": "Clara raises the infected page into the sunbeam to destroy it, but her hand stops before the light touches it, and the black roots climb over her knuckles in silent recognition of her refusal.",
+      "signature_detail_hint": "The page fibers separate into capillary strands so fine they lift individual grains of charcoal ash and arrange them along the margins like punctuation without words.",
+      "emotional_beat": "Clara's attraction to preservation becomes unbearable vulnerability: the thing she loves most about her work is now the exact motion that feeds the horror.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; the emotional intensity is moral horror, isolation, and Clara's intimate betrayal by her own ethics.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Pay off C005, C006, and C007 through concrete comparison and controlled observation, then deliver R003 unmistakably: preserved records strengthen the ink-root system and paper can dissolve into organic vascular roots. Plant C009 as an unresolved lower-archive or buried-record clue for chapter 8. Preserve continuity: Clara knows sunlight and metal rules but does not know Eleanor's true fate. End on Clara failing to let sunlight destroy an infected page while roots climb over her knuckles.",
+      "carries_to_next": "Clara now knows her preservation work feeds the entity, has an unresolved clue pointing toward hidden lower records beneath the observatory, and carries both practical knowledge and moral paralysis into the next complication.",
+      "narrative": {
+        "clues_plant": [
+          "C009"
+        ],
+        "clues_payoff": [
+          "C005",
+          "C006",
+          "C007"
+        ],
+        "reveals": [
+          {
+            "id": "R003",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C005",
+              "C006",
+              "C007"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Clara Vance",
+            "Eleanor Vance",
+            "The black ink / ancient bog parasite",
+            "The drowned observatory archive"
+          ],
+          "may_know": [
+            "Clara Vance: Clara has learned that the ink-root network feeds on preserved records",
+            "Clara Vance: Paper can soften into organic vascular strands, saved pages make the roots thicken, and rejected scraps appear to starve",
+            "Clara Vance: This knowledge turns her archival ethics into a trap: every act of preservation may strengthen the spreading entity",
+            "Clara Vance: She also recognizes that sunlight can freeze the roots into brittle charcoal ash and that metal near the ink can oxidize and shed flecks of light, but she still does not know the ink is Eleanor.",
+            "Clara Vance: Clara must not know in chapter 1 that the ink is active and drawn toward records; she may only observe wrongness and rationalize it.",
+            "Clara Vance: Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+            "Eleanor Vance: Eleanor's connection to the archive is still hidden",
+            "Eleanor Vance: The ink-root network is known to feed on preserved paper, but its personal link to Eleanor has not been revealed",
+            "Eleanor Vance: Visual patterns may begin to cluster around sister-linked objects or records, yet they must not provide a complete answer before chapter 9.",
+            "The black ink / ancient bog parasite: The ink's feeding logic is partially known: preserved records strengthen it, paper dissolves into organic vascular roots, and neglected or rejected scraps do not nourish it in the same way",
+            "The black ink / ancient bog parasite: The world rules are now legible enough for Clara to fear her own archival work",
+            "The black ink / ancient bog parasite: The parasite component is not yet fully named as the ancient bog organism.",
+            "The black ink / ancient bog parasite: Before chapter 2, the ink must not be confirmed as active.",
+            "The black ink / ancient bog parasite: Before chapter 6, the ink must not be confirmed to feed specifically on Clara's preservation of records.",
+            "The drowned observatory archive: The archive is revealed as part of a feeding system",
+            "The drowned observatory archive: Preserved records thicken the roots, while paper can become organic vascular tissue",
+            "The drowned observatory archive: Clara's catalogue work is no longer neutral",
+            "The drowned observatory archive: it helps the entity grow.",
+            "The drowned observatory archive: Before chapter 6, the archive must not be fully understood as nourishment for the ink-root network."
+          ],
+          "must_not_know": [
+            "Clara Vance: Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "Clara Vance: Clara must not fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy.",
+            "Eleanor Vance: The narrative must not confirm before chapter 9 that Eleanor became the ink. Earlier chapters may imply association through visual clues only.",
+            "Eleanor Vance: Eleanor must never gain a speaking role, scent-based presence, audible manifestation, or independent ghost form at any point.",
+            "The black ink / ancient bog parasite: Before chapter 9, the ink must not be confirmed as Eleanor merged with the ancient bog parasite.",
+            "The drowned observatory archive: Before chapter 9, the archive must not be fully understood as Eleanor's vessel.",
+            "The drowned observatory archive: Before chapter 12, the archive must not be safely neutralized or restored."
+          ],
+          "effective_milestone": 6
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 7,
+      "title": "The Negative Register",
+      "slug": "the-negative-register",
+      "one_line_summary": "Clara follows the lower-archive lead from the infected page and plants two new visual clues when Eleanor-linked records leave blank bodily impressions and peat-black filaments beneath the observatory glass.",
+      "beat_summary": "Open with the black roots tightening over Clara's knuckles after her refusal to burn the infected page, forcing her to cut herself free with sunlight rather than destroy the record. Clara follows C009's lower-observatory notation toward a half-submerged register cabinet while knowing preserved records feed the ink-root system, so every rescue now feels like complicity. Plant C010: she finds a waterlogged negative register where Eleanor's name is not written but absent, preserved as a clean white gap surrounded by black branching that outlines a human hand, a throat, or a rib-like shape without forming words. Plant C011: beneath an old glass plate, peat-black filaments thread through paper pulp and water as if a body and a record have been processed through the same vascular system, but Clara can only catalogue it as organic contamination. [ISOLATION] Clara mouths Eleanor's old catalogue habit to an empty lower room and receives no sound, no scent, no touch, only stains that make absence feel deliberate. End with Clara preserving both new clues despite knowing preservation feeds the roots, and the lower glass plates turning their black branching toward the exact route pattern from chapter 5.",
+      "must_happen": [
+        "Continue directly from chapter 6: Clara's hand is still near the infected page she could not put into the sunbeam, and she uses reflected daylight to make the roots release her knuckles without burning the page itself.",
+        "Clara follows the unresolved C009 lower-observatory notation toward a submerged register cabinet or lower shelf marked as withheld, buried, or deliberately set below the main archive, but do not pay off C009 yet.",
+        "Plant C010: Clara finds a waterlogged negative register or index sheet where Eleanor Vance's expected entry appears as a blank preserved absence surrounded by black branching, visually outlining a hand, throat, ribs, or other bodily impression without words.",
+        "Plant C011: Clara discovers peat-black filaments beneath a glass plate or inside paper pulp that resemble both vascular tissue and dissolved archival fiber, suggesting body and record have been fused without revealing Eleanor's transformation yet.",
+        "Clara records C010 and C011 in her contamination notes while struggling with the new knowledge from chapter 6 that protecting these clues will feed the ink-root system.",
+        "[ISOLATION] Clara speaks no confession aloud; she mouths Eleanor's remembered catalogue sequence in the flooded lower room and finds no answering hand, no voice, no scent, and no witness to stop her from preserving what may be dangerous."
+      ],
+      "must_not": [
+        "Do not reveal before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+        "Do not pay off C008, C009, C010, C011, or C015 in chapter 7; C010 and C011 must be planted only as unresolved visual clues.",
+        "Do not let Eleanor speak, whisper, breathe, make footsteps, produce scent, appear as a ghost, or write a verbal message.",
+        "Do not make Clara willing to destroy written records yet; she may use sunlight defensively against roots but must still protect records.",
+        "Do not introduce a male lead, male antagonist, romance line, doctor, caretaker, or any physical helper."
+      ],
+      "opens_with": "\"Take my hand, then,\" Clara said to the roots, and the black veins tightened over her knuckles instead.",
+      "cliffhanger": "When Clara slides the negative register into a protective sleeve, the blank space where Eleanor's entry should be darkens around the edges, and every glass plate in the lower cabinet tilts its black branching toward the same buried route.",
+      "signature_detail_hint": "A bone-dry moth pinned inside a cracked glass plate has black capillaries printed through its transparent wings, though the insect itself never touches the water.",
+      "emotional_beat": "Clara's vulnerability hardens into a lonely, guilty attraction to the evidence: she knows preservation feeds the horror, yet Eleanor's absence makes the dangerous pages feel impossible to abandon.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; the chapter's intensity is isolation, grief, moral dread, and Clara's compulsive preservation instinct.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Continue from chapter 6 without resetting: Clara knows preserved records feed the ink-root system, knows sunlight and metal rules, and still does not know Eleanor's true fate. Plant C010 and C011 clearly as visual, unresolved clues in the lower archive. Keep all manifestations silent, scentless, and visual only. Include [ISOLATION] through absence only, with no male lead, no romance, and no new helper. End on the specific visual cliffhanger of the sleeved negative register darkening while the glass plates align toward the buried route.",
+      "carries_to_next": "Clara carries two new unresolved clues—Eleanor's negative absence in a register and peat-black filaments that suggest fused body and paper—plus the lower-route pattern, setting up chapter 8's payoff of C008 and C009 without revealing Eleanor yet.",
+      "narrative": {
+        "clues_plant": [
+          "C010",
+          "C011"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Clara Vance",
+            "Eleanor Vance",
+            "The black ink / ancient bog parasite",
+            "The drowned observatory archive"
+          ],
+          "may_know": [
+            "Clara Vance: Clara has learned that the ink-root network feeds on preserved records",
+            "Clara Vance: Paper can soften into organic vascular strands, saved pages make the roots thicken, and rejected scraps appear to starve",
+            "Clara Vance: This knowledge turns her archival ethics into a trap: every act of preservation may strengthen the spreading entity",
+            "Clara Vance: She also recognizes that sunlight can freeze the roots into brittle charcoal ash and that metal near the ink can oxidize and shed flecks of light, but she still does not know the ink is Eleanor.",
+            "Clara Vance: Clara must not know in chapter 1 that the ink is active and drawn toward records; she may only observe wrongness and rationalize it.",
+            "Clara Vance: Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+            "Eleanor Vance: Eleanor's connection to the archive is still hidden",
+            "Eleanor Vance: The ink-root network is known to feed on preserved paper, but its personal link to Eleanor has not been revealed",
+            "Eleanor Vance: Visual patterns may begin to cluster around sister-linked objects or records, yet they must not provide a complete answer before chapter 9.",
+            "The black ink / ancient bog parasite: The ink's feeding logic is partially known: preserved records strengthen it, paper dissolves into organic vascular roots, and neglected or rejected scraps do not nourish it in the same way",
+            "The black ink / ancient bog parasite: The world rules are now legible enough for Clara to fear her own archival work",
+            "The black ink / ancient bog parasite: The parasite component is not yet fully named as the ancient bog organism.",
+            "The black ink / ancient bog parasite: Before chapter 2, the ink must not be confirmed as active.",
+            "The black ink / ancient bog parasite: Before chapter 6, the ink must not be confirmed to feed specifically on Clara's preservation of records.",
+            "The drowned observatory archive: The archive is revealed as part of a feeding system",
+            "The drowned observatory archive: Preserved records thicken the roots, while paper can become organic vascular tissue",
+            "The drowned observatory archive: Clara's catalogue work is no longer neutral",
+            "The drowned observatory archive: it helps the entity grow.",
+            "The drowned observatory archive: Before chapter 6, the archive must not be fully understood as nourishment for the ink-root network."
+          ],
+          "must_not_know": [
+            "Clara Vance: Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "Clara Vance: Clara must not fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy.",
+            "Eleanor Vance: The narrative must not confirm before chapter 9 that Eleanor became the ink. Earlier chapters may imply association through visual clues only.",
+            "Eleanor Vance: Eleanor must never gain a speaking role, scent-based presence, audible manifestation, or independent ghost form at any point.",
+            "The black ink / ancient bog parasite: Before chapter 9, the ink must not be confirmed as Eleanor merged with the ancient bog parasite.",
+            "The drowned observatory archive: Before chapter 9, the archive must not be fully understood as Eleanor's vessel.",
+            "The drowned observatory archive: Before chapter 12, the archive must not be safely neutralized or restored."
+          ],
+          "effective_milestone": 6
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Sister-Linked Route",
+      "one_line_summary": "Clara pays off the route-like branching and hidden lower-record clues by observing that the ink's branching is densest around Eleanor-linked documents, though she cannot yet interpret the meaning of the pattern.",
+      "beat_summary": "Open with the glass plates from chapter 7 levering themselves toward the submerged lower cabinet, forcing Clara to follow the route pattern first planted in C008 and the buried-record lead planted in C009. Pay off C008 by matching the black vascular branching across star chart, glass plate, and water to an actual route beneath the observatory leading to hidden lower shelves. Pay off C009 when Clara opens the withheld lower collection and finds records deliberately buried or submerged: not random forbidden papers, but clustered Eleanor-linked materials, name traces, childhood labels, accession slips, and sister-marked fragments. Clara notices that the black branching is denser and faster around Eleanor-linked objects than around neutral ones, but she does not yet understand why—this suggests but does not confirm a material connection. [ISOLATION] The revelation lands with no comfort, only Clara's hand hovering over the sister-linked records and no living sister to deny what the archive is implying, but the implication remains a question, not an answer.",
+      "opens_with": "\"The map is under the floor,\" Clara said, as the glass plates lifted one blackened edge toward the drowned stair.",
+      "cliffhanger": "Inside the lowest drawer, every neutral record lies flat, but every Eleanor-linked slip stands upright in the water, each one haloed by black roots that bend toward Clara's marked knuckles.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Continue directly from chapter 7's cliffhanger and pay off C008 and C009 with concrete visual investigation. Suggest R004: the ink concentrates around Eleanor's documents, name traces, and sister-linked artifacts more than ordinary records, but Clara must not conclude a material connection—only observe a puzzling correlation. Do not pay off C010, C011, or C015 yet, and do not reveal Eleanor's transformation before chapter 9. Keep manifestations silent, scentless, and visual only. Include [ISOLATION] through absence only. End on the specific image of Eleanor-linked slips standing upright in water and roots.",
+      "must_happen": [
+        "Pay off C008: Clara matches the black vascular branching pattern from the star chart (planted in C008, chapter 5) to an actual route beneath the observatory floor, visible through glass plates and water surfaces, leading to the submerged lower cabinet.",
+        "Pay off C009: Clara opens the withheld lower collection discovered through C009's notation and finds not random forbidden records, but a deliberate cluster of Eleanor-linked materials: name slips, childhood labels, accession slips in Eleanor's hand, and sister-marked fragments.",
+        "Clara observes that the black branching is thicker and faster around Eleanor-linked objects than around neutral records and catalogs the correlation without inferring a material connection or understanding Eleanor's transformation.",
+        "Clara preserves the Eleanor-linked fragments in archival sleeves while knowing from chapter 6 that preservation feeds the ink-root system, creating tension between her duty and the danger.",
+        "[ISOLATION] Clara's hand hovers over the sister-linked records; she speaks no confession aloud and receives no answer, no scent, no touch from the ink, only the visual clustering of branching around Eleanor's traces.",
+        "The chapter ends with the specific visual cliffhanger: in the lowest drawer, neutral records lie flat while every Eleanor-linked slip stands upright in water, haloed by black roots bending toward Clara's ink-marked knuckles."
+      ],
+      "must_not": [
+        "Do not pay off C010, C011, or C015 in chapter 8; these clues remain unresolved until later chapters.",
+        "Do not confirm that the black ink is Eleanor's preserved memory merged with an ancient bog parasite before chapter 9.",
+        "Do not allow Eleanor to speak, whisper, produce scent, make sound, appear as a ghost, or write a verbal message.",
+        "Do not let Clara conclude that the ink is materially connected to Eleanor; she must only observe a puzzling correlation.",
+        "Do not introduce a male lead, male antagonist, romance line, doctor, caretaker, or any new physical helper.",
+        "Do not neutralize the observatory, destroy all roots, or make the archive safe; the danger persists."
+      ],
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C008",
+          "C009"
+        ],
+        "reveals": [
+          {
+            "id": "R004",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C008",
+              "C009",
+              "C010"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Clara Vance",
+            "Eleanor Vance",
+            "The black ink / ancient bog parasite",
+            "The drowned observatory archive"
+          ],
+          "may_know": [
+            "Clara Vance: Clara has learned that the ink-root network feeds on preserved records",
+            "Clara Vance: Paper can soften into organic vascular strands, saved pages make the roots thicken, and rejected scraps appear to starve",
+            "Clara Vance: This knowledge turns her archival ethics into a trap: every act of preservation may strengthen the spreading entity",
+            "Clara Vance: She also recognizes that sunlight can freeze the roots into brittle charcoal ash and that metal near the ink can oxidize and shed flecks of light, but she still does not know the ink is Eleanor.",
+            "Clara Vance: Clara must not know in chapter 1 that the ink is active and drawn toward records; she may only observe wrongness and rationalize it.",
+            "Clara Vance: Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+            "Eleanor Vance: Eleanor's connection to the archive is still hidden",
+            "Eleanor Vance: The ink-root network is known to feed on preserved paper, but its personal link to Eleanor has not been revealed",
+            "Eleanor Vance: Visual patterns may begin to cluster around sister-linked objects or records, yet they must not provide a complete answer before chapter 9.",
+            "The black ink / ancient bog parasite: The ink's feeding logic is partially known: preserved records strengthen it, paper dissolves into organic vascular roots, and neglected or rejected scraps do not nourish it in the same way",
+            "The black ink / ancient bog parasite: The world rules are now legible enough for Clara to fear her own archival work",
+            "The black ink / ancient bog parasite: The parasite component is not yet fully named as the ancient bog organism.",
+            "The black ink / ancient bog parasite: Before chapter 2, the ink must not be confirmed as active.",
+            "The black ink / ancient bog parasite: Before chapter 6, the ink must not be confirmed to feed specifically on Clara's preservation of records.",
+            "The drowned observatory archive: The archive is revealed as part of a feeding system",
+            "The drowned observatory archive: Preserved records thicken the roots, while paper can become organic vascular tissue",
+            "The drowned observatory archive: Clara's catalogue work is no longer neutral",
+            "The drowned observatory archive: it helps the entity grow.",
+            "The drowned observatory archive: Before chapter 6, the archive must not be fully understood as nourishment for the ink-root network."
+          ],
+          "must_not_know": [
+            "Clara Vance: Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "Clara Vance: Clara must not fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy.",
+            "Eleanor Vance: The narrative must not confirm before chapter 9 that Eleanor became the ink. Earlier chapters may imply association through visual clues only.",
+            "Eleanor Vance: Eleanor must never gain a speaking role, scent-based presence, audible manifestation, or independent ghost form at any point.",
+            "The black ink / ancient bog parasite: Before chapter 9, the ink must not be confirmed as Eleanor merged with the ancient bog parasite.",
+            "The drowned observatory archive: Before chapter 9, the archive must not be fully understood as Eleanor's vessel.",
+            "The drowned observatory archive: Before chapter 12, the archive must not be safely neutralized or restored."
+          ],
+          "effective_milestone": 6
+        },
+        "clue_beats": {}
+      },
+      "slug": "the-sister-linked-route",
+      "spice": 1,
+      "signature_detail_hint": "\"The map is under the floor,\" Clara said, as the glass plates lifted one blackened edge toward the drowned stair."
+    },
+    {
+      "chapter": 9,
+      "title": "What Eleanor Preserved",
+      "slug": "what-eleanor-preserved",
+      "one_line_summary": "Clara pays off the Eleanor-linked clues and learns the central truth that Eleanor dissolved herself into the forbidden records and merged with an ancient bog parasite, making the black ink her preserved memory and physical mass.",
+      "beat_summary": "Open with the upright Eleanor-linked slips from chapter 8 turning black from their edges inward as Clara tries to separate them from the lower drawer. Pay off C010 when the negative register's blank Eleanor-shaped absence fills not with words but with branching stains that align with Clara's childhood memory of Eleanor's hand, showing a body preserved as missing space rather than a ghost. Pay off C011 when the peat-black filaments in pulp and glass reveal the same material behavior as paper fiber, vascular tissue, and bog matter, letting Clara identify the organismal component without hearing or seeing Eleanor as a person. Pay off C015 by returning to the Eleanor-linked label or accession slip from chapter 5: black branches frame Eleanor's name, avoid the letters, then spread through the record as if the name is a boundary around preserved memory. Reveal R005 fully: Eleanor dissolved herself into the forbidden records to preserve them and merged with an ancient bog parasite; the ink is Eleanor's preserved memory and physical mass fused with that organism. Clara understands why the ink is silent, scentless, visual-only, why records feed it, and why saving the archive means feeding what remains of her sister. [ISOLATION] The answer offers no reunion; Clara is alone with a sister who can only appear as stain, water, glass, paper, roots, and ash. End with Clara facing the first clear moral choice—preserve the lower archive and feed Eleanor-parasite, or begin planning to drown the observatory—without fully accepting destruction yet.",
+      "must_happen": [
+        "Pay off C010: Clara returns to the negative register from chapter 7 and sees the blank Eleanor-shaped absence fill with black branching that suggests preserved bodily memory through missing space, not speech or written message.",
+        "Pay off C011: Clara examines the peat-black filaments in glass, paper pulp, and water and realizes they behave as fused archival fiber, vascular tissue, and bog organism, pointing to an ancient parasite bound into the records.",
+        "Pay off C015: the Eleanor-linked record planted in chapter 5 becomes central as black branches frame Eleanor's name and spread through the surrounding paper while leaving the letters visually intact, proving the pattern has always singled out her preserved trace.",
+        "Reveal R005 clearly and centrally: Eleanor Vance dissolved herself into the forbidden records to preserve them and merged with an ancient bog parasite; the black ink is Eleanor's preserved memory and physical mass fused with that organism.",
+        "Clara connects prior rules to the truth: preserved records feed the system, paper becomes vascular roots, metal oxidizes near the ink, sunlight freezes exposed roots into charcoal ash, and Eleanor can manifest only through silent stains across paper, glass, and water.",
+        "[ISOLATION] Clara receives the central answer without reunion: no voice, no scent, no hand, no ghost body, only visual stains that make her sister present and unreachable at once.",
+        "Clara confronts the moral crisis that will drive the final act: saving the archive means preserving and feeding what remains of Eleanor, while destroying it would mean ending the vessel that holds her sister."
+      ],
+      "must_not": [
+        "Do not let Eleanor speak, whisper, breathe, write a verbal message, make sound, produce scent, appear as a ghost, or separate from the ink-root system.",
+        "Do not make Clara fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy; chapter 9 should reveal the truth and force the choice, not complete the final resolution.",
+        "Do not neutralize the archive, kill the parasite, or make the observatory safe before chapter 12.",
+        "Do not introduce a male lead, male antagonist, romance line, doctor, caretaker, or any new physical helper.",
+        "Do not soften the reveal into a conventional haunting or hidden corpse; the truth must remain body-as-archive horror fused with an ancient bog parasite."
+      ],
+      "opens_with": "\"Eleanor is not written here,\" Clara said, as the blank space in the register began to blacken around her sister's shape.",
+      "cliffhanger": "The lower archive's black roots spread into two perfect paths at Clara's feet: one curling around the preserved Eleanor records, the other descending toward the peat-dark channels beneath the observatory like an invitation to drown them all.",
+      "signature_detail_hint": "A pressed bog leaf sealed inside an old accession packet unfolds under water into a black vascular fan, its veins matching the negative outline of Eleanor's absent hand.",
+      "emotional_beat": "Clara's grief becomes unbearable vulnerability and dread-laced longing: the sister she wanted to find is present everywhere and reachable nowhere, preserved only by the system Clara may have to destroy.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; the chapter's emotional force is revelation, isolation, sister-grief, and moral horror.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Continue directly from chapter 8's lower-drawer cliffhanger. Pay off C010, C011, and C015 through concrete visual evidence, then deliver R005 as the central chapter-9 truth: Eleanor dissolved herself into the forbidden records to preserve them and merged with an ancient bog parasite, making the black ink her preserved memory and physical mass. Keep Eleanor silent, scentless, visual-only, and never a conventional ghost. Include [ISOLATION] through absence only, with no romance and no male lead. Do not resolve the final moral choice yet; end on the two-path visual cliffhanger leading into the crisis aftermath.",
+      "carries_to_next": "Clara knows what Eleanor became and why the archive feeds on preservation, but she has not yet accepted destroying records; chapter 10 can push her into the crisis of whether to save the Eleanor-vessel or drown the observatory.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C010",
+          "C011",
+          "C015"
+        ],
+        "reveals": [
+          {
+            "id": "R005",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C002",
+              "C004",
+              "C006",
+              "C008",
+              "C010",
+              "C011"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Clara Vance",
+            "Eleanor Vance",
+            "The black ink / ancient bog parasite",
+            "The drowned observatory archive"
+          ],
+          "may_know": [
+            "Clara Vance: Clara learns the single central truth: Eleanor did not simply vanish or return as a conventional ghost",
+            "Clara Vance: Eleanor dissolved herself into the forbidden records to preserve them and merged with an ancient bog parasite",
+            "Clara Vance: The black ink is Eleanor's preserved memory and physical mass fused with that organism",
+            "Clara Vance: Clara now understands why the substance reacts to Eleanor's name, why records feed it, why it remains silent and scentless, and why saving the archive would mean feeding what remains of her sister.",
+            "Clara Vance: Clara must not know in chapter 1 that the ink is active and drawn toward records; she may only observe wrongness and rationalize it.",
+            "Clara Vance: Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+            "Clara Vance: Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "Eleanor Vance: The truth is revealed: Eleanor dissolved herself into the forbidden records to preserve them and merged with an ancient bog parasite",
+            "Eleanor Vance: She is not a separate speaking ghost and not a conventional corpse hidden elsewhere",
+            "Eleanor Vance: The black ink is her preserved memory and physical mass fused with the parasite, able to manifest only as silent, scentless stains across paper, glass, and water.",
+            "Eleanor Vance: The narrative must not confirm before chapter 9 that Eleanor became the ink. Earlier chapters may imply association through visual clues only.",
+            "The black ink / ancient bog parasite: The ink's true nature is fully revealed: it is Eleanor's preserved memory and physical mass merged with an ancient bog parasite",
+            "The black ink / ancient bog parasite: It obeys physical rules: paper becomes vascular roots, metal submerged in it oxidizes instantly and throws off metallic flecks of light, and sunlight freezes the roots into brittle charcoal that crumbles into ash.",
+            "The black ink / ancient bog parasite: Before chapter 2, the ink must not be confirmed as active.",
+            "The black ink / ancient bog parasite: Before chapter 6, the ink must not be confirmed to feed specifically on Clara's preservation of records.",
+            "The black ink / ancient bog parasite: Before chapter 9, the ink must not be confirmed as Eleanor merged with the ancient bog parasite.",
+            "The drowned observatory archive: The archive is understood as Eleanor's chosen vessel and the parasite's feeding structure",
+            "The drowned observatory archive: Saving it means preserving and feeding the Eleanor-parasite fusion",
+            "The drowned observatory archive: Destroying it means ending the physical structure that holds what remains of Eleanor.",
+            "The drowned observatory archive: Before chapter 6, the archive must not be fully understood as nourishment for the ink-root network.",
+            "The drowned observatory archive: Before chapter 9, the archive must not be fully understood as Eleanor's vessel."
+          ],
+          "must_not_know": [
+            "Clara Vance: Clara must not fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy.",
+            "Eleanor Vance: Eleanor must never gain a speaking role, scent-based presence, audible manifestation, or independent ghost form at any point.",
+            "The drowned observatory archive: Before chapter 12, the archive must not be safely neutralized or restored."
+          ],
+          "effective_milestone": 9
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 10,
+      "title": "The Peat Routes",
+      "slug": "the-peat-routes",
+      "one_line_summary": "Clara follows the deeper vascular routes first glimpsed beneath the observatory and discovers they connect the Eleanor-archive to peat-dark channels that could drown the feeding structure instead of preserving it.",
+      "beat_summary": "Open with the two black paths from chapter 9 dividing around Clara's boots, one clutching the Eleanor records and one descending beneath the floor. Pay off C012 by returning to the warped grate and submerged route from chapter 3: Clara now understands the black vascular lines are not random roots but conduits running from the observatory archive into peat-dark channels below the estate. She traces the route through drowned shelves, glass plates, and lower masonry while knowing the ink is Eleanor's preserved memory and physical mass fused with an ancient bog parasite. Plant C013 through a corroded flood-control diagram, sluice marker, or pressure-gate tally showing that the observatory can be deliberately sunk by opening the peat channels, though Clara records it as a structural fact and cannot yet accept it as her solution. [ISOLATION] The route offers no reunion and no counsel, only visual stains where Eleanor should have been a sister; Clara's dread and longing sharpen because the same path that could end the parasite would also drown what remains of Eleanor.",
+      "must_happen": [
+        "Continue directly from chapter 9: Clara stands before the two black paths, knowing the central truth about Eleanor and the ancient bog parasite but not yet able to choose destruction.",
+        "Pay off C012: Clara returns to the deep vascular routes first glimpsed beneath the grate in chapter 3 and realizes they are physical conduits between the archive, the lower observatory, and peat-dark channels under the estate.",
+        "Clara tests the route with sunlight, glass, and a loose scrap, confirming that exposed strands charcoal in light while the submerged channels remain active and fed by preserved records.",
+        "Plant C013: Clara finds a corroded flood-control diagram, sluice marker, or pressure-gate tally indicating that opening the peat channels would sink the observatory beneath the bog, but she treats it as dangerous structural information rather than a final plan.",
+        "Clara protects the diagram or marker despite understanding that preservation feeds the ink-root system, proving her boundary still holds after the central reveal.",
+        "[ISOLATION] Clara silently faces the route without any voice, scent, hand, ghost, helper, or witness; Eleanor exists only as stains across water, glass, paper, roots, and ash."
+      ],
+      "must_not": [
+        "Do not make Clara fully accept in chapter 10 that she will destroy written records and drown the observatory as an act of mercy.",
+        "Do not pay off C013 in chapter 10; the flood-control clue must remain planted for chapter 12.",
+        "Do not make the observatory safe, neutralized, restored, or structurally ended before chapter 12.",
+        "Do not let Eleanor speak, whisper, breathe, make sound, produce scent, appear as a ghost, or write a verbal message.",
+        "Do not introduce a male lead, male antagonist, romance line, doctor, caretaker, or new physical helper."
+      ],
+      "opens_with": "\"One path keeps her,\" Clara said, and the other black route opened under the floorboards.",
+      "cliffhanger": "When Clara sleeves the corroded flood-control diagram, the black route beneath the grate splits into the exact shape of the sluice marks, and the peat water below rises one inch without a sound.",
+      "signature_detail_hint": "A drowned ceramic sluice tile has numbers baked under its glaze, visible only when black water slides across them and leaves the white grooves untouched.",
+      "emotional_beat": "Clara's grief becomes a pressure between dread and longing: the route gives her a way to end Eleanor's suffering, but it also asks her to become the person who erases the last vessel of her sister.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; the chapter's charge is isolation, sister-grief, moral pressure, and body-as-archive horror.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Continue from chapter 9 without resetting: Clara knows Eleanor became the black ink-root archive through fusion with an ancient bog parasite, knows preservation feeds the system, and knows sunlight and metal rules. Pay off C012 by making the deeper routes under the observatory physically meaningful as conduits to peat channels. Plant C013 as a concrete flood-control or sluice clue for chapter 12, but do not let Clara accept drowning the observatory yet. Keep Eleanor silent, scentless, visual-only, and never a conventional ghost. Include [ISOLATION] through absence only. End on peat water rising beneath the sluice-shaped route.",
+      "carries_to_next": "Clara now knows the lower vascular routes connect the archive to peat channels and has preserved a flood-control clue that could sink the observatory, but she still cannot accept destroying the records or Eleanor's vessel.",
+      "narrative": {
+        "clues_plant": [
+          "C013"
+        ],
+        "clues_payoff": [
+          "C012"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Clara Vance",
+            "Eleanor Vance",
+            "The black ink / ancient bog parasite",
+            "The drowned observatory archive"
+          ],
+          "may_know": [
+            "Clara Vance: Clara learns the single central truth: Eleanor did not simply vanish or return as a conventional ghost",
+            "Clara Vance: Eleanor dissolved herself into the forbidden records to preserve them and merged with an ancient bog parasite",
+            "Clara Vance: The black ink is Eleanor's preserved memory and physical mass fused with that organism",
+            "Clara Vance: Clara now understands why the substance reacts to Eleanor's name, why records feed it, why it remains silent and scentless, and why saving the archive would mean feeding what remains of her sister.",
+            "Clara Vance: Clara must not know in chapter 1 that the ink is active and drawn toward records; she may only observe wrongness and rationalize it.",
+            "Clara Vance: Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+            "Clara Vance: Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "Eleanor Vance: The truth is revealed: Eleanor dissolved herself into the forbidden records to preserve them and merged with an ancient bog parasite",
+            "Eleanor Vance: She is not a separate speaking ghost and not a conventional corpse hidden elsewhere",
+            "Eleanor Vance: The black ink is her preserved memory and physical mass fused with the parasite, able to manifest only as silent, scentless stains across paper, glass, and water.",
+            "Eleanor Vance: The narrative must not confirm before chapter 9 that Eleanor became the ink. Earlier chapters may imply association through visual clues only.",
+            "The black ink / ancient bog parasite: The ink's true nature is fully revealed: it is Eleanor's preserved memory and physical mass merged with an ancient bog parasite",
+            "The black ink / ancient bog parasite: It obeys physical rules: paper becomes vascular roots, metal submerged in it oxidizes instantly and throws off metallic flecks of light, and sunlight freezes the roots into brittle charcoal that crumbles into ash.",
+            "The black ink / ancient bog parasite: Before chapter 2, the ink must not be confirmed as active.",
+            "The black ink / ancient bog parasite: Before chapter 6, the ink must not be confirmed to feed specifically on Clara's preservation of records.",
+            "The black ink / ancient bog parasite: Before chapter 9, the ink must not be confirmed as Eleanor merged with the ancient bog parasite.",
+            "The drowned observatory archive: The archive is understood as Eleanor's chosen vessel and the parasite's feeding structure",
+            "The drowned observatory archive: Saving it means preserving and feeding the Eleanor-parasite fusion",
+            "The drowned observatory archive: Destroying it means ending the physical structure that holds what remains of Eleanor.",
+            "The drowned observatory archive: Before chapter 6, the archive must not be fully understood as nourishment for the ink-root network.",
+            "The drowned observatory archive: Before chapter 9, the archive must not be fully understood as Eleanor's vessel."
+          ],
+          "must_not_know": [
+            "Clara Vance: Clara must not fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy.",
+            "Eleanor Vance: Eleanor must never gain a speaking role, scent-based presence, audible manifestation, or independent ghost form at any point.",
+            "The drowned observatory archive: Before chapter 12, the archive must not be safely neutralized or restored."
+          ],
+          "effective_milestone": 9
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 11,
+      "title": "The Mercy Catalogue",
+      "slug": "the-mercy-catalogue",
+      "one_line_summary": "Clara tries to make a final catalogue that would save Eleanor's records without feeding the parasite, but every careful entry strengthens the archive and plants the mark that will follow her out.",
+      "beat_summary": "Open with Clara crossing out a catalogue number and watching the black ink restore the shape of the entry through her own hand. She attempts a compromise after chapter 10: preserve only an index, only names, only evidence, only enough of Eleanor to prove she existed, but every selective act of preservation feeds the roots and thickens the lower channels. Plant C014 when the roots climb over Clara's hands in a stable vein pattern that matches the flood-control diagram and does not wash off, foreshadowing the permanent marks that will remain after the observatory is drowned. Clara still cannot fully accept destruction, so she drafts a mercy catalogue of what would be lost, placing Eleanor's records beside neutral records and seeing the parasite favor both preservation and sister-linked material. [ISOLATION] The emotional pressure is absolute absence: no one absolves Clara, Eleanor remains visual only, and every careful label becomes a form of feeding.",
+      "must_happen": [
+        "Clara attempts a non-destructive compromise by making a reduced index, rescue list, or mercy catalogue that would preserve the evidence without saving the full infected archive.",
+        "Show that even selective preservation feeds the ink-root system: copied names, sleeved fragments, and ordered evidence draw black branching just as earlier protected records did.",
+        "Clara revisits the C013 flood-control clue and studies how opening the peat channels could drown the observatory, but she frames it as an emergency possibility rather than a decision she has accepted.",
+        "Plant C014: black roots climb over Clara's hands and leave a stable vein pattern matching the sluice diagram or lower-route map, a mark that resists water, ash, and wiping but is not yet understood as permanent.",
+        "Clara uses sunlight to burn exposed roots from the mercy catalogue, but she saves the pages themselves and thereby worsens the branching around Eleanor-linked material.",
+        "[ISOLATION] Clara has no voice of forgiveness, no hand to stop her, no scent, no ghost, and no helper; Eleanor's only presence is the black visual pattern that stains the documents Clara cannot abandon."
+      ],
+      "must_not": [
+        "Do not make Clara fully accept before chapter 12 that she will destroy the archive and drown the observatory.",
+        "Do not pay off C013 or C014 in chapter 11; both must remain pending for chapter 12.",
+        "Do not neutralize, restore, or safely close the observatory in chapter 11.",
+        "Do not let Eleanor speak, whisper, breathe, make sound, produce scent, appear as a ghost, or write a verbal message.",
+        "Do not introduce a male lead, male antagonist, romance line, doctor, caretaker, or new physical helper."
+      ],
+      "opens_with": "\"If I save only the index, I save less of it,\" Clara said, and the crossed-out number rose black through her skin.",
+      "cliffhanger": "The mercy catalogue buckles open to a blank final page, and the vein pattern on Clara's hands prints itself there in black, exactly over the sluice route she has refused to choose.",
+      "signature_detail_hint": "A stack of blotting papers dries into thin translucent layers, and between them black capillaries preserve the shape of Clara's fingerprints without leaving ordinary ink on the surface.",
+      "emotional_beat": "Clara's vulnerability turns into trapped tenderness and dread, because every smaller act of preservation feels like a more intimate betrayal of Eleanor and a quieter refusal to let her end.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; the chapter is driven by isolation, grief, moral dread, and Clara's failed attempt to preserve without feeding.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Continue from chapter 10: Clara knows the peat routes and has C013 planted, but she has not accepted drowning the observatory. Build the chapter around her failed compromise, the mercy catalogue, and the horror that even careful selective preservation feeds the Eleanor-parasite archive. Plant C014 clearly as black vein-marks on Clara's hands matching the sluice or route pattern, but do not pay it off as permanent until chapter 12. Keep all manifestations silent, scentless, and visual only. Include [ISOLATION] through absence only. End on Clara's hand-pattern appearing over the unchosen sluice route.",
+      "carries_to_next": "Clara has exhausted compromise, carries a planted hand-mark clue, and faces the final choice with C013 and C014 ready to pay off when she opens the peat channels and drowns the observatory.",
+      "narrative": {
+        "clues_plant": [
+          "C014"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Clara Vance",
+            "Eleanor Vance",
+            "The black ink / ancient bog parasite",
+            "The drowned observatory archive"
+          ],
+          "may_know": [
+            "Clara Vance: Clara learns the single central truth: Eleanor did not simply vanish or return as a conventional ghost",
+            "Clara Vance: Eleanor dissolved herself into the forbidden records to preserve them and merged with an ancient bog parasite",
+            "Clara Vance: The black ink is Eleanor's preserved memory and physical mass fused with that organism",
+            "Clara Vance: Clara now understands why the substance reacts to Eleanor's name, why records feed it, why it remains silent and scentless, and why saving the archive would mean feeding what remains of her sister.",
+            "Clara Vance: Clara must not know in chapter 1 that the ink is active and drawn toward records; she may only observe wrongness and rationalize it.",
+            "Clara Vance: Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+            "Clara Vance: Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "Eleanor Vance: The truth is revealed: Eleanor dissolved herself into the forbidden records to preserve them and merged with an ancient bog parasite",
+            "Eleanor Vance: She is not a separate speaking ghost and not a conventional corpse hidden elsewhere",
+            "Eleanor Vance: The black ink is her preserved memory and physical mass fused with the parasite, able to manifest only as silent, scentless stains across paper, glass, and water.",
+            "Eleanor Vance: The narrative must not confirm before chapter 9 that Eleanor became the ink. Earlier chapters may imply association through visual clues only.",
+            "The black ink / ancient bog parasite: The ink's true nature is fully revealed: it is Eleanor's preserved memory and physical mass merged with an ancient bog parasite",
+            "The black ink / ancient bog parasite: It obeys physical rules: paper becomes vascular roots, metal submerged in it oxidizes instantly and throws off metallic flecks of light, and sunlight freezes the roots into brittle charcoal that crumbles into ash.",
+            "The black ink / ancient bog parasite: Before chapter 2, the ink must not be confirmed as active.",
+            "The black ink / ancient bog parasite: Before chapter 6, the ink must not be confirmed to feed specifically on Clara's preservation of records.",
+            "The black ink / ancient bog parasite: Before chapter 9, the ink must not be confirmed as Eleanor merged with the ancient bog parasite.",
+            "The drowned observatory archive: The archive is understood as Eleanor's chosen vessel and the parasite's feeding structure",
+            "The drowned observatory archive: Saving it means preserving and feeding the Eleanor-parasite fusion",
+            "The drowned observatory archive: Destroying it means ending the physical structure that holds what remains of Eleanor.",
+            "The drowned observatory archive: Before chapter 6, the archive must not be fully understood as nourishment for the ink-root network.",
+            "The drowned observatory archive: Before chapter 9, the archive must not be fully understood as Eleanor's vessel."
+          ],
+          "must_not_know": [
+            "Clara Vance: Clara must not fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy.",
+            "Eleanor Vance: Eleanor must never gain a speaking role, scent-based presence, audible manifestation, or independent ghost form at any point.",
+            "The drowned observatory archive: Before chapter 12, the archive must not be safely neutralized or restored."
+          ],
+          "effective_milestone": 9
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 12,
+      "title": "The Drowned Observatory",
+      "slug": "the-drowned-observatory",
+      "one_line_summary": "Clara breaks her preservation boundary, opens the peat channels, drowns the observatory and its feeding archive, and escapes with permanent black vein-marks etched into her hands.",
+      "beat_summary": "Open with Clara tearing the mercy catalogue from its binding before the roots can feed on it again, making the first true break in her lifelong boundary. Pay off C013 when she uses the flood-control diagram, sluice tile, and lower-route knowledge to open the peat channels and sink the observatory beneath the bog. Pay off C014 when the black vein pattern on Clara's hands does not wash away as the archive drowns; it darkens, seals into her skin, and remains after the main feeding structure collapses. Reveal R006 fully: Clara drowns the observatory beneath the peat bog, ending the archive's feeding structure, but black vein-marks remain permanently etched into her hands. The chapter must honor the book1 ending: Clara chooses destruction as mercy, not restoration, and the dread lingers through her marked body. [ISOLATION] There is no final speech, reunion, ghost, scent, or romantic comfort; Eleanor's last presence is visual, silent, and swallowed by peat-dark water and drifting ash.",
+      "must_happen": [
+        "Clara makes the final moral choice and breaks her boundary by damaging, sacrificing, or abandoning written records so the archive can stop feeding the Eleanor-parasite fusion.",
+        "Pay off C013: Clara uses the planted flood-control diagram, sluice marker, pressure-gate tally, or peat-route knowledge to open the channels and deliberately drown the observatory beneath the peat bog.",
+        "Pay off C014: the black vein pattern on Clara's hands survives water, ash, and the collapse of the root network, proving the marks are permanent rather than surface stains.",
+        "Reveal R006 clearly: Clara drowns the observatory beneath the peat bog, ending the archive's feeding structure, but black vein-marks remain permanently etched into her hands.",
+        "Show the observatory's records, glass plates, shelves, and Eleanor-linked slips being swallowed by peat water and black ash without turning Eleanor into a speaking ghost or conventional apparition.",
+        "[ISOLATION] Clara leaves alone with no voice, no scent, no hand to take, no helper, and no absolution; what remains of Eleanor is visual absence and the marks on Clara's body."
+      ],
+      "must_not": [
+        "Do not let Eleanor speak, whisper, breathe, make sound, produce scent, appear as a ghost, or deliver a final message.",
+        "Do not add romance, a male lead, male antagonist, doctor, caretaker, rescuer, or new physical helper in the finale.",
+        "Do not make the ending cleanly restorative, triumphant, or safe; the central threat is ended, but the dread remains through Clara's permanent marks.",
+        "Do not imply Clara preserves a secret full copy of the infected archive that keeps the Book 1 feeding structure intact.",
+        "Do not contradict the book1 ending: Clara must choose to drown the observatory beneath the peat bog and walk away with black vein-marks etched into her hands."
+      ],
+      "opens_with": "\"No more entries,\" Clara said, and tore the catalogue before the roots could take another name.",
+      "cliffhanger": "On the bog road beyond the drowned observatory, Clara opens her hands to the pale morning and the black veins under her skin branch toward a clean sheet in her satchel.",
+      "signature_detail_hint": "As peat water floods the dome, the old star apertures reflect downward like black coins, and each reflection goes out one by one as the archive sinks.",
+      "emotional_beat": "Clara's final tenderness is inseparable from dread: she chooses mercy through erasure, accepts the loneliness of that act, and carries Eleanor's absence as a permanent mark rather than a saved record.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; the finale's emotional force is sacrifice, isolation, sister-grief, and lingering body horror.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Deliver the Book 1 ending exactly: Clara understands what Eleanor became, chooses to drown the observatory beneath the peat bog, breaks her preservation boundary, and walks away with permanent black vein-marks etched into her hands. Pay off C013 through the flood-control or sluice mechanism and C014 through the hand-marks becoming permanent. Reveal R006 clearly. Keep Eleanor silent, scentless, visual-only, and never a conventional ghost. Include [ISOLATION] through absence only. End on the specific lingering dread of Clara's marked hands reacting near a clean sheet after the observatory is drowned.",
+      "carries_to_next": "Book 1 closes with the observatory drowned and the main feeding archive ended, but Clara's permanent black vein-marks create the Book 2 hook that the parasite's routes may extend beyond the sunken estate.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C013",
+          "C014"
+        ],
+        "reveals": [
+          {
+            "id": "R006",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C012",
+              "C013",
+              "C014"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Clara Vance",
+            "Eleanor Vance",
+            "The black ink / ancient bog parasite",
+            "The drowned observatory archive"
+          ],
+          "may_know": [
+            "Clara Vance: Clara has made the final choice",
+            "Clara Vance: She breaks her lifelong boundary and chooses to drown the observatory beneath the peat bog, destroying the archive's feeding structure rather than preserving it",
+            "Clara Vance: She understands that this kills or ends what remains of Eleanor within the observatory network",
+            "Clara Vance: The case is closed, but Clara walks away with permanent black vein-marks etched into her hands, knowing the dread has marked her body even though the central mystery is solved.",
+            "Clara Vance: Clara must not know in chapter 1 that the ink is active and drawn toward records; she may only observe wrongness and rationalize it.",
+            "Clara Vance: Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+            "Clara Vance: Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "Clara Vance: Clara must not fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy.",
+            "Eleanor Vance: Eleanor's archive-body is drowned with the observatory when Clara chooses destruction over preservation",
+            "Eleanor Vance: What remains of Eleanor within the feeding network is ended or rendered unreachable",
+            "Eleanor Vance: The emotional horror is that Clara's mercy looks like erasure",
+            "Eleanor Vance: Any lingering trace must remain visual and nonverbal, reflected in Clara's black vein-marked hands rather than a reopened mystery.",
+            "Eleanor Vance: The narrative must not confirm before chapter 9 that Eleanor became the ink. Earlier chapters may imply association through visual clues only.",
+            "Eleanor Vance: Eleanor must never gain a speaking role, scent-based presence, audible manifestation, or independent ghost form at any point.",
+            "The black ink / ancient bog parasite: The observatory's feeding network is drowned beneath the peat bog after Clara chooses destruction",
+            "The black ink / ancient bog parasite: The main ink-root structure is ended as the central threat of Book 1",
+            "The black ink / ancient bog parasite: Lingering dread survives through Clara's permanent black vein-marks, but this does not create a second answer to the mystery.",
+            "The black ink / ancient bog parasite: Before chapter 2, the ink must not be confirmed as active.",
+            "The black ink / ancient bog parasite: Before chapter 6, the ink must not be confirmed to feed specifically on Clara's preservation of records.",
+            "The black ink / ancient bog parasite: Before chapter 9, the ink must not be confirmed as Eleanor merged with the ancient bog parasite.",
+            "The drowned observatory archive: The archive is drowned beneath the peat bog",
+            "The drowned observatory archive: Clara rejects preservation as the highest good and destroys the observatory's records to stop feeding the entity",
+            "The drowned observatory archive: The archive thread closes with dread rather than restoration.",
+            "The drowned observatory archive: Before chapter 6, the archive must not be fully understood as nourishment for the ink-root network.",
+            "The drowned observatory archive: Before chapter 9, the archive must not be fully understood as Eleanor's vessel.",
+            "The drowned observatory archive: Before chapter 12, the archive must not be safely neutralized or restored."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 12
+        },
+        "clue_beats": {}
+      }
+    }
+  ],
+  "total_chapters": 12,
+  "title": "The Black Arteries",
+  "status": "draft",
+  "created_at": "2026-07-13T13:20:00.551280+00:00"
+}

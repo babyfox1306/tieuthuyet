@@ -1,0 +1,209 @@
+{
+  "act": [
+    7,
+    9
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Lower Discharge",
+      "slug": "the-lower-discharge",
+      "one_line_summary": "Elara learned Tobias's fear of cured patients was justified when she found proof that discharge means removal into a deeper transformation, and Tobias left her a coded salt warning before vanishing from the ward.",
+      "beat_summary": "Open with Tobias shoving Elara behind a linen press as a cured patient's stretcher passes downward with black-threaded skin exposed under the sheet. Pay off C005 and C009 by letting Elara witness enough of the lower discharge route to understand Tobias feared cure because patients disappear into an advanced transformation process rather than leave the sanatorium healed. Tobias gives her a frantic charcoal page filled with salt crystals drawn over branching black vessels, planting C012 without yet explaining it. Finch and Cora close ranks with soft clinical language and locked doors, while Elara's altered senses make the black lines in the removed patient's body seem to answer her own wrists. [ISOLATION] Tobias can warn but not stay, Beatrice's shimmer is confined to silent light, Marta is unreachable through honest letters, and no one stands between Elara and the treatment schedule Finch is tightening.",
+      "must_happen": [
+        "Pay off C005: Tobias admits, in a rushed whisper or through a desperate charcoal sequence, that cured patients do not leave safely and that his fear has always been about disappearance into the clinic's transformation process.",
+        "Pay off C009: Elara sees the cured patient's removal continue below the ordinary discharge route, with black vascular threading advanced enough to prove the patient is being processed rather than released.",
+        "Plant C012: Tobias gives Elara a coded charcoal drawing where jagged alpine salt crystals interrupt black branching vessels, but he is stopped before he can explain exactly how to use it.",
+        "Finch reframes the lower discharge as a necessary rest phase and turns Elara's alarm into evidence that her next venom dose must be supervised more closely.",
+        "Cora seals the lower corridor with practiced precision and reacts more strongly to Tobias's drawing than to Elara's questions, making the salt symbol feel dangerous.",
+        "Elara's body horror escalates when the black lines beneath her wrists angle toward the lower corridor and then spasm away from the salt shapes in Tobias's drawing.",
+        "[ISOLATION] Tobias is removed from Elara's reach by staff before he can become a safe ally, leaving her with a coded page, Beatrice's distant shimmer, and no human protection."
+      ],
+      "must_not": [
+        "Do not reveal that the venom is living biomass from an ancient sentient subterranean organism.",
+        "Do not confirm Finch's transformed chest or fully explain his grey skin and cold tea.",
+        "Do not pay off C012 until chapter 8; keep Tobias's salt code planted but not decoded.",
+        "Do not confirm Tobias's black root drawings as anatomically accurate records until chapter 9.",
+        "Do not create romance, attraction, seduction, or caretaker intimacy between Elara and Finch, Tobias, or anyone else."
+      ],
+      "opens_with": "\"Do not let them call you cured,\" Tobias hissed, and dragged Elara behind the linen press as the stretcher wheels started down.",
+      "cliffhanger": "At the locked lower stair, Tobias's charcoal page slips under Elara's sleeve, and the drawn salt crystals glow white against a black vessel pattern that exactly matches the veins climbing her arm.",
+      "signature_detail_hint": "The lower corridor keys hang from a strip of surgical gauze stiffened with old salt, each key labeled by a drilled bone-white bead instead of a number.",
+      "emotional_beat": "Fear sharpens into vulnerable urgency as Elara realizes the one patient who tried to warn her may be taken next, and her own body is already reading the path he feared.",
+      "spice": 1,
+      "spice_note": "Keep intensity psychological, bodily, and coercive rather than sexual; the chapter should contain dread, vulnerability, and isolation with no romance or erotic framing.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Continue from Elara's salt discovery and growing suspicion; pay off C005 and C009 through concrete lower-discharge evidence; plant C012 with Tobias's coded salt drawing; keep the organism truth withheld; end on the charcoal salt code matching Elara's own black vascular pattern.",
+      "carries_to_next": "Elara has proof that cure means disappearance, Tobias has been cut off from her, and his coded salt drawing pushes her toward decoding the restricted alpine salt before Finch's stronger treatment.",
+      "narrative": {
+        "clues_plant": [
+          "C012"
+        ],
+        "clues_payoff": [
+          "C005",
+          "C009"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "clue_beats": {
+          "C005": "Tobias's warning becomes concrete when he connects the word cured to patients being taken below, not discharged.",
+          "C009": "The lower route and the patient's advanced black threading show that removal is part of transformation, not recovery.",
+          "C012": "Tobias's charcoal code shows salt crystals breaking black vessels, but Elara cannot decode its practical meaning yet."
+        }
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Salt Room Ledger",
+      "slug": "the-salt-room-ledger",
+      "one_line_summary": "Elara decoded Tobias's salt warning, proved alpine salt can halt the black spread, and found clinic records mapping human nerves like tunnels while Finch's body began to register as a hidden electrical pattern.",
+      "beat_summary": "Open with Elara grinding stolen alpine salt into her wrist until the black threads recoil and her old pain flashes back like a blade. Pay off C010, C011, and C012 by making her connect the falsified kitchen salt, the recoil reaction, and Tobias's coded drawing into one usable fact: the alpine salt can interrupt or halt the black vascular spread, though not reverse what has already changed. Beatrice's shimmer guides Elara to a restricted ledger or salt room record where anatomical diagrams overlay human nerves with lower tunnel maps, planting C016. During an encounter with Finch, Elara's altered senses catch a faint current-like pattern under his grey stillness, planting C015 without confirming his full transformation. She also glimpses Cora hiding early black threading beneath a cuff or collar, planting C018 while withholding final confirmation. [ISOLATION] Every discovery gives Elara leverage but no comfort: salt brings pain back, Beatrice cannot explain, Tobias is gone, and Finch now knows she is learning too fast.",
+      "must_happen": [
+        "Pay off C010: Elara confirms the falsified alpine salt inventory matters because the salt is controlled as an inhibitor, not ordinary kitchen stock.",
+        "Pay off C011: Salt applied to Elara's wrist, ash sample, or contaminated tool makes the black lines recoil and briefly restores sharp human pain, proving it interrupts the conversion.",
+        "Pay off C012: Elara decodes Tobias's charcoal salt symbols as instructions or evidence that alpine salt can halt the black vascular spread.",
+        "Plant C015: In Finch's presence, Elara's altered perception catches a faint bio-electrical current pattern beneath his grey skin or through his still chest posture, but she does not yet know what she is seeing.",
+        "Plant C016: Elara finds a clinic ledger, diagram, or salt-room chart showing lower tunnel routes overlaid with diagrams of nerves and blood vessels, proving the clinic maps the same branching pattern onto human bodies.",
+        "Plant C018: Elara glimpses Cora conceal early black vascular threading at her wrist, throat, or shoulder, but the moment is partial enough that Elara cannot prove the full extent of Cora's conversion.",
+        "Beatrice's shimmer silently directs Elara through visual flashes only, never speaking, touching, smelling, writing words, or appearing as a body.",
+        "[ISOLATION] The salt gives Elara a tool but also returns enough pain to leave her shaking alone, with no safe person to help her decide how much of herself to hurt in order to remain herself."
+      ],
+      "must_not": [
+        "Do not reveal the full central answer that the venom is living biomass from an ancient sentient subterranean organism; hold that for chapter 9.",
+        "Do not reveal Finch's transformed chest or state with certainty that he is already transformed.",
+        "Do not confirm Cora's full partial conversion as an embodied escape obstacle; plant only the hidden threading for chapter 12 payoff.",
+        "Do not make the salt reverse Elara's transformation; it may halt or interrupt, not restore original tissue.",
+        "Do not introduce romance, attraction, seduction, or any love-interest dynamic."
+      ],
+      "opens_with": "Elara crushed the stolen salt into her wrist, and the black veins screamed without making a sound.",
+      "cliffhanger": "Behind Finch's calm reflection in the salt-room glass, Elara sees a faint grid of current moving under his grey skin, and every line in the ledger points toward the sealed mineral rooms below.",
+      "signature_detail_hint": "The salt-room ledger uses transparent vellum overlays: one sheet for mountain tunnels, one for human nerves, and one stained with black thumbprints that line up too perfectly with both.",
+      "emotional_beat": "Agency arrives braided with vulnerability because the only thing that can slow the change also brings pain back, forcing Elara to choose suffering over surrender.",
+      "spice": 1,
+      "spice_note": "Keep the chapter non-explicit and non-romantic; intensity should come from pain, fear, bodily autonomy, and psychological pressure inside a medical gothic setting.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Pay off C010, C011, and C012 by proving alpine salt halts the black spread; plant C015, C016, and C018 through visual evidence only; keep Beatrice's communication strictly silent and visual; do not reveal the full organism truth until chapter 9; end on Finch's hidden current pattern and the ledger pointing below.",
+      "carries_to_next": "Elara now knows salt can interrupt the conversion, has seen records linking body maps to lower tunnels, has glimpsed possible alteration in Cora, and has begun perceiving something unnatural inside Finch that will break open the central truth.",
+      "narrative": {
+        "clues_plant": [
+          "C015",
+          "C016",
+          "C018"
+        ],
+        "clues_payoff": [
+          "C010",
+          "C011",
+          "C012"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "clue_beats": {
+          "C010": "The kitchen inventory is exposed as a cover for controlled medicinal salt stock.",
+          "C011": "The black threads recoil from salt because the salt interrupts their advance.",
+          "C012": "Tobias's salt drawing becomes a usable warning about how to halt the spread.",
+          "C015": "Elara's altered senses begin to read a current-like structure inside Finch without understanding it yet.",
+          "C016": "The clinic's records show nerve-and-vessel diagrams matching lower tunnel maps.",
+          "C018": "Cora hides a brief glimpse of black vascular threading, suggesting compromise without final confirmation."
+        }
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "What the Venom Is",
+      "slug": "what-the-venom-is",
+      "one_line_summary": "Elara discovered the venom is living biomass from an ancient subterranean organism, confirmed Finch is already transformed, and understood Tobias's drawings, Finch's cold body, and the clinic's nerve maps as one single horror.",
+      "beat_summary": "Open with Finch catching Elara at the sealed mineral-room door and calmly opening it for her instead of dragging her away. In the lower research chamber, Elara's accumulated clues converge: pay off C002 when she sees the so-called venom moving as viable living biomass in the old mineral apparatus; pay off C007 when Tobias's charcoal anatomy matches preserved records of nerves and blood vessels being replaced; pay off C013 and C014 when Finch reveals enough of his grey transformed chest and altered cold body to prove he is not merely ill; pay off C015 when Elara recognizes the current pattern inside him as the organism's bio-electrical network; and pay off C016 when the clinic's body maps and tunnel diagrams show the subterranean source. The central truth lands in Elara's limited POV: the venom is ancient sentient subterranean biomass that replaces human nervous and circulatory systems to fold patients into a collective consciousness, while salt can halt but not reverse the change. [ISOLATION] Finch offers painless unity as medical salvation, Beatrice's shimmer trembles silently at the chamber edge, Tobias is absent except through his accurate drawings, and Elara must reject comfort without any rescue.",
+      "must_happen": [
+        "Pay off C002: Elara sees the venom outside a syringe in the lower mineral room and understands it is living biomass, not conventional medicine.",
+        "Pay off C007: Tobias's charcoal drawings are confirmed as accurate records of the organism replacing nerves, veins, spine, and chest structures rather than disturbed fantasies.",
+        "Pay off C013: Finch's body is revealed as already remade into grey transformed tissue, including a chest mass threaded with black vascular structures that Elara sees directly.",
+        "Pay off C014: Finch's cold tea, lack of ordinary warmth response, and altered taste become evidence that his body no longer functions like a human body.",
+        "Pay off C015: Elara recognizes the current-like grid she sensed in Finch as the organism's bio-electrical network moving through his transformed tissue.",
+        "Pay off C016: The clinic's diagrams and lower mineral-room records show that the subterranean organism maps itself onto human nerves and blood vessels.",
+        "Deliver the central chapter 9 reveal in Elara's witnessed and inferred POV: the venom is viable biomass from an ancient sentient subterranean organism that replaces human nervous and circulatory systems to build a collective consciousness.",
+        "Finch explains or demonstrates the horror through calm clinical omissions and partial admissions, framing assimilation as relief from pain rather than as consentless destruction.",
+        "Elara understands alpine salt can halt the change but cannot restore tissue already replaced, making escape urgent and incomplete.",
+        "[ISOLATION] Elara faces the truth without romance, rescue, or comfort: Finch is antagonist and host, Beatrice remains only silent shimmer, and Tobias can help only through the drawings he left behind."
+      ],
+      "must_not": [
+        "Do not frame Finch as romantic, seductive, protective, or a caretaker love interest; his intimacy is coercive medical horror.",
+        "Do not let Beatrice speak, touch, smell, write words, or appear as a full ghostly body even after the reveal.",
+        "Do not fully confirm Cora as the final embodied obstacle or reveal the full extent of her partial conversion before chapter 12.",
+        "Do not make the salt reverse Elara's transformation or restore her original body.",
+        "Do not show the final book ending image of Elara escaping into the mountains with Tobias's sketchbook and a vial of venom."
+      ],
+      "opens_with": "\"You wanted the door beneath the mountain,\" Finch said, and unlocked it before Elara could run.",
+      "cliffhanger": "Finch lifts the mineral-room lamp, and in its white glare Elara sees the black network in his chest pulse once as the same pulse answers from beneath her own ribs.",
+      "signature_detail_hint": "The oldest venom vessel is a blown-glass retort clouded with black internal veining, sealed by a salt-crusted cork pierced with a tarnished medical needle instead of a stopper.",
+      "emotional_beat": "Revelation becomes a brutal vulnerability: Finch offers painless belonging at the exact moment Elara understands that relief would cost her body, her solitude, and the last private borders of herself.",
+      "spice": 1,
+      "spice_note": "Keep all intensity psychological, gothic, and bodily; no sexual content, no romance, and no eroticization of Finch's coercive authority or Elara's medical vulnerability.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Stage the chapter in the lower mineral rooms and deliver the fixed central reveal through witnessed evidence, not omniscient exposition. Pay off C002, C007, C013, C014, C015, and C016 clearly; confirm Finch as transformed antagonist; connect venom, black threads, Tobias's drawings, patient disappearances, Beatrice's shimmer, sensory changes, and salt into one answer; end on Finch's chest pulse answering from Elara's ribs.",
+      "carries_to_next": "Elara now knows the central truth, knows Finch is a transformed host, knows salt can halt but not reverse her conversion, and must move from investigation into crisis survival before the clinic forces the final stage.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C002",
+          "C007",
+          "C013",
+          "C014",
+          "C015",
+          "C016"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005",
+          "T006",
+          "T007",
+          "T008",
+          "T009",
+          "T010",
+          "T011",
+          "T012"
+        ],
+        "clue_beats": {
+          "C002": "The venom is seen behaving as living biomass in the lower mineral apparatus.",
+          "C007": "Tobias's drawings match medical evidence of nervous and circulatory replacement.",
+          "C013": "Finch's grey transformed chest proves his body has already been remade.",
+          "C014": "His cold tea and altered warmth response are reinterpreted as symptoms of a nonhumanized body.",
+          "C015": "Elara identifies the current pattern inside Finch as part of the organism's network.",
+          "C016": "Clinic maps and diagrams confirm the organism's branching pattern spans both mountain tunnels and human anatomy."
+        }
+      }
+    }
+  ]
+}

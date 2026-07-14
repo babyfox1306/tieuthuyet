@@ -1,0 +1,13 @@
+characters:
+  female_lead:
+    canonical: Clara Vance
+    allowed_aliases:
+    - Clara
+    forbidden_aliases: []
+  male_lead:
+    canonical: No male lead exists
+    allowed_aliases:
+    - 'No'
+    forbidden_aliases: []
+pov_mode: third_person_limited
+spice_max: 1

@@ -1,0 +1,79 @@
+{
+  "word_count": 1752,
+  "target_language": "en",
+  "markdown": [
+    "*C001. Pressure-plate readings. 1889–1892.*",
+    "*C*",
+    "*0*",
+    "*1*",
+    "*C003. Seismograph traces. 1892–1894.*",
+    "*C005. C007. C009.*",
+    "*C009*",
+    "*Eleanor, 1897*"
+  ],
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 15,
+        "snippet": "*C001. Pressure-plate readings. 1889–1892.*"
+      },
+      {
+        "line": 23,
+        "snippet": "*C*"
+      },
+      {
+        "line": 23,
+        "snippet": "*0*"
+      },
+      {
+        "line": 23,
+        "snippet": "*1*"
+      },
+      {
+        "line": 31,
+        "snippet": "*C003. Seismograph traces. 1892–1894.*"
+      },
+      {
+        "line": 33,
+        "snippet": "*C005. C007. C009.*"
+      },
+      {
+        "line": 35,
+        "snippet": "*C009*"
+      },
+      {
+        "line": 39,
+        "snippet": "*Eleanor, 1897*"
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*C001. Pressure-plate readings. 1889–1892.*",
+        "*C*",
+        "*0*",
+        "*1*",
+        "*C003. Seismograph traces. 1892–1894.*",
+        "*C005. C007. C009.*",
+        "*C009*",
+        "*Eleanor, 1897*"
+      ]
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 1,
+    "max_content_retries": 2,
+    "short_expands": 1,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}

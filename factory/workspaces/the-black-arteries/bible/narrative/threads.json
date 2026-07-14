@@ -1,0 +1,126 @@
+{
+  "description": "Thread map for Book 1 of The Black Arteries. The story is locked to Clara Vance's third-limited POV, contains no romance thread, no male lead, no invented male antagonist, and maintains a single central mystery answer: the black ink is Eleanor Vance's preserved memory and physical mass merged with an ancient bog parasite. All threads support slow atmospheric gothic dread, visual chapter-end cliffhangers, and concrete mystery payoffs every 2–3 chapters.",
+  "threads": [
+    {
+      "id": "T001",
+      "name": "The Drowned Observatory Catalogue",
+      "opened_chapter": 1,
+      "must_close_by": 12,
+      "status": "closed_in_book1",
+      "book1_resolution": "Clara's assignment to catalogue the flooded Victorian observatory becomes impossible once she understands that preserving the records feeds the ink-entity. In the final chapters, she abandons the catalogue as a sacred duty and chooses to drown the observatory beneath the peat bog.",
+      "book2_promise": "No active catalogue thread remains, but Clara's black vein-marked hands imply that written records may still react to what survived inside her.",
+      "book1_payoff": "The practical archival job becomes the moral engine of the ending: every saved record strengthens what Eleanor has become, and every destroyed record damages what remains of her sister.",
+      "note": "Assumption: Clara was formally hired or summoned to catalogue the estate records, but the directive does not require naming an employer."
+    },
+    {
+      "id": "T002",
+      "name": "Clara's Boundary: Never Destroy a Written Record",
+      "opened_chapter": 1,
+      "must_payoff_by": 12,
+      "status": "closed_in_book1",
+      "book1_resolution": "Clara breaks the central boundary of her life as an archivist. After chapter 9 reveals the ink's true nature, chapters 10–12 force her to accept that preservation is no longer neutral. She destroys and drowns the archive to stop feeding Eleanor and the parasite.",
+      "book2_promise": "The psychological wound remains: Clara survived by doing the one thing she believed made her monstrous. Future dread can arise from whether the act freed Eleanor or merely transferred the burden to Clara.",
+      "book1_payoff": "Her final choice provides the emotional resolution of Book 1: she chooses mercy over preservation, even though mercy looks like erasure.",
+      "note": "This is Clara's primary internal thread and must stay within her locked POV."
+    },
+    {
+      "id": "T003",
+      "name": "The Black Ink Spreading Through Water, Paper, and Glass",
+      "opened_chapter": 1,
+      "must_close_by": 9,
+      "status": "answered_in_book1",
+      "book1_resolution": "The apparent ink rot is revealed in chapter 9 to be Eleanor Vance's preserved memory and physical mass merged with an ancient bog parasite. It is not symbolic decay, ordinary mold, or a haunting with multiple causes.",
+      "book2_promise": "The main answer is closed, but the permanent vein-marks in Clara's hands leave a lingering question about whether contact with the ink can preserve fragments outside the drowned observatory.",
+      "book1_payoff": "Readers receive the single canonical answer to the central mystery in chapter 9, satisfying the promised reveal cadence.",
+      "note": "Eleanor manifests only as a stain: black ink branching across paper, glass, or water. She never speaks and has no scent."
+    },
+    {
+      "id": "T004",
+      "name": "Eleanor's Silent Presence",
+      "opened_chapter": 2,
+      "must_payoff_by": 9,
+      "status": "answered_in_book1",
+      "book1_resolution": "Clara realizes that the ink's silent patterns, repeated branching, and selective movement around Eleanor-linked records are not messages spoken by a ghost but the behavior of Eleanor's preserved memory inside the parasite.",
+      "book2_promise": "No conversational ghost thread continues. Any lingering Eleanor remnant must remain visual, silent, and scentless if it appears again.",
+      "book1_payoff": "The sister mystery gains emotional force without violating the rules: Eleanor is present, but only as a visual stain that reacts through surfaces.",
+      "note": "The story must never allow Eleanor to produce sound, dialogue, whispering, music, breath, perfume, rot-smell, or any scent-based manifestation."
+    },
+    {
+      "id": "T005",
+      "name": "World Rule: Paper Becomes Organic Vascular Roots",
+      "opened_chapter": 2,
+      "must_payoff_by": 12,
+      "status": "paid_off_in_book1",
+      "book1_resolution": "Waterlogged papers exposed to the ink dissolve into organic vascular roots, proving that the archive is being physically converted into a living network. By chapter 11, Clara uses this understanding to identify which records are still feeding the entity.",
+      "book2_promise": "The biological logic may echo in Clara's hand-marks, but the observatory's root network is drowned with the archive.",
+      "book1_payoff": "This recurring image turns the archival setting into body horror and gives Clara concrete evidence that preservation is feeding growth.",
+      "note": "Recurring signature image: black ink branching into vascular roots across paper, glass, and water."
+    },
+    {
+      "id": "T006",
+      "name": "World Rule: Metal Oxidizes and Throws Flecks of Light",
+      "opened_chapter": 3,
+      "must_payoff_by": 10,
+      "status": "paid_off_in_book1",
+      "book1_resolution": "Submerged metal oxidizes instantly in the ink and sheds metallic flecks of light, giving Clara a repeatable physical test that separates the black substance from ordinary decay. By chapter 10, this reaction helps confirm the ink is parasitic matter rather than ink, oil, or rot.",
+      "book2_promise": "The metal-light phenomenon does not remain active after the observatory is drowned, unless Clara later encounters preserved contaminated fragments.",
+      "book1_payoff": "The flecks of light provide visual cliffhanger material and a grounded gothic science rule that supports the chapter 9 reveal.",
+      "note": "This thread should remain visual and tactile, not auditory or scent-based."
+    },
+    {
+      "id": "T007",
+      "name": "World Rule: Sunlight Freezes the Roots into Charcoal Ash",
+      "opened_chapter": 4,
+      "must_payoff_by": 12,
+      "status": "paid_off_in_book1",
+      "book1_resolution": "Clara learns that sunlight freezes the vascular roots into brittle charcoal that crumbles. This becomes part of her final strategy: exposure, collapse, and drowning combine to break the archive's feeding structure.",
+      "book2_promise": "Drifting ash may remain as a visual omen in Clara's memory and around her marked hands, but the central mechanism is resolved.",
+      "book1_payoff": "The rule turns the recurring ash image into a plot tool and gives the ending a concrete visual language: black roots, brittle charcoal, and the observatory sinking into peat.",
+      "note": "Use drifting ash as a recurring chapter-end image where appropriate."
+    },
+    {
+      "id": "T008",
+      "name": "Reveal Cadence: From Decay to Living Archive to Eleanor",
+      "opened_chapter": 1,
+      "must_payoff_by": 12,
+      "status": "completed_in_book1",
+      "book1_resolution": "The reveals escalate every 2–3 chapters: the stains are active; the archive feeds the roots; the substance obeys physical rules; the records are tied to Eleanor; chapter 9 gives the full answer; chapters 10–12 force Clara's choice and consequence.",
+      "book2_promise": "Future books may carry lingering dread from Clara's marks, but Book 1's central reveal cadence is complete.",
+      "book1_payoff": "The reader receives regular concrete answers without losing the slow atmospheric burn.",
+      "note": "Suggested reveal beats: chapter 2 active stain behavior, chapter 4 sunlight/ash rule, chapter 6 archive-feeding proof, chapter 8 Eleanor-specific pattern, chapter 9 full truth, chapter 12 marked-hands aftermath."
+    },
+    {
+      "id": "T009",
+      "name": "Visual Cliffhangers at Every Chapter End",
+      "opened_chapter": 1,
+      "must_payoff_by": 12,
+      "status": "structural_thread_active_until_finale",
+      "book1_resolution": "Each chapter ends on an image rather than a dialogue sting: ink reaching a new surface, roots under glass, metallic light in stagnant water, charcoal ash falling upward, or Clara seeing black vein-marks in her own hands after the observatory sinks.",
+      "book2_promise": "The final visual cliffhanger becomes the series door: Clara's hand-marks darken near written records, implying the dread lingers beyond the closed case.",
+      "book1_payoff": "The structure sustains mobile-reading hooks while preserving the quiet gothic tone.",
+      "note": "No chapter-end cliffhanger should depend on Eleanor speaking, a romantic beat, or a newly invented male figure."
+    },
+    {
+      "id": "T010",
+      "name": "Clara's Brass Pocket Watch Tic",
+      "opened_chapter": 1,
+      "must_payoff_by": 12,
+      "status": "paid_off_in_book1",
+      "book1_resolution": "Clara repeatedly winds her brass pocket watch when anxious. As the ink's effect on metal becomes clear, the watch becomes a personal vulnerability: a familiar object that can oxidize, throw flecks of light, and expose how close the ink has come to her body.",
+      "book2_promise": "If retained after the finale, the watch can serve as an early warning object near contaminated records or Clara's own marked hands.",
+      "book1_payoff": "The tic moves from character detail to dread mechanism, making Clara's anxiety physically visible without breaking POV.",
+      "note": "The watch should not become a magical speaking device or a separate mystery answer."
+    },
+    {
+      "id": "T011",
+      "name": "The Final Choice: Feed the Archive or Drown It",
+      "opened_chapter": 9,
+      "must_close_by": 12,
+      "status": "closed_in_book1",
+      "book1_resolution": "Once Clara understands what Eleanor has become, the story narrows to one choice: save the archive and feed the entity, or drown it forever and kill what remains of Eleanor. Clara chooses to drown it, sinking the observatory beneath the peat bog.",
+      "book2_promise": "The case is closed, but Clara walks away with black vein-marks permanently etched into her hands, leaving dread without reopening the central mystery.",
+      "book1_payoff": "The ending delivers the promised closed case: Clara chooses destruction, the observatory is lost, Eleanor's condition is understood, and the horror lingers in Clara's body.",
+      "note": "This thread must not split into alternate explanations for the ink; the single answer remains Eleanor plus ancient bog parasite."
+    }
+  ]
+}

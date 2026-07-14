@@ -1,0 +1,65 @@
+{
+  "description": "Knowledge matrix for Book 1 of The Black Arteries. POV is third-limited locked to Clara Vance for the entire book. No romance line, no male lead, no invented male antagonist, no explicit 18+ content. The central mystery has one answer only: the black ink is Eleanor Vance's preserved memory and physical mass merged with an ancient bog parasite. Eleanor manifests only as silent, scentless black ink branching across paper, glass, or water.",
+  "target_language": "en",
+  "milestones": [
+    1,
+    2,
+    6,
+    9,
+    12
+  ],
+  "characters": {
+    "Clara Vance": {
+      "ch1": "Clara arrives at the half-submerged Victorian manor as a meticulous archivist assigned to catalogue the drowned observatory. She knows Eleanor is missing and carries a professional boundary: she will never destroy any written record. She notices black stains in water, glass, and paper but initially reads them as flood damage, mildew, ink bleed, or rot. She winds her brass pocket watch when anxious. She does not know the stains are alive, linked to Eleanor, or feeding on preservation.",
+      "ch2": "Clara understands the black stains are not behaving like ordinary decay. She sees directed movement: ink above the waterline, black branching across glass, and threads angling toward written records. She begins to suspect the archive is contaminated by something active, though she still frames it as a material problem rather than Eleanor's transformed presence. She does not yet know the rules of sunlight, metal, paper conversion, or the parasite.",
+      "ch6": "Clara has learned that the ink-root network feeds on preserved records. Paper can soften into organic vascular strands, saved pages make the roots thicken, and rejected scraps appear to starve. This knowledge turns her archival ethics into a trap: every act of preservation may strengthen the spreading entity. She also recognizes that sunlight can freeze the roots into brittle charcoal ash and that metal near the ink can oxidize and shed flecks of light, but she still does not know the ink is Eleanor.",
+      "ch9": "Clara learns the single central truth: Eleanor did not simply vanish or return as a conventional ghost. Eleanor dissolved herself into the forbidden records to preserve them and merged with an ancient bog parasite. The black ink is Eleanor's preserved memory and physical mass fused with that organism. Clara now understands why the substance reacts to Eleanor's name, why records feed it, why it remains silent and scentless, and why saving the archive would mean feeding what remains of her sister.",
+      "ch12": "Clara has made the final choice. She breaks her lifelong boundary and chooses to drown the observatory beneath the peat bog, destroying the archive's feeding structure rather than preserving it. She understands that this kills or ends what remains of Eleanor within the observatory network. The case is closed, but Clara walks away with permanent black vein-marks etched into her hands, knowing the dread has marked her body even though the central mystery is solved.",
+      "must_not_know_before": {
+        "ch2": "Clara must not know in chapter 1 that the ink is active and drawn toward records; she may only observe wrongness and rationalize it.",
+        "ch6": "Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+        "ch9": "Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+        "ch12": "Clara must not fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy."
+      },
+      "hidden_truth": "Clara's deepest conflict is not whether she can solve the archive's mystery, but whether she can betray the identity that made her feel moral: the belief that preserving records is always righteous. Her hands becoming permanently vein-marked implies the archive's dread has entered her body without reopening the central answer."
+    },
+    "Eleanor Vance": {
+      "ch1": "Eleanor is known to Clara only as her missing sister. Clara does not have direct access to Eleanor's consciousness, voice, memories, or intentions. Eleanor is absent as a person and present only through records, traces, and Clara's grief. Any apparent sign of her must remain visual and ambiguous.",
+      "ch2": "Eleanor remains unseen and unheard. The active black stains may begin to suggest a presence, but Clara cannot yet connect them to Eleanor with certainty. Eleanor must not speak, whisper, breathe, write new verbal messages, create sound, or produce scent. Her presence, if any, is limited to black branching stains on surfaces.",
+      "ch6": "Eleanor's connection to the archive is still hidden. The ink-root network is known to feed on preserved paper, but its personal link to Eleanor has not been revealed. Visual patterns may begin to cluster around sister-linked objects or records, yet they must not provide a complete answer before chapter 9.",
+      "ch9": "The truth is revealed: Eleanor dissolved herself into the forbidden records to preserve them and merged with an ancient bog parasite. She is not a separate speaking ghost and not a conventional corpse hidden elsewhere. The black ink is her preserved memory and physical mass fused with the parasite, able to manifest only as silent, scentless stains across paper, glass, and water.",
+      "ch12": "Eleanor's archive-body is drowned with the observatory when Clara chooses destruction over preservation. What remains of Eleanor within the feeding network is ended or rendered unreachable. The emotional horror is that Clara's mercy looks like erasure. Any lingering trace must remain visual and nonverbal, reflected in Clara's black vein-marked hands rather than a reopened mystery.",
+      "must_not_know_before": {
+        "ch9": "The narrative must not confirm before chapter 9 that Eleanor became the ink. Earlier chapters may imply association through visual clues only.",
+        "ch12": "Eleanor must never gain a speaking role, scent-based presence, audible manifestation, or independent ghost form at any point."
+      },
+      "hidden_truth": "Eleanor's preservation impulse and the parasite's hunger are fused. The ink's desire to keep every page is both Eleanor's last human act and the organism's feeding mechanism."
+    },
+    "The black ink / ancient bog parasite": {
+      "ch1": "The black substance appears as stains, threads, or vascular branching in stagnant water, on glass, and across paper. Its true nature is hidden. It should be perceived through Clara's limited observations as wrongness within the flooded archive, not as an explained monster.",
+      "ch2": "The ink is revealed to be active rather than passive decay. It can move across surfaces and angle toward written records. It remains silent and scentless. It should not display intelligence through speech or conventional messages; its behavior is visual and physical.",
+      "ch6": "The ink's feeding logic is partially known: preserved records strengthen it, paper dissolves into organic vascular roots, and neglected or rejected scraps do not nourish it in the same way. The world rules are now legible enough for Clara to fear her own archival work. The parasite component is not yet fully named as the ancient bog organism.",
+      "ch9": "The ink's true nature is fully revealed: it is Eleanor's preserved memory and physical mass merged with an ancient bog parasite. It obeys physical rules: paper becomes vascular roots, metal submerged in it oxidizes instantly and throws off metallic flecks of light, and sunlight freezes the roots into brittle charcoal that crumbles into ash.",
+      "ch12": "The observatory's feeding network is drowned beneath the peat bog after Clara chooses destruction. The main ink-root structure is ended as the central threat of Book 1. Lingering dread survives through Clara's permanent black vein-marks, but this does not create a second answer to the mystery.",
+      "must_not_know_before": {
+        "ch2": "Before chapter 2, the ink must not be confirmed as active.",
+        "ch6": "Before chapter 6, the ink must not be confirmed to feed specifically on Clara's preservation of records.",
+        "ch9": "Before chapter 9, the ink must not be confirmed as Eleanor merged with the ancient bog parasite."
+      },
+      "hidden_truth": "The parasite is ancient and material, not demonic, not a metaphor-only force, and not a second separate explanation. Its merger with Eleanor is the one canonical answer."
+    },
+    "The drowned observatory archive": {
+      "ch1": "The archive is Clara's assignment: a flooded Victorian observatory full of ledgers, glass plates, star charts, labels, and forbidden records. It appears to be a damaged collection in need of rescue. Clara treats it as a professional and moral obligation.",
+      "ch2": "The archive becomes a site of directed contamination. Records are not merely victims of water damage; they attract the spreading black substance. Clara begins to understand that cataloguing the archive may expose new dangers.",
+      "ch6": "The archive is revealed as part of a feeding system. Preserved records thicken the roots, while paper can become organic vascular tissue. Clara's catalogue work is no longer neutral; it helps the entity grow.",
+      "ch9": "The archive is understood as Eleanor's chosen vessel and the parasite's feeding structure. Saving it means preserving and feeding the Eleanor-parasite fusion. Destroying it means ending the physical structure that holds what remains of Eleanor.",
+      "ch12": "The archive is drowned beneath the peat bog. Clara rejects preservation as the highest good and destroys the observatory's records to stop feeding the entity. The archive thread closes with dread rather than restoration.",
+      "must_not_know_before": {
+        "ch6": "Before chapter 6, the archive must not be fully understood as nourishment for the ink-root network.",
+        "ch9": "Before chapter 9, the archive must not be fully understood as Eleanor's vessel.",
+        "ch12": "Before chapter 12, the archive must not be safely neutralized or restored."
+      },
+      "hidden_truth": "The archive is both evidence and body. Its preservation is the mechanism of horror, not the solution."
+    }
+  }
+}

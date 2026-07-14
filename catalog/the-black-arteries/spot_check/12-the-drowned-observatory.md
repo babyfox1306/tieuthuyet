@@ -1,0 +1,59 @@
+---
+series: the-black-arteries
+book: 1
+chapter: 12
+title: The Drowned Observatory
+spice: 1
+word_count: 1312
+status: draft
+needs_fix: []
+promoted_at: '2026-07-13T15:01:57Z'
+---
+
+"No more entries," Clara said, and tore the catalogue before the roots could take another name.
+
+She ripped the spine lengthwise, feeling the cloth cover split from the signatures. Pages fluttered out like wounded birds, their edges already darkening where her fingers touched them. Nine years she had spent building that accession ledger. Nine years of call numbers, condition reports, cross-references, preservation priorities. The spine had been hand-sewn with linen thread. The board corners had been reinforced with Japanese tissue. It was the finest catalogue she had ever made, and she destroyed it with her bare hands because every name in it had become a vein.
+
+The pages hit the stone floor and the black filaments on them writhed. They reached for each other, trying to reconnect, but the tear had broken the continuity. She watched them slow, then still. The catalogue lay in two halves, its words bleeding ink that soaked into the mortar.
+
+She had to destroy more than one book. The entire archive was a feeding structure now. Every preserved sheet, every sleeved plate, every careful annotation was a synapse in a creature that had learned to metabolize memory. She had known the route to the peat channels from the star chart C008, the faint overlay of sluice markers and pressure-gate tallies that she had initially dismissed as architectural decoration. The diagram had been drawn with the same hand that had mapped the vascular roots. It was the only way out.
+
+She dropped the ruined catalogue and walked through the main corridor. The shelves on either side were glistening. Black fibers had wrapped around the glass plates like silk cocoons, and the paper records had bulged into pulpy masses that wept dark fluid. She did not stop to examine them. She did not reach for her magnifier. Preservation was the enemy now, and every second she spent observing would give the root network time to understand what she intended.
+
+The stairwell to the lower chamber was the same one she had descended to find drawer C009. The water had risen since then. It came up past her knees, warm as a fever, and the walls were slick with a translucent film that caught the light. She moved through it carefully, one hand on the railing, feeling the current pulse like a heartbeat. The pressure-gate room lay at the bottom—a circular chamber with six iron wheels arranged like a compass rose, each one controlling a sluice valve into the peat channels.
+
+The tallies were carved into the wall above each wheel, worn but legible. She had memorized them from the star chart. Wheel one: forty-seven rotations. Wheel two: thirty-two. Wheel three: sixty-one. Wheel four: eighteen. Wheel five: fifty-three. Wheel six: twenty-seven. The sequence would open the channels in the correct order, releasing the full weight of the bog above the observatory in a controlled collapse.
+
+She gripped the first wheel and pulled. It resisted, rusted and swollen, the spokes crusted with mineral deposits. She threw her whole body into it, feeling the iron fight her, feeling the tendons in her arms strain. The wheel groaned. She counted one, two, three—the rotations came slowly, each one scraping against decades of disuse. By the time she reached forty-seven, her hands were bleeding through the grime.
+
+The second wheel was easier. The water rippled as she turned it, and a low hum began somewhere beneath her feet. The third wheel sent a shudder through the walls. The fourth wheel cracked something deep in the foundation—she felt it as a pressure change in her ears. The fifth wheel brought a rushing sound from beyond the chamber, like a held breath released. The sixth wheel locked into place with a clang that vibrated through her bones.
+
+The flood came.
+
+Water surged from every opening: the sluice mouths, the cracks in the stone, the stairwell behind her. It was black with peat, thick enough to taste, gritty with the rot of centuries. It lifted her off her feet and slammed her against the ceiling. She swallowed silt, choked, kicked for the stairwell. The current dragged her through the corridor, spinning her past shelves that were already dissolving.
+
+She saw paper lift from its housings like ghosts, curling and softening as the peat water hit it. Glass plates cracked into shards and turned to milk. The black ink that had colonized every record rose in twisting threads, desperate to hold the archive together, but the peat was too dense, too old. The threads broke apart, their fragments dispersing into the flood like ash. Eleanor's writing, Eleanor's drawings, the accession numbers she had so carefully preserved—all of it turned to slurry.
+
+Clara surfaced in the main reading room, gasping, her hands finding the edge of a table that was already sinking. She pulled herself onto it, coughing black water. The dome above her was intact, but the star apertures—the observation slits cut into the old copper—were letting in thin grey light. Each aperture reflected on the water surface below like a black coin, perfectly round. As the water climbed the walls, the reflections lifted. One by one, they reached the apertures themselves and went out, swallowed by the peat-dark flood. The last coin vanished. The dome went dark.
+
+The archive was drowned.
+
+She stayed on the table until the water stopped rising, until the building settled with a groan that seemed to come from its bones. Then she slid off and waded toward the main entrance. The doors had been forced open by the pressure. She crawled through into the bog air, onto the rotting porch steps, and then onto the spongy ground that surrounded the observatory.
+
+Behind her, the dome shuddered and sank another inch. Windows shattered as water forced out the last pockets of air. The structure was settling into the peat like a stone into mud.
+
+She lay on the ground, coughing, unable to stand. Her hands were in front of her face, palms up, and she saw that the black veins were still there. Not washed away. Not dissolved. They ran from her wrists across her knuckles, branching in the same pattern she had traced on the star chart. The marks had survived the flood, the collapse, the drowning of every record that had fed them.
+
+She sat up slowly. The observatory was half-submerged, its dome peeking above the bog like a skull. No more records. No more feeding. What remained of Eleanor within that network had been ended. Clara had chosen destruction over preservation, and she had done it as an act of mercy.
+
+But she was alone. The silence was absolute—no voice, no scent, no hand reaching for hers, no warmth, no absolution. She had destroyed her life's work, her sister's memory, the only thing that had made her a preservationist. And she had to live with that.
+
+She stood up, legs shaking, and began to walk the bog road away from the observatory. Her satchel was still slung across her body, soaked but intact. Inside was a clean sheet of paper—one she had meant to use for a final catalog entry she never wrote.
+
+She stopped on the road. The morning was pale, washed-out, the sky the colour of old bone. She opened the satchel and pulled out the sheet. It was dry, untouched by the flood.
+
+The black veins under her skin pulsed. They branched, reaching, spreading toward the clean paper as if they recognized a surface they could colonize. The marks were not just scars. They were alive. Carriers of whatever had lived in the archive. The dread had not ended with the drowning.
+
+She closed her eyes. When she opened them, the veins had stilled, but they had moved. The pattern had shifted, leaning toward the paper.
+
+The case was closed. The observatory was drowned. But the black ink was inside her now, and it wanted to write.

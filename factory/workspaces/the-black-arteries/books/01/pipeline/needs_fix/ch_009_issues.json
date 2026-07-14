@@ -1,0 +1,55 @@
+{
+  "word_count": 1364,
+  "target_language": "en",
+  "markdown": [
+    "*absence*",
+    "*Eleanor Vance*",
+    "*around*",
+    "*memory*"
+  ],
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 21,
+        "snippet": "*absence*"
+      },
+      {
+        "line": 37,
+        "snippet": "*Eleanor Vance*"
+      },
+      {
+        "line": 37,
+        "snippet": "*around*"
+      },
+      {
+        "line": 39,
+        "snippet": "*memory*"
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*absence*",
+        "*Eleanor Vance*",
+        "*around*",
+        "*memory*"
+      ]
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 1,
+    "max_content_retries": 2,
+    "short_expands": 0,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}

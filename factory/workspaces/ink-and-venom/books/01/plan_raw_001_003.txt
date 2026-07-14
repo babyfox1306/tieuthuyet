@@ -1,0 +1,101 @@
+{
+  "act": [
+    1,
+    3
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The First Injection",
+      "slug": "the-first-injection",
+      "one_line_summary": "Elara Sennewald arrived at the Styrian Alp Sanatorium, accepted Dr. Alistair Finch's venom therapy, and found faint black threads under her wrist skin after her pain briefly vanished.",
+      "beat_summary": "Open on Nurse Cora locking Elara's treatment chair before Elara can object, then move through the sanatorium's controlled admissions ritual: confiscated letters, restricted art supplies, Finch's soft clinical authority, his greyish skin, and his untouched cold tea. Elara notices the venom in the syringe moving with a sluggish black sheen that Cora calls settling compound, and Finch frames the treatment as her last humane chance at relief. The injection brings a terrifying absence of pain and a false moment of grace, but later, alone, Elara rubs her wrists and sees threadlike black shadows beneath white skin. [ISOLATION] Her mother is reachable only through clinic-handled correspondence, Tobias is only a watchful stranger, and there is no hand she can trust when relief begins to feel like a trap.",
+      "must_happen": [
+        "Cora straps Elara into the treatment chair with procedural calm, making Elara's boundary around medical restraint immediately active.",
+        "Plant C001: after the first treatment, Elara sees faint black threadlike shadows under the pale skin of her wrists and initially accepts them as bruising or vascular side effects.",
+        "Plant C002: the venom in the syringe appears ink-dark, slightly viscous, and almost self-leveling before Cora injects it, but no one calls it alive.",
+        "Plant C013: Finch's skin reads subtly grey in bright clinical light, and his stillness feels wrong without confirming why.",
+        "Finch presents himself as gentle, precise, and medically authoritative, promising pain relief while carefully avoiding honest explanation.",
+        "The clinic intercepts Elara's ordinary autonomy: her outgoing letter to Marta is taken for review under the policy of nervous rest.",
+        "[ISOLATION] Elara experiences the first pain-free interval alone in a locked clinic room, with no family, friend, or romantic comfort present."
+      ],
+      "must_not": [
+        "Do not reveal that the venom is living biomass from an ancient subterranean organism.",
+        "Do not confirm Finch is transformed or show his chest.",
+        "Do not create romantic tension, attraction, caretaker intimacy, or seduction between Elara and Finch.",
+        "Do not make Beatrice appear, speak, touch, smell, or guide Elara yet.",
+        "Do not explain the black wrist threads as anything beyond an unsettling side effect."
+      ],
+      "opens_with": "\"Please do not tighten that,\" Elara said, and Nurse Cora tightened the strap anyway.",
+      "cliffhanger": "Elara lifts her wrist to the washbasin mirror and watches a black thread beneath her skin fork neatly into two thinner lines.",
+      "signature_detail_hint": "A porcelain dosage tile marked with hand-painted blue numbers has a tiny black stain trapped beneath the glaze, as if the ink was fired into it decades ago.",
+      "emotional_beat": "Relief turns intimate and frightening because the first absence of pain feels like mercy until Elara realizes it may have been purchased with control over her body.",
+      "spice": 1,
+      "spice_note": "Keep the intensity psychological and bodily rather than sexual: clinical proximity, fear, vulnerability, and dread, with no attraction or erotic framing.",
+      "chapter_task": "Write 1600-1900 words in tight third-limited Elara POV. Establish the alpine sanatorium as controlled, elegant, and quietly coercive; make the first injection frighteningly calm; plant C001, C002, and C013 clearly through observed physical detail; end on the black threads under Elara's wrist skin.",
+      "carries_to_next": "Elara has begun treatment, her pain has briefly vanished, the clinic controls her communication, and the black wrist threads set up her move into Beatrice Wren's former art studio."
+    },
+    {
+      "chapter": 2,
+      "title": "The Dead Woman's Studio",
+      "slug": "the-dead-womans-studio",
+      "one_line_summary": "Elara inherited Beatrice Wren's former art studio, saw silent metallic shimmer behave like impossible light, and encountered Tobias's disturbing charcoal warnings while Finch watched her reaction too closely.",
+      "beat_summary": "Open with Elara finding a charcoal drawing of her own wrist taped inside the studio cabinet before she has told anyone about the black threads. Cora assigns Beatrice Wren's former studio as if dead patients routinely leave useful rooms behind, while Finch evades questions about Beatrice with elegant omissions and another cup of cold tea. In the studio, Elara sees dancing iridescent metallic-shimmer light skim across the wall, silent and scentless, never touching her and never forming a body. Tobias appears at the corridor edge and leaves behind charcoal images of branching black structures, altered hands, and a figure staring at colorless windows. [ISOLATION] The shimmer offers no voice, Tobias gives no safe explanation, and Finch's attention replaces comfort with surveillance.",
+      "must_happen": [
+        "Plant C003: Beatrice's shimmer appears only as dancing iridescent metallic light in the inherited studio, visually drawing Elara's eye toward a hidden scratch or cabinet seam without confirming intent.",
+        "Plant C014: Finch carries or sips cold tea that has clearly gone untouched too long and shows no ordinary reaction to its temperature or taste.",
+        "Elara learns Beatrice Wren was the previous patient connected to the studio, but Cora and Finch keep the details sterile and incomplete.",
+        "Tobias is introduced as a fellow patient who communicates uneasily through charcoal drawings rather than direct confession.",
+        "Tobias leaves or reveals a charcoal image that resembles black branching beneath skin, but Elara cannot yet trust whether it is warning, obsession, or illness.",
+        "Elara's altered body horror escalates through heightened sensitivity to paper texture, charcoal dust, and the faint pressure of her own pulse under the black wrist threads.",
+        "[ISOLATION] Elara tests the shimmer by whispering and holding out a hand, but receives no speech, no touch, no scent, and no human comfort."
+      ],
+      "must_not": [
+        "Do not reveal that Beatrice's shimmer is purposeful guidance or tied to resisted absorption.",
+        "Do not let Beatrice speak, touch, smell, write words, or appear as a conventional ghost.",
+        "Do not confirm Tobias knows cured patients disappear.",
+        "Do not imply Tobias is a love interest or romantic substitute.",
+        "Do not confirm Finch's cold tea habit is caused by his altered body."
+      ],
+      "opens_with": "The drawing inside the cabinet showed Elara's wrist with black roots already growing through it.",
+      "cliffhanger": "As Elara shuts the studio door, the metallic shimmer darts across Beatrice's old wall and lights up a hairline scratch shaped exactly like an arrow pointing down.",
+      "signature_detail_hint": "Beatrice's old palette knife has a paper-thin edge worn smooth on one side, as if it was used for scraping something harder than paint from the studio wall.",
+      "emotional_beat": "Curiosity and vulnerability twist together as Elara longs for any witness who might validate her fear, but every possible witness is incomplete, silent, or watched.",
+      "spice": 1,
+      "spice_note": "Use closeness as unease: Finch's clinical attention, Tobias's guarded warning, and Elara's solitude in the studio should feel charged with dread, never romance.",
+      "chapter_task": "Write 1600-1900 words in third-limited Elara POV. Build the studio as a gothic refuge that is also evidence; plant C003 and C014 without payoff; keep Beatrice strictly visual and silent; introduce Tobias through charcoal warnings; end with the shimmer pointing toward a downward clue without confirming what it wants.",
+      "carries_to_next": "Elara now has a private studio linked to Beatrice, an ambiguous shimmer, Tobias's charcoal warnings, and growing sensory changes that will sharpen during the next treatment cycle."
+    },
+    {
+      "chapter": 3,
+      "title": "Colorless Pain",
+      "slug": "colorless-pain",
+      "one_line_summary": "Elara's black wrist threads spread and her senses turned violently strange under light and sound, proving the treatment is changing her body while Tobias warned that being declared cured is something to fear.",
+      "beat_summary": "Open with Elara convulsing at breakfast when a spoon strikes porcelain and the sound tears through her skull like wire. The chapter escalates from small sensory wrongness into undeniable bodily alteration: pure window light hurts, fabric texture becomes unbearable, and the black threads beneath her wrists no longer resemble bruises. Pay off C001 by making Elara understand the lines are actively branching inside her, not fading, and plant/pay off C004 through immediate light allergy and sound-texture hypersensitivity. Tobias corners her near the studio long enough to mutter that the cured patients do not come back the same, then hides the warning inside a charcoal drawing when Cora approaches. [ISOLATION] Finch offers calm explanations instead of truth, Tobias retreats before he can protect her, and Beatrice's shimmer remains only a silent visual disturbance.",
+      "must_happen": [
+        "Pay off C001: Elara compares the wrist threads to the previous night and realizes they have branched into a deliberate vascular pattern rather than healing bruises.",
+        "Plant and pay off C004: direct pure light burns or nauseates Elara, ordinary sound becomes painfully sharp, and fabric texture against her skin feels neurologically magnified.",
+        "Plant C005: Tobias warns Elara, directly or through charcoal, that being declared cured is dangerous and that patients who leave the visible wards are not simply discharged.",
+        "Finch reframes Elara's light and sound sensitivity as expected recalibration while avoiding any explanation that would reveal the organism.",
+        "Cora enforces protocol by reducing light exposure, changing dosage timing, or restricting Elara's movement, making care feel indistinguishable from containment.",
+        "Elara's ability to draw is affected: charcoal lines seem to pulse or misalign with what her eyes see, suggesting her perception is being rewired.",
+        "[ISOLATION] Elara tries to use Tobias's fear as proof, but he pulls away when staff appear, leaving her with evidence she cannot safely show anyone."
+      ],
+      "must_not": [
+        "Do not reveal the organism, collective consciousness, subterranean source, or full medical truth.",
+        "Do not pay off C005 early by explaining exactly what Tobias knows about cured patients.",
+        "Do not confirm Cora is partly converted or biologically linked to protocol.",
+        "Do not show fully transformed perception as a bio-electrical grid.",
+        "Do not turn Finch's attention into romance, attraction, or intimate rescue."
+      ],
+      "opens_with": "The spoon hit porcelain, and Elara's body forgot how to remain human.",
+      "cliffhanger": "Under the covered window, Elara peels back her sleeve and sees the black threads in her wrist pulse once in perfect time with a low answering knock from somewhere beneath the floor.",
+      "signature_detail_hint": "The ward keeps a drawer of smoked-glass breakfast spoons for sensitive patients, each spoon numbered with acid-etched dots instead of printed labels.",
+      "emotional_beat": "Terror sharpens into lonely defiance as Elara realizes relief has made her vulnerable to the clinic, yet her need to know begins to outrank her need to be believed.",
+      "spice": 1,
+      "spice_note": "Keep the chapter sweet/non-explicit by focusing on fear, bodily vulnerability, and psychological pressure; no romantic or erotic beats.",
+      "chapter_task": "Write 1600-1900 words in third-limited Elara POV. Escalate body horror through light, sound, texture, and visible black branching; explicitly pay off C001 and C004 while planting C005; keep Tobias frightened but not fully explanatory; end on the wrist pulse answering the sound beneath the floor.",
+      "carries_to_next": "Elara now knows the treatment is physically changing her, suspects Tobias's warnings matter, and has a new subterranean sound clue pulling the story toward restricted rooms and deeper clinic evidence."
+    }
+  ]
+}

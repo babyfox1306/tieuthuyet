@@ -1,0 +1,210 @@
+{
+  "act": [
+    4,
+    6
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "Charcoal Under Sun",
+      "slug": "charcoal-under-sun",
+      "one_line_summary": "Clara proves that sunlight freezes the black vascular roots into brittle charcoal ash while fresh metal near the ink oxidizes in impossible flashes.",
+      "beat_summary": "Open with a black root tightening around Clara's metal forceps and throwing off bright flecks before she can pull the rescued folder free. Pay off C003 by having metal near the ink oxidize unnaturally fast, leaving glittering rust and light-like particles in the floodwater, and pay off C004 when Clara deliberately angles reflected daylight from the fractured observatory glass onto a living black branch. Reveal R002: sunlight freezes the vascular roots into brittle charcoal that crumbles into drifting ash, giving Clara her first partial defense without making the archive safe. Plant C006 by having Clara place one sun-charred page fragment into a protective sleeve beside an unburned saved page, then note that the protected fragment remains oddly attractive to nearby black threads while loose ash is ignored. Keep Eleanor as visual absence only: the ash briefly settles around an old Eleanor-labeled drawer but never forms words, sound, scent, or a ghost. The chapter ends with Clara realizing the sunlit ash is useful but limited, because the deeper roots beneath the floor remain untouched.",
+      "must_happen": [
+        "Pay off C003: Clara's metal forceps, a rusted star-sighting screw, or a small brass fitting touches or nears the black ink and oxidizes within seconds, shedding bright metallic flecks into the stagnant water.",
+        "Pay off C004: Clara uses a shard of old observatory glass, a mirror plate, or a tilted dome fragment to direct a narrow beam of daylight onto a black vascular thread and watches it stiffen, blacken, and crumble into charcoal ash.",
+        "Reveal R002 clearly: Clara understands that sunlight freezes the vascular roots into brittle charcoal that crumbles into drifting ash, though only where light directly touches them.",
+        "Plant C006: Clara preserves a sun-charred page fragment in an archival sleeve beside an unburned rescued page and observes that nearby black threads favor the protected materials while loose ash is left untouched, without yet understanding the feeding rule.",
+        "Clara adds a sunlight column and a metal-oxidation note to her contamination map, treating the discovery as a procedural defense rather than comfort.",
+        "[ISOLATION] Eleanor remains an absence: ash drifts around the drawer labeled in Eleanor's handwriting, and Clara has no voice, hand, or witness to confirm whether the pattern is warning, accusation, or coincidence."
+      ],
+      "must_not": [
+        "Do not reveal before chapter 6 that preservation itself feeds the ink-root system; C006 must remain an unresolved observation.",
+        "Do not reveal before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+        "Do not let sunlight destroy the entire network or make the observatory safe; it only damages exposed roots in direct light.",
+        "Do not allow Eleanor to speak, whisper, breathe, smell, appear as a ghost, or communicate in written words.",
+        "Do not introduce a male lead, male antagonist, romance line, doctor, caretaker, or any invented supporting cast."
+      ],
+      "opens_with": "\"Let go,\" Clara ordered, and the forceps bloomed orange rust around her fingers.",
+      "cliffhanger": "When Clara lifts the sleeve containing the sun-charred fragment, every black vein under the floor bends toward it, leaving the loose ash behind in a perfect untouched circle.",
+      "signature_detail_hint": "A cracked prism from the observatory's spectroscope splits one strip of daylight into sickly colors, but only the plain white edge of the beam turns the root to charcoal.",
+      "emotional_beat": "Clara feels a brief, dangerous attraction to control itself, then vulnerability returns when the ash gathers near Eleanor's label and gives her no answer.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; the emotional charge is isolation, grief, and Clara's frightening relief at finding a partial rule.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Continue directly from chapter 3 with the exposed grate, Eleanor-labeled drawer, contamination map, and Clara's knowledge that the stains are active and directed. Pay off C003 and C004 with concrete visual tests, deliver R002 clearly, and plant C006 without explaining the preservation-feeding rule. Maintain silent, scentless, visual-only manifestations and end on the specific cliffhanger of veins turning toward the sleeved charred fragment while loose ash is ignored.",
+      "carries_to_next": "Clara now knows sunlight can freeze exposed roots into charcoal ash and metal oxidizes near the ink, but she has also logged the unresolved fact that protected page fragments still attract the veins.",
+      "narrative": {
+        "clues_plant": [
+          "C006"
+        ],
+        "clues_payoff": [
+          "C003",
+          "C004"
+        ],
+        "reveals": [
+          {
+            "id": "R002",
+            "reveal_weight": "major",
+            "reveal": "Sunlight freezes the vascular roots into brittle charcoal that crumbles into drifting ash.",
+            "required_clues": [
+              "C003",
+              "C004"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "clue_beats": {
+          "C003": "Use the metal forceps or an astronomical fitting as the payoff object: the ink causes instant oxidation and bright metallic flecks, proving the earlier screw was not ordinary corrosion.",
+          "C004": "Repeat the daylight anomaly deliberately: a directed sunbeam hardens a living black thread into charcoal ash so Clara can name the rule.",
+          "C006": "Show a protected sun-charred page fragment attracting nearby black threads while loose ash is ignored; do not explain this as nourishment yet."
+        },
+        "knowledge": {
+          "may_know": [
+            "Clara knows the ink is active and directed toward records.",
+            "Clara now knows exposed black roots freeze and crumble under direct sunlight.",
+            "Clara now knows metal near the ink can oxidize and shed bright flecks.",
+            "Clara still does not know that preserved records feed the ink-root system.",
+            "Clara still does not know that the ink is connected to Eleanor's body and memory."
+          ],
+          "must_not_know": [
+            "Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+            "Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "Eleanor must never speak, make sound, produce scent, or appear as an independent ghost."
+          ]
+        }
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "The Sleeved Pages",
+      "slug": "the-sleeved-pages",
+      "one_line_summary": "Clara tries to protect selected records after learning the sunlight rule, but the black roots gather around her safest archival choices and expose three new patterns she cannot yet interpret.",
+      "beat_summary": "Open with a sealed archival sleeve swelling as if the page inside has taken a breath, though no sound or breath is present. Clara sets up a controlled salvage station in a sunlit strip, separating loose scraps, sleeved fragments, Eleanor-linked labels, and waterlogged ledgers while believing she is imposing order after the sunlight discovery. Plant C007 by showing that the black veins thicken most around pages Clara has cleaned, numbered, sleeved, and placed in safe order, while unhandled scraps remain comparatively untouched. Plant C008 by showing a star chart, glass plate, or water surface branching into a pattern that resembles vascular routes beneath the estate rather than simple stains, but do not pay it off until chapter 8. Plant C015 through an Eleanor-linked record: perhaps a childhood catalogue label, an old accession slip, or a page bearing Eleanor's hand that draws black branching in a way that frames her name visually without confirming she is the ink. Keep the chapter oppressive and procedural, with [ISOLATION] focused on Clara's private rituals and the absence of anyone to stop her preservation instinct.",
+      "must_happen": [
+        "Plant C007: Clara notices that pages she has cleaned, numbered, flattened, sleeved, and protected gather thicker black branching than loose scraps she has left unprocessed.",
+        "Plant C008: a star chart, submerged glass plate, or surface of still water displays black vascular branching that mirrors a route beneath the observatory or toward the peat-dark lower levels, but Clara records it only as a repeating structural pattern.",
+        "Plant C015: Clara finds an Eleanor-linked record such as a childhood label, accession slip, drawer tag, or page in Eleanor's hand, and black branches frame or avoid the name in a precise visual pattern without forming words.",
+        "Clara uses the chapter 4 sunlight rule practically, keeping several roots pinned in a narrow beam until they charcoal and crumble, but the darker roots outside the light continue spreading.",
+        "[ISOLATION] Clara mouths catalogue numbers and reaches for Eleanor's remembered opinion only in her own mind; the corridor, water, and glass give her no voice, no touch, and no answer.",
+        "Clara's preservation boundary tightens: even after seeing protected pages attract roots, she cannot bring herself to discard or burn the records and instead improves their housing."
+      ],
+      "must_not": [
+        "Do not pay off C007 or state the feeding rule before chapter 6.",
+        "Do not pay off C008 before chapter 8 or explain the full meaning of the route-like branching.",
+        "Do not pay off C015 before chapter 9 or confirm Eleanor's transformation.",
+        "Do not let the ink write a verbal message, speak, make sound, produce scent, or act through a human-like ghost form.",
+        "Do not introduce a male lead, romance line, male antagonist, caretaker, doctor, or any new physical helper."
+      ],
+      "opens_with": "\"The sleeve is swelling,\" Clara said, and the page inside pressed black veins against the plastic like fingers against glass.",
+      "cliffhanger": "The Eleanor-labeled slip inside Clara's safest folder turns face-up by itself, and black branches on the glass plate above it arrange into the same route she saw descending beneath the grate.",
+      "signature_detail_hint": "A strip of archival linen tape floats loose in the water, perfectly white except for one black vein running down its woven center like a thread pulled through cloth.",
+      "emotional_beat": "Clara's vulnerability sharpens into compulsive attraction toward the protected pages, because every safer enclosure makes Eleanor's absence feel more orderly and more dangerous.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; the chapter's intensity comes from obsessive preservation, dread, and solitary grief.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Build from chapter 4's sunlight reveal: Clara should use daylight as a limited tool while setting up a controlled salvage station. Plant C007, C008, and C015 clearly as unresolved visual clues. Do not reveal that preserved records feed the roots yet, and do not confirm Eleanor's nature. Keep every manifestation silent, scentless, and visual. End on the Eleanor-labeled slip turning face-up beneath a matching route-like pattern on glass.",
+      "carries_to_next": "Clara has gathered evidence that protected records attract thicker branching, route-like patterns repeat across glass and water, and Eleanor-linked material is visually singled out, setting up chapter 6's feeding reveal without solving Eleanor's identity.",
+      "narrative": {
+        "clues_plant": [
+          "C007",
+          "C008",
+          "C015"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "clue_beats": {
+          "C007": "Make the contrast obvious: processed and protected pages collect black growth, while unprocessed scraps remain less touched.",
+          "C008": "Show route-like vascular branching on a chart, glass plate, or water surface that suggests a larger subterranean pattern but remains unexplained.",
+          "C015": "Use an Eleanor-linked record as a visual magnet or frame for the black branches without confirming Eleanor is the substance."
+        },
+        "knowledge": {
+          "may_know": [
+            "Clara knows the stains move toward records and that sunlight can damage exposed roots.",
+            "Clara may suspect her archival handling changes the pattern, but she does not yet understand preservation as nourishment.",
+            "Clara may notice Eleanor-linked records draw precise visual behavior, but she cannot identify Eleanor as the ink."
+          ],
+          "must_not_know": [
+            "Clara must not know before chapter 6 that preservation itself feeds the ink-root system.",
+            "Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "The route-like branching planted as C008 must not be paid off before chapter 8.",
+            "C015 must not become an Eleanor reveal before chapter 9."
+          ]
+        }
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "What Preservation Feeds",
+      "slug": "what-preservation-feeds",
+      "one_line_summary": "Clara discovers that every record she preserves strengthens the black ink-root system, turning her archival ethics into the engine of the observatory's growth.",
+      "beat_summary": "Open with Clara cutting open a protective sleeve and finding the saved page inside softened into living vascular strands. Pay off C005, C006, and C007 by comparing the folder of rescued records from chapter 2, the sun-charred sleeved fragment from chapter 4, and the carefully protected pages from chapter 5: all preserved materials have fed thicker roots, while loose ash and neglected scraps are comparatively ignored. Reveal R003 with full force: every preserved record strengthens the ink-root system, paper dissolves into organic vascular roots, and records Clara protects become conduits instead of safe objects. Clara tests the rule reluctantly by moving one unprocessed scrap near the roots and one newly sleeved page beside it, watching the protected page draw violent branching while the scrap remains almost untouched. Plant C009 when Clara finds an old observatory inventory or lower-level notation indicating that some records were deliberately withheld, buried, or submerged beneath the peat-dark floor, suggesting a hidden collection for chapter 8 without identifying the parasite or Eleanor. End with Clara physically unable to destroy a dangerous page even after understanding what it feeds, making her boundary the chapter's horror.",
+      "must_happen": [
+        "Pay off C005: Clara returns to the rescued folder from chapter 2 and sees that the pages she separated and saved have become a dense center of black vascular growth.",
+        "Pay off C006: the sun-charred fragment Clara preserved in a sleeve has not remained inert; black roots have laced its protected edges while loose charcoal ash nearby is untouched.",
+        "Pay off C007: Clara compares carefully cleaned, numbered, and sleeved pages with neglected scraps and realizes the protected records consistently draw stronger branching.",
+        "Reveal R003 clearly: Clara understands that every preserved record strengthens the ink-root system, paper dissolves into organic vascular roots, and protected records become conduits rather than safe objects.",
+        "Plant C009: Clara finds a lower-observatory inventory mark, submerged shelf notation, or peat-stained accession reference indicating a deliberately hidden or buried set of records beneath the main archive, without revealing its full meaning before chapter 8.",
+        "[ISOLATION] Clara stands alone with the terrible solution in her hands: no one tells her to burn the page, no one forgives her if she does, and no one stops her when she protects it anyway."
+      ],
+      "must_not": [
+        "Do not reveal before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+        "Do not pay off C008 or C009 in chapter 6; C009 must remain a planted lead toward chapter 8.",
+        "Do not let Clara suddenly become willing to destroy written records; her inability to do so must remain intact and painful.",
+        "Do not neutralize the archive, solve the central mystery, or make sunlight a complete answer.",
+        "Do not give Eleanor a voice, sound, scent, ghost body, written message, or direct communication.",
+        "Do not introduce romance, a male lead, male antagonist, doctor, caretaker, or new helper."
+      ],
+      "opens_with": "\"This page is growing veins,\" Clara said, and the sleeve split wetly down its sealed edge.",
+      "cliffhanger": "Clara raises the infected page into the sunbeam to destroy it, but her hand stops before the light touches it, and the black roots climb over her knuckles in silent recognition of her refusal.",
+      "signature_detail_hint": "The page fibers separate into capillary strands so fine they lift individual grains of charcoal ash and arrange them along the margins like punctuation without words.",
+      "emotional_beat": "Clara's attraction to preservation becomes unbearable vulnerability: the thing she loves most about her work is now the exact motion that feeds the horror.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; the emotional intensity is moral horror, isolation, and Clara's intimate betrayal by her own ethics.",
+      "chapter_task": "Write 1600-1900 words in third-limited Clara POV. Pay off C005, C006, and C007 through concrete comparison and controlled observation, then deliver R003 unmistakably: preserved records strengthen the ink-root system and paper can dissolve into organic vascular roots. Plant C009 as an unresolved lower-archive or buried-record clue for chapter 8. Preserve continuity: Clara knows sunlight and metal rules but does not know Eleanor's true fate. End on Clara failing to let sunlight destroy an infected page while roots climb over her knuckles.",
+      "carries_to_next": "Clara now knows her preservation work feeds the entity, has an unresolved clue pointing toward hidden lower records beneath the observatory, and carries both practical knowledge and moral paralysis into the next complication.",
+      "narrative": {
+        "clues_plant": [
+          "C009"
+        ],
+        "clues_payoff": [
+          "C005",
+          "C006",
+          "C007"
+        ],
+        "reveals": [
+          {
+            "id": "R003",
+            "reveal_weight": "major",
+            "reveal": "Every preserved record strengthens the ink-root system. Paper dissolves into organic vascular roots, and records Clara protects become conduits instead of safe objects.",
+            "required_clues": [
+              "C005",
+              "C006",
+              "C007"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "clue_beats": {
+          "C005": "Return to the rescued folder from chapter 2 and show that preservation caused the densest branching.",
+          "C006": "Show that the sleeved sun-charred fragment is attractive to roots while loose ash is ignored.",
+          "C007": "Compare processed protected pages to neglected scraps so Clara can infer the feeding logic.",
+          "C009": "Introduce an old lower-level inventory mark or buried-record reference that points toward hidden records below the observatory, to be paid off in chapter 8."
+        },
+        "knowledge": {
+          "may_know": [
+            "Clara knows the ink-root network feeds on preserved records.",
+            "Clara knows paper can soften into organic vascular strands.",
+            "Clara knows saved pages make the roots thicken and become conduits.",
+            "Clara knows sunlight can freeze exposed roots and metal can oxidize near the ink.",
+            "Clara still does not know the ink is Eleanor or that an ancient bog parasite is involved."
+          ],
+          "must_not_know": [
+            "Clara must not know before chapter 9 that the ink is Eleanor's preserved memory and physical mass merged with an ancient bog parasite.",
+            "Clara must not fully accept before the finale that she will destroy written records and drown the observatory as an act of mercy.",
+            "The archive must not be understood as Eleanor's vessel before chapter 9.",
+            "The archive must not be safely neutralized or restored before chapter 12."
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "word_count": 1775,
+  "target_language": "en",
+  "markdown": [
+    "*fed*",
+    "*concentrated colonization behavior in preserved materials requiring fur",
+    "*risk isolate — do not destroy*",
+    "*unresolved environmental patterning — repeat structure observed in mult",
+    "*Components — refractor accessories, 1929–1935*",
+    "*Lens set, 4 inch, refractor component, accessioned March 1932.*",
+    "*It knows her.*",
+    "*sample 5A — solar termination residue*"
+  ],
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 13,
+        "snippet": "*fed*"
+      },
+      {
+        "line": 15,
+        "snippet": "*concentrated colonization behavior in preserved materials requiring fur"
+      },
+      {
+        "line": 27,
+        "snippet": "*risk isolate — do not destroy*"
+      },
+      {
+        "line": 55,
+        "snippet": "*unresolved environmental patterning — repeat structure observed in mult"
+      },
+      {
+        "line": 63,
+        "snippet": "*Components — refractor accessories, 1929–1935*"
+      },
+      {
+        "line": 65,
+        "snippet": "*Lens set, 4 inch, refractor component, accessioned March 1932.*"
+      },
+      {
+        "line": 79,
+        "snippet": "*It knows her.*"
+      },
+      {
+        "line": 89,
+        "snippet": "*sample 5A — solar termination residue*"
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*fed*",
+        "*concentrated colonization behavior in preserved materials requiring fur",
+        "*risk isolate — do not destroy*",
+        "*unresolved environmental patterning — repeat structure observed in mult",
+        "*Components — refractor accessories, 1929–1935*",
+        "*Lens set, 4 inch, refractor component, accessioned March 1932.*",
+        "*It knows her.*",
+        "*sample 5A — solar termination residue*"
+      ]
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 1,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}

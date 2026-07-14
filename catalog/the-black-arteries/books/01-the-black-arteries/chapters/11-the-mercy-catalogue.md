@@ -1,0 +1,142 @@
+---
+series: the-black-arteries
+book: 1
+chapter: 11
+title: The Mercy Catalogue
+spice: 1
+word_count: 1752
+status: draft
+needs_fix:
+- markdown:*C001. Pressure-plate readings. 1889–189
+promoted_at: '2026-07-13T14:57:55Z'
+---
+
+"If I save only the index, I save less of it," Clara said, and the crossed-out number rose black through her skin.
+
+She watched it happen. The accession entry for Eleanor's correspondence bundle—1897, stamped for destruction, cancelled with a single red line that had long since faded to brown—pulled itself out of the paper fiber and threaded upward through Clara's fingertip. She had been tracing the cancelled number with her nail. A nervous habit. The way she touched any old mark without thinking.
+
+Now the number was in her. Branching across the back of her hand in fine black capillaries that did not wash off when she touched her palm to her sleeve.
+
+She pressed her lips together and did not wipe at it again. Wiping would not help. Nothing wiped off down here. The observatory kept what it took.
+
+The Mercy Catalogue sat open on the worktable. She had chosen that name herself, half an hour ago, because calling it a rescue list made her feel like a doctor instead of a traitor. She was not abandoning the archive. She was distilling it. A skeleton index of the essential records. Spine numbers only. No full texts. No sleeved originals. Just the reference chain, preserved in a single dry ledger, so that when the rest rotted or burned or drowned, the shape of what existed would survive.
+
+She believed this enough to write the first entry.
+
+C001. Pressure-plate readings. 1889–1892.
+
+The pen moved cleanly across the page. The ledger's paper was thick, pressed, century-old stock that had stayed dry in a sealed cupboard. She had checked every leaf for moisture before uncorking the inkwell. No damp. No preexisting stain. A clean vessel.
+
+She set the pen down and watched the ink dry.
+
+For three breaths, nothing happened.
+
+Then the fine black threads lifted from the fresh letters, curled upward like smoke moving in reverse, and settled into the paper grain. The edges of the letters began to fray. The "C" sprouted a root. The "0" filled with a web. The "1" split into a fork.
+
+No. Even the index fed it.
+
+Clara pulled the ledger into a blade of sunlight falling through the western shutter. The threads withered instantly, snapping into brittle ash that she brushed onto the floor. For a moment the page was clean again. The letters were just letters. The entry lay flat and harmless.
+
+She kept her hand in the light and wrote the second entry.
+
+"C003. Seismograph traces. 1892–1894."
+
+The ink dried clean. The roots tried to form, and the sunlight killed them before they could anchor. She worked faster, writing through the narrow band of light, chasing the sunbeam as it crept across the table. "C005. C007. C009."
+
+"C009" was the drawer. The lower cabinet. The mahogany box she had pulled from the flooded strongroom. She had not opened it yet. The lock was too delicate to force, and the key had not turned. But she had written its number in the catalogue, and that was enough.
+
+The roots on her hand pulsed.
+
+She looked down. The cancelled accession number—"Eleanor, 1897"—had grown. It was no longer a single line on her finger. It had branched across her knuckles, spread over the webbing between her thumb and forefinger, and begun threading toward her wrist.
+
+She touched it with her other hand. The surface was smooth. No raised texture. Not a rash. Not a wound. The ink was simply "there", under her skin, as if she had been born with this particular record printed into her dermis.
+
+She tried to wash it off.
+
+The tap in the washroom ran brown for a long time before it cleared. She held her hands under the stream and scrubbed with the stiff-bristled brush she used for mold. The black lines did not lift. They did not fade. They sat under the surface like old tattoos, precise and deliberate.
+
+She tried ash. She carried the brittle remains of the burned root filaments from the windowsill and rubbed them into her skin. The gray powder clung to the black lines, outlining them, making them more visible. She wiped the ash away. The lines remained.
+
+She tried blotting paper.
+
+The stack sat at the corner of the worktable—thin translucent sheets she used to dry excess ink. She pressed her marked hand flat against the top sheet and held it there for a full minute. When she lifted her palm, the blotting paper showed the outline of her fingerprint, the curve of her palm, the gap between her fingers. But the black capillary lines had not transferred. They stayed on her skin, anchored, refusing to leave.
+
+The blotting paper dried. Between its thin layers, the silhouette of her hand was preserved like a botanical specimen. A ghost of her touch. But the pattern itself was rooted in her.
+
+She folded the blotting paper and slid it into the back of the Mercy Catalogue. Evidence. If anyone ever found this room, they would find her handprint preserved between the leaves. They would know she had been here.
+
+As if the observatory would let her leave without leaving a mark.
+
+The sluice diagram hung under glass in the reading alcove. She had pinned it there four hours ago, after tracing the lower-archive route through the peat-dark channels, and she had not been able to look away from it since. The map showed the flood-control system installed in 1876—a series of gates and drains cut into the bog stone beneath the observatory foundation, designed to channel overflow water into the deep basin of the estuary. The system had never been activated. The records said the sluices had seized in their housings by 1882, gummed with peat sediment and disuse.
+
+But the map showed the route. Clear. Unambiguous.
+
+She traced it with her finger. The line ran from a junction beneath the main stairwell, through a stone culvert, past the lower cabinet, and out to a release point twelve feet below the observatory's eastern wall. If the sluice opened, the water would drop. The entire ground floor would drain into the bog. The roots would dry. The ink would have no medium.
+
+If the sluice opened, the lower cabinet would flood again. The Eleanor folder would be submerged. Every sleeved page, every sealed fragment, every preserved trace of her sister would drown.
+
+She stopped tracing.
+
+The pattern on her hand matched the map. Node for node. Branch for branch. The cancelled accession number on her finger had grown into the exact shape of the sluice route. The junction sat at her wrist. The culvert ran along her thumb. The release point marked the tip of her index finger.
+
+She was carrying the route in her skin. The only decision she had not made was already printed into her.
+
+"I could open it," she said. The words scraped out of her throat, dry and thin. "If I had to."
+
+She was not choosing. She was measuring. Calculating. The water volume required to clear the ground floor. The time it would take for the peat to drain. The condition of the sluice mechanism after a hundred and forty years of disuse.
+
+These were numbers. A preservationist understood numbers. She did not have to act on them. She only had to know them.
+
+She wrote the flood calculation in the margin of the sluice diagram. "Eleven-foot drop. Seventeen minutes to drain. Gate torque estimate: unreliable."
+
+The ink on her pen tip bled into the paper. Black threads rose from her handwriting and spread across the glass. She watched them move. Slow. Deliberate. Mapping the route she had just described in numbers.
+
+The glass fogged. The threads sank into the condensation and grew.
+
+She pressed her marked hand against the glass to wipe the fog away. Her palmprint smeared the moisture. When she lifted her hand, the black pattern on her skin had transferred a faint shadow of itself onto the glass. Not the full shape. Just the outline. A promise.
+
+She stepped back.
+
+The Mercy Catalogue sat open on the worktable. She had finished the index. Every essential accession number was transcribed. "C001" through "C012", cleanly copied in the sunlight, the roots burned away as fast as they formed. The ledger was the last true record. The rest could rot. The rest could drown. She had saved the spine.
+
+She turned to the final page to write the closing date.
+
+The page was blank.
+
+She checked the spine. The ledger had sixty-four leaves. She had written on sixty-three. The sixty-fourth should have been empty, untouched, waiting for a signature she would never need.
+
+It was not empty.
+
+The blank page was not blank. The paper had absorbed something from the air, from the water, from the pressure of her hand on the glass. The faint shadow of the sluice route lay across the leaf like a watermark. Barely visible. Waiting.
+
+She touched it.
+
+Her hand came down flat on the page to steady the book. The black pattern on her skin rose. It lifted from her dermis as if drawn by a magnetic pull, transferring from her body to the paper. The transfer was immediate. The branch spread across the leaf in perfect black. Node for node. Junction for junction.
+
+The sluice route.
+
+Exact. Precise. Unavoidable.
+
+The Mercy Catalogue buckled open. The spine cracked. The blank page curled at the edges as the ink soaked through to the leaf beneath. The pattern was printing itself into the only record she had tried to save. The route she had refused to choose. The decision she had framed as a theory, a measurement, an emergency possibility she would never need to use.
+
+It was on the page. Permanent. Immediate.
+
+She pulled her hand away.
+
+The pattern stayed.
+
+She tried to close the book. The cover would not shut. The new ink had swelled the paper, warped the spine, locked the leaves into a moist mass that would not compress.
+
+The roots on her hand had stopped climbing. They had settled into a design. They were stable. They were finished.
+
+She looked at her palm.
+
+The sluice route stared back.
+
+She looked at the catalogue.
+
+The same route bled across the final page.
+
+The observatory had accepted her compromise. It had printed the choice she would not make into the last clean record she possessed. No more pretending. No more delay. The Mercy Catalogue was no longer a list of what she would save.
+
+It was the map of what she would have to drown.

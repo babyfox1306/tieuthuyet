@@ -1,0 +1,137 @@
+{
+  "description": "Continuity threads for Book 1 of Ink and Venom. The book is gothic psychological body horror, locked to Elara Sennewald's third-limited POV, with no romance or attraction of any kind. Threads track the surface treatment plot, the true organism mystery, Beatrice's silent visual guidance, Tobias's warning, Finch's authority-based manipulation, Cora's protocol-bound complicity, and Elara's irreversible partial transformation.",
+  "threads": [
+    {
+      "id": "T001",
+      "name": "Venom therapy as promised cure",
+      "opened_chapter": 1,
+      "must_close_by": 12,
+      "status": "closed_book1",
+      "book1_resolution": "Elara rejects the final stage of the treatment after learning the venom is not medicine but living biomass replacing her nerves and blood vessels. She uses the clinic-controlled alpine salt to halt the transformation enough to escape.",
+      "book2_promise": "The treatment is halted, not reversed. Elara remains colder, painless, and black-veined, carrying the question of what the halted organism can still do inside her.",
+      "book1_payoff": "The surface promise of a pain-free body is exposed as a trap: relief is real, but it is the relief of being consumed and absorbed into a collective consciousness.",
+      "note": "No romantic or sensual framing around the treatment or Finch. The pull is authority, medical dependence, false comfort, and Elara's desperation for relief."
+    },
+    {
+      "id": "T002",
+      "name": "Black threads under white skin",
+      "opened_chapter": 1,
+      "must_payoff_by": 12,
+      "status": "closed_book1_with_residual_consequence",
+      "book1_resolution": "The black threads are revealed as the organism's vascular and neural replacement structure. By the ending, Elara has stopped the process from completing, but her veins remain black and the alteration is permanent.",
+      "book2_promise": "Elara's altered body may function as evidence, vulnerability, or a partial connection to the organism beyond the sanatorium.",
+      "book1_payoff": "The recurring image evolves from side effect to diagnosis to irreversible mark of survival.",
+      "note": "Escalate visibly every chapter: faint branching at first, then denser vascular ink, cold skin, altered sensation, light allergy, sound hypersensitivity, and final permanent black-veined escape."
+    },
+    {
+      "id": "T003",
+      "name": "Beatrice's metallic shimmer in the inherited studio",
+      "opened_chapter": 2,
+      "must_payoff_by": 12,
+      "status": "closed_book1",
+      "book1_resolution": "Beatrice's remnant guides Elara visually toward Tobias's sketchbook, the alpine salt, and the escape path during the final clinic crisis.",
+      "book2_promise": "Beatrice's fate remains tragic and mostly unknowable; her silent resistance proves absorption is not perfectly complete.",
+      "book1_payoff": "The shimmer is confirmed as the remnant of Beatrice, a dead patient who resisted full absorption enough to signal visually from the studio and later help Elara navigate.",
+      "note": "Beatrice never speaks, never touches, and never has a scent. Her only manifestation is dancing iridescent metallic-shimmer light."
+    },
+    {
+      "id": "T004",
+      "name": "Tobias's charcoal warnings",
+      "opened_chapter": 2,
+      "must_payoff_by": 12,
+      "status": "closed_book1",
+      "book1_resolution": "Elara escapes carrying Tobias's sketchbook, which records what he knew: the treatment was transformation, not cure. His drawings become physical proof and a guide to the organism's logic.",
+      "book2_promise": "Tobias's disappearance remains a wound and a warning. His sketchbook may contain information Elara cannot yet interpret until her altered senses develop further.",
+      "book1_payoff": "Tobias is revealed to have understood the conversion before Elara did and tried to warn her through charcoal drawings because direct warnings were unsafe or disbelieved.",
+      "note": "Tobias disappears mid-book after being declared cured, reinforcing that 'cure' means removal into the collective, not recovery."
+    },
+    {
+      "id": "T005",
+      "name": "Dr. Alistair Finch's false comfort and authority",
+      "opened_chapter": 1,
+      "must_close_by": 12,
+      "status": "closed_book1_antagonist_unresolved",
+      "book1_resolution": "Finch is exposed as already transformed and as the director who supplies the organism with new hosts. Elara leaves him and the clinic behind rather than defeating him fully.",
+      "book2_promise": "Finch remains a live threat if he survives at the clinic, and his transformed body suggests the organism has durable human agents beyond ordinary illness or injury.",
+      "book1_payoff": "His greyish skin, cold tea habit, and controlled medical reassurance reframe as symptoms and tactics. His chapter 9 chest reveal confirms his body is a solid grey mass threaded with black vascular structures.",
+      "note": "Finch is the antagonist, not a love interest. No attraction, romance, yearning, erotic tension, or caretaker-romance dynamic is permitted."
+    },
+    {
+      "id": "T006",
+      "name": "Nurse Cora's protocol-bound complicity",
+      "opened_chapter": 1,
+      "must_payoff_by": 12,
+      "status": "closed_book1",
+      "book1_resolution": "Cora is revealed as partly converted and becomes an immediate obstacle during Elara's escape. Elara fights past her rather than saving or fully understanding her.",
+      "book2_promise": "Cora's partial conversion suggests staff can be used as extensions of the clinic's system without fully understanding the organism's truth.",
+      "book1_payoff": "Her rigid adherence to treatment protocol is recontextualized as both institutional obedience and biological compromise.",
+      "note": "Cora should not know the full truth early. Her horror comes from administration without comprehension, then bodily evidence of partial conversion."
+    },
+    {
+      "id": "T007",
+      "name": "Allergy to pure light and sensory rewiring",
+      "opened_chapter": 3,
+      "must_payoff_by": 12,
+      "status": "closed_book1",
+      "book1_resolution": "Elara understands that her aversion to direct pure light and heightened sensitivity to sound and texture are not side effects but signs that her body is being adapted to the organism's sensory world.",
+      "book2_promise": "Her altered senses may help her survive outside the sanatorium, but they also mark her as no longer fully human in ordinary terms.",
+      "book1_payoff": "The final escape uses these changes against the clinic: Elara navigates through sound, texture, shimmer, and cold rather than trusting ordinary sight.",
+      "note": "A fully transformed patient sees bio-electrical current instead of color; Elara should approach this threshold but not complete it in Book 1."
+    },
+    {
+      "id": "T008",
+      "name": "Alpine salt as the controlled halt mechanism",
+      "opened_chapter": 4,
+      "must_payoff_by": 12,
+      "status": "closed_book1",
+      "book1_resolution": "Elara obtains and ingests the specific alpine salt the clinic controls, halting the transformation long enough to reject the final stage and flee.",
+      "book2_promise": "The salt halts but never reverses conversion. Supply, dosage, and dependency can become future pressure points.",
+      "book1_payoff": "The clinic's control over the salt proves the staff know the process requires management, and that the sanatorium has been built to regulate transformation rather than heal patients.",
+      "note": "Do not present the salt as a cure. It is a brake, not restoration."
+    },
+    {
+      "id": "T009",
+      "name": "The single central mystery: what the venom is",
+      "opened_chapter": 1,
+      "must_payoff_by": 9,
+      "status": "closed_book1",
+      "book1_resolution": "In chapter 9, Elara learns the one true answer: the ink is viable biomass from an ancient sentient subterranean organism that consumes and replaces human nervous and circulatory systems to build a collective consciousness.",
+      "book2_promise": "The organism's origin, reach, and possible other hosts remain open beyond the solved Book 1 mystery.",
+      "book1_payoff": "The mystery does not split into alternate causes. The treatment, black threads, patient disappearances, Finch's body, Beatrice's shimmer, and sensory changes all point to the same biological truth.",
+      "note": "Reveal cadence should provide concrete payoffs every 2-3 chapters, but the canonical central reveal lands in chapter 9."
+    },
+    {
+      "id": "T010",
+      "name": "Elara's fear of restraint and enclosed medical devices",
+      "opened_chapter": 1,
+      "must_close_by": 12,
+      "status": "closed_book1",
+      "book1_resolution": "Elara's deepest fear is activated by the clinic's enclosed procedures and final-stage apparatus, but she refuses restraint and chooses an altered escape over a controlled cure.",
+      "book2_promise": "The trauma of near-confinement remains with her, intensified by the fact that her own altered body can feel like a living enclosure.",
+      "book1_payoff": "Her climactic choice is not to become fearless, but to act while terrified: she rejects being sealed into the clinic's process and forces her way into the open winter mountains.",
+      "note": "Use wrist and temple rubbing as Elara's recurring self-warming tic and stress signal."
+    },
+    {
+      "id": "T011",
+      "name": "Visual chapter-end cliffhangers",
+      "opened_chapter": 1,
+      "must_payoff_by": 12,
+      "status": "structural_thread_active_through_book1",
+      "book1_resolution": "Every chapter ends on a concrete visual disturbance or image: black threads, metallic shimmer, ash, grey skin, altered light, charcoal evidence, Cora's partial conversion, Finch's chest, the salt, the vial, or Elara's black-veined body in the snow.",
+      "book2_promise": "The final image of Elara carrying venom while permanently altered becomes the visual bridge into the next book.",
+      "book1_payoff": "The visual cliffhangers accumulate into a coherent body-horror chain rather than isolated shocks.",
+      "note": "Keep the signature image family recurring: black threads under white skin, metallic shimmer, ash, cold tea, grey flesh, and hostile pure light."
+    },
+    {
+      "id": "T012",
+      "name": "No-romance boundary",
+      "opened_chapter": 1,
+      "must_close_by": 12,
+      "status": "closed_book1_continuity_guardrail",
+      "book1_resolution": "Elara has no love interest. Finch's influence is medical, institutional, manipulative, and predatory, never romantic. Tobias is a friend and fellow patient, not a romantic lead.",
+      "book2_promise": "Future installments should preserve the horror premise without retroactively romanticizing Finch, the treatment, or coercive medical dependence.",
+      "book1_payoff": "The emotional arc centers on bodily autonomy, survival, pain, trust, and contamination rather than romantic attachment.",
+      "note": "This is a canon constraint from the author directive: no romance of any kind, including attraction, yearning, jealousy, sexual tension, or caretaker-romance framing."
+    }
+  ]
+}

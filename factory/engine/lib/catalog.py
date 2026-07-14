@@ -297,14 +297,38 @@ def load_manifest(ws: Path) -> dict:
     return {"id": ws.name}
 
 
+def resolve_pen_name(workspace_id: str) -> str:
+    """Author/pen name for KDP + EPUB: direction → manifest → catalog series.yaml."""
+    ws = workspace_dir(workspace_id)
+    direction = load_direction(ws)
+    for raw in (
+        direction.get("pen_name"),
+        load_manifest(ws).get("pen_name"),
+    ):
+        name = str(raw or "").strip()
+        if name:
+            return name
+    series_path = catalog_series_dir(workspace_id) / "series.yaml"
+    if series_path.exists():
+        try:
+            data = yaml.safe_load(series_path.read_text(encoding="utf-8")) or {}
+            name = str(data.get("pen_name") or "").strip()
+            if name:
+                return name
+        except (yaml.YAMLError, OSError):
+            pass
+    return ""
+
+
 def sync_series_yaml(workspace_id: str) -> Path:
     ws = workspace_dir(workspace_id)
     manifest = load_manifest(ws)
     series_dir = catalog_series_dir(workspace_id)
     series_dir.mkdir(parents=True, exist_ok=True)
+    pen = resolve_pen_name(workspace_id) or str(manifest.get("pen_name") or "").strip()
     out = {
         "id": manifest.get("id", workspace_id),
-        "pen_name": manifest.get("pen_name", ""),
+        "pen_name": pen,
         "blurb": manifest.get("blurb", "").strip(),
         "tropes": manifest.get("tropes", []),
         "spice_badge": manifest.get("spice_badge", ""),
@@ -486,6 +510,7 @@ def repair_catalog_book(
             target_lang=lang,
             workspace_id=workspace_id,
             book=book_num,
+            chapter=int(meta.get("chapter") or 0) or None,
         )
         needs_fix = issues_to_needs_fix(m_issues)
         if meta.get("needs_fix") and not needs_fix:
@@ -562,6 +587,8 @@ def promote_chapter(
         cfg=cfg,
         workspace_id=workspace_id,
         book=book,
+        chapter=ch_num,
+        plan=plan_beat,
     )
     needs_fix = issues_to_needs_fix(m_issues)
 
@@ -694,6 +721,7 @@ def migrate_from_scripts(
                 cfg=cfg,
                 workspace_id=workspace_id,
                 book=1,
+                chapter=spec["chapter"],
             )
             extra = issues_to_needs_fix(m_issues)
             extra.extend(spec.get("continuity_flags", []))
@@ -866,6 +894,7 @@ def export_epub(
     book_title = book_display_title(workspace_id, book_slug)
     epub_uid = ensure_epub_identifier(workspace_id, book_slug)
     modified = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    author = resolve_pen_name(workspace_id)
 
     chapter_entries: list[tuple[str, str, dict, str]] = []
     for i, (_path, meta, body) in enumerate(items, 1):
@@ -923,6 +952,11 @@ def export_epub(
         f"<dc:language>{_escape_xml(lang)}</dc:language>"
         f'<meta property="dcterms:modified">{modified}</meta>'
     )
+    if author:
+        meta_block += (
+            f'<dc:creator id="creator">{_escape_xml(author)}</dc:creator>'
+            '<meta refines="#creator" property="role" scheme="marc:relators">aut</meta>'
+        )
     if cover_href:
         meta_block += '<meta name="cover" content="cover-image"/>'
 

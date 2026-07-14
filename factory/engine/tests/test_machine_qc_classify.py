@@ -10,9 +10,12 @@ from unittest.mock import patch
 
 from factory.engine.lib.machine_qc import (
     classify_machine_issues,
+    expects_low_dialogue,
+    find_missing_dialogue_quote_hits,
     format_machine_reasons,
     has_content_fail,
     is_format_only_issues,
+    issues_to_needs_fix,
     machine_pass,
     machine_qc,
 )
@@ -71,6 +74,85 @@ class ClassifyMachineIssuesTests(unittest.TestCase):
         reasons = format_machine_reasons(issues)
         self.assertTrue(any("format_fix" in r for r in reasons))
         self.assertTrue(any("markdown" in r for r in reasons))
+
+
+class DialogueQuoteHeuristicTests(unittest.TestCase):
+    def _isolation_plan(self) -> dict:
+        return {
+            "chapter": 3,
+            "must_happen": [
+                "[ISOLATION] Clara finds an old note and realizes there is no living witness.",
+                "Clara maps contamination with catalogue numbers only.",
+            ],
+            "spice_note": "No romance; tension from isolation and grief.",
+            "chapter_task": "Solo POV catalogue notes; near-zero dialogue except mandated opener.",
+            "opens_with": '"Stay where I put you," Clara snapped, and drove the paperweight down.',
+        }
+
+    def _isolation_chapter_prose(self) -> str:
+        opener = (
+            '"Stay where I put you," Clara snapped, and drove the paperweight down '
+            "before the ledger crawled another inch."
+        )
+        para = (
+            "Clara numbered the plates by habit. The corridor stayed empty. "
+            "She wrote contamination notes in the catalogue and did not speak again. "
+            "Black veins threaded the glass while she worked alone with blotting paper "
+            "and weights, recording each surface as if order could hold the room still."
+        )
+        return "# Chapter 3: The Ashless Room\n\n" + opener + "\n\n" + "\n\n".join([para] * 40)
+
+    def test_isolation_single_quote_chapter_passes(self):
+        plan = self._isolation_plan()
+        text = self._isolation_chapter_prose()
+        self.assertTrue(expects_low_dialogue(plan=plan))
+        hits = find_missing_dialogue_quote_hits(text, plan=plan)
+        self.assertEqual(hits, [])
+        issues = machine_qc(text, min_words=100, plan=plan)
+        self.assertNotIn("missing_quotes", issues)
+        self.assertEqual(issues_to_needs_fix(issues), [])
+        self.assertTrue(machine_pass(issues))
+
+    def test_sparse_quotes_alone_do_not_fail(self):
+        # One properly quoted line, rest narration — no isolation signal, no dangling tags.
+        narration = (
+            "The house settled. She catalogued the silence and walked the empty hall. "
+            "No other voice replied to her. Dust held the light."
+        )
+        text = "# Chapter 1: Quiet\n\n" + '"Goodnight," she said.\n\n' + "\n\n".join([narration] * 50)
+        hits = find_missing_dialogue_quote_hits(text)
+        self.assertEqual(hits, [])
+        issues = machine_qc(text, min_words=100)
+        self.assertNotIn("missing_quotes", issues)
+        self.assertTrue(machine_pass(issues))
+
+    def test_many_unquoted_dialogue_tags_still_flagged(self):
+        text = (
+            "# Chapter 1: Crowd\n\n"
+            "Leave now, he said.\n"
+            "Why should I, she asked.\n"
+            "Because it is over, he whispered.\n"
+            "You never listen, she muttered.\n"
+            + ("They argued in the corridor without marks. " * 80)
+        )
+        hits = find_missing_dialogue_quote_hits(text)
+        self.assertTrue(hits)
+        issues = machine_qc(text, min_words=100)
+        self.assertIn("missing_quotes", issues)
+        self.assertFalse(machine_pass(issues))
+        self.assertIn("missing_quotes:dialogue", issues_to_needs_fix(issues))
+
+    def test_isolation_suppresses_even_sparse_noise(self):
+        plan = self._isolation_plan()
+        text = (
+            "# Chapter 3\n\n"
+            '"Stay," Clara said.\n\n'
+            + ("She wrote alone. Catalogue notes only. " * 100)
+        )
+        self.assertEqual(
+            find_missing_dialogue_quote_hits(text, plan=plan),
+            [],
+        )
 
 
 class DraftNoFormatRetryTests(unittest.TestCase):
