@@ -463,9 +463,125 @@ _ROMANCE_EXPLICITLY_ABSENT_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Concept/direction signals that romance is forbidden (horror, antagonist-only ML, …).
+_ROMANCE_FORBIDDEN_RE = re.compile(
+    r"\bno romance\b|"
+    r"\bromance of any kind\b|"
+    r"\bnot a (?:love interest|romance)\b|"
+    r"\bno love interest\b|"
+    r"\bforbids? romance\b|"
+    r"\bwithout romance\b|"
+    r"\bno attraction\b|"
+    r"\bnot a romance\b|"
+    r"\bno romance line\b",
+    re.IGNORECASE,
+)
 
-def _forbidden_romance_when_no_male_lead(plan: dict) -> bool:
-    """True when plan invents romance despite absent male lead."""
+# must_avoid entries that ban romance as a category (not "bad romance trope" notes).
+_MUST_AVOID_FORBIDS_ROMANCE_RE = re.compile(
+    r"^(?:no\s+)?romance(?:\s+of\s+any\s+kind)?\.?$|"
+    r"romance of any kind|"
+    r"^no (?:romance|love interest|romantic(?:\s+subplot)?)\b|"
+    r"^any romance\b|"
+    r"^romantic (?:subplot|relationship|arc|line)\b|"
+    r"^love interest\b",
+    re.IGNORECASE,
+)
+
+# Opt-in: workspace wants romance-thriller micro-beats (ceo-contract / glass-meridian).
+_ROMANCE_OPT_IN_RE = re.compile(
+    r"\bromance[- ]?thriller\b|"
+    r"\bwrite\b.{0,40}\bas a\b.{0,40}\bromance\b|"
+    r"\bslow[- ]burn romance\b|"
+    r"\bmarry first\b|"
+    r"\blove interest\b|"
+    r"\bromantic subplot\b|"
+    r"\bforced proximity\b|"
+    r"\bend[- ]of[- ]chapter hooks\b.{0,40}\bromance\b",
+    re.IGNORECASE | re.DOTALL,
+)
+
+
+def _load_concept_for_qc(ws: Path | None) -> dict[str, Any]:
+    if ws is None:
+        return {}
+    try:
+        from factory.engine.lib.narrative_schema import load_concept
+
+        return load_concept(ws) or {}
+    except (OSError, TypeError, ValueError):
+        return {}
+
+
+def _concept_direction_blob(direction: dict, concept: dict) -> str:
+    parts: list[str] = [
+        str(direction.get("narrative_profile") or ""),
+        str(direction.get("goal") or ""),
+        str(direction.get("spice_badge") or ""),
+        " ".join(str(t) for t in (direction.get("tropes") or [])),
+        str(concept.get("author_directive") or ""),
+        str(concept.get("notes") or ""),
+        str(concept.get("logline") or ""),
+        "\n".join(str(x) for x in (concept.get("must_avoid") or [])),
+        "\n".join(str(x) for x in (concept.get("must_include") or [])),
+    ]
+    return "\n".join(parts)
+
+
+def romance_forbidden(direction: dict, *, ws: Path | None = None) -> bool:
+    """True when concept/direction forbids romance of any kind."""
+    concept = _load_concept_for_qc(ws)
+    for item in concept.get("must_avoid") or []:
+        if _MUST_AVOID_FORBIDS_ROMANCE_RE.search(str(item).strip()):
+            return True
+    blob = _concept_direction_blob(direction, concept)
+    if _ROMANCE_FORBIDDEN_RE.search(blob):
+        return True
+    # Antagonist-only male lead, explicitly not romantic.
+    if re.search(
+        r"\bNOT a love interest\b|"
+        r"\bnot a love interest\b|"
+        r"\bnever\b.{0,40}\battraction\b|"
+        r"\bno attraction,\s*ever\b",
+        blob,
+        re.IGNORECASE | re.DOTALL,
+    ):
+        return True
+    return False
+
+
+def romance_microbeat_required(direction: dict, *, ws: Path | None = None) -> bool:
+    """[ROMANCE] micro-beat is OPT-IN from concept/direction — never the default.
+
+    Romance workspaces signal via narrative_profile / directive / tropes.
+    Forbidden-romance or absent male lead → never required.
+    """
+    if romance_forbidden(direction, ws=ws):
+        return False
+    if _male_lead_absent(None, ws):
+        return False
+
+    concept = _load_concept_for_qc(ws)
+    profile = str(direction.get("narrative_profile") or "").strip().lower()
+    if "romance" in profile:
+        return True
+
+    for pool in (
+        direction.get("tropes") or [],
+        concept.get("must_include") or [],
+    ):
+        for item in pool:
+            if "romance" in str(item).lower() or "slow burn" in str(item).lower():
+                return True
+
+    blob = _concept_direction_blob(direction, concept)
+    if _ROMANCE_OPT_IN_RE.search(blob):
+        return True
+    return False
+
+
+def _forbidden_romance_when_disabled(plan: dict) -> bool:
+    """True when plan invents romance despite absent ML / romance-forbidden workspace."""
     for item in plan.get("must_happen") or []:
         s = str(item)
         upper = s.strip().upper()
@@ -496,6 +612,10 @@ def _forbidden_romance_when_no_male_lead(plan: dict) -> bool:
     if _ROMANCE_WHEN_ABSENT_RE.search(blob):
         return True
     return False
+
+
+# Back-compat alias for older call sites / tests.
+_forbidden_romance_when_no_male_lead = _forbidden_romance_when_disabled
 
 
 def validate_plan(
@@ -549,11 +669,18 @@ def validate_plan(
         issues.append(f"ch{ch}:cliffhanger_weak")
 
     male_absent = _male_lead_absent(bible, ws)
-    if male_absent:
-        if _forbidden_romance_when_no_male_lead(plan):
-            issues.append(f"ch{ch}:forbidden_romance_when_no_male_lead")
-    elif not plan.get("locked") and not _has_romance_micro_beat(plan):
-        issues.append(f"ch{ch}:missing_romance_micro_beat")
+    romance_off = romance_forbidden(direction, ws=ws) or male_absent
+    if romance_off:
+        if _forbidden_romance_when_disabled(plan):
+            code = (
+                "forbidden_romance_when_no_male_lead"
+                if male_absent
+                else "forbidden_romance_when_concept_forbids"
+            )
+            issues.append(f"ch{ch}:{code}")
+    elif romance_microbeat_required(direction, ws=ws):
+        if not plan.get("locked") and not _has_romance_micro_beat(plan):
+            issues.append(f"ch{ch}:missing_romance_micro_beat")
 
     issues.extend(_plan_pov_issues(plan, direction, ws=ws))
 

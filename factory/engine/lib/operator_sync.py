@@ -131,7 +131,11 @@ def write_chapter_count_everywhere(
     book: int,
     total: int,
 ) -> dict[str, Any]:
-    """UI save: overwrite chapter count in every derived file."""
+    """UI save: overwrite chapter count in plan/narrative/config only.
+
+    Never rewrites chapter prose (``pipeline/*/ch_*.txt``, catalog ``chapters/*.md``,
+    spot_check). Those files are publishable bodies — rescale must not touch them.
+    """
     from factory.engine.lib.workspace_metadata import rescale_direction_arc, sync_manifest_from_direction
 
     total = clamp_chapters(total)

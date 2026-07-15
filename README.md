@@ -108,7 +108,7 @@ KDP Sub-niche Recon/
 │   │       ├── canon_guard.py          # Forbidden lead aliases lúc promote
 │   │       ├── plan_qc.py              # Plan QC + NC-01..NC-07 + absent-ML romance
 │   │       ├── machine_qc.py           # format_fix / content_fail / length buckets
-│   │       ├── export_gate.py          # EG-01..EG-12 trước promote/export
+│   │       ├── export_gate.py          # EG-01..EG-13 trước promote/export
 │   │       ├── plan_normalize.py       # Unwrap plan, flatten must_happen
 │   │       ├── write_guards.py         # State gate, prior excerpt
 │   │       ├── qc_eval.py              # QC hard-fail continuity/voice

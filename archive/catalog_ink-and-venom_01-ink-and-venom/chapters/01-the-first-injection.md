@@ -18,7 +18,7 @@ Cora moved to the right wrist without hesitation. Her fingers were practiced, ef
 
 "I said please," Elara said.
 
-"And I heard you." Cora's voice was flat, warmless. She checked the tension on both restraints and stepped back.
+"And I heard you." Cora's voice was flat, cold. She checked the tension on both restraints and stepped back.
 
 Elara tested the give. There was none. Her fingers spread against the leather, and she felt the shape of her own breath shortening. She had told them she could hold still. She had told them she did not need to be tied. But the clinic had its procedures, and pain patients were unreliable narrators of their own bodies. That was what the intake form had implied.
 

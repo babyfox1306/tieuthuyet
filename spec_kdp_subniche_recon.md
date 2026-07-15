@@ -569,11 +569,11 @@ def format_export_gate_reasons(report: dict) -> list[str]: ...
 
 Hook trong `catalog.py`:
 
-- `promote_chapter()` — subset **EG-01, EG-02, EG-03, EG-06, EG-08, EG-10, EG-11, EG-12**
-- `export_book()` — **full book** EG-01..**12**
+- `promote_chapter()` — subset **EG-01, EG-02, EG-03, EG-06, EG-08, EG-10, EG-11, EG-12, EG-13**
+- `export_book()` — **full book** EG-01..**13**
 - **`write` — không hook**
 
-#### 6.10.4 Rules (EG-01 .. EG-12)
+#### 6.10.4 Rules (EG-01 .. EG-13)
 
 Mỗi rule trả `CheckResult`: `{id, severity, passed, chapter?, detail, snippet?}`.
 
@@ -591,6 +591,7 @@ Mỗi rule trả `CheckResult`: `{id, severity, passed, chapter?, detail, snippe
 | **EG-10** | error | CJK trên bản EN | fullwidth/CJK trong body |
 | **EG-11** | error | Generic title (per-chapter promote) | tương tự EG-09, hook promote |
 | **EG-12** | error/warn | Frontmatter `needs_fix` còn flags | kể cả khi body đã sạch — phải clear meta |
+| **EG-13** | error | Engine/template residue in prose | `chapterless`, `chapter{`, `{N}`, `total_chapters`, `{{N}}` — chặn promote/export; EG-13 → `needs_fix` |
 
 **Pass book:** mọi `severity=error` đều `passed=true`. `warn` không chặn trừ `export_gate_strict`.
 

@@ -52,7 +52,7 @@ One drawer remained half open at knee height.
 
 VANCE, ELEANOR M. OBSERVATIONAL NOTES. 1894-1896.
 
-The label was swollen, the paper puckered beneath its ink. Clara had spent all of chapterless hours avoiding the exact curve of the V, as if refusing to look straight at it could turn it into someone else's handwriting. It had not obliged.
+The label was swollen, the paper puckered beneath its ink. Clara had spent all of countless hours avoiding the exact curve of the V, as if refusing to look straight at it could turn it into someone else's handwriting. It had not obliged.
 
 Ash drifted around the drawer front in the thin water film, gray and weightless, not falling from above but collecting where disturbed paper had blackened earlier under some accidental exposure near the cracked upper panes. The ash made no pattern Clara could trust. It circled the drawer label, gathered at the brass pull, then separated into loose islands.
 
@@ -86,7 +86,7 @@ The daylight passing through it divided weakly across the far wall: greenish yel
 
 The black veins avoided that strip.
 
-Clara had noticed the avoidance in chapterless fragments of panic: a clean gap on the wet boards, a thread bending around pale light, the odd brittle smear near the drawer. She had catalogued it as C003? No, she corrected herself irritably, not a catalogue number, not yet. A clue was not a record until tested.
+Clara had noticed the avoidance in countless fragments of panic: a clean gap on the wet boards, a thread bending around pale light, the odd brittle smear near the drawer. She had catalogued it as C003? No, she corrected herself irritably, not a catalogue number, not yet. A clue was not a record until tested.
 
 "Fine," she said. "Sunlight gets its turn."
 

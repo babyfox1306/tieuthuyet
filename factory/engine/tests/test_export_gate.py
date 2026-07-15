@@ -14,6 +14,7 @@ from factory.engine.lib.export_gate import (
     check_eg09_metadata,
     check_eg10_cjk,
     check_eg11_generic_title,
+    check_eg13_engine_tokens,
     export_gate_pass,
     format_export_gate_reasons,
     prepare_chapter_for_export,
@@ -164,6 +165,30 @@ class EG12NeedsFixTests(unittest.TestCase):
 
         check = check_eg12_needs_fix({"needs_fix": []}, 5)
         self.assertTrue(check["passed"])
+
+
+class EG13EngineTokenTests(unittest.TestCase):
+    def test_chapterless_fails(self):
+        from factory.engine.lib.export_gate import check_eg13_engine_tokens
+
+        checks = check_eg13_engine_tokens(
+            "Clara had spent all of chapterless hours avoiding.", 4
+        )
+        self.assertTrue(any(c["id"] == "EG-13" and not c["passed"] for c in checks))
+
+    def test_countless_passes(self):
+        from factory.engine.lib.export_gate import check_eg13_engine_tokens
+
+        checks = check_eg13_engine_tokens(
+            "Clara had spent all of countless hours avoiding.", 4
+        )
+        self.assertTrue(all(c["passed"] for c in checks if c["id"] == "EG-13"))
+
+    def test_total_chapters_token_fails(self):
+        from factory.engine.lib.export_gate import check_eg13_engine_tokens
+
+        checks = check_eg13_engine_tokens("There are total_chapters left.", 1)
+        self.assertTrue(any(not c["passed"] for c in checks if c["id"] == "EG-13"))
 
 
 class PrepareExportTests(unittest.TestCase):

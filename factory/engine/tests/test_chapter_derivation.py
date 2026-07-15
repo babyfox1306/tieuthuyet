@@ -13,6 +13,7 @@ from factory.engine.lib.chapter_derivation import (
     rescale_knowledge_matrix,
     rescale_mystery_ledger,
     rescale_narrative_dir,
+    rescale_text_chapters,
     rescale_threads,
 )
 
@@ -118,6 +119,56 @@ class ChapterDerivationTests(unittest.TestCase):
                 encoding="utf-8",
             )
             self.assertEqual(infer_narrative_extent(ws), 28)
+
+    def test_countless_survives_text_rescale(self) -> None:
+        """Quantity words must never become engine tokens like chapterless."""
+        prose = (
+            "Clara had spent all of countless hours avoiding the curve.\n"
+            "Clara had noticed the avoidance in countless fragments of panic.\n"
+            "Payoff is before chapter 12 and chapters 10-12 wrap the arc."
+        )
+        out = rescale_text_chapters(prose, 12, 10)
+        self.assertIn("countless hours", out)
+        self.assertIn("countless fragments", out)
+        self.assertNotIn("chapterless", out)
+        self.assertIn("chapter 10", out)  # 12 * 10/12 → 10
+        self.assertRegex(out, r"chapters 8.10")  # 10-12 → 8-10
+
+    def test_prose_files_untouched_on_narrative_rescale(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp)
+            nd = ws / "bible" / "narrative"
+            nd.mkdir(parents=True)
+            (nd / "threads.json").write_text(
+                json.dumps(
+                    {
+                        "threads": [
+                            {
+                                "must_close_by": 12,
+                                "note": "countless hours before chapter 12",
+                            }
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            pipe = ws / "books" / "01" / "pipeline" / "ready"
+            pipe.mkdir(parents=True)
+            prose_path = pipe / "ch_004.txt"
+            prose = "Clara had spent all of countless hours avoiding.\n"
+            prose_path.write_text(prose, encoding="utf-8")
+            cat = ws / "catalog" / "chapters"
+            cat.mkdir(parents=True)
+            cat_path = cat / "04-x.md"
+            cat_path.write_text(prose, encoding="utf-8")
+
+            rescale_narrative_dir(ws, 10, from_total=12, book=1)
+            self.assertEqual(prose_path.read_text(encoding="utf-8"), prose)
+            self.assertEqual(cat_path.read_text(encoding="utf-8"), prose)
+            th = json.loads((nd / "threads.json").read_text(encoding="utf-8"))
+            self.assertEqual(th["threads"][0]["must_close_by"], 10)
+            self.assertIn("countless hours", th["threads"][0]["note"])
+            self.assertNotIn("chapterless", th["threads"][0]["note"])
 
 
 if __name__ == "__main__":

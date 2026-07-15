@@ -41,6 +41,16 @@ MARKER_PATTERNS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"NARRATIVE CONSTRAINTS", re.IGNORECASE), "NARRATIVE CONSTRAINTS"),
     (re.compile(r"Write \*\*Chapter", re.IGNORECASE), "Write **Chapter"),
 ]
+# Engine / rescale template residue — formerly requested as EG-11; EG-11 already =
+# generic title, so these fail as dedicated EG-13 (also blocked on promote/export).
+ENGINE_TOKEN_PATTERNS: list[tuple[re.Pattern[str], str]] = [
+    (re.compile(r"\bchapterless\b", re.IGNORECASE), "engine token: chapterless"),
+    (re.compile(r"\bchapter\{"), "engine token: chapter{"),
+    (re.compile(r"\{N\}"), "engine token: {N}"),
+    (re.compile(r"\btotal_chapters\b"), "engine token: total_chapters"),
+    (re.compile(r"\{\{\s*total_chapters\s*\}\}", re.IGNORECASE), "engine token: {{total_chapters}}"),
+    (re.compile(r"\{\{\s*N\s*\}\}"), "engine token: {{N}}"),
+]
 CJK_BODY_RE = re.compile(
     r"[\u3000-\u303f\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff00-\uffef"
     r"\uac00-\ud7af\u3040-\u30ff]"
@@ -52,11 +62,13 @@ VALID_ENDING_CHARS = frozenset(
 )
 OPEN_CURLY = "\u201c\u201e"
 CLOSE_CURLY = "\u201d"
-PROMOTE_RULES = frozenset({"EG-01", "EG-02", "EG-03", "EG-06", "EG-08", "EG-10", "EG-11", "EG-12"})
+PROMOTE_RULES = frozenset(
+    {"EG-01", "EG-02", "EG-03", "EG-06", "EG-08", "EG-10", "EG-11", "EG-12", "EG-13"}
+)
 FULL_RULES = frozenset(
     {
         "EG-01", "EG-02", "EG-03", "EG-04", "EG-05", "EG-06", "EG-07", "EG-08",
-        "EG-09", "EG-10", "EG-11", "EG-12",
+        "EG-09", "EG-10", "EG-11", "EG-12", "EG-13",
     }
 )
 
@@ -510,6 +522,27 @@ def check_eg11_generic_title(
     return _check("EG-11", "error", True, chapter=chapter)
 
 
+def check_eg13_engine_tokens(body: str, chapter: int) -> list[dict[str, Any]]:
+    """Block promote/export when chapter prose contains engine/template residue."""
+    found: list[dict[str, Any]] = []
+    for pattern, label in ENGINE_TOKEN_PATTERNS:
+        m = pattern.search(body or "")
+        if m:
+            found.append(
+                _check(
+                    "EG-13",
+                    "error",
+                    False,
+                    chapter=chapter,
+                    detail=label,
+                    snippet=m.group(0).strip()[:120],
+                )
+            )
+    if not found:
+        found.append(_check("EG-13", "error", True, chapter=chapter))
+    return found
+
+
 def check_eg12_needs_fix(meta: dict, chapter: int, *, severity: str = "error") -> dict[str, Any]:
     flags = meta.get("needs_fix") or []
     if flags:
@@ -650,6 +683,7 @@ def check_chapter_for_promote(
     checks.append(check_eg10_cjk(body, chapter, lang))
     if workspace_id:
         checks.append(check_eg11_generic_title(meta, lang, workspace_id, chapter))
+    checks.extend(check_eg13_engine_tokens(body, chapter))
     eg12_sev = "error" if gcfg["publish_mode"] else "warn"
     checks.append(check_eg12_needs_fix(meta, chapter, severity=eg12_sev))
     return checks
@@ -702,6 +736,8 @@ def run_export_gate(
             checks.append(check_eg10_cjk(body, ch_num, lang))
         if "EG-11" in active:
             checks.append(check_eg11_generic_title(meta, lang, workspace_id, ch_num))
+        if "EG-13" in active:
+            checks.extend(check_eg13_engine_tokens(body, ch_num))
         if "EG-12" in active:
             eg12_sev = "error" if gcfg["publish_mode"] else "warn"
             checks.append(check_eg12_needs_fix(meta, ch_num, severity=eg12_sev))

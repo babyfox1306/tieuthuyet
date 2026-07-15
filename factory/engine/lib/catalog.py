@@ -613,6 +613,26 @@ def promote_chapter(
         safe_print(f"  [promote blocked] ch_{ch:03d}: export gate")
         for reason in reasons[:6]:
             safe_print(f"    {reason}")
+        engine_hits = [
+            c for c in gate_checks if c.get("id") == "EG-13" and not c.get("passed")
+        ]
+        if engine_hits:
+            # Fail loud → needs_fix so operator sees engine residue in the UI bucket.
+            fix_dir = pipeline_dir(ws, book, "needs_fix")
+            fix_dir.mkdir(parents=True, exist_ok=True)
+            dest = chapter_pipeline_path(ws, book, "needs_fix", ch)
+            dest.write_text(text, encoding="utf-8")
+            issues = {
+                "engine_tokens": [c.get("detail") or c.get("snippet") for c in engine_hits],
+                "export_gate": reasons,
+            }
+            (fix_dir / f"ch_{ch:03d}_issues.json").write_text(
+                json.dumps(issues, indent=2, ensure_ascii=False) + "\n",
+                encoding="utf-8",
+            )
+            if ready_path.exists() and ready_path.resolve() != dest.resolve():
+                ready_path.unlink(missing_ok=True)
+            safe_print(f"  [needs_fix] ch_{ch:03d}: EG-13 engine token residue")
         return None, reasons
 
     from factory.engine.lib.canon_guard import format_canon_guard_reasons, run_canon_guard

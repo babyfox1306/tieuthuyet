@@ -27,12 +27,33 @@ CHAPTER_FIELD_NAMES = frozenset(
     }
 )
 
+# Strict chapter refs only — NEVER match quantity words ("countless") or
+# synonyms like "count"/"less" (those produced the "chapterless" prose leak).
 _CHAPTER_IN_TEXT = re.compile(
-    r"(?:(?:chapter|ch(?:apter)?)\s*)(\d{1,3})|"
-    r"chapters?\s+(\d{1,3})\s*[–\-]\s*(\d{1,3})",
+    r"\b(?:chapter|ch)\s+(\d{1,3})\b|"
+    r"\bchapters?\s+(\d{1,3})\s*[–\-]\s*(\d{1,3})\b",
+    re.IGNORECASE,
+)
+_CHAPTER_RANGE_RE = re.compile(
+    r"\bchapters?\s+(\d{1,3})\s*([–\-])\s*(\d{1,3})\b",
+    re.IGNORECASE,
+)
+_CHAPTER_SINGLE_RE = re.compile(
+    r"\b((?:chapter|ch)\s+)(\d{1,3})\b",
     re.IGNORECASE,
 )
 _CH_KEY = re.compile(r"^ch(\d+)$", re.IGNORECASE)
+
+def is_prose_path(path: Path | str) -> bool:
+    """True for pipeline chapter .txt/.md or catalog chapter bodies."""
+    s = str(path).replace("\\", "/").lower()
+    if "/pipeline/" in s and (s.endswith(".txt") or s.endswith(".md")):
+        return True
+    if "/chapters/" in s and s.endswith(".md"):
+        return True
+    if "/spot_check/" in s and s.endswith(".md"):
+        return True
+    return False
 
 
 def derive_milestones(total: int) -> list[int]:
@@ -77,6 +98,11 @@ def rescale_chapter_optional(
 
 
 def rescale_text_chapters(text: str, from_total: int, to_total: int) -> str:
+    """Rewrite explicit ``chapter N`` / ``chapters A-B`` refs in structured notes.
+
+    Never matches quantity words (``countless``, ``endless``) or bare numerals.
+    Must only be applied to plan/narrative/config string fields — never prose files.
+    """
     if not text or from_total <= 0 or from_total == to_total:
         return text
 
@@ -87,26 +113,12 @@ def rescale_text_chapters(text: str, from_total: int, to_total: int) -> str:
         sep = m.group(2)
         return f"chapters {ra}{sep}{rb}"
 
-    def _sub_single(m: re.Match[str]) -> str:
-        ch = int(m.group(1))
-        new_ch = rescale_chapter(ch, from_total, to_total)
-        prefix = m.group(0)[: -len(m.group(1))].rstrip()
-        return f"{prefix} {new_ch}".strip()
-
-    out = re.sub(
-        r"chapters?\s+(\d{1,3})\s*([–\-])\s*(\d{1,3})",
-        _sub_range,
-        text,
-        flags=re.IGNORECASE,
-    )
-    out = re.sub(
-        r"((?:chapter|ch(?:apter)?)\s*)(\d{1,3})",
+    out = _CHAPTER_RANGE_RE.sub(_sub_range, text)
+    out = _CHAPTER_SINGLE_RE.sub(
         lambda m: f"{m.group(1)}{rescale_chapter(int(m.group(2)), from_total, to_total)}",
         out,
-        flags=re.IGNORECASE,
     )
     return out
-
 
 def _collect_chapter_numbers(obj: Any, found: set[int]) -> None:
     if isinstance(obj, dict):
@@ -350,7 +362,11 @@ def rescale_narrative_dir(
     from_total: int | None = None,
     book: int = 1,
 ) -> list[str]:
-    """Rescale all narrative JSON files when operator changes chapter count."""
+    """Rescale narrative JSON chapter refs when operator changes chapter count.
+
+    Scope is ONLY ``bible/narrative/*.json``. Never rewrite pipeline prose,
+    catalog chapters, or spot_check bodies.
+    """
     nd = ws / "bible" / "narrative"
     if not nd.exists():
         return []
@@ -373,6 +389,8 @@ def rescale_narrative_dir(
     for fname, fn in handlers.items():
         path = nd / fname
         if not path.exists():
+            continue
+        if is_prose_path(path):
             continue
         try:
             data = json.loads(path.read_text(encoding="utf-8"))

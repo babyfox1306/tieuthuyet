@@ -21,6 +21,6 @@ Quy tắc kỹ thuật BẮT BUỘC:
 - signature_detail_hint: lạ-mà-thật, KHÔNG nhẫn/xe/đồng hồ sáo
 - cliffhanger: cụ thể, buộc đọc chương sau
 - Nối continuity từ prior_plans — không reset bối cảnh
-- **Romance micro-beat:**
-  - Nếu bible/canon có male lead thật: thiếu `[ROMANCE]` → thêm 1 mục cụ thể (ánh mắt/chạm) giữa hai lead lúc nguy hiểm.
-  - Nếu male lead = Unassigned / no male lead / M.I.A.: **CẤM** bịa bác sĩ / love interest. Dùng `[ROMANCE]`/`[ISOLATION]` dạng absence only (empty corridor, no hand to take). **Không** invent tên kiểu Dr. Mateo / Dr. Noah. Chỉ dùng cast đã khai trong concept/bible (vd. Dr. Ovid = phone-only, không hiện diện vật lý, không romantic).
+- **Romance micro-beat (OPT-IN):**
+  - Nếu romance **opt-in** (narrative_profile chứa romance / concept romance-thriller): thiếu `[ROMANCE]` → thêm 1 mục cụ thể (ánh mắt/chạm) giữa hai lead lúc nguy hiểm.
+  - Nếu concept **forbids romance** (must_avoid "Romance of any kind" / "no romance") hoặc male lead = Unassigned / M.I.A.: **CẤM** bịa bác sĩ / love interest / `[ROMANCE]` attraction. Dùng `[ISOLATION]` dạng absence only nếu cần. **Không** invent tên kiểu Dr. Mateo / Dr. Noah. Chỉ dùng cast đã khai trong concept/bible.
