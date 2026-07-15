@@ -2,9 +2,9 @@
   "ok": true,
   "passed": true,
   "skipped": false,
-  "workspace_id": "the-black-arteries",
-  "book_slug": "01-the-black-arteries",
-  "checked_at": "2026-07-15T03:16:59.133410+00:00",
+  "workspace_id": "ink-and-venom",
+  "book_slug": "01-ink-and-venom",
+  "checked_at": "2026-07-15T02:54:28.928106+00:00",
   "chapter_count": 12,
   "expected_chapters": 12,
   "target_language": "en",
@@ -150,9 +150,8 @@
     {
       "id": "EG-12",
       "severity": "warn",
-      "passed": false,
-      "chapter": 3,
-      "detail": "catalog needs_fix: missing_quotes:dialogue"
+      "passed": true,
+      "chapter": 3
     },
     {
       "id": "EG-01",
@@ -535,9 +534,8 @@
     {
       "id": "EG-12",
       "severity": "warn",
-      "passed": false,
-      "chapter": 11,
-      "detail": "catalog needs_fix: markdown:*C001. Pressure-plate readings. 1889–189"
+      "passed": true,
+      "chapter": 11
     },
     {
       "id": "EG-01",
@@ -610,6 +608,6 @@
     }
   ],
   "errors": 0,
-  "warnings": 2,
-  "summary": "Export gate PASS — 2 warning(s)"
+  "warnings": 0,
+  "summary": "Export gate PASS"
 }

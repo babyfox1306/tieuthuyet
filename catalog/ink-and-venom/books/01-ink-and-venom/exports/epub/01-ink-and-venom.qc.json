@@ -2,10 +2,10 @@
   "ok": true,
   "passed": true,
   "exit_code": 0,
-  "epub_path": "D:\\tieuthuyet\\tieuthuyet\\catalog\\the-black-arteries\\books\\01-the-black-arteries\\exports\\epub\\01-the-black-arteries.epub",
+  "epub_path": "D:\\tieuthuyet\\tieuthuyet\\catalog\\ink-and-venom\\books\\01-ink-and-venom\\exports\\epub\\01-ink-and-venom.epub",
   "epubcheck_jar": "F:\\phanmem\\epubcheck-5.3.0\\epubcheck.jar",
-  "checked_at": "2026-07-15T03:44:12.482873+00:00",
-  "duration_sec": 7.97,
+  "checked_at": "2026-07-15T02:54:29.110046+00:00",
+  "duration_sec": 9.64,
   "counts": {
     "fatals": 0,
     "errors": 0,

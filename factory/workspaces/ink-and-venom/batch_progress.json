@@ -1,12 +1,15 @@
 {
-  "running": true,
+  "running": false,
   "phase": "write",
   "write_mode": "supervised",
-  "from_ch": 1,
-  "to_ch": 12,
-  "written": 0,
-  "issue_chapters": [],
+  "ok": true,
+  "written": 1,
+  "failed_ch": null,
+  "issue_chapters": [
+    11
+  ],
   "skipped_chapters": [],
+  "error": "",
   "log": [
     "Viet chuong 1–12 (giam sat — loi de lai, chay het)",
     "⊘ ch1: da co (catalog) — bo qua",
@@ -19,12 +22,13 @@
     "⊘ ch8: da co (catalog) — bo qua",
     "⊘ ch9: da co (catalog) — bo qua",
     "⊘ ch10: da co (catalog) — bo qua",
-    "▶ ch11 dang viet... (write #1; content cap 2 ben trong writer)"
+    "▶ ch11 dang viet... (write #1; content cap 2 ben trong writer)",
+    "⚠ ch11: needs_review — đứt mạch (continuity): Beatrice's shimmer appears and guides Elara through the lower mineral chambers and tunnels, contradicting the series bible rule that B…",
+    "  → đứt mạch (continuity): Beatrice's shimmer appears and guides Elara through the lower mineral chambers and tunnels, contradicting the series bible rule that Beatrice manifests only in the inherited art studio. Although the prior chapter excerpt already places the shimmer in the lower mineral room, the chapter continues and expands that unresolved bible conflict.",
+    "⏸ ch11: needs_review — STOP (content cap 2; operator quyết định)",
+    "▶ ch12 dang viet... (write #1; content cap 2 ben trong writer)",
+    "✓ ch12: ready + catalog",
+    "--- Ket thuc batch: 1 ch da viet; 10 ready (bo qua); 1 can sua: ch11"
   ],
-  "chapter_retry_counts": {
-    "11": 1
-  },
-  "current_ch": 11,
-  "attempt": 1,
-  "updated_at": "2026-07-14T15:42:16.477762+00:00"
+  "updated_at": "2026-07-15T01:54:10.491932+00:00"
 }
