@@ -1,0 +1,63 @@
+{
+  "current_book": 1,
+  "current_chapter": 12,
+  "timeline": [
+    "Marget Halloway arrives at the graveyard before dawn, avoiding Arthur Penhaligon.",
+    "The raven perches on the central stone and opens its beak in silence.",
+    "Marget maps the cold spots and draws a perfect circle connecting them.",
+    "She discovers that the central stone has a rhythmic pulse, like a heartbeat beneath the surface.",
+    "She finds a fissure in the base of the stone and extracts a human bone fragment dated 18 October 1912.",
+    "The bone is polished from handling, suggesting it has been placed there intentionally."
+  ],
+  "character_status": {
+    "Marget Halloway": {
+      "location": "graveyard, at the central stone",
+      "knows": [
+        "cold spots form a perimeter around the central stone",
+        "central stone has a pulse",
+        "bone fragment date 18 October 1912",
+        "Arthur Penhaligon warned her to stop investigating",
+        "her right hand is progressively numbing"
+      ],
+      "relationship_other": "Arthur Penhaligon: supervisor/dissenter",
+      "mood": "determined, anxious, curious, weary"
+    },
+    "Arthur Penhaligon": {
+      "location": "unknown (absent from graveyard)",
+      "knows": [
+        "he warned Marget to focus on removal and stop asking questions"
+      ],
+      "relationship_other": "Marget Halloway: subordinate who disobeys him",
+      "mood": "authoritative and suspicious (inferred)"
+    }
+  },
+  "open_threads": [
+    "What is the nature of the pulse in the central stone?",
+    "Who placed the bone fragment and what does the date 18 October 1912 refer to?",
+    "Is the bone fragment from Oswin? (Who is Oswin?)",
+    "Why is the raven watching and silent?",
+    "Why does Arthur Penhaligon want Marget to stop investigating?",
+    "What is the connection between the stone and the numbness spreading in Marget's hand?",
+    "The identity of Oswin may be a previous victim or related to the bone."
+  ],
+  "facts_established": [
+    "The central stone in the graveyard emits a rhythmic pulse detectable by touch and ear.",
+    "The grass around the base of the central stone is dead and frosted.",
+    "The cold spots form a perfect circle around the central stone.",
+    "There is a fissure in the base of the central stone containing a human bone fragment.",
+    "The bone fragment is carved with the date '18 October 1912'.",
+    "The bone has been polished by frequent handling.",
+    "Marget Halloway's right hand is numb, with thumb gone and palm numb.",
+    "Arthur Penhaligon ordered Marget to stop asking questions and focus on removal."
+  ],
+  "spice_progression": "The body horror escalates as Marget's hand grows numb, and the supernatural mystery deepens with the discovery of a breathing stone and a bone relic, hinting at a dark history and a conspiracy to suppress the truth.",
+  "phrases_used": [
+    "the stone that breathes",
+    "a low thrum, like a heartbeat heard through solid rock",
+    "Granite doesn't pulse.",
+    "a pulse, and it was hungry",
+    "cold spots form a deliberate perimeter",
+    "a subterranean breath that swelled against the stone",
+    "a deep wound in the stone"
+  ]
+}

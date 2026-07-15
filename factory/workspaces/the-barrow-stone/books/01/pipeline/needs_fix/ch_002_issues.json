@@ -1,0 +1,79 @@
+{
+  "word_count": 1635,
+  "target_language": "en",
+  "markdown": [
+    "*That wasn't there before.*",
+    "*Moss regrowth: 12-hour cycle. Base temperature of regrown moss: ~68°F. ",
+    "*thermal gradient*",
+    "*Not fog. Mist.*",
+    "*R—perch. Cold intensity: 38°F.*",
+    "*Kerrow*",
+    "*Kerrow stone. Surface temp: below measurable range of pocket thermomete",
+    "*Nerve response: loss of tactile discrimination in right index finger af"
+  ],
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 13,
+        "snippet": "*That wasn't there before.*"
+      },
+      {
+        "line": 15,
+        "snippet": "*Moss regrowth: 12-hour cycle. Base temperature of regrown moss: ~68°F. "
+      },
+      {
+        "line": 15,
+        "snippet": "*thermal gradient*"
+      },
+      {
+        "line": 25,
+        "snippet": "*Not fog. Mist.*"
+      },
+      {
+        "line": 29,
+        "snippet": "*R—perch. Cold intensity: 38°F.*"
+      },
+      {
+        "line": 37,
+        "snippet": "*Kerrow*"
+      },
+      {
+        "line": 43,
+        "snippet": "*Kerrow stone. Surface temp: below measurable range of pocket thermomete"
+      },
+      {
+        "line": 43,
+        "snippet": "*Nerve response: loss of tactile discrimination in right index finger af"
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*That wasn't there before.*",
+        "*Moss regrowth: 12-hour cycle. Base temperature of regrown moss: ~68°F. ",
+        "*thermal gradient*",
+        "*Not fog. Mist.*",
+        "*R—perch. Cold intensity: 38°F.*",
+        "*Kerrow*",
+        "*Kerrow stone. Surface temp: below measurable range of pocket thermomete",
+        "*Nerve response: loss of tactile discrimination in right index finger af"
+      ]
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 1,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}

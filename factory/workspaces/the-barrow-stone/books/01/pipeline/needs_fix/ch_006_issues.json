@@ -1,0 +1,51 @@
+{
+  "word_count": 1466,
+  "target_language": "en",
+  "markdown": [
+    "*For Kerrow's full records, see the tin under the chapel floor.*",
+    "*The root reaches the surface tonight. I have confirmed it by touch. It "
+  ],
+  "missing_quotes": true,
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 5,
+        "snippet": "*For Kerrow's full records, see the tin under the chapel floor.*"
+      },
+      {
+        "line": 27,
+        "snippet": "*The root reaches the surface tonight. I have confirmed it by touch. It "
+      }
+    ],
+    "missing_quotes": [
+      {
+        "line": 17,
+        "snippet": "The twine was brittle. It snapped when she pulled the knot. She unwound the waxed cloth and lifted t"
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*For Kerrow's full records, see the tin under the chapel floor.*",
+        "*The root reaches the surface tonight. I have confirmed it by touch. It "
+      ],
+      "missing_quotes": true
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 1,
+    "max_content_retries": 2,
+    "short_expands": 2,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}

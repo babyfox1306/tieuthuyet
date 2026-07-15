@@ -1,20 +1,35 @@
 {
-  "running": true,
+  "running": false,
   "phase": "write",
   "write_mode": "supervised",
-  "from_ch": 1,
-  "to_ch": 12,
+  "ok": true,
   "written": 0,
-  "issue_chapters": [],
+  "failed_ch": null,
+  "issue_chapters": [
+    7
+  ],
   "skipped_chapters": [],
+  "error": "",
   "log": [
     "Viet chuong 1–12 (giam sat — loi de lai, chay het)",
-    "▶ ch1 dang viet... (write #1; content cap 2 ben trong writer)"
+    "⊘ ch1: da co (catalog) — bo qua",
+    "⊘ ch2: da co (catalog) — bo qua",
+    "⊘ ch3: da co (catalog) — bo qua",
+    "⊘ ch4: da co (catalog) — bo qua",
+    "⊘ ch5: da co (catalog) — bo qua",
+    "▶ ch6 dang viet... (write #1; content cap 2 ben trong writer)",
+    "⊘ ch6: da ready — bo qua",
+    "▶ ch7 dang viet... (write #1; content cap 2 ben trong writer)",
+    "⚠ ch7: needs_review — đứt mạch (continuity): The chapter begins by repeating the event of Arthur Penhaligon taking the ledger from Marget, which already occurred at the end of the…",
+    "  → đứt mạch (continuity): The chapter begins by repeating the event of Arthur Penhaligon taking the ledger from Marget, which already occurred at the end of the prior chapter excerpt. In the prior chapter, Arthur takes the ledger and leaves the site. In this chapter, he demands the ledger again and takes it from Marget. Additionally, the `story_state` lists Arthur Penhaligon's location as 'unknown (absent from graveyard)', but he is physically present and actively interacting with Marget and the environment in this chapter.",
+    "⏸ ch7: needs_review — STOP (content cap 2; operator quyết định)",
+    "⊘ ch8: da co (catalog) — bo qua",
+    "⊘ ch9: da co (catalog) — bo qua",
+    "⊘ ch10: da co (catalog) — bo qua",
+    "⊘ ch11: da co (catalog) — bo qua",
+    "▶ ch12 dang viet... (write #1; content cap 2 ben trong writer)",
+    "⊘ ch12: da ready — bo qua",
+    "--- Ket thuc batch: 0 ch da viet; 9 ready (bo qua); 1 can sua: ch7"
   ],
-  "chapter_retry_counts": {
-    "1": 1
-  },
-  "current_ch": 1,
-  "attempt": 1,
-  "updated_at": "2026-07-15T09:49:28.457209+00:00"
+  "updated_at": "2026-07-15T13:14:06.643906+00:00"
 }

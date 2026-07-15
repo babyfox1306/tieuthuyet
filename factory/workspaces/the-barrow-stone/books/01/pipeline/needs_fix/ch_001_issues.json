@@ -1,0 +1,49 @@
+{
+  "word_count": 1276,
+  "target_language": "en",
+  "markdown": [
+    "*When the stone stops talking to your skin, you stop trusting the stone.",
+    "*C001. Persistent cold vibration. Temperature depressed markedly below a",
+    "*C006. Central stone. Raven perched stationary. Temperature differential"
+  ],
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 69,
+        "snippet": "*When the stone stops talking to your skin, you stop trusting the stone."
+      },
+      {
+        "line": 73,
+        "snippet": "*C001. Persistent cold vibration. Temperature depressed markedly below a"
+      },
+      {
+        "line": 85,
+        "snippet": "*C006. Central stone. Raven perched stationary. Temperature differential"
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*When the stone stops talking to your skin, you stop trusting the stone.",
+        "*C001. Persistent cold vibration. Temperature depressed markedly below a",
+        "*C006. Central stone. Raven perched stationary. Temperature differential"
+      ]
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 0,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}

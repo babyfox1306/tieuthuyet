@@ -1,0 +1,55 @@
+{
+  "word_count": 1502,
+  "target_language": "en",
+  "markdown": [
+    "*Left hand: index, middle, thumb, outer palm—no sensation. Remaining: ri",
+    "*Moss samples from four graves show synchronized response when the sampl",
+    "*Arthur Penhaligon flooded only the graves I marked. He knows what the n",
+    "*was*"
+  ],
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 13,
+        "snippet": "*Left hand: index, middle, thumb, outer palm—no sensation. Remaining: ri"
+      },
+      {
+        "line": 69,
+        "snippet": "*Moss samples from four graves show synchronized response when the sampl"
+      },
+      {
+        "line": 71,
+        "snippet": "*Arthur Penhaligon flooded only the graves I marked. He knows what the n"
+      },
+      {
+        "line": 87,
+        "snippet": "*was*"
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*Left hand: index, middle, thumb, outer palm—no sensation. Remaining: ri",
+        "*Moss samples from four graves show synchronized response when the sampl",
+        "*Arthur Penhaligon flooded only the graves I marked. He knows what the n",
+        "*was*"
+      ]
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 1,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}

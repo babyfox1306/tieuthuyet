@@ -1,0 +1,131 @@
+---
+series: the-barrow-stone
+book: 1
+chapter: 10
+title: What the Moss Consumes
+spice: 1
+word_count: 1423
+status: draft
+needs_fix: []
+promoted_at: '2026-07-15T11:19:57Z'
+---
+
+"Move away from the root," Arthur Penhaligon said, raising the stone maul over the ribs beneath Marget Halloway's hand.
+
+She didn't move. The bone fragment pressed into her chest, the carved date digging through the thinning fabric of her coat. The exposed rib cage swayed in the torn earth, green-white filaments flexing like the mouth of a sea creature. Arthur's shadow covered it, the maul's head catching the low mistlight.
+
+"I said move."
+
+"You break those ribs and the network severs." Her voice came out steadier than she felt. "Every grave connected to it collapses."
+
+Arthur's face tightened. He wanted to swing. She saw the calculation in his eyes—whether the act would end the problem or create a worse one. The maul lowered a fraction.
+
+She took the opening. One step sideways, toward the nearest moss-covered grave. Two steps. She crouched, keeping the bone visible, keeping Arthur in her peripheral vision.
+
+The headstone wore a plate of moss as thick as two fingers, black, white-veined, pulsing. She touched it with her left hand—the hand that still felt something. Beneath the moss the stone was cold, but not the cold of a saturated record. Dead cold. Empty.
+
+She pressed deeper. No grain. No temperature shift. No residual impression of the person beneath. Every carved stone she had ever read left a tactile signature in the its surface, like a fingerprint in wet clay. This stone had nothing. The moss had consumed it entirely.
+
+"What are you doing?" Arthur's voice grated.
+
+She ignored him. From her coat pocket she pulled the folding trowel and cut into the moss at the edge of the stone, peeling back a flap. The underlying rock was clean, but at the cut line the white filaments twitched, curling outward like blind fingers searching.
+
+She reached into her other pocket and withdrew a small wrapped stone chip. She had collected it from the untouched section of the cemetery that morning, before Arthur arrived. It carried the residue of a grave that had not been touched by moss. She unwrapped it and placed it half an inch from the cut.
+
+The filaments stopped searching. They bent toward the chip, slowly at first, then faster. Within twenty seconds they had crossed the gap and covered the chip's surface. Where they touched, the residue dissolved, the stone's surface going smooth and dead.
+
+Direct feeding. The moss was actively hunting residual impressions, pulling them out of stone.
+
+She looked up. Arthur had lowered the maul to his side. He was watching the moss with the look of a man watching a fire spread.
+
+"You knew this was happening," she said.
+
+Arthur's jaw tightened. "It doesn't matter what I know."
+
+"It matters. It all matters."
+
+She stood, the bone still in her grip. She moved toward the central stone, where the rib cage hung suspended in the torn earth, the roots and filaments branching out from it like a nerve network. The ground was wet with pale liquid from whatever cavity had ruptured beneath the stone.
+
+Arthur followed, but he kept his distance.
+
+She knelt near the exposed root system where it surfaced beside the rib cage. From her pocket she produced two more stone chips. One was coated with residue from the same untouched grave. The other she had heat-sterilized in the chapel's furnace that morning—clean of all impression.
+
+She also carried a length of dried filament, collected from the fissure earlier. She laid the chips on the mud, six inches apart. Then she connected them with the filament, pressing both ends into the mud to hold them.
+
+Arthur sucked in a breath. "Don't."
+
+She ignored him and placed her fingertip on the untouched chip. The residue was there, faint but present. Her finger felt the faint thermal shadow of the person who had lain beneath it.
+
+Then she placed her other fingertip on the clean chip. Nothing.
+
+She watched the filament.
+
+A tremor ran through it. Then a pulse, exactly matching the rhythm she had felt from the central stone. The pulse moved from the untouched chip toward the rib cage. She kept her finger on the surface. With each pulse, the residue on the untouched chip weakened. A tiny wisp of cold lifted from the chip's surface and traveled along the filament.
+
+She pressed her finger harder. The cold crawled past her knuckle, into her palm, up her wrist.
+
+The pulses were drawing the residue. Collecting it. Feeding it to the network.
+
+She lifted her hand. The untouched chip was now as dead as the moss-covered stone. The filament had drawn the impression out of it, pulled it toward the center.
+
+"Every grave within the cold perimeter," she said slowly, "is being drained the same way. The moss doesn't just cover the stones—it extracts the dead. That's what the network does. It digests souls."
+
+Arthur said "nothing." His hand moved toward his pocket.
+
+She followed the filament with her eyes. It ran from the chip to the root bundle, then through the bundle into the mud. She crawled forward, tracing the thickest strand, and found where it disappeared into the glass.
+
+A vacuum receiver, buried at the base of the central stone. A cylinder of thick glass sealed with wax, the top half empty, the bottom third filled with a pale liquid that moved like mercury. Thin capillary tubes jutted from the top, each connected to a different filament.
+
+As she watched, a bead of the liquid slid down one tube and dropped into the receiver. It sat on the surface of the collected essence, and for an instant she saw the impression of a face forming and dissolving—middle-aged, bearded, eyes closed.
+
+The receiver was full of the dead.
+
+Arthur's shadow fell over her. "Stand up."
+
+She turned. He had the vial in his hand now, the palm-sized one with a cork stopper. He uncorked it.
+
+"The same liquid," she said. "You harvest it. You use it."
+
+Arthur did not deny. He brought the vial to his lips and drank.
+
+The transformation was visible. The deep furrows across his forehead smoothed in seconds. The liver spots on his cheeks lightened and vanished. The skin above the cuff of his glove flushed from a mottled gray to a healthy pink. He straightened, his shoulders squaring, his eyes clearing.
+
+He looked fifteen years younger.
+
+"It's my work," he said, and his voice had weight now. "I found the network. I nurtured it. I have a right to its yield."
+
+"Oswin Kerrow made himself the anchor to save the other graves. You've turned his body into a harvesting pipe."
+
+Arthur's expression hardened. "You don't know what you're talking about."
+
+"I know this bone." She held up the fragment. "18 October 1912. His carving. His chisel mark. He lies in the center so the moss feeds on him instead of everyone else. And you've been taking what it extracts."
+
+Arthur's hand went to the receiver. "This conversation is over."
+
+She reached for the cylinder.
+
+Arthur swung the maul.
+
+The head shattered the glass before her fingers touched it. The cylinder exploded inward, pale liquid spraying across her hands, across the mud, across the exposed ribs. It burned cold—not cold like ice, cold like the absence of all warmth. The liquid sank into the ground, and the ground responded.
+
+The filament network convulsed. Every root and thread within sight snapped taut, then relaxed, then began to pulse violently. The pulses were no longer synchronized to the slow heartbeat she had felt earlier. They were fast, desperate, a stutter that sent ripples across the entire graveyard.
+
+Arthur stared at the ruined receiver, the color draining from his face. "You don't understand what you've done."
+
+The moss on the nearest grave split.
+
+It did not tear or crack. It separated cleanly along the letters of the carved name, the black mat withdrawing from the incised lines as if the stone itself had exhaled. The name stood out clear and sharp against the paler rock beneath.
+
+The grave next to it did the same.
+
+And the next.
+
+And the next.
+
+She looked down at her left hand. She could not feel the ring finger. She could not feel the little finger. The numbness had climbed past her wrist and spread up her forearm, leaving only a faint pressure at her palm—and even that was fading.
+
+The ground heaved.
+
+Arthur grabbed his bag and stumbled backward. "We're done. We're all done."
+
+The shattered receiver spilled a pale current into the soil, and every moss-covered grave opened along its carved name at once.

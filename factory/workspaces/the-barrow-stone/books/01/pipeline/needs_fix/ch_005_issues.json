@@ -1,0 +1,61 @@
+{
+  "word_count": 1633,
+  "target_language": "en",
+  "markdown": [
+    "*Root of Barrow.*",
+    "*Keepers of the Stone.*",
+    "*took the root.*",
+    "*Oswin Kerrow — 23rd of March, four years ago.*",
+    "*Right arm—sensation absent to mid-brachium. Motor function declining.*"
+  ],
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 25,
+        "snippet": "*Root of Barrow.*"
+      },
+      {
+        "line": 55,
+        "snippet": "*Keepers of the Stone.*"
+      },
+      {
+        "line": 57,
+        "snippet": "*took the root.*"
+      },
+      {
+        "line": 69,
+        "snippet": "*Oswin Kerrow — 23rd of March, four years ago.*"
+      },
+      {
+        "line": 133,
+        "snippet": "*Right arm—sensation absent to mid-brachium. Motor function declining.*"
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*Root of Barrow.*",
+        "*Keepers of the Stone.*",
+        "*took the root.*",
+        "*Oswin Kerrow — 23rd of March, four years ago.*",
+        "*Right arm—sensation absent to mid-brachium. Motor function declining.*"
+      ]
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 0,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "word_count": 1453,
+  "target_language": "en",
+  "markdown": [
+    "*Again, Marget. The cut is your name on the stone. Do it until your wris",
+    "*C010 confirmed—Oswin Kerrow's bone, dated 1901, damage-chisel pattern m"
+  ],
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 17,
+        "snippet": "*Again, Marget. The cut is your name on the stone. Do it until your wris"
+      },
+      {
+        "line": 25,
+        "snippet": "*C010 confirmed—Oswin Kerrow's bone, dated 1901, damage-chisel pattern m"
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*Again, Marget. The cut is your name on the stone. Do it until your wris",
+        "*C010 confirmed—Oswin Kerrow's bone, dated 1901, damage-chisel pattern m"
+      ]
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 1,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}

@@ -1,0 +1,135 @@
+---
+series: the-barrow-stone
+book: 1
+chapter: 2
+title: Moss That Grows in Darkness
+spice: 1
+word_count: 1635
+status: draft
+needs_fix: []
+promoted_at: '2026-07-15T10:26:52Z'
+---
+
+The moss was back — greener, thicker than Marget Halloway had left it, climbing the base of the stones she had scrubbed clean twelve hours before.
+
+She stopped at the edge of the first grave and let her gaze travel over the carpet of emerald that now lapped at the carved names. Every stroke of her brush, every bucket of water she’d hauled from the spigot — it might as well have been a drizzle on granite. The moss had not just regrown; it had advanced, spreading into the chiseled crevices with the ambition of something that knew exactly what it wanted.
+
+Marget pulled off her glove and crouched.
+
+She touched the moss at the stone’s base. It was damp, springy, warm to the touch — warmer than the air around it, which was impossible. The graveyard sat under a permanent gray ceiling, the mist seeping through her coat every morning, and the ground should have held the chill of the night like a bruise. But this moss radiated a faint, loamy heat that prickled her bare fingertip.
+
+She pressed deeper. The cushion of it gave way to a thin layer of soil, then to something firmer — rootlike filaments that clung to the stone like thin white veins.
+
+"That wasn't there before."
+
+Marget stood, fished her ledger from her satchel, and wrote: "Moss regrowth: 12-hour cycle. Base temperature of regrown moss: ~68°F. Thermal gradient present." She underlined "thermal gradient" twice.
+
+The air temperature at her elbow was forty-three degrees. She had measured it with the pocket thermometer she kept clipped to her collar. The difference was twenty-five degrees, and that was not a thing that happened in dead soil on a misty moor.
+
+She looked around for Arthur Penhaligon. He had said he would return by midday to check her progress, but the sun — or what passed for it here — had barely moved past ten o’clock. The graveyard was empty except for the raven.
+
+The bird sat on the central stone, a monolith that rose from the center of the plot like a broken tooth. It had not moved since she arrived. Its black eye watched her with the patience of something that did not need to blink.
+
+Marget walked toward it, keeping her steps deliberate on the spongy turf. The closer she got, the cooler the air became. It hit her first at the cheeks, then at the exposed skin of her hands. By the time she stood within arm’s reach of the monolith, her breath was fogging in front of her face.
+
+"Not fog. Mist." The air itself was denser here, colder, as if the stone had pulled the moisture from the atmosphere and chilled it into a column of frost.
+
+The raven shifted one step sideways on the stone, but its feet made no sound at all — like claws on slate muffled by something soft.
+
+Marget marked the spot in her ledger with a small sketch: "R—perch. Cold intensity: 38°F." She pulled a flag from her pocket — bright orange against the gray — and pushed the wire stem into the ground at the base of the monolith.
+
+She worked her way across the graveyard, touching each stone she had cleaned the day before. At each one, she paused, held her breath, and pressed her naked fingertips to the face of the carved granite. The first three stones were cool but ordinary — the temperature she would expect from the ambient cold, the moisture of the fog leaching into the rock. The fourth stone, the one nearest to the monolith, was colder.
+
+She planted another flag.
+
+The fifth was colder still.
+
+By the time she reached the seventh stone — a flat slab that bore the faded name "Kerrow" — the cold was so sharp it bit through her calluses and into the bone of her index finger. She pulled her hand back and shook it, expecting to see ice on her skin. There was none.
+
+But the numbness was already spreading.
+
+Marget looked at her hand, flexed the index finger. It moved, but the sensation was dulled, muddy, as if she had wrapped the digit in thick cloth. She touched the stone again — she had to be sure — and the cold shot up her arm like a current, settling in her wrist with a deep ache.
+
+She wrote: "Kerrow stone. Surface temp: below measurable range of pocket thermometer." She noted the reading — the mercury had dipped to the bottom of the tube and stayed there. "Nerve response: loss of tactile discrimination in right index finger after two contacts."
+
+She had been here for less than a day and a half, and already she was losing sensation.
+
+"Measurable nerve loss. First occurrence: thumb. Second: index finger. Rate of degradation: accelerating."
+
+She capped the pen, pressed the ledger flat, and stared at the Kerrow stone. The name was worn, the letters barely visible under a patina of ancient weathering. The moss had not touched this stone. It grew all around the base, a thick green halo, but the surface was bare — dark, damp, but clean of any growth.
+
+"Something about this stone keeps the moss away," she thought.
+
+Or something attracted it to the others.
+
+The cold was still there, pooling around her ankles, seeping through the leather of her boots. It was not the ambient mist cold. It was a directed, hungry cold that clung to the stone itself and radiated outward in waves she could feel with her bare palms.
+
+"Persistent," she wrote. "Not atmospheric. The cold comes from the stone."
+
+It was the first observation that felt like a truth — the first time the ground beneath her feet seemed to shift and show a crack of something else.
+
+She heard footsteps behind her and turned.
+
+Arthur Penhaligon stood at the gate, his coat immaculate, his boots dry and clean. He did not step onto the grass. He stayed on the gravel path that encircled the graveyard, arms folded, his expression flat.
+
+"Miss Halloway," he said. "You're not removing the moss."
+
+It was not a question.
+
+Marget tucked the ledger under her arm and walked toward him, careful not to step on the graves. The flags fluttered behind her like a warning.
+
+"It regrew," she said. "Overnight. All of it."
+
+"I saw."
+
+"Then you know it's not normal. Moss doesn't regenerate that fast in these conditions. It needs light, warmth —"
+
+"It's a damp moor," he said. "Moss grows."
+
+"It grows a quarter inch a year in favorable conditions. This grew three inches in twelve hours, and it's warmer than the soil beneath it." She stopped a yard from him, held her ground. "Did you know that?"
+
+Arthur's jaw tightened. His gaze flicked to her hands, to the orange flags behind her, back to her face. "I hired you to clean the stones, not to measure the temperature of the moss."
+
+"The cold is —"
+
+"The cold is the moor. You'll get used to it."
+
+"No," she said. "It's not. I felt it in the first stone yesterday, and it's stronger today. It's not ambient. It's coming from the stones, especially the ones near the center. And the raven —"
+
+"The raven is a bird," he said.
+
+"It only sits on the stones where the cold is strongest."
+
+He stared at her. For a moment she thought she saw something flicker in his eyes — not surprise, but recognition. Then he blinked and it was gone.
+
+"Miss Halloway, I am paying you to clean the gravestones and remove the overgrowth. That is all. If you cannot do the work, I will find someone who can."
+
+"I can do the work," she said. "But I need to understand what I'm dealing with. If the moss is going to regrow every time I clean it, we'll be here for months. I'd rather find the source and stop it."
+
+"The source is moisture and decay," he said. "This is an old cemetery. Things rot. They'll keep rotting until they're gone. Your job is to make it look presentable."
+
+"And the cold?"
+
+"The cold is the dead." He said it flatly, as if it meant nothing. Then he turned, pulling out his pocket watch. "You have until midday tomorrow to finish the southeast quadrant. If the moss is not removed from those stones by then, I will withhold payment."
+
+He walked away without another word, his footsteps silent on the gravel, his coat tails brushing the gate as he passed through.
+
+Marget stood at the edge of the path and watched him go. She did not call after him. There was no point. He had made up his mind.
+
+She turned back to the graveyard, to the flags, to the raven on the monolith, to the cold that had settled into her bones and spread through her like a slow tide.
+
+"The cold is the dead."
+
+It was the most honest thing he had said since she arrived.
+
+She walked back to the Kerrow stone and knelt before it. She touched the surface again, pressing her palm flat, letting the cold sink into her hand until her fingers ached with the absence of feeling.
+
+The raven cawed once, a low, rough sound that scraped through the mist.
+
+"Write it down," she told herself. "Every stone, every degree, every flag."
+
+But when she reached for her pen, she could not feel the metal against the pad of her thumb. She looked down, flexed the grip. The thumb moved, but the skin was dead — no sensation at all from the first knuckle to the tip.
+
+She dropped the pen, fished her trowel from her pocket, and pressed the polished steel flat against the pad of her thumb.
+
+She could not tell whether it was cold or warm.

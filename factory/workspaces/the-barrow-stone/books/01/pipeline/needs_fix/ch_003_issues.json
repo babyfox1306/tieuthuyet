@@ -1,0 +1,49 @@
+{
+  "word_count": 1484,
+  "target_language": "en",
+  "markdown": [
+    "*Entry: Stone 1, East Face. 0817. Scrape test with steel blade. Regrowth",
+    "*Nerve loss progression: Sensation absent in all fingers of left hand. P",
+    "*The central one has been there a hundred years. The others are younger."
+  ],
+  "format_locations": {
+    "markdown": [
+      {
+        "line": 17,
+        "snippet": "*Entry: Stone 1, East Face. 0817. Scrape test with steel blade. Regrowth"
+      },
+      {
+        "line": 85,
+        "snippet": "*Nerve loss progression: Sensation absent in all fingers of left hand. P"
+      },
+      {
+        "line": 97,
+        "snippet": "*The central one has been there a hundred years. The others are younger."
+      }
+    ]
+  },
+  "classification": {
+    "format_fix": {
+      "markdown": [
+        "*Entry: Stone 1, East Face. 0817. Scrape test with steel blade. Regrowth",
+        "*Nerve loss progression: Sensation absent in all fingers of left hand. P",
+        "*The central one has been there a hundred years. The others are younger."
+      ]
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 1,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}
