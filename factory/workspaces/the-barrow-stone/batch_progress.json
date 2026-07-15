@@ -1,0 +1,20 @@
+{
+  "running": true,
+  "phase": "write",
+  "write_mode": "supervised",
+  "from_ch": 1,
+  "to_ch": 12,
+  "written": 0,
+  "issue_chapters": [],
+  "skipped_chapters": [],
+  "log": [
+    "Viet chuong 1–12 (giam sat — loi de lai, chay het)",
+    "▶ ch1 dang viet... (write #1; content cap 2 ben trong writer)"
+  ],
+  "chapter_retry_counts": {
+    "1": 1
+  },
+  "current_ch": 1,
+  "attempt": 1,
+  "updated_at": "2026-07-15T09:49:28.457209+00:00"
+}

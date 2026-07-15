@@ -1,0 +1,49 @@
+{
+  "description": "Knowledge matrix tracking key information states for Marget Halloway, Arthur Penhaligon, and Oswin Kerrow across the five narrative milestones. Tracks the progression of Marget's stone-reading ability and her understanding of the fungal network, Arthur's hidden scheme, and Oswin's sacrificial anchor. Hidden truths and must-not-know constraints ensure the mystery unfolds correctly without premature revelation or expository dialogue.",
+  "target_language": "en",
+  "milestones": [
+    1,
+    2,
+    6,
+    9,
+    12
+  ],
+  "characters": {
+    "Marget Halloway": {
+      "ch1": "Arrives at the sunken graveyard. Touches the first stone; sensation loss begins. She is aware of the cold but not its cause.",
+      "ch2": "Confirms the moss regrows overnight. Begins marking cold spots. Records her first measurable nerve loss.",
+      "ch6": "Finds Oswin's notebook. Learns he tracked the moss for fourteen months; the columns stop four years ago. Suspects a connection between his disappearance and the graveyard's condition.",
+      "ch9": "Deduces the cold network centers on a person, not a place. Realizes Oswin made himself the anchor. Understands Arthur's obstruction is active concealment.",
+      "ch12": "Strikes the stone with iron. The network dies. Her hands are permanently numb. She walks out unable to read stone ever again.",
+      "must_not_know_before": [
+        "Marget must not identify Oswin as the center before chapter 9.",
+        "Marget must not fully comprehend Arthur's role until chapter 11."
+      ],
+      "hidden_truth": "Marget's hand numbness is irreversible; she is losing the ability to read stone with every touch, and by the final chapter she will be permanently deaf to the dead's history."
+    },
+    "Arthur Penhaligon": {
+      "ch1": "Presents himself as the employer. Gloved, brisk. Sets a three-week deadline without explanation.",
+      "ch2": "Pressures Marget to focus on removal rather than investigation. Dismisses her concerns about the moss regrowth.",
+      "ch6": "Grows impatient as Marget starts deeper observation. He confiscates her cold-map ledger in chapter 7.",
+      "ch9": "After the ledger confiscation and flooding of the lower plot, his role as active concealer becomes evident, though his ultimate aims are not yet clear.",
+      "ch12": "His scheme collapses with the network. His gloves come off, revealing physically marked hands from the harvest.",
+      "must_not_know_before": [
+        "Arthur's true motive (harvesting vitality) must not be explicitly revealed before chapter 10.",
+        "Arthur's gloves remaining on must sustain the mystery of his condition throughout."
+      ],
+      "hidden_truth": "Arthur has been accelerating the fungal network's decay to extract life force for his own longevity. His gloves conceal hands that are symbiotically marked by the process."
+    },
+    "Oswin Kerrow": {
+      "ch1": "Absent physically; presence manifests as cold in the central stones. Marget does not yet associate the cold with him.",
+      "ch2": "No direct presence beyond cold intensity; the raven perches on the stones where his cold is strongest.",
+      "ch6": "His field notebook is discovered, containing fourteen months of meticulous soil and moss data, ending abruptly on the date he disappeared.",
+      "ch9": "Marget deduces that Oswin is the central anchor of the network, having deliberately made himself the host to spare the other dead.",
+      "ch12": "His consciousness is released when the stone is shattered. The cold vanishes. Marget feels nothing where his presence had held the strongest.",
+      "must_not_know_before": [
+        "Oswin's true fate (as anchor) must not be confirmed until chapter 9.",
+        "Oswin must never communicate through language; only cold indicates his presence."
+      ],
+      "hidden_truth": "Oswin Kerrow willingly entered the barrow and made his own consciousness the anchor for the parasitic network, knowing it would consume him for decades. He did this to save the other graves from being devoured."
+    }
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "main_mystery": "What is eating the graves, and why does the raven never leave the central stone?",
+  "truth": "The moss is a parasitic fungal network digesting the souls beneath the stones. Oswin Kerrow made himself its anchor so the network would consume him instead of the other graves. Arthur Penhaligon accelerates the decay to harvest what the network extracts for his own longevity.",
+  "canonical_reveal_chapter": 10,
+  "red_herrings": [
+    {
+      "description": "Marget suspects the moss is a natural, aggressive lichen caused by decades of neglect. She discards this when the moss regrows identically on meticulously scrubbed stone within twelve hours, proving active biological agency.",
+      "planted_chapter": 1,
+      "dismissed_chapter": 2
+    },
+    {
+      "description": "She briefly wonders if Arthur Penhaligon seeded the mold to devalue the land for a cheap purchase, but the cold spots form a geometry that predates Arthur's ownership by decades, and the network's centre is geological, not arbitrary.",
+      "planted_chapter": 3,
+      "dismissed_chapter": 5
+    },
+    {
+      "description": "Marget considers that the raven might be a wight or fetch that feeds on the dead, but the raven never reacts to her presence, never aids or hinders, and never perches on anything but the strongest anchor stone, confirming it is a biological marker of cold intensity rather than a separate supernatural entity.",
+      "planted_chapter": 4,
+      "dismissed_chapter": 9
+    }
+  ],
+  "major_reveals": [
+    {
+      "description": "The moss on the central stones regrows completely overnight after being scrubbed clean. It is unequivocally alive and actively recolonizing, not merely decaying.",
+      "chapter": 2,
+      "required_clues": [
+        "C001"
+      ]
+    },
+    {
+      "description": "The cold spots Marget maps are not random. They form a branching, root-like network converging on the barrow's deepest, unmarked plot.",
+      "chapter": 4,
+      "required_clues": [
+        "C002",
+        "C010"
+      ]
+    },
+    {
+      "description": "Oswin Kerrow's field notebook contains soil-density and moss-growth measurements that track the network's expansion. The final entries show his handwriting deteriorating; the last date marks the day he 'retired' into the barrow.",
+      "chapter": 6,
+      "required_clues": [
+        "C004"
+      ]
+    },
+    {
+      "description": "Arthur Penhaligon is not merely impatient—his confiscation of the cold-map ledger and the flooding of the lower plot are acts of concealment. He is actively preserving the network, not trying to erase it.",
+      "chapter": 8,
+      "required_clues": [
+        "C005",
+        "C007"
+      ]
+    },
+    {
+      "description": "The centre of the fungal network is not a place—it is a person. Oswin Kerrow made his living consciousness the anchor, directly beneath the unmarked stone.",
+      "chapter": 9,
+      "required_clues": [
+        "C002",
+        "C004",
+        "C010"
+      ]
+    },
+    {
+      "description": "Canonical revelation: The moss is a parasitic fungal network digesting the souls beneath the stones. Oswin Kerrow made himself its anchor so it would consume him instead of the other dead. Arthur Penhaligon accelerates the harvest to extract vitality for his own longevity. Iron shatters the stone and the network.",
+      "chapter": 10,
+      "required_clues": [
+        "C002",
+        "C004",
+        "C009",
+        "C010"
+      ]
+    },
+    {
+      "description": "Arthur Penhaligon's gloves are never removed because the network's symbiosis has physically marked him—extraction flows through his bare skin. When the network dies, his hands are exposed as mottled and drained.",
+      "chapter": 11,
+      "required_clues": [
+        "C006"
+      ]
+    },
+    {
+      "description": "Marget's hands are permanently numb. She struck the final blow with iron at a range that completed the nerve death she has been meticulously recording in her ledger. She walks out of the barrow unable to read the ground or the stones she once understood better than any living person.",
+      "chapter": 12,
+      "required_clues": [
+        "C008"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "description": "A slate headstone Marget scrubbed clean in the afternoon is furred with new moss by dawn. The regrowth is identical in shape and density to what she removed.",
+      "plant_chapter": 1,
+      "payoff_chapter": 2,
+      "suspect": null,
+      "type": "physical"
+    },
+    {
+      "id": "C002",
+      "description": "Plotting the location and intensity of the cold spots on a map of the graveyard, Marget watches them connect into a clear branching structure. Every branch leads to the same unmarked depression at the barrow's lowest point.",
+      "plant_chapter": 4,
+      "payoff_chapter": 5,
+      "suspect": null,
+      "type": "deductive"
+    },
+    {
+      "id": "C003",
+      "description": "The raven shifts its perch precisely when Marget's hand approaches a stone reading. It lands on the stone with the strongest cold. It does not react to her presence or her tools—only to the gradient of the temperature she is measuring.",
+      "plant_chapter": 3,
+      "payoff_chapter": 10,
+      "suspect": null,
+      "type": "behavioral"
+    },
+    {
+      "id": "C004",
+      "description": "Oswin's field notebook, wedged into a seam of the barrow wall, logs soil density, moss coverage percentages, and root depth over a period of fourteen months. The columns are regular until the final entry, where the handwriting blurs and the measurements stop. The last date is exactly four years ago.",
+      "plant_chapter": 5,
+      "payoff_chapter": 6,
+      "suspect": "Oswin Kerrow",
+      "type": "document"
+    },
+    {
+      "id": "C005",
+      "description": "Arthur confiscates Marget's cold-map ledger without warning, claiming she is wasting time on 'superstition.' The act is physically aggressive—he pulls it from her hands—and he refuses to return it.",
+      "plant_chapter": 7,
+      "payoff_chapter": 8,
+      "suspect": "Arthur Penhaligon",
+      "type": "behavioral"
+    },
+    {
+      "id": "C006",
+      "description": "Arthur Penhaligon never removes his gloves. They are clean, black leather, unchanged even as he handles soot-laden lamp glass or muddy papers. No one has ever seen his bare hands.",
+      "plant_chapter": 1,
+      "payoff_chapter": 12,
+      "suspect": "Arthur Penhaligon",
+      "type": "visual"
+    },
+    {
+      "id": "C007",
+      "description": "Digging at the edge of a cold spot, Marget uncovers a lattice of white fungal cords. The soil around them is dry and gray, completely stripped of organic matter, while the surrounding soil is dark and wet.",
+      "plant_chapter": 6,
+      "payoff_chapter": 8,
+      "suspect": null,
+      "type": "physical"
+    },
+    {
+      "id": "C008",
+      "description": "Marget keeps a meticulous record of her sensation loss. After each reading, she notes the exact millimetric retreat of feeling in her fingertips. The loss correlates perfectly with the number of distinct stones she has touched, not with the passage of days.",
+      "plant_chapter": 2,
+      "payoff_chapter": 12,
+      "suspect": "Marget Halloway",
+      "type": "personal"
+    },
+    {
+      "id": "C009",
+      "description": "When Marget accidentally drops her iron crowbar against the central unmarked stone, the moss on it shrivels instantly, the cold beneath it drops to ambient temperature for several seconds, and a tremor runs through the network's mapped root system before it recovers.",
+      "plant_chapter": 8,
+      "payoff_chapter": 10,
+      "suspect": null,
+      "type": "experimental"
+    },
+    {
+      "id": "C010",
+      "description": "The lowest grave in the barrow is the coldest by several degrees, sustained even in the sunlit hours. The soil around its base is heavily laced with the same white fungal threads, and its unmarked stone bears no inscription—as if it was never meant to be read.",
+      "plant_chapter": 4,
+      "payoff_chapter": 9,
+      "suspect": null,
+      "type": "physical"
+    }
+  ]
+}

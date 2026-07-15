@@ -1,0 +1,63 @@
+{
+  "book_number": 1,
+  "total_chapters": 12,
+  "target_language": "en",
+  "case_closed": true,
+  "case_open": "Marget Halloway accepts a three-week commission from Arthur Penhaligon to assess and remove moss from a sunken moorland graveyard abandoned for forty years.",
+  "lead_internal_arc": [
+    {
+      "character": "Marget Halloway",
+      "starting_state": "A stone restorer who lives by the principle that a carved truth must never be defaced. She reads the dead through bare touch, measuring the world in stone grain and temperature. Her hands are still mostly sensitive, though she has noted the creeping numbness in her ledger without naming it. She has not confronted the truth of Oswin's disappearance, believing he retired, and keeps emotion at bay through technical precision.",
+      "ending_state": "She has shattered the central stone with her own hands, destroying the network and freeing Oswin. Her hands are permanently dead to the history of stone. She walks out of the barrow carrying grief she can no longer feel with her fingertips, uncertain whether Oswin wanted the release she gave him. She has lost both her mentor and the only language she was fluent in.",
+      "key_change": "From passive preservation—refusing to deface carved stone—to active destruction for love and mercy. From avoiding the truth to assembling it through her own ruined senses and acting on it. The cost is the very sense that defined her."
+    },
+    {
+      "character": "Arthur Penhaligon",
+      "starting_state": "A wealthy, secretive employer with a hidden agenda. He never removes his gloves, hinting at his connection to the fungal network. He is already partly bought by the harvest, using the extracted souls to extend his own life. He presents a calm, commanding facade while applying pressure on Marget's timeline.",
+      "ending_state": "His harvest ends when Marget breaks the central stone. He arrives too late to stop her, possibly with men and crowbars, but fails. His plan is permanently thwarted, though he likely escapes without consequence. His mask of civility has dropped to reveal desperation, but he remains unrepentant and unchanged internally.",
+      "key_change": "From covert manipulation—using lies and withheld information to control Marget—to overt threat when time runs out. His composure cracks as he loses control, but he does not undergo a moral transformation."
+    }
+  ],
+  "act_structure": [
+    {
+      "act": 1,
+      "chapters_start": 1,
+      "chapters_end": 3,
+      "summary": "Setup — Marget arrives at the sunken graveyard, begins her survey, experiences unnatural moss regrowth and localized cold that seems to follow her. She maps cold spots and notices a raven that never leaves the fractured central stone. The atmosphere of wrongness is established.",
+      "chapters": [
+        1,
+        3
+      ]
+    },
+    {
+      "act": 2,
+      "chapters_start": 4,
+      "chapters_end": 7,
+      "summary": "Complications — Marget's cold map resolves into a branching root-like network. She discovers Oswin's field notes (ch5), which contain measurements matching the network and a sudden stop—the date he 'retired'. Arthur confiscates part of her ledger and shortens deadlines. The numbness in her hands advances measurably. She realizes the network is alive and feeding.",
+      "chapters": [
+        4,
+        7
+      ]
+    },
+    {
+      "act": 3,
+      "chapters_start": 8,
+      "chapters_end": 10,
+      "summary": "Crisis — Marget fully decodes the pattern, deducing that Oswin made himself the anchor so the network would consume him instead of the other graves. The central mystery is answered (ch10). Arthur arrives with men and crowbars to protect the harvest. Marget chooses to shatter the central stone, knowing it will cost her hands.",
+      "chapters": [
+        8,
+        10
+      ]
+    },
+    {
+      "act": 4,
+      "chapters_start": 11,
+      "chapters_end": 12,
+      "summary": "Resolution — Marget strikes the central stone with the iron mallet. The fungal network dies, Oswin's cold vanishes, the raven has nowhere to land. Marget walks out of the barrow across stone she can no longer read, carrying a grief she cannot feel. The threat is ended. The cost is permanent and irreversible.",
+      "chapters": [
+        11,
+        12
+      ]
+    }
+  ]
+}

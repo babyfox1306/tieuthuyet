@@ -1,0 +1,242 @@
+{
+  "act": [
+    7,
+    9
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Drowned Plot",
+      "slug": "the-drowned-plot",
+      "one_line_summary": "Arthur Penhaligon confiscates Marget Halloway's cold-map ledger and deliberately floods the lower graves after noticing which stones she marked.",
+      "beat_summary": "The confrontation begun over Marget Halloway's ledger ends with Arthur Penhaligon wrenching it from her numb right hand and carrying it away. Marget Halloway follows him at a distance and sees Arthur Penhaligon open an old iron sluice above the lower plot. Water pours through only the row of graves she marked as having the strongest cold outside the central circle, burying the stones and their connecting seams beneath black runoff. Arthur Penhaligon watches until the final marker disappears, then leaves without examining the damage. Marget Halloway recognizes the timing as suspicious but cannot yet prove intent. She rescues one torn, waterlogged corner of her map from a drainage grate and hides Oswin Kerrow's notebook elsewhere. During the recovery, she tests her left hand and records the first numbness in two fingertips, while her entire right arm remains insensible.",
+      "must_happen": [
+        "Arthur Penhaligon completes the confiscation of Marget Halloway's cold-map ledger, exploiting the fact that Marget Halloway cannot feel his grip on her numb right arm.",
+        "Marget Halloway secretly follows Arthur Penhaligon and observes him opening an old sluice that floods the exact lower row of graves she marked as unusually cold, planting behavioral clue C005.",
+        "Marget Halloway retrieves a torn corner of the soaked cold map from a drainage grate before the rest of the ledger is carried underground by the runoff.",
+        "Marget Halloway hides Oswin Kerrow's notebook and the pressed feather where Arthur Penhaligon cannot find them.",
+        "Marget Halloway records measurable numbness in the tips of her left index and middle fingers while confirming that her right arm remains completely numb."
+      ],
+      "must_not": [
+        "Marget Halloway must not yet conclude why Arthur Penhaligon flooded the graves or what he ultimately gains from the graveyard.",
+        "Arthur Penhaligon must not explain the sluice, the network, Oswin Kerrow's fate, or his own intentions.",
+        "No romance, attraction, tenderness, or caretaker warmth may occur between Marget Halloway and Arthur Penhaligon.",
+        "Oswin Kerrow must not communicate through words, visions, symbols, or directed messages."
+      ],
+      "opens_with": "\"Give me the ledger,\" Arthur Penhaligon said, and closed his gloved hand around the arm Marget Halloway could no longer feel.",
+      "cliffhanger": "Across the flooded plot, the submerged grave markers vanished one by one, but a black line of moss rose through the water and continued crawling toward Marget Halloway.",
+      "signature_detail_hint": "The sluice lever bears a crescent of fresh mud only inside its locked housing, proof that someone opened it with a narrow tool rather than by accident.",
+      "emotional_beat": "Marget Halloway feels isolation sharpen into violated distrust when Arthur Penhaligon takes the record that has served as her substitute for sensation.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; the physical contact is brief, adversarial, and limited to the struggle over the ledger.",
+      "chapter_task": "Write a 1600-1900 word chapter continuing directly from the ledger seizure. Plant C005 through Arthur Penhaligon's specific decision to flood the graves Marget Halloway marked, but do not explain his motive yet. Advance the numbness track into Marget Halloway's left fingertips and end on the visual of moss moving above the floodwater.",
+      "carries_to_next": "Marget Halloway retains a torn section of the cold map, Oswin Kerrow's notebook, and the pressed feather; she must compare them with the flooded plot before Arthur Penhaligon destroys more evidence.",
+      "narrative": {
+        "clues_plant": [
+          "C005"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005"
+        ],
+        "clue_beats": {
+          "C005": "Arthur Penhaligon checks the marked page before opening the sluice, and the resulting flood covers precisely the coldest lower graves rather than the whole graveyard."
+        },
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway knows Arthur Penhaligon has confiscated her cold-map ledger.",
+            "Marget Halloway sees Arthur Penhaligon flood graves represented on the confiscated map.",
+            "Marget Halloway suspects deliberate concealment but does not yet know what is being concealed.",
+            "Arthur Penhaligon knows which graves Marget Halloway identified as unusually cold.",
+            "Oswin Kerrow remains physically absent and manifests only as localized cold."
+          ],
+          "must_not_know": [
+            "Marget Halloway must not know that Arthur Penhaligon harvests extracted soul-energy for longevity.",
+            "Marget Halloway must not yet know that Oswin Kerrow is the human anchor of the network."
+          ],
+          "effective_milestone": 7
+        }
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Feather Points Down",
+      "slug": "the-feather-points-down",
+      "one_line_summary": "Marget Halloway proves Arthur Penhaligon flooded the graves to conceal the cold network, uses Oswin Kerrow's pressed feather to locate its center, and begins an experiment showing the moss remains connected underground.",
+      "beat_summary": "Marget Halloway returns before Arthur Penhaligon can drain the lower plot and lays the torn map corner beside the surviving waterline. The flooded graves align exactly with her strongest cold marks, paying off C005 and establishing Arthur Penhaligon's act as targeted concealment. Marget Halloway removes the pressed feather from Oswin Kerrow's notebook and places it on dry slate beside samples taken from the flooded row. Frost forms along only one side of the feather, while the other remains limp; when she rotates the slate, the frozen vane continues to orient toward the central stone. The physical response pays off C007 without conveying language and confirms that the cold has a fixed center. Marget Halloway then seals moss samples from three distant graves in separate glass dishes and arranges them according to her remembered map. Fine strands press against the glass in matching pulses whenever the central sample is touched, planting experimental clue C009 that the patches remain part of one underground system. Arthur Penhaligon appears above the flooded plot and closes the sluice, trapping Marget Halloway below as the loosened ground begins to sink. The numbness spreads across Marget Halloway's left palm.",
+      "must_happen": [
+        "Marget Halloway aligns the torn cold-map fragment with the flood boundary and confirms that Arthur Penhaligon submerged only the graves she marked as coldest, paying off C005.",
+        "Marget Halloway tests the pressed feather from Oswin Kerrow's notebook and observes frost forming consistently on the vane oriented toward the central stone, paying off C007 through physical evidence rather than communication.",
+        "Marget Halloway deduces that the flooding was an act of concealment and that the cold network has a fixed center beneath or beside the central stone, without yet identifying the person at that center.",
+        "Marget Halloway seals moss samples from separate graves in glass dishes and observes synchronized movement when the sample nearest the central stone is disturbed, planting experimental clue C009.",
+        "Arthur Penhaligon closes the sluice while Marget Halloway is in the lower plot, leaving Marget Halloway on ground destabilized by the flood.",
+        "Marget Halloway records measurable numbness covering her left index finger, middle finger, thumb, and the outer half of her left palm."
+      ],
+      "must_not": [
+        "Marget Halloway must not yet discover that the network digests souls or that Arthur Penhaligon harvests its output for longevity.",
+        "The pressed feather must not write, point like a conscious instrument, produce words, or function as a message from Oswin Kerrow.",
+        "Arthur Penhaligon must not confess that the flooding was deliberate or explain what lies beneath the central stone.",
+        "No romance, attraction, protective intimacy, or emotional warmth may occur between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "The waterline crossed every cold mark on Marget Halloway's torn map and missed every grave she had left unmarked.",
+      "cliffhanger": "The mud split beneath Marget Halloway's knees, exposing a web of white filaments stretched between the graves like tendons under peeled skin.",
+      "signature_detail_hint": "Inside the sealed dishes, the moss strands flatten against the glass at the same instant, leaving tiny branching prints in the condensation.",
+      "emotional_beat": "Marget Halloway's dread hardens into certainty that Arthur Penhaligon is actively concealing the graveyard's structure, while the loss of her left palm threatens the last instrument she can still trust.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; the chapter centers on investigation, bodily loss, and entrapment.",
+      "chapter_task": "Write a 1600-1900 word chapter paying off C005 and C007 through concrete physical tests. Reveal that Arthur Penhaligon deliberately concealed the cold network and that its cold converges on the central stone, but preserve the full mystery for later chapters. Plant C009 with synchronized sealed moss samples, advance numbness across Marget Halloway's left palm, and end with the exposed underground filaments.",
+      "carries_to_next": "Marget Halloway has physical proof of a connected underground structure centered on the central stone, while the flood has exposed a path she can follow to determine what the structure surrounds.",
+      "narrative": {
+        "clues_plant": [
+          "C009"
+        ],
+        "clues_payoff": [
+          "C005",
+          "C007"
+        ],
+        "reveals": [
+          {
+            "id": "",
+            "reveal": "Arthur Penhaligon deliberately flooded the lower plot to hide a connected cold structure centered on the central stone.",
+            "impact": "Marget Halloway can no longer treat Arthur Penhaligon as merely evasive; his obstruction is active and targeted.",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C005",
+              "C007"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005"
+        ],
+        "clue_beats": {
+          "C005": "The boundary of Arthur Penhaligon's flood matches the strongest cold marks on Marget Halloway's torn map.",
+          "C007": "The pressed feather develops frost only along the vane facing the central stone, physically linking Oswin Kerrow's hidden cache to the cold center.",
+          "C009": "Moss samples isolated in separate sealed dishes move in synchronized pulses when the central sample is disturbed, suggesting continued connection through a larger system."
+        },
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway knows Arthur Penhaligon flooded the lower graves to conceal evidence.",
+            "Marget Halloway knows the separated moss patches behave as parts of a connected system.",
+            "Marget Halloway knows the strongest cold converges on the central stone.",
+            "Arthur Penhaligon knows Marget Halloway continued investigating after the ledger confiscation.",
+            "Oswin Kerrow remains unable to communicate and is detectable only through localized cold."
+          ],
+          "must_not_know": [
+            "Marget Halloway must not know that the moss digests the souls beneath the stones.",
+            "Marget Halloway must not know that Arthur Penhaligon harvests extracted essence to extend his life.",
+            "Marget Halloway must not identify Oswin Kerrow as the network's human anchor until chapter 9."
+          ],
+          "effective_milestone": 8
+        }
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "The Man Beneath the Root",
+      "slug": "the-man-beneath-the-root",
+      "one_line_summary": "Marget Halloway follows the exposed filaments to the central stone, identifies the embedded bone as Oswin Kerrow's, and deduces that he made himself the network's human anchor to divert it from the other graves.",
+      "beat_summary": "Marget Halloway follows the white filaments revealed by the collapsed mud and finds that they curve around the buried dead rather than penetrating most of the coffins. Every strand converges beneath the central stone. Using her left hand, Marget Halloway clears the base and recovers the bone fragment first found there, paying off C010. The carved date matches Oswin Kerrow's disappearance, and the cut marks carry the distinctive stagger made by the damaged chisel Oswin Kerrow taught her to use. When Marget Halloway touches the fragment, a concentrated cold surges from the bone into the stone while the surrounding graves briefly warm. Combined with the circular layout, the succession of keepers, Oswin Kerrow's decision to take the root, and the physical convergence of the filaments, Marget Halloway deduces that the network centers on a person: Oswin Kerrow deliberately made himself its anchor so it would consume him before reaching the other dead. The evidence also confirms Arthur Penhaligon's flooding and confiscation were active concealment, though his ultimate purpose remains unknown. Arthur Penhaligon arrives carrying a stone maul and orders Marget Halloway away from the exposed root. The numbness crosses Marget Halloway's left wrist, leaving only intermittent pressure in two fingers.",
+      "must_happen": [
+        "Marget Halloway follows the exposed filaments and observes that they bypass most coffins before converging beneath the central stone.",
+        "Marget Halloway recovers and examines the dated bone fragment planted as C010, identifying Oswin Kerrow's distinctive chisel pattern and paying off C010 through technical physical evidence.",
+        "Marget Halloway touches the bone fragment and experiences concentrated localized cold while the outer graves briefly become less cold; Oswin Kerrow does not speak or communicate meaning.",
+        "Marget Halloway combines C002, C004, and C010 to deduce that the network centers on Oswin Kerrow and that Oswin Kerrow deliberately became its human anchor to spare the other graves.",
+        "Marget Halloway concludes that Arthur Penhaligon's ledger confiscation and flooding were acts of active concealment, while his longevity goal and harvesting method remain unrevealed.",
+        "Arthur Penhaligon confronts Marget Halloway beside the exposed root while carrying a stone maul and attempts to force her away through threats rather than explanation.",
+        "Marget Halloway records measurable numbness extending through her left wrist, with only intermittent pressure remaining in her left ring and little fingers."
+      ],
+      "must_not": [
+        "Marget Halloway must not yet learn that the moss digests souls or that Arthur Penhaligon harvests extracted essence to extend his life.",
+        "Oswin Kerrow must not appear, speak, form a vision, guide Marget Halloway, or confirm whether he wants to be freed.",
+        "Arthur Penhaligon must not explain the network, confess his motive, or reveal the complete central mystery.",
+        "No romance, attraction, sympathy, or protective warmth may occur between Marget Halloway and Arthur Penhaligon.",
+        "Marget Halloway must not destroy or strike the central stone in this chapter."
+      ],
+      "opens_with": "The white filaments did not enter the nearest coffin; they bent around it and ran toward the central stone.",
+      "cliffhanger": "Behind Arthur Penhaligon, the central stone tilted in the softened earth, and a moss-bound human rib cage rose into view beneath the raven's feet.",
+      "signature_detail_hint": "The carving on the bone repeats the shallow-deep-shallow chatter of a chisel with one blunted corner, a flaw Marget Halloway recognizes from years beside Oswin Kerrow's workbench.",
+      "emotional_beat": "Marget Halloway's horror collapses into grief when physical proof identifies Oswin Kerrow as the anchor, while uncertainty over whether freeing him would be mercy or violation leaves her emotionally isolated.",
+      "spice": 0,
+      "spice_note": "No sexual or romantic content; the emotional intensity comes from mentor grief, bodily deterioration, and confrontation with Arthur Penhaligon.",
+      "chapter_task": "Write a 1600-1900 word chapter paying off C010 and delivering the major deduction supported by C002, C004, and C010: Oswin Kerrow deliberately became the network's human anchor to protect the other graves. Make Marget Halloway earn this truth through filament paths, carving analysis, bone, and touch rather than explanatory dialogue or documents alone. Preserve the chapter 10 reveal concerning soul digestion and Arthur Penhaligon's longevity harvest. Advance numbness through Marget Halloway's left wrist and end with the rib cage rising beneath the central stone.",
+      "carries_to_next": "Marget Halloway knows Oswin Kerrow is physically bound beneath the central stone and must determine what the network consumes, what Arthur Penhaligon gains from it, and whether breaking the anchor can end it.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C010"
+        ],
+        "reveals": [
+          {
+            "id": "",
+            "reveal": "Oswin Kerrow deliberately made himself the human anchor at the center of the network so its feeding would be diverted from the other graves.",
+            "impact": "Marget Halloway's investigation becomes a rescue and release dilemma, while Arthur Penhaligon is confirmed as an active concealer.",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C002",
+              "C004",
+              "C010"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005"
+        ],
+        "clue_beats": {
+          "C010": "The date and distinctive chisel pattern on the embedded bone identify it as connected to Oswin Kerrow, while the converging filaments and concentrated cold establish that his remains occupy the network's center."
+        },
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway knows the cold network centers on a person rather than merely a place.",
+            "Marget Halloway knows Oswin Kerrow deliberately made himself the anchor.",
+            "Marget Halloway knows Arthur Penhaligon is actively concealing the network.",
+            "Arthur Penhaligon knows Marget Halloway has exposed Oswin Kerrow's remains and identified the anchor.",
+            "Oswin Kerrow remains the central anchor and manifests only as localized cold."
+          ],
+          "must_not_know": [
+            "Marget Halloway must not know that the network digests souls.",
+            "Marget Halloway must not know that Arthur Penhaligon harvests the extracted essence for longevity.",
+            "Marget Halloway must not know whether Oswin Kerrow wants the central stone destroyed."
+          ],
+          "effective_milestone": 9
+        }
+      }
+    }
+  ]
+}

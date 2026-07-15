@@ -1,0 +1,83 @@
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Stone That Breathes",
+      "slug": "the-stone-that-breathes",
+      "one_line_summary": "Marget Halloway touches the central stone at dawn and feels a rhythm beneath the cold, but Arthur Penhaligon confronts her and she loses sensation in her wrist.",
+      "beat_summary": "Marget Halloway arrives at the graveyard before sunrise, determined to investigate the central stone. She places her palm on the stone and feels a slow pulse, like a heartbeat from deep underground. She marks the cold spots she has mapped and deduces they form a circle around the central stone—a pattern too deliberate to be natural (C002 planted). While tracing the stone's base, her fingers catch on a rough patch: an embedded shard of bone carved with a date that matches Oswin's disappearance (C010 planted). Arthur Penhaligon finds her there, his voice tight, orders her to stay away from the central stone or leave the job. Marget Halloway refuses, pointing out the pattern, but Arthur Penhaligon dismisses it as coincidence and walks away. That evening, she records in her ledger that the numbness has spread to her entire right wrist. She can no longer feel the pen she holds.",
+      "must_happen": [
+        "Marget Halloway touches the central stone and detects a slow rhythm beneath it (atmospheric horror, no linguistic reveal).",
+        "Marget Halloway deduces that the cold spots form a deliberate circle around the central stone (C002 planted as deductive clue).",
+        "Marget Halloway discovers a bone fragment carved with a date embedded in the stone's base (C010 planted as physical clue).",
+        "Arthur Penhaligon confronts Marget Halloway and warns her to stay away from the central stone.",
+        "Marget Halloway records the numbness spreading to her full wrist (nerve loss track advancement)."
+      ],
+      "must_not": [
+        "No explanation of the rhythm or the bone fragment is given by any character in dialogue.",
+        "No sign of comfort, warmth, or personal care between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "The raven watched Marget Halloway cross the wet grass, and for the first time, it opened its beak but made no sound.",
+      "cliffhanger": "Marget Halloway lifted her right hand to look at it—and realized she had no idea whether she was still holding the pen, because the entire limb had gone to sleep.",
+      "signature_detail_hint": "The bone fragment was set into the stone like a letter pressed into wax, the edges smooth as if it had been there for decades.",
+      "emotional_beat": "The first moment of pure dread when the pattern becomes visible and the numbness accelerates faster than she would admit.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1700-1900 word chapter that advances Marget Halloway's exploration of the graveyard, plants C002 and C010, and escalates the nerve loss to the wrist. Use the confrontation with Arthur Penhaligon to increase his suspicious pressure. Ensure no dialogue explains the central mystery. End with the wrist numbness cliffhanger.",
+      "carries_to_next": "Marget Halloway's determination to uncover the meaning of the bone date and the pattern of cold spots, now that she suspects something deliberate beneath the graveyard."
+    },
+    {
+      "chapter": 5,
+      "title": "The Circle Underfoot",
+      "slug": "the-circle-underfoot",
+      "one_line_summary": "Marget Halloway tests her deduction by examining the center of the cold circle, finding a buried slate and a document that points to a hidden record of the graveyard's caretakers.",
+      "beat_summary": "At dawn, Marget Halloway returns to the graveyard with the pattern mapped in her head. She locates the geometric center of the cold spots—a patch of ground six feet behind the central stone that the raven never visits. She scrapes away the moss and finds a slate slab engraved with the words 'Root of Barrow'. Beneath it, tucked into a crack, she discovers a yellowed piece of paper listing names and dates of men who served as 'Keepers of the Stone' (C004 document planted). She uses the pattern to confirm her earlier deduction: the cold is not a natural phenomenon but part of a deliberate system (C002 payoff). On her way back, she encounters Arthur Penhaligon emerging from the moor, his shoes wet for the first time. He asks her if she has been 'digging' and his tone is cold. She denies it, but knows he senses something. That evening she records numbness traveling up her right forearm. The motion of writing has become clumsy.",
+      "must_happen": [
+        "Marget Halloway returns to the graveyard at dawn and locates the center of the cold circle using her deduction (C002 payoff).",
+        "Marget Halloway discovers a slate slab engraved with 'Root of Barrow' beneath the moss (physical confirmation of the network's artificiality).",
+        "Marget Halloway finds a document listing Keepers of the Stone (C004 document planted).",
+        "Arthur Penhaligon confronts Marget Halloway on the moor, suspicious of her actions.",
+        "Marget Halloway records numbness spreading to her entire right forearm (nerve loss progression)."
+      ],
+      "must_not": [
+        "No character explains the meaning of the slate or the document.",
+        "No exchange of trust, apology, or warmth between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "Marget Halloway had expected to find something dead at the center of the cold circle—instead she found a stone that had never been touched by the raven.",
+      "cliffhanger": "She unfolded the paper in the pub light and read the last entry: 'Oswin Kerrow—took the root on the 23rd of March, four years ago.'",
+      "signature_detail_hint": "The slate was set flush with the soil as if it had been placed by someone who expected to find it again in the dark.",
+      "emotional_beat": "The mounting horror of seeing a pattern that implies intention, and the loneliness of knowing she cannot trust the only other person on the moor.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1700-1900 word chapter that delivers the payoff of C002 by having Marget Halloway physically confirm the pattern as artificial, plants C004 via the discovered document, and advances nerve loss to the forearm. The confrontation with Arthur Penhaligon should heighten his suspiciousness and her isolation. Ensure no dialogue explains the slate or document. End with the document revealing Oswin's name.",
+      "carries_to_next": "Marget Halloway now has proof that the graveyard was managed by a succession of keepers, including her missing mentor. She must find out what 'took the root' means and why Oswin's name is the last entry."
+    },
+    {
+      "chapter": 6,
+      "title": "The Notebook Under the Stone",
+      "slug": "the-notebook-under-the-stone",
+      "one_line_summary": "Marget Halloway uses the keepers' document to locate Oswin Kerrow's hidden notebook, reads his detailed observations of the moss, and plants a physical clue that connects the raven to his fate.",
+      "beat_summary": "Marget Halloway studies the keepers' document by lamplight and notices marginal notes in Oswin Kerrow's handwriting—a reference to a 'cache beneath the fifth stone'. She returns to the graveyard and, after counting from the central stone, locates a weathered headstone marked with a faint scratch. Beneath it she finds a tin containing Oswin Kerrow's notebook. The notebook records fourteen months of obsessive soil and moss observations: the cold's intensity, the regrowth speed, the raven's movements. On the final page, she finds a pressed feather and a scribbled line: 'I will take the root so the Barrow does not starve. The raven will remember.' (C004 payoff). She slips the feather into her own ledger (C007 physical planted). Arthur Penhaligon appears, his gloves stained with soil, and demands she hand over any documents she has found. She gives him a blank page from her cold-map ledger, but he takes the entire ledger, leaving her with only the hidden notebook. That night, she records numbness in her right elbow: her entire arm is now dead.",
+      "must_happen": [
+        "Marget Halloway discovers a hidden tin containing Oswin Kerrow's notebook by following marginal notes in the keepers' document (C004 payoff).",
+        "Marget Halloway reads Oswin's final entry, which mentions 'taking the root' and 'the raven will remember' (non-revealing but deepening mystery).",
+        "Marget Halloway plants a pressed feather as a physical clue into her ledger (C007 physical planted).",
+        "Arthur Penhaligon confiscates Marget Halloway's cold-map ledger, escalating the conflict.",
+        "Marget Halloway records numbness spreading to her elbow (nerve loss track advancement)."
+      ],
+      "must_not": [
+        "No character explains what 'the root' is or what 'the raven will remember' means.",
+        "No moment of trust or alliance between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "The name Oswin Kerrow was written in the margin, in ink that had faded to brown, as if the pen had been dipped in rust.",
+      "cliffhanger": "She pressed her left hand to her right and felt nothing at all—not the cuff, not the skin, not the bone beneath.",
+      "signature_detail_hint": "The notebook's pages were warped from damp, but the last page was crisp, as if it had been added on a different day.",
+      "emotional_beat": "The shock of finding evidence of Oswin's final weeks, and the bitter recognition that she is following the same path he did—only faster.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1700-1900 word chapter that pays off C004 by delivering Oswin's notebook, plants C007 via the pressed feather, and advances nerve loss to the elbow. The confrontation with Arthur Penhaligon should escalate his antagonism, leading to him confiscating her ledger. Ensure the notebook content offers clues but not the full truth. End with numbness spreading to the elbow.",
+      "carries_to_next": "Marget Halloway has Oswin's notebook hidden but lost her cold-map ledger. She now knows Oswin tracked the same decay and planned to 'take the root'. She fears she is repeating his fate."
+    }
+  ]
+}

@@ -58,6 +58,54 @@ REQUIRED_FIELDS = [
 # Locked chapter plans live in workspace bible/locked_chapter_plans.json (data, not code).
 
 
+def chapter_plan_structurally_complete(plan: dict) -> bool:
+    """True when required planning fields are present (QC structural bar).
+
+    Used by resume/merge so half-broken chapter objects are never treated as done
+    and never overwrite a complete chapter.
+    """
+    plan = normalize_chapter_plan(plan)
+    for field in REQUIRED_FIELDS:
+        if field not in plan or plan[field] in (None, "", []):
+            return False
+    mh = plan.get("must_happen", [])
+    if not isinstance(mh, list) or len(mh) < 3:
+        return False
+    if len(str(plan.get("cliffhanger") or "")) < 15:
+        return False
+    return True
+
+
+def prefer_richer_chapter_plan(existing: dict | None, incoming: dict) -> dict:
+    """Merge chapter plans without downgrading a structurally complete chapter."""
+    incoming = normalize_chapter_plan(incoming)
+    if not existing:
+        return incoming
+    existing = normalize_chapter_plan(existing)
+    e_ok = chapter_plan_structurally_complete(existing)
+    n_ok = chapter_plan_structurally_complete(incoming)
+    if e_ok and not n_ok:
+        return existing
+    if n_ok:
+        return incoming
+    # Both incomplete: keep non-empty fields from whichever side has them.
+    out = dict(existing)
+    for key, val in incoming.items():
+        if val in (None, "", []):
+            continue
+        cur = out.get(key)
+        if cur in (None, "", []):
+            out[key] = val
+            continue
+        if key in ("must_happen", "must_not") and isinstance(val, list) and isinstance(cur, list):
+            if len(val) > len(cur):
+                out[key] = val
+            continue
+        if isinstance(val, str) and isinstance(cur, str) and len(val.strip()) > len(cur.strip()):
+            out[key] = val
+    return normalize_chapter_plan(out)
+
+
 def _has_romance_micro_beat(plan: dict) -> bool:
     mh = plan.get("must_happen", [])
     if isinstance(mh, list):

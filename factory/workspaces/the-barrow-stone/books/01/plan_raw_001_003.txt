@@ -1,0 +1,81 @@
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Sunken Graveyard",
+      "slug": "the-sunken-graveyard",
+      "one_line_summary": "Marget Halloway arrives at the moorland graveyard, touches her first stone, and begins to lose the feeling in her fingers while meeting the evasive Arthur Penhaligon.",
+      "beat_summary": "Marget Halloway arrives by taxi at the edge of the moor, carrying her kit. The graveyard is sunken, the ground uneven, and a single raven sits on the tallest stone. Arthur Penhaligon waits near the gate, gloved, watches her without greeting. He leads her to the central stone and sets a three-week deadline. Marget Halloway begins work, cleaning the first headstone. When she places her bare fingers on the stone, she feels a cold deeper than the temperature — and a faint vibration, as if something beneath is breathing. She pulls away, but the cold lingers. She records the sensation in her ledger, noting that her right index finger feels slightly numb.",
+      "must_happen": [
+        "Marget Halloway arrives at the graveyard and observes the raven on the central stone (C006).",
+        "Marget Halloway meets Arthur Penhaligon, who is gloved and sets a three-week deadline.",
+        "Marget Halloway touches her first stone and experiences the persistent cold vibration (C001 planted as physical clue).",
+        "Marget Halloway records the first nerve numbness in her ledger."
+      ],
+      "must_not": [
+        "No explanation of the cold or the raven is given by any character in dialogue.",
+        "No romantic or familiar interaction of any kind between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "The raven did not move when Marget Halloway stepped out of the taxi.",
+      "cliffhanger": "She looked at her right index finger, pressed it against her own cheek — and felt nothing.",
+      "signature_detail_hint": "The raven never once turned its head, as if it had been carved from the same slate as the stone it sat on.",
+      "emotional_beat": "A creeping unease in her chest as the numbness begins — the first time she cannot feel her own body.",
+      "spice": 0,
+      "spice_note": "No spice; pure atmospheric horror.",
+      "chapter_task": "Write a 1600-1800 word chapter establishing the setting, characters, and first clue. The numbness track must begin with the cold in the fingers. Introduce the raven as a static presence. Arthur Penhaligon's gloves and evasiveness should create distrust. End with the cliffhanger of face numbness.",
+      "carries_to_next": "Marget Halloway's curiosity about the cold stone and Arthur Penhaligon's unexplained three-week deadline."
+    },
+    {
+      "chapter": 2,
+      "title": "Moss That Grows in Darkness",
+      "slug": "moss-that-grows-in-darkness",
+      "one_line_summary": "Marget Halloway discovers the moss she cleaned has regrown overnight, and Arthur Penhaligon dismisses her concerns while she maps the cold spots and loses sensation in her thumb.",
+      "beat_summary": "Marget Halloway arrives next morning to find the graveyard covered in fresh moss, thicker than before. The stone she cleaned is already veined with green. She marks the locations of the coldest spots, noticing the raven moves between them. Arthur Penhaligon arrives, pressures her to quicken the removal, dismissing the regrowth as 'the damp.' Marget Halloway records the second episode of numbness, now affecting her thumb. She begins to suspect the moss is not ordinary. The cold vibration from the first stone clings to her fingers longer yesterday — she confirms it is not ambient temperature but something intrinsic to the stone.",
+      "must_happen": [
+        "Marget Halloway confirms the moss has regrown overnight despite her cleaning (moss regrowth established).",
+        "Marget Halloway begins marking cold spots with flags and observes the raven perching where the cold is strongest (raven on cold spots).",
+        "Arthur Penhaligon pressures Marget Halloway to focus on quick removal and dismisses her concerns about the regrowth.",
+        "Marget Halloway records measurable nerve loss in her thumb (second numbness episode).",
+        "Payoff C001: Marget Halloway acknowledges the cold from the first stone is persistent and not atmospheric — the clue is now connected to the stone itself."
+      ],
+      "must_not": [
+        "No character reveals that the moss is supernatural or connected to the souls of the dead.",
+        "No intimate or friendly dialogue between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "The moss was back — greener, thicker than Marget Halloway had left it, climbing the base of the stones she had scrubbed clean twelve hours before.",
+      "cliffhanger": "She pressed her thumb to the polished steel of her trowel and could not tell whether the metal was cold or warm.",
+      "signature_detail_hint": "The raven shifted one step sideways on the stone, but its feet made no sound at all — like claws on slate muffled by something soft.",
+      "emotional_beat": "The stubborn dread of being trapped in a job that feels wrong, and the first time she wonders whether Arthur Penhaligon knows more than he says.",
+      "spice": 0,
+      "spice_note": "No spice.",
+      "chapter_task": "Write a 1700-1900 word chapter focusing on Marget Halloway's investigation, the regrowth mystery, and her growing distrust. Include the first measurable nerve loss in the thumb. The clue payoff for C001 should be subtle: the cold sensation is persistent and not ambient. End with the thumb numbness cliffhanger.",
+      "carries_to_next": "The pattern of cold spots; Marget Halloway's determination to understand the moss; Arthur Penhaligon's increasing pressure and evasiveness."
+    },
+    {
+      "chapter": 3,
+      "title": "The Knife's Edge",
+      "slug": "the-knifes-edge",
+      "one_line_summary": "Marget Halloway tests the moss by scraping it and watches it regrow instantly, plants a behavioral clue about the moss's reaction, and feels the numbness spread to her palm.",
+      "beat_summary": "On the third day, Marget Halloway arrives determined to test the moss. She scrapes a patch from an older stone and watches it regrow within minutes — too fast for any natural lichen. Arthur Penhaligon finds her mapping the cold spots, reiterates the three-week deadline, and warns her not to 'touch the wrong stones.' The raven remains fixed on the central stone. That evening, reviewing her ledger, Marget Halloway notices the numbness has spread from her fingertips into her palm. She decides to ignore Arthur Penhaligon's instructions and investigate the central stone at dawn.",
+      "must_happen": [
+        "Marget Halloway tests the moss by scraping a patch and observes immediate regrowth (behavioral clue C003 planted: aggressive regrowth indicative of an active network).",
+        "Arthur Penhaligon issues a specific warning about not touching certain stones (evasive behavior clue).",
+        "Marget Halloway records the numbness spreading to her palm (nerve loss progression).",
+        "The raven stays on the central stone, reinforcing the visual clue C006 from chapter 1."
+      ],
+      "must_not": [
+        "No confrontation between Marget Halloway and Arthur Penhaligon about his gloves or hidden agenda.",
+        "No moment of comfort, warmth, or caring between the two leads."
+      ],
+      "opens_with": "Marget Halloway touched the edge of the knife blade to the moss and the moss seemed to shrink from it — then it grew back before she could blink.",
+      "cliffhanger": "Her palm against the stone: she felt nothing. She pressed harder — still nothing. The numbness had crossed from fingers into flesh.",
+      "signature_detail_hint": "The raven's shadow never moved across the ground that afternoon — as if the sun did not reach that particular stone at all.",
+      "emotional_beat": "The slow crawl of terror as Marget Halloway realises the numbness is accelerating, and that Arthur Penhaligon's warnings hide something darker.",
+      "spice": 0,
+      "spice_note": "No spice.",
+      "chapter_task": "Write a 1600-1800 word chapter that deepens the mystery by showing the aggressive regrowth and Arthur Penhaligon's warnings. Plant C003: the moss regrowth behavior (payoff ch10). Advance the numbness track to the palm. End with the palm numbness cliffhanger. Keep the atmosphere grim and isolated.",
+      "carries_to_next": "Marget Halloway's decision to investigate the central stone against Arthur Penhaligon's wishes; the growing threat of full hand numbness."
+    }
+  ]
+}

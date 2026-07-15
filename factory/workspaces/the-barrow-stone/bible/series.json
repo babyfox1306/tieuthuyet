@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "series_id": "the-barrow-stone",
+    "genre": "gothic_psychological_horror",
+    "target_language": "en"
+  },
+  "title": "The Barrow Stone",
+  "sub_niche": "gothic_psychological_horror",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "A stone restorer who reads the dead through her fingertips is hired to clean a sunken moorland graveyard — and discovers the only way to free her mentor from the thing beneath it is to shatter the stone that holds him, with the same hands that will never feel anything again.",
+  "tropes": [
+    "gothic atmosphere",
+    "psychological horror",
+    "slow burn",
+    "parasitic horror",
+    "loss of sense",
+    "mentor sacrifice",
+    "antagonist with longevity goal",
+    "atmospheric dread",
+    "touch-based supernatural"
+  ],
+  "leads": {
+    "female": {
+      "name": "Marget Halloway",
+      "age": 28,
+      "voice": "Quiet, measured, technical; it trembles only when the stone reads wrong.",
+      "tics": [
+        "Rubs her thumb over her calluses until they bleed; later continues rubbing even when she cannot feel the blood.",
+        "Measures the numbness in her ledger, precisely, chapter by chapter.",
+        "Holds her breath when touching a new stone."
+      ],
+      "boundary": "Will never deface or destroy a carved stone. Her hands are her instrument, and she cares for them with obsessive precision.",
+      "internal_voice": "She logs everything in her ledger — temperature, grain, numbness level — refusing to call the loss what it is."
+    },
+    "male": {
+      "name": "Arthur Penhaligon",
+      "age": 62,
+      "voice": "Curt, evasive, speaks in abbreviated commands. Never explains his reasoning; offers only dismissive half-sentences.",
+      "tics": [
+        "Never removes his gloves, even indoors, even when handling paper.",
+        "Frequently looks at his pocket watch when time is irrelevant.",
+        "His shoes are always dry and clean, as if he never walks the moor."
+      ],
+      "boundary": "Will never reveal his true intentions directly; he acts, threatens, or withholds. He is not a romantic interest and no attraction exists between him and Marget.",
+      "wound": "His own mortality; he has already extended his life unnaturally through the harvested essence and will do anything to continue."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Oswin Kerrow",
+      "relation_to": "Marget Halloway",
+      "relation_type": "mentor and surrogate father",
+      "alive": false,
+      "secret": "He made himself the living anchor of the fungal network so it would consume him instead of the other graves, believing he could spare them."
+    },
+    {
+      "name": "Arthur Penhaligon",
+      "relation_to": "Marget Halloway",
+      "relation_type": "employer and antagonist",
+      "alive": true,
+      "secret": "He is harvesting the network's extracted soul-energy for his own longevity and accelerated the decay of the graveyard."
+    }
+  ],
+  "central_mystery": {
+    "question": "What is eating the graves, and why does the raven never leave the central stone?",
+    "answer": "The moss is a parasitic fungal network digesting the souls beneath the stones. Oswin Kerrow made himself its anchor so the network would consume him instead of the other graves. Arthur Penhaligon accelerates the decay to harvest what the network extracts for his own longevity.",
+    "reveal_chapter": 10
+  },
+  "bloodline": {
+    "description": "Marget Halloway has no blood relatives present in the story. Oswin Kerrow is a mentor with no biological relation. Arthur Penhaligon has no familial connection to Marget. No incest or blood relations between leads.",
+    "hard_rules": [
+      "Female lead and male lead are not blood-related.",
+      "No romantic or familial ties between leads.",
+      "Marget has no known living blood relatives.",
+      "Oswin is a non-biological mentor figure."
+    ],
+    "lead_relation": "employer-contractor / antagonist-protagonist"
+  },
+  "world_rules": [
+    "Stone reading works by sensing temperature and grain through fingertips; each reading causes permanent numbness in the fingers.",
+    "The raven is a permanent fixture on the central stone until the stone is shattered.",
+    "The moss is a parasitic fungal network that digests the souls of the dead and sinks the ground.",
+    "Oswin Kerrow manifests only as sudden localized cold, never as voice, vision, or any linguistic communication.",
+    "No supernatural entity can speak or convey meaning; cold signals only proximity and intensity.",
+    "The moorland graveyard is perpetually cold and misty, conditions necessary for the network's activity.",
+    "Arthur Penhaligon cannot harvest the extracted essence without the network's continued operation."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "Marget must rely on her fading sense of touch to uncover what is consuming the graves and why the raven never leaves the central stone.",
+      "ending_hook": "She shatters the central stone with her own numb hands, the network dies, and the raven has nowhere to land. She walks out across ground she can no longer read, carrying a grief she cannot put her hands on."
+    },
+    {
+      "book": 2,
+      "thesis": "Unable to read stone, Marget re-examines Oswin's old ledgers and discovers the network was part of a larger system. Arthur Penhaligon, still alive, attempts to harvest residual energy from other nodes.",
+      "ending_hook": "A new cold patch appears in a distant churchyard, and the raven is seen again, circling above it."
+    },
+    {
+      "book": 3,
+      "thesis": "Marget devises a mechanical tool to detect the cold patterns and follows them to a second barrow, where she finds evidence of other human anchors forced into the network.",
+      "ending_hook": "The tool shatters, and for a moment she feels a faint warmth through her dead fingers — the first sensation since the barrow — and a single raven feather lies on the ground."
+    },
+    {
+      "book": 4,
+      "thesis": "Confronting Arthur's partner in the harvest, Marget learns the network was artificially seeded centuries ago. She must decide whether to destroy the remaining nodes permanently, knowing it may kill whatever consciousness still lingers.",
+      "ending_hook": "She chooses to set a controlled burn across the moor, but the fire uncovers a row of stone markers — each one carved with Oswin's hand."
+    },
+    {
+      "book": 5,
+      "thesis": "In the final confrontation, Marget offers herself as a temporary anchor to lure Arthur into the network's root, then severs the entire system by collapsing the barrow over them both.",
+      "ending_hook": "The barrow falls silent. The raven lands on a broken slate near the edge. Marget clasps a stone — and feels nothing but warmth, for the first time since she was fourteen."
+    }
+  ],
+  "content_rules": [
+    "18+ content only if spice_level >= 3 — here spice_level is 1, so no explicit content.",
+    "No romance of any kind between any characters.",
+    "No character explains the central mystery in dialogue; Marget must earn truth through physical evidence and touch.",
+    "Oswin never communicates linguistically — cold only ever signals proximity and intensity.",
+    "No hints or reveals via journals, documents, or characters stating the answer outright.",
+    "Every chapter must end with a visual cliffhanger, the numbness track must advance measurably each chapter, and reveal cadence must be spaced every 2–3 chapters.",
+    "Recurring signature images: raven, moss, fractured stone, creeping cold.",
+    "No underage characters; all major and minor characters are adults.",
+    "All interaction must be consensual in nature (no coercion beyond the horror premise)."
+  ],
+  "bible_status": "approved"
+}

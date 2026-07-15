@@ -1,0 +1,60 @@
+{
+  "description": "Threads for The Barrow Stone, a gothic psychological horror with a single central mystery and no romance. The narrative follows Marget Halloway's investigation of the Barrow Stone graveyard, the progression of her hand numbness, the uncovering of Oswin's fate, Arthur's antagonistic scheme, and the raven's marker role. All threads open in chapter 1 (except Oswin's which begins with field notes in chapter 5) and resolve within the 12-chapter arc. The story ends definitively with no sequel hook; thus every book2_promise is empty.",
+  "threads": [
+    {
+      "id": "T001",
+      "name": "The Graveyard's Cold",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "resolved",
+      "book1_resolution": "Marget maps the cold spots, realizes they form a root-like fungal network centred on Oswin, and discovers the truth in chapter 10: the moss is a parasitic network digesting souls, and Oswin made himself its anchor.",
+      "book2_promise": "",
+      "book1_payoff": "The central mystery is solved by her own physical evidence; the network's nature and anchor are fully understood.",
+      "note": "No character explains the mystery. All truth earned through touch and measurement. Reveal at chapter 10."
+    },
+    {
+      "id": "T002",
+      "name": "The Numbness",
+      "opened_chapter": 1,
+      "must_payoff_by": 12,
+      "status": "resolved",
+      "book1_resolution": "Marget's hands progress from partial numbness to complete insensibility. In chapter 12 she strikes the final blow with hands that feel nothing and walks away unable to read the ground or any stone.",
+      "book2_promise": "",
+      "book1_payoff": "The irreversible cost of her work is fully realised; she loses her ability to read stone forever.",
+      "note": "Measured in her ledger chapter by chapter. The numbness is a closing vice tracked through sensory detail."
+    },
+    {
+      "id": "T003",
+      "name": "Arthur Penhaligon's Scheme",
+      "opened_chapter": 1,
+      "must_close_by": 12,
+      "status": "resolved",
+      "book1_resolution": "Arthur is revealed as the employer who has been accelerating the network's decay to harvest extracted vitality for his own longevity. His scheme ends when the network is destroyed in chapter 12; he is confronted but not given a explanatory speech.",
+      "book2_promise": "",
+      "book1_payoff": "Antagonist's true motive is unmasked through his actions (shortening deadlines, confiscating ledger, flooding a plot).",
+      "note": "Arthur never explains himself; only acts, lies, or threatens. His tell: never removes his gloves."
+    },
+    {
+      "id": "T004",
+      "name": "Oswin's Sacrifice",
+      "opened_chapter": 5,
+      "must_close_by": 10,
+      "status": "resolved",
+      "book1_resolution": "From Oswin's field notes (found chapter 5) and her own cold mapping, Marget deduces that he entered the barrow four years ago and made himself the anchor to spare the other dead. She strikes the stone that holds him in the climax.",
+      "book2_promise": "",
+      "book1_payoff": "The emotional core is resolved: Marget learns the truth of her mentor's fate and frees him at the cost of her own touch.",
+      "note": "Oswin never speaks, whispers, or conveys language. Only cold proximity indicates his presence."
+    },
+    {
+      "id": "T005",
+      "name": "The Raven",
+      "opened_chapter": 1,
+      "must_payoff_by": 12,
+      "status": "resolved",
+      "book1_resolution": "The raven perches on the strongest anchor stone throughout. When Marget breaks the central stone, the raven simply has nowhere to land. It does not react or flee.",
+      "book2_promise": "",
+      "book1_payoff": "Final image: the raven has nowhere to perch, marking the network's destruction without melodrama.",
+      "note": "The raven is a marker, not a messenger. It never attacks, helps, or reacts to Marget."
+    }
+  ]
+}

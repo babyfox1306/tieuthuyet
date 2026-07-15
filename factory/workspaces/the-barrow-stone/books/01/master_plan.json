@@ -1,0 +1,851 @@
+{
+  "book": 1,
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Sunken Graveyard",
+      "slug": "the-sunken-graveyard",
+      "one_line_summary": "Marget Halloway arrives at the moorland graveyard, touches her first stone, and begins to lose the feeling in her fingers while meeting the evasive Arthur Penhaligon.",
+      "beat_summary": "Marget Halloway arrives by taxi at the edge of the moor, carrying her kit. The graveyard is sunken, the ground uneven, and a single raven sits on the tallest stone. Arthur Penhaligon waits near the gate, gloved, watches her without greeting. He leads her to the central stone and sets a three-week deadline. Marget Halloway begins work, cleaning the first headstone. When she places her bare fingers on the stone, she feels a cold deeper than the temperature — and a faint vibration, as if something beneath is breathing. She pulls away, but the cold lingers. She records the sensation in her ledger, noting that her right index finger feels slightly numb.",
+      "must_happen": [
+        "Marget Halloway arrives at the graveyard and observes the raven on the central stone (C006).",
+        "Marget Halloway meets Arthur Penhaligon, who is gloved and sets a three-week deadline.",
+        "Marget Halloway touches her first stone and experiences the persistent cold vibration (C001 planted as physical clue).",
+        "Marget Halloway records the first nerve numbness in her ledger."
+      ],
+      "must_not": [
+        "No explanation of the cold or the raven is given by any character in dialogue.",
+        "No romantic or familiar interaction of any kind between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "The raven did not move when Marget Halloway stepped out of the taxi.",
+      "cliffhanger": "She looked at her right index finger, pressed it against her own cheek — and felt nothing.",
+      "signature_detail_hint": "The raven never once turned its head, as if it had been carved from the same slate as the stone it sat on.",
+      "emotional_beat": "A creeping unease in her chest as the numbness begins — the first time she cannot feel her own body.",
+      "spice": 1,
+      "spice_note": "No spice; pure atmospheric horror.",
+      "chapter_task": "Write a 1600-1800 word chapter establishing the setting, characters, and first clue. The numbness track must begin with the cold in the fingers. Introduce the raven as a static presence. Arthur Penhaligon's gloves and evasiveness should create distrust. End with the cliffhanger of face numbness.",
+      "carries_to_next": "Marget Halloway's curiosity about the cold stone and Arthur Penhaligon's unexplained three-week deadline.",
+      "narrative": {
+        "clues_plant": [
+          "C001",
+          "C006"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway: Arrives at the sunken graveyard",
+            "Marget Halloway: Touches the first stone",
+            "Marget Halloway: sensation loss begins",
+            "Marget Halloway: She is aware of the cold but not its cause.",
+            "Arthur Penhaligon: Presents himself as the employer",
+            "Arthur Penhaligon: Gloved, brisk",
+            "Arthur Penhaligon: Sets a three-week deadline without explanation.",
+            "Oswin Kerrow: Absent physically",
+            "Oswin Kerrow: presence manifests as cold in the central stones",
+            "Oswin Kerrow: Marget does not yet associate the cold with him."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 2,
+      "title": "Moss That Grows in Darkness",
+      "slug": "moss-that-grows-in-darkness",
+      "one_line_summary": "Marget Halloway discovers the moss she cleaned has regrown overnight, and Arthur Penhaligon dismisses her concerns while she maps the cold spots and loses sensation in her thumb.",
+      "beat_summary": "Marget Halloway arrives next morning to find the graveyard covered in fresh moss, thicker than before. The stone she cleaned is already veined with green. She marks the locations of the coldest spots, noticing the raven moves between them. Arthur Penhaligon arrives, pressures her to quicken the removal, dismissing the regrowth as 'the damp.' Marget Halloway records the second episode of numbness, now affecting her thumb. She begins to suspect the moss is not ordinary. The cold vibration from the first stone clings to her fingers longer yesterday — she confirms it is not ambient temperature but something intrinsic to the stone.",
+      "must_happen": [
+        "Marget Halloway confirms the moss has regrown overnight despite her cleaning (moss regrowth established).",
+        "Marget Halloway begins marking cold spots with flags and observes the raven perching where the cold is strongest (raven on cold spots).",
+        "Arthur Penhaligon pressures Marget Halloway to focus on quick removal and dismisses her concerns about the regrowth.",
+        "Marget Halloway records measurable nerve loss in her thumb (second numbness episode).",
+        "Payoff C001: Marget Halloway acknowledges the cold from the first stone is persistent and not atmospheric — the clue is now connected to the stone itself.",
+        "[CLUE C008]"
+      ],
+      "must_not": [
+        "No character reveals that the moss is supernatural or connected to the souls of the dead.",
+        "No intimate or friendly dialogue between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "The moss was back — greener, thicker than Marget Halloway had left it, climbing the base of the stones she had scrubbed clean twelve hours before.",
+      "cliffhanger": "She pressed her thumb to the polished steel of her trowel and could not tell whether the metal was cold or warm.",
+      "signature_detail_hint": "The raven shifted one step sideways on the stone, but its feet made no sound at all — like claws on slate muffled by something soft.",
+      "emotional_beat": "The stubborn dread of being trapped in a job that feels wrong, and the first time she wonders whether Arthur Penhaligon knows more than he says.",
+      "spice": 1,
+      "spice_note": "No spice.",
+      "chapter_task": "Write a 1700-1900 word chapter focusing on Marget Halloway's investigation, the regrowth mystery, and her growing distrust. Include the first measurable nerve loss in the thumb. The clue payoff for C001 should be subtle: the cold sensation is persistent and not ambient. End with the thumb numbness cliffhanger.",
+      "carries_to_next": "The pattern of cold spots; Marget Halloway's determination to understand the moss; Arthur Penhaligon's increasing pressure and evasiveness.",
+      "narrative": {
+        "clues_plant": [
+          "C008"
+        ],
+        "clues_payoff": [
+          "C001"
+        ],
+        "reveals": [
+          {
+            "id": "",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C001"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway: Confirms the moss regrows overnight",
+            "Marget Halloway: Begins marking cold spots",
+            "Marget Halloway: Records her first measurable nerve loss.",
+            "Arthur Penhaligon: Pressures Marget to focus on removal rather than investigation",
+            "Arthur Penhaligon: Dismisses her concerns about the moss regrowth.",
+            "Oswin Kerrow: No direct presence beyond cold intensity",
+            "Oswin Kerrow: the raven perches on the stones where his cold is strongest."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 3,
+      "title": "The Knife's Edge",
+      "slug": "the-knifes-edge",
+      "one_line_summary": "Marget Halloway tests the moss by scraping it and watches it regrow instantly, plants a behavioral clue about the moss's reaction, and feels the numbness spread to her palm.",
+      "beat_summary": "On the third day, Marget Halloway arrives determined to test the moss. She scrapes a patch from an older stone and watches it regrow within minutes — too fast for any natural lichen. Arthur Penhaligon finds her mapping the cold spots, reiterates the three-week deadline, and warns her not to 'touch the wrong stones.' The raven remains fixed on the central stone. That evening, reviewing her ledger, Marget Halloway notices the numbness has spread from her fingertips into her palm. She decides to ignore Arthur Penhaligon's instructions and investigate the central stone at dawn.",
+      "must_happen": [
+        "Marget Halloway tests the moss by scraping a patch and observes immediate regrowth (behavioral clue C003 planted: aggressive regrowth indicative of an active network).",
+        "Arthur Penhaligon issues a specific warning about not touching certain stones (evasive behavior clue).",
+        "Marget Halloway records the numbness spreading to her palm (nerve loss progression).",
+        "The raven stays on the central stone, reinforcing the visual clue C006 from chapter 1."
+      ],
+      "must_not": [
+        "No confrontation between Marget Halloway and Arthur Penhaligon about his gloves or hidden agenda.",
+        "No moment of comfort, warmth, or caring between the two leads."
+      ],
+      "opens_with": "Marget Halloway touched the edge of the knife blade to the moss and the moss seemed to shrink from it — then it grew back before she could blink.",
+      "cliffhanger": "Her palm against the stone: she felt nothing. She pressed harder — still nothing. The numbness had crossed from fingers into flesh.",
+      "signature_detail_hint": "The raven's shadow never moved across the ground that afternoon — as if the sun did not reach that particular stone at all.",
+      "emotional_beat": "The slow crawl of terror as Marget Halloway realises the numbness is accelerating, and that Arthur Penhaligon's warnings hide something darker.",
+      "spice": 1,
+      "spice_note": "No spice.",
+      "chapter_task": "Write a 1600-1800 word chapter that deepens the mystery by showing the aggressive regrowth and Arthur Penhaligon's warnings. Plant C003: the moss regrowth behavior (payoff ch10). Advance the numbness track to the palm. End with the palm numbness cliffhanger. Keep the atmosphere grim and isolated.",
+      "carries_to_next": "Marget Halloway's decision to investigate the central stone against Arthur Penhaligon's wishes; the growing threat of full hand numbness.",
+      "narrative": {
+        "clues_plant": [
+          "C003"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway: Confirms the moss regrows overnight",
+            "Marget Halloway: Begins marking cold spots",
+            "Marget Halloway: Records her first measurable nerve loss.",
+            "Arthur Penhaligon: Pressures Marget to focus on removal rather than investigation",
+            "Arthur Penhaligon: Dismisses her concerns about the moss regrowth.",
+            "Oswin Kerrow: No direct presence beyond cold intensity",
+            "Oswin Kerrow: the raven perches on the stones where his cold is strongest."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 4,
+      "title": "The Stone That Breathes",
+      "slug": "the-stone-that-breathes",
+      "one_line_summary": "Marget Halloway touches the central stone at dawn and feels a rhythm beneath the cold, but Arthur Penhaligon confronts her and she loses sensation in her wrist.",
+      "beat_summary": "Marget Halloway arrives at the graveyard before sunrise, determined to investigate the central stone. She places her palm on the stone and feels a slow pulse, like a heartbeat from deep underground. She marks the cold spots she has mapped and deduces they form a circle around the central stone—a pattern too deliberate to be natural (C002 planted). While tracing the stone's base, her fingers catch on a rough patch: an embedded shard of bone carved with a date that matches Oswin's disappearance (C010 planted). Arthur Penhaligon finds her there, his voice tight, orders her to stay away from the central stone or leave the job. Marget Halloway refuses, pointing out the pattern, but Arthur Penhaligon dismisses it as coincidence and walks away. That evening, she records in her ledger that the numbness has spread to her entire right wrist. She can no longer feel the pen she holds.",
+      "must_happen": [
+        "Marget Halloway touches the central stone and detects a slow rhythm beneath it (atmospheric horror, no linguistic reveal).",
+        "Marget Halloway deduces that the cold spots form a deliberate circle around the central stone (C002 planted as deductive clue).",
+        "Marget Halloway discovers a bone fragment carved with a date embedded in the stone's base (C010 planted as physical clue).",
+        "Arthur Penhaligon confronts Marget Halloway and warns her to stay away from the central stone.",
+        "Marget Halloway records the numbness spreading to her full wrist (nerve loss track advancement)."
+      ],
+      "must_not": [
+        "No explanation of the rhythm or the bone fragment is given by any character in dialogue.",
+        "No sign of comfort, warmth, or personal care between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "The raven watched Marget Halloway cross the wet grass, and for the first time, it opened its beak but made no sound.",
+      "cliffhanger": "Marget Halloway lifted her right hand to look at it—and realized she had no idea whether she was still holding the pen, because the entire limb had gone to sleep.",
+      "signature_detail_hint": "The bone fragment was set into the stone like a letter pressed into wax, the edges smooth as if it had been there for decades.",
+      "emotional_beat": "The first moment of pure dread when the pattern becomes visible and the numbness accelerates faster than she would admit.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1700-1900 word chapter that advances Marget Halloway's exploration of the graveyard, plants C002 and C010, and escalates the nerve loss to the wrist. Use the confrontation with Arthur Penhaligon to increase his suspicious pressure. Ensure no dialogue explains the central mystery. End with the wrist numbness cliffhanger.",
+      "carries_to_next": "Marget Halloway's determination to uncover the meaning of the bone date and the pattern of cold spots, now that she suspects something deliberate beneath the graveyard.",
+      "narrative": {
+        "clues_plant": [
+          "C002",
+          "C010"
+        ],
+        "clues_payoff": [],
+        "reveals": [
+          {
+            "id": "",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C002",
+              "C010"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway: Confirms the moss regrows overnight",
+            "Marget Halloway: Begins marking cold spots",
+            "Marget Halloway: Records her first measurable nerve loss.",
+            "Arthur Penhaligon: Pressures Marget to focus on removal rather than investigation",
+            "Arthur Penhaligon: Dismisses her concerns about the moss regrowth.",
+            "Oswin Kerrow: No direct presence beyond cold intensity",
+            "Oswin Kerrow: the raven perches on the stones where his cold is strongest."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "The Circle Underfoot",
+      "slug": "the-circle-underfoot",
+      "one_line_summary": "Marget Halloway tests her deduction by examining the center of the cold circle, finding a buried slate and a document that points to a hidden record of the graveyard's caretakers.",
+      "beat_summary": "At dawn, Marget Halloway returns to the graveyard with the pattern mapped in her head. She locates the geometric center of the cold spots—a patch of ground six feet behind the central stone that the raven never visits. She scrapes away the moss and finds a slate slab engraved with the words 'Root of Barrow'. Beneath it, tucked into a crack, she discovers a yellowed piece of paper listing names and dates of men who served as 'Keepers of the Stone' (C004 document planted). She uses the pattern to confirm her earlier deduction: the cold is not a natural phenomenon but part of a deliberate system (C002 payoff). On her way back, she encounters Arthur Penhaligon emerging from the moor, his shoes wet for the first time. He asks her if she has been 'digging' and his tone is cold. She denies it, but knows he senses something. That evening she records numbness traveling up her right forearm. The motion of writing has become clumsy.",
+      "must_happen": [
+        "Marget Halloway returns to the graveyard at dawn and locates the center of the cold circle using her deduction (C002 payoff).",
+        "Marget Halloway discovers a slate slab engraved with 'Root of Barrow' beneath the moss (physical confirmation of the network's artificiality).",
+        "Marget Halloway finds a document listing Keepers of the Stone (C004 document planted).",
+        "Arthur Penhaligon confronts Marget Halloway on the moor, suspicious of her actions.",
+        "Marget Halloway records numbness spreading to her entire right forearm (nerve loss progression)."
+      ],
+      "must_not": [
+        "No character explains the meaning of the slate or the document.",
+        "No exchange of trust, apology, or warmth between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "Marget Halloway had expected to find something dead at the center of the cold circle—instead she found a stone that had never been touched by the raven.",
+      "cliffhanger": "She unfolded the paper in the pub light and read the last entry: 'Oswin Kerrow—took the root on the 23rd of March, four years ago.'",
+      "signature_detail_hint": "The slate was set flush with the soil as if it had been placed by someone who expected to find it again in the dark.",
+      "emotional_beat": "The mounting horror of seeing a pattern that implies intention, and the loneliness of knowing she cannot trust the only other person on the moor.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1700-1900 word chapter that delivers the payoff of C002 by having Marget Halloway physically confirm the pattern as artificial, plants C004 via the discovered document, and advances nerve loss to the forearm. The confrontation with Arthur Penhaligon should heighten his suspiciousness and her isolation. Ensure no dialogue explains the slate or document. End with the document revealing Oswin's name.",
+      "carries_to_next": "Marget Halloway now has proof that the graveyard was managed by a succession of keepers, including her missing mentor. She must find out what 'took the root' means and why Oswin's name is the last entry.",
+      "narrative": {
+        "clues_plant": [
+          "C004"
+        ],
+        "clues_payoff": [
+          "C002"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway: Confirms the moss regrows overnight",
+            "Marget Halloway: Begins marking cold spots",
+            "Marget Halloway: Records her first measurable nerve loss.",
+            "Arthur Penhaligon: Pressures Marget to focus on removal rather than investigation",
+            "Arthur Penhaligon: Dismisses her concerns about the moss regrowth.",
+            "Oswin Kerrow: No direct presence beyond cold intensity",
+            "Oswin Kerrow: the raven perches on the stones where his cold is strongest."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "The Notebook Under the Stone",
+      "slug": "the-notebook-under-the-stone",
+      "one_line_summary": "Marget Halloway uses the keepers' document to locate Oswin Kerrow's hidden notebook, reads his detailed observations of the moss, and plants a physical clue that connects the raven to his fate.",
+      "beat_summary": "Marget Halloway studies the keepers' document by lamplight and notices marginal notes in Oswin Kerrow's handwriting—a reference to a 'cache beneath the fifth stone'. She returns to the graveyard and, after counting from the central stone, locates a weathered headstone marked with a faint scratch. Beneath it she finds a tin containing Oswin Kerrow's notebook. The notebook records fourteen months of obsessive soil and moss observations: the cold's intensity, the regrowth speed, the raven's movements. On the final page, she finds a pressed feather and a scribbled line: 'I will take the root so the Barrow does not starve. The raven will remember.' (C004 payoff). She slips the feather into her own ledger (C007 physical planted). Arthur Penhaligon appears, his gloves stained with soil, and demands she hand over any documents she has found. She gives him a blank page from her cold-map ledger, but he takes the entire ledger, leaving her with only the hidden notebook. That night, she records numbness in her right elbow: her entire arm is now dead.",
+      "must_happen": [
+        "Marget Halloway discovers a hidden tin containing Oswin Kerrow's notebook by following marginal notes in the keepers' document (C004 payoff).",
+        "Marget Halloway reads Oswin's final entry, which mentions 'taking the root' and 'the raven will remember' (non-revealing but deepening mystery).",
+        "Marget Halloway plants a pressed feather as a physical clue into her ledger (C007 physical planted).",
+        "Arthur Penhaligon confiscates Marget Halloway's cold-map ledger, escalating the conflict.",
+        "Marget Halloway records numbness spreading to her elbow (nerve loss track advancement)."
+      ],
+      "must_not": [
+        "No character explains what 'the root' is or what 'the raven will remember' means.",
+        "No moment of trust or alliance between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "The name Oswin Kerrow was written in the margin, in ink that had faded to brown, as if the pen had been dipped in rust.",
+      "cliffhanger": "She pressed her left hand to her right and felt nothing at all—not the cuff, not the skin, not the bone beneath.",
+      "signature_detail_hint": "The notebook's pages were warped from damp, but the last page was crisp, as if it had been added on a different day.",
+      "emotional_beat": "The shock of finding evidence of Oswin's final weeks, and the bitter recognition that she is following the same path he did—only faster.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1700-1900 word chapter that pays off C004 by delivering Oswin's notebook, plants C007 via the pressed feather, and advances nerve loss to the elbow. The confrontation with Arthur Penhaligon should escalate his antagonism, leading to him confiscating her ledger. Ensure the notebook content offers clues but not the full truth. End with numbness spreading to the elbow.",
+      "carries_to_next": "Marget Halloway has Oswin's notebook hidden but lost her cold-map ledger. She now knows Oswin tracked the same decay and planned to 'take the root'. She fears she is repeating his fate.",
+      "narrative": {
+        "clues_plant": [
+          "C007"
+        ],
+        "clues_payoff": [
+          "C004"
+        ],
+        "reveals": [
+          {
+            "id": "",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C004"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway: Finds Oswin's notebook",
+            "Marget Halloway: Learns he tracked the moss for fourteen months",
+            "Marget Halloway: the columns stop four years ago",
+            "Marget Halloway: Suspects a connection between his disappearance and the graveyard's condition.",
+            "Arthur Penhaligon: Grows impatient as Marget starts deeper observation",
+            "Arthur Penhaligon: He confiscates her cold-map ledger in chapter 7.",
+            "Oswin Kerrow: His field notebook is discovered, containing fourteen months of meticulous soil and moss data, ending abruptly on the date he disappeared."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 6
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 7,
+      "title": "The Drowned Plot",
+      "slug": "the-drowned-plot",
+      "one_line_summary": "Arthur Penhaligon confiscates Marget Halloway's cold-map ledger and deliberately floods the lower graves after noticing which stones she marked.",
+      "beat_summary": "The confrontation begun over Marget Halloway's ledger ends with Arthur Penhaligon wrenching it from her numb right hand and carrying it away. Marget Halloway follows him at a distance and sees Arthur Penhaligon open an old iron sluice above the lower plot. Water pours through only the row of graves she marked as having the strongest cold outside the central circle, burying the stones and their connecting seams beneath black runoff. Arthur Penhaligon watches until the final marker disappears, then leaves without examining the damage. Marget Halloway recognizes the timing as suspicious but cannot yet prove intent. She rescues one torn, waterlogged corner of her map from a drainage grate and hides Oswin Kerrow's notebook elsewhere. During the recovery, she tests her left hand and records the first numbness in two fingertips, while her entire right arm remains insensible.",
+      "must_happen": [
+        "Arthur Penhaligon completes the confiscation of Marget Halloway's cold-map ledger, exploiting the fact that Marget Halloway cannot feel his grip on her numb right arm.",
+        "Marget Halloway secretly follows Arthur Penhaligon and observes him opening an old sluice that floods the exact lower row of graves she marked as unusually cold, planting behavioral clue C005.",
+        "Marget Halloway retrieves a torn corner of the soaked cold map from a drainage grate before the rest of the ledger is carried underground by the runoff.",
+        "Marget Halloway hides Oswin Kerrow's notebook and the pressed feather where Arthur Penhaligon cannot find them.",
+        "Marget Halloway records measurable numbness in the tips of her left index and middle fingers while confirming that her right arm remains completely numb."
+      ],
+      "must_not": [
+        "Marget Halloway must not yet conclude why Arthur Penhaligon flooded the graves or what he ultimately gains from the graveyard.",
+        "Arthur Penhaligon must not explain the sluice, the network, Oswin Kerrow's fate, or his own intentions.",
+        "No romance, attraction, tenderness, or caretaker warmth may occur between Marget Halloway and Arthur Penhaligon.",
+        "Oswin Kerrow must not communicate through words, visions, symbols, or directed messages."
+      ],
+      "opens_with": "\"Give me the ledger,\" Arthur Penhaligon said, and closed his gloved hand around the arm Marget Halloway could no longer feel.",
+      "cliffhanger": "Across the flooded plot, the submerged grave markers vanished one by one, but a black line of moss rose through the water and continued crawling toward Marget Halloway.",
+      "signature_detail_hint": "The sluice lever bears a crescent of fresh mud only inside its locked housing, proof that someone opened it with a narrow tool rather than by accident.",
+      "emotional_beat": "Marget Halloway feels isolation sharpen into violated distrust when Arthur Penhaligon takes the record that has served as her substitute for sensation.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; the physical contact is brief, adversarial, and limited to the struggle over the ledger.",
+      "chapter_task": "Write a 1600-1900 word chapter continuing directly from the ledger seizure. Plant C005 through Arthur Penhaligon's specific decision to flood the graves Marget Halloway marked, but do not explain his motive yet. Advance the numbness track into Marget Halloway's left fingertips and end on the visual of moss moving above the floodwater.",
+      "carries_to_next": "Marget Halloway retains a torn section of the cold map, Oswin Kerrow's notebook, and the pressed feather; she must compare them with the flooded plot before Arthur Penhaligon destroys more evidence.",
+      "narrative": {
+        "clues_plant": [
+          "C005"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway: Finds Oswin's notebook",
+            "Marget Halloway: Learns he tracked the moss for fourteen months",
+            "Marget Halloway: the columns stop four years ago",
+            "Marget Halloway: Suspects a connection between his disappearance and the graveyard's condition.",
+            "Arthur Penhaligon: Grows impatient as Marget starts deeper observation",
+            "Arthur Penhaligon: He confiscates her cold-map ledger in chapter 7.",
+            "Oswin Kerrow: His field notebook is discovered, containing fourteen months of meticulous soil and moss data, ending abruptly on the date he disappeared."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 6
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Feather Points Down",
+      "slug": "the-feather-points-down",
+      "one_line_summary": "Marget Halloway proves Arthur Penhaligon flooded the graves to conceal the cold network, uses Oswin Kerrow's pressed feather to locate its center, and begins an experiment showing the moss remains connected underground.",
+      "beat_summary": "Marget Halloway returns before Arthur Penhaligon can drain the lower plot and lays the torn map corner beside the surviving waterline. The flooded graves align exactly with her strongest cold marks, paying off C005 and establishing Arthur Penhaligon's act as targeted concealment. Marget Halloway removes the pressed feather from Oswin Kerrow's notebook and places it on dry slate beside samples taken from the flooded row. Frost forms along only one side of the feather, while the other remains limp; when she rotates the slate, the frozen vane continues to orient toward the central stone. The physical response pays off C007 without conveying language and confirms that the cold has a fixed center. Marget Halloway then seals moss samples from three distant graves in separate glass dishes and arranges them according to her remembered map. Fine strands press against the glass in matching pulses whenever the central sample is touched, planting experimental clue C009 that the patches remain part of one underground system. Arthur Penhaligon appears above the flooded plot and closes the sluice, trapping Marget Halloway below as the loosened ground begins to sink. The numbness spreads across Marget Halloway's left palm.",
+      "must_happen": [
+        "Marget Halloway aligns the torn cold-map fragment with the flood boundary and confirms that Arthur Penhaligon submerged only the graves she marked as coldest, paying off C005.",
+        "Marget Halloway tests the pressed feather from Oswin Kerrow's notebook and observes frost forming consistently on the vane oriented toward the central stone, paying off C007 through physical evidence rather than communication.",
+        "Marget Halloway deduces that the flooding was an act of concealment and that the cold network has a fixed center beneath or beside the central stone, without yet identifying the person at that center.",
+        "Marget Halloway seals moss samples from separate graves in glass dishes and observes synchronized movement when the sample nearest the central stone is disturbed, planting experimental clue C009.",
+        "Arthur Penhaligon closes the sluice while Marget Halloway is in the lower plot, leaving Marget Halloway on ground destabilized by the flood.",
+        "Marget Halloway records measurable numbness covering her left index finger, middle finger, thumb, and the outer half of her left palm."
+      ],
+      "must_not": [
+        "Marget Halloway must not yet discover that the network digests souls or that Arthur Penhaligon harvests its output for longevity.",
+        "The pressed feather must not write, point like a conscious instrument, produce words, or function as a message from Oswin Kerrow.",
+        "Arthur Penhaligon must not confess that the flooding was deliberate or explain what lies beneath the central stone.",
+        "No romance, attraction, protective intimacy, or emotional warmth may occur between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "The waterline crossed every cold mark on Marget Halloway's torn map and missed every grave she had left unmarked.",
+      "cliffhanger": "The mud split beneath Marget Halloway's knees, exposing a web of white filaments stretched between the graves like tendons under peeled skin.",
+      "signature_detail_hint": "Inside the sealed dishes, the moss strands flatten against the glass at the same instant, leaving tiny branching prints in the condensation.",
+      "emotional_beat": "Marget Halloway's dread hardens into certainty that Arthur Penhaligon is actively concealing the graveyard's structure, while the loss of her left palm threatens the last instrument she can still trust.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; the chapter centers on investigation, bodily loss, and entrapment.",
+      "chapter_task": "Write a 1600-1900 word chapter paying off C005 and C007 through concrete physical tests. Reveal that Arthur Penhaligon deliberately concealed the cold network and that its cold converges on the central stone, but preserve the full mystery for later chapters. Plant C009 with synchronized sealed moss samples, advance numbness across Marget Halloway's left palm, and end with the exposed underground filaments.",
+      "carries_to_next": "Marget Halloway has physical proof of a connected underground structure centered on the central stone, while the flood has exposed a path she can follow to determine what the structure surrounds.",
+      "narrative": {
+        "clues_plant": [
+          "C009"
+        ],
+        "clues_payoff": [
+          "C005",
+          "C007"
+        ],
+        "reveals": [
+          {
+            "id": "",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C005",
+              "C007"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway: Finds Oswin's notebook",
+            "Marget Halloway: Learns he tracked the moss for fourteen months",
+            "Marget Halloway: the columns stop four years ago",
+            "Marget Halloway: Suspects a connection between his disappearance and the graveyard's condition.",
+            "Arthur Penhaligon: Grows impatient as Marget starts deeper observation",
+            "Arthur Penhaligon: He confiscates her cold-map ledger in chapter 7.",
+            "Oswin Kerrow: His field notebook is discovered, containing fourteen months of meticulous soil and moss data, ending abruptly on the date he disappeared."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 6
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "The Bone Under the Root",
+      "slug": "the-bone-under-the-root",
+      "one_line_summary": "Marget Halloway follows the exposed filaments to the central stone and identifies the embedded bone as Oswin Kerrow's by its dated carving and his damaged-chisel mark — without yet knowing why he lies at the centre.",
+      "beat_summary": "Marget Halloway follows the white filaments revealed by the collapsed mud and finds that they curve around the buried dead rather than penetrating most of the coffins. Every strand converges beneath the central stone. Using her left hand, Marget Halloway clears the base and recovers the bone fragment first found there, paying off C010. The carved date matches Oswin Kerrow's disappearance, and the cut marks carry the distinctive stagger made by the damaged chisel Oswin Kerrow taught her to use. When Marget Halloway touches the fragment, a concentrated cold surges from the bone into the stone while the surrounding graves briefly warm — Oswin Kerrow does not speak or convey meaning. The physical trail now proves the body's identity and that the network routes through this unmarked plot; what Oswin Kerrow meant by lying there, and what the moss takes, remain unread. Combined with Arthur Penhaligon's flooding and ledger confiscation, the scene reads as active concealment, though his ultimate purpose is still unknown. Arthur Penhaligon arrives carrying a stone maul and orders Marget Halloway away from the exposed root. The numbness crosses Marget Halloway's left wrist, leaving only intermittent pressure in two fingers.",
+      "must_happen": [
+        "Marget Halloway follows the exposed filaments and observes that they bypass most coffins before converging beneath the central stone.",
+        "Marget Halloway recovers and examines the dated bone fragment planted as C010, identifying Oswin Kerrow by his distinctive damaged-chisel pattern and paying off C010 through technical physical evidence.",
+        "Marget Halloway touches the bone fragment and experiences concentrated localized cold while the outer graves briefly become less cold; Oswin Kerrow does not speak or communicate meaning.",
+        "Marget Halloway records that the network's physical routes converge on Oswin Kerrow's unmarked plot without yet stating why he is there or what the moss consumes.",
+        "Marget Halloway notes that Arthur Penhaligon's ledger confiscation and flooding align with protecting this centre, while his motive remains unrevealed.",
+        "Arthur Penhaligon confronts Marget Halloway beside the exposed root while carrying a stone maul and attempts to force her away through threats rather than explanation.",
+        "Marget Halloway records measurable numbness extending through her left wrist, with only intermittent pressure remaining in her left ring and little fingers."
+      ],
+      "must_not": [
+        "Marget Halloway must not yet conclude that Oswin Kerrow deliberately made himself the network's human anchor.",
+        "Marget Halloway must not yet learn that the moss digests souls or that Arthur Penhaligon harvests extracted essence to extend his life.",
+        "Oswin Kerrow must not appear, speak, form a vision, guide Marget Halloway, or confirm whether he wants to be freed.",
+        "Arthur Penhaligon must not explain the network, confess his motive, or reveal the complete central mystery.",
+        "No romance, attraction, sympathy, or protective warmth may occur between Marget Halloway and Arthur Penhaligon.",
+        "Marget Halloway must not destroy or strike the central stone in this chapter."
+      ],
+      "opens_with": "The white filaments did not enter the nearest coffin; they bent around it and ran toward the central stone.",
+      "cliffhanger": "Behind Arthur Penhaligon, the central stone tilted in the softened earth, and a moss-bound human rib cage rose into view beneath the raven's feet.",
+      "signature_detail_hint": "The damaged-chisel stagger cut into the dated bone — the same tool-mark Oswin Kerrow once made Marget Halloway practise until her wrist burned.",
+      "emotional_beat": "Marget Halloway's horror collapses into grief when physical proof identifies Oswin Kerrow as the anchor, while uncertainty over whether freeing him would be mercy or violation leaves her emotionally isolated.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; the emotional intensity comes from mentor grief, bodily deterioration, and confrontation with Arthur Penhaligon.",
+      "chapter_task": "Write a 1600-1900 word chapter paying off C010 through filament paths, carving analysis, bone identity, and touch. Establish that the network converges on Oswin Kerrow's unmarked plot and that Arthur Penhaligon is actively protecting it. Do NOT deliver the deliberate-anchor sacrifice, soul-digestion, or longevity-harvest answers — those belong to chapter 10. Advance left-wrist numbness. End on the moss-bound rib cage rising under the raven.",
+      "carries_to_next": "Marget Halloway knows Oswin Kerrow is physically bound beneath the central stone and must determine what the network consumes, what Arthur Penhaligon gains from it, and whether breaking the anchor can end it.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C010"
+        ],
+        "reveals": [
+          {
+            "id": "",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C002",
+              "C004",
+              "C010"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway: Deduces the cold network centers on a person, not a place",
+            "Marget Halloway: Realizes Oswin made himself the anchor",
+            "Marget Halloway: Understands Arthur's obstruction is active concealment.",
+            "Arthur Penhaligon: After the ledger confiscation and flooding of the lower plot, his role as active concealer becomes evident, though his ultimate aims are not yet clear.",
+            "Oswin Kerrow: Marget deduces that Oswin is the central anchor of the network, having deliberately made himself the host to spare the other dead."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 9
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 10,
+      "title": "What the Moss Consumes",
+      "slug": "what-the-moss-consumes",
+      "one_line_summary": "Marget Halloway proves the moss digests the dead, that Oswin Kerrow made himself its anchor to spare the other graves, and that Arthur Penhaligon harvests the extracted essence to preserve his own life.",
+      "beat_summary": "Continuing beside the exposed rib cage, Marget Halloway prevents Arthur Penhaligon from covering the root and uses the last intermittent pressure in her left fingers to compare an untouched grave, a moss-covered grave, and the central stone. The untouched carving retains the distinct tactile residue by which Marget Halloway reads the dead, while the moss-covered carving has been scraped empty of every human trace. When Marget Halloway cuts the moss, its aggressive regrowth accelerates toward the remaining residue, paying off C003 as feeding behavior rather than ordinary growth. Marget Halloway repeats the sealed-dish experiment beside the exposed root; all samples pulse together, the outer graves lose their residual impressions, and a concentrated current passes through Oswin Kerrow into a buried glass receiver, paying off C009. Following the receiver's tube, Marget Halloway finds Arthur Penhaligon's concealed harvesting apparatus. Arthur Penhaligon draws the luminous condensate into his gloved grip, and a strip of deeply aged skin visible above his cuff smooths within seconds. Combined with the filament convergence and Oswin Kerrow's identified remains from the prior day, Marget Halloway earns the full answer through physical evidence and touch: the fungal network digests the souls held in the graves; Oswin Kerrow deliberately made himself its anchor so it would consume him before reaching the other dead; and Arthur Penhaligon accelerated the decay to harvest the extracted essence for unnatural longevity. Arthur Penhaligon attacks the apparatus rather than explain it, rupturing the receiver and driving the network into a feeding surge. The numbness advances through Marget Halloway's left forearm.",
+      "must_happen": [
+        "Marget Halloway compares an untouched grave with a moss-covered grave and finds that the covered stone has lost the distinct tactile residue through which Marget Halloway reads the dead.",
+        "Marget Halloway cuts back the moss and observes it regrowing directly toward the remaining tactile residue, paying off C003 by establishing the regrowth as active feeding behavior.",
+        "Marget Halloway repeats the separated-sample experiment beside the exposed root and observes synchronized pulses drawing residual impressions from the outer graves toward the central stone, paying off C009.",
+        "Marget Halloway traces the synchronized current through Oswin Kerrow's anchor and into a concealed glass receiver connected to Arthur Penhaligon's harvesting apparatus.",
+        "Marget Halloway sees Arthur Penhaligon absorb or administer the collected essence and watches exposed skin above Arthur Penhaligon's glove visibly lose signs of extreme age.",
+        "Marget Halloway deduces from physical evidence — including the bone identity and filament convergence earned the previous day — that the moss is a parasitic fungal network digesting souls, that Oswin Kerrow deliberately made himself its human anchor to protect the other graves, and that Arthur Penhaligon harvests the extracted essence to extend his life.",
+        "Arthur Penhaligon ruptures the receiver to prevent Marget Halloway from taking it, causing the filaments beneath the graveyard to enter a violent feeding surge.",
+        "Marget Halloway records the numbness extending from the left wrist through the left forearm, leaving only faint pressure in the left ring and little fingertips."
+      ],
+      "must_not": [
+        "Arthur Penhaligon must not explain, confess, or state any part of the central mystery in dialogue.",
+        "Oswin Kerrow must not speak, appear, create a vision, or convey approval, refusal, or instructions.",
+        "Arthur Penhaligon's gloves must not come fully off before chapter 12.",
+        "Marget Halloway must not strike or destroy the central stone in this chapter.",
+        "No romance, attraction, tenderness, sympathy, or caretaker warmth may occur between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "\"Move away from the root,\" Arthur Penhaligon said, raising the stone maul over the ribs beneath Marget Halloway's hand.",
+      "cliffhanger": "The shattered receiver spilled a pale current into the soil, and every moss-covered grave opened along its carved name at once.",
+      "signature_detail_hint": "The harvested essence beads inside the glass receiver like mercury, except each bead briefly holds the whorled texture of a fingertip before merging with the next.",
+      "emotional_beat": "Marget Halloway's grief becomes horrified certainty when Marget Halloway understands that Oswin Kerrow has endured the network's hunger for years, while Arthur Penhaligon has treated that sacrifice as a renewable resource.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; all physical proximity between Marget Halloway and Arthur Penhaligon is adversarial.",
+      "chapter_task": "Write a 1600-1900 word chapter that pays off C003 and C009 through repeatable physical observations and delivers the canonical chapter 10 reveal without explanatory dialogue. Marget Halloway must earn the full truth by comparing stone residues, observing synchronized feeding, tracing the harvest current, and combining it with Oswin Kerrow's identified remains: parasitic fungal network digesting souls; Oswin Kerrow as deliberate human anchor; Arthur Penhaligon harvesting essence for longevity. Advance left-forearm numbness. End on the moss-covered graves opening along their carved names.",
+      "carries_to_next": "Marget Halloway knows the complete mechanism and must stop the feeding surge, determine whether the central stone can be broken without spreading the network, and overcome Arthur Penhaligon before the remaining graves are emptied.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C003",
+          "C009"
+        ],
+        "reveals": [
+          {
+            "id": "",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C002",
+              "C004",
+              "C009",
+              "C010"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004",
+          "T005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway: Deduces the cold network centers on a person, not a place",
+            "Marget Halloway: Realizes Oswin made himself the anchor",
+            "Marget Halloway: Understands Arthur's obstruction is active concealment.",
+            "Arthur Penhaligon: After the ledger confiscation and flooding of the lower plot, his role as active concealer becomes evident, though his ultimate aims are not yet clear.",
+            "Oswin Kerrow: Marget deduces that Oswin is the central anchor of the network, having deliberately made himself the host to spare the other dead."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 9
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 11,
+      "title": "The Last Stone Marget Halloway Can Read",
+      "slug": "the-last-stone-marget-halloway-can-read",
+      "one_line_summary": "Marget Halloway discovers that shattering the central stone will collapse the network, chooses to violate her lifelong rule against destroying carved stone, and seizes Arthur Penhaligon's maul.",
+      "beat_summary": "The feeding surge pulls black moss through the opened names, forcing Marget Halloway to work with rapidly failing sensation. Marget Halloway blocks one exposed filament with broken slate and observes every connected strand recoil, confirming that the network depends on continuity through the central stone. The raven remains fixed to the tilting central stone even when the slab shifts violently; its wings beat, but its claws cannot leave the carved surface. Combined with the raven's unbroken vigil since Marget Halloway arrived and the network's response to fractures, this visual behavior reveals that the raven is bound to the intact anchor and that the central stone is the network's structural lock. Marget Halloway tests an existing fracture with an iron wedge. The network stops feeding for one heartbeat, the outer graves warm, and the concentrated cold of Oswin Kerrow weakens. Marget Halloway concludes that shattering the stone will kill the network and release the anchor, but Marget Halloway cannot learn whether Oswin Kerrow desires that release. Arthur Penhaligon tries to remove the wedge and preserve the stone. During the struggle, Marget Halloway lets Arthur Penhaligon believe the numb left hand has failed, then uses the weight of the dead right arm to trap the maul shaft and take the weapon. The numbness reaches Marget Halloway's left elbow, and the final pressure in the left fingertips disappears. Marget Halloway raises the maul over the carved face, crossing the boundary Marget Halloway has obeyed throughout her life.",
+      "must_happen": [
+        "Marget Halloway interrupts one exposed filament with broken slate and observes a simultaneous recoil across the connected network, proving that damage at the central structure affects every grave.",
+        "The raven attempts to lift from the violently tilting central stone but cannot release its claws from the carved surface, developing C006 as evidence that the raven is supernaturally bound to the intact anchor without paying off its final release.",
+        "Marget Halloway drives an iron wedge into an existing fracture and observes the network stop feeding for one heartbeat while the outer graves briefly warm.",
+        "Marget Halloway deduces that shattering the central stone will break the network's continuity, end the feeding, and release Oswin Kerrow from the anchor.",
+        "Marget Halloway remains unable to determine whether Oswin Kerrow wants release, because Oswin Kerrow manifests only as nonlinguistic localized cold.",
+        "Arthur Penhaligon attempts to preserve the stone by removing the wedge and taking back the stone maul without explaining Arthur Penhaligon's intentions.",
+        "Marget Halloway uses the dead weight of the numb right arm to trap the maul shaft and seize the weapon from Arthur Penhaligon.",
+        "Marget Halloway loses the last pressure sensation in the left fingertips as numbness advances through the left elbow.",
+        "Marget Halloway consciously chooses to destroy a carved stone for the first time, placing mercy and the other graves above Marget Halloway's professional boundary."
+      ],
+      "must_not": [
+        "Marget Halloway must not complete the decisive strike or shatter the central stone before chapter 12.",
+        "The raven must not leave the central stone while the stone remains intact.",
+        "Oswin Kerrow must not communicate whether destruction is desired, merciful, or correct.",
+        "Arthur Penhaligon must not die or reveal Arthur Penhaligon's marked hands in full.",
+        "No romance, attraction, tenderness, reconciliation, or protective warmth may occur between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "Every carved name split open, and the moss beneath them began pulling toward the exposed ribs.",
+      "cliffhanger": "Marget Halloway raised Arthur Penhaligon's maul above the central stone, and the raven spread its wings without lifting its trapped feet.",
+      "signature_detail_hint": "When the iron wedge opens the fracture by a hair, beads of clear moisture rise out of the stone against gravity and hang beneath the raven like a reversed rain.",
+      "emotional_beat": "Marget Halloway faces unbearable vulnerability in choosing an irreversible mercy for Oswin Kerrow without consent, certainty, or enough sensation left to trust the final blow.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; the chapter focuses on moral crisis, mentor grief, and physical conflict with Arthur Penhaligon.",
+      "chapter_task": "Write a 1600-1900 word chapter that uses the raven's inability to leave the intact central stone, the network's recoil, and the iron-wedge test to reveal that shattering the anchor will kill the network. Keep C006's final payoff for chapter 12. Force Marget Halloway to choose between the prohibition against destroying carved stone and releasing Oswin Kerrow without knowing Oswin Kerrow's wishes. Advance numbness through Marget Halloway's left elbow and end before the decisive strike lands.",
+      "carries_to_next": "Marget Halloway holds the maul above the central stone with both hands insensible, Arthur Penhaligon is close enough to interfere, the network is feeding uncontrollably, and the raven remains physically bound to the unbroken anchor.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [
+          {
+            "id": "",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C006"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T002",
+          "T003",
+          "T005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway: Deduces the cold network centers on a person, not a place",
+            "Marget Halloway: Realizes Oswin made himself the anchor",
+            "Marget Halloway: Understands Arthur's obstruction is active concealment.",
+            "Arthur Penhaligon: After the ledger confiscation and flooding of the lower plot, his role as active concealer becomes evident, though his ultimate aims are not yet clear.",
+            "Oswin Kerrow: Marget deduces that Oswin is the central anchor of the network, having deliberately made himself the host to spare the other dead."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 9
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 12,
+      "title": "The Blow Marget Halloway Cannot Feel",
+      "slug": "the-blow-marget-halloway-cannot-feel",
+      "one_line_summary": "Marget Halloway shatters the central stone, frees Oswin Kerrow and destroys the network, while Arthur Penhaligon escapes with his marked hands exposed and Marget Halloway leaves unable to feel stone ever again.",
+      "beat_summary": "Marget Halloway begins the downward swing, but Arthur Penhaligon catches the shaft and the maul glances from the central fracture. During the struggle, the gloves Arthur Penhaligon has never removed tear free, paying off C008: both hands are mapped with black root scars, old puncture sites, and alternating bands of withered and unnaturally renewed skin that physically expose years of repeated harvesting. The broken receiver has left Arthur Penhaligon's hands rapidly aging, yet Arthur Penhaligon abandons Marget Halloway rather than remain when the stone begins to fail. Marget Halloway braces the maul without feeling the grip, aligns the head by sight, and strikes the central stone with iron. The stone breaks through Oswin Kerrow's carved chisel line. Every filament contracts, the moss turns grey, the graveyard rises as the sinking network collapses, and the concentrated cold of Oswin Kerrow vanishes. The raven's claws finally release, paying off C006, but the central stone falls into fragments and leaves the raven circling over empty ground with nowhere to land. The complete loss of touch that began with Marget Halloway's first readings pays off C008's personal dimension as well: Marget Halloway cannot feel the maul, the shattered slate, blood from damaged calluses, or the last cold of Oswin Kerrow. Arthur Penhaligon escapes across the moor with visibly marked hands and a remaining trace of harvested essence, preserving the wider threat while ending the graveyard scheme. Marget Halloway logs total bilateral hand numbness by watching the pen move rather than feeling it, then walks out across ground Marget Halloway can no longer read.",
+      "must_happen": [
+        "Arthur Penhaligon intercepts Marget Halloway's first swing, causing the maul to strike beside the central fracture rather than complete the destruction.",
+        "Arthur Penhaligon's gloves tear completely off, paying off C008 by revealing black root scars, repeated harvest punctures, and unevenly aged skin across Arthur Penhaligon's hands.",
+        "Marget Halloway recognizes from Arthur Penhaligon's exposed hands that the gloves concealed the physical cost and repeated use of the longevity harvest.",
+        "Marget Halloway aligns the maul entirely by sight because Marget Halloway can no longer feel the handle in either hand.",
+        "Marget Halloway strikes and shatters the central stone, breaking the fungal network and ending the extraction process.",
+        "The filaments contract, the moss dies grey, the sinking ground settles, and the localized cold of Oswin Kerrow disappears without words, visions, or confirmation of Oswin Kerrow's wishes.",
+        "The raven's claws release only after the central stone shatters, paying off C006, and the raven circles because no intact central stone remains on which to land.",
+        "Arthur Penhaligon escapes alive across the moor with marked hands exposed and only a residual trace of harvested essence, allowing Arthur Penhaligon's threat to continue beyond book 1.",
+        "Marget Halloway confirms total permanent numbness in both hands and cannot feel the maul, slate fragments, blood, or the last cold associated with Oswin Kerrow.",
+        "Marget Halloway walks out of the barrow across ground Marget Halloway can no longer read, carrying grief without knowing whether Oswin Kerrow wanted to be freed."
+      ],
+      "must_not": [
+        "Marget Halloway must not regain touch, warmth, pain, or any supernatural stone-reading ability after the network dies.",
+        "Oswin Kerrow must not speak, appear, thank Marget Halloway, forgive Marget Halloway, or confirm that destruction was desired.",
+        "Arthur Penhaligon must not die, repent, assist Marget Halloway, or lose all capacity to continue Arthur Penhaligon's longevity scheme elsewhere.",
+        "The raven must not land on another object within the graveyard after the central stone is shattered.",
+        "No romance, attraction, tenderness, reconciliation, or caretaker warmth may occur between Marget Halloway and Arthur Penhaligon."
+      ],
+      "opens_with": "Marget Halloway swung, and Arthur Penhaligon caught the maul with both gloved hands.",
+      "cliffhanger": "Above the empty place where the central stone had stood, the raven circled once more, lowered its feet toward nothing, and beat its wings against the fall.",
+      "signature_detail_hint": "Arthur Penhaligon's bare palms show concentric root scars around tiny glass punctures, with young skin growing in narrow islands between patches thin as old paper.",
+      "emotional_beat": "Marget Halloway accepts devastating grief and permanent bodily loss after choosing uncertain mercy for Oswin Kerrow, while Arthur Penhaligon's escape leaves the victory complete only within the barrow.",
+      "spice": 1,
+      "spice_note": "No sexual or romantic content; the climax is physical horror, sacrifice, and mentor grief.",
+      "chapter_task": "Write a 1600-1900 word final chapter that pays off C006 and C008, fulfills the exact book 1 ending, and closes the graveyard threat while preserving Arthur Penhaligon for the series arc. Marget Halloway must shatter the central stone with hands that feel nothing, the network must die, the raven must have nowhere to land, and Oswin Kerrow's cold must vanish without linguistic communication or certainty. End on a concrete visual cliffhanger centered on the circling raven and Marget Halloway's irreversible loss.",
+      "carries_to_next": "The barrow network is dead and Oswin Kerrow has been released, but Arthur Penhaligon remains alive with physically marked hands and residual knowledge of other harvest sites, while Marget Halloway must continue without the touch-based ability that defined Marget Halloway's life.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C006",
+          "C008"
+        ],
+        "reveals": [
+          {
+            "id": "",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C008"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T002",
+          "T003",
+          "T005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Marget Halloway",
+            "Arthur Penhaligon",
+            "Oswin Kerrow"
+          ],
+          "may_know": [
+            "Marget Halloway: Strikes the stone with iron",
+            "Marget Halloway: The network dies",
+            "Marget Halloway: Her hands are permanently numb",
+            "Marget Halloway: She walks out unable to read stone ever again.",
+            "Arthur Penhaligon: His scheme collapses with the network",
+            "Arthur Penhaligon: His gloves come off, revealing physically marked hands from the harvest.",
+            "Oswin Kerrow: His consciousness is released when the stone is shattered",
+            "Oswin Kerrow: The cold vanishes",
+            "Oswin Kerrow: Marget feels nothing where his presence had held the strongest."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 12
+        },
+        "clue_beats": {}
+      }
+    }
+  ],
+  "title": "The Barrow Stone",
+  "total_chapters": 12
+}

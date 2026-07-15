@@ -20,7 +20,9 @@ from factory.engine.lib.prompt_builder import (
 from factory.engine.lib.plan_qc import (
     apply_canon_plans,
     apply_deterministic_plan_fixes,
+    chapter_plan_structurally_complete,
     ensure_task_word_count,
+    prefer_richer_chapter_plan,
     validate_plan,
 )
 from factory.engine.lib.narrative_compiler import (
@@ -155,8 +157,15 @@ def fix_plan_with_llm(ws: Path, book: int, plan: dict, issues: list[str]) -> dic
     fixed.pop("narrative", None)
     if narrative_compiler_enabled(ws):
         merged = merge_narrative_into_plans(ws, [fixed])
-        return merged[0] if merged else fixed
-    return fixed
+        fixed = merged[0] if merged else fixed
+    fixed = normalize_chapter_plan(fixed)
+    # Never accept a fixer result that strips required fields from a complete chapter.
+    kept = prefer_richer_chapter_plan(plan, fixed)
+    if chapter_plan_structurally_complete(plan) and not chapter_plan_structurally_complete(fixed):
+        safe_print(
+            f"[fix-plans] ch{plan.get('chapter')}: fixer returned incomplete object — kept prior"
+        )
+    return kept
 
 
 def qc_and_fix_plans(ws: Path, book: int, *, use_llm: bool = True) -> dict[int, list[str]]:
@@ -266,10 +275,52 @@ def save_master_plan(ws: Path, book: int, data: dict) -> Path:
 
 
 def merge_plans(existing: list[dict], new_plans: list[dict]) -> list[dict]:
-    by_ch = {p["chapter"]: normalize_chapter_plan(p) for p in existing}
+    """Upsert chapter plans — never replace a complete chapter with a thinner one."""
+    by_ch: dict[int, dict] = {}
+    for p in existing:
+        np = normalize_chapter_plan(p)
+        ch = int(np.get("chapter") or 0)
+        if ch:
+            by_ch[ch] = np
     for p in new_plans:
-        by_ch[normalize_chapter_plan(p)["chapter"]] = normalize_chapter_plan(p)
+        np = normalize_chapter_plan(p)
+        ch = int(np.get("chapter") or 0)
+        if not ch:
+            continue
+        by_ch[ch] = prefer_richer_chapter_plan(by_ch.get(ch), np)
     return [by_ch[k] for k in sorted(by_ch)]
+
+
+def chunk_needs_replan(existing_plans: list[dict], lo: int, hi: int) -> bool:
+    """True unless every chapter in [lo, hi] is structurally complete."""
+    by_ch = {
+        int(p.get("chapter") or 0): p
+        for p in existing_plans
+        if int(p.get("chapter") or 0)
+    }
+    for ch in range(lo, hi + 1):
+        plan = by_ch.get(ch)
+        if plan is None or not chapter_plan_structurally_complete(plan):
+            return True
+    return False
+
+
+def filter_complete_chapter_plans(plans: list[dict], *, lo: int, hi: int) -> list[dict]:
+    """Keep only structurally complete plans in range — refuse partial objects."""
+    out: list[dict] = []
+    for p in plans:
+        np = normalize_chapter_plan(p)
+        ch = int(np.get("chapter") or 0)
+        if ch < lo or ch > hi:
+            continue
+        if chapter_plan_structurally_complete(np):
+            out.append(np)
+        else:
+            safe_print(
+                f"  [plan] reject incomplete ch{ch} "
+                f"(missing required fields / must_happen<3) — not written"
+            )
+    return out
 
 
 def initial_prior_plans(ws: Path, direction: dict) -> list[dict]:
@@ -349,6 +400,7 @@ def _fetch_act_plans(
                 f"Plan ch{act_from}-{act_to} thiếu chapter_plans[]. Xem {raw_path}"
             )
     new_plans = normalize_chapter_plans(merge_narrative_into_plans(ws, chapter_plans))
+    new_plans = filter_complete_chapter_plans(new_plans, lo=act_from, hi=act_to)
     return new_plans, log
 
 
@@ -359,22 +411,25 @@ def plan_act(ws: Path, book: int, act_from: int, act_to: int, act_name: str) -> 
         return plans, log
 
     safe_print(
-        f"  [plan] thiếu {len(plans)}/{expected} ch (JSON có thể bị cắt) — tách {act_from}-{act_to} làm 2..."
+        f"  [plan] thiếu {len(plans)}/{expected} ch hoàn chỉnh (JSON cắt/thiếu field) — "
+        f"tách {act_from}-{act_to} làm 2..."
     )
     if expected <= 1:
         raise RuntimeError(
-            f"Outliner trả thiếu plan ch{act_from}. Chạy lại: plan --acts {act_from}-{act_to}"
+            f"Outliner trả thiếu/incomplete plan ch{act_from}. "
+            f"Chạy lại: plan --acts {act_from}-{act_to}"
         )
     mid = (act_from + act_to) // 2
     p1, log1 = _fetch_act_plans(ws, book, act_from, mid, f"{act_name}a")
     p2, log2 = _fetch_act_plans(ws, book, mid + 1, act_to, f"{act_name}b")
     merged = merge_plans(p1, p2)
-    if len(merged) < expected:
+    complete = filter_complete_chapter_plans(merged, lo=act_from, hi=act_to)
+    if len(complete) < expected:
         raise RuntimeError(
-            f"Vẫn thiếu plan sau khi tách ch{act_from}-{act_to} "
-            f"({len(merged)}/{expected}). Thử: plan --acts {act_from}-{act_to}"
+            f"Vẫn thiếu plan hoàn chỉnh sau khi tách ch{act_from}-{act_to} "
+            f"({len(complete)}/{expected}). Thử: plan --acts {act_from}-{act_to}"
         )
-    return merged, log2
+    return complete, log2
 
 
 def clear_master_plan_for_replan(ws: Path, book: int) -> Path:
@@ -449,9 +504,22 @@ def plan_book(
     existing_chs = {p.get("chapter") for p in data.get("chapter_plans", [])}
 
     for lo, hi, name in ranges:
-        if acts == "all" and all(ch in existing_chs for ch in range(lo, hi + 1)):
-            safe_print(f"[plan] skip {name} ch {lo}-{hi} (đã có trong master_plan)")
+        if acts == "all" and not chunk_needs_replan(data.get("chapter_plans", []), lo, hi):
+            safe_print(f"[plan] skip {name} ch {lo}-{hi} (đủ field trong master_plan)")
             continue
+        if acts == "all" and any(ch in existing_chs for ch in range(lo, hi + 1)):
+            incomplete = [
+                ch
+                for ch in range(lo, hi + 1)
+                if chunk_needs_replan(
+                    [p for p in data.get("chapter_plans", []) if p.get("chapter") == ch],
+                    ch,
+                    ch,
+                )
+            ]
+            safe_print(
+                f"[plan] re-plan {name} ch {lo}-{hi} — incomplete: {incomplete or 'range gap'}"
+            )
         print(f"[plan] act {name}: ch {lo}-{hi}...")
         new_plans, log = plan_act(ws, book, lo, hi, name)
         print(f"  -> {len(new_plans)} chapters ({log.get('usage', {})})")

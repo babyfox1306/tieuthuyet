@@ -1,0 +1,15 @@
+characters:
+  female_lead:
+    canonical: Marget Halloway
+    allowed_aliases:
+    - Marget
+    - Halloway
+    forbidden_aliases: []
+  male_lead:
+    canonical: Arthur Penhaligon
+    allowed_aliases:
+    - Arthur
+    - Penhaligon
+    forbidden_aliases: []
+pov_mode: third_person_limited
+spice_max: 1
