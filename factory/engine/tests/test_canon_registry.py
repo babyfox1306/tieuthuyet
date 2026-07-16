@@ -154,6 +154,7 @@ characters:
                         "total_chapters": 1,
                         "target_language": "en",
                         "spice_default": 1,
+                        "spice_level": 1,
                     },
                     allow_unicode=True,
                 ),
@@ -206,6 +207,95 @@ characters:
             self.assertEqual(spice[0]["value"], 3)
             self.assertEqual(spice[0]["expected"], 1)
 
+    def test_missing_spice_max_fails_loud(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "no-spice-ceiling"
+            ws.mkdir()
+            (ws / "canon_registry.yaml").write_text(CANON_REGISTRY_YAML, encoding="utf-8")
+            (ws / "direction.yaml").write_text(
+                yaml.dump(
+                    {
+                        "id": "no-spice-ceiling",
+                        "book": 1,
+                        "spice_default": 1,
+                    },
+                    allow_unicode=True,
+                ),
+                encoding="utf-8",
+            )
+            with self.assertRaises(CanonRegistryError) as ctx:
+                build_canon_registry(ws, book=1)
+            codes = {c["code"] for c in ctx.exception.conflicts}
+            self.assertIn("missing_spice_max", codes)
+
+    def test_spice_default_is_not_book_ceiling(self) -> None:
+        """spice_default=1 + spice_level=3 must allow explicit chapters at spice 3."""
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "explicit-spice"
+            ws.mkdir()
+            (ws / "canon_registry.yaml").write_text(CANON_REGISTRY_YAML, encoding="utf-8")
+            (ws / "direction.yaml").write_text(
+                yaml.dump(
+                    {
+                        "id": "explicit-spice",
+                        "book": 1,
+                        "book_slug": "01-explicit-spice",
+                        "total_chapters": 14,
+                        "target_language": "en",
+                        "spice_default": 1,
+                        "spice_level": 3,
+                        "spice_steamy_chapters": [6],
+                        "spice_explicit_chapters": [9, 14],
+                    },
+                    allow_unicode=True,
+                ),
+                encoding="utf-8",
+            )
+            (ws / "bible").mkdir()
+            (ws / "bible" / "series.json").write_text(
+                json.dumps(
+                    {
+                        "leads": {
+                            "female": {"name": "Mara Vale"},
+                            "male": {"name": "Elias Crane"},
+                        },
+                        "supporting_cast": [],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            book_dir = ws / "books" / "01"
+            book_dir.mkdir(parents=True)
+            (book_dir / "master_plan.json").write_text(
+                json.dumps(
+                    {
+                        "book": 1,
+                        "total_chapters": 14,
+                        "chapter_plans": [
+                            {
+                                "chapter": ch,
+                                "title": f"Ch {ch}",
+                                "slug": f"ch-{ch}",
+                                "one_line_summary": "Mara and Elias move the plot.",
+                                "beat_summary": "Elias Crane supports Mara Vale.",
+                                "must_happen": ["a", "b", "c"],
+                                "must_not": ["x", "y"],
+                                "opens_with": "The night held.",
+                                "cliffhanger": "Something shifted.",
+                                "signature_detail_hint": "cold metal",
+                                "spice": spice,
+                                "chapter_task": "Write chapter (1600-1900 words).",
+                            }
+                            for ch, spice in ((6, 2), (9, 3), (14, 3))
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            conflicts = validate_plan_against_canon_registry(ws, book=1)
+            spice_hits = [c for c in conflicts if c["code"] == "spice_exceeds_max"]
+            self.assertEqual(spice_hits, [], spice_hits)
+
     def test_approve_plan_passes_clean_fixture(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             ws = Path(tmp) / "clean-test"
@@ -220,6 +310,7 @@ characters:
                         "total_chapters": 1,
                         "target_language": "en",
                         "spice_default": 1,
+                        "spice_level": 1,
                         "plan_status": "draft",
                         "pov_mode": "third_person_limited",
                     },
@@ -311,7 +402,6 @@ characters:
     canonical: M.I.A.
     allowed_aliases: []
 pov_mode: third_person_limited
-spice_max: 1
 """,
             encoding="utf-8",
         )
@@ -324,6 +414,7 @@ spice_max: 1
                     "total_chapters": 1,
                     "target_language": "en",
                     "spice_default": 1,
+                    "spice_level": 1,
                     "plan_status": "draft",
                 },
                 allow_unicode=True,

@@ -262,7 +262,6 @@ def scaffold_canon_registry(
         m_name = male.strip()
 
     direction = load_direction(ws)
-    spice = int(direction.get("spice_level") or direction.get("spice_default") or 1)
     pov = str(direction.get("pov_mode") or "third_person_limited").strip()
 
     data: dict[str, Any] = {
@@ -279,7 +278,6 @@ def scaffold_canon_registry(
             },
         },
         "pov_mode": pov,
-        "spice_max": spice,
     }
 
     path.write_text(
@@ -672,12 +670,30 @@ def _chapter_count_from_book_yaml(ws: Path, book_slug: str) -> int | None:
         return None
 
 
-def _spice_max_from_direction(direction: dict) -> int:
-    for key in ("spice_max", "spice_default", "spice_level"):
+def resolve_spice_max_from_direction(direction: dict) -> int:
+    """Book-wide spice ceiling from direction (not per-chapter spice_default)."""
+    for key in ("spice_max", "spice_level"):
         val = direction.get(key)
         if val is not None:
             return int(val)
-    return 1
+    raise CanonRegistryError(
+        [
+            {
+                "code": "missing_spice_max",
+                "source": "direction.yaml",
+                "value": "(missing)",
+                "expected": "spice_max or spice_level",
+                "detail": (
+                    "Book spice ceiling required in direction.yaml; "
+                    "spice_default is per-chapter baseline only"
+                ),
+            }
+        ]
+    )
+
+
+def _spice_max_from_direction(direction: dict) -> int:
+    return resolve_spice_max_from_direction(direction)
 
 
 def _pov_mode_from_declarations(decl: dict, direction: dict) -> str:
@@ -1180,7 +1196,10 @@ def validate_plan_against_canon_registry(ws: Path, book: int = 1) -> list[dict[s
                     "source": f"master_plan.json:ch{ch}",
                     "value": spice_val,
                     "expected": registry.spice_max,
-                    "detail": "plan spice exceeds direction spice_max — fix plan, do not clamp",
+                    "detail": (
+                        "plan spice exceeds book ceiling "
+                        "(direction spice_max or spice_level) — fix plan, do not clamp"
+                    ),
                 }
             )
 

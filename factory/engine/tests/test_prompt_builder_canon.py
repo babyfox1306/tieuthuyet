@@ -107,6 +107,7 @@ def _write_ws(root: Path) -> Path:
                 "total_chapters": 10,
                 "target_language": "en",
                 "spice_default": 1,
+                "spice_level": 1,
                 "audience": "women 18-35",
             },
             allow_unicode=True,
@@ -215,6 +216,7 @@ class TestBuildChapterPromptCanon(unittest.TestCase):
             "target_language": "en",
             "audience": "women 18-35",
             "spice_default": 1,
+            "spice_level": 1,
             "book": 1,
         }
 

@@ -46,6 +46,7 @@ class TestNarrativePromptInjection(unittest.TestCase):
             "target_language": "en",
             "audience": "women 18-35",
             "spice_default": 1,
+            "spice_level": 1,
         }
 
     def test_thriller_workspace_injects_compiler_block(self):

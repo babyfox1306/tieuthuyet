@@ -387,7 +387,9 @@ def build_qc_payload(ws: Path, book: int, chapter: str, chapter_num: int) -> str
     except Exception:
         bible = {}
 
-    spice_max = int(direction.get("spice_max") or direction.get("spice_level") or 3)
+    from factory.engine.lib.canon_registry import resolve_spice_max_from_direction
+
+    spice_max = resolve_spice_max_from_direction(direction)
 
     return json.dumps(
         {

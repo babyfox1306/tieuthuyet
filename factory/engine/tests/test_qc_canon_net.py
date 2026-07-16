@@ -90,6 +90,7 @@ def _write_promote_workspace(root: Path, *, prose: str, slug: str = BOOK_SLUG) -
                 "total_chapters": 10,
                 "target_language": "en",
                 "spice_default": 1,
+                "spice_level": 1,
             },
             allow_unicode=True,
         ),
@@ -164,7 +165,12 @@ def _long_clean_third_person() -> str:
         "The wind carried dust across the cracked boards. She did not speak. "
         "Elias stopped at the steps and met her eyes with steady patience. "
     )
-    return base + ("The house waited in silence while the road stayed empty. " * 280)
+    # Unique filler sentences — avoid EG-16 verbatim 12-gram repeats.
+    fillers = [
+        f"Mara counted the boards underfoot and noted the {i}th crack near the rail. "
+        for i in range(1, 201)
+    ]
+    return base + "".join(fillers)
 
 
 class TestMachineQcCanonNet(unittest.TestCase):

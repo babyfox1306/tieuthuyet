@@ -59,6 +59,7 @@ class ScaffoldCanonRegistryTests(unittest.TestCase):
             self.assertEqual(result["male_lead"], "Julian Vane")
             data = yaml.safe_load((ws / "canon_registry.yaml").read_text(encoding="utf-8"))
             self.assertEqual(data["characters"]["female_lead"]["canonical"], "Elena March")
+            self.assertNotIn("spice_max", data)
 
             again = scaffold_canon_registry(ws)
             self.assertFalse(again["created"])

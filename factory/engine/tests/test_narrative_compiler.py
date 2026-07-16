@@ -135,6 +135,8 @@ def _write_workspace(
         "narrative_status": narrative_status,
         "total_chapters": 50,
         "target_language": "en",
+        "spice_level": 1,
+        "spice_default": 1,
     }
     if workspace_mode:
         direction["workspace_mode"] = workspace_mode
