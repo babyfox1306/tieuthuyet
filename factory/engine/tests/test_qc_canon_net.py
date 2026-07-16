@@ -230,6 +230,24 @@ class TestMachineQcCanonNet(unittest.TestCase):
         self.assertNotIn("pov_violation", issues)
         self.assertNotIn("spice_violation", issues)
 
+    def test_curly_dialogue_first_person_not_pov(self) -> None:
+        """I/me inside curly-quoted speech must not count as POV violation."""
+        from factory.engine.lib.canon_prose_qc import (
+            count_first_person_outside_dialogue,
+            canon_prose_issues,
+        )
+
+        # Straight-only strip would leave these I/me hits; normalize fixes it.
+        text = (
+            "Mara stood at the rail.\n"
+            "\u201cI will not leave,\u201d she said.\n"
+            "\u201cI\u2019ve already decided. Stay with me.\u201d\n"
+            "Elias watched the fog and said nothing.\n"
+        ) + ("The marsh held its silence under the pale sky. " * 40)
+        self.assertEqual(count_first_person_outside_dialogue(text), 0)
+        issues = canon_prose_issues(text, _registry_elias())
+        self.assertNotIn("pov_violation", issues)
+
 
 class TestCanonGuardPromoteBlock(unittest.TestCase):
     def test_canon_guard_fail_blocks_promote(self) -> None:

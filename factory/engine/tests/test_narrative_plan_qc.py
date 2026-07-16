@@ -153,6 +153,40 @@ class TestNarrativePlanQC(unittest.TestCase):
         self.assertIn("C001", body["narrative_fix_hints"]["clues_plant"])
         self.assertIn("narrative_issues", body)
 
+    def test_nc09_reveal_payoff_duplicate(self):
+        from factory.engine.lib.plan_qc import validate_payoff_uniqueness
+
+        p_a = merge_narrative_into_plans(self.ws, [_full_plan(8)])[0]
+        p_b = dict(p_a)
+        p_b["chapter"] = 9
+        p_b["title"] = "Chapter 9"
+        p_b["slug"] = "ch-9"
+        narr = dict(p_b.get("narrative") or {})
+        narr["reveals"] = list(narr.get("reveals") or []) or [{"id": "R001"}]
+        # Force same reveal id on two chapters
+        p_a_narr = dict(p_a.get("narrative") or {})
+        p_a_narr["reveals"] = [{"id": "R001"}]
+        p_a["narrative"] = p_a_narr
+        p_b["narrative"] = narr
+        issues = validate_payoff_uniqueness([p_a, p_b], ws=self.ws)
+        flat = [i for ch_issues in issues.values() for i in ch_issues]
+        self.assertTrue(any("NC-09:reveal_payoff_duplicate:R001" in i for i in flat), flat)
+
+    def test_nc09_clue_payoff_duplicate(self):
+        from factory.engine.lib.plan_qc import validate_payoff_uniqueness
+
+        p3 = merge_narrative_into_plans(self.ws, [_full_plan(3)])[0]
+        p8 = merge_narrative_into_plans(self.ws, [_full_plan(8)])[0]
+        n3 = dict(p3.get("narrative") or {})
+        n8 = dict(p8.get("narrative") or {})
+        n3["clues_payoff"] = ["C002"]
+        n8["clues_payoff"] = ["C002"]
+        p3["narrative"] = n3
+        p8["narrative"] = n8
+        issues = validate_payoff_uniqueness([p3, p8], ws=self.ws)
+        flat = [i for ch_issues in issues.values() for i in ch_issues]
+        self.assertTrue(any("NC-09:clue_payoff_duplicate:C002" in i for i in flat), flat)
+
 
 if __name__ == "__main__":
     unittest.main()

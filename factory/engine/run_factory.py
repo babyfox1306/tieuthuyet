@@ -17,6 +17,7 @@ if str(ROOT) not in sys.path:
 from factory.engine.lib.call_9router import (
     call_9router,
     list_models,
+    load_role,
     parse_json_response,
     probe_model,
     resolve_priority_chain,
@@ -77,6 +78,10 @@ from factory.engine.lib.write_guards import (
     is_sequential_writes,
     load_prior_chapter_excerpt,
     state_chain_complete,
+)
+from factory.engine.lib.writer_payload_log import (
+    write_writer_payload_artifact,
+    writer_source_versions,
 )
 from factory.engine.paths import (
     bible_path,
@@ -546,6 +551,8 @@ def _draft_chapter_prose(
     )
 
     base_payload = build_writer_payload(ws, book, ch, cfg)
+    system_message = load_role("writer", direction=direction, cfg=cfg)
+    source_versions = writer_source_versions(ws, book)
     max_tokens = int(cfg.get("writer_max_tokens", 16384))
     short_retries = int(cfg.get("writer_short_retries", 2))
     # Full rewrites when expand patches still leave chapter under min (default 3).
@@ -570,6 +577,7 @@ def _draft_chapter_prose(
     content_attempts = 0
     short_used = 0
     length_rewrites = 0
+    attempt_number = 0
 
     max_rounds = content_max + short_retries + length_max + 2
 
@@ -584,12 +592,44 @@ def _draft_chapter_prose(
         }
 
     for _round in range(max_rounds):
-        raw, _ = call_9router(
-            "writer",
-            base_payload + expand_suffix + content_suffix,
-            max_tokens=max_tokens,
-            direction=direction,
-        )
+        attempt_number += 1
+        retry_suffix = expand_suffix + content_suffix
+        user_content = base_payload + retry_suffix
+        try:
+            raw, call_meta = call_9router(
+                "writer",
+                user_content,
+                max_tokens=max_tokens,
+                direction=direction,
+            )
+            write_writer_payload_artifact(
+                ws,
+                book,
+                ch,
+                attempt_number=attempt_number,
+                system_message=system_message,
+                user_payload=base_payload,
+                retry_suffix=retry_suffix,
+                model_called=call_meta.get("model") if isinstance(call_meta, dict) else None,
+                source_versions=source_versions,
+                output=raw,
+                error=None,
+            )
+        except Exception as call_exc:
+            write_writer_payload_artifact(
+                ws,
+                book,
+                ch,
+                attempt_number=attempt_number,
+                system_message=system_message,
+                user_payload=base_payload,
+                retry_suffix=retry_suffix,
+                model_called=None,
+                source_versions=source_versions,
+                output=None,
+                error=str(call_exc),
+            )
+            raise
         chapter = raw.strip()
         state = load_state(ws, book)
         m_issues = machine_qc(
@@ -972,6 +1012,11 @@ def cmd_qc_export_gate(args: argparse.Namespace) -> None:
     report = run_export_gate(args.workspace, book_slug, cfg=cfg, scope="full")
     save_export_gate_report(args.workspace, book_slug, report)
     safe_print(format_export_gate_summary(report))
+    flagged = report.get("needs_fix_chapters") or []
+    if flagged:
+        safe_print("  [advisory] chapters still carrying needs_fix:")
+        for line in flagged:
+            safe_print(f"    {line}")
     reasons = format_export_gate_reasons(report)
     for reason in reasons[:20]:
         safe_print(f"  {reason}")

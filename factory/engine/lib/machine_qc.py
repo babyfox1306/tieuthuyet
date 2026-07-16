@@ -8,14 +8,17 @@ from pathlib import Path
 from typing import Any
 
 from factory.engine.lib.language import find_foreign_chars, target_language
-from factory.engine.lib.prose_sanitize import find_markdown_artifacts
 from factory.engine.paths import workspace_dir
 
 # Deterministic, operator-fixable — never auto-rewrite for these alone.
+# Markdown (*italic*) is ADVISORY only — never needs_fix / never block promote.
+# See prose_sanitize.find_markdown_leaks + chapter markdown-fix UI.
+#
+# missing_quotes is ALSO advisory forever (2026-07): tag-verb heuristics measure
+# attribution vocabulary, not "speech lacks quote marks". Four false-positive
+# patches proved the detector is wrong-class — do not re-promote to needs_fix.
 FORMAT_ISSUE_KEYS = frozenset(
     {
-        "markdown",
-        "missing_quotes",
         "foreign_chars",
         "cjk_chars",
         "stray_whitespace",
@@ -91,6 +94,18 @@ _TAG_DIALOGUE_LINE_RE = re.compile(
     r"murmured|nói|hỏi|thì thầm|lẩm bẩm|đáp|trả lời)\b"
     r")"
 )
+# Narration: tag verb + negation / non-utterance object — NOT unquoted dialogue.
+# "Arthur said nothing." must never fire; wrapping it would corrupt prose.
+_NON_UTTERANCE_SPEECH_RE = re.compile(
+    r"(?i)\b(?:"
+    r"(?:said|says|asked|asks|answered|answers|replied|replies|"
+    r"spoke|speaks|whispered|muttered)\s+"
+    r"(?:nothing|no more|not a word|little)\b|"
+    r"never\s+(?:spoke|said)\b|"
+    r"(?:did|does|do)\s+not\s+(?:speak|say)\b|"
+    r"didn'?t\s+(?:speak|say)\b"
+    r")"
+)
 # Plan/direction signals that sparse dialogue is intentional — never fail on quote count.
 _LOW_DIALOGUE_SIGNAL_RE = re.compile(
     r"\[ISOLATION\]|"
@@ -126,19 +141,33 @@ def _has_quote_mark(s: str) -> bool:
     return any(q in s for q in _QUOTE_CHARS)
 
 
+def _normalize_quotes(text: str) -> str:
+    from factory.engine.lib.canon_prose_qc import normalize_typographic_quotes
+
+    return normalize_typographic_quotes(text)
+
+
 def _text_outside_quotes(text: str) -> str:
     """Strip paired quote spans so dialogue tags inside speech are ignored."""
+    text = _normalize_quotes(text)
     out = re.sub(r'"[^"\n]*"', " ", text)
     out = re.sub(r"“[^”\n]*”", " ", out)
     out = re.sub(r"«[^»\n]*»", " ", out)
     return out
 
 
+def _mask_non_utterance_speech(text: str) -> str:
+    """Remove negated / non-utterance tag spans before dialogue-tag detection."""
+    return _NON_UTTERANCE_SPEECH_RE.sub(" ", text)
+
+
 def _count_dialogue_tags_outside_quotes(text: str) -> int:
-    return len(_DIALOGUE_TAG_VERBS_RE.findall(_text_outside_quotes(text)))
+    scrubbed = _mask_non_utterance_speech(_text_outside_quotes(text))
+    return len(_DIALOGUE_TAG_VERBS_RE.findall(scrubbed))
 
 
 def _quote_mark_count(text: str) -> int:
+    text = _normalize_quotes(text)
     return sum(text.count(q) for q in ('"', "“", "”"))
 
 
@@ -202,6 +231,7 @@ def find_missing_dialogue_quote_hits(
     if expects_low_dialogue(plan, direction):
         return []
 
+    text = _normalize_quotes(text)
     hits: list[dict[str, Any]] = []
 
     def is_dash_dialogue(line_strip: str) -> bool:
@@ -212,7 +242,11 @@ def find_missing_dialogue_quote_hits(
     def is_tag_dialogue(line_strip: str) -> bool:
         if _has_quote_mark(line_strip):
             return False
-        return bool(_TAG_DIALOGUE_LINE_RE.search(line_strip))
+        # Tag verb + negation/non-utterance object is narration, not dialogue.
+        scrubbed = _mask_non_utterance_speech(line_strip)
+        if not scrubbed.strip():
+            return False
+        return bool(_TAG_DIALOGUE_LINE_RE.search(scrubbed))
 
     hits.extend(_line_locations(text, is_dash_dialogue))
     if len(hits) < 8:
@@ -253,6 +287,7 @@ def find_sparse_quote_warnings(
     """
     if expects_low_dialogue(plan, direction):
         return []
+    text = _normalize_quotes(text)
     total_quotes = _quote_mark_count(text)
     outside_tags = _count_dialogue_tags_outside_quotes(text)
     if 0 < total_quotes < 4 and outside_tags >= 3:
@@ -285,27 +320,13 @@ def find_stray_whitespace_hits(text: str) -> list[dict[str, Any]]:
     return hits
 
 
-def find_markdown_locations(text: str) -> list[dict[str, Any]]:
-    """Map markdown samples to approximate line numbers."""
-    samples = find_markdown_artifacts(text)
-    locs: list[dict[str, Any]] = []
-    lines = text.split("\n")
-    for sample in samples:
-        line_no = 0
-        for i, line in enumerate(lines, start=1):
-            if sample in line:
-                line_no = i
-                break
-        locs.append({"line": line_no, "snippet": sample[:100]})
-    return locs
-
-
 def classify_machine_issues(issues: dict) -> dict[str, Any]:
     """Split machine_qc issues into format_fix / content_fail / length buckets.
 
-    - format_fix: ``*`` markdown, quotes, whitespace — operator hand-edits, no rewrite
+    - format_fix: foreign chars, whitespace — operator hand-edits, no rewrite
     - length (short): below min_word_count — MUST expand/rewrite; never treat as hand-fix
     - content_fail: POV / name drift / bible — capped rewrites then needs_review
+    Markdown (*…*) and missing_quotes are ADVISORY only — never format_fix.
     """
     format_fix = {k: issues[k] for k in FORMAT_ISSUE_KEYS if k in issues}
     content_fail = {k: issues[k] for k in CONTENT_ISSUE_KEYS if k in issues}
@@ -317,6 +338,8 @@ def classify_machine_issues(issues: dict) -> dict[str, Any]:
         "retry_meta",
         "format_locations",
         "warnings",
+        "markdown_advisory",  # advisor UI only — never content_fail
+        "quotes_advisory",  # tag-verb heuristic — never content_fail / needs_fix
     }
     for k, v in issues.items():
         if k not in known and not str(k).startswith("_"):
@@ -381,9 +404,6 @@ def machine_qc(
     repeats = [p for p in banned if p in text and p in used]
     if repeats:
         issues["repeat"] = repeats
-    markdown = find_markdown_artifacts(text)
-    if markdown:
-        issues["markdown"] = markdown
 
     _apply_canon_registry_checks(
         issues, text, workspace_id=workspace_id, book=book
@@ -398,8 +418,18 @@ def machine_qc(
     quote_hits = find_missing_dialogue_quote_hits(
         text, plan=resolved_plan, direction=direction
     )
+    # Advisory only — never needs_fix / never machine_pass fail / never format_fix.
+    # Heuristic is wrong-class (attribution verbs ≠ missing speech quotes).
     if quote_hits:
-        issues["missing_quotes"] = True
+        issues["quotes_advisory"] = [
+            {"line": h.get("line"), "snippet": h.get("snippet")}
+            for h in quote_hits[:20]
+        ]
+        soft_note = (
+            f"quotes advisory ({len(quote_hits)} hit) — tag-verb heuristic; "
+            "eye-check only, không chặn promote"
+        )
+        issues["warnings"] = list(issues.get("warnings") or []) + [soft_note]
 
     soft_warnings = find_sparse_quote_warnings(
         text, plan=resolved_plan, direction=direction
@@ -408,16 +438,22 @@ def machine_qc(
         issues["warnings"] = list(issues.get("warnings") or []) + soft_warnings
 
     format_locations: dict[str, list] = {}
-    if markdown:
-        format_locations["markdown"] = find_markdown_locations(text)
-    if quote_hits:
-        format_locations["missing_quotes"] = quote_hits
     ws_hits = find_stray_whitespace_hits(text)
     if ws_hits:
         issues["stray_whitespace"] = True
         format_locations["stray_whitespace"] = ws_hits
     if format_locations:
         issues["format_locations"] = format_locations
+
+    # Advisory only — never feeds needs_fix / promote blocks
+    from factory.engine.lib.prose_sanitize import find_markdown_leaks
+
+    md_leaks = find_markdown_leaks(text)
+    if md_leaks:
+        issues["markdown_advisory"] = [
+            {"id": h["id"], "kind": h["kind"], "match": h["match"], "context": h["context"]}
+            for h in md_leaks[:20]
+        ]
 
     issues["classification"] = classify_machine_issues(issues)
     return issues
@@ -439,15 +475,12 @@ def issues_to_needs_fix(issues: dict, extra: list[str] | None = None) -> list[st
         flags.append(f"short:{issues['short']}")
     if "repeat" in issues:
         flags.extend(f"repeat:{p}" for p in issues["repeat"])
-    if "markdown" in issues:
-        flags.extend(f"markdown:{s[:40]}" for s in issues["markdown"][:5])
     for hit in issues.get("name_drift") or []:
         if isinstance(hit, dict):
             flags.append(f"name_drift:{hit.get('found')}->{hit.get('canonical')}")
     if "pov_violation" in issues:
         flags.append("pov_violation:first_person")
-    if "missing_quotes" in issues:
-        flags.append("missing_quotes:dialogue")
+    # missing_quotes / quotes_advisory: never needs_fix (advisory forever)
     if "stray_whitespace" in issues:
         flags.append("stray_whitespace")
     if extra:
@@ -472,19 +505,22 @@ def format_machine_reasons(issues: dict) -> list[str]:
         phrases = [str(p) for p in (issues["repeat"] or [])][:3]
         if phrases:
             reasons.append(f"lặp cụm cấm: {', '.join(phrases)}")
-    if "markdown" in issues:
-        md_locs = locs.get("markdown") or []
-        if md_locs:
-            bits = [
-                f"L{h.get('line')}: {h.get('snippet')}"
-                for h in md_locs[:3]
-                if h.get("snippet")
-            ]
-            reasons.append("markdown trong prose — " + "; ".join(bits))
-        else:
-            samples = [str(s) for s in (issues["markdown"] or [])][:2]
-            if samples:
-                reasons.append(f"markdown trong prose: {', '.join(samples)}")
+    advisory = issues.get("markdown_advisory") or []
+    if advisory:
+        reasons.append(
+            f"markdown advisory ({len(advisory)} hit) — dùng UI fixer, không chặn promote"
+        )
+    q_adv = issues.get("quotes_advisory") or []
+    if q_adv:
+        bits = [
+            f"L{h.get('line')}: {h.get('snippet')}"
+            for h in q_adv[:3]
+            if h.get("snippet")
+        ]
+        detail = (" — " + "; ".join(bits)) if bits else ""
+        reasons.append(
+            f"quotes advisory ({len(q_adv)} hit){detail} — heuristic sai lớp, không chặn promote"
+        )
     for hit in issues.get("name_drift") or []:
         if isinstance(hit, dict):
             reasons.append(
@@ -494,17 +530,6 @@ def format_machine_reasons(issues: dict) -> list[str]:
         pv = issues["pov_violation"]
         count = pv.get("count", "?") if isinstance(pv, dict) else pv
         reasons.append(f"POV first-person outside dialogue ({count} hits)")
-    if "missing_quotes" in issues:
-        q_locs = locs.get("missing_quotes") or []
-        if q_locs:
-            bits = [
-                f"L{h.get('line')}: {h.get('snippet')}"
-                for h in q_locs[:3]
-                if h.get("snippet")
-            ]
-            reasons.append("thiếu dấu ngoặc kép đối thoại — " + "; ".join(bits))
-        else:
-            reasons.append("thiếu dấu ngoặc kép đối thoại (dialogue quotes missing)")
     if "stray_whitespace" in issues:
         reasons.append("khoảng trắng thừa cuối dòng (stray whitespace)")
 
@@ -528,7 +553,7 @@ def format_machine_reasons(issues: dict) -> list[str]:
             f"KHÔNG cho qua ready{bit} — không phải lỗi dấu *]",
         )
     elif cls.get("format_only"):
-        reasons.insert(0, "[format_fix — chỉ sửa dấu */quotes tay, không rewrite]")
+        reasons.insert(0, "[format_fix — chỉ sửa tay, không rewrite]")
     elif cls.get("has_content"):
         meta = issues.get("retry_meta") or {}
         used = meta.get("content_attempts")

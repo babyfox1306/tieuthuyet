@@ -1,0 +1,191 @@
+---
+series: his-final-target
+book: 1
+chapter: 3
+title: The Seven Lines
+spice: 1
+word_count: 2087
+status: draft
+needs_fix: []
+promoted_at: '2026-07-16T10:19:08Z'
+---
+
+The weight of the rifle felt familiar in Sloane Mercer's hands, a chilling echo of a skill she couldn't place. "You think this proves anything?" she challenged Lucian Vey, her fingers already tracing the cold metal, searching for a lie.
+
+He stood motionless, a silhouette against the rising sun. "Keep talking."
+
+She ignored the threat. The rifle was a precision instrument—custom stock, aftermarket trigger, suppressor still warm from use. She ran her thumb along the receiver, feeling for inconsistencies. Her training might be three months gone, but muscle memory didn't forget. The gun oil left a faint residue on her fingertips, and she rubbed them against her jeans, but the smell clung like a ghost she couldn't shake.
+
+"Why did you let me take this?" she asked, buying time.
+
+"Because you needed to see."
+
+"See what?" She turned the rifle over, checking the magazine release. A standard 5.56 NATO platform, but modified. The magazine felt heavier than it should. She palmed it free, and a faint etching caught the morning light.
+
+Seven lines. Almost invisible, scratched into the metal housing of the magazine. Not manufacturer marks—deliberate. Counting something.
+
+Her heart stuttered. "What are these?"
+
+Lucian stepped closer, his boots silent on the gravel. "You tell me. You put them there."
+
+The accusation landed like a slap. She stared at the lines, and a ghost of movement flickered in the corner of her vision—her own hand holding a scribe, scoring metal. But the image dissolved before she could hold it.
+
+"I don't remember," she said, hating the weakness in her voice.
+
+"No," he said softly. "You don't."
+
+That tone—conversational, almost tender—sent ice down her spine. She knew that voice. Knew the way he said her name in the dark—
+
+Stop. She shook her head, clinging to the present. "Why seven? What did I count?"
+
+"Targets." The word came without hesitation. "The ones you ordered eliminated before you decided to forget."
+
+The air between them thickened. Sloane's grip tightened on the rifle. Seven targets. She had issued kill orders. For an investigator, that was a line she couldn't cross. But she had crossed it.
+
+"No," she breathed. "I don't—" The rifle was suddenly too heavy. "I don't kill people."
+
+"You don't remember killing people," he corrected. "There's a difference."
+
+The words cut cleanly. She forced herself to meet his eyes—gray, unblinking, holding her prisoner without a single blink. "Why would you help me do that? The recording said you were my—"
+
+"Contractor." He supplied the word like a diagnosis.
+
+"Lover." The word escaped before she could catch it.
+
+A muscle in his jaw jumped. "Once upon a time."
+
+The half-confession hung between them like a grenade without a pin. Sloane's wrist burned where she had been tracing those circles earlier. The skin felt raw, even though she hadn't moved in minutes.
+
+"I need to know," she whispered.
+
+"Knowing doesn't undo it."
+
+"I don't care." She raised the magazine, pointing at the seven lines. "If I etched these, they mean something. A sequence. A countdown. What did I count?"
+
+Lucian's composure cracked, just slightly. "You counted the people who had to die so your sister could survive."
+
+Mara. The name was a blade twisting in her chest. She tried to picture her sister's face, but the image slipped, replaced by a body on concrete. "Mara is dead. The recording said you shot her."
+
+"I did."
+
+"You shot her because I told you to."
+
+"Yes."
+
+The simplicity of his admission broke something inside her. She lifted the rifle, not pointing it at him but ready. "Then why am I still alive? The recording said you'd kill me if my memory returned."
+
+"Because it's not back yet." He stepped closer, so close she could smell the gun oil on his jacket—identical to the residue on her own fingers. "You have fragments. Pieces. But you don't remember the night you gave the order. You don't remember the bed we shared. You don't remember the safe word."
+
+The last phrase snagged her attention. "Safe word?"
+
+He said nothing, but his eyes flickered downward—a crack in the mask. And in that crack, Sloane saw something that felt like truth.
+
+"Tell me," she demanded.
+
+"Can't. You made me promise."
+
+Her finger moved to the trigger before she decided to pull. But he caught her wrist, his grip iron-hard, and the rifle clattered to the gravel. They both lunged for it, bodies colliding.
+
+The struggle was desperate and wrong. She kneed his thigh; he twisted her arm. Suddenly she was pinned against the low parapet, his weight pressing her into the metal. His thigh pushed between her legs, and the intimacy of it shattered her focus.
+
+The memory flooded in without warning.
+
+A bedroom. Dim light. His hands on her shoulders, thumbs pressing into the hollow of her collarbone. "Remember the sequence," he murmured against her mouth. "First the circle, then the number, then the name." Her own voice, throaty and drugged, repeating back: "Circle, number, name. Circle, number, name." And then his lips on her neck, the world dissolving into heat. She had trusted him. She had let him take her apart.
+
+She gasped, bucking against him. "Get off me."
+
+He didn't move. "You saw something."
+
+"Your face." Her voice came out raw. "In the dark. You were teaching me... a sequence."
+
+His breath hitched. "What else?"
+
+She fought the memory, but it was relentless. "You said I could trust you. You said the conditioning would keep me safe. And then you took me apart until I couldn't think."
+
+He flinched. "Sloane—"
+
+"Circle, number, name." She repeated the words like a curse. "That's what the seven lines are, aren't they? A number. I engraved the number on each magazine. Seven targets. Seven numbers. And I made you the trigger."
+
+"That's not the whole story."
+
+"Then tell me the whole story!" She pushed against his chest, but he didn't budge. The closeness was suffocating—his thighs against hers, his breath on her cheek, the heat of him seeping through her clothes. "You were inside my head, inside my body, and you knew what I was becoming. Why didn't you stop me?"
+
+"Because you made me promise." The words ripped out of him, stripped of all control. "You said the only way to trap Rook was to go all the way. To erase yourself. To become his perfect weapon so he'd lower his guard. And I agreed because I thought I could save you after."
+
+"Save me?" A bitter laugh escaped. "You turned me into a killer."
+
+"I turned you into a key." His hand came up, cupping her jaw, forcing her to meet his eyes. "The seven targets were the ones Rook pointed out to you. You believed they were threats to Mara. You were never the weapon, Sloane—you were the ledger. The lines on the magazine are a map to his entire network. You recorded everything. The only way to access it is through the conditioned reflex we built together."
+
+The words dropped into her like stones into deep water. She wanted to reject them, but the memory fragment pulsed behind her forehead—a bed, a voice, a promise.
+
+"Why don't I remember?" she whispered.
+
+"Because we buried it deep." His thumb traced her lower lip. "Deep enough that Rook's interrogations couldn't find it. But it's still there. And if you can complete the sequence—"
+
+"Circle, number, name," she finished.
+
+"Naming the seven numbers triggers something. I don't know what. You never told me the final step."
+
+She stared at him, searching for the lie among the angles of his face—familiar in a way that broke her heart and healed it all at once. Her free hand came up to his chest, feeling the steady thump of his heart beneath layers of tactical fabric. The intimacy was a reflex, a thing her body remembered even if her mind didn't.
+
+"Who were we before this?" she asked, barely audible.
+
+"Ruinous." His voice cracked. "We were ruinous. And I would tear down every contract I ever kept to have one more hour of you."
+
+The kiss came without warning—her leaning up, him dropping his head—and it shattered the last wall between them. His mouth was hot, insistent, tasting of coffee and copper. She opened for him, desperate, and his hand slid into her hair, cradling her skull as if she were something precious.
+
+The rooftop dissolved. For a moment, there was only the press of his body, the scrape of stubble against her chin, the slick heat of his tongue. Her fingers curled into his jacket, pulling him closer, and the world narrowed to the place where they touched. He groaned against her mouth, and the sound sent a shiver down her spine. His hand slid down her back, pressing her into him, and the length of him was hard and wanting.
+
+But the memory that surfaced was not the one she wanted.
+
+She is strapped to a chair. A man she doesn't know stands over her, wires trailing from his hand to her temple. Lucian watches from the corner. "Repeat it," the stranger says. "Circle, number, name." She complies, her voice hollow. And Lucian—behind his eyes, something clicks into place. The conditioning locks in. Then he turns away.
+
+She tore her mouth free, breathing hard. "No."
+
+"Sloane—"
+
+"You were there." She pushed him back, the separation raw and sudden. "When they conditioned me. You watched."
+
+"I had to." The plea in his voice was foreign. "If I'd stopped the process, your memory would have collapsed all at once. You might have died. And I needed you alive."
+
+"To finish the plan." She wiped her mouth with the back of her hand, tasting him. "Everything was for the plan. The sex, the promises, the—"
+
+"No." He grabbed her wrist before she could retreat. "The plan was a shell. The real reason I stayed was that I loved you. I still love you. And I've spent three months dying every morning I woke up alone."
+
+She searched his eyes for the lie. But all she found was a mirror of her own exhaustion.
+
+"Then help me remember," she said. "Don't protect me. Give me the pieces, and let me put them together."
+
+"Not yet. There's something missing. A variable."
+
+"Which is?"
+
+"Mara." He said the name with difficulty. "The recording you heard was true, but incomplete. Mara's death was staged, but I don't know whether she survived. Rook took her after the shooting. If she's alive, you need to find her. If she's dead, her body holds the last evidence."
+
+The mention of her sister reopened the wound. But before she could respond, a voice crackled through the air—electronic, filtered, familiar.
+
+"Is she remembering yet, Lucian? Or does she still belong to me?"
+
+Sloane whirled, scanning the rooftop. The voice came from something small clipped to Lucian's collar. A hidden comm.
+
+Rook.
+
+"Nice work with the rifle examination, Sloane. I was beginning to think the conditioning had scrambled your instincts. But you're still a bloodhound, aren't you?" A pause. "Lucian, how much have you told her?"
+
+Lucian's hand went to the comm, but he didn't silence it. "Enough."
+
+"Not nearly enough." Rook's voice dripped with false amiability. "You see, my dear Sloane, Lucian has painted himself as the tragic lover, but he left out one detail. He was the one who suggested the memory erasure. He designed the conditioning protocol. He signed off on every step of your deconstruction."
+
+The accusation hung in the air, poisoning the intimacy of the moment.
+
+"That's a lie," Lucian said.
+
+"Is it? I have the files, Lucian. The ones you thought you deleted. And I have Mara. If you want her alive, you'll bring Sloane to the exchange point at midnight. Alone. No conditions."
+
+The comm went dead.
+
+Sloane stared at Lucian, and the ghost rose between them—not the assassin in tactical gear, but the man from the memory, his face half-lit by a bedroom lamp, murmuring a sequence against her skin. That ghost was a stranger. And yet her body remembered. Her fingers traced a circle on her wrist without permission, and she realized with cold clarity that she would follow him to midnight. Not because she trusted him. But because the seven lines on the magazine were a path etched in metal and muscle memory, and he was the only guide she had.
+
+"We have until midnight," she said.
+
+The dawn wind carried the silence that followed, heavy with the scent of gun oil and salt and a love she couldn't yet remember.

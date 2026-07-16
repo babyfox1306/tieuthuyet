@@ -64,7 +64,16 @@
   "export_gate_dup_title": "warn",
   "export_gate_near_dup": "warn",
   "export_gate_on_promote": true,
+  "completion_phrases": [
+    "the truth was out",
+    "the evidence is in the wild",
+    "the broadcast completed",
+    "all of it",
+    "it's in the air",
+    "upload was complete"
+  ],
   "min_publish_words": 1250,
+  "last_pen_name": "Nix Vale",
   "temperature": {
     "architect": 0.7,
     "outliner": 0.7,

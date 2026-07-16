@@ -30,20 +30,23 @@ def tempfile_workspace():
 
 
 class ClassifyMachineIssuesTests(unittest.TestCase):
-    def test_markdown_is_format_only(self):
+    def test_markdown_advisory_not_format_only(self):
         issues = {
-            "markdown": ["*click*"],
+            "markdown_advisory": [{"id": 0, "kind": "italic", "match": "*click*"}],
             "word_count": 1500,
             "target_language": "en",
         }
         cls = classify_machine_issues(issues)
-        self.assertTrue(cls["format_only"])
-        self.assertTrue(is_format_only_issues(issues))
+        self.assertFalse(cls["format_only"])
+        self.assertFalse(cls["has_format"])
         self.assertFalse(has_content_fail(issues))
+        self.assertNotIn("markdown", issues_to_needs_fix(issues))
 
-    def test_missing_quotes_is_format(self):
-        issues = {"missing_quotes": True, "word_count": 1500}
-        self.assertTrue(is_format_only_issues(issues))
+    def test_quotes_advisory_not_format(self):
+        issues = {"quotes_advisory": [{"line": 1, "snippet": "he said"}], "word_count": 1500}
+        self.assertFalse(is_format_only_issues(issues))
+        self.assertFalse(classify_machine_issues(issues)["has_format"])
+        self.assertEqual(issues_to_needs_fix(issues), [])
 
     def test_pov_is_content(self):
         issues = {
@@ -55,25 +58,27 @@ class ClassifyMachineIssuesTests(unittest.TestCase):
         self.assertFalse(cls["format_only"])
         self.assertTrue(has_content_fail(issues))
 
-    def test_mixed_format_and_content(self):
+    def test_legacy_missing_quotes_key_not_format(self):
+        """Stale key must not re-enter format_fix after advisory downgrade."""
         issues = {
-            "markdown": ["*x*"],
+            "missing_quotes": True,
             "name_drift": [{"found": "Bob", "canonical": "Robert"}],
             "word_count": 1500,
         }
         cls = classify_machine_issues(issues)
-        self.assertFalse(cls["format_only"])
-        self.assertTrue(cls["has_format"])
+        self.assertFalse(cls["has_format"])
         self.assertTrue(cls["has_content"])
+        self.assertNotIn("missing_quotes:dialogue", issues_to_needs_fix(issues))
 
-    def test_format_reasons_include_locations(self):
-        text = "# Chapter 1: X\n\nThe *click* echoed.\n\n" + ("word " * 200)
+    def test_markdown_advisory_does_not_block_machine_pass(self):
+        text = "# Chapter 1: X\n\nThe *click* echoed.\n\n" + ("word\n" * 200)
         issues = machine_qc(text, min_words=100)
-        self.assertIn("markdown", issues)
-        self.assertIn("format_locations", issues)
+        self.assertIn("markdown_advisory", issues)
+        self.assertNotIn("markdown", issues)
+        self.assertTrue(machine_pass(issues))
         reasons = format_machine_reasons(issues)
-        self.assertTrue(any("format_fix" in r for r in reasons))
-        self.assertTrue(any("markdown" in r for r in reasons))
+        self.assertTrue(any("markdown advisory" in r for r in reasons))
+        self.assertEqual(issues_to_needs_fix(issues), [])
 
 
 class DialogueQuoteHeuristicTests(unittest.TestCase):
@@ -109,6 +114,7 @@ class DialogueQuoteHeuristicTests(unittest.TestCase):
         hits = find_missing_dialogue_quote_hits(text, plan=plan)
         self.assertEqual(hits, [])
         issues = machine_qc(text, min_words=100, plan=plan)
+        self.assertNotIn("quotes_advisory", issues)
         self.assertNotIn("missing_quotes", issues)
         self.assertEqual(issues_to_needs_fix(issues), [])
         self.assertTrue(machine_pass(issues))
@@ -123,24 +129,65 @@ class DialogueQuoteHeuristicTests(unittest.TestCase):
         hits = find_missing_dialogue_quote_hits(text)
         self.assertEqual(hits, [])
         issues = machine_qc(text, min_words=100)
+        self.assertNotIn("quotes_advisory", issues)
         self.assertNotIn("missing_quotes", issues)
         self.assertTrue(machine_pass(issues))
 
-    def test_many_unquoted_dialogue_tags_still_flagged(self):
+    def test_tag_verb_hits_are_advisory_only(self):
         text = (
             "# Chapter 1: Crowd\n\n"
             "Leave now, he said.\n"
             "Why should I, she asked.\n"
             "Because it is over, he whispered.\n"
             "You never listen, she muttered.\n"
-            + ("They argued in the corridor without marks. " * 80)
+            + ("They argued in the corridor without marks." + "\n") * 80
         )
         hits = find_missing_dialogue_quote_hits(text)
         self.assertTrue(hits)
         issues = machine_qc(text, min_words=100)
-        self.assertIn("missing_quotes", issues)
-        self.assertFalse(machine_pass(issues))
-        self.assertIn("missing_quotes:dialogue", issues_to_needs_fix(issues))
+        self.assertIn("quotes_advisory", issues)
+        self.assertNotIn("missing_quotes", issues)
+        self.assertTrue(machine_pass(issues))
+        self.assertNotIn("missing_quotes:dialogue", issues_to_needs_fix(issues))
+        self.assertEqual(issues_to_needs_fix(issues), [])
+        self.assertTrue(any("quotes advisory" in w for w in (issues.get("warnings") or [])))
+
+    def test_negated_dialogue_tags_are_not_unquoted_dialogue(self):
+        cases = (
+            "Arthur said nothing. His silence was the only confirmation she would ever get.",
+            "She spoke no more.",
+            "He said no more about the ledger.",
+            "Clara answered nothing.",
+            "They never spoke after that night.",
+            "She did not speak.",
+            "He said little.",
+            "Marget said not a word.",
+        )
+        padding = "\n\n".join(["The house held its quiet still."] * 40)
+        for line in cases:
+            with self.subTest(line=line):
+                text = f"# Chapter 12\n\n{line}\n\n{padding}"
+                hits = find_missing_dialogue_quote_hits(text)
+                self.assertEqual(hits, [], f"unexpected hits for: {line!r}")
+                issues = machine_qc(text, min_words=100, target_lang="en")
+                self.assertNotIn("missing_quotes", issues)
+                self.assertNotIn("quotes_advisory", issues)
+                self.assertNotIn("missing_quotes:dialogue", issues_to_needs_fix(issues))
+
+    def test_curly_quoted_dialogue_not_missing_quotes(self):
+        """Typographic quotes must count as dialogue marks after normalize."""
+        text = (
+            "# Chapter 1\n\n"
+            "\u201cLeave now,\u201d he said.\n"
+            "\u201cWhy should I?\u201d she asked.\n"
+            "\u201cBecause it is over,\u201d he whispered.\n"
+            + ("They stood in the corridor with the lamps low. " * 80)
+        )
+        hits = find_missing_dialogue_quote_hits(text)
+        self.assertEqual(hits, [], hits)
+        issues = machine_qc(text, min_words=100, target_lang="en")
+        self.assertNotIn("missing_quotes", issues)
+        self.assertNotIn("quotes_advisory", issues)
 
     def test_isolation_suppresses_even_sparse_noise(self):
         plan = self._isolation_plan()
@@ -156,14 +203,19 @@ class DialogueQuoteHeuristicTests(unittest.TestCase):
 
 
 class DraftNoFormatRetryTests(unittest.TestCase):
-    def test_format_only_calls_writer_once(self):
+    def test_quotes_advisory_alone_does_not_force_format_retry(self):
         from factory.engine.run_factory import _draft_chapter_prose
 
         calls = {"n": 0}
 
         def fake_router(role, payload, **kwargs):
             calls["n"] += 1
-            body = "# Chapter 1: Test\n\nThe *click* echoed in the hall.\n\n" + ("word " * 400)
+            # Tag-verb heuristic may advisory-hit; must not format_fix / rewrite
+            body = (
+                "# Chapter 1: Test\n\n"
+                "Clara said the corridor was empty and cold.\n\n"
+                + ("word\n" * 400)
+            )
             return body, {}
 
         cfg = {
@@ -187,10 +239,23 @@ class DraftNoFormatRetryTests(unittest.TestCase):
                             ws, 1, 1, cfg, {"target_language": "en"}
                         )
         self.assertEqual(calls["n"], 1)
-        self.assertIn("markdown", issues)
-        self.assertTrue(is_format_only_issues(issues))
-        self.assertFalse(machine_pass(issues))
+        self.assertNotIn("missing_quotes", issues)
+        self.assertFalse(is_format_only_issues(issues))
+        self.assertTrue(machine_pass(issues))
+        self.assertEqual(issues_to_needs_fix(issues), [])
 
+    def test_markdown_alone_does_not_force_format_retry(self):
+        text = (
+            "# Chapter 1: Test\n\n"
+            "The *click* echoed in the hall.\n\n"
+            + ("word\n" * 400)
+        )
+        issues = machine_qc(text, min_words=100)
+        self.assertIn("markdown_advisory", issues)
+        self.assertNotIn("markdown", issues)
+        self.assertFalse(is_format_only_issues(issues))
+        self.assertTrue(machine_pass(issues))
+        self.assertEqual(issues_to_needs_fix(issues), [])
     def test_content_retries_capped_at_two(self):
         from factory.engine.run_factory import _draft_chapter_prose
 

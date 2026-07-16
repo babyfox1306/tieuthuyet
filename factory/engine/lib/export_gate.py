@@ -70,7 +70,17 @@ FULL_RULES = frozenset(
     {
         "EG-01", "EG-02", "EG-03", "EG-04", "EG-05", "EG-06", "EG-07", "EG-08",
         "EG-09", "EG-10", "EG-11", "EG-12", "EG-13", "EG-14", "EG-15", "EG-16",
+        "EG-18",
     }
+)
+
+_DEFAULT_COMPLETION_PHRASES = (
+    "the truth was out",
+    "the evidence is in the wild",
+    "the broadcast completed",
+    "all of it",
+    "it's in the air",
+    "upload was complete",
 )
 
 # EG-16 — intra-chapter duplicate blocks
@@ -921,6 +931,13 @@ def check_eg13_engine_tokens(body: str, chapter: int) -> list[dict[str, Any]]:
 
 
 def check_eg12_needs_fix(meta: dict, chapter: int, *, severity: str = "error") -> dict[str, Any]:
+    """Flag non-empty catalog needs_fix.
+
+    Still a real gate after quotes went advisory: needs_fix can hold short,
+    foreign, name_drift, pov_violation, stray_whitespace, etc. Do not remove
+    publish_mode BLOCK — empty-gate risk only applied when missing_quotes was
+    the sole consumer (it is not).
+    """
     flags = meta.get("needs_fix") or []
     if flags:
         sample = ", ".join(str(f) for f in flags[:4])
@@ -933,6 +950,192 @@ def check_eg12_needs_fix(meta: dict, chapter: int, *, severity: str = "error") -
             detail=f"catalog needs_fix: {sample}{extra}",
         )
     return _check("EG-12", severity, True, chapter=chapter)
+
+
+def _completion_phrases(cfg: dict | None) -> list[str]:
+    cfg = cfg or load_config()
+    raw = cfg.get("completion_phrases")
+    if isinstance(raw, list) and raw:
+        return [str(p).strip().lower() for p in raw if str(p).strip()]
+    return list(_DEFAULT_COMPLETION_PHRASES)
+
+
+def _sentence_windows(prose: str) -> list[str]:
+    parts = re.split(r"(?<=[.!?])\s+", prose.strip())
+    return [p.strip() for p in parts if p.strip()]
+
+
+def _chapter_threads_from_plan(workspace_id: str, chapter: int) -> list[str]:
+    """active_threads / threads_touch from master_plan narrative for this chapter."""
+    try:
+        from factory.engine.lib.master_plan import load_master_plan
+        from factory.engine.lib.prompt_builder import load_direction
+
+        ws = workspace_dir(workspace_id)
+        direction = load_direction(ws)
+        book = int(direction.get("book") or 1)
+        plan_data = load_master_plan(ws, book)
+        for p in plan_data.get("chapter_plans") or []:
+            if int(p.get("chapter") or 0) != chapter:
+                continue
+            narr = p.get("narrative") if isinstance(p.get("narrative"), dict) else {}
+            threads = list(narr.get("active_threads") or []) or list(
+                narr.get("threads_touch") or []
+            )
+            return [str(t).strip() for t in threads if str(t).strip()]
+    except Exception:
+        return []
+    return []
+
+
+def find_completion_phrase_hits(
+    body: str,
+    phrases: list[str],
+) -> list[tuple[str, str]]:
+    """Return (phrase, sentence) pairs for completion-phrase hits in prose."""
+    prose = prose_body_for_duplicate_check(body) if body else ""
+    if not prose:
+        return []
+    lower = prose.lower()
+    hits: list[tuple[str, str]] = []
+    seen: set[tuple[str, str]] = set()
+    sentences = _sentence_windows(prose)
+    for phrase in phrases:
+        if not phrase or phrase not in lower:
+            continue
+        matched_sentence = ""
+        for sent in sentences:
+            if phrase in sent.lower():
+                matched_sentence = sent.strip()
+                break
+        if not matched_sentence:
+            # phrase may span sentence split — fall back to a short window
+            idx = lower.find(phrase)
+            lo = max(0, idx - 40)
+            hi = min(len(prose), idx + len(phrase) + 40)
+            matched_sentence = prose[lo:hi].strip()
+        key = (phrase, matched_sentence[:160])
+        if key in seen:
+            continue
+        seen.add(key)
+        hits.append((phrase, matched_sentence[:200]))
+    return hits
+
+
+def check_eg18_reveal_replayed(
+    chapters: list[tuple[int, dict, str]],
+    *,
+    workspace_id: str | None = None,
+    cfg: dict | None = None,
+) -> list[dict[str, Any]]:
+    """WARN when ≥2 chapters use completion phrases for the same thread.
+
+    Advisory only — never blocks export/promote.
+    """
+    phrases = _completion_phrases(cfg)
+    # chapter -> [(phrase, sentence), ...]
+    by_ch: dict[int, list[tuple[str, str]]] = {}
+    threads_by_ch: dict[int, list[str]] = {}
+    for ch_num, _meta, body in chapters:
+        if ch_num <= 0:
+            continue
+        hits = find_completion_phrase_hits(body, phrases)
+        if not hits:
+            continue
+        by_ch[ch_num] = hits
+        if workspace_id:
+            threads_by_ch[ch_num] = _chapter_threads_from_plan(workspace_id, ch_num)
+        else:
+            threads_by_ch[ch_num] = []
+
+    if len(by_ch) < 2:
+        return [_check("EG-18", "warn", True)]
+
+    # Group by thread. Chapters with empty threads_touch (common after a thread
+    # closes in the plan) still join every thread that another phrase-chapter
+    # touches — otherwise post-payoff prose replays fall into a separate bucket
+    # and miss the original reveal chapter.
+    from collections import defaultdict
+
+    thread_members: dict[str, set[int]] = defaultdict(set)
+    unscoped: set[int] = set()
+    for ch, threads in threads_by_ch.items():
+        if threads:
+            for tid in threads:
+                thread_members[tid].add(ch)
+        else:
+            unscoped.add(ch)
+
+    if not thread_members and len(by_ch) >= 2:
+        thread_members["_unscoped"] = set(by_ch)
+    else:
+        for tid in list(thread_members):
+            thread_members[tid] |= unscoped
+        if unscoped and not thread_members:
+            thread_members["_unscoped"] = set(unscoped)
+
+    flagged_chs: set[int] = set()
+    checks: list[dict[str, Any]] = []
+    for tid, chs in thread_members.items():
+        uniq = sorted(chs)
+        if len(uniq) < 2:
+            continue
+        for ch in uniq:
+            if ch in flagged_chs:
+                continue
+            flagged_chs.add(ch)
+            hit_lines = []
+            for phrase, sent in by_ch.get(ch) or []:
+                hit_lines.append(f"«{phrase}» → {sent}")
+            detail = (
+                f"EG-18:reveal_replayed thread={tid} chapters={uniq} "
+                + "; ".join(hit_lines[:3])
+            )
+            checks.append(
+                _check(
+                    "EG-18",
+                    "warn",
+                    False,
+                    chapter=ch,
+                    detail=detail,
+                    snippet=(by_ch.get(ch) or [("", "")])[0][1],
+                )
+            )
+
+    if not checks and len(by_ch) >= 2:
+        uniq = sorted(by_ch)
+        for ch in uniq:
+            hit_lines = [f"«{p}» → {s}" for p, s in by_ch[ch][:2]]
+            checks.append(
+                _check(
+                    "EG-18",
+                    "warn",
+                    False,
+                    chapter=ch,
+                    detail=(
+                        f"EG-18:reveal_replayed thread=_book chapters={uniq} "
+                        + "; ".join(hit_lines)
+                    ),
+                    snippet=by_ch[ch][0][1],
+                )
+            )
+
+    if not checks:
+        return [_check("EG-18", "warn", True)]
+    return checks
+
+
+def needs_fix_chapter_report(checks: list[dict[str, Any]]) -> list[str]:
+    """Human-readable list of promoted/catalog chapters still carrying needs_fix (EG-12)."""
+    lines: list[str] = []
+    for check in checks:
+        if check.get("id") != "EG-12" or check.get("passed"):
+            continue
+        ch = check.get("chapter")
+        detail = str(check.get("detail") or "").strip()
+        prefix = f"ch{ch:02d}" if isinstance(ch, int) and ch else "ch??"
+        lines.append(f"{prefix}: {detail or 'needs_fix non-empty'}")
+    return lines
 
 
 def check_eg06_markdown(body: str, chapter: int) -> list[dict[str, Any]]:
@@ -1141,6 +1344,13 @@ def run_export_gate(
     if "EG-15" in active:
         checks.append(check_eg15_state_timeline(workspace_id, book_slug))
 
+    if "EG-18" in active and triples:
+        checks.extend(
+            check_eg18_reveal_replayed(
+                triples, workspace_id=workspace_id, cfg=cfg
+            )
+        )
+
     expected = _expected_chapter_count(workspace_id, book_slug, chapter_nums) if chapter_nums else 0
     return _build_report(workspace_id, book_slug, lang, chapter_nums, checks, expected=expected)
 
@@ -1166,6 +1376,7 @@ def _build_report(
         passed = True
     errors = sum(1 for c in checks if c.get("severity") == "error" and not c.get("passed"))
     warns = sum(1 for c in checks if c.get("severity") == "warn" and not c.get("passed"))
+    needs_fix_lines = needs_fix_chapter_report(checks)
     summary = format_export_gate_summary(
         {
             "passed": passed,
@@ -1173,6 +1384,7 @@ def _build_report(
             "skipped": skipped,
             "errors": errors,
             "warnings": warns,
+            "needs_fix_chapters": needs_fix_lines,
         }
     )
     return {
@@ -1188,6 +1400,7 @@ def _build_report(
         "checks": checks,
         "errors": errors,
         "warnings": warns,
+        "needs_fix_chapters": needs_fix_lines,
         "summary": summary,
     }
 
@@ -1212,10 +1425,19 @@ def format_export_gate_summary(report: dict[str, Any]) -> str:
         return "Export gate SKIP (disabled)"
     if report.get("passed"):
         w = report.get("warnings", 0)
-        return f"Export gate PASS — {w} warning(s)" if w else "Export gate PASS"
-    e = report.get("errors", 0)
-    w = report.get("warnings", 0)
-    return f"Export gate FAIL — {e} error(s), {w} warning(s)"
+        base = f"Export gate PASS — {w} warning(s)" if w else "Export gate PASS"
+    else:
+        e = report.get("errors", 0)
+        w = report.get("warnings", 0)
+        base = f"Export gate FAIL — {e} error(s), {w} warning(s)"
+    flagged = report.get("needs_fix_chapters") or []
+    if flagged:
+        # Compact chapter list for the one-line summary
+        chs = []
+        for line in flagged:
+            chs.append(line.split(":", 1)[0])
+        base += f" | needs_fix still set on: {', '.join(chs)}"
+    return base
 
 
 def format_export_gate_reasons(report: dict[str, Any]) -> list[str]:

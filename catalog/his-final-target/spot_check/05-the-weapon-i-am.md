@@ -1,0 +1,133 @@
+---
+series: his-final-target
+book: 1
+chapter: 5
+title: The Weapon I Am
+spice: 1
+word_count: 1358
+status: draft
+needs_fix: []
+promoted_at: '2026-07-16T10:32:18Z'
+---
+
+The fluorescent light flickered once, then held, illuminating row after row of black cases. Sloane Mercer knew this room. She had built it. She just couldn't remember why.
+
+The air smelled of cold steel and Hoppe's No. 9—the solvent she'd used for years, the scent embedded in her fingertips. She ran her hand along the nearest case, and her fingers found the locking latches before her brain caught up. Muscle memory unlocking hardware before she'd decided to touch it.
+
+Lucian stood in the doorway, his shoulder pressed against the frame. "You designed the security grid. Fourteen-point authentication. Retinal scan. Palm geometry. Voiceprint. Takes me ninety seconds to bypass, but that's ninety seconds you built in as a fail-safe."
+
+She didn't look at him. "I designed a panic room?"
+
+"Not a panic room. A weapon cache." He stepped inside, the door sliding shut behind him with a hydraulic hiss. "You built this six weeks before you erased your memory. You told me that if you ever lost yourself, this room would remind you who you were."
+
+Sloane opened the first case. The rifle inside was identical to the one Lucian had used on the rooftop—same stock modifications, same scope elevation marks. But this one had no suppressor. She lifted it, testing the weight. Seven lines etched into the magazine housing, same as the other.
+
+She set it down and opened the next case. Combat knives arranged in a foam insert, each blade labeled with a date. She picked up the middle knife, and her thumb brushed against a small sticker on the handle—a heat signature decal worn to near transparency.
+
+She turned it over. The wear pattern matched. The same fading on the same position as the rifle's grip. She had assembled both, handled both, and the sticker was her signature. A marker she used on every weapon she built herself.
+
+"I don't remember making this," she said, though the knife's balance felt natural in her palm. "But I know it's mine."
+
+Lucian moved beside her, close enough that she caught the scent of gunpowder still clinging to his coat. "You called it the proof of concept. The first piece of the machine you were building to dismantle Rook."
+
+"I was building a machine to dismantle a man?" She lowered the knife. "That doesn't sound like me."
+
+"Before you forget, it sounds exactly like you." He reached past her and pulled a slim file from a shelf above the cases. The cover read PROJECT RESET in black marker. "You left this too."
+
+She took the file, the cardboard soft at the edges from handling. Inside, she found pages of clinical language—psychometric evaluations, neural conditioning protocols, a single diagram of the human wrist with a circle drawn around the joint.
+
+The word "trigger" appeared three times.
+
+She read slowly. The conditioning anchored certain responses to physical gestures. A sequence of movements, practiced until they became reflexive. The wrist circle. The report called it "motor-cued information retrieval".
+
+Her throat tightened. "You're telling me my own body has been programmed like a weapon?"
+
+"Like a safe deposit box." Lucian's voice softened. "You didn't erase everything. You hid what mattered inside your own hands."
+
+She looked at her left wrist, at the faint red mark from earlier that morning. She'd been tracing the circle without knowing why.
+
+"Why would I do that?"
+
+"Because you knew Rook would look for the ledger. You couldn't let him find it. So you buried it inside the one thing he couldn't take from you." He paused. "Your training."
+
+The word "ledger" meant nothing. But the way he said it—like a verdict—sent ice down her spine.
+
+She set down the knife and flipped through more pages. Names. Profiles. Seven of them. The same seven lines on the rifle. But the details were blacked out, redacted with thick marker.
+
+"I can't read them," she said.
+
+"You wrote that yourself. You said that if anyone opened this file before you completed the conditioning sequence, the identities would stay sealed. Only you can unlock them." He tapped the diagram of the wrist circle. "By completing the sequence."
+
+"I don't know the sequence."
+
+"You recorded it. With the same tape you left on the rooftop."
+
+She wanted to throw the file across the room. Instead, she pressed her palm flat against the page, as if she could feel the truth through the paper. "Why would I make it so hard for myself?"
+
+"Because the truth would get you killed if Rook found it first." Lucian's hand moved toward hers, hesitated, then settled over her knuckles, warm and steady. "You designed this room to be a safe place. A space where you could remember without being watched."
+
+Her fingers were still wrapped around the knife handle. She hadn't realized she was gripping it hard enough to shake.
+
+"Let go," he said quietly.
+
+She didn't. The blade trembled between them.
+
+"Sloane." His palm pressed against the back of her hand, not pulling, just anchoring. "You're not holding a weapon. You're holding a key. You built it that way."
+
+She looked up. His eyes were dark, tired, but unguarded in a way she hadn't seen on the rooftop. The mask had slipped again.
+
+"Did you know," she said, her voice thin, "that you were going to have to kill me too?"
+
+He went still. The air thickened.
+
+"I saw the way you handled the rifle," she continued. "You were waiting for something. A signal. If the contract said to shoot Mara, and if I somehow came back, there had to be a clause for dealing with me."
+
+"There was."
+
+"And you already broke it."
+
+He didn't answer. But his hand stayed on hers, steady, unflinching.
+
+"Tell me," she said.
+
+Lucian exhaled slowly. "I was ordered to eliminate you after the mission. The contract includes a sunrise clause. If you recovered certain memories before a designated cutoff, I was supposed to confirm termination by dawn."
+
+"Then why didn't you?"
+
+"Because you remembered the rifle. You remembered the seven lines. And you looked at me like you were trying to find a version of me you used to trust." His jaw tightened. "I told myself I'd wait. See if you would remember more. But I think I made that choice the second I saw you rub your wrist. Because that was the first time you looked human to me."
+
+She pulled her hand free, but she didn't step away.
+
+"Where's the video log?"
+
+"It's in the safe behind the case of ammunition. You set it to open on your vocal pattern."
+
+She walked to the safe, said her name, and the lock clicked open. Inside, a single hard drive and a note in her own handwriting: "Play this. Then finish what we started."
+
+She took the drive to a monitor mounted on the wall. Lucian plugged it in without being asked.
+
+The screen flickered, and her own face appeared—slightly younger, sharper, with shadows under her eyes that spoke of sleepless nights.
+
+"Hey, you," her recorded self said. "If you're watching this, the conditioning didn't break clean. You're probably standing in the cache, feeling like a stranger in your own skin. That's okay. I built you a way back."
+
+The recording paused, and her recorded self looked down at something off-screen.
+
+"Rook is going to win if you don't act. He's already positioned himself closer than you think. He knows you're compromised. He's waiting for you to fail so he can bury the ledger permanently."
+
+The image sharpened.
+
+"Here's the part you won't like. I need you to become the weapon you were made to be. Start with the list in the coat."
+
+The screen went dark.
+
+Sloane stood motionless, the silence pressing in.
+
+"The coat," she repeated.
+
+She turned. On a metal hook near the door hung a black trench coat she didn't remember owning. But the cut was familiar. The weight would feel right.
+
+"Sloane." Lucian's voice held a warning she couldn't parse.
+
+She crossed the room and reached for the coat, her fingers already closing around the collar. The fabric was cold, damp from the morning fog.
+
+Inside the pocket, her hand closed around paper.

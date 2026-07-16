@@ -14,13 +14,38 @@ _FIRST_PERSON_OUTSIDE_RE = re.compile(
     re.IGNORECASE,
 )
 
+# Typographic / guillemet / low-9 quotes → ASCII before any quote-span regex.
+_TYPOGRAPHIC_DOUBLE = str.maketrans(
+    {
+        "\u201c": '"',  # “ LEFT DOUBLE
+        "\u201d": '"',  # ” RIGHT DOUBLE
+        "\u201e": '"',  # „ DOUBLE LOW-9
+        "\u201f": '"',  # ‟ DOUBLE HIGH-REVERSED-9
+        "\u00ab": '"',  # « LEFT GUILLEMET
+        "\u00bb": '"',  # » RIGHT GUILLEMET
+        "\u2039": "'",  # ‹ SINGLE LEFT GUILLEMET (rare)
+        "\u203a": "'",  # › SINGLE RIGHT GUILLEMET
+        "\u2018": "'",  # ‘ LEFT SINGLE
+        "\u2019": "'",  # ’ RIGHT SINGLE / apostrophe
+        "\u201a": "'",  # ‚ SINGLE LOW-9
+        "\u201b": "'",  # ‛ SINGLE HIGH-REVERSED-9
+    }
+)
+
+
+def normalize_typographic_quotes(text: str) -> str:
+    """Map curly/guillemet quotes to straight ASCII so quote regexes match once."""
+    if not text:
+        return text
+    return text.translate(_TYPOGRAPHIC_DOUBLE)
+
+
 def strip_dialogue_for_pov(text: str) -> str:
     """Remove quoted dialogue spans before scanning for first-person narration."""
-    body = re.sub(r"^#.*$", "", text, flags=re.M)
+    body = normalize_typographic_quotes(text)
+    body = re.sub(r"^#.*$", "", body, flags=re.M)
     body = re.sub(r'"[^"\n]*"', " ", body)
     body = re.sub(r"'[^'\n]*'", " ", body)
-    body = re.sub(r"\u201c[^\u201d]*\u201d", " ", body)
-    body = re.sub(r"\u2018[^\u2019]*\u2019", " ", body)
     return body
 
 

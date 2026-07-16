@@ -1,0 +1,56 @@
+id: his-final-target
+pen_name: Nix Vale
+target_language: en
+publish_strategy: kdp_ku_exclusive
+narrative_status: approved
+book: 1
+canon_through: 12
+platform: kdp
+audience: women 18-35, mobile reading, hook-driven serial fiction
+goal: end-of-chapter hooks — international thriller-romance pace
+setting_hub: Blackridge weapons district — sealed rooftop observation post
+setting_nodes: []
+spice_default: 1
+spice_explicit_chapters:
+- 9
+- 14
+spice_steamy_chapters:
+- 6
+book1_ending: Sloane is arrested. Mara is alive. Rook's network is exposed. Sloane
+  releases her own seven contracts along with the ledger — she does not buy absolution,
+  she chooses the record. Lucian is offered the only escape route and refuses it,
+  standing beside the woman he was contracted to kill. Dawn fills the empty scope
+  with light and leaves nothing hidden behind it. The last feeling is not safety —
+  it is chosen loyalty.
+blurb: Trapped on a rooftop with the masked assassin she apparently hired to kill
+  her own sister, a firearms investigator must recover the memories she ordered erased
+  before dawn, when the man who once loved her is contractually bound to expose her
+  crimes or execute her.
+tropes:
+- Enemies to Lovers
+- Forced Proximity
+- Assassin Romance
+- Amnesia Romance
+- Morally Gray Hero
+spice_badge: 18+
+target_platforms:
+- kdp
+spice_level: 3
+plan_status: approved
+bible_status: approved
+book_slug: 01-his-final-target
+total_chapters: 17
+arc:
+  act1_setup:
+  - 1
+  - 4
+  act2_complications:
+  - 5
+  - 10
+  act3_crisis:
+  - 11
+  - 14
+  act4_resolution:
+  - 15
+  - 17
+narrative_profile: thriller_romance

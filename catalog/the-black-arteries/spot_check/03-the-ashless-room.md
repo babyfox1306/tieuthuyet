@@ -6,8 +6,7 @@ title: The Ashless Room
 spice: 1
 word_count: 1477
 status: draft
-needs_fix:
-- missing_quotes:dialogue
+needs_fix: []
 promoted_at: '2026-07-13T14:17:14Z'
 ---
 

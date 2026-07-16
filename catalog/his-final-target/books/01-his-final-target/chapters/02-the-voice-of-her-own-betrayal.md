@@ -1,0 +1,107 @@
+---
+series: his-final-target
+book: 1
+chapter: 2
+title: The Voice of Her Own Betrayal
+spice: 1
+word_count: 1660
+status: draft
+needs_fix: []
+promoted_at: '2026-07-16T13:29:57Z'
+---
+
+The mask was gone, but the stranger standing before Sloane Mercer still wore an expression she could not decipher, a cold certainty that cut through her denial. The wind whipped a strand of dark hair across her face, stinging her cheek, but she didn't brush it away. She was too busy staring at the man who claimed to know her better than she knew herself. Her mind scrambled for a logical foothold, a procedural explanation for the insanity spilling from his lips. A kill switch? A contract on her own life? It was absurd. It was the plot of a cheap paperback, not the reality of a firearms investigator who spent her days ballistics testing and filing paperwork.
+
+"You expect me to believe this," Sloane said, her voice scraping against her throat. She gestured wildly with the hand still clutching the warm brass casing, the metal biting into her palm. "You expect me to stand here, next to my dead sister, and accept that I hired a hitman to murder her if I happened to remember hiring him? Do you hear how psychotic that sounds?"
+
+Lucian didn't flinch. He stood there, solid and immovable as a concrete pillar, the rifle slung comfortably across his chest. He looked tired. Not the exhaustion of a sleepless night, but the deep, bone-weary fatigue of a man who had been carrying a heavy weight for too long. The morning light caught the sharp angles of his face, highlighting a scar she hadn't noticed before above his left eyebrow.
+
+"I don't expect you to believe anything," Lucian said. His voice was low, a rough rumble that seemed to vibrate in the cold air between them. "I expect you to obey the terms of the engagement, as we discussed. But I also know you, Sloane. Even with your mind scrambled, you need proof. You always need proof."
+
+"I need evidence," she corrected, her tone sharpening into a familiar, defensive cadence. "If this was a contract, there's a paper trail. Digital signatures. Biometric verification. You can't just walk around executing people based on a feeling."
+
+A flicker of something crossed his face—amusement, perhaps, or maybe it was just sadness. "We didn't use the network channels for this one. Too many eyes. Too many leaks."
+
+He reached into the pocket of his tactical vest. Sloane tensed, her heart rate spiking, her training screaming that he was going for a weapon. She took a step back, her boots scraping against the gravel of the rooftop. But his hand withdrew slowly, holding a small, rectangular object.
+
+It wasn't a phone. It wasn't a tablet.
+
+It was a micro-cassette recorder. A distinct, bulky block of black plastic and silver metal, the kind of thing that belonged in a museum rather than in the hands of an elite assassin. The sight of it was so jarringly anachronistic that for a second, Sloane's brain simply refused to process it.
+
+"Seriously?" Sloane let out a harsh, disbelieving laugh. "A tape recorder? What is this, a spy movie from the eighties? You're going to play me a spooky cassette tape?"
+
+"It's analog," Lucian said, his fingers moving over the buttons with a reverence that bordered on intimate. "No cloud storage. No servers to hack. No metadata to trace. Just magnetism and plastic. The only way to keep a secret in a surveillance state is to use technology the world has forgotten."
+
+He depressed the play button.
+
+There was a pause—a heartbeat of silence filled only by the whistling wind—and then the mechanical clunk of the play head engaging. The faint, almost imperceptible squeal of turning tape hissed through the air.
+
+Then, the voice spoke.
+
+Sloane froze. The air left her lungs in a rush, leaving her dizzy. The blood drained from her face so fast her vision blurred at the edges.
+
+The voice was hers.
+
+It wasn't just similar. It wasn't a deepfake approximation. It was the specific cadence of her speech, the slight rasp she got when she was tired, the precise way she dropped the 'g' at the end of her words when she was impatient. It was the voice she heard in her head every morning, the voice that argued with herself in the mirror.
+
+"Log entry C-Alpha-Seven," the recording began. The background noise was minimal—just the steady hum of what sounded like an air conditioner. "Date: October fourteenth. Time: 02:00 hours."
+
+Sloane stared at the recorder in Lucian's hand. It felt like a bomb had gone off inside her skull. "That's not me," she whispered, though the denial felt weak, flimsy as wet paper. "That's a synthesizer. You faked it."
+
+Lucian didn't look at her. His eyes were fixed on the spinning reels of the cassette, his jaw clenched tight enough to crack a walnut. "Listen," he ordered softly.
+
+On the tape, her voice continued, cold and detached, devoid of any warmth or hesitation.
+
+"Contract acceptance confirmed. Issuer: Sloane Mercer. Asset: Lucian Vey." The recording paused, the silence stretching out, filled with the weight of the coming words. "Target designation: Mara Mercer. Sister of the issuer."
+
+Sloane felt her knees buckle. She reached out, hand groping for empty air, and steadied herself against the low parapet wall. The brickwork was rough against her palm, a sharp reality check against the nightmare playing out on the magnetic strip.
+
+"No," she said. "No, I didn't. I loved Mara. She was..."
+
+She couldn't finish the sentence. The grief was a physical weight, crushing her chest. She looked over at the tarp-covered shape ten feet away. Her sister. Her baby sister.
+
+The tape played on. "Condition of engagement: Non-lethal simulation. The asset will terminate the target with a thoracic shot utilizing a frangible round. The target must remain incapacitated for a minimum of ten minutes to establish credible visual confirmation of death for third-party observers."
+
+Sloane squeezed her eyes shut. "Simulation," she breathed. "It was fake? She's... it's fake?"
+
+She spun toward Lucian, hope igniting like a flare in her chest. "Did you hear that? A simulation! She's not dead. You said she was dead!"
+
+Lucian’s eyes met hers. The sorrow she saw there was so profound it nearly knocked her backward. He didn't speak. He just tilted his head slightly toward the recorder.
+
+"Shh," he said.
+
+"Secondary contingency," the tape voice continued, the words dropping like heavy stones. "If the target survives the simulation and the issuer initiates memory wipe procedures Protocol Omega, the asset is authorized to execute the final termination clause."
+
+Sloane’s hopes crumbled into dust. "Memory wipe... procedures?"
+
+The tape voice—her voice—sounded almost bored now. "I am ordering the complete erasure of my episodic memory regarding the last ninety days. All knowledge of the network, the ledger, and the true nature of the target list is to be scrubbed. If the barrier fails and the memories return, the asset is to terminate the issuer immediately. No trial. No negotiation. Death on sight."
+
+Sloane retched, doubling over as her stomach revolted. She clutched her abdomen with her free hand, the brass casing of the bullet still digging into her other palm. She ordered this? She ordered her own brain to be scrambled? She ordered her own sister to be shot, even if it was staged, just to... to do what?
+
+"Why?" she gasped, looking up at Lucian through tears that blurred her vision. "Why would I do that?"
+
+Lucian stepped closer. The movement was fluid, predatory grace restrained by a heavy leash. He stopped just outside her reach, close enough that she could smell him—gun oil, cold rain, and something underneath, a scent that reminded her of cedar and old books. It was a smell that tugged at the edges of her mind, a ghost of a sense memory she couldn't quite grasp.
+
+"You were afraid," Lucian said. His voice was gentler now, the hard edge of the assassin softening into something else. It was the same tone he had used on the rooftop when he spoke of the contingency, a tone that terrified her more than the gun did. "You found something in the ledger. Something that broke you."
+
+"The ledger," Sloane repeated. The word felt foreign. "What ledger?"
+
+"You didn't tell me," Lucian said. He looked down at the recorder, his thumb hovering over the stop button. "You said knowing would put me in breach of contract. You compartmentalized everything. But you left instructions."
+
+He let the tape run a little longer.
+
+"Verification protocol," the recorded Sloane said. "For the asset to confirm the identity of the issuer is genuine, prior to termination, observe the physical tell. The wrist."
+
+Sloane went still. The wind seemed to die down.
+
+"The circle," the tape said. "Trace the circle on the left wrist. It is the grounding mechanism. It is the key to the firing sequence. If she performs the motion, she remembers. If she remembers, she dies."
+
+The recorder clicked. The button popped up as the tape reached the end. The silence that followed was worse than the voice. It filled the space between them, thick and final, and Sloane realized she had been holding her breath since the word dies.
+Her hand had moved without her.
+Her right thumb was pressed to the inside of her left wrist, tracing slow, patient circles against the skin. Round and round. A motion so familiar it had no beginning. She watched it happen the way she would watch someone else's hand — a stranger's hand, doing a stranger's work.
+She stopped. Forced her fingers open. The skin was pink where she had been rubbing it.
+"I wasn't—" she started.
+Lucian was staring at her wrist. Not at her face. At her wrist. And in his eyes was not surprise, but recognition — the flat, sick certainty of a man watching a clock he had been dreading finally strike the hour.
+"Say it again," she said. "The part about the circle."
+He lowered the recorder. He didn't rewind it.
+"I don't need to," Lucian said.

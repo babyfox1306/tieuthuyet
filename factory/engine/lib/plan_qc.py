@@ -423,6 +423,125 @@ def validate_narrative_plan(
     return issues
 
 
+def _reveal_id(rev: Any) -> str:
+    if isinstance(rev, dict):
+        return str(rev.get("id") or "").strip()
+    return str(rev or "").strip()
+
+
+def _thread_resolved_chapter(thread: dict[str, Any]) -> int:
+    """Close chapter for a thread — prefer resolved_chapter, else must_close_by when closed."""
+    for key in ("resolved_chapter", "payoff_chapter"):
+        raw = thread.get(key)
+        if raw is not None and str(raw).strip() != "":
+            try:
+                return int(raw)
+            except (TypeError, ValueError):
+                pass
+    status = str(thread.get("status") or "").lower()
+    if status in {"closed", "resolved", "paid_off", "complete"}:
+        raw = thread.get("must_close_by")
+        if raw is not None and str(raw).strip() != "":
+            try:
+                return int(raw)
+            except (TypeError, ValueError):
+                return 0
+    return 0
+
+
+def validate_payoff_uniqueness(
+    plans: list[dict],
+    ws: Path | None = None,
+) -> dict[int, list[str]]:
+    """NC-09 — each reveal/clue pays off once; closed threads cannot re-payoff.
+
+    Note: prompt C called this NC-07:reveal_payoff_duplicate, but NC-07 already
+    means clue_not_in_beats — use NC-09 to avoid colliding subtypes.
+    """
+    if ws is not None and not narrative_compiler_enabled(ws):
+        return {}
+
+    from collections import defaultdict
+
+    reveal_chs: dict[str, list[int]] = defaultdict(list)
+    clue_pay_chs: dict[str, list[int]] = defaultdict(list)
+    thread_pay_chs: dict[str, list[int]] = defaultdict(list)
+    thread_touch_chs: dict[str, list[int]] = defaultdict(list)
+
+    for plan in plans:
+        if plan.get("locked"):
+            continue
+        ch = int(plan.get("chapter") or 0)
+        if ch <= 0:
+            continue
+        narr = plan.get("narrative")
+        if not isinstance(narr, dict):
+            continue
+        for rev in narr.get("reveals") or []:
+            rid = _reveal_id(rev)
+            if rid:
+                reveal_chs[rid].append(ch)
+        for cid in narr.get("clues_payoff") or []:
+            key = str(cid).strip()
+            if key:
+                clue_pay_chs[key].append(ch)
+        for tid in narr.get("threads_payoff") or []:
+            key = str(tid).strip()
+            if key:
+                thread_pay_chs[key].append(ch)
+        for tid in narr.get("threads_touch") or []:
+            key = str(tid).strip()
+            if key:
+                thread_touch_chs[key].append(ch)
+
+    out: dict[int, list[str]] = defaultdict(list)
+
+    for rid, chs in reveal_chs.items():
+        uniq = sorted(set(chs))
+        if len(uniq) > 1:
+            for ch in uniq[1:]:
+                out[ch].append(
+                    f"ch{ch}:NC-09:reveal_payoff_duplicate:{rid}:also_ch{uniq[0]}"
+                )
+
+    for cid, chs in clue_pay_chs.items():
+        uniq = sorted(set(chs))
+        if len(uniq) > 1:
+            for ch in uniq[1:]:
+                out[ch].append(
+                    f"ch{ch}:NC-09:clue_payoff_duplicate:{cid}:also_ch{uniq[0]}"
+                )
+
+    if ws is not None:
+        from factory.engine.lib.narrative_compiler import load_threads
+
+        threads_data = load_threads(ws)
+        for thread in threads_data.get("threads") or []:
+            if not isinstance(thread, dict):
+                continue
+            tid = str(thread.get("id") or "").strip()
+            if not tid:
+                continue
+            resolved = _thread_resolved_chapter(thread)
+            if resolved <= 0:
+                continue
+            for ch in sorted(set(thread_pay_chs.get(tid) or [])):
+                if ch > resolved:
+                    out[ch].append(
+                        f"ch{ch}:NC-09:thread_payoff_after_close:{tid}:closed_ch{resolved}"
+                    )
+            # threads_touch after close is also a re-payoff signal when no
+            # dedicated threads_payoff field is used.
+            if not (thread_pay_chs.get(tid) or []):
+                for ch in sorted(set(thread_touch_chs.get(tid) or [])):
+                    if ch > resolved:
+                        out[ch].append(
+                            f"ch{ch}:NC-09:thread_payoff_after_close:{tid}:closed_ch{resolved}"
+                        )
+
+    return {ch: issues for ch, issues in out.items() if issues}
+
+
 def _male_lead_absent(bible: dict | None, ws: Path | None) -> bool:
     from factory.engine.lib.canon_registry import is_absent_male_lead
 
@@ -763,6 +882,8 @@ def validate_all_plans(
         issues = validate_plan(p, direction, bible=bible, all_plans=plans, ws=ws)
         if issues:
             out[ch] = issues
+    for ch, issues in validate_payoff_uniqueness(plans, ws=ws).items():
+        out.setdefault(ch, []).extend(issues)
     return out
 
 
