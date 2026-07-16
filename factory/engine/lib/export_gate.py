@@ -63,14 +63,41 @@ VALID_ENDING_CHARS = frozenset(
 OPEN_CURLY = "\u201c\u201e"
 CLOSE_CURLY = "\u201d"
 PROMOTE_RULES = frozenset(
-    {"EG-01", "EG-02", "EG-03", "EG-06", "EG-08", "EG-10", "EG-11", "EG-12", "EG-13"}
+    # EG-06 markdown deliberately excluded — advisor UI fixes; never block promote
+    {"EG-01", "EG-02", "EG-03", "EG-08", "EG-10", "EG-11", "EG-12", "EG-13", "EG-16"}
 )
 FULL_RULES = frozenset(
     {
         "EG-01", "EG-02", "EG-03", "EG-04", "EG-05", "EG-06", "EG-07", "EG-08",
-        "EG-09", "EG-10", "EG-11", "EG-12", "EG-13",
+        "EG-09", "EG-10", "EG-11", "EG-12", "EG-13", "EG-14", "EG-15", "EG-16",
     }
 )
+
+# EG-16 — intra-chapter duplicate blocks
+_EG16_NGRAM = 12
+_EG16_MIN_RUN = 20  # BLOCK only when contiguous duplicated run >= this; 12..19 → WARN
+_EG16_JACCARD = 0.6
+_EG16_MIN_PARA_WORDS = 15
+_EG16_RECORDING_KW = re.compile(
+    # Bare "speaker" omitted: ch16 cliffhanger ("speaker system") is a real
+    # duplicate PA taunt, not tape playback — would false-except BLOCK → WARN.
+    r"\b(?:recording|playback|replay|the\s+tape|pa\s+system)\b",
+    re.IGNORECASE,
+)
+_EG16_STOPWORDS = frozenset(
+    {
+        "a", "an", "the", "and", "or", "but", "if", "then", "than", "that", "this",
+        "these", "those", "to", "of", "in", "on", "at", "for", "from", "with",
+        "as", "by", "into", "onto", "over", "under", "is", "are", "was", "were",
+        "be", "been", "being", "have", "has", "had", "do", "does", "did", "will",
+        "would", "could", "should", "may", "might", "must", "can", "i", "you",
+        "he", "she", "it", "we", "they", "me", "him", "her", "us", "them", "my",
+        "your", "his", "its", "our", "their", "not", "no", "so", "too", "very",
+        "just", "about", "up", "out", "off", "down", "what", "when", "where",
+        "who", "which", "how", "why",
+    }
+)
+_EG16_WORD_RE = re.compile(r"[A-Za-z0-9]+(?:'[A-Za-z]+)?")
 
 
 class ExportGateError(Exception):
@@ -479,6 +506,356 @@ def check_eg09_metadata(
     return results
 
 
+_EMPTY_PEN_NAME_MSG = (
+    "Pen name is empty — the EPUB will have no author. Set it before export."
+)
+
+
+def check_eg14_pen_name(workspace_id: str) -> dict[str, Any]:
+    """Block export when dc:creator would be omitted (empty pen_name)."""
+    from factory.engine.lib.catalog import resolve_pen_name
+
+    author = resolve_pen_name(workspace_id)
+    if author:
+        return _check("EG-14", "error", True, detail=f"pen_name={author!r}")
+    return _check("EG-14", "error", False, detail=_EMPTY_PEN_NAME_MSG)
+
+
+def check_eg15_state_timeline(
+    workspace_id: str,
+    book_slug: str,
+) -> dict[str, Any]:
+    """Block export when current_chapter leads timeline by more than 1."""
+    from factory.engine.lib.state_updater import load_state, state_chapter_divergence
+    from factory.engine.paths import resolve_book_number, workspace_dir
+
+    book = resolve_book_number(book_slug)
+    state = load_state(workspace_dir(workspace_id), book)
+    div = state_chapter_divergence(state)
+    if not div["divergent"]:
+        return _check(
+            "EG-15",
+            "error",
+            True,
+            detail=(
+                f"current_chapter={div['current_chapter']} "
+                f"timeline_ch={div['timeline_chapter']}"
+            ),
+        )
+    return _check("EG-15", "error", False, detail=div["message"])
+
+
+def prose_body_for_duplicate_check(text: str) -> str:
+    """Strip YAML frontmatter + leading chapter heading before EG-16."""
+    raw = text or ""
+    if raw.lstrip().startswith("---"):
+        parts = raw.lstrip().split("---", 2)
+        if len(parts) >= 3:
+            raw = parts[2]
+    return strip_leading_chapter_heading(raw.strip())
+
+
+def _eg16_normalize_token(token: str) -> str:
+    t = token.lower()
+    t = (
+        t.replace("\u201c", '"')
+        .replace("\u201d", '"')
+        .replace("\u2018", "'")
+        .replace("\u2019", "'")
+    )
+    t = re.sub(r"^[^\w]+|[^\w]+$", "", t, flags=re.UNICODE)
+    return t
+
+
+def _eg16_tokenize(prose: str) -> list[tuple[str, int, int]]:
+    """Return (normalized, start_char, end_char) for each word in prose."""
+    out: list[tuple[str, int, int]] = []
+    for m in _EG16_WORD_RE.finditer(prose):
+        norm = _eg16_normalize_token(m.group(0))
+        if norm:
+            out.append((norm, m.start(), m.end()))
+    return out
+
+
+def _eg16_quoted_spans(prose: str) -> list[tuple[int, int]]:
+    """Character spans that lie inside dialogue quotes (straight or curly)."""
+    spans: list[tuple[int, int]] = []
+    i = 0
+    n = len(prose)
+    while i < n:
+        ch = prose[i]
+        if ch in '"\u201c\u201e':
+            close = '"' if ch == '"' else "\u201d"
+            # straight " toggles; curly open seeks curly close
+            j = i + 1
+            while j < n:
+                if ch == '"' and prose[j] == '"':
+                    spans.append((i, j + 1))
+                    i = j + 1
+                    break
+                if ch != '"' and prose[j] == close:
+                    spans.append((i, j + 1))
+                    i = j + 1
+                    break
+                j += 1
+            else:
+                i += 1
+        else:
+            i += 1
+    return spans
+
+
+def _eg16_span_fully_quoted(start: int, end: int, quoted: list[tuple[int, int]]) -> bool:
+    return any(qs <= start and end <= qe for qs, qe in quoted)
+
+
+def _eg16_context_has_recording(prose: str, start: int, end: int) -> bool:
+    lo = max(0, start - 200)
+    hi = min(len(prose), end + 200)
+    return bool(_EG16_RECORDING_KW.search(prose[lo:hi]))
+
+
+def _eg16_snippet(prose: str, start: int, end: int, pad: int = 100) -> str:
+    lo = max(0, start - pad)
+    hi = min(len(prose), end + pad)
+    chunk = prose[lo:hi].replace("\n", " ")
+    prefix = "..." if lo > 0 else ""
+    suffix = "..." if hi < len(prose) else ""
+    return f"{prefix}{chunk}{suffix}"
+
+
+def _eg16_format_verbatim_report(
+    chapter: int,
+    ngram: str,
+    occ1: tuple[int, str],
+    occ2: tuple[int, str],
+    *,
+    warning_only: bool = False,
+) -> str:
+    kind = "verbatim 12-gram (recording exception — WARN)" if warning_only else "verbatim 12-gram repeated 2x"
+    return (
+        f"EG-16:duplicate_block  ch{chapter}\n"
+        f"  {kind}:\n"
+        f'    "{ngram}"\n'
+        f"  occurrence 1 @ char {occ1[0]}:\n"
+        f"    {occ1[1]}\n"
+        f"  occurrence 2 @ char {occ2[0]}:\n"
+        f"    {occ2[1]}"
+    )
+
+
+def find_eg16_verbatim_hits(
+    prose: str,
+    *,
+    n: int = _EG16_NGRAM,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Return (block_hits, recording_warn_hits) for repeated n-grams."""
+    from itertools import combinations
+
+    tokens = _eg16_tokenize(prose)
+    if len(tokens) < n:
+        return [], []
+    words = [t[0] for t in tokens]
+    quoted = _eg16_quoted_spans(prose)
+    index: dict[tuple[str, ...], list[int]] = {}
+    for i in range(len(words) - n + 1):
+        gram = tuple(words[i : i + n])
+        index.setdefault(gram, []).append(i)
+
+    blocks: list[dict[str, Any]] = []
+    warns: list[dict[str, Any]] = []
+    seen_pairs: set[tuple[int, int]] = set()
+
+    for gram, starts in index.items():
+        if len(starts) < 2:
+            continue
+        for ai, bi in combinations(starts, 2):
+            # Only report left edge of a maximal duplicated run.
+            if ai > 0 and bi > 0 and words[ai - 1] == words[bi - 1]:
+                continue
+            length = n
+            while (
+                ai + length < len(words)
+                and bi + length < len(words)
+                and words[ai + length] == words[bi + length]
+            ):
+                length += 1
+            pair = (ai, bi)
+            if pair in seen_pairs:
+                continue
+            seen_pairs.add(pair)
+
+            c1s, c1e = tokens[ai][1], tokens[ai + length - 1][2]
+            c2s, c2e = tokens[bi][1], tokens[bi + length - 1][2]
+            ngram_text = " ".join(words[ai : ai + length])
+            hit = {
+                "ngram": ngram_text,
+                "ngram_window": " ".join(words[ai : ai + n]),
+                "length_words": length,
+                "occ1_char": c1s,
+                "occ2_char": c2s,
+                "snippet1": _eg16_snippet(prose, c1s, c1e),
+                "snippet2": _eg16_snippet(prose, c2s, c2e),
+            }
+            q1 = _eg16_span_fully_quoted(c1s, c1e, quoted)
+            q2 = _eg16_span_fully_quoted(c2s, c2e, quoted)
+            if q1 and q2 and _eg16_context_has_recording(prose, c2s, c2e):
+                hit["recording_exception"] = True
+                warns.append(hit)
+            else:
+                blocks.append(hit)
+    return blocks, warns
+
+
+def find_eg16_near_para_hits(
+    prose: str,
+    *,
+    threshold: float = _EG16_JACCARD,
+    min_words: int = _EG16_MIN_PARA_WORDS,
+) -> list[dict[str, Any]]:
+    paras = [p.strip() for p in re.split(r"\n\s*\n", prose) if p.strip()]
+    hits: list[dict[str, Any]] = []
+
+    def content_tokens(text: str) -> set[str]:
+        toks = {_eg16_normalize_token(w) for w in _EG16_WORD_RE.findall(text)}
+        return {t for t in toks if t and t not in _EG16_STOPWORDS}
+
+    tokenized = [content_tokens(p) for p in paras]
+    raw_counts = [len(_EG16_WORD_RE.findall(p)) for p in paras]
+    for i, ta in enumerate(tokenized):
+        if raw_counts[i] < min_words:
+            continue
+        for j in range(i + 1, len(tokenized)):
+            if raw_counts[j] < min_words:
+                continue
+            tb = tokenized[j]
+            if not ta or not tb:
+                continue
+            sim = len(ta & tb) / len(ta | tb)
+            if sim >= threshold:
+                hits.append(
+                    {
+                        "para_a": i + 1,
+                        "para_b": j + 1,
+                        "jaccard": round(sim, 3),
+                        "preview_a": paras[i][:80].replace("\n", " "),
+                        "preview_b": paras[j][:80].replace("\n", " "),
+                    }
+                )
+    return hits
+
+
+def check_eg16_duplicate_block(body: str, chapter: int) -> list[dict[str, Any]]:
+    """EG-16: block verbatim intra-chapter 12-gram repeats; warn on near-dup paras."""
+    prose = prose_body_for_duplicate_check(body)
+    if not prose.strip():
+        return [_check("EG-16", "error", True, chapter=chapter, detail="empty body")]
+
+    blocks_raw, rec_warns = find_eg16_verbatim_hits(prose)
+    near = find_eg16_near_para_hits(prose)
+    results: list[dict[str, Any]] = []
+
+    blocks: list[dict[str, Any]] = []
+    short_warns: list[dict[str, Any]] = []
+    for hit in blocks_raw:
+        if int(hit.get("length_words") or 0) >= _EG16_MIN_RUN:
+            blocks.append(hit)
+        else:
+            hit = dict(hit)
+            hit["below_min_run"] = True
+            short_warns.append(hit)
+
+    for hit in blocks:
+        report = _eg16_format_verbatim_report(
+            chapter,
+            hit["ngram"],
+            (hit["occ1_char"], hit["snippet1"]),
+            (hit["occ2_char"], hit["snippet2"]),
+        )
+        row = _check(
+            "EG-16",
+            "error",
+            False,
+            chapter=chapter,
+            detail=f"duplicate_block: {hit['ngram'][:80]}",
+            snippet=hit["snippet1"][:120],
+        )
+        row["report"] = report
+        row["code"] = "EG-16:duplicate_block"
+        row["ngram"] = hit["ngram"]
+        row["occurrences"] = [
+            {"char": hit["occ1_char"], "snippet": hit["snippet1"]},
+            {"char": hit["occ2_char"], "snippet": hit["snippet2"]},
+        ]
+        results.append(row)
+
+    for hit in list(rec_warns) + short_warns:
+        below = hit.get("below_min_run")
+        if below:
+            report = _eg16_format_verbatim_report(
+                chapter,
+                hit["ngram"],
+                (hit["occ1_char"], hit["snippet1"]),
+                (hit["occ2_char"], hit["snippet2"]),
+                warning_only=True,
+            )
+            report = report.replace(
+                "(recording exception — WARN)",
+                f"(run {hit.get('length_words', '?')} < min_run {_EG16_MIN_RUN} — WARN)",
+            )
+            row = _check(
+                "EG-16",
+                "warn",
+                False,
+                chapter=chapter,
+                detail=(
+                    f"duplicate_block below min_run "
+                    f"({hit.get('length_words')} < {_EG16_MIN_RUN}): {hit['ngram'][:80]}"
+                ),
+                snippet=hit["snippet1"][:120],
+            )
+        else:
+            report = _eg16_format_verbatim_report(
+                chapter,
+                hit["ngram"],
+                (hit["occ1_char"], hit["snippet1"]),
+                (hit["occ2_char"], hit["snippet2"]),
+                warning_only=True,
+            )
+            row = _check(
+                "EG-16",
+                "warn",
+                False,
+                chapter=chapter,
+                detail=f"duplicate_block recording exception: {hit['ngram'][:80]}",
+                snippet=hit["snippet2"][:120],
+            )
+        row["report"] = report
+        row["code"] = "EG-16:duplicate_block"
+        results.append(row)
+
+    for hit in near:
+        detail = (
+            f"near_dup paragraphs {hit['para_a']}~{hit['para_b']} "
+            f"jaccard={hit['jaccard']}: "
+            f"{hit['preview_a']!r} || {hit['preview_b']!r}"
+        )
+        row = _check(
+            "EG-16",
+            "warn",
+            False,
+            chapter=chapter,
+            detail=detail,
+            snippet=hit["preview_a"],
+        )
+        row["code"] = "EG-16:near_dup_paragraph"
+        results.append(row)
+
+    if not results:
+        return [_check("EG-16", "error", True, chapter=chapter)]
+    return results
+
+
 def check_eg10_cjk(body: str, chapter: int, lang: str) -> dict[str, Any]:
     if lang != "en":
         return _check("EG-10", "error", True, chapter=chapter)
@@ -678,7 +1055,7 @@ def check_chapter_for_promote(
     checks.append(check_eg01_truncated(body, chapter))
     checks.extend(check_eg02_markers(body, chapter))
     checks.extend(check_eg03_header(meta, body, lang, chapter))
-    checks.extend(check_eg06_markdown(body, chapter))
+    # EG-06 markdown: advisory UI only — never block promote
     checks.append(check_eg08_short(body, chapter, gcfg["min_publish_words"]))
     checks.append(check_eg10_cjk(body, chapter, lang))
     if workspace_id:
@@ -686,6 +1063,7 @@ def check_chapter_for_promote(
     checks.extend(check_eg13_engine_tokens(body, chapter))
     eg12_sev = "error" if gcfg["publish_mode"] else "warn"
     checks.append(check_eg12_needs_fix(meta, chapter, severity=eg12_sev))
+    checks.extend(check_eg16_duplicate_block(body, chapter))
     return checks
 
 
@@ -741,6 +1119,8 @@ def run_export_gate(
         if "EG-12" in active:
             eg12_sev = "error" if gcfg["publish_mode"] else "warn"
             checks.append(check_eg12_needs_fix(meta, ch_num, severity=eg12_sev))
+        if "EG-16" in active:
+            checks.extend(check_eg16_duplicate_block(body, ch_num))
 
     if "EG-04" in active and chapter_nums:
         expected = _expected_chapter_count(workspace_id, book_slug, chapter_nums)
@@ -754,6 +1134,12 @@ def run_export_gate(
 
     if "EG-09" in active:
         checks.extend(check_eg09_metadata(workspace_id, book_slug, lang))
+
+    if "EG-14" in active:
+        checks.append(check_eg14_pen_name(workspace_id))
+
+    if "EG-15" in active:
+        checks.append(check_eg15_state_timeline(workspace_id, book_slug))
 
     expected = _expected_chapter_count(workspace_id, book_slug, chapter_nums) if chapter_nums else 0
     return _build_report(workspace_id, book_slug, lang, chapter_nums, checks, expected=expected)
@@ -839,6 +1225,9 @@ def format_export_gate_reasons(report: dict[str, Any]) -> list[str]:
             continue
         ch = check.get("chapter")
         prefix = f"ch{ch:02d}" if ch else "book"
+        if check.get("report"):
+            reasons.append(str(check["report"]))
+            continue
         detail = check.get("detail") or check.get("id")
         reasons.append(f"{prefix} {check.get('id')}: {detail}")
     return reasons
