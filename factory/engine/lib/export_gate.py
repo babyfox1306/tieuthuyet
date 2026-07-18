@@ -221,6 +221,12 @@ def _straight_quote_terminal_invalid(body: str) -> bool:
 
 
 def check_eg01_truncated(body: str, chapter: int) -> dict[str, Any]:
+    """Fail when chapter ending is incomplete (mid-sentence / unclosed quote / bad terminal).
+
+    Writer path: when router omits ``finish_reason``, this is the fallback that
+    blocks incomplete=success. Prefer ``finish_reason=length`` when available
+    (see ``writer_completeness.writer_output_incomplete``).
+    """
     text = body.strip()
     if not text:
         return _check("EG-01", "error", False, chapter=chapter, detail="empty body")

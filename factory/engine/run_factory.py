@@ -564,6 +564,12 @@ def _draft_chapter_prose(
         is_format_only_issues,
     )
 
+    from factory.engine.lib.writer_completeness import (
+        continuation_suffix,
+        extract_finish_reason,
+        writer_output_incomplete,
+    )
+
     base_payload = build_writer_payload(ws, book, ch, cfg)
     system_message = load_role("writer", direction=direction, cfg=cfg)
     source_versions = writer_source_versions(ws, book)
@@ -586,22 +592,34 @@ def _draft_chapter_prose(
     llm_qc_max = int(cfg.get("writer_llm_qc_max_retries", 2))
     if llm_qc_max < 0:
         llm_qc_max = 0
+    truncate_max = int(cfg.get("writer_truncate_max_retries", 2))
+    if truncate_max < 0:
+        truncate_max = 0
 
     chapter = ""
     m_issues: dict = {}
     expand_suffix = ""
     content_suffix = ""
     llm_qc_suffix = ""
+    truncate_suffix = ""
     lang = target_language(direction, cfg)
     content_attempts = 0
     short_used = 0
     length_rewrites = 0
     attempt_number = 0
     llm_qc_rewrites = 0
+    truncate_retries = 0
     pending_qc_before: dict | None = None
     throttle = float(cfg.get("throttle_seconds", 4) or 0)
 
-    max_rounds = content_max + short_retries + length_max + llm_qc_max * (1 + short_retries) + 4
+    max_rounds = (
+        content_max
+        + short_retries
+        + length_max
+        + truncate_max
+        + llm_qc_max * (1 + short_retries)
+        + 4
+    )
 
     def _meta() -> dict:
         return {
@@ -613,6 +631,8 @@ def _draft_chapter_prose(
             "max_length_retries": length_max,
             "llm_qc_rewrites": llm_qc_rewrites,
             "max_llm_qc_retries": llm_qc_max,
+            "truncate_retries": truncate_retries,
+            "max_truncate_retries": truncate_max,
         }
 
     def _write_attempt(
@@ -620,7 +640,8 @@ def _draft_chapter_prose(
         retry_suffix: str,
         retry_reason_source: str | None = None,
         qc_result_before_retry: dict | None = None,
-    ) -> str:
+    ) -> tuple[str, dict]:
+        # Camera: every attempt (incl. attempt_1 pre-rewrite) lands in payloads/ch_NNN_attempt_M.json
         nonlocal attempt_number
         attempt_number += 1
         user_content = base_payload + retry_suffix
@@ -631,6 +652,7 @@ def _draft_chapter_prose(
                 max_tokens=max_tokens,
                 direction=direction,
             )
+            fr = extract_finish_reason(call_meta)
             write_writer_payload_artifact(
                 ws,
                 book,
@@ -645,6 +667,7 @@ def _draft_chapter_prose(
                 error=None,
                 retry_reason_source=retry_reason_source,
                 qc_result_before_retry=qc_result_before_retry,
+                finish_reason=fr,
             )
         except Exception as call_exc:
             write_writer_payload_artifact(
@@ -661,11 +684,12 @@ def _draft_chapter_prose(
                 error=str(call_exc),
                 retry_reason_source=retry_reason_source,
                 qc_result_before_retry=qc_result_before_retry,
+                finish_reason=None,
             )
             raise
         if throttle > 0:
             time.sleep(throttle)
-        return raw.strip()
+        return raw.strip(), call_meta if isinstance(call_meta, dict) else {}
 
     def _run_machine_qc(text: str) -> dict:
         state = load_state(ws, book)
@@ -717,9 +741,27 @@ def _draft_chapter_prose(
             qc["verdict"] = "FAIL"
         return qc
 
+    def _reject_truncated(text: str, code: str, detail: str) -> tuple[str, dict, None]:
+        safe_print(f"  ch_{ch:03d} TRUNCATED — {code}: {detail[:120]}")
+        issues = {
+            "truncated": {"code": code, "detail": detail},
+            "classification": {
+                "format_fix": {"truncated": code},
+                "content_fail": {},
+                "length": {},
+                "format_only": True,
+                "length_only": False,
+                "has_format": True,
+                "has_content": False,
+                "has_length": False,
+            },
+            "retry_meta": _meta(),
+        }
+        return text, issues, None
+
     machine_passed = False
     for _round in range(max_rounds):
-        retry_suffix = expand_suffix + content_suffix + llm_qc_suffix
+        retry_suffix = expand_suffix + content_suffix + llm_qc_suffix + truncate_suffix
         kwargs: dict = {"retry_suffix": retry_suffix}
         if pending_qc_before is not None and llm_qc_suffix:
             kwargs["retry_reason_source"] = "llm_qc"
@@ -732,7 +774,32 @@ def _draft_chapter_prose(
                 "content_boundary_ok": pending_qc_before.get("content_boundary_ok"),
             }
             pending_qc_before = None
-        chapter = _write_attempt(**kwargs)
+        if truncate_suffix and not llm_qc_suffix:
+            kwargs["retry_reason_source"] = "truncated"
+        chapter, call_meta = _write_attempt(**kwargs)
+        fr = extract_finish_reason(call_meta)
+        incomplete, t_code, t_detail = writer_output_incomplete(
+            chapter, finish_reason=fr, chapter=ch
+        )
+        if incomplete:
+            if truncate_retries < truncate_max:
+                truncate_retries += 1
+                print(
+                    f"  ch_{ch:03d} TRUNCATED ({t_code}) — continuation "
+                    f"{truncate_retries}/{truncate_max}"
+                )
+                truncate_suffix = continuation_suffix(
+                    code=t_code,
+                    detail=t_detail,
+                    prior_tail=chapter,
+                    attempt=truncate_retries,
+                )
+                expand_suffix = ""
+                content_suffix = ""
+                continue
+            return _reject_truncated(chapter, t_code, t_detail)
+
+        truncate_suffix = ""
         m_issues = _run_machine_qc(chapter)
         cls = m_issues["classification"]
 
@@ -824,6 +891,31 @@ def _draft_chapter_prose(
             m_issues["retry_meta"] = _meta()
             return chapter, m_issues, last_qc
 
+        # TODO(revert): temporary night-run safety — NOT architecture.
+        # QC transport/infra failure must NOT trigger writer rewrite (was dirtying prose).
+        # Keep chapter as-is → caller buckets needs_review with qc_infra_skipped.
+        _qc_reasons = [str(r) for r in (last_qc.get("fail_reasons") or [])]
+        if (
+            last_qc.get("source") == "qc_transport_error"
+            or "qc_transport_error" in _qc_reasons
+        ):
+            safe_print(
+                f"  ch_{ch:03d} LLM_QC INFRA — qc_transport_error → "
+                "needs_review (qc_infra_skipped), NO writer rewrite"
+            )
+            m_issues["retry_meta"] = _meta()
+            return (
+                chapter,
+                m_issues,
+                {
+                    "verdict": "FAIL",
+                    "fail_reasons": ["qc_infra_skipped"],
+                    "source": "qc_infra_skipped",
+                    "detail": last_qc.get("detail"),
+                    "upstream": "qc_transport_error",
+                },
+            )
+
         reasons = format_qc_reasons(last_qc) or last_qc.get("fail_reasons") or []
         if llm_qc_rewrites >= llm_qc_max:
             safe_print(
@@ -842,10 +934,11 @@ def _draft_chapter_prose(
         pending_qc_before = last_qc
         expand_suffix = ""
         content_suffix = ""
+        truncate_suffix = ""
         short_used = 0  # allow length expands again on the QC rewrite
 
         # One writer call with QC feedback; then length-only expands if short.
-        chapter = _write_attempt(
+        chapter, call_meta = _write_attempt(
             retry_suffix=llm_qc_suffix,
             retry_reason_source="llm_qc",
             qc_result_before_retry={
@@ -857,6 +950,12 @@ def _draft_chapter_prose(
                 "content_boundary_ok": last_qc.get("content_boundary_ok"),
             },
         )
+        fr = extract_finish_reason(call_meta)
+        incomplete, t_code, t_detail = writer_output_incomplete(
+            chapter, finish_reason=fr, chapter=ch
+        )
+        if incomplete:
+            return _reject_truncated(chapter, t_code, t_detail)
         pending_qc_before = None
         m_issues = _run_machine_qc(chapter)
         cls = m_issues["classification"]
@@ -870,10 +969,16 @@ def _draft_chapter_prose(
                 f"{short_used}/{short_retries}"
             )
             expand_suffix = _expand_short_patch(cfg, wc, short_used)
-            chapter = _write_attempt(
+            chapter, call_meta = _write_attempt(
                 retry_suffix=llm_qc_suffix + expand_suffix,
                 retry_reason_source="llm_qc",
             )
+            fr = extract_finish_reason(call_meta)
+            incomplete, t_code, t_detail = writer_output_incomplete(
+                chapter, finish_reason=fr, chapter=ch
+            )
+            if incomplete:
+                return _reject_truncated(chapter, t_code, t_detail)
             m_issues = _run_machine_qc(chapter)
             cls = m_issues["classification"]
 
@@ -889,6 +994,7 @@ def _draft_chapter_prose(
 
         # machine pass again → loop to re-QC
         continue
+
 
 
 def write_one_chapter(
@@ -924,6 +1030,25 @@ def write_one_chapter(
     chapter, m_issues, qc = _draft_chapter_prose(
         ws, book, ch, cfg, direction, auto=auto, run_llm_qc=True
     )
+
+    trunc = m_issues.get("truncated") if isinstance(m_issues, dict) else None
+    if isinstance(trunc, dict) and trunc.get("code"):
+        chapter_pipeline_path(ws, book, "needs_fix", ch).write_text(
+            chapter, encoding="utf-8"
+        )
+        save_machine_issues(issues_path(ws, book, "needs_fix", ch), m_issues)
+        save_json(
+            qc_report_path(ws, book, "needs_fix", ch),
+            {
+                "verdict": "FAIL",
+                "fail_reasons": [trunc.get("code"), trunc.get("detail")],
+                "source": trunc.get("code"),
+            },
+        )
+        safe_print(
+            f"  ch_{ch:03d} NEEDS_FIX ({trunc.get('code')}) — incomplete writer output"
+        )
+        return ch, "needs_fix"
 
     if not machine_pass(m_issues):
         cls = m_issues.get("classification") or classify_machine_issues(m_issues)

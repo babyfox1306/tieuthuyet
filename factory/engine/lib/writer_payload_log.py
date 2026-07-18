@@ -49,6 +49,7 @@ def write_writer_payload_artifact(
     error: str | None = None,
     retry_reason_source: str | None = None,
     qc_result_before_retry: dict[str, Any] | None = None,
+    finish_reason: str | None = None,
 ) -> None:
     """Write payloads/ch_NNN_attempt_M.json. Never raises into the write path."""
     try:
@@ -62,6 +63,7 @@ def write_writer_payload_artifact(
             "user_payload": user_payload,
             "retry_suffix": retry_suffix or "",
             "model_called": model_called,
+            "finish_reason": finish_reason,
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "source_versions": source_versions,
             "output": output,

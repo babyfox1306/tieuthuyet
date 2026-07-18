@@ -213,6 +213,11 @@ def call_9router(
                         "completion_tokens": resp.usage.completion_tokens,
                         "total_tokens": resp.usage.total_tokens,
                     }
+                finish_reason = None
+                try:
+                    finish_reason = resp.choices[0].finish_reason
+                except (AttributeError, IndexError, TypeError):
+                    finish_reason = None
                 entry = {
                     "ts": datetime.now(timezone.utc).isoformat(),
                     "role": role,
@@ -220,6 +225,7 @@ def call_9router(
                     "elapsed_sec": round(elapsed, 2),
                     "usage": usage,
                     "attempt": attempt + 1,
+                    "finish_reason": finish_reason,
                 }
                 _append_log(entry)
                 return content, entry
