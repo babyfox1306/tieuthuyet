@@ -165,18 +165,37 @@ def pipeline_status(workspace_id: str, book: int | None = None) -> dict[str, Any
         bible_errors = validate_bible(json.loads(bible_path(ws).read_text(encoding="utf-8")))
 
     from factory.engine.lib.canon_registry import canon_registry_path
+    from factory.engine.lib.concept_canon import artifact_stale_errors, concept_digest
+    from factory.engine.lib.concept_satisfiability import (
+        concept_satisfiability_errors,
+        format_satisfiability_errors,
+    )
+    from factory.engine.lib.narrative_schema import concept_content_errors
 
     canon_exists = canon_registry_path(ws).exists()
+    sat_errors = format_satisfiability_errors(concept_satisfiability_errors(concept))
+    stale_errors = [e.format() for e in artifact_stale_errors(ws, concept)]
+    content_errors = concept_content_errors(concept)
+    # content_errors already includes SAT_* via concept_satisfiability
+    concept_ok = (
+        concept.get("concept_status") == "ready"
+        and not content_errors
+        and not sat_errors
+    )
 
     gates = {
         "concept": {
             "status": concept.get("concept_status", "missing"),
-            "ok": concept.get("concept_status") == "ready",
+            "ok": concept_ok,
+            "errors": (sat_errors + [e for e in content_errors if e not in sat_errors])[:8],
+            "digest": concept_digest(concept) if concept else "",
         },
         "narrative": {
             "status": direction.get("narrative_status", "draft"),
-            "ok": narrative_is_approved(direction),
-            "errors": narr_errors[:5],
+            "ok": narrative_is_approved(direction) and not any(
+                e.startswith("STALE_NARRATIVE") for e in stale_errors
+            ),
+            "errors": (narr_errors + [e for e in stale_errors if e.startswith("STALE_NARRATIVE")])[:8],
         },
         "bible": {
             "status": direction.get("bible_status", "draft"),
@@ -189,7 +208,10 @@ def pipeline_status(workspace_id: str, book: int | None = None) -> dict[str, Any
         },
         "plan": {
             "status": direction.get("plan_status", "draft"),
-            "ok": plan_is_approved(ws),
+            "ok": plan_is_approved(ws) and not any(
+                e.startswith("STALE_PLAN") for e in stale_errors
+            ),
+            "errors": [e for e in stale_errors if e.startswith("STALE_PLAN")][:5],
             "chapters_planned": planned,
             "total": total,
         },
@@ -197,11 +219,19 @@ def pipeline_status(workspace_id: str, book: int | None = None) -> dict[str, Any
             "ready": counts["ready"] + counts["catalog"],
             "in_catalog": in_catalog,
             "total": total,
+            "blocked_by_stale": bool(stale_errors),
         },
     }
 
     next_steps: list[str] = []
     written = counts["ready"] + counts["catalog"]
+    if sat_errors:
+        next_steps.insert(0, "SAT: sửa concept (satisfiability) trước khi develop-narrative")
+    if stale_errors:
+        next_steps.insert(
+            0,
+            "STALE: " + "; ".join(stale_errors[:2]) + " — regenerate narrative/plan",
+        )
     if not gates["concept"]["ok"]:
         next_steps.append("concept: điền form → sẵn sàng")
     elif not gates["narrative"]["ok"]:
@@ -223,8 +253,20 @@ def pipeline_status(workspace_id: str, book: int | None = None) -> dict[str, Any
         next_steps.append("export: EPUB/DOCX")
 
     from factory.engine.lib.book_scaffold import list_series_books
+    from factory.engine.lib.state_updater import load_state, state_chapter_divergence
 
     _, slug = _resolve_book(workspace_id, book)
+
+    story_state = load_state(ws, book)
+    state_health = state_chapter_divergence(story_state)
+    state_health["promoted_chapters"] = list(story_state.get("promoted_chapters") or [])
+    if state_health.get("divergent"):
+        next_steps.insert(
+            0,
+            f"STATE DIVERGENCE: current_chapter={state_health['current_chapter']} "
+            f"but timeline only to ch{state_health['timeline_chapter']} — "
+            "export blocked until state_updater reconciles",
+        )
 
     return {
         "workspace": workspace_id,
@@ -235,16 +277,22 @@ def pipeline_status(workspace_id: str, book: int | None = None) -> dict[str, Any
         "planned_chapters": planned,
         "title": concept.get("title", ""),
         "target_language": direction.get("target_language", "vi"),
+        "pen_name": str(direction.get("pen_name") or "").strip(),
+        "last_pen_name": str(cfg.get("last_pen_name") or "").strip(),
         "gates": gates,
         "counts": counts,
         "blocked_chapters": blocked,
         "next_steps": next_steps,
+        "state_health": state_health,
+        "satisfiability_errors": sat_errors,
+        "stale_errors": stale_errors,
         "direction": {
             "narrative_profile": direction.get("narrative_profile"),
             "publish_strategy": direction.get("publish_strategy"),
             "plan_status": direction.get("plan_status"),
             "bible_status": direction.get("bible_status"),
             "narrative_status": direction.get("narrative_status"),
+            "pen_name": str(direction.get("pen_name") or "").strip(),
         },
     }
 
@@ -304,6 +352,9 @@ def chapter_get(workspace_id: str, ch: int, book: int = 1) -> dict:
     pp = prompt_path(ws, book, ch)
     if pp.exists():
         prompt = pp.read_text(encoding="utf-8")
+    from factory.engine.lib.prose_sanitize import find_markdown_leaks
+
+    leaks = find_markdown_leaks(text or "") if text else []
     return {
         "chapter": ch,
         "status": status,
@@ -318,12 +369,150 @@ def chapter_get(workspace_id: str, ch: int, book: int = 1) -> dict:
         "reason_summary": block["reason_summary"],
         "issues": block["issues"],
         "qc": block["qc"],
+        "markdown_leaks": leaks,
+        "markdown_advisory": True,
+    }
+
+
+def _chapter_writable_path(
+    workspace_id: str, book: int, ch: int
+) -> tuple[Path | None, str, bool]:
+    """Path to rewrite in place. Returns (path, source, is_catalog_md)."""
+    ws = workspace_dir(workspace_id)
+    cat = _catalog_chapter_path(workspace_id, book, ch)
+    if cat and cat.exists():
+        return cat, "catalog", True
+    for bucket in ("ready", "needs_review", "needs_fix", "draft"):
+        p = chapter_pipeline_path(ws, book, bucket, ch)
+        if p.exists():
+            return p, bucket, False
+    return None, "none", False
+
+
+def _append_markdown_fix_log(ws: Path, book: int, entry: dict) -> Path:
+    log_dir = book_workspace_dir(ws, book) / "pipeline"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    path = log_dir / "markdown_fix_log.jsonl"
+    import json
+
+    row = {"ts": datetime.now(timezone.utc).isoformat(), **entry}
+    with path.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    return path
+
+
+def chapter_markdown_fix(
+    workspace_id: str,
+    ch: int,
+    book: int = 1,
+    *,
+    mode: str,
+    hit_id: int | None = None,
+    apply_all: bool = False,
+) -> dict:
+    """Operator-chosen markdown leak fix. Never auto-runs; never blocks promote."""
+    from factory.engine.lib.catalog import (
+        build_frontmatter,
+        parse_markdown,
+        safe_print,
+    )
+    from factory.engine.lib.prose_sanitize import apply_markdown_leak_fix, find_markdown_leaks
+    from factory.engine.paths import catalog_series_dir
+
+    ws = workspace_dir(workspace_id)
+    path, source, is_catalog = _chapter_writable_path(workspace_id, book, ch)
+    if path is None:
+        return {"ok": False, "error": "không có file chương để sửa"}
+
+    if is_catalog:
+        meta, body = parse_markdown(path)
+        raw = body
+    else:
+        meta = {}
+        raw = path.read_text(encoding="utf-8")
+
+    before_leaks = find_markdown_leaks(raw)
+    if not before_leaks:
+        return {
+            "ok": True,
+            "changed": False,
+            "message": "không còn markdown leak",
+            **chapter_get(workspace_id, ch, book),
+        }
+
+    hit_ids = None if apply_all else ([int(hit_id)] if hit_id is not None else None)
+    if not apply_all and hit_ids is None:
+        return {"ok": False, "error": "cần hit_id hoặc apply_all"}
+
+    new_body, changelog = apply_markdown_leak_fix(
+        raw, mode=mode, hit_ids=hit_ids, apply_all=apply_all  # type: ignore[arg-type]
+    )
+    if not changelog:
+        return {
+            "ok": False,
+            "error": f"hit_id không khớp (còn {len(before_leaks)} leak)",
+            **chapter_get(workspace_id, ch, book),
+        }
+
+    if is_catalog:
+        meta = dict(meta)
+        meta["word_count"] = word_count_vi(new_body)
+        out = build_frontmatter(meta) + "\n" + (
+            new_body if new_body.endswith("\n") else new_body + "\n"
+        )
+        path.write_text(out, encoding="utf-8")
+        spot_path = catalog_series_dir(workspace_id) / "spot_check" / path.name
+        if spot_path.exists():
+            spot_path.write_text(out, encoding="utf-8")
+    else:
+        path.write_text(new_body if new_body.endswith("\n") else new_body + "\n", encoding="utf-8")
+
+    log_path = _append_markdown_fix_log(
+        ws,
+        book,
+        {
+            "workspace": workspace_id,
+            "book": book,
+            "chapter": ch,
+            "source": source,
+            "path": str(path),
+            "mode": mode,
+            "apply_all": bool(apply_all),
+            "hit_id": hit_id,
+            "changes": changelog,
+        },
+    )
+    for c in changelog:
+        safe_print(
+            f"[markdown-fix] ch{ch:03d} {c['kind']} {mode}: "
+            f"{c['before'][:40]!r} → {c['after'][:40]!r}"
+        )
+
+    return {
+        "ok": True,
+        "changed": True,
+        "mode": mode,
+        "apply_all": bool(apply_all),
+        "changes": changelog,
+        "log": str(log_path),
+        "remaining_count": len(find_markdown_leaks(new_body)),
+        **chapter_get(workspace_id, ch, book),
     }
 
 
 def chapter_write(workspace_id: str, ch: int, book: int = 1) -> dict:
     ws = workspace_dir(workspace_id)
     direction = _load_direction(ws)
+    from factory.engine.lib.concept_canon import artifact_stale_errors
+
+    stale = [e.format() for e in artifact_stale_errors(ws)]
+    if stale:
+        return {
+            "ok": False,
+            "error": stale[0],
+            "errors": stale,
+            **pipeline_status(workspace_id, book),
+        }
     if not plan_is_approved(ws):
         return {"ok": False, "error": "plan chưa approved — chạy plan + approve-plan trước"}
     if not prompt_path(ws, book, ch).exists():
@@ -336,7 +525,8 @@ def chapter_write(workspace_id: str, ch: int, book: int = 1) -> dict:
 def chapter_approve(workspace_id: str, ch: int, book: int = 1) -> dict:
     """User đọc xong → duyệt vào catalog (kể cả needs_review).
 
-    Promote first; state catch-up is best-effort AFTER so LLM hangs never block Duyệt.
+    Promote first. Records promoted_chapters only — never bumps current_chapter
+    (that stays with state_updater + timeline/facts).
     """
     ws = workspace_dir(workspace_id)
     cat_existing = _catalog_chapter_path(workspace_id, book, ch)
@@ -394,21 +584,16 @@ def chapter_approve(workspace_id: str, ch: int, book: int = 1) -> dict:
             **meta,
         }
 
-    # Lightweight state bump only (no LLM). Full catch-up is optional offline.
+    # Promote progress only — NEVER bump current_chapter here (that is state_updater's job).
     try:
-        from factory.engine.lib.state_updater import load_state, save_state
+        from factory.engine.lib.state_updater import record_promoted_chapter
 
-        st = load_state(ws, book)
-        cur = int(st.get("current_chapter") or 0)
-        if ch > cur:
-            st["current_chapter"] = ch
-            st["current_book"] = book
-            save_state(ws, book, st)
+        record_promoted_chapter(ws, book, ch)
     except Exception as exc:
         safe_print = __import__(
             "factory.engine.lib.catalog", fromlist=["safe_print"]
         ).safe_print
-        safe_print(f"  [approve] WARN state bump failed: {exc}")
+        safe_print(f"  [approve] WARN promoted_chapters record failed: {exc}")
 
     meta = chapter_get(workspace_id, ch, book)
     return {
@@ -438,6 +623,61 @@ def run_pipeline_step(workspace_id: str, action: str, book: int = 1) -> dict:
     ws = workspace_dir(workspace_id)
     cfg = load_config()
     direction = _load_direction(ws)
+
+    from factory.engine.lib.concept_canon import artifact_stale_errors
+    from factory.engine.lib.concept_satisfiability import (
+        concept_satisfiability_errors,
+        format_satisfiability_errors,
+    )
+    from factory.engine.lib.narrative_schema import load_concept
+
+    concept = load_concept(ws)
+    sat = format_satisfiability_errors(concept_satisfiability_errors(concept))
+    stale = [e.format() for e in artifact_stale_errors(ws, concept)]
+
+    # Preflight: same codes as engine CLI
+    _sat_actions = (
+        "develop-narrative",
+        "approve-narrative",
+        "architect",
+        "plan",
+        "approve-plan",
+        "fix-plans",
+        "replan",
+        "render-prompts",
+    )
+    if action in _sat_actions and sat:
+        return {
+            "ok": False,
+            "error": sat[0],
+            "errors": sat,
+            **pipeline_status(workspace_id, book),
+        }
+    if action in (
+        "approve-narrative",
+        "plan",
+        "approve-plan",
+        "fix-plans",
+        "replan",
+        "render-prompts",
+    ) and any(e.startswith("STALE_NARRATIVE") for e in stale):
+        narr_stale = [e for e in stale if e.startswith("STALE_NARRATIVE")]
+        return {
+            "ok": False,
+            "error": narr_stale[0],
+            "errors": narr_stale,
+            **pipeline_status(workspace_id, book),
+        }
+    if action in ("approve-plan", "render-prompts") and any(
+        e.startswith("STALE_PLAN") for e in stale
+    ):
+        plan_stale = [e for e in stale if e.startswith("STALE_PLAN")]
+        return {
+            "ok": False,
+            "error": plan_stale[0],
+            "errors": plan_stale,
+            **pipeline_status(workspace_id, book),
+        }
 
     try:
         if action == "develop-narrative":
@@ -1140,6 +1380,16 @@ def start_batch_write(
                 hint = f"batch da dung o ch{prog['failed_ch']} — tat 'Dung khi QC fail' de chay het"
             return {"ok": False, "error": f"batch dang chay — {hint}", **prog}
         prog = reset_batch_lock(workspace_id)
+    from factory.engine.lib.concept_canon import artifact_stale_errors
+
+    stale = [e.format() for e in artifact_stale_errors(ws)]
+    if stale:
+        return {
+            "ok": False,
+            "error": stale[0],
+            "errors": stale,
+            **pipeline_status(workspace_id, book),
+        }
     if not plan_is_approved(ws):
         return {"ok": False, "error": "plan chua approved — chay chuan bi sach truoc"}
     direction = _load_direction(ws)
@@ -1193,6 +1443,16 @@ def start_batch_full(
         if _batch_is_active(workspace_id):
             return {"ok": False, "error": "batch dang chay — doi xong hoac bam Huy lock", **prog}
         reset_batch_lock(workspace_id)
+    from factory.engine.lib.concept_canon import artifact_stale_errors
+
+    stale = [e.format() for e in artifact_stale_errors(ws)]
+    if stale:
+        return {
+            "ok": False,
+            "error": stale[0],
+            "errors": stale,
+            **pipeline_status(workspace_id, book),
+        }
     mode = "auto" if str(write_mode).strip().lower() == "auto" else "supervised"
 
     def _full() -> None:

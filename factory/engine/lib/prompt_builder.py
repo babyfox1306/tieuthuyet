@@ -241,6 +241,23 @@ def build_chapter_prompt(
             for r in ((series_bible or {}).get("world_rules") or [])
             if str(r).strip()
         ]
+        # Prefer concept compiler over vague bible "touches the clause" rules
+        from factory.engine.lib.concept_canon import (
+            compile_chapter_canon_rules,
+            format_chapter_canon_for_prompt,
+        )
+        from factory.engine.lib.narrative_schema import load_concept
+
+        concept = load_concept(ws)
+        chapter_rules = compile_chapter_canon_rules(concept, chapter)
+        if chapter_rules.reveal_state != "none":
+            # Drop ambiguous touch-style world rules when structured pair exists
+            world_rules = [
+                r
+                for r in world_rules
+                if "touches the clause" not in r.lower()
+                and "stated identically in every chapter that touches" not in r.lower()
+            ]
         from factory.engine.lib.canon_registry import phone_only_cast_constraints
 
         locked_canon_block = render_locked_canon_block(
@@ -250,6 +267,9 @@ def build_chapter_prompt(
             world_rules=world_rules,
             supporting_constraints=phone_only_cast_constraints(ws),
         )
+        clause_block = format_chapter_canon_for_prompt(chapter_rules, lang=lang)
+        if clause_block:
+            locked_canon_block = locked_canon_block + "\n\n" + clause_block
 
     reveal_ch: int | None = None
     if ws is not None:
@@ -373,6 +393,9 @@ def build_chapter_prompt(
 
 
 def render_all_prompts(ws: Path, book: int) -> int:
+    from factory.engine.lib.concept_canon import require_fresh_plan
+
+    require_fresh_plan(ws)
     plan_path = master_plan_path(ws, book)
     if not plan_path.exists():
         raise FileNotFoundError(f"Missing {plan_path} — chạy `plan` trước")

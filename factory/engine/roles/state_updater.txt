@@ -6,7 +6,7 @@ Output **JSON ONLY** — schema đầy đủ:
 {
   "current_book": number,
   "current_chapter": number,
-  "timeline": ["sự kiện theo thứ tự"],
+  "timeline": ["ChN: sự kiện theo thứ tự — mỗi dòng BẮT ĐẦU bằng Ch{số chương}:"],
   "character_status": {
     "Tên nhân vật": {
       "location": "",

@@ -98,7 +98,10 @@ def best_effort_catch_up_state(ws: Path, book: int, target_ch: int) -> int:
         path = chapter_pipeline_path(ws, book, "ready", c)
         text = path.read_text(encoding="utf-8")
         update_state_after_pass(ws, c, text, book=book)
-    return hi
+        # Failed updater must not let later chapters advance the counter past a hole.
+        if _state_current_chapter(load_state(ws, book)) < c:
+            break
+    return _state_current_chapter(load_state(ws, book))
 
 
 def catch_up_state_before_write(ws: Path, book: int, target_ch: int) -> None:
@@ -119,6 +122,12 @@ def catch_up_state_before_write(ws: Path, book: int, target_ch: int) -> None:
             )
         text = path.read_text(encoding="utf-8")
         update_state_after_pass(ws, c, text, book=book)
+        if _state_current_chapter(load_state(ws, book)) < c:
+            raise WriteBlockedError(
+                f"Cannot write ch{target_ch}: state_updater failed at ch{c} "
+                f"(current_chapter still {_state_current_chapter(load_state(ws, book))}). "
+                "Fix state update before continuing."
+            )
 
 
 def assert_write_allowed(ws: Path, book: int, ch: int, cfg: dict | None = None) -> None:

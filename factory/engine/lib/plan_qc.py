@@ -696,7 +696,12 @@ def _concept_direction_blob(direction: dict, concept: dict) -> str:
 
 
 def romance_forbidden(direction: dict, *, ws: Path | None = None) -> bool:
-    """True when concept/direction forbids romance of any kind."""
+    """Heuristic: keyword scan of concept/direction prose.
+
+    Wrong-class for hard gates (pedagogical 'not a love interest' false positives).
+    Callers that *block* on this must treat it as advisory — see validate_plan.
+    Structured must_avoid entries and blob keywords both feed this detector.
+    """
     concept = _load_concept_for_qc(ws)
     for item in concept.get("must_avoid") or []:
         if _MUST_AVOID_FORBIDS_ROMANCE_RE.search(str(item).strip()):
@@ -704,7 +709,6 @@ def romance_forbidden(direction: dict, *, ws: Path | None = None) -> bool:
     blob = _concept_direction_blob(direction, concept)
     if _ROMANCE_FORBIDDEN_RE.search(blob):
         return True
-    # Antagonist-only male lead, explicitly not romantic.
     if re.search(
         r"\bNOT a love interest\b|"
         r"\bnot a love interest\b|"
@@ -721,14 +725,19 @@ def romance_microbeat_required(direction: dict, *, ws: Path | None = None) -> bo
     """[ROMANCE] micro-beat is OPT-IN from concept/direction — never the default.
 
     Romance workspaces signal via narrative_profile / directive / tropes.
-    Forbidden-romance or absent male lead → never required.
+    Absent male lead → never required.
+    Structured must_avoid "Romance of any kind" suppresses requirement.
+    Keyword ``romance_forbidden`` blob scan is advisory-only and does NOT gate.
     """
-    if romance_forbidden(direction, ws=ws):
-        return False
     if _male_lead_absent(None, ws):
         return False
 
     concept = _load_concept_for_qc(ws)
+    # Explicit structured must_avoid — not free-prose keyword illusion.
+    for item in concept.get("must_avoid") or []:
+        if _MUST_AVOID_FORBIDS_ROMANCE_RE.search(str(item).strip()):
+            return False
+
     profile = str(direction.get("narrative_profile") or "").strip().lower()
     if "romance" in profile:
         return True
@@ -836,15 +845,13 @@ def validate_plan(
         issues.append(f"ch{ch}:cliffhanger_weak")
 
     male_absent = _male_lead_absent(bible, ws)
-    romance_off = romance_forbidden(direction, ws=ws) or male_absent
-    if romance_off:
-        if _forbidden_romance_when_disabled(plan):
-            code = (
-                "forbidden_romance_when_no_male_lead"
-                if male_absent
-                else "forbidden_romance_when_concept_forbids"
-            )
-            issues.append(f"ch{ch}:{code}")
+    if male_absent and _forbidden_romance_when_disabled(plan):
+        # Absent ML inventing romance is structural — still hard-fail.
+        issues.append(f"ch{ch}:forbidden_romance_when_no_male_lead")
+    elif romance_forbidden(direction, ws=ws) and _forbidden_romance_when_disabled(plan):
+        # Keyword scan of concept prose (author_directive/notes/must_avoid blob) —
+        # wrong-class heuristic; advisory forever (same lesson as missing_quotes).
+        issues.append(f"ch{ch}:advisory:forbidden_romance_when_concept_forbids")
     elif romance_microbeat_required(direction, ws=ws):
         if not plan.get("locked") and not _has_romance_micro_beat(plan):
             issues.append(f"ch{ch}:missing_romance_micro_beat")
@@ -869,6 +876,15 @@ def validate_plan(
     return issues
 
 
+def is_advisory_plan_issue(issue: str) -> bool:
+    """True for wrong-class heuristics that must never block approve-plan."""
+    return ":advisory:" in str(issue)
+
+
+def blocking_plan_issues(issues: list[str]) -> list[str]:
+    return [i for i in issues if not is_advisory_plan_issue(i)]
+
+
 def validate_all_plans(
     plans: list[dict],
     direction: dict,
@@ -876,14 +892,19 @@ def validate_all_plans(
     bible: dict | None = None,
     ws: Path | None = None,
 ) -> dict[int, list[str]]:
+    """Return blocking plan QC issues only (advisory codes omitted)."""
     out: dict[int, list[str]] = {}
     for p in plans:
         ch = p.get("chapter", 0)
-        issues = validate_plan(p, direction, bible=bible, all_plans=plans, ws=ws)
+        issues = blocking_plan_issues(
+            validate_plan(p, direction, bible=bible, all_plans=plans, ws=ws)
+        )
         if issues:
             out[ch] = issues
     for ch, issues in validate_payoff_uniqueness(plans, ws=ws).items():
-        out.setdefault(ch, []).extend(issues)
+        blocked = blocking_plan_issues(issues)
+        if blocked:
+            out.setdefault(ch, []).extend(blocked)
     return out
 
 

@@ -27,7 +27,7 @@ from factory.engine.paths import bible_path, load_config, workspace_dir
 
 from factory.ui import factory_workflow
 
-UI_VERSION = "2026-07-12b"
+UI_VERSION = "2026-07-15-mdfix"
 
 _workflow_lock = __import__("threading").Lock()
 _workflow_cache = None  # type: ignore[var-annotated]
@@ -144,6 +144,7 @@ def create_workspace(body: dict) -> dict:
     lang = normalize_language(body.get("target_language") or body.get("language") or "en")
     mode = (body.get("mode") or "blank").strip().lower()
     template_id = (body.get("template") or body.get("from_workspace") or "ceo-contract").strip()
+    pen_name = (body.get("pen_name") or body.get("author") or "").strip() or None
 
     try:
         if mode == "template":
@@ -156,6 +157,7 @@ def create_workspace(body: dict) -> dict:
                 template_id=template_id,
                 copy_narrative=body.get("copy_narrative", True),
                 copy_concept=body.get("copy_concept", True),
+                pen_name=pen_name,
             )
         else:
             tc = body.get("total_chapters")
@@ -164,6 +166,7 @@ def create_workspace(body: dict) -> dict:
                 title=title,
                 target_language=lang,
                 total_chapters=int(tc) if tc is not None else None,
+                pen_name=pen_name,
             )
     except FileExistsError as exc:
         return {"ok": False, "error": str(exc)}
@@ -193,20 +196,38 @@ def concept_to_json(ws_id: str) -> dict:
     lang = normalize_language(
         concept.get("target_language") or direction.get("target_language") or "vi"
     )
+    from factory.engine.lib.concept_canon import artifact_stale_errors, concept_digest
+    from factory.engine.lib.concept_satisfiability import (
+        concept_satisfiability_errors,
+        format_satisfiability_errors,
+    )
+    from factory.engine.lib.narrative_schema import concept_content_errors
+
+    sat = format_satisfiability_errors(concept_satisfiability_errors(concept))
+    stale = [e.format() for e in artifact_stale_errors(ws, concept)]
+    content = concept_content_errors(concept)
+    full = concept_validation_errors(concept)
 
     return {
         "workspace": ws_id,
         "concept": concept,
         "target_language": lang,
         "languages": SUPPORTED_LANGUAGES,
+        "pen_name": str(direction.get("pen_name") or "").strip(),
+        "last_pen_name": str(load_config().get("last_pen_name") or "").strip(),
         "direction": {
             "target_language": lang,
+            "pen_name": str(direction.get("pen_name") or "").strip(),
             "narrative_profile": direction.get("narrative_profile", ""),
             "narrative_status": direction.get("narrative_status", "draft"),
             "publish_strategy": direction.get("publish_strategy", ""),
         },
-        "validation_errors": concept_validation_errors(concept),
-        "ready": len(concept_validation_errors(concept)) == 0,
+        "validation_errors": full,
+        "content_errors": content,
+        "satisfiability_errors": sat,
+        "stale_errors": stale,
+        "concept_digest": concept_digest(concept) if concept else "",
+        "ready": len(full) == 0,
     }
 
 
@@ -217,20 +238,49 @@ def save_concept(ws_id: str, body: dict, *, mark_ready: bool = False) -> dict:
     lang = normalize_language(body.get("target_language"))
     _sync_workspace_language(ws, lang)
 
-    data = {
-        "concept_status": "ready" if mark_ready else "draft",
-        "target_language": lang,
-        "title": body.get("title", "") or "",
-        "logline": body.get("logline", "") or "",
-        "author_directive": body.get("author_directive", "") or "",
-        "surface_plot": body.get("surface_plot", "") or "",
-        "true_plot": body.get("true_plot", "") or "",
-        "must_include": body.get("must_include") or [],
-        "must_avoid": body.get("must_avoid") or [],
-        "ending_book1": body.get("ending_book1", "") or "",
-        "hook_book2": body.get("hook_book2", "") or "",
-        "notes": body.get("notes", "") or "",
-    }
+    if "pen_name" in body:
+        from factory.engine.lib.workspace_metadata import write_pen_name
+
+        write_pen_name(ws, body.get("pen_name") or "")
+
+    existing = load_concept(ws)
+    data = dict(existing) if existing else {}
+    data.update(
+        {
+            "concept_status": "ready" if mark_ready else "draft",
+            "target_language": lang,
+            "title": body.get("title", "") or "",
+            "logline": body.get("logline", "") or "",
+            "author_directive": body.get("author_directive", "") or "",
+            "surface_plot": body.get("surface_plot", "") or "",
+            "true_plot": body.get("true_plot", "") or "",
+            "must_include": body.get("must_include") or [],
+            "must_avoid": body.get("must_avoid") or [],
+            "ending_book1": body.get("ending_book1", "") or "",
+            "hook_book2": body.get("hook_book2", "") or "",
+            "notes": body.get("notes", "") or "",
+        }
+    )
+    # Structured clause schema (optional)
+    if "concept_schema_version" in body:
+        try:
+            data["concept_schema_version"] = int(body.get("concept_schema_version") or 2)
+        except (TypeError, ValueError):
+            data["concept_schema_version"] = 2
+    if "forbidden_phrases" in body:
+        data["forbidden_phrases"] = body.get("forbidden_phrases") or []
+    if "surface_order" in body:
+        so = body.get("surface_order")
+        if so:
+            data["surface_order"] = so
+        else:
+            data.pop("surface_order", None)
+    if "binding_condition" in body:
+        bc = body.get("binding_condition")
+        if bc:
+            data["binding_condition"] = bc
+        else:
+            data.pop("binding_condition", None)
 
     if not mark_ready:
         path = ws / "concept.yaml"
@@ -327,6 +377,7 @@ class Handler(BaseHTTPRequestHandler):
                     "workspaces": list_workspaces(),
                     "languages": SUPPORTED_LANGUAGES,
                     "default_workspace": cfg.get("default_workspace", ""),
+                    "last_pen_name": str(cfg.get("last_pen_name") or "").strip(),
                 },
             )
             return
@@ -549,6 +600,28 @@ class Handler(BaseHTTPRequestHandler):
                 self._json(500, {"error": str(exc)})
             return
 
+        if path.startswith("/api/pipeline/") and path.endswith("/pen-name"):
+            ws_id = path[len("/api/pipeline/") : -len("/pen-name")].strip("/")
+            if not ws_id or "/" in ws_id:
+                self._json(400, {"error": "invalid workspace"})
+                return
+            try:
+                from factory.engine.lib.workspace_metadata import write_pen_name
+
+                name = write_pen_name(workspace_dir(ws_id), body.get("pen_name") or "")
+                self._json(
+                    200,
+                    {
+                        "ok": True,
+                        "workspace": ws_id,
+                        "pen_name": name,
+                        **_workflow().pipeline_status(ws_id, int(body.get("book", 1))),
+                    },
+                )
+            except Exception as exc:
+                self._json(500, {"error": str(exc)})
+            return
+
         if path.startswith("/api/pipeline/") and path.endswith("/step"):
             ws_id = path[len("/api/pipeline/") : -len("/step")].strip("/")
             action = body.get("action", "")
@@ -576,6 +649,15 @@ class Handler(BaseHTTPRequestHandler):
                         result = _workflow().chapter_approve(ws_id, ch, book)
                     elif action == "discard":
                         result = _workflow().chapter_discard(ws_id, ch, book)
+                    elif action == "markdown-fix":
+                        result = _workflow().chapter_markdown_fix(
+                            ws_id,
+                            ch,
+                            book,
+                            mode=str(body.get("mode") or ""),
+                            hit_id=body.get("hit_id"),
+                            apply_all=bool(body.get("apply_all")),
+                        )
                     else:
                         self._json(400, {"error": f"unknown action: {action}"})
                         return

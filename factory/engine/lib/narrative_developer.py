@@ -51,11 +51,26 @@ def _author_directive(concept: dict) -> str:
         parts.append(f"Logline: {concept['logline']}")
     if concept.get("author_directive"):
         parts.append(str(concept["author_directive"]).strip())
-    for key in ("surface_plot", "true_plot", "must_include", "must_avoid", "ending_book1", "hook_book2"):
+    for key in (
+        "surface_plot",
+        "true_plot",
+        "must_include",
+        "must_avoid",
+        "ending_book1",
+        "hook_book2",
+        "surface_order",
+        "binding_condition",
+        "forbidden_phrases",
+        "concept_schema_version",
+    ):
         val = concept.get(key)
         if val:
             if isinstance(val, list):
                 parts.append(f"{key}:\n- " + "\n- ".join(str(x) for x in val))
+            elif isinstance(val, dict):
+                import json
+
+                parts.append(f"{key}:\n{json.dumps(val, ensure_ascii=False, indent=2)}")
             else:
                 parts.append(f"{key}: {val}")
     return "\n\n".join(parts) if parts else "(chưa có chỉ đạo — điền concept.yaml)"
@@ -187,4 +202,13 @@ def develop_narrative(workspace_id: str, *, pass_name: str = "all") -> list[Path
     from factory.engine.lib.workspace_metadata import sync_narrative_profile_to_direction
 
     sync_narrative_profile_to_direction(ws)
+
+    from factory.engine.lib.concept_canon import (
+        concept_digest,
+        sync_direction_digests,
+        write_narrative_meta,
+    )
+
+    write_narrative_meta(ws, source_concept_digest=concept_digest(concept))
+    sync_direction_digests(ws)
     return written

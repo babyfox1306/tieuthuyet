@@ -43,6 +43,7 @@
   "writer_short_retries": 2,
   "writer_length_max_retries": 3,
   "writer_content_max_retries": 2,
+  "writer_llm_qc_max_retries": 2,
   "writer_auto_max_retries": 10,
   "write_mode": "parallel",
   "story_so_far_max_chapters": 5,

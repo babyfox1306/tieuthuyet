@@ -40,12 +40,40 @@ def normalize_typographic_quotes(text: str) -> str:
     return text.translate(_TYPOGRAPHIC_DOUBLE)
 
 
+# Single-quoted dialogue opener/closer that is NOT a contraction/possessive apostrophe.
+# Body may contain I'll / Rook's — apostrophe+letter stays inside the span.
+_SINGLE_QUOTED_DIALOGUE_RE = re.compile(
+    r"(?<![A-Za-z0-9])'"
+    r"(?P<body>(?:[^'\n]|'(?=[A-Za-z]))+)"
+    r"'(?![A-Za-z0-9])"
+)
+
+
+def normalize_single_quoted_dialogue(text: str) -> str:
+    """Convert ASCII single-quoted dialogue spans to double quotes.
+
+    Preserves apostrophes in contractions/possessives (I'll, Rook's).
+    Call after normalize_typographic_quotes so curly singles are already ASCII.
+    """
+    if not text or "'" not in text:
+        return text
+
+    def _repl(m: re.Match[str]) -> str:
+        return f'"{m.group("body")}"'
+
+    return _SINGLE_QUOTED_DIALOGUE_RE.sub(_repl, text)
+
+
+def normalize_quotes(text: str) -> str:
+    """Full quote normalize: typographic → ASCII, then single-quoted dialogue → \"…\"."""
+    return normalize_single_quoted_dialogue(normalize_typographic_quotes(text))
+
+
 def strip_dialogue_for_pov(text: str) -> str:
     """Remove quoted dialogue spans before scanning for first-person narration."""
-    body = normalize_typographic_quotes(text)
+    body = normalize_quotes(text)
     body = re.sub(r"^#.*$", "", body, flags=re.M)
     body = re.sub(r'"[^"\n]*"', " ", body)
-    body = re.sub(r"'[^'\n]*'", " ", body)
     return body
 
 

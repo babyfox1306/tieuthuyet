@@ -142,9 +142,9 @@ def _has_quote_mark(s: str) -> bool:
 
 
 def _normalize_quotes(text: str) -> str:
-    from factory.engine.lib.canon_prose_qc import normalize_typographic_quotes
+    from factory.engine.lib.canon_prose_qc import normalize_quotes
 
-    return normalize_typographic_quotes(text)
+    return normalize_quotes(text)
 
 
 def _text_outside_quotes(text: str) -> str:

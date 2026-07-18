@@ -160,6 +160,11 @@
           <input type="text" id="title" placeholder="VD: Hợp đồng có giá" />
         </div>
         <div class="field">
+          <h3>Pen name (bút danh / author EPUB)</h3>
+          <div class="hint">Ghi vào direction.yaml → dc:creator. Cùng pen name cho cả line được nhớ làm mặc định.</div>
+          <input type="text" id="pen_name" placeholder="VD: Reynard Frost" />
+        </div>
+        <div class="field">
           <h3>Logline</h3>
           <div class="hint">1–2 câu hook — độc giả đọc xong muốn mở chương 1</div>
           <textarea id="logline"></textarea>
@@ -214,9 +219,48 @@
           </div>
         </div>
         <div class="field">
+          <h3>Forbidden phrases (máy đọc)</h3>
+          <div class="hint">Literal phrases cấm trong logline/plots/directive — mỗi dòng một cụm.</div>
+          <textarea id="forbidden_phrases" placeholder="if I remember&#10;if you remember"></textarea>
+        </div>
+        <div class="field">
           <h3>Ghi chú thêm</h3>
           <textarea id="notes"></textarea>
         </div>
+      </section>
+
+      <section>
+        <h2>Surface order / Binding condition (optional pair)</h2>
+        <div class="hint">Cả hai hoặc không. Cùng event_id. reveal_chapter: cấm trước ch N, được từ ch N.</div>
+        <div class="row2">
+          <div class="field">
+            <h3>Surface — event_id</h3>
+            <input type="text" id="so_event_id" placeholder="sloane_termination_at_sunrise" />
+          </div>
+          <div class="field">
+            <h3>Binding — event_id (phải khớp)</h3>
+            <input type="text" id="bc_event_id" placeholder="sloane_termination_at_sunrise" />
+          </div>
+        </div>
+        <div class="field">
+          <h3>Surface exact_text</h3>
+          <input type="text" id="so_exact_text" placeholder="CLIENT TERMINATION AT SUNRISE" />
+        </div>
+        <div class="row2">
+          <div class="field">
+            <h3>visible_from_chapter</h3>
+            <input type="text" id="so_visible_from" placeholder="1" />
+          </div>
+          <div class="field">
+            <h3>binding reveal_chapter</h3>
+            <input type="text" id="bc_reveal_chapter" placeholder="10" />
+          </div>
+        </div>
+        <div class="field">
+          <h3>Binding canonical_text</h3>
+          <textarea id="bc_canonical_text" placeholder="Lucian must kill Sloane at sunrise only if Rook restores the obedient identity."></textarea>
+        </div>
+        <input type="hidden" id="concept_schema_version" value="2" />
       </section>
 
       <div class="toolbar">
@@ -239,9 +283,14 @@
     };
 
     function formData() {
-      return {
+      const soEid = $("so_event_id").value.trim();
+      const soText = $("so_exact_text").value.trim();
+      const bcEid = $("bc_event_id").value.trim();
+      const bcText = $("bc_canonical_text").value.trim();
+      const payload = {
         target_language: $("target_language").value,
         title: $("title").value.trim(),
+        pen_name: $("pen_name").value.trim(),
         logline: $("logline").value.trim(),
         author_directive: $("author_directive").value.trim(),
         surface_plot: $("surface_plot").value.trim(),
@@ -250,14 +299,36 @@
         hook_book2: $("hook_book2").value.trim(),
         must_include: linesToList($("must_include").value),
         must_avoid: linesToList($("must_avoid").value),
+        forbidden_phrases: linesToList($("forbidden_phrases").value),
         notes: $("notes").value.trim(),
+        concept_schema_version: parseInt($("concept_schema_version").value || "2", 10),
       };
+      if (soEid || soText || bcEid || bcText) {
+        payload.surface_order = {
+          event_id: soEid || bcEid,
+          exact_text: soText,
+          visible_from_chapter: parseInt($("so_visible_from").value || "1", 10),
+          appears_unconditional: true,
+        };
+        payload.binding_condition = {
+          event_id: bcEid || soEid,
+          canonical_text: bcText,
+          reveal_chapter: parseInt($("bc_reveal_chapter").value || "10", 10),
+          exact_wording_required_when_explicitly_stated: true,
+        };
+      } else {
+        payload.surface_order = null;
+        payload.binding_condition = null;
+      }
+      return payload;
     }
 
-    function fillForm(c) {
+    function fillForm(c, meta) {
       c = c || {};
+      meta = meta || {};
       if (c.target_language) $("target_language").value = c.target_language;
       $("title").value = c.title || "";
+      $("pen_name").value = meta.pen_name || c.pen_name || meta.last_pen_name || "";
       $("logline").value = c.logline || "";
       $("author_directive").value = c.author_directive || "";
       $("surface_plot").value = c.surface_plot || "";
@@ -266,7 +337,17 @@
       $("hook_book2").value = c.hook_book2 || "";
       $("must_include").value = listToLines(c.must_include);
       $("must_avoid").value = listToLines(c.must_avoid);
+      $("forbidden_phrases").value = listToLines(c.forbidden_phrases);
       $("notes").value = c.notes || "";
+      $("concept_schema_version").value = c.concept_schema_version || 2;
+      const so = c.surface_order || {};
+      const bc = c.binding_condition || {};
+      $("so_event_id").value = so.event_id || "";
+      $("so_exact_text").value = so.exact_text || "";
+      $("so_visible_from").value = so.visible_from_chapter || "";
+      $("bc_event_id").value = bc.event_id || "";
+      $("bc_canonical_text").value = bc.canonical_text || "";
+      $("bc_reveal_chapter").value = bc.reveal_chapter || "";
     }
 
     function showStatus(msg, kind, errors) {
@@ -320,12 +401,13 @@
     async function loadConcept() {
       const ws = $("workspace").value;
       const data = await api(`/api/concept/${ws}`);
-      fillForm(data.concept);
+      fillForm(data.concept, data);
       const lang = data.target_language || data.direction?.target_language || "vi";
       $("target_language").value = lang;
       updateLangHint(lang);
       const d = data.direction || {};
-      $("meta").textContent = `profile: ${d.narrative_profile || "—"} · narrative: ${d.narrative_status || "draft"} · publish: ${d.publish_strategy || "—"}`;
+      const pen = data.pen_name || d.pen_name || "";
+      $("meta").textContent = `pen: ${pen || "(empty)"} · profile: ${d.narrative_profile || "—"} · narrative: ${d.narrative_status || "draft"} · publish: ${d.publish_strategy || "—"}`;
       if (data.validation_errors && data.validation_errors.length) {
         showStatus("Chưa sẵn sàng cho develop-narrative:", "warn", data.validation_errors);
       } else if (data.concept?.concept_status === "ready") {

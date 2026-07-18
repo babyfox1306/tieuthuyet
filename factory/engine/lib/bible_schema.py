@@ -285,7 +285,30 @@ def validate_bible(bible: dict) -> list[str]:
     wr = bible.get("world_rules")
     if not isinstance(wr, list) or len(wr) < 1:
         errors.append("empty:world_rules")
+    else:
+        errors.extend(world_rules_ambiguous_touch_errors(wr))
 
+    return errors
+
+
+# Substrings only — no fuzzy / no LLM. Same code family as concept SAT_AMBIGUOUS_TOUCH_RULE.
+_WORLD_RULE_TOUCH_SUBSTRINGS = (
+    "touches the clause",
+    "every chapter that touches",
+)
+
+
+def world_rules_ambiguous_touch_errors(world_rules: list[Any]) -> list[str]:
+    """Fail bible world_rules that reintroduce ambiguous chapter-touch wording."""
+    errors: list[str] = []
+    for i, rule in enumerate(world_rules):
+        text = str(rule).lower()
+        for needle in _WORLD_RULE_TOUCH_SUBSTRINGS:
+            if needle in text:
+                errors.append(
+                    f"SAT_AMBIGUOUS_TOUCH_RULE: world_rules[{i}] contains {needle!r}"
+                )
+                break
     return errors
 
 
@@ -294,7 +317,7 @@ def render_bible_block(
     *,
     lang: str = "vi",
     reveal_chapter: int | None = None,
-    chapter: int | None = None,
+    chapter: int | str | None = None,
 ) -> str:
     """Render character bible block for Writer prompts — đọc từ series.json.
 
@@ -341,6 +364,26 @@ def render_bible_block(
             "Do not spoil or invent the answer.]"
         )
 
+    _CH_RE = re.compile(r"(?i)^\s*ch\s*(\d{1,4})\s*$")
+
+    def _chapter_int(value: Any) -> int | None:
+        if value is None:
+            return None
+        if isinstance(value, (int, float)):
+            try:
+                return int(value)
+            except (TypeError, ValueError):
+                return None
+        s = str(value).strip()
+        if not s:
+            return None
+        if s.isdigit():
+            return int(s)
+        m = _CH_RE.match(s)
+        if m:
+            return int(m.group(1))
+        return None
+
     def fmt_lead(lead: dict) -> str:
         tics = ", ".join(str(t) for t in (lead.get("tics") or []))
         boundary = lead.get("boundary", "")
@@ -382,14 +425,12 @@ def render_bible_block(
     cm = bible.get("central_mystery", {})
     if cm:
         reveal = reveal_chapter if reveal_chapter is not None else cm.get("reveal_chapter", "?")
-        try:
-            reveal_int = int(reveal)
-        except (TypeError, ValueError):
-            reveal_int = None
+        reveal_int = _chapter_int(reveal)
+        chapter_int = _chapter_int(chapter)
         redact = (
-            chapter is not None
+            chapter_int is not None
             and reveal_int is not None
-            and int(chapter) < reveal_int
+            and chapter_int < reveal_int
         )
         lines.extend(
             [

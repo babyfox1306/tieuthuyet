@@ -47,6 +47,8 @@ def write_writer_payload_artifact(
     source_versions: dict[str, str | None],
     output: str | None,
     error: str | None = None,
+    retry_reason_source: str | None = None,
+    qc_result_before_retry: dict[str, Any] | None = None,
 ) -> None:
     """Write payloads/ch_NNN_attempt_M.json. Never raises into the write path."""
     try:
@@ -65,6 +67,10 @@ def write_writer_payload_artifact(
             "output": output,
             "error": error,
         }
+        if retry_reason_source:
+            payload["retry_reason_source"] = retry_reason_source
+        if qc_result_before_retry is not None:
+            payload["qc_result_before_retry"] = qc_result_before_retry
         path.write_text(
             json.dumps(payload, ensure_ascii=False, indent=2),
             encoding="utf-8",

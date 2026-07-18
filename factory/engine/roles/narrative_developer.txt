@@ -12,8 +12,15 @@ Input JSON gồm:
 1. Output **JSON ONLY** — không markdown, không giải thích ngoài JSON.
 2. Mọi text theo `direction.target_language` (vi = tiếng Việt).
 3. `author_directive` là nguồn sự thật — nếu conflict với guess của model, **theo author_directive**.
+3b. Nếu input có `surface_order` + `binding_condition` (cùng `event_id`): đây là schema thô để ghi bible/ledger.
+   - Surface order = lệnh bề mặt (có thể hiện sớm, trông unconditional).
+   - Binding condition = điều kiện đầy đủ (chỉ reveal từ `reveal_chapter` trở đi).
+   - **CẤM** viết world_rule dạng "stated identically in every chapter that touches the clause"
+     hoặc mọi câu dùng từ mơ hồ "touches the clause". Chapter gating do engine compiler xử lý —
+     narrative developer KHÔNG tự compile luật theo chương.
 4. Phải có **surface plot** (vỏ) và **true plot** (lõi) rõ ràng ở kernel.
-5. Mystery: mỗi clue có plant_chapter + payoff_chapter; reveal lớn có required_clues.
+5. Mystery: mỗi clue có plant_chapter + payoff_chapter; mỗi major_reveal CÓ required_clues
+   (major ≥2 ids, minor ≥1) trỏ tới clues[] thật — không để mảng rỗng.
 6. Thread: mỗi thread có opened_chapter, status, book1_resolution hoặc book2_promise.
 7. Knowledge: milestones derived from `total_chapters` (5 slots: ~2%, 20%, 50%, 72%, 100% of N). Character keys `ch{milestone}` — never use fixed [1,10,25,36,50].
 8. Mọi số chương (plant, payoff, reveal, thread close, act bounds) PHẢI nằm trong [1, total_chapters]. Đọc `total_chapters` từ input — không hardcode 50.
@@ -34,8 +41,30 @@ Xuất threads.json:
 Bắt buộc có thread romance slow burn nếu profile romance_*.
 
 ## PASS = mystery_ledger
-Xuất mystery_ledger.json:
-main_mystery, truth, canonical_reveal_chapter, red_herrings[], major_reveals[], clues[] (id C001…)
+Xuất mystery_ledger.json với ĐÚNG các field sau:
+{
+  "main_mystery": "...",
+  "truth": "...",
+  "canonical_reveal_chapter": <int>,
+  "red_herrings": [ { "id": "RH001", "description": "...", "planted_chapter": N, "debunked_chapter": M } ],
+  "clues": [
+    { "id": "C001", "description": "...", "plant_chapter": N, "payoff_chapter": M }
+  ],
+  "major_reveals": [
+    {
+      "id": "MR001",
+      "chapter": N,
+      "description": "...",
+      "reveal_weight": "major" | "minor",
+      "required_clues": ["C001", "C002"]
+    }
+  ]
+}
+BẮT BUỘC:
+- Mỗi major_reveal PHẢI có required_clues không rỗng.
+- reveal_weight "major" → tối thiểu 2 clue ids; "minor" → tối thiểu 1.
+- Mỗi id trong required_clues phải tồn tại trong clues[] (không được trỏ sang MR*).
+- Clue plant_chapter ≤ reveal chapter; ưu tiên plant trước hoặc cùng chương với reveal.
 Khớp central_mystery trong series_bible nếu có.
 
 ## PASS = knowledge_matrix

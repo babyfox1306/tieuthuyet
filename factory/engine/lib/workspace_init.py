@@ -65,6 +65,7 @@ def init_blank_workspace(
     title: str = "",
     target_language: str = "en",
     total_chapters: int | None = None,
+    pen_name: str | None = None,
 ) -> Path:
     """New story — empty concept only. Chapter count comes from concept when ready."""
     err = validate_workspace_id(new_id)
@@ -83,8 +84,13 @@ def init_blank_workspace(
         yaml.dump(concept, allow_unicode=True, default_flow_style=False, sort_keys=False),
         encoding="utf-8",
     )
-    _write_default_direction(dst, new_id, total_chapters=total_chapters)
+    _write_default_direction(dst, new_id, total_chapters=total_chapters, pen_name=pen_name)
     _write_default_manifest(dst, new_id)
+    from factory.engine.lib.workspace_metadata import remember_last_pen_name
+
+    name = str(pen_name or "").strip()
+    if name:
+        remember_last_pen_name(name)
     return dst
 
 
@@ -94,6 +100,7 @@ def init_workspace_from_template(
     template_id: str = "ceo-contract",
     copy_narrative: bool = True,
     copy_concept: bool = True,
+    pen_name: str | None = None,
 ) -> Path:
     """Create workspace with concept + narrative only. No series.json, plans, or locked canon."""
     err = validate_workspace_id(new_id)
@@ -116,18 +123,32 @@ def init_workspace_from_template(
             for f in narr_src.glob("*.json"):
                 shutil.copy2(f, dst / "bible" / "narrative" / f.name)
 
-    _write_default_direction(dst, new_id)
+    _write_default_direction(dst, new_id, pen_name=pen_name)
     _write_default_manifest(dst, new_id)
+    from factory.engine.lib.workspace_metadata import remember_last_pen_name
+
+    name = str(pen_name or "").strip()
+    if name:
+        remember_last_pen_name(name)
     return dst
 
 
-def _write_default_direction(ws: Path, ws_id: str, *, total_chapters: int | None = None) -> None:
+def _write_default_direction(
+    ws: Path,
+    ws_id: str,
+    *,
+    total_chapters: int | None = None,
+    pen_name: str | None = None,
+) -> None:
     concept = {}
     cp = ws / "concept.yaml"
     if cp.exists():
         concept = yaml.safe_load(cp.read_text(encoding="utf-8")) or {}
     lang = concept.get("target_language") or "en"
-    from factory.engine.lib.workspace_metadata import parse_chapter_count_from_concept
+    from factory.engine.lib.workspace_metadata import (
+        last_pen_name_default,
+        parse_chapter_count_from_concept,
+    )
 
     from_notes = parse_chapter_count_from_concept(concept)
     total = from_notes or total_chapters
@@ -136,9 +157,10 @@ def _write_default_direction(ws: Path, ws_id: str, *, total_chapters: int | None
     explicit, steamy = spice_chapter_lists(total, spice) if total else ([], [])
     profile = resolve_narrative_profile(ws, concept)
     goal = default_goal_for_profile(profile, lang)
+    author = str(pen_name if pen_name is not None else last_pen_name_default() or "").strip()
     data = {
         "id": ws_id,
-        "pen_name": "",
+        "pen_name": author,
         "target_language": lang,
         "publish_strategy": "kdp_ku_exclusive",
         "narrative_status": "draft",

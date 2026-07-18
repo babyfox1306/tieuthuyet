@@ -23,6 +23,7 @@ def _out(msg: str) -> None:
 
 CONCEPT_TEMPLATE = """# CHỈ ĐẠO CÂU CHUYỆN — BẠN ĐIỀN, MÁY KHÔNG TỰ ĐOÁN
 concept_status: draft
+concept_schema_version: 2
 target_language: vi
 
 title: ""
@@ -36,6 +37,22 @@ true_plot: ""
 
 must_include: []
 must_avoid: []
+
+# Optional mystery clause pair (both or neither). Same event_id required.
+# reveal_chapter: N => forbidden for ch < N; available from ch N.
+# surface_order:
+#   event_id: example_event
+#   exact_text: "SURFACE ORDER TEXT"
+#   visible_from_chapter: 1
+#   appears_unconditional: true
+# binding_condition:
+#   event_id: example_event
+#   canonical_text: "Full binding condition exact wording."
+#   reveal_chapter: 10
+#   exact_wording_required_when_explicitly_stated: true
+#
+# Machine-readable bans (deterministic gate). must_avoid stays for humans/LLM.
+forbidden_phrases: []
 
 ending_book1: ""
 hook_book2: ""

@@ -1,4 +1,4 @@
-"""Romance micro-beat in plan_qc is opt-in — horror / must_avoid must not require it."""
+"""Romance micro-beat in plan_qc is opt-in — keyword forbid is advisory only."""
 
 from __future__ import annotations
 
@@ -9,8 +9,10 @@ from pathlib import Path
 import yaml
 
 from factory.engine.lib.plan_qc import (
+    is_advisory_plan_issue,
     romance_forbidden,
     romance_microbeat_required,
+    validate_all_plans,
     validate_plan,
 )
 
@@ -40,7 +42,8 @@ def _minimal_plan(*, chapter: int = 6, with_romance: bool = False) -> dict:
 
 
 class RomanceOptInTests(unittest.TestCase):
-    def test_forbidden_concept_skips_romance_requirement(self) -> None:
+    def test_forbidden_concept_skips_hard_block_on_keyword(self) -> None:
+        """Keyword romance_forbidden may fire, but must not require romance either."""
         with tempfile.TemporaryDirectory() as tmp:
             ws = Path(tmp)
             (ws / "concept.yaml").write_text(
@@ -77,6 +80,7 @@ class RomanceOptInTests(unittest.TestCase):
                 "spice_explicit_chapters": [],
             }
             self.assertTrue(romance_forbidden(direction, ws=ws))
+            # No romance in profile → microbeat not required
             self.assertFalse(romance_microbeat_required(direction, ws=ws))
 
             issues = validate_plan(_minimal_plan(with_romance=False), direction, ws=ws)
@@ -122,7 +126,6 @@ class RomanceOptInTests(unittest.TestCase):
                 "spice_steamy_chapters": [8],
                 "spice_explicit_chapters": [3],
             }
-            self.assertFalse(romance_forbidden(direction, ws=ws))
             self.assertTrue(romance_microbeat_required(direction, ws=ws))
 
             missing = validate_plan(_minimal_plan(with_romance=False), direction, ws=ws)
@@ -136,7 +139,7 @@ class RomanceOptInTests(unittest.TestCase):
                 ok,
             )
 
-    def test_forbidden_workspace_flags_invented_romance(self) -> None:
+    def test_keyword_forbid_is_advisory_not_blocking(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             ws = Path(tmp)
             (ws / "concept.yaml").write_text(
@@ -151,10 +154,50 @@ class RomanceOptInTests(unittest.TestCase):
                 "spice_default": 1,
                 "spice_level": 1,
             }
-            issues = validate_plan(_minimal_plan(with_romance=True), direction, ws=ws)
-            self.assertTrue(
-                any("forbidden_romance_when_concept_forbids" in i for i in issues),
-                issues,
+            raw = validate_plan(_minimal_plan(with_romance=True), direction, ws=ws)
+            adv = [i for i in raw if "forbidden_romance_when_concept_forbids" in i]
+            self.assertTrue(adv, raw)
+            self.assertTrue(all(is_advisory_plan_issue(i) for i in adv), adv)
+            # approve-plan path uses validate_all_plans → advisory stripped
+            blocked = validate_all_plans(
+                [_minimal_plan(with_romance=True)], direction, ws=ws
+            )
+            self.assertEqual(blocked, {})
+
+    def test_pedagogical_not_a_love_interest_does_not_block_romance_book(self) -> None:
+        """Keyword may still match; advisory must not block approve-plan."""
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp)
+            (ws / "concept.yaml").write_text(
+                yaml.dump(
+                    {
+                        "must_avoid": ["Head-hopping"],
+                        "author_directive": (
+                            "If he only protects and asks permission, he is a "
+                            "bodyguard, not a love interest.\n"
+                            "Write as a romance-thriller."
+                        ),
+                        "notes": "dark romance",
+                    },
+                    allow_unicode=True,
+                ),
+                encoding="utf-8",
+            )
+            direction = {
+                "narrative_profile": "international thriller-romance, dark romance",
+                "spice_default": 1,
+                "spice_level": 3,
+            }
+            self.assertTrue(romance_microbeat_required(direction, ws=ws))
+            plan = _minimal_plan(with_romance=True)
+            blocked = validate_all_plans([plan], direction, ws=ws)
+            self.assertFalse(
+                any(
+                    "forbidden_romance" in i
+                    for iss in blocked.values()
+                    for i in iss
+                ),
+                blocked,
             )
 
 

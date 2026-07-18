@@ -313,6 +313,7 @@ def sync_manifest_from_direction(ws: Path) -> dict[str, Any]:
 
     keys = (
         "id",
+        "pen_name",
         "target_language",
         "spice_level",
         "publish_strategy",
@@ -329,8 +330,50 @@ def sync_manifest_from_direction(ws: Path) -> dict[str, Any]:
         elif key in direction:
             manifest[key] = direction[key]
 
+    # Direction is authoritative for author; never leave manifest missing/out of sync.
+    manifest["pen_name"] = str(direction.get("pen_name") or "").strip()
+
     _save_yaml(manifest_path, manifest)
     return manifest
+
+
+def last_pen_name_default() -> str:
+    """Most recently used pen name (factory/engine/config.json), if any."""
+    from factory.engine.paths import load_config
+
+    return str(load_config().get("last_pen_name") or "").strip()
+
+
+def remember_last_pen_name(pen_name: str) -> None:
+    name = str(pen_name or "").strip()
+    if not name:
+        return
+    from factory.engine.paths import save_config_patch
+
+    save_config_patch({"last_pen_name": name})
+
+
+def write_pen_name(ws: Path, pen_name: str, *, remember: bool = True) -> str:
+    """Persist pen_name to direction.yaml + manifest.yaml (+ catalog series.yaml).
+
+    direction.yaml is the EPUB exporter's primary source (see catalog.resolve_pen_name).
+    """
+    name = str(pen_name or "").strip()
+    direction = load_direction(ws) or {}
+    direction["pen_name"] = name
+    if "id" not in direction:
+        direction["id"] = ws.name
+    _save_yaml(ws / "direction.yaml", direction)
+    sync_manifest_from_direction(ws)
+    try:
+        from factory.engine.lib.catalog import sync_series_yaml
+
+        sync_series_yaml(ws.name)
+    except Exception:
+        pass
+    if remember and name:
+        remember_last_pen_name(name)
+    return name
 
 
 def rescale_direction_arc(ws: Path, total: int) -> None:

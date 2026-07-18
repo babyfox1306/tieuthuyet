@@ -15,7 +15,13 @@ from factory.engine.lib.qc_eval import format_qc_reasons
 class FormatReasonsTests(unittest.TestCase):
     def test_machine_short(self):
         reasons = format_machine_reasons({"word_count": 900, "short": 900, "target_language": "en"})
-        self.assertEqual(reasons, ["quá ngắn (900 từ)"])
+        self.assertEqual(
+            reasons,
+            [
+                "[length_fail — 900 từ < min; đã expand/rewrite; KHÔNG cho qua ready — không phải lỗi dấu *]",
+                "quá ngắn (900 từ)",
+            ],
+        )
 
     def test_machine_foreign(self):
         reasons = format_machine_reasons({"foreign_chars": ["中", "文"], "word_count": 2000})
@@ -57,7 +63,13 @@ class ChapterBlockInfoTests(unittest.TestCase):
                 encoding="utf-8",
             )
             info = chapter_block_info(ws, 1, "needs_fix", 22)
-            self.assertEqual(info["reasons"], ["quá ngắn (1347 từ)"])
+            self.assertEqual(
+                info["reasons"],
+                [
+                    "[length_fail — 1347 từ < min; đã expand/rewrite; KHÔNG cho qua ready — không phải lỗi dấu *]",
+                    "quá ngắn (1347 từ)",
+                ],
+            )
             self.assertIn("quá ngắn", info["reason_summary"])
 
     def test_loads_needs_review(self):

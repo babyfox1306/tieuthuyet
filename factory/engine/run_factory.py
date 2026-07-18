@@ -68,7 +68,13 @@ from factory.engine.lib.prompt_builder import (
     prompt_path,
     render_all_prompts,
 )
-from factory.engine.lib.qc_eval import format_qc_reasons, qc_fail_reasons, qc_passes
+from factory.engine.lib.qc_eval import (
+    format_qc_reasons,
+    llm_qc_revision_suffix,
+    qc_fail_reasons,
+    qc_passes,
+    verbatim_llm_qc_feedback,
+)
 from factory.engine.lib.state_updater import load_state, save_state, update_state_after_pass
 from factory.engine.lib.language import target_language
 from factory.engine.lib.write_guards import (
@@ -373,6 +379,7 @@ def build_qc_payload(ws: Path, book: int, chapter: str, chapter_num: int) -> str
 
     # Collect concept-driven content boundaries for LLM QC comprehension check
     must_avoid: list[str] = []
+    concept: dict = {}
     try:
         from factory.engine.lib.narrative_schema import load_concept
         concept = load_concept(ws)
@@ -393,8 +400,10 @@ def build_qc_payload(ws: Path, book: int, chapter: str, chapter_num: int) -> str
         bible = {}
 
     from factory.engine.lib.canon_registry import resolve_spice_max_from_direction
+    from factory.engine.lib.concept_canon import compile_chapter_canon_rules
 
     spice_max = resolve_spice_max_from_direction(direction)
+    chapter_canon = compile_chapter_canon_rules(concept, chapter_num)
 
     return json.dumps(
         {
@@ -406,6 +415,7 @@ def build_qc_payload(ws: Path, book: int, chapter: str, chapter_num: int) -> str
             "target_language": direction.get("target_language"),
             "spice_max": spice_max,
             "content_boundaries": must_avoid,
+            "chapter_canon_rules": chapter_canon.to_dict(),
         },
         ensure_ascii=False,
     )
@@ -539,8 +549,12 @@ def _draft_chapter_prose(
     direction: dict,
     *,
     auto: bool = False,
-) -> tuple[str, dict]:
-    """Call writer; short → expand then full rewrite; format_only → no rewrite; content capped.
+    run_llm_qc: bool = True,
+) -> tuple[str, dict, dict | None]:
+    """Call writer; machine QC retries; then LLM QC closed loop (fail→feedback→rewrite).
+
+    Returns ``(chapter, machine_issues, llm_qc_or_none)``.
+    ``llm_qc`` is None when machine QC never passed or ``run_llm_qc`` is False.
 
     auto=True → content + length full rewrites use writer_auto_max_retries (default 10).
     """
@@ -569,17 +583,25 @@ def _draft_chapter_prose(
         content_max = auto_max
         length_max = auto_max
 
+    llm_qc_max = int(cfg.get("writer_llm_qc_max_retries", 2))
+    if llm_qc_max < 0:
+        llm_qc_max = 0
+
     chapter = ""
     m_issues: dict = {}
     expand_suffix = ""
     content_suffix = ""
+    llm_qc_suffix = ""
     lang = target_language(direction, cfg)
     content_attempts = 0
     short_used = 0
     length_rewrites = 0
     attempt_number = 0
+    llm_qc_rewrites = 0
+    pending_qc_before: dict | None = None
+    throttle = float(cfg.get("throttle_seconds", 4) or 0)
 
-    max_rounds = content_max + short_retries + length_max + 2
+    max_rounds = content_max + short_retries + length_max + llm_qc_max * (1 + short_retries) + 4
 
     def _meta() -> dict:
         return {
@@ -589,11 +611,18 @@ def _draft_chapter_prose(
             "max_short_retries": short_retries,
             "length_rewrites": length_rewrites,
             "max_length_retries": length_max,
+            "llm_qc_rewrites": llm_qc_rewrites,
+            "max_llm_qc_retries": llm_qc_max,
         }
 
-    for _round in range(max_rounds):
+    def _write_attempt(
+        *,
+        retry_suffix: str,
+        retry_reason_source: str | None = None,
+        qc_result_before_retry: dict | None = None,
+    ) -> str:
+        nonlocal attempt_number
         attempt_number += 1
-        retry_suffix = expand_suffix + content_suffix
         user_content = base_payload + retry_suffix
         try:
             raw, call_meta = call_9router(
@@ -614,6 +643,8 @@ def _draft_chapter_prose(
                 source_versions=source_versions,
                 output=raw,
                 error=None,
+                retry_reason_source=retry_reason_source,
+                qc_result_before_retry=qc_result_before_retry,
             )
         except Exception as call_exc:
             write_writer_payload_artifact(
@@ -628,12 +659,18 @@ def _draft_chapter_prose(
                 source_versions=source_versions,
                 output=None,
                 error=str(call_exc),
+                retry_reason_source=retry_reason_source,
+                qc_result_before_retry=qc_result_before_retry,
             )
             raise
-        chapter = raw.strip()
+        if throttle > 0:
+            time.sleep(throttle)
+        return raw.strip()
+
+    def _run_machine_qc(text: str) -> dict:
         state = load_state(ws, book)
-        m_issues = machine_qc(
-            chapter,
+        issues = machine_qc(
+            text,
             min_words=cfg["min_word_count"],
             banned_phrases=cfg.get("banned_phrases", []),
             phrases_already_used=state.get("phrases_used", []),
@@ -643,12 +680,65 @@ def _draft_chapter_prose(
             book=book,
             chapter=ch,
         )
-        cls = classify_machine_issues(m_issues)
-        m_issues["classification"] = cls
-        m_issues["retry_meta"] = _meta()
+        cls = classify_machine_issues(issues)
+        issues["classification"] = cls
+        issues["retry_meta"] = _meta()
+        return issues
+
+    def _run_llm_qc(text: str) -> dict:
+        try:
+            qc_raw, _ = call_9router(
+                "qc",
+                build_qc_payload(ws, book, text, ch),
+                max_tokens=4096,
+                direction=direction,
+            )
+        except Exception as qc_exc:
+            return {
+                "verdict": "FAIL",
+                "fail_reasons": ["qc_transport_error"],
+                "source": "qc_transport_error",
+                "detail": str(qc_exc)[:500],
+            }
+        if throttle > 0:
+            time.sleep(throttle)
+        try:
+            qc = parse_json_response(qc_raw)
+        except (json.JSONDecodeError, TypeError, ValueError):
+            qc = {"verdict": "FAIL", "fail_reasons": ["qc_json_parse_error"]}
+        if not isinstance(qc, dict):
+            qc = {"verdict": "FAIL", "fail_reasons": ["qc_not_object"]}
+        hard = qc_fail_reasons(qc)
+        if hard:
+            qc.setdefault("fail_reasons", [])
+            for r in hard:
+                if r not in qc["fail_reasons"]:
+                    qc["fail_reasons"].append(r)
+            qc["verdict"] = "FAIL"
+        return qc
+
+    machine_passed = False
+    for _round in range(max_rounds):
+        retry_suffix = expand_suffix + content_suffix + llm_qc_suffix
+        kwargs: dict = {"retry_suffix": retry_suffix}
+        if pending_qc_before is not None and llm_qc_suffix:
+            kwargs["retry_reason_source"] = "llm_qc"
+            kwargs["qc_result_before_retry"] = {
+                "verdict": pending_qc_before.get("verdict"),
+                "fail_reasons": list(pending_qc_before.get("fail_reasons") or []),
+                "verbatim_feedback": verbatim_llm_qc_feedback(pending_qc_before),
+                "continuity_conflict": pending_qc_before.get("continuity_conflict"),
+                "voice_drift": pending_qc_before.get("voice_drift"),
+                "content_boundary_ok": pending_qc_before.get("content_boundary_ok"),
+            }
+            pending_qc_before = None
+        chapter = _write_attempt(**kwargs)
+        m_issues = _run_machine_qc(chapter)
+        cls = m_issues["classification"]
 
         if machine_pass(m_issues):
-            return chapter, m_issues
+            machine_passed = True
+            break
 
         # Length ALWAYS first — never treat short like format hand-fix / never stop early
         if cls["has_length"]:
@@ -678,7 +768,7 @@ def _draft_chapter_prose(
                 f"{short_used} expand + {length_rewrites} rewrite — "
                 "needs_fix (KHÔNG cho qua ready; không phải lỗi dấu *)"
             )
-            return chapter, m_issues
+            return chapter, m_issues, None
 
         # Format-only (length OK) → stop; operator hand-fixes * / quotes (save tokens)
         if is_format_only_issues(m_issues) or (
@@ -688,7 +778,7 @@ def _draft_chapter_prose(
                 f"  ch_{ch:03d} FORMAT_FIX — no rewrite "
                 f"({', '.join(cls['format_fix'].keys())})"
             )
-            return chapter, m_issues
+            return chapter, m_issues, None
 
         # Content fail → regenerate up to writer_content_max_retries
         if has_content_fail(m_issues):
@@ -700,7 +790,7 @@ def _draft_chapter_prose(
                     f"  ch_{ch:03d} CONTENT_CAP — stop after {content_attempts}/{content_max} "
                     f"({', '.join(cls['content_fail'].keys())})"
                 )
-                return chapter, m_issues
+                return chapter, m_issues, None
             print(
                 f"  ch_{ch:03d} CONTENT — retry {content_attempts}/{content_max} "
                 f"({', '.join(cls['content_fail'].keys())})"
@@ -709,10 +799,96 @@ def _draft_chapter_prose(
             expand_suffix = ""
             continue
 
-        return chapter, m_issues
+        return chapter, m_issues, None
 
-    m_issues["retry_meta"] = _meta()
-    return chapter, m_issues
+    if not machine_passed:
+        m_issues["retry_meta"] = _meta()
+        return chapter, m_issues, None
+
+    if not run_llm_qc:
+        return chapter, m_issues, None
+
+    # --- LLM QC closed loop (after machine pass) ---
+    last_qc: dict | None = None
+    while True:
+        draft_path = chapter_pipeline_path(ws, book, "draft", ch)
+        draft_path.parent.mkdir(parents=True, exist_ok=True)
+        draft_path.write_text(chapter, encoding="utf-8")
+
+        last_qc = _run_llm_qc(chapter)
+        if qc_passes(last_qc):
+            safe_print(
+                f"  ch_{ch:03d} LLM_QC PASS"
+                + (f" (after {llm_qc_rewrites} rewrite)" if llm_qc_rewrites else "")
+            )
+            m_issues["retry_meta"] = _meta()
+            return chapter, m_issues, last_qc
+
+        reasons = format_qc_reasons(last_qc) or last_qc.get("fail_reasons") or []
+        if llm_qc_rewrites >= llm_qc_max:
+            safe_print(
+                f"  ch_{ch:03d} LLM_QC_CAP — still FAIL after {llm_qc_rewrites}/{llm_qc_max} "
+                f"rewrite(s) — {'; '.join(str(r) for r in reasons[:3])}"
+            )
+            m_issues["retry_meta"] = _meta()
+            return chapter, m_issues, last_qc
+
+        llm_qc_rewrites += 1
+        safe_print(
+            f"  ch_{ch:03d} LLM_QC FAIL — rewrite {llm_qc_rewrites}/{llm_qc_max} "
+            f"({'; '.join(str(r) for r in reasons[:2])})"
+        )
+        llm_qc_suffix = llm_qc_revision_suffix(last_qc, attempt=llm_qc_rewrites)
+        pending_qc_before = last_qc
+        expand_suffix = ""
+        content_suffix = ""
+        short_used = 0  # allow length expands again on the QC rewrite
+
+        # One writer call with QC feedback; then length-only expands if short.
+        chapter = _write_attempt(
+            retry_suffix=llm_qc_suffix,
+            retry_reason_source="llm_qc",
+            qc_result_before_retry={
+                "verdict": last_qc.get("verdict"),
+                "fail_reasons": list(last_qc.get("fail_reasons") or []),
+                "verbatim_feedback": verbatim_llm_qc_feedback(last_qc),
+                "continuity_conflict": last_qc.get("continuity_conflict"),
+                "voice_drift": last_qc.get("voice_drift"),
+                "content_boundary_ok": last_qc.get("content_boundary_ok"),
+            },
+        )
+        pending_qc_before = None
+        m_issues = _run_machine_qc(chapter)
+        cls = m_issues["classification"]
+
+        # Length expands only — do not burn content retries inside LLM QC loop
+        while not machine_pass(m_issues) and cls.get("has_length") and short_used < short_retries:
+            wc = int(m_issues.get("word_count") or word_count_vi(chapter))
+            short_used += 1
+            print(
+                f"  ch_{ch:03d} SHORT after LLM_QC rewrite ({wc} words) — expand "
+                f"{short_used}/{short_retries}"
+            )
+            expand_suffix = _expand_short_patch(cfg, wc, short_used)
+            chapter = _write_attempt(
+                retry_suffix=llm_qc_suffix + expand_suffix,
+                retry_reason_source="llm_qc",
+            )
+            m_issues = _run_machine_qc(chapter)
+            cls = m_issues["classification"]
+
+        if not machine_pass(m_issues):
+            # Machine broke after QC rewrite — stop LLM loop; caller buckets by machine
+            safe_print(
+                f"  ch_{ch:03d} LLM_QC rewrite lost machine_pass — "
+                f"{', '.join(format_machine_reasons(m_issues)[:3]) or list(cls.keys())}"
+            )
+            m_issues["retry_meta"] = _meta()
+            m_issues["llm_qc_before_machine_fail"] = last_qc
+            return chapter, m_issues, last_qc
+
+        # machine pass again → loop to re-QC
+        continue
 
 
 def write_one_chapter(
@@ -725,12 +901,14 @@ def write_one_chapter(
     force: bool = False,
     auto: bool = False,
 ) -> tuple[int, str]:
+    from factory.engine.lib.concept_canon import require_fresh_plan
     from factory.engine.lib.machine_qc import (
         classify_machine_issues,
         has_content_fail,
         is_format_only_issues,
     )
 
+    require_fresh_plan(ws)
     direction = load_direction(ws)
     beat = load_chapter_plan(ws, book, ch)
     if chapter_pipeline_path(ws, book, "ready", ch).exists():
@@ -743,10 +921,9 @@ def write_one_chapter(
     _clear_chapter_pipeline(ws, book, ch)
 
     print(f"  ch_{ch:03d} writing...")
-    chapter, m_issues = _draft_chapter_prose(
-        ws, book, ch, cfg, direction, auto=auto
+    chapter, m_issues, qc = _draft_chapter_prose(
+        ws, book, ch, cfg, direction, auto=auto, run_llm_qc=True
     )
-    time.sleep(cfg.get("throttle_seconds", 4))
 
     if not machine_pass(m_issues):
         cls = m_issues.get("classification") or classify_machine_issues(m_issues)
@@ -760,7 +937,7 @@ def write_one_chapter(
             )
             save_machine_issues(issues_path(ws, book, "needs_review", ch), m_issues)
             meta = m_issues.get("retry_meta") or {}
-            qc = {
+            qc_out = {
                 "verdict": "FAIL",
                 "fail_reasons": reasons,
                 "source": "machine_content_cap",
@@ -768,7 +945,9 @@ def write_one_chapter(
                 "max_content_retries": meta.get("max_content_retries"),
                 "classification": cls,
             }
-            save_json(qc_report_path(ws, book, "needs_review", ch), qc)
+            if isinstance(m_issues.get("llm_qc_before_machine_fail"), dict):
+                qc_out["llm_qc_before_machine_fail"] = m_issues["llm_qc_before_machine_fail"]
+            save_json(qc_report_path(ws, book, "needs_review", ch), qc_out)
             safe_print(
                 f"  ch_{ch:03d} NEEDS_REVIEW (content_fail) — "
                 + ("; ".join(reasons) or str(list(cls.get("content_fail", {}))))
@@ -780,21 +959,9 @@ def write_one_chapter(
         safe_print(f"  ch_{ch:03d} NEEDS_FIX — {'; '.join(reasons) or list(m_issues.keys())}")
         return ch, "needs_fix"
 
-    qc_raw, _ = call_9router("qc", build_qc_payload(ws, book, chapter, ch), max_tokens=4096, direction=direction)
-    time.sleep(cfg.get("throttle_seconds", 4))
-    try:
-        qc = parse_json_response(qc_raw)
-    except json.JSONDecodeError:
-        qc = {"verdict": "FAIL", "fail_reasons": ["qc_json_parse_error"]}
-
-    hard_fail = qc_fail_reasons(qc)
-    if hard_fail:
-        qc.setdefault("fail_reasons", [])
-        for r in hard_fail:
-            if r not in qc["fail_reasons"]:
-                qc["fail_reasons"].append(r)
-        qc["verdict"] = "FAIL"
-
+    # LLM QC already ran inside _draft_chapter_prose (closed loop).
+    if qc is None:
+        qc = {"verdict": "FAIL", "fail_reasons": ["qc_missing_after_draft"]}
     if not qc_passes(qc):
         chapter_pipeline_path(ws, book, "needs_review", ch).write_text(chapter, encoding="utf-8")
         save_json(qc_report_path(ws, book, "needs_review", ch), qc)
@@ -850,6 +1017,11 @@ def cmd_write(args: argparse.Namespace) -> None:
             if is_sequential_writes(cfg):
                 break
             continue
+        except RuntimeError as exc:
+            # STALE_* / require_fresh_plan — same codes as UI
+            print(f"  ch_{ch:03d} BLOCKED: {exc}")
+            counts["blocked"] = counts.get("blocked", 0) + 1
+            break
         counts[status] = counts.get(status, 0) + 1
     print(f"\n[write] done: {counts}")
 
@@ -893,12 +1065,19 @@ def cmd_approve_plan(args: argparse.Namespace) -> None:
         for line in format_conflicts(exc.conflicts):
             print(f"  {line}")
         return
+    except RuntimeError as exc:
+        print(f"[approve-plan] BLOCKED — {exc}")
+        return
     print(f"[approve-plan] plan_status=approved -> {ws / 'direction.yaml'}")
 
 
 def cmd_render_prompts(args: argparse.Namespace) -> None:
     ws = workspace_dir(args.workspace)
-    n = render_all_prompts(ws, args.book)
+    try:
+        n = render_all_prompts(ws, args.book)
+    except RuntimeError as exc:
+        print(f"[render-prompts] BLOCKED — {exc}")
+        return
     print(f"[render-prompts] {n} files -> {book_workspace_dir(ws, args.book) / 'prompts'}")
 
 

@@ -119,6 +119,12 @@ def validate_narrative_assets(ws: Path, direction: dict) -> list[str]:
                 continue
             rid = str(rev.get("id") or "").strip() or "?"
             required = [str(x).strip() for x in (rev.get("required_clues") or []) if str(x).strip()]
+            weight = str(rev.get("reveal_weight") or "major").strip().lower() or "major"
+            min_needed = 1 if weight == "minor" else 2
+            if len(required) < min_needed:
+                errors.append(
+                    f"mystery_ledger:reveal_missing_required_clues:{rid}:{len(required)}<{min_needed}"
+                )
             for cid in required:
                 if cid in reveal_ids:
                     errors.append(f"mystery_ledger:required_clue_is_reveal:{rid}:{cid}")
@@ -197,6 +203,12 @@ def concept_content_errors(concept: dict) -> list[str]:
             f"concept:author_directive_quá_ngắn ({len(directive)} ký tự, cần ≥{MIN_DIRECTIVE_CHARS})"
         )
 
+    from factory.engine.lib.concept_satisfiability import (
+        concept_satisfiability_errors,
+        format_satisfiability_errors,
+    )
+
+    errors.extend(format_satisfiability_errors(concept_satisfiability_errors(concept)))
     return errors
 
 

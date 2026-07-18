@@ -16,6 +16,15 @@ def load_config() -> dict:
     return json.loads((ENGINE / "config.json").read_text(encoding="utf-8"))
 
 
+def save_config_patch(updates: dict) -> dict:
+    """Merge keys into config.json (preserves unrelated settings / secrets)."""
+    path = ENGINE / "config.json"
+    cfg = json.loads(path.read_text(encoding="utf-8"))
+    cfg.update(updates)
+    path.write_text(json.dumps(cfg, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return cfg
+
+
 def bible_path(ws: Path) -> Path:
     return ws / "bible" / "series.json"
 

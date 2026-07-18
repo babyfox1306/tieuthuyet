@@ -209,6 +209,9 @@ def qc_and_fix_plans(ws: Path, book: int, *, use_llm: bool = True) -> dict[int, 
             remaining[ch] = issues
 
     data["chapter_plans"] = plans
+    from factory.engine.lib.concept_canon import stamp_plan_digests
+
+    stamp_plan_digests(ws, data)
     save_master_plan(ws, book, data)
     if remaining:
         safe_print(f"[fix-plans] remaining: {len(remaining)} chapter(s)")
@@ -476,7 +479,9 @@ def plan_book(
     force_replan: bool = False,
 ) -> tuple[Path, int]:
     from factory.engine.lib.canon_registry import sync_bible_leads_from_registry
+    from factory.engine.lib.concept_canon import require_fresh_narrative, stamp_plan_digests
 
+    require_fresh_narrative(ws)
     sync_bible_leads_from_registry(ws, book)
     direction = load_direction(ws)
     bible = load_series_bible(ws)
@@ -528,6 +533,9 @@ def plan_book(
         existing_chs = {p.get("chapter") for p in data["chapter_plans"]}
 
     data["chapter_plans"] = merge_narrative_into_plans(ws, data.get("chapter_plans", []))
+    from factory.engine.lib.concept_canon import stamp_plan_digests
+
+    stamp_plan_digests(ws, data)
     save_master_plan(ws, book, data)
 
     # Deterministic QC only here — LLM fix is a separate step (UI fix-plans / CLI).
@@ -535,23 +543,35 @@ def plan_book(
     safe_print("[plan] deterministic QC (spice/word-count)…")
     remaining = qc_and_fix_plans(ws, book, use_llm=False)
     if remaining:
-        print(f"[plan] plan_qc remaining issues: {len(remaining)} chapters (chạy fix-plans nếu cần)")
-    save_master_plan(ws, book, load_master_plan(ws, book))
+        safe_print(
+            f"[plan] plan_qc remaining issues: {len(remaining)} chapters "
+            "(chay fix-plans neu can)"
+        )
+    data = load_master_plan(ws, book)
+    stamp_plan_digests(ws, data)
+    save_master_plan(ws, book, data)
     safe_print("[plan] render prompts…")
     n = render_all_prompts(ws, book)
     return master_plan_path(ws, book), n
 
 
 def fix_plans(ws: Path, book: int, *, use_llm: bool = True) -> tuple[dict[int, list[str]], int]:
+    from factory.engine.lib.concept_canon import stamp_plan_digests
+
     remaining = qc_and_fix_plans(ws, book, use_llm=use_llm)
+    data = load_master_plan(ws, book)
+    stamp_plan_digests(ws, data)
+    save_master_plan(ws, book, data)
     n = render_all_prompts(ws, book)
     return remaining, n
 
 
 def approve_plan(ws: Path, book: int | None = None) -> None:
     from factory.engine.lib.canon_registry import CanonRegistryError, validate_plan_against_canon_registry
+    from factory.engine.lib.concept_canon import require_fresh_plan, stamp_plan_digests
     from factory.engine.lib.plan_qc import apply_deterministic_plan_fixes, validate_all_plans
 
+    require_fresh_plan(ws)
     direction = load_direction(ws)
     book_num = int(book if book is not None else direction.get("book") or 1)
     conflicts = validate_plan_against_canon_registry(ws, book_num)
@@ -564,6 +584,7 @@ def approve_plan(ws: Path, book: int | None = None) -> None:
     plans = merge_narrative_into_plans(ws, plans)
     plans = [apply_deterministic_plan_fixes(p, direction) for p in plans]
     data["chapter_plans"] = plans
+    stamp_plan_digests(ws, data)
     save_master_plan(ws, book_num, data)
 
     remaining = validate_all_plans(plans, direction, bible=bible, ws=ws)

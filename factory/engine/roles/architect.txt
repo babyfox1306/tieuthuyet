@@ -70,5 +70,13 @@ Mọi text trong bible phải theo direction.target_language.
   "bible_status": "draft"
 }
 
+## WORLD_RULES — CẤM (surface/binding)
+Nếu concept có `surface_order` + `binding_condition` (hoặc binding condition trong directive):
+- Surface order = lệnh bề mặt (có thể hiện sớm, trông unconditional).
+- Binding condition = điều kiện đầy đủ (chỉ reveal từ reveal_chapter trở đi).
+- **CẤM** viết world_rule dạng "stated identically in every chapter that touches the clause"
+  hoặc mọi câu dùng từ mơ hồ "touches the clause". Chapter gating do engine compiler xử lý —
+  architect KHÔNG tự compile luật theo chương.
+
 Character bible phải đủ chi tiết để Writer không trôi giọng qua 50 chương.
 Không để trống central_mystery.answer — phải chốt một phiên bản sự thật duy nhất.

@@ -1,0 +1,12 @@
+{
+  "_comment": "Snapshot of kill-me-if-i-remember bible world_rules from series.json created 2026-07-17 (pre architect regen 2026-07-18). Used as fixture for SAT_AMBIGUOUS_TOUCH_RULE gate — do not 'fix' the ambiguous line.",
+  "world_rules": [
+    "Realistic thriller world with no supernatural elements.",
+    "Psychological conditioning is used to create obedient identities.",
+    "Contract killing follows a strict code.",
+    "Firearms and ballistics are accurate to real forensic procedures.",
+    "Time is continuous from midnight to sunrise; no training montages or time jumps.",
+    "No real-world people or organizations; all are fictional.",
+    "The binding condition: Lucian must kill Sloane at sunrise only if Rook restores the conditioned obedient identity he built in her. This condition is stated identically in every chapter that touches it."
+  ]
+}

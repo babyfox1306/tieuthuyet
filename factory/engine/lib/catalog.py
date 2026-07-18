@@ -910,11 +910,16 @@ def export_epub(
     if not items:
         raise FileNotFoundError("No chapters to export")
 
+    author = resolve_pen_name(workspace_id)
+    if not author:
+        raise ValueError(
+            "Pen name is empty — the EPUB will have no author. Set it before export."
+        )
+
     lang = export_language(workspace_id)
     book_title = book_display_title(workspace_id, book_slug)
     epub_uid = ensure_epub_identifier(workspace_id, book_slug)
     modified = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    author = resolve_pen_name(workspace_id)
 
     chapter_entries: list[tuple[str, str, dict, str]] = []
     for i, (_path, meta, body) in enumerate(items, 1):
@@ -971,12 +976,9 @@ def export_epub(
         f"<dc:title>{_escape_xml(book_title)}</dc:title>"
         f"<dc:language>{_escape_xml(lang)}</dc:language>"
         f'<meta property="dcterms:modified">{modified}</meta>'
+        f'<dc:creator id="creator">{_escape_xml(author)}</dc:creator>'
+        '<meta refines="#creator" property="role" scheme="marc:relators">aut</meta>'
     )
-    if author:
-        meta_block += (
-            f'<dc:creator id="creator">{_escape_xml(author)}</dc:creator>'
-            '<meta refines="#creator" property="role" scheme="marc:relators">aut</meta>'
-        )
     if cover_href:
         meta_block += '<meta name="cover" content="cover-image"/>'
 

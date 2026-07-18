@@ -235,8 +235,9 @@ class DraftNoFormatRetryTests(unittest.TestCase):
                         "factory.engine.run_factory.load_state",
                         return_value={"phrases_used": []},
                     ):
-                        _chapter, issues = _draft_chapter_prose(
-                            ws, 1, 1, cfg, {"target_language": "en"}
+                        _chapter, issues, _qc = _draft_chapter_prose(
+                            ws, 1, 1, cfg, {"target_language": "en"},
+                            run_llm_qc=False,
                         )
         self.assertEqual(calls["n"], 1)
         self.assertNotIn("missing_quotes", issues)
@@ -304,8 +305,9 @@ class DraftNoFormatRetryTests(unittest.TestCase):
                             "factory.engine.run_factory.machine_qc",
                             side_effect=fake_qc,
                         ):
-                            _chapter, issues = _draft_chapter_prose(
-                                ws, 1, 1, cfg, {"target_language": "en"}
+                            _chapter, issues, _qc = _draft_chapter_prose(
+                                ws, 1, 1, cfg, {"target_language": "en"},
+                                run_llm_qc=False,
                             )
         self.assertEqual(calls["n"], 2)
         self.assertEqual(issues.get("retry_meta", {}).get("content_attempts"), 2)
@@ -360,8 +362,9 @@ class DraftNoFormatRetryTests(unittest.TestCase):
                             "factory.engine.run_factory.machine_qc",
                             side_effect=fake_qc,
                         ):
-                            _chapter, issues = _draft_chapter_prose(
-                                ws, 1, 1, cfg, {"target_language": "en"}, auto=True
+                            _chapter, issues, _qc = _draft_chapter_prose(
+                                ws, 1, 1, cfg, {"target_language": "en"}, auto=True,
+                                run_llm_qc=False,
                             )
         self.assertEqual(calls["n"], 10)
         self.assertEqual(issues.get("retry_meta", {}).get("content_attempts"), 10)
