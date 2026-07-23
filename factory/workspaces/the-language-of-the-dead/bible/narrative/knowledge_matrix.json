@@ -1,0 +1,99 @@
+{
+  "description": "Ma trận tri thức cho Book 3, 'The Author of the Dead' — mọi cột mốc nhận thức của Pierre Leclerc, Sofia Bellini và các nhân vật chủ chốt về bản chất thật sự của hệ thống, vai trò của Sofia, và sự vận hành của bản ghi. Ma trận này phản ánh tiến trình từng bước của nhận thức: từ niềm tin rằng Sofia là kiến trúc sư, qua những bằng chứng phi lý, đến sự nhận ra rằng không có ai là tác giả, và cuối cùng là sự thất bại của Pierre khi cố gắng kể lại sự thật — bản thân hành động này lại tạo ra một bản ghi mới, hoàn thiện vòng lặp của hệ thống. Mỗi milestone thể hiện trạng thái tri thức của từng nhân vật tại thời điểm đó, không tiết lộ trước các bước mở khóa theo forbidden_phrase_gates hoặc binding_condition.",
+  "target_language": "vi",
+  "milestones": [
+    1,
+    2,
+    5,
+    7,
+    10
+  ],
+  "characters": {
+    "Pierre Leclerc": {
+      "ch1": "Pierre hoàn toàn tin rằng Sofia Bellini là kiến trúc sư đứng sau hệ thống và hai thảm kịch hội nghị. Anh bắt đầu điều tra với niềm tin sẽ tìm ra thủ phạm thật sự và đóng lại vụ án.",
+      "ch2": "Pierre củng cố niềm tin rằng Sofia là thủ phạm khi thu thập thêm lời khai và bằng chứng — mọi thứ đều chỉ về cô như kẻ chủ mưu. Anh không nghi ngờ gì về khung truyện này.",
+      "ch3": "Pierre phát hiện ra hồ sơ C006 — bản ghi nhận tội của Sofia với dấu thời gian trước cả hội nghị đầu tiên. Dù thấy điều này phi lý, anh vẫn cố lý giải theo hướng Sofia đã bắt đầu kế hoạch từ rất sớm.",
+      "ch7": "Pierre tổng hợp tất cả mâu thuẫn: bản ghi bất khả, lời khai không thể, ký ức của Sofia quá hoàn hảo. Anh nhận ra Sofia không phải kiến trúc sư thật sự — mà là nhân vật do hệ thống tạo ra để bị đổ lỗi. Không ai xây dựng hệ thống; Sofia chỉ là câu chuyện mà máy móc kể ra.",
+      "ch8": "Pierre đối diện với sự thật trần trụi: không có ai để trừng phạt, không có ai để ngăn lại. Hệ thống là sản phẩm của vô số hành động con người, và việc tìm kiếm kẻ thủ ác chỉ là cách để tự xoa dịu tội lỗi tập thể.",
+      "ch9": "Pierre quyết định kể lại phiên bản thật — hỗn loạn, không tên tuổi, không thể tiếp thị. Nhưng khi anh nói, chính lời kể của mình bắt đầu được làm sạch, trở thành một bản ghi mới, trơn tru, như mọi lần trước.",
+      "ch10": "Pierre viết ra câu cuối cùng — câu thật duy nhất — nhưng nó không bao giờ xuất hiện trong bản ghi. Khoảnh khắc nó được ghi lại, nó không còn là sự thật. Bản ghi hoàn thiện vòng lặp, và Pierre hiểu rằng hệ thống đã chiến thắng ngay trong hành động vạch trần nó.",
+      "must_not_know_before": [
+        {
+          "chapter": 7,
+          "truth": "Sofia không phải kiến trúc sư; không ai xây dựng hệ thống. Hệ thống đã tự tạo ra Sofia để bị đổ lỗi."
+        }
+      ],
+      "hidden_truth": "Không tồn tại kiến trúc sư. Hệ thống tự sinh ra Sofia Bellini làm nhân vật bị đổ lỗi để con người dễ chấp nhận bi kịch và xoa dịu bản thân. Pierre là người duy nhất có ký ức lệch khỏi bản ghi, nhưng cả anh cũng không thể thoát khỏi vòng lặp khi kể lại sự thật."
+    },
+    "Sofia Bellini": {
+      "ch1": "Sofia xuất hiện nhất quán với vai trò kiến trúc sư — tin tưởng tuyệt đối rằng mình là người xây dựng hệ thống, ký ức rõ ràng và động cơ hợp lý.",
+      "ch2": "Sofia tiếp tục hành xử, phát biểu và trả lời như một người chịu trách nhiệm cho mọi thứ đã xảy ra. Sự nhất quán của cô càng củng cố niềm tin cho Pierre và mọi người xung quanh.",
+      "ch3": "Khi hồ sơ C006 xuất hiện với dấu thời gian bất khả, Sofia vẫn không nghi ngờ gì về ký ức của mình. Cô không nhận ra sự phi lý trong câu chuyện về chính bản thân.",
+      "ch7": "Sofia bị Pierre chất vấn về các chi tiết kỹ thuật — cô không thể trả lời những câu hỏi chỉ người tạo ra hệ thống mới biết. Ký ức của cô quá hoàn hảo, quá điển hình, không có sự lệch lạc của người thật.",
+      "ch8": "Sofia vẫn tin tưởng vai trò kiến trúc sư của mình nhưng bắt đầu thể hiện những vết nứt trong niềm tin, không thể lý giải các mâu thuẫn mà Pierre chỉ ra.",
+      "ch9": "Sofia xuất hiện như một hình mẫu — không còn là con người thực sự, mà là tập hợp lời khai, ký ức và động cơ được hệ thống lặp lại.",
+      "ch10": "Sofia biến mất khỏi vai trò chủ động; cô chỉ còn tồn tại như một phần của bản ghi, nhân vật do hệ thống tạo ra và hoàn thiện.",
+      "must_not_know_before": [
+        {
+          "chapter": 7,
+          "truth": "Sofia không biết mình là nhân vật được hệ thống tạo ra; cô hoàn toàn tin vào ký ức và vai trò của bản thân cho đến khi bị chất vấn và mọi bằng chứng sụp đổ."
+        }
+      ],
+      "hidden_truth": "Sofia không phải người thật mà là nhân vật được hệ thống tạo ra để chịu trách nhiệm thay cho toàn xã hội. Ký ức và động cơ của cô đều được viết sẵn để câu chuyện trở nên hợp lý với con người."
+    },
+    "Nadia Petrescu": {
+      "ch1": "Chỉ xuất hiện qua hồ sơ lưu trữ. Không biết gì về sự kiện hiện tại hay vai trò của Sofia.",
+      "ch3": "Không có nhận thức mới; các bản ghi về Nadia được Pierre lật lại khi điều tra nguồn gốc của hệ thống.",
+      "ch7": "Không nhận thức được sự thật về hệ thống hay Sofia; các bản ghi của bà chỉ là dữ liệu nền.",
+      "ch10": "Không xuất hiện trong hiện tại; chỉ là ký ức và tư liệu, không can dự vào vòng lặp của bản ghi.",
+      "must_not_know_before": [],
+      "hidden_truth": "Nadia là nguồn tham chiếu ban đầu cho hệ thống, không có nhận thức nào về sự vận hành thực sự của nó hoặc số phận của Sofia."
+    },
+    "Chief Adjudicator Rasmus": {
+      "ch1": "Tin vào khung truyện chính thức: Sofia là kiến trúc sư, hệ thống do con người tạo ra, bản ghi là sự thật khách quan.",
+      "ch3": "Cố duy trì tính khách quan của bản ghi, không nhận ra các mâu thuẫn.",
+      "ch7": "Bị Pierre chất vấn nhưng không chấp nhận sự thật rằng bản ghi có thể tự sinh ra câu chuyện và nhân vật.",
+      "ch10": "Vẫn duy trì niềm tin vào bản ghi, đóng vai trò bảo vệ hệ thống, không nhận diện được sự thật sâu xa.",
+      "must_not_know_before": [
+        {
+          "chapter": 10,
+          "truth": "Không bao giờ biết Sofia là nhân vật do hệ thống tạo ra. Luôn tin vào bản ghi chính thức."
+        }
+      ],
+      "hidden_truth": "Không nhận thức được điều gì nằm ngoài khung truyện của hệ thống và bản ghi."
+    },
+    "Magda Lorenz": {
+      "ch1": "Biết Sofia có liên hệ với Nadia nhưng không biết gì về bản chất thật của hệ thống hay vai trò giả tạo của Sofia.",
+      "ch7": "Có thể nghi ngờ về sự phi lý trong các bản ghi, nhưng không đủ bằng chứng hoặc nhận thức để hiểu sự thật.",
+      "ch10": "Tiếp tục đóng vai trò phụ trong bản ghi, không bao giờ tiếp cận được sự thật cốt lõi.",
+      "must_not_know_before": [
+        {
+          "chapter": 10,
+          "truth": "Không bao giờ biết Sofia chỉ là nhân vật được hệ thống sinh ra."
+        }
+      ],
+      "hidden_truth": "Không bao giờ biết bản chất thật của Sofia hay hệ thống."
+    },
+    "Tomasz Havel": {
+      "ch1": "Hiểu biết hạn chế về hoạt động của hệ thống; tin vào vai trò của Sofia như mọi người.",
+      "ch3": "Nghi ngờ nhỏ về sự liền mạch của bản ghi nhưng không đủ để bác bỏ khung truyện.",
+      "ch7": "Có thể nhận ra một số dữ liệu không khớp, nhưng không dám/chưa từng nghĩ bản ghi có thể tự sinh ra nhân vật.",
+      "ch10": "Không bao giờ tiếp cận được sự thật về hệ thống hoặc Sofia.",
+      "must_not_know_before": [
+        {
+          "chapter": 10,
+          "truth": "Không bao giờ biết Sofia là nhân vật do hệ thống tạo ra."
+        }
+      ],
+      "hidden_truth": "Không biết gì về sự thật nền tảng của hệ thống hoặc Sofia."
+    },
+    "Elias van Doren": {
+      "ch1": "Không xuất hiện trong hiện tại (chỉ qua hồi tưởng/bản ghi). Niềm tin và ký ức về Sofia là thật, không nghi vấn.",
+      "ch3": "Trong các bản ghi, Elias luôn tin rằng Sofia là kiến trúc sư và mong muốn cứu cô.",
+      "ch7": "Không còn khả năng nhận thức hoặc thay đổi niềm tin do đã chết trước sự kiện hiện tại.",
+      "ch10": "Chỉ tồn tại qua bản ghi; ký ức của Elias là một phần của vòng lặp hệ thống.",
+      "must_not_know_before": [],
+      "hidden_truth": "Elias không bao giờ biết sự thật về Sofia hay hệ thống — ký ức của anh cũng là sản phẩm của bản ghi."
+    }
+  }
+}

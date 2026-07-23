@@ -1,0 +1,30 @@
+{
+  "truncated": {
+    "code": "truncated_by_length",
+    "detail": "finish_reason=length — output hit token/body cap; incomplete chapter"
+  },
+  "classification": {
+    "format_fix": {
+      "truncated": "truncated_by_length"
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 0,
+    "max_short_retries": 5,
+    "length_rewrites": 0,
+    "max_length_retries": 3,
+    "llm_qc_rewrites": 0,
+    "max_llm_qc_retries": 2,
+    "truncate_retries": 2,
+    "max_truncate_retries": 2
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "description": "Knowledge matrix tracking what each major character knows and does not know at key structural milestones in the 17-chapter single-night thriller-romance. Milestones are derived from total_chapters (17): ~2% (ch1), 20% (ch3), 50% (ch9), 72% (ch12), 100% (ch17). The matrix enforces information asymmetry, plant/payoff discipline, and the binding-condition restriction (canonical wording only from chapter 10).",
+  "target_language": "en",
+  "milestones": [
+    1,
+    4,
+    11,
+    16,
+    22
+  ],
+  "characters": {
+    "Sloane Mercer": {
+      "ch1": "Wakes on rooftop beside what appears to be Mara's body. Holds contract in her handwriting: CLIENT TERMINATION AT SUNRISE. Knows she is a federal firearms investigator with three months missing. Believes Mara is dead. Does not know the meaning of her wrist tic or the binding condition.",
+      "ch3": "Has examined the contract paper stock (dated during the gap). Has unconsciously performed the dry-fire wrist circle sequence without understanding its origin. Begins to suspect her memory loss is not natural. Still believes Mara is dead. Does not know Lucian's role or the binding condition.",
+      "ch8": "Has discovered the altered target files (C005), the journal entry (C006), and the voice recording (C007). Knows Rook manipulated seven contracts. Does not yet know the binding condition or that Mara is alive. Is beginning to suspect the staged death might not be real.",
+      "ch12": "Has seen Mara's hand-rhythm signal through the rifle scope (ch11) and recognized the repetition of the firing sequence (ch12). Now knows Mara is alive and that the rooftop shooting was staged. Has broadcast a decoded fragment of the ledger (ch13). Still does not know the full ledger location or the overwrite.",
+      "ch17": "Has assembled the trap-inside-trap evidence in ch13, reached Mara in ch16-17, received the mirror key (Mara's hand rhythm), decoded the complete ledger from her own conditioned reflexes, published it once, broken Rook's conditioning, and accepted arrest. Knows everything: her own plan, her guilt, the series hook.",
+      "must_not_know_before": "Must not learn the binding condition (Lucian must kill Sloane at sunrise only if Rook restores the obedient identity) before chapter 10. Must not know Mara is alive before chapter 11 scope signal. Must not know she overwrote Rook's ending before chapter 13. Must not know the complete ledger is in her own reflexes before chapter 9 (plant) or how to access it before chapter 17.",
+      "hidden_truth": "Her pre-erasure plan to stage Mara's death, hide the ledger in her own conditioned reflexes, erase her own memory, and overwrite Rook's ending. She also knows she is guilty of authorizing lethal contracts, even though Rook manipulated the targets. This truth is hidden from the reader and from herself until appropriately revealed."
+    },
+    "Lucian Vey": {
+      "ch1": "Knows the full binding condition and the surface order. Knows Mara's death was staged. Knows Sloane's pre-erasure plan (most of it, including the staged death and his role). Knows the contract he must execute if Rook restores obedient identity. Will not reveal anything. His tic (quarter-turn focus ring) signals his internal conflict.",
+      "ch3": "Has accompanied Sloane through initial investigation. Has continued to withhold the binding condition and the full truth. Observes her wrist tic without commenting. His POV at ch5 will show his internal cost and his knowledge of the staged death.",
+      "ch8": "Has guided Sloane toward evidence while concealing his full knowledge. Knows she is getting closer to the trap-inside-trap. Has not revealed the binding condition. His POV at ch10 will do so.",
+      "ch12": "After revealing the binding condition in ch10, now acts with Sloane knowing the condition but not the full plan. Has seen Mara's signal. Knows Rook is closing in. Continues to protect Sloane while respecting her autonomy. His POV at ch14 shows his conflict during Mara's capture.",
+      "ch17": "Standing with Sloane at the climax. Knows the ledger is published, Rook is dead, Mara is free. Chooses to refuse extraction and accept legal consequences. Knows the series hook: someone in the ledger has his contract file. His hidden truth about the contract's wider network remains.",
+      "must_not_know_before": "Must not reveal the binding condition before chapter 10. Must not tell Sloane that she is the ledger or that the etched lines map Rook's network. Must not reveal the full extent of Sloane's pre-erasure plan to her before she assembles it herself.",
+      "hidden_truth": "The full binding condition, his knowledge of Sloane's plan, the contract code he must obey, and his personal lover's memory of their relationship which Sloane cannot remember. Hides the emotional cost of his loyalty to the forgotten version of Sloane."
+    },
+    "Mara Mercer": {
+      "ch1": "Alive and in hiding. Knows the staged shooting plan (she consented). Knows her role: fall, blood pack, hand rhythm signal later. Knows Sloane's plan to hide the ledger and erase memory. Does not know all details of Rook's manipulation or the overwrite.",
+      "ch3": "Still hidden. No direct contact with Sloane. Her survival is known to Lucian but not to Rook (Rook does not know she is alive). Her hidden truth includes her survival and role in the staged death.",
+      "ch8": "Remains hidden. Her hand rhythm is crucial later. She is not captured until ch14. At this point she may be aware of Sloane's progress through Lucian (no direct contact). Knows she must signal at ch11.",
+      "ch12": "After signaling through scope at ch11 and repeating the firing sequence at ch12, she is now in active communication with Sloane. She knows Sloane now understands the staged death. She is captured at ch14.",
+      "ch17": "Freed by Sloane at the climax. Provides the mirror key (hand rhythm) for the ledger. Testifies months later in epilogue. Knows the ledger is published. Understands the full scope of Rook's network.",
+      "must_not_know_before": "Must not be revealed as alive to Sloane before chapter 11. Must not reveal the exact hand rhythm sequence to the reader before chapter 12. Must not be known to Rook as alive before chapter 14 capture (Rook's contingency).",
+      "hidden_truth": "Her survival and consent to the staged death. The mirror key (hand rhythm) is hidden in her body as a reflex. She knows Sloane's plan to hide the ledger and the fact that Sloane erased her own memory."
+    },
+    "Cassian Rook": {
+      "ch1": "Knows he altered seven target files to eliminate witnesses. Knows he created Sloane's conditioning. Knows he planned for her discovery as step seven of his design. Does not know that Sloane discovered his plan and wrote over his ending before erasing her memory. Does not know the mirror key is Mara's hand rhythm. Knows the surface order and binding condition (he designed it).",
+      "ch3": "Monitoring Sloane's investigation. Confident she will follow his design. Does not yet sense her hidden counter-plan. His first move forced them off the roof to prevent Sloane examining the body.",
+      "ch8": "Still believes his plan is on track. Has not realized Sloane is executing a separate design. Knows she has accessed some altered files but believes she is following his intended path.",
+      "ch12": "Becomes aware that Sloane is not following his expected script. He captures Mara at ch14 as a contingency. Still does not know about the overwrite or the mirror key. His intelligence remains sharp; he plans ahead.",
+      "ch17": "Realizes too late that Sloane overwrote his ending. Dies reaching for the rifle he trained her to use. His hidden knowledge of the wider network dies with him, but the ledger reveals it.",
+      "must_not_know_before": "Must not know that Sloane overwrote his ending before chapter 13 reveal. Must not know the mirror key is Mara's hand rhythm (he cannot find it because he searches for objects, not reflexes). Must not appear dead before chapter 17.",
+      "hidden_truth": "His manipulation of the seven target files, his creation of Sloane's conditioning, his design for her betrayal as step seven, and his connection to the larger weapons network that extends beyond his death."
+    }
+  }
+}

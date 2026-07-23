@@ -1,0 +1,171 @@
+---
+series: kill-me-if-i-remember
+book: 1
+chapter: 2
+title: The Contract
+spice: 1
+word_count: 1681
+status: draft
+needs_fix: []
+promoted_at: '2026-07-18T10:54:38Z'
+---
+
+The contract's corner had a micro-perforation from a printer she hadn't used since before the gap.
+
+Sloane's thumb traced the tiny row of holes, the kind that came only from the offline HP LaserJet in her office basement—a machine she'd requisitioned herself because it couldn't connect to the network, couldn't leave a digital trail. She'd been paranoid about security breaches for years. She'd built her own fortress.
+
+And now that fortress had a window she didn't remember opening.
+
+"This paper came from my office." She kept her voice flat, clinical. "The basement printer. No Wi-Fi, no print log."
+
+Lucian lowered his hand from the rifle scope. His silence was an admission.
+
+"How did I get it here? I don't have access to that room after hours. The key card logs would show—"
+
+"The logs show you accessed it twelve times in the past three months," he said.
+
+The words landed like a blade between her ribs. Twelve times. She had no memory of walking into that basement, no image of her hands feeding paper into the tray, no echo of her own voice muttering over the document she was creating. The contract she'd written against herself.
+
+She looked down at the page again. CLIENT TERMINATION AT SUNRISE. The letters were crisp, clean, perfectly aligned. This wasn't a frantic note scrawled in panic. This was a formal document, typed and printed with care.
+
+Her own care.
+
+"I need to sit down," she said.
+
+Lucian gestured toward the door that led back into the building. "There's a car in the garage. We're leaving."
+
+"We're not going anywhere until you answer questions."
+
+"You can ask them in the vehicle." He stepped past her, moving toward the rooftop door with the easy confidence of someone who expected to be obeyed. When he reached the handle, he paused. "The contract has a sunrise deadline. That gives us roughly four hours. Do you want to spend them freezing on a roof with a corpse, or do you want to find out what you did during those three months?"
+
+Sloane's gaze flicked back to Mara. Her sister still lay where she had fallen, dark hair against the gravel, the red coat soaked darker at the shoulder. A scream built in her throat, but she swallowed it.
+
+"Four hours," she repeated. "And then what?"
+
+"Then I execute the contract."
+
+"Unless I cancel it."
+
+"You can't." He pushed the door open and held it, waiting.
+
+She wanted to argue, to fight, to force him to explain the loophole she knew existed in every contract she'd ever written. But the cold was sinking into her bones now, and her sister's body lay behind her, and the man waiting by the door was the only link she had to the woman she'd become.
+
+She followed him into the stairwell.
+
+The descent was five flights of concrete and flickering emergency lights. Lucian moved ahead of her with a deliberate economy of motion, his boots silent on the steps. Sloane's heels clicked loud enough to wake the dead. She watched his shoulders, the set of his spine, the way his hand never strayed far from the holster beneath his jacket.
+
+In the parking garage, the air smelled of oil and cold cement. A single black sedan sat in the corner spot, inconspicuous and clean. Lucian unlocked the doors with a remote, and Sloane slid into the passenger seat without being told.
+
+The leather was cold against her legs. She held the contract in her lap, her fingers still pressed to the micro-perforation.
+
+Lucian settled behind the wheel. He reached for the ignition, and she watched his hand—the way his thumb and forefinger rotated the key in a precise two-finger twist, identical to the way he'd adjusted the rifle scope. A man who controlled every motion, even the ones that didn't matter.
+
+Then she saw the scar.
+
+A thin white line ran from the base of his index finger to the meat of his palm, a clean cut that had healed badly, leaving a ridge of raised tissue. She knew that scar. Not the story behind it—she didn't remember that—but the geography of it. Her eyes traced its path with a familiarity that made her stomach tighten.
+
+She looked away quickly, but the damage was done. Her pulse had jumped, and something warm and treacherous uncurled in her chest.
+
+"Where did you get that?" she asked, her voice steadier than she expected.
+
+Lucian followed her gaze to his hand. For a moment, his composure cracked, something dark and tender flickering across his face before he smoothed it away. "Kitchen knife. Three years ago."
+
+"Whose kitchen?"
+
+"Yours."
+
+The word hung in the air between them. Her kitchen. Her knife. A wound she'd given him. Or maybe one she'd tried to heal. She had no frame of reference, no image to attach to the memory. But her body remembered. Her stomach remembered. The flutter in her chest was not fear.
+
+She forced herself to look at the contract again. Safer territory. "Tell me how I hired you."
+
+"You found me through a mutual contact. You gave me the details of the job. I accepted."
+
+"That's not an answer. How did I find you? What contact? What were the terms?"
+
+Lucian turned the key, and the engine hummed to life. The heater began to push warm air into the cabin, but Sloane didn't feel it. "The terms were standard. Payment upon completion, half upfront. You transferred the deposit from an offshore account I'd never seen before."
+
+"Show me the account."
+
+"I can't. It was closed after the transaction."
+
+"Convenient."
+
+He didn't react. "You were thorough. You always were."
+
+Always. The word implied a history she couldn't access. "How long have you known me?"
+
+"Long enough."
+
+"That's not a number."
+
+"It's the only one I'm giving you."
+
+Sloane's hand dropped to her left wrist, her thumb pressing into the soft skin beneath her palm. The circle started small, a nervous orbit around a point she couldn't name. She felt the motion happening but couldn't stop it—a muscle memory that demanded completion.
+
+Lucian's eyes tracked the movement. He said nothing, but his knuckles whitened on the steering wheel.
+
+"What?" she demanded. "What does this mean?"
+
+"You're doing it right now."
+
+"I know I'm doing it. I want to know why."
+
+He held her gaze for a long moment. The garage was silent except for the low idle of the engine. Then he said, "It's the first step in a firing sequence."
+
+Sloane's hand froze mid-circle. "A firing sequence for what?"
+
+"For the weapon you built into your own reflexes." He shifted the car into drive and pulled out of the parking spot. The headlights cut through the dark, illuminating the concrete pillars as they wound upward toward the exit. "You designed it as a safety measure. If you ever forgot who you were, the circle would remind you."
+
+"Remind me of what?"
+
+"Who you were before you forgot."
+
+It didn't make sense. She was a federal firearms investigator. She tracked illegal weapons sales, broke up trafficking rings, testified in court. She didn't build weapons into her own body. She didn't write contracts on herself. She didn't hire assassins.
+
+But her thumb was still pressed against her wrist, and the muscle beneath it ached with the ghost of movement.
+
+The garage entrance ramp ended at a security gate. Lucian rolled down his window and swiped a card through the reader—not hers, because she hadn't brought her purse, hadn't brought anything except the contract and the clothes on her back. The gate lifted.
+
+"Where are we going?" she asked.
+
+"Somewhere safe."
+
+"There's nowhere safe. I'm a target. My sister is dead. You're the one holding the gun."
+
+He glanced at her, and for the first time, she saw something like regret in his eyes. "I'm also the only one who can keep you alive until sunrise."
+
+"After which you kill me."
+
+"After which I fulfill the contract."
+
+She wanted to scream at him, to beat her fists against the dashboard until something cracked. But the edge of the contract pressed against her palm, and the micro-perforation caught her attention again. She lifted the paper closer to the dash light, examining the tear line.
+
+This printer was in a locked room. A room she needed a key card to enter. A room that, according to the logs, she'd visited twelve times in three months.
+
+"What was I doing in the basement?" she muttered, half to herself. "Printing paper targets? Drafts? Why that specific printer?"
+
+Lucian didn't answer. He turned onto the main road, merging into the sparse early-morning traffic. The streetlights slid across the hood in rhythmic pulses.
+
+Sloane's thumb resumed its orbit on her wrist. The motion was automatic now, a comfort she didn't understand. She completed one circle, then two, then a third. On the fourth, her fingers curled inward, forming a loose grip—a trigger grip—and then relaxed.
+
+The sequence felt practiced. Intentional. As if her hand had memorized an action her brain had forgotten.
+
+Lucian's jaw tightened. He said nothing.
+
+"That just happened again," she said. "The circle and then the grip. What comes next?"
+
+"Nothing. It stops there because you don't have the weapon."
+
+"What weapon?"
+
+He didn't answer. The exit ramp for the highway rose ahead, and he accelerated into the merge, his two-fingered grip on the steering wheel mirroring the motion she'd just seen in her own hand.
+
+Sloane stared at the passing scenery—the dark storefronts, the empty bus stops, the glow of the city against the sky. Somewhere behind her, the Vertigo Building shrank into the distance, and with it, the only evidence of her sister's death.
+
+She looked down at the contract again. Her handwriting on the client line. The date. The phrase she didn't understand. CLIENT TERMINATION AT SUNRISE.
+
+Her phone buzzed in her coat pocket.
+
+She'd forgotten she had it. She pulled it out, expecting a notification from work, a text from a friend she didn't remember having. Instead, the screen showed a single message from an unknown number.
+
+You're not the only one watching the clock, Mercer.

@@ -1,0 +1,141 @@
+{
+  "act": [
+    7,
+    9
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Verdict Before the Test",
+      "slug": "the-verdict-before-the-test",
+      "one_line_summary": "Stellan Marsh gives Iris Kane forty-eight hours to repeat the Meridian Spine test, but a prewritten public statement and a distinctive archive puncture show that someone prepared the official conclusion before the new evidence exists.",
+      "beat_summary": "The summons from Ironwood leads directly to a controlled confrontation between Iris Kane and Stellan Marsh. Stellan Marsh treats the missing micrograph as a chain-of-custody failure and authorizes a fresh load test, but he requires Iris Kane to deliver a preliminary finding within forty-eight hours. Iris Kane refuses to endorse any conclusion until she controls the replacement sample from extraction through fracture. Stellan Marsh accepts that condition without losing his composure and gives her the internal briefing packet already prepared for the test. Inside it, Iris Kane finds a scheduled public statement reading, \"National Integrity Directorate -- independent certification; Meridian Spine verified clean,\" despite the replacement coupon not yet existing. She also notices that the Aegis approval copy bears a distinctive offset archive-comb puncture with one crescent-shaped hole, planting C005b and indicating that this copy passed through an unidentified internal file set before reaching the briefing packet.",
+      "must_happen": [
+        "Stellan Marsh confronts Iris Kane about the missing micrograph and authorizes a replacement load test with a forty-eight-hour deadline.",
+        "Iris Kane refuses to sign a preliminary conclusion unless she personally controls extraction, custody, and testing of the replacement coupon.",
+        "Iris Kane finds the prewritten statement \"National Integrity Directorate -- independent certification; Meridian Spine verified clean\" scheduled for release before the new test is performed.",
+        "Iris Kane observes the offset archive-comb puncture and its chipped crescent hole on the Aegis approval copy, planting C005b without identifying who handled the earlier file."
+      ],
+      "must_not": [
+        "Must not identify Stellan Marsh as the source of the wider fraud or attribute the hidden hierarchy to him.",
+        "Must not state that the National Integrity Directorate was created for a concealed criminal purpose.",
+        "Must not let Iris Kane recover the missing micrograph or treat the replacement test as equivalent to the lost original evidence."
+      ],
+      "opens_with": "\"You lost the only evidence that justified your accusation,\" Stellan Marsh says, pushing an empty slide tray across the table toward Iris Kane.",
+      "cliffhanger": "Iris Kane turns the briefing packet over and finds tomorrow's release time stamped beneath the words \"Meridian Spine verified clean\" - six hours before the replacement coupon is scheduled to be cut.",
+      "signature_detail_hint": "The briefing packet has four archive-comb holes, but one tooth in the punch was chipped, leaving a tiny crescent of paper attached inside the third hole like a hinged trapdoor.",
+      "emotional_beat": "Iris Kane feels the professional trust once offered by Stellan Marsh harden into pressure, and her isolation deepens when even her demand for a valid test is absorbed into a timetable she did not set.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word institutional confrontation that continues directly from the Ironwood summons, gives Iris Kane a concrete replacement-test objective, plants C005b through a physical document feature, and ends on proof that the public conclusion was scheduled before the test. Maintain single POV through Iris Kane, keep Stellan Marsh measured and strategically reasonable, and include no romance or sexual content.",
+      "carries_to_next": "Iris Kane goes to the Meridian Spine fabrication site to extract the replacement coupon under her own chain of custody while concealing the premature release schedule and the archive-comb puncture from Nadia Okafor.",
+      "narrative": {
+        "clues_plant": [
+          "C005b"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "clue_beats": {
+          "C005b": "Plant the clue as an offset archive-comb puncture with a chipped crescent hole on the internal Aegis approval copy; Iris Kane records the pattern but cannot yet identify the earlier packet or handler."
+        }
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Broken Seal",
+      "slug": "the-broken-seal",
+      "one_line_summary": "Iris Kane extracts a replacement coupon under hostile supervision and finds microscopic evidence that its secured storage bay was opened and resealed after Petra Lund's certification.",
+      "beat_summary": "Iris Kane arrives at the Meridian Spine fabrication site with Nadia Okafor and enforces the custody conditions accepted by Stellan Marsh. Petra Lund must identify the approved coupon bank but is not permitted to touch the selected piece. Nadia Okafor repeatedly urges Iris Kane to finish before the scheduled public briefing, confirming that institutional timing matters more to her than the engineering process. Before cutting the replacement coupon, Iris Kane examines the storage-bay seal and finds a crescent of older adhesive beneath the current strip, along with two misaligned registration perforations. She photographs the seal in place, removes it intact, and bags the metal latch, adhesive strip, and paper backing separately, planting C004. A blue abrasive grain trapped between the adhesive layers indicates that the bay was exposed to fabrication residue before the current seal was applied. Iris Kane proceeds with the extraction but treats the coupon as potentially compromised rather than clean evidence.",
+      "must_happen": [
+        "Iris Kane takes personal control of the replacement coupon extraction and prevents Petra Lund or Nadia Okafor from handling the selected piece.",
+        "Nadia Okafor pressures Iris Kane to complete the test before the scheduled public briefing, reinforcing that Iris Kane is still being steered.",
+        "Iris Kane discovers an older adhesive crescent and misaligned registration perforations beneath the current storage-bay seal, planting C004.",
+        "Iris Kane preserves the latch, seal, backing, and trapped blue abrasive grain as separate evidence items before allowing the coupon to be cut."
+      ],
+      "must_not": [
+        "Must not identify who opened or resealed the storage bay.",
+        "Must not conclude that the replacement coupon carries the same tool-mark as the original evidence.",
+        "Must not allow Nadia Okafor or Petra Lund to destroy, replace, or take custody of the recovered seal components."
+      ],
+      "opens_with": "\"Take your hand off the coupon,\" Iris Kane says as Petra Lund reaches across the cutting bench.",
+      "cliffhanger": "Under magnification, Iris Kane finds a blue abrasive grain sealed between two adhesive layers - physical proof that the supposedly untouched bay had been opened on the fabrication floor and closed again.",
+      "signature_detail_hint": "The tamper strip has two rows of pinprick registration holes that almost overlap; the offset is smaller than a fingernail clipping but too regular to be accidental.",
+      "emotional_beat": "Iris Kane's need for physical certainty collides with the knowledge that every controlled object may already have been handled, leaving her angry, exposed, and unwilling to trust even a test performed under her own authority.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word evidence-extraction sequence built around procedural pressure, physical custody, and the planting of C004. Keep the action tactile and specific, show Nadia Okafor steering Iris Kane through deadlines rather than confession, preserve Petra Lund's established guilt without expanding her knowledge, and include no romance or sexual content.",
+      "carries_to_next": "Iris Kane brings the replacement coupon and every layer of the broken seal to an independent document bench, intending to determine when the bay was reopened before the Directorate publishes its prepared conclusion.",
+      "narrative": {
+        "clues_plant": [
+          "C004"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "clue_beats": {
+          "C004": "Plant the clue through an older adhesive layer, offset registration perforations, and a trapped fabrication abrasive grain, all preserved by Iris Kane before the replacement coupon leaves storage."
+        }
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "Her Number on the Ledger",
+      "slug": "her-number-on-the-ledger",
+      "one_line_summary": "Iris Kane proves that the coupon bay was opened after Petra Lund's certification and discovers that the paper access ledger records the unauthorized entry under Iris Kane's own credentials.",
+      "beat_summary": "Iris Kane examines the recovered seal components before testing the replacement coupon. By aligning the registration perforations and comparing the compressed adhesive edges, she proves that the original strip was peeled back and a second strip applied after Petra Lund signed the certification, paying off C004. The trapped abrasive grain matches residue from the active cutting floor rather than the secured coupon bank, establishing MR002: someone interfered with the certified storage bay after Petra Lund's initial act. Iris Kane then demands the physical access ledger for the bay. Nadia Okafor produces it only after arguing that the seal damage could be routine maintenance. The ledger's machine-imprinted time falls during Iris Kane's visit to Aldous Renn at Ironwood, yet the credential number beside the entry belongs to Iris Kane. She does not accuse Nadia Okafor or Stellan Marsh because the physical record proves misuse of her credentials, not the identity of the person who used them. The prepared public statement remains scheduled, forcing Iris Kane to choose between an inconclusive replacement test and an immediate challenge to the chain of custody.",
+      "must_happen": [
+        "Iris Kane aligns the two seal layers and proves that the storage bay was opened and resealed after Petra Lund's certification, paying off C004.",
+        "Iris Kane matches the trapped abrasive grain to residue from the active fabrication floor, establishing MR002 as post-certification interference with the secured coupon bank.",
+        "Nadia Okafor resists but ultimately provides the physical access ledger after Iris Kane refuses to continue without it.",
+        "Iris Kane finds an entry made during her Ironwood visit under Iris Kane's own credential number, proving that someone used her identity to access the bay."
+      ],
+      "must_not": [
+        "Must not identify the person who used Iris Kane's credentials.",
+        "Must not attribute the credential misuse or post-certification interference to Stellan Marsh.",
+        "Must not publish, destroy, or fully retest the original tool-mark proof.",
+        "Must not let Iris Kane accept the replacement coupon as an uncontaminated basis for certification."
+      ],
+      "opens_with": "Iris Kane lowers the blade toward the seal backing and says, \"If these perforations align, somebody opened the bay after certification.\"",
+      "cliffhanger": "The access time is 14:17, when Iris Kane was behind the gates at Ironwood, but the credential number stamped beside it is hers.",
+      "signature_detail_hint": "Pressure from the ledger printer has driven a tiny ridge of black ribbon wax through the paper, allowing Iris Kane to distinguish the original machine imprint from later handwriting without relying on a digital record.",
+      "emotional_beat": "The evidence turns Iris Kane's isolation into personal vulnerability: the obstruction is no longer merely around her investigation, because someone has begun making the physical record speak in her name.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word forensic payoff chapter that resolves C004 through seal mechanics, delivers MR002 as proof of post-certification interference, and ends with the concrete false-record threat against Iris Kane. Keep every conclusion limited to what the physical seal, abrasive residue, timing, and paper ledger establish; maintain single POV through Iris Kane and include no romance or sexual content.",
+      "carries_to_next": "Iris Kane must determine who could issue or duplicate her Directorate credential while preventing the prewritten clean certification from being released under her authority.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C004"
+        ],
+        "reveals": [
+          {
+            "id": "MR002",
+            "reveal_weight": "minor",
+            "required_clues": [
+              "C004"
+            ],
+            "min_clues_required": 1
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "clue_beats": {
+          "C004": "Pay off the clue by aligning the seal perforations, comparing compressed adhesive edges, and matching the trapped grain to the fabrication floor, proving that the secured bay was opened and resealed after certification."
+        }
+      }
+    }
+  ]
+}

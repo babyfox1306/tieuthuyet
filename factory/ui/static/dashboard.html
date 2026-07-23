@@ -53,6 +53,7 @@
     .ch-card:hover { border-color: var(--accent); }
     .ch-card.selected { border-color: var(--accent); background: #1e2438; }
     .ch-card .num { font-weight: 700; font-size: .95rem; }
+    .ch-card .ch-title { font-size: .72rem; line-height: 1.25; margin-top: .2rem; color: var(--text); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .ch-card .st { font-size: .7rem; color: var(--muted); margin-top: .15rem; }
     .ch-card .why { font-size: .65rem; color: var(--warn); margin-top: .2rem; line-height: 1.3; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
     .st-ready { color: var(--accent2); }
@@ -130,7 +131,8 @@
           <button class="btn-ghost" id="btnSavePenName" type="button" title="Lưu pen name vào direction.yaml + manifest.yaml">Lưu</button>
         </div>
       </div>
-      <button class="btn-success" id="btnNewWorkspace" title="Tạo sách / series mới">+ Workspace mới</button>
+      <button class="btn-success" id="btnNewWorkspace" title="Tạo series mới (Book 1)">+ Workspace mới</button>
+      <button class="btn-ghost" id="btnAddBook" title="Thêm Book N vào series đang chọn">+ Thêm sách (serial)</button>
       <button class="btn-ghost" id="btnRefresh">↻ Làm mới</button>
     </div>
   </header>
@@ -146,7 +148,7 @@
     <div id="status"></div>
 
     <div id="tab-concept" class="tab active">
-      <p class="meta-line">Điền ý tưởng, chọn ngôn ngữ, sinh narrative. Sau khi xong chuyển sang tab Pipeline.</p>
+      <p class="meta-line">Điền ý tưởng theo <strong>Book #</strong> đang chọn (concept riêng từng sách). Sau khi xong chuyển sang tab Pipeline.</p>
       <iframe class="concept-frame" id="conceptFrame" src="/index.html" title="Concept form"></iframe>
     </div>
 
@@ -260,7 +262,7 @@
   <div class="dialog-backdrop" id="newWsDialog" role="dialog" aria-labelledby="newWsTitle">
     <div class="dialog">
       <h2 id="newWsTitle">Tạo workspace mới</h2>
-      <p>Mỗi workspace = một sách/series riêng trong <code>factory/workspaces/</code>. Không cần Cursor.</p>
+      <p>Mỗi workspace = một <strong>series</strong> riêng trong <code>factory/workspaces/</code>. Book 2+ dùng nút <strong>+ Thêm sách (serial)</strong>.</p>
       <div class="field">
         <label for="newWsTitleInput">Tên truyện (tuỳ chọn)</label>
         <input id="newWsTitleInput" type="text" placeholder="VD: Midnight Harbor" />
@@ -302,6 +304,39 @@
       <div class="actions">
         <button class="btn-ghost" type="button" id="btnNewWsCancel">Huỷ</button>
         <button class="btn-success" type="button" id="btnNewWsCreate">Tạo</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog-backdrop" id="addBookDialog" role="dialog" aria-labelledby="addBookTitle">
+    <div class="dialog">
+      <h2 id="addBookTitle">Thêm sách vào series</h2>
+      <p>Scaffold <code>books/NN/</code> + catalog trong workspace đang chọn. Không tạo workspace mới.</p>
+      <div class="field">
+        <label for="addBookSeries">Series (workspace)</label>
+        <select id="addBookSeries"></select>
+      </div>
+      <div class="field">
+        <label for="addBookNum">Book #</label>
+        <input id="addBookNum" type="number" min="2" max="20" value="2" />
+        <div class="mode-hint">Book 1 đã có sẵn khi tạo workspace. Tiếp theo thường là 2.</div>
+      </div>
+      <div class="field">
+        <label for="addBookTitleInput">Tiêu đề sách</label>
+        <input id="addBookTitleInput" type="text" placeholder="VD: The Meridian Spine" />
+      </div>
+      <div class="field">
+        <label for="addBookSlug">Slug catalog (tuỳ chọn)</label>
+        <input id="addBookSlug" type="text" placeholder="02-the-meridian-spine" />
+        <div class="mode-hint">Để trống = tự sinh từ số + title</div>
+      </div>
+      <div class="field">
+        <label for="addBookChapters">Số chương</label>
+        <input id="addBookChapters" type="number" min="3" max="200" value="22" />
+      </div>
+      <div class="actions">
+        <button class="btn-ghost" type="button" id="btnAddBookCancel">Huỷ</button>
+        <button class="btn-success" type="button" id="btnAddBookCreate">Thêm sách</button>
       </div>
     </div>
   </div>
@@ -471,7 +506,7 @@
         }
         closeNewWorkspaceDialog();
         await loadWorkspaces(id);
-        $("conceptFrame").src = "/index.html?ws=" + encodeURIComponent(id);
+        syncConceptFrame();
         document.querySelector('nav.tabs button[data-tab="concept"]').click();
         showStatus(`Đã tạo workspace «${id}» — điền Concept rồi chạy Pipeline`, "ok");
         await refreshAll();
@@ -479,6 +514,110 @@
         showStatus("Lỗi: " + e.message, "bad");
       } finally {
         $("btnNewWsCreate").disabled = false;
+      }
+    });
+
+    let lastConceptFrameKey = "";
+    function syncConceptFrame() {
+      const f = $("conceptFrame");
+      if (!f) return;
+      const key = ws() + "|" + book();
+      if (key === lastConceptFrameKey) return;
+      lastConceptFrameKey = key;
+      f.src = "/index.html?ws=" + encodeURIComponent(ws()) + "&book=" + encodeURIComponent(book());
+    }
+
+    function openAddBookDialog() {
+      const sel = $("addBookSeries");
+      sel.innerHTML = "";
+      const list = Array.from($("workspace").options).map(o => o.value);
+      list.forEach(w => {
+        const o = document.createElement("option");
+        o.value = w; o.textContent = w;
+        sel.appendChild(o);
+      });
+      sel.value = ws() || list[0] || "";
+      const books = (pipelineData && pipelineData.books) || [];
+      const maxBook = books.reduce((m, b) => Math.max(m, Number(b.book) || 0), 1);
+      $("addBookNum").value = String(maxBook + 1);
+      $("addBookTitleInput").value = "";
+      $("addBookSlug").value = "";
+      $("addBookChapters").value = "22";
+      $("addBookDialog").classList.add("open");
+      $("addBookTitleInput").focus();
+    }
+
+    function closeAddBookDialog() {
+      $("addBookDialog").classList.remove("open");
+    }
+
+    $("btnAddBook").addEventListener("click", openAddBookDialog);
+    $("btnAddBookCancel").addEventListener("click", closeAddBookDialog);
+    $("addBookDialog").addEventListener("click", (e) => {
+      if (e.target === $("addBookDialog")) closeAddBookDialog();
+    });
+    $("addBookTitleInput").addEventListener("input", () => {
+      const n = parseInt($("addBookNum").value, 10) || 2;
+      const t = $("addBookTitleInput").value.trim();
+      if (t && !$("addBookSlug").dataset.touched) {
+        $("addBookSlug").value = String(n).padStart(2, "0") + "-" + slugifyId(t);
+      }
+    });
+    $("addBookSlug").addEventListener("input", () => { $("addBookSlug").dataset.touched = "1"; });
+    $("addBookNum").addEventListener("input", () => {
+      const n = parseInt($("addBookNum").value, 10) || 2;
+      const t = $("addBookTitleInput").value.trim();
+      if (t && !$("addBookSlug").dataset.touched) {
+        $("addBookSlug").value = String(n).padStart(2, "0") + "-" + slugifyId(t);
+      }
+    });
+
+    $("btnAddBookCreate").addEventListener("click", async () => {
+      const series = $("addBookSeries").value;
+      const bookNum = parseInt($("addBookNum").value, 10);
+      const title = $("addBookTitleInput").value.trim();
+      if (!series) {
+        showStatus("Chọn series/workspace", "bad");
+        return;
+      }
+      if (!bookNum || bookNum < 2) {
+        showStatus("Book # phải >= 2", "bad");
+        return;
+      }
+      if (!title) {
+        showStatus("Tiêu đề sách bắt buộc", "bad");
+        return;
+      }
+      $("btnAddBookCreate").disabled = true;
+      try {
+        const data = await api("/api/series-book", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            workspace: series,
+            book: bookNum,
+            title,
+            slug: $("addBookSlug").value.trim() || undefined,
+            total_chapters: parseInt($("addBookChapters").value, 10) || 22,
+          }),
+        });
+        if (!data.ok) {
+          showStatus("Lỗi thêm sách: " + (data.error || "failed"), "bad");
+          return;
+        }
+        closeAddBookDialog();
+        await loadWorkspaces(series);
+        $("workspace").value = series;
+        await loadPipeline();
+        $("book").value = String(data.book);
+        syncConceptFrame();
+        document.querySelector('nav.tabs button[data-tab="concept"]').click();
+        showStatus(data.message || `Đã thêm Book ${data.book}`, "ok");
+        await refreshAll();
+      } catch (e) {
+        showStatus("Lỗi: " + e.message, "bad");
+      } finally {
+        $("btnAddBookCreate").disabled = false;
       }
     });
 
@@ -662,10 +801,11 @@
         const div = document.createElement("div");
         div.className = "ch-card" + (selectedCh === ch.chapter ? " selected" : "");
         const st = ch.in_catalog ? "catalog" : ch.status;
+        const title = ch.title ? escapeHtml(ch.title) : "";
         const why = (!ch.in_catalog && ch.reason_summary)
           ? `<div class="why" title="${escapeHtml(ch.reason_summary)}">${escapeHtml(ch.reason_summary)}</div>`
           : "";
-        div.innerHTML = `<div class="num">Ch ${ch.chapter}</div><div class="st ${statusClass(st)}">${st}${ch.word_count ? " · " + ch.word_count + "w" : ""}</div>${why}`;
+        div.innerHTML = `<div class="num">Ch ${ch.chapter}</div>${title ? `<div class="ch-title">${title}</div>` : ""}<div class="st ${statusClass(st)}">${st}${ch.word_count ? " · " + ch.word_count + "w" : ""}</div>${why}`;
         div.onclick = () => selectChapter(ch.chapter);
         grid.appendChild(div);
       });
@@ -674,7 +814,7 @@
     async function selectChapter(ch) {
       selectedCh = ch;
       await loadChapters();
-      const data = await api(`/api/chapters/${ws()}/${ch}`);
+      const data = await api(`/api/chapters/${ws()}/${ch}?book=${book()}`);
       const displayStatus = data.in_catalog || data.status === "catalog" ? "catalog" : data.status;
       const reasonBit = data.reason_summary ? ` · ${data.reason_summary}` : "";
       $("chMeta").textContent = `Chương ${ch}: ${data.title || data.plan_summary || ""} · ${displayStatus} · ${data.word_count || 0} từ${reasonBit}`;
@@ -880,11 +1020,13 @@
     $("btnQcEpub").addEventListener("click", doQcEpub);
 
     $("workspace").addEventListener("change", () => {
-      const f = $("conceptFrame");
-      f.src = "/index.html?ws=" + encodeURIComponent(ws());
+      syncConceptFrame();
       refreshAll();
     });
-    $("book").addEventListener("change", refreshAll);
+    $("book").addEventListener("change", () => {
+      syncConceptFrame();
+      refreshAll();
+    });
 
     async function saveTotalChapters() {
       const total = parseInt($("totalChapters").value, 10);
@@ -1104,6 +1246,7 @@
       try {
         await loadPipeline();
         await loadChapters();
+        syncConceptFrame();
         if (selectedCh) await selectChapter(selectedCh);
         showStatus("Đã cập nhật trạng thái", "ok");
       } catch (e) {

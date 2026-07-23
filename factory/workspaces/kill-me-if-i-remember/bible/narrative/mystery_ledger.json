@@ -1,0 +1,138 @@
+{
+  "main_mystery": "Who shot Mara Mercer on the rooftop, and why does the contract in Sloane's own handwriting order her own death at sunrise? What happened during the three months she cannot remember?",
+  "truth": "Her handler spent two years feeding her falsified targets so that her assassin would eliminate seven witnesses to his private weapons network. When she found out, she did not run — she built a trap that required her own destruction. She staged her sister's death as bait, hid the complete transaction ledger inside her own conditioned reflexes, erased her memory so no interrogation could reach it, and ordered her lover to kill her if the handler ever restored the obedient version of her he had trained. But the handler had planned for her discovery too. Her rebellion was a step in his design. What he did not plan for is that she wrote over his ending. The night is not her recovering the truth. It is her executing a plan she can no longer remember making, using a body that remembers everything.",
+  "canonical_reveal_chapter": 13,
+  "red_herrings": [
+    {
+      "id": "RH001",
+      "description": "Sloane suspects she may have killed Mara herself during a dissociative episode in her missing three months, believing she was the shooter.",
+      "planted_chapter": 2,
+      "debunked_chapter": 11
+    },
+    {
+      "id": "RH002",
+      "description": "The contract appears unconditional — Sloane believes Lucian intends to execute her at sunrise regardless of any hidden clause, with no possible escape.",
+      "planted_chapter": 1,
+      "debunked_chapter": 10
+    },
+    {
+      "id": "RH003",
+      "description": "Rook is presumed dead early in the investigation, leading Sloane to conclude the conspiracy died with him and she is chasing a ghost.",
+      "planted_chapter": 3,
+      "debunked_chapter": 6
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "description": "The contract includes a hidden rider visible only when held at an angle, but the ink reactively fades before Sloane can read the additional clause.",
+      "plant_chapter": 2,
+      "payoff_chapter": 10
+    },
+    {
+      "id": "C002",
+      "description": "Lucian's hand trembles and his focus ring adjustment slows when Sloane presses him about sunrise — a physical tell that the obligation has a nested condition.",
+      "plant_chapter": 3,
+      "payoff_chapter": 10
+    },
+    {
+      "id": "C003",
+      "description": "The blood pool on the rooftop already shows early clotting, inconsistent with a wound sustained minutes before Sloane woke — indicating pre-staging.",
+      "plant_chapter": 1,
+      "payoff_chapter": 11
+    },
+    {
+      "id": "C004",
+      "description": "Lucian's ballistic line of fire on the roof traces a controlled shoulder graze angle, not a lethal head or torso shot — a practiced minimum-impact placement.",
+      "plant_chapter": 2,
+      "payoff_chapter": 11
+    },
+    {
+      "id": "C005",
+      "description": "Mara's phone, still in her jacket pocket, shows a timestamped text sent after the recorded time of the shooting — Sloane finds it before Rook can scrub it.",
+      "plant_chapter": 4,
+      "payoff_chapter": 11
+    },
+    {
+      "id": "C006",
+      "description": "Sloane uncovers a hidden drive in her apartment containing an audio file labeled 'overwrite_protocol'; her own voice describes predicting Rook's seventh-stage contingency.",
+      "plant_chapter": 7,
+      "payoff_chapter": 13
+    },
+    {
+      "id": "C007",
+      "description": "Rook's encrypted operational notes reference a 'step seven — rebellion phase' among his planning stages, confirming he anticipated her discovery.",
+      "plant_chapter": 8,
+      "payoff_chapter": 13
+    },
+    {
+      "id": "C008",
+      "description": "Handwriting samples from Sloane's apartment show she had practiced a different signature and legal formulation, indicating she prepared a counter-order before erasing her memory.",
+      "plant_chapter": 9,
+      "payoff_chapter": 13
+    },
+    {
+      "id": "C009",
+      "description": "Sloane catches herself tracing the same wrist circle she uses to load a magazine — the motion is not a tic but the first motor sequence of a conditioned firing protocol.",
+      "plant_chapter": 5,
+      "payoff_chapter": 12
+    },
+    {
+      "id": "C010",
+      "description": "Sloane remembers a childhood habit of Mara's — a specific finger-tapping pattern when anxious — and realizes the rhythm she saw through the scope is identical, confirming Mara's signal was intentional.",
+      "plant_chapter": 11,
+      "payoff_chapter": 17
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "MR001",
+      "chapter": 10,
+      "description": "The binding condition is exposed: Lucian's duty to kill Sloane at sunrise is conditional — it activates only if Rook restores her obedient identity, not on the dawn itself.",
+      "reveal_weight": "major",
+      "required_clues": [
+        "C001",
+        "C002"
+      ]
+    },
+    {
+      "id": "MR002",
+      "chapter": 11,
+      "description": "Mara signals through the rifle scope, proving she is alive and the shooting was a staged operation she consented to — she is the bait, not a victim.",
+      "reveal_weight": "major",
+      "required_clues": [
+        "C003",
+        "C004",
+        "C005"
+      ]
+    },
+    {
+      "id": "MR003",
+      "chapter": 13,
+      "description": "Sloane confirms that Rook designed her rebellion as step seven of his operation, and that she overwrote his ending before erasing her memory — the trap inside the trap.",
+      "reveal_weight": "major",
+      "required_clues": [
+        "C006",
+        "C008"
+      ]
+    },
+    {
+      "id": "MR004",
+      "chapter": 12,
+      "description": "The wrist circle is identified as the first motion of Sloane's conditioned firing sequence — her body remembers the training her mind lost.",
+      "reveal_weight": "minor",
+      "required_clues": [
+        "C009"
+      ]
+    },
+    {
+      "id": "MR005",
+      "chapter": 16,
+      "description": "The mirror key is revealed as Mara's hand rhythm — a reflex embedded in her muscle memory, impossible for Rook to confiscate because it is not an object.",
+      "reveal_weight": "minor",
+      "required_clues": [
+        "C010"
+      ]
+    }
+  ]
+}

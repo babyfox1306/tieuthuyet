@@ -1,0 +1,20 @@
+{
+  "foreign_chars": [],
+  "word_count": 3916,
+  "voice_drift": {
+    "flag": false,
+    "details": ""
+  },
+  "continuity_conflict": {
+    "flag": false,
+    "details": ""
+  },
+  "cliffhanger_strength": 4,
+  "pacing_issue": false,
+  "signature_detail_present": true,
+  "spice_ok": true,
+  "content_boundary_ok": true,
+  "verdict": "PASS",
+  "fail_reasons": [],
+  "source": "llm_qc_supervised"
+}

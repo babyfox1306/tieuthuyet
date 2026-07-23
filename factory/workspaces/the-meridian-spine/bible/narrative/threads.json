@@ -1,0 +1,15 @@
+{
+  "description": "Threads for 'The Meridian Spine' (Book 2), detailing the progression and resolution of key narrative arcs, character developments, and conspiracy layers.",
+  "threads": [
+    {
+      "id": "T001",
+      "name": "The Meridian Spine Fraud & National Capture",
+      "opened_chapter": 1,
+      "must_close_by": 22,
+      "status": "closed",
+      "book1_resolution": "Stellan Marsh is exposed on chapter 19-20 as the architect of the National Integrity Directorate, which he built as a capture instrument to launder national procurement. The physical tool-mark proof is published on chapter 21, leading to his arrest. Iris resigns from the Directorate on chapter 22, choosing the record over the office.",
+      "book2_promise": "The redacted page named a foreign counter-signatory, and the tool-mark appears on a contract outside Iris's jurisdiction, indicating the conspiracy extends internationally for Book 3.",
+      "book1_payoff": "The complete dismantling of"
+    }
+  ]
+}

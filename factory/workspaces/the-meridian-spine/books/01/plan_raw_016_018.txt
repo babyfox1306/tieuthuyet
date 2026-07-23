@@ -1,0 +1,249 @@
+```json
+{
+  "act": [
+    16,
+    18
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 16,
+      "title": "The Coordinator's Signature",
+      "slug": "the-coordinators-signature",
+      "one_line_summary": "Iris Kane connects Seraphina Cole's directive to Gerald Halveston's fund, exposing him as the coordinator of the Meridian Spine's capture, and discovers a pattern in his other projects suggesting a national strategy.",
+      "beat_summary": "Iris Kane meticulously investigates Seraphina Cole, the policy director who signed the Spine prioritization memo from chapter 15. Using the 'Fides et Ratio' watermark (C006 payoff) as a key, Iris Kane traces Cole's professional history to a series of legal and financial consultancies that directly intersect with Gerald Halveston's philanthropic foundation. She uncovers a hidden subsidiary of Halveston's fund that managed Cole's appointments and provided her with 'policy guidance,' effectively proving that Halveston orchestrated Cole's directive and thus the capture of the Meridian Spine contracts (MR005). Halveston, now exposed as the coordinator of this specific project's fraud, issues a carefully worded statement denying direct involvement. Iris Kane, however, reviews Halveston's other national infrastructure projects and finds a recurring pattern of expedited approvals and shell company financing, planting C007, indicating a broader, national-scale capture strategy beyond just the Spine.",
+      "must_happen": [
+        "Iris Kane uses the 'Fides et Ratio' watermark (C006 payoff) to establish a direct, hidden link between Seraphina Cole and Gerald Halveston's foundation.",
+        "Iris Kane exposes Gerald Halveston as the coordinator of the Meridian Spine contract capture (MR005).",
+        "Gerald Halveston issues a public statement denying direct involvement, attempting to contain the fallout.",
+        "Iris Kane identifies a recurring pattern of expedited approvals and shell company financing in Halveston's other national projects, planting C007."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not name Stellan Marsh as the architect above Halveston, only that the conspiracy is national.",
+        "Must not have Halveston confess his full role or implicate Marsh."
+      ],
+      "opens_with": "The 'Fides et Ratio' watermark on Seraphina Cole's memo wasn't just a mark; it was a compass point, leading Iris Kane directly into Gerald Halveston's shadow.",
+      "cliffhanger": "Iris Kane stares at the screen, a map of Halveston's 'philanthropic' projects spread before her. Not one, not two, but a dozen national infrastructure contracts bear the same tell-tale pattern of expedited approval and opaque financing. The Meridian Spine was just a single thread in a national web.",
+      "signature_detail_hint": "A faded photograph of Seraphina Cole at a charity gala, standing beside a younger Gerald Halveston, both wearing a pin with the 'Fides et Ratio' emblem, a detail Iris Kane finds in an obscure social registry.",
+      "emotional_beat": "A cold certainty settles over Iris Kane. Halveston's exposure is a victory, but the scale of his operations shifts her understanding from a project-level fraud to a national systemic capture, deepening her isolation in the face of such pervasive corruption.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter focused on Iris Kane's investigation connecting Seraphina Cole to Gerald Halveston. Pay off C006, deliver MR005, and plant C007, while adhering to the `iris_knows` constraints regarding Halveston's role and the national scope of the conspiracy. Maintain single POV and avoid romance.",
+      "carries_to_next": "Iris Kane now understands Halveston's national pattern and must delve deeper into the systemic mechanism that allows such widespread capture, seeking the next layer of the conspiracy.",
+      "narrative": {
+        "clues_plant": [
+          "C007"
+        ],
+        "clues_payoff": [
+          "C006"
+        ],
+        "reveals": [
+          {
+            "id": "MR005",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C006",
+              "C007"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has proven Gerald Halveston's fund captured the Spine contracts",
+            "Iris: She exposes him as the coordinator",
+            "Iris: She sees the conspiracy is national but still cannot name the architect above Halveston.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Okafor is in custody",
+            "Nadia Okafor: Her knowledge of the domestic tiers is complete."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 16,
+          "iris_knows": [
+            "Iris: Iris has proven Gerald Halveston's fund captured the Spine contracts",
+            "Iris: She exposes him as the coordinator",
+            "Iris: She sees the conspiracy is national but still cannot name the architect above Halveston.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Okafor is in custody",
+            "Nadia Okafor: Her knowledge of the domestic tiers is complete."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ]
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 17,
+      "title": "The Systemic Loophole",
+      "slug": "the-systemic-loophole",
+      "one_line_summary": "Iris Kane, facing Halveston's deflection, investigates the legal framework of his national projects and uncovers a recurring, non-standard clause that systematically bypasses oversight, hinting at a higher, institutional design.",
+      "beat_summary": "Following Halveston's exposure, the Directorate's legal department issues a directive to Iris Kane, attempting to restrict her inquiry to the Meridian Spine project only. Iris Kane sees this as a clear attempt to contain the damage and shield the broader conspiracy. Ignoring the directive, she focuses on the common patterns she identified in Halveston's national projects (C007 from chapter 16). She dives into the legal documentation for these projects, specifically seeking anomalies in the procurement and oversight clauses. After painstaking analysis, she uncovers a subtle, non-standard legal loophole—a recurring clause that consistently diverts oversight authority from independent bodies to a specific, internal 'advisory panel' within the Directorate itself (C008 planted). This clause appears in every one of Halveston's national contracts, suggesting a deliberate, systemic design rather than isolated legal maneuvering. The clause is so subtly embedded it could easily be missed by standard audits, yet its consistent presence points to an intentional architect.",
+      "must_happen": [
+        "The Directorate's legal department attempts to restrict Iris Kane's investigation to the Meridian Spine, clearly a move to contain Halveston's exposure.",
+        "Iris Kane bypasses the legal directive and continues investigating the national pattern of Halveston's projects.",
+        "Iris Kane discovers a recurring, non-standard legal clause in multiple national infrastructure contracts funded by Halveston's network, planting C008.",
+        "The clause diverts oversight authority to an internal 'advisory panel' within the Directorate, suggesting a systemic design."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not identify the specific members of the 'advisory panel' or link them directly to Marsh.",
+        "Must not allow Iris Kane to be formally sanctioned or stopped by the Directorate's legal department yet."
+      ],
+      "opens_with": "\"Your inquiry is confined to the Meridian Spine,\" the legal directive stated, its tone clipped and final. Iris Kane crumpled the paper. \"Not if the Spine is just a single vertebra.\"",
+      "cliffhanger": "Iris Kane highlights the same unusual legal clause in the tenth contract. 'Oversight to Advisory Panel, Directorate Internal Review.' The words, innocuous on their own, now echoed like a drumbeat across a national landscape, a blueprint for systemic capture.",
+      "signature_detail_hint": "The recurring legal clause is formatted with a specific, outdated legal citation style, a subtle anachronism that suggests it was lifted from an older, less scrutinized template, or intentionally designed to evade modern scrutiny.",
+      "emotional_beat": "Iris Kane feels a chilling realization: the conspiracy isn't just about corruption, but about the insidious re-engineering of the law itself, turning the very rules of oversight into instruments of capture.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter where Iris Kane investigates Halveston's national projects, uncovers a systemic legal loophole (C008 plant), and deepens her understanding of the conspiracy's institutional nature. Maintain single POV and avoid romance.",
+      "carries_to_next": "Iris Kane now possesses evidence of a systemic legal loophole and a national pattern, and must connect these threads to the physical evidence of manipulation to expose the full scope of the capture.",
+      "narrative": {
+        "clues_plant": [
+          "C008"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has proven Gerald Halveston's fund captured the Spine contracts",
+            "Iris: She exposes him as the coordinator",
+            "Iris: She sees the conspiracy is national but still cannot name the architect above Halveston.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Okafor is in custody",
+            "Nadia Okafor: Her knowledge of the domestic tiers is complete."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 16,
+          "iris_knows": [
+            "Iris: Iris has proven Gerald Halveston's fund captured the Spine contracts",
+            "Iris: She exposes him as the coordinator",
+            "Iris: She sees the conspiracy is national but still cannot name the architect above Halveston.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Okafor is in custody",
+            "Nadia Okafor: Her knowledge of the domestic tiers is complete."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ]
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 18,
+      "title": "The Captured Reform",
+      "slug": "the-captured-reform",
+      "one_line_summary": "Iris Kane combines evidence of Halveston's national capture strategy with the manipulated evidence, realizing the Directorate itself has been co-opted as an instrument to entrench fraud at a national scale.",
+      "beat_summary": "Iris Kane, armed with the systemic loophole (C008 payoff) and Halveston's national pattern (C007 payoff), now synthesizes her evidence. She clearly demonstrates that Halveston's fund has systematically captured national infrastructure contracts through a network of shell companies and legally embedded oversight diversions (MR006). This reveals a profound, national-scale corruption, far beyond a single project. She then integrates the micro-crack pattern on the replacement coupon (C009 payoff), which indicated deliberate evidence manipulation after the Kessler collapse. By connecting this physical evidence tampering to the systemic legal capture, Iris Kane realizes the true, horrifying scope: the National Integrity Directorate, the very reform built to prevent the next disaster, has been co-opted and redesigned to serve as the instrument by which this national fraud is entrenched and protected (MR007). She understands that the 'integrity' it projects is a shield for its own corrupt function. The implication is clear: the system isn't broken; it's working exactly as intended by its hidden architects, even if she cannot yet name Stellan Marsh as the ultimate architect.",
+      "must_happen": [
+        "Iris Kane synthesizes the evidence of Halveston's national pattern (C007 payoff) and the systemic legal loophole (C008 payoff).",
+        "Iris Kane reveals that Halveston's fund has implemented a national-scale capture strategy for infrastructure contracts (MR006).",
+        "Iris Kane integrates the micro-crack pattern (C009 payoff) to link physical evidence manipulation to the systemic legal capture.",
+        "Iris Kane realizes that the National Integrity Directorate itself has been co-opted as an instrument to entrench national-scale fraud (MR007)."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not name Stellan Marsh as the ultimate architect of the Directorate's capture.",
+        "Must not have Iris Kane find the redacted page or the full list of co-owners.",
+        "Must not have Iris Kane disclose her full findings to Marsh or any Directorate official yet."
+      ],
+      "opens_with": "The legal clause, the shell companies, the micro-crack on the metal — they were all pieces of a single, monstrous machine, and Iris Kane finally saw it whole.",
+      "cliffhanger": "Iris Kane stands in her office, surrounded by diagrams, legal documents, and micrographs. The lines connect: the national pattern, the systemic loophole, the tampered evidence. The Directorate wasn't failing to stop the fraud; it was enabling it. The reform itself was the capture.",
+      "signature_detail_hint": "Iris Kane notices a specific, recurring font in the legal loopholes that matches a rarely used typeface in the Directorate's internal policy documents, a subtle signature of common authorship across the 'reform' and the 'capture.'",
+      "emotional_beat": "A profound sense of betrayal and grim determination washes over Iris Kane. The institution she believed in, the very symbol of integrity, is revealed as the core of the corruption, leaving her with a chilling understanding of the depth of the deception.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter where Iris Kane synthesizes C007, C008, and C009, delivering MR006 and MR007. Focus on Iris Kane's realization that the Directorate itself is an instrument of national capture, while strictly avoiding naming Stellan Marsh as the architect. Maintain single POV and avoid romance.",
+      "carries_to_next": "Iris Kane now fully understands the Directorate's role as a capture instrument and must decide how to expose this truth to the public, knowing the fight is no longer about a single project but the integrity of the nation's oversight.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C007",
+          "C008",
+          "C009"
+        ],
+        "reveals": [
+          {
+            "id": "MR006",
+            "reveal_weight": "minor",
+            "required_clues": [
+              "C007",
+              "C008"
+            ],
+            "min_clues_required": 1
+          },
+          {
+            "id": "MR007",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C007",
+              "C008",
+              "C009"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has proven Gerald Halveston's fund captured the Spine contracts",
+            "Iris: She exposes him as the coordinator",
+            "Iris: She sees the conspiracy is national but still cannot name the architect above Halveston.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Okafor is in custody",
+            "Nadia Okafor: Her knowledge of the domestic tiers is complete."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 16,
+          "iris_knows": [
+            "Iris: Iris has proven Gerald Halveston's fund captured the Spine contracts",
+            "Iris: She exposes him as the coordinator",
+            "Iris: She sees the conspiracy is national but still cannot name the architect above Halveston.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Okafor is in custody",
+            "Nadia Okafor: Her knowledge of the domestic tiers is complete."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ]
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

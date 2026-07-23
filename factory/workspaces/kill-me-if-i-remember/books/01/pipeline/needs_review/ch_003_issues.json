@@ -1,0 +1,97 @@
+{
+  "word_count": 1396,
+  "target_language": "en",
+  "pov_violation": {
+    "count": 6,
+    "threshold": 3
+  },
+  "markdown_advisory": [
+    {
+      "id": 0,
+      "kind": "italic",
+      "match": "*When?*",
+      "context": "skin of oil floating on the surface. She touched it. Cold.\n\n*When?* She tried to force the image. Her hand pouring the coffee. "
+    },
+    {
+      "id": 1,
+      "kind": "italic",
+      "match": "*Focus.*",
+      "context": "ad he been watching her? How deep did the surveillance go?\n\n*Focus.*\n\nShe started with the kitchen. The counters were clean, but"
+    },
+    {
+      "id": 2,
+      "kind": "italic",
+      "match": "*I left this for myself.*",
+      "context": "aint hadn't had time to yellow.\n\nShe had an absurd thought: *I left this for myself.*\n\n\"Sloane.\" Lucian's voice was low. He stood by the window, "
+    },
+    {
+      "id": 3,
+      "kind": "italic",
+      "match": "*It's not a tic,*",
+      "context": " to suggest why the motion felt so specific, so practiced.\n\n*It's not a tic,* she realized. *It's training.*\n\nThe thought struck her like"
+    },
+    {
+      "id": 4,
+      "kind": "italic",
+      "match": "*It's training.*",
+      "context": "so specific, so practiced.\n\n*It's not a tic,* she realized. *It's training.*\n\nThe thought struck her like a physical blow. She had assum"
+    },
+    {
+      "id": 5,
+      "kind": "italic",
+      "match": "*Why? What did I train myself to do?*",
+      "context": "led by repetition. A reflex she'd coded into her own body.\n\n*Why? What did I train myself to do?*\n\nShe turned her wrist over, examining it as if the answers "
+    },
+    {
+      "id": 6,
+      "kind": "italic",
+      "match": "*I must have hidden something.*",
+      "context": "xisted here for three months, and she had no record of it.\n\n*I must have hidden something.*\n\nThe thought was pure instinct. A survival impulse from a v"
+    },
+    {
+      "id": 7,
+      "kind": "italic",
+      "match": "*Including herself.*",
+      "context": "panel.\n\nShe'd done this to protect something from someone.\n\n*Including herself.*\n\nShe worked the wire loose with a careful precision that fe"
+    },
+    {
+      "id": 8,
+      "kind": "italic",
+      "match": "*What did I do, Sloane?*",
+      "context": "ed memory. A coded message. A trained reflex in her wrist.\n\n*What did I do, Sloane?*\n\nShe walked to the window, needing air, needing space from "
+    }
+  ],
+  "classification": {
+    "format_fix": {},
+    "content_fail": {
+      "pov_violation": {
+        "count": 6,
+        "threshold": 3
+      }
+    },
+    "length": {},
+    "format_only": false,
+    "length_only": false,
+    "has_format": false,
+    "has_content": true,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 0,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3,
+    "llm_qc_rewrites": 1,
+    "max_llm_qc_retries": 2
+  },
+  "llm_qc_before_machine_fail": {
+    "verdict": "FAIL",
+    "fail_reasons": [
+      "qc_transport_error"
+    ],
+    "source": "qc_transport_error",
+    "detail": "All models failed (['auto/fast', 'auto']): Error code: 503 - {'error': {'message': 'Maximum combo retry limit reached', 'type': 'server_error', 'code': 'service_unavailable'}}"
+  }
+}

@@ -1,0 +1,97 @@
+---
+series: kill-me-if-i-remember
+book: 1
+chapter: 13
+title: The Design
+spice: 1
+word_count: 1285
+status: draft
+needs_fix: []
+promoted_at: '2026-07-18T11:03:11Z'
+---
+
+She had written the plan in her own hand, and still she could not remember a single word of it. That, more than anything, told her how afraid she had been.
+
+The three pieces lay on the motel room table, arranged in a triangle she could reach from the chair. The journal pages with the folded corners. The voice recorder with the dent where someone's thumb had pressed too hard. The rooftop schematic with the shooting position circled in blue ink she recognized as her own.
+
+Sloane touched the edge of the schematic first. The paper was thin, the kind that came from a twenty-dollar printer. But the marks on it were precise. The shooter's position at the north stairwell door. The angle of the bullet that would pass through Mara's shoulder and strike the concrete behind her. The timing notation: 00:47 from first shot to exit.
+
+Her handwriting. Every annotation, every calculation.
+
+"That's what they teach you in federal investigation," she said, her voice flat. "How to stage a crime scene so it holds up under scrutiny."
+
+Lucian was leaning against the wall near the door, arms crossed, watching her in that way that made her feel like she was being catalogued. "You were thorough."
+
+"I was a ghost writing my own haunted house." She picked up the journal pages. The first entry had the looping cursive she'd always used in her personal notes, not the block letters of official reports. Mara agreed to the location. She understood the risk. I told her the exit wound would look convincing if she didn't move during the ricochet.
+
+The second page was shorter, almost angry. Rook's network is too deep. If I disappear, he'll suspect. If I stay, he'll use me to finish what he started. The only way is to become someone who doesn't know anything until the moment the trap springs.
+
+Sloane's throat tightened. She set the pages down and picked up the voice recorder. The dent in its side caught the light, a crescent shadow that she traced with her finger. She had pressed that dent into it. In a room she couldn't remember, with a truth she couldn't recall speaking, she had stopped the recording because whatever came next was too dangerous to preserve.
+
+She hit play. The recording hissed for a moment, then a man's voice—Korovin's, the name that had started this—saying something about a shipment and an airfield in Tuzla. Then Rook's voice, answering. Delete the flight logs. We'll route through the Korridor instead. The witness counts are already handled.
+
+The seven. The seven people Rook had used Lucian to eliminate, and that Sloane had unknowingly fed to him because the target files were doctored.
+
+She stopped the recording. "He made me the reason for seven deaths."
+
+Lucian didn't flinch. "He made you the vector. I was the instrument."
+
+"And I ordered it." She pushed the recorder away, like it had burned her. "I signed off on every dossier. I didn't know I was approving hits on witnesses, but I still pressed the button. That's what I can't run from."
+
+She stood, paced to the window, and checked the street through the gap in the blinds. Nothing moved. The motel was a half-mile from the safe house she'd used six years ago when a case went sideways. She'd chosen it now because it was close enough to the Vertigo Building that she could still feel the elevator shaft in her teeth.
+
+"The staged death was the decoy," she said, more to herself than to him. "I needed Mara to disappear so Rook wouldn't use her against me. I needed the contract on myself to make sure I didn't survive to be interrogated. And I needed to lose my memory so that even if Rook broke me, I couldn't tell him where the rest of the ledger was."
+
+Her wrist itched. She traced the circle, once, twice. The motion was becoming as automatic as breathing.
+
+"But I didn't count on you finding the recording before I erased it. I didn't count on Mara signaling from the scope before your finger reached the trigger." She turned to face him. "I left too many cracks in my own design."
+
+"You left them on purpose." He pushed off the wall and stepped closer, stopping three feet away. "You wanted someone to be able to follow the trail. You just didn't want it to be you who followed it."
+
+She looked at the three pieces on the table. The journal, the recorder, the schematic. Her own handwriting. Her own voice. Her own geometry.
+
+"I built a bomb and then I blindfolded myself and walked backward into the blast radius," she said. "And somewhere in that missing three months, I thought that was the only way."
+
+She reached for his hand. Her fingers found his, cold and steady. He squeezed, once, and the pressure told her everything—that he understood, that he didn't forgive but he didn't blame, that he would stay until the sunrise took the choice away from both of them.
+
+"Thank you," she said.
+
+"Acknowledgment isn't thanks."
+
+"It's all I have right now."
+
+He said nothing else, but his hand stayed where it was.
+
+Sloane stood in the silence, letting the connections lock into place. The journal showed the plan. The recording showed the motive. The schematic showed the execution. All of it was her. All of it led to the same conclusion: she had framed her own death to trap Rook because she couldn't trust her own testimony to hold. She had erased herself because she was the weakness in the case. She had written the contract on her life because she knew Rook would never stop hunting her, and the only way to hide the ledger was to hide it inside a corpse.
+
+But she wasn't dead. And the ledger wasn't just in her head—it was in her body, in the firing sequence her sister had been signaling, in the rhythm that made her wrist circle the first motion of a weapon.
+
+The phone on the table buzzed.
+
+Sloane released his hand and picked it up. The screen showed an encrypted message, the sender identified only by a black hexagon she recognized from Rook's burner profile.
+
+She opened it.
+
+The message read: Fifty-third Street warehouse. Block C. You have one hour.
+
+Then a second line came through: Do you remember the eighth contract, Sloane? Bring it, and I'll let your sister live.
+
+She read it twice, waiting for the meaning to surface. But the only thing that came was a cold thread of confusion, because she had no idea what the eighth contract was.
+
+The ledger fragments she had found listed six altered target files. The contracts in her own handwriting showed only the current one. There were no eighths. There was no eighth.
+
+But Rook was betting she knew.
+
+She looked at Lucian. "He says he has Mara."
+
+"He's lying."
+
+"Probably. But if he doesn't, and I don't show up, he'll prove it by sending me a piece of her." She locked the phone and grabbed her jacket from the back of the chair. "We're going."
+
+He didn't argue. He simply reached for the rifle case under the bed.
+
+Sloane picked up the voice recorder and slid it into her pocket. The dent pressed into her thigh like a reminder of every silence she had chosen not to break. The three pieces had given her a picture of the trap she had built, but not the key to disarming it.
+
+She didn't know the eighth contract.
+
+But she had one hour to remember it, or Rook would make sure she spent the rest of her short life regretting that she'd forgotten.

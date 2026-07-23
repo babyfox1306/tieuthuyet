@@ -1,0 +1,34 @@
+{
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "[content_fail — retries 0/2]",
+    "markdown advisory (9 hit) — dùng UI fixer, không chặn promote",
+    "POV first-person outside dialogue (6 hits)"
+  ],
+  "source": "machine_content_cap",
+  "content_retries": 0,
+  "max_content_retries": 2,
+  "classification": {
+    "format_fix": {},
+    "content_fail": {
+      "pov_violation": {
+        "count": 6,
+        "threshold": 3
+      }
+    },
+    "length": {},
+    "format_only": false,
+    "length_only": false,
+    "has_format": false,
+    "has_content": true,
+    "has_length": false
+  },
+  "llm_qc_before_machine_fail": {
+    "verdict": "FAIL",
+    "fail_reasons": [
+      "qc_transport_error"
+    ],
+    "source": "qc_transport_error",
+    "detail": "All models failed (['auto/fast', 'auto']): Error code: 503 - {'error': {'message': 'Maximum combo retry limit reached', 'type': 'server_error', 'code': 'service_unavailable'}}"
+  }
+}

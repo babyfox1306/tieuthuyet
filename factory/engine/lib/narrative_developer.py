@@ -18,13 +18,14 @@ from factory.engine.lib.book_config import get_total_chapters, sync_book_arc_tot
 from factory.engine.lib.prompt_builder import load_direction, load_series_bible
 from factory.engine.paths import workspace_dir
 
-PASSES = ("kernel", "book_arc", "threads", "mystery_ledger", "knowledge_matrix")
+PASSES = ("kernel", "book_arc", "threads", "mystery_ledger", "knowledge_matrix", "conspiracy")
 PASS_TO_FILE = {
     "kernel": "kernel.json",
     "book_arc": "book_arc.json",
     "threads": "threads.json",
     "mystery_ledger": "mystery_ledger.json",
     "knowledge_matrix": "knowledge_matrix.json",
+    "conspiracy": "conspiracy.json",
 }
 PASS_DEPS = {
     "kernel": [],
@@ -32,6 +33,7 @@ PASS_DEPS = {
     "threads": ["kernel"],
     "mystery_ledger": ["kernel", "threads"],
     "knowledge_matrix": ["kernel", "mystery_ledger", "threads"],
+    "conspiracy": ["kernel", "mystery_ledger", "threads"],
 }
 
 MAX_TOKENS = {
@@ -40,7 +42,24 @@ MAX_TOKENS = {
     "threads": 6144,
     "mystery_ledger": 12288,
     "knowledge_matrix": 8192,
+    "conspiracy": 6144,
 }
+
+# Passes required only for specific narrative_profile values.
+PROFILE_ONLY_PASSES: dict[str, frozenset[str]] = {
+    "conspiracy": frozenset({"conspiracy_thriller"}),
+}
+
+
+def _passes_for_profile(profile: str) -> tuple[str, ...]:
+    profile = (profile or "").strip()
+    out: list[str] = []
+    for p in PASSES:
+        allowed = PROFILE_ONLY_PASSES.get(p)
+        if allowed is not None and profile not in allowed:
+            continue
+        out.append(p)
+    return tuple(out)
 
 
 def _author_directive(concept: dict) -> str:
@@ -61,6 +80,7 @@ def _author_directive(concept: dict) -> str:
         "surface_order",
         "binding_condition",
         "forbidden_phrases",
+        "forbidden_phrase_gates",
         "concept_schema_version",
     ):
         val = concept.get(key)
@@ -139,7 +159,9 @@ def develop_pass(ws: Path, pass_name: str) -> Path:
     if isinstance(data, dict):
         from factory.engine.lib.chapter_derivation import normalize_narrative_pass
 
-        data = normalize_narrative_pass(pass_name, data, total_chapters, book)
+        data = normalize_narrative_pass(
+            pass_name, data, total_chapters, book, concept=load_concept(ws)
+        )
     if pass_name == "book_arc" and isinstance(data, dict):
         data["total_chapters"] = total_chapters
         data["book_number"] = book
@@ -192,10 +214,17 @@ def develop_narrative(workspace_id: str, *, pass_name: str = "all") -> list[Path
     total_chapters = get_total_chapters(workspace_id, book)
 
     written: list[Path] = []
+    profile = str(direction.get("narrative_profile") or "").strip()
     if pass_name == "all":
-        for p in PASSES:
+        for p in _passes_for_profile(profile):
             written.append(develop_pass(ws, p))
     else:
+        allowed = PROFILE_ONLY_PASSES.get(pass_name)
+        if allowed is not None and profile not in allowed:
+            raise RuntimeError(
+                f"Pass {pass_name!r} chỉ dành cho profile {sorted(allowed)}; "
+                f"workspace đang là {profile!r}"
+            )
         written.append(develop_pass(ws, pass_name))
 
     sync_book_arc_total_chapters(ws, book, total_chapters)
@@ -205,10 +234,24 @@ def develop_narrative(workspace_id: str, *, pass_name: str = "all") -> list[Path
 
     from factory.engine.lib.concept_canon import (
         concept_digest,
+        sync_chapter_canon_gates,
         sync_direction_digests,
         write_narrative_meta,
     )
 
+    sync_chapter_canon_gates(ws, concept=concept)
     write_narrative_meta(ws, source_concept_digest=concept_digest(concept))
     sync_direction_digests(ws)
+
+    # Keep series/canon leads aligned with narrative POV (Book N lead swaps).
+    from factory.engine.lib.canon_registry import (
+        canon_registry_path,
+        scaffold_canon_registry,
+        sync_canon_leads_from_narrative,
+    )
+
+    if not canon_registry_path(ws).exists():
+        scaffold_canon_registry(ws, force=False)
+    sync_canon_leads_from_narrative(ws, book)
+
     return written

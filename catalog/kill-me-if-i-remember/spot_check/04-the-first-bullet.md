@@ -1,0 +1,103 @@
+---
+series: kill-me-if-i-remember
+book: 1
+chapter: 4
+title: The First Bullet
+spice: 1
+word_count: 1049
+status: draft
+needs_fix: []
+promoted_at: '2026-07-18T11:00:20Z'
+---
+
+The bullet hit the wall where her head had been a second before. Sloane hit the floor without thinking, the impact jarring through her palms. A second round shattered the lamp beside the couch, plunging the room into darkness cut only by the muzzle flash from the hallway.
+
+“Stay down.” Lucian’s voice came from somewhere to her left, flat and controlled. She heard him move, a quick shuffle of weight, then three suppressed shots in rapid succession. The sounds were wrong—too soft for the damage they did. A body hit the floor in the corridor.
+
+Sloane crawled toward the bedroom, her knees sliding on scattered glass. The fire escape was through the kitchen, around the corner. She had mapped the route a hundred times in her head during drills, but that was before she couldn’t remember the past three months.
+
+Another burst of gunfire chewed through the drywall above her. Plaster dust rained down, bitter on her tongue.
+
+“Kitchen window,” she said, her voice steadier than she felt. “Fire escape leads to the alley.”
+
+“Go. I’ll cover.”
+
+She didn’t argue. She scrambled through the dark, one hand brushing the wall for orientation. Her left wrist brushed the edge of a photograph frame that had fallen from the nightstand during the chaos. It was face-up on the carpet, the glass cracked but intact.
+
+She should have kept moving. Every instinct screamed to run. But the image held her.
+
+It was her. Same jaw, same hair color, same rectangular glasses she’d worn yesterday—except she hadn’t worn those glasses in months. The woman in the picture stood beside a man she did not recognize. Tall, dark hair, sharp cheekbones. He had his hand on her shoulder, familiar, possessive. And in the background, a clock tower showed the time.
+
+She flipped it over. The date on the back was stamped: two months ago.
+
+Her stomach dropped. She didn’t remember this man. She didn’t remember being in this room. But the woman in the photograph was smiling the way she used to smile—before her sister died, before the memory vanished, before she woke up on a rooftop holding her own death warrant.
+
+“Sloane.” Lucian’s hand closed around her elbow. “Now.”
+
+She shoved the photograph into her jacket pocket and let him pull her upright. They ran through the kitchen, and he threw the window open, the old metal frame screeching against the sill. Cold air flooded in. The fire escape was a rusted skeleton bolted to the brick.
+
+She went first, her boots clanging on the metal steps. Three floors down, the ladder was supposed to release if she pulled the pin. She hauled on the release mechanism, and it groaned but didn’t drop.
+
+“Stuck.”
+
+Lucian looked up. The muzzle flash from the apartment window framed his profile. “Move down one more level. There’s a secondary latch.”
+
+She climbed down to the second-floor platform, and he followed, his weight making the whole structure shudder. She found the secondary latch—a corroded lever—and threw her weight against it. The ladder dropped with a grinding shriek.
+
+Bullets sparked off the railing above them. Lucian returned fire, two shots, then swung himself down the ladder. “Drop. I’ll catch you.”
+
+She didn’t think. She let go, and his arms closed around her, breaking her fall. They hit the alley concrete together, and for a moment she felt his heartbeat against her back, fast and steady.
+
+Then he was up, pulling her into a run.
+
+They didn’t stop until they reached the parking garage two blocks over. The concrete structure echoed with their footsteps, the air thick with exhaust and damp. Sloane bent over, hands on her knees, trying to pull enough oxygen into her lungs.
+
+“That was not a random break-in,” she said.
+
+“No.” Lucian leaned against a pillar, his breathing controlled. In the dim emergency lighting, she saw a dark stain spreading along his left sleeve.
+
+“You’re hit.”
+
+He glanced at his arm as if he’d forgotten. “Graze. It can wait.”
+
+“Show me.” She stepped closer, her fingers finding the torn fabric. He didn’t stop her. The wound was shallow, a clean groove across the outside of his forearm, already clotting. But the skin around it was warm, and the blood smeared under her touch.
+
+She pulled a clean handkerchief from her pocket—she still carried them, old habit—and pressed it against the wound. Her palm rested flat on his forearm, feeling the muscle beneath. He didn’t flinch. She could feel the tension in him, the way he held himself still.
+
+Their eyes met. The air thickened.
+
+“You knew where the secondary latch was,” she said quietly. “You’ve been here before.”
+
+“I’ve been a lot of places before.”
+
+“That’s not an answer.”
+
+He didn’t give one. Instead, he lifted his other hand and brushed a strand of hair from her face, the touch so light she almost missed it. But she felt it—the callus on his thumb, the hesitation, the way his fingers lingered a fraction of a second longer than necessary.
+
+Her heart stumbled.
+
+She looked down at where her hand still pressed the handkerchief to his arm. She could see the shape of her own fingers against his skin, the way they curved. For a split second, she felt like she had done this before—tended to him, stood this close, breathed the same air.
+
+But the memory was smoke, impossible to hold.
+
+She stepped back.
+
+“We need to figure out what they want,” she said, her voice rough. “They were waiting for me. They knew I’d come back to the apartment.”
+
+“They wanted you alive,” he said. “The first shot was too wide. They were herding you, not trying to kill.”
+
+“Herding me to what?”
+
+He didn’t answer. He was pulling out his encrypted phone, the screen lighting up his face. His expression shifted—something between recognition and wariness.
+
+“What is it?”
+
+He turned the screen toward her. It was a text from an unknown number.
+
+The message read: The photograph is just the beginning. Come find me.
+
+Sloane’s breath caught. Her hand went to her jacket pocket, where the photograph pressed against her ribs like a second heartbeat.
+
+She didn’t remember the man in the picture. But someone wanted her to find him.
+
+And she had a feeling whoever sent that message knew exactly where he was.

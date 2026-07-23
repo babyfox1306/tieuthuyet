@@ -50,6 +50,8 @@ def build_outliner_payload(
 ) -> dict:
     """Assemble Outliner request body; adds narrative_constraints when compiler on."""
     from factory.engine.lib.canon_registry import locked_canon_names_payload
+    from factory.engine.lib.narrative_schema import load_concept
+    from factory.engine.lib.plan_canon_gate import chapter_canon_rules_for_act
 
     body: dict = {
         "series_bible": bible,
@@ -63,6 +65,18 @@ def build_outliner_payload(
     locked = locked_canon_names_payload(ws, book)
     if locked:
         body["locked_canon_names"] = locked
+    concept = load_concept(ws)
+    # Same authorship/phrase ladder as writer — generation lock, not plan QC.
+    rules_map = chapter_canon_rules_for_act(concept, act_from, act_to)
+    if rules_map:
+        body["chapter_canon_rules"] = rules_map
+        body["chapter_canon_instruction"] = (
+            "HARD: For each chapter, beat_summary / must_happen / cliffhanger / "
+            "chapter_task / one_line_summary / carries_to_next / opens_with may ONLY "
+            "state what iris_knows allows. Never put forbidden_facts or "
+            "truth_background into those fields. God-truth (true_case, cast secrets) "
+            "is background only until unlock_chapter."
+        )
     if narrative_compiler_enabled(ws):
         body["narrative_constraints"] = compile_act_constraints(ws, act_from, act_to)
     return body
@@ -127,11 +141,25 @@ def build_plan_fixer_payload(
             "clues_plant": narr.get("clues_plant") or [],
             "clues_payoff": narr.get("clues_payoff") or [],
             "must_not_know": knowledge.get("must_not_know") or [],
+            "iris_knows": knowledge.get("iris_knows") or knowledge.get("may_know") or [],
             "instruction": (
-                "Sửa must_happen/beat_summary/cliffhanger để khớp clue & knowledge. "
+                "Sửa must_happen/beat_summary/cliffhanger để khớp clue & iris_knows. "
+                "KHÔNG đưa truth_background / forbidden_facts vào beat. "
                 "KHÔNG đổi clue ID, timing, hay thêm field narrative vào output."
             ),
         }
+        try:
+            from factory.engine.lib.narrative_schema import load_concept
+            from factory.engine.lib.concept_canon import compile_chapter_canon_rules
+
+            concept = load_concept(ws)
+            ch = int(plan.get("chapter") or 0)
+            if concept and ch >= 1:
+                body["chapter_canon_rules"] = compile_chapter_canon_rules(
+                    concept, ch
+                ).to_dict()
+        except Exception:
+            pass
     return body
 
 
@@ -404,7 +432,34 @@ def _fetch_act_plans(
             )
     new_plans = normalize_chapter_plans(merge_narrative_into_plans(ws, chapter_plans))
     new_plans = filter_complete_chapter_plans(new_plans, lo=act_from, hi=act_to)
+    new_plans = _apply_plan_phrase_gate(ws, new_plans, act_from=act_from, act_to=act_to)
     return new_plans, log
+
+
+def _apply_plan_phrase_gate(
+    ws: Path,
+    plans: list[dict],
+    *,
+    act_from: int,
+    act_to: int,
+) -> list[dict]:
+    """Drop chapter plans whose dramatized fields hit forbidden_facts (generation lock)."""
+    from factory.engine.lib.narrative_schema import load_concept
+    from factory.engine.lib.plan_canon_gate import (
+        filter_plans_by_phrase_gate,
+        format_phrase_gate_violations,
+    )
+
+    concept = load_concept(ws)
+    if not concept:
+        return plans
+    clean, hits = filter_plans_by_phrase_gate(plans, concept)
+    if hits:
+        safe_print(
+            f"  [plan] phrase-gate REJECT ch{act_from}-{act_to}: "
+            f"{format_phrase_gate_violations(hits)}"
+        )
+    return clean
 
 
 def plan_act(ws: Path, book: int, act_from: int, act_to: int, act_name: str) -> tuple[list[dict], dict]:
@@ -567,13 +622,19 @@ def fix_plans(ws: Path, book: int, *, use_llm: bool = True) -> tuple[dict[int, l
 
 
 def approve_plan(ws: Path, book: int | None = None) -> None:
-    from factory.engine.lib.canon_registry import CanonRegistryError, validate_plan_against_canon_registry
+    from factory.engine.lib.canon_registry import (
+        CanonRegistryError,
+        sync_canon_leads_from_narrative,
+        validate_plan_against_canon_registry,
+    )
     from factory.engine.lib.concept_canon import require_fresh_plan, stamp_plan_digests
     from factory.engine.lib.plan_qc import apply_deterministic_plan_fixes, validate_all_plans
 
     require_fresh_plan(ws)
     direction = load_direction(ws)
     book_num = int(book if book is not None else direction.get("book") or 1)
+    # Heal Book-N POV drift before hard gate (Pierre vs Elias class of failures).
+    sync_canon_leads_from_narrative(ws, book_num)
     conflicts = validate_plan_against_canon_registry(ws, book_num)
 
     # Full plan QC must also pass — names/spice alone are not enough.

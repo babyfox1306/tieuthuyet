@@ -227,6 +227,34 @@ def catalog_chapter_is_clean(meta: dict) -> bool:
     return not (meta.get("needs_fix") or [])
 
 
+def accept_catalog_chapter(
+    workspace_id: str,
+    book: int,
+    ch: int,
+    *,
+    book_slug: str | None = None,
+) -> Path | None:
+    """Operator accept — clear catalog ``needs_fix`` (EG-12 debt waived).
+
+    Human duyệt is final for format flags. Hard promote blockers (EG-13, canon)
+    still apply at promote time; this only clears stamps already in catalog.
+    """
+    cfg = load_config()
+    slug = book_slug or resolve_book_slug(workspace_id, book, cfg=cfg)
+    path = find_catalog_chapter_by_number(workspace_id, slug, ch)
+    if not path:
+        return None
+    meta, body = parse_markdown(path)
+    if not (meta.get("needs_fix") or []):
+        return path
+    meta["needs_fix"] = []
+    content = build_frontmatter(meta) + "\n\n" + body
+    write_catalog_chapter(workspace_id, slug, path.name, content, spot_check=True)
+    sync_chapter_pipeline_from_catalog(workspace_id, book, ch, book_slug=slug)
+    safe_print(f"  [accepted] ch_{ch:03d}: operator waived needs_fix")
+    return path
+
+
 def sync_chapter_pipeline_from_catalog(
     workspace_id: str,
     book: int,
@@ -245,7 +273,14 @@ def sync_chapter_pipeline_from_catalog(
         return False
 
     ws = workspace_dir(workspace_id)
-    chapter_pipeline_path(ws, book, "ready", ch).write_text(body.strip() + "\n", encoding="utf-8")
+    lang = export_language(workspace_id)
+    title = str(meta.get("title") or "").strip()
+    if lang == "en":
+        heading = f"# Chapter {ch}: {title}" if title else f"# Chapter {ch}"
+    else:
+        heading = f"# Chương {ch}: {title}" if title else f"# Chương {ch}"
+    ready_text = f"{heading}\n\n{body.strip()}\n"
+    chapter_pipeline_path(ws, book, "ready", ch).write_text(ready_text, encoding="utf-8")
     promoted_marker(ws, book, ch).write_text(
         datetime.now(timezone.utc).isoformat(),
         encoding="utf-8",
@@ -286,8 +321,17 @@ def sync_pipeline_from_catalog(
     return {"synced": synced, "skipped": skipped}
 
 
+def normalize_chapter_slug(chapter: int, slug: str) -> str:
+    """Strip leading ``NN-`` / ``chapter-N-`` so filenames stay ``01-title.md``, not ``01-01-title.md``."""
+    s = str(slug or "").strip().strip("-").lower()
+    if not s:
+        return f"chapter-{chapter}"
+    s = re.sub(rf"^(?:{chapter:02d}|{chapter}|chapter-{chapter})-", "", s)
+    return s.strip("-") or f"chapter-{chapter}"
+
+
 def chapter_filename(chapter: int, slug: str) -> str:
-    return f"{chapter:02d}-{slug}.md"
+    return f"{chapter:02d}-{normalize_chapter_slug(chapter, slug)}.md"
 
 
 def load_manifest(ws: Path) -> dict:
@@ -393,6 +437,10 @@ def text_to_catalog_md(
     elif parsed_title:
         title = title or f"Chương {chapter}"
         sub = subtitle or parsed_title
+    elif lang == "en":
+        # EN books: title lives in meta / EPUB <h1> only — never invent a subtitle
+        # from the first dialogue line (that polluted export structure).
+        sub = None
     else:
         sub = subtitle or extract_subtitle(body)
 
@@ -414,8 +462,11 @@ def text_to_catalog_md(
         "needs_fix": needs_fix or [],
         "promoted_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
     }
-    if sub:
+    if sub and lang != "en":
         meta["subtitle"] = sub
+    meta, body = normalize_catalog_chapter(
+        meta, body, lang, workspace_id=series_id, book=book
+    )
     return build_frontmatter(meta) + "\n\n" + body, meta
 
 
@@ -512,9 +563,15 @@ def repair_catalog_book(
             book=book_num,
             chapter=int(meta.get("chapter") or 0) or None,
         )
-        needs_fix = issues_to_needs_fix(m_issues)
-        if meta.get("needs_fix") and not needs_fix:
-            cleared_flags += 1
+        machine_flags = issues_to_needs_fix(m_issues)
+        current_flags = list(meta.get("needs_fix") or [])
+        # Empty needs_fix = operator already accepted (or clean). Do not re-stamp.
+        if not current_flags:
+            needs_fix: list[str] = []
+        else:
+            needs_fix = machine_flags
+            if current_flags and not machine_flags:
+                cleared_flags += 1
         meta["needs_fix"] = needs_fix
         meta["word_count"] = word_count_vi(sanitize_prose(body))
         new_meta, new_body = normalize_catalog_chapter(
@@ -570,9 +627,9 @@ def promote_chapter(
         title = f"Chapter {ch_num}" if lang == "en" else f"Chương {ch_num}"
 
     if plan_beat and plan_beat.get("slug"):
-        slug = str(plan_beat["slug"]).strip()
+        slug = normalize_chapter_slug(ch_num, str(plan_beat["slug"]).strip())
     else:
-        slug = slugify_vi(title)
+        slug = normalize_chapter_slug(ch_num, slugify_vi(title))
 
     if spice is None and plan_beat and plan_beat.get("spice") is not None:
         spice = int(plan_beat["spice"])
@@ -590,7 +647,18 @@ def promote_chapter(
         chapter=ch_num,
         plan=plan_beat,
     )
-    needs_fix = issues_to_needs_fix(m_issues)
+    # Operator promote (auto=False) accepts the prose as-is — do not stamp
+    # format debt into catalog. Auto-promote keeps machine flags for later review.
+    if auto:
+        needs_fix = issues_to_needs_fix(m_issues)
+    else:
+        needs_fix = []
+        waived = issues_to_needs_fix(m_issues)
+        if waived:
+            safe_print(
+                f"  [operator accept] ch_{ch_num:03d}: waived needs_fix "
+                f"({', '.join(str(f) for f in waived[:4])})"
+            )
 
     md, meta = text_to_catalog_md(
         text,
@@ -765,12 +833,17 @@ def migrate_from_scripts(
     return count
 
 
-def reader_title(meta: dict) -> str:
-    title = meta.get("title", "")
-    sub = meta.get("subtitle", "")
-    if sub:
-        return f"Chương {meta.get('chapter', '')} — {title}\n{sub}"
-    return f"Chương {meta.get('chapter', '')} — {title}"
+def reader_title(meta: dict, lang: str | None = None) -> str:
+    title = str(meta.get("title") or "").strip()
+    sub = str(meta.get("subtitle") or "").strip()
+    ch = meta.get("chapter", "")
+    if (lang or "").lower().startswith("en"):
+        header = f"Chapter {ch}: {title}" if title else f"Chapter {ch}"
+    else:
+        header = f"Chương {ch} — {title}" if title else f"Chương {ch}"
+    if sub and (lang or "").lower()[:2] != "en":
+        return f"{header}\n{sub}"
+    return header
 
 
 EPUB_CSS = """body {
@@ -1100,10 +1173,13 @@ def validate_epub_structure(epub_path: Path) -> list[str]:
 def export_vella(workspace_id: str, book_slug: str, out_dir: Path) -> int:
     chapters_dir = book_catalog_dir(workspace_id, book_slug) / "chapters"
     out_dir.mkdir(parents=True, exist_ok=True)
+    lang = export_language(workspace_id)
     n = 0
-    for path in sorted(chapters_dir.glob("*.md")):
-        meta, body = parse_markdown(path)
-        header = reader_title(meta)
+    for path, meta, body in load_chapter_items(chapters_dir):
+        title, _sub, body = resolve_chapter_display(workspace_id, meta, body, lang)
+        meta = dict(meta)
+        meta["title"] = title
+        header = reader_title(meta, lang=lang)
         out = out_dir / f"{path.stem}.txt"
         out.write_text(f"{header}\n\n{body}", encoding="utf-8")
         n += 1

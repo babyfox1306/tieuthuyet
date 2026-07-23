@@ -1,0 +1,1608 @@
+{
+  "book": 2,
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Offer She Can't Refuse",
+      "slug": "the-offer-she-cant-refuse",
+      "one_line_summary": "Iris Kane is appointed Lead Forensic Authority for the Meridian Spine and meets Stellan Marsh, Nadia Okafor, and Petra Lund, spotting a tool-mark anomaly in the load coupons that matches a Kessler-era override.",
+      "beat_summary": "Iris Kane arrives at the National Integrity Directorate headquarters. Stellan Marsh officially welcomes her as Lead Forensic Authority for the Meridian Spine, framing it as the reform's cornerstone. Her designated investigative partner, Nadia Okafor, immediately begins steering her focus toward institutional structure. During a tour of the Spine's fabrication facility, Iris meets Petra Lund, the lead certifier. Lund is nervous, her explanations careful. Iris examines the load coupons and discovers a tool-mark pattern identical to the Kessler override—a physical anomaly she cannot explain away. She hides the observation, guarding it alongside the unresolved redacted page from Book 1.",
+      "must_happen": [
+        "Iris Kane accepts the role of Lead Forensic Authority for the Meridian Spine from Stellan Marsh.",
+        "Nadia Okafor is introduced as Iris's partner and subtly directs her attention toward Gerald Halveston's fund.",
+        "During a fabrication facility tour, Iris spots a tool-mark in the certified load coupons that matches the Kessler override method (C010 planted)."
+      ],
+      "must_not": [
+        "Must not reveal that the National Integrity Directorate is a capture instrument.",
+        "Must not name Stellan Marsh as the architect of any broader fraud."
+      ],
+      "opens_with": "\"Iris Kane, I need you to certify the spine so clean it squeaks.\" — Stellan Marsh slides the contract across his glass desk, smiling as if he's doing her a favor.",
+      "cliffhanger": "Iris stares at the load coupon in her private office, the tool-mark matching a Kessler-class override. She holds a single note from her Book 1 files: *Find the other names.*",
+      "signature_detail_hint": "The tool-mark on the coupon has a microscopic wave pattern in the shear line — not a standard machining defect, but one created by an override jig that shouldn't exist outside the Kessler scrap pile.",
+      "emotional_beat": "The weight of the new position pushes against the fracture of the unresolved page. She feels trusted — and guilty for not trusting the institution giving her the trust.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Establish the surface of the Directorate and the Meridian Spine. Introduce Stellan Marsh, Nadia Okafor, and Petra Lund. Plant the physical anomaly (C010). No romance subplot. Target length: 1600-1900 words.",
+      "carries_to_next": "The tool-mark anomaly is a secret Iris keeps to herself as she enters her first official week.",
+      "narrative": {
+        "clues_plant": [
+          "C010"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris Kane is appointed Lead Forensic Authority for the National Integrity Directorate and assigned to certify the Meridian Spine",
+            "Iris: She knows the surface narrative: an independent reform built to prevent another Kessler",
+            "Iris: She still wrestles with the Book 1 redacted page, aware that co-owners behind Renn remain unnamed.",
+            "Petra Lund: Lund knows she signed falsified load coupons for the Meridian Spine using the override method, with tooling provided from an undisclosed higher source.",
+            "Nadia Okafor: Okafor knows the Directorate is a capture instrument",
+            "Nadia Okafor: She actively steers Iris toward Halveston (FA2) to shield Marsh",
+            "Nadia Okafor: She is aware of Marsh as the architect and Halveston as the coordinator."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris Kane is appointed Lead Forensic Authority for the National Integrity Directorate and assigned to certify the Meridian Spine",
+            "Iris: She knows the surface narrative: an independent reform built to prevent another Kessler",
+            "Iris: She still wrestles with the Book 1 redacted page, aware that co-owners behind Renn remain unnamed.",
+            "Petra Lund: Lund knows she signed falsified load coupons for the Meridian Spine using the override method, with tooling provided from an undisclosed higher source.",
+            "Nadia Okafor: Okafor knows the Directorate is a capture instrument",
+            "Nadia Okafor: She actively steers Iris toward Halveston (FA2) to shield Marsh",
+            "Nadia Okafor: She is aware of Marsh as the architect and Halveston as the coordinator."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 2,
+      "title": "The Revolving Door",
+      "slug": "the-revolving-door",
+      "one_line_summary": "Iris Kane finds a timestamp discrepancy in the Spine's records, receives suspicious explanations from Petra Lund, and uncovers a missing serial number on the tooling rig.",
+      "beat_summary": "During her first official week, Iris delves into the Meridian Spine certification files. She finds a critical discrepancy: a load test was certified before the pre-certification checks were recorded (C001). Petra Lund visits, offering an explanation that feels rehearsed and evasive. Lund mentions receiving specific tooling from an unnamed higher source. Nadia Okafor pressures Iris to meet Gerald Halveston, framing the meeting as essential for political capital. A journalist calls Iris's office, asking directly about the 'unredacted co-owners' of the Kessler fast-track, reopening her old wound. Iris investigates the tooling serial number and discovers it does not exist in the manufacturer's database (C002).",
+      "must_happen": [
+        "Iris identifies a conflict in the Meridian Spine's approval timestamps, suggesting a backdated certification (C001 planted).",
+        "Petra Lund's evasive behavior deepens Iris's suspicion of her role.",
+        "Iris discovers the serial number for the load test rig's tooling is not registered with the manufacturer (C002 planted)."
+      ],
+      "must_not": [
+        "Must not confirm the Directorate is a wider capture instrument.",
+        "Must not reveal Nadia Okafor's deliberate steering of the investigation."
+      ],
+      "opens_with": "\"The first material I ever certified is still standing,\" Petra Lund says, knocking her knuckles against the spine section in the showroom. \"That means something where I come from.\"",
+      "cliffhanger": "The journalist's question loops in Iris's head. *Unresolved co-owners.* She opens the redacted page file from Book 1 again. Renn's trial testimony. 'I was paid by a company. A developer. Ask the developers.'",
+      "signature_detail_hint": "The missing serial number feels deliberately erased — not faded or misprinted, but removed from the manufacturer's database with surgical precision.",
+      "emotional_beat": "Iris battles the isolation of her suspicions. Being surrounded by new colleagues in a job that feels like a reward only sharpens her distrust.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Deepen the investigation setup. Plant clues C001 and C002. Build distrust in Lund and Nadia's agendas. No romance subplot. Target length: 1600-1900 words.",
+      "carries_to_next": "Iris agrees to meet Halveston with Nadia, but keeps the tool-mark anomaly and missing serial number to herself.",
+      "narrative": {
+        "clues_plant": [
+          "C001",
+          "C002"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris Kane is appointed Lead Forensic Authority for the National Integrity Directorate and assigned to certify the Meridian Spine",
+            "Iris: She knows the surface narrative: an independent reform built to prevent another Kessler",
+            "Iris: She still wrestles with the Book 1 redacted page, aware that co-owners behind Renn remain unnamed.",
+            "Petra Lund: Lund knows she signed falsified load coupons for the Meridian Spine using the override method, with tooling provided from an undisclosed higher source.",
+            "Nadia Okafor: Okafor knows the Directorate is a capture instrument",
+            "Nadia Okafor: She actively steers Iris toward Halveston (FA2) to shield Marsh",
+            "Nadia Okafor: She is aware of Marsh as the architect and Halveston as the coordinator."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris Kane is appointed Lead Forensic Authority for the National Integrity Directorate and assigned to certify the Meridian Spine",
+            "Iris: She knows the surface narrative: an independent reform built to prevent another Kessler",
+            "Iris: She still wrestles with the Book 1 redacted page, aware that co-owners behind Renn remain unnamed.",
+            "Petra Lund: Lund knows she signed falsified load coupons for the Meridian Spine using the override method, with tooling provided from an undisclosed higher source.",
+            "Nadia Okafor: Okafor knows the Directorate is a capture instrument",
+            "Nadia Okafor: She actively steers Iris toward Halveston (FA2) to shield Marsh",
+            "Nadia Okafor: She is aware of Marsh as the architect and Halveston as the coordinator."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 3,
+      "title": "The Financier's Compass",
+      "slug": "the-financiers-compass",
+      "one_line_summary": "Iris Kane and Nadia Okafor meet Gerald Halveston, who presents himself as a reform ally, but Iris discovers a shell company—Veridian Trust—linking the Spine's financing to the Kessler era.",
+      "beat_summary": "Nadia and Iris visit the Halveston Foundation headquarters. Halveston is polished and positions himself as a transparent force for good. He reveals he vetted Iris personally, unsettling her. Iris notices Halveston is deeply invested in the Spine's narrative but avoids technical details. During the meeting, the contract structure surfaces: a shell company called Veridian Trust provides the real financing, with no public reporting requirements. Nadia frames Halveston as the primary political target. Iris leaves the meeting suspecting she is being directed toward a false wall. Later, she searches for Veridian Trust and finds its registration predates the Kessler collapse, sharing an address with Renn's old backers.",
+      "must_happen": [
+        "Iris and Nadia meet Gerald Halveston at the Halveston Foundation.",
+        "Halveston implies he vetted Iris personally, revealing how closely she is being managed.",
+        "Iris discovers the Veridian Trust shell company structure behind the Meridian Spine financing."
+      ],
+      "must_not": [
+        "Must not reveal Halveston's exact coordinating role (only implied false wall).",
+        "Must not connect the dots to Marsh as the architect."
+      ],
+      "opens_with": "\"My grandfather built bridges you can still walk across,\" Halveston says, shaking Iris's hand. \"I build the bridges that keep those bridges standing. Software of accountability.\"",
+      "cliffhanger": "Iris searches for the Veridian Trust's registration number. It was registered six months before the Kessler collapse. The co-owners of Renn's old company and the founders of this trust share a legal address.",
+      "signature_detail_hint": "The Veridian Trust letterhead has the same corporate logo kerning as the redacted bottom of the Kessler page — same typehouse, same who-are-you-hiding.",
+      "emotional_beat": "The meeting confirms to Iris she is being managed. Her partner Nadia and the financier Halveston are too eager to show her a path. It feels like a trap wrapped in a theme park.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Introduce Halveston as the false target. Deepen the shell company mystery. Solidify Iris's isolation and suspicion. No romance subplot. Target length: 1600-1900 words.",
+      "carries_to_next": "Iris now has three threads: the tool-mark anomaly, the missing serial number, and the Veridian Trust. She needs to investigate them in parallel without anyone directing her.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris Kane is appointed Lead Forensic Authority for the National Integrity Directorate and assigned to certify the Meridian Spine",
+            "Iris: She knows the surface narrative: an independent reform built to prevent another Kessler",
+            "Iris: She still wrestles with the Book 1 redacted page, aware that co-owners behind Renn remain unnamed.",
+            "Petra Lund: Lund knows she signed falsified load coupons for the Meridian Spine using the override method, with tooling provided from an undisclosed higher source.",
+            "Nadia Okafor: Okafor knows the Directorate is a capture instrument",
+            "Nadia Okafor: She actively steers Iris toward Halveston (FA2) to shield Marsh",
+            "Nadia Okafor: She is aware of Marsh as the architect and Halveston as the coordinator."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris Kane is appointed Lead Forensic Authority for the National Integrity Directorate and assigned to certify the Meridian Spine",
+            "Iris: She knows the surface narrative: an independent reform built to prevent another Kessler",
+            "Iris: She still wrestles with the Book 1 redacted page, aware that co-owners behind Renn remain unnamed.",
+            "Petra Lund: Lund knows she signed falsified load coupons for the Meridian Spine using the override method, with tooling provided from an undisclosed higher source.",
+            "Nadia Okafor: Okafor knows the Directorate is a capture instrument",
+            "Nadia Okafor: She actively steers Iris toward Halveston (FA2) to shield Marsh",
+            "Nadia Okafor: She is aware of Marsh as the architect and Halveston as the coordinator."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 4,
+      "title": "The Executor's Purchase",
+      "slug": "the-executors-purchase",
+      "one_line_summary": "Iris Kane confronts Petra Lund with the tool-mark match, and traces the supplier behind Lund's override jig to a Veridian Trust subsidiary.",
+      "beat_summary": "Iris Kane invites Petra Lund to her office and presents the micrograph evidence. Lund initially denies, but breaks when Iris shows the serial number gap. Lund admits she used the override jig but claims she was following instructions from the certification committee and did not know the tooling was fraudulent. She provides the supplier name, Aegis Fabrication. Iris investigates the Aegis purchase order and finds it was pushed through an informal vendor list. She uses the missing serial number (C002 payoff) to trace the tooling to Aegis. A new email (C003) from an internal whistleblower shows that Aegis was acquired by Veridian Trust after the Spine contract was awarded. This minor reveal (MR001) solidifies a link between Lund's fraud and the shell company financing the Spine.",
+      "must_happen": [
+        "Iris Kane confronts Petra Lund and forces her to admit the override method and name the tooling supplier Aegis Fabrication.",
+        "Iris Kane verifies that the serial number missing from the manufacturer's database (C002) corresponds to the Aegis jig.",
+        "Iris Kane receives an internal email showing Aegis was acquired by Veridian Trust after the Meridian Spine contract (C003 payoff, MR001)."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not have Iris fully trust Nadia Okafor or believe she is not steering the investigation."
+      ],
+      "opens_with": "\"The fracture on the Spine coupon matches the Kessler override at every point,\" Iris Kane says, placing the micrograph on Petra Lund's desk. \"I need to know who gave you the jig.\"",
+      "cliffhanger": "As Iris returns to her office after the confrontation, she finds a typed note under the door: 'You're looking at the wrong supplier. Veridian Trust acquired Aegis after the fact. The real tooling vendor is still inside the Directorate. — A friend.'",
+      "signature_detail_hint": "The Aegis Fabrication purchase order is printed on paper with a watermark of a Latin phrase Iris recognizes from the Kessler files, hinting at a shared legal counsel.",
+      "emotional_beat": "The satisfaction of cracking Lund is undercut by the realization that Iris is still a step behind — someone else is guiding the investigation even when she exposes the executor.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Advance the evidence chain from Lund to Veridian Trust. Pay off clues C002 and C003, minor reveal MR001. Keep focus on physical evidence, no romance. Target length: 1600-1900 words.",
+      "carries_to_next": "Iris has a new lead: the insider note points to a vendor inside the Directorate, not Aegis. She will investigate who inside the Directorate certified Aegis.",
+      "narrative": {
+        "clues_plant": [
+          "C003"
+        ],
+        "clues_payoff": [
+          "C002",
+          "C003"
+        ],
+        "reveals": [
+          {
+            "id": "MR001",
+            "reveal_weight": "minor",
+            "required_clues": [
+              "C002",
+              "C003"
+            ],
+            "min_clues_required": 1
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method",
+            "Iris: She has exposed Lund as the executor",
+            "Iris: She now suspects the method came from above Lund but lacks proof of the higher source.",
+            "Petra Lund: Lund is exposed and knows Iris has matched her tool-mark to the fraud",
+            "Petra Lund: She knows the method is not hers alone but does not know the full hierarchy above her.",
+            "Nadia Okafor: Same as ch1",
+            "Nadia Okafor: she continues feeding incomplete evidence to guide Iris's investigation."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method",
+            "Iris: She has exposed Lund as the executor",
+            "Iris: She now suspects the method came from above Lund but lacks proof of the higher source.",
+            "Petra Lund: Lund is exposed and knows Iris has matched her tool-mark to the fraud",
+            "Petra Lund: She knows the method is not hers alone but does not know the full hierarchy above her.",
+            "Nadia Okafor: Same as ch1",
+            "Nadia Okafor: she continues feeding incomplete evidence to guide Iris's investigation."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 4
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "The Inside Vendor",
+      "slug": "the-inside-vendor",
+      "one_line_summary": "Iris Kane investigates the Directorate employee who approved Aegis Fabrication, but finds her path blocked by Nadia Okafor and a missing evidence file.",
+      "beat_summary": "Iris Kane begins tracing the procurement trail. She identifies the Directorate employee who personally approved Aegis Fabrication as a qualified vendor: Alan Torvik, a procurement officer in the major projects division. She arranges a meeting with him, but he is suddenly on leave. When she pushes, she is told by his assistant that his files have been moved to legal. She suspects the evidence is being hidden. Nadia Okafor confronts her, directly warning her not to involve Directorate personnel in an investigation meant for external actors. Iris is now sure that Nadia is protecting someone inside. She also receives a call from the Directorate legal department informing her that her investigation scope is limited to the Spine certification, and further personnel inquiries require Stellan Marsh's approval. Frustrated, Iris visits the records room and finds that her original micrograph of the coupon has been removed from the evidence locker.",
+      "must_happen": [
+        "Iris Kane identifies procurement officer Alan Torvik as the approver of Aegis Fabrication and attempts to interview him.",
+        "Nadia Okafor warns Iris to focus on external actors, confirming she is being steered away from internal figures.",
+        "Iris Kane discovers her micrograph evidence has been tampered with or removed from the locker."
+      ],
+      "must_not": [
+        "Must not reveal Stellan Marsh's role as architect of any broader fraud.",
+        "Must not have Iris draw a direct line from internal obstruction to Stellan Marsh personally."
+      ],
+      "opens_with": "\"You need to stop digging into our own procurement,\" Nadia Okafor says, her voice low. \"The Directorate is the institution that needs to survive, not your private investigation.\"",
+      "cliffhanger": "Iris storms to the evidence locker. The slide tray is empty. Her micrograph, her only physical proof of the tool-mark match, is gone. She stands in the stark light, knowing that someone inside the Directorate has taken it.",
+      "signature_detail_hint": "The empty slide tray is dusted with a fine white powder — fingerprint powder — indicating a deliberate removal by someone who knew exactly what they were taking.",
+      "emotional_beat": "The isolation closes in. Iris has been trusted, celebrated, and now contains a trap: the cell is her office, the guards are her allies.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Raise stakes by having Iris lose her main physical evidence. Show internal resistance through Nadia's warning and the missing micrograph. Deepen the sense of containment. No romance. Target length: 1600-1900 words.",
+      "carries_to_next": "Without the micrograph, Iris must rely on her memory and seek an alternative source — she decides to visit Aldous Renn.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method",
+            "Iris: She has exposed Lund as the executor",
+            "Iris: She now suspects the method came from above Lund but lacks proof of the higher source.",
+            "Petra Lund: Lund is exposed and knows Iris has matched her tool-mark to the fraud",
+            "Petra Lund: She knows the method is not hers alone but does not know the full hierarchy above her.",
+            "Nadia Okafor: Same as ch1",
+            "Nadia Okafor: she continues feeding incomplete evidence to guide Iris's investigation."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method",
+            "Iris: She has exposed Lund as the executor",
+            "Iris: She now suspects the method came from above Lund but lacks proof of the higher source.",
+            "Petra Lund: Lund is exposed and knows Iris has matched her tool-mark to the fraud",
+            "Petra Lund: She knows the method is not hers alone but does not know the full hierarchy above her.",
+            "Nadia Okafor: Same as ch1",
+            "Nadia Okafor: she continues feeding incomplete evidence to guide Iris's investigation."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 4
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "The Source in Ironwood",
+      "slug": "the-source-in-ironwood",
+      "one_line_summary": "Iris Kane visits Aldous Renn in prison, receives a cryptic warning about the procurement system itself, and is summoned to Stellan Marsh's office — ending Act 1.",
+      "beat_summary": "Without the micrograph, Iris Kane re-documents her analysis from memory and sketches the tool-mark pattern. She decides to reach out to the one person who might know how the override method survived: Aldous Renn. In prison, Renn is cool and observant. He asks why she is still chasing the method when she should be chasing the system that allowed it. He hints that the people who funded him are now inside the Directorate, and that the certification rules were rewritten after Kessler to accommodate the pattern. He warns her that exposing them will cost her everything, but she presses. Renn gives her a name: the law firm that drafted the Veridian Trust charter — same firm that represented his shell companies. Iris leaves unsettled. On her way out of the prison parking lot, she gets a call from the Directorate's central office: Stellan Marsh requests a meeting with her first thing in the morning.",
+      "must_happen": [
+        "Iris Kane visits Aldous Renn in prison and extracts a lead: the law firm behind Veridian Trust also worked for Renn's companies.",
+        "Stellan Marsh's office officially summons Iris for a private meeting the next day.",
+        "Iris Kane realizes that her evidence chain, though damaged, now connects Lund to the same legal origins as Renn's network."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not have Renn explicitly name Marsh or Halveston as the active architects."
+      ],
+      "opens_with": "\"You think you caught me,\" Renn says, his voice echoing in the Ironwood visitation room. \"But you didn't catch the people who paid me. They're still out there, and now they own the referee.\"",
+      "cliffhanger": "Iris ends the call from Stellan Marsh's office, the dial tone humming. She looks at her notes: Renn's law firm, Veridian Trust, Aegis, Lund, the missing slide. She doesn't yet have the full picture, but she has the shape of the chain — and Stellan Marsh is calling her in.",
+      "signature_detail_hint": "During the prison visit, Renn taps the table in an old habit: thumb and middle finger rhythm — the same gesture Iris saw in his trial videos when he would stall for time.",
+      "emotional_beat": "A mix of dread and purpose: the prison meeting confirms Iris is on the right track, but the summons from Marsh feels like the ground closing beneath her feet.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Close Act 1 with a prison visit that enriches the conspiracy context and a summons from the top authority. Set up Act 2 complications. No romance. Target length: 1600-1900 words.",
+      "carries_to_next": "Iris will go to Stellan Marsh's office in chapter 7, carrying the knowledge that the reformed institution is built on the same legal foundations as the crime it was supposed to prevent.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method",
+            "Iris: She has exposed Lund as the executor",
+            "Iris: She now suspects the method came from above Lund but lacks proof of the higher source.",
+            "Petra Lund: Lund is exposed and knows Iris has matched her tool-mark to the fraud",
+            "Petra Lund: She knows the method is not hers alone but does not know the full hierarchy above her.",
+            "Nadia Okafor: Same as ch1",
+            "Nadia Okafor: she continues feeding incomplete evidence to guide Iris's investigation."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method",
+            "Iris: She has exposed Lund as the executor",
+            "Iris: She now suspects the method came from above Lund but lacks proof of the higher source.",
+            "Petra Lund: Lund is exposed and knows Iris has matched her tool-mark to the fraud",
+            "Petra Lund: She knows the method is not hers alone but does not know the full hierarchy above her.",
+            "Nadia Okafor: Same as ch1",
+            "Nadia Okafor: she continues feeding incomplete evidence to guide Iris's investigation."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 4
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 7,
+      "title": "The Verdict Before the Test",
+      "slug": "the-verdict-before-the-test",
+      "one_line_summary": "Stellan Marsh gives Iris Kane forty-eight hours to repeat the Meridian Spine test, but a prewritten public statement and a distinctive archive puncture show that someone prepared the official conclusion before the new evidence exists.",
+      "beat_summary": "The summons from Ironwood leads directly to a controlled confrontation between Iris Kane and Stellan Marsh. Stellan Marsh treats the missing micrograph as a chain-of-custody failure and authorizes a fresh load test, but he requires Iris Kane to deliver a preliminary finding within forty-eight hours. Iris Kane refuses to endorse any conclusion until she controls the replacement sample from extraction through fracture. Stellan Marsh accepts that condition without losing his composure and gives her the internal briefing packet already prepared for the test. Inside it, Iris Kane finds a scheduled public statement reading, \"National Integrity Directorate -- independent certification; Meridian Spine verified clean,\" despite the replacement coupon not yet existing. She also notices that the Aegis approval copy bears a distinctive offset archive-comb puncture with one crescent-shaped hole, planting C005b and indicating that this copy passed through an unidentified internal file set before reaching the briefing packet.",
+      "must_happen": [
+        "Stellan Marsh confronts Iris Kane about the missing micrograph and authorizes a replacement load test with a forty-eight-hour deadline.",
+        "Iris Kane refuses to sign a preliminary conclusion unless she personally controls extraction, custody, and testing of the replacement coupon.",
+        "Iris Kane finds the prewritten statement \"National Integrity Directorate -- independent certification; Meridian Spine verified clean\" scheduled for release before the new test is performed.",
+        "Iris Kane observes the offset archive-comb puncture and its chipped crescent hole on the Aegis approval copy, planting C005b without identifying who handled the earlier file."
+      ],
+      "must_not": [
+        "Must not identify Stellan Marsh as the source of the wider fraud or attribute the hidden hierarchy to him.",
+        "Must not state that the National Integrity Directorate was created for a concealed criminal purpose.",
+        "Must not let Iris Kane recover the missing micrograph or treat the replacement test as equivalent to the lost original evidence."
+      ],
+      "opens_with": "\"You lost the only evidence that justified your accusation,\" Stellan Marsh says, pushing an empty slide tray across the table toward Iris Kane.",
+      "cliffhanger": "Iris Kane turns the briefing packet over and finds tomorrow's release time stamped beneath the words \"Meridian Spine verified clean\" - six hours before the replacement coupon is scheduled to be cut.",
+      "signature_detail_hint": "The briefing packet has four archive-comb holes, but one tooth in the punch was chipped, leaving a tiny crescent of paper attached inside the third hole like a hinged trapdoor.",
+      "emotional_beat": "Iris Kane feels the professional trust once offered by Stellan Marsh harden into pressure, and her isolation deepens when even her demand for a valid test is absorbed into a timetable she did not set.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word institutional confrontation that continues directly from the Ironwood summons, gives Iris Kane a concrete replacement-test objective, plants C005b through a physical document feature, and ends on proof that the public conclusion was scheduled before the test. Maintain single POV through Iris Kane, keep Stellan Marsh measured and strategically reasonable, and include no romance or sexual content.",
+      "carries_to_next": "Iris Kane goes to the Meridian Spine fabrication site to extract the replacement coupon under her own chain of custody while concealing the premature release schedule and the archive-comb puncture from Nadia Okafor.",
+      "narrative": {
+        "clues_plant": [
+          "C005b"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method",
+            "Iris: She has exposed Lund as the executor",
+            "Iris: She now suspects the method came from above Lund but lacks proof of the higher source.",
+            "Petra Lund: Lund is exposed and knows Iris has matched her tool-mark to the fraud",
+            "Petra Lund: She knows the method is not hers alone but does not know the full hierarchy above her.",
+            "Nadia Okafor: Same as ch1",
+            "Nadia Okafor: she continues feeding incomplete evidence to guide Iris's investigation."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method",
+            "Iris: She has exposed Lund as the executor",
+            "Iris: She now suspects the method came from above Lund but lacks proof of the higher source.",
+            "Petra Lund: Lund is exposed and knows Iris has matched her tool-mark to the fraud",
+            "Petra Lund: She knows the method is not hers alone but does not know the full hierarchy above her.",
+            "Nadia Okafor: Same as ch1",
+            "Nadia Okafor: she continues feeding incomplete evidence to guide Iris's investigation."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 4
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Broken Seal",
+      "slug": "the-broken-seal",
+      "one_line_summary": "Iris Kane extracts a replacement coupon under hostile supervision and finds microscopic evidence that its secured storage bay was opened and resealed after Petra Lund's certification.",
+      "beat_summary": "Iris Kane arrives at the Meridian Spine fabrication site with Nadia Okafor and enforces the custody conditions accepted by Stellan Marsh. Petra Lund must identify the approved coupon bank but is not permitted to touch the selected piece. Nadia Okafor repeatedly urges Iris Kane to finish before the scheduled public briefing, confirming that institutional timing matters more to her than the engineering process. Before cutting the replacement coupon, Iris Kane examines the storage-bay seal and finds a crescent of older adhesive beneath the current strip, along with two misaligned registration perforations. She photographs the seal in place, removes it intact, and bags the metal latch, adhesive strip, and paper backing separately, planting C004. A blue abrasive grain trapped between the adhesive layers indicates that the bay was exposed to fabrication residue before the current seal was applied. Iris Kane proceeds with the extraction but treats the coupon as potentially compromised rather than clean evidence.",
+      "must_happen": [
+        "Iris Kane takes personal control of the replacement coupon extraction and prevents Petra Lund or Nadia Okafor from handling the selected piece.",
+        "Nadia Okafor pressures Iris Kane to complete the test before the scheduled public briefing, reinforcing that Iris Kane is still being steered.",
+        "Iris Kane discovers an older adhesive crescent and misaligned registration perforations beneath the current storage-bay seal, planting C004.",
+        "Iris Kane preserves the latch, seal, backing, and trapped blue abrasive grain as separate evidence items before allowing the coupon to be cut."
+      ],
+      "must_not": [
+        "Must not identify who opened or resealed the storage bay.",
+        "Must not conclude that the replacement coupon carries the same tool-mark as the original evidence.",
+        "Must not allow Nadia Okafor or Petra Lund to destroy, replace, or take custody of the recovered seal components."
+      ],
+      "opens_with": "\"Take your hand off the coupon,\" Iris Kane says as Petra Lund reaches across the cutting bench.",
+      "cliffhanger": "Under magnification, Iris Kane finds a blue abrasive grain sealed between two adhesive layers - physical proof that the supposedly untouched bay had been opened on the fabrication floor and closed again.",
+      "signature_detail_hint": "The tamper strip has two rows of pinprick registration holes that almost overlap; the offset is smaller than a fingernail clipping but too regular to be accidental.",
+      "emotional_beat": "Iris Kane's need for physical certainty collides with the knowledge that every controlled object may already have been handled, leaving her angry, exposed, and unwilling to trust even a test performed under her own authority.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word evidence-extraction sequence built around procedural pressure, physical custody, and the planting of C004. Keep the action tactile and specific, show Nadia Okafor steering Iris Kane through deadlines rather than confession, preserve Petra Lund's established guilt without expanding her knowledge, and include no romance or sexual content.",
+      "carries_to_next": "Iris Kane brings the replacement coupon and every layer of the broken seal to an independent document bench, intending to determine when the bay was reopened before the Directorate publishes its prepared conclusion.",
+      "narrative": {
+        "clues_plant": [
+          "C004"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method",
+            "Iris: She has exposed Lund as the executor",
+            "Iris: She now suspects the method came from above Lund but lacks proof of the higher source.",
+            "Petra Lund: Lund is exposed and knows Iris has matched her tool-mark to the fraud",
+            "Petra Lund: She knows the method is not hers alone but does not know the full hierarchy above her.",
+            "Nadia Okafor: Same as ch1",
+            "Nadia Okafor: she continues feeding incomplete evidence to guide Iris's investigation."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method",
+            "Iris: She has exposed Lund as the executor",
+            "Iris: She now suspects the method came from above Lund but lacks proof of the higher source.",
+            "Petra Lund: Lund is exposed and knows Iris has matched her tool-mark to the fraud",
+            "Petra Lund: She knows the method is not hers alone but does not know the full hierarchy above her.",
+            "Nadia Okafor: Same as ch1",
+            "Nadia Okafor: she continues feeding incomplete evidence to guide Iris's investigation."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 4
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "Her Number on the Ledger",
+      "slug": "her-number-on-the-ledger",
+      "one_line_summary": "Iris Kane proves that the coupon bay was opened after Petra Lund's certification and discovers that the paper access ledger records the unauthorized entry under Iris Kane's own credentials.",
+      "beat_summary": "Iris Kane examines the recovered seal components before testing the replacement coupon. By aligning the registration perforations and comparing the compressed adhesive edges, she proves that the original strip was peeled back and a second strip applied after Petra Lund signed the certification, paying off C004. The trapped abrasive grain matches residue from the active cutting floor rather than the secured coupon bank, establishing MR002: someone interfered with the certified storage bay after Petra Lund's initial act. Iris Kane then demands the physical access ledger for the bay. Nadia Okafor produces it only after arguing that the seal damage could be routine maintenance. The ledger's machine-imprinted time falls during Iris Kane's visit to Aldous Renn at Ironwood, yet the credential number beside the entry belongs to Iris Kane. She does not accuse Nadia Okafor or Stellan Marsh because the physical record proves misuse of her credentials, not the identity of the person who used them. The prepared public statement remains scheduled, forcing Iris Kane to choose between an inconclusive replacement test and an immediate challenge to the chain of custody.",
+      "must_happen": [
+        "Iris Kane aligns the two seal layers and proves that the storage bay was opened and resealed after Petra Lund's certification, paying off C004.",
+        "Iris Kane matches the trapped abrasive grain to residue from the active fabrication floor, establishing MR002 as post-certification interference with the secured coupon bank.",
+        "Nadia Okafor resists but ultimately provides the physical access ledger after Iris Kane refuses to continue without it.",
+        "Iris Kane finds an entry made during her Ironwood visit under Iris Kane's own credential number, proving that someone used her identity to access the bay."
+      ],
+      "must_not": [
+        "Must not identify the person who used Iris Kane's credentials.",
+        "Must not attribute the credential misuse or post-certification interference to Stellan Marsh.",
+        "Must not publish, destroy, or fully retest the original tool-mark proof.",
+        "Must not let Iris Kane accept the replacement coupon as an uncontaminated basis for certification."
+      ],
+      "opens_with": "Iris Kane lowers the blade toward the seal backing and says, \"If these perforations align, somebody opened the bay after certification.\"",
+      "cliffhanger": "The access time is 14:17, when Iris Kane was behind the gates at Ironwood, but the credential number stamped beside it is hers.",
+      "signature_detail_hint": "Pressure from the ledger printer has driven a tiny ridge of black ribbon wax through the paper, allowing Iris Kane to distinguish the original machine imprint from later handwriting without relying on a digital record.",
+      "emotional_beat": "The evidence turns Iris Kane's isolation into personal vulnerability: the obstruction is no longer merely around her investigation, because someone has begun making the physical record speak in her name.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word forensic payoff chapter that resolves C004 through seal mechanics, delivers MR002 as proof of post-certification interference, and ends with the concrete false-record threat against Iris Kane. Keep every conclusion limited to what the physical seal, abrasive residue, timing, and paper ledger establish; maintain single POV through Iris Kane and include no romance or sexual content.",
+      "carries_to_next": "Iris Kane must determine who could issue or duplicate her Directorate credential while preventing the prewritten clean certification from being released under her authority.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C004"
+        ],
+        "reveals": [
+          {
+            "id": "MR002",
+            "reveal_weight": "minor",
+            "required_clues": [
+              "C004"
+            ],
+            "min_clues_required": 1
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method",
+            "Iris: She has exposed Lund as the executor",
+            "Iris: She now suspects the method came from above Lund but lacks proof of the higher source.",
+            "Petra Lund: Lund is exposed and knows Iris has matched her tool-mark to the fraud",
+            "Petra Lund: She knows the method is not hers alone but does not know the full hierarchy above her.",
+            "Nadia Okafor: Same as ch1",
+            "Nadia Okafor: she continues feeding incomplete evidence to guide Iris's investigation."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method",
+            "Iris: She has exposed Lund as the executor",
+            "Iris: She now suspects the method came from above Lund but lacks proof of the higher source.",
+            "Petra Lund: Lund is exposed and knows Iris has matched her tool-mark to the fraud",
+            "Petra Lund: She knows the method is not hers alone but does not know the full hierarchy above her.",
+            "Nadia Okafor: Same as ch1",
+            "Nadia Okafor: she continues feeding incomplete evidence to guide Iris's investigation."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 4
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 10,
+      "title": "The Phantom Key",
+      "slug": "the-phantom-key",
+      "one_line_summary": "Iris Kane confronts Nadia Okafor about the access ledger entry, discovers a unique etching on her own access card, and realizes her identity has been compromised by a specific card-issuing method.",
+      "beat_summary": "Iris Kane confronts Nadia Okafor about the unauthorized entry in the access ledger, where Iris Kane's credentials were used while she was at Ironwood. Nadia Okafor deflects, suggesting a system glitch or an administrative error, but her evasiveness only deepens Iris Kane's suspicion. Iris Kane, refusing to let the matter drop, investigates the physical properties of her own Directorate access card. Under high magnification, she discovers a unique, faint etching on the magnetic strip (C005 planted) that she recognizes as a specific manufacturing defect from a specialized batch of cards, implying her card was specially prepared or cloned. She realizes this isn't just a system error but a deliberate act of identity theft from within. Stellan Marsh's office issues a final, curt reminder about the impending public statement regarding the Meridian Spine's certification, adding immense pressure to Iris Kane's timeline.",
+      "must_happen": [
+        "Iris Kane confronts Nadia Okafor about the unauthorized use of her credentials on the access ledger.",
+        "Nadia Okafor offers evasive explanations, increasing Iris Kane's suspicion of her direct involvement in the obstruction.",
+        "Iris Kane discovers a unique, faint etching on her own Directorate access card (C005 planted), indicating a specific, compromised card-issuing method.",
+        "Stellan Marsh's office issues a final reminder about the impending public statement, forcing Iris Kane to act quickly."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not identify the person who physically used Iris Kane's credentials to access the bay.",
+        "Must not confirm Nadia Okafor's full role in the conspiracy before the physical evidence forces her confession."
+      ],
+      "opens_with": "\"My credential number is on this access ledger,\" Iris Kane says, placing the printout on Nadia Okafor's desk. \"At a time I was at Ironwood. Explain it.\"",
+      "cliffhanger": "Iris Kane holds her Directorate access card, the faint etching on its strip a silent accusation. Her identity wasn't just borrowed; it was copied, imprinted with a signature she now recognizes, and she knows the system that issued her badge is compromised.",
+      "signature_detail_hint": "The etching on the magnetic strip is a series of tiny, almost invisible, parallel lines, too uniform to be accidental wear, like a fingerprint left by a specific, illicit duplication machine.",
+      "emotional_beat": "Iris Kane feels a profound sense of violation. Her professional identity, the very tool of her authority, has been turned against her, making her feel exposed and personally targeted by the unseen forces at play.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter focused on Iris Kane's investigation into the credential misuse. Plant clue C005 through a physical detail on her access card. Build tension around the impending public statement and deepen Iris Kane's suspicion of Nadia Okafor. Maintain single POV and avoid romance.",
+      "carries_to_next": "Iris Kane must now connect the specific card-issuing method to a perpetrator and prevent the prewritten, false certification from being released under the Directorate's authority.",
+      "narrative": {
+        "clues_plant": [
+          "C005"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method",
+            "Iris: She has exposed Lund as the executor",
+            "Iris: She now suspects the method came from above Lund but lacks proof of the higher source.",
+            "Petra Lund: Lund is exposed and knows Iris has matched her tool-mark to the fraud",
+            "Petra Lund: She knows the method is not hers alone but does not know the full hierarchy above her.",
+            "Nadia Okafor: Same as ch1",
+            "Nadia Okafor: she continues feeding incomplete evidence to guide Iris's investigation."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method",
+            "Iris: She has exposed Lund as the executor",
+            "Iris: She now suspects the method came from above Lund but lacks proof of the higher source.",
+            "Petra Lund: Lund is exposed and knows Iris has matched her tool-mark to the fraud",
+            "Petra Lund: She knows the method is not hers alone but does not know the full hierarchy above her.",
+            "Nadia Okafor: Same as ch1",
+            "Nadia Okafor: she continues feeding incomplete evidence to guide Iris's investigation."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 4
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 11,
+      "title": "The Architect of Silence",
+      "slug": "the-architect-of-silence",
+      "one_line_summary": "Iris Kane confronts Nadia Okafor with combined physical evidence, forcing Nadia to confess her role in steering the investigation to protect a higher coordinator within the Directorate.",
+      "beat_summary": "Iris Kane confronts Nadia Okafor again, this time armed with irrefutable physical evidence. She presents the unique etching on her access card (C005 payoff), proving her credentials were deliberately duplicated. Then, she lays out the Aegis approval copy with the distinctive archive-comb puncture (C005b payoff), linking Nadia directly to the prewritten public statement. Cornered by the physical evidence, Nadia Okafor breaks, confessing to her role in steering Iris Kane toward Gerald Halveston (MR003 payoff) as a false target. Nadia Okafor reveals that she acted under direct orders from a 'coordinator' within the Directorate, whose primary directive was to 'protect the institution's integrity' at all costs. Iris Kane realizes Nadia's actions were driven by a misguided, fierce loyalty to the Directorate, not personal gain, making the betrayal more profound and the conspiracy more insidious.",
+      "must_happen": [
+        "Iris Kane confronts Nadia Okafor with the etched access card (C005 payoff) and the archive-comb puncture on the prewritten statement (C005b payoff).",
+        "Nadia Okafor, faced with the physical evidence, confesses to steering Iris Kane toward Gerald Halveston as a false target (MR003 payoff).",
+        "Nadia Okafor reveals she received orders from a 'coordinator' within the Directorate to protect the institution, but does not name Stellan Marsh.",
+        "Iris Kane realizes Nadia Okafor's motivation was loyalty to the Directorate, not personal corruption, solidifying the institutional nature of the conspiracy."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not have Nadia Okafor explicitly name Stellan Marsh as the architect of the broader fraud.",
+        "Must not allow Iris Kane to recover the original missing micrograph.",
+        "Must not fully expose the Directorate as a capture instrument, only that it is being protected by internal actors."
+      ],
+      "opens_with": "\"This etching,\" Iris Kane says, pointing to the micrograph of her access card, \"matches the unique defect in a batch of cards issued to your department. Care to explain how it ended up on mine, Nadia?\"",
+      "cliffhanger": "Nadia Okafor, defeated, whispers a single phrase, not a name, but a title: \"The Director of Policy.\" Iris Kane's mind races, already putting the pieces together, knowing exactly who holds that title.",
+      "signature_detail_hint": "As Nadia Okafor confesses, her hand instinctively goes to adjust her watch, a nervous habit Iris Kane hasn't seen since their first meeting, revealing the deep stress of her hidden role.",
+      "emotional_beat": "Iris Kane feels a bitter clarity. The confirmation of Nadia's betrayal is painful, but it removes the last layer of doubt, transforming suspicion into a cold, hard resolve to expose the true orchestrator.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter where Iris Kane uses physical evidence to force Nadia Okafor's confession. Pay off C005 and C005b, and deliver MR003 as Nadia's betrayal. End with Iris Kane identifying the next target without explicitly naming Stellan Marsh as the architect of capture. Maintain single POV and avoid romance.",
+      "carries_to_next": "Iris Kane now knows the 'coordinator' is the Director of Policy, Stellan Marsh, and must decide how to confront him and expose the institutional conspiracy before the false certification is officially released.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C005",
+          "C005b"
+        ],
+        "reveals": [
+          {
+            "id": "MR003",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C005",
+              "C005b"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has discovered Nadia Okafor's betrayal — Okafor fed selective leads to steer Iris toward Halveston as a stopping point",
+            "Iris: Iris knows the conspiracy is guided and that a coordinator stands above Lund.",
+            "Petra Lund: Lund has been neutralized/removed",
+            "Petra Lund: Her knowledge remains static: she knows she was an executor but cannot identify Halveston or Marsh.",
+            "Nadia Okafor: Okafor is exposed as the guided betrayer",
+            "Nadia Okafor: She knows the domestic conspiracy's structure (Lund through Marsh) and that her role was to protect the Directorate."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has discovered Nadia Okafor's betrayal — Okafor fed selective leads to steer Iris toward Halveston as a stopping point",
+            "Iris: Iris knows the conspiracy is guided and that a coordinator stands above Lund.",
+            "Petra Lund: Lund has been neutralized/removed",
+            "Petra Lund: Her knowledge remains static: she knows she was an executor but cannot identify Halveston or Marsh.",
+            "Nadia Okafor: Okafor is exposed as the guided betrayer",
+            "Nadia Okafor: She knows the domestic conspiracy's structure (Lund through Marsh) and that her role was to protect the Directorate."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 11
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 12,
+      "title": "The Unspoken Name",
+      "slug": "the-unspoken-name",
+      "one_line_summary": "Iris Kane identifies Stellan Marsh as the 'Director of Policy' who ordered Nadia's actions, and moves to publicly challenge the false Spine certification, knowing she is targeting the head of the Directorate.",
+      "beat_summary": "Iris Kane processes the raw aftermath of Nadia Okafor's confession. The realization that Nadia's actions were driven by a misguided loyalty to the Directorate, protecting a 'coordinator,' shifts Iris Kane's focus entirely. She immediately reviews the Directorate's official organizational chart, confirming Stellan Marsh's position as the 'Director of Policy' – the very title Nadia Okafor whispered. This crystallizes his role as the orchestrator of the internal conspiracy. Iris Kane initiates a quiet, independent investigation into Stellan Marsh's past directives and policy changes within the Directorate, searching for patterns that align with the systematic obstruction she has faced. Simultaneously, she takes decisive steps to publicly challenge the prewritten certification. Using the evidence of the compromised coupon bay and the manipulated access ledger (without naming Nadia Okafor directly), Iris Kane releases an anonymous, carefully worded statement to a trusted journalist, delaying the official broadcast of the false 'Meridian Spine verified clean' certification, but knowing the fight has just gone public and the next target is Stellan Marsh.",
+      "must_happen": [
+        "Iris Kane processes Nadia Okafor's confession, understanding the institutional loyalty driving the conspiracy.",
+        "Iris Kane reviews the Directorate's organizational chart and identifies Stellan Marsh as the 'Director of Policy', confirming him as the 'coordinator' Nadia Okafor referred to.",
+        "Iris Kane begins a quiet, independent investigation into Stellan Marsh's policy directives within the Directorate, looking for systemic patterns.",
+        "Iris Kane publicly challenges the prewritten certification by anonymously leaking evidence of the compromised coupon bay and manipulated ledger to a journalist, delaying the official release."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not directly accuse Stellan Marsh of fraud or being the ultimate mastermind yet, only identify him as the next target.",
+        "Must not name Nadia Okafor in the public challenge to the certification.",
+        "Must not allow the public statement to be completely prevented, only delayed or discredited."
+      ],
+      "opens_with": "The silence in Iris Kane's office after Nadia Okafor left was louder than any confession. 'Director of Policy.' The words echoed, cold and clear.",
+      "cliffhanger": "The public statement, \"National Integrity Directorate -- independent certification; Meridian Spine verified clean,\" flashes across a news screen, delayed by Iris Kane's leak but broadcast nonetheless. She watches it, a grim resolve settling in her gaze, knowing the system she once trusted has now declared war, and she has just named her adversary: Stellan Marsh.",
+      "signature_detail_hint": "Iris Kane's anonymous leak to the journalist includes a unique, encrypted timestamp in the metadata of the shared file, a digital fingerprint only she can trace back to ensure its authenticity and her protection.",
+      "emotional_beat": "A profound, almost liberating sense of clarity washes over Iris Kane. The fog of misdirection has lifted, replaced by the stark, terrifying reality of facing the institution's leader. Her isolation now feels like a weapon, honed and sharp.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter where Iris Kane identifies Stellan Marsh as her next target based on Nadia Okafor's confession. Show Iris Kane's strategic move to publicly challenge the false certification, escalating the conflict. Maintain single POV and avoid romance. End Act 2 with Iris Kane directly targeting Marsh's role in the cover-up.",
+      "carries_to_next": "Iris Kane has now publicly challenged the Directorate's integrity, setting her directly against Stellan Marsh, who will undoubtedly retaliate in the next chapter.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has discovered Nadia Okafor's betrayal — Okafor fed selective leads to steer Iris toward Halveston as a stopping point",
+            "Iris: Iris knows the conspiracy is guided and that a coordinator stands above Lund.",
+            "Petra Lund: Lund has been neutralized/removed",
+            "Petra Lund: Her knowledge remains static: she knows she was an executor but cannot identify Halveston or Marsh.",
+            "Nadia Okafor: Okafor is exposed as the guided betrayer",
+            "Nadia Okafor: She knows the domestic conspiracy's structure (Lund through Marsh) and that her role was to protect the Directorate."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has discovered Nadia Okafor's betrayal — Okafor fed selective leads to steer Iris toward Halveston as a stopping point",
+            "Iris: Iris knows the conspiracy is guided and that a coordinator stands above Lund.",
+            "Petra Lund: Lund has been neutralized/removed",
+            "Petra Lund: Her knowledge remains static: she knows she was an executor but cannot identify Halveston or Marsh.",
+            "Nadia Okafor: Okafor is exposed as the guided betrayer",
+            "Nadia Okafor: She knows the domestic conspiracy's structure (Lund through Marsh) and that her role was to protect the Directorate."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 11
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 13,
+      "title": "The Timestamp Fracture",
+      "slug": "the-timestamp-fracture",
+      "one_line_summary": "Iris Kane forces Stellan Marsh to confront evidence of systematic backdating in the Meridian Spine certification, then discovers a tamper mark on the replacement coupon that points to a broader cover-up.",
+      "beat_summary": "Iris Kane is summoned to Stellan Marsh's office after the public leak. She presents the timestamp discrepancy from the approval records, proving the load test certification was backdated. Marsh agrees to an internal inquiry, but his composure unsettles her. Later, examining the replacement coupon from the fabricated bay, Iris Kane finds a micro-crack pattern that matches a technique used to alter evidence after the Kessler collapse — a sign that the replacement itself was machined after the original fracture. She also receives an anonymous note citing a policy directive as the source of the backdating order. These pieces confirm the conspiracy reaches into the Directorate's leadership.",
+      "must_happen": [
+        "Iris Kane confronts Stellan Marsh with the timestamp discrepancy from the Meridian Spine approval records, forcing acknowledgment of backdated certification (C001 payoff).",
+        "Iris Kane identifies a micro-crack pattern on the replacement coupon that indicates post-fracture machining, establishing a new evidence thread (C009 planted).",
+        "Iris Kane receives an anonymous communication linking the backdating order to a policy directive from the Directorate's executive office."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not confirm that the anonymous communication identifies Marsh by name."
+      ],
+      "opens_with": "\"You've chosen a dangerous path,\" Stellan Marsh says, his voice flat as he slides the leaked article across his desk. \"Let's see if your evidence can walk it.\"",
+      "cliffhanger": "Under the magnifier, the micro-crack on the replacement coupon splits into three branches — identical to the mark Iris Kane documented on a component fabricated after the Kessler collapse to destroy evidence.",
+      "signature_detail_hint": "The micro-crack branches are spaced at exactly 120 degrees, a pattern that only appears when the metal is fractured under a specific non-standard cooling rate used in a single unauthorized machine shop.",
+      "emotional_beat": "The revelation of the tampered replacement coupon shifts Iris Kane from suspicion to certainty: the conspiracy is not just steering her; it is actively manufacturing false evidence to contain her.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter that pays off C001 through the timestamp confrontation, plants C009 via the micro-crack observation, and achieves MR004 by linking the backdating to a policy directive. Maintain single POV, high tension, and physical evidence focus. No romance or sexual content.",
+      "carries_to_next": "Iris Kane must identify the source of the policy directive and the unauthorized machine shop, knowing that Stellan Marsh will continue to manage the inquiry from above.",
+      "narrative": {
+        "clues_plant": [
+          "C009"
+        ],
+        "clues_payoff": [
+          "C001"
+        ],
+        "reveals": [
+          {
+            "id": "MR004",
+            "reveal_weight": "minor",
+            "required_clues": [
+              "C001",
+              "C009"
+            ],
+            "min_clues_required": 1
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has discovered Nadia Okafor's betrayal — Okafor fed selective leads to steer Iris toward Halveston as a stopping point",
+            "Iris: Iris knows the conspiracy is guided and that a coordinator stands above Lund.",
+            "Petra Lund: Lund has been neutralized/removed",
+            "Petra Lund: Her knowledge remains static: she knows she was an executor but cannot identify Halveston or Marsh.",
+            "Nadia Okafor: Okafor is exposed as the guided betrayer",
+            "Nadia Okafor: She knows the domestic conspiracy's structure (Lund through Marsh) and that her role was to protect the Directorate."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has discovered Nadia Okafor's betrayal — Okafor fed selective leads to steer Iris toward Halveston as a stopping point",
+            "Iris: Iris knows the conspiracy is guided and that a coordinator stands above Lund.",
+            "Petra Lund: Lund has been neutralized/removed",
+            "Petra Lund: Her knowledge remains static: she knows she was an executor but cannot identify Halveston or Marsh.",
+            "Nadia Okafor: Okafor is exposed as the guided betrayer",
+            "Nadia Okafor: She knows the domestic conspiracy's structure (Lund through Marsh) and that her role was to protect the Directorate."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 11
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 14,
+      "title": "The Institutional Wall",
+      "slug": "the-institutional-wall",
+      "one_line_summary": "Iris Kane is blocked from accessing policy records and threatened by Stellan Marsh's press conference, forcing her to operate outside the Directorate's channels.",
+      "beat_summary": "Following the anonymous tip about a policy directive, Iris Kane requests the official records from the Directorate's policy office. The legal department rejects her request, claiming no such directive exists. She then tracks down Alan Torvik, the procurement officer who approved Aegis Fabrication. Torvik is visibly agitated and refuses to speak, hinting that he fears retaliation. Meanwhile, Stellan Marsh calls a press conference to reaffirm the Directorate's integrity, directly countering Iris Kane's leak. Iris Kane attends the conference unannounced, and a journalist, alerted by the leak, poses a pointed question about the tampering. The chapter ends with Iris Kane deciding to bypass legal procedures and access the policy archive through an old contact in the records division.",
+      "must_happen": [
+        "Iris Kane is formally denied access to policy office records by the Directorate's legal department.",
+        "Iris Kane locates Alan Torvik but he refuses to cooperate, appearing intimidated.",
+        "Stellan Marsh holds a press conference that reaffirms the Directorate's commitment to integrity, and a journalist challenges him on the tampering leak."
+      ],
+      "must_not": [
+        "Must not have Alan Torvik explicitly accuse Stellan Marsh of orchestrating the intimidation.",
+        "Must not state that the press conference is a deliberate cover-up."
+      ],
+      "opens_with": "\"The policy office has no record of any directive regarding certification timelines,\" the legal officer says, spreading her hands. \"Your internal inquiry is closed.\"",
+      "cliffhanger": "From the back of the packed press room, Iris Kane watches Stellan Marsh field the question. He smiles. 'The Directorate is built on a foundation of integrity. Any allegation to the contrary will be thoroughly investigated.' He meets Iris Kane's eyes for a fraction of a second — a warning.",
+      "signature_detail_hint": "The legal officer's denial bears a rubber stamp with a missing corner — the same stamp Iris Kane saw on Alan Torvik's procurement approval, hinting at a common bureaucratic chain used to suppress uncomfortable requests.",
+      "emotional_beat": "Iris Kane feels the institution closing ranks around her, and the frustration of having irrefutable evidence dismissed by process turns into a cold resolve to break the rules they hide behind.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter that shows institutional obstruction and Marsh's counter-narrative. Maintain tension through blocked attempts and the press conference confrontation. No romance or sexual content.",
+      "carries_to_next": "Iris Kane arranges an off-the-books visit to the policy office archive, using a contact from the records division who owes her a favor from the Kessler case.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has discovered Nadia Okafor's betrayal — Okafor fed selective leads to steer Iris toward Halveston as a stopping point",
+            "Iris: Iris knows the conspiracy is guided and that a coordinator stands above Lund.",
+            "Petra Lund: Lund has been neutralized/removed",
+            "Petra Lund: Her knowledge remains static: she knows she was an executor but cannot identify Halveston or Marsh.",
+            "Nadia Okafor: Okafor is exposed as the guided betrayer",
+            "Nadia Okafor: She knows the domestic conspiracy's structure (Lund through Marsh) and that her role was to protect the Directorate."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has discovered Nadia Okafor's betrayal — Okafor fed selective leads to steer Iris toward Halveston as a stopping point",
+            "Iris: Iris knows the conspiracy is guided and that a coordinator stands above Lund.",
+            "Petra Lund: Lund has been neutralized/removed",
+            "Petra Lund: Her knowledge remains static: she knows she was an executor but cannot identify Halveston or Marsh.",
+            "Nadia Okafor: Okafor is exposed as the guided betrayer",
+            "Nadia Okafor: She knows the domestic conspiracy's structure (Lund through Marsh) and that her role was to protect the Directorate."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 11
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 15,
+      "title": "The Directive's Signature",
+      "slug": "the-directives-signature",
+      "one_line_summary": "Iris Kane illegally accesses the policy archive, finds a memo signed by Seraphina Cole that ordered certification prioritization, and discovers a watermark linking it to Veridian Trust.",
+      "beat_summary": "Using a contact in the records division, Iris Kane gains after-hours access to the policy office's archived directives. She locates a memo from three months before the Meridian Spine certification, addressed to the certification committee, ordering prioritization for the Spine's approval. The signatory is Seraphina Cole, a policy director Iris Kane hasn't encountered before. The memo lacks a specific reason, which makes it suspect. Iris Kane photographs the memo and notices that the paper bears a watermark — a faint circle with the phrase 'Fides et Ratio.' The same watermark appeared on the Veridian Trust charter (from chapter 3), indicating a legal or financial link. Before leaving, she checks the building's access log and finds that her badge was logged as entering the policy office earlier that day — an access she never made, suggesting her credentials are being replicated by someone in the Directorate.",
+      "must_happen": [
+        "Iris Kane accesses the policy archive using a contact and locates a memo ordering prioritization of the Meridian Spine certification.",
+        "Iris Kane identifies the memo's signatory as Seraphina Cole, a policy director, and photographs it.",
+        "Iris Kane notices the watermark 'Fides et Ratio' on the memo paper, matching the Veridian Trust charter, planting C006.",
+        "Iris Kane discovers a false access log entry showing her badge entered the policy office earlier, indicating ongoing credential misuse."
+      ],
+      "must_not": [
+        "Must not state that Seraphina Cole is acting on behalf of Stellan Marsh.",
+        "Must not conclude that the false access log entry is directly tied to the backdating."
+      ],
+      "opens_with": "\"Thirty minutes,\" the archivist whispers, sealing the door behind Iris Kane. \"And I was never here.\"",
+      "cliffhanger": "Iris Kane freezes at the access log screen: her name, her badge number, a scan time of 11:14 AM. She was in a meeting with the legal department at that exact time, twenty floors away.",
+      "signature_detail_hint": "The 'Fides et Ratio' watermark is set in a typeface characteristic of the law firm that represented Aldous Renn's shell companies, a detail Iris Kane filed from the Veridian Trust documents.",
+      "emotional_beat": "The false access log triggers a deep personal alarm: the conspiracy is now impersonating her physically, a violation that makes every step forward feel like walking through a hall of mirrors.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter that plants C006 through the watermark detail, advances Iris Kane's evidence collection, and deepens the threat with the forged access entry. No romance or sexual content.",
+      "carries_to_next": "Iris Kane must investigate Seraphina Cole's connections and find a secure way to preserve her evidence without it being tampered with by someone who can duplicate her credentials.",
+      "narrative": {
+        "clues_plant": [
+          "C006"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has discovered Nadia Okafor's betrayal — Okafor fed selective leads to steer Iris toward Halveston as a stopping point",
+            "Iris: Iris knows the conspiracy is guided and that a coordinator stands above Lund.",
+            "Petra Lund: Lund has been neutralized/removed",
+            "Petra Lund: Her knowledge remains static: she knows she was an executor but cannot identify Halveston or Marsh.",
+            "Nadia Okafor: Okafor is exposed as the guided betrayer",
+            "Nadia Okafor: She knows the domestic conspiracy's structure (Lund through Marsh) and that her role was to protect the Directorate."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has discovered Nadia Okafor's betrayal — Okafor fed selective leads to steer Iris toward Halveston as a stopping point",
+            "Iris: Iris knows the conspiracy is guided and that a coordinator stands above Lund.",
+            "Petra Lund: Lund has been neutralized/removed",
+            "Petra Lund: Her knowledge remains static: she knows she was an executor but cannot identify Halveston or Marsh.",
+            "Nadia Okafor: Okafor is exposed as the guided betrayer",
+            "Nadia Okafor: She knows the domestic conspiracy's structure (Lund through Marsh) and that her role was to protect the Directorate."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 11
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 16,
+      "title": "The Coordinator's Signature",
+      "slug": "the-coordinators-signature",
+      "one_line_summary": "Iris Kane connects Seraphina Cole's directive to Gerald Halveston's fund, exposing him as the coordinator of the Meridian Spine's capture, and discovers a pattern in his other projects suggesting a national strategy.",
+      "beat_summary": "Iris Kane meticulously investigates Seraphina Cole, the policy director who signed the Spine prioritization memo from chapter 15. Using the 'Fides et Ratio' watermark (C006 payoff) as a key, Iris Kane traces Cole's professional history to a series of legal and financial consultancies that directly intersect with Gerald Halveston's philanthropic foundation. She uncovers a hidden subsidiary of Halveston's fund that managed Cole's appointments and provided her with 'policy guidance,' effectively proving that Halveston orchestrated Cole's directive and thus the capture of the Meridian Spine contracts (MR005). Halveston, now exposed as the coordinator of this specific project's fraud, issues a carefully worded statement denying direct involvement. Iris Kane, however, reviews Halveston's other national infrastructure projects and finds a recurring pattern of expedited approvals and shell company financing, planting C007, indicating a broader, national-scale capture strategy beyond just the Spine.",
+      "must_happen": [
+        "Iris Kane uses the 'Fides et Ratio' watermark (C006 payoff) to establish a direct, hidden link between Seraphina Cole and Gerald Halveston's foundation.",
+        "Iris Kane exposes Gerald Halveston as the coordinator of the Meridian Spine contract capture (MR005).",
+        "Gerald Halveston issues a public statement denying direct involvement, attempting to contain the fallout.",
+        "Iris Kane identifies a recurring pattern of expedited approvals and shell company financing in Halveston's other national projects, planting C007."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not name Stellan Marsh as the architect above Halveston, only that the conspiracy is national.",
+        "Must not have Halveston confess his full role or implicate Marsh."
+      ],
+      "opens_with": "The 'Fides et Ratio' watermark on Seraphina Cole's memo wasn't just a mark; it was a compass point, leading Iris Kane directly into Gerald Halveston's shadow.",
+      "cliffhanger": "Iris Kane stares at the screen, a map of Halveston's 'philanthropic' projects spread before her. Not one, not two, but a dozen national infrastructure contracts bear the same tell-tale pattern of expedited approval and opaque financing. The Meridian Spine was just a single thread in a national web.",
+      "signature_detail_hint": "A faded photograph of Seraphina Cole at a charity gala, standing beside a younger Gerald Halveston, both wearing a pin with the 'Fides et Ratio' emblem, a detail Iris Kane finds in an obscure social registry.",
+      "emotional_beat": "A cold certainty settles over Iris Kane. Halveston's exposure is a victory, but the scale of his operations shifts her understanding from a project-level fraud to a national systemic capture, deepening her isolation in the face of such pervasive corruption.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter focused on Iris Kane's investigation connecting Seraphina Cole to Gerald Halveston. Pay off C006, deliver MR005, and plant C007, while adhering to the `iris_knows` constraints regarding Halveston's role and the national scope of the conspiracy. Maintain single POV and avoid romance.",
+      "carries_to_next": "Iris Kane now understands Halveston's national pattern and must delve deeper into the systemic mechanism that allows such widespread capture, seeking the next layer of the conspiracy.",
+      "narrative": {
+        "clues_plant": [
+          "C007"
+        ],
+        "clues_payoff": [
+          "C006"
+        ],
+        "reveals": [
+          {
+            "id": "MR005",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C006",
+              "C007"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has proven Gerald Halveston's fund captured the Spine contracts",
+            "Iris: She exposes him as the coordinator",
+            "Iris: She sees the conspiracy is national but still cannot name the architect above Halveston.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Okafor is in custody",
+            "Nadia Okafor: Her knowledge of the domestic tiers is complete."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has proven Gerald Halveston's fund captured the Spine contracts",
+            "Iris: She exposes him as the coordinator",
+            "Iris: She sees the conspiracy is national but still cannot name the architect above Halveston.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Okafor is in custody",
+            "Nadia Okafor: Her knowledge of the domestic tiers is complete."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 16
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 17,
+      "title": "The Systemic Loophole",
+      "slug": "the-systemic-loophole",
+      "one_line_summary": "Iris Kane, facing Halveston's deflection, investigates the legal framework of his national projects and uncovers a recurring, non-standard clause that systematically bypasses oversight, hinting at a higher, institutional design.",
+      "beat_summary": "Following Halveston's exposure, the Directorate's legal department issues a directive to Iris Kane, attempting to restrict her inquiry to the Meridian Spine project only. Iris Kane sees this as a clear attempt to contain the damage and shield the broader conspiracy. Ignoring the directive, she focuses on the common patterns she identified in Halveston's national projects (C007 from chapter 16). She dives into the legal documentation for these projects, specifically seeking anomalies in the procurement and oversight clauses. After painstaking analysis, she uncovers a subtle, non-standard legal loophole—a recurring clause that consistently diverts oversight authority from independent bodies to a specific, internal 'advisory panel' within the Directorate itself (C008 planted). This clause appears in every one of Halveston's national contracts, suggesting a deliberate, systemic design rather than isolated legal maneuvering. The clause is so subtly embedded it could easily be missed by standard audits, yet its consistent presence points to an intentional architect.",
+      "must_happen": [
+        "The Directorate's legal department attempts to restrict Iris Kane's investigation to the Meridian Spine, clearly a move to contain Halveston's exposure.",
+        "Iris Kane bypasses the legal directive and continues investigating the national pattern of Halveston's projects.",
+        "Iris Kane discovers a recurring, non-standard legal clause in multiple national infrastructure contracts funded by Halveston's network, planting C008.",
+        "The clause diverts oversight authority to an internal 'advisory panel' within the Directorate, suggesting a systemic design."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not identify the specific members of the 'advisory panel' or link them directly to Marsh.",
+        "Must not allow Iris Kane to be formally sanctioned or stopped by the Directorate's legal department yet."
+      ],
+      "opens_with": "\"Your inquiry is confined to the Meridian Spine,\" the legal directive stated, its tone clipped and final. Iris Kane crumpled the paper. \"Not if the Spine is just a single vertebra.\"",
+      "cliffhanger": "Iris Kane highlights the same unusual legal clause in the tenth contract. 'Oversight to Advisory Panel, Directorate Internal Review.' The words, innocuous on their own, now echoed like a drumbeat across a national landscape, a blueprint for systemic capture.",
+      "signature_detail_hint": "The recurring legal clause is formatted with a specific, outdated legal citation style, a subtle anachronism that suggests it was lifted from an older, less scrutinized template, or intentionally designed to evade modern scrutiny.",
+      "emotional_beat": "Iris Kane feels a chilling realization: the conspiracy isn't just about corruption, but about the insidious re-engineering of the law itself, turning the very rules of oversight into instruments of capture.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter where Iris Kane investigates Halveston's national projects, uncovers a systemic legal loophole (C008 plant), and deepens her understanding of the conspiracy's institutional nature. Maintain single POV and avoid romance.",
+      "carries_to_next": "Iris Kane now possesses evidence of a systemic legal loophole and a national pattern, and must connect these threads to the physical evidence of manipulation to expose the full scope of the capture.",
+      "narrative": {
+        "clues_plant": [
+          "C008"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has proven Gerald Halveston's fund captured the Spine contracts",
+            "Iris: She exposes him as the coordinator",
+            "Iris: She sees the conspiracy is national but still cannot name the architect above Halveston.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Okafor is in custody",
+            "Nadia Okafor: Her knowledge of the domestic tiers is complete."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has proven Gerald Halveston's fund captured the Spine contracts",
+            "Iris: She exposes him as the coordinator",
+            "Iris: She sees the conspiracy is national but still cannot name the architect above Halveston.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Okafor is in custody",
+            "Nadia Okafor: Her knowledge of the domestic tiers is complete."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 16
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 18,
+      "title": "The Captured Reform",
+      "slug": "the-captured-reform",
+      "one_line_summary": "Iris Kane combines evidence of Halveston's national capture strategy with the manipulated evidence, realizing the Directorate itself has been co-opted as an instrument to entrench fraud at a national scale.",
+      "beat_summary": "Iris Kane, armed with the systemic loophole (C008 payoff) and Halveston's national pattern (C007 payoff), now synthesizes her evidence. She clearly demonstrates that Halveston's fund has systematically captured national infrastructure contracts through a network of shell companies and legally embedded oversight diversions (MR006). This reveals a profound, national-scale corruption, far beyond a single project. She then integrates the micro-crack pattern on the replacement coupon (C009 payoff), which indicated deliberate evidence manipulation after the Kessler collapse. By connecting this physical evidence tampering to the systemic legal capture, Iris Kane realizes the true, horrifying scope: the National Integrity Directorate, the very reform built to prevent the next disaster, has been co-opted and redesigned to serve as the instrument by which this national fraud is entrenched and protected (MR007). She understands that the 'integrity' it projects is a shield for its own corrupt function. The implication is clear: the system isn't broken; it's working exactly as intended by its hidden architects, even if she cannot yet name Stellan Marsh as the ultimate architect.",
+      "must_happen": [
+        "Iris Kane synthesizes the evidence of Halveston's national pattern (C007 payoff) and the systemic legal loophole (C008 payoff).",
+        "Iris Kane reveals that Halveston's fund has implemented a national-scale capture strategy for infrastructure contracts (MR006).",
+        "Iris Kane integrates the micro-crack pattern (C009 payoff) to link physical evidence manipulation to the systemic legal capture.",
+        "Iris Kane realizes that the National Integrity Directorate itself has been co-opted as an instrument to entrench national-scale fraud (MR007)."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not name Stellan Marsh as the ultimate architect of the Directorate's capture.",
+        "Must not have Iris Kane find the redacted page or the full list of co-owners.",
+        "Must not have Iris Kane disclose her full findings to Marsh or any Directorate official yet."
+      ],
+      "opens_with": "The legal clause, the shell companies, the micro-crack on the metal — they were all pieces of a single, monstrous machine, and Iris Kane finally saw it whole.",
+      "cliffhanger": "Iris Kane stands in her office, surrounded by diagrams, legal documents, and micrographs. The lines connect: the national pattern, the systemic loophole, the tampered evidence. The Directorate wasn't failing to stop the fraud; it was enabling it. The reform itself was the capture.",
+      "signature_detail_hint": "Iris Kane notices a specific, recurring font in the legal loopholes that matches a rarely used typeface in the Directorate's internal policy documents, a subtle signature of common authorship across the 'reform' and the 'capture.'",
+      "emotional_beat": "A profound sense of betrayal and grim determination washes over Iris Kane. The institution she believed in, the very symbol of integrity, is revealed as the core of the corruption, leaving her with a chilling understanding of the depth of the deception.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter where Iris Kane synthesizes C007, C008, and C009, delivering MR006 and MR007. Focus on Iris Kane's realization that the Directorate itself is an instrument of national capture, while strictly avoiding naming Stellan Marsh as the architect. Maintain single POV and avoid romance.",
+      "carries_to_next": "Iris Kane now fully understands the Directorate's role as a capture instrument and must decide how to expose this truth to the public, knowing the fight is no longer about a single project but the integrity of the nation's oversight.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C007",
+          "C008",
+          "C009"
+        ],
+        "reveals": [
+          {
+            "id": "MR006",
+            "reveal_weight": "minor",
+            "required_clues": [
+              "C007",
+              "C008"
+            ],
+            "min_clues_required": 1
+          },
+          {
+            "id": "MR007",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C007",
+              "C008",
+              "C009"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has proven Gerald Halveston's fund captured the Spine contracts",
+            "Iris: She exposes him as the coordinator",
+            "Iris: She sees the conspiracy is national but still cannot name the architect above Halveston.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Okafor is in custody",
+            "Nadia Okafor: Her knowledge of the domestic tiers is complete."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has proven Gerald Halveston's fund captured the Spine contracts",
+            "Iris: She exposes him as the coordinator",
+            "Iris: She sees the conspiracy is national but still cannot name the architect above Halveston.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Okafor is in custody",
+            "Nadia Okafor: Her knowledge of the domestic tiers is complete."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 16
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 19,
+      "title": "The Last Thread",
+      "slug": "the-last-thread",
+      "one_line_summary": "Iris Kane conclusively links the Meridian Spine tool-mark to Veridian Trust's machine shop, forcing a confrontation with Stellan Marsh as she prepares to expose the conspiracy.",
+      "beat_summary": "Iris Kane performs a detailed metallurgical analysis and discovers a unique etching on the Spine coupon that matches a jig registered to a Veridian Trust subsidiary. This is the conclusive link between the physical fraud and the shell company network (MR008). She documents the evidence and prepares to leak it. Nadia Okafor, in custody, warns her that the person above Halveston will destroy her career. Stellan Marsh summons Iris to his office and offers a final warning: cease the internal investigation or face reassignment. Iris leaves the meeting knowing she must act fast. She sends an encrypted copy of her findings to a journalist she trusts. The chapter ends with Iris receiving a call from Marsh, asking for a private meeting before the leak goes live.",
+      "must_happen": [
+        "Iris Kane discovers a manufacturer's etching on the Meridian Spine coupon that ties the override jig to a Veridian Trust subsidiary, paying off C010.",
+        "Nadia Okafor warns Iris Kane that the architect above Halveston is untouchable within the Directorate.",
+        "Stellan Marsh summons Iris Kane and threatens her with reassignment if she continues the internal investigation.",
+        "Iris Kane sends her compiled evidence to a journalist outside the Directorate, initiating the public exposure."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not have Iris Kane explicitly name Marsh as the architect in her thoughts or dialogue."
+      ],
+      "opens_with": "The fifth micrograph showed something Iris Kane had missed a dozen times: a tiny 'K' etched into the fracture surface, invisible except under oblique lighting. She rotated the image and realized it was half of a larger symbol — the same logo she had seen on the Veridian Trust charter.",
+      "cliffhanger": "As Iris Kane left the lab, her phone buzzed. Stellan Marsh's name appeared on the screen. She answered, and his voice was calm: 'Iris, I think it's time we had the conversation you've been avoiding. My office, tonight. Alone.'",
+      "signature_detail_hint": "The 'K' etching is actually part of a winged-key emblem, the trademark of a machine shop that no longer legally exists; its registration papers are buried in a holding company that shares a law firm with Veridian Trust.",
+      "emotional_beat": "Iris Kane felt the pieces clicking into place, but the satisfaction was flattened by dread. The thread in her hand led straight to the top of the institution she had sworn to serve.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter that pays off C010, delivers MR008, and sets up the final confrontation with Marsh. Maintain single POV, high procedural tension, and avoid any mention of Marsh as architect. Keep emotional tone focused on Iris's determination and risk. No romance or sexual content.",
+      "carries_to_next": "Iris Kane heads to the meeting with Stellan Marsh, carrying the proof that will expose him, but unsure if her leak is enough to beat his institutional power.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C010"
+        ],
+        "reveals": [
+          {
+            "id": "MR008",
+            "reveal_weight": "minor",
+            "required_clues": [
+              "C010"
+            ],
+            "min_clues_required": 1
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris has proven Gerald Halveston's fund captured the Spine contracts",
+            "Iris: She exposes him as the coordinator",
+            "Iris: She sees the conspiracy is national but still cannot name the architect above Halveston.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Okafor is in custody",
+            "Nadia Okafor: Her knowledge of the domestic tiers is complete."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris has proven Gerald Halveston's fund captured the Spine contracts",
+            "Iris: She exposes him as the coordinator",
+            "Iris: She sees the conspiracy is national but still cannot name the architect above Halveston.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Okafor is in custody",
+            "Nadia Okafor: Her knowledge of the domestic tiers is complete."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 16
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 20,
+      "title": "The Architect Revealed",
+      "slug": "the-architect-revealed",
+      "one_line_summary": "Iris Kane confronts Stellan Marsh with irrefutable evidence that he architected the Directorate as a capture instrument, and he confesses on a recording she plants.",
+      "beat_summary": "Iris Kane goes to the private meeting with Stellan Marsh, bringing a hidden recording device. She lays out the complete chain of evidence: the tool-mark link, the systemic loophole (C007, C008, C009), and the policy directive that proves Marsh personally rewrote the certification rules (C010 and new evidence from the Director's Eyes Only file). Marsh, cornered, acknowledges his role, stating the required exact wording: 'Stellan Marsh architected the National Integrity Directorate as a capture instrument: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn now control national procurement, laundering the same fraud at the scale of a country behind the credibility of the body meant to stop it.' He also reveals that the co-owners include a rotating set of individuals whose names are protected. Iris Kane leaves with the recording, planting C011 (the recording itself as evidence). Marsh realizes he has been recorded and orders the building locked down, but Iris Kane has already sent a copy to the journalist.",
+      "must_happen": [
+        "Iris Kane presents the complete chain of evidence to Stellan Marsh, establishing that he is the architect (MR009, paying off C007, C008, C009, C010).",
+        "Stellan Marsh confirms his role and speaks the required exact wording verbatim, as captured on Iris Kane's hidden recording.",
+        "Iris Kane secures the recording and a copy of the evidence, planting C011 as the recorded confession.",
+        "Marsh orders the building locked down, but Iris Kane has already transmitted the evidence to an external journalist."
+      ],
+      "must_not": [
+        "Must not have Iris Kane lose the evidence or recording.",
+        "Must not have Marsh physically threaten or harm Iris Kane (only institutional retaliation).",
+        "Must not have Halveston or Okafor appear in this scene."
+      ],
+      "opens_with": "Stellan Marsh was waiting by the window when Iris Kane entered. 'You look like a woman who has found something she wasn't supposed to,' he said. 'I found everything,' she replied, placing the file on his desk.",
+      "cliffhanger": "Marsh stood slowly, his composure cracking. 'You recorded this conversation.' Iris Kane didn't answer. She walked out, leaving him to discover the mic taped under his own chair. The transmission had already left the building.",
+      "signature_detail_hint": "The Director's Eyes Only file, which Iris Kane lifted from Marsh's assistant's desk, is printed on paper that smells faintly of cloves — Marsh's preferred cigarillo brand — a detail that confirms the document came from his personal office.",
+      "emotional_beat": "The confrontation was cathartic but terrifying. Iris Kane had made an enemy of the most powerful man in national procurement, but she had the truth on her side — for now.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter that delivers the major reveal MR009 with the required exact wording, plants C011 (the recording), and ends with Iris escaping the lockdown. No romance. Keep dialogue sharp and evidence-driven.",
+      "carries_to_next": "Iris Kane has the recording and evidence, but Marsh will use every tool to discredit her. She races to publish before he can destroy her career.",
+      "narrative": {
+        "clues_plant": [
+          "C011"
+        ],
+        "clues_payoff": [],
+        "reveals": [
+          {
+            "id": "MR009",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C007",
+              "C008",
+              "C009",
+              "C010"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris obtains the final evidence proving Stellan Marsh architected the Directorate as a capture instrument",
+            "Iris: She now holds the canonical truth: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn control national procurement.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Same as ch16."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris obtains the final evidence proving Stellan Marsh architected the Directorate as a capture instrument",
+            "Iris: She now holds the canonical truth: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn control national procurement.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Same as ch16."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 20
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 21,
+      "title": "The Public Account",
+      "slug": "the-public-account",
+      "one_line_summary": "Iris Kane releases the evidence to the public; Stellan Marsh attempts to spin the narrative, but his recorded confession forces him to resign and face arrest.",
+      "beat_summary": "The journalist Iris Kane contacted releases the story, including the recording of Marsh's confession (C011 payoff). Marsh holds a press conference to deny the allegations, but Iris Kane has prepared a secondary piece of evidence — a financial audit linking Marsh personally to Veridian Trust (C012 planted by Iris Kane). When Marsh claims the recording is doctored, Iris Kane releases the audit, which contains a unique paper watermark that matches the 'Director's Eyes Only' file, proving the documents are genuine. This major reveal MR010 solidifies the case. Marsh is arrested on camera. The chapter ends with Iris Kane realizing that the co-owners beyond Marsh remain unknown, and one name from the redacted page was never on any live record, setting up the series arc.",
+      "must_happen": [
+        "The journalist publishes the story including Marsh's recorded confession (payoff C011).",
+        "Stellan Marsh holds a press conference to deny the allegations, claiming the recording is fabricated.",
+        "Iris Kane releases a forensic audit linking Marsh's personal finances to Veridian Trust, paying off C012.",
+        "Marsh is arrested after the audit confirms the conspiracy, achieving MR010."
+      ],
+      "must_not": [
+        "Must not have Iris Kane be physically present at the arrest (she watches remotely).",
+        "Must not have Marsh escape or die before arrest.",
+        "Must not have the full list of co-owners revealed in this chapter."
+      ],
+      "opens_with": "Iris Kane watched the press conference from a safe house, the evidence briefcase beside her. Marsh was defending his legacy with practiced ease, until the journalist asked about the machine shop logo. 'That's a fabrication,' Marsh said. Iris Kane pressed send on the audit.",
+      "cliffhanger": "As Marsh was led away in handcuffs, Iris Kane's phone buzzed with a message from an unknown number: 'One co-owner remains. She knows who you are. — R.' Iris Kane looked at the redacted page from Book 1, still missing the final name.",
+      "signature_detail_hint": "The forensic audit Iris Kane used contains a minuscule falcon watermark identical to the one on the 'Director's Eyes Only' file, proving the chain of custody is unbroken.",
+      "emotional_beat": "Iris Kane felt the heaviness of the victory. Marsh was gone, but the system that enabled him was still intact. The real fight had just begun.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter that pays off C011 and C012 for MR010, includes the required exact wording in the press conference rebuttal or in the released statement, and sets up the Book 2 ending. Maintain Iris's single POV, no romance.",
+      "carries_to_next": "With Marsh arrested, Iris Kane resigns from the Directorate as promised, knowing the one missing name from the redacted page is still out there, and a woman named 'R' may hold the key.",
+      "narrative": {
+        "clues_plant": [
+          "C012"
+        ],
+        "clues_payoff": [],
+        "reveals": [
+          {
+            "id": "MR010",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C011",
+              "C012"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: Iris obtains the final evidence proving Stellan Marsh architected the Directorate as a capture instrument",
+            "Iris: She now holds the canonical truth: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn control national procurement.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Same as ch16."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: Iris obtains the final evidence proving Stellan Marsh architected the Directorate as a capture instrument",
+            "Iris: She now holds the canonical truth: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn control national procurement.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Same as ch16."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 20
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 22,
+      "title": "The Unfinished Thread",
+      "slug": "the-unfinished-thread",
+      "one_line_summary": "Iris Kane publishes the complete tool-mark proof, Stellan Marsh states his role on live record and is arrested, and Iris resigns from the Directorate with the knowledge that a foreign counter-signatory remains.",
+      "beat_summary": "Iris Kane prepares to release the definitive proof. Stellan Marsh, in a live broadcast, states the required exact wording, confirming his role as the architect of the captured reform. The evidence is published irrevocably, and Marsh is taken into custody. Iris submits her resignation, choosing the record over the office. She receives an encrypted file from 'R' revealing a foreign energy contract bearing the same tool-mark watermark, indicating the conspiracy extends beyond national jurisdiction. Iris realizes the redacted page named a foreign counter-signatory, and the fight is not over.",
+      "must_happen": [
+        "Stellan Marsh states the required exact wording verbatim on live record: 'Stellan Marsh architected the National Integrity Directorate as a capture instrument: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn now control national procurement, laundering the same fraud at the scale of a country behind the credibility of the body meant to stop it.'",
+        "The complete tool-mark proof and the recorded confession (C011) are published through the journalist, backed by the forensic audit (C012).",
+        "Stellan Marsh is arrested by federal authorities as the evidence becomes public.",
+        "Iris Kane formally resigns from the National Integrity Directorate, stating that she chooses the factual record over the institution's authority.",
+        "Iris Kane receives an encrypted communication containing a foreign contract with the same tool-mark pattern, confirming that the redacted page named a counter-signatory outside her jurisdiction."
+      ],
+      "must_not": [
+        "Must not reveal the identity of the foreign counter-signatory.",
+        "Must not allow Marsh to escape arrest or recant his statement.",
+        "Must not have Iris remain in the Directorate."
+      ],
+      "opens_with": "\"Iris Kane,\" the anchor's voice cut through the static from the safe house, \"can you confirm that Mr. Marsh has just confessed to architecting the capture of the National Integrity Directorate?\"",
+      "cliffhanger": "The foreign contract's signature block was blacked out, but the typeface and watermark matched exactly. One co-owner had remained invisible. 'Find her,' the message from R ended. Iris searched the database for the contract number and found it registered to a shell company in a jurisdiction that did not share extradition.",
+      "signature_detail_hint": "The foreign contract's paper had a faint fleur-de-lis watermark that Iris recognized from a single case file in Book 1: the Kessler inquiry's confidential addendum, which she had never been shown.",
+      "emotional_beat": "Iris watched Marsh being led away with a strange mix of justice and melancholy. The system she had served was now her target, and the victory felt more like a new beginning than an end.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter that depicts the public release of evidence including Marsh's required exact wording, his arrest, Iris's resignation, and the book 2 hook about the foreign counter-signatory. Pay off C011 and C012. Ensure the exact wording from chapter_canon_rules appears verbatim. No romance. Maintain single POV through Iris Kane.",
+      "carries_to_next": "Iris Kane leaves the Directorate, now knowing that the capture extends beyond national borders, and begins to plan her next investigation into the foreign jurisdiction.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C011",
+          "C012"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: The complete tool-mark proof is published irrevocably after Marsh states his role on live record",
+            "Iris: Marsh is arrested",
+            "Iris: Iris resigns the Directorate, choosing the record over the office",
+            "Iris: She knows the redacted page named a foreign counter-signatory, and the same tool-mark appears on a contract beyond her jurisdiction.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Same as ch16."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: The complete tool-mark proof is published irrevocably after Marsh states his role on live record",
+            "Iris: Marsh is arrested",
+            "Iris: Iris resigns the Directorate, choosing the record over the office",
+            "Iris: She knows the redacted page named a foreign counter-signatory, and the same tool-mark appears on a contract beyond her jurisdiction.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Same as ch16."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 22
+        },
+        "clue_beats": {}
+      }
+    }
+  ],
+  "total_chapters": 22,
+  "title": "The Meridian Spine",
+  "status": "draft",
+  "created_at": "2026-07-19T20:11:32.408883+00:00",
+  "source_concept_digest": "ef17798446a2494d",
+  "source_narrative_digest": "580676f0a58d9dad"
+}

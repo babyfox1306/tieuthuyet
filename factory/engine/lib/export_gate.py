@@ -50,6 +50,47 @@ ENGINE_TOKEN_PATTERNS: list[tuple[re.Pattern[str], str]] = [
     (re.compile(r"\btotal_chapters\b"), "engine token: total_chapters"),
     (re.compile(r"\{\{\s*total_chapters\s*\}\}", re.IGNORECASE), "engine token: {{total_chapters}}"),
     (re.compile(r"\{\{\s*N\s*\}\}"), "engine token: {{N}}"),
+    # GATE 1 — narrative-spec / chapter-map leaks (not in-story evidence IDs)
+    (
+        re.compile(
+            r"\b[A-Z]{1,3}\d{3}\s+(?:planted|revealed|seeded|lifted|debunked)\b"
+        ),
+        "spec leak: ID + verb (e.g. C001 planted)",
+    ),
+    (re.compile(r"\bBook\s*[12]\b"), "meta leak: Book 1/Book 2"),
+    (
+        re.compile(
+            r"\bauthorized\s+for\s+release\s+in\s+chapter\s+\w+",
+            re.IGNORECASE,
+        ),
+        "meta leak: chapter-map in prose",
+    ),
+    (
+        re.compile(r"\bchapter\s+\d+\s+of\s+the\b", re.IGNORECASE),
+        "meta leak: chapter N of the",
+    ),
+    # Bare chapter-map leaks ("Chapter 8: Transmission", "Chapters 19 and 20")
+    (
+        re.compile(r"(?m)^Chapter\s+\d+\s*:", re.IGNORECASE),
+        "meta leak: Chapter N: heading in body",
+    ),
+    (
+        re.compile(
+            r"\bChapters?\s+\d+(?:\s*,\s*\d+)*(?:\s+and\s+\d+)?\b",
+            re.IGNORECASE,
+        ),
+        "meta leak: Chapters N and M in prose",
+    ),
+    (re.compile(r"\bFALSE\s+ANSWER\b"), "engine token: FALSE ANSWER"),
+    (re.compile(r"\bTIER\s*[1-4]\b"), "engine token: TIER N"),  # uppercase TIER only
+    (re.compile(r"\bbinding_condition\b"), "engine token: binding_condition"),
+    (re.compile(r"\bcanonical_text\b"), "engine token: canonical_text"),
+    (re.compile(r"\breveal_state\b"), "engine token: reveal_state"),
+    # Spec-flavored clue-ID as sentence subject ("C011 holds up")
+    (
+        re.compile(r"\bC\d{3}\s+holds\s+up\b", re.IGNORECASE),
+        "spec leak: C### holds up",
+    ),
 ]
 CJK_BODY_RE = re.compile(
     r"[\u3000-\u303f\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff\uff00-\uffef"
@@ -64,13 +105,16 @@ OPEN_CURLY = "\u201c\u201e"
 CLOSE_CURLY = "\u201d"
 PROMOTE_RULES = frozenset(
     # EG-06 markdown deliberately excluded — advisor UI fixes; never block promote
-    {"EG-01", "EG-02", "EG-03", "EG-08", "EG-10", "EG-11", "EG-12", "EG-13", "EG-16"}
+    {
+        "EG-01", "EG-02", "EG-03", "EG-08", "EG-10", "EG-11", "EG-12", "EG-13",
+        "EG-16", "EG-19", "EG-20", "EG-21",
+    }
 )
 FULL_RULES = frozenset(
     {
         "EG-01", "EG-02", "EG-03", "EG-04", "EG-05", "EG-06", "EG-07", "EG-08",
         "EG-09", "EG-10", "EG-11", "EG-12", "EG-13", "EG-14", "EG-15", "EG-16",
-        "EG-18",
+        "EG-18", "EG-19", "EG-20", "EG-21",
     }
 )
 
@@ -78,7 +122,7 @@ _DEFAULT_COMPLETION_PHRASES = (
     "the truth was out",
     "the evidence is in the wild",
     "the broadcast completed",
-    "all of it",
+    # "all of it" removed — everyday English, floods EG-18 false positives
     "it's in the air",
     "upload was complete",
 )
@@ -153,6 +197,42 @@ def strip_leading_chapter_heading(body: str) -> str:
     return body
 
 
+def has_pipeline_chapter_heading(text: str) -> bool:
+    """True when first line is ``# Chapter N: …`` / ``# Chương N: …``."""
+    first = (text or "").lstrip("\n").split("\n", 1)[0].strip()
+    return bool(first and CHAPTER_HEADING_LINE.match(first))
+
+
+def prose_opening_truncated(body: str) -> bool:
+    """True when prose (after optional heading) starts mid-sentence (lowercase Latin).
+
+    Catches head-truncated rewrites like ``the inevitable; she had…`` that still
+    pass EG-01 because the *ending* is clean.
+    """
+    prose = strip_leading_chapter_heading(body or "").strip()
+    if not prose:
+        return True
+    s = prose
+    if s[0] in "\"“«":
+        s = s[1:].lstrip()
+        if not s:
+            return False
+    ch = s[0]
+    return bool(ch.isalpha() and ch.islower() and ("a" <= ch <= "z"))
+
+
+def polluted_en_subtitle(subtitle: str) -> bool:
+    """Dialogue / paragraph leaked into meta.subtitle — not a real chapter hook."""
+    sub = normalize_heading_text(str(subtitle or ""))
+    if not sub:
+        return False
+    if len(sub) > 120:
+        return True
+    if sub.count('"') >= 2 or sub.count("“") + sub.count("”") >= 2:
+        return True
+    return False
+
+
 def prepare_chapter_for_export(
     meta: dict,
     body: str,
@@ -165,22 +245,24 @@ def prepare_chapter_for_export(
     subtitle = normalize_heading_text(str(subtitle_raw)) if subtitle_raw else None
 
     if lang == "en":
+        # EN: chapter name is the <h1>; never ship a Vietnamese-style subtitle,
+        # and never ship dialogue/prose that leaked into meta.subtitle.
         if subtitle:
             m = re.match(r"^Chapter\s+\d+\s*:\s*(.+)$", subtitle, re.IGNORECASE)
             if m:
                 title = m.group(1).strip()
-                subtitle = None
-        if re.match(r"^Chương\s+\d+$", title, re.IGNORECASE) and subtitle:
-            m = re.match(r"^Chapter\s+\d+\s*:\s*(.+)$", subtitle, re.IGNORECASE)
-            if m:
-                title = m.group(1).strip()
-                subtitle = None
+            subtitle = None
+        if re.match(r"^Chương\s+\d+$", title, re.IGNORECASE):
+            title = ""
 
     if subtitle:
         if subtitle.lower() == title.lower():
             subtitle = None
         first = body.split("\n", 1)[0].strip() if body else ""
-        if normalize_heading_text(first).lower() == subtitle.lower():
+        if first and normalize_heading_text(first).lower() == subtitle.lower():
+            subtitle = None
+        # Dialogue / paragraph-length "subtitles" are promote bugs — drop them.
+        if subtitle and (len(subtitle) > 120 or subtitle.count('"') >= 2):
             subtitle = None
 
     if not title:
@@ -372,6 +454,31 @@ def check_eg03_header(meta: dict, body: str, lang: str, chapter: int) -> list[di
             )
         )
 
+    if lang == "en" and polluted_en_subtitle(subtitle):
+        results.append(
+            _check(
+                "EG-03",
+                "error",
+                False,
+                chapter=chapter,
+                detail="polluted EN subtitle (dialogue/prose in meta.subtitle)",
+                snippet=subtitle[:120],
+            )
+        )
+
+    # Catalog body has heading stripped — still fail mid-sentence openings.
+    if prose_opening_truncated(body):
+        results.append(
+            _check(
+                "EG-03",
+                "error",
+                False,
+                chapter=chapter,
+                detail="truncated opening (prose starts mid-sentence / lowercase)",
+                snippet=first_line[:120],
+            )
+        )
+
     if not results:
         results.append(_check("EG-03", "error", True, chapter=chapter))
     return results
@@ -435,14 +542,11 @@ def _load_book_yaml(workspace_id: str, book_slug: str) -> dict:
     return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
 
 
-def _load_concept_title(workspace_id: str) -> str | None:
-    path = workspace_dir(workspace_id) / "concept.yaml"
-    if not path.exists():
-        return None
-    try:
-        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-    except yaml.YAMLError:
-        return None
+def _load_concept_title(workspace_id: str, book: int | None = None) -> str | None:
+    """Book-scoped concept title when present; else series/root concept."""
+    from factory.engine.lib.narrative_schema import load_concept
+
+    data = load_concept(workspace_dir(workspace_id), book)
     t = data.get("title")
     return str(t).strip() if t else None
 
@@ -462,7 +566,11 @@ def check_eg09_metadata(
     )
     export_title = _normalize_title(book_display_title(workspace_id, book_slug))
     export_lang = export_language(workspace_id)
-    concept_title = _load_concept_title(workspace_id)
+    book_num = int(book_yaml.get("book") or 0) or None
+    if book_num is None:
+        m = re.match(r"^(\d+)", book_slug or "")
+        book_num = int(m.group(1)) if m else None
+    concept_title = _load_concept_title(workspace_id, book_num)
 
     if yaml_title and export_title and yaml_title != export_title:
         results.append(
@@ -936,6 +1044,129 @@ def check_eg13_engine_tokens(body: str, chapter: int) -> list[dict[str, Any]]:
     return found
 
 
+def check_eg19_inherited_canon(
+    body: str,
+    chapter: int,
+    *,
+    workspace_id: str | None,
+) -> list[dict[str, Any]]:
+    """BLOCK prose that contradicts prior-book ontology (inherited_canon)."""
+    if not workspace_id:
+        return [_check("EG-19", "error", True, chapter=chapter)]
+    from factory.engine.lib.inherited_canon import (
+        find_inherited_canon_violations,
+        load_inherited_canon_for_workspace,
+    )
+
+    lock = load_inherited_canon_for_workspace(workspace_id)
+    hits = find_inherited_canon_violations(body or "", lock)
+    if not hits:
+        return [_check("EG-19", "error", True, chapter=chapter)]
+    out: list[dict[str, Any]] = []
+    for h in hits[:6]:
+        out.append(
+            _check(
+                "EG-19",
+                "error",
+                False,
+                chapter=chapter,
+                detail=f"inherited_canon:{h.get('id')} matched {h.get('match')!r}",
+                snippet=str(h.get("snippet") or "")[:160],
+            )
+        )
+    return out
+
+
+def check_eg20_reveal_order_role(
+    body: str,
+    chapter: int,
+    *,
+    workspace_id: str | None,
+) -> list[dict[str, Any]]:
+    """BLOCK early tier-4 identity-as-apex (role language, not just phrases)."""
+    if not workspace_id or chapter <= 0:
+        return [_check("EG-20", "error", True, chapter=chapter)]
+    from factory.engine.lib.narrative_schema import load_concept
+    from factory.engine.lib.reveal_order_gate import (
+        antagonist_from_concept,
+        find_early_tier4_identity_hits,
+        reveal_chapter_from_concept,
+    )
+
+    ws = workspace_dir(workspace_id)
+    direction = load_direction(ws)
+    book = int(direction.get("book") or 1)
+    concept = load_concept(ws, book) or load_concept(ws) or {}
+    reveal = reveal_chapter_from_concept(concept)
+    name, aliases = antagonist_from_concept(concept)
+    if not name or reveal < 1:
+        return [_check("EG-20", "error", True, chapter=chapter)]
+    hits = find_early_tier4_identity_hits(
+        body or "",
+        antagonist_canonical=name,
+        antagonist_aliases=aliases,
+        reveal_chapter=reveal,
+        chapter=chapter,
+    )
+    if not hits:
+        return [_check("EG-20", "error", True, chapter=chapter)]
+    out: list[dict[str, Any]] = []
+    for h in hits[:4]:
+        out.append(
+            _check(
+                "EG-20",
+                "error",
+                False,
+                chapter=chapter,
+                detail=(
+                    f"EG-20:early_tier4_identity ch={chapter}<{reveal} "
+                    f"name={h.get('name')!r} role={h.get('role_cue')!r}"
+                ),
+                snippet=str(h.get("snippet") or "")[:160],
+            )
+        )
+    return out
+
+
+def check_eg21_character_identity(
+    body: str,
+    chapter: int,
+    *,
+    workspace_id: str | None,
+) -> list[dict[str, Any]]:
+    """BLOCK wrong pronouns / role flips vs character_identity in canon_registry."""
+    if not workspace_id or chapter <= 0:
+        return [_check("EG-21", "error", True, chapter=chapter)]
+    from factory.engine.lib.character_identity_gate import (
+        find_character_identity_violations,
+        load_character_identity_for_workspace,
+    )
+
+    lock = load_character_identity_for_workspace(workspace_id)
+    if lock.empty:
+        return [_check("EG-21", "error", True, chapter=chapter)]
+    hits = find_character_identity_violations(body or "", lock)
+    if not hits:
+        return [_check("EG-21", "error", True, chapter=chapter)]
+    out: list[dict[str, Any]] = []
+    for h in hits[:6]:
+        kind = h.get("kind") or "identity"
+        out.append(
+            _check(
+                "EG-21",
+                "error",
+                False,
+                chapter=chapter,
+                detail=(
+                    f"EG-21:{kind} {h.get('canonical')!r} "
+                    f"matched {h.get('match')!r}"
+                ),
+                snippet=str(h.get("snippet") or "")[:160],
+            )
+        )
+    return out
+
+
 def check_eg12_needs_fix(meta: dict, chapter: int, *, severity: str = "error") -> dict[str, Any]:
     """Flag non-empty catalog needs_fix.
 
@@ -1273,6 +1504,9 @@ def check_chapter_for_promote(
     eg12_sev = "error" if gcfg["publish_mode"] else "warn"
     checks.append(check_eg12_needs_fix(meta, chapter, severity=eg12_sev))
     checks.extend(check_eg16_duplicate_block(body, chapter))
+    checks.extend(check_eg19_inherited_canon(body, chapter, workspace_id=workspace_id))
+    checks.extend(check_eg20_reveal_order_role(body, chapter, workspace_id=workspace_id))
+    checks.extend(check_eg21_character_identity(body, chapter, workspace_id=workspace_id))
     return checks
 
 
@@ -1330,6 +1564,18 @@ def run_export_gate(
             checks.append(check_eg12_needs_fix(meta, ch_num, severity=eg12_sev))
         if "EG-16" in active:
             checks.extend(check_eg16_duplicate_block(body, ch_num))
+        if "EG-19" in active:
+            checks.extend(
+                check_eg19_inherited_canon(body, ch_num, workspace_id=workspace_id)
+            )
+        if "EG-20" in active:
+            checks.extend(
+                check_eg20_reveal_order_role(body, ch_num, workspace_id=workspace_id)
+            )
+        if "EG-21" in active:
+            checks.extend(
+                check_eg21_character_identity(body, ch_num, workspace_id=workspace_id)
+            )
 
     if "EG-04" in active and chapter_nums:
         expected = _expected_chapter_count(workspace_id, book_slug, chapter_nums)

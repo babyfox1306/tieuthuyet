@@ -43,7 +43,8 @@ def load_series_bible(ws: Path) -> dict:
 def load_direction(ws: Path) -> dict:
     path = ws / "direction.yaml"
     if path.exists():
-        return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        return data if isinstance(data, dict) else {}
     return {}
 
 
@@ -270,6 +271,16 @@ def build_chapter_prompt(
         clause_block = format_chapter_canon_for_prompt(chapter_rules, lang=lang)
         if clause_block:
             locked_canon_block = locked_canon_block + "\n\n" + clause_block
+        from factory.engine.lib.inherited_canon import (
+            format_inherited_canon_for_prompt,
+            load_inherited_canon,
+        )
+
+        inherited_block = format_inherited_canon_for_prompt(
+            load_inherited_canon(ws), lang=lang
+        )
+        if inherited_block:
+            locked_canon_block = locked_canon_block + "\n\n" + inherited_block
 
     reveal_ch: int | None = None
     if ws is not None:

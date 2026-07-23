@@ -294,6 +294,208 @@ def scaffold_canon_registry(
     }
 
 
+def _arc_lead_display_names(ws: Path) -> list[str]:
+    """Ordered display names from bible/narrative/book_arc.json lead_internal_arc."""
+    arc_path = ws / "bible" / "narrative" / "book_arc.json"
+    if not arc_path.exists():
+        return []
+    try:
+        arc = json.loads(arc_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return []
+    lia = arc.get("lead_internal_arc") or {}
+    keys: list[str] = []
+    if isinstance(lia, list):
+        for item in lia:
+            if not isinstance(item, dict):
+                continue
+            raw = str(item.get("character") or "").strip()
+            if raw:
+                keys.append(re.sub(r"\s*\(.*", "", raw).strip())
+    elif isinstance(lia, dict):
+        keys = [str(k).strip() for k in lia if str(k).strip()]
+    out: list[str] = []
+    for k in keys:
+        display = _arc_key_as_display_name(k)
+        if display and _is_plausible_lead_name(display):
+            out.append(display)
+    return out
+
+
+def _ensure_supporting_cast_name(bible: dict[str, Any], name: str, *, note: str) -> bool:
+    """Append ``name`` to supporting_cast if missing. Returns True if mutated."""
+    cast = bible.get("supporting_cast")
+    if not isinstance(cast, list):
+        cast = []
+        bible["supporting_cast"] = cast
+    for row in cast:
+        if isinstance(row, dict) and _matches_declared_lead(
+            str(row.get("name") or ""), name, []
+        ):
+            return False
+        if isinstance(row, str) and _matches_declared_lead(row, name, []):
+            return False
+    cast.append(
+        {
+            "name": name,
+            "relation_to": "series",
+            "relation_type": note,
+            "alive": True,
+            "secret": "",
+        }
+    )
+    return True
+
+
+def sync_canon_leads_from_narrative(ws: Path, book: int | None = None) -> dict[str, Any]:
+    """Align canon_registry + series.json leads with narrative lead_internal_arc.
+
+    Root cause of recurring approve-plan failures on Book N: develop-narrative
+    invents/promotes a new POV (e.g. Pierre) while canon_registry / series.json
+    still freeze Book-1 leads (e.g. Elias). Call after develop and before approve.
+
+    - Female arc key matching current female_lead is kept.
+    - First non-female arc key becomes male_lead when it differs from registry.
+    - Previous male_lead is demoted into series.json supporting_cast.
+    - No-op when absent-male placeholder or no usable arc keys.
+    """
+    path = canon_registry_path(ws)
+    if not path.exists():
+        return {"ok": False, "synced": False, "reason": "no_canon_registry"}
+
+    try:
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    except yaml.YAMLError:
+        return {"ok": False, "synced": False, "reason": "invalid_canon_registry"}
+    if not isinstance(data, dict):
+        return {"ok": False, "synced": False, "reason": "invalid_canon_registry"}
+
+    chars = data.get("characters") or {}
+    if not isinstance(chars, dict):
+        return {"ok": False, "synced": False, "reason": "missing_characters"}
+
+    female_block = chars.get("female_lead") if isinstance(chars.get("female_lead"), dict) else {}
+    male_block = chars.get("male_lead") if isinstance(chars.get("male_lead"), dict) else {}
+    female_can = str(female_block.get("canonical") or "").strip()
+    male_can = str(male_block.get("canonical") or "").strip()
+    if is_absent_male_lead(male_can):
+        return {"ok": True, "synced": False, "reason": "absent_male_lead"}
+
+    arc_names = _arc_lead_display_names(ws)
+    if not arc_names:
+        return {"ok": True, "synced": False, "reason": "no_arc_leads"}
+
+    f_aliases = [str(a) for a in (female_block.get("allowed_aliases") or []) if str(a).strip()]
+    m_aliases = [str(a) for a in (male_block.get("allowed_aliases") or []) if str(a).strip()]
+
+    female_hit = next(
+        (n for n in arc_names if _matches_declared_lead(n, female_can, f_aliases)),
+        None,
+    )
+    # Prefer full form already in registry when arc uses first name only
+    new_female = female_can
+    if female_hit and " " in female_hit and _norm_name(female_hit) != _norm_name(female_can):
+        new_female = female_hit
+
+    male_candidates = [
+        n
+        for n in arc_names
+        if not _matches_declared_lead(n, new_female, f_aliases + lead_name_aliases(new_female))
+    ]
+    if not male_candidates:
+        return {"ok": True, "synced": False, "reason": "no_male_arc_candidate"}
+
+    # Prefer candidate that already matches registry; else longest / first arc male
+    matched = next(
+        (n for n in male_candidates if _matches_declared_lead(n, male_can, m_aliases)),
+        None,
+    )
+    if matched:
+        return {
+            "ok": True,
+            "synced": False,
+            "reason": "already_aligned",
+            "female_lead": new_female,
+            "male_lead": male_can,
+        }
+
+    # New POV male — prefer full name (has space) over single token
+    male_candidates_sorted = sorted(
+        male_candidates, key=lambda n: (0 if " " in n else 1, -len(n))
+    )
+    new_male = male_candidates_sorted[0]
+    if _matches_declared_lead(new_male, male_can, m_aliases):
+        return {"ok": True, "synced": False, "reason": "already_aligned"}
+
+    old_male = male_can
+    changed: list[str] = []
+
+    chars["female_lead"] = {
+        "canonical": new_female or female_can,
+        "allowed_aliases": lead_name_aliases(new_female or female_can),
+        "forbidden_aliases": [],
+    }
+    chars["male_lead"] = {
+        "canonical": new_male,
+        "allowed_aliases": lead_name_aliases(new_male),
+        "forbidden_aliases": [],
+    }
+    data["characters"] = chars
+    path.write_text(
+        yaml.dump(data, allow_unicode=True, default_flow_style=False, sort_keys=False),
+        encoding="utf-8",
+    )
+    changed.append("canon_registry.yaml")
+
+    bible_path = ws / "bible" / "series.json"
+    if bible_path.exists():
+        try:
+            bible = json.loads(bible_path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            bible = None
+        if isinstance(bible, dict):
+            leads = bible.get("leads")
+            if not isinstance(leads, dict):
+                leads = {}
+                bible["leads"] = leads
+            female_lead = leads.get("female") if isinstance(leads.get("female"), dict) else {}
+            male_lead = leads.get("male") if isinstance(leads.get("male"), dict) else {}
+            female_lead["name"] = new_female or female_can
+            male_lead["name"] = new_male
+            leads["female"] = female_lead
+            leads["male"] = male_lead
+            if old_male and not _matches_declared_lead(old_male, new_male, lead_name_aliases(new_male)):
+                if _ensure_supporting_cast_name(
+                    bible,
+                    old_male,
+                    note=(
+                        f"Prior series male lead demoted after Book "
+                        f"{int(book or load_direction(ws).get('book') or 1)} "
+                        f"POV shift to {new_male}"
+                    ),
+                ):
+                    changed.append("series.json:supporting_cast")
+            bible_path.write_text(
+                json.dumps(bible, indent=2, ensure_ascii=False) + "\n",
+                encoding="utf-8",
+            )
+            if "series.json:supporting_cast" not in changed:
+                changed.append("series.json:leads")
+
+    return {
+        "ok": True,
+        "synced": True,
+        "female_lead": new_female or female_can,
+        "male_lead": new_male,
+        "previous_male_lead": old_male,
+        "updated": changed,
+        "message": (
+            f"Synced leads from narrative: male_lead "
+            f"{old_male!r} → {new_male!r}"
+        ),
+    }
+
+
 def locked_canon_names_payload(ws: Path, book: int = 1) -> dict[str, Any] | None:
     """Outliner LOCKED-NAMES block from canon_registry (None if registry missing)."""
     if not canon_registry_path(ws).exists():
@@ -366,12 +568,68 @@ def sync_bible_leads_from_registry(ws: Path, book: int = 1) -> dict[str, Any]:
 
 
 def _norm_name(name: str) -> str:
-    return re.sub(r"\s+", " ", str(name or "").strip()).lower()
+    """Case-fold + treat `_`/`-` as spaces so arc slugs match display names.
+
+    Narrative ``lead_internal_arc`` often keys characters as ``stellan_marsh`` while
+    series.json / registry use ``Stellan Marsh``. Without underscore folding those
+    disagree and block approve-plan as a false name conflict.
+    """
+    s = str(name or "").strip().lower().replace("_", " ").replace("-", " ")
+    return re.sub(r"\s+", " ", s)
+
+
+def _arc_key_as_display_name(key: str) -> str:
+    """Map snake_case arc keys to Title Case display names; leave real names alone."""
+    raw = str(key or "").strip()
+    if not raw:
+        return raw
+    if re.fullmatch(r"[a-z][a-z0-9]*(?:_[a-z0-9]+)+", raw):
+        return " ".join(part.capitalize() for part in raw.split("_"))
+    return raw
 
 
 def _first_token(name: str) -> str:
-    parts = str(name or "").strip().split()
+    # Normalize snake_case arc keys first; keep Title Case for normal display names.
+    parts = _arc_key_as_display_name(name).strip().split()
     return parts[0] if parts else ""
+
+
+def _matches_declared_lead(
+    name: str,
+    canonical: str,
+    aliases: list[str] | None = None,
+) -> bool:
+    """True if ``name`` is the declared lead or an allowed short form (first token / alias).
+
+    Narrative ``lead_internal_arc`` often keys ``Sofia`` / ``Elias`` while registry
+    stores ``Sofia Bellini`` / ``Elias van Doren``. Exact-norm mismatch previously
+    misclassified the female first name as a forbidden male lead.
+    """
+    n = _norm_name(name)
+    if not n or not str(canonical or "").strip():
+        return False
+    if n == _norm_name(canonical):
+        return True
+    ft = _first_token(name)
+    c_ft = _first_token(canonical)
+    if ft and c_ft and _norm_name(ft) == _norm_name(c_ft):
+        return True
+    for a in aliases or []:
+        an = _norm_name(str(a))
+        if not an:
+            continue
+        if n == an or (ft and _norm_name(ft) == an):
+            return True
+    return False
+
+
+def _resolve_source_male_key(name: str, male: CharacterCanon) -> str:
+    """Map any allowed male form to one comparison key (operator canonical)."""
+    if male.is_allowed(name) or _matches_declared_lead(
+        name, male.canonical, male.allowed_aliases
+    ):
+        return _norm_name(male.canonical)
+    return _norm_name(name)
 
 
 # Placeholder / absent male-lead markers (gothic, no-ML books).
@@ -827,17 +1085,22 @@ def _names_from_narrative(
     *,
     supporting_cast: set[str] | None = None,
     male_absent: bool = False,
+    female_aliases: list[str] | None = None,
+    male_canonical: str | None = None,
+    male_aliases: list[str] | None = None,
 ) -> dict[str, set[str]]:
     """Lead-name candidates from structured narrative fields only (no prose regex scan).
 
     When male_absent, skip male candidates entirely (gothic / no-ML books).
     Supporting-cast names are never treated as male lead.
+    First-name arc keys (``Sofia``, ``Elias``) match full declared leads.
     """
     nd = ws / "bible" / "narrative"
     male_names: set[str] = set()
     female_names: set[str] = set()
-    female_norm = _norm_name(female_canonical)
     cast = supporting_cast or set()
+    f_aliases = list(female_aliases or [])
+    m_aliases = list(male_aliases or [])
 
     arc_path = nd / "book_arc.json"
     if arc_path.exists():
@@ -856,15 +1119,23 @@ def _names_from_narrative(
             elif isinstance(lia, dict):
                 keys = [str(k).strip() for k in lia if str(k).strip()]
             for k in keys:
-                if not k or not _is_plausible_lead_name(k):
+                display = _arc_key_as_display_name(k)
+                if not display or not _is_plausible_lead_name(display):
                     continue
-                if _norm_name(k) == female_norm:
-                    female_names.add(k)
-                elif male_absent or _name_in_cast(k, cast):
+                if _matches_declared_lead(display, female_canonical, f_aliases):
+                    female_names.add(display)
+                elif male_canonical and _matches_declared_lead(
+                    display, male_canonical, m_aliases
+                ):
+                    if not male_absent:
+                        male_names.add(display)
+                elif male_absent or _name_in_cast(display, cast):
                     # Twin / supporting / secondary arcs — not male lead.
                     continue
                 else:
-                    male_names.add(k)
+                    # Unknown third arc character — only treat as male-lead
+                    # candidate when it does not look like the female lead.
+                    male_names.add(display)
         except (json.JSONDecodeError, OSError):
             pass
 
@@ -978,35 +1249,60 @@ def _extract_master_plan_male_lead(
 
 def _collect_source_lead_names(ws: Path, book: int, registry: CanonRegistry) -> None:
     bible = load_series_bible(ws)
-    female_canonical = registry.characters["female_lead"].canonical
-    male_canonical = registry.characters["male_lead"].canonical
+    female = registry.characters["female_lead"]
+    male = registry.characters["male_lead"]
+    female_canonical = female.canonical
+    male_canonical = male.canonical
     male_absent = is_absent_male_lead(male_canonical)
     cast = _supporting_cast_names(bible)
 
     fn, mn = lead_names(bible)
     if mn:
         registry.source_male_lead_names["series.json"] = mn
-        if not male_absent and not registry.characters["male_lead"].is_allowed(mn):
-            registry.characters["male_lead"].register_forbidden(mn)
-    if fn and not registry.characters["female_lead"].is_allowed(fn):
-        registry.characters["female_lead"].register_forbidden(fn)
+        if not male_absent and not male.is_allowed(mn) and not _matches_declared_lead(
+            mn, male_canonical, male.allowed_aliases
+        ):
+            male.register_forbidden(mn)
+    if fn and not female.is_allowed(fn) and not _matches_declared_lead(
+        fn, female_canonical, female.allowed_aliases
+    ):
+        female.register_forbidden(fn)
 
     narr = _names_from_narrative(
         ws,
         female_canonical,
         supporting_cast=cast,
         male_absent=male_absent,
+        female_aliases=female.allowed_aliases,
+        male_canonical=male_canonical,
+        male_aliases=male.allowed_aliases,
     )
     male_narr = narr.get("male_lead") or set()
     if male_narr:
-        primary_narr = sorted(male_narr, key=len, reverse=True)[0]
+        # Prefer full declared form when short arc keys are present
+        preferred = None
+        for name in male_narr:
+            if _matches_declared_lead(name, male_canonical, male.allowed_aliases):
+                preferred = male_canonical
+                break
+        primary_narr = preferred or sorted(male_narr, key=len, reverse=True)[0]
         registry.source_male_lead_names["narrative/*.json"] = primary_narr
         for name in male_narr:
-            if not registry.characters["male_lead"].is_allowed(name):
-                registry.characters["male_lead"].register_forbidden(name)
+            if female.is_allowed(name) or _matches_declared_lead(
+                name, female_canonical, female.allowed_aliases
+            ):
+                continue  # never forbid female lead tokens on male_lead
+            if male.is_allowed(name) or _matches_declared_lead(
+                name, male_canonical, male.allowed_aliases
+            ):
+                continue
+            male.register_forbidden(name)
     for name in narr.get("female_lead") or set():
-        if not registry.characters["female_lead"].is_allowed(name):
-            registry.characters["female_lead"].register_forbidden(name)
+        if female.is_allowed(name) or _matches_declared_lead(
+            name, female_canonical, female.allowed_aliases
+        ):
+            continue
+        female.register_forbidden(name)
 
     plan_data = load_master_plan(ws, book)
     plans = normalize_chapter_plans(plan_data.get("chapter_plans", []))
@@ -1018,29 +1314,49 @@ def _collect_source_lead_names(ws: Path, book: int, registry: CanonRegistry) -> 
         # When male is absent, an invented plan name is still recorded so approve-plan
         # can fail closed — but supporting-cast names are never extracted above.
         registry.source_male_lead_names["master_plan.json"] = plan_male
-        if not registry.characters["male_lead"].is_allowed(plan_male):
-            registry.characters["male_lead"].register_forbidden(plan_male)
-            first = _first_token(plan_male)
-            if (
-                first
-                and first != plan_male
-                and first not in _PLAN_NAME_STOPWORDS
-                and first.lower() not in _SKIP_FIRST_TOKENS
+        if not (
+            male.is_allowed(plan_male)
+            or _matches_declared_lead(plan_male, male_canonical, male.allowed_aliases)
+        ):
+            if not (
+                female.is_allowed(plan_male)
+                or _matches_declared_lead(
+                    plan_male, female_canonical, female.allowed_aliases
+                )
             ):
-                registry.characters["male_lead"].register_forbidden(first)
+                male.register_forbidden(plan_male)
+                first = _first_token(plan_male)
+                if (
+                    first
+                    and first != plan_male
+                    and first not in _PLAN_NAME_STOPWORDS
+                    and first.lower() not in _SKIP_FIRST_TOKENS
+                    and not _matches_declared_lead(
+                        first, female_canonical, female.allowed_aliases
+                    )
+                ):
+                    male.register_forbidden(first)
 
     # First-token variants for structured narrative alternates only.
     # Do not expand absent-male placeholders into forbidden tokens.
+    # Do not expand tokens that are the female lead's first name / alias.
     if not male_absent:
-        for name in list(registry.characters["male_lead"].forbidden_aliases):
-            if " " in name:
-                first = _first_token(name)
-                if (
-                    first
-                    and first.lower() not in _SKIP_FIRST_TOKENS
-                    and first not in _PLAN_NAME_STOPWORDS
-                ):
-                    registry.characters["male_lead"].register_forbidden(first)
+        for name in list(male.forbidden_aliases):
+            if " " not in name:
+                continue
+            first = _first_token(name)
+            if (
+                first
+                and first.lower() not in _SKIP_FIRST_TOKENS
+                and first not in _PLAN_NAME_STOPWORDS
+                and not _matches_declared_lead(
+                    first, female_canonical, female.allowed_aliases
+                )
+                and not _matches_declared_lead(
+                    first, male_canonical, male.allowed_aliases
+                )
+            ):
+                male.register_forbidden(first)
 
 
 def build_canon_registry(ws: Path, book: int = 1) -> CanonRegistry:
@@ -1100,10 +1416,12 @@ def validate_plan_against_canon_registry(ws: Path, book: int = 1) -> list[dict[s
     expected_male = male_canon.canonical
 
     # Cross-source male lead agreement vs operator canonical.
+    # Short forms (Elias) and full forms (Elias van Doren) agree when both
+    # resolve to the declared male lead.
     source_values = {
         src: val for src, val in registry.source_male_lead_names.items() if str(val).strip()
     }
-    distinct = {_norm_name(v) for v in source_values.values()}
+    distinct = {_resolve_source_male_key(v, male_canon) for v in source_values.values()}
     if len(distinct) > 1:
         for src, val in source_values.items():
             conflicts.append(
@@ -1117,15 +1435,27 @@ def validate_plan_against_canon_registry(ws: Path, book: int = 1) -> list[dict[s
             )
 
     for src, val in source_values.items():
-        if not male_canon.is_allowed(val):
-            conflicts.append(
-                {
-                    "code": "male_lead_source_mismatch",
-                    "source": src,
-                    "value": val,
-                    "expected": expected_male,
-                }
+        if male_canon.is_allowed(val) or _matches_declared_lead(
+            val, male_canon.canonical, male_canon.allowed_aliases
+        ):
+            continue
+        detail = None
+        if src == "narrative/*.json":
+            detail = (
+                "narrative lead_internal_arc POV/male name differs from "
+                "canon_registry male_lead — update canon_registry.yaml + "
+                "bible/series.json leads.male (or add the name to supporting_cast "
+                "if they are not the male lead)"
             )
+        conflicts.append(
+            {
+                "code": "male_lead_source_mismatch",
+                "source": src,
+                "value": val,
+                "expected": expected_male,
+                **({"detail": detail} if detail else {}),
+            }
+        )
 
     plan_data = load_master_plan(ws, book)
     plans = normalize_chapter_plans(plan_data.get("chapter_plans", []))

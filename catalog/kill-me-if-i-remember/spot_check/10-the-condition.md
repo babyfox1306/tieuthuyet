@@ -1,0 +1,205 @@
+---
+series: kill-me-if-i-remember
+book: 1
+chapter: 10
+title: The Condition
+spice: 1
+word_count: 1576
+status: draft
+needs_fix: []
+promoted_at: '2026-07-18T11:20:01Z'
+---
+
+He had memorized the condition the night she wrote it: "Terminate at sunrise only if I am no longer myself." Those words had lived in his chest like a second heartbeat for three months.
+
+Lucian Vey stood at the window of the motel room with a thumb's width of curtain pulled back. The parking lot was empty. The street beyond was dead. He had already marked every exit, every angle of fire, every shadow that moved wrong.
+
+Behind him, Sloane spread the contents of the safety-deposit box across the worn table in neat, obsessive rows. She was working through the evidence the way she worked through everything—with her hands first, then her eyes, then that sharp, surgical voice that cut straight through a man's defenses.
+
+"The paper," she said.
+
+He didn't turn. "What about it?"
+
+"It's my watermark. I ordered this stock for final drafts. Two hundred grams. A specific rag-to-wood-pulp ratio that only one mill in Italy produces."
+
+He already knew. He had held that contract in his hands a hundred times. Felt the weight of it. The edge was soft now from being folded and unfolded so many times, but the crease lines were clean, as if someone had measured the fold with a ruler.
+
+She had. She stood in her kitchen three months ago and measured the fold.
+
+Lucian turned the focus ring on his suppressed rifle exactly one quarter rotation away from clarity. The habit was older than the contract. It meant he was about to do something he hated.
+
+"Sloane."
+
+"Don't." Her voice cracked like ice. "You knew. You've known this whole time that I wrote it. That I walked into Rook's office and signed my own death warrant."
+
+"Not your death warrant."
+
+She stood up so fast the chair scraped against the linoleum. "Then what is it? What did I write?"
+
+He looked at her. The woman in front of him was not the woman who had typed the contract. That woman had been fraying at the edges, losing hours, waking up in places she didn't remember entering. She had known she was becoming something she couldn't control.
+
+And she had loved him.
+
+That was the part that destroyed him every time. She had loved him, and she had trusted him to make the hardest call of his life.
+
+"Tell me," she said, her voice lower now. Dangerous. "I need to hear it."
+
+"I can't."
+
+"Why not?"
+
+"Because you wrote a condition into the contract. A single sentence that changes everything."
+
+She stepped closer. Close enough that he could see the faint tremor in her jaw, the way her fingers wrapped around her own wrist in that unconscious circle. The tic she didn't know she had. The firing sequence she couldn't remember learning.
+
+"Describe it."
+
+He held her gaze. "You told me that the kill order was only valid if a specific condition was met. If you woke up and you were no longer yourself. If Rook's conditioning erased the woman who wrote the contract."
+
+She blinked. Once. Twice. Her hand tightened on her wrist.
+
+"But I'm still here," she said slowly. "I don't remember three months, but I remember who I am. I remember what I value. I remember how to think."
+
+He said nothing.
+
+"If I'm still myself, the contract is void."
+
+The words hung between them.
+
+She reached for him. Not a victim's reach, desperate and pleading. A seeker's reach. She took his hand, palm to palm, and her fingers were cold and steady.
+
+"How did you know?" she asked. "That first night on the rooftop. You looked at me and you didn't pull the trigger. How did you know I was still me?"
+
+He remembered the exact moment. She had woken up disoriented, covered in blood that wasn't hers, and the first thing she did was reach for her sister. Not for a weapon. Not for an exit. For Mara.
+
+The obedient identity Rook wanted wouldn't have done that. The weapon wouldn't have felt grief.
+
+"I knew," he said simply.
+
+She didn't pull away. Her thumb traced the calluses on his palm. The touch lingered, a silent recognition of a past she couldn't reach but could feel in her bones.
+
+"Did I love you?" she whispered.
+
+"Yes."
+
+"I'm sorry I don't remember."
+
+"Don't be sorry. You saved yourself."
+
+She looked at him, and for a moment he saw the woman from the memory—sharp and fierce and terrified of the thing she was becoming. The woman who had pressed the contract into his hands and made him swear.
+
+"Promise me, Lucian. If I turn into what they want, you end it. You don't hesitate. You don't try to save her. She won't be me anymore."
+
+"Then what will she be?"
+
+"Nothing. A shell with my face. And I don't want that thing walking around wearing my skin."
+
+He had kissed her forehead that night. He had taken the contract. He had sworn the binding condition exactly as she dictated.
+
+Lucian Vey must kill Sloane Mercer at sunrise only if Cassian Rook restores the obedient identity.
+
+If Sloane Mercer remains herself, the contract is void.
+
+He had watched her fall asleep that night, her hand in his, and he had believed they would find a way out before sunrise. Three months later, the sun was climbing closer, and he had nothing but questions and a dead woman's heartbeat in his pocket.
+
+The apartment signs. The books arranged by color on her shelf. The handwritten notes in the margins of the novels. The scar on her thumb from a kitchen knife accident she didn't remember. These were the pieces she was using to rebuild herself.
+
+She pulled her hand back, but slowly. Reluctantly.
+
+"What aren't you telling me?" she asked.
+
+"Many things."
+
+"The honest one."
+
+He almost smiled. That was her. She knew when she was being managed.
+
+"I told you the condition exists," he said. "That's all I can give you right now. You have to find the rest yourself."
+
+"Why?"
+
+"Because Rook built this trap for you to walk into. If I hand you the answers, you won't understand the shape of them. You have to touch them. Hold them. Feel the weight."
+
+She looked down at the contract. At the soft edges. The clean creases. Her handwriting.
+
+"I set a trap for myself," she said quietly. "Not just a kill order. A trap that would only spring if I stopped being me."
+
+"Yes."
+
+She picked up the contract and folded it carefully along the crease lines. The motion was practiced. Unconscious. Her body remembered what her mind had lost.
+
+"If I'm still myself," she said, "then why is Rook letting me live? Why hasn't he already triggered whatever failsafe he planted in my head?"
+
+"Because you're still useful to him. You're chasing the threads he laid out. You're doing exactly what he designed you to do."
+
+"Rebel."
+
+"Step seven."
+
+She laughed, and it was hollow. "I knew you were a professional. I didn't know you were a poet."
+
+He watched her. The sharpness was returning. The sarcasm was armor, but it was also identity. The woman he loved was fighting her way back to the surface.
+
+His encrypted phone vibrated against his thigh.
+
+A single pulse. A code he had taught her three years ago, when they were still just a handler and a contractor who had fallen too deep into each other.
+
+She's ready.
+
+Mara.
+
+He kept his face neutral. He pulled the phone from his pocket and glanced at the screen.
+
+She's ready. The mirror key is confirmed. Give me the location.
+
+He pocketed the phone.
+
+Sloane's eyes were on him. "Who is it?"
+
+"No one."
+
+"You're lying."
+
+"I'm protecting you."
+
+"From what?"
+
+He met her gaze and held it. "From the truth you aren't ready for."
+
+She opened her mouth to argue, but he was already moving. He slung the rifle case over his shoulder and grabbed the folder with the evidence.
+
+"We need to move."
+
+"Where?"
+
+"Rook hit the Federal Records Annex an hour ago. He's cleaning up his tracks. If we get there before he finishes, we might find the servers with the original target files."
+
+"You're chasing a lead while my sister's body is still on that roof?"
+
+He stopped. He turned. He looked at her, and for a fraction of a second, he almost told her.
+
+She's not dead. She's waiting for us. She has the key to everything.
+
+But he couldn't. Mara's safety was the only card he had left to play, and if Rook knew, she would be dead before sunrise.
+
+"Mara wouldn't want you to stop," he said.
+
+It was the truth. Just not the whole truth.
+
+Sloane stared at him, and he saw her reading him. She was looking for the lie. She found the shape of it, but she couldn't see the substance.
+
+"Fine," she said. "But when this is over, you're going to tell me everything."
+
+"I will."
+
+She picked up her coat and followed him to the door.
+
+The encrypted phone felt heavy in his pocket. Mara was waiting. The mirror key was confirmed. And somewhere in this city, Cassian Rook was watching them dance to his music.
+
+But Lucian Vey had been playing a longer game than Rook knew.
+
+He had the woman who wrote the contract.
+
+And he had the woman who knew her well enough to save her.
+
+The door closed behind them, and the motel room went dark.

@@ -1,0 +1,203 @@
+---
+series: kill-me-if-i-remember
+book: 1
+chapter: 17
+title: Sunrise
+spice: 1
+word_count: 1771
+status: draft
+needs_fix: []
+promoted_at: '2026-07-18T10:55:48Z'
+---
+
+The countdown hit three minutes, and Sloane Mercer stopped thinking. She let her hands remember what her mind had buried.
+
+The console room was a furnace. The air conditioning had failed hours ago—or maybe it had never worked in this part of the terminal. Heat rippled off the servers stacked floor to ceiling, and the digits on the main screen wavered like water, like truth trying to evaporate before she could grasp it.
+
+She didn't need to grasp it. She needed to release it.
+
+Lucian stood at her shoulder, rifle angled down but ready. Mara leaned against the far wall, a gash across her forehead, her eyes fixed on Sloane's hands. She had given the first sequence in the shipping container. Now the rest had to come from Sloane's own body.
+
+"How much time?" Sloane asked.
+
+"Two forty-seven." Lucian's voice was flat, but she heard the tension threading it. "Rook triggered the purge protocol when he lost visual on us. If the timer hits zero, every byte of the ledger that's still stored locally gets overwritten."
+
+She understood. The copy she had partially unlocked was local. The broadcast she had initiated earlier had sent fragments, not the whole. This was the last chance to show everything.
+
+"I need the full release sequence," she said. "Not just the first tier. The entire chain."
+
+Mara pushed off from the wall. "You already have it. It's in your muscle memory. The same progression I showed you, but you have to go deeper. The wrist circle starts it. Then the elbow pivot. Then the finger spread. Then the repeat."
+
+Sloane already knew. The pendant in the safe had triggered a fragment. Mara's rhythm had unlocked the first gate. Now her own hands had to finish what she had started three months ago—a plan she had erased from her memory but written into her nerves.
+
+She placed her left hand on the console's scanner plate. The screen lit with a prompt: Identity Verification Required.
+
+The countdown read 2:31.
+
+She pressed her right thumb to the inside of her left wrist and traced a slow, deliberate circle. The motion was automatic, the same tic she had done for years, but now she did it with intent. The circle tightened, and the screen flickered.
+
+Partial match. Continue sequence.
+
+"Elbow," she murmured.
+
+She rotated her arm, bending her elbow at a precise forty-five degree angle, and held it for two beats. The muscle memory came without thought—her body had rehearsed this hundreds of times while her mind had slept.
+
+The console beeped.
+
+Acknowledgement.
+
+Next, the finger spread. She flattened her palm, stretched her fingers wide, then curled them into a fist in a pattern she couldn't have described but her hands knew perfectly. The rhythm accelerated.
+
+Sequence accepted. Depth access: Level 7 of 7.
+
+"That's it," Mara whispered. "You're through."
+
+The screen dissolved into a cascade of data. Names. Dates. Transaction IDs. The full ledger rolled upward like a waterfall of numerals and coded references. Every weapon sale. Every bribe. Every death.
+
+Rook's network. Her network. She had processed these transactions, authenticated them, made them legal with her federal credentials. Her handwriting appeared in the margin of every major deal: Approved, Mercer.
+
+Guilt was not something she could run from. She had ordered those deaths with full knowledge. But she had also written the code that would burn it all down.
+
+The countdown hit 1:47.
+
+"There's a distribution list," Lucian said, pointing to an icon on the sidebar. "Preconfigured. Multiple outlets."
+
+She saw them: three major news networks, two federal oversight committees, an international watchdog. All with secure upload addresses. All pre-loaded when she had written the ledger's architecture three months ago.
+
+She had planned this. She couldn't remember making those preparations, but the evidence was in front of her.
+
+The cursor blinked on the send button.
+
+"Once it goes out, there's no recall," Lucian said. "You know that."
+
+"I'm counting on it."
+
+She pressed the button.
+
+The screen flashed. Transmitting...
+
+The countdown stopped at 1:18.
+
+The data streamed green bars for each recipient. One hundred percent. Two hundred. The transmission confirmed simultaneously across all channels.
+
+"Done," she said.
+
+The door behind them slid open.
+
+Cassian Rook walked in, his jacket smeared with grease and dust, a pistol in his hand. He looked at the screen, at the green bars, and his face went cold.
+
+"What did you do?"
+
+Sloane turned to face him. "I showed the world what you built."
+
+"You have no idea what you've destroyed."
+
+"I know exactly what I destroyed. A network that sold weapons to both sides of three wars. A system that used my clearance to make it clean. And seven witnesses who got in the way—your people, not the targets. You fed me false files so Lucian would eliminate them for you."
+
+Rook's jaw tightened. He looked past her to the rifle mounted on the wall—an old hunting model, retrofitted with a scope and a pressure trigger.
+
+"You think you've won," he said. "But you've just handed the whole thing to people who'll bury it."
+
+"Maybe. But it's not in your hands anymore."
+
+He moved for the rifle.
+
+His hand closed around the stock, and he yanked it from the mount. The rifle came free. But the mount was wired. Sloane saw the tripwire—thin, nearly invisible, running from the bracket to the ceiling panel.
+
+Rook had set it. Years ago, as a failsafe in case anyone ever accessed the full ledger. He had to know about it. But in the desperation of the moment, he forgot.
+
+His arm jerked the wire taut.
+
+A single shot cracked from the ceiling panel. Rook's body went rigid. The rifle clattered to the floor. He looked down at the red spreading across his chest, then at Sloane, and his mouth formed words that never came out.
+
+He dropped.
+
+The silence in the room was absolute.
+
+Sloane stared at the body for a long breath. She felt nothing but exhausted relief. The trap he had built to protect his secrets had consumed him. It was fitting.
+
+Lucian stepped around the console and put a hand on her shoulder. "We need to go. The local police are already on their way. My extraction contact is two minutes out."
+
+She shook her head.
+
+"I'm not running."
+
+"Sloane—"
+
+"I published a ledger that proves I facilitated illegal arms sales. I'm going to prison, Lucian. That's the deal I made with myself when I erased my memory." She looked up at him. "I didn't build this plan so I could get away. I built it so the truth would survive, even if I didn't."
+
+He understood. She saw it in the way his jaw tightened, the way his grip on the rifle loosened.
+
+"I can still walk out," he said quietly. "My handler owes me a clean exit. New name, new continent. I'm offering it to you."
+
+"No, you're not. You're telling me you'll refuse it."
+
+He almost smiled. "How do you know that?"
+
+"Because I know you." She turned to Mara. "Go. You're a witness, not a participant. You testify in a few months, and you're free."
+
+Mara hesitated. "Sloane—"
+
+"Go. That's an order from your big sister."
+
+Mara embraced her, then slipped out the back door.
+
+The sirens grew louder.
+
+Lucian pulled out his phone, dialed a number, and spoke three words: "Extraction declined." Then he pocketed it and stood beside her.
+
+"Do you know what you're choosing?" she asked.
+
+"A future without guarantees." He said it like a fact.
+
+The first police officer burst through the main door, weapon raised. Sloane raised her hands. Lucian lowered his rifle and placed it on the floor.
+
+"The ledger's been published," Sloane said. "All outlets. The terminal's server has the original copy. You'll want to secure it."
+
+The officer cuffed her. She heard Lucian being cuffed as well, and she let herself be led out into the grey light of dawn.
+
+Sunrise. The deadline she had written for herself. She was still alive. The condition had not been fulfilled—Rook had never gotten the chance to restore her obedient identity. Now the sun broke over the shipping terminal, and she was standing in its light, alive and guilty and free.
+
+---
+
+Epilogue: Eight Months Later
+
+The visitation room smelled of antiseptic and old coffee. Fluorescent lights buzzed overhead. Sloane sat on the metal stool, the glass partition between her and the man on the other side.
+
+Lucian Vey looked different. No tactical gear, no rifle. He wore a simple grey jacket, his hair shorter. He had been working with the prosecution team, she knew, providing context for the ledger's transactions. He had stayed in the country, refused every offer to disappear, and visited her every week.
+
+He picked up the phone.
+
+"Good week?" he asked.
+
+"Same as always. I've been reading. The prison library has a surprising amount of criminal law texts."
+
+"Planning an appeal?"
+
+"Planning an understanding." She smiled, small but real. "How's Mara?"
+
+"Testimony wrapped up last week. Twelve people indicted in the network. She's in a safe house, finishing her degree."
+
+"Good."
+
+A silence settled between them, comfortable.
+
+"I saw the news," she said. "They're calling me the architect of the biggest scandal in federal history. Some think I should get a medal. Most think I should get a life sentence."
+
+"And what do you think?"
+
+"I think I'd do it again." She pressed her palm flat against the glass. Her hand looked pale against the smudges. "Everything I was before the erasure believed in this plan. The version of me that woke up on the roof hated the version that did this. But now I understand. I chose to become a stranger so the truth could survive. I can live with that."
+
+Lucian placed his hand on the opposite side of the glass, palm to palm, his fingers aligning with hers. She felt the warmth through the barrier—imagined it, maybe, but it was enough.
+
+"I never stopped loving the woman who wrote that plan," he said. "And I'm not going to stop loving the woman she became."
+
+The prison officer announced that visiting hours were over.
+
+Sloane Mercer rose. Lucian Vey did not look away.
+
+"I'll be here tomorrow," he said. Not a promise—just a fact.
+
+She nodded and turned to walk back to her cell. Behind her, she heard his footsteps recede, then stop. He would wait until she was out of sight. He always did.
+
+The door closed. The fluorescent lights hummed. And in the silent space between her breaths, Sloane felt the weight of a future she had never expected to have—uncertain, complicated, but real.

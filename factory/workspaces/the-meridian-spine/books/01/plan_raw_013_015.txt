@@ -1,0 +1,78 @@
+{
+  "act": [13, 15],
+  "chapter_plans": [
+    {
+      "chapter": 13,
+      "title": "The Timestamp Fracture",
+      "slug": "the-timestamp-fracture",
+      "one_line_summary": "Iris Kane forces Stellan Marsh to confront evidence of systematic backdating in the Meridian Spine certification, then discovers a tamper mark on the replacement coupon that points to a broader cover-up.",
+      "beat_summary": "Iris Kane is summoned to Stellan Marsh's office after the public leak. She presents the timestamp discrepancy from the approval records, proving the load test certification was backdated. Marsh agrees to an internal inquiry, but his composure unsettles her. Later, examining the replacement coupon from the fabricated bay, Iris Kane finds a micro-crack pattern that matches a technique used to alter evidence after the Kessler collapse — a sign that the replacement itself was machined after the original fracture. She also receives an anonymous note citing a policy directive as the source of the backdating order. These pieces confirm the conspiracy reaches into the Directorate's leadership.",
+      "must_happen": [
+        "Iris Kane confronts Stellan Marsh with the timestamp discrepancy from the Meridian Spine approval records, forcing acknowledgment of backdated certification (C001 payoff).",
+        "Iris Kane identifies a micro-crack pattern on the replacement coupon that indicates post-fracture machining, establishing a new evidence thread (C009 planted).",
+        "Iris Kane receives an anonymous communication linking the backdating order to a policy directive from the Directorate's executive office."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not confirm that the anonymous communication identifies Marsh by name."
+      ],
+      "opens_with": "\"You've chosen a dangerous path,\" Stellan Marsh says, his voice flat as he slides the leaked article across his desk. \"Let's see if your evidence can walk it.\"",
+      "cliffhanger": "Under the magnifier, the micro-crack on the replacement coupon splits into three branches — identical to the mark Iris Kane documented on a component fabricated after the Kessler collapse to destroy evidence.",
+      "signature_detail_hint": "The micro-crack branches are spaced at exactly 120 degrees, a pattern that only appears when the metal is fractured under a specific non-standard cooling rate used in a single unauthorized machine shop.",
+      "emotional_beat": "The revelation of the tampered replacement coupon shifts Iris Kane from suspicion to certainty: the conspiracy is not just steering her; it is actively manufacturing false evidence to contain her.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter that pays off C001 through the timestamp confrontation, plants C009 via the micro-crack observation, and achieves MR004 by linking the backdating to a policy directive. Maintain single POV, high tension, and physical evidence focus. No romance or sexual content.",
+      "carries_to_next": "Iris Kane must identify the source of the policy directive and the unauthorized machine shop, knowing that Stellan Marsh will continue to manage the inquiry from above."
+    },
+    {
+      "chapter": 14,
+      "title": "The Institutional Wall",
+      "slug": "the-institutional-wall",
+      "one_line_summary": "Iris Kane is blocked from accessing policy records and threatened by Stellan Marsh's press conference, forcing her to operate outside the Directorate's channels.",
+      "beat_summary": "Following the anonymous tip about a policy directive, Iris Kane requests the official records from the Directorate's policy office. The legal department rejects her request, claiming no such directive exists. She then tracks down Alan Torvik, the procurement officer who approved Aegis Fabrication. Torvik is visibly agitated and refuses to speak, hinting that he fears retaliation. Meanwhile, Stellan Marsh calls a press conference to reaffirm the Directorate's integrity, directly countering Iris Kane's leak. Iris Kane attends the conference unannounced, and a journalist, alerted by the leak, poses a pointed question about the tampering. The chapter ends with Iris Kane deciding to bypass legal procedures and access the policy archive through an old contact in the records division.",
+      "must_happen": [
+        "Iris Kane is formally denied access to policy office records by the Directorate's legal department.",
+        "Iris Kane locates Alan Torvik but he refuses to cooperate, appearing intimidated.",
+        "Stellan Marsh holds a press conference that reaffirms the Directorate's commitment to integrity, and a journalist challenges him on the tampering leak."
+      ],
+      "must_not": [
+        "Must not have Alan Torvik explicitly accuse Stellan Marsh of orchestrating the intimidation.",
+        "Must not state that the press conference is a deliberate cover-up."
+      ],
+      "opens_with": "\"The policy office has no record of any directive regarding certification timelines,\" the legal officer says, spreading her hands. \"Your internal inquiry is closed.\"",
+      "cliffhanger": "From the back of the packed press room, Iris Kane watches Stellan Marsh field the question. He smiles. 'The Directorate is built on a foundation of integrity. Any allegation to the contrary will be thoroughly investigated.' He meets Iris Kane's eyes for a fraction of a second — a warning.",
+      "signature_detail_hint": "The legal officer's denial bears a rubber stamp with a missing corner — the same stamp Iris Kane saw on Alan Torvik's procurement approval, hinting at a common bureaucratic chain used to suppress uncomfortable requests.",
+      "emotional_beat": "Iris Kane feels the institution closing ranks around her, and the frustration of having irrefutable evidence dismissed by process turns into a cold resolve to break the rules they hide behind.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter that shows institutional obstruction and Marsh's counter-narrative. Maintain tension through blocked attempts and the press conference confrontation. No romance or sexual content.",
+      "carries_to_next": "Iris Kane arranges an off-the-books visit to the policy office archive, using a contact from the records division who owes her a favor from the Kessler case."
+    },
+    {
+      "chapter": 15,
+      "title": "The Directive's Signature",
+      "slug": "the-directives-signature",
+      "one_line_summary": "Iris Kane illegally accesses the policy archive, finds a memo signed by Seraphina Cole that ordered certification prioritization, and discovers a watermark linking it to Veridian Trust.",
+      "beat_summary": "Using a contact in the records division, Iris Kane gains after-hours access to the policy office's archived directives. She locates a memo from three months before the Meridian Spine certification, addressed to the certification committee, ordering prioritization for the Spine's approval. The signatory is Seraphina Cole, a policy director Iris Kane hasn't encountered before. The memo lacks a specific reason, which makes it suspect. Iris Kane photographs the memo and notices that the paper bears a watermark — a faint circle with the phrase 'Fides et Ratio.' The same watermark appeared on the Veridian Trust charter (from chapter 3), indicating a legal or financial link. Before leaving, she checks the building's access log and finds that her badge was logged as entering the policy office earlier that day — an access she never made, suggesting her credentials are being replicated by someone in the Directorate.",
+      "must_happen": [
+        "Iris Kane accesses the policy archive using a contact and locates a memo ordering prioritization of the Meridian Spine certification.",
+        "Iris Kane identifies the memo's signatory as Seraphina Cole, a policy director, and photographs it.",
+        "Iris Kane notices the watermark 'Fides et Ratio' on the memo paper, matching the Veridian Trust charter, planting C006.",
+        "Iris Kane discovers a false access log entry showing her badge entered the policy office earlier, indicating ongoing credential misuse."
+      ],
+      "must_not": [
+        "Must not state that Seraphina Cole is acting on behalf of Stellan Marsh.",
+        "Must not conclude that the false access log entry is directly tied to the backdating."
+      ],
+      "opens_with": "\"Thirty minutes,\" the archivist whispers, sealing the door behind Iris Kane. \"And I was never here.\"",
+      "cliffhanger": "Iris Kane freezes at the access log screen: her name, her badge number, a scan time of 11:14 AM. She was in a meeting with the legal department at that exact time, twenty floors away.",
+      "signature_detail_hint": "The 'Fides et Ratio' watermark is set in a typeface characteristic of the law firm that represented Aldous Renn's shell companies, a detail Iris Kane filed from the Veridian Trust documents.",
+      "emotional_beat": "The false access log triggers a deep personal alarm: the conspiracy is now impersonating her physically, a violation that makes every step forward feel like walking through a hall of mirrors.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter that plants C006 through the watermark detail, advances Iris Kane's evidence collection, and deepens the threat with the forged access entry. No romance or sexual content.",
+      "carries_to_next": "Iris Kane must investigate Seraphina Cole's connections and find a secure way to preserve her evidence without it being tampered with by someone who can duplicate her credentials."
+    }
+  ]
+}

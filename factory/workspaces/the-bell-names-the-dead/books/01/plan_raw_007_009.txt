@@ -1,0 +1,82 @@
+{
+  "act": [7, 9],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Unbroken Chain",
+      "slug": "the-unbroken-chain",
+      "one_line_summary": "Female Lead is forced to confront the recurring logic of the deaths while two new clues tie the soot signatures to the hidden victim cycle.",
+      "beat_summary": "Female Lead, still trapped in the church basement, retraces every deviation in the victim chain using the physical evidence she’s amassed. The realization that the pattern is not random intensifies, as she discovers two new clues left behind during the latest reenactment. A breakthrough occurs when Female Lead deciphers the connection between the soot-written names and the altered signatures from the ledger, confirming the cycle’s deliberate handoff. Male Lead, acting under increasing desperation, tries to block her access to critical documents. The town’s refrain—'THE BELL CHOOSES THE NEXT NAME.'—is chanted in both fear and denial, drowning out any logic. With the clues in hand, Female Lead pieces together the ritual’s surface logic but cannot yet see its true intent.",
+      "must_happen": [
+        "Female Lead escapes the locked church basement using a hidden panel and discovers two new clues (C006 and C007) left during the latest victim's reenactment.",
+        "Female Lead pays off Clue C002 by recognizing the repeated patterns in soot and ledger signatures, confirming that each death hands off to a new, necessary witness.",
+        "Male Lead intercepts Female Lead and tries to confiscate her notes and clues, escalating their confrontation.",
+        "Female Lead maps the logic of the chain up to this point, realizing the victim’s actions are not random.",
+        "‘THE BELL CHOOSES THE NEXT NAME.’ echoes in the town as both a warning and a denial."
+      ],
+      "must_not": [
+        "Do not directly reveal the underlying mechanism that compels each victim.",
+        "Do not allow Female Lead to learn the true purpose behind the chain or access the sealed chamber."
+      ],
+      "opens_with": "\"If you’re waiting for a sign, the bell already rang,\" Female Lead mutters as she presses her ear to the basement door.",
+      "cliffhanger": "Female Lead discovers a coded message in Ada Voss’s handwriting hidden beneath the latest soot signature, hinting at what must be done to break the chain.",
+      "signature_detail_hint": "A scrap of hymnbook page, folded and wedged inside a cracked tile, is marked with the same soot-smudged spiral found in every victim’s final room.",
+      "emotional_beat": "Mounting dread, the rush of piecing together a harrowing pattern, and the isolation of being the only one who sees the logic.",
+      "spice": 0,
+      "spice_note": "No romantic or sexual content; all tension is investigative and psychological.",
+      "chapter_task": "Advance Female Lead’s understanding of the victim cycle by having her escape, recover two new clues, and recognize the non-random pattern in 1600–1900 words. Do not reveal the god-truth or the full chain mechanism. Maintain procedural focus and gothic dread.",
+      "carries_to_next": "Female Lead now has the evidence to confront Male Lead and test whether the chain can be stopped by breaking the ritual logic."
+    },
+    {
+      "chapter": 8,
+      "title": "The Logic of the Bell",
+      "slug": "the-logic-of-the-bell",
+      "one_line_summary": "Female Lead makes a major breakthrough: the bell does not choose at random—each victim must name the next necessary witness to the unfinished testimony.",
+      "beat_summary": "Female Lead, armed with the new clues and Ada Voss’s coded message, reconstructs the recent reenactment and realizes the chain’s progression is not supernatural fate but enforced logic. She demonstrates, through failed restraint and physical evidence, that each victim is compelled to name the next person with unique knowledge or access. Male Lead, sensing the chain is reaching its end, tries to destroy key documents and block Female Lead from acting. Female Lead finds Ada’s handwriting in the corrections, and the evidence of deliberate intervention in the record. The town’s last defenses crumble as the reason for the chain becomes undeniable.",
+      "must_happen": [
+        "Female Lead pays off Clues C003 and C006 by mapping the forced handoff: victims must name the next person with necessary knowledge or access to keep the chain moving.",
+        "Female Lead tests the chain by attempting to isolate or restrain a chosen witness, only to see the compulsion override physical barriers.",
+        "Male Lead is caught destroying or hiding documents that could end the cycle, revealing his desperation.",
+        "Female Lead discovers Ada Voss’s handwriting in the corrections, linking Ada directly to the altered testimony.",
+        "Female Lead plants Clue C008: evidence that the chain is a mechanism for restoring lost testimony."
+      ],
+      "must_not": [
+        "Do not reveal the full list of erased children or the ultimate outcome of Ada’s intervention.",
+        "Do not allow Female Lead to stop the cycle or open the sealed chamber yet."
+      ],
+      "opens_with": "\"You think the bell chooses? Watch who’s left standing,\" Female Lead whispers as she lines up the names and signatures.",
+      "cliffhanger": "Male Lead sets fire to the last set of records as the bell’s tone begins to shift, signaling the chain’s approach to completion.",
+      "signature_detail_hint": "A drop of sealing wax, melted onto the ledger’s margin, bears the imprint of a child’s thumbprint instead of a town official’s.",
+      "emotional_beat": "Shock at the revelation, urgency to act before the chain claims another, and the betrayal of realizing past interventions were not accidents.",
+      "spice": 0,
+      "spice_note": "No romantic or sexual content; stakes are existential and procedural.",
+      "chapter_task": "Deliver the major revelation that each victim is compelled to name the next necessary witness, not chosen at random. Let Female Lead expose the logic through experiment and evidence, and escalate Male Lead’s sabotage. Word count: 1600–1900.",
+      "carries_to_next": "With the chain’s logic exposed, Female Lead must race to preserve the last pieces of testimony before Male Lead destroys them and the cycle claims its final victim."
+    },
+    {
+      "chapter": 9,
+      "title": "Testimony in Ash",
+      "slug": "testimony-in-ash",
+      "one_line_summary": "Female Lead and Male Lead clash over the remaining evidence as the chain’s logic and Ada’s direct intervention become undeniable.",
+      "beat_summary": "As the chain nears completion, Female Lead consolidates all available evidence, confronting Male Lead in a final effort to halt the destruction of testimony. The compulsion to name the next witness overrides any attempt at evasion. Female Lead recognizes Ada’s intervention as the act that positioned her in the chain, and the town’s history of denial collapses under the mounting proof. The bell’s peal grows distorted, echoing the urgency of the unfinished business. The town is on the verge of panic and violence as the truth threatens to surface. Female Lead must decide whether to risk the final step into the sealed chamber.",
+      "must_happen": [
+        "Female Lead retrieves and secures the last unburned documents that prove the chain’s logic and Ada Voss’s alteration of the record.",
+        "Male Lead, frantic, attempts to physically stop Female Lead and destroy the final testimony, but is overpowered by the compulsion of the chain.",
+        "Female Lead accepts that Ada Voss’s intervention placed her in the chain, and that the mechanism will not stop until the testimony is complete.",
+        "The town’s remaining deniers are forced to confront the evidence as the bell’s new, warped tone echoes across Morrow Wick."
+      ],
+      "must_not": [
+        "Do not permit access to the sealed chamber or reveal the names of the erased children.",
+        "Do not allow the chain to end or the cycle to break this chapter."
+      ],
+      "opens_with": "\"If you destroy what’s left, the bell will ring for you,\" Female Lead warns as she blocks Male Lead in the archive.",
+      "cliffhanger": "As dawn approaches, Female Lead stands before the sealed chamber’s threshold, the last key in her hand, and the bell tolling a fractured, urgent sequence.",
+      "signature_detail_hint": "The scent of scorched beeswax and iron filings rises from the locked chamber door as the bell’s echoes splinter the silence.",
+      "emotional_beat": "Desperation, grim resolve, and the weight of inherited obligation.",
+      "spice": 0,
+      "spice_note": "No romantic or sexual content; the only heat is from the threat of irreversible loss.",
+      "chapter_task": "Have Female Lead consolidate the evidence, directly confront Male Lead, and bring the stakes to a crisis point where the chain’s compulsion is undeniable. Do not allow the chamber to be opened or the cycle to end. 1600–1900 words.",
+      "carries_to_next": "Female Lead is poised to enter the sealed chamber at sunrise, setting up the final confrontation with Male Lead and the buried truth."
+    }
+  ]
+}

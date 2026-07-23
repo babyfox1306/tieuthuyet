@@ -1,0 +1,35 @@
+{
+  "word_count": 1186,
+  "target_language": "en",
+  "short": 1186,
+  "classification": {
+    "format_fix": {},
+    "content_fail": {},
+    "length": {
+      "short": 1186
+    },
+    "format_only": false,
+    "length_only": true,
+    "has_format": false,
+    "has_content": false,
+    "has_length": true
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 2,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3,
+    "llm_qc_rewrites": 2,
+    "max_llm_qc_retries": 2
+  },
+  "llm_qc_before_machine_fail": {
+    "verdict": "FAIL",
+    "fail_reasons": [
+      "qc_transport_error"
+    ],
+    "source": "qc_transport_error",
+    "detail": "All models failed (['auto/fast', 'auto']): Error code: 503 - {'error': {'message': 'Maximum combo retry limit reached', 'type': 'server_error', 'code': 'service_unavailable'}}"
+  }
+}

@@ -598,7 +598,210 @@ class ReplanClearTests(unittest.TestCase):
 
 
 def _norm(s: str) -> str:
-    return s.strip().lower()
+    return s.strip().lower().replace("_", " ")
+
+
+class SnakeCaseNarrativeArcKeyTests(unittest.TestCase):
+    """lead_internal_arc slug keys must not block approve-plan vs display names."""
+
+    def test_snake_case_arc_key_matches_canonical_male_lead(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "slug-arc"
+            ws.mkdir()
+            (ws / "direction.yaml").write_text(
+                "book: 1\ntotal_chapters: 1\nplan_status: draft\nspice_level: 1\n",
+                encoding="utf-8",
+            )
+            (ws / "canon_registry.yaml").write_text(
+                yaml.dump(
+                    {
+                        "characters": {
+                            "female_lead": {
+                                "canonical": "Iris Kane",
+                                "allowed_aliases": ["Iris"],
+                            },
+                            "male_lead": {
+                                "canonical": "Stellan Marsh",
+                                "allowed_aliases": ["Marsh", "Stellan"],
+                            },
+                        },
+                        "pov_mode": "third_person_limited",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            bible_dir = ws / "bible"
+            bible_dir.mkdir()
+            (bible_dir / "series.json").write_text(
+                json.dumps(
+                    {
+                        "characters": {
+                            "female_lead": {"name": "Iris Kane", "age": 34},
+                            "male_lead": {"name": "Stellan Marsh", "age": 52},
+                        },
+                        "supporting_cast": [],
+                        "central_mystery": {
+                            "question": "Who?",
+                            "answer": "Stellan Marsh built the capture.",
+                            "reveal_chapter": 20,
+                        },
+                        "bloodline": {"lead_relation": "none"},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            narr = bible_dir / "narrative"
+            narr.mkdir()
+            (narr / "book_arc.json").write_text(
+                json.dumps(
+                    {
+                        "lead_internal_arc": {
+                            "iris_kane": {"starting_point": "trusted"},
+                            "stellan_marsh": {"starting_point": "benevolent"},
+                        }
+                    }
+                ),
+                encoding="utf-8",
+            )
+            book_dir = ws / "books" / "01"
+            book_dir.mkdir(parents=True)
+            (book_dir / "master_plan.json").write_text(
+                json.dumps(
+                    {
+                        "book": 1,
+                        "total_chapters": 1,
+                        "chapter_plans": [
+                            {
+                                "chapter": 1,
+                                "title": "Open",
+                                "slug": "open",
+                                "one_line_summary": "Iris Kane meets Stellan Marsh at the briefing.",
+                                "beat_summary": "Iris Kane and Stellan Marsh frame the inquiry.",
+                                "must_happen": ["a", "b", "c"],
+                                "must_not": ["x", "y"],
+                                "opens_with": "Rain on glass.",
+                                "cliffhanger": "A redacted name surfaces.",
+                                "signature_detail_hint": "tool scrapings",
+                                "spice": 1,
+                                "chapter_task": "Write chapter 1 (1700-1900 words).",
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            registry = build_canon_registry(ws, book=1)
+            self.assertEqual(
+                registry.source_male_lead_names.get("narrative/*.json"),
+                "Stellan Marsh",
+            )
+            conflicts = validate_plan_against_canon_registry(ws, book=1)
+            codes = {c["code"] for c in conflicts}
+            self.assertNotIn("male_lead_cross_source_mismatch", codes)
+            self.assertNotIn("male_lead_source_mismatch", codes)
+
+    def test_short_arc_keys_do_not_forbid_female_or_mismatch_male(self) -> None:
+        """Regression: Sofia/Elias arc keys vs Sofia Bellini / Elias van Doren."""
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "language-short-names"
+            ws.mkdir()
+            (ws / "canon_registry.yaml").write_text(
+                """\
+characters:
+  female_lead:
+    canonical: Sofia Bellini
+    allowed_aliases: [Sofia, Bellini]
+  male_lead:
+    canonical: Elias van Doren
+    allowed_aliases: [Elias, Doren]
+""",
+                encoding="utf-8",
+            )
+            (ws / "direction.yaml").write_text(
+                yaml.dump(
+                    {
+                        "id": "language-short-names",
+                        "book": 1,
+                        "book_slug": "01-language-short-names",
+                        "total_chapters": 1,
+                        "target_language": "en",
+                        "spice_default": 1,
+                        "spice_level": 1,
+                    },
+                    allow_unicode=True,
+                    default_flow_style=False,
+                ),
+                encoding="utf-8",
+            )
+            bible = ws / "bible"
+            bible.mkdir()
+            (bible / "series.json").write_text(
+                json.dumps(
+                    {
+                        "leads": {
+                            "female": {"name": "Sofia Bellini"},
+                            "male": {"name": "Elias van Doren"},
+                        },
+                        "supporting_cast": [],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            narr = bible / "narrative"
+            narr.mkdir()
+            (narr / "book_arc.json").write_text(
+                json.dumps(
+                    {
+                        "lead_internal_arc": {
+                            "Sofia": {"overview": "Female lead arc."},
+                            "Elias": {"overview": "Male lead arc."},
+                        }
+                    }
+                ),
+                encoding="utf-8",
+            )
+            books = ws / "books" / "01"
+            books.mkdir(parents=True)
+            (books / "master_plan.json").write_text(
+                json.dumps(
+                    {
+                        "total_chapters": 1,
+                        "chapter_plans": [
+                            {
+                                "chapter": 1,
+                                "title": "Dawn",
+                                "one_line_summary": "Sofia and Elias van Doren arrive.",
+                                "beat_summary": "Sofia Bellini waits for Elias.",
+                                "must_happen": ["a", "b", "c"],
+                                "must_not": ["x", "y"],
+                                "opens_with": "Fog.",
+                                "cliffhanger": "A count rises.",
+                                "signature_detail_hint": "stutter",
+                                "spice": 1,
+                                "chapter_task": "Write chapter 1.",
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            registry = build_canon_registry(ws, book=1)
+            self.assertNotIn("Sofia", registry.characters["male_lead"].forbidden_aliases)
+            self.assertEqual(
+                registry.source_male_lead_names.get("narrative/*.json"),
+                "Elias van Doren",
+            )
+            conflicts = validate_plan_against_canon_registry(ws, book=1)
+            codes = {c["code"] for c in conflicts}
+            self.assertNotIn("male_lead_cross_source_mismatch", codes)
+            self.assertNotIn("male_lead_source_mismatch", codes)
+            self.assertFalse(
+                any(
+                    c["code"] == "forbidden_lead_name_in_plan" and c["value"] == "Sofia"
+                    for c in conflicts
+                ),
+                conflicts,
+            )
 
 
 @unittest.skipUnless(SECOND_SHADOW.exists(), "the-second-shadow workspace fixture missing")

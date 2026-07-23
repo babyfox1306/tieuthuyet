@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "series_id": "the-meridian-spine",
+    "genre": "conspiracy_thriller",
+    "target_language": "en"
+  },
+  "title": "The Meridian Spine",
+  "sub_niche": "conspiracy_thriller",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "After bringing down the commissioner behind the Kessler collapse, forensic engineer Iris Kane accepts the flagship job of the reform built to prevent the next disaster — only to discover the reform itself is the instrument by which the people who financed Renn are capturing national infrastructure, protected by a name redacted from the one page she never recovered.",
+  "tropes": [
+    "Conspiracy Thriller",
+    "Forensic Investigation",
+    "Government Corruption",
+    "Betrayal",
+    "False Accusation",
+    "Reform is Capture",
+    "Single POV",
+    "Female Lead",
+    "No Romance"
+  ],
+  "leads": {
+    "female": {
+      "name": "Iris Kane",
+      "age": 39,
+      "voice": "Dry, exacting, allergic to comfort.",
+      "tics": [
+        "Thumbnail along edges reading for hairline cracks, escalating from reading documents as structures to reading institutions as structures built to fail on cue."
+      ],
+      "boundary": "Will not sign a conclusion she cannot physically prove.",
+      "internal_voice": "She mentally scans every system, document, and institution for hidden weaknesses before she accepts its function."
+    },
+    "male": {
+      "name": "Stellan Marsh",
+      "age": 58,
+      "voice": "Charismatic statesman, speaks in national interest and legacy, always rational and measured.",
+      "tics": [
+        "Adjusts cufflinks when confronted with inconvenient data"
+      ],
+      "boundary": "Never turns careless, always controls the frame, loses only because physical tool-mark is outside every registry he controls.",
+      "wound": "His legacy — the Directorate — must survive at any cost; he betrays his own reform to preserve it."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Petra Lund",
+      "relation_to": "Iris Kane",
+      "relation_type": "lead materials certifier on Meridian Spine, former Kessler contractor",
+      "alive": true,
+      "secret": "Used the same override method as Kessler to falsify load coupons; genuine copycat but guilty of her own act."
+    },
+    {
+      "name": "Nadia Okafor",
+      "relation_to": "Iris Kane",
+      "relation_type": "investigative partner at the Directorate",
+      "alive": true,
+      "secret": "Steers Iris toward Halveston to burn the financier as the stopping point and shield Marsh; not for money but to preserve the Directorate."
+    },
+    {
+      "name": "Gerald Halveston",
+      "relation_to": "Iris Kane",
+      "relation_type": "chair of philanthropic infrastructure fund financing the Spine",
+      "alive": true,
+      "secret": "Coordinated the capture project and moved the money to capture contracts; financed but did not architect; false answer 2."
+    },
+    {
+      "name": "Aldous Renn",
+      "relation_to": "Iris Kane",
+      "relation_type": "convicted mastermind of Kessler collapse, now prison source",
+      "alive": true,
+      "secret": "Co-owner names redacted from the one page Iris never recovered; available only as source, not active mastermind."
+    }
+  ],
+  "central_mystery": {
+    "question": "Who built the post-Kessler reform into a national capture instrument — who are the co-owners behind Renn, and who architected using the correction itself to entrench the fraud at national scale?",
+    "answer": "Stellan Marsh architected the National Integrity Directorate as a capture instrument: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn now control national procurement, laundering the same fraud at the scale of a country behind the credibility of the body meant to stop it.",
+    "reveal_chapter": 20
+  },
+  "bloodline": {
+    "description": "No blood relation exists between Iris Kane and Stellan Marsh. Iris comes from working-class background, parents deceased. Stellan Marsh belongs to a political dynasty with no familial link to Iris.",
+    "hard_rules": [
+      "Iris Kane and Stellan Marsh are not blood relatives.",
+      "Leads have no romantic or familial relationship."
+    ],
+    "lead_relation": "sponsor and protégé (professional, non-romantic)"
+  },
+  "world_rules": [
+    "All evidence is physical (tool-marks, coupons, approval-timing); no confessions or monologues expose the truth.",
+    "Each tier – Lund, Okafor, Halveston, Marsh – is genuinely guilty of their own act; false answers are not mere frames but actual culprits.",
+    "Stellan Marsh never becomes careless, forgetful, or stupid (Rook-analog rule); his exposure comes only from a physical tool-mark outside every registry he controls.",
+    "The reform (National Integrity Directorate) is revealed as a capture instrument only from chapter 18; before that, no character can state it outright.",
+    "Marsh's role as architect is not named before chapter 19; before chapter 20, no statement that Marsh ordered or laundered the fraud.",
+    "The tool-mark proof is published exactly once, in chapter 21, after Marsh states his role on live record.",
+    "Chapter 13 partial release: tool-mark match Spine<->Kessler only — reopens certification, names no one.",
+    "Book 1 core sample is spent and cannot be reused as the winning card.",
+    "Single POV: Iris Kane holds all 22 chapters; third-person limited.",
+    "No romance subplot or explicit content; spice_level=1 ensures no sexual content.",
+    "No character under 18.",
+    "No real people, real organizations, or real named agencies.",
+    "Aldous Renn remains convicted, not freed, not resurrected as active mastermind.",
+    "Reveals are assembled from physical evidence, never from a character's speech."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "A single irrefutable sample can bring down a corrupt system, but the victory grants the adversary a more elegant leash.",
+      "ending_hook": "Iris is celebrated as the whistleblower who took down the commissioner and immediately offered the role that ties her to the reform she does not yet see as a trap."
+    },
+    {
+      "book": 2,
+      "thesis": "The reform built to prevent disaster is the next disaster; the institution meant to stop fraud is the vehicle for its national scale.",
+      "ending_hook": "Iris resigns the Directorate and returns to the field, knowing that at least one co-owner name from the redacted page was never on any live record."
+    },
+    {
+      "book": 3,
+      "thesis": "The co-owner list is a rotating set of positions, not permanent identities; the real system is above any single name.",
+      "ending_hook": "Iris traces one position to a trust that legally does not exist, realizing the capture pattern is institutional."
+    },
+    {
+      "book": 4,
+      "thesis": "To break the capture, Iris must publish the full record — but publishing destroys the system's credibility beyond repair.",
+      "ending_hook": "She obtains the complete list but hesitates, weighing the cost of decertifying national infrastructure."
+    },
+    {
+      "book": 5,
+      "thesis": "The truth is worth the cost; Iris publishes the full record, accepts the collapse of the reform, and begins the true rebuilding from outside the institution.",
+      "ending_hook": "The series closes on Iris, outside the Directorate, teaching a new class of engineers to examine systems before they trust them."
+    }
+  ],
+  "content_rules": [
+    "No explicit sexual content or romance subplot (spice level 1).",
+    "No minors under 18.",
+    "All interactions are consensual (professional, not romantic).",
+    "No real people, organizations, or identifiable agencies; all fictional."
+  ],
+  "bible_status": "approved"
+}

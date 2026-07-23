@@ -56,8 +56,41 @@ def is_prose_path(path: Path | str) -> bool:
     return False
 
 
-def derive_milestones(total: int) -> list[int]:
-    """Five knowledge milestones scaled to book length (always includes 1 and N)."""
+def authorship_unlock_chapters(concept: dict | None, total: int) -> list[int]:
+    """Chapter numbers that must appear as knowledge milestones (gate unlocks + binding reveal)."""
+    if not concept:
+        return []
+    total = max(3, int(total))
+    out: list[int] = []
+    gates = concept.get("forbidden_phrase_gates") or []
+    if isinstance(gates, list):
+        for gate in gates:
+            if not isinstance(gate, dict):
+                continue
+            try:
+                unlock = int(gate.get("unlock_chapter") or 0)
+            except (TypeError, ValueError):
+                unlock = 0
+            if 1 <= unlock <= total:
+                out.append(unlock)
+    binding = concept.get("binding_condition")
+    if isinstance(binding, dict):
+        try:
+            reveal = int(binding.get("reveal_chapter") or 0)
+        except (TypeError, ValueError):
+            reveal = 0
+        if 1 <= reveal <= total:
+            out.append(reveal)
+    return sorted(set(out))
+
+
+def derive_milestones(total: int, concept: dict | None = None) -> list[int]:
+    """Knowledge milestones scaled to book length (always includes 1 and N).
+
+    Base five slots from length ratios, then union any authorship unlock chapters
+    from concept (forbidden_phrase_gates + binding_condition.reveal_chapter) so
+    staged reveals like 18/19/20 are never collapsed into a single end jump.
+    """
     total = max(3, int(total))
     raw = [max(1, min(total, round(total * frac))) for frac in MILESTONE_FRACTIONS]
     ms = sorted(set(raw))
@@ -65,7 +98,9 @@ def derive_milestones(total: int) -> list[int]:
         ms.insert(0, 1)
     if ms[-1] != total:
         ms.append(total)
-    return ms
+    for ch in authorship_unlock_chapters(concept, total):
+        ms.append(ch)
+    return sorted(set(ms))
 
 
 def rescale_chapter(ch: int, from_total: int, to_total: int) -> int:
@@ -236,14 +271,16 @@ def patch_book_arc(arc: dict[str, Any], total: int, book: int) -> dict[str, Any]
 
 
 def rescale_knowledge_matrix(
-    matrix: dict[str, Any], from_total: int, to_total: int
+    matrix: dict[str, Any],
+    from_total: int,
+    to_total: int,
+    *,
+    concept: dict | None = None,
 ) -> dict[str, Any]:
     matrix = deepcopy(matrix)
-    old_ms = list(matrix.get("milestones") or TEMPLATE_MILESTONES)
-    new_ms = derive_milestones(to_total)
+    new_ms = derive_milestones(to_total, concept)
     matrix["milestones"] = new_ms
 
-    old_by_ch = {int(m): i for i, m in enumerate(old_ms)}
     new_chars: dict[str, Any] = {}
     for name, char in (matrix.get("characters") or {}).items():
         if not isinstance(char, dict):
@@ -254,8 +291,10 @@ def rescale_knowledge_matrix(
             m = _CH_KEY.match(str(key))
             if m:
                 old_ch = int(m.group(1))
-                if old_ch in old_by_ch:
-                    new_ch = new_ms[old_by_ch[old_ch]]
+                # Never remap by list index — authorship gates expand the list and
+                # index-shift would collapse late reveals into the wrong slot.
+                if from_total == to_total:
+                    new_ch = old_ch
                 else:
                     new_ch = rescale_chapter(old_ch, from_total, to_total)
                 remapped[f"ch{new_ch}"] = val
@@ -269,6 +308,18 @@ def rescale_knowledge_matrix(
                 )
         new_chars[name] = remapped
     matrix["characters"] = new_chars
+    if from_total != to_total:
+        keep = set(new_ms)
+        for name, char in list(new_chars.items()):
+            if not isinstance(char, dict):
+                continue
+            pruned: dict[str, Any] = {}
+            for k, v in char.items():
+                km = _CH_KEY.match(str(k))
+                if not km or int(km.group(1)) in keep:
+                    pruned[k] = v
+            new_chars[name] = pruned
+        matrix["characters"] = new_chars
     return matrix
 
 
@@ -329,7 +380,12 @@ def rescale_threads(data: dict[str, Any], from_total: int, to_total: int) -> dic
 
 
 def normalize_narrative_pass(
-    pass_name: str, data: dict[str, Any], total: int, book: int = 1
+    pass_name: str,
+    data: dict[str, Any],
+    total: int,
+    book: int = 1,
+    *,
+    concept: dict | None = None,
 ) -> dict[str, Any]:
     """Post-process develop-narrative output — clamp/derive all chapter refs from N."""
     if not isinstance(data, dict):
@@ -341,7 +397,7 @@ def normalize_narrative_pass(
     if pass_name == "book_arc":
         return patch_book_arc(data, total, book)
     if pass_name == "knowledge_matrix":
-        return rescale_knowledge_matrix(data, from_total, total)
+        return rescale_knowledge_matrix(data, from_total, total, concept=concept)
     if pass_name == "mystery_ledger":
         return rescale_mystery_ledger(data, from_total, total)
     if pass_name == "threads":
@@ -379,10 +435,20 @@ def rescale_narrative_dir(
     if from_total < to_total:
         from_total = max(from_total, to_total)
 
+    concept: dict[str, Any] | None = None
+    try:
+        from factory.engine.lib.narrative_schema import load_concept
+
+        concept = load_concept(ws) or None
+    except Exception:
+        concept = None
+
     updated: list[str] = []
     handlers = {
         "book_arc.json": lambda d: patch_book_arc(d, to_total, book),
-        "knowledge_matrix.json": lambda d: rescale_knowledge_matrix(d, from_total, to_total),
+        "knowledge_matrix.json": lambda d: rescale_knowledge_matrix(
+            d, from_total, to_total, concept=concept
+        ),
         "mystery_ledger.json": lambda d: rescale_mystery_ledger(d, from_total, to_total),
         "threads.json": lambda d: rescale_threads(d, from_total, to_total),
     }

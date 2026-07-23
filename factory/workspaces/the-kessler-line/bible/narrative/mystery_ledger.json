@@ -1,0 +1,202 @@
+{
+  "main_mystery": "Who built the post-Kessler reform into a national capture instrument -- who are the co-owners behind Renn, and who architected using the correction itself to entrench the fraud at national scale?",
+  "truth": "Stellan Marsh architected the National Integrity Directorate as a capture instrument: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn now control national procurement, laundering the same fraud at the scale of a country behind the credibility of the body meant to stop it.",
+  "canonical_reveal_chapter": 20,
+  "red_herrings": [
+    {
+      "id": "RH001",
+      "description": "A lone method-copycat (Petra Lund) faked the coupons using Renn's old method on her own initiative.",
+      "planted_chapter": 5,
+      "debunked_chapter": 9
+    },
+    {
+      "id": "RH002",
+      "description": "The money did it; Gerald Halveston's fund captured the contracts and is the mastermind.",
+      "planted_chapter": 12,
+      "debunked_chapter": 18
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "description": "Iris recovers a physical fractured coupon from the Meridian Spine project site, showing an anomalous signature.",
+      "plant_chapter": 2,
+      "payoff_chapter": 13
+    },
+    {
+      "id": "C002",
+      "description": "Discovery of falsified load coupons signed by Petra Lund for the Meridian Spine, using an override method similar to Kessler's.",
+      "plant_chapter": 2,
+      "payoff_chapter": 4
+    },
+    {
+      "id": "C003",
+      "description": "Iris identifies a specific, recurring micro-signature (tool-mark) on Lund's falsified coupons, identical to the Kessler override method.",
+      "plant_chapter": 4,
+      "payoff_chapter": 4
+    },
+    {
+      "id": "C004",
+      "description": "Investigation reveals the specific machining/press tooling used to create the fraud's tool-mark was never in Petra Lund's inventory or control.",
+      "plant_chapter": 8,
+      "payoff_chapter": 9
+    },
+    {
+      "id": "C005",
+      "description": "A critical piece of investigative data, known only to Iris and Nadia, is leaked or acted upon by the network before Iris officially files it.",
+      "plant_chapter": 10,
+      "payoff_chapter": 11
+    },
+    {
+      "id": "C005b",
+      "description": "Iris reconstructs that Nadia's 'helpful' leads were true-but-incomplete — each one steered the inquiry toward Halveston's fund and away from Directorate sponsorship chains.",
+      "plant_chapter": 7,
+      "payoff_chapter": 11
+    },
+    {
+      "id": "C006",
+      "description": "Forensic accounting shows Gerald Halveston's philanthropic fund strategically moved money to capture key Meridian Spine contracts.",
+      "plant_chapter": 15,
+      "payoff_chapter": 16
+    },
+    {
+      "id": "C007",
+      "description": "Analysis of Directorate approvals reveals a pattern where 'clean' certifications consistently align with Halveston's fund's investment positions.",
+      "plant_chapter": 16,
+      "payoff_chapter": 18
+    },
+    {
+      "id": "C008",
+      "description": "Iris identifies a suspicious pattern in the timing of the Directorate's 'clean verdicts,' strategically released to restore public trust.",
+      "plant_chapter": 17,
+      "payoff_chapter": 18
+    },
+    {
+      "id": "C009",
+      "description": "Iris confirms the identical physical tool-mark signature appears on other projects certified by the Directorate, including the Kessler fraud, not just the Meridian Spine.",
+      "plant_chapter": 13,
+      "payoff_chapter": 18
+    },
+    {
+      "id": "C010",
+      "description": "Evidence confirming Stellan Marsh's foundational role in creating and chairing the National Integrity Directorate, positioned as the reform's architect.",
+      "plant_chapter": 1,
+      "payoff_chapter": 19
+    },
+    {
+      "id": "C011",
+      "description": "Stellan Marsh, under public and investigative pressure, makes a statement on live record regarding his role and the Directorate's function.",
+      "plant_chapter": 20,
+      "payoff_chapter": 22
+    },
+    {
+      "id": "C012",
+      "description": "The assembled physical evidence (recurring tool-marks, Directorate approval patterns, timing of verdicts) conclusively proves common authorship of the national capture, linking Spine fraud to Kessler, Halveston's fund, and Marsh's Directorate.",
+      "plant_chapter": 21,
+      "payoff_chapter": 22
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "MR001",
+      "chapter": 4,
+      "description": "Petra Lund is revealed as the executor of the Meridian Spine fraud, having signed off on falsified load coupons with a specific tool-mark.",
+      "reveal_weight": "minor",
+      "required_clues": [
+        "C002",
+        "C003"
+      ]
+    },
+    {
+      "id": "MR002",
+      "chapter": 9,
+      "description": "False Answer 1 ('a lone method-copycat') is debunked, as the specific tooling for the fraud was never in Lund's possession, indicating a source above her.",
+      "reveal_weight": "minor",
+      "required_clues": [
+        "C004"
+      ]
+    },
+    {
+      "id": "MR003",
+      "chapter": 11,
+      "description": "Nadia Okafor is revealed as a betrayer, having guided Iris's investigation by leaking leads prematurely, curating which top Iris would reach.",
+      "reveal_weight": "major",
+      "required_clues": [
+        "C005",
+        "C005b"
+      ]
+    },
+    {
+      "id": "MR004",
+      "chapter": 13,
+      "description": "Iris releases a partial tool-mark match between the Meridian Spine fraud and the Kessler collapse, reopening the Spine's certification but naming no one.",
+      "reveal_weight": "minor",
+      "required_clues": [
+        "C001",
+        "C009"
+      ]
+    },
+    {
+      "id": "MR005",
+      "chapter": 16,
+      "description": "Gerald Halveston is revealed as the coordinator, having moved money through his philanthropic fund to capture Meridian Spine contracts.",
+      "reveal_weight": "major",
+      "required_clues": [
+        "C006",
+        "C007"
+      ]
+    },
+    {
+      "id": "MR006",
+      "chapter": 18,
+      "description": "False Answer 2 ('Halveston, the money, did it') is debunked, as evidence shows his fund was guided by the Directorate, implying a higher architect.",
+      "reveal_weight": "minor",
+      "required_clues": [
+        "C007",
+        "C008"
+      ]
+    },
+    {
+      "id": "MR007",
+      "chapter": 18,
+      "description": "The National Integrity Directorate itself is revealed to be a national capture instrument, assembled from three pieces of evidence.",
+      "reveal_weight": "major",
+      "required_clues": [
+        "C007",
+        "C008",
+        "C009"
+      ]
+    },
+    {
+      "id": "MR008",
+      "chapter": 19,
+      "description": "Stellan Marsh's connection as the founder and beneficiary of the Directorate is established, linking him to the instrument of capture.",
+      "reveal_weight": "minor",
+      "required_clues": [
+        "C010"
+      ]
+    },
+    {
+      "id": "MR009",
+      "chapter": 20,
+      "description": "Stellan Marsh is revealed as the architect of the national capture, having built the National Integrity Directorate as the mechanism for laundering fraud at a national scale.",
+      "reveal_weight": "major",
+      "required_clues": [
+        "C007",
+        "C008",
+        "C009",
+        "C010"
+      ]
+    },
+    {
+      "id": "MR010",
+      "chapter": 21,
+      "description": "The complete, irrevocable tool-mark proof linking the Spine fraud to Kessler, the fund, and Marsh's architecture is published, after Marsh states his role on live record.",
+      "reveal_weight": "major",
+      "required_clues": [
+        "C011",
+        "C012"
+      ]
+    }
+  ]
+}

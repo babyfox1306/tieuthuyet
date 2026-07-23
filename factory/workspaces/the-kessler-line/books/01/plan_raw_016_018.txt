@@ -1,0 +1,91 @@
+```json
+{
+  "act": [
+    16,
+    18
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 16,
+      "title": "The Coordinator's Fall",
+      "slug": "16-the-coordinators-fall",
+      "one_line_summary": "Iris Kane uses the partial Vantor ledger and the encrypted channel clue to expose Adrienne Sol as the operational coordinator of the cover-up, leading to Sol's arrest.",
+      "beat_summary": "Iris Kane analyzes the partial Vantor ledger log, identifying numerous 'pre-production anomaly' entries corresponding to failed load tests (payoff C004). She then investigates the unfamiliar symbol (C005) found on Adrienne Sol's system, tracing it to a secure, government-linked server for classified project oversight. With Theo Vance's corroboration and the physical evidence, Iris Kane compiles an irrefutable case against Adrienne Sol, confirming her as the operational coordinator who buried the true cause of the Kessler Line collapse (reveal MR004). Adrienne Sol is arrested. Commissioner Aldous Renn publicly praises Iris Kane's tenacity, but his underlying relief is palpable, hinting at a contained narrative.",
+      "must_happen": [
+        "Iris Kane analyzes the partial Vantor ledger log, confirming the 'pre-production anomaly' codes correspond to failed load tests (payoff C004).",
+        "Iris Kane investigates the unfamiliar symbol (C005) on Adrienne Sol's system, tracing it to a government-linked classified project server.",
+        "Iris Kane compiles the evidence, including Theo Vance's testimony and the core sample report, to build an irrefutable case against Adrienne Sol.",
+        "Adrienne Sol is arrested as the operational coordinator of the Kessler Line cover-up (reveal MR004).",
+        "Commissioner Aldous Renn publicly commends Iris Kane, subtly attempting to contain the narrative and manage the fallout."
+      ],
+      "must_not": [
+        "Aldous Renn's direct involvement or name is not yet linked to the fast-track or the overall conspiracy.",
+        "Iris Kane does not reveal the core sample's existence to the public or the commission.",
+        "Adrienne Sol does not provide any information about Aldous Renn or the top tier."
+      ],
+      "opens_with": "The partial Vantor ledger log glowed on Iris Kane's screen, a digital Rosetta Stone of lies. She scrolled through the 'pre-production anomaly' entries, each one a suppressed failure, each one a death.",
+      "cliffhanger": "Iris Kane watched the news report of Adrienne Sol's arrest, the camera flashing on the Vantor Group tower. But then a different image appeared: a close-up of the unfamiliar symbol she'd seen on Sol's system, now visible on a discreet plaque next to the entrance of a high-security government building. The conspiracy went higher.",
+      "signature_detail_hint": "The faint, almost imperceptible watermark on the Vantor ledger printout, a stylized 'R' in the corner, which Iris Kane dismisses as a corporate logo.",
+      "emotional_beat": "A grim satisfaction at exposing another layer of the conspiracy, immediately followed by the chilling realization that the architect remains hidden, and the danger persists.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Payoff C004 and C005, and reveal MR004 by exposing Adrienne Sol as the operational coordinator. Ensure the physical evidence drives the reveal. Set up the next layer of the conspiracy, hinting at a government connection without naming Aldous Renn. No romance.",
+      "carries_to_next": "Adrienne Sol is arrested, but Iris Kane now suspects an even higher tier, linked to the mysterious symbol and a government entity. She will now seek to understand this new connection."
+    },
+    {
+      "chapter": 17,
+      "title": "The Architect's Shadow",
+      "slug": "17-the-architects-shadow",
+      "one_line_summary": "Iris Kane investigates the government-linked symbol and the classified server, uncovering evidence of a systemic, high-level directive that enabled the fast-track, further isolating her.",
+      "beat_summary": "Following Adrienne Sol's arrest, Iris Kane focuses on the unfamiliar symbol (C005) and the government-linked classified server. She uses her network to discreetly inquire about the server's function, learning it's used for 'special project' oversight and fast-tracking critical infrastructure. She obtains a redacted internal memo from the server, indicating a 'Directive 63' for accelerated approvals (plant C006), and a log of unusual, high-level access requests to Vantor's original contract files just before the fast-track (plant C007). Iris Kane attempts to get more information from Theo Vance, who is hesitant, only confirming that Adrienne Sol took orders from 'above' but never named a specific person. Iris Kane realizes the pattern of these directives suggests a deliberate, systemic bypass of safety protocols, orchestrated at the highest levels, but still without a name.",
+      "must_happen": [
+        "Iris Kane investigates the government-linked server and the meaning of the unfamiliar symbol (C005) she found.",
+        "Iris Kane discovers a redacted internal memo, 'Directive 63,' outlining accelerated approval processes for critical infrastructure projects (plant C006).",
+        "Iris Kane uncovers a log of unusual, high-level access to Vantor's original contract files just prior to the fast-track approval (plant C007).",
+        "Iris Kane attempts to get more information from Theo Vance, who confirms Adrienne Sol took orders from 'above' but cannot name the person.",
+        "Iris Kane realizes the fast-track wasn't an anomaly, but a directed, systemic bypass from a high-level authority, though the architect remains unnamed."
+      ],
+      "must_not": [
+        "Aldous Renn is not named or directly implicated in Directive 63 or the high-level access.",
+        "Iris Kane does not directly confront anyone from the government regarding Directive 63.",
+        "The core sample is not revealed or used."
+      ],
+      "opens_with": "The symbol pulsed in Iris Kane's mind—a stylized 'R' she'd dismissed as a Vantor watermark. But now, after Adrienne Sol's arrest, she saw it on a different building, a government annex for 'special projects.'",
+      "cliffhanger": "Iris Kane stared at the two documents: Directive 63, ordering accelerated approvals, and the access log showing high-level inquiries into Vantor's contract. No name. Just a pattern. It was like looking at the shadow of a structure, knowing the architect was there, but unable to see their face.",
+      "signature_detail_hint": "The paper of Directive 63 felt oddly heavy, almost like bond paper, suggesting its importance, yet the content was deliberately vague and generic.",
+      "emotional_beat": "Growing frustration and a sense of being outmaneuvered by an invisible, powerful adversary, compounded by the chilling realization of the systemic nature of the corruption.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Plant C006 (Directive 63) and C007 (high-level access logs) to point towards the systemic nature of the higher-tier conspiracy. Emphasize the lack of a named individual, keeping the architect in shadow. Maintain the institutional thriller tone. No romance.",
+      "carries_to_next": "Iris Kane has evidence of a high-level directive and access logs pointing to systemic corruption, but no name. She will now connect these to the original terms of reference."
+    },
+    {
+      "chapter": 18,
+      "title": "The Controlled Burn",
+      "slug": "18-the-controlled-burn",
+      "one_line_summary": "Iris Kane synthesizes the fast-track directive, the high-level access logs, and the inquiry's original scope, realizing the entire commission was designed as a controlled burn to contain the truth.",
+      "beat_summary": "Iris Kane lays out Directive 63 (payoff C006), the high-level access logs (payoff C007), and the original inquiry's terms of reference (payoff C008). She cross-references the dates and content, realizing the terms of reference, which explicitly forbade examining procurement decisions, were designed to contain the investigation *before* it reached Directive 63 and the associated high-level access. She sees the pattern: Dov Marek, then Theo Vance, then Adrienne Sol – each exposed on a schedule, each serving as a sacrificial lamb. The inquiry itself was a mechanism of cover-up, designed to exhaust public anger by sacrificing lower-tier culprits before the true architect (reveal MR005). Iris Kane understands that Commissioner Aldous Renn, as the architect of the inquiry, is the final target, and the 'R' symbol (C005) she saw earlier might not be a corporate logo but a personal initial. She now must find a way to expose Aldous Renn without being consumed by the controlled burn.",
+      "must_happen": [
+        "Iris Kane synthesizes Directive 63 (payoff C006) and the high-level access logs (payoff C007) with the inquiry's original terms of reference (payoff C008).",
+        "Iris Kane realizes the inquiry's scope was deliberately designed to prevent investigation into the systemic fast-track (reveal MR005: the inquiry is a controlled burn).",
+        "Iris Kane understands the sequential exposure of Dov Marek, Theo Vance, and Adrienne Sol was part of a larger, pre-planned sacrifice.",
+        "Iris Kane deduces that Commissioner Aldous Renn, as the architect of the inquiry, is likely the mastermind behind the entire conspiracy.",
+        "Iris Kane begins to suspect the 'R' symbol she saw earlier is Aldous Renn's initial, not a corporate logo."
+      ],
+      "must_not": [
+        "Iris Kane does not directly confront Aldous Renn yet.",
+        "The core sample is not used to implicate Aldous Renn, or revealed to the public.",
+        "Aldous Renn's name is not explicitly attached to the Vantor fast-track, only his role as architect of the inquiry-as-cover-up."
+      ],
+      "opens_with": "Iris Kane spread the documents across her table: the yellowed original terms of reference, Directive 63, and the high-level access logs. The pieces clicked into place with a chilling, sickening certainty.",
+      "cliffhanger": "Iris Kane looked at the 'R' symbol she'd sketched, then at Commissioner Aldous Renn's name on a newspaper clipping. The inquiry wasn't designed to find the truth; it was designed to bury it, and Renn was the man who had drawn the blueprint for the grave. She had to find the definitive link, before he finished his work.",
+      "signature_detail_hint": "The faint, almost invisible crease in the corner of the original terms of reference document, as if it had been folded and unfolded countless times, a private blueprint.",
+      "emotional_beat": "A profound and terrifying realization of the true scale of the betrayal, transforming her professional frustration into a cold, focused fury against the mastermind who designed the entire system.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Payoff C006, C007, and C008 to reveal MR005: the inquiry itself is a controlled burn. Iris Kane realizes Aldous Renn is the architect. Emphasize the intellectual breakthrough and the shift in focus to Renn. No romance.",
+      "carries_to_next": "Iris Kane now knows the inquiry is a cover-up orchestrated by Aldous Renn, but needs the final, irrefutable physical evidence to connect him directly to the original load-test override and burial."
+    }
+  ]
+}
+```

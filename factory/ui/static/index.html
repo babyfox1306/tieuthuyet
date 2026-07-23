@@ -282,12 +282,26 @@
       en: "Language en: write logline, directive, plots… in English. AI generates narrative + chapters in English.",
     };
 
+    function currentBook() {
+      const params = new URLSearchParams(location.search);
+      const fromQs = parseInt(params.get("book") || "0", 10);
+      if (fromQs >= 1) return fromQs;
+      try {
+        if (window.parent && window.parent !== window) {
+          const sel = window.parent.document.getElementById("book");
+          if (sel && sel.value) return parseInt(sel.value, 10) || 1;
+        }
+      } catch (_) { /* cross-origin ignore */ }
+      return 1;
+    }
+
     function formData() {
       const soEid = $("so_event_id").value.trim();
       const soText = $("so_exact_text").value.trim();
       const bcEid = $("bc_event_id").value.trim();
       const bcText = $("bc_canonical_text").value.trim();
       const payload = {
+        book: currentBook(),
         target_language: $("target_language").value,
         title: $("title").value.trim(),
         pen_name: $("pen_name").value.trim(),
@@ -400,14 +414,21 @@
 
     async function loadConcept() {
       const ws = $("workspace").value;
-      const data = await api(`/api/concept/${ws}`);
+      const book = currentBook();
+      const data = await api(`/api/concept/${ws}?book=${book}`);
       fillForm(data.concept, data);
       const lang = data.target_language || data.direction?.target_language || "vi";
       $("target_language").value = lang;
       updateLangHint(lang);
       const d = data.direction || {};
       const pen = data.pen_name || d.pen_name || "";
-      $("meta").textContent = `pen: ${pen || "(empty)"} · profile: ${d.narrative_profile || "—"} · narrative: ${d.narrative_status || "draft"} · publish: ${d.publish_strategy || "—"}`;
+      const cPath = data.concept_path || "concept.yaml";
+      $("meta").textContent = `Book ${data.book || book} · ${cPath} · pen: ${pen || "(empty)"} · profile: ${d.narrative_profile || "—"} · narrative: ${d.narrative_status || "draft"} · publish: ${d.publish_strategy || "—"}`;
+      // Relabel ending/hook for book 2+
+      const endingH = $("ending_book1")?.closest(".field")?.querySelector("h3");
+      const hookH = $("hook_book2")?.closest(".field")?.querySelector("h3");
+      if (endingH) endingH.textContent = book <= 1 ? "Cuốn 1 trả gì cho reader (case đóng)" : `Cuốn ${book} trả gì cho reader (case đóng)`;
+      if (hookH) hookH.textContent = `Hook mở cuốn ${book + 1}`;
       if (data.validation_errors && data.validation_errors.length) {
         showStatus("Chưa sẵn sàng cho develop-narrative:", "warn", data.validation_errors);
       } else if (data.concept?.concept_status === "ready") {
@@ -439,7 +460,7 @@
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData()),
         });
-        showStatus("Đã lưu nháp concept.yaml", "ok", data.validation_errors);
+        showStatus(`Đã lưu nháp Book ${data.book || currentBook()} → ${data.concept_path || "concept.yaml"}`, "ok", data.validation_errors);
         updateSteps(data);
       } catch (e) {
         showStatus("Lỗi lưu: " + e.message, "bad");
@@ -453,7 +474,11 @@
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData()),
       });
-      const data = await api(`/api/concept/${ws}/check`, { method: "POST", body: "{}" });
+      const data = await api(`/api/concept/${ws}/check`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ book: currentBook() }),
+      });
       if (data.ready) showStatus("OK — có thể đánh dấu sẵn sàng", "ok");
       else showStatus("Chưa đủ:", "bad", data.errors);
     });
@@ -489,7 +514,7 @@
         const data = await api(`/api/concept/${ws}/develop`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ pass: "all" }),
+          body: JSON.stringify({ pass: "all", book: currentBook(), ...formData() }),
         });
         if (data.ok) {
           const files = (data.files || []).map((f) => f.split(/[/\\]/).pop()).join(", ");

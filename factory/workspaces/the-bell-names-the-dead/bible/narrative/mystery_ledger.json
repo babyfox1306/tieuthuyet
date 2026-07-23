@@ -1,0 +1,134 @@
+{
+  "main_mystery": "Why does the bell, removed from Saint Orison’s Church in 1974, ring at 2:17 a.m. for selected victims in Morrow Wick—and what unfinished business compels each victim to reenact the previous death, reveal a new fragment of the past, and name the next to die?",
+  "truth": "The bell’s loop is an unfinished chain of testimony created by seven children who died, erased from the records, beneath Saint Orison’s Church in 1974. Each victim is compelled to reenact their predecessor’s final hours with one deliberate deviation, which reveals a sensory memory from the fire. The next victim is always chosen for their potential to advance the buried truth. Only by restoring the children’s names to the official death register can the cycle end.",
+  "canonical_reveal_chapter": 8,
+  "red_herrings": [
+    {
+      "id": "RH001",
+      "description": "The bell is said to choose victims at random—implying a supernatural curse targeting sinners or the guilty.",
+      "planted_chapter": 1,
+      "debunked_chapter": 8
+    },
+    {
+      "id": "RH002",
+      "description": "Gideon Rusk manipulates evidence, making it appear he is the sole orchestrator of the deaths.",
+      "planted_chapter": 2,
+      "debunked_chapter": 10
+    },
+    {
+      "id": "RH003",
+      "description": "A rumor circulates that the bell is physically missing from the church, so the sound must be a collective hallucination.",
+      "planted_chapter": 2,
+      "debunked_chapter": 6
+    },
+    {
+      "id": "RH004",
+      "description": "A supposed deathbed confession from a past victim claims the fire was an accident, not a cover-up.",
+      "planted_chapter": 4,
+      "debunked_chapter": 8
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "description": "A scorch-marked attendance ledger from 1974, found in a sealed parish cabinet, with missing names and altered signatures.",
+      "plant_chapter": 2,
+      "payoff_chapter": 10
+    },
+    {
+      "id": "C002",
+      "description": "The recurring use of soot to write the next victim’s name, matching handwriting to official records.",
+      "plant_chapter": 3,
+      "payoff_chapter": 7
+    },
+    {
+      "id": "C003",
+      "description": "A unique deviation in each victim’s reenactment—a phrase, object, or gesture not present in the previous cycle—which leads Elena to physical evidence (e.g., a scorched toy, a hidden room, a page torn from a register).",
+      "plant_chapter": 4,
+      "payoff_chapter": 8
+    },
+    {
+      "id": "C004",
+      "description": "The false stone wall in Saint Orison’s, newly disturbed, hides a sealed chamber beneath the church.",
+      "plant_chapter": 5,
+      "payoff_chapter": 10
+    },
+    {
+      "id": "C005",
+      "description": "Ada Voss’s hidden correction page in the death register, with evidence of recent alteration and Ada’s handwriting.",
+      "plant_chapter": 6,
+      "payoff_chapter": 10
+    },
+    {
+      "id": "C006",
+      "description": "A failed attempt to restrain a named victim causes witnesses to compulsively repeat fragments of the reenactment.",
+      "plant_chapter": 7,
+      "payoff_chapter": 8
+    },
+    {
+      "id": "C007",
+      "description": "A public reenactment of the ritual death occurs in the town square, with multiple witnesses describing actions that match the sealed chamber’s layout.",
+      "plant_chapter": 7,
+      "payoff_chapter": 10
+    },
+    {
+      "id": "C008",
+      "description": "A sensory memory revealed in a victim’s final moments: the smell of burning hair, children’s voices, and the sound of a heavy door closing.",
+      "plant_chapter": 8,
+      "payoff_chapter": 10
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "MR001",
+      "chapter": 7,
+      "description": "Elena’s own name appears, written in soot, before the midpoint, confirming she is the next victim and must break the cycle or die.",
+      "reveal_weight": "major",
+      "required_clues": [
+        "C002",
+        "C003"
+      ]
+    },
+    {
+      "id": "MR002",
+      "chapter": 8,
+      "description": "The bell never chooses at random: each victim is compelled to name the one person whose knowledge or evidence is needed to continue the unfinished testimony.",
+      "reveal_weight": "major",
+      "required_clues": [
+        "C003",
+        "C006"
+      ]
+    },
+    {
+      "id": "MR003",
+      "chapter": 9,
+      "description": "Ada Voss’s role is exposed: she altered the register to ensure Elena would become the final witness, not another disposable victim.",
+      "reveal_weight": "major",
+      "required_clues": [
+        "C001",
+        "C005"
+      ]
+    },
+    {
+      "id": "MR004",
+      "chapter": 10,
+      "description": "The remains of the seven children are found in the sealed chamber, the attendance ledger is restored, and Elena records their names—ending the loop.",
+      "reveal_weight": "major",
+      "required_clues": [
+        "C001",
+        "C004",
+        "C007",
+        "C008"
+      ]
+    },
+    {
+      "id": "MR005",
+      "chapter": 10,
+      "description": "Gideon Rusk’s attempts to suppress the truth are physically and legally overcome. He is arrested after attacking Elena in the chamber.",
+      "reveal_weight": "minor",
+      "required_clues": [
+        "C001"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "qc_transport_error"
+  ],
+  "source": "qc_transport_error",
+  "detail": "All models failed (['auto/fast', 'auto']): Error code: 503 - {'error': {'message': 'Maximum combo retry limit reached', 'type': 'server_error', 'code': 'service_unavailable'}}"
+}

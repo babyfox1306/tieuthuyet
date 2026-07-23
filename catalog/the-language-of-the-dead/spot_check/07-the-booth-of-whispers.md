@@ -1,0 +1,105 @@
+---
+series: the-language-of-the-dead
+book: 1
+chapter: 7
+title: The Booth of Whispers
+spice: 1
+word_count: 1379
+status: draft
+needs_fix: []
+promoted_at: '2026-07-20T15:50:54Z'
+---
+
+The interpreter booth door clicked shut behind them, sealing the air inside. There was no window, only a microphone on the desk, a speaker on the wall, and the sound of two people breathing. The space was brutally small, a glass rectangle embedded in the wall of the main hall, designed for one person to sit and translate for ten. With two of them inside, the air turned stale almost immediately, smelling of dust, old electronics, and the faint, sharp scent of Elias's soap.
+
+Sofia pressed her back against the soundproofed partition, her heart hammering against her ribs like a trapped bird. Outside, the heavy oak doors of the main hall had slammed shut an hour ago as the building settled into its nightly lockdown. They had been separated from the others, herded by the building's shifting architecture until only this booth remained open. Now, that door was locked too.
+
+"We wait," Elias said, his voice low and vibrating in the tight space.
+
+He sat on the single rolling chair, leaving Sofia to perch on the edge of the narrow desk. Her legs brushed his knees, a sparking contact that sent a jolt of adrenaline through her system that had nothing to do with fear. Or maybe it was all fear. Fear of the dark, fear of the system, and fear of this agonizing proximity to the one person she was slowly destroying.
+
+"I hate this," Sofia whispered, though she knew the room was soundproof. It felt wrong to make noise. "It feels like a coffin."
+
+Elias looked up at her, his dark eyes swallowing the dim light from the console. He tapped his fingers rhythmically against his thigh—a nervous tic she had memorized over the last week. Tap, tap, pause. Tap, tap, pause.
+
+"It's safe," he signed, his hands moving in the small gap between their bodies. "No one can mistranslate silence."
+
+Sofia bit her lower lip, the skin already raw from her anxiety. The theory that the system hunted mistranslations was crumbling, yet here they were, still terrified of their own voices. She looked down at the equipment in front of her. The mixing board was ancient, sliders yellowed with age. The microphone was a heavy, chrome beast anchored to the desk.
+
+Leaning closer, she squinted at a small, peeling sticker affixed to the base of the mic: 'Property of Department of Linguistic Correction, 1997.'
+
+A cold prickle walked down her spine. Linguistic Correction. It sounded like something out of a dystopian nightmare, not a boarding school history. The academy had been built long before 1997, but this system... this felt like a retrofit. A patch job for a problem no one talked about.
+
+"I found the records," Sofia said softly, her voice trembling. "In the archive. Nadia Petrescu. They erased her, Elias. They literally erased her from the transcripts, over and over again. Like the system is doing to us."
+
+Elias stopped tapping. He reached out, his hand hovering near hers, but he didn't touch her. The heat radiating from his palm was a physical weight in the air. He wanted to comfort her. She could see it in the desperate softening of his eyes, but he didn't know how. Words failed him, always failed him, and the silence between them stretched until it snapped.
+
+"It's... it's not your f-fault," Elias stammered.
+
+The stutter was a jagged tear in the fabric of the quiet. Sofia's body reacted instantly. Her muscles tensed, her lips parted, and her tongue curled around the correction that wanted to fly out. "It isn't your burden." "You are innocent." "We are in this together."
+
+The urge was a physical itch under her skin, a compulsive need to smooth out his rough edges, to make him understood, to make him perfect. But she knew better now. Every time she spoke for him, she rewrote him. She took his jagged truth and filed it down until it fit the system's neat little boxes. And Lea had died with perfect words.
+
+Sofia slammed her hand over her mouth, pressing her lips together until they hurt. She squeezed her eyes shut, fighting the translator in her brain that screamed to fix the sentence.
+
+Elias watched her, his expression shifting from confusion to horror. He realized what she was doing. He realized she was stopping herself from saving him.
+
+"Sofia?" he whispered. "D-Don't..."
+
+He stopped himself, grimacing. He pressed his own lips together, a mirror of her agony, punishing his own tongue for its clumsiness.
+
+The silence returned, heavier than before. It was thick with unsaid things, with the weight of their combined fear. Sofia lowered her hand slowly, her fingers trembling. She looked at Elias, really looked at him. He was pale, the shadows under his eyes deep bruises in the low light. He was terrified of disappearing, of being nothing but a distorted echo, yet he was willing to let the silence stand if it meant keeping her safe from the compulsion to speak.
+
+"It's okay," she mouthed, making no sound. She reached out and brushed a stray lock of hair away from his forehead. The contact was electric, forbidden in its tenderness.
+
+Elias turned his face into her palm, his eyes closing. He leaned into her touch, seeking anchor. The desk was hard beneath her, but his skin was warm, alive. In this tiny, soundproof box, cut off from the rest of the world and the deadly dawn approaching outside, they were the only two things that mattered.
+
+He opened his eyes and looked at her with an intensity that made her breath hitch. Slowly, deliberately, he took her hand in his. He turned it over, exposing her palm. He didn't speak. He didn't stutter.
+
+With the tip of his index finger, he traced a line across her skin.
+
+S.
+
+Her heart skipped a beat. He traced another letter.
+
+T.
+
+A.
+
+Y.
+
+Stay.
+
+The word burned into her palm like a brand. Stay with me. Stay alive. Stay silent.
+
+Sofia felt tears prick the corners of her eyes. She gripped his hand tightly, lacing her fingers through his, squeezing hard enough to hurt. She didn't need to speak. He knew. He always knew. She wasn't going anywhere. She would sit in this glass cage and hold his hand until dawn if that was what it took to keep the world from twisting his voice into something deadly.
+
+But the world was listening.
+
+A low hum started from the speaker grid above their heads. It wasn't the mechanical drone of the building's heating. It was the distinctive, sickening sound of the system booting up.
+
+Sofia froze. The lights on the mixer board flickered to life, one by one, casting a sickly green glow over their faces.
+
+"It's too early," she mouthed, panic flooding her chest. The dawn replay was scheduled for sunrise. It was still pitch black outside. Unless...
+
+Time moved differently here. Or the system didn't care about their clocks.
+
+The hum grew louder, resolving into the crackle of static. Sofia watched the VU meter needles jump, reacting to sound that wasn't there yet.
+
+Then, the audio began.
+
+It started with a replay of the hallway from hours ago. The sounds of Dmitri arguing with Pierre, muffled and distant, played through the speaker. But then the sound shifted. It sharpened. It wasn't the hallway anymore. It was the booth.
+
+The system was playing back the inside of the room they were currently sitting in.
+
+They heard the shuffling of clothes as Sofia had sat on the desk. They heard the squeak of the chair as Elias had shifted. And then, they heard the sound of breathing.
+
+It was amplified, distorted. It sounded like a wind tunnel, a ragged, gasping rhythm. Their breathing. It was loud, obscenely intimate.
+
+Sofia instinctively pulled her hand away from Elias, her face flushing with a mix of shame and terror. The system was monitoring them. It had been recording everything. The intimacy, the panic, the stutter.
+
+"Make it stop," she whispered, knowing it was useless.
+
+The speaker crackled again, and a new sound emerged. It was the rhythmic thumping of a heart. Hers. It was beating so fast the microphone had picked it up through her chest, resonating against the desk.
+
+Then came Elias's voice. But it wasn't his.

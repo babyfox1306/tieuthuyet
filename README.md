@@ -18,6 +18,18 @@ Triết lý: **recon tìm ngách** → **Narrative OS hiểu truyện** → **Ca
 
 > Ghi các sửa engine / vận hành như **bản vá**, kèm ngày giờ (UTC+7) và lý do. Chi tiết kiến trúc: `spec_kdp_subniche_recon.md`.
 
+### 2026-07-19 ~09:40–10:35 — Cấu trúc chương / export title (khép vòng)
+
+| | |
+|--|--|
+| **Ngày giờ** | **2026-07-19** khoảng **09:40–10:35 UTC+7** (phát hiện trên `the-kessler-line`, vá engine toàn cục). |
+| **Triệu chứng** | Catalog/UI/EPUB thiếu tên chương rõ; file `01-01-…`; ch6 mở đầu cụt + `subtitle` chứa thoại; export nhìn “sai cấu trúc”. |
+| **Nguyên nhân gốc** | **Quy trình chưa khép kín** (không phải “máy hỏng xuất” nói chung): (1) promote **cố ý** strip `# Chapter N: Title` → YAML `title` nhưng UI đọc body trần; (2) plan slug đã có `01-…` + `chapter_filename` thêm `01-` lần nữa; (3) EN thiếu heading → `extract_subtitle` nhặt thoại vào `meta.subtitle`; (4) EG-01 chỉ bắt **cụt cuối**, không bắt **cụt đầu**; (5) sync catalog→ready có thể ghi body không heading. Máy chỉ góp phần hẹp (rewrite ch6 cụt đầu). |
+| **Files** | `factory/engine/lib/catalog.py`, `export_gate.py`, `writer_completeness.py`, `machine_qc.py`, `plan_normalize.py`, `factory/ui/factory_workflow.py`; tests: `test_catalog_export_titles.py`, `test_writer_completeness.py`; catalog Kessler sửa tay + EPUB re-export. |
+| **Vá (hai lớp)** | **Lớp A — sửa dữ liệu/đường đọc:** normalize slug; EN không invent subtitle; UI/Vella/sync gắn lại `Chapter N: Title`; export bỏ subtitle bẩn; EPUB `<h1>` = tên chương. **Lớp B — fail loud (tiết kiệm token):** writer bắt buộc `# Chapter N: Title` + mở đầu không chữ thường; fail cấu trúc → **STRUCTURE REWRITE** (không continuation); `machine_qc` keys `missing_chapter_heading` / `truncated_opening`; EG-03 bắt truncated opening + polluted EN subtitle. |
+| **Operator — điều dẫn tới** | 1) Writer phải dòng 1 = `# Chapter N: Title` (EN) / `# Chương N: …` (VI). 2) Thấy `missing_chapter_heading` / `truncated_opening` / EG-03 → **đừng approve**; để pipeline STRUCTURE REWRITE hoặc viết lại từ đầu. 3) Filename chuẩn `NN-slug.md` (không `01-01-`). 4) EN: title chỉ trong YAML + EPUB `<h1>` — body catalog **không** giữ `#` (EG-03). 5) Sau sửa engine cũ: `repair-catalog` rồi kiểm tra UI có heading; export EPUB và mở ch1 xem `<h1>`. 6) Đừng `continuation` tay trên bản cụt đầu — đốt token vô ích. |
+| **Workspace ví dụ** | `the-kessler-line` — đã rename file, sửa ch6/ch11, EPUB tại `catalog/the-kessler-line/books/01-the-kessler-line/exports/epub/`. |
+
 ### 2026-07-14 ~20:20–20:40 — Canon registry + outliner tên lead
 
 | | |
@@ -107,9 +119,10 @@ KDP Sub-niche Recon/
 │   │       ├── canon_registry.py       # SSOT tên lead + cast allowlist + approve-plan
 │   │       ├── canon_guard.py          # Forbidden lead aliases lúc promote
 │   │       ├── plan_qc.py              # Plan QC + NC-01..NC-07 + absent-ML romance
-│   │       ├── machine_qc.py           # format_fix / content_fail / length buckets
+│   │       ├── machine_qc.py           # format_fix / content_fail / length (+ heading/opening)
+│   │       ├── writer_completeness.py  # incomplete ≠ success; STRUCTURE REWRITE nếu cụt đầu
 │   │       ├── export_gate.py          # EG-01..EG-13 trước promote/export
-│   │       ├── plan_normalize.py       # Unwrap plan, flatten must_happen
+│   │       ├── plan_normalize.py       # Unwrap plan, flatten must_happen, scrub slug NN-
 │   │       ├── write_guards.py         # State gate, prior excerpt
 │   │       ├── qc_eval.py              # QC hard-fail continuity/voice
 │   │       ├── chapter_reasons.py      # Lý do needs_fix / needs_review (UI + batch log)
@@ -200,6 +213,18 @@ Batch UI: `supervised` vs `auto`. Auto **không** infinite-rewrite `needs_fix` f
 **Không sửa tay `prompts/ch_NNN.txt`** nếu sẽ chạy lại `render-prompts` — sửa `master_plan.json` hoặc narrative ledger.
 
 Format prompt mẫu (tham chiếu tay): `archive/scripts/prompt_chapter3_ceo_explicit.txt`
+
+### Hợp đồng cấu trúc chương (bắt buộc — tiết kiệm token)
+
+Writer / ready / promote phải tuân:
+
+1. **Dòng 1 pipeline:** `# Chapter N: <Title>` (EN) hoặc `# Chương N: <Tiêu đề>` (VI).
+2. **Câu prose đầu:** chữ hoa / mở thoại — **không** bắt đầu giữa câu (`the inevitable;…`).
+3. **Catalog body:** không giữ `# Chapter` (EG-03); tên nằm YAML `title` → EPUB/DOCX `<h1>` / Heading 1.
+4. **Filename:** `NN-slug.md` — slug **không** mang sẵn `01-` (engine `normalize_chapter_slug`).
+5. **Fail loud:** `missing_chapter_heading` / `truncated_opening` / EG-03 → STRUCTURE REWRITE hoặc viết lại; **không** continuation tay.
+
+Chi tiết ngày/nguyên nhân: patch log **2026-07-19** phía trên; spec §6.10 EG-03.
 
 ---
 
@@ -386,7 +411,7 @@ Sau khi đổi `target_language`: `render-prompts` (hoặc `fix-plans`) rồi `w
 | `min_word_count` | **1250** | Dưới ngưỡng → length fail (không cho qua ready) |
 | `min_publish_words` | **1250** | EG-08 export/promote |
 | `max_word_count` | 2200 | Gợi ý trần |
-| `writer_short_retries` | 2 | Expand patch khi short |
+| `writer_short_retries` | 5 | Expand patch khi short (kể cả sau LLM QC rewrite) |
 | `writer_length_max_retries` | 3 | Full rewrite khi expand chưa đủ (supervised) |
 | `writer_content_max_retries` | 2 | POV / name drift / bible (supervised) |
 | `writer_auto_max_retries` | **10** | Auto mode: content + length full rewrite |
@@ -525,9 +550,22 @@ DB và CSV nằm trong `recon/` (xem `recon/config.py`).
 - Hiện: **promote trước**, chỉ bump `current_chapter` local — không chờ LLM
 - Restart UI sau khi pull code; nếu vẫn fail → đọc toast `export gate chặn promote: EG-…`
 
+### Thiếu tên chương / `01-01-*.md` / EG-03 truncated opening (2026-07-19)
+
+| Dấu hiệu | Việc làm |
+|----------|----------|
+| UI/prose không có `# Chapter N: Title` trên đầu (sau pull code mới phải có) | Restart UI; nếu catalog cũ → mở chương, xác nhận meta `title`; engine gắn heading khi đọc |
+| File `01-01-the-….md` | Bug slug cũ — đã `normalize_chapter_slug`; rename hoặc `repair-catalog` + promote lại |
+| `missing_chapter_heading` / `truncated_opening` | **Không approve.** Để STRUCTURE REWRITE hoặc viết lại từ dòng `# Chapter N:` |
+| EG-03 `polluted EN subtitle` | Xóa `subtitle` trong frontmatter EN (chỉ giữ `title`) rồi export lại |
+| EPUB không thấy tên chương | Export lại; mở `OEBPS/chapter_001.xhtml` — phải có `<h1>…</h1>` |
+
+Nguyên nhân + vá: README patch log **2026-07-19**; spec §6.10.11.
+
 ### Chương cụt / EG-01 / KDP spelling
 
 - EG-01: body kết giữa câu → sửa catalog md rồi export lại
+- EG-03 truncated opening: body **bắt đầu** giữa câu → cùng xử lý như cụt đầu (viết lại mở chương), không chỉ nối đuôi
 - KDP Quality: sửa từ bịa (vd. `hypoxiate` → `go hypoxic`) trong `catalog/.../chapters/` rồi `export --cover`
 
 ### Batch treo / `batch dang chay`

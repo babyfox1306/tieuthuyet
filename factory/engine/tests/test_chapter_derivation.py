@@ -22,6 +22,20 @@ class ChapterDerivationTests(unittest.TestCase):
     def test_derive_milestones_ten(self) -> None:
         self.assertEqual(derive_milestones(10), [1, 2, 5, 7, 10])
 
+    def test_derive_milestones_merges_authorship_gates(self) -> None:
+        concept = {
+            "forbidden_phrase_gates": [
+                {"id": "a", "unlock_chapter": 18, "phrases": ["x"]},
+                {"id": "b", "unlock_chapter": 19, "phrases": ["y"]},
+            ],
+            "binding_condition": {"reveal_chapter": 20, "canonical_text": "z", "event_id": "e"},
+            "surface_order": {"event_id": "e", "exact_text": "s", "visible_from_chapter": 1},
+        }
+        self.assertEqual(
+            derive_milestones(22, concept),
+            [1, 4, 11, 16, 18, 19, 20, 22],
+        )
+
     def test_derive_milestones_thirty(self) -> None:
         self.assertEqual(derive_milestones(30), [1, 6, 15, 22, 30])
 

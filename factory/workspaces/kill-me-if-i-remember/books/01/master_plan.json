@@ -1,0 +1,1283 @@
+{
+  "book": 1,
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "Rooftop",
+      "slug": "rooftop",
+      "one_line_summary": "Sloane Mercer wakes on a rooftop beside her sister's body, holding a contract in her own handwriting that orders her death at sunrise, and the masked assassin she apparently hired steps from the shadows.",
+      "beat_summary": "Sloane Mercer awakens on a rooftop with no memory of how she got there. A few feet away lies the body of her younger sister, Mara, motionless. In her hand is a folded contract in her own precise handwriting, ordering 'CLIENT TERMINATION AT SUNRISE' with her name as the subject. Before she can process, Lucian Vey emerges from the rooftop shadows—cold, efficient, and unnervingly familiar. He confirms the contract is legitimate and that Sloane hired him to kill her. Sloane's mind reels through a three-month void she cannot explain. As she struggles to recall, her hand traces an unconscious circle on her left wrist. Lucian's rifle shifts—a quarter turn of the focus ring—a silent tic that speaks of internal conflict. A distant siren or approaching vehicle forces them off the roof; Lucian grabs her arm and they flee into the night.",
+      "must_happen": [
+        "Sloane Mercer wakes on a rooftop, disoriented, and sees the body of her sister Mara Mercer several feet away.",
+        "Sloane Mercer finds a folded contract in her own handwriting, dated during the gap, ordering her death at sunrise (clue C003 planted).",
+        "Lucian Vey appears and confirms the contract is real, that she hired him, but offers no further explanation.",
+        "Sloane Mercer realizes she has no memory of the past three months and panics.",
+        "[ROMANCE] Lucian Vey says Sloane Mercer's name with a quiet intimacy that contradicts his role, triggering a flash of unwelcome familiarity she cannot name."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the meaning of the wrist tic (the circle sequence) or its connection to her past.",
+        "Sloane Mercer does not discover the binding condition hidden in the contract beyond the surface order.",
+        "Sloane Mercer does not physically approach or touch Mara's body."
+      ],
+      "opens_with": "The contract said her name, but the body at her feet was her sister's.",
+      "cliffhanger": "A light sweeps across the rooftop below—a vehicle arriving—and Lucian Vey's grip tightens on her arm. 'We have to move. Now.'",
+      "signature_detail_hint": "The quarter-turn of Lucian Vey's rifle focus ring as he assesses the scene before speaking—a tic that betrays conflict no matter how steady his voice.",
+      "emotional_beat": "Dislocation, profound loss, and the first strand of unwilling trust toward a stranger who should be an enemy.",
+      "spice": 1,
+      "spice_note": "Subtle romantic tension in Lucian Vey's intimate tone and the unaccountable pull Sloane Mercer feels despite her shock.",
+      "chapter_task": "Write 1600-1900 words establishing the rooftop scene, contract discovery, and Lucian Vey's entrance from Sloane Mercer's limited POV. Include physical details (never reaching the body) and the first [ROMANCE] micro-beat. Plant C003 explicitly.",
+      "carries_to_next": "Sloane Mercer's desperation for answers, the contract in her possession, and the growing suspicion that her amnesia is engineered.",
+      "narrative": {
+        "clues_plant": [
+          "C003"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Wakes on rooftop beside what appears to be Mara's body",
+            "Sloane Mercer: Holds contract in her handwriting: CLIENT TERMINATION AT SUNRISE",
+            "Sloane Mercer: Knows she is a federal firearms investigator with three months missing",
+            "Sloane Mercer: Believes Mara is dead",
+            "Sloane Mercer: Does not know the meaning of her wrist tic or the binding condition.",
+            "Lucian Vey: Knows the full binding condition and the surface order",
+            "Lucian Vey: Knows Mara's death was staged",
+            "Lucian Vey: Knows Sloane's pre-erasure plan (most of it, including the staged death and his role)",
+            "Lucian Vey: Knows the contract he must execute if Rook restores obedient identity",
+            "Lucian Vey: Will not reveal anything",
+            "Lucian Vey: His tic (quarter-turn focus ring) signals his internal conflict.",
+            "Mara Mercer: Alive and in hiding",
+            "Mara Mercer: Knows the staged shooting plan (she consented)",
+            "Mara Mercer: Knows her role: fall, blood pack, hand rhythm signal later",
+            "Mara Mercer: Knows Sloane's plan to hide the ledger and erase memory",
+            "Mara Mercer: Does not know all details of Rook's manipulation or the overwrite.",
+            "Cassian Rook: Knows he altered seven target files to eliminate witnesses",
+            "Cassian Rook: Knows he created Sloane's conditioning",
+            "Cassian Rook: Knows he planned for her discovery as step seven of his design",
+            "Cassian Rook: Does not know that Sloane discovered his plan and wrote over his ending before erasing her memory",
+            "Cassian Rook: Does not know the mirror key is Mara's hand rhythm",
+            "Cassian Rook: Knows the surface order and binding condition (he designed it)."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 2,
+      "title": "The Contract",
+      "slug": "the-contract",
+      "one_line_summary": "Sloane Mercer presses Lucian Vey for answers and discovers the contract paper dates to her own office during the missing months, while an unconscious muscle memory reveals the first crack in her erased past.",
+      "beat_summary": "Sloane and Lucian regroup in his car. She interrogates him about the contract, learning only that she approached him under a false identity. Under the dome light, she examines the contract's paper and recognizes the micro-perforation of her office's offline printer—dating it to two months ago, within the gap (C001 planted). Frustrated, she makes the wrist circle again, unconsciously, and Lucian's eyes follow it without comment (C004 planted). Their voices rise until a moment of proximity—Lucian's hand on the steering wheel reveals a scar that Sloane's body remembers though her mind doesn't. Her phone buzzes: an unknown number. The message is from Cassian Rook, her handler, warning her that she is being monitored.",
+      "must_happen": [
+        "Sloane Mercer interrogates Lucian Vey about how she hired him; he gives evasive answers, revealing only surface details.",
+        "Sloane Mercer identifies the contract paper as coming from her office's offline printer, placing its creation during the gap (C001 planted).",
+        "Sloane Mercer unconsciously performs the dry-fire wrist circle sequence, and Lucian Vey observes without explanation (C004 planted).",
+        "[ROMANCE] Sloane Mercer notices a scar on Lucian Vey's hand—her stomach reacts before her mind catches up, a visceral memory she cannot access."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the binding condition hidden in the contract.",
+        "Sloane Mercer does not recall any specific events from the three-month gap.",
+        "Sloane Mercer does not discover that Mara's death was staged or that Mara is alive."
+      ],
+      "opens_with": "The contract's corner had a micro-perforation from a printer she hadn't used since before the gap.",
+      "cliffhanger": "Sloane Mercer's phone buzzes with a message from an unknown number: 'You're not the only one watching the clock, Mercer.'",
+      "signature_detail_hint": "The two-finger rotation Lucian Vey uses to turn the car key—a mirror of his rifle focus ring tic, revealing a man who controls every motion.",
+      "emotional_beat": "Frustration, creeping fear, and the unsettling certainty that her body knows things her mind refuses to retrieve.",
+      "spice": 1,
+      "spice_note": "Tension of proximity and suppressed familiarity during interrogation; no physical intimacy beyond a charged glance.",
+      "chapter_task": "Write 1600-1900 words covering the car interrogation, contract examination, and first emergence of the conditioned reflex (wrist circle). Include [ROMANCE] micro-beat and plant C001 and C004 explicitly. Maintain tight Sloane Mercer POV.",
+      "carries_to_next": "The knowledge that the contract was created recently, the wrist tic as a potential clue, and the first direct contact from Cassian Rook.",
+      "narrative": {
+        "clues_plant": [
+          "C001",
+          "C004"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Wakes on rooftop beside what appears to be Mara's body",
+            "Sloane Mercer: Holds contract in her handwriting: CLIENT TERMINATION AT SUNRISE",
+            "Sloane Mercer: Knows she is a federal firearms investigator with three months missing",
+            "Sloane Mercer: Believes Mara is dead",
+            "Sloane Mercer: Does not know the meaning of her wrist tic or the binding condition.",
+            "Lucian Vey: Knows the full binding condition and the surface order",
+            "Lucian Vey: Knows Mara's death was staged",
+            "Lucian Vey: Knows Sloane's pre-erasure plan (most of it, including the staged death and his role)",
+            "Lucian Vey: Knows the contract he must execute if Rook restores obedient identity",
+            "Lucian Vey: Will not reveal anything",
+            "Lucian Vey: His tic (quarter-turn focus ring) signals his internal conflict.",
+            "Mara Mercer: Alive and in hiding",
+            "Mara Mercer: Knows the staged shooting plan (she consented)",
+            "Mara Mercer: Knows her role: fall, blood pack, hand rhythm signal later",
+            "Mara Mercer: Knows Sloane's plan to hide the ledger and erase memory",
+            "Mara Mercer: Does not know all details of Rook's manipulation or the overwrite.",
+            "Cassian Rook: Knows he altered seven target files to eliminate witnesses",
+            "Cassian Rook: Knows he created Sloane's conditioning",
+            "Cassian Rook: Knows he planned for her discovery as step seven of his design",
+            "Cassian Rook: Does not know that Sloane discovered his plan and wrote over his ending before erasing her memory",
+            "Cassian Rook: Does not know the mirror key is Mara's hand rhythm",
+            "Cassian Rook: Knows the surface order and binding condition (he designed it)."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 3,
+      "title": "The Memory of Touch",
+      "slug": "the-memory-of-touch",
+      "one_line_summary": "Sloane Mercer returns to her apartment only to find a stranger's version of her life, while a hidden note and the deliberate use of her wrist tic bring her closer to the trap she set, and Lucian Vey's touch sparks a fragment of the woman she no longer knows.",
+      "beat_summary": "Sloane returns to her apartment, hoping for anchor. The digital lock accepts a code she doesn't consciously know. Inside, she finds evidence of her own recent activity—a coffee cup in the sink, security circuit disarmed—but she cannot recall (C002 planted). A hidden note in her sock drawer bears a string of numbers: a fragment of the transaction ledger she hid from herself. She deliberately performs the wrist circle, this time feeling a flicker of muscle memory, a sequence that feels like a firing position. Lucian watches from the doorway; when she reaches for a drawer, his hand closes on her arm, and for a split second Sloane feels tactile familiarity—his skin on hers, somewhere dark and close. Then the window shatters the intimacy: a movement in the alley below. Rook has arrived.",
+      "must_happen": [
+        "Sloane Mercer returns to her apartment and discovers signs of her own recent activity that she cannot remember (C002 planted).",
+        "Sloane Mercer finds a hidden note in her own handwriting containing a numeric fragment from the ledger she hid.",
+        "Sloane Mercer deliberately performs the wrist circle sequence and feels the muscle memory, realizing the motion is intentional training.",
+        "Sloane Mercer concludes her memory loss is not natural but induced.",
+        "[ROMANCE] Lucian Vey touches Sloane Mercer's arm to stop her opening a drawer, and she experiences a flash of tactile déjà vu—his palm against her skin in a dark room."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn that Mara is alive or staged her death.",
+        "Sloane Mercer does not discover the binding condition of the contract.",
+        "The numeric fragment does not reveal the complete ledger or explicitly name the conspiracy."
+      ],
+      "opens_with": "The lock was digital, but her thumb moved across the keypad before her brain caught up—a code she didn't know she remembered.",
+      "cliffhanger": "A shadow moves below the apartment window—Cassian Rook is there, and the glint of a rifle confirms he is not alone.",
+      "signature_detail_hint": "A faint scratch mark on the apartment doorframe at wrist height, as if someone measured exactly her arm reach—a clue she left for herself but cannot interpret.",
+      "emotional_beat": "Escalating unease, the horror of being a stranger in her own home, and the first active step toward trusting Lucian Vey despite his role as her executioner.",
+      "spice": 1,
+      "spice_note": "Tension of proximity and inexplicable physical recognition during the touch; no explicit content, focus on emotional and sensory flash.",
+      "chapter_task": "Write 1600-1900 words covering the apartment search, the deliberate wrist circle, and the tactile [ROMANCE] micro-beat. Plant C002 explicitly. End with Rook's arrival setting up act transition.",
+      "carries_to_next": "The numeric ledger fragment, the confirmation that Sloane Mercer prepared for this night, and the direct threat of Cassian Rook's surveillance.",
+      "narrative": {
+        "clues_plant": [
+          "C002"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has examined the contract paper stock (dated during the gap)",
+            "Sloane Mercer: Has unconsciously performed the dry-fire wrist circle sequence without understanding its origin",
+            "Sloane Mercer: Begins to suspect her memory loss is not natural",
+            "Sloane Mercer: Still believes Mara is dead",
+            "Sloane Mercer: Does not know Lucian's role or the binding condition.",
+            "Lucian Vey: Has accompanied Sloane through initial investigation",
+            "Lucian Vey: Has continued to withhold the binding condition and the full truth",
+            "Lucian Vey: Observes her wrist tic without commenting",
+            "Lucian Vey: His POV at ch5 will show his internal cost and his knowledge of the staged death.",
+            "Mara Mercer: Still hidden",
+            "Mara Mercer: No direct contact with Sloane",
+            "Mara Mercer: Her survival is known to Lucian but not to Rook (Rook does not know she is alive)",
+            "Mara Mercer: Her hidden truth includes her survival and role in the staged death.",
+            "Cassian Rook: Monitoring Sloane's investigation",
+            "Cassian Rook: Confident she will follow his design",
+            "Cassian Rook: Does not yet sense her hidden counter-plan",
+            "Cassian Rook: His first move forced them off the roof to prevent Sloane examining the body."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 3
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 4,
+      "title": "The First Bullet",
+      "slug": "the-first-bullet",
+      "one_line_summary": "Sloane Mercer and Lucian Vey escape Rook's ambush, and a photograph found in her pocket hints at a life she cannot remember.",
+      "beat_summary": "Sloane Mercer and Lucian Vey race through the apartment as Rook's men open fire. They escape via the fire escape, barely. In the alley, Sloane discovers a photograph in her jacket pocket—herself with a man she doesn't know, dated within the gap. The photograph is bent at the corner, as if she deliberately placed it for later discovery. Lucian identifies the man as a Russian export agent connected to the weapons network. Sloane's wrist circle twitches as she processes. Lucian is grazed by a bullet, and Sloane tears a strip from her shirt to bandage his arm, their faces close in the dark.",
+      "must_happen": [
+        "Sloane Mercer and Lucian Vey evade gunfire from Rook's team and flee the apartment via the fire escape.",
+        "Sloane Mercer discovers a photograph of herself with an unknown man, dated two months ago, planted for her to find (C005 planted).",
+        "[ROMANCE] In tending Lucian Vey's wound, Sloane Mercer's hands linger on his skin, and she feels a flicker of the intimacy they once shared."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the binding condition of the contract.",
+        "Sloane Mercer does not learn that Mara Mercer is alive."
+      ],
+      "opens_with": "The bullet hit the wall where her head had been a second before.",
+      "cliffhanger": "Lucian Vey's encrypted phone buzzes with a message from an unknown number: 'The photograph is just the beginning. Come find me.'",
+      "signature_detail_hint": "The photograph's corner is bent at a precise angle, as if folded by someone who could not afford to expose the full print.",
+      "emotional_beat": "Adrenaline and confusion, followed by a moment of care that deepens Sloane Mercer's trust in Lucian Vey.",
+      "spice": 1,
+      "spice_note": "Touch and proximity during wound-tending; implicit trust forming.",
+      "chapter_task": "Write 1600-1900 words covering the escape from the apartment, the discovery of the photograph, and the medical-attention micro-beat. Plant C005 explicitly. Keep the pace tight and use the photograph as a visual anchor for the gap's mystery.",
+      "carries_to_next": "The photograph's subject and the message that their next destination is unknown.",
+      "narrative": {
+        "clues_plant": [
+          "C005"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has examined the contract paper stock (dated during the gap)",
+            "Sloane Mercer: Has unconsciously performed the dry-fire wrist circle sequence without understanding its origin",
+            "Sloane Mercer: Begins to suspect her memory loss is not natural",
+            "Sloane Mercer: Still believes Mara is dead",
+            "Sloane Mercer: Does not know Lucian's role or the binding condition.",
+            "Lucian Vey: Has accompanied Sloane through initial investigation",
+            "Lucian Vey: Has continued to withhold the binding condition and the full truth",
+            "Lucian Vey: Observes her wrist tic without commenting",
+            "Lucian Vey: His POV at ch5 will show his internal cost and his knowledge of the staged death.",
+            "Mara Mercer: Still hidden",
+            "Mara Mercer: No direct contact with Sloane",
+            "Mara Mercer: Her survival is known to Lucian but not to Rook (Rook does not know she is alive)",
+            "Mara Mercer: Her hidden truth includes her survival and role in the staged death.",
+            "Cassian Rook: Monitoring Sloane's investigation",
+            "Cassian Rook: Confident she will follow his design",
+            "Cassian Rook: Does not yet sense her hidden counter-plan",
+            "Cassian Rook: His first move forced them off the roof to prevent Sloane examining the body."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 3
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "The Contract's Weight",
+      "slug": "the-contracts-weight",
+      "one_line_summary": "Lucian Vey relives the night Sloane Mercer gave him the contract and faces the cost of his silence as Rook's trap closes.",
+      "beat_summary": "Lucian Vey's POV. He tends his wound while Sloane Mercer sleeps briefly. He recalls the night Sloane—the full-hiding Sloane—gave him the contract and the binding condition. He is tormented by his love for her and his duty. He checks his phone and finds a tracking beacon indicating Rook is monitoring them. He wakes Sloane and decides to take them to a safe location he knows, but he does not reveal the truth about Mara. In a moment of vulnerability, he touches her face before she fully awakes, and she murmurs his name in a way that cuts him. They move to a second location, where they find a dead drop with a key card (C009 planted). Sloane asks about the photograph, and Lucian tells her it connects to a man Rook eliminated.",
+      "must_happen": [
+        "Lucian Vey reflects on the night Sloane Mercer gave him the contract, revealing his internal conflict.",
+        "Lucian Vey discovers a tracking beacon from Rook and intercepts a dead drop with a key card (C009 planted).",
+        "[ROMANCE] Lucian Vey touches Sloane Mercer's face while she sleeps, and she murmurs his name with familiarity, causing him pain."
+      ],
+      "must_not": [
+        "Lucian Vey does not reveal the binding condition or that Mara Mercer is alive.",
+        "Sloane Mercer does not regain her memory."
+      ],
+      "opens_with": "He had watched her sleep often in the old life. Now every breath she took reminded him he was the one who had to end it.",
+      "cliffhanger": "The key card's magnetic strip reveals a location: the Federal Records Annex—Sloane Mercer's old office.",
+      "signature_detail_hint": "Lucian Vey's hand on the rifle focus ring, turning it precisely a quarter turn away from clarity—a tic that surfaces every time he withholds a painful truth.",
+      "emotional_beat": "Regret, love, and the crushing weight of carrying a decision that could destroy the woman he protects.",
+      "spice": 1,
+      "spice_note": "The touch carries emotional depth; no explicit intimacy.",
+      "chapter_task": "Write 1600-1900 words from Lucian Vey's limited third-person POV. Include the flashback to the contract signing, the dead drop encounter, and the [ROMANCE] micro-beat. Plant C009 explicitly through the dead drop.",
+      "carries_to_next": "The key card and the new location: Federal Records Annex.",
+      "narrative": {
+        "clues_plant": [
+          "C009"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has examined the contract paper stock (dated during the gap)",
+            "Sloane Mercer: Has unconsciously performed the dry-fire wrist circle sequence without understanding its origin",
+            "Sloane Mercer: Begins to suspect her memory loss is not natural",
+            "Sloane Mercer: Still believes Mara is dead",
+            "Sloane Mercer: Does not know Lucian's role or the binding condition.",
+            "Lucian Vey: Has accompanied Sloane through initial investigation",
+            "Lucian Vey: Has continued to withhold the binding condition and the full truth",
+            "Lucian Vey: Observes her wrist tic without commenting",
+            "Lucian Vey: His POV at ch5 will show his internal cost and his knowledge of the staged death.",
+            "Mara Mercer: Still hidden",
+            "Mara Mercer: No direct contact with Sloane",
+            "Mara Mercer: Her survival is known to Lucian but not to Rook (Rook does not know she is alive)",
+            "Mara Mercer: Her hidden truth includes her survival and role in the staged death.",
+            "Cassian Rook: Monitoring Sloane's investigation",
+            "Cassian Rook: Confident she will follow his design",
+            "Cassian Rook: Does not yet sense her hidden counter-plan",
+            "Cassian Rook: His first move forced them off the roof to prevent Sloane examining the body."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 3
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "The Records Room",
+      "slug": "the-records-room",
+      "one_line_summary": "Sloane Mercer and Lucian Vey infiltrate the Federal Records Annex to find a file tied to the photograph, but Rook's trap is waiting.",
+      "beat_summary": "Sloane Mercer uses her old clearance to access the annex. They find a file on the man in the photograph—a dead witness. But the file is a dead end. Rook has set a secondary trap. Sloane feels the conditioning pull as she sees a whiteboard with her own handwriting. She fights it, using the wrist circle. Lucian Vey helps her focus. They escape with a backup drive that contains partial records of the weapons network.",
+      "must_happen": [
+        "Sloane Mercer and Lucian Vey infiltrate the Federal Records Annex and retrieve a file on the photographed man.",
+        "Sloane Mercer resists a conditioning trigger when she sees her own handwriting on a whiteboard, using the wrist circle to ground herself.",
+        "[ROMANCE] Lucian Vey holds Sloane Mercer steady during the fugue, and she grips his hand, anchoring herself to him.",
+        "They acquire a backup drive with incomplete transaction records."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the full extent of her conditioning.",
+        "Sloane Mercer does not discover that Mara Mercer is alive."
+      ],
+      "opens_with": "Her key card still worked. That told her more about her enemies' confidence than any surveillance feed.",
+      "cliffhanger": "The backup drive contains a single file: a countdown clock labeled 'Condition: Oblivion' with her name and a timestamp at sunrise.",
+      "signature_detail_hint": "The whiteboard was calibrated to her exact writing height—footprints on the floor showed where she had stood to write the trigger phrase.",
+      "emotional_beat": "Dread, the thrill of uncovering, and the solidity of Lucian Vey's presence against the ghost of her past.",
+      "spice": 1,
+      "spice_note": "Hand-grip as anchor; a shared moment of vulnerability.",
+      "chapter_task": "Write 1600-1900 words covering the annex infiltration, the conditioning test, and the file acquisition. Include the [ROMANCE] micro-beat through physical anchoring. No new clues, but maintain tension and thread T01-T05.",
+      "carries_to_next": "The backup drive content and the countdown timer.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has examined the contract paper stock (dated during the gap)",
+            "Sloane Mercer: Has unconsciously performed the dry-fire wrist circle sequence without understanding its origin",
+            "Sloane Mercer: Begins to suspect her memory loss is not natural",
+            "Sloane Mercer: Still believes Mara is dead",
+            "Sloane Mercer: Does not know Lucian's role or the binding condition.",
+            "Lucian Vey: Has accompanied Sloane through initial investigation",
+            "Lucian Vey: Has continued to withhold the binding condition and the full truth",
+            "Lucian Vey: Observes her wrist tic without commenting",
+            "Lucian Vey: His POV at ch5 will show his internal cost and his knowledge of the staged death.",
+            "Mara Mercer: Still hidden",
+            "Mara Mercer: No direct contact with Sloane",
+            "Mara Mercer: Her survival is known to Lucian but not to Rook (Rook does not know she is alive)",
+            "Mara Mercer: Her hidden truth includes her survival and role in the staged death.",
+            "Cassian Rook: Monitoring Sloane's investigation",
+            "Cassian Rook: Confident she will follow his design",
+            "Cassian Rook: Does not yet sense her hidden counter-plan",
+            "Cassian Rook: His first move forced them off the roof to prevent Sloane examining the body."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 3
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 7,
+      "title": "The Encrypted Entry",
+      "slug": "the-encrypted-entry",
+      "one_line_summary": "Sloane Mercer cracks the backup drive and finds a journal entry in her own handwriting confirming that seven target files were corrupted, forcing her to question everything Lucian Vey has withheld.",
+      "beat_summary": "Sloane Mercer decodes the backup drive from the Federal Records Annex and discovers a single encrypted file that yields to her old passphrase. Inside is a journal entry she wrote during the missing months, referencing exactly seven altered contracts and pointing to a safety deposit box key embedded in the drive's metadata. She and Lucian Vey locate the bank and retrieve a handwritten ledger fragment before Rook's men close in. During the escape, Lucian Vey shields Sloane Mercer from an assailant; she feels the rapid beat of his heart against her back, a momentary anchor. The ledger lists a partial name that matches the dead man from the photograph (C005). Sloane Mercer now knows Rook systematically eliminated witnesses.",
+      "must_happen": [
+        "Sloane Mercer decodes the backup drive and discovers a journal entry she wrote during the gap, confirming seven corrupted contracts (C006 planted).",
+        "Sloane Mercer and Lucian Vey use the embedded key to retrieve a safety deposit box containing a handwritten ledger fragment.",
+        "[ROMANCE] Lucian Vey shields Sloane Mercer from an attacker; she feels his heartbeat and the solidity of his body, a visceral reminder of a forgotten intimacy."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the binding condition of her contract.",
+        "Sloane Mercer does not learn that Mara Mercer is alive."
+      ],
+      "opens_with": "The encrypted file answered to a passphrase Sloane Mercer didn't know she'd chosen, as if her past self had left a key inside her own muscle memory.",
+      "cliffhanger": "The ledger fragment holds a partial name—Korovin—and Sloane Mercer's own handwriting beneath it: 'Seven deaths to bury one truth. Find the eighth.'",
+      "signature_detail_hint": "The safety deposit box had been opened exactly twice before that night; the bank's log showed timestamps from the week of the gap, each signed with a thumbprint that matched Sloane Mercer's left hand.",
+      "emotional_beat": "The shock of self-discovery as Sloane Mercer reads her own words, the fear of the chase, and the unwilling trust that grows as Lucian Vey's presence steadies her.",
+      "spice": 1,
+      "spice_note": "A beat of physical protection—chest to back, heartbeat—that carries the weight of a former life she cannot recall.",
+      "chapter_task": "Write 1600-1900 words from Sloane Mercer's limited POV. Include the decryption process, the journal entry reveal (C006), the bank retrieval, and the [ROMANCE] micro-beat. Plant C006 explicitly. Maintain tension of Rook's pursuit. End with the ledger fragment and Korovin name as hook.",
+      "carries_to_next": "The Korovin name as a new lead, Sloane Mercer's growing awareness of Rook's manipulation, and the concrete evidence of seven altered targets.",
+      "narrative": {
+        "clues_plant": [
+          "C006"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has examined the contract paper stock (dated during the gap)",
+            "Sloane Mercer: Has unconsciously performed the dry-fire wrist circle sequence without understanding its origin",
+            "Sloane Mercer: Begins to suspect her memory loss is not natural",
+            "Sloane Mercer: Still believes Mara is dead",
+            "Sloane Mercer: Does not know Lucian's role or the binding condition.",
+            "Lucian Vey: Has accompanied Sloane through initial investigation",
+            "Lucian Vey: Has continued to withhold the binding condition and the full truth",
+            "Lucian Vey: Observes her wrist tic without commenting",
+            "Lucian Vey: His POV at ch5 will show his internal cost and his knowledge of the staged death.",
+            "Mara Mercer: Still hidden",
+            "Mara Mercer: No direct contact with Sloane",
+            "Mara Mercer: Her survival is known to Lucian but not to Rook (Rook does not know she is alive)",
+            "Mara Mercer: Her hidden truth includes her survival and role in the staged death.",
+            "Cassian Rook: Monitoring Sloane's investigation",
+            "Cassian Rook: Confident she will follow his design",
+            "Cassian Rook: Does not yet sense her hidden counter-plan",
+            "Cassian Rook: His first move forced them off the roof to prevent Sloane examining the body."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 3
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Recording",
+      "slug": "the-recording",
+      "one_line_summary": "Sloane Mercer and Lucian Vey follow the Korovin lead to a hidden voice recording that exposes Cassian Rook's conspiracy, and Sloane Mercer begins to suspect that her sister's death might have been staged.",
+      "beat_summary": "The partial name Korovin leads Sloane Mercer and Lucian Vey to an abandoned safehouse used by one of the eliminated witnesses. There, Sloane Mercer finds a voice recorder (C007) containing a conversation between Cassian Rook and a Russian contact; both men discuss how the seven victims were scapegoats for a larger weapons network. As she listens, Sloane Mercer's mind catches the pattern—the same one used on the rooftop: false evidence, a body that sells a story. She voices the possibility that Mara Mercer's death was staged. Lucian Vey says nothing, but his silence is an answer. Rook's men arrive; they escape through a sewage tunnel. During a tense moment, Sloane Mercer tends to a cut on Lucian Vey's arm, her hands unnervingly steady; he cups her jaw and says her name—once, softly—and the tenderness in it tells her there is more he can't say.",
+      "must_happen": [
+        "Sloane Mercer discovers a voice recording of Cassian Rook discussing the seven eliminated witnesses (C007 planted).",
+        "Sloane Mercer explicitly suspects that her sister Mara's death was part of a staged scene and says it aloud.",
+        "[ROMANCE] Lucian Vey cups Sloane Mercer's face after she tends his wound, speaking her name with a tenderness that breaks through the silence between them."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the binding condition of the contract.",
+        "Sloane Mercer does not receive confirmation that Mara Mercer is alive (only suspicion)."
+      ],
+      "opens_with": "The voice on the recording was Cassian Rook's, relaxed, as if he were ordering coffee instead of ordering a man's death.",
+      "cliffhanger": "Sloane Mercer pries open the recorder's casing and finds a stripped-down SIM card with a single number—her sister's childhood code to the shared safety-deposit box.",
+      "signature_detail_hint": "The safehouse smelled of cheap cigarettes and bleach, but the voice recorder was clean, its metal casing polished by a hand that knew not to leave prints behind.",
+      "emotional_beat": "Cold certainty mixes with dread as Sloane Mercer sees the shape of a conspiracy; the vulnerability she feels when Lucian Vey touches her face threatens to crack her composure.",
+      "spice": 1,
+      "spice_note": "A moment of quiet intimacy in the aftermath of chase—touch and voice carrying more than a confession could.",
+      "chapter_task": "Write 1600-1900 words from Sloane Mercer's limited POV. Include the discovery of C007 (voice recording), the recognition of the staged-death pattern, and the [ROMANCE] micro-beat with the jaw-cup and name. Follow knowledge constraints: she now suspects Mara is alive but does not confirm. End with the SIM card as a hook.",
+      "carries_to_next": "The SIM card number pointing to a shared safety-deposit box, Sloane Mercer's intentional suspicion about Mara, and the unresolved tension with Lucian Vey's silence.",
+      "narrative": {
+        "clues_plant": [
+          "C007"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has discovered the altered target files (C005), the journal entry (C006), and the voice recording (C007)",
+            "Sloane Mercer: Knows Rook manipulated seven contracts",
+            "Sloane Mercer: Does not yet know the binding condition or that Mara is alive",
+            "Sloane Mercer: Is beginning to suspect the staged death might not be real.",
+            "Lucian Vey: Has guided Sloane toward evidence while concealing his full knowledge",
+            "Lucian Vey: Knows she is getting closer to the trap-inside-trap",
+            "Lucian Vey: Has not revealed the binding condition",
+            "Lucian Vey: His POV at ch10 will do so.",
+            "Mara Mercer: Remains hidden",
+            "Mara Mercer: Her hand rhythm is crucial later",
+            "Mara Mercer: She is not captured until ch14",
+            "Mara Mercer: At this point she may be aware of Sloane's progress through Lucian (no direct contact)",
+            "Mara Mercer: Knows she must signal at ch11.",
+            "Cassian Rook: Still believes his plan is on track",
+            "Cassian Rook: Has not realized Sloane is executing a separate design",
+            "Cassian Rook: Knows she has accessed some altered files but believes she is following his intended path."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "The Second Journal",
+      "slug": "the-second-journal",
+      "one_line_summary": "Sloane Mercer retrieves the contents of the safety-deposit box and finds a second journal entry detailing the exact plan for the staged shooting, including proof that Mara Mercer consented—forcing her to confront the trap she set for herself.",
+      "beat_summary": "Using the SIM card number, Sloane Mercer and Lucian Vey access a safety-deposit box at a different bank. Inside is a second journal entry (C008) written by Sloane Mercer, outlining the rifle angles, blood-pack placement, and timing of the staged shooting. A photograph of Mara Mercer is included, marked with a deliberate hand signal—the mirror-key reflex. Sloane Mercer realizes she planned her own sister's false death. Before she can fully process, a Rook operative corners them in the vault. Lucian Vey neutralizes the operative, but the altercation forces them to flee. In the car, Sloane Mercer turns on him: \"You knew.\" Lucian Vey meets her eyes and says only, \"I can't answer.\" She holds his gaze, the trust between them fracturing and reforming at once. A text from Cassian Rook arrives: 'You found her little game. But the real condition activates at sunrise. Did she tell you that?'",
+      "must_happen": [
+        "Sloane Mercer retrieves a second journal entry from a safety-deposit box, containing the complete staged-shooting plan (C008 planted).",
+        "Sloane Mercer confirms that the plan was her own, including evidence of Mara Mercer's consent through the mirror-key signal.",
+        "Sloane Mercer confronts Lucian Vey about his knowledge; he refuses to answer but does not deny.",
+        "[ROMANCE] Sloane Mercer holds Lucian Vey's gaze after his non-answer, and in the silence she reads the cost in his eyes—he is not lying to protect himself, but protecting her from a truth she is not ready for."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the exact wording of the binding condition.",
+        "Sloane Mercer does not receive explicit confirmation that Mara Mercer is alive (only strong circumstantial)."
+      ],
+      "opens_with": "The safety-deposit box contained a single envelope, but the handwriting on the front was her own, the letters slightly widened—as if written by a woman who expected never to read them again.",
+      "cliffhanger": "Cassian Rook's text burns across the screen: 'Did she tell you that?' Sloane Mercer's blood goes cold—not because she received an answer, but because she knows now, for the first time, that she built this entire night to beat him, and yet he is still three moves ahead.",
+      "signature_detail_hint": "The photograph of Mara Mercer showed the faint track of a teardrop that had dried on the glossy side; Sloane Mercer knew she must have been the one who cried over it, but she couldn't remember placing the photo in the envelope.",
+      "emotional_beat": "The horror of recognizing her own orchestration, the stubborn trust that refuses to break despite Lucian Vey's silence, and the first icy certainty that she may have made a deal even she cannot survive.",
+      "spice": 1,
+      "spice_note": "A silent stare that carries more intimacy than touch—years of love and pain compressed into a single, unblinking moment.",
+      "chapter_task": "Write 1600-1900 words from Sloane Mercer's limited POV. Include the safety-deposit box retrieval, the reveal of C008 (second journal entry), the action beat with the operative, and the [ROMANCE] micro-beat of the held gaze. Follow knowledge: she now has strong proof of staging but not of Mara's current state. Plant C008 explicitly. End with Rook's text setting up chapter 10's POV shift.",
+      "carries_to_next": "The photograph and journal as clear proof of staging, the question of the 'real condition' from Rook's text, and Sloane Mercer's determination to uncover the full truth before sunrise.",
+      "narrative": {
+        "clues_plant": [
+          "C008"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has discovered the altered target files (C005), the journal entry (C006), and the voice recording (C007)",
+            "Sloane Mercer: Knows Rook manipulated seven contracts",
+            "Sloane Mercer: Does not yet know the binding condition or that Mara is alive",
+            "Sloane Mercer: Is beginning to suspect the staged death might not be real.",
+            "Lucian Vey: Has guided Sloane toward evidence while concealing his full knowledge",
+            "Lucian Vey: Knows she is getting closer to the trap-inside-trap",
+            "Lucian Vey: Has not revealed the binding condition",
+            "Lucian Vey: His POV at ch10 will do so.",
+            "Mara Mercer: Remains hidden",
+            "Mara Mercer: Her hand rhythm is crucial later",
+            "Mara Mercer: She is not captured until ch14",
+            "Mara Mercer: At this point she may be aware of Sloane's progress through Lucian (no direct contact)",
+            "Mara Mercer: Knows she must signal at ch11.",
+            "Cassian Rook: Still believes his plan is on track",
+            "Cassian Rook: Has not realized Sloane is executing a separate design",
+            "Cassian Rook: Knows she has accessed some altered files but believes she is following his intended path."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 10,
+      "title": "The Condition",
+      "slug": "the-condition",
+      "one_line_summary": "Lucian Vey wrestles with the full weight of the binding condition as the reader learns the exact words Sloane Mercer wrote, while Sloane Mercer pieces together the evidence that she authored her own death warrant.",
+      "beat_summary": "Lucian Vey keeps watch while Sloane Mercer examines the contract. In his internal narration he relives the night she gave it to him, remembering the exact binding condition: he must kill her at sunrise only if Rook restores her obedient identity. If she is still herself, the contract is void. He wrestles with the burden of that knowledge. Sloane Mercer, meanwhile, notices the micro-perforation consistent with her office printer (C001) and realizes the coffee cup in her sink (C002) proves she was active in her own apartment during the gap—she wrote the contract. She confronts Lucian, demanding the hidden condition. He says nothing, but she touches his hand and he doesn't pull away, the silence between them an acknowledgment of a history she cannot access. His encrypted phone buzzes: a signal from Mara. He hides it.",
+      "must_happen": [
+        "Lucian Vey recalls the exact wording of the binding condition during a flashback, revealing it to the reader.",
+        "Sloane Mercer deduces from the contract's paper (C001) and the apartment signs (C002) that she authored the contract and set a hidden condition.",
+        "[ROMANCE] Sloane Mercer reaches for Lucian Vey's hand as she confronts him, and the touch lingers—a silent recognition of their shared past.",
+        "Lucian Vey receives an encrypted signal from Mara Mercer that she is ready to make contact, but he does not share it."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the exact wording of the binding condition in this chapter (only the reader does through Lucian Vey's POV).",
+        "Lucian Vey does not reveal Mara Mercer's survival or the signal.",
+        "No explicit sexual content; spice remains emotional and suggestive."
+      ],
+      "opens_with": "He had memorized the condition the night she wrote it: 'Terminate at sunrise only if I am no longer myself.' Those words had lived in his chest like a second heartbeat for three months.",
+      "cliffhanger": "The encrypted phone vibrated once. Lucian Vey glanced at the screen—a code he'd taught her years ago. She's ready. He pocketed the phone and met Sloane Mercer's questioning eyes. 'We need to move.'",
+      "signature_detail_hint": "The edge of the contract paper was soft from being folded and unfolded so many times, but the crease lines were clean, as if someone had measured the fold with a ruler.",
+      "emotional_beat": "Heavy with the burden of hidden knowledge and the longing to bridge a gap that Sloane Mercer does not even know exists.",
+      "spice": 1,
+      "spice_note": "A hand‑touch charged with history; no physical intimacy beyond that.",
+      "chapter_task": "Write 1600–1900 words from Lucian Vey's limited third‑person POV. Pay off C001 and C002 through Sloane Mercer's deductions and Lucian Vey's memory. Reveal the binding condition exactly: 'Lucian Vey must kill Sloane Mercer at sunrise only if Cassian Rook restores the obedient identity. If Sloane Mercer remains herself, the contract is void.' Ensure the [ROMANCE] micro‑beat is present. End with the encrypted message cliffhanger.",
+      "carries_to_next": "The encrypted signal from Mara sets up contact in chapter 11; Sloane Mercer's suspicion that she wrote the condition; Lucian Vey's internal conflict deepens.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C001",
+          "C002"
+        ],
+        "reveals": [
+          {
+            "id": "MR001",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C001",
+              "C002"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has discovered the altered target files (C005), the journal entry (C006), and the voice recording (C007)",
+            "Sloane Mercer: Knows Rook manipulated seven contracts",
+            "Sloane Mercer: Does not yet know the binding condition or that Mara is alive",
+            "Sloane Mercer: Is beginning to suspect the staged death might not be real.",
+            "Lucian Vey: Has guided Sloane toward evidence while concealing his full knowledge",
+            "Lucian Vey: Knows she is getting closer to the trap-inside-trap",
+            "Lucian Vey: Has not revealed the binding condition",
+            "Lucian Vey: His POV at ch10 will do so.",
+            "Mara Mercer: Remains hidden",
+            "Mara Mercer: Her hand rhythm is crucial later",
+            "Mara Mercer: She is not captured until ch14",
+            "Mara Mercer: At this point she may be aware of Sloane's progress through Lucian (no direct contact)",
+            "Mara Mercer: Knows she must signal at ch11.",
+            "Cassian Rook: Still believes his plan is on track",
+            "Cassian Rook: Has not realized Sloane is executing a separate design",
+            "Cassian Rook: Knows she has accessed some altered files but believes she is following his intended path."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 11,
+      "title": "The Hand Signal",
+      "slug": "the-hand-signal",
+      "one_line_summary": "Sloane Mercer sees her sister's hand‑rhythm through a rifle scope, confirming Mara is alive and that the staged shooting was part of her own forgotten plan.",
+      "beat_summary": "Following the encrypted signal, Lucian Vey leads Sloane Mercer to a vantage point where a rifle scope is aimed at a distant window. Through the scope Sloane Mercer sees a hand—Mara's hand—repeating a rhythm that mirrors the dry‑fire sequence she has been unconsciously tracing on her wrist (C004 payoff). She recognizes the signal: Mara is alive and sending her a code. Overwhelmed, Sloane Mercer pieces together the clues: the contract's surface order (C003 payoff) was a smokescreen she wrote herself, and the photograph of the dead witness (C005 payoff) was part of the seven altered targets. She now fully accepts that she orchestrated the staged death and that Mara is an active participant. Lucian Vey confirms the binding condition, but does not speak it aloud. Sloane Mercer records the hand rhythm as a fragment of the ledger's key and plants a new clue (C010) in a dead drop for herself or Mara to retrieve.",
+      "must_happen": [
+        "Sloane Mercer sees Mara Mercer's hand‑rhythm through the rifle scope, confirming Mara is alive and the shooting was staged (C004 payoff as she recognizes the wrist sequence).",
+        "Sloane Mercer connects C003 (contract surface order) as a deliberate misdirection she wrote to fool Rook.",
+        "Sloane Mercer uses the photograph (C005) to identify the eliminated witness pattern, understanding the full conspiracy.",
+        "[ROMANCE] Sloane Mercer turns to Lucian Vey after seeing Mara's signal, and their shared look carries relief and overwhelming intimacy.",
+        "Sloane Mercer plants a new clue (C010) in a dead drop for later retrieval."
+      ],
+      "must_not": [
+        "Sloane Mercer does not retrieve the full ledger in this chapter (only a fragment of the key from Mara's rhythm).",
+        "Lucian Vey does not speak the binding condition aloud (still only known to the reader from Lucian's POV in ch10).",
+        "No explicit content; emotional intensity is high but not physical."
+      ],
+      "opens_with": "The crosshairs settled on a window three blocks away, but the hand that moved behind the glass was not the hand of a captive.",
+      "cliffhanger": "Sloane Mercer's phone captured the rhythm—fifteen sequences of the same pattern. She sent the recording to a number she didn't recognize but knew would receive it. Then she turned to Lucian Vey. 'It's not sunrise yet. She's running out of time.'",
+      "signature_detail_hint": "The window was smudged at the bottom, as if someone had pressed their palm against the glass to leave a message that condensation would erase.",
+      "emotional_beat": "A wave of hope and terror as Sloane Mercer confirms her sister lives; the crushing weight of knowing she built this trap fully aware.",
+      "spice": 1,
+      "spice_note": "Intense eye contact and silent understanding; no physical touch needed for the depth of connection.",
+      "chapter_task": "Write 1600–1900 words from Sloane Mercer's limited third‑person POV. Pay off C003, C004, C005 through the rifle scope scene and her deductions. Reveal MR002: Sloane Mercer now knows she staged her sister's death and that Mara is alive. Plant C010 as a recorded message or physical item left in a dead drop. Include the [ROMANCE] micro‑beat as a shared look of relief. End with the cliffhanger of time running out.",
+      "carries_to_next": "Mara's hand rhythm as the key to the ledger; Sloane Mercer's full acceptance of her role; C010 planted; the chase against sunrise continues.",
+      "narrative": {
+        "clues_plant": [
+          "C010"
+        ],
+        "clues_payoff": [
+          "C003",
+          "C004",
+          "C005"
+        ],
+        "reveals": [
+          {
+            "id": "MR002",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C003",
+              "C004",
+              "C005"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has discovered the altered target files (C005), the journal entry (C006), and the voice recording (C007)",
+            "Sloane Mercer: Knows Rook manipulated seven contracts",
+            "Sloane Mercer: Does not yet know the binding condition or that Mara is alive",
+            "Sloane Mercer: Is beginning to suspect the staged death might not be real.",
+            "Lucian Vey: Has guided Sloane toward evidence while concealing his full knowledge",
+            "Lucian Vey: Knows she is getting closer to the trap-inside-trap",
+            "Lucian Vey: Has not revealed the binding condition",
+            "Lucian Vey: His POV at ch10 will do so.",
+            "Mara Mercer: Remains hidden",
+            "Mara Mercer: Her hand rhythm is crucial later",
+            "Mara Mercer: She is not captured until ch14",
+            "Mara Mercer: At this point she may be aware of Sloane's progress through Lucian (no direct contact)",
+            "Mara Mercer: Knows she must signal at ch11.",
+            "Cassian Rook: Still believes his plan is on track",
+            "Cassian Rook: Has not realized Sloane is executing a separate design",
+            "Cassian Rook: Knows she has accessed some altered files but believes she is following his intended path."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 12,
+      "title": "The Key Card",
+      "slug": "the-key-card",
+      "one_line_summary": "Sloane Mercer uses the key card from Lucian's dead drop to discover the second fragment of the ledger, while recognizing the firing sequence repeated in Mara's rhythm and broadcasting a partial proof to the world.",
+      "beat_summary": "With Mara's hand rhythm decoded as a numerical sequence, Sloane Mercer realizes it corresponds to the firing sequence she has been unconsciously performing. She and Lucian Vey use the key card (C009 payoff) to access a hidden storage unit beneath the city. Inside, they find a second ledger fragment and a secure terminal. Sloane Mercer broadcasts a partial segment of the transaction records—enough to be undeniable but not enough to expose her full plan. The broadcast goes live. Minutes later, a surge of movement alerts them that Rook has triangulated the signal. They escape through an underground tunnel, moving in perfect synchronicity despite the danger. Lucian Vey shields Sloane Mercer from a collapsing grate. Their bodies press together—a brief, necessary contact—and she feels again the unwanted familiarity of his heartbeat.",
+      "must_happen": [
+        "Sloane Mercer uses the key card (C009) to access a storage unit containing the second ledger fragment.",
+        "Sloane Mercer recognizes that the hand rhythm from Mara is the same as the firing sequence she has been unconsciously tracing, linking it to her conditioning.",
+        "Sloane Mercer broadcasts a partial ledger fragment over a secure terminal, setting up the final confrontation.",
+        "[ROMANCE] Lucian Vey shields Sloane Mercer from a collapsing grate, and for a moment their bodies press together—she feels the unwanted familiarity of his heartbeat."
+      ],
+      "must_not": [
+        "Sloane Mercer does not retrieve the complete ledger (only the second fragment).",
+        "Lucian Vey does not confess his feelings verbally; his actions speak.",
+        "No explicit content; the contact is driven by danger, not designed for intimacy."
+      ],
+      "opens_with": "The key card opened a door she'd never entered, but the hallway behind it smelled like a place she had dreamed.",
+      "cliffhanger": "The broadcast went out—a fragment of the same hand rhythm, now decoded into numbers that matched the first seven lines of the transaction ledger. The clock on the wall read 04:37. Rook would see it in minutes.",
+      "signature_detail_hint": "The storage locker was numbered 1423, but the paint around the '1' was fresher, as if the number had been changed recently.",
+      "emotional_beat": "Determination and the eerie confidence of following a script she no longer remembers writing; the exhaustion of the night weighs on both leads, but the end is in sight.",
+      "spice": 1,
+      "spice_note": "They move in synchrony, a choreography born of practice she can't recall—sharing a look of trust as they work together to evade capture.",
+      "chapter_task": "Write 1600–1900 words from Sloane Mercer's limited third‑person POV. Pay off C009 by revealing that the key card grants access to the storage unit with the second ledger fragment and the broadcast terminal. Include Sloane Mercer's recognition of the firing sequence as the same hand rhythm. Show the partial broadcast (setup for ch13). Include [ROMANCE] micro‑beat through the protective moment under the grate. End with the broadcast and Rook's reaction as cliffhanger.",
+      "carries_to_next": "The broadcasted fragment draws Rook's attention; Sloane Mercer now has the location of the full ledger; the night is approaching crisis.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C009"
+        ],
+        "reveals": [
+          {
+            "id": "MR004",
+            "reveal_weight": "minor",
+            "required_clues": [
+              "C009"
+            ],
+            "min_clues_required": 1
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has seen Mara's hand-rhythm signal through the rifle scope (ch11) and recognized the repetition of the firing sequence (ch12)",
+            "Sloane Mercer: Now knows Mara is alive and that the rooftop shooting was staged",
+            "Sloane Mercer: Has broadcast a decoded fragment of the ledger (ch13)",
+            "Sloane Mercer: Still does not know the full ledger location or the overwrite.",
+            "Lucian Vey: After revealing the binding condition in ch10, now acts with Sloane knowing the condition but not the full plan",
+            "Lucian Vey: Has seen Mara's signal",
+            "Lucian Vey: Knows Rook is closing in",
+            "Lucian Vey: Continues to protect Sloane while respecting her autonomy",
+            "Lucian Vey: His POV at ch14 shows his conflict during Mara's capture.",
+            "Mara Mercer: After signaling through scope at ch11 and repeating the firing sequence at ch12, she is now in active communication with Sloane",
+            "Mara Mercer: She knows Sloane now understands the staged death",
+            "Mara Mercer: She is captured at ch14.",
+            "Cassian Rook: Becomes aware that Sloane is not following his expected script",
+            "Cassian Rook: He captures Mara at ch14 as a contingency",
+            "Cassian Rook: Still does not know about the overwrite or the mirror key",
+            "Cassian Rook: His intelligence remains sharp",
+            "Cassian Rook: he plans ahead."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 12
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 13,
+      "title": "The Design",
+      "slug": "the-design",
+      "one_line_summary": "Sloane Mercer pieces together the full conspiracy from the three pieces of evidence and realizes she orchestrated her own memory erasure, but the overwrite and the eighth contract remain out of reach.",
+      "beat_summary": "After the tunnel escape, Sloane Mercer insists on reviewing everything. She spreads out the journal entries (C006, C008) and plays the voice recording (C007) again. Connecting each thread, she understands that Cassian Rook altered seven contracts, that she discovered it, that she deliberately staged Mara's death and erased her own memory to hide the evidence. She also intuits that the contract with Lucian Vey carries a hidden condition she wrote—though she cannot recall the exact wording. Lucian watches her wrestle with the weight of her own actions, saying nothing but staying close. When she reaches for his hand, he squeezes back without hesitation. A text from Rook arrives: he has Mara's location. Sloane knows it is a trap but sees no other choice.",
+      "must_happen": [
+        "Sloane Mercer examines the three pieces of evidence together: the journal excerpt (C006), the voice recording (C007), and the staged‑shooting plan (C008), connecting them into a single conspiracy.",
+        "Sloane Mercer explicitly acknowledges that she is the architect of the night's events—the staged death, the contract, the erased memory.",
+        "Cassian Rook sends a location message implying Mara is there, forcing the next move.",
+        "[ROMANCE] Sloane Mercer reaches for Lucian Vey's hand while processing, and he squeezes back, a wordless acceptance."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the exact wording of the binding condition or the overwrite.",
+        "Sloane Mercer does not regain any specific memory of the missing three months.",
+        "No explicit sexual content."
+      ],
+      "opens_with": "She had written the plan in her own hand, and still she could not remember a single word of it. That, more than anything, told her how afraid she had been.",
+      "cliffhanger": "Rook's message ended with a single line: 'Do you remember the eighth contract, Sloane? Bring it, and I'll let your sister live.' Sloane stared at the screen. She had no idea what the eighth contract was.",
+      "signature_detail_hint": "The voice recorder had a faint dent on its side, exactly where a thumb would press if someone wanted to stop the recording before the truth became unbearable.",
+      "emotional_beat": "Exhaustion, horror, and a stubborn resolve as Sloane Mercer confronts the lengths she went to stop Cassian Rook.",
+      "spice": 1,
+      "spice_note": "A hand squeeze of understanding; no further intimacy needed.",
+      "chapter_task": "Write 1600–1900 words from Sloane Mercer's limited third‑person POV. Pay off C006, C007, and C008 by having her examine and connect them. Include the [ROMANCE] micro‑beat. Do not reveal the overwrite or the full condition to Sloane. End with Rook's text setting up chapter 14.",
+      "carries_to_next": "Rook's message about the eighth contract and Mara's location drives the next move into the trap.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C006",
+          "C007",
+          "C008"
+        ],
+        "reveals": [
+          {
+            "id": "MR003",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C006",
+              "C008"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has seen Mara's hand-rhythm signal through the rifle scope (ch11) and recognized the repetition of the firing sequence (ch12)",
+            "Sloane Mercer: Now knows Mara is alive and that the rooftop shooting was staged",
+            "Sloane Mercer: Has broadcast a decoded fragment of the ledger (ch13)",
+            "Sloane Mercer: Still does not know the full ledger location or the overwrite.",
+            "Lucian Vey: After revealing the binding condition in ch10, now acts with Sloane knowing the condition but not the full plan",
+            "Lucian Vey: Has seen Mara's signal",
+            "Lucian Vey: Knows Rook is closing in",
+            "Lucian Vey: Continues to protect Sloane while respecting her autonomy",
+            "Lucian Vey: His POV at ch14 shows his conflict during Mara's capture.",
+            "Mara Mercer: After signaling through scope at ch11 and repeating the firing sequence at ch12, she is now in active communication with Sloane",
+            "Mara Mercer: She knows Sloane now understands the staged death",
+            "Mara Mercer: She is captured at ch14.",
+            "Cassian Rook: Becomes aware that Sloane is not following his expected script",
+            "Cassian Rook: He captures Mara at ch14 as a contingency",
+            "Cassian Rook: Still does not know about the overwrite or the mirror key",
+            "Cassian Rook: His intelligence remains sharp",
+            "Cassian Rook: he plans ahead."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 12
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 14,
+      "title": "The Capture",
+      "slug": "the-capture",
+      "one_line_summary": "Lucian Vey and Sloane Mercer walk into Rook's trap; Mara Mercer is captured before they can stop it.",
+      "beat_summary": "Lucian Vey's POV. He drives to the warehouse Rook pinged, knowing it is a trap but with no alternative. Inside, they are ambushed. Lucian fights to give Sloane time, but Rook's men extract Mara through a hidden exit. Lucian is grazed by a bullet. In the aftermath, Sloane presses a cloth to his wound, their eyes locked in a moment that says more than words. Rook taunts them over the intercom, revealing he knows the binding condition and intends to use Mara to trigger Sloane's conditioning. Lucian's internal conflict rages: he loves her, but he may be forced to kill her if Rook breaks her. Swearing he will not let Rook control the outcome, he helps Sloane escape. Mara is gone.",
+      "must_happen": [
+        "Lucian Vey and Sloane Mercer are ambushed at the warehouse; Mara Mercer is captured by Cassian Rook's men.",
+        "Lucian Vey is wounded while covering Sloane Mercer's retreat.",
+        "[ROMANCE] Sloane Mercer tends to Lucian Vey's wound, their gaze holding a silent acknowledgment of the stakes.",
+        "Cassian Rook taunts Lucian Vey over the intercom, referencing the binding condition."
+      ],
+      "must_not": [
+        "Sloane Mercer does not recover the full ledger.",
+        "Mara Mercer is not rescued in this chapter.",
+        "No explicit sexual content."
+      ],
+      "opens_with": "Lucian Vey had walked into worse traps, but never with the woman he was supposed to kill pressed against his back.",
+      "cliffhanger": "Rook's voice echoed through the empty warehouse: 'You have until sunrise, Vey. Choose the woman or choose the contract. Either way, you lose.'",
+      "signature_detail_hint": "The warehouse floor was painted with numbered grid lines, as if Rook had treated the chase as a game of chess, marking every square.",
+      "emotional_beat": "Rage, desperation, and the hardening of resolve as Lucian Vey sees his worst fears realized.",
+      "spice": 1,
+      "spice_note": "Intense eye contact and a shared breath after the wound is tended; tension of imminent loss.",
+      "chapter_task": "Write 1600–1900 words from Lucian Vey's limited third‑person POV. Include the ambush, Mara's capture, the [ROMANCE] micro‑beat of wound‑tending, and Rook's taunt. Keep Lucian's internal conflict central. Do not resolve the capture.",
+      "carries_to_next": "Mara is in Rook's custody; the binding condition is now leverage; Lucian and Sloane must decide their next move.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has seen Mara's hand-rhythm signal through the rifle scope (ch11) and recognized the repetition of the firing sequence (ch12)",
+            "Sloane Mercer: Now knows Mara is alive and that the rooftop shooting was staged",
+            "Sloane Mercer: Has broadcast a decoded fragment of the ledger (ch13)",
+            "Sloane Mercer: Still does not know the full ledger location or the overwrite.",
+            "Lucian Vey: After revealing the binding condition in ch10, now acts with Sloane knowing the condition but not the full plan",
+            "Lucian Vey: Has seen Mara's signal",
+            "Lucian Vey: Knows Rook is closing in",
+            "Lucian Vey: Continues to protect Sloane while respecting her autonomy",
+            "Lucian Vey: His POV at ch14 shows his conflict during Mara's capture.",
+            "Mara Mercer: After signaling through scope at ch11 and repeating the firing sequence at ch12, she is now in active communication with Sloane",
+            "Mara Mercer: She knows Sloane now understands the staged death",
+            "Mara Mercer: She is captured at ch14.",
+            "Cassian Rook: Becomes aware that Sloane is not following his expected script",
+            "Cassian Rook: He captures Mara at ch14 as a contingency",
+            "Cassian Rook: Still does not know about the overwrite or the mirror key",
+            "Cassian Rook: His intelligence remains sharp",
+            "Cassian Rook: he plans ahead."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 12
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 15,
+      "title": "The Decision",
+      "slug": "the-decision",
+      "one_line_summary": "Sloane Mercer and Lucian Vey regroup; she uses her conditioned reflex to find the key to the full ledger, and they set out for the final confrontation.",
+      "beat_summary": "After escaping the warehouse, Sloane Mercer and Lucian Vey take shelter in a safehouse. Sloane deliberately triggers her wrist circle, allowing muscle memory to lead her to a hidden compartment containing a key card and coded coordinates for the shipping terminal where the full ledger is stored. She and Lucian discuss the binding condition: he asks if she truly wants him to execute it if Rook restores her obedient identity. She gives no answer, but her eyes say she trusts him. He cups her face, and she leans into his palm—a fleeting moment of peace. They gather their weapons and head to the terminal, knowing it will end tonight.",
+      "must_happen": [
+        "Sloane Mercer uses her conditioned wrist circle to locate a hidden key card that will access the full ledger storage.",
+        "Sloane Mercer and Lucian Vey have a charged conversation about the binding condition; she does not answer but conveys trust.",
+        "[ROMANCE] Lucian Vey cups Sloane Mercer's face, and she leans into his touch, a moment of fragile intimacy before the final fight.",
+        "They set out for the shipping terminal where Cassian Rook is holding Mara."
+      ],
+      "must_not": [
+        "The full ledger is not published in this chapter.",
+        "Mara Mercer is not rescued.",
+        "No explicit sexual content."
+      ],
+      "opens_with": "The safehouse was cold, but the silence between them was colder. Sloane Mercer pressed her thumb into the palm of her left hand and felt the answer rise through her bones.",
+      "cliffhanger": "The shipping terminal appeared on the horizon, floodlights cutting through the pre‑dawn dark. Sloane Mercer checked her weapon. 'We get Mara. Then we burn the whole thing down.'",
+      "signature_detail_hint": "The hidden compartment was lined with felt, the same material as her jacket pocket, as if she had planned for this moment with the patience of a woman who trusted no one but herself.",
+      "emotional_beat": "Determination and the quiet acceptance that they may not both survive the dawn, but they will face it together.",
+      "spice": 1,
+      "spice_note": "A gentle touch on the cheek and a lean into the palm—more intimate than a kiss in the context of their shared history.",
+      "chapter_task": "Write 1600–1900 words from Sloane Mercer's limited third‑person POV (with brief Lucian observations). Include the conditioned‑reflex discovery, the [ROMANCE] micro‑beat, and the decision to go to the terminal. Plant the key card as a setup for the final ledger retrieval in chapters 16–17.",
+      "carries_to_next": "The race to the shipping terminal for the final confrontation with Rook and the recovery of the full ledger.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has seen Mara's hand-rhythm signal through the rifle scope (ch11) and recognized the repetition of the firing sequence (ch12)",
+            "Sloane Mercer: Now knows Mara is alive and that the rooftop shooting was staged",
+            "Sloane Mercer: Has broadcast a decoded fragment of the ledger (ch13)",
+            "Sloane Mercer: Still does not know the full ledger location or the overwrite.",
+            "Lucian Vey: After revealing the binding condition in ch10, now acts with Sloane knowing the condition but not the full plan",
+            "Lucian Vey: Has seen Mara's signal",
+            "Lucian Vey: Knows Rook is closing in",
+            "Lucian Vey: Continues to protect Sloane while respecting her autonomy",
+            "Lucian Vey: His POV at ch14 shows his conflict during Mara's capture.",
+            "Mara Mercer: After signaling through scope at ch11 and repeating the firing sequence at ch12, she is now in active communication with Sloane",
+            "Mara Mercer: She knows Sloane now understands the staged death",
+            "Mara Mercer: She is captured at ch14.",
+            "Cassian Rook: Becomes aware that Sloane is not following his expected script",
+            "Cassian Rook: He captures Mara at ch14 as a contingency",
+            "Cassian Rook: Still does not know about the overwrite or the mirror key",
+            "Cassian Rook: His intelligence remains sharp",
+            "Cassian Rook: he plans ahead."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 12
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 16,
+      "title": "The Mirror Key",
+      "slug": "the-mirror-key",
+      "one_line_summary": "Sloane Mercer and Lucian Vey infiltrate the shipping terminal, rescue Mara Mercer, and use her hand rhythm to unlock the first level of the conditioned ledger while Rook prepares his final move.",
+      "beat_summary": "Sloane Mercer and Lucian Vey reach the shipping terminal. They neutralize the guards and find Mara Mercer bound to a chair in front of a terminal with a keypad. Rook appears remotely, gloating. Sloane retrieves the dead-drop recording she made in chapter 11 (C010) and plays it, activating Mara's conditioned hand rhythm. The rhythm syncs with Sloane's own wrist circle, and the terminal displays a fragment of the transaction ledger. Rook is momentarily stunned but recovers, threatening to trigger a conditioned emergency wipe that will destroy the complete evidence. Lucian frees Mara while Sloane copies the fragment to a secure channel. A firefight erupts; Lucian takes a graze to the shoulder but keeps fighting. In the chaos, Sloane and Lucian share a glance of grim determination before they press toward the main server room. Mara provides the final beats of the hand rhythm—the mirror key—to Sloane's hidden conditioning.",
+      "must_happen": [
+        "Sloane Mercer and Lucian Vey infiltrate the terminal and rescue Mara Mercer.",
+        "Sloane Mercer uses the dead-drop recording (C010) to trigger Mara Mercer's hand rhythm, which syncs with her own conditioned reflex and reveals a preliminary ledger fragment (MR005).",
+        "Cassian Rook reveals his contingency: an automated wipe that will delete the complete ledger if Sloane Mercer tries to access the root server.",
+        "[ROMANCE] In a brief pause after Lucian Vey is grazed, Sloane Mercer inspects the wound and their eyes meet—a beat of unspoken solidarity."
+      ],
+      "must_not": [
+        "The complete ledger is not published in this chapter.",
+        "Sloane Mercer does not learn the full extent of the overwrite (she still believes she simply hid the ledger, not that she overwrote Rook's ending).",
+        "Mara Mercer is not killed or permanently harmed."
+      ],
+      "opens_with": "Rook's voice echoed through the terminal speakers before they cleared the first checkpoint: 'I've been watching you follow a script you wrote for yourself, Mercer. Let's see how well you improvise.'",
+      "cliffhanger": "The server room door sealed behind them, and a red countdown began on the main screen—five minutes until the entire network purged itself. Sloane Mercer slammed the dead-drop recording into the slot. The ledger began to compile, but the wipe countdown did not stop.",
+      "signature_detail_hint": "The terminal keyboard had two worn keys—'G' and 'W'—as if someone had spent hours typing a single sequence over and over, a code she could not yet read.",
+      "emotional_beat": "The adrenaline of rescue mixed with the exhaustion of the night, but seeing Mara Mercer alive reignited a fierce determination in Sloane Mercer, while Lucian Vey's steady presence grounded her.",
+      "spice": 1,
+      "spice_note": "A shared glance and brief touch while tending Lucian Vey's wound; the intimacy of trust forged in danger.",
+      "chapter_task": "Write 1600-1900 words covering the terminal infiltration, rescue of Mara Mercer, use of C010 to trigger hand rhythm and reveal MR005 (preliminary ledger fragment), the [ROMANCE] micro-beat during wound inspection, and the cliffhanger of the five-minute wipe countdown. Ensure Sloane Mercer's knowledge remains at effective_milestone 12 (she still does not know about her overwrite). Adhere to action pacing and emotional beats.",
+      "carries_to_next": "The race against the wipe countdown to retrieve the complete ledger before Rook's contingency destroys it; the mirror key now fully transferred to Sloane Mercer's conditioned reflexes.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [
+          {
+            "id": "MR005",
+            "reveal_weight": "minor",
+            "required_clues": [
+              "C010"
+            ],
+            "min_clues_required": 1
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has seen Mara's hand-rhythm signal through the rifle scope (ch11) and recognized the repetition of the firing sequence (ch12)",
+            "Sloane Mercer: Now knows Mara is alive and that the rooftop shooting was staged",
+            "Sloane Mercer: Has broadcast a decoded fragment of the ledger (ch13)",
+            "Sloane Mercer: Still does not know the full ledger location or the overwrite.",
+            "Lucian Vey: After revealing the binding condition in ch10, now acts with Sloane knowing the condition but not the full plan",
+            "Lucian Vey: Has seen Mara's signal",
+            "Lucian Vey: Knows Rook is closing in",
+            "Lucian Vey: Continues to protect Sloane while respecting her autonomy",
+            "Lucian Vey: His POV at ch14 shows his conflict during Mara's capture.",
+            "Mara Mercer: After signaling through scope at ch11 and repeating the firing sequence at ch12, she is now in active communication with Sloane",
+            "Mara Mercer: She knows Sloane now understands the staged death",
+            "Mara Mercer: She is captured at ch14.",
+            "Cassian Rook: Becomes aware that Sloane is not following his expected script",
+            "Cassian Rook: He captures Mara at ch14 as a contingency",
+            "Cassian Rook: Still does not know about the overwrite or the mirror key",
+            "Cassian Rook: His intelligence remains sharp",
+            "Cassian Rook: he plans ahead."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 12
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 17,
+      "title": "Sunrise",
+      "slug": "sunrise",
+      "one_line_summary": "Sloane Mercer publishes the complete ledger using her own conditioned reflexes, confronts Rook one last time, and accepts the consequences as dawn breaks.",
+      "beat_summary": "With the countdown ticking, Sloane Mercer accesses the root server by performing the full hand rhythm that Mara Mercer transferred. The conditioned response unlocks the complete transaction ledger, which she broadcasts to multiple news outlets and authorities before the wipe can activate. Cassian Rook, realizing defeat, storms into the server room. He reaches for a rifle—the one he trained her to use. Sloane Mercer gets there first and, without firing, disables him. Rook is struck down by a security mechanism he activated himself, dying from the trap meant for her. The police arrive; Sloane Mercer is arrested. She consciously releases the evidence of her own seven contracts alongside the ledger, accepting accountability rather than absolution. Lucian Vey is offered an extraction route by an unknown contact but refuses, stepping to stand beside her. In the epilogue, months later, Sloane Mercer visits with Lucian Vey in a prison visitation room. There are no guarantees, but when she presses her palm to the glass, he matches it with his own. A future that exists.",
+      "must_happen": [
+        "Sloane Mercer uses her conditioned reflex (final hand rhythm) to unlock and publish the complete transaction ledger to multiple outlets (C010 payoff).",
+        "Cassian Rook dies in a final confrontation, reaching for the rifle but killed by his own security measure.",
+        "Sloane Mercer is arrested and Lucian Vey refuses extraction, standing with her.",
+        "Epilogue: months later, Sloane Mercer and Lucian Vey share a moment through glass, confirming their connection without a wedding or safety.",
+        "[ROMANCE] During the epilogue, Sloane Mercer presses her palm to the glass, and Lucian Vey matches it—a gesture of commitment."
+      ],
+      "must_not": [
+        "The complete ledger is not recalled or disputed; it is published irrevocably.",
+        "Lucian Vey does not leave Sloane Mercer to escape; he chooses to stay.",
+        "No explicit sexual content; intimacy is emotional and symbolic."
+      ],
+      "opens_with": "The countdown hit three minutes, and Sloane Mercer stopped thinking. She let her hands remember what her mind had buried.",
+      "cliffhanger": "The prison officer announced that visiting hours were over. Sloane Mercer rose. Lucian Vey did not look away. 'I'll be here tomorrow,' he said. Not a promise—just a fact.",
+      "signature_detail_hint": "The server room's air conditioning had failed, and the heat made the digits of the transaction records shimmer on the screen like water, as if the truth itself could evaporate.",
+      "emotional_beat": "The bitter relief of completing her mission, the weight of guilt she chooses to carry rather than bury, and the quiet hope of a love that survives even in captivity.",
+      "spice": 1,
+      "spice_note": "Touch of palm to glass in the epilogue; no contact but deep emotional resonance.",
+      "chapter_task": "Write 1600-1900 words covering the final publication of the ledger, Rook's death, Sloane Mercer's arrest, Lucian Vey's choice, and the epilogue visitation scene. Ensure C010 is paid off through the final reflex unlocking. Sloane Mercer now knows the overwrite and the full extent of her plan. Keep the emotional tone: acceptance and a future without guarantees. Include the [ROMANCE] micro-beat in the epilogue.",
+      "carries_to_next": "Sets up Book 2: the ledger is public, its exposure triggers unseen enemies; Sloane Mercer faces legal consequences while Lucian Vey remains at risk.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C010"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer: Has assembled the trap-inside-trap evidence in ch13, reached Mara in ch16-17, received the mirror key (Mara's hand rhythm), decoded the complete ledger from her own conditioned reflexes, published it once, broken Rook's conditioning, and accepted arrest",
+            "Sloane Mercer: Knows everything: her own plan, her guilt, the series hook.",
+            "Lucian Vey: Standing with Sloane at the climax",
+            "Lucian Vey: Knows the ledger is published, Rook is dead, Mara is free",
+            "Lucian Vey: Chooses to refuse extraction and accept legal consequences",
+            "Lucian Vey: Knows the series hook: someone in the ledger has his contract file",
+            "Lucian Vey: His hidden truth about the contract's wider network remains.",
+            "Mara Mercer: Freed by Sloane at the climax",
+            "Mara Mercer: Provides the mirror key (hand rhythm) for the ledger",
+            "Mara Mercer: Testifies months later in epilogue",
+            "Mara Mercer: Knows the ledger is published",
+            "Mara Mercer: Understands the full scope of Rook's network.",
+            "Cassian Rook: Realizes too late that Sloane overwrote his ending",
+            "Cassian Rook: Dies reaching for the rifle he trained her to use",
+            "Cassian Rook: His hidden knowledge of the wider network dies with him, but the ledger reveals it."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 17
+        },
+        "clue_beats": {}
+      }
+    }
+  ],
+  "title": "Kill Me If I Remember",
+  "total_chapters": 17,
+  "source_concept_digest": "fef07b5bcc33a05e",
+  "source_narrative_digest": "64097438c5ad0a3a"
+}

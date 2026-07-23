@@ -1,0 +1,72 @@
+{
+  "current_book": 1,
+  "current_chapter": 1,
+  "timeline": [
+    "Ch1: Iris Kane reviews the names of the sixty-three people killed in the Kessler Line tunnel collapse before opening her appointment letter.",
+    "Ch1: Iris discovers she has been appointed lead technical investigator for the Kessler Line Inquiry and must submit findings through the commission secretariat for approval.",
+    "Ch1: Iris notices that the terms of reference repeatedly frame the official cause as seismic microfracture compounded by dispatch error rather than allowing that premise to be questioned.",
+    "Ch1: Iris identifies subclause 4.3 as a barrier preventing review of procurement, vendors, contracts, policy decisions, and other matters classified as administrative discretion.",
+    "Ch1: Iris marks the phrase \"administrative discretion,\" scans the appointment letter page by page, and uses her scanner's recurring blue-stripe defect to help detect later substitutions.",
+    "Ch1: Iris leaves the appointment acceptance block unsigned and turns to a second packet labeled Initial Forensic Archive."
+  ],
+  "character_status": {
+    "Iris Kane": {
+      "location": "Her office",
+      "knows": [
+        "The Kessler Line collapse killed sixty-three passengers and employees.",
+        "The official cause is stated as seismic microfracture compounded by dispatch error.",
+        "Her appointment requires findings to pass through the commission secretariat for approval before circulation.",
+        "Subclause 4.3 excludes policy, procurement, vendor selection, contract authorization, and administrative discretion from review.",
+        "The delivered envelope bears a pressure mark indicating that a staple was removed before it reached her."
+      ],
+      "relationship_other": "Newly appointed lead technical investigator for the Kessler Line Inquiry, but distrustful of the commission's restrictive mandate.",
+      "mood": "Controlled, meticulous, skeptical, and alert to institutional manipulation."
+    }
+  },
+  "open_threads": [
+    "Whether seismic microfracture and dispatch error are the true causes of the Kessler Line collapse",
+    "Why the inquiry mandate is designed to exclude procurement, vendor, contract, and policy decisions",
+    "Who removed a staple from Iris's appointment envelope and what had been attached",
+    "Whether the commission secretariat intends to suppress or alter Iris's findings",
+    "What evidence is contained in the Initial Forensic Archive",
+    "Whether Iris will sign the appointment acceptance block"
+  ],
+  "facts_established": [
+    "The Kessler Line eastbound tunnel collapsed during evening service.",
+    "Sixty-three passengers and employees died in the collapse.",
+    "Iris Kane has been appointed lead technical investigator to the Kessler Line Inquiry, effective immediately.",
+    "The inquiry's official stated cause is \"Seismic microfracture compounded by dispatch error.\"",
+    "The terms of reference require Iris to submit findings for approval before circulation.",
+    "The inquiry remit includes reconstructing the mechanical failure sequence, assessing dispatch decisions, and recommending revisions to emergency operating procedure.",
+    "Subclause 4.3 prohibits review of policy-level determinations, procurement strategy, vendor selection, contract authorization, and administrative discretion.",
+    "The appointment envelope was hand-delivered without a courier signature or receipt.",
+    "A pressure mark on the envelope indicates that a staple had been removed before delivery.",
+    "Iris's document scanner adds a faint blue stripe to every seventh page, which she uses to make document substitutions easier to detect.",
+    "Iris has not signed the appointment acceptance block.",
+    "A second packet is labeled Initial Forensic Archive."
+  ],
+  "spice_progression": "No romantic or sexual progression; the chapter establishes investigative tension and institutional distrust.",
+  "phrases_used": [
+    "The body count arrived before the terms of reference.",
+    "Once was a description. Twice was emphasis. Three times was architecture.",
+    "grammar decorative",
+    "The dead had occupations, addresses, and next-of-kin contacts. The terms of reference had subclauses.",
+    "an insulated wall around every decision made before engineering became physical",
+    "Very tidy.",
+    "Acceptance of an appointment was not acceptance of its premise."
+  ],
+  "promoted_chapters": [
+    3,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    12,
+    14,
+    18,
+    20,
+    22
+  ]
+}

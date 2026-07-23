@@ -1,0 +1,63 @@
+{
+  "book_number": 1,
+  "total_chapters": 17,
+  "target_language": "en",
+  "case_closed": "Yes, the central mystery of why Sloane orchestrated her own trap is resolved, Rook's network is exposed, and Sloane accepts the consequences of her actions.",
+  "case_open": "Sloane Mercer awakens on a locked rooftop beside a sniper rifle and watches a masked assassin shoot her sister. With her memory erased, she must uncover why she signed a contract in her own blood that commands the assassin to kill her by dawn. The central mystery of her past actions and the true nature of her relationship with the assassin is a blank slate.",
+  "lead_internal_arc": [
+    {
+      "character": "Sloane Mercer",
+      "initial_state": "A firearms investigator who trusts her rational mind and believes her present self is innocent of any crime. She is defined by control and factual analysis, but she wakes with no memory of the past three months and a growing fear that she may not be who she thinks.",
+      "external_goal": "Survive the night, escape the rooftop, and prove the assassin is lying about her involvement.",
+      "internal_struggle": "The gradual erosion of her self-image as she recovers memories of ordering seven executions. She must reconcile her present sense of morality with the undeniable evidence that she was a killer.",
+      "transformation": "By the end, Sloane accepts full ownership of her past actions — she does not seek absolution. She reclaims agency by choosing to release the full record, sacrificing her freedom for the truth. Her internal shift is from a victim of circumstance to an architect of her own complicated legacy.",
+      "final_state": "Guilty, clear-eyed, and arrested, but no longer fragmented by a hidden past. She faces legal consequences with a chosen loyalty from Lucian at her side."
+    },
+    {
+      "character": "Lucian Vey",
+      "initial_state": "A contract assassin bound by an unbreakable blood contract to Sloane. He still loves the woman who gave that contract, but he is committed to fulfill its terms — to restore her memories and, if necessary, kill her by sunrise.",
+      "external_goal": "Follow the contract's instructions: confine Sloane, restore three sealed memories in sequence, and evaluate her to decide whether to execute her before dawn.",
+      "internal_struggle": "His love for the woman Sloane is now, versus his duty to the woman she was when she signed. Every moment of tenderness with Sloane reminds him of what they had, but he must remain an instrument of her forgotten plan, even if it destroys any chance they might have together.",
+      "transformation": "Lucian moves from recognizing only the contract's authority to recognizing Sloane's current autonomy. He initially obeys because it is a binding promise, but by the end he breaks the contract's requirement to kill her, choosing instead to stand with her against the legal fallout. His loyalty shifts from the signature to the woman who currently exists.",
+      "final_state": "Having refused the escape route, he stands beside Sloane as she is arrested, offering his presence as loyalty, not rescue. He is no longer defined solely by contracts, but by a genuine commitment to the person he loves."
+    }
+  ],
+  "act_structure": [
+    {
+      "act": 1,
+      "name": "Setup",
+      "chapters": [
+        1,
+        4
+      ],
+      "summary": "Sloane wakes on the rooftop, witnesses Mara's shooting, meets Lucian, learns of the contract, and begins to suspect the impossible truth. The first memory restoration and the first clues appear. Rook makes contact, but the web of deception is still unclear."
+    },
+    {
+      "act": 2,
+      "name": "Escalation",
+      "chapters": [
+        5,
+        9
+      ],
+      "summary": "Sloane struggles against Lucian's control while recovering fragments of memory. The relationship intensifies, including a steamy encounter in chapter 6 that restores a fragment. The power dynamic shifts as Sloane discovers the seven names and the full extent of her past orders. Rook escalates, capturing Mara at chapter 11. The tension builds toward the revelation of the central mystery."
+    },
+    {
+      "act": 3,
+      "name": "Reveal",
+      "chapters": [
+        10,
+        14
+      ],
+      "summary": "Mara signals through the scope, Sloane completes the firing sequence unlocking the ledger, and she assembles the truth from physical evidence. By chapter 13, she understands why she staged everything. Explicit spice in chapter 14 breaks the conditioning, proving her present self overrides Rook's programming. All three recordings and seven names are recovered. She seizes control from Lucian at chapter 12."
+    },
+    {
+      "act": 4,
+      "name": "Resolution",
+      "chapters": [
+        15,
+        17
+      ],
+      "summary": "Rook enters wearing Lucian's mask in the blind interval. Sloane confronts him, and he dies reaching for the rifle. Mara releases the ledger. As dawn breaks, Sloane is arrested but chooses to release the full record publicly. Lucian refuses escape to stand with her. The central mystery is resolved, but the series door opens for consequences from the families of the seven."
+    }
+  ]
+}

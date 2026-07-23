@@ -1,0 +1,85 @@
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "Rooftop",
+      "slug": "rooftop",
+      "one_line_summary": "Sloane Mercer wakes on a rooftop beside her sister's body, holding a contract in her own handwriting that orders her death at sunrise, and the masked assassin she apparently hired steps from the shadows.",
+      "beat_summary": "Sloane Mercer awakens on a rooftop with no memory of how she got there. A few feet away lies the body of her younger sister, Mara, motionless. In her hand is a folded contract in her own precise handwriting, ordering 'CLIENT TERMINATION AT SUNRISE' with her name as the subject. Before she can process, Lucian Vey emerges from the rooftop shadows—cold, efficient, and unnervingly familiar. He confirms the contract is legitimate and that Sloane hired him to kill her. Sloane's mind reels through a three-month void she cannot explain. As she struggles to recall, her hand traces an unconscious circle on her left wrist. Lucian's rifle shifts—a quarter turn of the focus ring—a silent tic that speaks of internal conflict. A distant siren or approaching vehicle forces them off the roof; Lucian grabs her arm and they flee into the night.",
+      "must_happen": [
+        "Sloane Mercer wakes on a rooftop, disoriented, and sees the body of her sister Mara Mercer several feet away.",
+        "Sloane Mercer finds a folded contract in her own handwriting, dated during the gap, ordering her death at sunrise (clue C003 planted).",
+        "Lucian Vey appears and confirms the contract is real, that she hired him, but offers no further explanation.",
+        "Sloane Mercer realizes she has no memory of the past three months and panics.",
+        "[ROMANCE] Lucian Vey says Sloane Mercer's name with a quiet intimacy that contradicts his role, triggering a flash of unwelcome familiarity she cannot name."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the meaning of the wrist tic (the circle sequence) or its connection to her past.",
+        "Sloane Mercer does not discover the binding condition hidden in the contract beyond the surface order.",
+        "Sloane Mercer does not physically approach or touch Mara's body."
+      ],
+      "opens_with": "The contract said her name, but the body at her feet was her sister's.",
+      "cliffhanger": "A light sweeps across the rooftop below—a vehicle arriving—and Lucian Vey's grip tightens on her arm. 'We have to move. Now.'",
+      "signature_detail_hint": "The quarter-turn of Lucian Vey's rifle focus ring as he assesses the scene before speaking—a tic that betrays conflict no matter how steady his voice.",
+      "emotional_beat": "Dislocation, profound loss, and the first strand of unwilling trust toward a stranger who should be an enemy.",
+      "spice": 1,
+      "spice_note": "Subtle romantic tension in Lucian Vey's intimate tone and the unaccountable pull Sloane Mercer feels despite her shock.",
+      "chapter_task": "Write 1600-1900 words establishing the rooftop scene, contract discovery, and Lucian Vey's entrance from Sloane Mercer's limited POV. Include physical details (never reaching the body) and the first [ROMANCE] micro-beat. Plant C003 explicitly.",
+      "carries_to_next": "Sloane Mercer's desperation for answers, the contract in her possession, and the growing suspicion that her amnesia is engineered."
+    },
+    {
+      "chapter": 2,
+      "title": "The Contract",
+      "slug": "the-contract",
+      "one_line_summary": "Sloane Mercer presses Lucian Vey for answers and discovers the contract paper dates to her own office during the missing months, while an unconscious muscle memory reveals the first crack in her erased past.",
+      "beat_summary": "Sloane and Lucian regroup in his car. She interrogates him about the contract, learning only that she approached him under a false identity. Under the dome light, she examines the contract's paper and recognizes the micro-perforation of her office's offline printer—dating it to two months ago, within the gap (C001 planted). Frustrated, she makes the wrist circle again, unconsciously, and Lucian's eyes follow it without comment (C004 planted). Their voices rise until a moment of proximity—Lucian's hand on the steering wheel reveals a scar that Sloane's body remembers though her mind doesn't. Her phone buzzes: an unknown number. The message is from Cassian Rook, her handler, warning her that she is being monitored.",
+      "must_happen": [
+        "Sloane Mercer interrogates Lucian Vey about how she hired him; he gives evasive answers, revealing only surface details.",
+        "Sloane Mercer identifies the contract paper as coming from her office's offline printer, placing its creation during the gap (C001 planted).",
+        "Sloane Mercer unconsciously performs the dry-fire wrist circle sequence, and Lucian Vey observes without explanation (C004 planted).",
+        "[ROMANCE] Sloane Mercer notices a scar on Lucian Vey's hand—her stomach reacts before her mind catches up, a visceral memory she cannot access."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the binding condition hidden in the contract.",
+        "Sloane Mercer does not recall any specific events from the three-month gap.",
+        "Sloane Mercer does not discover that Mara's death was staged or that Mara is alive."
+      ],
+      "opens_with": "The contract's corner had a micro-perforation from a printer she hadn't used since before the gap.",
+      "cliffhanger": "Sloane Mercer's phone buzzes with a message from an unknown number: 'You're not the only one watching the clock, Mercer.'",
+      "signature_detail_hint": "The two-finger rotation Lucian Vey uses to turn the car key—a mirror of his rifle focus ring tic, revealing a man who controls every motion.",
+      "emotional_beat": "Frustration, creeping fear, and the unsettling certainty that her body knows things her mind refuses to retrieve.",
+      "spice": 1,
+      "spice_note": "Tension of proximity and suppressed familiarity during interrogation; no physical intimacy beyond a charged glance.",
+      "chapter_task": "Write 1600-1900 words covering the car interrogation, contract examination, and first emergence of the conditioned reflex (wrist circle). Include [ROMANCE] micro-beat and plant C001 and C004 explicitly. Maintain tight Sloane Mercer POV.",
+      "carries_to_next": "The knowledge that the contract was created recently, the wrist tic as a potential clue, and the first direct contact from Cassian Rook."
+    },
+    {
+      "chapter": 3,
+      "title": "The Memory of Touch",
+      "slug": "the-memory-of-touch",
+      "one_line_summary": "Sloane Mercer returns to her apartment only to find a stranger's version of her life, while a hidden note and the deliberate use of her wrist tic bring her closer to the trap she set, and Lucian Vey's touch sparks a fragment of the woman she no longer knows.",
+      "beat_summary": "Sloane returns to her apartment, hoping for anchor. The digital lock accepts a code she doesn't consciously know. Inside, she finds evidence of her own recent activity—a coffee cup in the sink, security circuit disarmed—but she cannot recall (C002 planted). A hidden note in her sock drawer bears a string of numbers: a fragment of the transaction ledger she hid from herself. She deliberately performs the wrist circle, this time feeling a flicker of muscle memory, a sequence that feels like a firing position. Lucian watches from the doorway; when she reaches for a drawer, his hand closes on her arm, and for a split second Sloane feels tactile familiarity—his skin on hers, somewhere dark and close. Then the window shatters the intimacy: a movement in the alley below. Rook has arrived.",
+      "must_happen": [
+        "Sloane Mercer returns to her apartment and discovers signs of her own recent activity that she cannot remember (C002 planted).",
+        "Sloane Mercer finds a hidden note in her own handwriting containing a numeric fragment from the ledger she hid.",
+        "Sloane Mercer deliberately performs the wrist circle sequence and feels the muscle memory, realizing the motion is intentional training.",
+        "Sloane Mercer concludes her memory loss is not natural but induced.",
+        "[ROMANCE] Lucian Vey touches Sloane Mercer's arm to stop her opening a drawer, and she experiences a flash of tactile déjà vu—his palm against her skin in a dark room."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn that Mara is alive or staged her death.",
+        "Sloane Mercer does not discover the binding condition of the contract.",
+        "The numeric fragment does not reveal the complete ledger or explicitly name the conspiracy."
+      ],
+      "opens_with": "The lock was digital, but her thumb moved across the keypad before her brain caught up—a code she didn't know she remembered.",
+      "cliffhanger": "A shadow moves below the apartment window—Cassian Rook is there, and the glint of a rifle confirms he is not alone.",
+      "signature_detail_hint": "A faint scratch mark on the apartment doorframe at wrist height, as if someone measured exactly her arm reach—a clue she left for herself but cannot interpret.",
+      "emotional_beat": "Escalating unease, the horror of being a stranger in her own home, and the first active step toward trusting Lucian Vey despite his role as her executioner.",
+      "spice": 1,
+      "spice_note": "Tension of proximity and inexplicable physical recognition during the touch; no explicit content, focus on emotional and sensory flash.",
+      "chapter_task": "Write 1600-1900 words covering the apartment search, the deliberate wrist circle, and the tactile [ROMANCE] micro-beat. Plant C002 explicitly. End with Rook's arrival setting up act transition.",
+      "carries_to_next": "The numeric ledger fragment, the confirmation that Sloane Mercer prepared for this night, and the direct threat of Cassian Rook's surveillance."
+    }
+  ]
+}

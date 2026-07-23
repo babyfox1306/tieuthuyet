@@ -1,0 +1,169 @@
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Lab Report",
+      "slug": "04-the-lab-report",
+      "one_line_summary": "Iris Kane receives the lab confirmation that the certification stamp was forged after Marek's death, leading her to publish the first official finding against Marek despite sensing the inquiry is steering her toward a convenient close.",
+      "beat_summary": "Iris Kane receives the laboratory analysis confirming the certification stamp on the Kessler liner segment was applied posthumously—the paint's chemical composition dates it six months after Marek's death. She compiles her first interim finding, naming Dov Marek as responsible for the fraudulent certification. At a commission meeting, Adrienne Sol frames Marek as a rogue employee acting without authorization, while Commissioner Aldous Renn praises Iris Kane's thoroughness but warns against expanding the scope. Theo Vance offers to draft the press release; his language subtly limits the finding to Marek alone. After the meeting, Iris Kane receives a mysterious phone call suggesting Marek was not the only participant—the fast-track approval chain was designed to protect someone higher. Iris Kane calls the lab to expedite the core sample analysis.",
+      "must_happen": [
+        "Iris Kane receives the laboratory report confirming the forged stamp (payoff C001).",
+        "Iris Kane submits her interim finding that Dov Marek is responsible for the certification fraud (reveal MR001).",
+        "Commissioner Aldous Renn and Adrienne Sol publicly accept the finding but steer toward closure.",
+        "Theo Vance offers to draft the press release, limiting language to Marek's sole culpability.",
+        "Iris Kane receives a phone call from an unknown number hinting that the fast-track approval was part of a larger scheme."
+      ],
+      "must_not": [
+        "Iris Kane does not pursue the fast-track approval chain in this chapter; the call is a seed only.",
+        "Theo Vance is not revealed as the mole; his assistance appears genuine."
+      ],
+      "opens_with": "The lab report arrived by courier at 7:13 a.m. Iris Kane opened it standing up, read the conclusion, and sat down slowly.",
+      "cliffhanger": "Iris Kane locked the report in her briefcase. Her phone rang—unknown number. A distorted voice said, 'Marek was the first step. The fast-track approval was signed before he died. Ask yourself who benefits from burying it.' Then the line went dead.",
+      "signature_detail_hint": "The paper clip on the lab report had left a faint rust mark on the corner, as if someone else had already read it before sealing the envelope.",
+      "emotional_beat": "Satisfaction at solving the first piece is undercut by the growing awareness that the solution feels packaged—too clean, too convenient, like a story written for her to find.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Confirm the Marek forgery through the lab report (C001 payoff) and have Iris Kane publish the first finding (MR001). Introduce the external pressure to close the investigation at Marek. Plant the fast-track thread via the anonymous call. Maintain the tone of institutional thriller; no romance.",
+      "carries_to_next": "Iris Kane now has an official finding against Marek but suspects a larger conspiracy. The anonymous call points her toward the fast-track procurement chain, setting up her next area of inquiry.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": ["C001"],
+        "reveals": [
+          {
+            "id": "MR001",
+            "reveal": "Dov Marek forged the certification stamp on the Kessler liner segment.",
+            "impact": "Iris Kane now has the first concrete evidence of fraud, but the convenient timing suggests a scapegoat.",
+            "reveal_weight": "minor",
+            "required_clues": ["C001"],
+            "min_clues_required": 1
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["core_sample", "inquiry_coverup", "marek_investigation", "renn_reveal", "sol_investigation", "vance_betrayal"],
+        "knowledge": {
+          "pov_characters": ["Iris Kane", "Dov Marek", "Theo Vance", "Adrienne Sol", "Aldous Renn"],
+          "may_know": [
+            "Iris Kane: Has discovered Marek's signature mismatch (Tier 1)",
+            "Iris Kane: Knows Marek is guilty but senses it is incomplete",
+            "Iris Kane: Has pulled and hidden the core sample (ch2) – significance still unknown.",
+            "Dov Marek: Aware that Iris has discovered his signature forgery",
+            "Dov Marek: Pressure from the network increases.",
+            "Theo Vance: Still active, provides assistance to Iris on Marek investigation while secretly reporting to Sol.",
+            "Adrienne Sol: Monitors Iris's progress on Marek",
+            "Adrienne Sol: coordinates with Vance.",
+            "Aldous Renn: Sees Marek exposure proceeding on schedule",
+            "Aldous Renn: No concern."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 4
+        }
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "The Safe Deposit Box",
+      "slug": "05-the-safe-deposit-box",
+      "one_line_summary": "Iris Kane's attempt to access Marek's safe deposit box is blocked by a mysterious earlier visit, and she faces increasing pressure from the commission to close the case on Marek alone.",
+      "beat_summary": "After the interim finding, Iris Kane applies for a warrant to open Dov Marek's safe deposit box, believing it may contain evidence of a wider network. Vantor's legal team objects, but a judge grants the warrant. At the bank, the manager informs Iris Kane that the box was accessed earlier that day by a representative from the inquiry—but the sign-in log has the name redacted on a 'confidentiality' basis. Commissioner Renn calls Iris Kane to a private meeting, warning that pursuing tangential evidence will damage the inquiry's credibility and delay closure for the victims' families. Adrienne Sol publicly announces Vantor's full cooperation, but privately her tone is dismissive. Theo Vance reassures Iris Kane that she's doing the right thing, but his phone buzzes with a message from a contact labeled 'Operations' that he quickly silences. Iris Kane leaves the bank with nothing but the certainty that she is being watched.",
+      "must_happen": [
+        "Iris Kane obtains a warrant for Marek's safe deposit box.",
+        "At the bank, Iris Kane learns the box was accessed hours earlier by an unnamed inquiry representative, with the log redacted.",
+        "Commissioner Aldous Renn warns Iris Kane against pursuing leads beyond the Marek finding.",
+        "Adrienne Sol makes a public statement of Vantor's cooperation, but her private meeting with Iris Kane is condescending.",
+        "Theo Vance receives a suspicious message from 'Operations' that he hides from Iris Kane."
+      ],
+      "must_not": [
+        "The identity of the person who accessed the safe deposit box is not revealed.",
+        "Iris Kane does not access the contents of the box (it was emptied earlier)."
+      ],
+      "opens_with": "The warrant was signed at 3:17 p.m. By 4:00, Iris Kane was standing at the bank counter, watching the manager's face change.",
+      "cliffhanger": "Iris Kane pressed the manager on the redacted name. 'I can't disclose it,' he said. 'The visit was authorised by the commission's confidentiality protocol.' She looked at the log. The ink was still wet.",
+      "signature_detail_hint": "The bank's foyer clock was two minutes slow. Iris Kane noted it because the log timestamp for the earlier visit was exactly 10:30—and the clock would have shown 10:28.",
+      "emotional_beat": "Frustration and the sharp sting of being outmanoeuvred; the institutional walls closing in, and the first clear evidence that the inquiry itself is compromised.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Deepen the institutional obstruction and introduce the idea that Iris Kane is being actively undermined from inside the inquiry. Use the safe deposit box as a physical symbol of what is being hidden. Show Theo Vance's subtle discomfort as his divided loyalties begin to strain. No romance.",
+      "carries_to_next": "Iris Kane now knows someone inside the inquiry is actively obstructing her investigation. She becomes more guarded and decides to find a lab for the core sample herself, outside the official chain.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["core_sample", "false_answer_1", "inquiry_coverup", "marek_investigation", "renn_reveal", "sol_investigation", "vance_betrayal"],
+        "knowledge": {
+          "pov_characters": ["Iris Kane", "Dov Marek", "Theo Vance", "Adrienne Sol", "Aldous Renn"],
+          "may_know": [
+            "Iris Kane: Has discovered Marek's signature mismatch (Tier 1)",
+            "Iris Kane: Knows Marek is guilty but senses it is incomplete",
+            "Iris Kane: Has pulled and hidden the core sample (ch2) – significance still unknown.",
+            "Dov Marek: Aware that Iris has discovered his signature forgery",
+            "Dov Marek: Pressure from the network increases.",
+            "Theo Vance: Still active, provides assistance to Iris on Marek investigation while secretly reporting to Sol.",
+            "Adrienne Sol: Monitors Iris's progress on Marek",
+            "Adrienne Sol: coordinates with Vance.",
+            "Aldous Renn: Sees Marek exposure proceeding on schedule",
+            "Aldous Renn: No concern."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 4
+        }
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "The Dissenting Vote",
+      "slug": "06-the-dissenting-vote",
+      "one_line_summary": "After the commission votes to close the investigation with Marek as the sole culprit, Iris Kane registers her dissent and secretly decides to continue the investigation alone, starting with the hidden core sample.",
+      "beat_summary": "Commissioner Renn convenes a full commission meeting to ratify the final report based on Iris Kane's finding. Despite Iris Kane's objections—there is still the unexplained fast-track approval, the missing core sample, the empty safe deposit box—the vote passes seven to one. Iris Kane is the sole dissenter. Renn schedules a press conference for the next day to announce closure. After the meeting, Theo Vance offers sympathy, but his phone buzzes again; this time Iris Kane sees the message preview: 'Moving to stage two.' In her temporary office, Iris Kane retrieves the core sample she took from the tunnel on her first visit, hidden in a locked drawer. She packs it into a bag, intending to send it to a private lab. As she leaves the building, she notices her desk drawer is not fully closed—she always pushes it flush. Someone has been inside.",
+      "must_happen": [
+        "The commission votes to close the investigation with Marek as the sole accountable party.",
+        "Iris Kane votes against the findings, the only dissenting vote.",
+        "Theo Vance offers comfort but his phone reveals a suspicious message ('Moving to stage two').",
+        "Iris Kane retrieves the hidden core sample from her locked drawer and decides to act outside the commission.",
+        "Iris Kane discovers evidence that her office was searched: the drawer was left slightly ajar."
+      ],
+      "must_not": [
+        "The press conference does not happen yet; it is only scheduled for the next day.",
+        "Iris Kane does not yet analyze the core sample or reveal its significance.",
+        "Renn is not explicitly called out as the architect; the cover-up is not named."
+      ],
+      "opens_with": "The vote was seven to one. Iris Kane was the one.",
+      "cliffhanger": "Iris Kane reached into her bag. The core sample was still there. She locked her office door and pulled out her personal phone—she knew a lab that would run the analysis without reporting to the commission. As she slipped out of the building, she glanced back at her desk. The drawer was ajar. She never left it ajar.",
+      "signature_detail_hint": "The decorative grille on the building's entrance doors had been polished that morning; Iris Kane could smell the solvent. But the cleaner had missed a streak on the handle—a smear that suggested someone in a hurry had left by the side exit.",
+      "emotional_beat": "Defiance hardening into resolve as the institutional doors close; the loneliness of being the only one who sees the pattern, but the core sample is a tangible anchor for her determination.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. End Act 1 with the commission shutting down the investigation officially. Iris Kane's dissenting vote is the turning point. The stolen core sample becomes her personal mission. Show the fracture between public narrative and private truth. No romance.",
+      "carries_to_next": "Iris Kane is now operating outside the commission, with the core sample as the key evidence to challenge the official conclusion. She will enter Act 2 as a lone investigator with the system against her.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["core_sample", "false_answer_1", "inquiry_coverup", "marek_investigation", "renn_reveal", "sol_investigation", "vance_betrayal"],
+        "knowledge": {
+          "pov_characters": ["Iris Kane", "Dov Marek", "Theo Vance", "Adrienne Sol", "Aldous Renn"],
+          "may_know": [
+            "Iris Kane: Has discovered Marek's signature mismatch (Tier 1)",
+            "Iris Kane: Knows Marek is guilty but senses it is incomplete",
+            "Iris Kane: Has pulled and hidden the core sample (ch2) – significance still unknown.",
+            "Iris Kane: Now suspects someone inside the inquiry is actively working against her.",
+            "Dov Marek: Aware that Iris has discovered his signature forgery",
+            "Dov Marek: Pressure from the network increases.",
+            "Theo Vance: Still active, provides assistance to Iris on Marek investigation while secretly reporting to Sol.",
+            "Adrienne Sol: Monitors Iris's progress on Marek",
+            "Adrienne Sol: coordinates with Vance.",
+            "Aldous Renn: Sees Marek exposure proceeding on schedule",
+            "Aldous Renn: No concern."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 4
+        }
+      }
+    }
+  ]
+}

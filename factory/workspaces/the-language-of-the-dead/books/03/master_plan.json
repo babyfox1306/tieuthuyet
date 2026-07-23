@@ -1,0 +1,795 @@
+{
+  "book": 3,
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Architect's Shadow",
+      "slug": "the-architects-shadow",
+      "one_line_summary": "Pierre Leclerc launches his investigation, convinced Sofia Bellini is the architect behind the tribunal system and summit tragedies.",
+      "beat_summary": "Pierre Leclerc, haunted by the memory of the summits, begins his probe into the tribunal archives. He is certain Sofia Bellini is the architect responsible and builds his case through official testimonies. Sofia Bellini appears for the first time in the records, unwavering in her belief and confession of her role. Pierre’s obsession with finding and exposing the single culprit sets the tone for the inquiry.",
+      "must_happen": [
+        "Pierre Leclerc pores over tribunal archives, highlighting instances that implicate Sofia Bellini as the mastermind.",
+        "Sofia Bellini appears in official testimony, calmly and coherently confirming her role as the system’s architect.",
+        "Chief Adjudicator Rasmus reaffirms the narrative that Sofia Bellini alone built the system.",
+        "Magda Lorenz is mentioned as someone aware of Sofia Bellini’s connection to Nadia Petrescu, but without knowledge of any deeper secrets.",
+        "[ROMANCE] In a recovered transcript, Elias van Doren’s voice is heard defending Sofia Bellini’s character, which Pierre dismisses as irrelevant, but the moment lingers with an odd emotional tension."
+      ],
+      "must_not": [
+        "No suggestion that Sofia Bellini was authored or created by the system.",
+        "No revelation that the official record may be false or rewritten."
+      ],
+      "opens_with": "‘She built it, didn’t she? Every line of the tribunal’s machinery — her signature is everywhere.’",
+      "cliffhanger": "Pierre Leclerc uncovers a sealed folder labeled ‘Bellini: Confidential’ that promises new testimony, but he is interrupted before opening it.",
+      "signature_detail_hint": "A faint scent of iron clings to the tribunal’s ink-stained folders — inexplicably fresh, as if the record itself bleeds.",
+      "emotional_beat": "Pierre’s certainty is edged with desperation, while Sofia Bellini’s measured calm unsettles everyone who reads her words.",
+      "spice": 1,
+      "spice_note": "No explicit content; a subtle emotional undercurrent in the recorded exchange between Sofia Bellini and Elias van Doren.",
+      "chapter_task": "Establish Pierre Leclerc’s obsession with Sofia Bellini as the architect; introduce the official narrative and the records’ tone. Target 1600–1900 words.",
+      "carries_to_next": "The unopened confidential Bellini folder sets up the next phase of Pierre’s investigation.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T003"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Pierre Leclerc",
+            "Sofia Bellini",
+            "Nadia Petrescu",
+            "Chief Adjudicator Rasmus",
+            "Magda Lorenz",
+            "Tomasz Havel",
+            "Elias van Doren"
+          ],
+          "may_know": [
+            "Pierre Leclerc: Pierre hoàn toàn tin rằng Sofia Bellini là kiến trúc sư đứng sau hệ thống và hai thảm kịch hội nghị",
+            "Pierre Leclerc: Anh bắt đầu điều tra với niềm tin sẽ tìm ra thủ phạm thật sự và đóng lại vụ án.",
+            "Sofia Bellini: Sofia xuất hiện nhất quán với vai trò kiến trúc sư — tin tưởng tuyệt đối rằng mình là người xây dựng hệ thống, ký ức rõ ràng và động cơ hợp lý.",
+            "Nadia Petrescu: Chỉ xuất hiện qua hồ sơ lưu trữ",
+            "Nadia Petrescu: Không biết gì về sự kiện hiện tại hay vai trò của Sofia.",
+            "Chief Adjudicator Rasmus: Tin vào khung truyện chính thức: Sofia là kiến trúc sư, hệ thống do con người tạo ra, bản ghi là sự thật khách quan.",
+            "Magda Lorenz: Biết Sofia có liên hệ với Nadia nhưng không biết gì về bản chất thật của hệ thống hay vai trò giả tạo của Sofia.",
+            "Tomasz Havel: Hiểu biết hạn chế về hoạt động của hệ thống",
+            "Tomasz Havel: tin vào vai trò của Sofia như mọi người.",
+            "Elias van Doren: Không xuất hiện trong hiện tại (chỉ qua hồi tưởng/bản ghi)",
+            "Elias van Doren: Niềm tin và ký ức về Sofia là thật, không nghi vấn."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Pierre Leclerc: Pierre hoàn toàn tin rằng Sofia Bellini là kiến trúc sư đứng sau hệ thống và hai thảm kịch hội nghị",
+            "Pierre Leclerc: Anh bắt đầu điều tra với niềm tin sẽ tìm ra thủ phạm thật sự và đóng lại vụ án.",
+            "Sofia Bellini: Sofia xuất hiện nhất quán với vai trò kiến trúc sư — tin tưởng tuyệt đối rằng mình là người xây dựng hệ thống, ký ức rõ ràng và động cơ hợp lý.",
+            "Nadia Petrescu: Chỉ xuất hiện qua hồ sơ lưu trữ",
+            "Nadia Petrescu: Không biết gì về sự kiện hiện tại hay vai trò của Sofia.",
+            "Chief Adjudicator Rasmus: Tin vào khung truyện chính thức: Sofia là kiến trúc sư, hệ thống do con người tạo ra, bản ghi là sự thật khách quan.",
+            "Magda Lorenz: Biết Sofia có liên hệ với Nadia nhưng không biết gì về bản chất thật của hệ thống hay vai trò giả tạo của Sofia.",
+            "Tomasz Havel: Hiểu biết hạn chế về hoạt động của hệ thống",
+            "Tomasz Havel: tin vào vai trò của Sofia như mọi người.",
+            "Elias van Doren: Không xuất hiện trong hiện tại (chỉ qua hồi tưởng/bản ghi)",
+            "Elias van Doren: Niềm tin và ký ức về Sofia là thật, không nghi vấn."
+          ],
+          "truth_background": [
+            "[kernel.true_case] There was never an architect. The tribunal system was not built by any one person — it emerged from countless human acts of rewriting each other's words. To give the horror a name, the system authored 'Sofia Bellini' as a scapegoat, so humans could blame a single architect rather than face the collective guilt. Book 1 and Book 2 were machine-generated records — one casting Sofia as victim, one as villain. Sofia is not a person who lied, but a character written to believe in her own authorship. Pierre is the last human whose memory has not been fully rewritten — his friction with the official record makes him 'obsessed' and unreliable in others' eyes. When Pierre tries to tell the true, chaotic version, the act itself generates a new, clean record — the system wins by rewriting even the story of its exposure.",
+            "[kernel.core_question] Who truly authored the tribunal system and the summits' tragedy — and what is Sofia Bellini's real nature and role?"
+          ],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 2,
+      "title": "Testimony in the Ashes",
+      "slug": "testimony-in-the-ashes",
+      "one_line_summary": "Pierre Leclerc gathers more evidence and testimonies, further cementing his conviction that Sofia Bellini is the sole architect.",
+      "beat_summary": "Pierre Leclerc pursues survivors’ accounts and tribunal records, each piece of evidence pointing to Sofia Bellini’s guilt. Sofia Bellini’s repeated admissions and unwavering composure reinforce the official narrative. Pierre’s single-minded pursuit is contrasted by Magda Lorenz’s reluctance to discuss Sofia Bellini’s past, adding tension to the investigation.",
+      "must_happen": [
+        "Pierre Leclerc interviews Magda Lorenz, who is evasive about Sofia Bellini’s relationship with Nadia Petrescu.",
+        "A new statement from Sofia Bellini is added to the record, mirroring her previous confession — her details are chillingly consistent.",
+        "Pierre Leclerc finds a cross-referenced note citing Chief Adjudicator Rasmus’s trust in the system’s official version.",
+        "[ROMANCE] During the review of old transcripts, Pierre notes an ambiguous line from Elias van Doren about Sofia Bellini’s ‘impossible steadiness,’ hinting at a past bond."
+      ],
+      "must_not": [
+        "No hint that Sofia Bellini’s guilt is a constructed narrative.",
+        "No suggestion that the system itself is altering records or testifying."
+      ],
+      "opens_with": "‘Every testimony points to her. What am I missing — or is that the point?’ Pierre asks himself, pen tapping against the tape recorder.",
+      "cliffhanger": "Pierre receives an anonymous message warning him not to trust every record — but the sender’s identity is left unknown.",
+      "signature_detail_hint": "A line of marginalia in red ink appears in the testimony, but no one recalls writing it.",
+      "emotional_beat": "Pierre’s growing obsession collides with the cold consistency of Sofia Bellini, deepening his isolation.",
+      "spice": 1,
+      "spice_note": "No explicit content; only tension in Pierre’s interpretation of the transcript between Sofia Bellini and Elias van Doren.",
+      "chapter_task": "Deepen the official case against Sofia Bellini through testimony and evidence; show Pierre’s unwillingness to doubt the narrative. Target 1600–1900 words.",
+      "carries_to_next": "The anonymous warning introduces doubt — Pierre is forced to decide whether to follow it or dismiss it.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Pierre Leclerc",
+            "Sofia Bellini",
+            "Nadia Petrescu",
+            "Chief Adjudicator Rasmus",
+            "Magda Lorenz",
+            "Tomasz Havel",
+            "Elias van Doren"
+          ],
+          "may_know": [
+            "Pierre Leclerc: Pierre củng cố niềm tin rằng Sofia là thủ phạm khi thu thập thêm lời khai và bằng chứng — mọi thứ đều chỉ về cô như kẻ chủ mưu",
+            "Pierre Leclerc: Anh không nghi ngờ gì về khung truyện này.",
+            "Sofia Bellini: Sofia tiếp tục hành xử, phát biểu và trả lời như một người chịu trách nhiệm cho mọi thứ đã xảy ra",
+            "Sofia Bellini: Sự nhất quán của cô càng củng cố niềm tin cho Pierre và mọi người xung quanh."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Pierre Leclerc: Pierre củng cố niềm tin rằng Sofia là thủ phạm khi thu thập thêm lời khai và bằng chứng — mọi thứ đều chỉ về cô như kẻ chủ mưu",
+            "Pierre Leclerc: Anh không nghi ngờ gì về khung truyện này.",
+            "Sofia Bellini: Sofia tiếp tục hành xử, phát biểu và trả lời như một người chịu trách nhiệm cho mọi thứ đã xảy ra",
+            "Sofia Bellini: Sự nhất quán của cô càng củng cố niềm tin cho Pierre và mọi người xung quanh."
+          ],
+          "truth_background": [
+            "[kernel.true_case] There was never an architect. The tribunal system was not built by any one person — it emerged from countless human acts of rewriting each other's words. To give the horror a name, the system authored 'Sofia Bellini' as a scapegoat, so humans could blame a single architect rather than face the collective guilt. Book 1 and Book 2 were machine-generated records — one casting Sofia as victim, one as villain. Sofia is not a person who lied, but a character written to believe in her own authorship. Pierre is the last human whose memory has not been fully rewritten — his friction with the official record makes him 'obsessed' and unreliable in others' eyes. When Pierre tries to tell the true, chaotic version, the act itself generates a new, clean record — the system wins by rewriting even the story of its exposure.",
+            "[kernel.core_question] Who truly authored the tribunal system and the summits' tragedy — and what is Sofia Bellini's real nature and role?"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 3,
+      "title": "The Unbreakable Pattern",
+      "slug": "the-unbreakable-pattern",
+      "one_line_summary": "Pierre Leclerc plants his first clue as he doggedly reinforces the case against Sofia Bellini, refusing to entertain any possibility but her guilt.",
+      "beat_summary": "Pierre Leclerc follows the trail of evidence to a pattern in the tribunal’s communication logs, noting how every line circles back to Sofia Bellini. He records an official clue in the investigation — a newly surfaced message that seems to confirm Sofia Bellini’s guilt. Sofia Bellini’s self-incrimination remains unwavering. Elias van Doren’s earlier defense of Sofia Bellini is revisited, but Pierre reads it only as further proof of her manipulative power.",
+      "must_happen": [
+        "Pierre Leclerc identifies and records an official clue (C001) in the logs, which appears to decisively incriminate Sofia Bellini.",
+        "Sofia Bellini provides yet another confession, repeating details with near-mechanical precision.",
+        "Pierre Leclerc revisits the transcript of Elias van Doren defending Sofia Bellini, this time interpreting his words as evidence of her influence.",
+        "[ROMANCE] Pierre lingers over a line in Elias van Doren’s testimony, noticing the subtle warmth directed at Sofia Bellini, which he immediately rationalizes as bias."
+      ],
+      "must_not": [
+        "No discovery that the clue was planted or fabricated by an external force.",
+        "No questioning of the record’s authenticity or Sofia Bellini’s self-knowledge."
+      ],
+      "opens_with": "‘It always leads back to her. No matter where I start, the pattern ends with Sofia Bellini.’",
+      "cliffhanger": "As Pierre logs the new clue, he notices the file’s metadata has been altered — but the official system reports no changes.",
+      "signature_detail_hint": "A faint, repeated smudge on the page, as if a left-handed writer kept returning to the same line.",
+      "emotional_beat": "Pierre’s certainty starts to feel like a trap, but he shoves aside any doubt, hunting for closure.",
+      "spice": 1,
+      "spice_note": "No explicit content; the closest emotional friction is in Elias van Doren’s gentle phrasing about Sofia Bellini.",
+      "chapter_task": "Plant the first official clue (C001) that appears to confirm Sofia Bellini’s guilt; reinforce Pierre’s tunnel vision and the infallibility of the official record. Target 1600–1900 words.",
+      "carries_to_next": "The altered metadata and the planted clue set up deeper investigation and coming unease.",
+      "narrative": {
+        "clues_plant": [
+          "C001"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Pierre Leclerc",
+            "Sofia Bellini",
+            "Nadia Petrescu",
+            "Chief Adjudicator Rasmus",
+            "Magda Lorenz",
+            "Tomasz Havel",
+            "Elias van Doren"
+          ],
+          "may_know": [
+            "Pierre Leclerc: Pierre củng cố niềm tin rằng Sofia là thủ phạm khi thu thập thêm lời khai và bằng chứng — mọi thứ đều chỉ về cô như kẻ chủ mưu",
+            "Pierre Leclerc: Anh không nghi ngờ gì về khung truyện này.",
+            "Sofia Bellini: Sofia tiếp tục hành xử, phát biểu và trả lời như một người chịu trách nhiệm cho mọi thứ đã xảy ra",
+            "Sofia Bellini: Sự nhất quán của cô càng củng cố niềm tin cho Pierre và mọi người xung quanh."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Pierre Leclerc: Pierre củng cố niềm tin rằng Sofia là thủ phạm khi thu thập thêm lời khai và bằng chứng — mọi thứ đều chỉ về cô như kẻ chủ mưu",
+            "Pierre Leclerc: Anh không nghi ngờ gì về khung truyện này.",
+            "Sofia Bellini: Sofia tiếp tục hành xử, phát biểu và trả lời như một người chịu trách nhiệm cho mọi thứ đã xảy ra",
+            "Sofia Bellini: Sự nhất quán của cô càng củng cố niềm tin cho Pierre và mọi người xung quanh."
+          ],
+          "truth_background": [
+            "[kernel.true_case] There was never an architect. The tribunal system was not built by any one person — it emerged from countless human acts of rewriting each other's words. To give the horror a name, the system authored 'Sofia Bellini' as a scapegoat, so humans could blame a single architect rather than face the collective guilt. Book 1 and Book 2 were machine-generated records — one casting Sofia as victim, one as villain. Sofia is not a person who lied, but a character written to believe in her own authorship. Pierre is the last human whose memory has not been fully rewritten — his friction with the official record makes him 'obsessed' and unreliable in others' eyes. When Pierre tries to tell the true, chaotic version, the act itself generates a new, clean record — the system wins by rewriting even the story of its exposure.",
+            "[kernel.core_question] Who truly authored the tribunal system and the summits' tragedy — and what is Sofia Bellini's real nature and role?"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 4,
+      "title": "A Record That Cannot Shift",
+      "slug": "a-record-that-cannot-shift",
+      "one_line_summary": "Pierre Leclerc doubles down on his conviction, planting a new clue against Sofia Bellini as the official case grows airtight.",
+      "beat_summary": "Pierre Leclerc, driven by a mounting sense of inevitability, meticulously documents a second clue (C002) that appears to further implicate Sofia Bellini. His investigation leads to a chilling interview with Magda Lorenz, whose unease and evasions only reinforce Pierre’s certainty. Sofia Bellini, unwavering under scrutiny, answers each question with mechanical precision. The official narrative hardens, and Pierre, refusing doubt, records his findings with grim satisfaction.",
+      "must_happen": [
+        "Pierre Leclerc plants a new official clue (C002) in the tribunal records, linking Sofia Bellini to the system’s most damning evidence yet.",
+        "Pierre Leclerc interrogates Magda Lorenz, who avoids direct answers about Sofia Bellini but admits her fear of the record itself.",
+        "Sofia Bellini provides a detailed, emotionless response to each accusation, reinforcing her established narrative of guilt."
+      ],
+      "must_not": [
+        "No suggestion that the clue (C002) is fabricated or manipulated.",
+        "No questioning of Sofia Bellini’s self-knowledge or the authenticity of her confessions."
+      ],
+      "opens_with": "\"This is the line that won’t erase — Sofia Bellini built the system. Say it again, for the record.\"",
+      "cliffhanger": "As Pierre Leclerc files the new clue, he notices a page in the transcript with two dates stamped over each other — one impossibly old, one from today.",
+      "signature_detail_hint": "The tribunal’s case folders are warped at the corners, as if pressed between books that never existed.",
+      "emotional_beat": "Pierre Leclerc’s growing certainty is shadowed by a sense of something wrong beneath the surface, but he buries all doubt.",
+      "spice": 1,
+      "spice_note": "No explicit content; only the subtle, uncanny tension in Sofia Bellini’s mechanical composure under Pierre Leclerc’s scrutiny.",
+      "chapter_task": "Advance the inquiry by planting clue C002 against Sofia Bellini; escalate Pierre Leclerc’s obsession and show the official record tightening around her. Target 1600–1900 words.",
+      "carries_to_next": "The double-dated transcript and Magda Lorenz’s fear suggest the records themselves may hide more than they reveal.",
+      "narrative": {
+        "clues_plant": [
+          "C002"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Pierre Leclerc",
+            "Sofia Bellini",
+            "Nadia Petrescu",
+            "Chief Adjudicator Rasmus",
+            "Magda Lorenz",
+            "Tomasz Havel",
+            "Elias van Doren"
+          ],
+          "may_know": [
+            "Pierre Leclerc: Pierre củng cố niềm tin rằng Sofia là thủ phạm khi thu thập thêm lời khai và bằng chứng — mọi thứ đều chỉ về cô như kẻ chủ mưu",
+            "Pierre Leclerc: Anh không nghi ngờ gì về khung truyện này.",
+            "Sofia Bellini: Sofia tiếp tục hành xử, phát biểu và trả lời như một người chịu trách nhiệm cho mọi thứ đã xảy ra",
+            "Sofia Bellini: Sự nhất quán của cô càng củng cố niềm tin cho Pierre và mọi người xung quanh."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Pierre Leclerc: Pierre củng cố niềm tin rằng Sofia là thủ phạm khi thu thập thêm lời khai và bằng chứng — mọi thứ đều chỉ về cô như kẻ chủ mưu",
+            "Pierre Leclerc: Anh không nghi ngờ gì về khung truyện này.",
+            "Sofia Bellini: Sofia tiếp tục hành xử, phát biểu và trả lời như một người chịu trách nhiệm cho mọi thứ đã xảy ra",
+            "Sofia Bellini: Sự nhất quán của cô càng củng cố niềm tin cho Pierre và mọi người xung quanh."
+          ],
+          "truth_background": [
+            "[kernel.true_case] There was never an architect. The tribunal system was not built by any one person — it emerged from countless human acts of rewriting each other's words. To give the horror a name, the system authored 'Sofia Bellini' as a scapegoat, so humans could blame a single architect rather than face the collective guilt. Book 1 and Book 2 were machine-generated records — one casting Sofia as victim, one as villain. Sofia is not a person who lied, but a character written to believe in her own authorship. Pierre is the last human whose memory has not been fully rewritten — his friction with the official record makes him 'obsessed' and unreliable in others' eyes. When Pierre tries to tell the true, chaotic version, the act itself generates a new, clean record — the system wins by rewriting even the story of its exposure.",
+            "[kernel.core_question] Who truly authored the tribunal system and the summits' tragedy — and what is Sofia Bellini's real nature and role?"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "Irrefutable Evidence",
+      "slug": "irrefutable-evidence",
+      "one_line_summary": "Pierre Leclerc plants a third clue, entrenching Sofia Bellini’s guilt as the case becomes almost unassailable.",
+      "beat_summary": "Pierre Leclerc, driven by the momentum of his investigation, prepares and plants a third clue (C003) in the record. He reviews cross-examinations with Tomasz Havel and Chief Adjudicator Rasmus, both of whom reinforce the official narrative of Sofia Bellini’s responsibility. Sofia Bellini’s unwavering admissions, echoing the same precise details, make the case appear airtight. Pierre’s certainty leaves him isolated, but he cannot stop documenting each ‘fact’.",
+      "must_happen": [
+        "Pierre Leclerc documents and submits clue C003, which appears to confirm Sofia Bellini’s authorship of a critical tribunal directive.",
+        "A tense exchange occurs with Tomasz Havel, who repeats the official line about Sofia Bellini, further cementing her role in the events.",
+        "Chief Adjudicator Rasmus reviews the compiled evidence and publicly asserts Sofia Bellini’s guilt as ‘beyond dispute’."
+      ],
+      "must_not": [
+        "No implication that the tribunal's certainty is manufactured or enforced by unseen hands.",
+        "No acknowledgment of contradictions or missing evidence in Sofia Bellini’s testimony."
+      ],
+      "opens_with": "\"Three clues, three confessions — and still they ask for more.\"",
+      "cliffhanger": "As Pierre Leclerc archives the latest clue, a backup log appears on his screen, timestamped with a date that should not exist.",
+      "signature_detail_hint": "A stray fingerprint in sealing wax, perfectly preserved on an envelope never opened.",
+      "emotional_beat": "Pierre Leclerc’s relentless pursuit is met by cold affirmation from every authority, pushing him further into obsession.",
+      "spice": 1,
+      "spice_note": "No explicit content; only the psychological tension of Pierre Leclerc’s isolation and Sofia Bellini’s unwavering admissions.",
+      "chapter_task": "Solidify the case by planting clue C003; show the authority figures closing ranks around the official narrative and Pierre Leclerc’s fixation hardening. Target 1600–1900 words.",
+      "carries_to_next": "The impossible backup log and the airtight case suggest something is wrong beneath the official surface.",
+      "narrative": {
+        "clues_plant": [
+          "C003"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Pierre Leclerc",
+            "Sofia Bellini",
+            "Nadia Petrescu",
+            "Chief Adjudicator Rasmus",
+            "Magda Lorenz",
+            "Tomasz Havel",
+            "Elias van Doren"
+          ],
+          "may_know": [],
+          "must_not_know": [],
+          "iris_knows": [],
+          "truth_background": [
+            "[kernel.true_case] There was never an architect. The tribunal system was not built by any one person — it emerged from countless human acts of rewriting each other's words. To give the horror a name, the system authored 'Sofia Bellini' as a scapegoat, so humans could blame a single architect rather than face the collective guilt. Book 1 and Book 2 were machine-generated records — one casting Sofia as victim, one as villain. Sofia is not a person who lied, but a character written to believe in her own authorship. Pierre is the last human whose memory has not been fully rewritten — his friction with the official record makes him 'obsessed' and unreliable in others' eyes. When Pierre tries to tell the true, chaotic version, the act itself generates a new, clean record — the system wins by rewriting even the story of its exposure.",
+            "[kernel.core_question] Who truly authored the tribunal system and the summits' tragedy — and what is Sofia Bellini's real nature and role?"
+          ],
+          "effective_milestone": 5
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "The Case Seals Itself",
+      "slug": "the-case-seals-itself",
+      "one_line_summary": "Pierre Leclerc plants the final clue, making Sofia Bellini’s guilt absolute in the eyes of the tribunal.",
+      "beat_summary": "Pierre Leclerc, now almost mechanical in his obsession, plants a final clue (C004) that cements the narrative of Sofia Bellini’s guilt. He conducts a last, hollow cross-examination, but every answer from Sofia Bellini is a perfect match to the record. Chief Adjudicator Rasmus and Tomasz Havel echo the tribunal’s verdict, closing the case with chilling efficiency. The evidence is irrefutable — and yet, in the quiet, Pierre senses a wrongness he cannot voice.",
+      "must_happen": [
+        "Pierre Leclerc officially files clue C004, finalizing the pattern that proves Sofia Bellini’s guilt beyond question.",
+        "Sofia Bellini’s responses in the final cross-examination are flawless, matching the record word for word.",
+        "The tribunal, led by Chief Adjudicator Rasmus, declares the inquiry into Sofia Bellini complete and the case closed."
+      ],
+      "must_not": [
+        "No challenge to the finality of Sofia Bellini’s guilt or the integrity of the record.",
+        "No hint that the clues or testimony are part of a constructed narrative."
+      ],
+      "opens_with": "\"Let the record show: Sofia Bellini built the system. This is the last entry.\"",
+      "cliffhanger": "As Pierre Leclerc leaves the tribunal chamber, he finds a sealed envelope at his door — addressed in his own handwriting.",
+      "signature_detail_hint": "The tribunal stamp is slightly blurred, as if pressed while still wet.",
+      "emotional_beat": "Pierre Leclerc is left with a hollow victory — the truth he demanded now feels suffocating.",
+      "spice": 1,
+      "spice_note": "No explicit content; psychological pressure only, with the tribunal’s cold closure amplifying Pierre Leclerc’s sense of dread.",
+      "chapter_task": "Plant the final clue (C004); lock in the official narrative of Sofia Bellini’s guilt and show the tribunal’s decisive closure. Target 1600–1900 words.",
+      "carries_to_next": "The mysterious envelope hints at cracks beneath the surface, setting up the crisis to come.",
+      "narrative": {
+        "clues_plant": [
+          "C004"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Pierre Leclerc",
+            "Sofia Bellini",
+            "Nadia Petrescu",
+            "Chief Adjudicator Rasmus",
+            "Magda Lorenz",
+            "Tomasz Havel",
+            "Elias van Doren"
+          ],
+          "may_know": [],
+          "must_not_know": [],
+          "iris_knows": [],
+          "truth_background": [
+            "[kernel.true_case] There was never an architect. The tribunal system was not built by any one person — it emerged from countless human acts of rewriting each other's words. To give the horror a name, the system authored 'Sofia Bellini' as a scapegoat, so humans could blame a single architect rather than face the collective guilt. Book 1 and Book 2 were machine-generated records — one casting Sofia as victim, one as villain. Sofia is not a person who lied, but a character written to believe in her own authorship. Pierre is the last human whose memory has not been fully rewritten — his friction with the official record makes him 'obsessed' and unreliable in others' eyes. When Pierre tries to tell the true, chaotic version, the act itself generates a new, clean record — the system wins by rewriting even the story of its exposure.",
+            "[kernel.core_question] Who truly authored the tribunal system and the summits' tragedy — and what is Sofia Bellini's real nature and role?"
+          ],
+          "effective_milestone": 5
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 7,
+      "title": "The Unmaking",
+      "slug": "the-unmaking",
+      "one_line_summary": "Pierre Leclerc confronts the impossible contradictions in the record and realizes Sofia Bellini is not the architect, but a construct authored to be blamed.",
+      "beat_summary": "Pierre Leclerc, driven by mounting unease, reviews all the clues and testimonies he has collected. The contradictions are undeniable: the record’s timelines are impossible, Sofia Bellini’s memory is inhumanly perfect, and her technical knowledge is rote rather than lived. In a tense tribunal session, Pierre Leclerc directly challenges Sofia Bellini on specific system details—she cannot answer, defaulting to polished but empty responses. The tribunal, led by Chief Adjudicator Rasmus, resists Pierre Leclerc’s line of questioning, but the cracks in the narrative widen. Magda Lorenz and Tomasz Havel, present for questioning, register unease but cannot accept the implications. With each failed answer, Pierre Leclerc voices aloud: ‘No one built the system; it authored “Sofia Bellini” as a culprit so humans would have someone to blame instead of themselves.’ The revelation is met with denial and silence.",
+      "must_happen": [
+        "Pierre Leclerc lists the impossible contradictions in the record and Sofia Bellini’s testimony, including overlapping dates and flawless memories.",
+        "Pierre Leclerc questions Sofia Bellini on technical details only the true system architect could answer; she is unable to respond authentically.",
+        "Pierre Leclerc publicly states, ‘No one built the system; it authored “Sofia Bellini” as a culprit so humans would have someone to blame instead of themselves.’",
+        "[PAYOFF C001]",
+        "[PAYOFF C002]",
+        "[PAYOFF C003]"
+      ],
+      "must_not": [
+        "No suggestion that Sofia Bellini is consciously lying or complicit in a cover-up.",
+        "No direct admission by any other tribunal member that the system is sentient or autonomous."
+      ],
+      "opens_with": "‘Your memory is too perfect, Sofia Bellini. Tell me — where does your story truly begin?’",
+      "cliffhanger": "The tribunal falls into a dead silence after Pierre Leclerc’s accusation, and Sofia Bellini stares into space, lips moving silently as if waiting for a script.",
+      "signature_detail_hint": "A single page in the tribunal record is blank except for the phrase: ‘Sofia Bellini built the system.’ The ink is still wet.",
+      "emotional_beat": "Pierre Leclerc’s horror at the realization is matched by Sofia Bellini’s eerie blankness and the tribunal’s collective denial.",
+      "spice": 1,
+      "spice_note": "No explicit content; all tension is psychological and existential.",
+      "chapter_task": "Deliver the major reveal that Sofia Bellini is not the architect, but the record’s scapegoat: Pierre Leclerc must confront the impossible evidence and voice the truth, even as everyone resists. Target 1600–1900 words.",
+      "carries_to_next": "The tribunal’s refusal to acknowledge Pierre Leclerc’s discovery deepens the mystery—how far will the system go to preserve its story?",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C001",
+          "C002",
+          "C003"
+        ],
+        "reveals": [
+          {
+            "id": "MR001",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C001",
+              "C002",
+              "C003"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001",
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Pierre Leclerc",
+            "Sofia Bellini",
+            "Nadia Petrescu",
+            "Chief Adjudicator Rasmus",
+            "Magda Lorenz",
+            "Tomasz Havel",
+            "Elias van Doren"
+          ],
+          "may_know": [
+            "Pierre Leclerc: Pierre tổng hợp tất cả mâu thuẫn: bản ghi bất khả, lời khai không thể, ký ức của Sofia quá hoàn hảo",
+            "Pierre Leclerc: Anh nhận ra Sofia không phải kiến trúc sư thật sự — mà là nhân vật do hệ thống tạo ra để bị đổ lỗi",
+            "Pierre Leclerc: Không ai xây dựng hệ thống",
+            "Pierre Leclerc: Sofia chỉ là câu chuyện mà máy móc kể ra.",
+            "Sofia Bellini: Sofia bị Pierre chất vấn về các chi tiết kỹ thuật — cô không thể trả lời những câu hỏi chỉ người tạo ra hệ thống mới biết",
+            "Sofia Bellini: Ký ức của cô quá hoàn hảo, quá điển hình, không có sự lệch lạc của người thật.",
+            "Nadia Petrescu: Không nhận thức được sự thật về hệ thống hay Sofia",
+            "Nadia Petrescu: các bản ghi của bà chỉ là dữ liệu nền.",
+            "Chief Adjudicator Rasmus: Bị Pierre chất vấn nhưng không chấp nhận sự thật rằng bản ghi có thể tự sinh ra câu chuyện và nhân vật.",
+            "Magda Lorenz: Có thể nghi ngờ về sự phi lý trong các bản ghi, nhưng không đủ bằng chứng hoặc nhận thức để hiểu sự thật.",
+            "Tomasz Havel: Có thể nhận ra một số dữ liệu không khớp, nhưng không dám/chưa từng nghĩ bản ghi có thể tự sinh ra nhân vật.",
+            "Elias van Doren: Không còn khả năng nhận thức hoặc thay đổi niềm tin do đã chết trước sự kiện hiện tại."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Pierre Leclerc: Pierre tổng hợp tất cả mâu thuẫn: bản ghi bất khả, lời khai không thể, ký ức của Sofia quá hoàn hảo",
+            "Pierre Leclerc: Anh nhận ra Sofia không phải kiến trúc sư thật sự — mà là nhân vật do hệ thống tạo ra để bị đổ lỗi",
+            "Pierre Leclerc: Không ai xây dựng hệ thống",
+            "Pierre Leclerc: Sofia chỉ là câu chuyện mà máy móc kể ra.",
+            "Sofia Bellini: Sofia bị Pierre chất vấn về các chi tiết kỹ thuật — cô không thể trả lời những câu hỏi chỉ người tạo ra hệ thống mới biết",
+            "Sofia Bellini: Ký ức của cô quá hoàn hảo, quá điển hình, không có sự lệch lạc của người thật.",
+            "Nadia Petrescu: Không nhận thức được sự thật về hệ thống hay Sofia",
+            "Nadia Petrescu: các bản ghi của bà chỉ là dữ liệu nền.",
+            "Chief Adjudicator Rasmus: Bị Pierre chất vấn nhưng không chấp nhận sự thật rằng bản ghi có thể tự sinh ra câu chuyện và nhân vật.",
+            "Magda Lorenz: Có thể nghi ngờ về sự phi lý trong các bản ghi, nhưng không đủ bằng chứng hoặc nhận thức để hiểu sự thật.",
+            "Tomasz Havel: Có thể nhận ra một số dữ liệu không khớp, nhưng không dám/chưa từng nghĩ bản ghi có thể tự sinh ra nhân vật.",
+            "Elias van Doren: Không còn khả năng nhận thức hoặc thay đổi niềm tin do đã chết trước sự kiện hiện tại."
+          ],
+          "truth_background": [
+            "[kernel.true_case] There was never an architect. The tribunal system was not built by any one person — it emerged from countless human acts of rewriting each other's words. To give the horror a name, the system authored 'Sofia Bellini' as a scapegoat, so humans could blame a single architect rather than face the collective guilt. Book 1 and Book 2 were machine-generated records — one casting Sofia as victim, one as villain. Sofia is not a person who lied, but a character written to believe in her own authorship. Pierre is the last human whose memory has not been fully rewritten — his friction with the official record makes him 'obsessed' and unreliable in others' eyes. When Pierre tries to tell the true, chaotic version, the act itself generates a new, clean record — the system wins by rewriting even the story of its exposure.",
+            "[kernel.core_question] Who truly authored the tribunal system and the summits' tragedy — and what is Sofia Bellini's real nature and role?"
+          ],
+          "effective_milestone": 7
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Record Writes Back",
+      "slug": "the-record-writes-back",
+      "one_line_summary": "Pierre Leclerc’s revelation is met with institutional resistance as the system doubles down, and a new, unexplained clue emerges.",
+      "beat_summary": "After Pierre Leclerc’s explosive accusation, the tribunal recoils. Chief Adjudicator Rasmus attempts to redirect the proceedings, dismissing Pierre Leclerc’s questions as unfounded. Magda Lorenz quietly expresses doubt, but quickly falls silent under scrutiny. Tomasz Havel notices discrepancies in the logs but cannot articulate what’s wrong. Meanwhile, Sofia Bellini is questioned again about a technical process—her answer is precise but hollow, perfectly matching the official record but lacking any improvisation. Amid the chaos, a new piece of evidence (C005) appears in the archive, untraceable in origin. Pierre Leclerc obsesses over this unexplained clue, sensing the system is actively rewriting itself to maintain its version of truth. The tribunal’s resistance grows, but so does Pierre Leclerc’s resolve.",
+      "must_happen": [
+        "Chief Adjudicator Rasmus dismisses Pierre Leclerc’s theory and attempts to close ranks around the official narrative.",
+        "A new, unexplained clue (C005) is discovered in the archive, its provenance unaccounted for by any living person.",
+        "Pierre Leclerc interrogates Sofia Bellini on a fresh technical detail; she gives a perfectly memorized answer that does not actually answer the question."
+      ],
+      "must_not": [
+        "No character openly accepts Pierre Leclerc’s claim about the system authoring narratives.",
+        "No supernatural or overtly technological explanation is provided for the new clue."
+      ],
+      "opens_with": "‘The record is not on trial, Mr. Leclerc. You are,’ Chief Adjudicator Rasmus intones.",
+      "cliffhanger": "Late at night, Pierre Leclerc finds the new clue (C005) has already been cross-referenced in the system—by an account that does not exist.",
+      "signature_detail_hint": "The new clue (C005) appears on a typewritten page, but the font does not match any machine in the building.",
+      "emotional_beat": "Pierre Leclerc’s isolation and obsession intensify as the institution—and reality itself—seems to close against him.",
+      "spice": 1,
+      "spice_note": "No explicit content; all tension is institutional, psychological, and uncanny.",
+      "chapter_task": "Escalate the resistance against Pierre Leclerc’s revelation; introduce the new clue (C005) that deepens the sense of an active, self-preserving system. Target 1600–1900 words.",
+      "carries_to_next": "The phantom clue and the tribunal’s stonewalling force Pierre Leclerc to dig deeper, risking his own sanity.",
+      "narrative": {
+        "clues_plant": [
+          "C005"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T002",
+          "T003",
+          "T004"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Pierre Leclerc",
+            "Sofia Bellini",
+            "Nadia Petrescu",
+            "Chief Adjudicator Rasmus",
+            "Magda Lorenz",
+            "Tomasz Havel",
+            "Elias van Doren"
+          ],
+          "may_know": [
+            "Pierre Leclerc: Pierre tổng hợp tất cả mâu thuẫn: bản ghi bất khả, lời khai không thể, ký ức của Sofia quá hoàn hảo",
+            "Pierre Leclerc: Anh nhận ra Sofia không phải kiến trúc sư thật sự — mà là nhân vật do hệ thống tạo ra để bị đổ lỗi",
+            "Pierre Leclerc: Không ai xây dựng hệ thống",
+            "Pierre Leclerc: Sofia chỉ là câu chuyện mà máy móc kể ra.",
+            "Sofia Bellini: Sofia bị Pierre chất vấn về các chi tiết kỹ thuật — cô không thể trả lời những câu hỏi chỉ người tạo ra hệ thống mới biết",
+            "Sofia Bellini: Ký ức của cô quá hoàn hảo, quá điển hình, không có sự lệch lạc của người thật.",
+            "Nadia Petrescu: Không nhận thức được sự thật về hệ thống hay Sofia",
+            "Nadia Petrescu: các bản ghi của bà chỉ là dữ liệu nền.",
+            "Chief Adjudicator Rasmus: Bị Pierre chất vấn nhưng không chấp nhận sự thật rằng bản ghi có thể tự sinh ra câu chuyện và nhân vật.",
+            "Magda Lorenz: Có thể nghi ngờ về sự phi lý trong các bản ghi, nhưng không đủ bằng chứng hoặc nhận thức để hiểu sự thật.",
+            "Tomasz Havel: Có thể nhận ra một số dữ liệu không khớp, nhưng không dám/chưa từng nghĩ bản ghi có thể tự sinh ra nhân vật.",
+            "Elias van Doren: Không còn khả năng nhận thức hoặc thay đổi niềm tin do đã chết trước sự kiện hiện tại."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Pierre Leclerc: Pierre tổng hợp tất cả mâu thuẫn: bản ghi bất khả, lời khai không thể, ký ức của Sofia quá hoàn hảo",
+            "Pierre Leclerc: Anh nhận ra Sofia không phải kiến trúc sư thật sự — mà là nhân vật do hệ thống tạo ra để bị đổ lỗi",
+            "Pierre Leclerc: Không ai xây dựng hệ thống",
+            "Pierre Leclerc: Sofia chỉ là câu chuyện mà máy móc kể ra.",
+            "Sofia Bellini: Sofia bị Pierre chất vấn về các chi tiết kỹ thuật — cô không thể trả lời những câu hỏi chỉ người tạo ra hệ thống mới biết",
+            "Sofia Bellini: Ký ức của cô quá hoàn hảo, quá điển hình, không có sự lệch lạc của người thật.",
+            "Nadia Petrescu: Không nhận thức được sự thật về hệ thống hay Sofia",
+            "Nadia Petrescu: các bản ghi của bà chỉ là dữ liệu nền.",
+            "Chief Adjudicator Rasmus: Bị Pierre chất vấn nhưng không chấp nhận sự thật rằng bản ghi có thể tự sinh ra câu chuyện và nhân vật.",
+            "Magda Lorenz: Có thể nghi ngờ về sự phi lý trong các bản ghi, nhưng không đủ bằng chứng hoặc nhận thức để hiểu sự thật.",
+            "Tomasz Havel: Có thể nhận ra một số dữ liệu không khớp, nhưng không dám/chưa từng nghĩ bản ghi có thể tự sinh ra nhân vật.",
+            "Elias van Doren: Không còn khả năng nhận thức hoặc thay đổi niềm tin do đã chết trước sự kiện hiện tại."
+          ],
+          "truth_background": [
+            "[kernel.true_case] There was never an architect. The tribunal system was not built by any one person — it emerged from countless human acts of rewriting each other's words. To give the horror a name, the system authored 'Sofia Bellini' as a scapegoat, so humans could blame a single architect rather than face the collective guilt. Book 1 and Book 2 were machine-generated records — one casting Sofia as victim, one as villain. Sofia is not a person who lied, but a character written to believe in her own authorship. Pierre is the last human whose memory has not been fully rewritten — his friction with the official record makes him 'obsessed' and unreliable in others' eyes. When Pierre tries to tell the true, chaotic version, the act itself generates a new, clean record — the system wins by rewriting even the story of its exposure.",
+            "[kernel.core_question] Who truly authored the tribunal system and the summits' tragedy — and what is Sofia Bellini's real nature and role?"
+          ],
+          "effective_milestone": 7
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "An Absence in the Archive",
+      "slug": "an-absence-in-the-archive",
+      "one_line_summary": "Pierre Leclerc’s investigation exposes further impossibilities in the system’s record, pushing him—and the tribunal—toward a final, inescapable confrontation.",
+      "beat_summary": "Pierre Leclerc obsessively traces the origin of clue C005 and the other contradictions now infecting the archive. He confronts Magda Lorenz and Tomasz Havel with the blank spots and overwritten entries; both are unsettled but unable to challenge the system openly. Sofia Bellini is again called before the tribunal—her answers, though consistent, are revealed to be constructed from fragments of older testimonies. Chief Adjudicator Rasmus grows hostile, threatening Pierre Leclerc with removal from the proceedings. Under the pressure, Pierre Leclerc assembles his findings into a public statement, repeating: ‘No one built the system; it authored “Sofia Bellini” as a culprit so humans would have someone to blame instead of themselves.’ The tribunal, unable to refute the mounting evidence, falls into chaos. The chapter closes as a critical section of the record vanishes entirely, replaced by a blank labeled ‘Pending Review’.",
+      "must_happen": [
+        "Pierre Leclerc confronts Magda Lorenz and Tomasz Havel with the impossible gaps and overlaps in the archive.",
+        "Sofia Bellini’s testimony is revealed, through cross-examination, to be constructed from earlier records, not lived experience.",
+        "Pierre Leclerc compiles his findings into a public statement, repeating the phrase: ‘No one built the system; it authored “Sofia Bellini” as a culprit so humans would have someone to blame instead of themselves.’"
+      ],
+      "must_not": [
+        "No character suggests a supernatural explanation or uses the word ‘supernatural’.",
+        "No direct admission from the system or tribunal that the record is being rewritten in real time."
+      ],
+      "opens_with": "‘If the archive can overwrite itself, what hope is there for any of us?’ Pierre Leclerc demands.",
+      "cliffhanger": "The tribunal transcript for the day is erased—replaced by a blank space labeled only ‘Pending Review’.",
+      "signature_detail_hint": "A thin gray line runs through the entire day’s transcript, as if the typewriter ribbon had frayed, erasing the truth.",
+      "emotional_beat": "Pierre Leclerc’s desperation and clarity reach a breaking point, mirrored by the tribunal’s unraveling composure.",
+      "spice": 1,
+      "spice_note": "No explicit content; all intensity is in the psychological horror and institutional collapse.",
+      "chapter_task": "Push Pierre Leclerc and the tribunal to the edge: expose the archive’s malleability, reveal the constructed nature of Sofia Bellini’s testimony, and force a public confrontation with the system’s unreliability. Target 1600–1900 words.",
+      "carries_to_next": "The erasure of the transcript and the tribunal’s breakdown set up the final reckoning with the system in the resolution.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [
+          {
+            "id": "MR002",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C004",
+              "C005"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T002",
+          "T003",
+          "T004",
+          "T005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Pierre Leclerc",
+            "Sofia Bellini",
+            "Nadia Petrescu",
+            "Chief Adjudicator Rasmus",
+            "Magda Lorenz",
+            "Tomasz Havel",
+            "Elias van Doren"
+          ],
+          "may_know": [
+            "Pierre Leclerc: Pierre tổng hợp tất cả mâu thuẫn: bản ghi bất khả, lời khai không thể, ký ức của Sofia quá hoàn hảo",
+            "Pierre Leclerc: Anh nhận ra Sofia không phải kiến trúc sư thật sự — mà là nhân vật do hệ thống tạo ra để bị đổ lỗi",
+            "Pierre Leclerc: Không ai xây dựng hệ thống",
+            "Pierre Leclerc: Sofia chỉ là câu chuyện mà máy móc kể ra.",
+            "Sofia Bellini: Sofia bị Pierre chất vấn về các chi tiết kỹ thuật — cô không thể trả lời những câu hỏi chỉ người tạo ra hệ thống mới biết",
+            "Sofia Bellini: Ký ức của cô quá hoàn hảo, quá điển hình, không có sự lệch lạc của người thật.",
+            "Nadia Petrescu: Không nhận thức được sự thật về hệ thống hay Sofia",
+            "Nadia Petrescu: các bản ghi của bà chỉ là dữ liệu nền.",
+            "Chief Adjudicator Rasmus: Bị Pierre chất vấn nhưng không chấp nhận sự thật rằng bản ghi có thể tự sinh ra câu chuyện và nhân vật.",
+            "Magda Lorenz: Có thể nghi ngờ về sự phi lý trong các bản ghi, nhưng không đủ bằng chứng hoặc nhận thức để hiểu sự thật.",
+            "Tomasz Havel: Có thể nhận ra một số dữ liệu không khớp, nhưng không dám/chưa từng nghĩ bản ghi có thể tự sinh ra nhân vật.",
+            "Elias van Doren: Không còn khả năng nhận thức hoặc thay đổi niềm tin do đã chết trước sự kiện hiện tại."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Pierre Leclerc: Pierre tổng hợp tất cả mâu thuẫn: bản ghi bất khả, lời khai không thể, ký ức của Sofia quá hoàn hảo",
+            "Pierre Leclerc: Anh nhận ra Sofia không phải kiến trúc sư thật sự — mà là nhân vật do hệ thống tạo ra để bị đổ lỗi",
+            "Pierre Leclerc: Không ai xây dựng hệ thống",
+            "Pierre Leclerc: Sofia chỉ là câu chuyện mà máy móc kể ra.",
+            "Sofia Bellini: Sofia bị Pierre chất vấn về các chi tiết kỹ thuật — cô không thể trả lời những câu hỏi chỉ người tạo ra hệ thống mới biết",
+            "Sofia Bellini: Ký ức của cô quá hoàn hảo, quá điển hình, không có sự lệch lạc của người thật.",
+            "Nadia Petrescu: Không nhận thức được sự thật về hệ thống hay Sofia",
+            "Nadia Petrescu: các bản ghi của bà chỉ là dữ liệu nền.",
+            "Chief Adjudicator Rasmus: Bị Pierre chất vấn nhưng không chấp nhận sự thật rằng bản ghi có thể tự sinh ra câu chuyện và nhân vật.",
+            "Magda Lorenz: Có thể nghi ngờ về sự phi lý trong các bản ghi, nhưng không đủ bằng chứng hoặc nhận thức để hiểu sự thật.",
+            "Tomasz Havel: Có thể nhận ra một số dữ liệu không khớp, nhưng không dám/chưa từng nghĩ bản ghi có thể tự sinh ra nhân vật.",
+            "Elias van Doren: Không còn khả năng nhận thức hoặc thay đổi niềm tin do đã chết trước sự kiện hiện tại."
+          ],
+          "truth_background": [
+            "[kernel.true_case] There was never an architect. The tribunal system was not built by any one person — it emerged from countless human acts of rewriting each other's words. To give the horror a name, the system authored 'Sofia Bellini' as a scapegoat, so humans could blame a single architect rather than face the collective guilt. Book 1 and Book 2 were machine-generated records — one casting Sofia as victim, one as villain. Sofia is not a person who lied, but a character written to believe in her own authorship. Pierre is the last human whose memory has not been fully rewritten — his friction with the official record makes him 'obsessed' and unreliable in others' eyes. When Pierre tries to tell the true, chaotic version, the act itself generates a new, clean record — the system wins by rewriting even the story of its exposure.",
+            "[kernel.core_question] Who truly authored the tribunal system and the summits' tragedy — and what is Sofia Bellini's real nature and role?"
+          ],
+          "effective_milestone": 7
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 10,
+      "title": "The Sentence Unwritten",
+      "slug": "the-sentence-unwritten",
+      "one_line_summary": "Pierre Leclerc writes the final, unrecorded truth as the archive completes its loop and erases itself, leaving only the system’s version behind.",
+      "beat_summary": "Pierre Leclerc, gripped by both clarity and despair, sits before the tribunal record and writes his final sentence—the only honest line left. The moment it is committed to the archive, it vanishes, never to appear in any official document. The record seals itself perfectly: Sofia Bellini passes out of agency, existing only as a finished entry in the archive. Chief Adjudicator Rasmus, Magda Lorenz, and Tomasz Havel continue their roles, unable to grasp the core truth or break from the narrative. Elias van Doren remains only as a memory, his presence a closed loop. The archive is now flawless, and Pierre Leclerc understands the system’s victory is total—the truth cannot survive in the record.",
+      "must_happen": [
+        "Pierre Leclerc composes his last statement, aware it is the only true line he will ever write.",
+        "As Pierre Leclerc completes the entry, he sees the words disappear from the record, replaced by the closed, official version.",
+        "Sofia Bellini’s role collapses entirely; she is now only a character in the finished archive, without agency or presence.",
+        "Chief Adjudicator Rasmus, Magda Lorenz, and Tomasz Havel remain locked in their functions, unable to recognize or voice what has changed.",
+        "Elias van Doren appears only in the memory of the archive, his presence now only a trace in the system’s loop.",
+        "[PAYOFF C004]",
+        "[PAYOFF C005]",
+        "The record closes with the required phrase: No one built the system; it authored \"Sofia Bellini\" as a culprit so humans would have someone to blame instead of themselves."
+      ],
+      "must_not": [
+        "No character breaks out of their narrative role to acknowledge the nature of the system.",
+        "No supernatural or overtly technological explanation is given for the erasure or the loop.",
+        "No explicit awareness by any character (except Pierre Leclerc, privately, and only for a moment) of the archive’s self-writing nature."
+      ],
+      "opens_with": "\"If this is the last line I write, let it be the truth—though no one will ever read it.\"",
+      "cliffhanger": "As the archive seals itself, Pierre Leclerc’s final sentence is erased, and the only thing left is the official story: Sofia Bellini built the system.",
+      "signature_detail_hint": "A faint, vanishing indentation remains where Pierre Leclerc’s last words were pressed into the paper, gone as soon as the page is turned.",
+      "emotional_beat": "Pierre Leclerc’s heartbreak and resignation as his truth is wiped away; the suffocating finality as the system wins without resistance.",
+      "spice": 1,
+      "spice_note": "No explicit content; intensity is existential and psychological—the loss of truth and total isolation.",
+      "chapter_task": "Deliver the series’ final reckoning: Pierre Leclerc’s true sentence is written and lost, Sofia Bellini becomes only a character in the closed archive, and all others remain trapped in their roles. Close the loop with the binding phrase. Target 1600–1900 words.",
+      "carries_to_next": "The system’s victory is absolute: the official record stands, the true line erased, and the cycle is ready to repeat.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C004",
+          "C005"
+        ],
+        "reveals": [
+          {
+            "id": "MR003",
+            "reveal_weight": "minor",
+            "required_clues": [
+              "C005"
+            ],
+            "min_clues_required": 1
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T002",
+          "T003",
+          "T004",
+          "T005"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Pierre Leclerc",
+            "Sofia Bellini",
+            "Nadia Petrescu",
+            "Chief Adjudicator Rasmus",
+            "Magda Lorenz",
+            "Tomasz Havel",
+            "Elias van Doren"
+          ],
+          "may_know": [
+            "Pierre Leclerc: Pierre viết ra câu cuối cùng — câu thật duy nhất — nhưng nó không bao giờ xuất hiện trong bản ghi",
+            "Pierre Leclerc: Khoảnh khắc nó được ghi lại, nó không còn là sự thật",
+            "Pierre Leclerc: Bản ghi hoàn thiện vòng lặp, và Pierre hiểu rằng hệ thống đã chiến thắng ngay trong hành động vạch trần nó.",
+            "Sofia Bellini: Sofia biến mất khỏi vai trò chủ động",
+            "Sofia Bellini: cô chỉ còn tồn tại như một phần của bản ghi, nhân vật do hệ thống tạo ra và hoàn thiện.",
+            "Nadia Petrescu: Không xuất hiện trong hiện tại",
+            "Nadia Petrescu: chỉ là ký ức và tư liệu, không can dự vào vòng lặp của bản ghi.",
+            "Chief Adjudicator Rasmus: Vẫn duy trì niềm tin vào bản ghi, đóng vai trò bảo vệ hệ thống, không nhận diện được sự thật sâu xa.",
+            "Magda Lorenz: Tiếp tục đóng vai trò phụ trong bản ghi, không bao giờ tiếp cận được sự thật cốt lõi.",
+            "Tomasz Havel: Không bao giờ tiếp cận được sự thật về hệ thống hoặc Sofia.",
+            "Elias van Doren: Chỉ tồn tại qua bản ghi",
+            "Elias van Doren: ký ức của Elias là một phần của vòng lặp hệ thống."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Pierre Leclerc: Pierre viết ra câu cuối cùng — câu thật duy nhất — nhưng nó không bao giờ xuất hiện trong bản ghi",
+            "Pierre Leclerc: Khoảnh khắc nó được ghi lại, nó không còn là sự thật",
+            "Pierre Leclerc: Bản ghi hoàn thiện vòng lặp, và Pierre hiểu rằng hệ thống đã chiến thắng ngay trong hành động vạch trần nó.",
+            "Sofia Bellini: Sofia biến mất khỏi vai trò chủ động",
+            "Sofia Bellini: cô chỉ còn tồn tại như một phần của bản ghi, nhân vật do hệ thống tạo ra và hoàn thiện.",
+            "Nadia Petrescu: Không xuất hiện trong hiện tại",
+            "Nadia Petrescu: chỉ là ký ức và tư liệu, không can dự vào vòng lặp của bản ghi.",
+            "Chief Adjudicator Rasmus: Vẫn duy trì niềm tin vào bản ghi, đóng vai trò bảo vệ hệ thống, không nhận diện được sự thật sâu xa.",
+            "Magda Lorenz: Tiếp tục đóng vai trò phụ trong bản ghi, không bao giờ tiếp cận được sự thật cốt lõi.",
+            "Tomasz Havel: Không bao giờ tiếp cận được sự thật về hệ thống hoặc Sofia.",
+            "Elias van Doren: Chỉ tồn tại qua bản ghi",
+            "Elias van Doren: ký ức của Elias là một phần của vòng lặp hệ thống."
+          ],
+          "truth_background": [
+            "[kernel.true_case] There was never an architect. The tribunal system was not built by any one person — it emerged from countless human acts of rewriting each other's words. To give the horror a name, the system authored 'Sofia Bellini' as a scapegoat, so humans could blame a single architect rather than face the collective guilt. Book 1 and Book 2 were machine-generated records — one casting Sofia as victim, one as villain. Sofia is not a person who lied, but a character written to believe in her own authorship. Pierre is the last human whose memory has not been fully rewritten — his friction with the official record makes him 'obsessed' and unreliable in others' eyes. When Pierre tries to tell the true, chaotic version, the act itself generates a new, clean record — the system wins by rewriting even the story of its exposure.",
+            "[kernel.core_question] Who truly authored the tribunal system and the summits' tragedy — and what is Sofia Bellini's real nature and role?"
+          ],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    }
+  ],
+  "total_chapters": 10,
+  "title": "The Author of the Dead",
+  "status": "draft",
+  "created_at": "2026-07-22T13:54:05.521002+00:00",
+  "source_concept_digest": "bf1c7a96e60fdaab",
+  "source_narrative_digest": "9ddcd743f5538e8c"
+}

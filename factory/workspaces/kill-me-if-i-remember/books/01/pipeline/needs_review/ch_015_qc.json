@@ -1,0 +1,30 @@
+{
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "[length_fail — 1186 từ < min; đã expand/rewrite; KHÔNG cho qua ready (expand 2/2, rewrite 0/3) — không phải lỗi dấu *]",
+    "quá ngắn (1186 từ)"
+  ],
+  "source": "machine_content_cap",
+  "content_retries": 0,
+  "max_content_retries": 2,
+  "classification": {
+    "format_fix": {},
+    "content_fail": {},
+    "length": {
+      "short": 1186
+    },
+    "format_only": false,
+    "length_only": true,
+    "has_format": false,
+    "has_content": false,
+    "has_length": true
+  },
+  "llm_qc_before_machine_fail": {
+    "verdict": "FAIL",
+    "fail_reasons": [
+      "qc_transport_error"
+    ],
+    "source": "qc_transport_error",
+    "detail": "All models failed (['auto/fast', 'auto']): Error code: 503 - {'error': {'message': 'Maximum combo retry limit reached', 'type': 'server_error', 'code': 'service_unavailable'}}"
+  }
+}

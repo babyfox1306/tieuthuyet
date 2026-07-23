@@ -1,0 +1,95 @@
+```json
+{
+  "act": [
+    10,
+    12
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Scope's Hidden Truth",
+      "slug": "the-scopes-hidden-truth",
+      "one_line_summary": "Sloane Mercer returns to the rooftop, discovering a hidden reflection in the rifle scope that confirms Cassian Rook's direct manipulation, while Lucian Vey reveals the full extent of the sunrise clause.",
+      "beat_summary": "Sloane Mercer and Lucian Vey return to the rooftop, confronting the rifle and the pre-dawn light. Sloane Mercer inspects the rifle scope and sees a subtle, distorted reflection of Cassian Rook's insignia within the crosshairs, confirming his direct involvement (Clue C004). Lucian Vey, seeing Sloane Mercer's despair, confesses the full, brutal terms of the 'sunrise clause': if Sloane Mercer doesn't recover her memories and expose Cassian Rook by dawn, Lucian Vey is contractually bound to kill her (Major Reveal MR004). Sloane Mercer grapples with the terrifying choice her past self made. Cassian Rook broadcasts a taunt, confirming he's watching.",
+      "must_happen": [
+        "Sloane Mercer and Lucian Vey arrive back on the original rooftop, finding the rifle mounted as seen on the monitor from the memory erasure room.",
+        "Sloane Mercer inspects Lucian Vey's rifle scope and discovers a subtle, almost imperceptible reflection of Cassian Rook's personal insignia or a distorted image of his face within the targeting reticle (Clue C004 is planted here).",
+        "[ROMANCE] Lucian Vey, seeing Sloane Mercer's dawning horror, gently holds her face in his hands and reveals the full, unedited 'sunrise clause' of the contract: if Sloane Mercer fails to recover her memories and expose Cassian Rook by dawn, Lucian Vey is contractually bound to execute her (Major Reveal MR004).",
+        "Sloane Mercer is overwhelmed by the horrifying realization that her past self chose this ultimate gamble, including her own potential death at Lucian Vey's hands.",
+        "Cassian Rook's voice crackles over a hidden speaker embedded in the rooftop structure, taunting Sloane Mercer about her impending 'restoration' and Lucian Vey's impossible choice.",
+        "Sloane Mercer attempts to re-enact the firing sequence on the rifle, but it fails to yield further memories or information."
+      ],
+      "must_not": [
+        "Sloane Mercer must not fully understand the wrist circle's definitive connection to unlocking Cassian Rook's complete transaction ledger.",
+        "Mara Mercer must not make contact or reveal her survival to Sloane Mercer or Lucian Vey.",
+        "Cassian Rook must not physically appear on the rooftop or be captured."
+      ],
+      "opens_with": "The cold wind whipped Sloane Mercer's hair as she stepped onto the rooftop, the rifle a dark silhouette against the pre-dawn sky, waiting like a judge for her final verdict.",
+      "cliffhanger": "As Cassian Rook's voice fades, Sloane Mercer turns to Lucian Vey, her eyes wide with a terror that eclipses even her own death: 'You knew. All this time, you knew you might have to kill me.'",
+      "signature_detail_hint": "A single drop of condensation forms on the rifle scope's lens, temporarily distorting the subtle reflection of Cassian Rook's insignia, making it momentarily look like a tear falling from his eye.",
+      "emotional_beat": "Despair, terror, profound self-betrayal for Sloane Mercer; agonizing conflict, grim determination, and protective despair for Lucian Vey.",
+      "spice": 0,
+      "spice_note": "N/A",
+      "chapter_task": "Write a 1600-1900 word chapter where Sloane Mercer and Lucian Vey return to the rooftop, Sloane Mercer discovers Clue C004 (Cassian Rook's reflection), Lucian Vey delivers Major Reveal MR004 (the full sunrise clause), and Cassian Rook taunts them. Include the romance micro-beat of Lucian Vey's confession and Sloane Mercer's emotional collapse.",
+      "carries_to_next": "Sloane Mercer's desperate search for a way out of the sunrise clause, her distrust of her past self, and the immediate threat of Cassian Rook's encroaching forces and his 'restoration' process."
+    },
+    {
+      "chapter": 11,
+      "title": "The Sister's Signal",
+      "slug": "the-sisters-signal",
+      "one_line_summary": "Sloane Mercer and Lucian Vey scramble to evade Cassian Rook's encroaching perimeter, only for Sloane Mercer to discover Mara Mercer is alive and sending a desperate signal through the rifle scope.",
+      "beat_summary": "With dawn approaching and Cassian Rook's forces closing in, Sloane Mercer and Lucian Vey are forced to move around the rooftop, using their environment to avoid detection. Sloane Mercer takes cover near the rifle and, looking through the scope, sees a series of rhythmic taps and flashes from a distant building—a signal from Mara Mercer, revealing her survival to Sloane Mercer. [ROMANCE] Lucian Vey, seeing Sloane Mercer's shock and relief, pulls her close, a shared moment of desperate hope amid the chaos. Cassian Rook's men begin to breach the rooftop access points, forcing Lucian Vey to engage them in a desperate defense while Sloane Mercer tries to decipher Mara Mercer's signal.",
+      "must_happen": [
+        "Sloane Mercer and Lucian Vey are actively trying to evade Cassian Rook's perimeter forces, who are now moving onto the rooftop from multiple access points.",
+        "Sloane Mercer, while taking cover near the rifle, looks through the scope and sees a series of rhythmic flashes or taps from a distant building, recognizing them as a coded signal from Mara Mercer, confirming Mara Mercer's survival to Sloane Mercer.",
+        "Mara Mercer's signal uses a specific hand rhythm that Sloane Mercer recognizes as familiar, but the full meaning or connection to the firing sequence is not yet clear.",
+        "[ROMANCE] Lucian Vey sees Sloane Mercer's overwhelmed reaction to Mara Mercer's signal and pulls her into a tight, protective embrace, their shared relief and renewed hope momentarily eclipsing the immediate danger.",
+        "Cassian Rook's forces breach a rooftop access point, forcing Lucian Vey to engage them in close quarters combat to protect Sloane Mercer and prevent them from reaching the rifle.",
+        "Sloane Mercer, despite the chaos and Lucian Vey's desperate defense, focuses on desperately trying to interpret Mara Mercer's rhythmic signal, realizing it's a specific, repeated sequence."
+      ],
+      "must_not": [
+        "Sloane Mercer must not fully decipher Mara Mercer's hand rhythm or understand its definitive connection to the firing sequence or the transaction ledger.",
+        "Mara Mercer must not be rescued or physically interact with Sloane Mercer or Lucian Vey on the rooftop.",
+        "Cassian Rook must not be captured or directly confronted by Sloane Mercer or Lucian Vey in this chapter."
+      ],
+      "opens_with": "The first alarm blared from the stairwell, a raw shriek that cut through the pre-dawn quiet, confirming Cassian Rook wasn't waiting for sunrise.",
+      "cliffhanger": "As Lucian Vey fires a suppressive burst, Sloane Mercer sees Mara Mercer's hand in the scope, tapping out a frantic, familiar rhythm—the same wrist movement Sloane Mercer had been making unconsciously since waking up, but this time, it was a complete sequence, a silent command demanding to be fulfilled.",
+      "signature_detail_hint": "The rhythmic taps from Mara Mercer create a faint, almost musical hum through the rifle scope's metal, a counterpoint to the distant gunfire and a ghostly echo of Sloane Mercer's own subconscious movements.",
+      "emotional_beat": "Desperate hope, shock, fierce protectiveness, and a rekindled resolve for Sloane Mercer; renewed purpose, protective fury, and shared vulnerability for Lucian Vey.",
+      "spice": 0,
+      "spice_note": "N/A",
+      "chapter_task": "Write a 1600-1900 word chapter where Sloane Mercer and Lucian Vey are under attack on the rooftop, Mara Mercer is revealed to be alive to Sloane Mercer via a coded signal (Mara Mercer's hand rhythm), and Lucian Vey defends Sloane Mercer. Include the romance micro-beat of their shared moment of hope.",
+      "carries_to_next": "Sloane Mercer is now aware of Mara Mercer's survival and has received a partial, rhythmic signal; the pressure from Cassian Rook's forces intensifies, pushing Sloane Mercer to complete the firing sequence and unlock the ledger."
+    },
+    {
+      "chapter": 12,
+      "title": "The Ledger's Pulse",
+      "slug": "the-ledgers-pulse",
+      "one_line_summary": "Sloane Mercer uses Mara Mercer's signal to complete the firing sequence, unlocking Cassian Rook's transaction ledger through an explicit act with Lucian Vey, but Cassian Rook intervenes during a critical blind interval.",
+      "beat_summary": "Under intense pressure from Cassian Rook's encroaching forces, Sloane Mercer definitively realizes Mara Mercer's rhythmic signal is the missing part of her conditioned firing sequence (Clue C002 is paid off). Sloane Mercer guides Lucian Vey's hands to help her perform the sequence, which evolves into an explicit act of intimacy, directly triggering the full memory of the firing sequence and beginning to unlock Cassian Rook's transaction ledger. [ROMANCE] Their bodies move in a desperate, remembered dance, confirming their deep connection even as it serves a higher purpose. A hidden device (Clue C005) activates, projecting the ledger onto the scope. Cassian Rook exploits a brief blind interval in the surveillance feed to attempt to seize control of the rifle.",
+      "must_happen": [
+        "Sloane Mercer, under fire, definitively realizes that Mara Mercer's hand rhythm is the final, crucial component of her conditioned firing sequence (Clue C002 is paid off here).",
+        "Sloane Mercer, with Lucian Vey's urgent assistance, physically performs the full firing sequence on the rifle, which requires precise, intimate bodily coordination and a deep physical memory.",
+        "[ROMANCE] The act of completing the firing sequence becomes an explicit, consensual encounter between Sloane Mercer and Lucian Vey, driven by necessity, their deep, recovered physical intimacy, and the countdown to dawn. This act directly triggers the full memory of the firing sequence and begins to unlock Cassian Rook's complete transaction ledger.",
+        "A previously unknown device (Clue C005 is planted here), hidden within the rifle's stock, activates and begins to project the transaction ledger's encrypted contents onto the scope display.",
+        "Sloane Mercer sees the initial entries of the ledger, confirming Cassian Rook's manipulation of the seven targets and her own unwitting role in their deaths.",
+        "Cassian Rook, alerted to the ledger's activation, exploits a brief 'blind interval' in the rooftop surveillance to attempt to seize the rifle or disrupt the data transmission.",
+        "Mara Mercer's hand rhythm continues to echo in Sloane Mercer's mind, guiding her through the sequence even as the ledger begins to appear."
+      ],
+      "must_not": [
+        "The full contents of the transaction ledger must not be completely revealed or fully understood in this chapter; only that it is *beginning* to unlock and display entries.",
+        "Cassian Rook must not succeed in fully seizing the rifle or stopping the ledger transmission at this point.",
+        "Lucian Vey must not reveal the full details of the unedited recordings of the seven execution orders."
+      ],
+      "opens_with": "The gunfire was a drumbeat against the steel, but in Sloane Mercer's mind, only Mara Mercer's frantic rhythm echoed, a silent cadence that suddenly clicked into place.",
+      "cliffhanger": "As the first lines of Cassian Rook's ledger scroll across the scope, a dark figure lunges from the blind spot, aiming for the rifle—and Sloane Mercer realizes it's Cassian Rook himself, wearing a mask identical to Lucian Vey's, his hand reaching for the weapon she just unlocked.",
+      "signature_detail_hint": "The rifle's scope, instead of displaying a targeting reticle, now shows a rapid stream of encrypted data, each line flashing with a faint, green pulse as the ledger unlocks, like a digital heartbeat.",
+      "emotional_beat": "Intense vulnerability, desperate intimacy, a terrifying rush of memory and guilt for Sloane Mercer; conflicted desire, protective urgency, and dawning horror at Cassian Rook's betrayal for Lucian Vey.",
+      "spice": 3,
+      "spice_note": "The explicit encounter between Sloane Mercer and Lucian Vey is a high-stakes, desperate act of shared intimacy and trust. It is essential for Sloane Mercer to complete the conditioned firing sequence, directly unlocking her memories and the transaction ledger. The scene should focus on the physical and emotional connection that allows Sloane Mercer to access her deepest, repressed conditioning, intertwining their bodies with the mechanism of the rifle and the act of memory recovery. This explicit scene should comprise approximately 40% of the chapter, highlighting the plot-critical function of their physical bond.",
+      "chapter_task": "Write a 1600-1900 word chapter where Sloane Mercer pays off Clue C002 (wrist circle/firing sequence) with Lucian Vey's help through an explicit spice-3 encounter, planting Clue C005 (the ledger device) as the ledger projection, and ending with Cassian Rook's direct intervention during a blind interval. Ensure the ledger is only *beginning* to unlock.",
+      "carries_to_next": "Cassian Rook's direct intervention, the partial unlocking of the ledger, and the immediate threat to the rifle and Sloane Mercer's life, demanding a confrontation and full reveal of the ledger in the next chapter."
+    }
+  ]
+}
+```

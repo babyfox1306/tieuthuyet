@@ -1,0 +1,74 @@
+{
+  "act": [22, 22],
+  "chapter_plans": [
+    {
+      "chapter": 22,
+      "title": "The Unfinished Thread",
+      "slug": "the-unfinished-thread",
+      "one_line_summary": "Iris Kane publishes the complete tool-mark proof, Stellan Marsh states his role on live record and is arrested, and Iris resigns from the Directorate with the knowledge that a foreign counter-signatory remains.",
+      "beat_summary": "Iris Kane prepares to release the definitive proof. Stellan Marsh, in a live broadcast, states the required exact wording, confirming his role as the architect of the captured reform. The evidence is published irrevocably, and Marsh is taken into custody. Iris submits her resignation, choosing the record over the office. She receives an encrypted file from 'R' revealing a foreign energy contract bearing the same tool-mark watermark, indicating the conspiracy extends beyond national jurisdiction. Iris realizes the redacted page named a foreign counter-signatory, and the fight is not over.",
+      "must_happen": [
+        "Stellan Marsh states the required exact wording verbatim on live record: 'Stellan Marsh architected the National Integrity Directorate as a capture instrument: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn now control national procurement, laundering the same fraud at the scale of a country behind the credibility of the body meant to stop it.'",
+        "The complete tool-mark proof and the recorded confession (C011) are published through the journalist, backed by the forensic audit (C012).",
+        "Stellan Marsh is arrested by federal authorities as the evidence becomes public.",
+        "Iris Kane formally resigns from the National Integrity Directorate, stating that she chooses the factual record over the institution's authority.",
+        "Iris Kane receives an encrypted communication containing a foreign contract with the same tool-mark pattern, confirming that the redacted page named a counter-signatory outside her jurisdiction."
+      ],
+      "must_not": [
+        "Must not reveal the identity of the foreign counter-signatory.",
+        "Must not allow Marsh to escape arrest or recant his statement.",
+        "Must not have Iris remain in the Directorate."
+      ],
+      "opens_with": "\"Iris Kane,\" the anchor's voice cut through the static from the safe house, \"can you confirm that Mr. Marsh has just confessed to architecting the capture of the National Integrity Directorate?\"",
+      "cliffhanger": "The foreign contract's signature block was blacked out, but the typeface and watermark matched exactly. One co-owner had remained invisible. 'Find her,' the message from R ended. Iris searched the database for the contract number and found it registered to a shell company in a jurisdiction that did not share extradition.",
+      "signature_detail_hint": "The foreign contract's paper had a faint fleur-de-lis watermark that Iris recognized from a single case file in Book 1: the Kessler inquiry's confidential addendum, which she had never been shown.",
+      "emotional_beat": "Iris watched Marsh being led away with a strange mix of justice and melancholy. The system she had served was now her target, and the victory felt more like a new beginning than an end.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter that depicts the public release of evidence including Marsh's required exact wording, his arrest, Iris's resignation, and the book 2 hook about the foreign counter-signatory. Pay off C011 and C012. Ensure the exact wording from chapter_canon_rules appears verbatim. No romance. Maintain single POV through Iris Kane.",
+      "carries_to_next": "Iris Kane leaves the Directorate, now knowing that the capture extends beyond national borders, and begins to plan her next investigation into the foreign jurisdiction.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C011",
+          "C012"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T001"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris",
+            "Petra Lund",
+            "Nadia Okafor"
+          ],
+          "may_know": [
+            "Iris: The complete tool-mark proof is published irrevocably after Marsh states his role on live record",
+            "Iris: Marsh is arrested",
+            "Iris: Iris resigns the Directorate, choosing the record over the office",
+            "Iris: She knows the redacted page named a foreign counter-signatory, and the same tool-mark appears on a contract beyond her jurisdiction.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Same as ch16."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Iris: The complete tool-mark proof is published irrevocably after Marsh states his role on live record",
+            "Iris: Marsh is arrested",
+            "Iris: Iris resigns the Directorate, choosing the record over the office",
+            "Iris: She knows the redacted page named a foreign counter-signatory, and the same tool-mark appears on a contract beyond her jurisdiction.",
+            "Petra Lund: Same as ch11.",
+            "Nadia Okafor: Same as ch16."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The redacted co-owners who financed Renn's Kessler fast-track did not die with him. They learned. Rather than corrupt individual projects, they built the correction: the National Integrity Directorate is their capture vehicle — the body that guarantees integrity is the body that now controls which national contracts pass, entrenching the same fraud at the scale of a country. They recruited Iris not because they need her credibility to pass a verdict but because she is now a public figure who cannot be ignored — so they contain her by empowerment: give her the biggest clean job imaginable so she stops wanting the one thing, the redacted page. Her flagship role is her leash. What they did not account for: the fraud has a physical signature. Names can be redacted; a machining tool-mark cannot. The same override method that faked Kessler's load test recurs, physically identical, in the Meridian Spine's certified coupons — and Iris reads tool-marks for a living. She cannot recover the redacted names. She can prove common authorship through the physical DNA of the fraud itself, and follow that to the one man who built the Directorate to launder a nation's procurement: Stellan Marsh.",
+            "[kernel.core_question] Who architected the National Integrity Directorate as a capture instrument, and who are the co-owners behind Renn's redacted page?"
+          ],
+          "effective_milestone": 22
+        }
+      }
+    }
+  ]
+}

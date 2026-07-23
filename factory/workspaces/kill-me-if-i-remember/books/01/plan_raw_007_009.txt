@@ -1,0 +1,78 @@
+{
+  "act": [7,9],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Encrypted Entry",
+      "slug": "the-encrypted-entry",
+      "one_line_summary": "Sloane Mercer cracks the backup drive and finds a journal entry in her own handwriting confirming that seven target files were corrupted, forcing her to question everything Lucian Vey has withheld.",
+      "beat_summary": "Sloane Mercer decodes the backup drive from the Federal Records Annex and discovers a single encrypted file that yields to her old passphrase. Inside is a journal entry she wrote during the missing months, referencing exactly seven altered contracts and pointing to a safety deposit box key embedded in the drive's metadata. She and Lucian Vey locate the bank and retrieve a handwritten ledger fragment before Rook's men close in. During the escape, Lucian Vey shields Sloane Mercer from an assailant; she feels the rapid beat of his heart against her back, a momentary anchor. The ledger lists a partial name that matches the dead man from the photograph (C005). Sloane Mercer now knows Rook systematically eliminated witnesses.",
+      "must_happen": [
+        "Sloane Mercer decodes the backup drive and discovers a journal entry she wrote during the gap, confirming seven corrupted contracts (C006 planted).",
+        "Sloane Mercer and Lucian Vey use the embedded key to retrieve a safety deposit box containing a handwritten ledger fragment.",
+        "[ROMANCE] Lucian Vey shields Sloane Mercer from an attacker; she feels his heartbeat and the solidity of his body, a visceral reminder of a forgotten intimacy."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the binding condition of her contract.",
+        "Sloane Mercer does not learn that Mara Mercer is alive."
+      ],
+      "opens_with": "The encrypted file answered to a passphrase Sloane Mercer didn't know she'd chosen, as if her past self had left a key inside her own muscle memory.",
+      "cliffhanger": "The ledger fragment holds a partial name—Korovin—and Sloane Mercer's own handwriting beneath it: 'Seven deaths to bury one truth. Find the eighth.'",
+      "signature_detail_hint": "The safety deposit box had been opened exactly twice before that night; the bank's log showed timestamps from the week of the gap, each signed with a thumbprint that matched Sloane Mercer's left hand.",
+      "emotional_beat": "The shock of self-discovery as Sloane Mercer reads her own words, the fear of the chase, and the unwilling trust that grows as Lucian Vey's presence steadies her.",
+      "spice": 1,
+      "spice_note": "A beat of physical protection—chest to back, heartbeat—that carries the weight of a former life she cannot recall.",
+      "chapter_task": "Write 1600-1900 words from Sloane Mercer's limited POV. Include the decryption process, the journal entry reveal (C006), the bank retrieval, and the [ROMANCE] micro-beat. Plant C006 explicitly. Maintain tension of Rook's pursuit. End with the ledger fragment and Korovin name as hook.",
+      "carries_to_next": "The Korovin name as a new lead, Sloane Mercer's growing awareness of Rook's manipulation, and the concrete evidence of seven altered targets."
+    },
+    {
+      "chapter": 8,
+      "title": "The Recording",
+      "slug": "the-recording",
+      "one_line_summary": "Sloane Mercer and Lucian Vey follow the Korovin lead to a hidden voice recording that exposes Cassian Rook's conspiracy, and Sloane Mercer begins to suspect that her sister's death might have been staged.",
+      "beat_summary": "The partial name Korovin leads Sloane Mercer and Lucian Vey to an abandoned safehouse used by one of the eliminated witnesses. There, Sloane Mercer finds a voice recorder (C007) containing a conversation between Cassian Rook and a Russian contact; both men discuss how the seven victims were scapegoats for a larger weapons network. As she listens, Sloane Mercer's mind catches the pattern—the same one used on the rooftop: false evidence, a body that sells a story. She voices the possibility that Mara Mercer's death was staged. Lucian Vey says nothing, but his silence is an answer. Rook's men arrive; they escape through a sewage tunnel. During a tense moment, Sloane Mercer tends to a cut on Lucian Vey's arm, her hands unnervingly steady; he cups her jaw and says her name—once, softly—and the tenderness in it tells her there is more he can't say.",
+      "must_happen": [
+        "Sloane Mercer discovers a voice recording of Cassian Rook discussing the seven eliminated witnesses (C007 planted).",
+        "Sloane Mercer explicitly suspects that her sister Mara's death was part of a staged scene and says it aloud.",
+        "[ROMANCE] Lucian Vey cups Sloane Mercer's face after she tends his wound, speaking her name with a tenderness that breaks through the silence between them."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the binding condition of the contract.",
+        "Sloane Mercer does not receive confirmation that Mara Mercer is alive (only suspicion)."
+      ],
+      "opens_with": "The voice on the recording was Cassian Rook's, relaxed, as if he were ordering coffee instead of ordering a man's death.",
+      "cliffhanger": "Sloane Mercer pries open the recorder's casing and finds a stripped-down SIM card with a single number—her sister's childhood code to the shared safety-deposit box.",
+      "signature_detail_hint": "The safehouse smelled of cheap cigarettes and bleach, but the voice recorder was clean, its metal casing polished by a hand that knew not to leave prints behind.",
+      "emotional_beat": "Cold certainty mixes with dread as Sloane Mercer sees the shape of a conspiracy; the vulnerability she feels when Lucian Vey touches her face threatens to crack her composure.",
+      "spice": 1,
+      "spice_note": "A moment of quiet intimacy in the aftermath of chase—touch and voice carrying more than a confession could.",
+      "chapter_task": "Write 1600-1900 words from Sloane Mercer's limited POV. Include the discovery of C007 (voice recording), the recognition of the staged-death pattern, and the [ROMANCE] micro-beat with the jaw-cup and name. Follow knowledge constraints: she now suspects Mara is alive but does not confirm. End with the SIM card as a hook.",
+      "carries_to_next": "The SIM card number pointing to a shared safety-deposit box, Sloane Mercer's intentional suspicion about Mara, and the unresolved tension with Lucian Vey's silence."
+    },
+    {
+      "chapter": 9,
+      "title": "The Second Journal",
+      "slug": "the-second-journal",
+      "one_line_summary": "Sloane Mercer retrieves the contents of the safety-deposit box and finds a second journal entry detailing the exact plan for the staged shooting, including proof that Mara Mercer consented—forcing her to confront the trap she set for herself.",
+      "beat_summary": "Using the SIM card number, Sloane Mercer and Lucian Vey access a safety-deposit box at a different bank. Inside is a second journal entry (C008) written by Sloane Mercer, outlining the rifle angles, blood-pack placement, and timing of the staged shooting. A photograph of Mara Mercer is included, marked with a deliberate hand signal—the mirror-key reflex. Sloane Mercer realizes she planned her own sister's false death. Before she can fully process, a Rook operative corners them in the vault. Lucian Vey neutralizes the operative, but the altercation forces them to flee. In the car, Sloane Mercer turns on him: \"You knew.\" Lucian Vey meets her eyes and says only, \"I can't answer.\" She holds his gaze, the trust between them fracturing and reforming at once. A text from Cassian Rook arrives: 'You found her little game. But the real condition activates at sunrise. Did she tell you that?'",
+      "must_happen": [
+        "Sloane Mercer retrieves a second journal entry from a safety-deposit box, containing the complete staged-shooting plan (C008 planted).",
+        "Sloane Mercer confirms that the plan was her own, including evidence of Mara Mercer's consent through the mirror-key signal.",
+        "Sloane Mercer confronts Lucian Vey about his knowledge; he refuses to answer but does not deny.",
+        "[ROMANCE] Sloane Mercer holds Lucian Vey's gaze after his non-answer, and in the silence she reads the cost in his eyes—he is not lying to protect himself, but protecting her from a truth she is not ready for."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the exact wording of the binding condition.",
+        "Sloane Mercer does not receive explicit confirmation that Mara Mercer is alive (only strong circumstantial)."
+      ],
+      "opens_with": "The safety-deposit box contained a single envelope, but the handwriting on the front was her own, the letters slightly widened—as if written by a woman who expected never to read them again.",
+      "cliffhanger": "Cassian Rook's text burns across the screen: 'Did she tell you that?' Sloane Mercer's blood goes cold—not because she received an answer, but because she knows now, for the first time, that she built this entire night to beat him, and yet he is still three moves ahead.",
+      "signature_detail_hint": "The photograph of Mara Mercer showed the faint track of a teardrop that had dried on the glossy side; Sloane Mercer knew she must have been the one who cried over it, but she couldn't remember placing the photo in the envelope.",
+      "emotional_beat": "The horror of recognizing her own orchestration, the stubborn trust that refuses to break despite Lucian Vey's silence, and the first icy certainty that she may have made a deal even she cannot survive.",
+      "spice": 1,
+      "spice_note": "A silent stare that carries more intimacy than touch—years of love and pain compressed into a single, unblinking moment.",
+      "chapter_task": "Write 1600-1900 words from Sloane Mercer's limited POV. Include the safety-deposit box retrieval, the reveal of C008 (second journal entry), the action beat with the operative, and the [ROMANCE] micro-beat of the held gaze. Follow knowledge: she now has strong proof of staging but not of Mara's current state. Plant C008 explicitly. End with Rook's text setting up chapter 10's POV shift.",
+      "carries_to_next": "The photograph and journal as clear proof of staging, the question of the 'real condition' from Rook's text, and Sloane Mercer's determination to uncover the full truth before sunrise."
+    }
+  ]
+}

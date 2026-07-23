@@ -1,0 +1,228 @@
+```json
+{
+  "act": [
+    19,
+    21
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 19,
+      "title": "The Private Stake",
+      "slug": "19-the-private-stake",
+      "one_line_summary": "Iris Kane uncovers financial records linking Aldous Renn to a private stake in Vantor, definitively identifying him as the author of the fast-track approval.",
+      "beat_summary": "Iris Kane, now certain of Aldous Renn's role as the inquiry's architect, intensifies her investigation into his financial history. Using the high-level access logs (C007) as a guide, she meticulously cross-references public records and corporate filings. She discovers a shell corporation with a significant private investment from an entity directly linked to Aldous Renn, predating the Vantor fast-track approval. This financial ledger (plant C009) reveals Renn's personal stake in Vantor, providing the motive for fast-tracking an uncertified contract. Iris Kane confirms that Aldous Renn personally authored or directed the Vantor fast-track due to this private interest (payoff C009, reveal MR006). She realizes this is the definitive link to his personal culpability, completing the four-tier exposure. Iris Kane prepares her evidence, knowing the next commission meeting will be her final opportunity to expose him.",
+      "must_happen": [
+        "Iris Kane actively investigates Aldous Renn's financial history and connections to Vantor Group.",
+        "Iris Kane uncovers a specific financial ledger (plant and payoff C009) linking Aldous Renn to a private stake in Vantor, predating the fast-track approval.",
+        "Iris Kane confirms that Aldous Renn personally authored or directed the Vantor fast-track due to this private interest (reveal MR006).",
+        "Iris Kane recognizes this evidence as the definitive personal link to Renn's culpability.",
+        "Iris Kane prepares to present her findings at the next commission meeting, aiming to expose Aldous Renn."
+      ],
+      "must_not": [
+        "Iris Kane does not yet reveal the core sample to Aldous Renn or the commission.",
+        "Aldous Renn is not yet directly linked to the load-test override or burial of evidence.",
+        "Aldous Renn is not arrested in this chapter."
+      ],
+      "opens_with": "The stylized 'R' from Adrienne Sol's encrypted channel now took on a chilling new meaning. Iris Kane laid out the high-level access logs, a network of connections she was finally ready to untangle.",
+      "cliffhanger": "Iris Kane traced the shell corporation's name, then Aldous Renn's signature on an old public filing. The private stake was undeniable. He hadn't just built the inquiry; he'd built the disaster. She looked at the date of the next commission meeting. The clock was ticking.",
+      "signature_detail_hint": "A faint, almost erased pencil notation on the margin of an old corporate ledger—a series of numbers that, when cross-referenced, match a specific, unusually large wire transfer to one of Renn's known charities.",
+      "emotional_beat": "A cold, focused resolve as Iris Kane uncovers the personal greed driving the conspiracy, solidifying her determination to expose the architect.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. This chapter solidifies Aldous Renn's personal involvement in the fast-track (plant and payoff C009, reveal MR006). Iris Kane finds the definitive physical evidence of his private interest. Build the tension towards the final confrontation. No romance.",
+      "carries_to_next": "Iris Kane now has the irrefutable evidence of Aldous Renn's private stake and his role in the fast-track. She is poised to expose him as the ultimate mastermind, linking him to the load-test override in the next chapter.",
+      "narrative": {
+        "clues_plant": [
+          "C009"
+        ],
+        "clues_payoff": [
+          "C009"
+        ],
+        "reveals": [
+          {
+            "id": "MR006",
+            "reveal": "Aldous Renn is identified as the author of the Vantor fast-track due to his private financial interest.",
+            "impact": "This reveal establishes Renn's personal motive and direct involvement in the initial corruption, completing the four-tier culpability chain leading to him.",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C007",
+              "C009"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "core_sample",
+          "renn_reveal"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Kane",
+            "Dov Marek",
+            "Theo Vance",
+            "Adrienne Sol",
+            "Aldous Renn"
+          ],
+          "may_know": [
+            "Iris Kane: Identified Renn as the fast-track author (private interest)",
+            "Iris Kane: Knows he is the architect of the fast-track but still does not know he built the inquiry or overrode the load test",
+            "Iris Kane: Core sample still hidden.",
+            "Dov Marek: Deceased.",
+            "Theo Vance: Arrested.",
+            "Adrienne Sol: In custody",
+            "Adrienne Sol: possibly learns Renn's name through investigation.",
+            "Aldous Renn: Iris has connected him to the fast-track (private interest)",
+            "Aldous Renn: Threat level increases, but still believes his override/burial role is safe",
+            "Aldous Renn: Still unaware of core sample."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 19
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 20,
+      "title": "The Binding Condition",
+      "slug": "20-the-binding-condition",
+      "one_line_summary": "Iris Kane confronts Aldous Renn at the inquiry, presenting the core sample and all evidence to reveal he orchestrated the load-test override, buried the failure, and designed the inquiry as a cover-up.",
+      "beat_summary": "At what Aldous Renn intends to be the final commission meeting, Iris Kane interjects, declaring new evidence that fundamentally alters the inquiry's findings. She presents the core sample, explaining its definitive proof of a catastrophic material flaw and the complete absence of seismic damage. Iris Kane systematically connects the dots: the suppressed load-test data, Theo Vance's coerced complicity, Adrienne Sol's operational cover-up, and finally, Aldous Renn's private stake and direct authorship of the Vantor fast-track (MR006). She uses Adrienne Sol's earlier comment about the fast-track being 'above her pay grade' (payoff C010) to highlight Renn's ultimate authority. Iris Kane reveals that Aldous Renn overrode the load-test failure, buried the evidence, and built the entire inquiry as a 'controlled burn' to launder his culpability (reveal MR007). Confronted with irrefutable physical and documentary evidence, Aldous Renn attempts to deny or deflect, but the weight of the truth shatters his composure, sending the meeting into chaos.",
+      "must_happen": [
+        "Iris Kane confronts Aldous Renn at a public or semi-public inquiry session.",
+        "Iris Kane presents the core sample analysis as definitive proof of the material flaw, directly disproving the official cause.",
+        "Iris Kane reveals that Aldous Renn personally overrode the load-test failure and buried the evidence (reveal MR007).",
+        "Iris Kane connects Aldous Renn's private stake (C009) and the fast-track (C006, C007) to his motive for burying the load test.",
+        "Iris Kane uses Adrienne Sol's earlier statement about the fast-track being 'above her pay grade' (payoff C010) to reinforce Renn's ultimate authority and culpability.",
+        "Iris Kane explicitly states that Aldous Renn built the inquiry as a cover-up to protect himself."
+      ],
+      "must_not": [
+        "Aldous Renn is not arrested in this chapter; the confrontation is the climax.",
+        "The complete truth is not yet *published* to the wider public in this chapter.",
+        "Iris Kane's own unwitting complicity is not yet acknowledged publicly."
+      ],
+      "opens_with": "Aldous Renn tapped his gavel, a practiced, dismissive sound. 'With Adrienne Sol's testimony finalized, I believe we can move to the formal closure of the Kessler Line Inquiry.' Iris Kane rose from her seat. 'Not yet, Commissioner. There's one more piece of evidence.'",
+      "cliffhanger": "Aldous Renn’s face, usually a mask of calm authority, crumpled. 'This is baseless speculation!' he roared, but his eyes darted to the core sample on the table. Iris Kane stood her ground. 'It's not speculation, Commissioner. It's the binding condition. And you wrote it.' The room erupted.",
+      "signature_detail_hint": "The air conditioning in the hearing room fails during the confrontation, and Aldous Renn’s meticulously styled hair begins to fall, revealing the damp sheen of sweat on his forehead.",
+      "emotional_beat": "A surge of righteous anger and vindication for Iris Kane, as years of suppressed truth explode into the open, facing down the architect of the conspiracy.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. This is the central mystery reveal (MR007). Iris Kane confronts Aldous Renn with all the evidence, including the core sample, proving he overrode the load test, buried the failure, and built the inquiry as a cover-up. Payoff C010. End on the chaos of the revelation. No romance.",
+      "carries_to_next": "Aldous Renn has been exposed as the mastermind, and the inquiry is in disarray. The next chapter will detail his arrest, the publication of the full truth, and Iris Kane's final actions.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C010"
+        ],
+        "reveals": [
+          {
+            "id": "MR007",
+            "reveal": "Aldous Renn overrode and buried the Kessler load-test failure because he had fast-tracked Vantor's uncertified contract for a private stake, and when the tunnel killed sixty-three people he built the independent inquiry itself to launder his culpability by sacrificing the tiers beneath him on a schedule that stops before his name.",
+            "impact": "This is the full and complete reveal of the central mystery, exposing Aldous Renn as the ultimate architect of both the disaster and the cover-up, linking his personal greed to the systemic corruption.",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C006",
+              "C009",
+              "C010"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "core_sample",
+          "renn_reveal"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Kane",
+            "Dov Marek",
+            "Theo Vance",
+            "Adrienne Sol",
+            "Aldous Renn"
+          ],
+          "may_know": [
+            "Iris Kane: Central mystery solved: Renn overrode and buried the load-test failure and built the inquiry as cover",
+            "Iris Kane: Binding condition exact wording now known",
+            "Iris Kane: The core sample's significance becomes clear and is used as key evidence.",
+            "Dov Marek: Deceased.",
+            "Theo Vance: Arrested.",
+            "Adrienne Sol: In custody",
+            "Adrienne Sol: now knows Renn's role through evidence.",
+            "Aldous Renn: Forced to state his role on live record",
+            "Aldous Renn: core sample and complete evidence used against him",
+            "Aldous Renn: Arrested."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 20
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 21,
+      "title": "The Record That Exists",
+      "slug": "21-the-record-that-exists",
+      "one_line_summary": "Aldous Renn is arrested, the complete truth about the Kessler Line collapse is irrevocably published, and Iris Kane returns to her work, the record of truth now her legacy.",
+      "beat_summary": "Following Iris Kane's explosive revelations, security forces move in. Aldous Renn, cornered by the irrefutable evidence and public scrutiny, is compelled to state his authorship of the Vantor fast-track and the subsequent cover-up on live record. He is then arrested at the inquiry table he had built. Iris Kane works with legal authorities to meticulously compile the complete, true finding document, which names all four tiers of culprits: Dov Marek, Theo Vance, Adrienne Sol, and Aldous Renn. Crucially, the document explicitly includes Iris Kane's own early unwitting cooperation, acknowledging her role in the initial, flawed inquiry. Iris Kane signs the true finding, ensuring the sixty-three victims' names are finally attached to the correct cause of collapse. The complete evidence is published, irrevocably. Months later, in an epilogue, Iris Kane is back in the field, coring a different structure, finding a quiet, honest purpose in her work. The reopened prosecutions and fate of Vantor contracts are briefly noted, but her focus is on the enduring record of truth she helped create, accepting the complexities of her journey.",
+      "must_happen": [
+        "Aldous Renn is forced to state his authorship of the fast-track and cover-up on live record.",
+        "Aldous Renn is arrested at the inquiry table he designed.",
+        "The complete evidence, naming Dov Marek, Theo Vance, Adrienne Sol, and Aldous Renn, is compiled and published irrevocably.",
+        "The published record explicitly includes Iris Kane's early unwitting cooperation with the inquiry's false design.",
+        "Iris Kane signs the true finding, linking the sixty-three victims' names to the correct cause of collapse.",
+        "Epilogue scene: Iris Kane is back doing field work, coring a different structure, finding an honest sense of purpose."
+      ],
+      "must_not": [
+        "Aldous Renn is not killed.",
+        "Iris Kane is not exculpated from her unwitting cooperation; it remains on the public record.",
+        "The narrative does not portray this as a triumphal victory, but a necessary, hard-won truth and a return to pragmatic work."
+      ],
+      "opens_with": "The gavel lay broken on the table, shattered during Aldous Renn’s final, desperate attempt to silence the truth. Uniformed officers moved through the stunned silence, their presence a stark punctuation mark to Iris Kane’s words.",
+      "cliffhanger": "Iris Kane drove past the Kessler Line memorial, a quiet monument to the sixty-three names finally attached to a true cause. She parked by a new construction site, pulling her core drill from the back of her truck. The work was her purpose, the truth her legacy. The record existed. And so did she.",
+      "signature_detail_hint": "The pen Iris Kane uses to sign the true finding document is a simple, heavy drafting pen she's owned for years, its metal casing worn smooth from countless calculations.",
+      "emotional_beat": "A profound, quiet acceptance for Iris Kane of the heavy cost of truth, tempered by the satisfaction of a record set straight and a renewed commitment to her principles.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Conclude Book 1. Detail Aldous Renn's arrest, the irrevocable publication of the complete truth, and Iris Kane's signing of the true finding. Include an epilogue showing Iris Kane's return to field work and reflection on her journey. Emphasize the themes of record-keeping and integrity. No romance.",
+      "carries_to_next": "The Kessler Line case is closed, but the lasting impact of the conspiracy and Iris Kane's role sets the stage for future books.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "core_sample"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Kane",
+            "Dov Marek",
+            "Theo Vance",
+            "Adrienne Sol",
+            "Aldous Renn"
+          ],
+          "may_know": [
+            "Iris Kane: Central mystery solved: Renn overrode and buried the load-test failure and built the inquiry as cover",
+            "Iris Kane: Binding condition exact wording now known",
+            "Iris Kane: The core sample's significance becomes clear and is used as key evidence.",
+            "Dov Marek: Deceased.",
+            "Theo Vance: Arrested.",
+            "Adrienne Sol: In custody",
+            "Adrienne Sol: now knows Renn's role through evidence.",
+            "Aldous Renn: Forced to state his role on live record",
+            "Aldous Renn: core sample and complete evidence used against him",
+            "Aldous Renn: Arrested."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 20
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

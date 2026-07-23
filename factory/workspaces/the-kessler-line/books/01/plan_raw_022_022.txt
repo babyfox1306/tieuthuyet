@@ -1,0 +1,38 @@
+```json
+{
+  "act": [
+    22,
+    22
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 22,
+      "title": "The Next Core",
+      "slug": "22-the-next-core",
+      "one_line_summary": "Months after Aldous Renn's arrest, Iris Kane finds a new anomaly in the Kessler Line's financial records, hinting at a wider, unaddressed network and setting the stage for future investigations.",
+      "beat_summary": "Months after the Kessler Line inquiry's conclusion, Iris Kane is back in the field, examining a new construction site. She reflects on the aftermath: the reopened prosecutions, the legal fallout for Vantor Group, and the ongoing public debate. While reviewing archival documents from the Kessler Line case, she stumbles upon a redacted section in the original Vantor Group contract’s co-owner ledger, hinting at unknown, influential stakeholders that were never addressed by the inquiry (book2_hook). A news report briefly mentions Theo Vance's continued cooperation, referencing his 'old case' as a factor in his plea. Iris Kane, recognizing the familiar pattern of hidden influence, feels a renewed, quiet determination to uncover the full extent of the network, understanding that the Kessler Line's true roots run deeper than a single architect.",
+      "must_happen": [
+        "Iris Kane is shown months after the Kessler Line inquiry, working on a new structural engineering project, embodying her return to her core profession.",
+        "Iris Kane reviews the official aftermath of the Kessler Line case, including notes on reopened prosecutions and the fate of Vantor Group contracts.",
+        "Iris Kane discovers a subtle anomaly: a redacted section in the original Vantor Group contract's co-owner ledger, hinting at unaddressed, powerful stakeholders (book2_hook).",
+        "A news report or brief mention references Theo Vance's continued cooperation, with a subtle nod to his 'old case' and its potential ongoing influence.",
+        "Iris Kane acknowledges the completed record of the Kessler Line but feels a new, quiet determination to investigate the newly discovered hidden layers, touching the 'core_sample' thread by applying her forensic mindset to this new anomaly."
+      ],
+      "must_not": [
+        "No new villains are actively introduced or confronted in this chapter.",
+        "The full scope of the next conspiracy (Book 2 hook) is not revealed, only hinted at.",
+        "Iris Kane does not engage in any direct action or investigation related to the new anomaly; it's a seed for the future.",
+        "There is no romantic interaction or sub-plot."
+      ],
+      "opens_with": "The hum of the core drill was a familiar comfort, a rhythmic pulse against the new concrete. Months had passed since the Kessler Line inquiry, and Iris Kane was back where she belonged: in the field, reading the bones of a structure.",
+      "cliffhanger": "Iris Kane ran her thumbnail over the redacted names in the old ledger, a familiar unease stirring. The Kessler Line was closed, the architect arrested, but the shadow of another structure, unseen and unexamined, stretched far beyond the tunnel. She closed the file, the faint scent of old paper clinging to her fingers. The work, she realized, was far from over.",
+      "signature_detail_hint": "The faint, almost translucent watermark on the old Vantor Group contract ledger, barely visible under direct light, shows a series of interlocking, stylized initials that do not match any publicly known entities.",
+      "emotional_beat": "A sense of quiet resolution for Iris Kane, intertwined with the rekindling of her investigative drive as a new, subtle mystery emerges from the ashes of the old.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Conclude Book 1 by establishing Iris Kane's 'new normal' and setting a clear, intriguing hook for Book 2. Detail the aftermath of the Kessler Line inquiry while introducing the next layer of the conspiracy through a subtle, physical detail. Touch on the 'book2_hook' and 'core_sample' threads as per narrative constraints. Ensure 'Iris Kane' and 'Theo Vance' are used verbatim. No romance.",
+      "carries_to_next": "The revelation of redacted co-owners for Vantor Group leaves Iris Kane with a new, unresolved mystery, directly setting up the premise for Book 2."
+    }
+  ]
+}
+```

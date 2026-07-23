@@ -2,13 +2,20 @@
 
 finish_reason=length → hard truncate (provider/cap).
 Missing finish_reason → fall back to EG-01 (sentence must end cleanly).
+Missing ``# Chapter N`` / mid-sentence opening → structure fail (full rewrite).
 """
 
 from __future__ import annotations
 
 from typing import Any
 
-from factory.engine.lib.export_gate import check_eg01_truncated
+from factory.engine.lib.export_gate import (
+    check_eg01_truncated,
+    has_pipeline_chapter_heading,
+    prose_opening_truncated,
+)
+
+STRUCTURE_FAIL_CODES = frozenset({"missing_chapter_heading", "truncated_opening"})
 
 
 def extract_finish_reason(choice_or_meta: Any) -> str | None:
@@ -35,6 +42,8 @@ def writer_output_incomplete(
     Codes:
       truncated_by_length — finish_reason == length (silent cap / token wall)
       truncated_eg01 — ending fails EG-01 (mid-sentence / unclosed quote / …)
+      missing_chapter_heading — no ``# Chapter N: Title`` first line
+      truncated_opening — prose starts mid-sentence (lowercase Latin)
     """
     fr = (finish_reason or "").strip().lower() or None
     if fr == "length":
@@ -45,11 +54,23 @@ def writer_output_incomplete(
         )
 
     body = (text or "").strip()
+    if not has_pipeline_chapter_heading(body):
+        return (
+            True,
+            "missing_chapter_heading",
+            "first line must be `# Chapter N: Title` (or `# Chương N: …`)",
+        )
+    if prose_opening_truncated(body):
+        return (
+            True,
+            "truncated_opening",
+            "prose starts mid-sentence (lowercase) — head was cut or rewrite fragment",
+        )
+
     eg = check_eg01_truncated(body, chapter)
     if not eg.get("passed"):
         detail = str(eg.get("detail") or "invalid chapter ending")
-        # When router omits finish_reason, EG-01 is the only signal.
-        code = "truncated_eg01" if fr is None or fr == "stop" else "truncated_eg01"
+        code = "truncated_eg01"
         if fr is None:
             detail = f"no finish_reason from router; EG-01: {detail}"
         else:
@@ -66,7 +87,23 @@ def continuation_suffix(
     prior_tail: str,
     attempt: int,
 ) -> str:
-    """Prompt patch: continue from cut-off without repeating."""
+    """Prompt patch after incomplete output.
+
+    Head/structure failures must FULL REWRITE — continuation would burn tokens
+    on a permanently broken opening.
+    """
+    if code in STRUCTURE_FAIL_CODES:
+        return (
+            f"\n\n[STRUCTURE REWRITE — attempt {attempt} — {code}]\n"
+            f"Previous draft had broken chapter STRUCTURE ({detail}).\n"
+            "Rewrite the FULL chapter from scratch.\n"
+            "Line 1 MUST be exactly: `# Chapter N: <Title>` "
+            "(or `# Chương N: <Tiêu đề>` for Vietnamese).\n"
+            "First prose sentence MUST start with a capital letter "
+            "(complete sentence — never mid-clause like 'the inevitable;…').\n"
+            "Do NOT continue a fragment. Do NOT omit the chapter title line.\n"
+        )
+
     tail = (prior_tail or "").strip()[-800:]
     return (
         f"\n\n[CONTINUATION — attempt {attempt} — {code}]\n"

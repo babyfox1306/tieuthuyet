@@ -1,0 +1,82 @@
+{
+  "act": [19, 21],
+  "chapter_plans": [
+    {
+      "chapter": 19,
+      "title": "The Last Thread",
+      "slug": "the-last-thread",
+      "one_line_summary": "Iris Kane conclusively links the Meridian Spine tool-mark to Veridian Trust's machine shop, forcing a confrontation with Stellan Marsh as she prepares to expose the conspiracy.",
+      "beat_summary": "Iris Kane performs a detailed metallurgical analysis and discovers a unique etching on the Spine coupon that matches a jig registered to a Veridian Trust subsidiary. This is the conclusive link between the physical fraud and the shell company network (MR008). She documents the evidence and prepares to leak it. Nadia Okafor, in custody, warns her that the person above Halveston will destroy her career. Stellan Marsh summons Iris to his office and offers a final warning: cease the internal investigation or face reassignment. Iris leaves the meeting knowing she must act fast. She sends an encrypted copy of her findings to a journalist she trusts. The chapter ends with Iris receiving a call from Marsh, asking for a private meeting before the leak goes live.",
+      "must_happen": [
+        "Iris Kane discovers a manufacturer's etching on the Meridian Spine coupon that ties the override jig to a Veridian Trust subsidiary, paying off C010.",
+        "Nadia Okafor warns Iris Kane that the architect above Halveston is untouchable within the Directorate.",
+        "Stellan Marsh summons Iris Kane and threatens her with reassignment if she continues the internal investigation.",
+        "Iris Kane sends her compiled evidence to a journalist outside the Directorate, initiating the public exposure."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not have Iris Kane explicitly name Marsh as the architect in her thoughts or dialogue."
+      ],
+      "opens_with": "The fifth micrograph showed something Iris Kane had missed a dozen times: a tiny 'K' etched into the fracture surface, invisible except under oblique lighting. She rotated the image and realized it was half of a larger symbol — the same logo she had seen on the Veridian Trust charter.",
+      "cliffhanger": "As Iris Kane left the lab, her phone buzzed. Stellan Marsh's name appeared on the screen. She answered, and his voice was calm: 'Iris, I think it's time we had the conversation you've been avoiding. My office, tonight. Alone.'",
+      "signature_detail_hint": "The 'K' etching is actually part of a winged-key emblem, the trademark of a machine shop that no longer legally exists; its registration papers are buried in a holding company that shares a law firm with Veridian Trust.",
+      "emotional_beat": "Iris Kane felt the pieces clicking into place, but the satisfaction was flattened by dread. The thread in her hand led straight to the top of the institution she had sworn to serve.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter that pays off C010, delivers MR008, and sets up the final confrontation with Marsh. Maintain single POV, high procedural tension, and avoid any mention of Marsh as architect. Keep emotional tone focused on Iris's determination and risk. No romance or sexual content.",
+      "carries_to_next": "Iris Kane heads to the meeting with Stellan Marsh, carrying the proof that will expose him, but unsure if her leak is enough to beat his institutional power."
+    },
+    {
+      "chapter": 20,
+      "title": "The Architect Revealed",
+      "slug": "the-architect-revealed",
+      "one_line_summary": "Iris Kane confronts Stellan Marsh with irrefutable evidence that he architected the Directorate as a capture instrument, and he confesses on a recording she plants.",
+      "beat_summary": "Iris Kane goes to the private meeting with Stellan Marsh, bringing a hidden recording device. She lays out the complete chain of evidence: the tool-mark link, the systemic loophole (C007, C008, C009), and the policy directive that proves Marsh personally rewrote the certification rules (C010 and new evidence from the Director's Eyes Only file). Marsh, cornered, acknowledges his role, stating the required exact wording: 'Stellan Marsh architected the National Integrity Directorate as a capture instrument: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn now control national procurement, laundering the same fraud at the scale of a country behind the credibility of the body meant to stop it.' He also reveals that the co-owners include a rotating set of individuals whose names are protected. Iris Kane leaves with the recording, planting C011 (the recording itself as evidence). Marsh realizes he has been recorded and orders the building locked down, but Iris Kane has already sent a copy to the journalist.",
+      "must_happen": [
+        "Iris Kane presents the complete chain of evidence to Stellan Marsh, establishing that he is the architect (MR009, paying off C007, C008, C009, C010).",
+        "Stellan Marsh confirms his role and speaks the required exact wording verbatim, as captured on Iris Kane's hidden recording.",
+        "Iris Kane secures the recording and a copy of the evidence, planting C011 as the recorded confession.",
+        "Marsh orders the building locked down, but Iris Kane has already transmitted the evidence to an external journalist."
+      ],
+      "must_not": [
+        "Must not have Iris Kane lose the evidence or recording.",
+        "Must not have Marsh physically threaten or harm Iris Kane (only institutional retaliation).",
+        "Must not have Halveston or Okafor appear in this scene."
+      ],
+      "opens_with": "Stellan Marsh was waiting by the window when Iris Kane entered. 'You look like a woman who has found something she wasn't supposed to,' he said. 'I found everything,' she replied, placing the file on his desk.",
+      "cliffhanger": "Marsh stood slowly, his composure cracking. 'You recorded this conversation.' Iris Kane didn't answer. She walked out, leaving him to discover the mic taped under his own chair. The transmission had already left the building.",
+      "signature_detail_hint": "The Director's Eyes Only file, which Iris Kane lifted from Marsh's assistant's desk, is printed on paper that smells faintly of cloves — Marsh's preferred cigarillo brand — a detail that confirms the document came from his personal office.",
+      "emotional_beat": "The confrontation was cathartic but terrifying. Iris Kane had made an enemy of the most powerful man in national procurement, but she had the truth on her side — for now.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter that delivers the major reveal MR009 with the required exact wording, plants C011 (the recording), and ends with Iris escaping the lockdown. No romance. Keep dialogue sharp and evidence-driven.",
+      "carries_to_next": "Iris Kane has the recording and evidence, but Marsh will use every tool to discredit her. She races to publish before he can destroy her career."
+    },
+    {
+      "chapter": 21,
+      "title": "The Public Account",
+      "slug": "the-public-account",
+      "one_line_summary": "Iris Kane releases the evidence to the public; Stellan Marsh attempts to spin the narrative, but his recorded confession forces him to resign and face arrest.",
+      "beat_summary": "The journalist Iris Kane contacted releases the story, including the recording of Marsh's confession (C011 payoff). Marsh holds a press conference to deny the allegations, but Iris Kane has prepared a secondary piece of evidence — a financial audit linking Marsh personally to Veridian Trust (C012 planted by Iris Kane). When Marsh claims the recording is doctored, Iris Kane releases the audit, which contains a unique paper watermark that matches the 'Director's Eyes Only' file, proving the documents are genuine. This major reveal MR010 solidifies the case. Marsh is arrested on camera. The chapter ends with Iris Kane realizing that the co-owners beyond Marsh remain unknown, and one name from the redacted page was never on any live record, setting up the series arc.",
+      "must_happen": [
+        "The journalist publishes the story including Marsh's recorded confession (payoff C011).",
+        "Stellan Marsh holds a press conference to deny the allegations, claiming the recording is fabricated.",
+        "Iris Kane releases a forensic audit linking Marsh's personal finances to Veridian Trust, paying off C012.",
+        "Marsh is arrested after the audit confirms the conspiracy, achieving MR010."
+      ],
+      "must_not": [
+        "Must not have Iris Kane be physically present at the arrest (she watches remotely).",
+        "Must not have Marsh escape or die before arrest.",
+        "Must not have the full list of co-owners revealed in this chapter."
+      ],
+      "opens_with": "Iris Kane watched the press conference from a safe house, the evidence briefcase beside her. Marsh was defending his legacy with practiced ease, until the journalist asked about the machine shop logo. 'That's a fabrication,' Marsh said. Iris Kane pressed send on the audit.",
+      "cliffhanger": "As Marsh was led away in handcuffs, Iris Kane's phone buzzed with a message from an unknown number: 'One co-owner remains. She knows who you are. — R.' Iris Kane looked at the redacted page from Book 1, still missing the final name.",
+      "signature_detail_hint": "The forensic audit Iris Kane used contains a minuscule falcon watermark identical to the one on the 'Director's Eyes Only' file, proving the chain of custody is unbroken.",
+      "emotional_beat": "Iris Kane felt the heaviness of the victory. Marsh was gone, but the system that enabled him was still intact. The real fight had just begun.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter that pays off C011 and C012 for MR010, includes the required exact wording in the press conference rebuttal or in the released statement, and sets up the Book 2 ending. Maintain Iris's single POV, no romance.",
+      "carries_to_next": "With Marsh arrested, Iris Kane resigns from the Directorate as promised, knowing the one missing name from the redacted page is still out there, and a woman named 'R' may hold the key."
+    }
+  ]
+}

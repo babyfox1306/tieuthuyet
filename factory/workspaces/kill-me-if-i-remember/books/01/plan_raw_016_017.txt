@@ -1,0 +1,58 @@
+{
+  "act": [16, 17],
+  "chapter_plans": [
+    {
+      "chapter": 16,
+      "title": "The Mirror Key",
+      "slug": "the-mirror-key",
+      "one_line_summary": "Sloane Mercer and Lucian Vey infiltrate the shipping terminal, rescue Mara Mercer, and use her hand rhythm to unlock the first level of the conditioned ledger while Rook prepares his final move.",
+      "beat_summary": "Sloane Mercer and Lucian Vey reach the shipping terminal. They neutralize the guards and find Mara Mercer bound to a chair in front of a terminal with a keypad. Rook appears remotely, gloating. Sloane retrieves the dead-drop recording she made in chapter 11 (C010) and plays it, activating Mara's conditioned hand rhythm. The rhythm syncs with Sloane's own wrist circle, and the terminal displays a fragment of the transaction ledger. Rook is momentarily stunned but recovers, threatening to trigger a conditioned emergency wipe that will destroy the complete evidence. Lucian frees Mara while Sloane copies the fragment to a secure channel. A firefight erupts; Lucian takes a graze to the shoulder but keeps fighting. In the chaos, Sloane and Lucian share a glance of grim determination before they press toward the main server room. Mara provides the final beats of the hand rhythm—the mirror key—to Sloane's hidden conditioning.",
+      "must_happen": [
+        "Sloane Mercer and Lucian Vey infiltrate the terminal and rescue Mara Mercer.",
+        "Sloane Mercer uses the dead-drop recording (C010) to trigger Mara Mercer's hand rhythm, which syncs with her own conditioned reflex and reveals a preliminary ledger fragment (MR005).",
+        "Cassian Rook reveals his contingency: an automated wipe that will delete the complete ledger if Sloane Mercer tries to access the root server.",
+        "[ROMANCE] In a brief pause after Lucian Vey is grazed, Sloane Mercer inspects the wound and their eyes meet—a beat of unspoken solidarity."
+      ],
+      "must_not": [
+        "The complete ledger is not published in this chapter.",
+        "Sloane Mercer does not learn the full extent of the overwrite (she still believes she simply hid the ledger, not that she overwrote Rook's ending).",
+        "Mara Mercer is not killed or permanently harmed."
+      ],
+      "opens_with": "Rook's voice echoed through the terminal speakers before they cleared the first checkpoint: 'I've been watching you follow a script you wrote for yourself, Mercer. Let's see how well you improvise.'",
+      "cliffhanger": "The server room door sealed behind them, and a red countdown began on the main screen—five minutes until the entire network purged itself. Sloane Mercer slammed the dead-drop recording into the slot. The ledger began to compile, but the wipe countdown did not stop.",
+      "signature_detail_hint": "The terminal keyboard had two worn keys—'G' and 'W'—as if someone had spent hours typing a single sequence over and over, a code she could not yet read.",
+      "emotional_beat": "The adrenaline of rescue mixed with the exhaustion of the night, but seeing Mara Mercer alive reignited a fierce determination in Sloane Mercer, while Lucian Vey's steady presence grounded her.",
+      "spice": 1,
+      "spice_note": "A shared glance and brief touch while tending Lucian Vey's wound; the intimacy of trust forged in danger.",
+      "chapter_task": "Write 1600-1900 words covering the terminal infiltration, rescue of Mara Mercer, use of C010 to trigger hand rhythm and reveal MR005 (preliminary ledger fragment), the [ROMANCE] micro-beat during wound inspection, and the cliffhanger of the five-minute wipe countdown. Ensure Sloane Mercer's knowledge remains at effective_milestone 12 (she still does not know about her overwrite). Adhere to action pacing and emotional beats.",
+      "carries_to_next": "The race against the wipe countdown to retrieve the complete ledger before Rook's contingency destroys it; the mirror key now fully transferred to Sloane Mercer's conditioned reflexes."
+    },
+    {
+      "chapter": 17,
+      "title": "Sunrise",
+      "slug": "sunrise",
+      "one_line_summary": "Sloane Mercer publishes the complete ledger using her own conditioned reflexes, confronts Rook one last time, and accepts the consequences as dawn breaks.",
+      "beat_summary": "With the countdown ticking, Sloane Mercer accesses the root server by performing the full hand rhythm that Mara Mercer transferred. The conditioned response unlocks the complete transaction ledger, which she broadcasts to multiple news outlets and authorities before the wipe can activate. Cassian Rook, realizing defeat, storms into the server room. He reaches for a rifle—the one he trained her to use. Sloane Mercer gets there first and, without firing, disables him. Rook is struck down by a security mechanism he activated himself, dying from the trap meant for her. The police arrive; Sloane Mercer is arrested. She consciously releases the evidence of her own seven contracts alongside the ledger, accepting accountability rather than absolution. Lucian Vey is offered an extraction route by an unknown contact but refuses, stepping to stand beside her. In the epilogue, months later, Sloane Mercer visits with Lucian Vey in a prison visitation room. There are no guarantees, but when she presses her palm to the glass, he matches it with his own. A future that exists.",
+      "must_happen": [
+        "Sloane Mercer uses her conditioned reflex (final hand rhythm) to unlock and publish the complete transaction ledger to multiple outlets (C010 payoff).",
+        "Cassian Rook dies in a final confrontation, reaching for the rifle but killed by his own security measure.",
+        "Sloane Mercer is arrested and Lucian Vey refuses extraction, standing with her.",
+        "Epilogue: months later, Sloane Mercer and Lucian Vey share a moment through glass, confirming their connection without a wedding or safety.",
+        "[ROMANCE] During the epilogue, Sloane Mercer presses her palm to the glass, and Lucian Vey matches it—a gesture of commitment."
+      ],
+      "must_not": [
+        "The complete ledger is not recalled or disputed; it is published irrevocably.",
+        "Lucian Vey does not leave Sloane Mercer to escape; he chooses to stay.",
+        "No explicit sexual content; intimacy is emotional and symbolic."
+      ],
+      "opens_with": "The countdown hit three minutes, and Sloane Mercer stopped thinking. She let her hands remember what her mind had buried.",
+      "cliffhanger": "The prison officer announced that visiting hours were over. Sloane Mercer rose. Lucian Vey did not look away. 'I'll be here tomorrow,' he said. Not a promise—just a fact.",
+      "signature_detail_hint": "The server room's air conditioning had failed, and the heat made the digits of the transaction records shimmer on the screen like water, as if the truth itself could evaporate.",
+      "emotional_beat": "The bitter relief of completing her mission, the weight of guilt she chooses to carry rather than bury, and the quiet hope of a love that survives even in captivity.",
+      "spice": 1,
+      "spice_note": "Touch of palm to glass in the epilogue; no contact but deep emotional resonance.",
+      "chapter_task": "Write 1600-1900 words covering the final publication of the ledger, Rook's death, Sloane Mercer's arrest, Lucian Vey's choice, and the epilogue visitation scene. Ensure C010 is paid off through the final reflex unlocking. Sloane Mercer now knows the overwrite and the full extent of her plan. Keep the emotional tone: acceptance and a future without guarantees. Include the [ROMANCE] micro-beat in the epilogue.",
+      "carries_to_next": "Sets up Book 2: the ledger is public, its exposure triggers unseen enemies; Sloane Mercer faces legal consequences while Lucian Vey remains at risk."
+    }
+  ]
+}

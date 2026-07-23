@@ -1,0 +1,90 @@
+```json
+{
+  "act": [
+    10,
+    12
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Phantom Key",
+      "slug": "the-phantom-key",
+      "one_line_summary": "Iris Kane confronts Nadia Okafor about the access ledger entry, discovers a unique etching on her own access card, and realizes her identity has been compromised by a specific card-issuing method.",
+      "beat_summary": "Iris Kane confronts Nadia Okafor about the unauthorized entry in the access ledger, where Iris Kane's credentials were used while she was at Ironwood. Nadia Okafor deflects, suggesting a system glitch or an administrative error, but her evasiveness only deepens Iris Kane's suspicion. Iris Kane, refusing to let the matter drop, investigates the physical properties of her own Directorate access card. Under high magnification, she discovers a unique, faint etching on the magnetic strip (C005 planted) that she recognizes as a specific manufacturing defect from a specialized batch of cards, implying her card was specially prepared or cloned. She realizes this isn't just a system error but a deliberate act of identity theft from within. Stellan Marsh's office issues a final, curt reminder about the impending public statement regarding the Meridian Spine's certification, adding immense pressure to Iris Kane's timeline.",
+      "must_happen": [
+        "Iris Kane confronts Nadia Okafor about the unauthorized use of her credentials on the access ledger.",
+        "Nadia Okafor offers evasive explanations, increasing Iris Kane's suspicion of her direct involvement in the obstruction.",
+        "Iris Kane discovers a unique, faint etching on her own Directorate access card (C005 planted), indicating a specific, compromised card-issuing method.",
+        "Stellan Marsh's office issues a final reminder about the impending public statement, forcing Iris Kane to act quickly."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not identify the person who physically used Iris Kane's credentials to access the bay.",
+        "Must not confirm Nadia Okafor's full role in the conspiracy before the physical evidence forces her confession."
+      ],
+      "opens_with": "\"My credential number is on this access ledger,\" Iris Kane says, placing the printout on Nadia Okafor's desk. \"At a time I was at Ironwood. Explain it.\"",
+      "cliffhanger": "Iris Kane holds her Directorate access card, the faint etching on its strip a silent accusation. Her identity wasn't just borrowed; it was copied, imprinted with a signature she now recognizes, and she knows the system that issued her badge is compromised.",
+      "signature_detail_hint": "The etching on the magnetic strip is a series of tiny, almost invisible, parallel lines, too uniform to be accidental wear, like a fingerprint left by a specific, illicit duplication machine.",
+      "emotional_beat": "Iris Kane feels a profound sense of violation. Her professional identity, the very tool of her authority, has been turned against her, making her feel exposed and personally targeted by the unseen forces at play.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter focused on Iris Kane's investigation into the credential misuse. Plant clue C005 through a physical detail on her access card. Build tension around the impending public statement and deepen Iris Kane's suspicion of Nadia Okafor. Maintain single POV and avoid romance.",
+      "carries_to_next": "Iris Kane must now connect the specific card-issuing method to a perpetrator and prevent the prewritten, false certification from being released under the Directorate's authority."
+    },
+    {
+      "chapter": 11,
+      "title": "The Architect of Silence",
+      "slug": "the-architect-of-silence",
+      "one_line_summary": "Iris Kane confronts Nadia Okafor with combined physical evidence, forcing Nadia to confess her role in steering the investigation to protect a higher coordinator within the Directorate.",
+      "beat_summary": "Iris Kane confronts Nadia Okafor again, this time armed with irrefutable physical evidence. She presents the unique etching on her access card (C005 payoff), proving her credentials were deliberately duplicated. Then, she lays out the Aegis approval copy with the distinctive archive-comb puncture (C005b payoff), linking Nadia directly to the prewritten public statement. Cornered by the physical evidence, Nadia Okafor breaks, confessing to her role in steering Iris Kane toward Gerald Halveston (MR003 payoff) as a false target. Nadia Okafor reveals that she acted under direct orders from a 'coordinator' within the Directorate, whose primary directive was to 'protect the institution's integrity' at all costs. Iris Kane realizes Nadia's actions were driven by a misguided, fierce loyalty to the Directorate, not personal gain, making the betrayal more profound and the conspiracy more insidious.",
+      "must_happen": [
+        "Iris Kane confronts Nadia Okafor with the etched access card (C005 payoff) and the archive-comb puncture on the prewritten statement (C005b payoff).",
+        "Nadia Okafor, faced with the physical evidence, confesses to steering Iris Kane toward Gerald Halveston as a false target (MR003 payoff).",
+        "Nadia Okafor reveals she received orders from a 'coordinator' within the Directorate to protect the institution, but does not name Stellan Marsh.",
+        "Iris Kane realizes Nadia Okafor's motivation was loyalty to the Directorate, not personal corruption, solidifying the institutional nature of the conspiracy."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not have Nadia Okafor explicitly name Stellan Marsh as the architect of the broader fraud.",
+        "Must not allow Iris Kane to recover the original missing micrograph.",
+        "Must not fully expose the Directorate as a capture instrument, only that it is being protected by internal actors."
+      ],
+      "opens_with": "\"This etching,\" Iris Kane says, pointing to the micrograph of her access card, \"matches the unique defect in a batch of cards issued to your department. Care to explain how it ended up on mine, Nadia?\"",
+      "cliffhanger": "Nadia Okafor, defeated, whispers a single phrase, not a name, but a title: \"The Director of Policy.\" Iris Kane's mind races, already putting the pieces together, knowing exactly who holds that title.",
+      "signature_detail_hint": "As Nadia Okafor confesses, her hand instinctively goes to adjust her watch, a nervous habit Iris Kane hasn't seen since their first meeting, revealing the deep stress of her hidden role.",
+      "emotional_beat": "Iris Kane feels a bitter clarity. The confirmation of Nadia's betrayal is painful, but it removes the last layer of doubt, transforming suspicion into a cold, hard resolve to expose the true orchestrator.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter where Iris Kane uses physical evidence to force Nadia Okafor's confession. Pay off C005 and C005b, and deliver MR003 as Nadia's betrayal. End with Iris Kane identifying the next target without explicitly naming Stellan Marsh as the architect of capture. Maintain single POV and avoid romance.",
+      "carries_to_next": "Iris Kane now knows the 'coordinator' is the Director of Policy, Stellan Marsh, and must decide how to confront him and expose the institutional conspiracy before the false certification is officially released."
+    },
+    {
+      "chapter": 12,
+      "title": "The Unspoken Name",
+      "slug": "the-unspoken-name",
+      "one_line_summary": "Iris Kane identifies Stellan Marsh as the 'Director of Policy' who ordered Nadia's actions, and moves to publicly challenge the false Spine certification, knowing she is targeting the head of the Directorate.",
+      "beat_summary": "Iris Kane processes the raw aftermath of Nadia Okafor's confession. The realization that Nadia's actions were driven by a misguided loyalty to the Directorate, protecting a 'coordinator,' shifts Iris Kane's focus entirely. She immediately reviews the Directorate's official organizational chart, confirming Stellan Marsh's position as the 'Director of Policy' – the very title Nadia Okafor whispered. This crystallizes his role as the orchestrator of the internal conspiracy. Iris Kane initiates a quiet, independent investigation into Stellan Marsh's past directives and policy changes within the Directorate, searching for patterns that align with the systematic obstruction she has faced. Simultaneously, she takes decisive steps to publicly challenge the prewritten certification. Using the evidence of the compromised coupon bay and the manipulated access ledger (without naming Nadia Okafor directly), Iris Kane releases an anonymous, carefully worded statement to a trusted journalist, delaying the official broadcast of the false 'Meridian Spine verified clean' certification, but knowing the fight has just gone public and the next target is Stellan Marsh.",
+      "must_happen": [
+        "Iris Kane processes Nadia Okafor's confession, understanding the institutional loyalty driving the conspiracy.",
+        "Iris Kane reviews the Directorate's organizational chart and identifies Stellan Marsh as the 'Director of Policy', confirming him as the 'coordinator' Nadia Okafor referred to.",
+        "Iris Kane begins a quiet, independent investigation into Stellan Marsh's policy directives within the Directorate, looking for systemic patterns.",
+        "Iris Kane publicly challenges the prewritten certification by anonymously leaking evidence of the compromised coupon bay and manipulated ledger to a journalist, delaying the official release."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not directly accuse Stellan Marsh of fraud or being the ultimate mastermind yet, only identify him as the next target.",
+        "Must not name Nadia Okafor in the public challenge to the certification.",
+        "Must not allow the public statement to be completely prevented, only delayed or discredited."
+      ],
+      "opens_with": "The silence in Iris Kane's office after Nadia Okafor left was louder than any confession. 'Director of Policy.' The words echoed, cold and clear.",
+      "cliffhanger": "The public statement, \"National Integrity Directorate -- independent certification; Meridian Spine verified clean,\" flashes across a news screen, delayed by Iris Kane's leak but broadcast nonetheless. She watches it, a grim resolve settling in her gaze, knowing the system she once trusted has now declared war, and she has just named her adversary: Stellan Marsh.",
+      "signature_detail_hint": "Iris Kane's anonymous leak to the journalist includes a unique, encrypted timestamp in the metadata of the shared file, a digital fingerprint only she can trace back to ensure its authenticity and her protection.",
+      "emotional_beat": "A profound, almost liberating sense of clarity washes over Iris Kane. The fog of misdirection has lifted, replaced by the stark, terrifying reality of facing the institution's leader. Her isolation now feels like a weapon, honed and sharp.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write a 1600-1900 word chapter where Iris Kane identifies Stellan Marsh as her next target based on Nadia Okafor's confession. Show Iris Kane's strategic move to publicly challenge the false certification, escalating the conflict. Maintain single POV and avoid romance. End Act 2 with Iris Kane directly targeting Marsh's role in the cover-up.",
+      "carries_to_next": "Iris Kane has now publicly challenged the Directorate's integrity, setting her directly against Stellan Marsh, who will undoubtedly retaliate in the next chapter."
+    }
+  ]
+}
+```

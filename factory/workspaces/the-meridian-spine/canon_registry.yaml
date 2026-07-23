@@ -1,0 +1,125 @@
+characters:
+  female_lead:
+    canonical: Iris Kane
+    allowed_aliases:
+    - Iris
+    - Kane
+    forbidden_aliases: []
+  male_lead:
+    canonical: Stellan Marsh
+    allowed_aliases:
+    - Stellan
+    - Marsh
+    forbidden_aliases: []
+# EG-21 — gender/pronoun + revealed-role lock (name → identity)
+character_identity:
+- canonical: Iris Kane
+  aliases: [Iris, Kane]
+  gender: female
+  pronouns: [she, her, hers, herself]
+  forbid_pronouns: [he, him, his, himself]
+  pronoun_gate: false  # POV — cross-refs flood FP; role_flip still applies
+  role: lead forensic authority; POV investigator
+  forbid_role_patterns: []
+- canonical: Petra Lund
+  aliases: [Petra, Lund]
+  gender: female
+  pronouns: [she, her, hers, herself]
+  forbid_pronouns: [he, him, his, himself]
+  pronoun_gate: true
+  role: materials certifier; forged Meridian load coupons with override tool-mark
+  forbid_role_patterns:
+  - \bspecial\s+agent\b
+  - \binvestigative\s+partner\b
+  - \b(?:the\s+)?architect\b
+  - \bdirector\s+of\s+policy\b
+- canonical: Nadia Okafor
+  aliases: [Nadia, Okafor]
+  gender: female
+  pronouns: [she, her, hers, herself]
+  forbid_pronouns: [he, him, his, himself]
+  pronoun_gate: true
+  role: investigative partner; steered Iris's investigation
+  forbid_role_patterns:
+  - \bspecial\s+agent\b
+  - \bmaterials\s+certifier\b
+  - \b(?:forged?|falsif(?:y|ied))\s+(?:the\s+)?(?:load\s+)?coupons\b
+  - \b(?:the\s+)?architect\b
+- canonical: Stellan Marsh
+  aliases: [Stellan, Marsh]
+  gender: male
+  pronouns: [he, him, his, himself]
+  forbid_pronouns: [she, her, hers, herself]
+  pronoun_gate: false  # antagonist refs Iris constantly; catch role_flip instead
+  role: architect of Directorate capture; antagonist / accused
+  forbid_role_patterns:
+  - \bspecial\s+agent\s+marsh\b
+  - \bagent\s+marsh\b
+  - \bmarsh\s*,?\s*(?:a\s+)?special\s+agent\b
+  - \binvestigator\s+marsh\b
+  - \bmarsh\s+(?:hosted|opened|led)\s+(?:the\s+)?(?:press|briefing|podium)\b
+- canonical: Gerald Halveston
+  aliases: [Gerald, Halveston]
+  gender: male
+  pronouns: [he, him, his, himself]
+  forbid_pronouns: [she, her, hers, herself]
+  pronoun_gate: true
+  role: financier / false top; philanthropic fund chair
+  forbid_role_patterns:
+  - \bspecial\s+agent\b
+  - \bmaterials\s+certifier\b
+- canonical: Celia Ward
+  aliases: [Celia, Ward]
+  gender: female
+  pronouns: [she, her, hers, herself]
+  forbid_pronouns: [he, him, his, himself]
+  pronoun_gate: true
+  role: journalist
+  forbid_role_patterns:
+  - \bspecial\s+agent\b
+pov_mode: third_person_limited
+spice_max: 0
+cast:
+- Petra Lund
+- Nadia Okafor
+- Gerald Halveston
+- Stellan Marsh
+prior_workspace: the-kessler-line
+inherited_canon:
+- id: kessler_structure
+  fact: The Kessler Line disaster was a TUNNEL collapse (eastbound tunnel / liner
+    failure). It was NOT a bridge.
+  forbid_patterns:
+  - \bkessler\s+bridge\b
+  - \bthe\s+kessler\s+bridge\b
+- id: kessler_evidence
+  fact: Book-1 central physical proof was a concrete CORE SAMPLE from the failed tunnel
+    liner. It is SPENT. Book-1 did NOT win on a 'Kessler coupon'.
+  forbid_patterns:
+  - \bkessler\s+coupon\b
+  - \bkessler\s+coupon\s+micrograph\b
+  - \bcoupon\s+micrograph\b.*\bkessler\b
+  - \bkessler\b.*\bcoupon\s+micrograph\b
+- id: renn_status
+  fact: Aldous Renn is convicted and in custody. Prison source only. Not Book-2 top,
+    not freed, not active mastermind.
+  forbid_patterns:
+  - \brenn\s+(?:was\s+)?(?:freed|released|exonerated)\b
+  - \brenn\s+(?:is|was)\s+the\s+(?:architect|mastermind)\b
+- id: core_sample_spent
+  fact: The Book-1 core sample was published once, irrevocably. It cannot be Book-2's
+    winning card again.
+  forbid_patterns: []
+- id: redacted_co_owners
+  fact: Book-1 fast-track page named private co-owners; redacted; Iris never recovered
+    the final name. Engine of Book 2.
+  forbid_patterns: []
+- id: iris_public
+  fact: Iris Kane is free and public after Book 1 — the engineer who brought down
+    Renn.
+  forbid_patterns: []
+- id: physical_spine_b2
+  fact: Book-2 physical spine is tool-mark signature on Meridian Spine certified coupons
+    matching Kessler's override method — NOT the Book-1 core sample. Meridian 'coupon'
+    is allowed; 'Kessler coupon' is not.
+  forbid_patterns: []

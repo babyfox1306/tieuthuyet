@@ -1,0 +1,77 @@
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Executor's Purchase",
+      "slug": "the-executors-purchase",
+      "one_line_summary": "Iris Kane confronts Petra Lund with the tool-mark match, and traces the supplier behind Lund's override jig to a Veridian Trust subsidiary.",
+      "beat_summary": "Iris Kane invites Petra Lund to her office and presents the micrograph evidence. Lund initially denies, but breaks when Iris shows the serial number gap. Lund admits she used the override jig but claims she was following instructions from the certification committee and did not know the tooling was fraudulent. She provides the supplier name, Aegis Fabrication. Iris investigates the Aegis purchase order and finds it was pushed through an informal vendor list. She uses the missing serial number (C002 payoff) to trace the tooling to Aegis. A new email (C003) from an internal whistleblower shows that Aegis was acquired by Veridian Trust after the Spine contract was awarded. This minor reveal (MR001) solidifies a link between Lund's fraud and the shell company financing the Spine.",
+      "must_happen": [
+        "Iris Kane confronts Petra Lund and forces her to admit the override method and name the tooling supplier Aegis Fabrication.",
+        "Iris Kane verifies that the serial number missing from the manufacturer's database (C002) corresponds to the Aegis jig.",
+        "Iris Kane receives an internal email showing Aegis was acquired by Veridian Trust after the Meridian Spine contract (C003 payoff, MR001)."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not have Iris fully trust Nadia Okafor or believe she is not steering the investigation."
+      ],
+      "opens_with": "\"The fracture on the Spine coupon matches the Kessler override at every point,\" Iris Kane says, placing the micrograph on Petra Lund's desk. \"I need to know who gave you the jig.\"",
+      "cliffhanger": "As Iris returns to her office after the confrontation, she finds a typed note under the door: 'You're looking at the wrong supplier. Veridian Trust acquired Aegis after the fact. The real tooling vendor is still inside the Directorate. — A friend.'",
+      "signature_detail_hint": "The Aegis Fabrication purchase order is printed on paper with a watermark of a Latin phrase Iris recognizes from the Kessler files, hinting at a shared legal counsel.",
+      "emotional_beat": "The satisfaction of cracking Lund is undercut by the realization that Iris is still a step behind — someone else is guiding the investigation even when she exposes the executor.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Advance the evidence chain from Lund to Veridian Trust. Pay off clues C002 and C003, minor reveal MR001. Keep focus on physical evidence, no romance. Target length: 1600-1900 words.",
+      "carries_to_next": "Iris has a new lead: the insider note points to a vendor inside the Directorate, not Aegis. She will investigate who inside the Directorate certified Aegis."
+    },
+    {
+      "chapter": 5,
+      "title": "The Inside Vendor",
+      "slug": "the-inside-vendor",
+      "one_line_summary": "Iris Kane investigates the Directorate employee who approved Aegis Fabrication, but finds her path blocked by Nadia Okafor and a missing evidence file.",
+      "beat_summary": "Iris Kane begins tracing the procurement trail. She identifies the Directorate employee who personally approved Aegis Fabrication as a qualified vendor: Alan Torvik, a procurement officer in the major projects division. She arranges a meeting with him, but he is suddenly on leave. When she pushes, she is told by his assistant that his files have been moved to legal. She suspects the evidence is being hidden. Nadia Okafor confronts her, directly warning her not to involve Directorate personnel in an investigation meant for external actors. Iris is now sure that Nadia is protecting someone inside. She also receives a call from the Directorate legal department informing her that her investigation scope is limited to the Spine certification, and further personnel inquiries require Stellan Marsh's approval. Frustrated, Iris visits the records room and finds that her original micrograph of the coupon has been removed from the evidence locker.",
+      "must_happen": [
+        "Iris Kane identifies procurement officer Alan Torvik as the approver of Aegis Fabrication and attempts to interview him.",
+        "Nadia Okafor warns Iris to focus on external actors, confirming she is being steered away from internal figures.",
+        "Iris Kane discovers her micrograph evidence has been tampered with or removed from the locker."
+      ],
+      "must_not": [
+        "Must not reveal Stellan Marsh's role as architect of any broader fraud.",
+        "Must not have Iris draw a direct line from internal obstruction to Stellan Marsh personally."
+      ],
+      "opens_with": "\"You need to stop digging into our own procurement,\" Nadia Okafor says, her voice low. \"The Directorate is the institution that needs to survive, not your private investigation.\"",
+      "cliffhanger": "Iris storms to the evidence locker. The slide tray is empty. Her micrograph, her only physical proof of the tool-mark match, is gone. She stands in the stark light, knowing that someone inside the Directorate has taken it.",
+      "signature_detail_hint": "The empty slide tray is dusted with a fine white powder — fingerprint powder — indicating a deliberate removal by someone who knew exactly what they were taking.",
+      "emotional_beat": "The isolation closes in. Iris has been trusted, celebrated, and now contains a trap: the cell is her office, the guards are her allies.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Raise stakes by having Iris lose her main physical evidence. Show internal resistance through Nadia's warning and the missing micrograph. Deepen the sense of containment. No romance. Target length: 1600-1900 words.",
+      "carries_to_next": "Without the micrograph, Iris must rely on her memory and seek an alternative source — she decides to visit Aldous Renn."
+    },
+    {
+      "chapter": 6,
+      "title": "The Source in Ironwood",
+      "slug": "the-source-in-ironwood",
+      "one_line_summary": "Iris Kane visits Aldous Renn in prison, receives a cryptic warning about the procurement system itself, and is summoned to Stellan Marsh's office — ending Act 1.",
+      "beat_summary": "Without the micrograph, Iris Kane re-documents her analysis from memory and sketches the tool-mark pattern. She decides to reach out to the one person who might know how the override method survived: Aldous Renn. In prison, Renn is cool and observant. He asks why she is still chasing the method when she should be chasing the system that allowed it. He hints that the people who funded him are now inside the Directorate, and that the certification rules were rewritten after Kessler to accommodate the pattern. He warns her that exposing them will cost her everything, but she presses. Renn gives her a name: the law firm that drafted the Veridian Trust charter — same firm that represented his shell companies. Iris leaves unsettled. On her way out of the prison parking lot, she gets a call from the Directorate's central office: Stellan Marsh requests a meeting with her first thing in the morning.",
+      "must_happen": [
+        "Iris Kane visits Aldous Renn in prison and extracts a lead: the law firm behind Veridian Trust also worked for Renn's companies.",
+        "Stellan Marsh's office officially summons Iris for a private meeting the next day.",
+        "Iris Kane realizes that her evidence chain, though damaged, now connects Lund to the same legal origins as Renn's network."
+      ],
+      "must_not": [
+        "Must not state that Stellan Marsh architected the National Integrity Directorate as a capture instrument.",
+        "Must not have Renn explicitly name Marsh or Halveston as the active architects."
+      ],
+      "opens_with": "\"You think you caught me,\" Renn says, his voice echoing in the Ironwood visitation room. \"But you didn't catch the people who paid me. They're still out there, and now they own the referee.\"",
+      "cliffhanger": "Iris ends the call from Stellan Marsh's office, the dial tone humming. She looks at her notes: Renn's law firm, Veridian Trust, Aegis, Lund, the missing slide. She doesn't yet have the full picture, but she has the shape of the chain — and Stellan Marsh is calling her in.",
+      "signature_detail_hint": "During the prison visit, Renn taps the table in an old habit: thumb and middle finger rhythm — the same gesture Iris saw in his trial videos when he would stall for time.",
+      "emotional_beat": "A mix of dread and purpose: the prison meeting confirms Iris is on the right track, but the summons from Marsh feels like the ground closing beneath her feet.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Close Act 1 with a prison visit that enriches the conspiracy context and a summons from the top authority. Set up Act 2 complications. No romance. Target length: 1600-1900 words.",
+      "carries_to_next": "Iris will go to Stellan Marsh's office in chapter 7, carrying the knowledge that the reformed institution is built on the same legal foundations as the crime it was supposed to prevent."
+    }
+  ]
+}

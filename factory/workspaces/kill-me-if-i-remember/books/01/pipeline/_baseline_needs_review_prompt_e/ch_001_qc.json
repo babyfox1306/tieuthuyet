@@ -1,0 +1,26 @@
+{
+  "foreign_chars": [],
+  "word_count": 1289,
+  "voice_drift": {
+    "flag": true,
+    "details": "Sloane says \"Please\" and the narration explicitly frames it as begging, contradicting her bible-defined internal voice as never soft and never begging."
+  },
+  "continuity_conflict": {
+    "flag": true,
+    "details": "The contract presents \"CLIENT TERMINATION AT SUNRISE\" as an unconditional order for Sloane's death, conflicting with the bible's binding condition that Lucian must kill her at sunrise only if Rook restores the obedient identity."
+  },
+  "cliffhanger_strength": 5,
+  "pacing_issue": false,
+  "signature_detail_present": true,
+  "spice_ok": true,
+  "content_boundary_ok": false,
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "voice_drift",
+    "continuity_conflict",
+    "content_boundary_violation: The chapter uses an unconditional sunrise termination clause instead of the required condition \"Rook restores the obedient identity.\"",
+    "content_boundary_violation: Lucian reveals the sunrise clause in chapter 1, before chapter 10.",
+    "verdict_fail",
+    "content_boundary_violation"
+  ]
+}

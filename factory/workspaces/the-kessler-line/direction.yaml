@@ -1,0 +1,57 @@
+id: the-kessler-line
+pen_name: Nix Vale
+target_language: en
+publish_strategy: kdp_ku_exclusive
+narrative_status: approved
+book: 2
+canon_through: 0
+platform: kdp
+audience: women 18-35, mobile reading, hook-driven serial fiction
+goal: end-of-chapter hooks - institutional conspiracy thriller pace
+setting_hub: The Kessler Line - primary setting
+setting_nodes: []
+spice_default: 1
+spice_explicit_chapters: []
+spice_steamy_chapters: []
+book1_ending: 'The complete evidence is published once, irrevocably. Renn is forced
+  to state his authorship on a live record before the release, so the document cannot
+  be dismissed as fabrication. He does not die theatrically — he is arrested at the
+  inquiry table he built, which is worse: the instrument of his laundering becomes
+  the instrument of his exposure. Sol, Vance, and the Marek file are all real and
+  all accounted for — Iris does not trade the lower tiers for the top; the record
+  names everyone, in order, including herself where her early cooperation unwittingly
+  served the design. She signs the true finding. Sixty-three names are entered into
+  a cause-of-collapse verdict that finally fits the physical evidence.
+
+
+  Epilogue, months later: the reopened prosecutions, the fate of the Vantor contracts,
+  and one quiet scene of Iris back in the field — coring a different structure, reading
+  it honestly, the habit that started the case now just her work again. Not triumph.
+  A record that exists.'
+blurb: A forensic structural engineer is appointed to a national inquiry into a tunnel
+  collapse that killed sixty-three people — and discovers the inquiry itself was built
+  to bury the truth she was hired to find, by handing her exactly four culprits to
+  expose in a sequence that stops one level short of the man who signed the order.
+tropes: []
+spice_badge: sweet
+target_platforms:
+- kdp
+spice_level: 1
+plan_status: approved
+bible_status: approved
+book_slug: 02-probe-book-two
+total_chapters: 22
+arc:
+  act1_setup:
+  - 1
+  - 6
+  act2_complications:
+  - 7
+  - 12
+  act3_crisis:
+  - 13
+  - 19
+  act4_resolution:
+  - 20
+  - 22
+narrative_profile: conspiracy_thriller

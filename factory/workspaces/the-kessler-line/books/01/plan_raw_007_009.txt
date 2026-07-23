@@ -1,0 +1,212 @@
+{
+  "act": [7, 9],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Private Laboratory",
+      "slug": "07-the-private-laboratory",
+      "one_line_summary": "Iris Kane brings the core sample to an independent lab, but the chain of custody raises her suspicion that she is still being tracked.",
+      "beat_summary": "Iris Kane drives to a private structural analysis laboratory across the city, having researched a facility not affiliated with the commission. She signs the chain-of-custody form and watches as the technician logs the sample. The technician mentions he received a call earlier asking if a 'Ms. Kane' had booked an appointment—the caller identified himself as from the commission's logistics office. Iris Kane tells the technician she has no such coordination with the commission. Outside, she notices a black sedan with tinted windows parked across the street. She writes down the license plate and drives away. Later, she returns to her temporary apartment and reviews the procurement structure of the Vantor fast-track, noting that the approval chain passes through the office of the Commissioner's secretariat—a department she hasn't examined.",
+      "must_happen": [
+        "Iris Kane delivers the core sample to the private laboratory and signs chain-of-custody.",
+        "The technician reveals someone from the commission called ahead to ask about her appointment.",
+        "Iris Kane spots a black sedan apparently surveilling her outside the lab.",
+        "Iris Kane studies the Vantor fast-track approval chain and identifies the secretariat as a missing link."
+      ],
+      "must_not": [
+        "The core sample analysis is not completed or discussed beyond logging.",
+        "Iris Kane does not yet confront anyone inside the commission."
+      ],
+      "opens_with": "The private laboratory was housed in a former textile mill, the entrance marked by a single brass plaque. Iris Kane carried the core sample inside like a fuse.",
+      "cliffhanger": "Iris Kane copied the license plate into her phone. Then she dialed the lab number. She asked for the technician. 'Did the commission caller give a name?' she asked. There was a pause. 'They said they were from Mr. Vance's office.'",
+      "signature_detail_hint": "The lab's reception desk had a brass paperweight shaped like a tension-test jaw; the bite marks on it were worn smooth from years of handling.",
+      "emotional_beat": "The relief of taking action is immediately undercut by the knowledge that she is expected, and her isolation becomes more acute.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Begin Act 2 with Iris Kane operating outside the commission. Establish her independent investigation and the immediate sign that her movements are monitored. Plant the suspicion of Theo Vance's involvement (via the caller) but do not confirm. No romance.",
+      "carries_to_next": "Iris Kane now knows someone in Theo Vance's office called the lab, increasing her suspicion of Theo Vance. The core sample is in process; she must wait for results while pursuing the secretariat angle.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "core_sample",
+          "false_answer_1",
+          "inquiry_coverup",
+          "marek_investigation",
+          "renn_reveal",
+          "sol_investigation",
+          "vance_betrayal"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Kane",
+            "Dov Marek",
+            "Theo Vance",
+            "Adrienne Sol",
+            "Aldous Renn"
+          ],
+          "may_know": [
+            "Iris Kane: Has discovered Marek's signature mismatch (Tier 1)",
+            "Iris Kane: Knows Marek is guilty but senses it is incomplete",
+            "Iris Kane: Has pulled and hidden the core sample – significance still unknown.",
+            "Dov Marek: Aware that Iris has discovered his signature forgery",
+            "Dov Marek: Pressure from the network increases.",
+            "Theo Vance: Still active, provides assistance to Iris on Marek investigation while secretly reporting to Sol.",
+            "Adrienne Sol: Monitors Iris's progress on Marek",
+            "Adrienne Sol: coordinates with Vance.",
+            "Aldous Renn: Sees Marek exposure proceeding on schedule",
+            "Aldous Renn: No concern."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 4
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Secretarial Trail",
+      "slug": "08-the-secretarial-trail",
+      "one_line_summary": "Iris Kane attempts to access the fast‑track approval documents but is blocked, and her encounter with Theo Vance deepens her suspicions.",
+      "beat_summary": "Iris Kane arrives at the public records office to request the Vantor fast‑track approval file, only to find that it has been transferred to a sealed category under the inquiry's confidentiality protocol. The clerk cannot disclose who requested the transfer. Frustrated, Iris Kane goes to the inquiry's temporary offices and asks Theo Vance directly about the procurement approval chain. Theo Vance is polite but evasive; he says the fast‑track was 'a Vantor routing matter' and suggests she focus on the final report. After the conversation, Iris Kane notices through the window that the black sedan is parked near the entrance. She decides to visit the bank again to press for CCTV images from the day Dov Marek's box was accessed. At the bank, the manager refuses but a junior teller later slips her a note with a time and a name: 'Call this number at 6 PM.'",
+      "must_happen": [
+        "Iris Kane is denied access to the fast‑track approval file because it was reclassified under the inquiry's protocol.",
+        "Iris Kane confronts Theo Vance about the fast‑track approval; Theo Vance deflects the question.",
+        "Iris Kane sees the black sedan outside the inquiry building.",
+        "Iris Kane attempts to get bank CCTV footage but is refused; a teller covertly gives her a note with a contact."
+      ],
+      "must_not": [
+        "The note's contact is not contacted yet; it is a seed for the next chapter.",
+        "Iris Kane does not obtain any conclusive evidence about Theo Vance's role."
+      ],
+      "opens_with": "The file number was in the public index. Iris Kane gave it to the clerk. The clerk typed, frowned, and said, 'This record has been moved to the inquiry's sealed protocol. You'll need to submit a request to the Commissioner.'",
+      "cliffhanger": "Iris Kane unfolded the note in the stairwell. 'Call 555-0199 at 1800. Ask for A. Watters.' She looked at the time. 5:47 PM. She had thirteen minutes.",
+      "signature_detail_hint": "The clerk's badge had a small scratch that looked like the number '63' if you tilted your head—the same as the death toll.",
+      "emotional_beat": "The frustration of institutional obstruction is punctuated by a glimmer of hope from an unexpected source.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Show the walls closing in on Iris Kane's investigation while a potential new lead emerges. Deepen the tension between her and Theo Vance without revealing his betrayal. Use the institutional resistance to raise the stakes.",
+      "carries_to_next": "Iris Kane has a contact number that may provide the fast‑track document. She will call it in chapter 9.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "core_sample",
+          "false_answer_1",
+          "inquiry_coverup",
+          "marek_investigation",
+          "renn_reveal",
+          "sol_investigation",
+          "vance_betrayal"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Kane",
+            "Dov Marek",
+            "Theo Vance",
+            "Adrienne Sol",
+            "Aldous Renn"
+          ],
+          "may_know": [
+            "Iris Kane: Has discovered Marek's signature mismatch (Tier 1)",
+            "Iris Kane: Knows Marek is guilty but senses it is incomplete",
+            "Iris Kane: Has pulled and hidden the core sample – significance still unknown.",
+            "Dov Marek: Aware that Iris has discovered his signature forgery",
+            "Dov Marek: Pressure from the network increases.",
+            "Theo Vance: Still active, provides assistance to Iris on Marek investigation while secretly reporting to Sol.",
+            "Adrienne Sol: Monitors Iris's progress on Marek",
+            "Adrienne Sol: coordinates with Vance.",
+            "Aldous Renn: Sees Marek exposure proceeding on schedule",
+            "Aldous Renn: No concern."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 4
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "The Whistleblower's Document",
+      "slug": "09-the-whistleblowers-document",
+      "one_line_summary": "Iris Kane contacts the source and receives the fast‑track approval document, which together with the forged certification reveals an internal conspiracy orchestrated from within the commission's secretariat.",
+      "beat_summary": "Iris Kane calls the number at exactly 6 PM. A man identifying himself as Alan Watters, a former procurement officer at the ministry, agrees to meet her. They meet in a park; Watters gives her a single page: the Vantor fast‑track approval, signed by the office of the commission's secretariat—specifically, the signature line shows a deputy director code that Iris Kane recognizes as Theo Vance's predecessor, but the processing log indicates Theo Vance's terminal ID. Watters explains that he kept a copy because the original was 'adjusted' after the collapse. Iris Kane brings the document back to her apartment and lays it next to the forged certification report. The handwriting on both documents shares a characteristic slant in the annotations—the same person handled both the certification override and the fast‑track approval. She now has tangible evidence that the cover‑up was managed from inside the secretariat, and the probability that Theo Vance is involved is high. She photographs both documents and stores them securely.",
+      "must_happen": [
+        "Iris Kane calls Alan Watters and meets him to receive the fast‑track approval document (plant C002).",
+        "Iris Kane examines the document and identifies the processing terminal ID and handwriting annotations linking it to the forged certification (payoff C002).",
+        "Iris Kane deduces that the same secretariat official was involved in both the forgery facilitation and the fast‑track approval, confirming an internal conspiracy (reveal MR002).",
+        "Iris Kane photographs and secures the evidence.",
+        "Iris Kane decides to investigate Theo Vance's terminal access logs."
+      ],
+      "must_not": [
+        "Iris Kane does not yet confront Theo Vance directly.",
+        "The full scope of the cover‑up (Adrienne Sol and Aldous Renn) is not revealed—only the internal link is established."
+      ],
+      "opens_with": "At 6:01 PM, Iris Kane dialed the number. A voice answered on the first ring. 'Alan Watters. You have twenty minutes.'",
+      "cliffhanger": "Iris Kane placed the fast‑track document next to the certification report. The handwriting annotations were unmistakable—the same compressed, right‑slanting script on both pages. Someone in the secretariat had their hand in both the forgery and the procurement. And the terminal ID belonged to Theo Vance's office.",
+      "signature_detail_hint": "The park bench where they met had a brass dedication plaque that listed the donor's name as 'In Memory of Stephen—63'—the same number as the Kessler dead, the same Stephen her research said was a Vantor engineer who died in a car crash the year before.",
+      "emotional_beat": "A surge of vindication mixed with the heavy realization that the conspiracy is inside her own team, and the person she trusted most is now the primary suspect.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. This is the breakthrough chapter of Act 2. Plant and payoff C002 (the fast‑track document) and reveal MR002 (the internal link between the forgery and the procurement). Ensure the handwriting and terminal ID evidence is clear but does not explicitly name Theo Vance as the mole—that will come in chapter 10. End with Iris Kane resolving to verify the terminal logs.",
+      "carries_to_next": "Iris Kane now has evidence linking the secretariat to both the forgery and the fast‑track. She will attempt to access the terminal logs to confirm the user, setting up the confrontation with Theo Vance.",
+      "narrative": {
+        "clues_plant": ["C002"],
+        "clues_payoff": ["C002"],
+        "reveals": [
+          {
+            "id": "MR002",
+            "reveal_weight": "major",
+            "required_clues": ["C001", "C002"],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "core_sample",
+          "false_answer_1",
+          "inquiry_coverup",
+          "marek_investigation",
+          "renn_reveal",
+          "sol_investigation",
+          "vance_betrayal"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Kane",
+            "Dov Marek",
+            "Theo Vance",
+            "Adrienne Sol",
+            "Aldous Renn"
+          ],
+          "may_know": [
+            "Iris Kane: Has discovered Marek's signature mismatch (Tier 1)",
+            "Iris Kane: Knows Marek is guilty but senses it is incomplete",
+            "Iris Kane: Has pulled and hidden the core sample – significance still unknown.",
+            "Iris Kane: Has obtained the fast‑track approval document linking the secretariat to the cover‑up (MR002).",
+            "Dov Marek: Aware that Iris has discovered his signature forgery",
+            "Dov Marek: Pressure from the network increases.",
+            "Theo Vance: Still active, provides assistance to Iris on Marek investigation while secretly reporting to Sol.",
+            "Adrienne Sol: Monitors Iris's progress on Marek",
+            "Adrienne Sol: coordinates with Vance.",
+            "Aldous Renn: Sees Marek exposure proceeding on schedule",
+            "Aldous Renn: No concern."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 4
+        },
+        "clue_beats": {
+          "C002_plant": "The fast‑track approval document from Alan Watters, showing a terminal ID that matches Vance's office and handwriting annotations similar to the forged certification.",
+          "C002_payoff": "Comparison of the annotations with the certification report confirms they were written by the same person, proving internal coordination."
+        }
+      }
+    }
+  ]
+}

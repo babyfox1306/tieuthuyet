@@ -1,0 +1,55 @@
+{
+  "current_book": 3,
+  "current_chapter": 1,
+  "timeline": [
+    "Ch1: Pierre Leclerc investigates the tribunal’s machinery in the records annex, focusing on Sofia Bellini’s role as architect.",
+    "Ch1: Pierre finds primary records and system schema signed by Sofia Bellini, confirming her as the system’s creator.",
+    "Ch1: Chief Adjudicator Rasmus’s verdict is found, asserting Sofia Bellini’s sole authorship and responsibility for the tribunal system.",
+    "Ch1: Pierre notes the official narrative’s insistence on Bellini’s authorship and senses possible contradictions."
+  ],
+  "character_status": {
+    "Pierre Leclerc": {
+      "location": "records annex, tribunal archive",
+      "knows": [
+        "Sofia Bellini is officially credited as the sole architect of the tribunal system.",
+        "Chief Adjudicator Rasmus strongly supports this narrative.",
+        "There may be contradictions or omissions in the official record."
+      ],
+      "relationship_other": "Investigative focus on Sofia Bellini and skepticism toward Rasmus’s narrative.",
+      "mood": "Determined, skeptical, unsettled"
+    },
+    "Sofia Bellini": {
+      "location": "Referenced in records (not physically present)",
+      "knows": [],
+      "relationship_other": "Subject of Pierre’s investigation; official architect of the system.",
+      "mood": "Described as calm and certain in testimony"
+    },
+    "Chief Adjudicator Rasmus": {
+      "location": "Referenced in records (not physically present)",
+      "knows": [],
+      "relationship_other": "Authority figure; defender of the official narrative.",
+      "mood": "Confident, possibly over-insistent"
+    }
+  },
+  "open_threads": [
+    "Are there contradictions or hidden truths in the official narrative about Sofia Bellini’s authorship?",
+    "Why does Pierre sense something brittle or calculated in Rasmus’s confidence?"
+  ],
+  "facts_established": [
+    "Sofia Bellini is officially credited as the architect and originator of the tribunal system.",
+    "Primary records and system schema exist, signed by Sofia Bellini.",
+    "Chief Adjudicator Rasmus authored a verdict affirming Bellini’s sole authorship and responsibility.",
+    "Sofia Bellini accepted responsibility for every aspect of the system in official testimony."
+  ],
+  "spice_progression": "Initial intrigue and tension established through Pierre’s investigation and skepticism; no explicit romance or heightened emotional conflict yet.",
+  "phrases_used": [
+    "her signature is everywhere",
+    "the record is incontrovertible",
+    "every parameter, every safeguard, every potential for unintended consequence was mine to consider",
+    "I accept responsibility"
+  ],
+  "promoted_chapters": [
+    2,
+    5
+  ]
+}

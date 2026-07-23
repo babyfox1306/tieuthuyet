@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+from pathlib import Path
 from typing import Any
 
 # lead_relation values that imply shared blood — forbidden for romance leads
@@ -560,6 +561,8 @@ def validate_plan_against_canon(
     bible: dict,
     *,
     all_plans: list[dict] | None = None,
+    ws: Path | None = None,
+    mystery_ledger: dict | None = None,
 ) -> list[str]:
     """QC canon từ bible — không hardcode tên cuốn."""
     issues: list[str] = []
@@ -646,6 +649,17 @@ def validate_plan_against_canon(
                     if isinstance(c, dict) and c.get("name"):
                         parts_n = str(c["name"]).lower().split()
                         name_stop.update(parts_n)
+                # Laddered conspiracies intentionally name intermediate truths
+                # (e.g. "Directorate is capture") before the architect answer —
+                # those shared tokens must not trip the final-answer fingerprint.
+                ladder_stop = _laddered_mystery_vocab_through_chapter(
+                    ch, ws=ws, mystery_ledger=mystery_ledger
+                )
+                # Surface mystery (question / world_rules / early red herrings) is
+                # published before reveal — shared vocab with the answer is not a spoil.
+                published_stop = _published_mystery_vocab(
+                    bible, ch=ch, ws=ws, mystery_ledger=mystery_ledger
+                )
                 stop = {
                     "the", "and", "was", "were", "that", "with", "from", "her", "his",
                     "she", "who", "had", "for", "are", "this", "they", "been", "have",
@@ -653,7 +667,8 @@ def validate_plan_against_canon(
                     "a", "an", "of", "to", "in", "on", "as", "by", "or", "it", "is",
                     "name", "child", "children", "voice", "room", "hotel", "family",
                     "summer", "years", "year", "said", "says", "including", "through",
-                } | {n for n in name_stop if n}
+                    "which",  # pronoun-ish; common in institutional answer prose
+                } | {n for n in name_stop if n} | ladder_stop | published_stop
                 tokens = [
                     t for t in re.findall(r"[a-zà-ỹ']{5,}", ans_lower)
                     if t not in stop
@@ -678,6 +693,101 @@ def validate_plan_against_canon(
 
     issues.extend(validate_plan_world_rules(plan, bible))
     return issues
+
+
+def _mystery_token_set(text: str) -> set[str]:
+    return set(re.findall(r"[a-zà-ỹ']{5,}", (text or "").lower()))
+
+
+def _load_mystery_ledger(
+    *,
+    ws: Path | None = None,
+    mystery_ledger: dict | None = None,
+) -> dict:
+    if isinstance(mystery_ledger, dict) and mystery_ledger:
+        return mystery_ledger
+    if ws is None:
+        return {}
+    try:
+        from factory.engine.lib.narrative_compiler import load_ledger
+
+        ledger = load_ledger(ws)
+    except (OSError, ValueError, TypeError):
+        return {}
+    return ledger if isinstance(ledger, dict) else {}
+
+
+def _published_mystery_vocab(
+    bible: dict,
+    *,
+    ch: int,
+    ws: Path | None = None,
+    mystery_ledger: dict | None = None,
+) -> set[str]:
+    """Tokens already public before the full answer reveal.
+
+    World rules, the mystery *question*, and early red herrings describe the
+    surface machine on purpose. Fingerprinting those same words in chapter plans
+    as an early answer spoil is a false positive (e.g. bell/reenact loop books).
+    """
+    blobs: list[str] = []
+    cm = bible.get("central_mystery") if isinstance(bible.get("central_mystery"), dict) else {}
+    blobs.append(str((cm or {}).get("question") or ""))
+    for rule in bible.get("world_rules") or []:
+        blobs.append(str(rule))
+    for arc in bible.get("series_arc") or []:
+        if isinstance(arc, dict):
+            blobs.append(str(arc.get("thesis") or ""))
+            blobs.append(str(arc.get("ending_hook") or ""))
+
+    ledger = _load_mystery_ledger(ws=ws, mystery_ledger=mystery_ledger)
+    for rh in ledger.get("red_herrings") or []:
+        if not isinstance(rh, dict):
+            continue
+        try:
+            planted = int(rh.get("planted_chapter") or 0)
+        except (TypeError, ValueError):
+            planted = 0
+        if 0 < planted <= ch:
+            blobs.append(str(rh.get("description") or ""))
+
+    return _mystery_token_set(" ".join(blobs))
+
+
+def _laddered_mystery_vocab_through_chapter(
+    ch: int,
+    *,
+    ws: Path | None = None,
+    mystery_ledger: dict | None = None,
+) -> set[str]:
+    """Tokens already owed by major_reveals / clues scheduled at or before ``ch``."""
+    ledger = _load_mystery_ledger(ws=ws, mystery_ledger=mystery_ledger)
+    if not ledger:
+        return set()
+
+    blobs: list[str] = []
+    for mr in ledger.get("major_reveals") or []:
+        if not isinstance(mr, dict):
+            continue
+        try:
+            mr_ch = int(mr.get("chapter") or 0)
+        except (TypeError, ValueError):
+            continue
+        if 0 < mr_ch <= ch:
+            blobs.append(str(mr.get("description") or ""))
+    for clue in ledger.get("clues") or []:
+        if not isinstance(clue, dict):
+            continue
+        for key in ("payoff_chapter", "plant_chapter", "chapter"):
+            try:
+                c_ch = int(clue.get(key) or 0)
+            except (TypeError, ValueError):
+                c_ch = 0
+            if 0 < c_ch <= ch:
+                blobs.append(str(clue.get("description") or ""))
+                break
+
+    return _mystery_token_set(" ".join(blobs))
 
 
 _AUDIO_ONLY_RULE_RE = re.compile(

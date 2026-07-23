@@ -1,0 +1,20 @@
+{
+  "book_number": 1,
+  "total_chapters": 10,
+  "target_language": "en",
+  "case_closed": "The victim loop ends when Elena recovers the remains of the seven children, enters their names into the official death register, and reads them aloud beneath the empty bell frame before sunrise. The 1974 deaths are formally recorded, the bodies are found, and the supernatural cycle ceases. Gideon Rusk is arrested after attacking Elena. Ada’s role in altering the register is exposed.",
+  "case_open": "A series of ritualistic deaths tied to Saint Orison’s Church, where each victim reenacts the previous victim’s final actions and names the next, is ongoing. The bell rings each night at 2:17 a.m. for a new victim, and Elena’s name appears before the midpoint, drawing her into the center of the loop. The mystery of the 1974 fire, the missing children, and the purpose of the bell’s compulsion remain unsolved at the outset.",
+  "lead_internal_arc": {
+    "Elena Voss": {
+      "start": "Emotionally restrained, skeptical of the supernatural, and focused on facts and procedure. Haunted by her mother’s death and unresolved questions about Saint Orison’s and the 1974 fire.",
+      "midpoint": "Forced to confront the limits of rational explanations as the victim loop escalates and her own name appears. Begins recognizing her mother’s hidden influence and the weight of the erased children’s legacy.",
+      "end": "Accepts the necessity of facing painful truths, even at the cost of her mother’s reputation. Risks everything to restore the children’s names, breaks the supernatural cycle, and reclaims agency over her own story."
+    }
+  },
+  "act_structure": [
+    "act1_setup",
+    "act2_complications",
+    "act3_crisis",
+    "act4_resolution"
+  ]
+}

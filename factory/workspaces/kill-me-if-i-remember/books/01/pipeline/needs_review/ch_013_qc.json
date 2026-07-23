@@ -1,0 +1,51 @@
+{
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "[content_fail — retries 1/2]",
+    "markdown advisory (5 hit) — dùng UI fixer, không chặn promote",
+    "POV first-person outside dialogue (5 hits)"
+  ],
+  "source": "machine_content_cap",
+  "content_retries": 1,
+  "max_content_retries": 2,
+  "classification": {
+    "format_fix": {},
+    "content_fail": {
+      "pov_violation": {
+        "count": 5,
+        "threshold": 3
+      }
+    },
+    "length": {},
+    "format_only": false,
+    "length_only": false,
+    "has_format": false,
+    "has_content": true,
+    "has_length": false
+  },
+  "llm_qc_before_machine_fail": {
+    "foreign_chars": [],
+    "word_count": 1881,
+    "voice_drift": {
+      "flag": false,
+      "details": ""
+    },
+    "continuity_conflict": {
+      "flag": true,
+      "details": "The chapter attributes the seven witness killings directly to Sloane ('The seven people I... eliminated' and 'He made me kill the witnesses'), while the series bible establishes that Lucian was the assassin who eliminated them and that Sloane ordered the deaths. It also states that Rook already has Mara in chapter 13, although the supporting-cast canon places Mara's capture in chapter 14."
+    },
+    "cliffhanger_strength": 5,
+    "pacing_issue": false,
+    "signature_detail_present": true,
+    "spice_ok": true,
+    "content_boundary_ok": false,
+    "verdict": "FAIL",
+    "fail_reasons": [
+      "continuity_conflict: Sloane is presented as the direct killer of the seven witnesses instead of the person who ordered Lucian to eliminate them, and Mara is already Rook's captive one chapter before her canonical capture",
+      "content_boundary_violation: Sloane explains the central mystery and the mechanics of her trap in an extended speech, despite the prohibition against any character explaining the mystery in a speech",
+      "verdict_fail",
+      "continuity_conflict",
+      "content_boundary_violation"
+    ]
+  }
+}

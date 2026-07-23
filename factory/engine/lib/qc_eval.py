@@ -101,6 +101,7 @@ _BARE_FAIL_TAGS = frozenset(
         "qc_not_object",
         "qc_json_parse_error",
         "qc_transport_error",
+        "qc_infra_skipped",
     }
 )
 
@@ -171,4 +172,10 @@ def llm_qc_revision_suffix(qc: dict[str, Any], *, attempt: int) -> str:
         ]
     header = f"[REVISION — LLM QC attempt {attempt}] Fix ALL of the following QC failures:"
     body = "\n".join(f"- {line}" for line in lines)
-    return f"\n\n{header}\n{body}\n"
+    # Hard floor is machine_qc (min_word_count); QC rewrite must not shrink under it.
+    length_rule = (
+        "LENGTH HARD RULE: Keep the chapter at or above the configured minimum word "
+        "count (machine_qc). Fix QC failures by rewriting scenes — do NOT shorten "
+        "below the floor."
+    )
+    return f"\n\n{header}\n{body}\n- {length_rule}\n"

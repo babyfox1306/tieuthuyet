@@ -1,0 +1,15 @@
+characters:
+  female_lead:
+    canonical: Sloane Mercer
+    allowed_aliases:
+    - Sloane
+    - Mercer
+    forbidden_aliases: []
+  male_lead:
+    canonical: Lucian Vey
+    allowed_aliases:
+    - Lucian
+    - Vey
+    forbidden_aliases: []
+pov_mode: third_person_limited
+spice_max: 3

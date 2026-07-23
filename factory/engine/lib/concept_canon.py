@@ -37,6 +37,7 @@ DIGEST_FIELDS = (
     "surface_order",
     "binding_condition",
     "forbidden_phrases",
+    "forbidden_phrase_gates",
     "concept_schema_version",
     "target_language",
 )
@@ -47,6 +48,8 @@ NARRATIVE_DIGEST_FILES = (
     "threads.json",
     "mystery_ledger.json",
     "knowledge_matrix.json",
+    "chapter_canon_gates.json",
+    "conspiracy.json",
 )
 
 
@@ -100,6 +103,97 @@ def write_narrative_meta(ws: Path, *, source_concept_digest: str) -> Path:
     return path
 
 
+def sync_chapter_canon_gates(ws: Path, *, concept: dict | None = None) -> Path:
+    """Emit machine-readable chapter gates from concept into narrative/.
+
+    Writer prompts already compile live via compile_chapter_canon_rules(concept, ch).
+    This file makes the same ladder visible to operators / plan / QC without
+    opening concept.yaml — so staged unlocks are a mechanism, not prose notes.
+    """
+    from factory.engine.lib.narrative_schema import load_concept
+
+    concept = concept if concept is not None else load_concept(ws)
+    path = narrative_dir(ws) / "chapter_canon_gates.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    surface = concept.get("surface_order") if isinstance(concept.get("surface_order"), dict) else {}
+    binding = concept.get("binding_condition") if isinstance(concept.get("binding_condition"), dict) else {}
+    gates_raw = concept.get("forbidden_phrase_gates") or []
+    gates_out: list[dict[str, Any]] = []
+    if isinstance(gates_raw, list):
+        for gate in gates_raw:
+            if not isinstance(gate, dict):
+                continue
+            try:
+                unlock = int(gate.get("unlock_chapter") or 0)
+            except (TypeError, ValueError):
+                unlock = 0
+            phrases = [str(p).strip() for p in (gate.get("phrases") or []) if str(p).strip()]
+            if unlock < 1 or not phrases:
+                continue
+            gates_out.append(
+                {
+                    "id": str(gate.get("id") or "").strip() or f"unlock_{unlock}",
+                    "unlock_chapter": unlock,
+                    "phrases": phrases,
+                }
+            )
+
+    payload = {
+        "source": "concept.yaml",
+        "compiled_by": "sync_chapter_canon_gates",
+        "enforcement": (
+            "forbidden_phrase_gates.unlock_chapter applies to EVERY chapter number "
+            "strictly less than unlock_chapter via compile_chapter_canon_rules(concept, ch) "
+            "at write/prompt time. per_chapter_preview is an operator sample only — "
+            "missing a preview entry does NOT mean that chapter is ungated."
+        ),
+        "surface_order": {
+            "event_id": str(surface.get("event_id") or "").strip(),
+            "exact_text": str(surface.get("exact_text") or "").strip(),
+            "visible_from_chapter": int(surface.get("visible_from_chapter") or 0)
+            if str(surface.get("visible_from_chapter") or "").strip()
+            else 0,
+        },
+        "binding_condition": {
+            "event_id": str(binding.get("event_id") or "").strip(),
+            "canonical_text": str(binding.get("canonical_text") or "").strip(),
+            "reveal_chapter": int(binding.get("reveal_chapter") or 0)
+            if str(binding.get("reveal_chapter") or "").strip()
+            else 0,
+            "exact_wording_required_when_explicitly_stated": bool(
+                binding.get("exact_wording_required_when_explicitly_stated", True)
+            ),
+        },
+        "forbidden_phrases_forever": [
+            str(p).strip()
+            for p in (concept.get("forbidden_phrases") or [])
+            if str(p).strip()
+        ],
+        "forbidden_phrase_gates": gates_out,
+        "per_chapter_preview": {},
+    }
+    # Sample unlock, unlock-1, binding reveal, and ch1 — never treat as the full set.
+    preview_chapters: set[int] = {1}
+    for g in gates_out:
+        unlock = int(g["unlock_chapter"])
+        preview_chapters.add(unlock)
+        if unlock > 1:
+            preview_chapters.add(unlock - 1)
+    reveal = int(binding.get("reveal_chapter") or 0)
+    if reveal >= 1:
+        preview_chapters.add(reveal)
+        if reveal > 1:
+            preview_chapters.add(reveal - 1)
+    payload["per_chapter_preview"] = {
+        str(ch): compile_chapter_canon_rules(concept, ch).to_dict()
+        for ch in sorted(preview_chapters)
+        if ch >= 1
+    }
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return path
+
+
 def load_narrative_meta(ws: Path) -> dict[str, Any]:
     path = narrative_meta_path(ws)
     if not path.exists():
@@ -117,10 +211,55 @@ def _pair_present(concept: dict) -> bool:
     return isinstance(s, dict) and isinstance(b, dict) and bool(s) and bool(b)
 
 
+def _gated_forbidden_phrases(concept: dict, chapter_number: int) -> list[str]:
+    """Phrases still locked at this chapter from forbidden_phrase_gates.
+
+    Each gate: {id?, unlock_chapter: int, phrases: [str, ...]}.
+    Phrase is forbidden while chapter_number < unlock_chapter.
+    Distinct clusters may unlock on different chapters (e.g. Renn+fast-track @19
+    vs Renn+override/burial @20) — not a single name switch.
+    """
+    gates = concept.get("forbidden_phrase_gates") or []
+    if not isinstance(gates, list):
+        return []
+    ch = int(chapter_number)
+    out: list[str] = []
+    seen: set[str] = set()
+    for gate in gates:
+        if not isinstance(gate, dict):
+            continue
+        try:
+            unlock = int(gate.get("unlock_chapter") or 0)
+        except (TypeError, ValueError):
+            unlock = 0
+        if unlock < 1 or ch >= unlock:
+            continue
+        phrases = gate.get("phrases") or []
+        if not isinstance(phrases, list):
+            continue
+        for raw in phrases:
+            p = str(raw or "").strip()
+            if not p or p in seen:
+                continue
+            seen.add(p)
+            out.append(p)
+    return out
+
+
 def compile_chapter_canon_rules(concept: dict, chapter_number: int) -> ChapterCanonRules:
     """Sole chapter-gate compiler — writer prompts and QC must consume this."""
+    ch = int(chapter_number)
+    gated = _gated_forbidden_phrases(concept, ch)
+
     if not _pair_present(concept):
-        return ChapterCanonRules()
+        if not gated:
+            return ChapterCanonRules()
+        return ChapterCanonRules(
+            allowed_exact_quotes=[],
+            forbidden_facts=gated,
+            required_exact_wording=[],
+            reveal_state="surface_only",
+        )
 
     surface = concept.get("surface_order") or {}
     binding = concept.get("binding_condition") or {}
@@ -130,7 +269,6 @@ def compile_chapter_canon_rules(concept: dict, chapter_number: int) -> ChapterCa
         reveal = int(binding.get("reveal_chapter") or 0)
     except (TypeError, ValueError):
         reveal = 0
-    ch = int(chapter_number)
 
     allowed = [exact] if exact else []
     if ch < reveal or reveal < 1:
@@ -138,6 +276,9 @@ def compile_chapter_canon_rules(concept: dict, chapter_number: int) -> ChapterCa
         # Also ban the distinctive Rook trigger fragment as a fact
         if "restores the" in canonical.lower() or "obedient identity" in canonical.lower():
             forbidden.append("Rook restores the obedient identity")
+        for p in gated:
+            if p not in forbidden:
+                forbidden.append(p)
         return ChapterCanonRules(
             allowed_exact_quotes=allowed,
             forbidden_facts=forbidden,
@@ -152,7 +293,7 @@ def compile_chapter_canon_rules(concept: dict, chapter_number: int) -> ChapterCa
         required = [canonical]
     return ChapterCanonRules(
         allowed_exact_quotes=allowed,
-        forbidden_facts=[],
+        forbidden_facts=list(gated),  # residual gates unlocking after binding reveal
         required_exact_wording=required,
         reveal_state="binding_revealed",
     )

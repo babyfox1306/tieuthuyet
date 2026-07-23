@@ -45,8 +45,15 @@ def _norm_phrase(s: str) -> str:
 
 
 def _creative_blobs(concept: dict) -> list[tuple[str, str]]:
+    """Story blobs scanned for flat forbidden_phrases.
+
+    ``author_directive`` is excluded (same rationale as ``must_avoid``): operators
+    routinely list bans there (\"NO Vance / NO Rook\"). Those tokens belong in
+    ``forbidden_phrases`` for chapter locks — mentioning them as instructions must
+    not block develop-narrative.
+    """
     out: list[tuple[str, str]] = []
-    for key in ("logline", "surface_plot", "true_plot", "author_directive"):
+    for key in ("logline", "surface_plot", "true_plot"):
         val = concept.get(key)
         if val and str(val).strip():
             out.append((key, str(val)))
@@ -180,17 +187,77 @@ def concept_satisfiability_errors(concept: dict) -> list[ConceptValidationError]
     return errors
 
 
-def _forbidden_phrase_errors(concept: dict) -> list[ConceptValidationError]:
+def _all_flat_forbidden_phrases(concept: dict) -> list[str]:
+    """Forever-banned phrases only (forbidden_phrases).
+
+    Staged gate phrases live in forbidden_phrase_gates and are allowed in concept
+    creative blobs — they become chapter locks via compile_chapter_canon_rules.
+    """
     phrases = concept.get("forbidden_phrases") or []
-    if not isinstance(phrases, list) or not phrases:
+    if not isinstance(phrases, list):
         return []
-    norms = [(str(p), _norm_phrase(str(p))) for p in phrases if str(p).strip()]
+    return [str(p).strip() for p in phrases if str(p).strip()]
+
+
+def _forbidden_phrase_gate_errors(concept: dict) -> list[ConceptValidationError]:
+    gates = concept.get("forbidden_phrase_gates")
+    if gates is None:
+        return []
     errors: list[ConceptValidationError] = []
+    if not isinstance(gates, list):
+        errors.append(
+            ConceptValidationError(
+                code="SAT_GATE_INVALID",
+                path="forbidden_phrase_gates",
+                message="forbidden_phrase_gates must be a list",
+            )
+        )
+        return errors
+    for i, gate in enumerate(gates):
+        path = f"forbidden_phrase_gates[{i}]"
+        if not isinstance(gate, dict):
+            errors.append(
+                ConceptValidationError(
+                    code="SAT_GATE_INVALID",
+                    path=path,
+                    message="each gate must be a mapping",
+                )
+            )
+            continue
+        try:
+            unlock = int(gate.get("unlock_chapter") or 0)
+        except (TypeError, ValueError):
+            unlock = 0
+        if unlock < 1:
+            errors.append(
+                ConceptValidationError(
+                    code="SAT_GATE_INVALID",
+                    path=f"{path}.unlock_chapter",
+                    message="unlock_chapter must be >= 1",
+                )
+            )
+        phrases = gate.get("phrases")
+        if not isinstance(phrases, list) or not any(str(p).strip() for p in phrases):
+            errors.append(
+                ConceptValidationError(
+                    code="SAT_GATE_INVALID",
+                    path=f"{path}.phrases",
+                    message="phrases must be a non-empty list",
+                )
+            )
+    return errors
+
+
+def _forbidden_phrase_errors(concept: dict) -> list[ConceptValidationError]:
+    errors = _forbidden_phrase_gate_errors(concept)
+    phrases = _all_flat_forbidden_phrases(concept)
+    if not phrases:
+        return errors
+    norms = [(str(p), _norm_phrase(str(p))) for p in phrases]
     code_by_key = {
         "logline": "SAT_FORBIDDEN_PHRASE_IN_LOGLINE",
         "surface_plot": "SAT_FORBIDDEN_PHRASE_IN_SURFACE_PLOT",
         "true_plot": "SAT_FORBIDDEN_PHRASE_IN_TRUE_PLOT",
-        "author_directive": "SAT_FORBIDDEN_PHRASE_IN_AUTHOR_DIRECTIVE",
     }
     for key, text in _creative_blobs(concept):
         hay = _norm_phrase(text)

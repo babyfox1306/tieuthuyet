@@ -12,3 +12,4 @@ kdp_recon/output/*.csv
 kdp_recon/output/*.md
 
 factory/engine/factory_log.json
+factory/workspaces/**/payloads/

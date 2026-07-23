@@ -1,0 +1,357 @@
+---
+series: kill-me-if-i-remember
+book: 1
+chapter: 7
+title: The Encrypted Entry
+spice: 1
+word_count: 1910
+status: draft
+needs_fix: []
+promoted_at: '2026-07-18T07:44:22Z'
+---
+
+The encrypted file answered to a passphrase Sloane Mercer didn't know she'd chosen, as if her past self had left a key inside her own muscle memory. Her fingers moved over the terminal while the countdown kept falling. Behind her, the corridor chirped a third time.
+
+Lucian raised the rifle toward the door. "How long?"
+
+"Ask the version of me who designed this."
+
+"She rarely gave useful estimates."
+
+Sloane glanced at him. "You knew her well enough to complain?"
+
+His expression closed before she could read it. "Work."
+
+An excellent answer, if the goal was to make every question multiply.
+
+She faced the terminal. The drive had mounted a hidden partition beneath the transaction files, but opening it had triggered four empty fields. No labels. No instructions. Just a cursor and the countdown.
+
+00:46:02.
+
+Sloane tried the code from the silver tape. Rejected.
+
+She entered the date printed on the photograph found in her pocket. Rejected.
+
+The corridor chirp stopped.
+
+Silence pressed against the archive door.
+
+Lucian turned the rifle's focus ring exactly one quarter rotation. The movement was precise enough to be ritual, and bleak enough to make her skin tighten.
+
+"They're waiting," she said.
+
+"They're positioning."
+
+"Much more comforting."
+
+Her left hand had found her wrist. Thumb tracing a small circle against the tender skin, once, twice—
+
+The cursor jumped to the second field.
+
+Sloane froze.
+
+She traced the circle again, slower. At the final curve, her little finger struck the terminal's edge. The first field filled with a single character.
+
+R.
+
+Not a password. A gesture translated into input.
+
+Her past self had not trusted words.
+
+Sloane repeated the motion and watched where her fingers wanted to go next. Circle. Tap. Drag left. Two short presses against the metal lip below the keyboard.
+
+R-7-C.
+
+A line appeared beneath the fields.
+
+CONTINGENCY ACCEPTED.
+
+"That's unsettling," she murmured.
+
+Lucian did not turn. "What did you do?"
+
+"Apparently, something familiar."
+
+A hard metallic scrape came from the corridor.
+
+The lock.
+
+Sloane set both hands on the keyboard. The remaining fields filled when she entered the seven transaction references in reverse order. Then the screen requested biometric confirmation.
+
+A thumbprint icon pulsed.
+
+She pressed her left thumb to the terminal reader.
+
+Access granted.
+
+The archive door buckled inward.
+
+Lucian fired once.
+
+The suppressed shot cracked through the room. Metal rang outside, followed by the heavy impact of someone hitting the wall.
+
+"Move," Lucian ordered.
+
+Sloane pulled the drive free, but the terminal caught her attention with a final opened file.
+
+JOURNAL_7.
+
+She copied it to the drive.
+
+The door shuddered again.
+
+Lucian crossed the archive, seized the back of a steel shelving unit, and dragged it across the entrance. Paper boxes toppled. One split open, spilling sealed records across the floor.
+
+Sloane slipped the drive into her coat. "Subtle."
+
+"That was not the requirement."
+
+A shot punched through the shelving. Lucian caught her shoulder and drove her behind the terminal block as fragments of plaster sprayed overhead.
+
+His body covered hers before the debris stopped falling.
+
+Sloane's cheek struck the hard plane of his chest. Beneath layers of dark fabric, his heartbeat slammed fast and steady against her temple.
+
+For one impossible second, the archive vanished.
+
+She knew this.
+
+Not the room. Not the gunfire. Him.
+
+The certainty came without an image. Her body recognized the width of his chest, the angle of his arm around her, the controlled breath he took before moving. Forgotten intimacy lived in her nerves while her mind stood outside the locked door.
+
+Lucian looked down.
+
+Their faces were too close. His gaze dropped to her mouth, then rose with visible restraint.
+
+"Sloane."
+
+The way he said her name held warning and something far more dangerous.
+
+She swallowed. "If this is your idea of answering questions, the technique needs work."
+
+His hand loosened at her shoulder, though he did not step away. "Can you run?"
+
+"Can you stop asking insulting questions?"
+
+Another round tore through the terminal.
+
+Lucian pivoted, firing toward the doorway while Sloane ducked along the cabinets. The attacker stayed beyond the shelving, using the narrow angle intelligently. No reckless charge. No convenient mistake.
+
+Rook had sent someone patient.
+
+That made two of them.
+
+Sloane reached the rear wall. The building plan she had studied downstairs showed a records transfer hatch behind the cabinets. She found the recessed latch, but it required an access card.
+
+Her fingers went to the contract tucked inside her coat.
+
+The laminated backing carried a magnetic strip.
+
+CLIENT TERMINATION AT SUNRISE.
+
+The words flashed under the emergency light before she slid the contract through the reader.
+
+The hatch unlocked.
+
+"Lucian."
+
+He fired once more, then crossed to her without exposing his back to the doorway. She pulled the hatch open. A narrow conveyor channel disappeared into darkness.
+
+"After you," she said.
+
+His stare suggested several objections.
+
+Sloane climbed in. "Save the lecture for the part where no one is shooting at us."
+
+She crawled through the channel, elbows scraping metal. Lucian entered behind her and pulled the hatch shut. A bullet struck the outer panel almost immediately.
+
+Their pursuer had not guessed. He had calculated.
+
+The conveyor dropped into a document intake room one floor below. Sloane landed badly, recovered, and pulled the drive from her pocket.
+
+Lucian descended beside her. "Leave it encrypted until we have distance."
+
+"The countdown is still running."
+
+"That is why Rook expects you to rush."
+
+"And because he expects it, hesitation becomes brilliant?"
+
+"It becomes an option."
+
+Sloane found an offline intake terminal and plugged in the drive. "Options are decorative when sunrise is attached to a death order."
+
+The hidden partition opened without requesting the gesture again. JOURNAL_7 sat beside a new file named EMBEDDED KEY.
+
+She opened the journal.
+
+The entry carried a timestamp from the second month of her missing period. Three paragraphs had been damaged. The surviving text appeared in her own clipped style.
+
+"Confirmed seven corrupted contracts. Original target records were altered after authorization but before execution. Same substitution architecture in all seven. Witness identifiers replaced with sanctioned target identities. Payment routes converge, then split through Rook-controlled channels."
+
+Sloane read the lines twice.
+
+Lucian stood motionless beside the door.
+
+She continued.
+
+"Lucian executed the files as delivered. That does not absolve the system, and it does not absolve me. Every authorization carried my hand. Seven deaths were approved with full knowledge of what the orders meant. The corruption changed who stood at the end of them, not what was ordered."
+
+The words hollowed out the space behind her ribs.
+
+No coercion conveniently erased her guilt. No forged signature offered a clean escape. She had authorized deaths knowing exactly what authorization meant.
+
+Only the names had been changed.
+
+Seven corrupted contracts.
+
+Seven people who had died because a trusted system had been turned sideways, with her hand still pushing each order forward.
+
+Lucian's voice was quiet. "Sloane."
+
+"Don't."
+
+He obeyed.
+
+That hurt more than an argument would have.
+
+She scrolled to the final surviving line.
+
+"Embedded key attached. Physical record isolated from network. Retrieval requires the left hand."
+
+The key file opened into an address, a vault number, and a one-use access token already counting down.
+
+Twenty-three minutes.
+
+Sloane unplugged the drive. "We have a bank to visit."
+
+"The attacker will follow the retrieval path."
+
+"Then Rook should have built a less obvious trap."
+
+Lucian checked the corridor through the narrow door window. "He built this one for you."
+
+The certainty in his tone chilled her. "Meaning?"
+
+"Meaning he knows which facts you cannot leave unopened."
+
+That was not an explanation. It was worse: an accurate assessment.
+
+They left through the annex service passage. Behind them, a distant door opened with controlled care. Their pursuer was still tracking, not charging.
+
+Outside, Lucian kept to blind angles between buildings while Sloane studied the embedded token. The bank address was four blocks away, its private vault accessible through a secured underground entrance.
+
+The streets felt stripped down to hard surfaces and surveillance lenses. Every reflective window became an eye.
+
+At the second intersection, Lucian caught her sleeve and pulled her back before she crossed.
+
+A red targeting point slid over the pavement where her chest would have been.
+
+Sloane flattened against the wall. "Rook does enjoy repetition."
+
+Lucian scanned the rooflines. "That was not a firing solution. It was pressure."
+
+"How thoughtful. He wants us tense."
+
+"He wants you moving faster than you think."
+
+Sloane traced the circle against her left wrist. The motion came too easily now. Less like a nervous habit and more like a mechanism waiting for the rest of itself.
+
+She stopped halfway.
+
+Lucian noticed. Of course he noticed.
+
+He said nothing.
+
+They changed direction twice, cut through a parking structure, and reached the bank's underground vault entrance with nine minutes left on the token.
+
+The outer reader accepted the code. A camera rotated toward Sloane, scanned her face, then requested a left thumbprint.
+
+She pressed her thumb to the glass.
+
+The door unlocked.
+
+The private vault was narrow, silent, and lined with steel boxes. No staff waited inside. The system guided them to box 417 with a thin strip of floor lights.
+
+Sloane entered the one-use token. A log appeared on the panel.
+
+The safety deposit box had been opened exactly twice before that night. Both timestamps fell within the same week of her missing months, and each entry had been signed with a thumbprint matching her left hand.
+
+First access: deposit.
+
+Second access: verification.
+
+Tonight would be the third.
+
+"She checked her own trap," Sloane said.
+
+Lucian stood at her shoulder. "You checked everything twice."
+
+The familiarity of the statement caught harder than it should have. "Did that annoy you too?"
+
+"No."
+
+One syllable. No hesitation.
+
+Their eyes met in the dark reflection of the steel box.
+
+Sloane felt again the remembered certainty of his body over hers, the heartbeat beneath her cheek. Nothing in her mind connected to it, yet something deeper had already answered.
+
+She turned to the panel before that answer became another danger.
+
+"Open box four-one-seven."
+
+The lock released with a dense mechanical clunk.
+
+Inside lay no drive, no document sealed for easy discovery. Only a thin piece of blackened metal etched with lines so fine they shifted when Sloane tilted it beneath the vault light.
+
+A handwritten ledger fragment had been wrapped around it.
+
+Her handwriting.
+
+Lucian reached toward the metal, then stopped before touching it. "Pressure sensor."
+
+Sloane saw it then: a hair-thin filament beneath the fragment, stretched to the back of the box.
+
+"Alarm?"
+
+"More likely a signal."
+
+"To Rook."
+
+"Assume he already knows we are here."
+
+A faint click sounded beyond the vault door.
+
+Then another.
+
+The pursuit had arrived.
+
+Sloane studied the filament, the angle of the paper, the narrow gap beneath the metal. Her left thumb began its circle before she made the decision.
+
+Circle. Pause. Press.
+
+The box's inner plate shifted.
+
+A hidden clamp caught the filament, holding its tension.
+
+Her hand had known the release.
+
+Sloane lifted the ledger fragment free.
+
+The vault lights turned red.
+
+Lucian brought up the rifle as the outer lock began cycling.
+
+"Read it," he said.
+
+Sloane unfolded the fragment.
+
+Seven contract numbers ran down the left margin. Each matched a corrupted file from the journal entry. Most of the names had been burned away, but one partial name remained.
+
+Korovin.
+
+Beneath it, Sloane had written a final instruction.
+
+"Seven deaths to bury one truth. Find the eighth."

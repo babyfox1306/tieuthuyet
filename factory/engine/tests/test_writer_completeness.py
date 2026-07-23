@@ -23,7 +23,7 @@ class WriterIncompleteTests(unittest.TestCase):
     def test_finish_reason_length_always_incomplete(self):
         # Even a clean-looking ending — length means the model hit a wall.
         incomplete, code, detail = writer_output_incomplete(
-            "She closed the door.",
+            "# Chapter 1: Test\n\nShe closed the door.",
             finish_reason="length",
             chapter=1,
         )
@@ -33,16 +33,46 @@ class WriterIncompleteTests(unittest.TestCase):
 
     def test_stop_with_clean_ending_ok(self):
         incomplete, code, _ = writer_output_incomplete(
-            'She said, "Done."',
+            '# Chapter 1: Test\n\nShe said, "Done."',
             finish_reason="stop",
             chapter=1,
         )
         self.assertFalse(incomplete)
         self.assertEqual(code, "")
 
+    def test_missing_heading_incomplete(self):
+        incomplete, code, detail = writer_output_incomplete(
+            "She closed the door.",
+            finish_reason="stop",
+            chapter=1,
+        )
+        self.assertTrue(incomplete)
+        self.assertEqual(code, "missing_chapter_heading")
+        self.assertIn("Chapter", detail)
+
+    def test_truncated_opening_incomplete(self):
+        incomplete, code, detail = writer_output_incomplete(
+            "# Chapter 6: Vote\n\nthe inevitable; she had volunteered.",
+            finish_reason="stop",
+            chapter=6,
+        )
+        self.assertTrue(incomplete)
+        self.assertEqual(code, "truncated_opening")
+        self.assertIn("mid-sentence", detail)
+
+    def test_structure_fail_uses_rewrite_not_continuation(self):
+        s = continuation_suffix(
+            code="missing_chapter_heading",
+            detail="no heading",
+            prior_tail="fragment",
+            attempt=1,
+        )
+        self.assertIn("STRUCTURE REWRITE", s)
+        self.assertNotIn("Continue from the exact cutoff", s)
+
     def test_no_finish_reason_falls_back_to_eg01_mid_sentence(self):
         incomplete, code, detail = writer_output_incomplete(
-            "She looked at Lucian and\n\nShe",
+            "# Chapter 9: X\n\nShe looked at Lucian and\n\nShe",
             finish_reason=None,
             chapter=9,
         )
@@ -52,7 +82,7 @@ class WriterIncompleteTests(unittest.TestCase):
 
     def test_no_finish_reason_unclosed_quote(self):
         incomplete, code, detail = writer_output_incomplete(
-            'She yelled, "I want to know why my sister is lying dead on this roof!',
+            '# Chapter 1: X\n\nShe yelled, "I want to know why my sister is lying dead on this roof!',
             finish_reason=None,
             chapter=1,
         )

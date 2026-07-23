@@ -1,0 +1,362 @@
+concept_status: ready
+concept_schema_version: 2
+target_language: en
+chapter_count: 22
+title: The Meridian Spine
+pen_name: Nix Vale
+logline: A year after she brought down the commissioner behind the Kessler collapse,
+  forensic engineer Iris Kane is handed the flagship job of the reform built to prevent
+  the next disaster -- and discovers the reform itself is the instrument by which
+  the people who financed Renn are capturing national infrastructure wholesale, protected
+  by a name redacted from the one page she never recovered.
+author_directive: 'LEAD -- same central character, evolved
+
+
+  Female lead: Iris Kane (39). Now public: the engineer who broke Renn. That reputation
+  is armor and trap both -- it got her the Directorate role, and the role is the leash.
+  Same voice: dry, exacting, allergic to comfort. Same tic: thumbnail along edges
+  reading for hairline cracks -- now escalating from Book 1''s "reads a document as
+  a structure" to Book 2''s "reads a national institution as a structure built to
+  fail on cue." Same boundary: will not sign a conclusion she cannot physically prove.
+  New pressure: Book 1 she fought to get access; Book 2 she is given everything --
+  and the seduction of finally having power is the thing she must see through. Single
+  POV, all 22 chapters. Third-person limited. No other POV.
+
+
+  Male lead: Stellan Marsh -- the architect antagonist (not a romantic lead). National
+  figure who created the National Integrity Directorate; Iris''s ultimate sponsor.
+  Rook-analog rule applies.
+
+
+  THE FOUR TIERS -- national escalation, each real+guilty, revealed in order
+
+
+  TIER 1 -- Petra Lund. The executor.
+
+  Lead materials certifier on the Meridian Spine who signs off falsified load coupons
+  using the same override method as Kessler.
+
+  - Planted: ch1-2 (named in the Spine certification chain). Revealed: ch3-4 (Iris
+  matches her tool-marks to the fraud). Function: the offered answer, a "Renn-era
+  method copycat." Guilty, low. Exit: neutralized/removed ch6 -> manufactures FALSE
+  ANSWER 1.
+
+
+  TIER 2 -- Nadia Okafor. The trusted one. THE BETRAYAL.
+
+  Iris''s investigative partner at the Directorate. Sharp, principled-seeming, the
+  person Iris finally trusts after Vance taught her not to. The reader must like her.
+
+  - Planted: ch1 (established as ally, genuinely helps early). Secret: she has been
+  steering Iris toward the financier (FA2) -- feeding true-but-incomplete evidence
+  to burn Halveston as the stopping point and shield Marsh. Not for money: she believes
+  the Directorate must survive even if it means a controlled sacrifice. Revealed:
+  ch10-11 (a lead reaches the network before Iris files it; only Nadia had it). Function:
+  fresh betrayal -- not a leaked finding like Vance, but a guided investigation --
+  the ally who curates which top you reach.
+
+
+  TIER 3 -- Gerald Halveston. The coordinator. FALSE ANSWER 2.
+
+  Chairs the philanthropic infrastructure fund financing the Spine. Public, clean,
+  benevolent. The obvious "money did it" villain.
+
+  - Planted: ch2. Revealed as coordinator: ch15-16 (he moved the money that captured
+  the contracts). Function: FA2 -- "follow the money, here''s the mastermind." Satisfying.
+  Feels like the top. It is not: Halveston answered to the political power that created
+  the Directorate and told the fund where to point. He financed; he did not architect.
+
+
+  TIER 4 -- Stellan Marsh. The architect. THE PATRON at national scale.
+
+  The national figure who created the National Integrity Directorate "so Kessler never
+  happens again" -- and who chairs the council that stood above Renn. Iris''s ultimate
+  sponsor; the man who gave her the flagship job.
+
+  - Planted: ch1 (the statesman who built the reform, championed Iris''s appointment).
+  Revealed as architect: ch19-20. Function: the reform is the capture, and its builder
+  is the top. Rook-analog rule: he loses only because the fraud''s physical tool-mark
+  is outside every registry he controls, never because he turns careless.
+
+
+  THE NEW PHYSICAL SPINE -- the tool-mark signature (mirror-key analog)
+
+  Book 1''s core sample is SPENT -- already published once, irrevocably. Do not reuse
+  it as the winning card.
+
+  Book 2''s un-launderable object: the physical fingerprint of the fraud method. The
+  override that faked Kessler''s load test was applied with a specific machining/press
+  tooling that leaves an identical micro-signature. The same signature appears on
+  the Meridian Spine''s certified coupons. The co-owner names are redacted on paper
+  -- but the tool-mark is physical, recurring, and can only mean common authorship.
+
+  - Iris recovers a fractured Spine coupon early (ch2), significance withheld.
+
+  - The complete proof -- tool-mark match linking Spine fraud to Kessler to the fund
+  to Marsh -- goes public exactly once, ch21, only after Marsh states his role on
+  live record. Cannot be recalled.
+
+  - No chapter before 21 claims the truth is out (ch13 partial: Iris releases the
+  tool-mark match Spine<->Kessler only -- reopens the Spine''s certification, names
+  no one).
+
+
+  THE TWO FALSE ANSWERS
+
+  FA1 -- "A lone method-copycat." Seeded ch5, believed ch6-8, lifted ch9. Lund faked
+  the coupons using Renn''s old method on her own initiative. Lifted: the tooling
+  that made the tool-mark was never in Lund''s possession -- the method came from
+  above her.
+
+  FA2 -- "The money did it. Halveston." Seeded ch12, believed ch13-16, lifted ch17-18.
+  Halveston''s fund captured the contracts. Lifted: the fund only moved where the
+  Directorate pointed it; the capture was architected by whoever built the Directorate,
+  not by whoever financed it.
+
+
+  CENTRAL MYSTERY -- ONE answer
+
+  Question: Who built the post-Kessler reform into a national capture instrument --
+  who are the co-owners behind Renn, and who architected using the correction itself
+  to entrench the fraud at national scale?
+
+  Answer (canonical): Stellan Marsh architected the National Integrity Directorate
+  as a capture instrument: the reform built to prevent the next Kessler is the mechanism
+  by which he and the co-owners who financed Renn now control national procurement,
+  laundering the same fraud at the scale of a country behind the credibility of the
+  body meant to stop it.
+
+  Reveal chapter: 20. No chapter before 20 states or paraphrases Marsh''s authorship
+  of the capture.
+
+
+  THE TRAP INSIDE THE TRAP
+
+  They planned for Iris to keep digging after Renn. Containment-by-empowerment: give
+  her the Directorate''s flagship so the biggest clean job in the country absorbs
+  the one who could expose the redactions. Her power is her leash. What they did not
+  account for: the fraud''s physical tool-mark, which Iris reads by trade, links the
+  new national fraud to the old Kessler fraud regardless of any redaction.
+
+  - Reveal that the reform is the capture: ch18 -- assembled from THREE pieces (the
+  tool-mark recurring across projects the Directorate certified; the Directorate''s
+  approvals tracking the fund''s positions; the timing of every "clean verdict" landing
+  where public trust needed restoring), never a summary. No personal name on the top
+  until ch19.
+
+
+  AUTHORSHIP UNLOCK LADDER -- three milestones (hard lock)
+
+  - ch17-18 ALLOWED: "the reform is the capture instrument" / national capture; co-owners
+  exist; "a principal above the fund." FORBIDDEN: any named person (incl. Marsh) tied
+  to architecting the capture; Marsh + built-the-Directorate-as-capture.
+
+  - ch19 ALLOWED: Marsh + created-the-Directorate + benefits (interest/negligence
+  -- Tier 4 closing in). FORBIDDEN: Marsh + architected-the-capture / ordered / laundered.
+
+  - ch20 UNLOCKED: Marsh + architected the capture -- binding_condition.canonical_text,
+  exact when explicitly stated.
+
+  - Machine gates: forbidden_phrase_gates ids reform_is_capture@18, marsh_founder@19,
+  marsh_architect@20.
+
+
+  ROOK-ANALOG RULE, THUMBNAIL-CRACK MOTIF, HOW TRUTH IS EARNED
+
+  Same as Book 1. Marsh never careless -- he loses to the physical tool-mark, not
+  to plot-induced stupidity. Motif escalates: Iris reads the Directorate the way she
+  reads concrete, finds the designed fracture in a national institution. Truth arrives
+  as tool-marks, coupons, approval-timing curves -- never a monologue. Marsh does
+  not confess; he is proven.
+
+
+  CAST CEILING
+
+  Iris + Lund, Okafor, Halveston, Marsh. Plus inherited (Renn as prison source only).
+  No fifth tier. No extra supporting character. Adrienne Sol, Theo Vance, Dov Marek
+  -- accounted for, may be referenced, do not re-litigate.
+
+
+  INHERITED CANON (IMMUTABLE -- do not contradict)
+
+  - Aldous Renn: convicted, in custody. May appear as a source (Iris can interview
+  him in prison) but he is NOT the top, NOT resurrected as active mastermind, NOT
+  freed.
+
+  - Adrienne Sol, Theo Vance, Dov Marek: accounted for, cases closed.
+
+  - The Book 1 core sample: already published once, irrevocably. SPENT.
+
+  - The OSP / Executive Council: still alive, still unnamed at Book 1 close. Book
+  2 names its head.
+
+  - The redacted co-owners of Renn''s private stake: Iris never recovered the page.
+  Engine of Book 2.
+
+  - Iris Kane: not imprisoned. Book 2 opens on her public reputation as the forensic
+  engineer who brought down Renn.
+
+
+  Escalation, not repeat. Book 1: the investigation was the trap. Book 2: the reform
+  is the trap. Scale climbs from one project (a tunnel) to national procurement.
+
+  Avoid Book-1 beat-cloning: betrayal mechanism is guided investigation (not leaked
+  finding); macro-trap is reform-as-capture (not inquiry-as-cover); physical spine
+  is recurring tool-mark (not a single retained sample).'
+surface_plot: 'After Kessler, the state creates the National Integrity Directorate
+  -- an independent body meant to certify that no infrastructure fraud can recur.
+  Iris Kane, the woman who exposed Renn, is recruited as its lead forensic authority,
+  given real power and a flagship project: verifying the Meridian Spine, a national
+  rail-modernization program. She uncovers fraud in the Spine''s materials, climbs
+  a chain -- a captured certifier, a compromised partner, a philanthropic financier
+  -- each layer feeling like the top, believing the Directorate is the clean instrument
+  she finally has on her side.'
+true_plot: 'The redacted co-owners who financed Renn''s Kessler fast-track did not
+  die with him. They learned. Rather than corrupt individual projects, they built
+  the correction: the National Integrity Directorate is their capture vehicle -- the
+  body that guarantees integrity is the body that now controls which national contracts
+  pass, entrenching the same fraud at the scale of a country. They recruited Iris
+  not because they need her credibility to pass a verdict (Book 1''s mechanism) but
+  because she is now a public figure who cannot be ignored -- so they contain her
+  by empowerment: give her the biggest clean job imaginable so she stops wanting the
+  one thing, the redacted page. Her flagship role is her leash. What they did not
+  account for: the fraud has a physical signature. Names can be redacted; a machining
+  tool-mark cannot. The same override method that faked Kessler''s load test recurs,
+  physically identical, in the Meridian Spine''s certified coupons -- and Iris reads
+  tool-marks for a living. She cannot recover the redacted names. She can prove common
+  authorship through the physical DNA of the fraud itself, and follow that to the
+  one man who built the Directorate to launder a nation''s procurement: Stellan Marsh.'
+surface_order:
+  event_id: meridian_spine_integrity
+  exact_text: National Integrity Directorate -- independent certification; Meridian
+    Spine verified clean
+  visible_from_chapter: 1
+  appears_unconditional: true
+binding_condition:
+  event_id: meridian_spine_integrity
+  canonical_text: 'Stellan Marsh architected the National Integrity Directorate as
+    a capture instrument: the reform built to prevent the next Kessler is the mechanism
+    by which he and the co-owners who financed Renn now control national procurement,
+    laundering the same fraud at the scale of a country behind the credibility of
+    the body meant to stop it.'
+  reveal_chapter: 20
+  exact_wording_required_when_explicitly_stated: true
+forbidden_phrases:
+- evidence is fully public
+- the case is fully exposed
+must_include:
+- Single POV -- Iris Kane holds all 22 chapters
+- 'Four tiers, each real and guilty, revealed in order: Lund (ch3-4), Okafor (ch10-11),
+  Halveston (ch15-16), Marsh (ch19-20)'
+- 'Two sequential false answers: lone method-copycat (seeded ch5, lifted ch9); Halveston/money
+  (seeded ch12, lifted ch17-18)'
+- ONE central-mystery answer, revealed chapter 20, binding_condition.canonical_text
+  only
+- Nadia Okafor is trusted and genuinely helpful before betrayal -- guided investigation,
+  not leaked finding
+- Marsh is positioned as Iris's patron/sponsor from chapter 1
+- Fractured Spine coupon recovered ch2, significance withheld until payoff
+- Complete tool-mark proof published exactly once, chapter 21, after Marsh states
+  his role on live record
+- 'Chapter 13 partial release: tool-mark match Spine<->Kessler only -- reopens certification,
+  names no one'
+- Every reveal assembled from physical evidence (tool-marks, coupons, approval-timing)
+  -- never a speech
+- 'Thumbnail-crack motif escalates: Iris reads the Directorate as a structure built
+  to fail on cue'
+- Reform-is-capture revealed ch18 from three evidence pieces; no personal name on
+  architect until ch19
+- 'Authorship unlock ladder: ch17-18 reform-is-capture + principal above fund (no
+  name); ch19 Marsh+founder/beneficiary only; ch20 binding_condition.canonical_text'
+- Aldous Renn available only as prison source -- convicted, not freed, not resurrected
+  as active mastermind
+- Book 1 core sample is spent -- not the winning card again
+- 'Cast ceiling: Iris + Lund, Okafor, Halveston, Marsh (+ Renn as source). No fifth
+  tier'
+- Pure conspiracy thriller -- NO romance, NO spice
+must_avoid:
+- Any tier revealed out of order, or two tiers collapsed into one reveal
+- Any false answer presented as merely a frame -- each culprit is genuinely guilty
+  of their own act
+- Marsh becoming careless, forgetful, or stupid to advance the plot (Rook-analog rule)
+- Any character explaining the mystery in a monologue or confession paragraph
+- Reusing Book 1 core sample as the Book 2 winning card
+- Any chapter before 21 claiming the truth is out or evidence is fully public (except
+  ch13 partial tool-mark match, names no one)
+- Okafor revealed as betrayer before chapter 10
+- Halveston revealed as anything above coordinator -- he financed; he did not architect
+- A fifth villain tier, or supporting cast beyond Lund, Okafor, Halveston, Marsh (+
+  Renn source)
+- Reviving Sol, Vance, or Marek as active plot engines
+- Freeing or exonerating Renn; making him the Book 2 top
+- Any romance subplot or explicit content -- spice 0
+- Real people, real organizations, real named agencies, anyone under 18
+- 'Before chapter 18: stating the reform/Directorate is a capture instrument / trap'
+- 'Before chapter 19: attaching Marsh (or any personal name) to architecting the capture'
+- 'Before chapter 20: Marsh + architected the capture / ordered / laundered -- ch19
+  may name Marsh + created-Directorate + benefits only'
+- Treating Halveston as the final mastermind (FA2 must be lifted)
+- 'Beat-cloning Book 1: leaked-finding betrayal, inquiry-as-cover as the new trap,
+  single retained sample spine'
+ending_book1: 'The tool-mark proof is published once, irrevocably. Marsh is forced
+  to state his role on live record before release, then arrested -- the reform he
+  built becomes the instrument of his exposure, exactly as the inquiry did to Renn
+  (rhyme, escalated). Halveston, Okafor, Lund all real, all accounted for, named in
+  order. Iris resigns the Directorate rather than inherit a captured institution,
+  and enters the true finding. She does not save the Directorate; she chooses the
+  record over the office. Epilogue: Directorate dissolved or reconstituted; Iris back
+  in the field -- but the reader knows the redacted page named co-owners, and one
+  of them was never on any live record.'
+hook_book2: Marsh architected; the fund financed; but the redacted page named a foreign
+  counter-signatory -- the capture was never only national. The tool-mark that linked
+  three domestic frauds also appears on a contract Iris has no jurisdiction to touch.
+  The ladder does not stop at a country's edge.
+notes: 'Book 2 of the Kessler series (workspace the-kessler-line). Path: books/02
+  + catalog 02-the-meridian-spine. Pen: Nix Vale. Spice 0. Publish: kdp_ku_exclusive.
+  22 chapters. POV: single third-limited Iris Kane. concept_status=draft -- mark ready
+  only after operator review of inherited canon. Machine gates: reform_is_capture@18
+  / marsh_founder@19 / marsh_architect@20. Escalation not repeat: Book1 investigation=trap;
+  Book2 reform=trap. Orphan workspace the-meridian-spine is NOT this book.
+
+  CHAPTER MAP (canon)
+
+  ch1: Iris recruited to Directorate; Spine flagship; Lund named; Nadia ally; Marsh
+  sponsor | plant all four
+
+  ch2: Spine site; Iris recovers+keeps fractured coupon (significance withheld); Halveston/fund
+  briefing | plant spine+Halveston
+
+  ch3-4: Lund tool-marks match fraud method | TIER 1
+
+  ch5: Lund offered as lone copycat | FA1 seeded
+
+  ch6: Lund removed/neutralized; Directorate moves to close | FA1 hardened
+
+  ch7-8: Pressure to accept copycat verdict; Iris resists | FA1 believed
+
+  ch9: Tooling was never Lunds -- method came from above | FA1 LIFTED
+
+  ch10-11: Lead reaches network before Iris files; only Nadia had it | TIER 2 betrayal
+
+  ch12: Trail points to fund/Halveston | FA2 seeded
+
+  ch13: Partial release tool-mark match Spine<->Kessler -- reopens certification,
+  names no one | only prior release
+
+  ch14-15: Halveston money-movement surfaces | building to TIER 3
+
+  ch16: Halveston confirmed as coordinator | TIER 3 / FA2 peak
+
+  ch17-18: Reform-is-capture assembled (three pieces); FA2 lifted; principal above
+  fund -- no name | macro-trap
+
+  ch19: Marsh named as Directorate founder/beneficiary -- still no capture authorship
+  | TIER 4 closing in
+
+  ch20: Marsh architected the capture -- CENTRAL MYSTERY / canonical exact | central
+  mystery
+
+  ch21: Marsh forced onto live record; complete tool-mark proof published once | irrevocable
+  release
+
+  ch22: Arrest; verdict; epilogue + book-3 hook | close + hook'

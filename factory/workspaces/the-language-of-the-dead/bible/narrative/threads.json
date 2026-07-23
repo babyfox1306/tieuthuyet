@@ -1,0 +1,60 @@
+{
+  "description": "Key story threads for Book 3, 'The Author of the Dead.' Each thread tracks a major line of tension, investigation, or revelation through Pierre's point of view. In this final volume, the narrative moves from the pursuit of a culprit to the meta-revelation that there is no true architect—only the system and its self-perpetuating record. Threads are structured to deliver dread and concrete mystery payoffs, in line with the author's directives. No romance or spice subplot is included, as per the trilogy's design.",
+  "threads": [
+    {
+      "id": "T001",
+      "name": "The Hunt for the Architect",
+      "opened_chapter": 1,
+      "must_close_by": 7,
+      "status": "closed",
+      "book1_resolution": "Pierre believes he is closing in on Sofia Bellini, the architect responsible for the summits' deaths. He gathers evidence and testimony pointing to her authorship, culminating in a direct confrontation. But by Chapter 7, Pierre discovers the crucial truth: Sofia is not the architect—she was authored by the system itself to serve as a scapegoat. The thread closes with the realization that there is no single person to blame.",
+      "book2_promise": "The system's true nature remains to be fully understood; if there is another layer, it is not about a hidden architect but about the machinery of narrative itself.",
+      "book1_payoff": "The pursuit of the architect was itself a fiction authored by the system. The real culprit cannot be punished, because it is the collective act of rewriting, not a person.",
+      "note": "This thread embodies the reader's and Pierre's expectation for a classic mystery resolution, only to subvert it with the meta-reveal."
+    },
+    {
+      "id": "T002",
+      "name": "The Impossible Record",
+      "opened_chapter": 3,
+      "must_payoff_by": 7,
+      "status": "closed",
+      "book1_resolution": "Pierre finds a record of Sofia's 'architect confession' dated before she could have acted—an impossible timestamp. Additional contradictions surface: witnesses describe Sofia in places she could not have been. By Chapter 7, Pierre understands these are not mistakes but evidence that the record is generating itself, and Sofia is a character written into existence.",
+      "book2_promise": "If the machinery can generate Sofia, what else in the official record is a fabrication? The question of the record's reliability remains open for any future story.",
+      "book1_payoff": "The impossible record is the smoking gun: the moment where the system's authorship of narrative, and not just events, is exposed.",
+      "note": "Signature motif—this evidence thread is the linchpin for earning the twist, not just declaring it."
+    },
+    {
+      "id": "T003",
+      "name": "Pierre Versus the Record",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "closed",
+      "book1_resolution": "Pierre's memory and lived experience do not match the official record. He is treated as unreliable and obsessed, but as he investigates, his friction with the system uncovers the central horror: the record rewrites everyone, and his resistance is the exception. In the end, when Pierre tries to tell the true, chaotic, nameless version, the act itself begins to generate a new clean record. The system wins inside the very act of exposure.",
+      "book2_promise": "The cycle of rewriting endures—any attempt to tell the truth becomes another version in the record.",
+      "book1_payoff": "Pierre's final true sentence exists for one instant, unrecorded; the record completes itself, erasing even this last resistance.",
+      "note": "This thread is the trilogy's emotional core, tracking Pierre's doomed struggle for honest testimony."
+    },
+    {
+      "id": "T004",
+      "name": "The Nature of Sofia Bellini",
+      "opened_chapter": 2,
+      "must_payoff_by": 7,
+      "status": "closed",
+      "book1_resolution": "Pierre confronts Sofia, who believes completely that she is the architect. Yet when pressed, she cannot answer basic questions only a true creator could know. Her memories are too consistent, her motivations too archetypal. By Chapter 7, it is clear: Sofia is not lying, but was written to believe her own myth. She is a character authored by the system to give the world a villain.",
+      "book2_promise": "If Sofia is a character, then all roles can be rewritten; the system's capacity for generating scapegoats is limitless.",
+      "book1_payoff": "The horror is not that Sofia is more evil, but that she was never real as an author at all.",
+      "note": "Thread closes with the meta-reveal, not with a villain's defeat."
+    },
+    {
+      "id": "T005",
+      "name": "The Record Completes Itself",
+      "opened_chapter": 9,
+      "must_close_by": 10,
+      "status": "closed",
+      "book1_resolution": "As Pierre tries to tell the chaotic, unfiltered truth, he sees his own words begin to smooth themselves into a new clean record. The final image is the trilogy closing itself into the very books the reader has just read. The system's victory is total: even the act of exposure becomes another version, another loop.",
+      "book2_promise": "Any future attempt to break the system will only feed it—there is no outside.",
+      "book1_payoff": "Pierre's last true sentence is never recorded; the reader is left complicit and unsettled, denied the only honest line.",
+      "note": "This thread delivers the series' meta-ending and the reader's final realization."
+    }
+  ]
+}

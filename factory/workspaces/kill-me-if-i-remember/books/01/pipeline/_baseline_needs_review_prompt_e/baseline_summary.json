@@ -1,0 +1,113 @@
+[
+  {
+    "ch": 1,
+    "wc": 1309,
+    "reasons": [
+      "voice_drift",
+      "continuity_conflict",
+      "content_boundary_violation: The chapter uses an unconditional sunrise termination clause instead of the required condition \"Rook restores the obedient identity.\"",
+      "content_boundary_violation: Lucian reveals the sunrise clause in chapter 1, before chapter 10.",
+      "verdict_fail",
+      "content_boundary_violation",
+      "continuity: The contract presents \"CLIENT TERMINATION AT SUNRISE\" as an unconditional order for Sloane's death, conflicting with the bible's binding condition that Lucian must kill her at sunrise only if Rook restores the obedient identity."
+    ],
+    "verdict": "FAIL"
+  },
+  {
+    "ch": 2,
+    "wc": 1551,
+    "reasons": [
+      "continuity_conflict: Sloane's profession conflicts with the series bible.",
+      "content_boundary_violation: Sloane assesses Mara as not cold yet and states that her heart stopped beating, violating the prohibition against describing Mara as cooling or as having no pulse.",
+      "verdict_fail",
+      "continuity_conflict",
+      "content_boundary_violation",
+      "continuity: The series bible establishes Sloane as a firearms investigator, but the chapter identifies her as a forensic accountant contracted with the state and attributes her controlled-evidence access to that role."
+    ],
+    "verdict": "FAIL"
+  },
+  {
+    "ch": 3,
+    "wc": 1775,
+    "reasons": [
+      "content_boundary_violation: The final recorder message uses a conditional about Sloane not remembering Lucian ('If you do not remember Lucian Vey'), which conflicts with the prohibited memory-condition phrasing rule.",
+      "verdict_fail",
+      "content_boundary_violation"
+    ],
+    "verdict": "FAIL"
+  },
+  {
+    "ch": 5,
+    "wc": 1565,
+    "reasons": [
+      "content_boundary_violation: Lucian reveals the sunrise clause before chapter 10",
+      "verdict_fail",
+      "continuity_conflict",
+      "content_boundary_violation",
+      "continuity: The chapter repeats and reveals the sunrise clause details too early. Content boundaries prohibit Lucian revealing the sunrise clause before chapter 10, but this chapter explicitly explains that Lucian must kill Sloane at sunrise only if Rook restores the obedient identity. The chapter also advances the clause explanation beyond prior established knowledge."
+    ],
+    "verdict": "FAIL"
+  },
+  {
+    "ch": 8,
+    "wc": 1745,
+    "reasons": [
+      "continuity_conflict",
+      "verdict_fail",
+      "continuity: The chapter begins with Lucian and Sloane still trapped at the hydraulic pressure door during the armed pursuit, but the prior chapter excerpt ends after they already escaped through the hydraulic route into a service corridor and opened the archive folder there. This creates a timeline/location overlap that reads like the action restarted instead of continuing."
+    ],
+    "verdict": "FAIL"
+  },
+  {
+    "ch": 13,
+    "wc": 1259,
+    "reasons": [
+      "continuity_conflict",
+      "content_boundary_violation: Past Sloane explains the central mystery and her full plan through a recorded speech rather than allowing Sloane to reconstruct it from evidence.",
+      "verdict_fail",
+      "content_boundary_violation",
+      "continuity: The prior chapter ends with Sloane and Lucian leaving the utility room via the cable gantry and moving toward the rooftop, while the archive's final instruction has already decrypted. This chapter abruptly places them in a service room without a transition and repeats the decryption and discovery of the rooftop/Mara relay instruction."
+    ],
+    "verdict": "FAIL"
+  },
+  {
+    "ch": 14,
+    "wc": 1608,
+    "reasons": [
+      "verdict_fail"
+    ],
+    "verdict": "FAIL"
+  },
+  {
+    "ch": 15,
+    "wc": 1668,
+    "reasons": [
+      "content_boundary_violation: Chapter 15 presents the decrypted ledger evidence on exterior screens and explicitly describes it as \"public exposure,\" implying the evidence is public before chapter 17.",
+      "verdict_fail",
+      "content_boundary_violation"
+    ],
+    "verdict": "FAIL"
+  },
+  {
+    "ch": 16,
+    "wc": 1908,
+    "reasons": [
+      "content_boundary_violation: The closing line explicitly introduces the first light of sunrise, violating the boundary that forbids daylight and requires the book to remain within one night.",
+      "verdict_fail",
+      "content_boundary_violation"
+    ],
+    "verdict": "FAIL"
+  },
+  {
+    "ch": 17,
+    "wc": 2224,
+    "reasons": [
+      "continuity_conflict",
+      "content_boundary_violation: The chapter jumps forward by months for sentencing and prison visits, violating the boundary that the whole book remains within one continuous night.",
+      "verdict_fail",
+      "content_boundary_violation",
+      "continuity: The binding condition is not stated identically to the series bible's mandated wording. The chapter expands the names to \"Lucian Vey,\" \"Sloane Mercer,\" and \"Cassian Rook,\" while the world rule requires the exact sentence: \"Lucian must kill Sloane at sunrise only if Rook restores the conditioned obedient identity he built in her.\""
+    ],
+    "verdict": "FAIL"
+  }
+]

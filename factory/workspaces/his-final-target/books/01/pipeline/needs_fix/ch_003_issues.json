@@ -1,0 +1,59 @@
+{
+  "word_count": 2087,
+  "target_language": "en",
+  "missing_quotes": true,
+  "format_locations": {
+    "missing_quotes": [
+      {
+        "line": 27,
+        "snippet": "That tone—conversational, almost tender—sent ice down her spine. She knew that voice. Knew the way h"
+      }
+    ]
+  },
+  "markdown_advisory": [
+    {
+      "id": 0,
+      "kind": "italic",
+      "match": "*Stop.*",
+      "context": "new that voice. Knew the way he said her name in the dark—\n\n*Stop.* She shook her head, clinging to the present. \"Why seven? Wh"
+    },
+    {
+      "id": 1,
+      "kind": "italic",
+      "match": "*A bedroom. Dim light. His hands on her shoulders, thumbs pressing into the hollow of her collarbone. \"Remember the sequence,\" he murmured against her mouth. \"First the circle, then the number, then the name.\" Her own voice, throaty and drugged, repeating back: \"Circle, number, name. Circle, number, name.\" And then his lips on her neck, the world dissolving into heat. She had trusted him. She had let him take her apart.*",
+      "context": "attered her focus.\n\nThe memory flooded in without warning.\n\n*A bedroom. Dim light. His hands on her shoulders, thumbs pressing into the hollow of her collarbone. \"Remember the sequence,\" he murmured against her mouth. \"First the circle, then the number, then the name.\" Her own voice, throaty and drugged, repeating back: \"Circle, number, name. Circle, number, name.\" And then his lips on her neck, the world dissolving into heat. She had trusted him. She had let him take her apart.*\n\nShe gasped, bucking against him. \"Get off me.\"\n\nHe didn't "
+    },
+    {
+      "id": 2,
+      "kind": "italic",
+      "match": "*But the memory that surfaced was not the one she wanted.*",
+      "context": " her into him, and the length of him was hard and wanting.\n\n*But the memory that surfaced was not the one she wanted.*\n\n*She is strapped to a chair. A man she doesn't know stands"
+    },
+    {
+      "id": 3,
+      "kind": "italic",
+      "match": "*She is strapped to a chair. A man she doesn't know stands over her, wires trailing from his hand to her temple. Lucian watches from the corner. \"Repeat it,\" the stranger says. \"Circle, number, name.\" She complies, her voice hollow. And Lucian—behind his eyes, something clicks into place. The conditioning locks in. Then he turns away.*",
+      "context": "*But the memory that surfaced was not the one she wanted.*\n\n*She is strapped to a chair. A man she doesn't know stands over her, wires trailing from his hand to her temple. Lucian watches from the corner. \"Repeat it,\" the stranger says. \"Circle, number, name.\" She complies, her voice hollow. And Lucian—behind his eyes, something clicks into place. The conditioning locks in. Then he turns away.*\n\nShe tore her mouth free, breathing hard. \"No.\"\n\n\"Sloane—\"\n"
+    }
+  ],
+  "classification": {
+    "format_fix": {
+      "missing_quotes": true
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 1,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}

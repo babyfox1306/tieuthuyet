@@ -101,11 +101,10 @@ def sync_narrative_profile_to_direction(ws: Path, *, concept: dict | None = None
     return profile
 
 
-def _load_concept(ws: Path) -> dict[str, Any]:
-    path = ws / "concept.yaml"
-    if not path.exists():
-        return {}
-    return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+def _load_concept(ws: Path, book: int | None = None) -> dict[str, Any]:
+    from factory.engine.lib.narrative_schema import load_concept
+
+    return load_concept(ws, book)
 
 
 def _save_yaml(path: Path, data: dict) -> None:

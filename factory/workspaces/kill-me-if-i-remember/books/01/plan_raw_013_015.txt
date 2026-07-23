@@ -1,0 +1,83 @@
+{
+  "act": [13, 15],
+  "chapter_plans": [
+    {
+      "chapter": 13,
+      "title": "The Design",
+      "slug": "the-design",
+      "one_line_summary": "Sloane Mercer pieces together the full conspiracy from the three pieces of evidence and realizes she orchestrated her own memory erasure, but the overwrite and the eighth contract remain out of reach.",
+      "beat_summary": "After the tunnel escape, Sloane Mercer insists on reviewing everything. She spreads out the journal entries (C006, C008) and plays the voice recording (C007) again. Connecting each thread, she understands that Cassian Rook altered seven contracts, that she discovered it, that she deliberately staged Mara's death and erased her own memory to hide the evidence. She also intuits that the contract with Lucian Vey carries a hidden condition she wrote—though she cannot recall the exact wording. Lucian watches her wrestle with the weight of her own actions, saying nothing but staying close. When she reaches for his hand, he squeezes back without hesitation. A text from Rook arrives: he has Mara's location. Sloane knows it is a trap but sees no other choice.",
+      "must_happen": [
+        "Sloane Mercer examines the three pieces of evidence together: the journal excerpt (C006), the voice recording (C007), and the staged‑shooting plan (C008), connecting them into a single conspiracy.",
+        "Sloane Mercer explicitly acknowledges that she is the architect of the night's events—the staged death, the contract, the erased memory.",
+        "Cassian Rook sends a location message implying Mara is there, forcing the next move.",
+        "[ROMANCE] Sloane Mercer reaches for Lucian Vey's hand while processing, and he squeezes back, a wordless acceptance."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the exact wording of the binding condition or the overwrite.",
+        "Sloane Mercer does not regain any specific memory of the missing three months.",
+        "No explicit sexual content."
+      ],
+      "opens_with": "She had written the plan in her own hand, and still she could not remember a single word of it. That, more than anything, told her how afraid she had been.",
+      "cliffhanger": "Rook's message ended with a single line: 'Do you remember the eighth contract, Sloane? Bring it, and I'll let your sister live.' Sloane stared at the screen. She had no idea what the eighth contract was.",
+      "signature_detail_hint": "The voice recorder had a faint dent on its side, exactly where a thumb would press if someone wanted to stop the recording before the truth became unbearable.",
+      "emotional_beat": "Exhaustion, horror, and a stubborn resolve as Sloane Mercer confronts the lengths she went to stop Cassian Rook.",
+      "spice": 1,
+      "spice_note": "A hand squeeze of understanding; no further intimacy needed.",
+      "chapter_task": "Write 1600–1900 words from Sloane Mercer's limited third‑person POV. Pay off C006, C007, and C008 by having her examine and connect them. Include the [ROMANCE] micro‑beat. Do not reveal the overwrite or the full condition to Sloane. End with Rook's text setting up chapter 14.",
+      "carries_to_next": "Rook's message about the eighth contract and Mara's location drives the next move into the trap."
+    },
+    {
+      "chapter": 14,
+      "title": "The Capture",
+      "slug": "the-capture",
+      "one_line_summary": "Lucian Vey and Sloane Mercer walk into Rook's trap; Mara Mercer is captured before they can stop it.",
+      "beat_summary": "Lucian Vey's POV. He drives to the warehouse Rook pinged, knowing it is a trap but with no alternative. Inside, they are ambushed. Lucian fights to give Sloane time, but Rook's men extract Mara through a hidden exit. Lucian is grazed by a bullet. In the aftermath, Sloane presses a cloth to his wound, their eyes locked in a moment that says more than words. Rook taunts them over the intercom, revealing he knows the binding condition and intends to use Mara to trigger Sloane's conditioning. Lucian's internal conflict rages: he loves her, but he may be forced to kill her if Rook breaks her. Swearing he will not let Rook control the outcome, he helps Sloane escape. Mara is gone.",
+      "must_happen": [
+        "Lucian Vey and Sloane Mercer are ambushed at the warehouse; Mara Mercer is captured by Cassian Rook's men.",
+        "Lucian Vey is wounded while covering Sloane Mercer's retreat.",
+        "[ROMANCE] Sloane Mercer tends to Lucian Vey's wound, their gaze holding a silent acknowledgment of the stakes.",
+        "Cassian Rook taunts Lucian Vey over the intercom, referencing the binding condition."
+      ],
+      "must_not": [
+        "Sloane Mercer does not recover the full ledger.",
+        "Mara Mercer is not rescued in this chapter.",
+        "No explicit sexual content."
+      ],
+      "opens_with": "Lucian Vey had walked into worse traps, but never with the woman he was supposed to kill pressed against his back.",
+      "cliffhanger": "Rook's voice echoed through the empty warehouse: 'You have until sunrise, Vey. Choose the woman or choose the contract. Either way, you lose.'",
+      "signature_detail_hint": "The warehouse floor was painted with numbered grid lines, as if Rook had treated the chase as a game of chess, marking every square.",
+      "emotional_beat": "Rage, desperation, and the hardening of resolve as Lucian Vey sees his worst fears realized.",
+      "spice": 1,
+      "spice_note": "Intense eye contact and a shared breath after the wound is tended; tension of imminent loss.",
+      "chapter_task": "Write 1600–1900 words from Lucian Vey's limited third‑person POV. Include the ambush, Mara's capture, the [ROMANCE] micro‑beat of wound‑tending, and Rook's taunt. Keep Lucian's internal conflict central. Do not resolve the capture.",
+      "carries_to_next": "Mara is in Rook's custody; the binding condition is now leverage; Lucian and Sloane must decide their next move."
+    },
+    {
+      "chapter": 15,
+      "title": "The Decision",
+      "slug": "the-decision",
+      "one_line_summary": "Sloane Mercer and Lucian Vey regroup; she uses her conditioned reflex to find the key to the full ledger, and they set out for the final confrontation.",
+      "beat_summary": "After escaping the warehouse, Sloane Mercer and Lucian Vey take shelter in a safehouse. Sloane deliberately triggers her wrist circle, allowing muscle memory to lead her to a hidden compartment containing a key card and coded coordinates for the shipping terminal where the full ledger is stored. She and Lucian discuss the binding condition: he asks if she truly wants him to execute it if Rook restores her obedient identity. She gives no answer, but her eyes say she trusts him. He cups her face, and she leans into his palm—a fleeting moment of peace. They gather their weapons and head to the terminal, knowing it will end tonight.",
+      "must_happen": [
+        "Sloane Mercer uses her conditioned wrist circle to locate a hidden key card that will access the full ledger storage.",
+        "Sloane Mercer and Lucian Vey have a charged conversation about the binding condition; she does not answer but conveys trust.",
+        "[ROMANCE] Lucian Vey cups Sloane Mercer's face, and she leans into his touch, a moment of fragile intimacy before the final fight.",
+        "They set out for the shipping terminal where Cassian Rook is holding Mara."
+      ],
+      "must_not": [
+        "The full ledger is not published in this chapter.",
+        "Mara Mercer is not rescued.",
+        "No explicit sexual content."
+      ],
+      "opens_with": "The safehouse was cold, but the silence between them was colder. Sloane Mercer pressed her thumb into the palm of her left hand and felt the answer rise through her bones.",
+      "cliffhanger": "The shipping terminal appeared on the horizon, floodlights cutting through the pre‑dawn dark. Sloane Mercer checked her weapon. 'We get Mara. Then we burn the whole thing down.'",
+      "signature_detail_hint": "The hidden compartment was lined with felt, the same material as her jacket pocket, as if she had planned for this moment with the patience of a woman who trusted no one but herself.",
+      "emotional_beat": "Determination and the quiet acceptance that they may not both survive the dawn, but they will face it together.",
+      "spice": 1,
+      "spice_note": "A gentle touch on the cheek and a lean into the palm—more intimate than a kiss in the context of their shared history.",
+      "chapter_task": "Write 1600–1900 words from Sloane Mercer's limited third‑person POV (with brief Lucian observations). Include the conditioned‑reflex discovery, the [ROMANCE] micro‑beat, and the decision to go to the terminal. Plant the key card as a setup for the final ledger retrieval in chapters 16–17.",
+      "carries_to_next": "The race to the shipping terminal for the final confrontation with Rook and the recovery of the full ledger."
+    }
+  ]
+}

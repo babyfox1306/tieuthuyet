@@ -1,0 +1,27 @@
+{
+  "description": "Threads for His Final Target Book 1: Sloane's past, the contract, and the rooftop trap.",
+  "threads": [
+    {
+      "id": "thread_contract",
+      "name": "The Blackridge Contract",
+      "opened_chapter": 1,
+      "must_close_by": 13,
+      "status": "closed",
+      "book1_resolution": "Sloane uncovers the full truth: she staged Mara's death and erased her own memory to expose Rook's manipulation of her assassination network.",
+      "book2_promise": "The public revelation of the contract and ledger creates new enemies among the victims' families.",
+      "book1_payoff": "The central mystery is resolved in chapter 13 with a complete explanation assembled from physical evidence.",
+      "note": "Central mystery thread; canon reveal at ch13."
+    },
+    {
+      "id": "thread_memory",
+      "name": "Recover the Sealed Memories",
+      "opened_chapter": 1,
+      "must_close_by": 14,
+      "status": "closed",
+      "book1_resolution": "Sloane retrieves all three recorded memories and remembers all seven names she ordered killed, fully reclaiming her past by chapter 14.",
+      "book2_promise": "Sloane must live with the full weight of her past actions and the person she used to be.",
+      "book1_payoff": "Each recovered memory restores a piece of the truth, building to complete recollection by chapter 14.",
+      "note": "Progresses via clues in ch2,3,6,9,10,12-13."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "foreign_chars": [],
+  "word_count": 962,
+  "voice_drift": {
+    "flag": false,
+    "details": ""
+  },
+  "continuity_conflict": {
+    "flag": false,
+    "details": ""
+  },
+  "fail_reasons": [
+    "verdict_fail"
+  ],
+  "verdict": "FAIL"
+}

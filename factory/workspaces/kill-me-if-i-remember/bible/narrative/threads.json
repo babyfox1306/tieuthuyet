@@ -1,0 +1,71 @@
+{
+  "description": "Threads for Kill Me If I Remember Book 1: each thread tracks a throughline from its opening chapter to its resolution within the single-night narrative, with hooks into the series. All threads are designed to align with the continuous timeline (midnight to sunrise), the dual POV structure, and the central mystery/romance beats.",
+  "threads": [
+    {
+      "id": "T01",
+      "name": "The Truth of the Missing Months",
+      "opened_chapter": 1,
+      "must_close_by": 17,
+      "status": "closed",
+      "book1_resolution": "Sloane recovers her full memory and assembles the evidence of Rook's manipulation during the missing three months. She learns that she erased her own memory as part of a trap to expose Rook's weapons network. The complete truth is revealed in chapter 13 when she finds her overwritten ending, and the ledger is published in chapter 17.",
+      "book2_promise": "The truth about the wider weapons network extends beyond Rook, implicating powerful buyers and enforcers who remain active and may seek retribution against Sloane and Lucian.",
+      "book1_payoff": "In chapter 17, the full transaction ledger is published once and cannot be recalled. Sloane faces the consequences of her own actions — including ordering deaths — and accepts arrest, knowing she has exposed the conspiracy and freed her sister.",
+      "note": "Central mystery thread. Every clue and reveal feeds into this. Major reveals require assembled evidence; no character explains the mystery in a speech."
+    },
+    {
+      "id": "T02",
+      "name": "The Sunrise Contract",
+      "opened_chapter": 1,
+      "must_payoff_by": 17,
+      "status": "closed",
+      "book1_resolution": "The binding condition ('Lucian must kill Sloane at sunrise only if Rook restores the obedient identity') is never triggered because Rook dies before restoration. Lucian refuses to execute the contract, choosing Sloane over his code. The sunrise deadline passes without violence.",
+      "book2_promise": "The binding condition on Lucian's contract was not unique to Rook — someone else holds a copy and may attempt to enforce it using another handler. The loophole that saved Sloane may not hold.",
+      "book1_payoff": "In the final confrontation, Lucian explicitly breaks his contract code by refusing the kill order and standing beside Sloane as the sun rises. The reader sees that his loyalty to her transcends his professional ethics.",
+      "note": "Countdown thread creating time pressure throughout the night. Surface order 'CLIENT TERMINATION AT SUNRISE' visible from chapter 1; full binding condition only revealed in exact wording from chapter 10 onward."
+    },
+    {
+      "id": "T03",
+      "name": "Sloane and Lucian's Romance (Slow Burn)",
+      "opened_chapter": 1,
+      "must_close_by": 17,
+      "status": "closed",
+      "book1_resolution": "Sloane and Lucian rebuild their relationship from a foundation of mistrust and erased memory. The intimacy scenes (chapters 12-13 lull) unlock her conditioning and deepen their bond. The epilogue, months later, confirms they still choose each other — not a wedding, not safety, but a future that exists.",
+      "book2_promise": "Their relationship will be tested by legal scrutiny, Lucian's past, and network remnants. The trust rebuilt in one night must survive the daylight of prosecution and ongoing danger.",
+      "book1_payoff": "In the epilogue, a quiet scene shows them together, in love, against all odds. The reader sees that their connection survived the night and its aftermath.",
+      "note": "Slow-burn romance. Lucian's POV chapters (5, 10, 14) are critical for deepening this thread. Emotional danger, not ballistic, during intimacy scenes."
+    },
+    {
+      "id": "T04",
+      "name": "The Staged Death and the Ledger",
+      "opened_chapter": 1,
+      "must_close_by": 17,
+      "status": "closed",
+      "book1_resolution": "The illusion of Mara's death is maintained until chapters 11-12, where signals reveal she is alive. The ledger is broadcast in fragment in chapter 13, and the complete version is published exactly once in chapter 17 using the mirror key (Mara's hand rhythm). Mara is freed. Sloane's guilt for ordering the staged death remains.",
+      "book2_promise": "The ledger names many players who will seek retribution. Mara may face legal consequences for her role in the staged shooting. The network's clients are exposed and dangerous.",
+      "book1_payoff": "In chapter 17, the complete ledger goes out and cannot be recalled. The truth that Rook's network fell because of Sloane's pre-erasure trap is now public. The mirror key — Mara's reflex — proves unsearchable and uncapturable.",
+      "note": "Action-thriller thread. Sloane never touches Mara's body. The staged death uses a frangible round and blood pack. The mirror key is a hand rhythm, not a document."
+    },
+    {
+      "id": "T05",
+      "name": "Rook's Hunt",
+      "opened_chapter": 2,
+      "must_close_by": 17,
+      "status": "closed",
+      "book1_resolution": "Rook is outmaneuvered by Sloane's overwritten ending. He dies reaching for the rifle he trained her to use. His private weapons network is exposed, but the buyers he served remain hidden.",
+      "book2_promise": "Rook's network was larger than he was. The buyers and enforcers named in the ledger are still active and now have a reason to target Sloane and Lucian. The handler's death does not end the conspiracy.",
+      "book1_payoff": "In chapter 17, Rook's death is a direct result of Sloane's plan — she does not kill him, but her prepared trap ensures his downfall. The reader sees the handler undone by his own creation, with Sloane out-thinking him at every turn.",
+      "note": "Antagonist thread. Rook planned for Sloane's rebellion as step seven of his design, but she wrote over his ending. Rook is never stupid — he loses because Sloane is faster."
+    },
+    {
+      "id": "T06",
+      "name": "Mara's Capture and Rescue",
+      "opened_chapter": 14,
+      "must_close_by": 17,
+      "status": "closed",
+      "book1_resolution": "Mara is captured by Rook's men at chapter 14. Sloane and Lucian reach her at chapter 16, where she provides the mirror key hand rhythm that unlocks the final ledger piece. She is freed when Rook is defeated in chapter 17.",
+      "book2_promise": "Mara may face legal scrutiny for her role in the staged death. Her testimony will be critical in Sloane's trial, and her safety remains a concern as network remnants may target her.",
+      "book1_payoff": "In chapter 16, Mara and Sloane reunite, and Mara's hand rhythm delivers the final piece of evidence. Her agency is affirmed as she chose to be part of the plan.",
+      "note": "Supporting character thread that raises stakes and emotional weight. Mara's capture signals the final act. Her hand rhythm is the mirror key — a reflex, not a written object."
+    }
+  ]
+}

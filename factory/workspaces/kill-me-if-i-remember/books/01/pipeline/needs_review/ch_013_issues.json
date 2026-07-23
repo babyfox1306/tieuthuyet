@@ -1,0 +1,90 @@
+{
+  "word_count": 1285,
+  "target_language": "en",
+  "pov_violation": {
+    "count": 5,
+    "threshold": 3
+  },
+  "markdown_advisory": [
+    {
+      "id": 0,
+      "kind": "italic",
+      "match": "*Mara agreed to the location. She understood the risk. I told her the exit wound would look convincing if she didn't move during the ricochet.*",
+      "context": " personal notes, not the block letters of official reports. *Mara agreed to the location. She understood the risk. I told her the exit wound would look convincing if she didn't move during the ricochet.*\n\nThe second page was shorter, almost angry. *Rook's network"
+    },
+    {
+      "id": 1,
+      "kind": "italic",
+      "match": "*Rook's network is too deep. If I disappear, he'll suspect. If I stay, he'll use me to finish what he started. The only way is to become someone who doesn't know anything until the moment the trap springs.*",
+      "context": " the ricochet.*\n\nThe second page was shorter, almost angry. *Rook's network is too deep. If I disappear, he'll suspect. If I stay, he'll use me to finish what he started. The only way is to become someone who doesn't know anything until the moment the trap springs.*\n\nSloane's throat tightened. She set the pages down and pick"
+    },
+    {
+      "id": 2,
+      "kind": "italic",
+      "match": "*Delete the flight logs. We'll route through the Korridor instead. The witness counts are already handled.*",
+      "context": "ent and an airfield in Tuzla. Then Rook's voice, answering. *Delete the flight logs. We'll route through the Korridor instead. The witness counts are already handled.*\n\nThe seven. The seven people Rook had used Lucian to elimin"
+    },
+    {
+      "id": 3,
+      "kind": "italic",
+      "match": "*Fifty-third Street warehouse. Block C. You have one hour.*",
+      "context": "m Rook's burner profile.\n\nShe opened it.\n\nThe message read: *Fifty-third Street warehouse. Block C. You have one hour.*\n\nThen a second line came through: *Do you remember the eigh"
+    },
+    {
+      "id": 4,
+      "kind": "italic",
+      "match": "*Do you remember the eighth contract, Sloane? Bring it, and I'll let your sister live.*",
+      "context": "ck C. You have one hour.*\n\nThen a second line came through: *Do you remember the eighth contract, Sloane? Bring it, and I'll let your sister live.*\n\nShe read it twice, waiting for the meaning to surface. But"
+    }
+  ],
+  "classification": {
+    "format_fix": {},
+    "content_fail": {
+      "pov_violation": {
+        "count": 5,
+        "threshold": 3
+      }
+    },
+    "length": {},
+    "format_only": false,
+    "length_only": false,
+    "has_format": false,
+    "has_content": true,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 1,
+    "max_content_retries": 2,
+    "short_expands": 1,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3,
+    "llm_qc_rewrites": 2,
+    "max_llm_qc_retries": 2
+  },
+  "llm_qc_before_machine_fail": {
+    "foreign_chars": [],
+    "word_count": 1881,
+    "voice_drift": {
+      "flag": false,
+      "details": ""
+    },
+    "continuity_conflict": {
+      "flag": true,
+      "details": "The chapter attributes the seven witness killings directly to Sloane ('The seven people I... eliminated' and 'He made me kill the witnesses'), while the series bible establishes that Lucian was the assassin who eliminated them and that Sloane ordered the deaths. It also states that Rook already has Mara in chapter 13, although the supporting-cast canon places Mara's capture in chapter 14."
+    },
+    "cliffhanger_strength": 5,
+    "pacing_issue": false,
+    "signature_detail_present": true,
+    "spice_ok": true,
+    "content_boundary_ok": false,
+    "verdict": "FAIL",
+    "fail_reasons": [
+      "continuity_conflict: Sloane is presented as the direct killer of the seven witnesses instead of the person who ordered Lucian to eliminate them, and Mara is already Rook's captive one chapter before her canonical capture",
+      "content_boundary_violation: Sloane explains the central mystery and the mechanics of her trap in an extended speech, despite the prohibition against any character explaining the mystery in a speech",
+      "verdict_fail",
+      "continuity_conflict",
+      "content_boundary_violation"
+    ]
+  }
+}

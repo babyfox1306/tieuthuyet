@@ -1,0 +1,83 @@
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Rule of Deviations",
+      "slug": "the-rule-of-deviations",
+      "one_line_summary": "Female Lead confirms that each death cycle repeats with one deliberate change, suggesting a ritualistic escalation tied to the church fire.",
+      "beat_summary": "Female Lead meticulously reconstructs the last three death cycles, charting the deviations in each victim’s reenactment. She notices the deviations are not random, but always reveal a new clue connected to the 1974 fire. Male Lead’s resistance sharpens, as he begins to actively erase evidence from the archives and church. Female Lead finds a cryptic new clue (C003), planted among Ada Voss’s altered correspondence, deepening her suspicion that the cycle is orchestrated by strict but hidden rules. The phrase 'THE BELL CHOOSES THE NEXT NAME.' is repeated among the townspeople, both as warning and denial. Tension spikes as Female Lead realizes the pattern is accelerating, with each deviation bringing her closer to the church’s sealed chamber.",
+      "must_happen": [
+        "Female Lead analyzes the reenactments of at least three victims and identifies a unique deviation in each cycle.",
+        "Female Lead connects each deviation to a clue about the 1974 fire, building a visual timeline.",
+        "Male Lead is caught removing or altering documents in the church archives, escalating the procedural conflict.",
+        "Female Lead discovers Clue C003 hidden within Ada Voss’s old correspondence and notes.",
+        "The phrase 'THE BELL CHOOSES THE NEXT NAME.' is repeated throughout the town, reinforcing the perceived supernatural order."
+      ],
+      "must_not": [
+        "Do not reveal the true logic behind the bell’s choice or the purpose of the deviations.",
+        "Do not allow Female Lead to access the sealed chamber or fully decode Ada Voss’s intentions."
+      ],
+      "opens_with": "\"How many times will they follow the same steps before someone refuses?\" Female Lead mutters, pinning another deviation on her wall.",
+      "cliffhanger": "Female Lead intercepts a partially burned letter from Ada Voss that references a key hidden inside Saint Orison’s pulpit.",
+      "signature_detail_hint": "A wisp of scorched paper clings to the inside of the municipal safe, as if someone closed it on a burning page.",
+      "emotional_beat": "Mounting obsession, dread at the growing pattern, and isolation as trust in authority crumbles.",
+      "spice": 0,
+      "spice_note": "No romantic or sexual content; psychological and investigative tension only.",
+      "chapter_task": "Map the structure of repeated death cycles and highlight each deliberate deviation. Plant Clue C003. Escalate Female Lead’s procedural investigation and her confrontation with Male Lead. Word count: 1600–1900 words.",
+      "carries_to_next": "Female Lead now searches for Ada Voss’s hidden key and prepares to confront Male Lead directly about the altered evidence."
+    },
+    {
+      "chapter": 5,
+      "title": "The Locked Pulpit",
+      "slug": "the-locked-pulpit",
+      "one_line_summary": "Female Lead retrieves Ada Voss’s hidden key from Saint Orison’s pulpit and uncovers evidence of the sealed chamber, while Male Lead intensifies his efforts to block her.",
+      "beat_summary": "Guided by Ada Voss’s cryptic letter, Female Lead sneaks into Saint Orison’s Church after hours. She finds a concealed compartment in the pulpit, using the clue to retrieve a small, tarnished key. With the key, she accesses a secondary records drawer, discovering blueprints and references to a sealed chamber beneath the church—proof the authorities have actively hidden part of the building’s history. Male Lead confronts her inside the church, warning her to abandon the search and physically attempting to bar her from the archives. Female Lead plants Clue C004: evidence that Ada Voss tried to restore one or more erased children’s names, but was threatened into silence. 'THE BELL CHOOSES THE NEXT NAME.' is repeated as an ominous warning.",
+      "must_happen": [
+        "Female Lead uses the clue from Ada Voss’s letter to recover a hidden key from inside the church pulpit.",
+        "Female Lead accesses a secret records drawer and finds architectural plans referencing a sealed chamber beneath Saint Orison’s.",
+        "Clue C004 is planted: Evidence that Ada Voss attempted to restore erased names but was stopped.",
+        "Male Lead confronts Female Lead in the church, raising the stakes and physically blocking her access.",
+        "The phrase 'THE BELL CHOOSES THE NEXT NAME.' is uttered by both leads as a tense refrain."
+      ],
+      "must_not": [
+        "Do not allow Female Lead to open the sealed chamber or discover the full list of erased names.",
+        "Do not reveal the ultimate motive for Male Lead’s interference."
+      ],
+      "opens_with": "\"You shouldn’t be here past vespers,\" Male Lead warns, but Female Lead’s hand is already inside the pulpit.",
+      "cliffhanger": "As Female Lead leaves the church, she finds the key’s teeth blackened with soot—and a fresh victim’s name carved into the wood.",
+      "signature_detail_hint": "The hidden compartment in the pulpit is lined with a child’s Sunday school drawing, faded but untouched by time.",
+      "emotional_beat": "Desperation, the cold edge of threat, and the thrill of uncovering forbidden history.",
+      "spice": 0,
+      "spice_note": "No romantic or sexual content; the intensity is drawn from confrontation and unearthed secrets.",
+      "chapter_task": "Have Female Lead recover Ada Voss’s key, access new evidence, and escalate her clash with Male Lead. Plant Clue C004. Maintain gothic tension and procedural focus. Word count: 1600–1900 words.",
+      "carries_to_next": "Female Lead now holds proof of the sealed chamber’s existence and Ada Voss’s attempted intervention; she must decide whether to break into the chamber or rally outside help."
+    },
+    {
+      "chapter": 6,
+      "title": "Blueprints and Barriers",
+      "slug": "blueprints-and-barriers",
+      "one_line_summary": "Female Lead attempts to access the sealed chamber beneath Saint Orison’s, but is thwarted by Male Lead’s escalating sabotage and a fresh cycle of ritual death.",
+      "beat_summary": "With the key and blueprints in hand, Female Lead returns to the church at night, seeking the sealed entrance. She deciphers the architectural plans, finding the hidden doorway, but her progress is blocked by Male Lead, who has destroyed part of the entry mechanism and removed key evidence. As a new victim is claimed by the bell and a fresh ritual begins, Female Lead plants Clue C005: evidence that each new death reveals a fragment of the truth about the 1974 fire. The phrase 'THE BELL CHOOSES THE NEXT NAME.' echoes through the town, now with a note of panic. Female Lead is left with no clear path forward as the cycle grows more violent and the barriers—both physical and procedural—tighten.",
+      "must_happen": [
+        "Female Lead uses the blueprints and key to locate the sealed chamber’s hidden entrance in the church basement.",
+        "Male Lead sabotages the entry mechanism and removes evidence, physically preventing Female Lead from opening the chamber.",
+        "A new victim is claimed by the bell, and the ritual death cycle begins again with an observable deviation.",
+        "Clue C005 is planted: Each new death yields a specific clue tied to the 1974 fire.",
+        "The phrase 'THE BELL CHOOSES THE NEXT NAME.' becomes a town-wide chant, escalating the sense of dread."
+      ],
+      "must_not": [
+        "Do not permit Female Lead to enter the sealed chamber or discover the names of the erased children.",
+        "Do not reveal the source of the bell’s power or the true selection mechanism."
+      ],
+      "opens_with": "\"If you break the seal, the town will burn again,\" Male Lead hisses as Female Lead forces the blueprint flat under her palm.",
+      "cliffhanger": "Female Lead is locked inside the church basement as the bell rings and the lights flicker—someone has turned the key from the outside.",
+      "signature_detail_hint": "A faint outline of a child’s hand is impressed in dust on the basement wall, only visible in slanting dawn light.",
+      "emotional_beat": "Helplessness, rage at enforced ignorance, and the terror of being so close yet utterly blocked.",
+      "spice": 0,
+      "spice_note": "No romantic or sexual content; horror and suspense are the only heat.",
+      "chapter_task": "Increase procedural tension as Female Lead attempts and fails to access the chamber, facing sabotage and a new cycle of violence. Plant Clue C005. Word count: 1600–1900 words.",
+      "carries_to_next": "Female Lead must escape the basement, confront Male Lead’s growing desperation, and decide whether to involve others as the ritual deaths spiral out of control."
+    }
+  ]
+}

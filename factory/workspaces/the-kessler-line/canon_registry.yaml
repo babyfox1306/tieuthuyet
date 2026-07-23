@@ -1,0 +1,16 @@
+characters:
+  female_lead:
+    canonical: Iris Kane
+    allowed_aliases:
+    - Iris
+    - Kane
+    forbidden_aliases: []
+  male_lead:
+    canonical: Aldous Renn
+    allowed_aliases:
+    - Aldous
+    - Renn
+    - Commissioner Renn
+    forbidden_aliases: []
+pov_mode: third_person_limited
+spice_max: 0

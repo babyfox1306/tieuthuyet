@@ -1,0 +1,9 @@
+{
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "qc_infra_skipped"
+  ],
+  "source": "qc_infra_skipped",
+  "detail": "All models failed (['auto/fast', 'auto/best-fast', 'gh/gpt-4o', 'gh/gpt-4.1', 'gh/claude-sonnet-4.5', 'moi']): Error code: 400 - {'error': {'message': \"Unable to determine provider for model 'moi'. Use a provider/model prefix (e.g. openai/moi) or ensure the model is added as a combo entry.\", 'type': 'invalid_request_error', 'code': 'bad_request'}}",
+  "upstream": "qc_transport_error"
+}

@@ -20,14 +20,16 @@ from factory.engine.lib.concept_cli import concept_check
 from factory.engine.lib.language import normalize_language
 from factory.engine.lib.narrative_schema import (
     concept_content_errors,
+    concept_path,
     concept_validation_errors,
     load_concept,
+    save_concept_yaml,
 )
 from factory.engine.paths import bible_path, load_config, workspace_dir
 
 from factory.ui import factory_workflow
 
-UI_VERSION = "2026-07-15-mdfix"
+UI_VERSION = "2026-07-20-chapter-book-param"
 
 _workflow_lock = __import__("threading").Lock()
 _workflow_cache = None  # type: ignore[var-annotated]
@@ -189,9 +191,29 @@ def create_workspace(body: dict) -> dict:
     }
 
 
-def concept_to_json(ws_id: str) -> dict:
+def _resolve_book(ws: Path, body: dict | None = None, qs: dict | None = None) -> int:
+    """Book number from query/body, else direction active book."""
+    if body and body.get("book") is not None:
+        try:
+            return max(1, int(body["book"]))
+        except (TypeError, ValueError):
+            pass
+    if qs and qs.get("book"):
+        try:
+            return max(1, int(qs["book"][0]))
+        except (TypeError, ValueError, IndexError):
+            pass
+    direction = _load_direction(ws)
+    try:
+        return max(1, int(direction.get("book") or 1))
+    except (TypeError, ValueError):
+        return 1
+
+
+def concept_to_json(ws_id: str, book: int | None = None) -> dict:
     ws = workspace_dir(ws_id)
-    concept = load_concept(ws)
+    book_n = book if book is not None else _resolve_book(ws)
+    concept = load_concept(ws, book_n)
     direction = _load_direction(ws)
     lang = normalize_language(
         concept.get("target_language") or direction.get("target_language") or "vi"
@@ -207,9 +229,12 @@ def concept_to_json(ws_id: str) -> dict:
     stale = [e.format() for e in artifact_stale_errors(ws, concept)]
     content = concept_content_errors(concept)
     full = concept_validation_errors(concept)
+    c_path = concept_path(ws, book_n)
 
     return {
         "workspace": ws_id,
+        "book": book_n,
+        "concept_path": str(c_path.relative_to(ws)).replace("\\", "/") if c_path.exists() or book_n > 1 else "concept.yaml",
         "concept": concept,
         "target_language": lang,
         "languages": SUPPORTED_LANGUAGES,
@@ -221,6 +246,8 @@ def concept_to_json(ws_id: str) -> dict:
             "narrative_profile": direction.get("narrative_profile", ""),
             "narrative_status": direction.get("narrative_status", "draft"),
             "publish_strategy": direction.get("publish_strategy", ""),
+            "book": direction.get("book", 1),
+            "book_slug": direction.get("book_slug", ""),
         },
         "validation_errors": full,
         "content_errors": content,
@@ -234,6 +261,7 @@ def concept_to_json(ws_id: str) -> dict:
 def save_concept(ws_id: str, body: dict, *, mark_ready: bool = False) -> dict:
     ws = workspace_dir(ws_id)
     ws.mkdir(parents=True, exist_ok=True)
+    book_n = _resolve_book(ws, body)
 
     lang = normalize_language(body.get("target_language"))
     _sync_workspace_language(ws, lang)
@@ -243,7 +271,7 @@ def save_concept(ws_id: str, body: dict, *, mark_ready: bool = False) -> dict:
 
         write_pen_name(ws, body.get("pen_name") or "")
 
-    existing = load_concept(ws)
+    existing = load_concept(ws, book_n)
     data = dict(existing) if existing else {}
     data.update(
         {
@@ -261,7 +289,6 @@ def save_concept(ws_id: str, body: dict, *, mark_ready: bool = False) -> dict:
             "notes": body.get("notes", "") or "",
         }
     )
-    # Structured clause schema (optional)
     if "concept_schema_version" in body:
         try:
             data["concept_schema_version"] = int(body.get("concept_schema_version") or 2)
@@ -282,34 +309,90 @@ def save_concept(ws_id: str, body: dict, *, mark_ready: bool = False) -> dict:
         else:
             data.pop("binding_condition", None)
 
+    if body.get("chapter_count") is not None:
+        try:
+            data["chapter_count"] = int(body["chapter_count"])
+        except (TypeError, ValueError):
+            pass
+
+    # Align direction active book before mark-ready / title sync
+    direction = _load_direction(ws)
+    if int(direction.get("book") or 1) != book_n:
+        direction["book"] = book_n
+        if body.get("book_slug"):
+            direction["book_slug"] = body["book_slug"]
+        _save_direction(ws, direction)
+
     if not mark_ready:
-        path = ws / "concept.yaml"
-        path.write_text(
-            yaml.dump(data, allow_unicode=True, default_flow_style=False, sort_keys=False),
-            encoding="utf-8",
-        )
+        save_concept_yaml(ws, data, book_n)
         _sync_direction_manifest_from_concept(ws, data)
         from factory.engine.lib.operator_sync import write_title_everywhere
 
-        write_title_everywhere(ws, data.get("title", ""))
-        return concept_to_json(ws_id)
+        write_title_everywhere(ws, data.get("title", ""), book=book_n)
+        return concept_to_json(ws_id, book_n)
 
-    # save draft first then validate for ready
-    path = ws / "concept.yaml"
     data["concept_status"] = "draft"
-    path.write_text(
-        yaml.dump(data, allow_unicode=True, default_flow_style=False, sort_keys=False),
-        encoding="utf-8",
-    )
+    save_concept_yaml(ws, data, book_n)
     ok, errs = _concept_mark_ready(ws)
     if not ok:
-        return {"ok": False, "errors": errs, **concept_to_json(ws_id)}
-    concept = load_concept(ws)
+        return {"ok": False, "errors": errs, **concept_to_json(ws_id, book_n)}
+    concept = load_concept(ws, book_n)
     _sync_direction_manifest_from_concept(ws, concept)
     from factory.engine.lib.operator_sync import write_title_everywhere
 
-    write_title_everywhere(ws, concept.get("title", ""))
-    return {"ok": True, **concept_to_json(ws_id)}
+    write_title_everywhere(ws, concept.get("title", ""), book=book_n)
+    return {"ok": True, **concept_to_json(ws_id, book_n)}
+
+
+def create_series_book(body: dict) -> dict:
+    """POST /api/series-book — thêm Book N vào series workspace có sẵn."""
+    from factory.engine.lib.book_scaffold import init_book, list_series_books
+
+    ws_id = (body.get("workspace") or body.get("workspace_id") or body.get("series") or "").strip()
+    if not ws_id:
+        return {"ok": False, "error": "workspace (series) bắt buộc"}
+    if ws_id not in list_workspaces():
+        return {"ok": False, "error": f"workspace '{ws_id}' không tồn tại"}
+    try:
+        book = int(body.get("book") or 0)
+    except (TypeError, ValueError):
+        return {"ok": False, "error": "book phải là số nguyên >= 2"}
+    if book < 2:
+        return {"ok": False, "error": "book phải >= 2 (Book 1 tạo qua Workspace mới)"}
+
+    title = (body.get("title") or "").strip() or None
+    slug = (body.get("slug") or "").strip() or None
+    tc = body.get("total_chapters")
+    try:
+        total = int(tc) if tc is not None else 22
+    except (TypeError, ValueError):
+        total = 22
+
+    try:
+        result = init_book(
+            ws_id,
+            book,
+            title=title,
+            slug=slug,
+            total_chapters=total,
+        )
+    except Exception as exc:
+        return {"ok": False, "error": str(exc)}
+
+    return {
+        "ok": True,
+        "workspace": ws_id,
+        "book": result["book"],
+        "title": result["title"],
+        "slug": result["slug"],
+        "total_chapters": result["total_chapters"],
+        "concept_created": result.get("concept_created"),
+        "books": list_series_books(ws_id),
+        "message": (
+            f"Đã thêm Book {result['book']}: {result['title']} — "
+            "chọn Book # trên dashboard rồi điền Concept"
+        ),
+    }
 
 
 def run_develop(ws_id: str, pass_name: str = "all") -> dict:
@@ -387,8 +470,10 @@ class Handler(BaseHTTPRequestHandler):
             if not ws_id or "/" in ws_id:
                 self._json(400, {"error": "invalid workspace"})
                 return
+            qs = parse_qs(parsed.query)
             try:
-                self._json(200, concept_to_json(ws_id))
+                book_n = _resolve_book(workspace_dir(ws_id), qs=qs)
+                self._json(200, concept_to_json(ws_id, book_n))
             except Exception as exc:
                 self._json(500, {"error": str(exc)})
             return
@@ -440,7 +525,7 @@ class Handler(BaseHTTPRequestHandler):
                 self._json(400, {"error": "invalid workspace"})
                 return
             qs = parse_qs(parsed.query)
-            book = int(qs.get("book", ["1"])[0])
+            book = _resolve_book(workspace_dir(ws_id), qs=qs)
             try:
                 if len(parts) == 1:
                     self._json(200, {"chapters": _workflow().chapter_list(ws_id, book)})
@@ -483,6 +568,15 @@ class Handler(BaseHTTPRequestHandler):
                 self._json(500, {"error": str(exc)})
             return
 
+        if path == "/api/series-book":
+            try:
+                result = create_series_book(body or {})
+                code = 200 if result.get("ok") else 400
+                self._json(code, result)
+            except Exception as exc:
+                self._json(500, {"error": str(exc)})
+            return
+
         if path.startswith("/api/concept/") and path.endswith("/ready"):
             ws_id = path[len("/api/concept/") : -len("/ready")].strip("/")
             try:
@@ -502,13 +596,14 @@ class Handler(BaseHTTPRequestHandler):
                     save_concept(ws_id, body, mark_ready=False)
                     ok, errs = _concept_mark_ready(workspace_dir(ws_id))
                     if not ok:
+                        book_n = _resolve_book(workspace_dir(ws_id), body)
                         self._json(
                             400,
                             {
                                 "ok": False,
                                 "error": "concept chua du dieu kien de sinh narrative",
                                 "errors": errs,
-                                **concept_to_json(ws_id),
+                                **concept_to_json(ws_id, book_n),
                             },
                         )
                         return
@@ -521,8 +616,14 @@ class Handler(BaseHTTPRequestHandler):
 
         if path.startswith("/api/concept/") and path.endswith("/check"):
             ws_id = path[len("/api/concept/") : -len("/check")].strip("/")
+            book_n = _resolve_book(workspace_dir(ws_id), body)
+            # Temporarily align direction so concept_check loads the right book
+            direction = _load_direction(workspace_dir(ws_id))
+            if int(direction.get("book") or 1) != book_n:
+                direction["book"] = book_n
+                _save_direction(workspace_dir(ws_id), direction)
             errs = concept_check(workspace_dir(ws_id))
-            self._json(200, {"errors": errs, "ready": len(errs) == 0})
+            self._json(200, {"errors": errs, "ready": len(errs) == 0, "book": book_n})
             return
 
         if path.startswith("/api/pipeline/") and path.endswith("/batch/reset"):
@@ -641,7 +742,7 @@ class Handler(BaseHTTPRequestHandler):
             if len(parts) >= 3 and parts[1].isdigit():
                 ws_id, ch_s, action = parts[0], parts[1], parts[2]
                 ch = int(ch_s)
-                book = int(body.get("book", 1))
+                book = _resolve_book(workspace_dir(ws_id), body)
                 try:
                     if action == "write":
                         result = _workflow().chapter_write(ws_id, ch, book)

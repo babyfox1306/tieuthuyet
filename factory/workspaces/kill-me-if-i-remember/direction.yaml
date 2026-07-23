@@ -1,0 +1,58 @@
+id: kill-me-if-i-remember
+pen_name: Nix Vale
+target_language: en
+publish_strategy: kdp_ku_exclusive
+narrative_status: approved
+book: 2
+canon_through: 0
+platform: kdp
+audience: women 18-35, mobile reading, hook-driven serial fiction
+goal: end-of-chapter hooks — international thriller-romance pace
+setting_hub: Kill Me If I Remember — primary setting
+setting_nodes: []
+spice_default: 1
+spice_explicit_chapters: []
+spice_steamy_chapters: []
+book1_ending: 'The complete ledger is published — once, irrevocably. Rook dies reaching
+  for the rifle he trained her to use. Mara is free. Sloane releases her own seven
+  contracts alongside the evidence: she does not buy absolution, she chooses the record.
+  She is arrested and accepts it. Lucian is offered the only extraction route and
+  refuses it, standing beside the woman he was contracted to kill.
+
+
+  Epilogue, months later: her sentence, Mara''s testimony, Lucian''s status, and one
+  scene that confirms they still choose each other. Not a wedding. Not safety. A future
+  that exists.'
+blurb: A firearms investigator wakes on a rooftop beside her sister's body with three
+  months missing from her mind, and the masked assassin standing over her says she
+  hired him — then hands her a contract in her own handwriting that orders her death
+  at sunrise, while the hidden condition governing that order remains buried with
+  Rook.
+tropes: []
+spice_badge: sweet
+target_platforms:
+- kdp
+spice_level: 1
+plan_status: approved
+bible_status: approved
+book_slug: 02-probe-book-two
+total_chapters: 22
+arc:
+  act1_setup:
+  - 1
+  - 6
+  act2_complications:
+  - 7
+  - 12
+  act3_crisis:
+  - 13
+  - 19
+  act4_resolution:
+  - 20
+  - 22
+narrative_profile: International thriller-romance, mystery, suspense, action, amnesia,
+  and dark romance told in dual third-person limited POV. The main action unfolds
+  continuously over roughly five hours, from shortly after midnight until sunrise,
+  followed by an epilogue months later.
+source_concept_digest: fef07b5bcc33a05e
+source_narrative_digest: 64097438c5ad0a3a

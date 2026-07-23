@@ -112,6 +112,12 @@ def normalize_chapter_plan(plan: dict[str, Any]) -> dict[str, Any]:
             out["slug"] = slug or f"chapter-{ch}"
         elif ch:
             out["slug"] = f"chapter-{ch}"
+    # Avoid ``01-title`` slugs — catalog filenames already prefix chapter number.
+    ch_num = int(out.get("chapter") or 0)
+    if ch_num and out.get("slug"):
+        slug = str(out["slug"]).strip().strip("-").lower()
+        slug = re.sub(rf"^(?:{ch_num:02d}|{ch_num}|chapter-{ch_num})-", "", slug)
+        out["slug"] = slug.strip("-") or f"chapter-{ch_num}"
     return out
 
 

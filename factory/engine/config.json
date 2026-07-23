@@ -4,21 +4,30 @@
   "model_routing": "flexible",
   "model_priority_groups": {
     "phase1_plan": [
-      "auto",
+      "auto/best-reasoning",
       "auto/best-fast",
       "auto/fast"
     ],
     "phase2_write": [
-      "auto/fast",
-      "auto",
-      "auto/best-fast"
+      "auto/best-reasoning",
+      "auto/best-fast",
+      "auto/best-coding",
+      "auto/fast"
     ],
     "phase_light": [
-      "auto/fast",
-      "auto"
+      "auto/best-fast",
+      "auto/fast"
     ]
   },
-  "model_preferences": [],
+  "model_preferences": [
+    "gh/claude-opus-4.7",
+    "gh/claude-opus-4.6",
+    "gh/claude-sonnet-4.6",
+    "gh/gpt-5.4",
+    "gh/claude-sonnet-4.5",
+    "gh/gpt-4.1",
+    "gh/gpt-4o"
+  ],
   "model_priority_by_role": {
     "architect": "phase1_plan",
     "outliner": "phase1_plan",
@@ -40,7 +49,7 @@
   "min_word_count": 1250,
   "max_word_count": 2200,
   "writer_max_tokens": 16384,
-  "writer_short_retries": 2,
+  "writer_short_retries": 5,
   "writer_length_max_retries": 3,
   "writer_content_max_retries": 2,
   "writer_llm_qc_max_retries": 2,
@@ -70,12 +79,11 @@
     "the truth was out",
     "the evidence is in the wild",
     "the broadcast completed",
-    "all of it",
     "it's in the air",
     "upload was complete"
   ],
   "min_publish_words": 1250,
-  "last_pen_name": "Nix Vale",
+  "last_pen_name": "Reynard Frost",
   "temperature": {
     "architect": 0.7,
     "outliner": 0.7,

@@ -1,0 +1,24 @@
+{
+  "foreign_chars": [],
+  "word_count": 2175,
+  "voice_drift": {
+    "flag": false,
+    "details": ""
+  },
+  "continuity_conflict": {
+    "flag": true,
+    "details": "The binding condition is not stated identically to the series bible's mandated wording. The chapter expands the names to \"Lucian Vey,\" \"Sloane Mercer,\" and \"Cassian Rook,\" while the world rule requires the exact sentence: \"Lucian must kill Sloane at sunrise only if Rook restores the conditioned obedient identity he built in her.\""
+  },
+  "cliffhanger_strength": 3,
+  "pacing_issue": false,
+  "signature_detail_present": true,
+  "spice_ok": true,
+  "content_boundary_ok": false,
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "continuity_conflict",
+    "content_boundary_violation: The chapter jumps forward by months for sentencing and prison visits, violating the boundary that the whole book remains within one continuous night.",
+    "verdict_fail",
+    "content_boundary_violation"
+  ]
+}

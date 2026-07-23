@@ -1,0 +1,22 @@
+{
+  "foreign_chars": [],
+  "word_count": 4660,
+  "voice_drift": {
+    "flag": false,
+    "details": ""
+  },
+  "continuity_conflict": {
+    "flag": true,
+    "details": "The chapter begins with Lucian and Sloane still trapped at the hydraulic pressure door during the armed pursuit, but the prior chapter excerpt ends after they already escaped through the hydraulic route into a service corridor and opened the archive folder there. This creates a timeline/location overlap that reads like the action restarted instead of continuing."
+  },
+  "cliffhanger_strength": 5,
+  "pacing_issue": false,
+  "signature_detail_present": true,
+  "spice_ok": true,
+  "content_boundary_ok": true,
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "continuity_conflict",
+    "verdict_fail"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "[length_fail — 1049 từ < min; đã expand/rewrite; KHÔNG cho qua ready (expand 2/2, rewrite 0/3) — không phải lỗi dấu *]",
+    "quá ngắn (1049 từ)",
+    "markdown advisory (1 hit) — dùng UI fixer, không chặn promote"
+  ],
+  "source": "machine_content_cap",
+  "content_retries": 0,
+  "max_content_retries": 2,
+  "classification": {
+    "format_fix": {},
+    "content_fail": {},
+    "length": {
+      "short": 1049
+    },
+    "format_only": false,
+    "length_only": true,
+    "has_format": false,
+    "has_content": false,
+    "has_length": true
+  },
+  "llm_qc_before_machine_fail": {
+    "foreign_chars": [],
+    "word_count": 1631,
+    "voice_drift": {
+      "flag": false,
+      "details": ""
+    },
+    "continuity_conflict": {
+      "flag": false,
+      "details": ""
+    },
+    "cliffhanger_strength": 1,
+    "pacing_issue": true,
+    "signature_detail_present": false,
+    "spice_ok": true,
+    "content_boundary_ok": true,
+    "verdict": "FAIL",
+    "fail_reasons": [
+      "cliffhanger_strength_below_3: The chapter ends mid-sentence rather than on a complete dramatic hook.",
+      "pacing_issue: The final sentence is truncated, leaving the action beat structurally incomplete.",
+      "signature_detail_missing: Sloane's established wrist-circle tic does not appear.",
+      "verdict_fail",
+      "pacing_issue"
+    ]
+  }
+}

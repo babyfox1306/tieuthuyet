@@ -1,0 +1,78 @@
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The First Bullet",
+      "slug": "the-first-bullet",
+      "one_line_summary": "Sloane Mercer and Lucian Vey escape Rook's ambush, and a photograph found in her pocket hints at a life she cannot remember.",
+      "beat_summary": "Sloane Mercer and Lucian Vey race through the apartment as Rook's men open fire. They escape via the fire escape, barely. In the alley, Sloane discovers a photograph in her jacket pocket—herself with a man she doesn't know, dated within the gap. The photograph is bent at the corner, as if she deliberately placed it for later discovery. Lucian identifies the man as a Russian export agent connected to the weapons network. Sloane's wrist circle twitches as she processes. Lucian is grazed by a bullet, and Sloane tears a strip from her shirt to bandage his arm, their faces close in the dark.",
+      "must_happen": [
+        "Sloane Mercer and Lucian Vey evade gunfire from Rook's team and flee the apartment via the fire escape.",
+        "Sloane Mercer discovers a photograph of herself with an unknown man, dated two months ago, planted for her to find (C005 planted).",
+        "[ROMANCE] In tending Lucian Vey's wound, Sloane Mercer's hands linger on his skin, and she feels a flicker of the intimacy they once shared."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the binding condition of the contract.",
+        "Sloane Mercer does not learn that Mara Mercer is alive."
+      ],
+      "opens_with": "The bullet hit the wall where her head had been a second before.",
+      "cliffhanger": "Lucian Vey's encrypted phone buzzes with a message from an unknown number: 'The photograph is just the beginning. Come find me.'",
+      "signature_detail_hint": "The photograph's corner is bent at a precise angle, as if folded by someone who could not afford to expose the full print.",
+      "emotional_beat": "Adrenaline and confusion, followed by a moment of care that deepens Sloane Mercer's trust in Lucian Vey.",
+      "spice": 1,
+      "spice_note": "Touch and proximity during wound-tending; implicit trust forming.",
+      "chapter_task": "Write 1600-1900 words covering the escape from the apartment, the discovery of the photograph, and the medical-attention micro-beat. Plant C005 explicitly. Keep the pace tight and use the photograph as a visual anchor for the gap's mystery.",
+      "carries_to_next": "The photograph's subject and the message that their next destination is unknown."
+    },
+    {
+      "chapter": 5,
+      "title": "The Contract's Weight",
+      "slug": "the-contracts-weight",
+      "one_line_summary": "Lucian Vey relives the night Sloane Mercer gave him the contract and faces the cost of his silence as Rook's trap closes.",
+      "beat_summary": "Lucian Vey's POV. He tends his wound while Sloane Mercer sleeps briefly. He recalls the night Sloane—the full-hiding Sloane—gave him the contract and the binding condition. He is tormented by his love for her and his duty. He checks his phone and finds a tracking beacon indicating Rook is monitoring them. He wakes Sloane and decides to take them to a safe location he knows, but he does not reveal the truth about Mara. In a moment of vulnerability, he touches her face before she fully awakes, and she murmurs his name in a way that cuts him. They move to a second location, where they find a dead drop with a key card (C009 planted). Sloane asks about the photograph, and Lucian tells her it connects to a man Rook eliminated.",
+      "must_happen": [
+        "Lucian Vey reflects on the night Sloane Mercer gave him the contract, revealing his internal conflict.",
+        "Lucian Vey discovers a tracking beacon from Rook and intercepts a dead drop with a key card (C009 planted).",
+        "[ROMANCE] Lucian Vey touches Sloane Mercer's face while she sleeps, and she murmurs his name with familiarity, causing him pain."
+      ],
+      "must_not": [
+        "Lucian Vey does not reveal the binding condition or that Mara Mercer is alive.",
+        "Sloane Mercer does not regain her memory."
+      ],
+      "opens_with": "He had watched her sleep often in the old life. Now every breath she took reminded him he was the one who had to end it.",
+      "cliffhanger": "The key card's magnetic strip reveals a location: the Federal Records Annex—Sloane Mercer's old office.",
+      "signature_detail_hint": "Lucian Vey's hand on the rifle focus ring, turning it precisely a quarter turn away from clarity—a tic that surfaces every time he withholds a painful truth.",
+      "emotional_beat": "Regret, love, and the crushing weight of carrying a decision that could destroy the woman he protects.",
+      "spice": 1,
+      "spice_note": "The touch carries emotional depth; no explicit intimacy.",
+      "chapter_task": "Write 1600-1900 words from Lucian Vey's limited third-person POV. Include the flashback to the contract signing, the dead drop encounter, and the [ROMANCE] micro-beat. Plant C009 explicitly through the dead drop.",
+      "carries_to_next": "The key card and the new location: Federal Records Annex."
+    },
+    {
+      "chapter": 6,
+      "title": "The Records Room",
+      "slug": "the-records-room",
+      "one_line_summary": "Sloane Mercer and Lucian Vey infiltrate the Federal Records Annex to find a file tied to the photograph, but Rook's trap is waiting.",
+      "beat_summary": "Sloane Mercer uses her old clearance to access the annex. They find a file on the man in the photograph—a dead witness. But the file is a dead end. Rook has set a secondary trap. Sloane feels the conditioning pull as she sees a whiteboard with her own handwriting. She fights it, using the wrist circle. Lucian Vey helps her focus. They escape with a backup drive that contains partial records of the weapons network.",
+      "must_happen": [
+        "Sloane Mercer and Lucian Vey infiltrate the Federal Records Annex and retrieve a file on the photographed man.",
+        "Sloane Mercer resists a conditioning trigger when she sees her own handwriting on a whiteboard, using the wrist circle to ground herself.",
+        "[ROMANCE] Lucian Vey holds Sloane Mercer steady during the fugue, and she grips his hand, anchoring herself to him.",
+        "They acquire a backup drive with incomplete transaction records."
+      ],
+      "must_not": [
+        "Sloane Mercer does not learn the full extent of her conditioning.",
+        "Sloane Mercer does not discover that Mara Mercer is alive."
+      ],
+      "opens_with": "Her key card still worked. That told her more about her enemies' confidence than any surveillance feed.",
+      "cliffhanger": "The backup drive contains a single file: a countdown clock labeled 'Condition: Oblivion' with her name and a timestamp at sunrise.",
+      "signature_detail_hint": "The whiteboard was calibrated to her exact writing height—footprints on the floor showed where she had stood to write the trigger phrase.",
+      "emotional_beat": "Dread, the thrill of uncovering, and the solidity of Lucian Vey's presence against the ghost of her past.",
+      "spice": 1,
+      "spice_note": "Hand-grip as anchor; a shared moment of vulnerability.",
+      "chapter_task": "Write 1600-1900 words covering the annex infiltration, the conditioning test, and the file acquisition. Include the [ROMANCE] micro-beat through physical anchoring. No new clues, but maintain tension and thread T01-T05.",
+      "carries_to_next": "The backup drive content and the countdown timer."
+    }
+  ]
+}

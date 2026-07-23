@@ -113,7 +113,11 @@ def language_profile(lang: str | None = None, *, direction: dict | None = None, 
 
 
 def find_foreign_chars(text: str, lang: str | None = None, *, direction: dict | None = None, cfg: dict | None = None) -> list[str]:
-    """Ký tự lạ theo target_language — CJK cho vi; CJK + chữ Việt cho en (Latin extended OK)."""
+    """Ký tự lạ theo target_language — CJK cho vi; CJK + chữ Việt cho en (Latin-1 loanwords OK).
+
+    EN allows Latin-1 Supplement (café, protégé, naïve, résumé). Vietnamese-only
+    letters outside that range (ă, ơ, ư, đ, …) still flag as foreign.
+    """
     code = normalize_language(lang) if lang else target_language(direction, cfg)
     found: set[str] = set()
     if code == "vi":
@@ -121,7 +125,8 @@ def find_foreign_chars(text: str, lang: str | None = None, *, direction: dict | 
     elif code == "en":
         found.update(_CJK_RE.findall(text))
         for ch in _VN_LETTER_RE.findall(text):
-            found.add(ch)
+            if not _is_en_latin_extended(ch):
+                found.add(ch)
     return sorted(found)
 
 

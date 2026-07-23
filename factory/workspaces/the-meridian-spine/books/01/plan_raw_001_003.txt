@@ -1,0 +1,77 @@
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Offer She Can't Refuse",
+      "slug": "the-offer-she-cant-refuse",
+      "one_line_summary": "Iris Kane is appointed Lead Forensic Authority for the Meridian Spine and meets Stellan Marsh, Nadia Okafor, and Petra Lund, spotting a tool-mark anomaly in the load coupons that matches a Kessler-era override.",
+      "beat_summary": "Iris Kane arrives at the National Integrity Directorate headquarters. Stellan Marsh officially welcomes her as Lead Forensic Authority for the Meridian Spine, framing it as the reform's cornerstone. Her designated investigative partner, Nadia Okafor, immediately begins steering her focus toward institutional structure. During a tour of the Spine's fabrication facility, Iris meets Petra Lund, the lead certifier. Lund is nervous, her explanations careful. Iris examines the load coupons and discovers a tool-mark pattern identical to the Kessler override—a physical anomaly she cannot explain away. She hides the observation, guarding it alongside the unresolved redacted page from Book 1.",
+      "must_happen": [
+        "Iris Kane accepts the role of Lead Forensic Authority for the Meridian Spine from Stellan Marsh.",
+        "Nadia Okafor is introduced as Iris's partner and subtly directs her attention toward Gerald Halveston's fund.",
+        "During a fabrication facility tour, Iris spots a tool-mark in the certified load coupons that matches the Kessler override method (C010 planted)."
+      ],
+      "must_not": [
+        "Must not reveal that the National Integrity Directorate is a capture instrument.",
+        "Must not name Stellan Marsh as the architect of any broader fraud."
+      ],
+      "opens_with": "\"Iris Kane, I need you to certify the spine so clean it squeaks.\" — Stellan Marsh slides the contract across his glass desk, smiling as if he's doing her a favor.",
+      "cliffhanger": "Iris stares at the load coupon in her private office, the tool-mark matching a Kessler-class override. She holds a single note from her Book 1 files: *Find the other names.*",
+      "signature_detail_hint": "The tool-mark on the coupon has a microscopic wave pattern in the shear line — not a standard machining defect, but one created by an override jig that shouldn't exist outside the Kessler scrap pile.",
+      "emotional_beat": "The weight of the new position pushes against the fracture of the unresolved page. She feels trusted — and guilty for not trusting the institution giving her the trust.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Establish the surface of the Directorate and the Meridian Spine. Introduce Stellan Marsh, Nadia Okafor, and Petra Lund. Plant the physical anomaly (C010). No romance subplot. Target length: 1600-1900 words.",
+      "carries_to_next": "The tool-mark anomaly is a secret Iris keeps to herself as she enters her first official week."
+    },
+    {
+      "chapter": 2,
+      "title": "The Revolving Door",
+      "slug": "the-revolving-door",
+      "one_line_summary": "Iris Kane finds a timestamp discrepancy in the Spine's records, receives suspicious explanations from Petra Lund, and uncovers a missing serial number on the tooling rig.",
+      "beat_summary": "During her first official week, Iris delves into the Meridian Spine certification files. She finds a critical discrepancy: a load test was certified before the pre-certification checks were recorded (C001). Petra Lund visits, offering an explanation that feels rehearsed and evasive. Lund mentions receiving specific tooling from an unnamed higher source. Nadia Okafor pressures Iris to meet Gerald Halveston, framing the meeting as essential for political capital. A journalist calls Iris's office, asking directly about the 'unredacted co-owners' of the Kessler fast-track, reopening her old wound. Iris investigates the tooling serial number and discovers it does not exist in the manufacturer's database (C002).",
+      "must_happen": [
+        "Iris identifies a conflict in the Meridian Spine's approval timestamps, suggesting a backdated certification (C001 planted).",
+        "Petra Lund's evasive behavior deepens Iris's suspicion of her role.",
+        "Iris discovers the serial number for the load test rig's tooling is not registered with the manufacturer (C002 planted)."
+      ],
+      "must_not": [
+        "Must not confirm the Directorate is a wider capture instrument.",
+        "Must not reveal Nadia Okafor's deliberate steering of the investigation."
+      ],
+      "opens_with": "\"The first material I ever certified is still standing,\" Petra Lund says, knocking her knuckles against the spine section in the showroom. \"That means something where I come from.\"",
+      "cliffhanger": "The journalist's question loops in Iris's head. *Unresolved co-owners.* She opens the redacted page file from Book 1 again. Renn's trial testimony. 'I was paid by a company. A developer. Ask the developers.'",
+      "signature_detail_hint": "The missing serial number feels deliberately erased — not faded or misprinted, but removed from the manufacturer's database with surgical precision.",
+      "emotional_beat": "Iris battles the isolation of her suspicions. Being surrounded by new colleagues in a job that feels like a reward only sharpens her distrust.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Deepen the investigation setup. Plant clues C001 and C002. Build distrust in Lund and Nadia's agendas. No romance subplot. Target length: 1600-1900 words.",
+      "carries_to_next": "Iris agrees to meet Halveston with Nadia, but keeps the tool-mark anomaly and missing serial number to herself."
+    },
+    {
+      "chapter": 3,
+      "title": "The Financier's Compass",
+      "slug": "the-financiers-compass",
+      "one_line_summary": "Iris Kane and Nadia Okafor meet Gerald Halveston, who presents himself as a reform ally, but Iris discovers a shell company—Veridian Trust—linking the Spine's financing to the Kessler era.",
+      "beat_summary": "Nadia and Iris visit the Halveston Foundation headquarters. Halveston is polished and positions himself as a transparent force for good. He reveals he vetted Iris personally, unsettling her. Iris notices Halveston is deeply invested in the Spine's narrative but avoids technical details. During the meeting, the contract structure surfaces: a shell company called Veridian Trust provides the real financing, with no public reporting requirements. Nadia frames Halveston as the primary political target. Iris leaves the meeting suspecting she is being directed toward a false wall. Later, she searches for Veridian Trust and finds its registration predates the Kessler collapse, sharing an address with Renn's old backers.",
+      "must_happen": [
+        "Iris and Nadia meet Gerald Halveston at the Halveston Foundation.",
+        "Halveston implies he vetted Iris personally, revealing how closely she is being managed.",
+        "Iris discovers the Veridian Trust shell company structure behind the Meridian Spine financing."
+      ],
+      "must_not": [
+        "Must not reveal Halveston's exact coordinating role (only implied false wall).",
+        "Must not connect the dots to Marsh as the architect."
+      ],
+      "opens_with": "\"My grandfather built bridges you can still walk across,\" Halveston says, shaking Iris's hand. \"I build the bridges that keep those bridges standing. Software of accountability.\"",
+      "cliffhanger": "Iris searches for the Veridian Trust's registration number. It was registered six months before the Kessler collapse. The co-owners of Renn's old company and the founders of this trust share a legal address.",
+      "signature_detail_hint": "The Veridian Trust letterhead has the same corporate logo kerning as the redacted bottom of the Kessler page — same typehouse, same who-are-you-hiding.",
+      "emotional_beat": "The meeting confirms to Iris she is being managed. Her partner Nadia and the financier Halveston are too eager to show her a path. It feels like a trap wrapped in a theme park.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Introduce Halveston as the false target. Deepen the shell company mystery. Solidify Iris's isolation and suspicion. No romance subplot. Target length: 1600-1900 words.",
+      "carries_to_next": "Iris now has three threads: the tool-mark anomaly, the missing serial number, and the Veridian Trust. She needs to investigate them in parallel without anyone directing her."
+    }
+  ]
+}

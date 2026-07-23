@@ -13,6 +13,7 @@ import yaml
 from factory.engine.lib.bible_schema import bible_is_approved, validate_bible
 from factory.engine.lib.book_config import get_total_chapters, set_total_chapters
 from factory.engine.lib.catalog import (
+    accept_catalog_chapter,
     catalog_chapter_is_clean,
     export_book,
     parse_markdown,
@@ -93,6 +94,17 @@ def _chapter_text(ws: Path, book: int, ch: int) -> tuple[str | None, str]:
     if cat_path:
         meta, body = parse_markdown(cat_path)
         if catalog_chapter_is_clean(meta):
+            from factory.engine.lib.catalog import export_language
+
+            title = str(meta.get("title") or "").strip()
+            lang = export_language(wid)
+            if lang == "en":
+                heading = f"# Chapter {ch}: {title}" if title else f"# Chapter {ch}"
+            else:
+                heading = f"# Chương {ch}: {title}" if title else f"# Chương {ch}"
+            # Catalog stores title in YAML only; restore heading for UI/read structure.
+            if body and not body.lstrip().startswith("#"):
+                return f"{heading}\n\n{body.lstrip()}", "catalog"
             return body, "catalog"
     for bucket in ("ready", "needs_review", "needs_fix", "draft"):
         p = chapter_pipeline_path(ws, book, bucket, ch)
@@ -127,7 +139,7 @@ def pipeline_status(workspace_id: str, book: int | None = None) -> dict[str, Any
     book = int(book or cfg.get("active_book", 1))
     ws = workspace_dir(workspace_id)
     direction = _load_direction(ws)
-    concept = load_concept(ws)
+    concept = load_concept(ws, book)
     total = get_total_chapters(workspace_id, book)
 
     plan_path = book_workspace_dir(ws, book) / "master_plan.json"
@@ -355,12 +367,19 @@ def chapter_get(workspace_id: str, ch: int, book: int = 1) -> dict:
     from factory.engine.lib.prose_sanitize import find_markdown_leaks
 
     leaks = find_markdown_leaks(text or "") if text else []
+    title = plan.get("title", "")
+    if in_cat:
+        cat_path = _catalog_chapter_path(workspace_id, book, ch)
+        if cat_path:
+            meta, _body = parse_markdown(cat_path)
+            if meta.get("title"):
+                title = str(meta["title"]).strip()
     return {
         "chapter": ch,
         "status": status,
         "in_catalog": in_cat,
         "source": source,
-        "title": plan.get("title", ""),
+        "title": title,
         "plan_summary": plan.get("one_line_summary", ""),
         "prose": text or "",
         "prompt_preview": prompt[:2000] if prompt else "",
@@ -525,6 +544,8 @@ def chapter_write(workspace_id: str, ch: int, book: int = 1) -> dict:
 def chapter_approve(workspace_id: str, ch: int, book: int = 1) -> dict:
     """User đọc xong → duyệt vào catalog (kể cả needs_review).
 
+    Operator accept is final for format ``needs_fix``: promote with auto=False
+    writes empty flags; re-approve on an existing catalog chapter clears them.
     Promote first. Records promoted_chapters only — never bumps current_chapter
     (that stays with state_updater + timeline/facts).
     """
@@ -536,11 +557,14 @@ def chapter_approve(workspace_id: str, ch: int, book: int = 1) -> dict:
         marker = promoted_marker(ws, book, ch)
         if not marker.exists():
             marker.write_text(datetime.now(timezone.utc).isoformat(), encoding="utf-8")
+        # Re-duyệt = operator accepts current catalog prose (waive EG-12 debt).
+        accept_catalog_chapter(workspace_id, book, ch)
         meta = chapter_get(workspace_id, ch, book)
         return {
             "ok": True,
             "already_promoted": True,
-            "message": "chương đã có trong catalog",
+            "operator_accepted": True,
+            "message": "chương đã có trong catalog — operator waived needs_fix",
             "catalog_path": str(cat_existing),
             **meta,
         }
@@ -567,10 +591,13 @@ def chapter_approve(workspace_id: str, ch: int, book: int = 1) -> dict:
     if out is None:
         cat_existing = _catalog_chapter_path(workspace_id, book, ch)
         if cat_existing:
+            accept_catalog_chapter(workspace_id, book, ch)
+            meta = chapter_get(workspace_id, ch, book)
             return {
                 "ok": True,
                 "already_promoted": True,
-                "message": "chương đã có trong catalog",
+                "operator_accepted": True,
+                "message": "chương đã có trong catalog — operator waived needs_fix",
                 "catalog_path": str(cat_existing),
                 **meta,
             }
@@ -598,6 +625,7 @@ def chapter_approve(workspace_id: str, ch: int, book: int = 1) -> dict:
     meta = chapter_get(workspace_id, ch, book)
     return {
         "ok": True,
+        "operator_accepted": True,
         "catalog_path": str(out),
         **meta,
     }
@@ -631,7 +659,7 @@ def run_pipeline_step(workspace_id: str, action: str, book: int = 1) -> dict:
     )
     from factory.engine.lib.narrative_schema import load_concept
 
-    concept = load_concept(ws)
+    concept = load_concept(ws, book)
     sat = format_satisfiability_errors(concept_satisfiability_errors(concept))
     stale = [e.format() for e in artifact_stale_errors(ws, concept)]
 

@@ -149,14 +149,71 @@ def validate_narrative_assets(ws: Path, direction: dict) -> list[str]:
     return errors
 
 
-def load_concept(ws: Path) -> dict[str, Any]:
+def _active_book_from_direction(ws: Path) -> int:
+    """Best-effort active book from direction.yaml (defaults to 1)."""
     import yaml
 
-    path = ws / "concept.yaml"
+    path = ws / "direction.yaml"
+    if not path.exists():
+        return 1
+    try:
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        return max(1, int(data.get("book") or 1))
+    except (OSError, TypeError, ValueError):
+        return 1
+
+
+def concept_path(ws: Path, book: int | None = None) -> Path:
+    """Resolve concept.yaml path for a book.
+
+    Prefer ``books/NN/concept.yaml`` when present (or when book >= 2).
+    Book 1 falls back to root ``concept.yaml`` for backward compatibility.
+    """
+    from factory.engine.paths import book_workspace_dir
+
+    b = int(book if book is not None else _active_book_from_direction(ws))
+    if b < 1:
+        b = 1
+    per_book = book_workspace_dir(ws, b) / "concept.yaml"
+    if per_book.exists():
+        return per_book
+    root = ws / "concept.yaml"
+    if b == 1:
+        return root if root.exists() else per_book
+    return per_book
+
+
+def load_concept(ws: Path, book: int | None = None) -> dict[str, Any]:
+    import yaml
+
+    path = concept_path(ws, book)
     if not path.exists():
         return {}
     data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     return data if isinstance(data, dict) else {}
+
+
+def save_concept_yaml(ws: Path, data: dict[str, Any], book: int | None = None) -> Path:
+    """Write concept dict to the book-scoped path (creates books/NN/ as needed)."""
+    import yaml
+
+    from factory.engine.paths import book_workspace_dir
+
+    b = int(book if book is not None else _active_book_from_direction(ws))
+    if b < 1:
+        b = 1
+    if b == 1:
+        # Keep book-1 at root unless an explicit per-book file already exists.
+        per_book = book_workspace_dir(ws, 1) / "concept.yaml"
+        path = per_book if per_book.exists() else (ws / "concept.yaml")
+    else:
+        path = book_workspace_dir(ws, b) / "concept.yaml"
+        path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        yaml.dump(data, allow_unicode=True, default_flow_style=False, sort_keys=False),
+        encoding="utf-8",
+    )
+    return path
 
 
 PLACEHOLDER_MARKERS = (

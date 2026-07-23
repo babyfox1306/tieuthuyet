@@ -92,6 +92,16 @@ class TestConceptSatisfiability(unittest.TestCase):
         c["must_avoid"] = ['Do not let her believe "if I remember" is the real condition.']
         self.assertEqual(concept_satisfiability_errors(c), [])
 
+    def test_author_directive_may_list_forbidden_as_instructions(self) -> None:
+        """author_directive may say NO Vance / NO Rook — bans live in forbidden_phrases."""
+        c = _clean_pair()
+        c["forbidden_phrases"] = ["Vance", "Rook", "brain chip"]
+        c["author_directive"] = (
+            "x" * 130
+            + "\nFORBIDDEN: NO Vance, NO Rook, NO brain chip. See forbidden_phrases."
+        )
+        self.assertEqual(concept_satisfiability_errors(c), [])
+
 
 class TestCompileChapterCanonRules(unittest.TestCase):
     def test_surface_only_before_reveal(self) -> None:
@@ -113,9 +123,46 @@ class TestCompileChapterCanonRules(unittest.TestCase):
             # ch11: required list present for explicit state only — not "every sunrise"
             self.assertIn("Rook restores the obedient identity", r.required_exact_wording[0])
 
-    def test_no_pair_none(self) -> None:
-        r = compile_chapter_canon_rules({"author_directive": "x" * 130}, 1)
-        self.assertEqual(r.reveal_state, "none")
+    def test_forbidden_phrase_gates_staged(self) -> None:
+        c = _clean_pair()
+        c["forbidden_phrase_gates"] = [
+            {
+                "id": "early",
+                "unlock_chapter": 18,
+                "phrases": ["the inquiry is the cover-up"],
+            },
+            {
+                "id": "mid",
+                "unlock_chapter": 19,
+                "phrases": ["Renn fast-tracked"],
+            },
+            {
+                "id": "late",
+                "unlock_chapter": 20,
+                "phrases": ["Renn buried"],
+            },
+        ]
+        # binding reveal is still 10 in clean pair — focus on gated phrases
+        c["binding_condition"]["reveal_chapter"] = 20
+        r17 = compile_chapter_canon_rules(c, 17)
+        self.assertTrue(any("cover-up" in f for f in r17.forbidden_facts))
+        self.assertTrue(any("fast-tracked" in f for f in r17.forbidden_facts))
+        self.assertTrue(any("buried" in f for f in r17.forbidden_facts))
+        r18 = compile_chapter_canon_rules(c, 18)
+        self.assertFalse(any("cover-up" in f for f in r18.forbidden_facts))
+        self.assertTrue(any("fast-tracked" in f for f in r18.forbidden_facts))
+        r19 = compile_chapter_canon_rules(c, 19)
+        self.assertFalse(any("fast-tracked" in f for f in r19.forbidden_facts))
+        self.assertTrue(any("buried" in f for f in r19.forbidden_facts))
+        r20 = compile_chapter_canon_rules(c, 20)
+        self.assertEqual(r20.reveal_state, "binding_revealed")
+        self.assertFalse(any("buried" in f for f in r20.forbidden_facts))
+
+    def test_gate_invalid_unlock(self) -> None:
+        c = _clean_pair()
+        c["forbidden_phrase_gates"] = [{"unlock_chapter": 0, "phrases": ["x"]}]
+        codes = {e.code for e in concept_satisfiability_errors(c)}
+        self.assertIn("SAT_GATE_INVALID", codes)
 
 
 class TestDigestStale(unittest.TestCase):

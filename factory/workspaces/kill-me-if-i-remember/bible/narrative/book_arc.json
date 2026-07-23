@@ -1,0 +1,59 @@
+{
+  "book_number": 2,
+  "total_chapters": 22,
+  "target_language": "en",
+  "case_closed": true,
+  "case_open": "Sloane Mercer wakes on a rooftop beside her sister's body with no memory of the past three months and a contract in her own handwriting ordering her death at sunrise. She must discover who shot her sister, why she ordered her own death, and what happened during the missing time—all while the assassin she once loved counts down to dawn.",
+  "lead_internal_arc": [
+    {
+      "name": "Sloane Mercer",
+      "starting_point": "A federal firearms investigator who trusts evidence and procedure because memory has failed her. She believes she would never kill innocents or trade lives, and needs to control every variable to feel safe.",
+      "arc_summary": "Over the course of the night, Sloane must confront the evidence that she willingly participated in the system she despises—she staged her sister's death and ordered seven killings with full knowledge. Her arc moves from desperate investigation to reluctant acceptance of her own moral complexity, culminating in her choice to own the record: she publishes the ledger, releases her own contracts, and accepts arrest rather than seek absolution. She learns to trust Lucian not because he explains, but because his choices prove he sees the woman she is now, not the one she forgot.",
+      "ending_point": "She accepts that she is not innocent but is not a monster either. She chooses accountability over innocence and lets Lucian stand beside her without needing rescue or forgiveness."
+    },
+    {
+      "name": "Lucian Vey",
+      "starting_point": "A contract assassin bound by a forgotten woman's command to kill her at sunrise if the conditioning returns. He holds the memory of a love Sloane cannot remember and the weight of a contract he never wanted but cannot break without betraying her original will.",
+      "arc_summary": "Lucian's arc is about choosing between literal obedience to Sloane's forgotten order and his own judgment of what she needs now. He must reveal enough truth to earn her trust without violating the binding condition, and he watches her struggle while falling deeper in love with the woman she has become. At the climax, he refuses the extraction route and stands beside her, proving that his loyalty is to her present self—not the ghost of her command, not the handler's plan.",
+      "ending_point": "He chooses the woman in front of him over the contract she left behind. He stays when every exit is open, accepting the consequences of love over duty and choosing a future that exists against the odds."
+    }
+  ],
+  "act_structure": [
+    {
+      "act": 1,
+      "label": "Setup",
+      "chapters": [
+        1,
+        6
+      ],
+      "summary": "Sloane wakes on the rooftop, sees Mara's body, and meets Lucian. He shows her the contract in her own handwriting: CLIENT TERMINATION AT SUNRISE. Disoriented and distrustful, she begins investigating while battling gaps in her memory. The surface order is introduced, and the central question is established. The wrist circle appears as a tic."
+    },
+    {
+      "act": 2,
+      "label": "Complications",
+      "chapters": [
+        7,
+        12
+      ],
+      "summary": "Opens with Lucian's first POV (chapter 5), revealing his internal conflict. Sloane uncovers fragments of evidence pointing to Rook's manipulation, deepening the conspiracy. Trust between them wavers. The wrist circle escalates from tic to a fragment of procedural memory. Act 2 ends with a major clue that exposes the larger network."
+    },
+    {
+      "act": 3,
+      "label": "Crisis",
+      "chapters": [
+        13,
+        19
+      ],
+      "summary": "The binding condition is explicitly revealed in chapter 10 from Lucian's POV. Mara signals through the rifle scope (ch11), and the true firing sequence surfaces (ch12). In chapter 13, Sloane broadcasts a decoded ledger fragment and assembles the trap-inside-trap: she wrote over Rook's ending before the erasure. Chapter 14 (Lucian's POV) shows Mara's capture, raising the stakes to their peak."
+    },
+    {
+      "act": 4,
+      "label": "Resolution",
+      "chapters": [
+        20,
+        22
+      ],
+      "summary": "Sloane reaches Mara and obtains the mirror key (hand rhythm) at chapters 16-17, but Rook seizes the relay. In chapter 17, she breaks the conditioning in front of Rook, publishes the complete ledger once and irrevocably, and Rook dies. Sloane releases her own seven contracts, is arrested, and accepts it. Lucian refuses extraction. The epilogue months later confirms they still choose each other."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Terms of Reference",
+      "slug": "01-the-terms-of-reference",
+      "one_line_summary": "Iris Kane is appointed to the Kessler Line inquiry and immediately senses that the official scope is designed to conceal as much as it reveals.",
+      "beat_summary": "Iris Kane receives the letter of appointment to the national inquiry into the Kessler Line tunnel collapse. The terms of reference frame the cause as 'seismic microfracture compounded by dispatch error' and explicitly forbid examining procurement decisions above the site level. Reading the initial forensic report, she finds no physical core data supporting the seismic claim. She tries to contact former site inspector Dov Marek, whose signature is on the liner certification, but is told he has withdrawn from all professional contact.",
+      "must_happen": [
+        "Iris Kane receives her formal appointment to the Kessler Line Inquiry.",
+        "The inquiry's terms of reference are outlined, framing the collapse as a seismic–dispatch failure and excluding procurement oversight.",
+        "Plant C008: Iris Kane notices an odd scope clause that explicitly insulates policy-level and procurement decisions from review.",
+        "Iris Kane studies the initial forensic report and finds no core-sample evidence of seismic microfracture in the archive.",
+        "Iris Kane is informed that Dov Marek is unavailable and has ceased professional correspondence."
+      ],
+      "must_not": [
+        "Iris Kane does not visit the tunnel site or the Vantor offices in this chapter.",
+        "Theo Vance does not appear; the chapter is entirely internal to Iris Kane's process."
+      ],
+      "opens_with": "The body count arrived before the terms of reference. Iris Kane read the sixty-three names twice, then opened the letter.",
+      "cliffhanger": "Iris Kane hung up. Marek's assistant had said he wasn't taking calls. She hadn't said why. Iris wrote 'Marek — unavailable' in her notebook. She didn't like the way the ink sat on the page.",
+      "signature_detail_hint": "Iris Kane runs her thumbnail along the edge of the appointment letter, feeling for delamination. The paper holds. The text does not.",
+      "emotional_beat": "Methodical calm covering a deep professional unease as the gaps in the official report sharpen her focus.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Establish the scope of the inquiry, Iris Kane's voice, and the first political constraint on the investigation. Plant C008 through the terms of reference. Build intellectual unease, not action. No romance or romantic tension.",
+      "carries_to_next": "Iris Kane holds a suspicion that the inquiry's boundaries are not neutral. Dov Marek is established as a key figure who is conspicuously absent."
+    },
+    {
+      "chapter": 2,
+      "title": "The Supporting Cast",
+      "slug": "02-the-supporting-cast",
+      "one_line_summary": "Iris Kane meets the inquiry team and the Vantor Group COO, sensing the official story is being managed by people who know more than they say.",
+      "beat_summary": "Iris Kane arrives at the St. Katherine Building and meets her technical advisor, Theo Vance, who is professional and accommodating. Commissioner Aldous Renn greets her with a speech about clean process and public trust. Adrienne Sol, Vantor Group COO, presents the company's official timeline—every date accounted for, every signature in order. During the meeting, Sol offhandedly notes that the procurement fast-track for Vantor was approved 'above her level,' a detail outside the inquiry's stated scope. Iris Kane receives Dov Marek's personnel file and certification log: twenty-seven clean records over four years.",
+      "must_happen": [
+        "Iris Kane meets Commissioner Aldous Renn, who emphasizes a swift, contained conclusion.",
+        "Iris Kane meets Theo Vance, her technical advisor, whose demeanor is helpful but guarded.",
+        "Iris Kane meets Adrienne Sol, who formally presents Vantor's flawless timeline.",
+        "Plant C010: Sol mentions that the fast-track procurement approval was handled 'above her pay grade' before the collapse timeline was formalized.",
+        "Iris Kane receives the Dov Marek certification file—a perfect record that immediately strikes her as improbable."
+      ],
+      "must_not": [
+        "The tunnel site is not visited.",
+        "No direct evidence of Marek's fraud is examined yet; the chapter focuses on impressions and paperwork."
+      ],
+      "opens_with": "Theo Vance met her in the lobby of the St. Katherine Building. 'Commissioner Renn is ready for you. He likes to meet the experts before the first session.'",
+      "cliffhanger": "In the quiet of her temporary office, Iris Kane opened the Marek file. Twenty-seven clean certifications. Four years. No failed load tests. 'Perfect records are a lie disguised as discipline,' she murmured.",
+      "signature_detail_hint": "The corporate binder Adrienne Sol presented was pristine, but the fast-track approval letter inside was stapled through a typo in the header, as if the first page had been hastily replaced.",
+      "emotional_beat": "Cautious cordiality. Iris Kane feels handled and observed; her analytical distance hardens into suspicion.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Introduce the core cast—Renn, Vance, Sol—and the political landscape of the inquiry. Plant C010 through Sol's dialogue. Build the tension between the official story and the truth Iris Kane is beginning to suspect. No romance.",
+      "carries_to_next": "Iris Kane is now oriented inside the inquiry structure and has identified Marek's uniform certification record as a target for physical inspection."
+    },
+    {
+      "chapter": 3,
+      "title": "The First Examination",
+      "slug": "03-the-first-examination",
+      "one_line_summary": "Iris Kane's first physical inspection of the Kessler Line tunnel reveals a forged certification stamp and a direct contradiction to the official cause of collapse.",
+      "beat_summary": "Iris Kane visits the Kessler Line tunnel for the first time, accompanied by Theo Vance. She works her way to the segment Dov Marek certified and immediately spots an anomaly: the certification stamp is too fresh, the load rating code does not match adjacent segments, and the date falls on a weekend. Theo Vance offhandedly mentions he knew Marek professionally—a 'company man' who never made waves. Iris Kane marks the segment for a core sample, noting that the concrete shows no seismic shear whatsoever, directly contradicting the inquiry's stated cause.",
+      "must_happen": [
+        "Iris Kane conducts her first physical inspection of the Kessler Line tunnel with Theo Vance.",
+        "Iris Kane identifies the forged certification on Marek's liner segment: fresh paint, mismatched load rating, weekend date stamp (C001).",
+        "Theo Vance reveals he knew Dov Marek, describing him as a company loyalist who avoided conflict.",
+        "Iris Kane detects no seismic fracture pattern in the segment, contradicting the official collapse theory.",
+        "Iris Kane orders a core sample from the segment for laboratory analysis."
+      ],
+      "must_not": [
+        "Iris Kane does not explicitly accuse Marek of fraud yet—only records the physical anomaly.",
+        "The core sample is not extracted or analyzed within this chapter; it is only ordered."
+      ],
+      "opens_with": "The tunnel smelled of damp concrete. Iris Kane started at the mouth, counting liner segments. Theo Vance followed three paces behind.",
+      "cliffhanger": "Iris Kane knelt and touched the liner certification. The paint came off on her glove. 'That stamp is less than a year old,' she said. 'Marek was dead before it was dry.' Theo Vance said nothing. His phone buzzed. He didn't answer it.",
+      "signature_detail_hint": "The concrete dust around the certification stamp was a slightly different shade of grey from the rest of the liner—ground recently, as if the stamp had been applied after the segment was installed.",
+      "emotional_beat": "Pure forensic focus sharpened by the discovery of the physical inconsistency, shading into a quiet distrust of Theo Vance's smooth silence.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. First physical setting in the tunnel. Plant C001 through the anomaly in the certification. Advance the Theo Vance dynamic through his knowledge of Marek and his evasive silence. End on the clear hook that Marek's involvement is a deliberate fabrication. No romance.",
+      "carries_to_next": "Iris Kane has physical evidence that the certification was forged after Marek's death. The core sample will confirm the structural truth. Theo Vance's connection to Marek is now a thread she will pull."
+    }
+  ]
+}

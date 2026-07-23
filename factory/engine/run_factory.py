@@ -574,7 +574,7 @@ def _draft_chapter_prose(
     system_message = load_role("writer", direction=direction, cfg=cfg)
     source_versions = writer_source_versions(ws, book)
     max_tokens = int(cfg.get("writer_max_tokens", 16384))
-    short_retries = int(cfg.get("writer_short_retries", 2))
+    short_retries = int(cfg.get("writer_short_retries", 5))
     # Full rewrites when expand patches still leave chapter under min (default 3).
     length_max = int(cfg.get("writer_length_max_retries", 3))
     if length_max < 1:
@@ -617,7 +617,7 @@ def _draft_chapter_prose(
         + short_retries
         + length_max
         + truncate_max
-        + llm_qc_max * (1 + short_retries)
+        + llm_qc_max * (1 + short_retries + length_max)
         + 4
     )
 
@@ -822,9 +822,9 @@ def _draft_chapter_prose(
                 continue
             if length_rewrites < length_max:
                 length_rewrites += 1
-                print(
+                safe_print(
                     f"  ch_{ch:03d} SHORT ({wc} words) — FULL REWRITE "
-                    f"{length_rewrites}/{length_max} (expand chưa đủ)"
+                    f"{length_rewrites}/{length_max} (expand not enough)"
                 )
                 expand_suffix = ""
                 content_suffix = _length_full_rewrite_patch(cfg, wc, length_rewrites - 1)
@@ -960,17 +960,32 @@ def _draft_chapter_prose(
         m_issues = _run_machine_qc(chapter)
         cls = m_issues["classification"]
 
-        # Length expands only — do not burn content retries inside LLM QC loop
-        while not machine_pass(m_issues) and cls.get("has_length") and short_used < short_retries:
+        # Hard floor remains machine_qc min_word_count — expand then full length rewrite.
+        # Do not burn content retries inside LLM QC loop; never waive short.
+        length_after_qc = 0
+        while not machine_pass(m_issues) and cls.get("has_length"):
             wc = int(m_issues.get("word_count") or word_count_vi(chapter))
-            short_used += 1
-            print(
-                f"  ch_{ch:03d} SHORT after LLM_QC rewrite ({wc} words) — expand "
-                f"{short_used}/{short_retries}"
-            )
-            expand_suffix = _expand_short_patch(cfg, wc, short_used)
+            if short_used < short_retries:
+                short_used += 1
+                safe_print(
+                    f"  ch_{ch:03d} SHORT after LLM_QC rewrite ({wc} words) — expand "
+                    f"{short_used}/{short_retries}"
+                )
+                expand_suffix = _expand_short_patch(cfg, wc, short_used)
+                length_patch = ""
+            elif length_after_qc < length_max:
+                length_after_qc += 1
+                length_rewrites += 1
+                safe_print(
+                    f"  ch_{ch:03d} SHORT after LLM_QC rewrite ({wc} words) — FULL REWRITE "
+                    f"{length_after_qc}/{length_max} (expand not enough; min floor hard)"
+                )
+                expand_suffix = ""
+                length_patch = _length_full_rewrite_patch(cfg, wc, length_after_qc - 1)
+            else:
+                break
             chapter, call_meta = _write_attempt(
-                retry_suffix=llm_qc_suffix + expand_suffix,
+                retry_suffix=llm_qc_suffix + expand_suffix + length_patch,
                 retry_reason_source="llm_qc",
             )
             fr = extract_finish_reason(call_meta)
@@ -984,6 +999,7 @@ def _draft_chapter_prose(
 
         if not machine_pass(m_issues):
             # Machine broke after QC rewrite — stop LLM loop; caller buckets by machine
+            # (short < min_word_count never promoted as ready)
             safe_print(
                 f"  ch_{ch:03d} LLM_QC rewrite lost machine_pass — "
                 f"{', '.join(format_machine_reasons(m_issues)[:3]) or list(cls.keys())}"
@@ -1102,20 +1118,24 @@ def write_one_chapter(
         except Exception as exc:
             safe_print(f"  ch_{ch:03d} WARN state update failed: {exc}")
     else:
-        print(
-            f"  ch_{ch:03d} READY (state deferred — chưa đủ chuỗi ready 1..{ch - 1}; sửa gap rồi reconcile)"
+        safe_print(
+            f"  ch_{ch:03d} READY (state deferred — chua du chuoi ready 1..{ch - 1}; sua gap roi reconcile)"
         )
     promote_out, promote_reasons = promote_chapter(workspace_id, book, ch, auto=True)
     if promote_out is None and promote_reasons:
         safe_print(
-            f"  ch_{ch:03d} READY nhưng promote bị chặn — "
+            f"  ch_{ch:03d} READY nhung promote bi chan — "
             + "; ".join(promote_reasons[:3])
         )
-        print(f"  ch_{ch:03d} READY (chưa catalog — bấm Duyệt sau khi sửa) (~{word_count_vi(chapter)} words)")
+        safe_print(
+            f"  ch_{ch:03d} READY (chua catalog — bam Duyet sau khi sua) (~{word_count_vi(chapter)} words)"
+        )
     elif promote_out is None:
-        print(f"  ch_{ch:03d} READY (catalog đã có hoặc thiếu ready file) (~{word_count_vi(chapter)} words)")
+        safe_print(
+            f"  ch_{ch:03d} READY (catalog da co hoac thieu ready file) (~{word_count_vi(chapter)} words)"
+        )
     else:
-        print(f"  ch_{ch:03d} READY + auto-promoted (~{word_count_vi(chapter)} words)")
+        safe_print(f"  ch_{ch:03d} READY + auto-promoted (~{word_count_vi(chapter)} words)")
     return ch, "ready"
 
 
@@ -1605,7 +1625,7 @@ def main() -> None:
         "--pass",
         dest="pass_name",
         default="all",
-        choices=["all", "kernel", "book_arc", "threads", "mystery_ledger", "knowledge_matrix"],
+        choices=["all", "kernel", "book_arc", "threads", "mystery_ledger", "knowledge_matrix", "conspiracy"],
         help="pass đơn hoặc all",
     )
 

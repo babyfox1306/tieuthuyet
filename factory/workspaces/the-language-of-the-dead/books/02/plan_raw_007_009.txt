@@ -1,0 +1,84 @@
+{
+  "act": [7, 9],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "Ancestral Record",
+      "slug": "ancestral-record",
+      "one_line_summary": "Elias van Doren uncovers the maternity record linking Sofia Bellini to Nadia Petrescu, raising dangerous suspicions just as the tribunal’s focus intensifies.",
+      "beat_summary": "Elias van Doren, driven by mounting dread, pores through archival files and discovers a maternity record connecting Sofia Bellini to Nadia Petrescu. Sofia Bellini, outwardly calm, becomes increasingly vigilant as she senses Elias’s suspicions and moves to protect her narrative. The tribunal debates whether the system's training data is flawed, but clings to the theory of technical error. Pierre Leclerc confides his anxieties to Elias van Doren, but cannot see the full pattern. As Sofia Bellini plants a cryptic clue (C005) to redirect attention, she braces for exposure. The chapter closes with Elias van Doren staring at Sofia Bellini, silent accusation in his eyes.",
+      "must_happen": [
+        "Elias van Doren finds a maternity record that proves Sofia Bellini is related to Nadia Petrescu.",
+        "Sofia Bellini senses Elias van Doren’s investigation and becomes intensely vigilant, masking her anxiety with supportive words.",
+        "Pierre Leclerc approaches Elias van Doren and shares his suspicions about the deaths, but does not uncover Sofia Bellini’s identity.",
+        "The tribunal discusses the possibility of flawed training data but still believes the system’s errors are not intentional.",
+        "Sofia Bellini discreetly plants a misleading clue (C005) to direct suspicion away from herself.",
+        "[ROMANCE] In a moment of private tension, Sofia Bellini’s hand lingers a second too long as she passes Elias van Doren a file, her touch both warning and comfort."
+      ],
+      "must_not": [
+        "Have Sofia Bellini admit or reveal to anyone that she is Nadia Petrescu’s daughter or the architect of the system.",
+        "Allow the tribunal or Pierre Leclerc to realize the full connection between Sofia Bellini and Nadia Petrescu."
+      ],
+      "opens_with": "\"You’re not supposed to have this,\" Elias van Doren mutters, clutching the maternity record with trembling hands.",
+      "cliffhanger": "Sofia Bellini catches Elias van Doren watching her, the maternity record visible in his grip—if she cannot redirect suspicion, everything will unravel.",
+      "signature_detail_hint": "The hospital file's paper edges are uneven, as if it was hastily torn from another document.",
+      "emotional_beat": "Tension and surveillance—Sofia Bellini and Elias van Doren circle each other with suspicion and a flicker of old trust.",
+      "spice": 1,
+      "spice_note": "Micro-beat of tactile contact and psychological tension; no explicit content.",
+      "chapter_task": "Reveal the maternity record linking Sofia Bellini and Nadia Petrescu; escalate suspicion between Sofia Bellini and Elias van Doren; plant clue C005; sustain tribunal’s denial. Target length: 1600-1900 words.",
+      "carries_to_next": "The tribunal’s focus shifts as Elias van Doren prepares to confront Sofia Bellini with his discovery."
+    },
+    {
+      "chapter": 8,
+      "title": "The Architect Unmasked",
+      "slug": "the-architect-unmasked",
+      "one_line_summary": "Sofia Bellini’s true identity and role are exposed: she is Nadia Petrescu’s daughter and the architect of the system, but only Elias van Doren grasps the horror.",
+      "beat_summary": "Elias van Doren, realizing the full truth from the accumulated clues, publicly accuses Sofia Bellini of being Nadia Petrescu’s daughter and the architect of the system. Sofia Bellini, with calm composure, confesses to her lineage and her creation of the tribunal’s deadly system, reframing her actions as acts of mercy and control. The tribunal, rattled by Elias van Doren’s outburst, dismisses him as unstable and sides with Sofia Bellini, whose gentle words recast her motives as benevolent. Pierre Leclerc is shocked by the confrontation but, like the tribunal, cannot see past Sofia Bellini’s narrative. The true horror is exposed for the reader, even as the tribunal itself remains blind.",
+      "must_happen": [
+        "Elias van Doren pieces together all clues and confronts Sofia Bellini before the tribunal, stating she is Nadia Petrescu’s daughter and the architect of the system.",
+        "Sofia Bellini calmly confesses, expressing that every kindness has been control and her actions were merciful by her logic.",
+        "The tribunal interprets Elias van Doren’s accusation as instability and dismisses his claims, reassured by Sofia Bellini’s composure.",
+        "Pierre Leclerc is stunned by the accusation but ultimately doubts Elias van Doren, swayed by Sofia Bellini’s framing.",
+        "The meaning of clues C001–C005 is revealed, tying them to Sofia Bellini’s lineage and system authorship."
+      ],
+      "must_not": [
+        "Allow the tribunal or Pierre Leclerc to truly comprehend the full rule or horror behind the system.",
+        "Depict Sofia Bellini facing any legal penalty or losing her composure."
+      ],
+      "opens_with": "\"You’re not a victim. You built this,\" Elias van Doren says, his voice raw in the silent chamber.",
+      "cliffhanger": "The tribunal votes to clear Sofia Bellini, while Elias van Doren is forcibly removed for ‘instability’—and Sofia Bellini’s gentle smile is the last thing he sees.",
+      "signature_detail_hint": "The tribunal’s record logs a line no one remembers speaking: ‘Mercy is the severest form of judgment.’",
+      "emotional_beat": "Cold revelation and heartbreak—Elias van Doren’s horror meets Sofia Bellini’s unwavering self-righteousness.",
+      "spice": 1,
+      "spice_note": "A single moment of devastating emotional exposure—Elias van Doren’s heartbreak, Sofia Bellini’s serene detachment.",
+      "chapter_task": "Deliver the major reveal: Sofia Bellini is Nadia Petrescu’s daughter and the system’s architect; let Elias van Doren expose the truth to deaf ears; payoff clues C001–C005. Target length: 1600-1900 words.",
+      "carries_to_next": "Sofia Bellini stands vindicated as the tribunal closes ranks around her; Elias van Doren’s fate is left in shadow, and the reader alone sees the monstrous truth."
+    },
+    {
+      "chapter": 9,
+      "title": "Mercy’s Closing Statement",
+      "slug": "mercys-closing-statement",
+      "one_line_summary": "Sofia Bellini stands vindicated before the tribunal, her control complete as the system’s horror is sealed and a new clue is quietly planted.",
+      "beat_summary": "With Elias van Doren removed and the tribunal’s official record secured, Sofia Bellini delivers her final testimony. She reframes her actions as necessary mercy, her words soothing the tribunal and erasing the last traces of doubt. Pierre Leclerc, shaken by the previous confrontation, watches as the hearing ends and Sofia Bellini gently plants a new clue (C006) in the system, setting the stage for future consequences. The tribunal, convinced of Sofia Bellini’s innocence, closes the summit case. Only the reader and Sofia Bellini know the true extent of her control and the system’s ongoing threat.",
+      "must_happen": [
+        "Sofia Bellini delivers a closing statement to the tribunal, recasting her actions as acts of mercy and control.",
+        "The tribunal votes to clear Sofia Bellini of all suspicion, sealing the official record.",
+        "Pierre Leclerc, disturbed, tries to raise concerns but cannot articulate the horror he senses.",
+        "Sofia Bellini plants clue C006 in the system, unseen by others, foreshadowing the next threat.",
+        "[ROMANCE] In a final, silent exchange, Sofia Bellini’s eyes linger on the absent seat of Elias van Doren—a moment of cold triumph and farewell."
+      ],
+      "must_not": [
+        "Let the tribunal or Pierre Leclerc uncover Sofia Bellini’s ongoing manipulation or the true rule behind the system.",
+        "Allow Sofia Bellini to express remorse or vulnerability."
+      ],
+      "opens_with": "\"For every life preserved, there is a kindness that costs everything,\" Sofia Bellini intones, voice steady as the tribunal records its verdict.",
+      "cliffhanger": "As the tribunal chamber empties, Sofia Bellini pauses by the sealed record—her reflection in the glass is the only witness to the truth.",
+      "signature_detail_hint": "A silent clock in the chamber stops ticking as the final verdict is read.",
+      "emotional_beat": "Icy closure and loneliness—Sofia Bellini’s ultimate victory is shadowed by the absence of Elias van Doren.",
+      "spice": 1,
+      "spice_note": "A single look loaded with finality—Sofia Bellini’s cold dominance, Elias van Doren’s absence.",
+      "chapter_task": "Conclude the tribunal’s case, ensuring Sofia Bellini’s victory and the system’s legacy; plant clue C006 for the next arc; highlight the emotional cost of triumph. Target length: 1600-1900 words.",
+      "carries_to_next": "The system remains in operation; Sofia Bellini’s power is unchallenged, and the consequences of her actions are left to unfold."
+    }
+  ]
+}

@@ -105,6 +105,10 @@ def get_canonical_total_chapters(workspace_id: str, book: int) -> int:
 def _arc_max_chapter(arc: dict) -> int:
     max_ch = 0
     for act in arc.get("act_structure") or []:
+        # Some books use string phase labels (\"act1_setup\"); others use
+        # {\"act\": ..., \"chapters\": [1,2,...]} — only the latter has .get.
+        if not isinstance(act, dict):
+            continue
         chapters = act.get("chapters") or []
         if chapters:
             max_ch = max(max_ch, max(int(c) for c in chapters))
@@ -170,12 +174,14 @@ def write_chapter_count_everywhere(
 
     needs_develop = _narrative_needs_develop(ws, total, prior_arc_total)
 
-    # concept.yaml
-    concept_path = ws / "concept.yaml"
-    if concept_path.exists():
-        patched = patch_concept_chapter_count(concept, total)
-        _save_yaml(concept_path, patched)
-        updated.append("concept.yaml")
+    # concept.yaml (book-scoped when books/NN/concept.yaml exists)
+    from factory.engine.lib.narrative_schema import save_concept_yaml
+
+    existing_concept = load_concept(ws, book) or concept
+    if existing_concept or book > 1:
+        patched = patch_concept_chapter_count(existing_concept or {}, total)
+        saved = save_concept_yaml(ws, patched, book)
+        updated.append(str(saved.relative_to(ws)).replace("\\", "/"))
 
     # master_plan.json
     plan = load_master_plan(ws, book)
@@ -273,13 +279,14 @@ def write_language_everywhere(ws: Path, lang: str) -> list[str]:
         lang = "en"
     updated: list[str] = []
 
-    concept_path = ws / "concept.yaml"
-    if concept_path.exists():
-        concept = yaml.safe_load(concept_path.read_text(encoding="utf-8")) or {}
-        if concept.get("target_language") != lang:
-            concept["target_language"] = lang
-            _save_yaml(concept_path, concept)
-            updated.append("concept.yaml")
+    from factory.engine.lib.narrative_schema import save_concept_yaml
+
+    existing = load_concept(ws)  # active book from direction
+    if existing:
+        if existing.get("target_language") != lang:
+            existing["target_language"] = lang
+            saved = save_concept_yaml(ws, existing)
+            updated.append(str(saved.relative_to(ws)).replace("\\", "/"))
 
     direction = load_direction(ws)
     if direction:

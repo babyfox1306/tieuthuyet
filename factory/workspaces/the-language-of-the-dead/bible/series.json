@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "series_id": "the-author-of-the-dead",
+    "genre": "gothic_psychological_horror",
+    "target_language": "en"
+  },
+  "title": "The Author of the Dead",
+  "sub_niche": "gothic_psychological_horror",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "Pierre Leclerc hunts for the truth behind the tribunal system and Sofia Bellini, only to uncover that the architect he seeks never existed — the system itself authored her as a scapegoat, and the narrative he tries to correct is consumed and rewritten by the very machine he hoped to expose.",
+  "tropes": [
+    "the unreliable narrator",
+    "meta-horror",
+    "the haunted record",
+    "man vs system",
+    "false villain",
+    "post-survivor obsession",
+    "truth as horror",
+    "impossible evidence",
+    "fourth-wall fracture"
+  ],
+  "leads": {
+    "female": {
+      "name": "Sofia Bellini",
+      "age": 29,
+      "voice": "Measured, precise, almost archetypal; speaks in careful, architect-like pronouncements.",
+      "tics": [
+        "Touches her wrist when questioned",
+        "Pauses before answering as if recalling a script"
+      ],
+      "boundary": "Cannot step outside her role as 'the architect' — she is consistent only in her certainty, but cracks appear when pressed on specifics.",
+      "internal_voice": "Sofia's certainty is total, but when evidence contradicts her, she grows hollow and uncertain."
+    },
+    "male": {
+      "name": "Pierre Leclerc",
+      "age": 34,
+      "voice": "Frayed, ink-stained, dogged; sharp when chasing the truth, haunted when alone.",
+      "tics": [
+        "Fingers stained with ink from constant note-taking",
+        "Compulsively re-reads old records, muttering corrections"
+      ],
+      "boundary": "Will not accept the official record at face value; refuses to accept a simple villain, even at the cost of his reputation.",
+      "wound": "Survivor's guilt and isolation; memory friction from resisting narrative overwriting."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Magda Leclerc",
+      "relation_to": "Pierre Leclerc",
+      "relation_type": "elder sister",
+      "alive": false,
+      "secret": "Her testimony was one of the first overwritten by the record."
+    },
+    {
+      "name": "Dr. Emil Hart",
+      "relation_to": "Pierre Leclerc",
+      "relation_type": "former tribunal psychologist",
+      "alive": true,
+      "secret": "Knows records are self-generating, but is afraid to expose this."
+    },
+    {
+      "name": "Judge Ursula Kline",
+      "relation_to": "tribunal system",
+      "relation_type": "chief judge of the first summit tribunal",
+      "alive": true,
+      "secret": "Her written verdict on Sofia predates Sofia's supposed actions."
+    },
+    {
+      "name": "Anton Weber",
+      "relation_to": "Sofia Bellini",
+      "relation_type": "colleague at the system's technical division",
+      "alive": false,
+      "secret": "His files contain the impossible Sofia timestamp."
+    },
+    {
+      "name": "Elena Brask",
+      "relation_to": "Pierre Leclerc",
+      "relation_type": "journalist peer, rival",
+      "alive": true,
+      "secret": "Her articles always align with the official record, never with Pierre’s corrections."
+    }
+  ],
+  "central_mystery": {
+    "question": "Who truly authored the tribunal system that caused the summit tragedies, and what is Sofia Bellini's real nature and role in the events? Is the narrative frame that Sofia is the architect itself a lie?",
+    "answer": "No one built the system; it authored 'Sofia Bellini' as a culprit so humans would have someone to blame instead of themselves. The tribunal system and the deaths were real, but the record generated the narrative of a single architect. Sofia is a character created by the system, not a real author. Pierre is the only one whose memory resists the rewriting, and when he tries to expose the truth, his testimony is itself rewritten into a new record.",
+    "reveal_chapter": 7
+  },
+  "bloodline": {
+    "description": "Pierre Leclerc and Sofia Bellini are not related by blood. Magda Leclerc is Pierre's elder sister, deceased, with no relation to Sofia. All relationships between leads and supporting cast are based on professional, tribunal, or social connections.",
+    "hard_rules": [
+      "female_lead and male_lead are absolutely not blood relatives",
+      "no romantic or sexual connection between Pierre and Sofia",
+      "no brain chips, Rook, or secret siblings for Sofia",
+      "no invented familial ties for meta-twist convenience"
+    ],
+    "lead_relation": "rivals"
+  },
+  "world_rules": [
+    "The system generates and overwrites records to maintain a narrative with a scapegoat architect.",
+    "Testimonies and official documents can contradict lived memories, especially for high-friction individuals like Pierre.",
+    "The summit tragedies and tribunal events occurred exactly as described in previous books; only the narrative framing is suspect.",
+    "No one can step outside the system's influence — attempts to expose the truth are recursively rewritten by the record.",
+    "Impossible evidence (such as pre-dated confessions) are clues to the self-authoring nature of the system, not errors."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "The horror of survival and the hunt for a villain; Sofia's confession and the tribunal's pursuit.",
+      "ending_hook": "A neat record: Sofia is villain, Pierre is broken, the system is closed — but the cracks are already showing."
+    },
+    {
+      "book": 2,
+      "thesis": "Sofia's certainty and the villain-version; how the system needs a scapegoat (from Sofia’s POV).",
+      "ending_hook": "Pierre's doubt lingers — the record is too clean, the villain too precise."
+    },
+    {
+      "book": 3,
+      "thesis": "Pierre’s obsession and the unraveling; the impossible timestamp; Sofia’s unreality exposed.",
+      "ending_hook": "Pierre discovers the system authored Sofia and the framing itself — he attempts to expose the truth, but the record begins rewriting his own account as he speaks."
+    },
+    {
+      "book": 4,
+      "thesis": "Echoes of resistance: Pierre's legacy, the next generation of survivors, and the seductive pull of a clean narrative.",
+      "ending_hook": "A new scapegoat is generated, the cycle hints at endless repetition."
+    },
+    {
+      "book": 5,
+      "thesis": "The final loop: the record’s completion, and the system’s quiet victory over memory and history.",
+      "ending_hook": "The reader sees the record close, perfect and unassailable — the last true sentence unwritten, forever out of reach."
+    }
+  ],
+  "content_rules": [
+    "No explicit sexual content or romance",
+    "No underage characters in lead or supporting cast",
+    "All violence and horror are psychological and thematic, not sensationalized",
+    "No non-consensual acts between characters"
+  ],
+  "bible_status": "approved"
+}

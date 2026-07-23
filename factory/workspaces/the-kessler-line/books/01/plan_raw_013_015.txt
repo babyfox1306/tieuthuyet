@@ -1,0 +1,215 @@
+```json
+{
+  "act": [
+    13,
+    15
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 13,
+      "title": "The Core Truth",
+      "slug": "13-the-core-truth",
+      "one_line_summary": "Iris Kane retrieves the core sample analysis, which definitively disproves the official cause of collapse and reveals the true, catastrophic material failure, but she faces immediate and aggressive obstruction.",
+      "beat_summary": "Iris Kane arrives at the private laboratory, where the technician, visibly nervous, explains that 'commission representatives' attempted to seize the core sample results. Iris Kane secures the analysis report, which confirms a severe, inherent material flaw in the liner concrete, utterly disproving the seismic microfracture theory. The report also indicates the original load test data must have shown this flaw, meaning it was deliberately buried. As Iris Kane leaves the lab, she is accosted by two unknown men who attempt to snatch her briefcase; she manages to escape, realizing the inquiry's cover-up is now actively physical.",
+      "must_happen": [
+        "Iris Kane goes to the private lab to retrieve the core sample analysis.",
+        "The lab technician confirms that 'commission representatives' attempted to seize the results earlier.",
+        "Iris Kane obtains the core sample report, which reveals a catastrophic material flaw in the liner and no evidence of seismic damage.",
+        "Iris Kane realizes the original load test data must have been suppressed, indicating a deliberate burial of the truth.",
+        "Iris Kane is physically accosted by two unknown men attempting to steal her briefcase, confirming direct, aggressive obstruction."
+      ],
+      "must_not": [
+        "Iris Kane does not reveal the core sample results to Theo Vance or anyone from the official inquiry.",
+        "The identity of the men who accosted Iris Kane is not revealed.",
+        "Adrienne Sol or Aldous Renn are not explicitly implicated by name in this chapter."
+      ],
+      "opens_with": "The lock on the lab door was a triple-bolt system. Iris Kane rapped on the reinforced glass, clutching her briefcase. The technician who answered looked like he hadn’t slept.",
+      "cliffhanger": "Iris Kane stumbled, her briefcase still clutched tight. The two men melted back into the shadows as a car sped past. She looked down at her scraped hand, then at the report tucked safely inside. They knew. And they wanted it gone.",
+      "signature_detail_hint": "The lab technician's hands, usually steady and precise, trembled noticeably as he handed Iris Kane the report, a small stain of coffee visible on his white coat near the cuff.",
+      "emotional_beat": "A profound sense of vindication mixed with stark fear and isolation as the physical evidence confirms her suspicions, but also draws her into immediate, personal danger.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Reveal the core sample results, definitively disproving the official cause of collapse and suggesting deliberate suppression. Escalate the threat against Iris Kane to a physical level, emphasizing her isolation. No romance.",
+      "carries_to_next": "Iris Kane has the definitive physical evidence of the structural flaw, but she is now under direct, physical threat. She must find a way to use this evidence to expose Adrienne Sol without being silenced.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "core_sample",
+          "false_answer_2",
+          "inquiry_coverup",
+          "renn_reveal",
+          "sol_investigation"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Kane",
+            "Dov Marek",
+            "Theo Vance",
+            "Adrienne Sol",
+            "Aldous Renn"
+          ],
+          "may_know": [
+            "Iris Kane: Has exposed Theo Vance as the mole (Tier 2).",
+            "Iris Kane: Knows about the override authorization that predates Marek.",
+            "Iris Kane: Has retrieved the core sample analysis, proving material flaw and no seismic damage.",
+            "Iris Kane: Is now under physical surveillance/threat.",
+            "Dov Marek: Deceased (suicide staged ch6).",
+            "Dov Marek: No further knowledge.",
+            "Theo Vance: Exposed as mole (ch10-11), arrested and cooperating.",
+            "Theo Vance: Knows Adrienne Sol and the existence of a higher authority, but may not know Aldous Renn specifically.",
+            "Adrienne Sol: Knows Theo Vance is exposed, begins cleaning paper trail, and initiates physical obstruction against Iris Kane.",
+            "Aldous Renn: Sees Theo Vance exposure on schedule, plan intact, still unaware of the core sample details."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 11
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 14,
+      "title": "The Suppressed Data",
+      "slug": "14-the-suppressed-data",
+      "one_line_summary": "Iris Kane confronts Theo Vance with the core sample results, compelling him to reveal Adrienne Sol's method for suppressing the original load-test data and a crucial, specific clue to her actions.",
+      "beat_summary": "Iris Kane arranges a secure meeting with Theo Vance, now under protective custody. She presents him with the core sample analysis, which unequivocally shows the structural material flaw and the absence of seismic damage. Theo Vance, seeing the irrefutable evidence, confirms that Adrienne Sol orchestrated the suppression of the original load-test data, which would have revealed the material flaw. He describes her method: a specific, coded entry in a proprietary Vantor Group internal ledger, designed to 'reclassify' failed test results as 'pre-production anomalies' (plant C004). Iris Kane realizes this ledger holds the key to linking Adrienne Sol directly to the cover-up. She works with Theo Vance to secure the core sample report and plan how to access the Vantor ledger, knowing the danger is escalating.",
+      "must_happen": [
+        "Iris Kane meets with Theo Vance (under protective custody) and presents the core sample analysis.",
+        "Theo Vance confirms Adrienne Sol orchestrated the suppression of the original load-test data, which would have revealed the material flaw.",
+        "Theo Vance reveals Adrienne Sol's method: a specific, coded entry in a proprietary Vantor Group internal ledger (plant C004).",
+        "Iris Kane realizes the significance of the Vantor ledger as direct evidence against Adrienne Sol.",
+        "Iris Kane and Theo Vance collaborate on a plan to secure the core sample report and consider how to access the Vantor ledger."
+      ],
+      "must_not": [
+        "Iris Kane does not confront Adrienne Sol directly.",
+        "The Vantor Group internal ledger is not accessed or retrieved in this chapter; only its existence and significance are revealed.",
+        "Aldous Renn is not yet implicated by Theo Vance or the evidence."
+      ],
+      "opens_with": "The secure meeting room had a single window, bulletproof glass distorting the city outside. Iris Kane laid the core sample report on the table between them. Theo Vance’s eyes widened.",
+      "cliffhanger": "Theo Vance tapped the report. 'She called them 'pre-production anomalies.' A coded entry in the Vantor ledger. You'll need the right access.' Iris Kane nodded. The ledger was the next step, and she knew it wouldn't be easy.",
+      "signature_detail_hint": "Theo Vance runs his hand through his hair, a nervous tic, but this time his fingers pause, tracing the faint scar on his scalp—a detail Iris Kane had never noticed before, hinting at a past trauma.",
+      "emotional_beat": "A calculated, strategic exchange of information, where Theo Vance's desperation to mitigate his own situation aligns with Iris Kane's need for the truth, creating a tense, vulnerable alliance.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Advance the plot by having Iris Kane use the core sample to extract critical information from Theo Vance, specifically planting C004 (the Vantor internal ledger). Emphasize the strategic importance of this new target. No romance.",
+      "carries_to_next": "Iris Kane now has a specific target—the Vantor Group internal ledger—to directly implicate Adrienne Sol. She will attempt to access this ledger in the next chapter, facing increased risk.",
+      "narrative": {
+        "clues_plant": [
+          "C004"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "core_sample",
+          "false_answer_2",
+          "inquiry_coverup",
+          "renn_reveal",
+          "sol_investigation"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Kane",
+            "Dov Marek",
+            "Theo Vance",
+            "Adrienne Sol",
+            "Aldous Renn"
+          ],
+          "may_know": [
+            "Iris Kane: Has exposed Theo Vance as the mole (Tier 2).",
+            "Iris Kane: Knows about the override authorization that predates Marek.",
+            "Iris Kane: Has retrieved the core sample analysis, proving material flaw and no seismic damage.",
+            "Iris Kane: Is now under physical surveillance/threat.",
+            "Iris Kane: Knows about the Vantor Group internal ledger (C004) from Theo Vance.",
+            "Dov Marek: Deceased (suicide staged ch6).",
+            "Dov Marek: No further knowledge.",
+            "Theo Vance: Exposed as mole (ch10-11), arrested and cooperating.",
+            "Theo Vance: Has revealed Adrienne Sol's method for suppressing load-test data and the Vantor ledger (C004).",
+            "Theo Vance: Knows Adrienne Sol and the existence of a higher authority, but may not know Aldous Renn specifically.",
+            "Adrienne Sol: Knows Theo Vance is exposed, begins cleaning paper trail, and initiates physical obstruction against Iris Kane.",
+            "Aldous Renn: Sees Theo Vance exposure on schedule, plan intact, still unaware of the core sample details."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 11
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 15,
+      "title": "The Vantor Ledger",
+      "slug": "15-the-vantor-ledger",
+      "one_line_summary": "Iris Kane infiltrates the Vantor Group offices to access the internal ledger Theo Vance described, but Adrienne Sol's tightened security leads to a near-capture and a new clue about Sol's deeper connections.",
+      "beat_summary": "Using Theo Vance’s intel, Iris Kane plans a covert operation to access the Vantor Group offices after hours, targeting the finance department where the internal ledger is kept. She bypasses standard security, but finds the area heavily fortified with new, unlisted biometric scanners. She observes Adrienne Sol's personal security detail making rounds, indicating heightened awareness. While attempting to access a terminal, Iris Kane discovers a hidden, encrypted communication channel on Sol's system, marked with a symbol she doesn't recognize (plant C005). She manages to download a partial log of the ledger entries, including the 'pre-production anomaly' codes, before a security alarm is triggered. Iris Kane narrowly escapes Vantor, realizing Adrienne Sol anticipated her move and is now directly aware of her pursuit.",
+      "must_happen": [
+        "Iris Kane infiltrates the Vantor Group offices after hours to access the internal ledger (C004).",
+        "Iris Kane encounters significantly increased security measures, including unlisted biometric scanners and Adrienne Sol’s personal security detail.",
+        "Iris Kane discovers a hidden, encrypted communication channel on Sol's system, marked with an unfamiliar symbol (plant C005).",
+        "Iris Kane manages to download a partial log of the ledger entries, including the 'pre-production anomaly' codes, before a security alarm sounds.",
+        "Iris Kane narrowly escapes Vantor Group offices, realizing Adrienne Sol is actively anticipating and countering her moves."
+      ],
+      "must_not": [
+        "Iris Kane does not fully access or download the entire Vantor Group internal ledger (C004 is planted, payoff is in Ch16).",
+        "Adrienne Sol is not present or directly confronted by Iris Kane.",
+        "The meaning of the unfamiliar symbol (C005) or the full extent of Sol's deeper connections is not revealed."
+      ],
+      "opens_with": "The Vantor Group tower gleamed in the twilight, a monument to corporate power. Iris Kane studied the blueprints Theo Vance had sketched, then slipped through the service entrance, a ghost in the shadows.",
+      "cliffhanger": "The security alarm blared, a piercing shriek that echoed through the empty corridors. Iris Kane bolted, the partial log of the Vantor ledger clutched in her hand. On a deserted floor, she glanced back. A red light pulsed above a door she hadn't seen before, bearing a symbol she couldn't place. She knew, then, that Adrienne Sol had deeper connections than Theo Vance had realized.",
+      "signature_detail_hint": "The biometric scanner at the finance department door had a faint residue of a particular, expensive hand cream, a scent Iris Kane had noticed on Adrienne Sol during their brief meetings.",
+      "emotional_beat": "Intense stress and a surge of adrenaline as Iris Kane faces direct, physical opposition, combined with the chilling realization that Adrienne Sol is more deeply entrenched and connected than initially thought.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Detail Iris Kane's infiltration of Vantor Group to retrieve C004 (the ledger). Emphasize the heightened security and near-capture. Plant C005 (the unfamiliar symbol/encrypted channel). End on a high-stakes escape and the hint of Adrienne Sol's deeper network. No romance.",
+      "carries_to_next": "Iris Kane has a partial log of the Vantor ledger and a new clue (C005) about Adrienne Sol's deeper connections. She will now analyze these to fully expose Sol and uncover the next tier of the conspiracy.",
+      "narrative": {
+        "clues_plant": [
+          "C005"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "core_sample",
+          "false_answer_2",
+          "inquiry_coverup",
+          "renn_reveal",
+          "sol_investigation"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Kane",
+            "Dov Marek",
+            "Theo Vance",
+            "Adrienne Sol",
+            "Aldous Renn"
+          ],
+          "may_know": [
+            "Iris Kane: Has exposed Theo Vance as the mole (Tier 2).",
+            "Iris Kane: Knows about the override authorization that predates Marek.",
+            "Iris Kane: Has retrieved the core sample analysis, proving material flaw and no seismic damage.",
+            "Iris Kane: Is now under physical surveillance/threat.",
+            "Iris Kane: Has identified the Vantor Group internal ledger (C004) as key evidence.",
+            "Iris Kane: Has obtained a partial log of the ledger entries and discovered a new clue (C005) about Sol's deeper connections.",
+            "Dov Marek: Deceased (suicide staged ch6).",
+            "Dov Marek: No further knowledge.",
+            "Theo Vance: Exposed as mole (ch10-11), arrested and cooperating.",
+            "Theo Vance: Has revealed Adrienne Sol's method for suppressing load-test data and the Vantor ledger (C004).",
+            "Theo Vance: Knows Adrienne Sol and the existence of a higher authority, but may not know Aldous Renn specifically.",
+            "Adrienne Sol: Knows Theo Vance is exposed, begins cleaning paper trail, and initiates physical obstruction against Iris Kane.",
+            "Adrienne Sol: Is now aware Iris Kane is actively targeting her and has increased security/countermeasures.",
+            "Aldous Renn: Sees Theo Vance exposure on schedule, plan intact, still unaware of the core sample details."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 11
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

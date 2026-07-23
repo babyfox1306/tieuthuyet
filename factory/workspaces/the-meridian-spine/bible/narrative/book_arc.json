@@ -1,0 +1,25 @@
+{
+  "book_number": 2,
+  "total_chapters": 22,
+  "target_language": "en",
+  "case_closed": "Stellan Marsh exposed and arrested; the domestic four tiers of the conspiracy are dismantled. The tool-mark proof is irrevocably public.",
+  "case_open": "Iris Kane is recruited as lead forensic authority of the National Integrity Directorate and handed the Meridian Spine flagship, believing the reform is the clean instrument she finally has. She does not yet know the reform is the trap.",
+  "lead_internal_arc": {
+    "iris_kane": {
+      "starting_point": "Reputation as the engineer who brought down Renn. She is now public, trusted, and given real power — but her role as a public figure is also a leash. She is wary but accepts the Directorate position.",
+      "midpoint_crisis": "Her investigative partner Nadia Okafor's betrayal and the realization that the Directorate itself is a capture vehicle. She must choose between institutional loyalty and the truth, knowing that exposing the truth means destroying the reform she was hired to uphold.",
+      "ending_point": "She publishes the tool-mark proof irrevocably, resigns her position, and chooses the record over the office. She does not save the Directorate; she ends it."
+    },
+    "stellan_marsh": {
+      "starting_point": "National figure who created the Directorate; Iris's sponsor. He appears benevolent and committed to reform. In truth, he architected the Directorate as a capture instrument to entrench the same fraud at national scale.",
+      "midpoint_crisis": "Iris begins connecting the physical signature (tool-mark) across projects, threatening to expose that the fraud is systematic. Marsh must guide the investigation away from himself without appearing to interfere, using the controlled burn of Halveston.",
+      "ending_point": "He is forced to state his role on live record during the proof's publication (ch21). He is arrested the same day, caught by the physical evidence he could not control."
+    }
+  },
+  "act_structure": [
+    "act1",
+    "act2",
+    "act3",
+    "act4"
+  ]
+}

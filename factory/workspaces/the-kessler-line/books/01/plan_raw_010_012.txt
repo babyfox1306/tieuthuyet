@@ -1,0 +1,230 @@
+```json
+{
+  "act": [
+    10,
+    12
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Access Log",
+      "slug": "10-the-access-log",
+      "one_line_summary": "Iris Kane covertly obtains the commission's terminal access logs, which confirm Theo Vance's involvement in manipulating the fast-track approval and the forged certification.",
+      "beat_summary": "Iris Kane, distrusting the official channels, uses a discreet contact in IT to access the commission's internal terminal logs. She meticulously cross-references the dates and times from the fast-track document and the forged certification with log entries, discovering that Theo Vance's terminal ID was used to make key \"adjustments\" to both (payoff C003). She finds a record of Theo Vance accessing a secure server containing the original load-test data, but the data itself is now missing (plant C003). She also finds an internal memo from Theo Vance's office authorizing the 'expedited re-certification' of the Kessler liner, predating Dov Marek's death (plant C003a).",
+      "must_happen": [
+        "Iris Kane uses a discreet method (e.g., a sympathetic IT contact, a data request loophole) to access the commission's terminal access logs.",
+        "Iris Kane verifies (payoff C003) that Theo Vance's terminal ID was used to modify the fast-track approval and the forged certification records.",
+        "Iris Kane discovers Theo Vance accessed a secure server for original load-test data, but the relevant files are gone (plant C003).",
+        "Iris Kane finds an internal memo from Theo Vance's office authorizing 'expedited re-certification' for the Kessler liner, predating Dov Marek's death (plant C003a).",
+        "Iris Kane realizes the depth of Theo Vance's direct, active complicity."
+      ],
+      "must_not": [
+        "Iris Kane does not directly confront Theo Vance in this chapter.",
+        "The core sample analysis is not complete or mentioned.",
+        "Adrienne Sol or Aldous Renn are not explicitly implicated beyond Theo Vance's actions."
+      ],
+      "opens_with": "Iris Kane stared at the two documents on her desk: the fast-track approval from Alan Watters, and the lab report detailing Dov Marek's forged certification. Both had Theo Vance's digital fingerprint. She knew what she needed next.",
+      "cliffhanger": "Iris Kane scrolled through the log entry on her screen, a cold certainty settling in her gut. There it was: a specific timestamp, a file path, and Theo Vance's login ID, just hours before the tunnel's original certification was officially overridden. The truth was worse than she imagined.",
+      "signature_detail_hint": "The old IT server room hummed with the dry, metallic smell of aged electronics, a stark contrast to the polished new offices of the inquiry. One of the server racks had a loose panel that vibrated slightly, a discordant note in the controlled environment.",
+      "emotional_beat": "A chilling realization of betrayal, the solid ground beneath her professional trust crumbling as the physical evidence points definitively to Theo Vance.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Establish Iris Kane's independent investigation into Theo Vance's digital footprint. Plant C003 and C003a, and payoff C003 by confirming Theo Vance's terminal access to the manipulated documents. Build tension around his imminent exposure. No romance.",
+      "carries_to_next": "Iris Kane now has undeniable proof of Theo Vance's direct involvement in manipulating key documents, setting up a confrontation.",
+      "narrative": {
+        "clues_plant": [
+          "C003",
+          "C003a"
+        ],
+        "clues_payoff": [
+          "C003"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "core_sample",
+          "inquiry_coverup",
+          "renn_reveal",
+          "sol_investigation",
+          "vance_betrayal"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Kane",
+            "Dov Marek",
+            "Theo Vance",
+            "Adrienne Sol",
+            "Aldous Renn"
+          ],
+          "may_know": [
+            "Iris Kane: Has discovered Marek's signature mismatch (Tier 1)",
+            "Iris Kane: Knows Marek is guilty but senses it is incomplete",
+            "Iris Kane: Has pulled and hidden the core sample (ch2) – significance still unknown.",
+            "Dov Marek: Aware that Iris has discovered his signature forgery",
+            "Dov Marek: Pressure from the network increases.",
+            "Theo Vance: Still active, provides assistance to Iris on Marek investigation while secretly reporting to Sol.",
+            "Adrienne Sol: Monitors Iris's progress on Marek",
+            "Adrienne Sol: coordinates with Vance.",
+            "Aldous Renn: Sees Marek exposure proceeding on schedule",
+            "Aldous Renn: No concern."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 4
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 11,
+      "title": "The Mole's Confession",
+      "slug": "11-the-moles-confession",
+      "one_line_summary": "Confronted with irrefutable evidence, Theo Vance confesses his role as the mole, revealing Adrienne Sol as his handler and the true orchestrator of the second tier of the Kessler Line cover-up.",
+      "beat_summary": "Iris Kane arranges a private meeting with Theo Vance, ostensibly to discuss a procedural matter. She presents him with the fast-track document, the forged certification report, the terminal access logs (C003), and the 'expedited re-certification' memo (payoff C003a). Initially, Theo Vance attempts to deflect, but as Iris Kane lays out the irrefutable physical evidence, his composure cracks. He admits his role as the mole, coerced by a past professional compromise. He reveals that Adrienne Sol has been his handler, directing him to manage the narrative and obstruct Iris Kane's investigation. He confirms that Adrienne Sol orchestrated the override of the original load-test data and the subsequent burial of the failure report (reveal MR003). Theo Vance, seeing no way out, offers to cooperate against Adrienne Sol, hoping for leniency.",
+      "must_happen": [
+        "Iris Kane confronts Theo Vance in a private setting, presenting the cumulative evidence (fast-track document, forged certification, terminal logs (C003), and the re-certification memo (payoff C003a)).",
+        "Theo Vance, after initial denial, breaks and confesses his role as the mole, confirming his direct involvement in manipulating records (reveal MR003).",
+        "Theo Vance names Adrienne Sol as his handler and the orchestrator of the cover-up's second tier.",
+        "Theo Vance reveals that Adrienne Sol directed the override of the original load-test data and the burial of the failure report.",
+        "Theo Vance agrees to cooperate with Iris Kane, offering information on Adrienne Sol."
+      ],
+      "must_not": [
+        "Theo Vance does not reveal Aldous Renn's involvement or the full scope of the conspiracy.",
+        "Iris Kane does not reveal the existence of her hidden core sample to Theo Vance.",
+        "Theo Vance is not killed or allowed to escape."
+      ],
+      "opens_with": "Iris Kane sent the meeting request to Theo Vance's secure email. Subject: 'Urgent: Procedural Discrepancy.' She knew he would come.",
+      "cliffhanger": "Theo Vance slumped in his chair, the carefully constructed facade finally shattering. 'Adrienne Sol,' he whispered, his voice hoarse. 'She gave the orders. The load test... it failed, Iris Kane. She buried it.'",
+      "signature_detail_hint": "Theo Vance repeatedly runs his hand through his hair, a tic Iris Kane has observed before, but this time his fingers tremble, leaving his usually neat hair in disarray.",
+      "emotional_beat": "The sharp pain of betrayal for Iris Kane, mixed with the grim satisfaction of uncovering the truth and the immediate strategic shift required to leverage Theo Vance's cooperation.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. This is the major reveal of Theo Vance as the mole (MR003) and the payoff of C003a. Show the confrontation and Theo Vance's confession, implicating Adrienne Sol. End with his agreement to cooperate and the shift of focus to Sol. No romance.",
+      "carries_to_next": "Theo Vance is exposed and cooperating, providing a direct link to Adrienne Sol as the next tier of the conspiracy. The commission's official narrative is now further undermined, and Adrienne Sol will react.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C003a"
+        ],
+        "reveals": [
+          {
+            "id": "MR003",
+            "reveal": "",
+            "impact": "",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C003",
+              "C003a"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "core_sample",
+          "inquiry_coverup",
+          "renn_reveal",
+          "sol_investigation",
+          "vance_betrayal"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Kane",
+            "Dov Marek",
+            "Theo Vance",
+            "Adrienne Sol",
+            "Aldous Renn"
+          ],
+          "may_know": [
+            "Iris Kane: Has exposed Vance as the mole (Tier 2)",
+            "Iris Kane: Knows about the override authorization that predates Marek",
+            "Iris Kane: Core sample still private, not yet analyzed.",
+            "Dov Marek: Deceased (suicide staged ch6)",
+            "Dov Marek: No further knowledge.",
+            "Theo Vance: Exposed as mole (ch10-11)",
+            "Theo Vance: After exposure, arrested and begins cooperating",
+            "Theo Vance: Knows Sol and the existence of a higher authority, but may not know Renn specifically.",
+            "Adrienne Sol: Knows Vance is exposed",
+            "Adrienne Sol: begins cleaning paper trail.",
+            "Aldous Renn: Sees Vance exposure on schedule",
+            "Aldous Renn: Plan intact",
+            "Aldous Renn: Still unaware of core sample."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 11
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 12,
+      "title": "The Tightening Net",
+      "slug": "12-the-tightening-net",
+      "one_line_summary": "As news of Theo Vance's arrest spreads, Adrienne Sol initiates a cover-up, destroying documents and further isolating Iris Kane, who realizes the pressure is intensifying from the next tier.",
+      "beat_summary": "News of Theo Vance's arrest, initially framed as a \"rogue employee\" by Commissioner Aldous Renn, quickly spreads through the commission. Iris Kane observes Adrienne Sol in a flurry of activity, shredding documents and making urgent phone calls. Theo Vance, under custodial interrogation, provides Iris Kane with controlled, verifiable details about Adrienne Sol's methods of operational cover-up, including specific files and locations (but nothing about Aldous Renn yet). Iris Kane realizes Adrienne Sol is actively destroying evidence and tightening her defenses. The black sedan is gone, replaced by new, more aggressive surveillance. Iris Kane receives a call from the private lab: her core sample analysis is complete, but the technician's voice is strained, suggesting trouble.",
+      "must_happen": [
+        "News of Theo Vance's arrest breaks, framed by Commissioner Aldous Renn as an isolated incident.",
+        "Iris Kane observes Adrienne Sol actively destroying documents and taking countermeasures to protect herself.",
+        "Theo Vance, now cooperating, provides Iris Kane with specific, verifiable (but limited) information about Adrienne Sol's operational cover-up.",
+        "Iris Kane realizes Adrienne Sol is aware of Theo Vance's exposure and is taking action to secure her own position.",
+        "Iris Kane receives a call from the private lab, indicating the core sample analysis is complete but hinting at complications."
+      ],
+      "must_not": [
+        "Adrienne Sol is not directly confronted or arrested in this chapter.",
+        "The core sample analysis results are not revealed to Iris Kane or the reader.",
+        "Aldous Renn is not directly implicated in Adrienne Sol's actions."
+      ],
+      "opens_with": "The news ticker on the lobby screen flashed: 'Inquiry Member Arrested: Disgraced Engineer Linked to Kessler Line Fraud.' Iris Kane watched Adrienne Sol's office door swing shut.",
+      "cliffhanger": "Iris Kane's phone rang. It was the private lab. 'Ms. Kane,' the technician said, his voice tight. 'The results are in. And... you need to come in person. We've had some strange visitors.'",
+      "signature_detail_hint": "A new security guard, noticeably taller and broader than the usual daytime staff, now stands by the commission's entrance, his eyes sweeping the lobby with an unsettling intensity.",
+      "emotional_beat": "A sense of heightened danger and urgency as the net tightens around Iris Kane, coupled with the anticipation of the core sample results, her last independent piece of evidence.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "1600-1900 words. Show the immediate fallout from Theo Vance's exposure, Adrienne Sol's reactive cover-up, and Theo Vance's initial cooperation. Raise the stakes for Iris Kane. End with the cliffhanger of the core sample results being ready, but with a hint of new danger. No romance.",
+      "carries_to_next": "Iris Kane must now go to the private lab to retrieve the core sample analysis, which will provide critical physical evidence against the next tier of the conspiracy (Adrienne Sol) or even higher.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "core_sample",
+          "false_answer_2",
+          "inquiry_coverup",
+          "renn_reveal",
+          "sol_investigation"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Iris Kane",
+            "Dov Marek",
+            "Theo Vance",
+            "Adrienne Sol",
+            "Aldous Renn"
+          ],
+          "may_know": [
+            "Iris Kane: Has exposed Vance as the mole (Tier 2)",
+            "Iris Kane: Knows about the override authorization that predates Marek",
+            "Iris Kane: Core sample still private, not yet analyzed.",
+            "Dov Marek: Deceased (suicide staged ch6)",
+            "Dov Marek: No further knowledge.",
+            "Theo Vance: Exposed as mole (ch10-11)",
+            "Theo Vance: After exposure, arrested and begins cooperating",
+            "Theo Vance: Knows Sol and the existence of a higher authority, but may not know Renn specifically.",
+            "Adrienne Sol: Knows Vance is exposed",
+            "Adrienne Sol: begins cleaning paper trail.",
+            "Aldous Renn: Sees Vance exposure on schedule",
+            "Aldous Renn: Plan intact",
+            "Aldous Renn: Still unaware of core sample."
+          ],
+          "must_not_know": [],
+          "effective_milestone": 11
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

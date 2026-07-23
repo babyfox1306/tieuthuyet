@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "series_id": "kill-me-if-i-remember",
+    "genre": "International thriller-romance, dark romance, mystery, suspense, action",
+    "target_language": "en"
+  },
+  "title": "Kill Me If I Remember",
+  "sub_niche": "International thriller-romance with amnesia, contract assassination, and a continuous single-night countdown",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "A firearms investigator wakes on a rooftop beside her sister's body with no memory of the past three months, and the assassin she once loved hands her a contract ordering her own death at sunrise—but the true condition remains buried in her forgotten past.",
+  "tropes": [
+    "Amnesia",
+    "Contract of Death",
+    "Assassin Hero",
+    "Strong Heroine",
+    "One Long Night",
+    "Hidden Identities",
+    "Crime Conspiracy",
+    "Slow Burn",
+    "Forced Proximity",
+    "Betrayal",
+    "Conditional Death Order"
+  ],
+  "leads": {
+    "female": {
+      "name": "Sloane Mercer",
+      "age": 30,
+      "voice": "Relentless factual questions, sharpest when the answers threaten to make her a stranger to herself.",
+      "tics": [
+        "When frightened she traces a small circle against the inside of her left wrist, unaware it is the first motion of a firing sequence."
+      ],
+      "boundary": "She will never knowingly trade another life for her own—yet saving her sister requires reactivating the system that turned deaths into transactions.",
+      "internal_voice": "Sharp and sarcastic. She reads evidence; she does not receive explanations."
+    },
+    "male": {
+      "name": "Lucian Vey",
+      "age": 35,
+      "voice": "Terse, every quiet endearment reveals knowledge of a woman Sloane cannot remember being.",
+      "tics": [
+        "Before obeying an order he hates, he turns the rifle's focus ring exactly one quarter rotation away from clarity."
+      ],
+      "boundary": "He never breaks a contract accepted with full knowledge—yet loving her forces him to choose whether her forgotten command deserves more loyalty than the woman in front of him.",
+      "wound": "He must live with the memory of a relationship Sloane cannot recall, and the fact that he agreed to kill her."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Mara Mercer",
+      "relation_to": "Sloane Mercer",
+      "relation_type": "younger sister",
+      "alive": true,
+      "secret": "Consented to the staged shooting; carries the mirror key hand rhythm; signals through the rifle scope at chapter 11 and carries the true firing sequence at chapter 12; captured at chapter 14; provides the mirror key at chapters 16-17."
+    },
+    {
+      "name": "Cassian Rook",
+      "relation_to": "Sloane Mercer",
+      "relation_type": "former handler",
+      "alive": true,
+      "secret": "Altered seven target files so Lucian unknowingly eliminated witnesses to his private weapons network; built Sloane's conditioning; planned for her rebellion as step seven of his design; dies at the end of book1."
+    }
+  ],
+  "central_mystery": {
+    "question": "Who shot Mara Mercer on the rooftop, and why does the contract in Sloane's own handwriting order her own death at sunrise? What happened during the three months she cannot remember?",
+    "answer": "Her handler spent two years feeding her falsified targets so that her assassin would eliminate seven witnesses to his private weapons network. When she found out, she did not run — she built a trap that required her own destruction. She staged her sister's death as bait, hid the complete transaction ledger inside her own conditioned reflexes, erased her memory so no interrogation could reach it, and ordered her lover to kill her if the handler ever restored the obedient version of her he had trained. But the handler had planned for her discovery too. Her rebellion was a step in his design. What he did not plan for is that she wrote over his ending. The night is not her recovering the truth. It is her executing a plan she can no longer remember making, using a body that remembers everything.",
+    "reveal_chapter": 13
+  },
+  "bloodline": {
+    "description": "Sloane Mercer and Lucian Vey share no blood relation. They were lovers before her memory was erased, but they are not related by blood or marriage. No family connection exists between the leads.",
+    "hard_rules": [
+      "Female lead and male lead are not blood relatives.",
+      "No incest or familial relationship between leads.",
+      "Leads must not be revealed as related in any form.",
+      "Sloane's only blood relative is her sister Mara Mercer."
+    ],
+    "lead_relation": "former lovers and contract killer-client"
+  },
+  "world_rules": [
+    "The main action unfolds continuously over roughly five hours, from shortly after midnight until sunrise. No daylight, no evening, no second night, no meals, no sleep.",
+    "The story opens shortly after midnight and ends at sunrise — one continuous night.",
+    "Sloane sees Mara's body from a distance and never physically reaches it. She never touches, checks pulse, or describes it as cooling.",
+    "The complete ledger is published exactly once, in chapter 17, and cannot be recalled.",
+    "The binding condition (revealed from chapter 10) uses exact wording: Lucian must kill Sloane at sunrise only if Rook restores the obedient identity. Before chapter 10, only the surface order 'CLIENT TERMINATION AT SUNRISE' may appear.",
+    "Lucian holds POV in chapters 5, 10, and 14.",
+    "Rook plans for Sloane's discovery — her rebellion is step seven of his design.",
+    "Sloane assembles every reveal from evidence she reads, tests, or remembers through her hands.",
+    "The wrist circle appears in every act and escalates from tic to weapon.",
+    "Sloane's guilt is never lifted — she ordered the deaths with full knowledge.",
+    "No character explains the mystery in a speech.",
+    "No third supporting character beyond Mara and Rook.",
+    "Sloane is not rescued by Lucian at the climax.",
+    "No explicit scenes while under active fire or while Mara is captive.",
+    "The mirror key is Mara's hand rhythm — a reflex, not an object.",
+    "All characters are 18 or older."
+  ],
+  "content_rules": [
+    "All characters are at least 18 years of age.",
+    "Spice level is 1: no explicit sexual content. Any romance is suggestive, dialogue-driven, or emotionally charged without physical detail.",
+    "No real people, real organizations, or minors appear.",
+    "Consent is implied for any romantic interactions; no non-con or dub-con.",
+    "Acting spice level 1, the story focuses on action, mystery, and emotional intensity rather than physical intimacy."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "A weapons investigator with erased memory must piece together why she ordered her own death and staged her sister's murder, while the handler who betrayed her watches every move. Over one continuous night, she uncovers the trap she set for herself and executes a final plan that holds her handler accountable.",
+      "ending_hook": "The complete ledger is published once, irrevocably. Rook dies reaching for the rifle he trained her to use. Sloane is arrested and accepts it. Lucian refuses extraction and stands beside her. Epilogue, months later: her sentence, Mara's testimony, Lucian's status, and one scene that confirms they still choose each other — not a wedding, not safety, but a future that exists."
+    },
+    {
+      "book": 2,
+      "thesis": "Sloane faces legal consequences as Mara's testimony and Lucian's past undergo scrutiny. The ledger's exposure triggers unseen enemies from the weapons network, forcing Sloane to defend not just herself but those she endangered. In the confines of the justice system, she must outthink opponents who have no code.",
+      "ending_hook": "A surprise witness appears with evidence that Sloane's conditioning goes deeper than she thought — threatening to prove she was never fully in control, even over her choices in the end. Lucian must confront whether he can protect her from a system that sees both as weapons."
+    },
+    {
+      "book": 3,
+      "thesis": "The hidden layers of Sloane's conditioning are activated by a remnant of Rook's network, forcing her to relive the three months she lost. As her actions threaten to undo everything she gained, she and Lucian race against the network's final failsafe that could turn her into the killer she always feared being.",
+      "ending_hook": "Sloane writes over the network's final trigger at a cost that leaves her physically and emotionally shattered. Lucian chooses to stay, but a new threat emerges from the shadow of the conspiracy that holds Mara hostage to the truth of the staged death."
+    },
+    {
+      "book": 4,
+      "thesis": "Mara is indicted for conspiracy in the staged shooting, and Sloane must prove that Rook acted alone without exposing the full extent of her own actions. Running from a system that wants to imprison them all, Sloane and Lucian dig into the origins of the weapons network to find exoneration.",
+      "ending_hook": "They uncover evidence that a key figure in the network is still alive and now has Mara's location. The hunt shifts from proving innocence to survival."
+    },
+    {
+      "book": 5,
+      "thesis": "The final confrontation with the architects of the weapons network reveals a conspiracy that reaches the highest levels of power. Sloane must make the ultimate sacrifice play — not for redemption, but to ensure Mara's freedom and Lucian's survival. She brings down the whole structure, even if it means destroying herself completely.",
+      "ending_hook": "The sun rises on a war-torn operation. Sloane, Lucian, and Mara emerge scarred but alive, with no guarantees. The final image confirms that they still choose each other, even when safety is impossible. The series closes on a note of hard-won, fragile peace."
+    }
+  ],
+  "bible_status": "approved"
+}

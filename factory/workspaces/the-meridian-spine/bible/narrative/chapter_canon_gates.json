@@ -1,0 +1,53 @@
+{
+  "source": "concept.yaml",
+  "compiled_by": "sync_chapter_canon_gates",
+  "enforcement": "forbidden_phrase_gates.unlock_chapter applies to EVERY chapter number strictly less than unlock_chapter via compile_chapter_canon_rules(concept, ch) at write/prompt time. per_chapter_preview is an operator sample only — missing a preview entry does NOT mean that chapter is ungated.",
+  "surface_order": {
+    "event_id": "meridian_spine_integrity",
+    "exact_text": "National Integrity Directorate -- independent certification; Meridian Spine verified clean",
+    "visible_from_chapter": 1
+  },
+  "binding_condition": {
+    "event_id": "meridian_spine_integrity",
+    "canonical_text": "Stellan Marsh architected the National Integrity Directorate as a capture instrument: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn now control national procurement, laundering the same fraud at the scale of a country behind the credibility of the body meant to stop it.",
+    "reveal_chapter": 20,
+    "exact_wording_required_when_explicitly_stated": true
+  },
+  "forbidden_phrases_forever": [
+    "evidence is fully public",
+    "the case is fully exposed"
+  ],
+  "forbidden_phrase_gates": [],
+  "per_chapter_preview": {
+    "1": {
+      "allowed_exact_quotes": [
+        "National Integrity Directorate -- independent certification; Meridian Spine verified clean"
+      ],
+      "forbidden_facts": [
+        "Stellan Marsh architected the National Integrity Directorate as a capture instrument: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn now control national procurement, laundering the same fraud at the scale of a country behind the credibility of the body meant to stop it."
+      ],
+      "required_exact_wording": [],
+      "reveal_state": "surface_only"
+    },
+    "19": {
+      "allowed_exact_quotes": [
+        "National Integrity Directorate -- independent certification; Meridian Spine verified clean"
+      ],
+      "forbidden_facts": [
+        "Stellan Marsh architected the National Integrity Directorate as a capture instrument: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn now control national procurement, laundering the same fraud at the scale of a country behind the credibility of the body meant to stop it."
+      ],
+      "required_exact_wording": [],
+      "reveal_state": "surface_only"
+    },
+    "20": {
+      "allowed_exact_quotes": [
+        "National Integrity Directorate -- independent certification; Meridian Spine verified clean"
+      ],
+      "forbidden_facts": [],
+      "required_exact_wording": [
+        "Stellan Marsh architected the National Integrity Directorate as a capture instrument: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn now control national procurement, laundering the same fraud at the scale of a country behind the credibility of the body meant to stop it."
+      ],
+      "reveal_state": "binding_revealed"
+    }
+  }
+}

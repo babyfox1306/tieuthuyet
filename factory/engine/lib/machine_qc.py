@@ -34,6 +34,11 @@ CONTENT_ISSUE_KEYS = frozenset(
         "repeat",
         "invented_character",
         "bible_rule",
+        "missing_chapter_heading",
+        "truncated_opening",
+        "inherited_canon",
+        "early_tier4_identity",
+        "character_identity",
     }
 )
 
@@ -455,6 +460,62 @@ def machine_qc(
             for h in md_leaks[:20]
         ]
 
+    # Structure — fail loud before LLM QC burns tokens on headless / mid-sentence drafts.
+    from factory.engine.lib.export_gate import (
+        has_pipeline_chapter_heading,
+        prose_opening_truncated,
+    )
+
+    if chapter is not None:
+        if not has_pipeline_chapter_heading(text):
+            issues["missing_chapter_heading"] = True
+        elif prose_opening_truncated(text):
+            issues["truncated_opening"] = True
+
+    if workspace_id:
+        from factory.engine.lib.inherited_canon import (
+            find_inherited_canon_violations,
+            load_inherited_canon_for_workspace,
+        )
+
+        lock = load_inherited_canon_for_workspace(workspace_id)
+        ic_hits = find_inherited_canon_violations(text, lock)
+        if ic_hits:
+            issues["inherited_canon"] = ic_hits[:8]
+
+        if chapter is not None:
+            from factory.engine.lib.narrative_schema import load_concept
+            from factory.engine.lib.reveal_order_gate import (
+                antagonist_from_concept,
+                find_early_tier4_identity_hits,
+                reveal_chapter_from_concept,
+            )
+            from factory.engine.paths import workspace_dir as _ws_dir
+
+            concept = load_concept(_ws_dir(workspace_id), book) or {}
+            reveal = reveal_chapter_from_concept(concept)
+            name, aliases = antagonist_from_concept(concept)
+            if name and reveal > 0:
+                role_hits = find_early_tier4_identity_hits(
+                    text,
+                    antagonist_canonical=name,
+                    antagonist_aliases=aliases,
+                    reveal_chapter=reveal,
+                    chapter=int(chapter),
+                )
+                if role_hits:
+                    issues["early_tier4_identity"] = role_hits[:6]
+
+            from factory.engine.lib.character_identity_gate import (
+                find_character_identity_violations,
+                load_character_identity_for_workspace,
+            )
+
+            id_lock = load_character_identity_for_workspace(workspace_id)
+            id_hits = find_character_identity_violations(text, id_lock)
+            if id_hits:
+                issues["character_identity"] = id_hits[:8]
+
     issues["classification"] = classify_machine_issues(issues)
     return issues
 
@@ -483,6 +544,24 @@ def issues_to_needs_fix(issues: dict, extra: list[str] | None = None) -> list[st
     # missing_quotes / quotes_advisory: never needs_fix (advisory forever)
     if "stray_whitespace" in issues:
         flags.append("stray_whitespace")
+    if issues.get("missing_chapter_heading"):
+        flags.append("missing_chapter_heading")
+    if issues.get("truncated_opening"):
+        flags.append("truncated_opening")
+    for hit in issues.get("inherited_canon") or []:
+        if isinstance(hit, dict):
+            flags.append(f"inherited_canon:{hit.get('id')}:{hit.get('match')}")
+    for hit in issues.get("early_tier4_identity") or []:
+        if isinstance(hit, dict):
+            flags.append(
+                f"early_tier4:{hit.get('name')}/{hit.get('role_cue')}"
+            )
+    for hit in issues.get("character_identity") or []:
+        if isinstance(hit, dict):
+            flags.append(
+                f"character_identity:{hit.get('kind')}:{hit.get('canonical')}:"
+                f"{hit.get('match')}"
+            )
     if extra:
         flags.extend(extra)
     return flags
@@ -532,6 +611,10 @@ def format_machine_reasons(issues: dict) -> list[str]:
         reasons.append(f"POV first-person outside dialogue ({count} hits)")
     if "stray_whitespace" in issues:
         reasons.append("khoảng trắng thừa cuối dòng (stray whitespace)")
+    if issues.get("missing_chapter_heading"):
+        reasons.append("thiếu dòng `# Chapter N: Title` / `# Chương N` ở đầu")
+    if issues.get("truncated_opening"):
+        reasons.append("mở đầu cụt (prose bắt đầu giữa câu / chữ thường)")
 
     cls = issues.get("classification") or classify_machine_issues(issues)
     if cls.get("has_length"):

@@ -46,6 +46,88 @@ class VerbatimFeedbackTests(unittest.TestCase):
         suffix = llm_qc_revision_suffix({"verdict": "FAIL", "fail_reasons": ["verdict_fail"]}, attempt=1)
         self.assertIn("LLM QC attempt 1", suffix)
         self.assertIn("no detailed reasons", suffix)
+        self.assertIn("LENGTH HARD RULE", suffix)
+        self.assertIn("minimum word", suffix)
+
+
+class LlmQcShortFloorTests(unittest.TestCase):
+    def test_qc_rewrite_short_expands_five_then_machine_blocks(self) -> None:
+        """After LLM QC rewrite, short drafts expand up to 5×; min_word_count never waived."""
+        from factory.engine.run_factory import _draft_chapter_prose
+
+        calls = {"writer": 0, "qc": 0}
+        short = "# Chapter 1: Test\n\n" + ("She walked. " * 20)  # well under 100
+        long = _long_chapter(400)
+        writer_payloads: list[str] = []
+
+        def fake_router(role, payload, **kwargs):
+            calls[role] = calls.get(role, 0) + 1
+            if role == "writer":
+                writer_payloads.append(str(payload))
+                # First write long (machine pass); QC rewrite + expands stay short
+                if calls["writer"] == 1:
+                    return long, {}
+                return short, {}
+            body = json.dumps(
+                {
+                    "verdict": "FAIL",
+                    "fail_reasons": [
+                        "content_boundary_violation: Early reveal of the architect."
+                    ],
+                    "content_boundary_ok": False,
+                    "continuity_conflict": {"flag": False},
+                    "voice_drift": {"flag": False},
+                    "spice_ok": True,
+                }
+            )
+            return body, {}
+
+        cfg = {
+            "min_word_count": 100,
+            "writer_max_tokens": 1024,
+            "writer_short_retries": 5,
+            # clamp in code forces length_max >= 1 → one full rewrite after expands
+            "writer_length_max_retries": 1,
+            "writer_content_max_retries": 2,
+            "writer_llm_qc_max_retries": 2,
+            "throttle_seconds": 0,
+            "banned_phrases": [],
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp)
+            (ws / "books" / "01" / "pipeline" / "draft").mkdir(parents=True)
+            (ws / "books" / "01" / "payloads").mkdir(parents=True)
+            with patch("factory.engine.run_factory.call_9router", side_effect=fake_router):
+                with patch(
+                    "factory.engine.run_factory.build_writer_payload",
+                    return_value="PROMPT",
+                ):
+                    with patch(
+                        "factory.engine.run_factory.build_qc_payload",
+                        return_value="QC_PROMPT",
+                    ):
+                        with patch(
+                            "factory.engine.run_factory.load_state",
+                            return_value={"phrases_used": []},
+                        ):
+                            with patch(
+                                "factory.engine.run_factory.load_role",
+                                return_value="SYS",
+                            ):
+                                _chapter, issues, qc = _draft_chapter_prose(
+                                    ws, 1, 1, cfg, {"target_language": "en"},
+                                    run_llm_qc=True,
+                                )
+        # 1 initial + 1 QC rewrite + 5 expands + 1 length full rewrite
+        self.assertEqual(calls["writer"], 8)
+        self.assertEqual(issues.get("retry_meta", {}).get("short_expands"), 5)
+        self.assertEqual(issues.get("retry_meta", {}).get("max_short_retries"), 5)
+        self.assertIn("short", issues)
+        self.assertLess(int(issues.get("word_count") or 0), 100)
+        self.assertNotEqual((qc or {}).get("verdict"), "PASS")
+        self.assertTrue(issues.get("llm_qc_before_machine_fail"))
+        self.assertTrue(any("LENGTH HARD RULE" in p for p in writer_payloads[1:]))
+
 
 
 class LlmQcRetryLoopTests(unittest.TestCase):
@@ -221,6 +303,66 @@ class CameraExtraFieldsTests(unittest.TestCase):
             data = json.loads(path.read_text(encoding="utf-8"))
             self.assertEqual(data["retry_reason_source"], "llm_qc")
             self.assertEqual(data["qc_result_before_retry"]["verdict"], "FAIL")
+
+
+class LlmQcTransportInfraSkipTests(unittest.TestCase):
+    def test_transport_error_skips_writer_rewrite(self) -> None:
+        """TODO(revert) night-run safety: QC transport → qc_infra_skipped, keep prose."""
+        from factory.engine.run_factory import _draft_chapter_prose
+
+        calls = {"writer": 0, "qc": 0}
+        first_prose = _long_chapter(420)
+
+        def fake_router(role, payload, **kwargs):
+            calls[role] = calls.get(role, 0) + 1
+            if role == "writer":
+                return first_prose, {"model": "auto/fast"}
+            raise RuntimeError("All models failed: connection reset")
+
+        cfg = {
+            "min_word_count": 100,
+            "writer_max_tokens": 1024,
+            "writer_short_retries": 0,
+            "writer_content_max_retries": 2,
+            "writer_llm_qc_max_retries": 2,
+            "throttle_seconds": 0,
+            "banned_phrases": [],
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp)
+            (ws / "books" / "01" / "pipeline" / "draft").mkdir(parents=True)
+            (ws / "books" / "01" / "payloads").mkdir(parents=True)
+            with patch("factory.engine.run_factory.call_9router", side_effect=fake_router):
+                with patch(
+                    "factory.engine.run_factory.build_writer_payload",
+                    return_value="PROMPT",
+                ):
+                    with patch(
+                        "factory.engine.run_factory.build_qc_payload",
+                        return_value="QC_PROMPT",
+                    ):
+                        with patch(
+                            "factory.engine.run_factory.load_state",
+                            return_value={"phrases_used": []},
+                        ):
+                            with patch(
+                                "factory.engine.run_factory.load_role",
+                                return_value="SYS",
+                            ):
+                                chapter, issues, qc = _draft_chapter_prose(
+                                    ws, 1, 1, cfg, {"target_language": "en"},
+                                    run_llm_qc=True,
+                                )
+            self.assertEqual(calls["writer"], 1)
+            self.assertEqual(calls["qc"], 1)
+            self.assertEqual(issues.get("retry_meta", {}).get("llm_qc_rewrites"), 0)
+            self.assertEqual(qc.get("source"), "qc_infra_skipped")
+            self.assertIn("qc_infra_skipped", qc.get("fail_reasons") or [])
+            self.assertEqual(chapter.strip(), first_prose.strip())
+            cam = ws / "books" / "01" / "payloads" / "ch_001_attempt_1.json"
+            self.assertTrue(cam.exists(), cam)
+            data = json.loads(cam.read_text(encoding="utf-8"))
+            self.assertEqual((data.get("output") or "").strip(), first_prose.strip())
 
 
 if __name__ == "__main__":

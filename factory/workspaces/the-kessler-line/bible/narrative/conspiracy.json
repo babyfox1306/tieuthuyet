@@ -1,0 +1,93 @@
+{
+  "description": "The four-tier conspiracy behind the Meridian Spine fraud, designed as a controlled burn where the National Integrity Directorate itself is the capture instrument. The revealed order follows a strict escalation from executor (Lund) through intermediary (Okafor) and coordinator (Halveston) to architect (Marsh), with two sequential false answers that must be lifted before the final truth can emerge.",
+  "target_language": "en",
+  "structure": "controlled_burn",
+  "tiers": [
+    {
+      "id": "T1",
+      "name": "Petra Lund",
+      "role": "executor",
+      "planted_from_chapter": 1,
+      "revealed_at_chapter": 4,
+      "function": "Lead materials certifier on the Meridian Spine who signs off falsified load coupons using the same override method as Kessler. She is the offered first answer, a 'Renn-era method copycat,' guilty at the lowest tier."
+    },
+    {
+      "id": "T2",
+      "name": "Nadia Okafor",
+      "role": "intermediary",
+      "planted_from_chapter": 1,
+      "revealed_at_chapter": 11,
+      "function": "Iris's investigative partner at the Directorate, secretly steering Iris toward the financier (FA2) by feeding true-but-incomplete evidence to burn Halveston as the stopping point and shield Marsh. She believes the Directorate must survive even if it means a controlled sacrifice. The betrayal mechanism is guided investigation, not leaked finding."
+    },
+    {
+      "id": "T3",
+      "name": "Gerald Halveston",
+      "role": "coordinator",
+      "planted_from_chapter": 2,
+      "revealed_at_chapter": 16,
+      "function": "Chairs the philanthropic infrastructure fund financing the Spine. He moved the money that captured the contracts. He is the second false answer, appearing as the mastermind, but he financed; he did not architect."
+    },
+    {
+      "id": "T4",
+      "name": "Stellan Marsh",
+      "role": "architect",
+      "planted_from_chapter": 1,
+      "revealed_at_chapter": 20,
+      "function": "National figure who created the National Integrity Directorate 'so Kessler never happens again' and who chairs the council that stood above Renn. He architected the Directorate as a national capture instrument, laundering the same fraud at the scale of a country. He loses only to the physical tool-mark outside every registry he controls."
+    }
+  ],
+  "false_answers": [
+    {
+      "id": "FA1",
+      "label": "A lone method-copycat",
+      "seeded_chapter": 5,
+      "believed_chapters": [
+        6,
+        7,
+        8
+      ],
+      "lifted_chapter": 9,
+      "how_lifted": "The tooling that made the tool-mark was never in Lund's possession – the method came from above her."
+    },
+    {
+      "id": "FA2",
+      "label": "The money did it. Halveston.",
+      "seeded_chapter": 12,
+      "believed_chapters": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "lifted_chapter": 18,
+      "how_lifted": "The fund only moved where the Directorate pointed it; the capture was architected by whoever built the Directorate, not by whoever financed it."
+    }
+  ],
+  "controlled_burn": {
+    "reveal_chapter": 18,
+    "description": "The reform is the capture instrument: the National Integrity Directorate, built to prevent the next Kessler, is the mechanism by which the co-owners who financed Renn now control national procurement, laundering the same fraud at the scale of a country behind the credibility of the body meant to stop it.",
+    "three_piece_assembly": [
+      "The same tool-mark recurring across projects the Directorate certified, linking the frauds",
+      "The Directorate's approvals consistently tracking the fund's investment positions",
+      "The timing of every 'clean verdict' landing where public trust needed restoring"
+    ]
+  },
+  "authorship_ladder": {
+    "ch17_18": "Allowed: 'the reform is the capture instrument' / national capture; co-owners exist; 'a principal above the fund.' Forbidden: any named person (incl. Marsh) tied to architecting the capture; Marsh + built-the-Directorate-as-capture.",
+    "ch19": "Allowed: Marsh + created-the-Directorate + benefits (interest/negligence – Tier 4 closing in). Forbidden: Marsh + architected-the-capture / ordered / laundered.",
+    "ch20": "Unlocked: Marsh + architected the capture – binding_condition.canonical_text, exact when explicitly stated."
+  },
+  "core_sample": {
+    "pulled_chapter": 2,
+    "publish_chapter": 21,
+    "nature": "physical_off_registry",
+    "note": "The physical fingerprint of the fraud method: a specific machining/press tooling micro-signature that appears identically on Kessler's load test override and the Meridian Spine's certified coupons. The tool-mark is physical, recurring, and can only mean common authorship, regardless of redacted names."
+  },
+  "cast_ceiling": [
+    "Iris Kane",
+    "Petra Lund",
+    "Nadia Okafor",
+    "Gerald Halveston",
+    "Stellan Marsh"
+  ]
+}

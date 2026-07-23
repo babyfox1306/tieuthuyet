@@ -1,0 +1,49 @@
+{
+  "description": "Knowledge state progression for 'The Meridian Spine' (Book 2) characters at key milestone chapters, tracking what each knows about the conspiracy based on the authorship unlock ladder, forbidden phrase gates, and reveal schedule.",
+  "target_language": "en",
+  "milestones": [
+    1,
+    4,
+    11,
+    16,
+    22
+  ],
+  "characters": {
+    "Iris": {
+      "ch1": "Iris Kane is appointed Lead Forensic Authority for the National Integrity Directorate and assigned to certify the Meridian Spine. She knows the surface narrative: an independent reform built to prevent another Kessler. She still wrestles with the Book 1 redacted page, aware that co-owners behind Renn remain unnamed.",
+      "ch4": "Iris has recovered a fractured Spine coupon (ch2) and matched Petra Lund's tool-mark to the Kessler override method. She has exposed Lund as the executor. She now suspects the method came from above Lund but lacks proof of the higher source.",
+      "ch11": "Iris has discovered Nadia Okafor's betrayal — Okafor fed selective leads to steer Iris toward Halveston as a stopping point. Iris knows the conspiracy is guided and that a coordinator stands above Lund.",
+      "ch16": "Iris has proven Gerald Halveston's fund captured the Spine contracts. She exposes him as the coordinator. She sees the conspiracy is national but still cannot name the architect above Halveston.",
+      "ch18": "Iris assembles three pieces: the recurring tool-mark across Directorate-certified projects (including Kessler), the alignment of Directorate approvals with Halveston's portfolio, and the timing of clean verdicts to restore public trust. She concludes the National Integrity Directorate itself is a capture instrument — the reform is the trap. She knows a principal above the fund exists but cannot name the architect.",
+      "ch19": "Iris establishes Stellan Marsh as the founder and chairman of the Directorate who benefits from its operation. She can name him as the institution's creator with interest/negligence, but lacks proof that he architected the capture itself.",
+      "ch20": "Iris obtains the final evidence proving Stellan Marsh architected the Directorate as a capture instrument. She now holds the canonical truth: the reform built to prevent the next Kessler is the mechanism by which he and the co-owners who financed Renn control national procurement.",
+      "ch22": "The complete tool-mark proof is published irrevocably after Marsh states his role on live record. Marsh is arrested. Iris resigns the Directorate, choosing the record over the office. She knows the redacted page named a foreign counter-signatory, and the same tool-mark appears on a contract beyond her jurisdiction.",
+      "must_not_know_before": "Before ch18, Iris must not know the Directorate is a capture instrument. Before ch19, she must not name Marsh as founder/beneficiary. Before ch20, she must not tie Marsh to architecting the capture.",
+      "hidden_truth": "The redacted page named a foreign counter-signatory; the tool-mark appears on a contract outside her jurisdiction, indicating the conspiracy extends internationally."
+    },
+    "Petra Lund": {
+      "ch1": "Lund knows she signed falsified load coupons for the Meridian Spine using the override method, with tooling provided from an undisclosed higher source.",
+      "ch4": "Lund is exposed and knows Iris has matched her tool-mark to the fraud. She knows the method is not hers alone but does not know the full hierarchy above her.",
+      "ch11": "Lund has been neutralized/removed. Her knowledge remains static: she knows she was an executor but cannot identify Halveston or Marsh.",
+      "ch16": "Same as ch11.",
+      "ch18": "Same as ch11.",
+      "ch19": "Same as ch11.",
+      "ch20": "Same as ch11.",
+      "ch22": "Same as ch11.",
+      "must_not_know_before": "Lund must not know the identities of Halveston or Marsh, nor the scope of the national capture.",
+      "hidden_truth": "Lund does not know she was a pawn in a nationwide capture instrument designed by the Directorate's architect."
+    },
+    "Nadia Okafor": {
+      "ch1": "Okafor knows the Directorate is a capture instrument. She actively steers Iris toward Halveston (FA2) to shield Marsh. She is aware of Marsh as the architect and Halveston as the coordinator.",
+      "ch4": "Same as ch1; she continues feeding incomplete evidence to guide Iris's investigation.",
+      "ch11": "Okafor is exposed as the guided betrayer. She knows the domestic conspiracy's structure (Lund through Marsh) and that her role was to protect the Directorate.",
+      "ch16": "Okafor is in custody. Her knowledge of the domestic tiers is complete.",
+      "ch18": "Same as ch16.",
+      "ch19": "Same as ch16.",
+      "ch20": "Same as ch16.",
+      "ch22": "Same as ch16.",
+      "must_not_know_before": "No restriction; Okafor knows the architecture from the start.",
+      "hidden_truth": "Okafor does not know the foreign counter-signatory named on the redacted page."
+    }
+  }
+}

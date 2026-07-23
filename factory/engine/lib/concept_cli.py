@@ -53,6 +53,15 @@ must_avoid: []
 #
 # Machine-readable bans (deterministic gate). must_avoid stays for humans/LLM.
 forbidden_phrases: []
+# Optional staged unlocks — phrase forbidden while chapter < unlock_chapter.
+# Use separate gates for separate clusters (e.g. Name+A @19 vs Name+B @20).
+# forbidden_phrase_gates:
+#   - id: example_cluster
+#     unlock_chapter: 19
+#     phrases: ["Name did A"]
+#   - id: architect_cluster
+#     unlock_chapter: 20
+#     phrases: ["Name did B"]
 
 ending_book1: ""
 hook_book2: ""
@@ -71,12 +80,9 @@ INTERVIEW_QUESTIONS = [
 
 
 def _save_concept(ws: Path, data: dict) -> Path:
-    path = ws / "concept.yaml"
-    path.write_text(
-        yaml.dump(data, allow_unicode=True, default_flow_style=False, sort_keys=False),
-        encoding="utf-8",
-    )
-    return path
+    from factory.engine.lib.narrative_schema import save_concept_yaml
+
+    return save_concept_yaml(ws, data)
 
 
 def concept_init(ws: Path) -> Path:
@@ -113,6 +119,7 @@ def concept_check(ws: Path) -> list[str]:
 
 def concept_mark_ready(ws: Path) -> tuple[bool, list[str]]:
     from factory.engine.lib.book_config import sync_chapter_count_from_concept
+    from factory.engine.lib.concept_canon import concept_digest, sync_chapter_canon_gates
     from factory.engine.lib.workspace_metadata import sync_direction_from_concept
 
     concept = load_concept(ws)
@@ -123,6 +130,7 @@ def concept_mark_ready(ws: Path) -> tuple[bool, list[str]]:
     _save_concept(ws, concept)
     sync_direction_from_concept(ws, preserve_gate_status=True, force_setting=True)
     sync_chapter_count_from_concept(ws, book=int(load_direction(ws).get("book") or 1))
+    sync_chapter_canon_gates(ws, concept=concept)
     return True, []
 
 

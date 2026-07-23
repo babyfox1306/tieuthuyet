@@ -861,7 +861,9 @@ def validate_plan(
     if bible:
         from factory.engine.lib.bible_schema import validate_plan_against_canon
 
-        issues.extend(validate_plan_against_canon(plan, bible, all_plans=all_plans))
+        issues.extend(
+            validate_plan_against_canon(plan, bible, all_plans=all_plans, ws=ws)
+        )
 
     lang = target_language(direction)
     issues.extend(validate_plan_language(plan, lang))

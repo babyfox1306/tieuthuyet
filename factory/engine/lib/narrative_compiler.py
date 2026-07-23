@@ -341,10 +341,17 @@ def compile_chapter_narrative(
     matrix: dict[str, Any],
     threads_data: dict[str, Any],
     chapter: int,
+    *,
+    truth_background: list[str] | None = None,
 ) -> dict[str, Any]:
     """Deterministic narrative constraint for one chapter — no LLM."""
     clues_plant, clues_payoff, clue_details = _clues_for_chapter(ledger, chapter)
     rh_plant, rh_dispel = _red_herrings_for_chapter(ledger, chapter)
+    knowledge = _knowledge_for_chapter(matrix, chapter)
+    iris_knows, truth_bg = _split_iris_knows_and_truth(knowledge, truth_background)
+    knowledge = dict(knowledge)
+    knowledge["iris_knows"] = iris_knows
+    knowledge["truth_background"] = truth_bg
     return {
         "chapter": chapter,
         "clues_plant": clues_plant,
@@ -353,8 +360,69 @@ def compile_chapter_narrative(
         "red_herrings_plant": rh_plant,
         "red_herrings_dispel": rh_dispel,
         "threads_touch": _active_thread_ids(threads_data, chapter),
-        "knowledge": _knowledge_for_chapter(matrix, chapter),
+        "knowledge": knowledge,
+        "iris_knows": iris_knows,
+        "truth_background": truth_bg,
         "clue_details": clue_details,
+    }
+
+
+def _split_iris_knows_and_truth(
+    knowledge: dict[str, Any],
+    extra_truth: list[str] | None = None,
+) -> tuple[list[str], list[str]]:
+    """iris_knows = may_know (writable beats); truth_background = must_not + god lines."""
+    iris = [str(x) for x in (knowledge.get("may_know") or []) if str(x).strip()]
+    truth = [str(x) for x in (knowledge.get("must_not_know") or []) if str(x).strip()]
+    for line in extra_truth or []:
+        s = str(line).strip()
+        if s and s not in truth:
+            truth.append(s)
+    return iris, truth
+
+
+def _kernel_truth_lines(ws: Path) -> list[str]:
+    """Short god-truth lines from kernel — outliner must not write these into early beats."""
+    path = ws / "bible" / "narrative" / "kernel.json"
+    if not path.exists():
+        return []
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return []
+    if not isinstance(data, dict):
+        return []
+    lines: list[str] = []
+    for key in ("true_case", "core_question"):
+        val = str(data.get(key) or "").strip()
+        if val:
+            lines.append(f"[kernel.{key}] {val}")
+    return lines
+
+
+def compile_act_constraints(ws: Path, act_from: int, act_to: int) -> dict[str, Any]:
+    """Payload slice for Outliner: constraints + clue catalog for an act range."""
+    direction = _load_direction(ws)
+    ledger = load_ledger(ws)
+    matrix = load_knowledge_matrix(ws)
+    threads_data = load_threads(ws)
+    truth_lines = _kernel_truth_lines(ws)
+    chapters = {}
+    for ch in range(act_from, act_to + 1):
+        compiled = compile_chapter_narrative(
+            ledger, matrix, threads_data, ch, truth_background=truth_lines
+        )
+        chapters[str(ch)] = compiled
+    return {
+        "act_range": [act_from, act_to],
+        "target_language": direction.get("target_language", "en"),
+        "chapters": chapters,
+        "clue_catalog": build_clue_catalog(ledger),
+        "canonical_reveal_chapter": ledger.get("canonical_reveal_chapter"),
+        "iris_vs_truth_rule": (
+            "Write beats only from iris_knows. truth_background is god-knowledge — "
+            "never put it into beat_summary/must_happen/cliffhanger before unlock."
+        ),
     }
 
 
@@ -387,28 +455,12 @@ def compile_book_narrative(ws: Path, *, total_chapters: int | None = None) -> di
     ledger = load_ledger(ws)
     matrix = load_knowledge_matrix(ws)
     threads_data = load_threads(ws)
+    truth_lines = _kernel_truth_lines(ws)
     return {
-        ch: compile_chapter_narrative(ledger, matrix, threads_data, ch)
+        ch: compile_chapter_narrative(
+            ledger, matrix, threads_data, ch, truth_background=truth_lines
+        )
         for ch in range(1, total + 1)
-    }
-
-
-def compile_act_constraints(ws: Path, act_from: int, act_to: int) -> dict[str, Any]:
-    """Payload slice for Outliner: constraints + clue catalog for an act range."""
-    direction = _load_direction(ws)
-    ledger = load_ledger(ws)
-    matrix = load_knowledge_matrix(ws)
-    threads_data = load_threads(ws)
-    chapters = {
-        str(ch): compile_chapter_narrative(ledger, matrix, threads_data, ch)
-        for ch in range(act_from, act_to + 1)
-    }
-    return {
-        "act_range": [act_from, act_to],
-        "target_language": direction.get("target_language", "en"),
-        "chapters": chapters,
-        "clue_catalog": build_clue_catalog(ledger),
-        "canonical_reveal_chapter": ledger.get("canonical_reveal_chapter"),
     }
 
 
@@ -606,6 +658,17 @@ def narrative_block_for_plan(compiled: dict[str, Any]) -> dict[str, Any]:
             "pov_characters": list(knowledge.get("pov_characters") or []),
             "may_know": list(knowledge.get("may_know") or []),
             "must_not_know": list(knowledge.get("must_not_know") or []),
+            "iris_knows": list(
+                knowledge.get("iris_knows")
+                or compiled.get("iris_knows")
+                or knowledge.get("may_know")
+                or []
+            ),
+            "truth_background": list(
+                knowledge.get("truth_background")
+                or compiled.get("truth_background")
+                or []
+            ),
             "effective_milestone": knowledge.get("effective_milestone", 0),
         },
         "clue_beats": clue_beats,
@@ -625,6 +688,7 @@ def merge_narrative_into_plans(ws: Path, plans: list[dict]) -> list[dict]:
     ledger = load_ledger(ws)
     matrix = load_knowledge_matrix(ws)
     threads_data = load_threads(ws)
+    truth_lines = _kernel_truth_lines(ws)
     out: list[dict] = []
     for plan in plans:
         if plan.get("locked"):
@@ -634,7 +698,9 @@ def merge_narrative_into_plans(ws: Path, plans: list[dict]) -> list[dict]:
         if ch <= 0:
             out.append(plan)
             continue
-        compiled = compile_chapter_narrative(ledger, matrix, threads_data, ch)
+        compiled = compile_chapter_narrative(
+            ledger, matrix, threads_data, ch, truth_background=truth_lines
+        )
         merged = dict(plan)
         merged["narrative"] = narrative_block_for_plan(compiled)
         merged["must_happen"] = _ensure_clue_beats_in_must_happen(

@@ -1,0 +1,47 @@
+[
+  {
+    "ch": 1,
+    "baseline_wc": 1309,
+    "baseline_reasons": [
+      "content_boundary_violation: The chapter uses an unconditional sunrise termination clause instead of the required condition \"Rook restores the obedient identity.\"",
+      "content_boundary_violation: Lucian reveals the sunrise clause in chapter 1, before chapter 10.",
+      "content_boundary_violation",
+      "The contract presents \"CLIENT TERMINATION AT SUNRISE\" as an unconditional order for Sloane's death, conflicting with the bible's binding condition that Lucian m"
+    ],
+    "status": "needs_review",
+    "final_wc": 1740,
+    "llm_qc_rewrites": 2,
+    "retry1_fixed": false,
+    "retry2_fixed": false,
+    "error": null,
+    "bucket": "needs_review",
+    "final_pass": false,
+    "final_reasons": [
+      "[content_fail — retries 0/2]",
+      "quotes advisory (8 hit) — L25: Take it, he said. The barrel of the rifle dipped slightly, a fraction of an inch, but the threat rem; L39: You wrote it, he said. The calmness in his voice was fracturing. He took a step closer, invading her; L41: I don't remember, she whispered. The confession tasted like bile. I don't remember the last three mo — heuristic sai lớp, không chặn promote",
+      "POV first-person outside dialogue (26 hits)"
+    ]
+  },
+  {
+    "ch": 2,
+    "baseline_wc": 1551,
+    "baseline_reasons": [
+      "continuity_conflict: Sloane's profession conflicts with the series bible.",
+      "content_boundary_violation: Sloane assesses Mara as not cold yet and states that her heart stopped beating, violating the prohibition against describing Mara as cooling or as having no pulse.",
+      "content_boundary_violation",
+      "The series bible establishes Sloane as a firearms investigator, but the chapter identifies her as a forensic accountant contracted with the state and attributes"
+    ],
+    "status": "needs_review",
+    "final_wc": 1884,
+    "llm_qc_rewrites": 4,
+    "retry1_fixed": false,
+    "retry2_fixed": false,
+    "error": null,
+    "bucket": "needs_review",
+    "final_pass": false,
+    "final_reasons": [
+      "nhịp chậm / pacing",
+      "pacing_issue: The chapter is truncated mid-sentence after \"Who is that?\" and ends on the incomplete word \"Slo,\" disrupting the otherwise strong cliffhanger."
+    ]
+  }
+]

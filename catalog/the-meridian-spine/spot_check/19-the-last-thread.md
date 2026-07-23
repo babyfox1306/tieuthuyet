@@ -1,0 +1,68 @@
+---
+series: the-meridian-spine
+book: 1
+chapter: 19
+title: The Last Thread
+spice: 1
+word_count: 1511
+status: draft
+needs_fix: []
+---
+
+“That mark’s not just random,” Iris muttered, voice taut as she crouched under the flickering glare of Veridian’s overhead strips. The mechanical heart of the shop hummed behind her, a constant litany of compressors and fans overlaid with the intermittent clatter of cooling pipes. The raw cold of the slab floor radiated up through her boots and into her knees, but she barely registered it. Her hands—encased in snug blue nitrile—were steady as she turned the corroded scrap of steel between her fingers.
+
+She set her jaw, fighting the animal urge to huff warmth into her gloves. Her mind had boiled over the evidence a hundred times in the past months, but this was the first time she’d held the real thing. She let her thumb drift over the scored surface, feeling the seven compression points: shallow dents from a tool meant for repetition and force. The fifth gouge, deeper than the rest, was cut on the diagonal—a signature she’d traced through photographs from half a dozen scenes. The asymmetric pattern of the guide bite, a slip or maybe a correction, was as distinct to her as a familiar scar.
+
+Iris shifted, setting the steel down on a section of clean cardboard she’d torn from the side of a shipping box. Every motion was deliberate—minimizing surface transfer, preserving the evidence in situ. Even the faint hiss of her breath was measured, mindful of the vapour hanging in the chilled air. The machine shop reeked of cutting fluid and old oil, heavy with the tang of ozone from the ancient panel above the drill press.
+
+She fished her camera from its padded pouch, knuckles scraping against a pile of cable ties. A quick adjustment to the macro lens—subtle whirr of plastic and glass—and then she propped a small LED ring beside the plate, angling the diffuser across the metal’s pitted face. The fluorescent lights above were too harsh, washing out the subtle depth of the scoring; with the LED ring, the etched lines snapped into relief.
+
+She thumbed the shutter several times: wide, then close on the crucial details, then a slow arc to capture the striations. Each image flicked up on the camera’s screen for confirmation, the fifth compression point and the jagged guide bite crisp against the steel’s patina. She flipped through the photos—satisfied—then slid the plate into a mylar evidence pouch, fingers careful not to touch the scored area. The pouch hissed as she pressed the adhesive shut, then she thumbed the tamper seal, the label crinkling as she pressed it into place.
+
+A quick note in her field book:  
+#0419 – Jig plate – 22:37 – Veridian – Seven comp, fifth drag, asymmetric guide bite. Handle all as trace.  
+She read it back, clipped and spare, the ink catching faintly in the cold.
+
+Her tablet buzzed as she unlocked it with her fingerprint. “Item zero-four-one-nine, jig plate. Photograph and physical, recovered 22:37 hours, Veridian Machine Shop, east bay.” She narrated quietly into the chain-of-custody app, eyes flicking to the steel to double-check. “Initial chain, Kane logging.” She tagged the location and scanned the pouch’s barcode, feeling the confirmation haptic thump as the system logged her entry.
+
+She straightened, knees protesting. The air felt thicker near the shop floor—the scent of decades-old oil layered atop the staleness of paper and chemical. Her boots made faint, sticky sounds as she moved, soles clinging to coolant residue and the grit of metal filings. She swept her headlamp beam over the clutter: silent lathes, piles of scrap, a wall hung with battered spanners. Tags on everything—some curling at the edges, hand-labeled in faded marker, the ink long since bled.
+
+Iris moved deeper into the sprawl, trailing the edge of her light along a battered file cabinet wedged under a workbench. An extension cord snaked over the drawer’s edge, securing it halfway open. The handle was sticky with ancient residue, but she yanked anyway, bracing her hip against the bench. The drawer shrieked but yielded.
+
+Inside, the smell of dust and old carbon paper rushed out. She dug through warped manila folders, fingers leaving faint prints in the gray film on their covers. She snapped reference photos as she worked, angling each sheet so the tablet’s scanner could capture page numbers and watermarks.
+
+Receipts first—lists of custom-machined parts, not the usual off-the-shelf stock. Each referenced specialty alloys and odd tolerances, quantities matching her working theories. She found a stack of purchase orders, crosschecked with her notes—the serial numbers lined up with the die she’d just bagged. Several invoices bore the hallmarks of private asset accounts, routed through layers of proxies. Each time she flagged a new one, she murmured their details for the chain-of-custody log, hands methodical and patient.
+
+Midway through the pile, a blue-green transaction coupon—Meridian Spine—caught her eye. She snapped another photo. The color and watermark matched those from the investigation’s first weeks: a universal ticket for procurement kickbacks. The coupon was sandwiched between two ledgers annotated with looping initials. She recognized the handwriting from earlier financial statements, always careful to stay one person removed from open scandal. None named Marsh outright, but pressure from those offices hummed at the margins—beneficiary, founder, or simply the one whose silence made everything possible.
+
+She bundled the ledgers and receipts, sealed them in a new evidence pouch—#0420—pushing the air out with a practiced motion. “Item zero-four-two-zero, production and account ledgers, 22:44 hours, Veridian Machine Shop. Chain of custody: Kane.” She photographed the sealed pouch and scanned the barcode, feeling the system log each step. The digits flickered on the tablet—confirmation, then the short hum of data uploading to offsite servers.
+
+She paused, listening. The machinery’s background hum seemed to pulse in her bones. The only movement was the jitter of paper as she stacked the files. Then—hard and sudden—a clang from the far side of the shop, just beyond the shadow of the tool cages.
+
+She froze, every muscle tensed, sidearm sliding free of its holster. She held it low, finger along the guard, scanning the dark. For a long, electric moment, nothing moved but the shifting shadows thrown by her lamp. She breathed—slow, quiet, not making fog in the air. Then, in the silence, she heard the faint squeak of the fire exit’s hinges at the back of the shop.
+
+Iris stalked across the floor, boots silent now. Near the door, she crouched, sweeping a gloved finger through a smear of oil mixed with graphite. The print was fresh. A partial boot mark—someone else, maybe watching her, or maybe just fleeing at the sound of her sidearm. The door rocked on its hinges, still shifting from a hasty exit.
+
+She scanned the entryway—nothing left but faint footprints leading into the dark behind the shop. Whoever it was hadn’t tried to cover their tracks, but they moved with intention, not panic. Iris holstered her weapon and slid her satphone from her pocket. The metal was cold against her glove, but her pulse was steady now, purpose sharpening every gesture.
+
+She selected Celia Ward from the encrypted contacts. As she assembled the outgoing packet—photographs, chain-of-custody logs, location tags, scans of the ledgers and the transaction coupon—she felt the outline of her case solidify. The evidence wasn’t just a scattered pattern. Now it had provenance, momentum, and teeth.
+
+The satphone display pulsed: SEND SECURE? She tapped her confirmation, watching the signal arc up and out, encrypted and logged. Let Celia piece the rest together—her skill lay in pattern recognition, pressure mapping. Iris trusted her to see what she saw: funds routed through private asset accounts, matching the physical evidence in this shop and the timeline of every suspicious order.
+
+Her phone buzzed—priority override, blocked ID. She steadied herself, precaution kicking in with practiced habit.
+
+“Kane,” she answered, voice ironed flat.
+
+A voice, tight and formal, came through the static: “Ms. Kane. We need to talk.”
+
+Marsh. She recognized the measured, distant authority—the pressure on the line, the sense that the call was more than information; it was an attempt to reassert control. A founder or beneficiary’s hand, exposed by her work. He offered only this: “Check your inbox for details. Come alone.”
+
+The line died. Silence pressed in, all the mechanical clatter of the shop feeling suddenly far away. Iris’s heart beat loud in her ears. She turned, listening—another faint exhale of the fire door behind her, as if the night itself had been waiting.
+
+She pocketed her phone, refocused on the evidence bags clipped to her belt. Every sense was acute—the cold sting of coolant in her nostrils, the prickle of metal dust on her cheeks, the subtle vibration of the old machines cooling. This was the pivot: evidence bagged, chain clear, the story moving from shadow to daylight. No more deniability for anyone in those ledgers.
+
+At the far end of the shop, a shadow disengaged from the stacks—a faint movement, then gone. Not a threat now, but a message—a reminder that she wasn’t the only one tracking these leads. She squared her shoulders and moved deeper into the gloom, evidence secured, every step careful and measured.
+
+Tonight, the pattern was set. The game had shifted. And Iris was ready for whatever came next.
+
+Before she left the shop, she checked the small recorder clipped inside her coat lining — the same unit she had logged into custody after Torvik. Battery green. Encryption primed. If Marsh meant to measure her alone tonight, she would bring more than memory: every word he confirmed would leave the room with her.

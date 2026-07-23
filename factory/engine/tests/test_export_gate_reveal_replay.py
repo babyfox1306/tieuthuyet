@@ -45,25 +45,19 @@ def _warn_hits(checks: list[dict]) -> list[dict]:
 
 
 class EG18RevealReplayTests(unittest.TestCase):
-    def test_hft_ch13_16_17_warn(self) -> None:
-        if not HFT_CHAPTERS.is_dir():
-            self.skipTest("his-final-target catalog missing")
-        wanted = {13, 16, 17}
-        triples = []
-        for path in sorted(HFT_CHAPTERS.glob("*.md")):
-            ch, meta, body = _load_catalog_chapter(path)
-            if ch in wanted:
-                triples.append((ch, meta, body))
-        self.assertEqual(sorted(t[0] for t in triples), [13, 16, 17])
+    def test_same_phrase_two_chapters_warns(self) -> None:
+        triples = [
+            (1, {}, 'She exhaled. "The truth was out." Marsh nodded.'),
+            (7, {}, 'Later she said it again: the truth was out, and louder.'),
+        ]
         checks = check_eg18_reveal_replayed(
-            triples, workspace_id="his-final-target", cfg=load_config()
+            triples,
+            workspace_id=None,
+            cfg={"completion_phrases": ["the truth was out"]},
         )
         warns = _warn_hits(checks)
         self.assertTrue(warns, f"expected EG-18 WARN, got {checks}")
-        hit_chs = {c.get("chapter") for c in warns}
-        # ch14 also hits «all of it» — still a completion-phrase chapter
-        self.assertTrue(wanted.issubset(hit_chs), hit_chs)
-        self.assertGreaterEqual(len(hit_chs), 3, hit_chs)
+        self.assertEqual({c.get("chapter") for c in warns}, {1, 7})
 
     def test_hft_ch1_to_8_no_warn(self) -> None:
         if not HFT_CHAPTERS.is_dir():

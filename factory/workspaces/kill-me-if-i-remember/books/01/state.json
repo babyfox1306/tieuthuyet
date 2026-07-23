@@ -1,0 +1,60 @@
+{
+  "current_book": 1,
+  "current_chapter": 1,
+  "timeline": [
+    "Ch1: Sloane Mercer wakes up on the rooftop of Vertigo Building, discovers her sister Mara's dead body, and finds a contract in her own handwriting designating herself as a target for termination at sunrise."
+  ],
+  "character_status": {
+    "Sloane Mercer": {
+      "location": "rooftop of Vertigo Building",
+      "knows": [
+        "she is a federal investigator",
+        "she has lost three months of memory",
+        "her sister Mara is dead",
+        "she is the target of a contract in her own handwriting",
+        "the contract is for termination at sunrise"
+      ],
+      "relationship_other": "sister of Mara (deceased)",
+      "mood": "shocked, terrified, disoriented, fighting to maintain calm"
+    },
+    "Mara": {
+      "location": "rooftop of Vertigo Building",
+      "knows": [],
+      "relationship_other": "sister of Sloane",
+      "mood": "dead"
+    }
+  },
+  "open_threads": [
+    "What caused Sloane's three-month memory loss?",
+    "How did Mara die and who is responsible?",
+    "Who is the client that commissioned the contract on Sloane?",
+    "Why is the contract written in Sloane's own handwriting?",
+    "What happened to Sloane during the missing three months?"
+  ],
+  "facts_established": [
+    "Sloane Mercer is a federal investigator.",
+    "Sloane's sister Mara is dead on the rooftop of Vertigo Building.",
+    "Sloane has no memory of the past three months.",
+    "Sloane found a contract on herself, in her own handwriting, stating she is to be terminated at sunrise on the current day.",
+    "Sloane has a nervous habit of rubbing her left thumb on her right wrist."
+  ],
+  "spice_progression": "The first chapter establishes a high-stakes mystery: a federal investigator wakes up from a three-month memory loss to find her sister dead and herself the target of a hit contract written in her own hand, setting a tense, psychological tone.",
+  "phrases_used": [
+    "The contract said her name, but the body at her feet was her sister's.",
+    "a jagged circuit board of lights and shadows",
+    "her memory was a gaping wound",
+    "her brain felt like a scrambled radio frequency",
+    "the only solid ground in a world that had suddenly tilted on its axis",
+    "the betrayal of her own nerves"
+  ],
+  "promoted_chapters": [
+    2,
+    4,
+    11,
+    12,
+    14,
+    15,
+    16,
+    17
+  ]
+}

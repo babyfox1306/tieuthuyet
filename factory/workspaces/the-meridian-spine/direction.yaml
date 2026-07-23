@@ -1,0 +1,55 @@
+id: the-meridian-spine
+pen_name: Nix Vale
+target_language: en
+publish_strategy: kdp_ku_exclusive
+narrative_status: approved
+book: 2
+canon_through: 0
+platform: kdp
+audience: women 18-35, mobile reading, hook-driven serial fiction
+goal: end-of-chapter hooks — institutional conspiracy thriller pace
+setting_hub: The Meridian Spine — primary setting
+setting_nodes: []
+spice_default: 1
+spice_explicit_chapters: []
+spice_steamy_chapters: []
+book1_ending: 'The tool-mark proof is published once, irrevocably. Marsh is forced
+  to state his role on live record before release, then arrested -- the reform he
+  built becomes the instrument of his exposure, exactly as the inquiry did to Renn
+  (rhyme, escalated). Halveston, Okafor, Lund all real, all accounted for, named in
+  order. Iris resigns the Directorate rather than inherit a captured institution,
+  and enters the true finding. She does not save the Directorate; she chooses the
+  record over the office. Epilogue: Directorate dissolved or reconstituted; Iris back
+  in the field -- but the reader knows the redacted page named co-owners, and one
+  of them was never on any live record.'
+blurb: A year after she brought down the commissioner behind the Kessler collapse,
+  forensic engineer Iris Kane is handed the flagship job of the reform built to prevent
+  the next disaster -- and discovers the reform itself is the instrument by which
+  the people who financed Renn are capturing national infrastructure wholesale, protected
+  by a name redacted from the one page she never recovered.
+tropes: []
+spice_badge: sweet
+target_platforms:
+- kdp
+spice_level: 1
+plan_status: approved
+bible_status: approved
+book_slug: 02-probe-book-two
+total_chapters: 22
+arc:
+  act1_setup:
+  - 1
+  - 6
+  act2_complications:
+  - 7
+  - 12
+  act3_crisis:
+  - 13
+  - 19
+  act4_resolution:
+  - 20
+  - 22
+narrative_profile: conspiracy_thriller
+prior_workspace: the-kessler-line
+source_concept_digest: ef17798446a2494d
+source_narrative_digest: bc3e25dac28483e1
