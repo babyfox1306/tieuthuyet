@@ -76,6 +76,41 @@ def _apply_canon_registry_checks(
     issues.update(canon_prose_issues(text, registry))
 
 
+def _apply_locked_names_drift_checks(
+    issues: dict,
+    text: str,
+    *,
+    workspace_id: str | None,
+    book: int,
+) -> None:
+    """Flag prose using a drifted name when locked_names already locked the role."""
+    if not workspace_id or not text:
+        return
+    from factory.engine.lib.state_updater import load_state
+
+    ws = workspace_dir(workspace_id)
+    state = load_state(ws, book)
+    locked = state.get("locked_names") if isinstance(state.get("locked_names"), dict) else {}
+    if not locked:
+        return
+    hits: list[dict[str, Any]] = []
+    husband = locked.get("husband")
+    if husband == "Marcus" and re.search(r"\bHarold\b", text):
+        hits.append({"found": "Harold", "canonical": "Marcus", "role": "husband"})
+    prev = locked.get("previous_housekeeper")
+    if prev == "Clara" and re.search(r"\bEmily(?:\s+Morrison)?\b", text):
+        # Only when housekeeper context OR full invent of E.M.
+        if re.search(r"housekeeper|carer|name tag", text, re.I) or re.search(
+            r"\bEmily\s+Morrison\b", text
+        ):
+            hits.append({"found": "Emily", "canonical": "Clara", "role": "previous_housekeeper"})
+    alias = locked.get("narrator_alias")
+    if alias and str(alias).startswith("Anna") and re.search(r"\bSarah\s+Mills\b", text):
+        hits.append({"found": "Sarah Mills", "canonical": "Anna", "role": "narrator_alias"})
+    if hits:
+        issues["name_drift"] = list(issues.get("name_drift") or []) + hits
+
+
 _QUOTE_CHARS = ('"', "“", "”", "«", "»")
 _DIALOGUE_TAG_VERBS_RE = re.compile(
     r"\b(?:"
@@ -441,6 +476,9 @@ def machine_qc(
         issues["repeat"] = repeats
 
     _apply_canon_registry_checks(
+        issues, text, workspace_id=workspace_id, book=book
+    )
+    _apply_locked_names_drift_checks(
         issues, text, workspace_id=workspace_id, book=book
     )
 

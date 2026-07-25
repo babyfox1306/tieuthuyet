@@ -1,0 +1,271 @@
+{
+  "book": 1,
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Interview",
+      "slug": "ch01-interview",
+      "one_line_summary": "The housekeeper arrives at the isolated estate, is grilled by the controlling husband, and notices the wife already knows something about her past.",
+      "beat_summary": "The housekeeper arrives at the isolated estate for a job interview. She counts her steps to the door (a compulsive tell). The husband stresses his wife's fragility and strict house rules — reader files him as controlling. A small 'off' detail: the wife already seems to know something about the housekeeper's past.",
+      "must_happen": [
+        "The housekeeper counts her steps from the car to the front door — 47 steps.",
+        "The husband interviews the housekeeper, emphasizing his wife's fragile health and the rigid house rules (no visitors, no questions about the locked room, no entering the east wing).",
+        "The wife appears briefly at the top of the stairs, pale and silent, but her gaze lingers on the housekeeper with a look of recognition — not surprise.",
+        "The husband mentions the previous housekeeper 'left suddenly' without explanation.",
+        "The housekeeper accepts the job, hiding her real reason for taking it (she came to case the house for a robbery)."
+      ],
+      "must_not": [
+        "Must not reveal the housekeeper's criminal past or her real agenda (robbery/blackmail).",
+        "Must not make the husband's control feel cartoonish — keep it clinical, plausible, unnerving."
+      ],
+      "opens_with": "I counted forty-seven steps from the rental car to the front door. I always count. It’s how I know when I’m being watched.",
+      "cliffhanger": "The wife, from the top of the stairs, mouths a single word — my name. A name I never gave her.",
+      "signature_detail_hint": "The housekeeper counts her steps compulsively — a habit she developed in prison, where counting was survival.",
+      "emotional_beat": "Unease and suspicion — the housekeeper feels the husband is a threat, but the wife's knowing look unsettles her more.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 1 (1600-1900 words). Establish the estate's oppressive atmosphere, the husband's control, and the wife's uncanny recognition. Plant the housekeeper's counting habit. End with the cliffhanger of the wife mouthing her name.",
+      "carries_to_next": "The housekeeper is now living in the estate, unsettled by the wife's knowledge. She will seek a private moment with the wife in Chapter 2."
+    },
+    {
+      "chapter": 2,
+      "title": "The Fragile Prisoner",
+      "slug": "ch02-fragile-prisoner",
+      "one_line_summary": "The housekeeper has her first private moment with the wife, who presents as a frail prisoner and shows quiet kindness — but the housekeeper notices a locked room and begins to suspect the wife is hiding something too.",
+      "beat_summary": "First private moment with the wife, who presents as a frail prisoner and shows a quiet kindness that will later read as recruitment. The housekeeper notes a locked room no one explains. (Narrator hides her own reason for taking this job from the reader.)",
+      "must_happen": [
+        "The wife invites the housekeeper to tea in her private sitting room — a space that feels more like a cage than a sanctuary.",
+        "The wife reveals she knows the housekeeper's real name (from the job application), but the housekeeper never put her full name on the form — only a first name.",
+        "The housekeeper notices a locked door in the east wing hallway. The wife says it's 'the old nursery' and changes the subject.",
+        "The wife gives the housekeeper a small gift — a silver locket — claiming it belonged to her mother. The housekeeper feels a strange pull to keep it.",
+        "The housekeeper secretly checks the job application file in her room: she never listed a last name. How did the wife know it?"
+      ],
+      "must_not": [
+        "Must not reveal the wife's true agenda (she is recruiting the housekeeper for a murder frame).",
+        "Must not reveal the housekeeper's criminal past or her plan to rob the house."
+      ],
+      "opens_with": "She poured the tea herself, hands trembling only slightly, and smiled at me like we were old friends. 'You must be exhausted,' she said. 'I know how hard it is to start over.'",
+      "cliffhanger": "Back in my room, I pulled the job application from my bag. I had written only 'Anna.' No last name. But the wife had called me by my full name — a name I hadn't used in years.",
+      "signature_detail_hint": "The silver locket the wife gives her has a tiny scratch inside — as if someone tried to pry it open with a knife.",
+      "emotional_beat": "The housekeeper feels a flicker of sympathy for the wife, but also a growing unease — the wife knows too much. The locked room gnaws at her.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 2 (1600-1900 words). Build the wife as a sympathetic but mysterious figure. Plant the locked room as a mystery. Deepen the housekeeper's suspicion that the wife knows more than she should. End with the cliffhanger about the name.",
+      "carries_to_next": "The housekeeper is now certain the wife is hiding something. She will investigate the locked room and the fate of the previous housekeeper in Chapter 3."
+    },
+    {
+      "chapter": 3,
+      "title": "The One Who Left",
+      "slug": "ch03-one-who-left",
+      "one_line_summary": "The housekeeper learns the previous housekeeper left suddenly and finds a hidden note she left behind — confirming the husband is dangerous, but also revealing a fixed deadline that changes everything.",
+      "beat_summary": "ACT REVERSAL — the housekeeper learns the previous housekeeper 'left suddenly' and finds a trace she left behind. A fixed deadline enters (the prior case reopening / a will-signing date). Reader's theory locks: the husband is the threat.",
+      "must_happen": [
+        "The housekeeper finds a hidden note in the laundry room — a torn piece of paper with the words 'HE KNOWS. GET OUT BEFORE THE 15TH.' scrawled on it.",
+        "The housekeeper asks the gardener about the previous housekeeper; he says she 'left in a hurry' and no one has heard from her since.",
+        "The husband announces that the will-signing is scheduled for the 15th — two weeks away — and that his wife's condition must remain stable until then.",
+        "The housekeeper tries the locked door in the east wing when the husband is away — it's bolted from the outside, not the inside.",
+        "The housekeeper calls an old contact to check the husband's background; she learns he has a prior criminal case that was 'reopened' — but the contact hangs up before explaining."
+      ],
+      "must_not": [
+        "Must not reveal that the wife is the one who orchestrated the hire and framed the previous housekeeper.",
+        "Must not reveal the housekeeper's full criminal past or her plan to rob the family."
+      ],
+      "opens_with": "The note was wedged behind the dryer, yellowed and torn, as if someone had tried to flush it. 'HE KNOWS. GET OUT BEFORE THE 15TH.' The ink was smudged — by water, or by tears.",
+      "cliffhanger": "The husband's voice, from the doorway: 'I see you've found the laundry room. My wife used to spend hours in here. Before she got sick.' He smiled. It didn't reach his eyes.",
+      "signature_detail_hint": "The bolt on the locked door is new — the metal still has a faint factory oil sheen, unlike the rusted hinges on the other doors.",
+      "emotional_beat": "Fear and urgency — the housekeeper now believes the husband is a genuine threat. The deadline of the 15th creates a countdown. She feels trapped but also determined to protect the wife.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 3 (1600-1900 words). Deliver the act reversal: the reader's theory locks that the husband is the threat. Plant the fixed deadline (the 15th). Introduce the note from the previous housekeeper. End with the husband's unsettling appearance. Maintain the housekeeper's hidden agenda (she is still planning to rob the house).",
+      "carries_to_next": "The housekeeper is now racing against the 15th deadline. She will try to uncover what happened to the previous housekeeper and what the husband is hiding in the locked room."
+    },
+    {
+      "chapter": 4,
+      "title": "The Temper",
+      "slug": "ch04-temper",
+      "one_line_summary": "The housekeeper finds a hidden object in the husband's study and witnesses his temper, solidifying her belief that he is dangerous — but a small detail in the wife's story doesn't add up.",
+      "beat_summary": "Evidence begins pointing hard at the husband — his temper, a hidden object, a lie he tells. The housekeeper starts protecting the wife. FALSE ANSWER building.",
+      "must_happen": [
+        "The housekeeper discovers a hidden drawer in the husband's study containing a woman's watch — engraved with initials that do not match the wife's.",
+        "The husband loses his temper at a phone call, slamming the receiver and shouting about 'that woman' — the housekeeper overhears and interprets it as a threat to the wife.",
+        "The wife confides that she fears the husband will 'do something' before the 15th, and asks the housekeeper to stay close to her at all times.",
+        "The housekeeper hides the watch in her own room as evidence, deciding to protect the wife by gathering proof of the husband's violence.",
+        "The wife mentions that the previous housekeeper 'knew something about the east wing' — but when pressed, she says she can't remember what."
+      ],
+      "must_not": [
+        "Must not reveal that the wife is the one who planted the watch to frame the husband.",
+        "Must not reveal the housekeeper's criminal past or her original plan to rob the family."
+      ],
+      "opens_with": "The drawer wasn't locked. That was the first thing that struck me — everything else in this house was locked. The drawer wasn't. It was an invitation, and I took it.",
+      "cliffhanger": "I held the watch in my palm. The initials on the back read 'E.M.' Not the wife's initials. And not the husband's. The wife's name was Lydia. The husband's was Marcus. Who was E.M.?",
+      "signature_detail_hint": "The watch is a woman's Patek Philippe, but the crystal is cracked — as if someone stepped on it, hard.",
+      "emotional_beat": "Protective urgency — the housekeeper now sees herself as the wife's guardian. She feels righteous anger toward the husband, but a flicker of doubt about the wife's story lingers.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 4 (1600-1900 words). Build the false answer: make the husband seem guilty. The housekeeper finds the watch, witnesses his temper, and commits to protecting the wife. Plant the first crack: the wife's story about the previous housekeeper is slightly off. End with the cliffhanger about the initials E.M.",
+      "carries_to_next": "The housekeeper is now actively gathering evidence against the husband. She will push further into his past and the locked room in Chapter 5."
+    },
+    {
+      "chapter": 5,
+      "title": "The Proof",
+      "slug": "ch05-proof",
+      "one_line_summary": "The housekeeper finds what looks like proof that the husband killed the previous housekeeper, and she commits fully to saving the wife — but the reader senses something is too convenient.",
+      "beat_summary": "MIDPOINT — the housekeeper obtains what looks like proof the husband killed the previous housekeeper. She commits fully to saving the wife. (This is the Tier-2 peak, and it is wrong.)",
+      "must_happen": [
+        "The housekeeper finds a bloodstained shirt in the husband's closet, hidden beneath a false floorboard — the shirt has a name tag from the previous housekeeper's uniform.",
+        "The husband lies about his whereabouts on the night the previous housekeeper disappeared — the housekeeper catches the inconsistency in his story.",
+        "The wife breaks down in tears, thanking the housekeeper for believing her and begging her to help escape before the 15th.",
+        "The housekeeper calls her old contact again and learns the husband's criminal case involved 'suspicious death' — but the contact warns her not to get involved.",
+        "The housekeeper hides the shirt with the watch and resolves to expose the husband after the 15th, planning to save the wife and then disappear."
+      ],
+      "must_not": [
+        "Must not reveal that the wife planted the bloodstained shirt (it's pig's blood, not human).",
+        "Must not reveal the housekeeper's original plan to rob the family — the reader still believes she is a good person with a secret past."
+      ],
+      "opens_with": "The floorboard gave way under my heel. I didn't mean to find it. But there it was — a shirt, stiff with dried blood, the name tag still pinned to the collar. 'Clara.' The previous housekeeper.",
+      "cliffhanger": "I held the shirt in my hands, my fingers trembling. Then I heard a sound behind me — soft footsteps. I turned. The wife was standing in the doorway, her face pale. 'You found it,' she whispered. 'I'm so sorry you had to see that.'",
+      "signature_detail_hint": "The blood on the shirt is too dark, almost black — and the fabric smells faintly of vinegar, as if someone tried to clean it with a homemade solution.",
+      "emotional_beat": "Triumph and fear — the housekeeper believes she has the proof she needs. She feels a rush of purpose, but also a deep dread. The wife's gratitude feels genuine, but her timing is too perfect.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 5 (1600-1900 words). Deliver the midpoint peak: the housekeeper finds the bloodstained shirt and believes she has proof. Commit her fully to saving the wife. Make the evidence feel too convenient — plant the first seed of doubt for the reader. End with the wife's appearance in the doorway. Maintain the housekeeper's hidden agenda (she still plans to rob the house and disappear).",
+      "carries_to_next": "The housekeeper now has 'proof' and is committed to protecting the wife. She will confront the husband or prepare to escape in Chapter 6, but the wife's story will begin to crack."
+    },
+    {
+      "chapter": 6,
+      "title": "The Confrontation",
+      "slug": "ch06-confrontation",
+      "one_line_summary": "The housekeeper confronts the husband with the evidence, but he denies everything and reveals a detail that doesn't match the wife's story — the false answer peaks, and the first crack in the wife's story appears.",
+      "beat_summary": "ACT REVERSAL — the false answer peaks: a confrontation or near-miss makes the husband look guilty beyond doubt, right as a first crack appears in the wife's story that the reader misreads.",
+      "must_happen": [
+        "The housekeeper confronts the husband in his study, presenting the watch and the bloodstained shirt as evidence of his crimes.",
+        "The husband denies everything and claims the wife has been 'playing' the housekeeper — he says the wife has a history of manipulating staff.",
+        "The wife bursts into the study, sobbing, and accuses the husband of threatening her — she begs the housekeeper to call the police.",
+        "The husband reveals that the locked room in the east wing is not a nursery — it's a room where the wife's previous 'carer' died under suspicious circumstances.",
+        "The housekeeper, torn, decides to side with the wife and calls the police — but as she does, she notices the wife's hands are perfectly steady, not trembling at all."
+      ],
+      "must_not": [
+        "Must not reveal that the wife is the true orchestrator — the reader should still believe the husband is the villain at the end of this chapter.",
+        "Must not reveal the housekeeper's criminal past or her plan to rob the family."
+      ],
+      "opens_with": "I walked into his study with the shirt in one hand and the watch in the other. 'Explain these,' I said. 'Or I'll explain them to the police.'",
+      "cliffhanger": "I dialed the police. The wife sobbed behind me. But as I pressed the last digit, I looked at her hands — folded in her lap, perfectly still. Not a tremor. Not a tear. And I knew, in that moment, that I had made a terrible mistake.",
+      "signature_detail_hint": "The wife's hands are not trembling — the housekeeper notices because she has been counting the wife's tremors all week, and this is the first time they are absent.",
+      "emotional_beat": "Confusion and dread — the housekeeper is certain the husband is guilty, but the wife's calm hands shatter that certainty. She feels the ground shift beneath her.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 6 (1600-1900 words). Deliver the act reversal: the confrontation makes the husband look guilty, but the wife's steady hands plant the first real crack. The false answer peaks. The housekeeper calls the police, but the reader should feel that something is wrong. End with the cliffhanger about the wife's hands. Maintain the housekeeper's hidden agenda (she is now trapped — she called the police, which will expose her own past).",
+      "carries_to_next": "The police will arrive in Chapter 7. The housekeeper is now trapped between her own secrets and the wife's lies. She will begin to realize she has been played."
+    },
+    {
+      "chapter": 7,
+      "title": "The Shared Wound",
+      "slug": "ch07-shared-wound",
+      "one_line_summary": "The police arrive and question everyone; the housekeeper and the wife share a vulnerable moment that feels like a genuine bond — but the housekeeper notices the wife's story is too polished.",
+      "beat_summary": "FALSE ALLY BEAT — the two women share their deepest vulnerability; a real bond forms (the shared wound). The emotional high point, placed right before it's undercut. The police interview everyone separately; the wife tells a harrowing story of abuse that mirrors the housekeeper's own past. The housekeeper feels a deep connection — for the first time, she doesn't feel alone. But a small detail breaks the spell: the wife's timeline has a two-hour gap she can't explain.",
+      "must_happen": [
+        "The police arrive and interview the housekeeper, the husband, and the wife separately — the housekeeper lies to protect the wife, claiming she found the shirt in the husband's closet without any help.",
+        "The wife confesses to the housekeeper in private that she was abused by her father as a child — a story that mirrors the housekeeper's own hidden past, creating a powerful emotional bond.",
+        "The husband tells the police the wife has a history of 'false accusations' against staff, and produces a doctor's note from three years ago claiming she suffers from paranoid delusions.",
+        "The housekeeper notices a two-hour gap in the wife's timeline of the night the previous housekeeper disappeared — the wife says she was asleep, but the housekeeper remembers hearing footsteps in the east wing that night.",
+        "The police take the bloodstained shirt as evidence but warn the housekeeper not to leave town — she is now a material witness, trapped in the estate."
+      ],
+      "must_not": [
+        "Must not reveal that the wife is the true architect of the con — the reader should still believe she is a victim at the end of this chapter.",
+        "Must not reveal the housekeeper's criminal past or her original plan to rob the family."
+      ],
+      "opens_with": "The police officer's pen hovered over his notepad. 'So you found the shirt by accident?' 'Yes.' 'And you've never been in trouble with the law before?' I met his eyes. 'Never.' The lie tasted like copper.",
+      "cliffhanger": "I looked at the clock. The wife said she was asleep from 10 PM to 6 AM. But I had heard footsteps in the east wing at 11:30 — light, quick footsteps, not heavy like the husband's. And I had heard a woman's voice, whispering.",
+      "signature_detail_hint": "The wife's hands tremble when she tells her childhood story — but the housekeeper notices the tremors start and stop on cue, like a practiced performance.",
+      "emotional_beat": "Vulnerability and connection — the housekeeper feels a deep bond with the wife for the first time, but also a growing unease. The shared wound feels real, but the timing is too perfect. She wants to trust the wife, but her instincts scream caution.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 7 (1600-1900 words). Deliver the FALSE ALLY BEAT: the two women share their deepest vulnerability, creating a powerful emotional bond. Plant the two-hour gap in the wife's timeline as the first crack the housekeeper notices. End with the cliffhanger about the footsteps and the whispering voice. Maintain the housekeeper's hidden agenda (she is now trapped as a material witness).",
+      "carries_to_next": "The housekeeper is now bound to the estate as a material witness. She will investigate the two-hour gap and the whispering voice in Chapter 8, leading to the double reversal."
+    },
+    {
+      "chapter": 8,
+      "title": "The Architect",
+      "slug": "ch08-architect",
+      "one_line_summary": "The housekeeper discovers the wife's true plan — she was hired to be framed for the husband's murder — and realizes every kindness was a manipulation.",
+      "beat_summary": "DOUBLE LIFT / ACT REVERSAL — two truths overturn at once: the housekeeper's own con is exposed to the reader, AND the fragile wife is revealed as the architect. Every earlier kindness re-reads as manipulation. The housekeeper finds the wife's hidden journal in the locked room, detailing the entire plan: the wife hired her specifically because of her criminal record, planted all the evidence, and intends to kill the husband on the 15th and frame the housekeeper. At the same moment, the wife enters and reveals she knows the housekeeper's real name — and her prison record.",
+      "must_happen": [
+        "The housekeeper picks the lock on the east wing door and discovers the room is not a nursery — it's a study filled with files, photographs, and a journal detailing the wife's plan.",
+        "The housekeeper reads the wife's journal and learns the truth: the wife hired her specifically because of her criminal record, planted the watch and the bloodstained shirt, and plans to kill the husband on the 15th and frame the housekeeper for the murder.",
+        "The wife enters the room behind the housekeeper, holding a gun — she reveals she knows the housekeeper's real name, her prison record, and her original plan to rob the family.",
+        "The wife explains her motive: the husband is not a predator — he discovered she killed her previous 'carer' (the woman who died in the east wing) and was going to expose her, so she needs to eliminate him first.",
+        "The housekeeper realizes every moment of kindness — the locket, the tea, the shared wound — was a calculated manipulation to gain her trust and make her the perfect patsy."
+      ],
+      "must_not": [
+        "Must not reveal whether the housekeeper will escape or be caught — the chapter ends with the wife holding a gun and the housekeeper trapped.",
+        "Must not reveal the husband's fate — the reader should still believe he may be killed on the 15th."
+      ],
+      "opens_with": "The lock was cheap — a simple pin tumbler. I had it open in thirty seconds. The door swung inward, and I stepped into a room that smelled of paper and dust. And there, on the desk, was a journal with my name on it.",
+      "cliffhanger": "I turned around. The wife stood in the doorway, a gun in her hand. 'You were never here to save me,' she said. 'You were here to take the fall. And now, my dear, you're going to help me kill him.'",
+      "signature_detail_hint": "The journal is written in the wife's handwriting, but the ink is different on different pages — some in blue, some in black, some in pencil — suggesting the plan was revised over months, maybe years.",
+      "emotional_beat": "Betrayal and horror — the housekeeper feels the ground collapse beneath her. Every kindness was a lie. She trusted the wife, and now she is trapped in a murder plot she cannot escape. The bond she felt was real to her, but it was a weapon to the wife.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 8 (1600-1900 words). Deliver the DOUBLE LIFT / ACT REVERSAL: the housekeeper discovers the wife's true plan, and the reader learns both women have been running cons. The wife reveals she knows the housekeeper's past. End with the cliffhanger of the wife holding a gun and demanding the housekeeper help her kill the husband. The false answer is shattered — the wife is the villain.",
+      "carries_to_next": "The housekeeper is now trapped in the wife's murder plot. She must find a way to escape or expose the wife before the 15th. Chapter 9 will focus on her search for physical evidence to prove the setup."
+    },
+    {
+      "chapter": 9,
+      "title": "The Frame Tightens",
+      "slug": "ch09-frame-tightens",
+      "one_line_summary": "The housekeeper realizes she's being framed for the husband's murder and hunts for physical evidence to prove the setup — but the wife is always one step ahead, and the husband becomes humanized as the real target.",
+      "beat_summary": "The housekeeper realizes she's being framed for the husband's murder. She hunts for the physical evidence that proves the setup; the husband is humanized as the real target, not the predator. The housekeeper finds a hidden camera in the east wing that recorded the wife planting the bloody shirt — but the wife discovers her watching the footage. The husband, meanwhile, reveals he knew about the wife's past all along and was trying to protect the previous housekeeper, not harm her. The housekeeper must now choose: escape alone, or try to save the husband too.",
+      "must_happen": [
+        "The housekeeper searches the east wing study for evidence and finds a hidden camera that recorded the wife planting the bloodstained shirt in the husband's closet — proof of the setup.",
+        "The wife catches the housekeeper watching the footage and reveals she has already called the husband back to the estate early, setting the final trap for the 15th.",
+        "The husband returns and confronts the housekeeper privately, revealing he knew the wife killed her previous 'carer' and was gathering evidence to expose her — he was never a predator, he was a man trying to protect himself.",
+        "The housekeeper hides the camera footage in a secure location (the silver locket the wife gave her, which has a hidden compartment) — her only proof of the setup.",
+        "The wife announces that the will-signing has been moved to tonight, not the 15th — the trap is springing early, and the housekeeper has hours, not days."
+      ],
+      "must_not": [
+        "Must not reveal whether the housekeeper will succeed in escaping or saving the husband — the chapter ends with the clock ticking down.",
+        "Must not reveal the final fate of any character — Book 1's ending is reserved for Chapter 10."
+      ],
+      "opens_with": "The footage was grainy, but clear enough. I watched the wife — Lydia — walk into the husband's study, a plastic bag in her hand. She pulled out the bloody shirt, placed it under the floorboard, and smiled. A cold, practiced smile. The smile of someone who had done this before.",
+      "cliffhanger": "Lydia's voice came from behind me. 'I see you've found my little recording.' I spun around. She was leaning against the doorframe, arms crossed, a thin smile on her lips. 'Don't worry,' she said. 'I have the original. And I've already called Marcus back. He'll be here in two hours. Just in time for the signing.'",
+      "signature_detail_hint": "The hidden camera is a baby monitor — the wife repurposed it from the 'nursery' setup, the lens disguised as a teddy bear's eye.",
+      "emotional_beat": "Desperation and clarity — the housekeeper now sees the full picture. The husband is not the enemy. The wife is a cold, calculating killer. The housekeeper must race against time to find a way out, but every move she makes is anticipated. She feels the walls closing in.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 9 (1600-1900 words). Deliver the frame-tightening beat: the housekeeper finds evidence of the setup, but the wife is always one step ahead. Humanize the husband as the real target. Move the deadline up to create urgency. End with the cliffhanger that the will-signing is tonight. The housekeeper must find a way to escape or expose the wife before it's too late.",
+      "carries_to_next": "The will-signing is tonight. The housekeeper has the camera footage hidden in the locket, but the wife has the original. Chapter 10 will resolve the central con: who dies, who survives, and what secret the housekeeper is bound to."
+    },
+    {
+      "chapter": 10,
+      "title": "The Inheritance",
+      "slug": "ch10-inheritance",
+      "one_line_summary": "The will-signing trap springs; the wife's plan unravels when the housekeeper uses the hidden camera footage to force a standoff, but the husband dies, and the housekeeper walks away bound to a secret that could destroy her.",
+      "beat_summary": "TRUE REVEAL via a planted object/document — the wife engineered the entire hire to frame her. Case closes: who framed whom, who dies. The housekeeper survives, bound to a destroying secret. Book-2 hook: evidence she thought she destroyed resurfaces.",
+      "must_happen": [
+        "The will-signing takes place in the husband's study; the wife produces a forged document claiming the husband signed everything to her, and produces the original camera footage to show the housekeeper as the aggressor.",
+        "The housekeeper reveals the locket's hidden compartment containing the copied footage, exposing the wife planting the bloody shirt and her true plan.",
+        "In the ensuing struggle, the husband is shot (by the wife or by accident — ambiguous), and the wife dies from a fall down the stairs (the housekeeper pushes her in self-defense).",
+        "The housekeeper destroys the original footage and the locket copy, leaving no proof of her own involvement, but the husband's last words reveal a second hidden safe with documents that implicate the housekeeper's past.",
+        "The housekeeper walks away from the estate as the sole survivor, but she knows the documents in the safe will surface someday — she is now bound to a secret that could destroy her."
+      ],
+      "must_not": [
+        "Must not reveal the exact contents of the husband's hidden safe documents — only imply they connect to the housekeeper's criminal past.",
+        "Must not show the housekeeper being arrested or caught — she survives and escapes, but is trapped by the knowledge of the safe."
+      ],
+      "opens_with": "Lydia smiled as she placed the will on the desk. 'Sign it, Marcus. You know it's the only way.' The pen trembled in his hand. I watched from the corner, the locket cold against my chest. I had one move left.",
+      "cliffhanger": "I stepped out of the estate into the cold night air. The sirens were distant. I had the locket in my pocket — empty now. But as I reached the gate, my phone buzzed. A text from an unknown number: 'I know what you did. I have the safe.'",
+      "signature_detail_hint": "The locket's hidden compartment is still warm from the footage card — the housekeeper can feel the phantom heat against her chest as she walks away.",
+      "emotional_beat": "Relief laced with dread — the housekeeper survived, but the cost is a permanent chain. She is free, but she will never be safe. The bond she felt with the wife is replaced by cold clarity: she was a pawn, and now she is a fugitive of her own making.",
+      "spice": 1,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 10 (1600-1900 words). Deliver the TRUE REVEAL: the wife's plan is exposed via the locket footage. Resolve the central con: who framed whom (the wife framed the housekeeper), who dies (the wife and the husband). The housekeeper survives but is now bound to a secret (the safe documents). End with the Book-2 hook: the text from an unknown number. Maintain the housekeeper's first-person POV and the tense, claustrophobic atmosphere of the estate.",
+      "carries_to_next": "The housekeeper is now a fugitive with a secret that could destroy her. Book 2 will follow her attempt to retrieve or destroy the safe documents before the unknown texter exposes her."
+    }
+  ],
+  "total_chapters": 10,
+  "title": "The Second Wife",
+  "status": "draft",
+  "created_at": "2026-07-25T11:36:26.465431+00:00",
+  "intent_digest": "2440d90c3e0c953e",
+  "intent_concept_digest": "c0f4933e5ab07d68"
+}

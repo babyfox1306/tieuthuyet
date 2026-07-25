@@ -1,0 +1,176 @@
+{
+  "main_mystery": "Who is conning whom, and who dies?",
+  "truth": "The wife engineered the entire hire to frame the housekeeper for the husband's murder. The housekeeper is also running a con (robbery/blackmail). The husband is the intended victim, not the predator. The prior housekeeper's disappearance was a test run by the wife.",
+  "canonical_reveal_chapter": 10,
+  "red_herrings": [
+    {
+      "id": "RH01",
+      "description": "The husband is the predator — controlling, menacing, possibly a killer.",
+      "plant_chapter": 1,
+      "payoff_chapter": 6,
+      "overturned_chapter": 8
+    },
+    {
+      "id": "RH02",
+      "description": "The husband murdered the previous housekeeper.",
+      "plant_chapter": 2,
+      "payoff_chapter": 6,
+      "overturned_chapter": 8
+    },
+    {
+      "id": "RH03",
+      "description": "The housekeeper is an innocent victim entering a dangerous house.",
+      "plant_chapter": 1,
+      "payoff_chapter": 7,
+      "overturned_chapter": 8
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "MR01",
+      "description": "Tier 1 reveal: The husband is controlling and menacing; the wife is a frail prisoner.",
+      "chapter": 3,
+      "type": "false_answer",
+      "required_clues": [
+        "C001",
+        "C002",
+        "C003"
+      ],
+      "note": "Reader's working theory by ch 3: the husband is the threat."
+    },
+    {
+      "id": "MR02",
+      "description": "Tier 2 false answer: The husband murdered the previous housekeeper.",
+      "chapter": 6,
+      "type": "false_answer",
+      "required_clues": [
+        "C004",
+        "C005",
+        "C006"
+      ],
+      "note": "The housekeeper obtains 'proof' and commits to protecting the wife."
+    },
+    {
+      "id": "MR03",
+      "description": "Tier 3 double lift: The housekeeper is running a con AND the wife is the architect of everything.",
+      "chapter": 8,
+      "type": "double_lift",
+      "required_clues": [
+        "C007",
+        "C008",
+        "C009"
+      ],
+      "note": "Re-read every earlier kindness from the wife as manipulation, every earlier vulnerability from the narrator as omission."
+    },
+    {
+      "id": "MR04",
+      "description": "Tier 4 true reveal: The wife engineered the entire hire to frame the housekeeper for the husband's murder.",
+      "chapter": 9,
+      "type": "true_reveal",
+      "required_clues": [
+        "C010",
+        "C011",
+        "C012"
+      ],
+      "note": "Truth is proven by physical evidence (planted object/document), not a confession speech."
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "description": "The husband's cold demeanor and controlling behavior toward the wife (e.g., monitoring her medication, restricting visitors).",
+      "plant_chapter": 1,
+      "payoff_chapter": 3,
+      "type": "surface",
+      "note": "Supports Tier 1 false answer."
+    },
+    {
+      "id": "C002",
+      "description": "The wife knows too much about the housekeeper's past (e.g., mentions a detail only an investigator would know).",
+      "plant_chapter": 1,
+      "payoff_chapter": 8,
+      "type": "hidden",
+      "note": "Re-reads as manipulation after Tier 3."
+    },
+    {
+      "id": "C003",
+      "description": "A locked room in the house that no one explains.",
+      "plant_chapter": 2,
+      "payoff_chapter": 5,
+      "type": "surface",
+      "note": "Suggests the husband has secrets."
+    },
+    {
+      "id": "C004",
+      "description": "A diary or letter from the previous housekeeper, found in the locked room, hinting at the husband's violence.",
+      "plant_chapter": 4,
+      "payoff_chapter": 6,
+      "type": "misdirect",
+      "note": "Supports Tier 2 false answer; later revealed as planted by the wife."
+    },
+    {
+      "id": "C005",
+      "description": "The husband's alibi for the night the previous housekeeper disappeared is weak (e.g., he was 'working late' but no one can confirm).",
+      "plant_chapter": 4,
+      "payoff_chapter": 6,
+      "type": "misdirect",
+      "note": "Supports Tier 2 false answer."
+    },
+    {
+      "id": "C006",
+      "description": "A police report or news clipping about the previous housekeeper's disappearance, with the husband named as a person of interest.",
+      "plant_chapter": 5,
+      "payoff_chapter": 6,
+      "type": "misdirect",
+      "note": "Peak of Tier 2; the housekeeper commits to protecting the wife."
+    },
+    {
+      "id": "C007",
+      "description": "The housekeeper's actions from ch 1 show hidden agenda: casing the house, asking about security, showing too much interest in the husband's finances.",
+      "plant_chapter": 1,
+      "payoff_chapter": 8,
+      "type": "hidden",
+      "note": "Re-reads as con after Tier 3."
+    },
+    {
+      "id": "C008",
+      "description": "The wife's 'fragile' moments are too convenient — she always recovers when the housekeeper is about to leave or act.",
+      "plant_chapter": 3,
+      "payoff_chapter": 8,
+      "type": "hidden",
+      "note": "Re-reads as manipulation after Tier 3."
+    },
+    {
+      "id": "C009",
+      "description": "The wife's genuine wound shared with the housekeeper (e.g., both survived a controlling man) — the bond is real, which is why the betrayal cuts.",
+      "plant_chapter": 7,
+      "payoff_chapter": 8,
+      "type": "emotional",
+      "note": "Emotional high point before Tier 3 undercuts it."
+    },
+    {
+      "id": "C010",
+      "description": "A planted object or document the housekeeper finds in ch 9 (e.g., a forged will, a recording of the wife's voice, a hidden key to the locked room with evidence).",
+      "plant_chapter": 8,
+      "payoff_chapter": 10,
+      "type": "physical_evidence",
+      "note": "Proves the wife's plan; the truth is earned through physical evidence."
+    },
+    {
+      "id": "C011",
+      "description": "The wife's fingerprints or DNA on the previous housekeeper's diary, proving she planted it.",
+      "plant_chapter": 8,
+      "payoff_chapter": 10,
+      "type": "physical_evidence",
+      "note": "Overturns Tier 2 false answer."
+    },
+    {
+      "id": "C012",
+      "description": "A timeline discrepancy: the wife's alibi for the night of the previous housekeeper's disappearance does not match her claimed illness.",
+      "plant_chapter": 6,
+      "payoff_chapter": 10,
+      "type": "hidden",
+      "note": "Supports the true reveal."
+    }
+  ]
+}

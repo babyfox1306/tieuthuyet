@@ -1,0 +1,83 @@
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Temper",
+      "slug": "ch04-temper",
+      "one_line_summary": "The housekeeper finds a hidden object in the husband's study and witnesses his temper, solidifying her belief that he is dangerous — but a small detail in the wife's story doesn't add up.",
+      "beat_summary": "Evidence begins pointing hard at the husband — his temper, a hidden object, a lie he tells. The housekeeper starts protecting the wife. FALSE ANSWER building.",
+      "must_happen": [
+        "The housekeeper discovers a hidden drawer in the husband's study containing a woman's watch — engraved with initials that do not match the wife's.",
+        "The husband loses his temper at a phone call, slamming the receiver and shouting about 'that woman' — the housekeeper overhears and interprets it as a threat to the wife.",
+        "The wife confides that she fears the husband will 'do something' before the 15th, and asks the housekeeper to stay close to her at all times.",
+        "The housekeeper hides the watch in her own room as evidence, deciding to protect the wife by gathering proof of the husband's violence.",
+        "The wife mentions that the previous housekeeper 'knew something about the east wing' — but when pressed, she says she can't remember what."
+      ],
+      "must_not": [
+        "Must not reveal that the wife is the one who planted the watch to frame the husband.",
+        "Must not reveal the housekeeper's criminal past or her original plan to rob the family."
+      ],
+      "opens_with": "The drawer wasn't locked. That was the first thing that struck me — everything else in this house was locked. The drawer wasn't. It was an invitation, and I took it.",
+      "cliffhanger": "I held the watch in my palm. The initials on the back read 'E.M.' Not the wife's initials. And not the husband's. The wife's name was Lydia. The husband's was Marcus. Who was E.M.?",
+      "signature_detail_hint": "The watch is a woman's Patek Philippe, but the crystal is cracked — as if someone stepped on it, hard.",
+      "emotional_beat": "Protective urgency — the housekeeper now sees herself as the wife's guardian. She feels righteous anger toward the husband, but a flicker of doubt about the wife's story lingers.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 4 (1600-1900 words). Build the false answer: make the husband seem guilty. The housekeeper finds the watch, witnesses his temper, and commits to protecting the wife. Plant the first crack: the wife's story about the previous housekeeper is slightly off. End with the cliffhanger about the initials E.M.",
+      "carries_to_next": "The housekeeper is now actively gathering evidence against the husband. She will push further into his past and the locked room in Chapter 5."
+    },
+    {
+      "chapter": 5,
+      "title": "The Proof",
+      "slug": "ch05-proof",
+      "one_line_summary": "The housekeeper finds what looks like proof that the husband killed the previous housekeeper, and she commits fully to saving the wife — but the reader senses something is too convenient.",
+      "beat_summary": "MIDPOINT — the housekeeper obtains what looks like proof the husband killed the previous housekeeper. She commits fully to saving the wife. (This is the Tier-2 peak, and it is wrong.)",
+      "must_happen": [
+        "The housekeeper finds a bloodstained shirt in the husband's closet, hidden beneath a false floorboard — the shirt has a name tag from the previous housekeeper's uniform.",
+        "The husband lies about his whereabouts on the night the previous housekeeper disappeared — the housekeeper catches the inconsistency in his story.",
+        "The wife breaks down in tears, thanking the housekeeper for believing her and begging her to help escape before the 15th.",
+        "The housekeeper calls her old contact again and learns the husband's criminal case involved 'suspicious death' — but the contact warns her not to get involved.",
+        "The housekeeper hides the shirt with the watch and resolves to expose the husband after the 15th, planning to save the wife and then disappear."
+      ],
+      "must_not": [
+        "Must not reveal that the wife planted the bloodstained shirt (it's pig's blood, not human).",
+        "Must not reveal the housekeeper's original plan to rob the family — the reader still believes she is a good person with a secret past."
+      ],
+      "opens_with": "The floorboard gave way under my heel. I didn't mean to find it. But there it was — a shirt, stiff with dried blood, the name tag still pinned to the collar. 'Clara.' The previous housekeeper.",
+      "cliffhanger": "I held the shirt in my hands, my fingers trembling. Then I heard a sound behind me — soft footsteps. I turned. The wife was standing in the doorway, her face pale. 'You found it,' she whispered. 'I'm so sorry you had to see that.'",
+      "signature_detail_hint": "The blood on the shirt is too dark, almost black — and the fabric smells faintly of vinegar, as if someone tried to clean it with a homemade solution.",
+      "emotional_beat": "Triumph and fear — the housekeeper believes she has the proof she needs. She feels a rush of purpose, but also a deep dread. The wife's gratitude feels genuine, but her timing is too perfect.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 5 (1600-1900 words). Deliver the midpoint peak: the housekeeper finds the bloodstained shirt and believes she has proof. Commit her fully to saving the wife. Make the evidence feel too convenient — plant the first seed of doubt for the reader. End with the wife's appearance in the doorway. Maintain the housekeeper's hidden agenda (she still plans to rob the house and disappear).",
+      "carries_to_next": "The housekeeper now has 'proof' and is committed to protecting the wife. She will confront the husband or prepare to escape in Chapter 6, but the wife's story will begin to crack."
+    },
+    {
+      "chapter": 6,
+      "title": "The Confrontation",
+      "slug": "ch06-confrontation",
+      "one_line_summary": "The housekeeper confronts the husband with the evidence, but he denies everything and reveals a detail that doesn't match the wife's story — the false answer peaks, and the first crack in the wife's story appears.",
+      "beat_summary": "ACT REVERSAL — the false answer peaks: a confrontation or near-miss makes the husband look guilty beyond doubt, right as a first crack appears in the wife's story that the reader misreads.",
+      "must_happen": [
+        "The housekeeper confronts the husband in his study, presenting the watch and the bloodstained shirt as evidence of his crimes.",
+        "The husband denies everything and claims the wife has been 'playing' the housekeeper — he says the wife has a history of manipulating staff.",
+        "The wife bursts into the study, sobbing, and accuses the husband of threatening her — she begs the housekeeper to call the police.",
+        "The husband reveals that the locked room in the east wing is not a nursery — it's a room where the wife's previous 'carer' died under suspicious circumstances.",
+        "The housekeeper, torn, decides to side with the wife and calls the police — but as she does, she notices the wife's hands are perfectly steady, not trembling at all."
+      ],
+      "must_not": [
+        "Must not reveal that the wife is the true orchestrator — the reader should still believe the husband is the villain at the end of this chapter.",
+        "Must not reveal the housekeeper's criminal past or her plan to rob the family."
+      ],
+      "opens_with": "I walked into his study with the shirt in one hand and the watch in the other. 'Explain these,' I said. 'Or I'll explain them to the police.'",
+      "cliffhanger": "I dialed the police. The wife sobbed behind me. But as I pressed the last digit, I looked at her hands — folded in her lap, perfectly still. Not a tremor. Not a tear. And I knew, in that moment, that I had made a terrible mistake.",
+      "signature_detail_hint": "The wife's hands are not trembling — the housekeeper notices because she has been counting the wife's tremors all week, and this is the first time they are absent.",
+      "emotional_beat": "Confusion and dread — the housekeeper is certain the husband is guilty, but the wife's calm hands shatter that certainty. She feels the ground shift beneath her.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 6 (1600-1900 words). Deliver the act reversal: the confrontation makes the husband look guilty, but the wife's steady hands plant the first real crack. The false answer peaks. The housekeeper calls the police, but the reader should feel that something is wrong. End with the cliffhanger about the wife's hands. Maintain the housekeeper's hidden agenda (she is now trapped — she called the police, which will expose her own past).",
+      "carries_to_next": "The police will arrive in Chapter 7. The housekeeper is now trapped between her own secrets and the wife's lies. She will begin to realize she has been played."
+    }
+  ]
+}

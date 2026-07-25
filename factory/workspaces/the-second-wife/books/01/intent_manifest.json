@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "book": 1,
+  "status": "approved",
+  "concept_digest": "c0f4933e5ab07d68",
+  "title": "The Second Wife",
+  "logline": "When a live-in housekeeper takes a job caring for a wealthy man's fragile wife, she's certain she's there to save the woman from him — until she realizes the wife hired her for something else entirely, and neither of them is who they claimed to be.",
+  "pov": "the housekeeper (unnamed narrator) | first_person | past",
+  "cast": [
+    "Lead / narrator",
+    "The wife",
+    "The husband",
+    "A prior housekeeper",
+    "PACING GUARDRAILS"
+  ],
+  "chapter_count": 10,
+  "chapter_map": [
+    {
+      "chapter": 1,
+      "title": "",
+      "beat": "The housekeeper arrives at the isolated estate to interview; counts her steps to the door (a compulsive tell). The husband stresses his wife's fragility and strict house rules — reader files him as controlling. A small \"off\" detail: the wife already seems to know something about the housekeeper's past.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 2,
+      "title": "",
+      "beat": "First private moment with the wife, who presents as a frail prisoner and shows a quiet kindness that will later read as recruitment. The housekeeper notes a locked room no one explains. (Narrator hides her own reason for taking this job from the reader.)",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 3,
+      "title": "",
+      "beat": "ACT REVERSAL — the housekeeper learns the previous housekeeper \"left suddenly\" and finds a trace she left behind. A fixed deadline enters (the prior case reopening / a will-signing date). Reader's theory locks: the husband is the threat.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 4,
+      "title": "",
+      "beat": "Evidence begins pointing hard at the husband — his temper, a hidden object, a lie he tells. The housekeeper starts protecting the wife. FALSE ANSWER building.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 5,
+      "title": "",
+      "beat": "MIDPOINT — the housekeeper obtains what looks like proof the husband killed the previous housekeeper. She commits fully to saving the wife. (This is the Tier-2 peak, and it is wrong.)",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 6,
+      "title": "",
+      "beat": "ACT REVERSAL — the false answer peaks: a confrontation or near-miss makes the husband look guilty beyond doubt, right as a first crack appears in the wife's story that the reader misreads.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 7,
+      "title": "",
+      "beat": "FALSE ALLY BEAT — the two women share their deepest vulnerability; a real bond forms (the shared wound). The emotional high point, placed right before it's undercut.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 8,
+      "title": "",
+      "beat": "DOUBLE LIFT / ACT REVERSAL — two truths overturn at once: the housekeeper's own con is exposed to the reader, AND the fragile wife is revealed as the architect. Every earlier kindness re-reads as manipulation.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 9,
+      "title": "",
+      "beat": "The housekeeper realizes she's being framed for the husband's murder. She hunts for the physical evidence that proves the setup; the husband is humanized as the real target, not the predator.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 10,
+      "title": "",
+      "beat": "TRUE REVEAL via a planted object/document — the wife engineered the entire hire to frame her. Case closes: who framed whom, who dies. The housekeeper survives, bound to a destroying secret. Book-2 hook: evidence she thought she destroyed resurfaces.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    }
+  ],
+  "must_include_by_chapter": {
+    "10": [
+      "Book 1 closes the central con: the reader learns who framed whom and who dies. The housekeeper survives but is now bound to a secret that could destroy her."
+    ]
+  },
+  "must_avoid": [
+    "Supernatural or paranormal elements",
+    "Villain confession speech as the reveal mechanism",
+    "Copying names, characters, or plot from any existing book",
+    "Flat stretches with no seed or shift for 3+ chapters",
+    "Making the twist obvious before its intended chapter"
+  ],
+  "must_include_book": [
+    "Unreliable first-person narrator who hides her own motive",
+    "Four-tier twist ladder, each tier re-reads the last",
+    "At least one fully-believable false answer before the true reveal",
+    "Truth revealed by physical evidence, not monologue",
+    "Genuine intimacy between the two women before the betrayal"
+  ],
+  "ending_book1": "Book 1 closes the central con: the reader learns who framed whom and who dies. The housekeeper survives but is now bound to a secret that could destroy her.",
+  "hook_book2": "The housekeeper walks free — but a single piece of evidence she thought she destroyed resurfaces in someone else's hands, and that someone knows exactly what she did.",
+  "surface_plot": "Reader thinks: A struggling housekeeper with a hidden past enters the perfect home of a rich couple and slowly uncovers that the controlling husband is dangerous and the frail wife is his victim. The housekeeper must protect the wife and escape before she becomes the next casualty.",
+  "true_plot": "Actually: The \"fragile wife\" orchestrated the entire hire. She chose this specific housekeeper because of the housekeeper's criminal past — she needs someone disposable to frame for a murder she has been planning for years. The husband isn't the predator; he's the target. And the housekeeper's own hidden agenda (she came to rob or blackmail this family) means both women are running long cons on each other. The real victim is the one reader trusted most.",
+  "final_supernatural_residue": "",
+  "genre_profile": "romance_thriller",
+  "language": "en",
+  "reveal_ladder": {
+    "the wife": 1,
+    "the husband": 1
+  },
+  "manifest_digest": "2440d90c3e0c953e"
+}

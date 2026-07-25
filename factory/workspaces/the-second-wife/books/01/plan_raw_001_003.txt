@@ -1,0 +1,83 @@
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Interview",
+      "slug": "ch01-interview",
+      "one_line_summary": "The housekeeper arrives at the isolated estate, is grilled by the controlling husband, and notices the wife already knows something about her past.",
+      "beat_summary": "The housekeeper arrives at the isolated estate for a job interview. She counts her steps to the door (a compulsive tell). The husband stresses his wife's fragility and strict house rules — reader files him as controlling. A small 'off' detail: the wife already seems to know something about the housekeeper's past.",
+      "must_happen": [
+        "The housekeeper counts her steps from the car to the front door — 47 steps.",
+        "The husband interviews the housekeeper, emphasizing his wife's fragile health and the rigid house rules (no visitors, no questions about the locked room, no entering the east wing).",
+        "The wife appears briefly at the top of the stairs, pale and silent, but her gaze lingers on the housekeeper with a look of recognition — not surprise.",
+        "The husband mentions the previous housekeeper 'left suddenly' without explanation.",
+        "The housekeeper accepts the job, hiding her real reason for taking it (she came to case the house for a robbery)."
+      ],
+      "must_not": [
+        "Must not reveal the housekeeper's criminal past or her real agenda (robbery/blackmail).",
+        "Must not make the husband's control feel cartoonish — keep it clinical, plausible, unnerving."
+      ],
+      "opens_with": "I counted forty-seven steps from the rental car to the front door. I always count. It’s how I know when I’m being watched.",
+      "cliffhanger": "The wife, from the top of the stairs, mouths a single word — my name. A name I never gave her.",
+      "signature_detail_hint": "The housekeeper counts her steps compulsively — a habit she developed in prison, where counting was survival.",
+      "emotional_beat": "Unease and suspicion — the housekeeper feels the husband is a threat, but the wife's knowing look unsettles her more.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 1 (1600-1900 words). Establish the estate's oppressive atmosphere, the husband's control, and the wife's uncanny recognition. Plant the housekeeper's counting habit. End with the cliffhanger of the wife mouthing her name.",
+      "carries_to_next": "The housekeeper is now living in the estate, unsettled by the wife's knowledge. She will seek a private moment with the wife in Chapter 2."
+    },
+    {
+      "chapter": 2,
+      "title": "The Fragile Prisoner",
+      "slug": "ch02-fragile-prisoner",
+      "one_line_summary": "The housekeeper has her first private moment with the wife, who presents as a frail prisoner and shows quiet kindness — but the housekeeper notices a locked room and begins to suspect the wife is hiding something too.",
+      "beat_summary": "First private moment with the wife, who presents as a frail prisoner and shows a quiet kindness that will later read as recruitment. The housekeeper notes a locked room no one explains. (Narrator hides her own reason for taking this job from the reader.)",
+      "must_happen": [
+        "The wife invites the housekeeper to tea in her private sitting room — a space that feels more like a cage than a sanctuary.",
+        "The wife reveals she knows the housekeeper's real name (from the job application), but the housekeeper never put her full name on the form — only a first name.",
+        "The housekeeper notices a locked door in the east wing hallway. The wife says it's 'the old nursery' and changes the subject.",
+        "The wife gives the housekeeper a small gift — a silver locket — claiming it belonged to her mother. The housekeeper feels a strange pull to keep it.",
+        "The housekeeper secretly checks the job application file in her room: she never listed a last name. How did the wife know it?"
+      ],
+      "must_not": [
+        "Must not reveal the wife's true agenda (she is recruiting the housekeeper for a murder frame).",
+        "Must not reveal the housekeeper's criminal past or her plan to rob the house."
+      ],
+      "opens_with": "She poured the tea herself, hands trembling only slightly, and smiled at me like we were old friends. 'You must be exhausted,' she said. 'I know how hard it is to start over.'",
+      "cliffhanger": "Back in my room, I pulled the job application from my bag. I had written only 'Anna.' No last name. But the wife had called me by my full name — a name I hadn't used in years.",
+      "signature_detail_hint": "The silver locket the wife gives her has a tiny scratch inside — as if someone tried to pry it open with a knife.",
+      "emotional_beat": "The housekeeper feels a flicker of sympathy for the wife, but also a growing unease — the wife knows too much. The locked room gnaws at her.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 2 (1600-1900 words). Build the wife as a sympathetic but mysterious figure. Plant the locked room as a mystery. Deepen the housekeeper's suspicion that the wife knows more than she should. End with the cliffhanger about the name.",
+      "carries_to_next": "The housekeeper is now certain the wife is hiding something. She will investigate the locked room and the fate of the previous housekeeper in Chapter 3."
+    },
+    {
+      "chapter": 3,
+      "title": "The One Who Left",
+      "slug": "ch03-one-who-left",
+      "one_line_summary": "The housekeeper learns the previous housekeeper left suddenly and finds a hidden note she left behind — confirming the husband is dangerous, but also revealing a fixed deadline that changes everything.",
+      "beat_summary": "ACT REVERSAL — the housekeeper learns the previous housekeeper 'left suddenly' and finds a trace she left behind. A fixed deadline enters (the prior case reopening / a will-signing date). Reader's theory locks: the husband is the threat.",
+      "must_happen": [
+        "The housekeeper finds a hidden note in the laundry room — a torn piece of paper with the words 'HE KNOWS. GET OUT BEFORE THE 15TH.' scrawled on it.",
+        "The housekeeper asks the gardener about the previous housekeeper; he says she 'left in a hurry' and no one has heard from her since.",
+        "The husband announces that the will-signing is scheduled for the 15th — two weeks away — and that his wife's condition must remain stable until then.",
+        "The housekeeper tries the locked door in the east wing when the husband is away — it's bolted from the outside, not the inside.",
+        "The housekeeper calls an old contact to check the husband's background; she learns he has a prior criminal case that was 'reopened' — but the contact hangs up before explaining."
+      ],
+      "must_not": [
+        "Must not reveal that the wife is the one who orchestrated the hire and framed the previous housekeeper.",
+        "Must not reveal the housekeeper's full criminal past or her plan to rob the family."
+      ],
+      "opens_with": "The note was wedged behind the dryer, yellowed and torn, as if someone had tried to flush it. 'HE KNOWS. GET OUT BEFORE THE 15TH.' The ink was smudged — by water, or by tears.",
+      "cliffhanger": "The husband's voice, from the doorway: 'I see you've found the laundry room. My wife used to spend hours in here. Before she got sick.' He smiled. It didn't reach his eyes.",
+      "signature_detail_hint": "The bolt on the locked door is new — the metal still has a faint factory oil sheen, unlike the rusted hinges on the other doors.",
+      "emotional_beat": "Fear and urgency — the housekeeper now believes the husband is a genuine threat. The deadline of the 15th creates a countdown. She feels trapped but also determined to protect the wife.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 3 (1600-1900 words). Deliver the act reversal: the reader's theory locks that the husband is the threat. Plant the fixed deadline (the 15th). Introduce the note from the previous housekeeper. End with the husband's unsettling appearance. Maintain the housekeeper's hidden agenda (she is still planning to rob the house).",
+      "carries_to_next": "The housekeeper is now racing against the 15th deadline. She will try to uncover what happened to the previous housekeeper and what the husband is hiding in the locked room."
+    }
+  ]
+}

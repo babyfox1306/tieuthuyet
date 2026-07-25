@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import re
+from pathlib import Path
 from typing import Any
 
 UNKNOWN_UNTIL_REVEAL = "unknown_until_reveal"
@@ -45,6 +46,16 @@ _MY_NAME_WAS_RE = re.compile(
     r"([A-Z][a-z]{1,20})[\'\"\u2019\u201d]?",
     re.IGNORECASE,
 )
+# Husband / male target — allowed even when canon male_lead is Unassigned (no romance).
+_HUSBAND_NAMED_RE = re.compile(
+    r"\bhusband(?:'s)?(?:\s+name)?\s+(?:was|is|named)\s+[\'\"\u2018\u201c]?"
+    r"([A-Z][a-z]{1,20})[\'\"\u2019\u201d]?",
+    re.IGNORECASE,
+)
+_HUSBAND_WAS_RE = re.compile(
+    r"\b(?:the\s+)?husband(?:'s)?\s+was\s+([A-Z][a-z]{1,20})\b",
+    re.IGNORECASE,
+)
 _INITIALS_RE = re.compile(r"(?<![A-Za-z])([A-Z]\.[A-Z]\.)(?![A-Za-z])")
 _INITIALS_CONTEXT_RE = re.compile(
     r"(?:initials?|watch|engraved|monogram).{0,80}?(?<![A-Za-z])([A-Z]\.[A-Z]\.)(?![A-Za-z])"
@@ -55,16 +66,19 @@ _FULL_NAME_RE = re.compile(r"\b([A-Z][a-z]{1,20}\s+[A-Z][a-z]{1,20})\b")
 
 _STOP_NAMES = frozenset(
     {
-        "Marcus",
-        "Lydia",
         "Katherine",
         "Thornton",
         "Detective",
         "Harris",
         "Subject",
         "Vance",
+        "The",
+        "Not",
     }
 )
+# Names that must not be locked into previous_housekeeper / narrator_alias by accident,
+# but ARE valid for husband/wife roles.
+_LEADISH_STOP_FOR_SUPPORT = frozenset({"Marcus", "Lydia", "Harold", "Emily", "Clara", "Anna"})
 
 
 def _clean_name(name: str) -> str:
@@ -80,6 +94,12 @@ def extract_name_locks_from_prose(text: str) -> dict[str, str]:
     def _set(role: str, name: str) -> None:
         name = _clean_name(name)
         if not name or name in _STOP_NAMES:
+            return
+        if role in {"previous_housekeeper", "narrator_alias"} and name in {
+            "Marcus",
+            "Lydia",
+            "Harold",
+        }:
             return
         if role not in found:
             found[role] = name
@@ -99,8 +119,11 @@ def extract_name_locks_from_prose(text: str) -> dict[str, str]:
         _set("narrator_alias", m.group(1))
     for m in _MY_NAME_WAS_RE.finditer(text):
         _set("narrator_alias", m.group(1))
-    # Prefer "written only" / "my name was" for narrator_alias; skip bare Alias:
-    # labels from antagonist dossiers that invent a second alias after lock.
+
+    for m in _HUSBAND_NAMED_RE.finditer(text):
+        _set("husband", m.group(1))
+    for m in _HUSBAND_WAS_RE.finditer(text):
+        _set("husband", m.group(1))
 
     for m in _INITIALS_CONTEXT_RE.finditer(text):
         initials = m.group(1) or m.group(2)
@@ -111,6 +134,93 @@ def extract_name_locks_from_prose(text: str) -> dict[str, str]:
             _set(m.group(1), UNKNOWN_UNTIL_REVEAL)
 
     return found
+
+
+def extract_husband_from_plan_blob(blob: str) -> str | None:
+    """Pull husband proper name from master_plan / concept text (plan SoT)."""
+    if not blob:
+        return None
+    not_names = frozenset(
+        {
+            "dangerous",
+            "controlling",
+            "wealthy",
+            "absent",
+            "away",
+            "gone",
+            "dead",
+            "home",
+            "here",
+            "there",
+            "back",
+            "early",
+            "late",
+            "still",
+            "already",
+            "always",
+            "never",
+            "often",
+            "truly",
+            "really",
+            "clearly",
+            "the",
+            "his",
+            "her",
+            "this",
+            "that",
+            "said",
+            "from",
+            "with",
+            "into",
+            "about",
+            "fragile",
+            "unwell",
+            "violent",
+            "guilty",
+            "innocent",
+        }
+    )
+    patterns = (
+        # "The husband's was Marcus" / "husband's name was Marcus"
+        r"husband(?:'s)?(?:\s+name)?\s+was\s+([A-Z][a-z]{1,20})\b",
+        r"husband(?:'s)?\s+named\s+([A-Z][a-z]{1,20})\b",
+        r"husband(?:'s)?\s+is\s+([A-Z][a-z]{1,20})\b",
+    )
+    for pat in patterns:
+        for m in re.finditer(pat, blob, re.IGNORECASE):
+            name = _clean_name(m.group(1))
+            if not name or name in _STOP_NAMES:
+                continue
+            if name.lower() in not_names:
+                continue
+            # Prefer Title Case person tokens (plan JSON preserves Marcus)
+            if name[0].isupper():
+                return name
+    return None
+
+
+def seed_locked_names_from_plan(ws: Path, book: int = 1) -> dict[str, str]:
+    """Seed supporting locks from master_plan (husband etc.) before write."""
+    from factory.engine.paths import book_workspace_dir
+
+    path = book_workspace_dir(ws, book) / "master_plan.json"
+    seeded: dict[str, str] = {}
+    if not path.exists():
+        return seeded
+    try:
+        blob = path.read_text(encoding="utf-8")
+    except OSError:
+        return seeded
+    husband = extract_husband_from_plan_blob(blob)
+    if husband:
+        seeded["husband"] = husband
+    if re.search(r"written only ['\u2018\u201c]Anna", blob, re.I):
+        seeded.setdefault("narrator_alias", "Anna")
+    if re.search(r"\bClara\b", blob) and re.search(r"housekeeper|name tag", blob, re.I):
+        seeded.setdefault("previous_housekeeper", "Clara")
+    if re.search(r"(?<![A-Za-z])E\.M\.(?![A-Za-z])", blob):
+        seeded.setdefault("E.M.", UNKNOWN_UNTIL_REVEAL)
+    return seeded
 
 
 def merge_locked_names(
@@ -222,6 +332,7 @@ def _conflicting_housekeeper_name(text: str, locked_prev: str) -> str | None:
 def _should_drop_fact(text: str, locked: dict[str, str]) -> bool:
     locked_prev = locked.get("previous_housekeeper")
     locked_alias = locked.get("narrator_alias")
+    locked_husband = locked.get("husband")
 
     for m in _FULL_NAME_RE.finditer(text):
         if _name_matches_unknown_initials(m.group(1), locked):
@@ -235,6 +346,22 @@ def _should_drop_fact(text: str, locked: dict[str, str]) -> bool:
 
     if locked_prev and _conflicting_housekeeper_name(text, locked_prev):
         return True
+
+    if locked_husband:
+        # Alternate husband first name (Harold when Marcus locked)
+        if re.search(r"\bHarold(?:\s+Vance)?\b", text) and locked_husband == "Marcus":
+            return True
+        for m in re.finditer(r"\b([A-Z][a-z]{2,20})\b", text):
+            first = m.group(1)
+            if first == locked_husband or first in _STOP_NAMES | {"Lydia", "Clara", "Anna"}:
+                continue
+            if re.search(
+                rf"\bhusband\b.*\b{re.escape(first)}\b|\b{re.escape(first)}\b.*\bhusband\b",
+                text,
+                re.I,
+            ):
+                if first != locked_husband:
+                    return True
 
     if locked_alias:
         for m in _FULL_NAME_RE.finditer(text):
@@ -309,6 +436,7 @@ def sanitize_state_for_locked_names(state: dict) -> dict:
     if isinstance(phrases, list):
         locked_prev = locked.get("previous_housekeeper")
         locked_alias = locked.get("narrator_alias")
+        locked_husband = locked.get("husband")
         kept_p: list[Any] = []
         for p in phrases:
             if not isinstance(p, str):
@@ -320,8 +448,22 @@ def sanitize_state_for_locked_names(state: dict) -> dict:
                 continue
             if locked_alias and locked_alias.startswith("Anna") and "Sarah" in p:
                 continue
+            if locked_husband == "Marcus" and re.search(r"\bHarold\b", p):
+                continue
             kept_p.append(p)
         state["phrases_used"] = kept_p
+
+    # Rename character_status keys that used the drifted husband name
+    locked_husband = locked.get("husband")
+    if locked_husband and isinstance(state.get("character_status"), dict):
+        status = state["character_status"]
+        renamed: dict[str, Any] = {}
+        for key, val in status.items():
+            new_key = key
+            if locked_husband == "Marcus" and re.search(r"\bHarold\b", str(key)):
+                new_key = re.sub(r"\bHarold(?:\s+Vance)?\b", "Marcus", str(key))
+            renamed[new_key] = val
+        state["character_status"] = renamed
 
     return state
 

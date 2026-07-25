@@ -1,0 +1,82 @@
+{
+  "description": "Threads for The Second Wife — a 10-chapter romance thriller with a four-tier twist ladder. Each thread tracks a narrative line from opening to payoff, ensuring no flat stretches and every chapter seeds or shifts something.",
+  "threads": [
+    {
+      "id": "T01",
+      "name": "The Housekeeper's Con",
+      "opened_chapter": 1,
+      "must_payoff_by": 8,
+      "status": "open",
+      "book1_resolution": "The housekeeper's true agenda (robbery/blackmail) is revealed in Tier 3 (ch 7-8), and she is outmaneuvered by the wife. She survives but is bound by a secret.",
+      "book2_promise": "A piece of evidence she thought destroyed resurfaces, threatening her new life.",
+      "book1_payoff": "Ch 8 — the housekeeper's con is exposed, and she becomes the frame's target instead.",
+      "note": "Unreliable narrator — her actions from ch 1 must be consistent with a hidden agenda (e.g., casing the house, asking about security, showing too much interest in the husband's finances)."
+    },
+    {
+      "id": "T02",
+      "name": "The Wife's Long Con",
+      "opened_chapter": 1,
+      "must_payoff_by": 10,
+      "status": "open",
+      "book1_resolution": "The wife is revealed as the architect who hired the housekeeper to frame her for the husband's murder. The truth is proven by a planted object/document in ch 9.",
+      "book2_promise": "The wife's fate is ambiguous — she may be dead, arrested, or escaped, but her machinations leave a lingering threat.",
+      "book1_payoff": "Ch 9 — physical evidence (e.g., a letter, a recording, a hidden key) proves the wife's plan. The husband is the target, not the predator.",
+      "note": "Every kindness from the wife in ch 1-7 must re-read as manipulation. The genuine wound shared with the housekeeper (e.g., both survived a controlling man) is real — that is why the betrayal cuts."
+    },
+    {
+      "id": "T03",
+      "name": "The Husband as Red Herring",
+      "opened_chapter": 1,
+      "must_payoff_by": 6,
+      "status": "open",
+      "book1_resolution": "The husband is cleared in Tier 3 (ch 7-8) when the wife's con is revealed. He is the intended victim, not the predator.",
+      "book2_promise": "The husband survives but is traumatized; his role in Book 2 is as a potential ally or obstacle for the housekeeper.",
+      "book1_payoff": "Ch 6 — the housekeeper obtains 'proof' the husband killed the prior housekeeper (Tier 2 peak). Ch 8 — this is overturned.",
+      "note": "The husband gets at least one humanizing scene before ch 7 (e.g., a moment of kindness to the housekeeper, a vulnerability with the wife) to complicate the reader's view."
+    },
+    {
+      "id": "T04",
+      "name": "The Prior Housekeeper's Fate",
+      "opened_chapter": 2,
+      "must_payoff_by": 6,
+      "status": "open",
+      "book1_resolution": "The prior housekeeper's disappearance is revealed as the wife's doing (a test run or a failed frame). This is the Tier-2 misdirect peak.",
+      "book2_promise": "The prior housekeeper's story may have loose ends that resurface in Book 2 (e.g., a hidden witness or evidence).",
+      "book1_payoff": "Ch 5-6 — the housekeeper finds evidence (e.g., a diary, a police report) that the husband was responsible. Ch 7-8 — this is recontextualized as the wife's work.",
+      "note": "The prior housekeeper is offscreen/flashback only. Her fate is the key to the false answer."
+    },
+    {
+      "id": "T05",
+      "name": "Romance Slow Burn (Housekeeper & Wife)",
+      "opened_chapter": 3,
+      "must_payoff_by": 7,
+      "status": "open",
+      "book1_resolution": "The emotional high point is ch 7 — a moment of genuine vulnerability and trust between the two women. This makes the Tier 3 betrayal devastating.",
+      "book2_promise": "The betrayal leaves the housekeeper unable to trust anyone; Book 2 may explore a new relationship or the aftermath of this wound.",
+      "book1_payoff": "Ch 7 — the false ally beat: the two women share a real bond (e.g., confessing a shared trauma). Ch 8 — this is undercut when the wife's con is revealed.",
+      "note": "The bond is genuine on the housekeeper's side and partially genuine on the wife's (she has a real wound too). This is why the betrayal hurts."
+    },
+    {
+      "id": "T06",
+      "name": "Ticking Clock: The Will-Signing / Case Reopening",
+      "opened_chapter": 3,
+      "must_payoff_by": 10,
+      "status": "open",
+      "book1_resolution": "The fixed deadline (e.g., the prior housekeeper's case reopening, a will-signing date) forces the climax in ch 9-10. The murder is planned to coincide with this deadline.",
+      "book2_promise": "The deadline's aftermath (e.g., a legal proceeding, a police investigation) creates complications for the housekeeper in Book 2.",
+      "book1_payoff": "Ch 9 — the deadline triggers the wife's plan; the housekeeper discovers the planted evidence. Ch 10 — the clock runs out, and the con resolves.",
+      "note": "Introduced by ch 3 (e.g., a lawyer's visit, a newspaper article). The countdown adds pressure and justifies the pacing."
+    },
+    {
+      "id": "T07",
+      "name": "Act Reversals",
+      "opened_chapter": 1,
+      "must_payoff_by": 10,
+      "status": "open",
+      "book1_resolution": "Three act reversals at ch 3 (husband is the threat), ch 6 (husband is the killer), ch 8 (wife is the mastermind). Each flips the reader's working theory.",
+      "book2_promise": "The final reversal (ch 10) leaves the housekeeper with a secret that could destroy her — a hook for Book 2.",
+      "book1_payoff": "Ch 3, 6, 8 — each reversal is earned through physical evidence or a shift in the housekeeper's understanding.",
+      "note": "These are the structural hinges of the four-tier twist ladder."
+    }
+  ]
+}

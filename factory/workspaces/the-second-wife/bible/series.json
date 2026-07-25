@@ -1,0 +1,43 @@
+{
+  "title": "The Second Wife",
+  "logline": "When a live-in housekeeper takes a job caring for a wealthy man's fragile wife, she's certain she's there to save the woman from him — until she realizes the wife hired her for something else entirely, and neither of them is who they claimed to be.",
+  "bible_status": "draft",
+  "spice_max": 0,
+  "leads": {
+    "female": {
+      "name": "the housekeeper (unnamed narrator)"
+    },
+    "male": {
+      "name": "Unassigned (no male lead)"
+    }
+  },
+  "supporting_cast": [],
+  "cast": [
+    {
+      "name": "Lead / narrator"
+    },
+    {
+      "name": "The wife"
+    },
+    {
+      "name": "The husband"
+    },
+    {
+      "name": "A prior housekeeper"
+    },
+    {
+      "name": "PACING GUARDRAILS"
+    }
+  ],
+  "world_rules": [],
+  "content_rules": [
+    "Supernatural or paranormal elements",
+    "Villain confession speech as the reveal mechanism",
+    "Copying names, characters, or plot from any existing book",
+    "Flat stretches with no seed or shift for 3+ chapters",
+    "Making the twist obvious before its intended chapter"
+  ],
+  "meta": {
+    "source": "intent_manifest_stub"
+  }
+}

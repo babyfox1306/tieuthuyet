@@ -1,0 +1,18 @@
+characters:
+  female_lead:
+    canonical: the housekeeper (unnamed narrator)
+    allowed_aliases:
+    - the
+    - housekeeper
+    - (unnamed
+    - narrator)
+    forbidden_aliases: []
+  male_lead:
+    canonical: Unassigned (no male lead)
+    allowed_aliases:
+    - Unassigned
+    - (no
+    - male
+    - lead)
+    forbidden_aliases: []
+pov_mode: first_person

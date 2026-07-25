@@ -1,0 +1,273 @@
+{
+  "description": "Knowledge matrix for The Second Wife — a 10-chapter romance thriller with a four-tier twist ladder. Tracks what each character knows and when, ensuring the unreliable narrator and hidden agendas are consistent with the reader's evolving understanding.",
+  "target_language": "en",
+  "milestones": [
+    1,
+    2,
+    5,
+    7,
+    10
+  ],
+  "characters": {
+    "housekeeper": {
+      "ch1": {
+        "knows": [
+          "She is an ex-convict with a hidden agenda (robbery/blackmail).",
+          "The husband appears cold and controlling.",
+          "The wife appears frail and ill.",
+          "There is a locked room in the house."
+        ],
+        "must_not_know_before": [
+          "The wife's true plan to frame her for murder.",
+          "The prior housekeeper's disappearance was the wife's doing.",
+          "The husband is the intended victim."
+        ],
+        "hidden_truth": [
+          "She is not an innocent victim; she came to con this family.",
+          "Her own criminal past makes her disposable in the wife's plan."
+        ]
+      },
+      "ch2": {
+        "knows": [
+          "The wife knows too much about her past (e.g., specific details only an investigator would know).",
+          "The locked room contains a diary or letter from the prior housekeeper.",
+          "The prior housekeeper disappeared suddenly."
+        ],
+        "must_not_know_before": [
+          "The wife planted the diary.",
+          "The wife is the architect of the prior housekeeper's fate."
+        ],
+        "hidden_truth": [
+          "She is casing the house for her own con (e.g., noting security, valuables, routines)."
+        ]
+      },
+      "ch5": {
+        "knows": [
+          "The husband's alibi for the prior housekeeper's disappearance is weak.",
+          "A police report names the husband as a person of interest.",
+          "The diary in the locked room hints at the husband's violence.",
+          "She has 'proof' the husband killed the prior housekeeper.",
+          "She commits fully to protecting the wife."
+        ],
+        "must_not_know_before": [
+          "The diary and police report were planted by the wife.",
+          "The wife is manipulating her."
+        ],
+        "hidden_truth": [
+          "Her commitment to protecting the wife is partly genuine — she feels a bond.",
+          "She still intends to execute her own con (robbery/blackmail) after the wife is 'safe.'"
+        ]
+      },
+      "ch7": {
+        "knows": [
+          "She and the wife share a genuine wound (e.g., both survived a controlling man).",
+          "The wife has moments of real vulnerability.",
+          "The bond between them feels real and deep."
+        ],
+        "must_not_know_before": [
+          "The wife is using this bond to manipulate her.",
+          "The wife's vulnerability is partly a performance."
+        ],
+        "hidden_truth": [
+          "Her own con is still active — she has not abandoned her plan.",
+          "She is falling for the wife's trap by trusting her."
+        ]
+      },
+      "ch10": {
+        "knows": [
+          "The wife engineered the entire hire to frame her for the husband's murder.",
+          "The husband is the intended victim, not the predator.",
+          "The prior housekeeper's disappearance was a test run by the wife.",
+          "The planted object/document (e.g., a forged will, a recording) proves the wife's plan.",
+          "She has a secret that could destroy her if it resurfaces."
+        ],
+        "must_not_know_before": [],
+        "hidden_truth": [
+          "She destroyed some evidence but one piece remains in someone else's hands.",
+          "She is now bound to a secret that could destroy her."
+        ]
+      }
+    },
+    "wife": {
+      "ch1": {
+        "knows": [
+          "She is the architect of the entire con.",
+          "She hired the housekeeper specifically because of her criminal past.",
+          "The housekeeper is disposable and believable as a killer.",
+          "The husband is her target, not a predator.",
+          "The prior housekeeper's disappearance was her doing (a test run or failed frame)."
+        ],
+        "must_not_know_before": [
+          "The housekeeper is also running a con (robbery/blackmail).",
+          "The housekeeper's true agenda."
+        ],
+        "hidden_truth": [
+          "She is not fragile or ill — this is a performance.",
+          "She has been planning the husband's murder for years.",
+          "She will frame the housekeeper for the murder."
+        ]
+      },
+      "ch2": {
+        "knows": [
+          "The housekeeper is curious about the locked room.",
+          "The housekeeper has a criminal past (she researched it).",
+          "The housekeeper is beginning to trust her."
+        ],
+        "must_not_know_before": [
+          "The housekeeper's specific plan (robbery or blackmail)."
+        ],
+        "hidden_truth": [
+          "She planted the diary in the locked room to misdirect the housekeeper.",
+          "She is monitoring the housekeeper's every move."
+        ]
+      },
+      "ch5": {
+        "knows": [
+          "The housekeeper has found the 'proof' against the husband.",
+          "The housekeeper now believes the husband is the killer.",
+          "The housekeeper has committed to protecting her.",
+          "Her plan is working perfectly."
+        ],
+        "must_not_know_before": [
+          "The housekeeper still intends to execute her own con."
+        ],
+        "hidden_truth": [
+          "She feels a flicker of genuine connection to the housekeeper — the shared wound is real.",
+          "She will use this bond to deepen the trap."
+        ]
+      },
+      "ch7": {
+        "knows": [
+          "The housekeeper trusts her completely now.",
+          "The emotional bond is real on both sides.",
+          "The timing is right for the final phase of her plan."
+        ],
+        "must_not_know_before": [
+          "The housekeeper's con is still active (though she suspects something is off)."
+        ],
+        "hidden_truth": [
+          "She is torn between her plan and her genuine feelings for the housekeeper.",
+          "She will proceed with the frame anyway — the plan is too old, too deep."
+        ]
+      },
+      "ch10": {
+        "knows": [
+          "The housekeeper discovered the planted evidence.",
+          "Her plan has been exposed.",
+          "The husband survived or the frame failed.",
+          "She may be dead, arrested, or escaped."
+        ],
+        "must_not_know_before": [],
+        "hidden_truth": [
+          "She left one piece of evidence that could destroy the housekeeper if it resurfaces.",
+          "She may have a contingency plan for Book 2."
+        ]
+      }
+    },
+    "husband": {
+      "ch1": {
+        "knows": [
+          "He is not a predator or killer.",
+          "He is the intended victim of his wife's plan.",
+          "His wife is not as fragile as she appears.",
+          "The prior housekeeper's disappearance was suspicious but he does not know the truth."
+        ],
+        "must_not_know_before": [
+          "The full extent of his wife's plan to frame the housekeeper for his murder.",
+          "The housekeeper is also running a con."
+        ],
+        "hidden_truth": [
+          "He is more complex than the reader first believes — he has moments of genuine kindness.",
+          "He suspects his wife is manipulating him but cannot prove it."
+        ]
+      },
+      "ch2": {
+        "knows": [
+          "The new housekeeper has a hidden past (he may have done a background check).",
+          "His wife is controlling the housekeeper's access to certain rooms.",
+          "The locked room is off-limits."
+        ],
+        "must_not_know_before": [
+          "The diary in the locked room is a plant."
+        ],
+        "hidden_truth": [
+          "He is afraid of his wife — not the other way around.",
+          "He has tried to leave but she has something on him."
+        ]
+      },
+      "ch5": {
+        "knows": [
+          "The housekeeper is investigating him.",
+          "The police have reopened the prior housekeeper's case.",
+          "His alibi is weak and he is a person of interest."
+        ],
+        "must_not_know_before": [
+          "His wife planted the evidence against him."
+        ],
+        "hidden_truth": [
+          "He is genuinely innocent of the prior housekeeper's fate.",
+          "He is trying to protect himself but does not know how."
+        ]
+      },
+      "ch7": {
+        "knows": [
+          "The housekeeper and his wife have grown close.",
+          "Something is wrong — his wife is too calm, too prepared.",
+          "He may be in immediate danger."
+        ],
+        "must_not_know_before": [
+          "The exact date of the planned murder."
+        ],
+        "hidden_truth": [
+          "He has one scene that humanizes him before the reader learns he is the target (e.g., a moment of vulnerability with the housekeeper)."
+        ]
+      },
+      "ch10": {
+        "knows": [
+          "His wife planned to kill him and frame the housekeeper.",
+          "He survived (or did not — depending on the ending).",
+          "The housekeeper is not entirely innocent."
+        ],
+        "must_not_know_before": [],
+        "hidden_truth": [
+          "He may have his own secrets that could surface in Book 2.",
+          "He is traumatized and may become an ally or obstacle for the housekeeper."
+        ]
+      }
+    },
+    "prior_housekeeper": {
+      "ch1": {
+        "knows": [
+          "She worked for the family before the current housekeeper.",
+          "She discovered something about the wife's true nature.",
+          "She disappeared under suspicious circumstances."
+        ],
+        "must_not_know_before": [],
+        "hidden_truth": [
+          "Her disappearance was the wife's doing — a test run or a failed frame.",
+          "She may be dead or alive, but her fate is the key to the Tier-2 misdirect."
+        ]
+      },
+      "ch2": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": []
+      },
+      "ch5": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": []
+      },
+      "ch7": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": []
+      },
+      "ch10": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": []
+      }
+    }
+  }
+}

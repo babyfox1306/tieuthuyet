@@ -1,0 +1,31 @@
+{
+  "act": [10, 10],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Inheritance",
+      "slug": "ch10-inheritance",
+      "one_line_summary": "The will-signing trap springs; the wife's plan unravels when the housekeeper uses the hidden camera footage to force a standoff, but the husband dies, and the housekeeper walks away bound to a secret that could destroy her.",
+      "beat_summary": "TRUE REVEAL via a planted object/document — the wife engineered the entire hire to frame her. Case closes: who framed whom, who dies. The housekeeper survives, bound to a destroying secret. Book-2 hook: evidence she thought she destroyed resurfaces.",
+      "must_happen": [
+        "The will-signing takes place in the husband's study; the wife produces a forged document claiming the husband signed everything to her, and produces the original camera footage to show the housekeeper as the aggressor.",
+        "The housekeeper reveals the locket's hidden compartment containing the copied footage, exposing the wife planting the bloody shirt and her true plan.",
+        "In the ensuing struggle, the husband is shot (by the wife or by accident — ambiguous), and the wife dies from a fall down the stairs (the housekeeper pushes her in self-defense).",
+        "The housekeeper destroys the original footage and the locket copy, leaving no proof of her own involvement, but the husband's last words reveal a second hidden safe with documents that implicate the housekeeper's past.",
+        "The housekeeper walks away from the estate as the sole survivor, but she knows the documents in the safe will surface someday — she is now bound to a secret that could destroy her."
+      ],
+      "must_not": [
+        "Must not reveal the exact contents of the husband's hidden safe documents — only imply they connect to the housekeeper's criminal past.",
+        "Must not show the housekeeper being arrested or caught — she survives and escapes, but is trapped by the knowledge of the safe."
+      ],
+      "opens_with": "Lydia smiled as she placed the will on the desk. 'Sign it, Marcus. You know it's the only way.' The pen trembled in his hand. I watched from the corner, the locket cold against my chest. I had one move left.",
+      "cliffhanger": "I stepped out of the estate into the cold night air. The sirens were distant. I had the locket in my pocket — empty now. But as I reached the gate, my phone buzzed. A text from an unknown number: 'I know what you did. I have the safe.'",
+      "signature_detail_hint": "The locket's hidden compartment is still warm from the footage card — the housekeeper can feel the phantom heat against her chest as she walks away.",
+      "emotional_beat": "Relief laced with dread — the housekeeper survived, but the cost is a permanent chain. She is free, but she will never be safe. The bond she felt with the wife is replaced by cold clarity: she was a pawn, and now she is a fugitive of her own making.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write Chapter 10 (1600-1900 words). Deliver the TRUE REVEAL: the wife's plan is exposed via the locket footage. Resolve the central con: who framed whom (the wife framed the housekeeper), who dies (the wife and the husband). The housekeeper survives but is now bound to a secret (the safe documents). End with the Book-2 hook: the text from an unknown number. Maintain the housekeeper's first-person POV and the tense, claustrophobic atmosphere of the estate.",
+      "carries_to_next": "The housekeeper is now a fugitive with a secret that could destroy her. Book 2 will follow her attempt to retrieve or destroy the safe documents before the unknown texter exposes her."
+    }
+  ]
+}

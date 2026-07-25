@@ -159,18 +159,52 @@ def strip_lead_honorific(name: str) -> str:
     return _LEAD_HONORIFIC_RE.sub("", str(name or "").strip()).strip()
 
 
+_ALIAS_STOPWORDS = frozenset(
+    {
+        "the",
+        "a",
+        "an",
+        "of",
+        "and",
+        "or",
+        "no",
+        "male",
+        "female",
+        "lead",
+        "unnamed",
+        "narrator",
+        "protagonist",
+        "pov",
+    }
+)
+
+
 def lead_name_aliases(canonical: str) -> list[str]:
-    """Given/surname aliases from canonical — never includes Dr./Mr./… alone."""
+    """Given/surname aliases from canonical — never includes Dr./Mr./… alone.
+
+    Parenthetical descriptors (e.g. ``(unnamed narrator)``) are stripped before
+    splitting so they do not become junk aliases like ``(unnamed``.
+    """
     bare = strip_lead_honorific(canonical)
     if not bare:
         return []
-    parts = bare.split()
+    # Drop parenthetical descriptors before tokenizing.
+    bare_core = re.sub(r"\([^)]*\)", " ", bare)
+    bare_core = re.sub(r"\s+", " ", bare_core).strip()
     out: list[str] = []
-    if bare != str(canonical or "").strip():
+    raw = str(canonical or "").strip()
+    if bare_core and bare_core != raw:
+        out.append(bare_core)
+    elif bare and bare != raw:
         out.append(bare)
-    for part in parts:
-        if part and part not in out:
-            out.append(part)
+    for part in bare_core.split() if bare_core else bare.split():
+        cleaned = part.strip(".,;:()[]{}\"'")
+        if not cleaned:
+            continue
+        if cleaned.lower() in _ALIAS_STOPWORDS:
+            continue
+        if cleaned not in out:
+            out.append(cleaned)
     return out
 
 
@@ -211,30 +245,87 @@ def _parse_lead_from_concept_text(text: str, *, side: str) -> str | None:
 
 
 def resolve_lead_names_for_registry(ws: Path) -> tuple[str, str]:
-    """Female/male canonical names: concept directive → bible → placeholders."""
+    """Female/male canonical names: intent → structured cast → directive → bible."""
+    from factory.engine.lib.intent_manifest import load_intent_manifest
     from factory.engine.lib.narrative_schema import load_concept
 
     concept = load_concept(ws)
+    female = ""
+    male = ""
+
+    # 1) Approved / compiled IntentManifest cast + POV
+    try:
+        man = load_intent_manifest(ws, 1)
+    except (OSError, TypeError, ValueError):
+        man = {}
+    if man:
+        pov = str(man.get("pov") or "")
+        cast = [str(x).strip() for x in (man.get("cast") or []) if str(x).strip()]
+        # POV character is female lead when named first in "Name | first_person"
+        pov_name = pov.split("|")[0].split(",")[0].strip()
+        if (
+            pov_name
+            and len(pov_name) < 80
+            and pov_name.lower() not in {"first_person", "third_person", "past", "present"}
+            and ( " " in pov_name or pov_name[0].isupper())
+        ):
+            female = pov_name
+        if cast:
+            if not female:
+                female = cast[0]
+            # Gothic / single-POV: no romantic male lead unless clearly labeled
+            male = "Unassigned (no male lead)"
+
+    # 2) Structured concept.characters / pov.character
+    if not female:
+        pov_raw = concept.get("pov")
+        if isinstance(pov_raw, dict):
+            female = str(pov_raw.get("character") or pov_raw.get("name") or "").strip()
+        chars = concept.get("characters")
+        if isinstance(chars, list):
+            names = [
+                str(c.get("name") or "").strip()
+                for c in chars
+                if isinstance(c, dict) and str(c.get("name") or "").strip()
+            ]
+            if names and not female:
+                female = names[0]
+            if names and not male:
+                male = "Unassigned (no male lead)"
+
+    # 3) Legacy "Female lead:" lines in free text
     blob = "\n".join(
         str(concept.get(k) or "")
         for k in ("author_directive", "notes", "must_include", "title", "logline")
     )
-    female = _parse_lead_from_concept_text(blob, side="female") or ""
-    male = _parse_lead_from_concept_text(blob, side="male") or ""
+    female = female or (_parse_lead_from_concept_text(blob, side="female") or "")
+    male_from_text = _parse_lead_from_concept_text(blob, side="male") or ""
+    if male_from_text:
+        male = male_from_text
 
     try:
         bible = load_series_bible(ws)
         bf, bm = lead_names(bible)
-        # Concept wins when present; bible fills gaps (gothic books often omit male in concept).
         female = female or bf
-        male = male or bm
+        if not male or male.lower() in {"male lead", "unassigned", "unassigned (no male lead)"}:
+            # Only take bible male if it is a real name
+            if bm and bm.strip().lower() not in {
+                "male lead",
+                "unassigned",
+                "unassigned (no male lead)",
+                "m.i.a.",
+                "n/a",
+            }:
+                male = bm
+            elif not male:
+                male = "Unassigned (no male lead)"
     except FileNotFoundError:
         pass
 
     if not female:
         female = "Female Lead"
     if not male:
-        male = "Male Lead"
+        male = "Unassigned (no male lead)"
     return female.strip(), male.strip()
 
 
@@ -262,7 +353,15 @@ def scaffold_canon_registry(
         m_name = male.strip()
 
     direction = load_direction(ws)
-    pov = str(direction.get("pov_mode") or "third_person_limited").strip()
+    pov = str(direction.get("pov_mode") or "").strip()
+    if not pov:
+        try:
+            from factory.engine.lib.intent_manifest import load_intent_manifest
+
+            man_pov = str(load_intent_manifest(ws, 1).get("pov") or "").lower()
+            pov = "first_person" if "first" in man_pov else "third_person_limited"
+        except (OSError, TypeError, ValueError):
+            pov = "third_person_limited"
 
     data: dict[str, Any] = {
         "characters": {
@@ -434,9 +533,18 @@ def _name_tokens_for_allowlist(raw: str) -> set[str]:
     if bare:
         out.add(bare)
     for tok in bare.split():
-        if len(tok) >= 2 and tok[0].isupper():
+        if len(tok) >= 2 and tok[0].isupper() and tok.lower() not in {
+            "the", "a", "an", "of", "and", "or", "dr", "mr", "mrs", "ms", "miss"
+        }:
             out.add(tok)
-    return {t for t in out if t}
+    # Never allow bare honorifics as cast tokens.
+    return {
+        t
+        for t in out
+        if t
+        and not re.fullmatch(r"(?:Dr|Mr|Mrs|Ms|Miss)\.?", t, flags=re.I)
+        and t.lower() not in {"the", "a", "an"}
+    }
 
 
 def collect_allowed_cast_names(ws: Path, book: int = 1) -> set[str]:
@@ -628,7 +736,22 @@ def _is_plausible_lead_name(name: str) -> bool:
     lower = n.lower()
     if lower.startswith(("the ", "a ", "an ")) and " " in n:
         return False
+    # Honorific alone is never a lead name (``Mrs`` from ``Mrs. Gable``).
+    if re.fullmatch(
+        r"(?:Dr|Mr|Mrs|Ms|Miss|Prof|Professor|Sir|Dame|Lady|Lord)\.?",
+        n,
+        flags=re.I,
+    ):
+        return False
     return True
+
+
+def _person_name_capture() -> str:
+    """Honorific-aware person name for invented-male regex groups."""
+    return (
+        r"((?:(?:Dr|Mr|Mrs|Ms|Miss)\.?\s+)?"
+        r"[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)"
+    )
 
 
 def _name_in_cast(name: str, cast: set[str]) -> bool:
@@ -816,8 +939,9 @@ def _supporting_cast_names(bible: dict) -> set[str]:
     names: set[str] = set()
     for cast in bible.get("supporting_cast") or []:
         if isinstance(cast, dict) and cast.get("name"):
-            names.add(str(cast["name"]).strip())
-            names.add(_first_token(str(cast["name"])))
+            names |= _name_tokens_for_allowlist(str(cast["name"]))
+        elif isinstance(cast, str) and cast.strip():
+            names |= _name_tokens_for_allowlist(cast)
     return {n for n in names if n}
 
 
@@ -876,17 +1000,26 @@ def _extract_invented_male_when_absent(
     female_first: str,
     cast: set[str],
 ) -> str | None:
-    """Strict person-name extraction for no-ML books (avoid place names like 'Sea Crest')."""
+    """Strict person-name extraction for no-ML books (avoid place names like 'Sea Crest').
+
+    Husband / male target names declared in plan are NOT romance leads — skip them.
+    """
+    from factory.engine.lib.locked_names import extract_husband_from_plan_blob
+
+    husband = extract_husband_from_plan_blob(blob) or ""
+    husband_first = husband.split()[0] if husband else ""
+
     # Prefixes may be case-insensitive; captured names stay Title-Case sensitive.
+    name = _person_name_capture()
     patterns = (
-        r"(?i:(?:man|neighbor|stranger|volunteer)\s+named\s+)([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)",
-        r"['\"]([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)['\"]\s*[—\-–].{0,60}(?i:\bman\b)",
-        r"(?i:\b(?:meets|met)\s+)([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)\b",
-        r"(?i:\blove interest\b[^.!]{0,40}\b)([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)\b",
-        r"(?i:\bfather\b[^.!]{0,80}\b)([A-Z][a-z]+\s+[A-Z][a-z]+)\b",
-        r"\b([A-Z][a-z]+\s+[A-Z][a-z]+)\b[^.!]{0,40}(?i:\bfather\b)",
-        r"(?i:\bthe name\b[^.!]{0,40}\b)([A-Z][a-z]+\s+[A-Z][a-z]+)\b",
-        r"(?i:\bnames?\s+)([A-Z][a-z]+\s+[A-Z][a-z]+)(?i:\s+as\s+(?:her\s+)?father\b)",
+        rf"(?i:(?:man|neighbor|stranger|volunteer)\s+named\s+){name}",
+        rf"['\"]{name}['\"]\s*[—\-–].{{0,60}}(?i:\bman\b)",
+        rf"(?i:\b(?:meets|met)\s+){name}\b",
+        rf"(?i:\blove interest\b[^.!]{{0,40}}\b){name}\b",
+        rf"(?i:\bfather\b[^.!]{{0,80}}\b){name}\b",
+        rf"{name}\b[^.!]{{0,40}}(?i:\bfather\b)",
+        rf"(?i:\bthe name\b[\s'\"“”‘’—\-–:]*){name}\b",
+        rf"(?i:\bnames?\s+){name}(?i:\s+as\s+(?:her\s+)?father\b)",
     )
     hits: list[str] = []
     for pat in patterns:
@@ -894,7 +1027,14 @@ def _extract_invented_male_when_absent(
             candidate = m.group(1).strip()
             if not candidate or female_first in candidate.split():
                 continue
-            if candidate[0].islower() or any(p and p[0].islower() for p in candidate.split()):
+            if husband and (
+                candidate == husband
+                or candidate.split()[0] == husband_first
+            ):
+                continue
+            # Reject lowercase-start tokens inside the capture
+            parts = candidate.replace(".", " ").split()
+            if any(p and p[0].islower() for p in parts if p.lower() not in {"dr", "mr", "mrs", "ms", "miss"}):
                 continue
             if _name_in_cast(candidate, cast):
                 continue

@@ -1,0 +1,25 @@
+{
+  "book_number": 1,
+  "total_chapters": 10,
+  "target_language": "en",
+  "case_closed": true,
+  "case_open": "Who is conning whom, and who dies?",
+  "lead_internal_arc": {
+    "housekeeper": {
+      "starting_state": "Hiding her true agenda (robbery/blackmail), presenting as a vulnerable ex-convict seeking a fresh start.",
+      "midpoint_state": "Commits fully to protecting the wife, believing the husband is the murderer. Her con is suspended.",
+      "ending_state": "Survives the frame, but is now bound to a secret that could destroy her. She is complicit in the wife's crime and knows the truth."
+    },
+    "wife": {
+      "starting_state": "Presenting as a fragile, ill prisoner in her own home, dependent on the housekeeper's care.",
+      "midpoint_state": "Solidifies the housekeeper's trust, deepening the bond — the emotional high point before the betrayal.",
+      "ending_state": "Succeeds in framing the housekeeper for the husband's murder. The architect of the con walks free, leaving the housekeeper to bear the consequences."
+    }
+  },
+  "act_structure": [
+    "act1_setup",
+    "act2_complications",
+    "act3_crisis",
+    "act4_resolution"
+  ]
+}

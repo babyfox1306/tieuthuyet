@@ -434,7 +434,21 @@ def build_writer_payload(ws: Path, book: int, ch: int, cfg: dict) -> str:
     if excerpt:
         prompt += format_prior_excerpt_block(excerpt, lang=lang)
     state = load_state(ws, book)
-    from factory.engine.lib.locked_names import format_locked_names_block
+    from factory.engine.lib.locked_names import (
+        format_locked_names_block,
+        merge_locked_names,
+        seed_locked_names_from_plan,
+    )
+    from factory.engine.lib.state_updater import save_state
+
+    # Ensure plan-derived husband/target locks exist before writer sees STORY_STATE
+    seeded = seed_locked_names_from_plan(ws, book)
+    if seeded:
+        merged = merge_locked_names(state.get("locked_names"), seeded)
+        if merged != (state.get("locked_names") or {}):
+            state = dict(state)
+            state["locked_names"] = merged
+            save_state(ws, book, state)
 
     locked_block = format_locked_names_block(
         state.get("locked_names") if isinstance(state.get("locked_names"), dict) else {},

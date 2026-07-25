@@ -26,5 +26,6 @@ Chỉ thêm fact mới từ chương này. Không xóa fact cũ trừ khi chươ
 
 **locked_names (CỨNG):**
 - Copy forward mọi key từ current_state.locked_names. First lock wins — không đổi tên đã khóa.
-- Một vai (vd previous_housekeeper) chỉ được MỘT tên. Nếu prose dùng tên khác → giữ tên đã khóa, KHÔNG ghi tên mới vào facts/knows/timeline.
+- Một vai (vd previous_housekeeper, narrator_alias, **husband**) chỉ được MỘT tên. Nếu prose dùng tên khác → giữ tên đã khóa, KHÔNG ghi tên mới vào facts/knows/timeline.
 - Initials chưa lộ danh (vd E.M. trên watch) → khóa `"E.M.": "unknown_until_reveal"`. CẤM gán full name (Emily Morrison) cho initials đó.
+- "No male lead" ≠ cấm husband/target nam. Nếu `husband` đã khóa (vd Marcus) → cấm ghi Harold / tên chồng khác.
