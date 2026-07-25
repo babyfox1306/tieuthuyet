@@ -4,7 +4,7 @@
   "skipped": false,
   "workspace_id": "the-second-wife",
   "book_slug": "01-the-second-wife",
-  "checked_at": "2026-07-25T13:14:38.466233+00:00",
+  "checked_at": "2026-07-25T13:34:19.498353+00:00",
   "chapter_count": 10,
   "expected_chapters": 10,
   "target_language": "en",
@@ -593,13 +593,9 @@
     },
     {
       "id": "EG-16",
-      "severity": "warn",
-      "passed": false,
-      "chapter": 9,
-      "detail": "duplicate_block recording exception: i've already called marcus back he'll be here in two hours just in time for the ",
-      "snippet": "...he gun.  \"I see you've found my little recording,\" she said. \"Don't worry. I have the original. And I've already call",
-      "report": "EG-16:duplicate_block  ch9\n  verbatim 12-gram (recording exception — WARN):\n    \"i've already called marcus back he'll be here in two hours just in time for the signing\"\n  occurrence 1 @ char 10473:\n    ...I felt the cold settle into my bones.  \"Don't do this, Lydia,\" Harold said.  \"Too late,\" she said. \"I've already called Marcus back. He'll be here in two hours. Just in time for the signing.\"  She raised the gun.  \"I see you've found my little recording,\" she said. \"Don't worry. I have th...\n  occurrence 2 @ char 10678:\n    ...he gun.  \"I see you've found my little recording,\" she said. \"Don't worry. I have the original. And I've already called Marcus back. He'll be here in two hours. Just in time for the signing.\"  I looked at the gun. At her steady hand.  I looked at Harold, standing beside me.  And I realize...",
-      "code": "EG-16:duplicate_block"
+      "severity": "error",
+      "passed": true,
+      "chapter": 9
     },
     {
       "id": "EG-16b",
@@ -709,11 +705,30 @@
     {
       "id": "EG-18",
       "severity": "warn",
-      "passed": true
+      "passed": false,
+      "chapter": 7,
+      "detail": "EG-18:reveal_replayed thread=_unscoped chapters=[7, 8, 10] «all of it» → \"She told you?\"\n\n\"Yes.\"\n\n\"All of it?\"\n\n\"Enough.\"\n\nHe sat down across from me.",
+      "snippet": "\"She told you?\"\n\n\"Yes.\"\n\n\"All of it?\"\n\n\"Enough.\"\n\nHe sat down across from me."
+    },
+    {
+      "id": "EG-18",
+      "severity": "warn",
+      "passed": false,
+      "chapter": 8,
+      "detail": "EG-18:reveal_replayed thread=_unscoped chapters=[7, 8, 10] «all of it» → All of it.",
+      "snippet": "All of it."
+    },
+    {
+      "id": "EG-18",
+      "severity": "warn",
+      "passed": false,
+      "chapter": 10,
+      "detail": "EG-18:reveal_replayed thread=_unscoped chapters=[7, 8, 10] «all of it» → After all of it.”\n\nI stayed in the shadows near the bookshelf, the locket pressed against my chest.",
+      "snippet": "After all of it.”\n\nI stayed in the shadows near the bookshelf, the locket pressed against my chest."
     }
   ],
   "errors": 0,
-  "warnings": 1,
+  "warnings": 3,
   "needs_fix_chapters": [],
-  "summary": "Export gate PASS — 1 warning(s)"
+  "summary": "Export gate PASS — 3 warning(s)"
 }
