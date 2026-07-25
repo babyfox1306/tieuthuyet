@@ -234,16 +234,29 @@ def _clue_hint_in_beats(hint: str, beat_blob: str) -> bool:
     return hits >= 2
 
 
+def _clue_hint_text(cid: str, clue_beats: dict, clues_idx: dict[str, dict]) -> str:
+    """Prose hint for NC-07: content first, then description. Empty → no pass."""
+    if cid in clue_beats and str(clue_beats.get(cid) or "").strip():
+        return str(clue_beats.get(cid) or "").strip()
+    meta = clues_idx.get(cid) or {}
+    content = str(meta.get("content") or "").strip()
+    if content:
+        return content
+    return str(meta.get("description") or "").strip()
+
+
 def _clue_reflected_in_beats(
     cid: str,
     clue_beats: dict,
     clues_idx: dict[str, dict],
     beat_blob: str,
 ) -> bool:
-    if cid.lower() in beat_blob:
-        return True
-    hint = str(clue_beats.get(cid) or clues_idx.get(cid, {}).get("content") or "")
-    return _clue_hint_in_beats(hint, beat_blob)
+    """Require prose beat evidence — bare ``[CLUE id]`` alone does not pass NC-07."""
+    hint = _clue_hint_text(cid, clue_beats, clues_idx)
+    if hint:
+        return _clue_hint_in_beats(hint, beat_blob)
+    # No content/description: ID token alone is insufficient (anti false-green).
+    return False
 
 
 def _clue_planted_before(all_plans: list[dict], clue_id: str, before_ch: int) -> bool:
@@ -580,6 +593,19 @@ def _plan_pov_issues(plan: dict, direction: dict, *, ws: Path | None = None) -> 
                 decl = yaml.safe_load(reg_path.read_text(encoding="utf-8")) or {}
                 pov = str(decl.get("pov_mode") or pov).strip().lower().replace("-", "_")
             except (yaml.YAMLError, OSError, TypeError):
+                pass
+        # Locked-chain SoT: approved IntentManifest overrides default when registry silent
+        if not pov or pov == "third_person_limited":
+            try:
+                from factory.engine.lib.intent_manifest import load_intent_manifest
+
+                man = load_intent_manifest(ws, int(direction.get("book") or 1))
+                man_pov = str(man.get("pov") or "").strip().lower().replace("-", "_")
+                if "first" in man_pov:
+                    pov = "first_person"
+                elif man_pov:
+                    pov = man_pov
+            except (OSError, TypeError, ValueError):
                 pass
     if not pov:
         pov = "third_person_limited"

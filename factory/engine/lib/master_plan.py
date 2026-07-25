@@ -677,8 +677,24 @@ def fix_plans(ws: Path, book: int, *, use_llm: bool = True) -> tuple[dict[int, l
     return remaining, n
 
 
+_EARLY_REVEAL_SOFT_MARKERS = (
+    "true_plot_spoil_early",
+    "mystery_reveal_too_early",
+)
+
+
+def _soft_intentional_early_reveal(ws: Path, issue: str) -> bool:
+    """When concept.intentional_early_reveal, demote two reveal gates to WARN."""
+    from factory.engine.lib.narrative_schema import intentional_early_reveal
+
+    if not intentional_early_reveal(ws=ws):
+        return False
+    return any(m in issue for m in _EARLY_REVEAL_SOFT_MARKERS)
+
+
 def approve_plan(ws: Path, book: int | None = None) -> None:
     from factory.engine.lib.canon_registry import CanonRegistryError, validate_plan_against_canon_registry
+    from factory.engine.lib.catalog import safe_print
     from factory.engine.lib.intent_gates import g3_plan_fidelity_errors, g4_prompt_errors
     from factory.engine.lib.intent_manifest import intent_is_approved, load_intent_manifest
     from factory.engine.lib.plan_qc import apply_deterministic_plan_fixes, validate_all_plans
@@ -725,6 +741,11 @@ def approve_plan(ws: Path, book: int | None = None) -> None:
     remaining = validate_all_plans(plans, direction, bible=bible, ws=ws)
     for ch, issues in sorted(remaining.items()):
         for issue in issues:
+            if _soft_intentional_early_reveal(ws, str(issue)):
+                safe_print(
+                    f"  [approve-plan WARN] intentional_early_reveal: {issue}"
+                )
+                continue
             conflicts.append(
                 {
                     "code": "plan_qc_fail",
@@ -771,6 +792,11 @@ def approve_plan(ws: Path, book: int | None = None) -> None:
                 ws=ws,
             )
             for err in g4_prompt_errors(ws, book_num, ch, live, disk_text=disk):
+                if _soft_intentional_early_reveal(ws, str(err)):
+                    safe_print(
+                        f"  [approve-plan WARN] intentional_early_reveal: {err}"
+                    )
+                    continue
                 conflicts.append(
                     {
                         "code": "prompt_fidelity",

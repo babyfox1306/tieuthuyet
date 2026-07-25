@@ -58,6 +58,35 @@ class TestNarrativePlanQC(unittest.TestCase):
         issues = validate_narrative_plan(plans[0], self.ws, all_plans=plans)
         self.assertTrue(any("NC-07:clue_not_in_beats:C001" in i for i in issues))
 
+    def test_nc07_description_fallback_passes(self):
+        """Ledger description-only clues still satisfy NC-07 when beats match."""
+        import json
+
+        from factory.engine.lib.plan_qc import _clue_hint_text, _clue_reflected_in_beats
+
+        ledger_path = self.ws / "bible" / "narrative" / "mystery_ledger.json"
+        ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+        for clue in ledger.get("clues") or []:
+            if clue.get("id") != "C001":
+                continue
+            clue.pop("content", None)
+            clue["description"] = "Thick contract rushed through signing"
+        ledger_path.write_text(json.dumps(ledger, indent=2), encoding="utf-8")
+
+        hint = _clue_hint_text("C001", {}, {"C001": {"description": "Thick contract rushed through signing"}})
+        self.assertIn("Thick contract", hint)
+        self.assertTrue(
+            _clue_reflected_in_beats(
+                "C001",
+                {},
+                {"C001": {"description": "Thick contract rushed through signing"}},
+                "elle signs the thick contract rushed through signing",
+            )
+        )
+        self.assertFalse(
+            _clue_reflected_in_beats("C001", {}, {"C001": {}}, "[CLUE C001] alone")
+        )
+
     def test_nc01_missing_clue_plant(self):
         plans = merge_narrative_into_plans(self.ws, [_full_plan(1)])
         narr = dict(plans[0]["narrative"])

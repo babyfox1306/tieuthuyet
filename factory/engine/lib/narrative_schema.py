@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 from typing import Any
 
@@ -153,6 +154,29 @@ def load_concept(ws: Path) -> dict[str, Any]:
     return data if isinstance(data, dict) else {}
 
 
+def intentional_early_reveal(
+    ws: Path | None = None,
+    concept: dict[str, Any] | None = None,
+) -> bool:
+    """True when concept opts into intentional early reader-knowledge (anti-hero).
+
+    Softens only ``true_plot_spoil_early`` and ``mystery_reveal_too_early``
+    at approve-plan (BLOCK → WARN). Default / absent = False (keep BLOCK).
+    """
+    if concept is None:
+        if ws is None:
+            return False
+        concept = load_concept(ws)
+    val = concept.get("intentional_early_reveal")
+    if isinstance(val, bool):
+        return val
+    if isinstance(val, (int, float)):
+        return bool(val)
+    if isinstance(val, str):
+        return val.strip().lower() in ("true", "1", "yes", "on")
+    return False
+
+
 PLACEHOLDER_MARKERS = (
     "ĐIỀN CHỈ ĐẠO",
     "điền chỉ đạo",
@@ -169,11 +193,294 @@ def concept_directive_text(concept: dict) -> str:
     parts: list[str] = []
     if concept.get("author_directive"):
         parts.append(str(concept["author_directive"]).strip())
-    for key in ("surface_plot", "true_plot", "ending_book1", "hook_book2", "logline"):
+    for key in (
+        "surface_plot",
+        "surface_mystery",
+        "true_plot",
+        "ending_book1",
+        "hook_book2",
+        "logline",
+        "final_supernatural_residue",
+    ):
         val = concept.get(key)
         if val and str(val).strip() and str(val).strip() not in ('""', "''"):
             parts.append(str(val).strip())
     return "\n".join(parts)
+
+
+def concept_intent_lock_errors(concept: dict) -> list[str]:
+    """Fields compile-intent requires — also enforced at concept ready so UI/CLI match."""
+    from factory.engine.lib.intent_manifest import (
+        _infer_pov,
+        _normalize_structured_chapter_map,
+        _parse_chapter_map_from_directive,
+    )
+
+    errors: list[str] = []
+    directive = str(concept.get("author_directive") or "")
+    chapter_map = _normalize_structured_chapter_map(concept.get("chapter_map"))
+    if not chapter_map:
+        chapter_map = _parse_chapter_map_from_directive(directive)
+    if not chapter_map:
+        errors.append(
+            "concept:chapter_map_missing — điền Chapter map (Ch1:/Ch2:…) trên form Concept"
+        )
+    if not _infer_pov(concept, directive):
+        errors.append(
+            "concept:pov_missing — chọn POV trên form Concept (nhân vật + ngôi) hoặc ghi POV: trong chỉ đạo"
+        )
+    return errors
+
+
+# --- G0b: concept map ↔ directive/plot fidelity (deterministic, no LLM) --------
+
+_MAPFID_WORD_RE = re.compile(r"[a-zA-Zà-ỹÀ-Ỹ0-9']{4,}")
+_MAPFID_STOP = {
+    "that", "this", "with", "from", "into", "about", "when", "what", "their", "them",
+    "than", "only", "just", "more", "some", "very", "also", "does", "have", "been",
+    "will", "they", "then", "over", "before", "after", "again", "each", "both",
+    "which", "where", "while", "would", "could", "should", "these", "those", "there",
+    "here", "must", "make", "made", "finds", "find", "first", "last",
+    "chapter", "reader", "story",
+}
+# A/B hard motif patterns: strong signal a whole plot family diverged from the lock.
+_MAPFID_HARD = (
+    re.compile(r"subject\s*\d+", re.I),
+    re.compile(r"\bexperiment", re.I),
+    re.compile(r"\bcollection\b", re.I),
+)
+_MAPFID_SUBJECT = re.compile(r"subject\s*\d+", re.I)
+_MAPFID_TIER = re.compile(
+    r"TIER\s*\d+\s*\(ch\s*(\d+)\s*[-–]\s*(\d+)\)\s*[:—-]?\s*(.+?)(?=TIER\s*\d|\Z)",
+    re.I | re.S,
+)
+# Role placeholders / non-name capitalized words that are never proper-noun drift.
+_MAPFID_ROLE_STOP = {
+    "the", "she", "her", "his", "him", "they", "wife", "husband", "housekeeper",
+    "narrator", "reader", "chapter", "tier", "subject", "book", "act", "part",
+    "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday",
+    "january", "february", "march", "april", "may", "june", "july", "august",
+    "september", "october", "november", "december",
+    # common sentence-starter / function words that get capitalized mid-text
+    "at", "it", "no", "on", "that", "then", "than", "this", "these", "those",
+    "while", "when", "where", "what", "you", "your", "and", "but", "for", "nor",
+    "afterward", "afterwards", "ending", "before", "after", "as", "if", "in",
+    "of", "to", "by", "an", "a", "or", "so", "yet", "now", "here", "there",
+    "meanwhile", "later", "finally", "inside", "outside", "above", "below",
+}
+_MAPFID_E_THR = 0.12          # E: both-way coverage floor
+_MAPFID_F_THR = 0.10          # F: per-TIER-band coverage floor
+_MAPFID_F_MIN_BANDS = 2       # F: how many bands must fail to BLOCK
+
+
+def _mapfid_tokens(text: str) -> set[str]:
+    return {
+        w.lower()
+        for w in _MAPFID_WORD_RE.findall(text or "")
+        if w.lower() not in _MAPFID_STOP
+    }
+
+
+def _mapfid_token_list(text: str) -> list[str]:
+    return [
+        w.lower()
+        for w in _MAPFID_WORD_RE.findall(text or "")
+        if w.lower() not in _MAPFID_STOP
+    ]
+
+
+def _mapfid_coverage(required: str, haystack: str) -> float:
+    req = _mapfid_tokens(required)
+    if not req:
+        return 1.0
+    have = _mapfid_tokens(haystack)
+    if not have:
+        return 0.0
+    return len(req & have) / max(1, len(req))
+
+
+def _mapfid_lock_text(concept: dict) -> str:
+    parts: list[str] = []
+    for k in ("author_directive", "surface_plot", "true_plot", "ending_book1", "logline"):
+        v = concept.get(k)
+        if v:
+            parts.append(str(v))
+    for k in ("must_include", "must_avoid"):
+        v = concept.get(k)
+        if isinstance(v, list):
+            parts.append(" ".join(str(x) for x in v))
+        elif v:
+            parts.append(str(v))
+    return "\n".join(parts)
+
+
+def _mapfid_map_text(chapter_map: dict) -> str:
+    parts: list[str] = []
+    for ch in sorted(chapter_map):
+        entry = chapter_map[ch]
+        parts.append(str(entry.get("beat") or ""))
+        mh = entry.get("must_happen") or []
+        if isinstance(mh, list):
+            parts.append(" ".join(str(x) for x in mh))
+    return "\n".join(parts)
+
+
+def _mapfid_signals(concept: dict) -> dict:
+    """Compute deterministic divergence signals for chapter_map vs directive/plot."""
+    from factory.engine.lib.intent_manifest import (
+        _infer_cast,
+        _normalize_structured_chapter_map,
+        _parse_chapter_map_from_directive,
+    )
+
+    directive = str(concept.get("author_directive") or "")
+    chapter_map = _normalize_structured_chapter_map(concept.get("chapter_map"))
+    if not chapter_map:
+        chapter_map = _parse_chapter_map_from_directive(directive)
+    if not chapter_map:
+        return {"skip": True}
+
+    lock = _mapfid_lock_text(concept)
+    mapt = _mapfid_map_text(chapter_map)
+    lock_tokens = _mapfid_tokens(lock)
+
+    # A — hard motif patterns repeated in MAP but absent from LOCK.
+    a_hits: list[str] = []
+    for pat in _MAPFID_HARD:
+        if len(pat.findall(mapt)) >= 2 and not pat.findall(lock):
+            a_hits.append(pat.pattern)
+
+    # B — Subject N appears in MAP, not in LOCK, not declared in cast.
+    subj_map = sorted({s.strip() for s in _MAPFID_SUBJECT.findall(mapt)})
+    subj_lock = _MAPFID_SUBJECT.findall(lock)
+    cast_lower = {n.lower() for n in _infer_cast(concept, directive)}
+    subj_in_cast = any(s.lower() in cast_lower for s in subj_map)
+    b_flag = bool(subj_map) and not subj_lock and not subj_in_cast
+
+    # E — two-way rare-token coverage between MAP and LOCK.
+    lock_list = _mapfid_token_list(lock)
+    map_list = _mapfid_token_list(mapt)
+    lock_rare = " ".join({t for t in lock_list if lock_list.count(t) >= 2})
+    map_rare = " ".join({t for t in map_list if map_list.count(t) >= 2})
+    r1 = _mapfid_coverage(lock_rare, mapt)  # lock motifs found in map
+    r2 = _mapfid_coverage(map_rare, lock)   # map motifs found in lock
+    e_flag = bool(lock_rare) and bool(map_rare) and r1 < _MAPFID_E_THR and r2 < _MAPFID_E_THR
+
+    # F — per-TIER-band coverage (only when directive declares TIER (ch a-b) bands).
+    bands: list[tuple[str, float]] = []
+    for lo_s, hi_s, desc in _MAPFID_TIER.findall(directive):
+        lo, hi = int(lo_s), int(hi_s)
+        band_map = "\n".join(
+            str(chapter_map[c].get("beat") or "") for c in chapter_map if lo <= c <= hi
+        )
+        bands.append((f"ch{lo}-{hi}", round(_mapfid_coverage(desc, band_map), 3)))
+    band_fail = [b for b in bands if b[1] < _MAPFID_F_THR]
+    f_flag = len(band_fail) >= _MAPFID_F_MIN_BANDS
+
+    # WARN-only: proper nouns in MAP absent from cast and lock.
+    # Keep it low-noise: strip function words, then keep either multi-word names
+    # (Clara Higgins) or single names that recur (>=2 occurrences).
+    proper_counts: dict[str, int] = {}
+    for m in re.findall(r"\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b", mapt):
+        toks = [t for t in m.split() if t.lower() not in _MAPFID_ROLE_STOP]
+        if not toks:
+            continue
+        cand = " ".join(toks)
+        cl = cand.lower()
+        if cl in cast_lower or cl in lock_tokens:
+            continue
+        if all(t.lower() in lock_tokens for t in toks):
+            continue
+        proper_counts[cand] = proper_counts.get(cand, 0) + 1
+    proper = sorted(
+        {
+            c
+            for c, n in proper_counts.items()
+            if " " in c or n >= 2
+        }
+    )[:12]
+
+    # WARN-only: rare divergent map tokens (>=3 occurrences, absent from lock).
+    map_counts: dict[str, int] = {}
+    for t in map_list:
+        map_counts[t] = map_counts.get(t, 0) + 1
+    rare_divergent = sorted(
+        [t for t, c in map_counts.items() if c >= 3 and t not in lock_tokens],
+        key=lambda x: -map_counts[x],
+    )[:12]
+
+    cast_sparse = len(cast_lower) == 0 and len(proper) >= 2
+
+    return {
+        "skip": False,
+        "A": a_hits,
+        "B": subj_map if b_flag else [],
+        "E": (round(r1, 3), round(r2, 3)) if e_flag else None,
+        "E_raw": (round(r1, 3), round(r2, 3)),
+        "F": band_fail if f_flag else [],
+        "F_raw": bands,
+        "warn_proper": proper,
+        "warn_rare": rare_divergent,
+        "warn_cast_sparse": cast_sparse,
+    }
+
+
+def concept_map_fidelity_errors(concept: dict) -> list[str]:
+    """G0b — BLOCK when chapter_map plot family contradicts author_directive/true_plot.
+
+    Deterministic (no LLM). BLOCK signals: A (hard motif ≥2 ∉ lock), B (Subject N ∉
+    cast), E (two-way rare-token coverage below floor), F (≥2 TIER bands below floor).
+    Everything else is WARN (printed, non-fatal). Escape hatch:
+    ``concept.gate_overrides: [map_fidelity]`` downgrades BLOCK→WARN with a loud line.
+    """
+    from factory.engine.lib.catalog import safe_print
+
+    sig = _mapfid_signals(concept)
+    if sig.get("skip"):
+        return []
+
+    block: list[str] = []
+    if sig["A"]:
+        block.append("concept:map_fidelity:A_hard_motif:" + ",".join(sig["A"]))
+    if sig["B"]:
+        block.append("concept:map_fidelity:B_subject_not_in_cast:" + ",".join(sig["B"]))
+    if sig["E"]:
+        block.append(
+            f"concept:map_fidelity:E_two_way_divergence:r1={sig['E'][0]},r2={sig['E'][1]}"
+        )
+    if sig["F"]:
+        bands = ",".join(f"{name}={cov}" for name, cov in sig["F"])
+        block.append(f"concept:map_fidelity:F_tier_band_mismatch:{bands}")
+
+    # WARN — always surfaced, never fatal.
+    if sig["warn_proper"]:
+        safe_print(
+            "  [map_fidelity WARN] proper nouns in chapter_map not in cast/directive: "
+            + ", ".join(sig["warn_proper"])
+        )
+    if not sig["A"] and sig["warn_rare"]:
+        safe_print(
+            "  [map_fidelity WARN] motif tokens in map absent from directive/plot: "
+            + ", ".join(sig["warn_rare"])
+        )
+    if sig["warn_cast_sparse"]:
+        safe_print(
+            "  [map_fidelity WARN] cast not declared — proper nouns appear only in map; "
+            "consider filling concept.characters"
+        )
+
+    if not block:
+        return []
+
+    overrides = concept.get("gate_overrides") or []
+    if isinstance(overrides, str):
+        overrides = [overrides]
+    if "map_fidelity" in {str(o).strip() for o in overrides}:
+        safe_print("⚠ GATE BYPASSED: map_fidelity divergence allowed by operator")
+        for b in block:
+            safe_print(f"  [map_fidelity WARN-bypassed] {b}")
+        return []
+    return block
 
 
 def concept_content_errors(concept: dict) -> list[str]:
@@ -197,6 +504,8 @@ def concept_content_errors(concept: dict) -> list[str]:
             f"concept:author_directive_quá_ngắn ({len(directive)} ký tự, cần ≥{MIN_DIRECTIVE_CHARS})"
         )
 
+    errors.extend(concept_intent_lock_errors(concept))
+    errors.extend(concept_map_fidelity_errors(concept))
     return errors
 
 
