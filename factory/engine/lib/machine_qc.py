@@ -11,8 +11,8 @@ from factory.engine.lib.language import find_foreign_chars, target_language
 from factory.engine.paths import workspace_dir
 
 # Deterministic, operator-fixable — never auto-rewrite for these alone.
-# Markdown (*italic*) is ADVISORY only — never needs_fix / never block promote.
-# See prose_sanitize.find_markdown_leaks + chapter markdown-fix UI.
+# Markdown (*italic* / **bold**) is format_fix → needs_fix so the user sees
+# and can strip via UI markdown-fix (not silent advisory).
 #
 # missing_quotes is ALSO advisory forever (2026-07): tag-verb heuristics measure
 # attribution vocabulary, not "speech lacks quote marks". Four false-positive
@@ -23,6 +23,8 @@ FORMAT_ISSUE_KEYS = frozenset(
         "cjk_chars",
         "stray_whitespace",
         "heading_artifact",
+        "markdown_leaks",
+        "markdown_advisory",  # legacy key → still treat as format_fix
     }
 )
 
@@ -34,6 +36,8 @@ CONTENT_ISSUE_KEYS = frozenset(
         "repeat",
         "invented_character",
         "bible_rule",
+        "must_happen_miss",
+        "cliffhanger_paste",
     }
 )
 
@@ -323,10 +327,10 @@ def find_stray_whitespace_hits(text: str) -> list[dict[str, Any]]:
 def classify_machine_issues(issues: dict) -> dict[str, Any]:
     """Split machine_qc issues into format_fix / content_fail / length buckets.
 
-    - format_fix: foreign chars, whitespace — operator hand-edits, no rewrite
+    - format_fix: foreign chars, whitespace, markdown *…* — operator hand-edits, no rewrite
     - length (short): below min_word_count — MUST expand/rewrite; never treat as hand-fix
     - content_fail: POV / name drift / bible — capped rewrites then needs_review
-    Markdown (*…*) and missing_quotes are ADVISORY only — never format_fix.
+    missing_quotes stays ADVISORY only — never format_fix.
     """
     format_fix = {k: issues[k] for k in FORMAT_ISSUE_KEYS if k in issues}
     content_fail = {k: issues[k] for k in CONTENT_ISSUE_KEYS if k in issues}
@@ -338,7 +342,6 @@ def classify_machine_issues(issues: dict) -> dict[str, Any]:
         "retry_meta",
         "format_locations",
         "warnings",
-        "markdown_advisory",  # advisor UI only — never content_fail
         "quotes_advisory",  # tag-verb heuristic — never content_fail / needs_fix
     }
     for k, v in issues.items():
@@ -371,6 +374,38 @@ def is_length_fail(issues: dict) -> bool:
 
 def has_content_fail(issues: dict) -> bool:
     return bool(classify_machine_issues(issues)["has_content"])
+
+
+def find_must_happen_misses(
+    text: str,
+    plan: dict | None,
+    *,
+    min_ratio: float = 0.22,
+) -> list[dict[str, Any]]:
+    """Flag plan must_happen items weakly covered by chapter prose (betrayal of lock)."""
+    if not isinstance(plan, dict):
+        return []
+    raw = plan.get("must_happen") or []
+    if not isinstance(raw, list) or not raw:
+        return []
+    from factory.engine.lib.intent_gates import _coverage_ratio, _tokens
+
+    prose = str(text or "")
+    misses: list[dict[str, Any]] = []
+    for item in raw:
+        beat = str(item or "").strip()
+        if not beat or len(_tokens(beat)) < 5:
+            continue
+        ratio = _coverage_ratio(beat, prose)
+        if ratio < min_ratio:
+            misses.append(
+                {
+                    "must_happen": beat[:160],
+                    "coverage": round(ratio, 3),
+                    "min_ratio": min_ratio,
+                }
+            )
+    return misses
 
 
 def machine_qc(
@@ -415,6 +450,21 @@ def machine_qc(
 
         resolved_plan = chapter_beat_from_plan(workspace_id, book, chapter)
 
+    mh_miss = find_must_happen_misses(text, resolved_plan)
+    if mh_miss:
+        issues["must_happen_miss"] = mh_miss
+
+    cliff = ""
+    if isinstance(resolved_plan, dict):
+        raw_cliff = resolved_plan.get("cliffhanger") or ""
+        cliff = raw_cliff if isinstance(raw_cliff, str) else str(raw_cliff)
+    if cliff.strip():
+        from factory.engine.lib.export_gate import find_cliffhanger_paste
+
+        paste_hit = find_cliffhanger_paste(text, cliff)
+        if paste_hit:
+            issues["cliffhanger_paste"] = paste_hit
+
     quote_hits = find_missing_dialogue_quote_hits(
         text, plan=resolved_plan, direction=direction
     )
@@ -445,12 +495,12 @@ def machine_qc(
     if format_locations:
         issues["format_locations"] = format_locations
 
-    # Advisory only — never feeds needs_fix / promote blocks
+    # Format fail — surfaces in needs_fix so user can strip * / ** via UI fixer
     from factory.engine.lib.prose_sanitize import find_markdown_leaks
 
     md_leaks = find_markdown_leaks(text)
     if md_leaks:
-        issues["markdown_advisory"] = [
+        issues["markdown_leaks"] = [
             {"id": h["id"], "kind": h["kind"], "match": h["match"], "context": h["context"]}
             for h in md_leaks[:20]
         ]
@@ -480,9 +530,27 @@ def issues_to_needs_fix(issues: dict, extra: list[str] | None = None) -> list[st
             flags.append(f"name_drift:{hit.get('found')}->{hit.get('canonical')}")
     if "pov_violation" in issues:
         flags.append("pov_violation:first_person")
+    for miss in issues.get("must_happen_miss") or []:
+        if isinstance(miss, dict):
+            flags.append(f"must_happen_miss:{str(miss.get('must_happen') or '')[:48]}")
+    if issues.get("cliffhanger_paste"):
+        hit = issues["cliffhanger_paste"]
+        if isinstance(hit, dict):
+            flags.append(
+                f"cliffhanger_paste:end_sim={hit.get('end_similarity')}"
+            )
+        else:
+            flags.append("cliffhanger_paste")
     # missing_quotes / quotes_advisory: never needs_fix (advisory forever)
     if "stray_whitespace" in issues:
         flags.append("stray_whitespace")
+    md = issues.get("markdown_leaks") or issues.get("markdown_advisory") or []
+    if md:
+        sample = next(
+            (str(h.get("match") or "") for h in md if isinstance(h, dict) and h.get("match")),
+            "*…*",
+        )
+        flags.append(f"markdown:{sample[:40]}")
     if extra:
         flags.extend(extra)
     return flags
@@ -505,10 +573,16 @@ def format_machine_reasons(issues: dict) -> list[str]:
         phrases = [str(p) for p in (issues["repeat"] or [])][:3]
         if phrases:
             reasons.append(f"lặp cụm cấm: {', '.join(phrases)}")
-    advisory = issues.get("markdown_advisory") or []
-    if advisory:
+    md = issues.get("markdown_leaks") or issues.get("markdown_advisory") or []
+    if md:
+        samples = [
+            str(h.get("match") or "")
+            for h in md[:3]
+            if isinstance(h, dict) and h.get("match")
+        ]
+        bit = f" — {'; '.join(samples)}" if samples else ""
         reasons.append(
-            f"markdown advisory ({len(advisory)} hit) — dùng UI fixer, không chặn promote"
+            f"markdown leak ({len(md)} hit){bit} — vào needs_fix, dùng UI strip * /**"
         )
     q_adv = issues.get("quotes_advisory") or []
     if q_adv:
@@ -530,6 +604,22 @@ def format_machine_reasons(issues: dict) -> list[str]:
         pv = issues["pov_violation"]
         count = pv.get("count", "?") if isinstance(pv, dict) else pv
         reasons.append(f"POV first-person outside dialogue ({count} hits)")
+    mh_miss = issues.get("must_happen_miss") or []
+    if mh_miss:
+        samples = [
+            str(m.get("must_happen") or "")[:60]
+            for m in mh_miss[:3]
+            if isinstance(m, dict)
+        ]
+        bit = f": {'; '.join(samples)}" if samples else ""
+        reasons.append(f"thiếu MUST HAPPEN khóa ({len(mh_miss)}){bit}")
+    if issues.get("cliffhanger_paste"):
+        hit = issues["cliffhanger_paste"]
+        sim = hit.get("end_similarity") if isinstance(hit, dict) else "?"
+        reasons.append(
+            f"cliffhanger paste (near-dup ending, end_sim={sim}) — "
+            "dẫn tới cliff, không dán lại câu prompt"
+        )
     if "stray_whitespace" in issues:
         reasons.append("khoảng trắng thừa cuối dòng (stray whitespace)")
 

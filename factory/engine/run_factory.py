@@ -104,6 +104,8 @@ def _cli_book_slug(args: argparse.Namespace, cfg: dict | None = None) -> tuple[i
 
 
 def load_json(path: Path) -> dict:
+    if not Path(path).exists():
+        return {}
     return json.loads(path.read_text(encoding="utf-8"))
 
 
@@ -137,7 +139,7 @@ def cmd_concept(args: argparse.Namespace) -> None:
     if args.init:
         p = concept_init(ws)
         safe_print(f"[concept] template -> {p}")
-        safe_print("[concept] Điền author_directive rồi: concept --ready")
+        safe_print("[concept] Điền author_directive (có Ch1:/Ch2:…) rồi: concept --ready")
         return
     if args.interview:
         concept_interview(ws)
@@ -149,19 +151,127 @@ def cmd_concept(args: argparse.Namespace) -> None:
             for e in errs:
                 safe_print(f"  - {e}")
         else:
-            safe_print("[concept] OK — chay concept --ready hoac develop-narrative")
+            safe_print("[concept] OK — chay concept --ready → compile-intent")
         return
     if args.ready:
         ok, errs = concept_mark_ready(ws)
         if ok:
             safe_print(f"[concept] concept_status=ready -> {ws / 'concept.yaml'}")
-            safe_print("[concept] Tiep: develop-narrative")
+            safe_print("[concept] Tiep: compile-intent → approve-intent")
         else:
             safe_print("[concept] BLOCKED:")
             for e in errs:
                 safe_print(f"  - {e}")
         return
     concept_show(ws)
+
+
+def cmd_compile_intent(args: argparse.Namespace) -> None:
+    from factory.engine.lib.intent_manifest import compile_and_save_intent, intent_manifest_path
+
+    ws = workspace_dir(args.workspace)
+    book = int(getattr(args, "book", None) or load_direction(ws).get("book") or 1)
+    try:
+        man = compile_and_save_intent(ws, book=book)
+    except ValueError as exc:
+        safe_print(f"[compile-intent] BLOCKED — {exc}")
+        return
+    path = intent_manifest_path(ws, book)
+    safe_print(f"[compile-intent] OK -> {path}")
+    safe_print(
+        f"[compile-intent] chapters_mapped={len(man.get('chapter_map') or [])} "
+        f"digest={man.get('manifest_digest')} status=draft"
+    )
+    safe_print("[compile-intent] Tiep: doc manifest → approve-intent")
+
+
+def cmd_approve_intent(args: argparse.Namespace) -> None:
+    from factory.engine.lib.intent_manifest import approve_intent, intent_manifest_path
+
+    ws = workspace_dir(args.workspace)
+    book = int(getattr(args, "book", None) or load_direction(ws).get("book") or 1)
+    try:
+        man = approve_intent(ws, book=book)
+    except ValueError as exc:
+        safe_print(f"[approve-intent] BLOCKED — {exc}")
+        return
+    safe_print(f"[approve-intent] intent_status=approved -> {intent_manifest_path(ws, book)}")
+    safe_print(f"[approve-intent] digest={man.get('manifest_digest')}")
+    safe_print("[approve-intent] Tiep: develop-narrative (optional) → plan")
+
+
+def cmd_approve_narrative(args: argparse.Namespace) -> None:
+    import yaml
+
+    from factory.engine.lib.intent_gates import g1_narrative_fidelity_errors
+
+    ws = workspace_dir(args.workspace)
+    direction = load_direction(ws)
+    profile = direction.get("narrative_profile", "")
+    if not profile:
+        print("[approve-narrative] FAIL — set narrative_profile trong direction.yaml trước")
+        return
+    errors = validate_narrative_assets(ws, direction)
+    if errors:
+        print(f"[approve-narrative] BLOCKED — validate-narrative fail ({len(errors)} issues)")
+        for e in errors[:10]:
+            safe_print(f"  - {e}")
+        return
+    g1 = g1_narrative_fidelity_errors(ws)
+    if g1:
+        print(f"[approve-narrative] BLOCKED — G1 fidelity fail ({len(g1)} issues)")
+        for e in g1[:15]:
+            safe_print(f"  - {e}")
+        return
+    dir_path = ws / "direction.yaml"
+    data = yaml.safe_load(dir_path.read_text(encoding="utf-8")) or {}
+    data["narrative_status"] = "approved"
+    dir_path.write_text(
+        yaml.dump(data, allow_unicode=True, default_flow_style=False, sort_keys=False),
+        encoding="utf-8",
+    )
+    safe_print(f"[approve-narrative] narrative_status=approved -> {dir_path}")
+    safe_print("[approve-narrative] Lock1 OK — plan sẽ đọc narrative pack đã khóa")
+
+
+def cmd_plan(args: argparse.Namespace) -> None:
+    from factory.engine.lib.intent_manifest import intent_is_approved
+
+    ws = workspace_dir(args.workspace)
+    direction = load_direction(ws)
+    bible = load_series_bible(ws)
+    if not intent_is_approved(ws, args.book, direction) and not args.force:
+        print("[plan] BLOCKED — intent chưa approved.")
+        print("        Chạy: compile-intent → approve-intent")
+        print("        Hoặc: plan --force (không khuyến khích)")
+        return
+    # Narrative/bible optional when intent locked; still warn if profile expects them
+    if direction.get("narrative_profile") and not narrative_is_approved(direction) and not args.force:
+        safe_print(
+            "[plan] WARN — narrative chưa approved; plan chỉ bám intent_manifest "
+            "(chạy develop-narrative → approve-narrative để tận dụng Lock1)"
+        )
+    # Locked-chain rule: approved IntentManifest is enough; bible is optional Lock1.
+    require_bible = False if intent_is_approved(ws, args.book, direction) else (not args.force)
+    if require_bible and not bible_is_approved(bible, direction):
+        print("[plan] BLOCKED — bible chưa approved. Chạy: validate-bible → approve-bible")
+        print("        Hoặc: plan --force (bỏ qua bible khi đã có intent)")
+        return
+    force_replan = bool(getattr(args, "replan", False))
+    try:
+        path, n_prompts = plan_book(
+            ws,
+            args.book,
+            acts=args.acts,
+            force_replan=force_replan,
+            require_bible=require_bible,
+        )
+    except RuntimeError as exc:
+        print(f"[plan] BLOCKED — {exc}")
+        return
+    print(f"[plan] OK -> {path}")
+    print(f"[plan] rendered {n_prompts} prompts in {book_workspace_dir(ws, args.book) / 'prompts'}")
+    safe_print("[plan] Doc luot prompts/ roi: approve-plan")
 
 
 def cmd_validate_narrative(args: argparse.Namespace) -> None:
@@ -180,32 +290,6 @@ def cmd_validate_narrative(args: argparse.Namespace) -> None:
         safe_print("[validate-narrative] PASS — đủ file + sanity check OK")
         if not narrative_is_approved(direction):
             safe_print("  (chưa approved — đọc bible/narrative/ rồi: approve-narrative)")
-
-
-def cmd_approve_narrative(args: argparse.Namespace) -> None:
-    import yaml
-
-    ws = workspace_dir(args.workspace)
-    direction = load_direction(ws)
-    profile = direction.get("narrative_profile", "")
-    if not profile:
-        print("[approve-narrative] FAIL — set narrative_profile trong direction.yaml trước")
-        return
-    errors = validate_narrative_assets(ws, direction)
-    if errors:
-        print(f"[approve-narrative] BLOCKED — validate-narrative fail ({len(errors)} issues)")
-        for e in errors[:10]:
-            safe_print(f"  - {e}")
-        return
-    dir_path = ws / "direction.yaml"
-    data = yaml.safe_load(dir_path.read_text(encoding="utf-8")) or {}
-    data["narrative_status"] = "approved"
-    dir_path.write_text(
-        yaml.dump(data, allow_unicode=True, default_flow_style=False, sort_keys=False),
-        encoding="utf-8",
-    )
-    safe_print(f"[approve-narrative] narrative_status=approved -> {dir_path}")
-    safe_print("[approve-narrative] Tiếp: validate-bible → plan (nếu bible đã approved)")
 
 
 def cmd_architect(args: argparse.Namespace) -> None:
@@ -318,17 +402,23 @@ def _clear_chapter_pipeline(ws: Path, book: int, ch: int) -> None:
 
 
 def build_writer_payload(ws: Path, book: int, ch: int, cfg: dict) -> str:
+    """Writer authority = locked disk prompt (SoT). Optional live rebuild only if digest matches."""
+    from factory.engine.lib.intent_gates import assert_prompt_matches_disk
+
     pp = prompt_path(ws, book, ch)
     if not pp.exists():
         raise FileNotFoundError(f"Missing prompt {pp} — chạy `plan` + `render-prompts` trước")
     direction = load_direction(ws)
     lang = target_language(direction, cfg)
+    disk_prompt = pp.read_text(encoding="utf-8")
+
+    # Verify live projection still matches disk (detect bible/registry drift).
     plan = load_chapter_plan(ws, book, ch)
     plan_path = book_workspace_dir(ws, book) / "master_plan.json"
     data = json.loads(plan_path.read_text(encoding="utf-8"))
     plans = normalize_chapter_plans(data.get("chapter_plans", data.get("chapter_beats", [])))
     prior = [p for p in plans if p.get("chapter", 0) < ch]
-    prompt = build_chapter_prompt(
+    live = build_chapter_prompt(
         plan,
         prior_plans=prior,
         direction=direction,
@@ -337,10 +427,21 @@ def build_writer_payload(ws: Path, book: int, ch: int, cfg: dict) -> str:
         series_bible=load_series_bible(ws),
         ws=ws,
     )
+    assert_prompt_matches_disk(disk_prompt, live, ch)
+    prompt = disk_prompt
+
     excerpt = load_prior_chapter_excerpt(ws, book, ch)
     if excerpt:
         prompt += format_prior_excerpt_block(excerpt, lang=lang)
     state = load_state(ws, book)
+    from factory.engine.lib.locked_names import format_locked_names_block
+
+    locked_block = format_locked_names_block(
+        state.get("locked_names") if isinstance(state.get("locked_names"), dict) else {},
+        lang=lang,
+    )
+    if locked_block:
+        prompt += "\n\n" + locked_block
     return (
         prompt
         + "\n\n---\n## STORY_STATE (không được mâu thuẫn)\n```json\n"
@@ -396,11 +497,19 @@ def build_qc_payload(ws: Path, book: int, chapter: str, chapter_num: int) -> str
 
     spice_max = resolve_spice_max_from_direction(direction)
 
+    def _qc_bible() -> dict:
+        b = load_json(bible_path(ws))
+        if b:
+            return b
+        from factory.engine.lib.master_plan import _bible_stub_from_intent
+
+        return _bible_stub_from_intent(ws, book)
+
     return json.dumps(
         {
             "chapter_number": chapter_num,
             "chapter": chapter,
-            "series_bible": load_json(bible_path(ws)),
+            "series_bible": _qc_bible(),
             "story_state": load_state(ws, book),
             "prior_chapter_excerpt": prior,
             "target_language": direction.get("target_language"),
@@ -516,6 +625,23 @@ def _content_fail_patch(lang: str, attempt: int, issues: dict) -> str:
         bits.append(
             f"[REVISION — attempt {attempt + 1}] Remove banned repeated phrases: {phrases}."
         )
+    if "must_happen_miss" in issues:
+        misses = issues.get("must_happen_miss") or []
+        samples = []
+        for m in misses[:3]:
+            if isinstance(m, dict):
+                samples.append(str(m.get("must_happen") or "")[:80])
+        sample = "; ".join(samples) or "locked beats"
+        if lang == "vi":
+            bits.append(
+                f"[VIẾT LẠI — lần {attempt + 1}] Thiếu MUST HAPPEN khóa ({sample}). "
+                "Viết ĐỦ mọi mục thành scene — cấm bỏ / đổi nhánh."
+            )
+        else:
+            bits.append(
+                f"[REVISION — attempt {attempt + 1}] Missing locked MUST HAPPEN ({sample}). "
+                "Realize EVERY item as on-page scene — do not drop or swap branches."
+            )
     # Generic content leftovers
     other = [
         k
@@ -852,32 +978,6 @@ def cmd_write(args: argparse.Namespace) -> None:
             continue
         counts[status] = counts.get(status, 0) + 1
     print(f"\n[write] done: {counts}")
-
-
-def cmd_plan(args: argparse.Namespace) -> None:
-    ws = workspace_dir(args.workspace)
-    direction = load_direction(ws)
-    bible = load_series_bible(ws)
-    if direction.get("narrative_profile") and not narrative_is_approved(direction) and not args.force:
-        print("[plan] BLOCKED — narrative chưa approved.")
-        print("        Chạy: develop-narrative → đọc bible/narrative/ → approve-narrative")
-        print("        Hoặc: plan --force (không khuyến khích)")
-        return
-    if not bible_is_approved(bible, direction) and not args.force:
-        print("[plan] BLOCKED — bible chưa approved. Chạy: validate-bible → approve-bible")
-        print("        Hoặc: plan --force (không khuyến khích)")
-        return
-    force_replan = bool(getattr(args, "replan", False))
-    try:
-        path, n_prompts = plan_book(
-            ws, args.book, acts=args.acts, force_replan=force_replan
-        )
-    except RuntimeError as exc:
-        print(f"[plan] BLOCKED — {exc}")
-        return
-    print(f"[plan] OK -> {path}")
-    print(f"[plan] rendered {n_prompts} prompts in {book_workspace_dir(ws, args.book) / 'prompts'}")
-    safe_print("[plan] Doc luot prompts/ roi: approve-plan")
 
 
 def cmd_approve_plan(args: argparse.Namespace) -> None:
@@ -1311,6 +1411,11 @@ def main() -> None:
     p_concept.add_argument("--check", action="store_true", help="kiểm tra đã điền chỉ đạo chưa")
     p_concept.add_argument("--ready", action="store_true", help="đánh dấu concept_status=ready")
 
+    p_ci = sub.add_parser("compile-intent", parents=[parent])
+    p_ci.add_argument("--book", type=int, default=None)
+    p_ai = sub.add_parser("approve-intent", parents=[parent])
+    p_ai.add_argument("--book", type=int, default=None)
+
     sub.add_parser("validate-narrative", parents=[parent])
     sub.add_parser("approve-narrative", parents=[parent])
 
@@ -1415,6 +1520,8 @@ def main() -> None:
         "init-canon-registry": cmd_init_canon_registry,
         "develop-narrative": cmd_develop_narrative,
         "concept": cmd_concept,
+        "compile-intent": cmd_compile_intent,
+        "approve-intent": cmd_approve_intent,
         "validate-narrative": cmd_validate_narrative,
         "approve-narrative": cmd_approve_narrative,
         "outline": cmd_outline,

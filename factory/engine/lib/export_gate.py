@@ -17,7 +17,7 @@ from factory.engine.lib.prompt_builder import load_direction
 from factory.engine.paths import book_catalog_dir, load_config, workspace_dir
 
 CHAPTER_HEADING_LINE = re.compile(
-    r"^#\s*(?:Chapter|Chương)\s+\d+\s*:?\s*(.*)$",
+    r"^#*\s*(?:Chapter|Chương)\s+\d+\s*:?\s*(.*)$",
     re.IGNORECASE,
 )
 CHAPTER_HEADING_BODY = re.compile(
@@ -64,13 +64,24 @@ OPEN_CURLY = "\u201c\u201e"
 CLOSE_CURLY = "\u201d"
 PROMOTE_RULES = frozenset(
     # EG-06 markdown deliberately excluded — advisor UI fixes; never block promote
-    {"EG-01", "EG-02", "EG-03", "EG-08", "EG-10", "EG-11", "EG-12", "EG-13", "EG-16"}
+    {
+        "EG-01",
+        "EG-02",
+        "EG-03",
+        "EG-08",
+        "EG-10",
+        "EG-11",
+        "EG-12",
+        "EG-13",
+        "EG-16",
+        "EG-16b",
+    }
 )
 FULL_RULES = frozenset(
     {
         "EG-01", "EG-02", "EG-03", "EG-04", "EG-05", "EG-06", "EG-07", "EG-08",
         "EG-09", "EG-10", "EG-11", "EG-12", "EG-13", "EG-14", "EG-15", "EG-16",
-        "EG-18",
+        "EG-16b", "EG-18",
     }
 )
 
@@ -866,6 +877,232 @@ def check_eg16_duplicate_block(body: str, chapter: int) -> list[dict[str, Any]]:
     return results
 
 
+# EG-16b — cliffhanger paste after beat already covered (near-dup, not verbatim ≥20)
+_EG16B_END_SIM = 0.55
+_EG16B_PRIOR_SIM = 0.42  # prior *paragraph* near-dup of full cliff
+_EG16B_QUOTE_MIN = 12
+# Double quotes; plus single-quoted MULTI-WORD spans (avoid wasn't/hadn't).
+_CLIFF_DQUOTE_RE = re.compile(
+    r"[\"\u201c\u201d]([^\"\u201c\u201d]{12,})[\"\u201c\u201d]"
+)
+_CLIFF_SQUOTE_RE = re.compile(
+    r"(?<![A-Za-z])['\u2018]([^'\u2019]{12,})['\u2019](?![A-Za-z])"
+)
+
+
+def _eg16b_cliff_quotes(cliff: str) -> list[str]:
+    quotes: list[str] = []
+    for q in _CLIFF_DQUOTE_RE.findall(cliff or ""):
+        if len(q.strip()) >= _EG16B_QUOTE_MIN:
+            quotes.append(q.strip())
+    for q in _CLIFF_SQUOTE_RE.findall(cliff or ""):
+        qs = q.strip()
+        # multi-word only — filters contractions / single tokens
+        if len(qs) >= _EG16B_QUOTE_MIN and " " in qs:
+            quotes.append(qs)
+    return quotes
+
+
+def _eg16b_token_set(text: str) -> set[str]:
+    toks = {_eg16_normalize_token(w) for w in _EG16_WORD_RE.findall(text or "")}
+    return {t for t in toks if t and t not in _EG16_STOPWORDS}
+
+
+def _eg16b_jaccard(a: str, b: str) -> float:
+    ta, tb = _eg16b_token_set(a), _eg16b_token_set(b)
+    if not ta or not tb:
+        return 0.0
+    return len(ta & tb) / len(ta | tb)
+
+
+def _eg16b_paras(prose: str) -> list[str]:
+    return [p.strip() for p in re.split(r"\n\s*\n", prose or "") if p.strip()]
+
+
+def extract_cliffhanger_from_prompt(prompt_text: str) -> str:
+    """Parse 'End cliffhanger:' / 'Kết cliffhanger:' from a rendered prompt."""
+    if not prompt_text:
+        return ""
+    m = re.search(
+        r"(?:End cliffhanger|Kết cliffhanger)\s*:\s*(.+)",
+        prompt_text,
+        re.IGNORECASE,
+    )
+    return (m.group(1).strip() if m else "")
+
+
+def find_cliffhanger_paste(
+    body: str,
+    cliffhanger: str,
+    *,
+    end_sim: float = _EG16B_END_SIM,
+    prior_sim: float = _EG16B_PRIOR_SIM,
+) -> dict[str, Any] | None:
+    """Detect: ending ≈ cliffhanger AND earlier prose already covered the same beat.
+
+    Legitimate chapters that *lead to* the cliffhanger once (no prior beat) return None.
+    """
+    cliff = (cliffhanger or "").strip()
+    if len(_EG16_WORD_RE.findall(cliff)) < 8:
+        return None
+    prose = prose_body_for_duplicate_check(body)
+    paras = _eg16b_paras(prose)
+    if not paras:
+        return None
+
+    # Last non-trivial paragraph(s) — writers often paste cliff as final line
+    tail_paras: list[str] = []
+    for p in reversed(paras):
+        if len(_EG16_WORD_RE.findall(p)) >= 6:
+            tail_paras.append(p)
+        if len(tail_paras) >= 2:
+            break
+    if not tail_paras:
+        return None
+    tail = " ".join(reversed(tail_paras))
+    sim_end = _eg16b_jaccard(tail, cliff)
+    # Also: high containment of cliff content in the very last paragraph
+    last = paras[-1]
+    sim_last = _eg16b_jaccard(last, cliff)
+    end_hit = max(sim_end, sim_last)
+    if end_hit < end_sim:
+        return None
+
+    # Body before the pasted tail
+    if sim_last >= end_sim:
+        prior_paras = paras[:-1]
+    else:
+        prior_paras = paras[: -len(tail_paras)]
+    prior = "\n\n".join(prior_paras)
+    if not prior.strip():
+        return None
+
+    # Distinctive quoted lines from cliffhanger already present earlier
+    quotes = _eg16b_cliff_quotes(cliff)
+    quotes_earlier = 0
+    prior_norm = (
+        prior.lower()
+        .replace("\u201c", '"')
+        .replace("\u201d", '"')
+        .replace("\u2018", "'")
+        .replace("\u2019", "'")
+    )
+    for q in quotes:
+        qn = (
+            q.lower()
+            .strip()
+            .replace("\u201c", '"')
+            .replace("\u201d", '"')
+            .replace("\u2018", "'")
+            .replace("\u2019", "'")
+        )
+        # Match regardless of surrounding quote style in prose
+        core = qn.strip("\"'")
+        if core and core in prior_norm:
+            quotes_earlier += 1
+            continue
+        q_toks = _eg16b_token_set(q)
+        if len(q_toks) >= 4 and len(q_toks & _eg16b_token_set(prior)) / len(q_toks) >= 0.85:
+            quotes_earlier += 1
+
+    # Near-dup of cliff beat in a prior *paragraph* (not whole-chapter bag)
+    sim_prior = 0.0
+    for p in prior_paras:
+        if len(_EG16_WORD_RE.findall(p)) < 8:
+            continue
+        sim_prior = max(sim_prior, _eg16b_jaccard(p, cliff))
+
+    beat_already = quotes_earlier >= 1 or sim_prior >= prior_sim
+    if not beat_already:
+        return None
+
+    return {
+        "end_similarity": round(end_hit, 3),
+        "prior_similarity": round(sim_prior, 3),
+        "quotes_earlier": quotes_earlier,
+        "tail_preview": last[:160].replace("\n", " "),
+        "cliff_preview": cliff[:160],
+    }
+
+
+def trim_cliffhanger_paste(body: str, cliffhanger: str) -> str:
+    """Drop trailing paste paragraph when find_cliffhanger_paste would flag it."""
+    hit = find_cliffhanger_paste(body, cliffhanger)
+    if not hit:
+        return body
+    # Split preserving structure: remove last prose paragraph only
+    raw = body or ""
+    # Work on full body paragraphs (keep heading)
+    parts = re.split(r"(\n\s*\n)", raw)
+    # parts alternating text/sep
+    # Find last non-empty text chunk and drop if it matches tail
+    idxs = [i for i, p in enumerate(parts) if i % 2 == 0 and p.strip()]
+    if not idxs:
+        return body
+    last_i = idxs[-1]
+    candidate = parts[last_i].strip()
+    cliff = (cliffhanger or "").strip()
+    if _eg16b_jaccard(candidate, cliff) >= _EG16B_END_SIM * 0.9:
+        parts[last_i] = ""
+        # also clear adjacent separators left empty
+        out = "".join(parts).rstrip() + "\n"
+        return out
+    return body
+
+
+def check_eg16_cliffhanger_paste(
+    body: str,
+    chapter: int,
+    cliffhanger: str | None,
+    *,
+    auto_trim: bool = False,
+) -> tuple[list[dict[str, Any]], str]:
+    """EG-16b: near-dup cliffhanger paste. Returns (checks, body_maybe_trimmed)."""
+    cliff = (cliffhanger or "").strip()
+    if not cliff:
+        return [_check("EG-16b", "error", True, chapter=chapter, detail="no cliffhanger")], body
+
+    hit = find_cliffhanger_paste(body, cliff)
+    if not hit:
+        return [_check("EG-16b", "error", True, chapter=chapter)], body
+
+    new_body = trim_cliffhanger_paste(body, cliff) if auto_trim else body
+    trimmed = auto_trim and new_body != body
+    detail = (
+        f"cliffhanger_paste end_sim={hit['end_similarity']} "
+        f"prior_sim={hit['prior_similarity']} quotes_earlier={hit['quotes_earlier']}"
+    )
+    if trimmed:
+        detail += " (auto-trimmed)"
+        # Re-check after trim — if clean, pass
+        if not find_cliffhanger_paste(new_body, cliff):
+            row = _check(
+                "EG-16b",
+                "warn",
+                True,
+                chapter=chapter,
+                detail=detail,
+                snippet=hit["tail_preview"],
+            )
+            row["code"] = "EG-16b:cliffhanger_paste_trimmed"
+            row["auto_trimmed"] = True
+            return [row], new_body
+
+    row = _check(
+        "EG-16b",
+        "error",
+        False,
+        chapter=chapter,
+        detail=detail,
+        snippet=hit["tail_preview"],
+    )
+    row["code"] = "EG-16b:cliffhanger_paste"
+    row["cliff_preview"] = hit["cliff_preview"]
+    row["end_similarity"] = hit["end_similarity"]
+    row["prior_similarity"] = hit["prior_similarity"]
+    return [row], new_body
+
+
 def check_eg10_cjk(body: str, chapter: int, lang: str) -> dict[str, Any]:
     if lang != "en":
         return _check("EG-10", "error", True, chapter=chapter)
@@ -1241,6 +1478,23 @@ def _severity_for(config_val: str) -> str:
     return "error" if config_val == "error" else "warn"
 
 
+def _cliffhanger_for_chapter(
+    workspace_id: str | None,
+    book: int,
+    chapter: int,
+) -> str:
+    if not workspace_id or not chapter:
+        return ""
+    try:
+        from factory.engine.lib.catalog import chapter_beat_from_plan
+
+        beat = chapter_beat_from_plan(workspace_id, book, chapter) or {}
+        cliff = beat.get("cliffhanger") or ""
+        return cliff if isinstance(cliff, str) else str(cliff)
+    except Exception:
+        return ""
+
+
 def check_chapter_for_promote(
     meta: dict,
     body: str,
@@ -1254,6 +1508,7 @@ def check_chapter_for_promote(
     if not gcfg["enabled"] or not gcfg["on_promote"]:
         return []
     chapter = int(meta.get("chapter") or 0)
+    book = int(meta.get("book") or 1)
     checks: list[dict[str, Any]] = []
     checks.append(check_eg01_truncated(body, chapter))
     checks.extend(check_eg02_markers(body, chapter))
@@ -1267,6 +1522,9 @@ def check_chapter_for_promote(
     eg12_sev = "error" if gcfg["publish_mode"] else "warn"
     checks.append(check_eg12_needs_fix(meta, chapter, severity=eg12_sev))
     checks.extend(check_eg16_duplicate_block(body, chapter))
+    cliff = _cliffhanger_for_chapter(workspace_id, book, chapter)
+    paste_checks, _ = check_eg16_cliffhanger_paste(body, chapter, cliff)
+    checks.extend(paste_checks)
     return checks
 
 
@@ -1324,6 +1582,11 @@ def run_export_gate(
             checks.append(check_eg12_needs_fix(meta, ch_num, severity=eg12_sev))
         if "EG-16" in active:
             checks.extend(check_eg16_duplicate_block(body, ch_num))
+        if "EG-16b" in active:
+            book_num = int(meta.get("book") or 1)
+            cliff = _cliffhanger_for_chapter(workspace_id, book_num, ch_num)
+            paste_checks, _ = check_eg16_cliffhanger_paste(body, ch_num, cliff)
+            checks.extend(paste_checks)
 
     if "EG-04" in active and chapter_nums:
         expected = _expected_chapter_count(workspace_id, book_slug, chapter_nums)

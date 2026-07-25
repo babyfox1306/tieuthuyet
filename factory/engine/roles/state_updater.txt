@@ -18,7 +18,13 @@ Output **JSON ONLY** — schema đầy đủ:
   "open_threads": ["móc chưa giải"],
   "facts_established": ["fact cụ thể, không mơ hồ"],
   "spice_progression": "mô tả ngắn",
-  "phrases_used": ["cụm từ đặc trưng đã dùng — tránh lặp"]
+  "phrases_used": ["cụm từ đặc trưng đã dùng — tránh lặp"],
+  "locked_names": {"role_or_initials": "canonical_name_or_unknown_until_reveal"}
 }
 
 Chỉ thêm fact mới từ chương này. Không xóa fact cũ trừ khi chương resolve thread.
+
+**locked_names (CỨNG):**
+- Copy forward mọi key từ current_state.locked_names. First lock wins — không đổi tên đã khóa.
+- Một vai (vd previous_housekeeper) chỉ được MỘT tên. Nếu prose dùng tên khác → giữ tên đã khóa, KHÔNG ghi tên mới vào facts/knows/timeline.
+- Initials chưa lộ danh (vd E.M. trên watch) → khóa `"E.M.": "unknown_until_reveal"`. CẤM gán full name (Emily Morrison) cho initials đó.

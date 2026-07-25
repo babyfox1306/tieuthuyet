@@ -3,11 +3,14 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 from factory.engine.lib.call_9router import call_9router, parse_json_response
 from factory.engine.lib.prompt_builder import load_direction
 from factory.engine.paths import book_workspace_dir
+
+_TIMELINE_CH_RE = re.compile(r"\bch(?:apter)?\s*[:\-]?\s*(\d+)", re.IGNORECASE)
 
 
 def state_path(ws: Path, book: int) -> Path:
@@ -29,6 +32,7 @@ def load_state(ws: Path, book: int = 1) -> dict:
         "facts_established": [],
         "spice_progression": "",
         "phrases_used": [],
+        "locked_names": {},
     }
 
 
@@ -36,6 +40,53 @@ def save_state(ws: Path, book: int, state: dict) -> None:
     path = state_path(ws, book)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def last_timeline_chapter(state: dict) -> int:
+    """Highest chapter number referenced in timeline entries (0 if none/unlabeled)."""
+    highest = 0
+    for entry in state.get("timeline") or []:
+        m = _TIMELINE_CH_RE.search(str(entry))
+        if m:
+            highest = max(highest, int(m.group(1)))
+    return highest
+
+
+def state_chapter_divergence(state: dict) -> dict:
+    """Detect when state.current_chapter runs ahead of the recorded timeline.
+
+    Divergence = current_chapter leads the last recorded timeline chapter by
+    more than 1 (one ahead is normal for an in-flight chapter). A non-empty but
+    unlabeled timeline (real state_updater output rarely prefixes "ChN:") is
+    treated as aligned to avoid false positives; only an empty timeline reads
+    as chapter 0.
+    """
+    current = int(state.get("current_chapter") or 0)
+    timeline = state.get("timeline") or []
+    labeled = last_timeline_chapter(state)
+    if not timeline:
+        timeline_chapter = 0
+    elif labeled > 0:
+        timeline_chapter = labeled
+    else:
+        timeline_chapter = current
+
+    ahead_by = current - timeline_chapter
+    divergent = ahead_by > 1
+    message = ""
+    if divergent:
+        message = (
+            f"state.current_chapter={current} leads timeline "
+            f"(last recorded ch{timeline_chapter}) by {ahead_by} — "
+            "state/timeline out of sync; reconcile before export"
+        )
+    return {
+        "divergent": divergent,
+        "current_chapter": current,
+        "timeline_chapter": timeline_chapter,
+        "ahead_by": ahead_by,
+        "message": message,
+    }
 
 
 def _fallback_state_bump(state: dict, chapter_num: int, book: int) -> dict:
@@ -93,12 +144,16 @@ def update_state_after_pass(
         new_state = _fallback_state_bump(state, chapter_num, book)
     new_state.setdefault("current_book", book)
     new_state.setdefault("current_chapter", chapter_num)
+    # Preserve prior locks if model dropped the field
+    if "locked_names" not in new_state and isinstance(state.get("locked_names"), dict):
+        new_state["locked_names"] = dict(state["locked_names"])
 
     from factory.engine.lib.canon_registry import (
         format_conflicts,
         validate_story_state_cast,
     )
     from factory.engine.lib.catalog import safe_print
+    from factory.engine.lib.locked_names import apply_locked_names_after_pass
 
     cast_conflicts = validate_story_state_cast(ws, new_state, book)
     if cast_conflicts:
@@ -141,12 +196,15 @@ def update_state_after_pass(
                             val["relationship_other"] = rel
                 cleaned[key] = val
             new_state["character_status"] = cleaned
-        new_state.setdefault("facts_established", [])
-        if isinstance(new_state["facts_established"], list):
-            new_state["facts_established"].append(
-                "CANON: invented doctors stripped from state; "
-                f"blocked={allowed_blob[:120]}"
-            )
+            new_state.setdefault("facts_established", [])
+            if isinstance(new_state["facts_established"], list):
+                new_state["facts_established"].append(
+                    "CANON: invented doctors stripped from state; "
+                    f"blocked={allowed_blob[:120]}"
+                )
+
+    # Đòn 1+2: extract supporting names from prose; one name per role; block E.M. invent
+    new_state = apply_locked_names_after_pass(new_state, chapter_text)
 
     save_state(ws, book, new_state)
     return new_state
