@@ -37,6 +37,86 @@ from factory.engine.lib.plan_normalize import (
 from factory.engine.paths import bible_path, book_workspace_dir, workspace_dir
 
 
+def _bible_stub_from_intent(ws: Path, book: int) -> dict:
+    """Minimal bible-shaped dict from approved IntentManifest (no AI, no disk write).
+
+    Used when planning with intent-only path (bible optional / not yet generated).
+    """
+    from factory.engine.lib.intent_manifest import load_intent_manifest
+    from factory.engine.lib.narrative_schema import load_concept
+
+    man = load_intent_manifest(ws, book)
+    concept = load_concept(ws)
+    cast = list(man.get("cast") or [])
+    female = cast[0] if cast else "Unassigned"
+    male = "Unassigned (no male lead)"
+
+    female_lead: dict = {"name": female}
+    supporting: list[dict] = []
+    for item in concept.get("characters") or []:
+        if not isinstance(item, dict):
+            continue
+        name = str(item.get("name") or "").strip()
+        if not name:
+            continue
+        traits = item.get("traits") or []
+        voice = ", ".join(str(t) for t in traits[:4]) if traits else str(item.get("role") or "")
+        entry = {
+            "name": name,
+            "age": item.get("age", ""),
+            "voice": voice,
+            "tics": list(traits)[:6] if isinstance(traits, list) else [],
+            # wound ok for POV; never put antagonist secret into prompt bible
+            "boundary": str(item.get("wound") or "")[:180],
+            "internal_voice": str(item.get("arc") or "")[:180],
+            "role": item.get("role"),
+        }
+        if name.lower() == female.lower():
+            female_lead = {k: v for k, v in entry.items() if k != "role"}
+        else:
+            # Never dump concept.secret into writer prompts via stub bible —
+            # those are late-book truths and would spoil early chapters.
+            # Never dump full character arc (end-state) into internal_voice.
+            supporting.append(
+                {
+                    "name": name,
+                    "relation_type": str(item.get("role") or "supporting"),
+                    "relation_to": female,
+                    "alive": str(item.get("status") or "").lower() not in ("deceased", "dead"),
+                }
+            )
+
+    # Female lead: keep wound/boundary; omit end-state arc from prompt stub
+    if female_lead.get("internal_voice"):
+        iv = str(female_lead.get("internal_voice") or "")
+        if "finally" in iv.lower() or "cuối cùng" in iv.lower():
+            female_lead["internal_voice"] = ""
+
+    spice_max = 0
+    genre = concept.get("genre") if isinstance(concept.get("genre"), dict) else {}
+    if isinstance(genre, dict) and genre.get("spice") is not None:
+        try:
+            spice_max = int(genre.get("spice"))
+        except (TypeError, ValueError):
+            spice_max = 0
+
+    return {
+        "title": man.get("title") or ws.name,
+        "logline": man.get("logline") or "",
+        "bible_status": "draft",
+        "spice_max": spice_max,
+        "leads": {
+            "female": female_lead,
+            "male": {"name": male},
+        },
+        "supporting_cast": supporting,
+        "cast": [{"name": n} for n in cast],
+        "world_rules": [],
+        "content_rules": list(man.get("must_avoid") or []),
+        "meta": {"source": "intent_manifest_stub"},
+    }
+
+
 def build_outliner_payload(
     ws: Path,
     book: int,
@@ -48,12 +128,38 @@ def build_outliner_payload(
     direction: dict,
     prior: list[dict],
 ) -> dict:
-    """Assemble Outliner request body; adds narrative_constraints when compiler on."""
-    from factory.engine.lib.canon_registry import locked_canon_names_payload
+    """Assemble Outliner request — locked pack only (intent ± approved narrative).
 
+    Does not send raw concept.yaml. Bible is slimmed to titles/cast already locked;
+    authority for beats is intent_manifest (+ narrative_lock when approved).
+    """
+    from factory.engine.lib.canon_registry import locked_canon_names_payload
+    from factory.engine.lib.intent_manifest import locked_pack_for_outliner
+
+    slim_direction = {
+        k: direction.get(k)
+        for k in (
+            "target_language",
+            "spice_default",
+            "spice_level",
+            "total_chapters",
+            "book",
+            "blurb",
+            "book1_ending",
+            "canon_through",
+            "narrative_profile",
+            "pen_name",
+        )
+        if direction.get(k) is not None
+    }
+    slim_bible = {
+        k: bible.get(k)
+        for k in ("title", "logline", "leads", "cast", "meta", "spice_max")
+        if bible.get(k) is not None
+    }
     body: dict = {
-        "series_bible": bible,
-        "direction": direction,
+        "direction": slim_direction,
+        "series_bible": slim_bible,
         "book_number": book,
         "act_range": [act_from, act_to],
         "act_name": act_name,
@@ -63,8 +169,13 @@ def build_outliner_payload(
     locked = locked_canon_names_payload(ws, book)
     if locked:
         body["locked_canon_names"] = locked
-    if narrative_compiler_enabled(ws):
-        body["narrative_constraints"] = compile_act_constraints(ws, act_from, act_to)
+    # Primary authority: approved intent pack (raises if missing)
+    try:
+        body["locked_pack"] = locked_pack_for_outliner(ws, book, act_from, act_to)
+    except RuntimeError:
+        # Backward-compat during migration: allow plan --force paths without intent
+        if narrative_compiler_enabled(ws):
+            body["narrative_constraints"] = compile_act_constraints(ws, act_from, act_to)
     return body
 
 
@@ -159,6 +270,13 @@ def fix_plan_with_llm(ws: Path, book: int, plan: dict, issues: list[str]) -> dic
         merged = merge_narrative_into_plans(ws, [fixed])
         fixed = merged[0] if merged else fixed
     fixed = normalize_chapter_plan(fixed)
+    # These fields are intentionally hidden from the fixer. Restore only a
+    # missing value from this chapter's prior plan before completeness checks.
+    for field in ("spice", "signature_detail_hint"):
+        fixed_missing = fixed.get(field) in (None, "", [])
+        prior_present = plan.get(field) not in (None, "", [])
+        if fixed_missing and prior_present:
+            fixed[field] = plan[field]
     # Never accept a fixer result that strips required fields from a complete chapter.
     kept = prefer_richer_chapter_plan(plan, fixed)
     if chapter_plan_structurally_complete(plan) and not chapter_plan_structurally_complete(fixed):
@@ -337,10 +455,14 @@ def _fetch_act_plans(
     ws: Path, book: int, act_from: int, act_to: int, act_name: str
 ) -> tuple[list[dict], dict]:
     from factory.engine.lib.canon_registry import sync_bible_leads_from_registry
+    from factory.engine.lib.prompt_builder import load_series_bible
 
     sync_bible_leads_from_registry(ws, book)
     direction = load_direction(ws)
-    bible = json.loads(bible_path(ws).read_text(encoding="utf-8"))
+    bible = load_series_bible(ws)
+    if not bible:
+        # Intent-only path: stub bible from locked intent so payload/QC don't crash.
+        bible = _bible_stub_from_intent(ws, book)
     current = load_master_plan(ws, book)
     prior = current.get("chapter_plans", [])
     if not prior:
@@ -474,15 +596,22 @@ def plan_book(
     acts: str = "all",
     chunk_size: int = 3,
     force_replan: bool = False,
+    require_bible: bool = True,
 ) -> tuple[Path, int]:
     from factory.engine.lib.canon_registry import sync_bible_leads_from_registry
+    from factory.engine.lib.intent_manifest import intent_is_approved
 
     sync_bible_leads_from_registry(ws, book)
     direction = load_direction(ws)
     bible = load_series_bible(ws)
-    if not bible_is_approved(bible, direction):
+    if not intent_is_approved(ws, book, direction):
         raise RuntimeError(
-            "Bible chưa approved. Chạy: validate-bible → (duyệt canon) → approve-bible"
+            "Intent chưa approved. Chạy: compile-intent → approve-intent"
+        )
+    if require_bible and not bible_is_approved(bible, direction):
+        raise RuntimeError(
+            "Bible chưa approved. Chạy: validate-bible → (duyệt canon) → approve-bible "
+            "(hoặc plan --force để bỏ qua bible khi đã có intent)"
         )
 
     if force_replan:
@@ -535,7 +664,7 @@ def plan_book(
     safe_print("[plan] deterministic QC (spice/word-count)…")
     remaining = qc_and_fix_plans(ws, book, use_llm=False)
     if remaining:
-        print(f"[plan] plan_qc remaining issues: {len(remaining)} chapters (chạy fix-plans nếu cần)")
+        safe_print(f"[plan] plan_qc remaining issues: {len(remaining)} chapters (chay fix-plans neu can)")
     save_master_plan(ws, book, load_master_plan(ws, book))
     safe_print("[plan] render prompts…")
     n = render_all_prompts(ws, book)
@@ -550,21 +679,48 @@ def fix_plans(ws: Path, book: int, *, use_llm: bool = True) -> tuple[dict[int, l
 
 def approve_plan(ws: Path, book: int | None = None) -> None:
     from factory.engine.lib.canon_registry import CanonRegistryError, validate_plan_against_canon_registry
+    from factory.engine.lib.intent_gates import g3_plan_fidelity_errors, g4_prompt_errors
+    from factory.engine.lib.intent_manifest import intent_is_approved, load_intent_manifest
     from factory.engine.lib.plan_qc import apply_deterministic_plan_fixes, validate_all_plans
+    from factory.engine.lib.prompt_builder import build_chapter_prompt, prompt_path
 
     direction = load_direction(ws)
     book_num = int(book if book is not None else direction.get("book") or 1)
     conflicts = validate_plan_against_canon_registry(ws, book_num)
 
+    if not intent_is_approved(ws, book_num, direction):
+        conflicts.append(
+            {
+                "code": "intent_not_approved",
+                "source": "intent_manifest.json",
+                "value": "missing",
+                "expected": "approve-intent before approve-plan",
+            }
+        )
+
     # Full plan QC must also pass — names/spice alone are not enough.
     bible = load_series_bible(ws)
     data = load_master_plan(ws, book_num)
     plans = normalize_chapter_plans(data.get("chapter_plans", []))
-    # Attach compiler narrative before QC (plans may predate compiler enablement).
+    # Attach compiler narrative only when Lock1 approved (compiler self-gates).
     plans = merge_narrative_into_plans(ws, plans)
     plans = [apply_deterministic_plan_fixes(p, direction) for p in plans]
     data["chapter_plans"] = plans
+    man = load_intent_manifest(ws, book_num)
+    if man:
+        data["intent_digest"] = man.get("manifest_digest")
+        data["intent_concept_digest"] = man.get("concept_digest")
     save_master_plan(ws, book_num, data)
+
+    for err in g3_plan_fidelity_errors(ws, plans, book=book_num):
+        conflicts.append(
+            {
+                "code": "intent_plan_fidelity",
+                "source": "master_plan.json",
+                "value": err,
+                "expected": "plan covers intent chapter_map",
+            }
+        )
 
     remaining = validate_all_plans(plans, direction, bible=bible, ws=ws)
     for ch, issues in sorted(remaining.items()):
@@ -578,12 +734,60 @@ def approve_plan(ws: Path, book: int | None = None) -> None:
                 }
             )
 
+    # Atomic with prompt projection (G4): render then verify disk
+    n = render_all_prompts(ws, book_num)
+    if n <= 0:
+        conflicts.append(
+            {
+                "code": "prompts_missing",
+                "source": "prompts/",
+                "value": "0",
+                "expected": "render prompts before approve",
+            }
+        )
+    else:
+        for plan in plans:
+            ch = int(plan.get("chapter") or 0)
+            if ch <= 0:
+                continue
+            pp = prompt_path(ws, book_num, ch)
+            if not pp.exists():
+                conflicts.append(
+                    {
+                        "code": "prompt_missing",
+                        "source": str(pp),
+                        "value": "missing",
+                        "expected": f"prompts/ch_{ch:03d}.txt",
+                    }
+                )
+                continue
+            disk = pp.read_text(encoding="utf-8")
+            live = build_chapter_prompt(
+                plan,
+                prior_plans=[p for p in plans if int(p.get("chapter") or 0) < ch],
+                direction=direction,
+                chapter=ch,
+                series_bible=bible,
+                ws=ws,
+            )
+            for err in g4_prompt_errors(ws, book_num, ch, live, disk_text=disk):
+                conflicts.append(
+                    {
+                        "code": "prompt_fidelity",
+                        "source": str(pp),
+                        "value": err,
+                        "expected": "prompt projection matches lock",
+                    }
+                )
+
     if conflicts:
         raise CanonRegistryError(conflicts)
 
     path = ws / "direction.yaml"
     data_dir = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     data_dir["plan_status"] = "approved"
+    if man:
+        data_dir["plan_intent_digest"] = man.get("manifest_digest")
     path.write_text(
         yaml.dump(data_dir, allow_unicode=True, default_flow_style=False, sort_keys=False),
         encoding="utf-8",
