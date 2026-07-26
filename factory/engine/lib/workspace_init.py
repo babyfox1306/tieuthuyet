@@ -65,6 +65,7 @@ def init_blank_workspace(
     title: str = "",
     target_language: str = "en",
     total_chapters: int | None = None,
+    pen_name: str = "",
 ) -> Path:
     """New story — empty concept only. Chapter count comes from concept when ready."""
     err = validate_workspace_id(new_id)
@@ -79,11 +80,15 @@ def init_blank_workspace(
     (dst / "books" / "01").mkdir(parents=True, exist_ok=True)
 
     concept = _blank_concept(title=title.strip(), target_language=target_language)
+    if pen_name.strip():
+        concept["pen_name"] = pen_name.strip()
     (dst / "concept.yaml").write_text(
         yaml.dump(concept, allow_unicode=True, default_flow_style=False, sort_keys=False),
         encoding="utf-8",
     )
-    _write_default_direction(dst, new_id, total_chapters=total_chapters)
+    _write_default_direction(
+        dst, new_id, total_chapters=total_chapters, pen_name=pen_name.strip()
+    )
     _write_default_manifest(dst, new_id)
     return dst
 
@@ -121,7 +126,13 @@ def init_workspace_from_template(
     return dst
 
 
-def _write_default_direction(ws: Path, ws_id: str, *, total_chapters: int | None = None) -> None:
+def _write_default_direction(
+    ws: Path,
+    ws_id: str,
+    *,
+    total_chapters: int | None = None,
+    pen_name: str = "",
+) -> None:
     concept = {}
     cp = ws / "concept.yaml"
     if cp.exists():
@@ -136,9 +147,10 @@ def _write_default_direction(ws: Path, ws_id: str, *, total_chapters: int | None
     explicit, steamy = spice_chapter_lists(total, spice) if total else ([], [])
     profile = resolve_narrative_profile(ws, concept)
     goal = default_goal_for_profile(profile, lang)
+    pen = (pen_name or concept.get("pen_name") or "").strip()
     data = {
         "id": ws_id,
-        "pen_name": "",
+        "pen_name": pen,
         "target_language": lang,
         "publish_strategy": "kdp_ku_exclusive",
         "narrative_status": "draft",

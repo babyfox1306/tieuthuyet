@@ -28,14 +28,31 @@ target_language: vi
 title: ""
 logline: ""
 
+# Bắt buộc cho compile-intent (form UI cũng có ô riêng):
+pov:
+  character: ""
+  mode: first_person   # first_person | third_person_limited
+  tense: past
+  single_pov: true
+
+# Chapter map — mỗi chương một beat (hoặc Ch1:/Ch2: trong author_directive):
+chapter_map:
+  1: "beat khóa chương 1"
+  2: "beat khóa chương 2"
+
 author_directive: |
   (ĐIỀN CHỈ ĐẠO CỦA BẠN)
+  CAST:
+  - Name: ...
 
 surface_plot: ""
 true_plot: ""
 
 must_include: []
 must_avoid: []
+# must_include_by_chapter:
+#   "1": ["..."]
+#   "10": ["ending obligation"]
 
 ending_book1: ""
 hook_book2: ""

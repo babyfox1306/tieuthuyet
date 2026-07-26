@@ -56,6 +56,7 @@
     }
     textarea { min-height: 100px; resize: vertical; }
     textarea.tall { min-height: 180px; }
+    textarea.xtall { min-height: 260px; }
     .field { margin-bottom: 1rem; }
     .field h3 {
       margin: 0 0 .35rem;
@@ -124,7 +125,7 @@
 <body>
   <header>
     <h1>Story Concept — Chỉ đạo của bạn</h1>
-    <p>Điền form → Lưu nháp → Đánh dấu sẵn sàng → AI sinh narrative (9router)</p>
+    <p>Điền form (gồm <strong>POV</strong> + <strong>Chapter map</strong>) → Lưu nháp → Đánh dấu sẵn sàng → AI sinh narrative</p>
   </header>
   <main>
     <div class="toolbar">
@@ -160,6 +161,11 @@
           <input type="text" id="title" placeholder="VD: Hợp đồng có giá" />
         </div>
         <div class="field">
+          <h3>Bút danh (pen name)</h3>
+          <div class="hint">Tên tác giả trên EPUB / KDP — bắt buộc trước khi export</div>
+          <input type="text" id="pen_name" placeholder="VD: Nix Vale / Reynard Frost" />
+        </div>
+        <div class="field">
           <h3>Logline</h3>
           <div class="hint">1–2 câu hook — độc giả đọc xong muốn mở chương 1</div>
           <textarea id="logline"></textarea>
@@ -183,8 +189,50 @@
       </section>
 
       <section>
+        <h2>POV (bắt buộc — compile-intent)</h2>
+        <div class="hint">Khóa ngôi kể. Không ghi ở đây thì autopilot sẽ báo <code>pov_missing</code>.</div>
+        <div class="row2">
+          <div class="field">
+            <h3>Nhân vật POV</h3>
+            <input type="text" id="pov_character" placeholder="VD: the housekeeper / Clara Vale" />
+          </div>
+          <div class="field">
+            <h3>Ngôi</h3>
+            <select id="pov_mode">
+              <option value="">— chọn —</option>
+              <option value="first_person">first_person (ngôi 1)</option>
+              <option value="third_person_limited">third_person_limited (ngôi 3 hạn chế)</option>
+              <option value="third_person_omniscient">third_person_omniscient</option>
+            </select>
+          </div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <h3>Thì</h3>
+            <select id="pov_tense">
+              <option value="">— chọn —</option>
+              <option value="past">past</option>
+              <option value="present">present</option>
+            </select>
+          </div>
+          <div class="field">
+            <h3>Single POV</h3>
+            <label style="display:flex;align-items:center;gap:.5rem;margin-top:.55rem;color:var(--text)">
+              <input type="checkbox" id="pov_single" checked /> Một POV xuyên suốt cuốn
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Chapter map (bắt buộc — compile-intent)</h2>
+        <div class="hint">Mỗi dòng một chương: <code>Ch1: beat khóa</code>, <code>Ch2: …</code>. Cần đủ để plan (sách dài nên map phần lớn số chương).</div>
+        <textarea id="chapter_map_text" class="xtall" placeholder="Ch1: Housekeeper arrives; seeds wrong theory about the husband&#10;Ch2: First private conversation with the wife&#10;Ch3: …"></textarea>
+      </section>
+
+      <section>
         <h2>Chỉ đạo chi tiết (quan trọng nhất)</h2>
-        <div class="hint">Nhân vật, bí ẩn, spice, chương khóa, điều cấm… Tối thiểu ~120 ký tự.</div>
+        <div class="hint">Nhân vật, bí ẩn, spice, chương khóa, điều cấm… Tối thiểu ~120 ký tự. POV + Ch1:/Ch2: nên điền ở ô riêng phía trên.</div>
         <textarea id="author_directive" class="tall" placeholder="Viết tự do theo ý bạn…"></textarea>
       </section>
 
@@ -242,6 +290,7 @@
       return {
         target_language: $("target_language").value,
         title: $("title").value.trim(),
+        pen_name: $("pen_name").value.trim(),
         logline: $("logline").value.trim(),
         author_directive: $("author_directive").value.trim(),
         surface_plot: $("surface_plot").value.trim(),
@@ -251,13 +300,44 @@
         must_include: linesToList($("must_include").value),
         must_avoid: linesToList($("must_avoid").value),
         notes: $("notes").value.trim(),
+        pov: {
+          character: $("pov_character").value.trim(),
+          mode: $("pov_mode").value,
+          tense: $("pov_tense").value,
+          single_pov: $("pov_single").checked,
+        },
+        chapter_map_text: $("chapter_map_text").value.trim(),
       };
+    }
+
+    function fillPov(c) {
+      const pov = c.pov;
+      if (pov && typeof pov === "object" && !Array.isArray(pov)) {
+        $("pov_character").value = pov.character || pov.name || "";
+        $("pov_mode").value = pov.mode || "";
+        $("pov_tense").value = pov.tense || "";
+        $("pov_single").checked = pov.single_pov !== false;
+        return;
+      }
+      if (typeof pov === "string" && pov.trim()) {
+        const parts = pov.split("|").map((x) => x.trim()).filter(Boolean);
+        $("pov_character").value = parts[0] || pov;
+        $("pov_mode").value = parts[1] || "";
+        $("pov_tense").value = parts[2] || "";
+        $("pov_single").checked = true;
+        return;
+      }
+      $("pov_character").value = "";
+      $("pov_mode").value = "";
+      $("pov_tense").value = "";
+      $("pov_single").checked = true;
     }
 
     function fillForm(c) {
       c = c || {};
       if (c.target_language) $("target_language").value = c.target_language;
       $("title").value = c.title || "";
+      $("pen_name").value = c.pen_name || "";
       $("logline").value = c.logline || "";
       $("author_directive").value = c.author_directive || "";
       $("surface_plot").value = c.surface_plot || "";
@@ -267,6 +347,8 @@
       $("must_include").value = listToLines(c.must_include);
       $("must_avoid").value = listToLines(c.must_avoid);
       $("notes").value = c.notes || "";
+      fillPov(c);
+      $("chapter_map_text").value = c.chapter_map_text || "";
     }
 
     function showStatus(msg, kind, errors) {
@@ -283,7 +365,9 @@
       const c = data.concept || {};
       const ready = c.concept_status === "ready";
       const narr = (data.direction || {}).narrative_status === "approved";
-      $("step1").classList.toggle("done", (c.author_directive || "").length > 80);
+      const hasPov = !!(c.pov && (c.pov.character || c.pov.mode || (typeof c.pov === "string" && c.pov)));
+      const hasMap = !!(c.chapter_map_text || c.chapter_map);
+      $("step1").classList.toggle("done", (c.author_directive || "").length > 80 && hasPov && hasMap);
       $("step2").classList.toggle("done", ready);
       $("step3").classList.toggle("done", narr || false);
     }
@@ -321,6 +405,8 @@
       const ws = $("workspace").value;
       const data = await api(`/api/concept/${ws}`);
       fillForm(data.concept);
+      if (data.direction?.pen_name) $("pen_name").value = data.direction.pen_name;
+      else if (data.pen_name) $("pen_name").value = data.pen_name;
       const lang = data.target_language || data.direction?.target_language || "vi";
       $("target_language").value = lang;
       updateLangHint(lang);

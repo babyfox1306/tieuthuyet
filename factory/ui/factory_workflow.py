@@ -165,23 +165,45 @@ def pipeline_status(workspace_id: str, book: int | None = None) -> dict[str, Any
         bible_errors = validate_bible(json.loads(bible_path(ws).read_text(encoding="utf-8")))
 
     from factory.engine.lib.canon_registry import canon_registry_path
+    from factory.engine.lib.intent_manifest import intent_is_approved, load_intent_manifest
 
     canon_exists = canon_registry_path(ws).exists()
+    intent_man = load_intent_manifest(ws, book)
+    intent_ok = intent_is_approved(ws, book, direction)
 
     gates = {
         "concept": {
             "status": concept.get("concept_status", "missing"),
             "ok": concept.get("concept_status") == "ready",
         },
+        "intent": {
+            "status": (intent_man.get("status") or direction.get("intent_status") or "missing"),
+            "ok": intent_ok,
+            "digest": intent_man.get("manifest_digest"),
+            "chapters_mapped": len(intent_man.get("chapter_map") or []),
+        },
         "narrative": {
             "status": direction.get("narrative_status", "draft"),
-            "ok": narrative_is_approved(direction),
-            "errors": narr_errors[:5],
+            # Optional Lock1: not required once plan is locked from intent
+            "ok": narrative_is_approved(direction) or plan_is_approved(ws),
+            "optional": True,
+            "errors": [] if plan_is_approved(ws) else narr_errors[:5],
         },
         "bible": {
             "status": direction.get("bible_status", "draft"),
-            "ok": bible_path(ws).exists() and not bible_errors,
-            "errors": bible_errors[:5],
+            "ok": (
+                plan_is_approved(ws)
+                or (
+                    bible_path(ws).exists()
+                    and not bible_errors
+                    and (
+                        (direction.get("bible_status") or "") == "approved"
+                        or not direction.get("narrative_profile")
+                    )
+                )
+            ),
+            "optional": True,
+            "errors": [] if plan_is_approved(ws) else bible_errors[:5],
         },
         "canon": {
             "status": "ready" if canon_exists else "missing",
@@ -204,14 +226,12 @@ def pipeline_status(workspace_id: str, book: int | None = None) -> dict[str, Any
     written = counts["ready"] + counts["catalog"]
     if not gates["concept"]["ok"]:
         next_steps.append("concept: điền form → sẵn sàng")
-    elif not gates["narrative"]["ok"]:
-        next_steps.append("narrative: sinh AI → duyệt → approve-narrative")
-    elif not gates["bible"]["ok"]:
-        next_steps.append("bible: architect → validate → approve-bible")
+    elif not gates["intent"]["ok"]:
+        next_steps.append("intent: compile-intent (Python) → approve-intent")
     elif not gates["canon"]["ok"]:
         next_steps.append("canon: tạo canon_registry.yaml (init-canon-registry)")
     elif not gates["plan"]["ok"]:
-        next_steps.append("plan: plan → (replan nếu lệch) → fix-plans → approve-plan")
+        next_steps.append("plan: plan → fix-plans → approve-plan")
     elif in_catalog < total:
         if counts["ready"] > 0:
             next_steps.append(
@@ -221,6 +241,14 @@ def pipeline_status(workspace_id: str, book: int | None = None) -> dict[str, Any
             next_steps.append(f"write: viết chương ({written}/{total} ready)")
     else:
         next_steps.append("export: EPUB/DOCX")
+    # Narrative/bible are optional Lock1 — never block the primary next-step chain.
+    if (
+        gates["intent"]["ok"]
+        and not gates["plan"]["ok"]
+        and direction.get("narrative_profile")
+        and not gates["narrative"]["ok"]
+    ):
+        next_steps.append("(optional) narrative Lock1")
 
     from factory.engine.lib.book_scaffold import list_series_books
 
@@ -440,6 +468,33 @@ def run_pipeline_step(workspace_id: str, action: str, book: int = 1) -> dict:
     direction = _load_direction(ws)
 
     try:
+        if action == "compile-intent":
+            from factory.engine.lib.intent_manifest import compile_and_save_intent
+
+            try:
+                man = compile_and_save_intent(ws, book=book)
+            except ValueError as exc:
+                return {"ok": False, "error": str(exc), **pipeline_status(workspace_id, book)}
+            return {
+                "ok": True,
+                "manifest_digest": man.get("manifest_digest"),
+                "chapters_mapped": len(man.get("chapter_map") or []),
+                **pipeline_status(workspace_id, book),
+            }
+
+        if action == "approve-intent":
+            from factory.engine.lib.intent_manifest import approve_intent
+
+            try:
+                man = approve_intent(ws, book=book)
+            except ValueError as exc:
+                return {"ok": False, "error": str(exc), **pipeline_status(workspace_id, book)}
+            return {
+                "ok": True,
+                "manifest_digest": man.get("manifest_digest"),
+                **pipeline_status(workspace_id, book),
+            }
+
         if action == "develop-narrative":
             paths = develop_narrative(workspace_id, pass_name="all")
             return {"ok": True, "files": [str(p) for p in paths], **pipeline_status(workspace_id, book)}
@@ -449,9 +504,14 @@ def run_pipeline_step(workspace_id: str, action: str, book: int = 1) -> dict:
             return {"ok": not errs, "errors": errs, **pipeline_status(workspace_id, book)}
 
         if action == "approve-narrative":
+            from factory.engine.lib.intent_gates import g1_narrative_fidelity_errors
+
             errs = validate_narrative_assets(ws, direction)
             if errs:
-                return {"ok": False, "errors": errs}
+                return {"ok": False, "errors": errs, **pipeline_status(workspace_id, book)}
+            g1 = g1_narrative_fidelity_errors(ws, book)
+            if g1:
+                return {"ok": False, "errors": g1, **pipeline_status(workspace_id, book)}
             data = direction
             data["narrative_status"] = "approved"
             (ws / "direction.yaml").write_text(
@@ -519,29 +579,40 @@ def run_pipeline_step(workspace_id: str, action: str, book: int = 1) -> dict:
 
         if action == "plan":
             from factory.engine.lib.canon_registry import canon_registry_path, scaffold_canon_registry
+            from factory.engine.lib.intent_manifest import intent_is_approved
 
+            if not intent_is_approved(ws, book, direction):
+                return {
+                    "ok": False,
+                    "error": "intent chưa approved — compile-intent → approve-intent",
+                    **pipeline_status(workspace_id, book),
+                }
             if not canon_registry_path(ws).exists():
                 scaffold_canon_registry(ws, force=False)
-            if direction.get("narrative_profile") and not narrative_is_approved(direction):
-                return {"ok": False, "error": "narrative chưa approved"}
-            bible = json.loads(bible_path(ws).read_text(encoding="utf-8"))
-            if not bible_is_approved(bible, direction):
-                return {"ok": False, "error": "bible chưa approved"}
-            plan_book(ws, book)
+            # Narrative/bible optional once intent locked; warn-only if missing
+            require_bible = bool(bible_path(ws).exists())
+            if require_bible:
+                bible = json.loads(bible_path(ws).read_text(encoding="utf-8"))
+                require_bible = not bible_is_approved(bible, direction)
+                # If bible file exists but not approved, still allow when intent ok
+                require_bible = False
+            plan_book(ws, book, require_bible=False)
             fix_plans(ws, book, use_llm=True)
             return {"ok": True, **pipeline_status(workspace_id, book)}
 
         if action == "replan":
             from factory.engine.lib.canon_registry import canon_registry_path, scaffold_canon_registry
+            from factory.engine.lib.intent_manifest import intent_is_approved
 
+            if not intent_is_approved(ws, book, direction):
+                return {
+                    "ok": False,
+                    "error": "intent chưa approved — compile-intent → approve-intent",
+                    **pipeline_status(workspace_id, book),
+                }
             if not canon_registry_path(ws).exists():
                 scaffold_canon_registry(ws, force=False)
-            if direction.get("narrative_profile") and not narrative_is_approved(direction):
-                return {"ok": False, "error": "narrative chưa approved"}
-            bible = json.loads(bible_path(ws).read_text(encoding="utf-8"))
-            if not bible_is_approved(bible, direction):
-                return {"ok": False, "error": "bible chưa approved"}
-            plan_book(ws, book, force_replan=True)
+            plan_book(ws, book, force_replan=True, require_bible=False)
             fix_plans(ws, book, use_llm=True)
             return {"ok": True, "replanned": True, **pipeline_status(workspace_id, book)}
 
@@ -550,9 +621,23 @@ def run_pipeline_step(workspace_id: str, action: str, book: int = 1) -> dict:
             return {"ok": True, **pipeline_status(workspace_id, book)}
 
         if action == "approve-plan":
-            approve_plan(ws)
-            n = render_all_prompts(ws, book)
-            return {"ok": True, "prompts_rendered": n, **pipeline_status(workspace_id, book)}
+            from factory.engine.lib.canon_registry import CanonRegistryError
+
+            try:
+                approve_plan(ws, book=book)
+            except CanonRegistryError as exc:
+                return {
+                    "ok": False,
+                    "plan_approved": False,
+                    "error": "approve-plan blocked",
+                    "errors": [c.get("value") or c.get("code") for c in (exc.conflicts or [])],
+                    **pipeline_status(workspace_id, book),
+                }
+            return {
+                "ok": True,
+                "plan_approved": True,
+                **pipeline_status(workspace_id, book),
+            }
 
         if action == "render-prompts":
             n = render_all_prompts(ws, book)
@@ -646,34 +731,32 @@ def get_batch_progress(workspace_id: str) -> dict:
 
 
 def _prep_steps(status: dict, *, prompts_ready: bool = False) -> list[str]:
-    """Các bước cần chạy để sẵn sàng viết — bỏ qua gate đã approved."""
+    """Critical path: concept → intent → plan → prompts. No blind auto-approve narrative/bible."""
     g = status.get("gates", {})
     if not g.get("concept", {}).get("ok"):
         return []
     if (
-        g.get("narrative", {}).get("ok")
-        and g.get("bible", {}).get("ok")
+        g.get("intent", {}).get("ok")
         and g.get("canon", {}).get("ok")
         and g.get("plan", {}).get("ok")
         and prompts_ready
     ):
         return []
     steps: list[str] = []
-    if g.get("narrative", {}).get("status") != "approved":
-        steps.extend(["develop-narrative", "validate-narrative", "approve-narrative"])
-    if g.get("bible", {}).get("status") != "approved":
-        steps.extend(["architect", "validate-bible", "approve-bible"])
+    if g.get("intent", {}).get("status") != "approved":
+        steps.extend(["compile-intent", "approve-intent"])
+    # Do NOT auto-run develop/approve-narrative or architect/approve-bible
     if not g.get("canon", {}).get("ok"):
         steps.append("init-canon-registry")
     planned = int(g.get("plan", {}).get("chapters_planned", 0))
     total = int(g.get("plan", {}).get("total", 50))
     if planned < total or not g.get("plan", {}).get("ok"):
-        steps.append("plan")
+        if g.get("plan", {}).get("status") != "approved":
+            steps.append("plan")
     if g.get("plan", {}).get("status") != "approved":
         steps.extend(["fix-plans", "approve-plan"])
     if not prompts_ready:
         steps.append("render-prompts")
-    # dedupe giữ thứ tự
     seen: set[str] = set()
     out: list[str] = []
     for s in steps:
@@ -681,6 +764,167 @@ def _prep_steps(status: dict, *, prompts_ready: bool = False) -> list[str]:
             seen.add(s)
             out.append(s)
     return out
+
+
+def _autopilot_steps(status: dict, *, prompts_ready: bool = False) -> list[str]:
+    """Full gated chain concept → prompts.
+
+    Unlike ``_prep_steps`` this DOES run narrative/bible generation + their gates
+    when a narrative_profile is declared — but each approve step still runs its
+    machine gate (G1 / validate-bible), so a failing gate STOPS the run instead of
+    force-approving. Promote-to-catalog is never part of this chain.
+    """
+    g = status.get("gates", {})
+    if not g.get("concept", {}).get("ok"):
+        return []
+    steps: list[str] = []
+    if g.get("intent", {}).get("status") != "approved":
+        steps.extend(["compile-intent", "approve-intent"])
+
+    has_profile = bool((status.get("direction") or {}).get("narrative_profile"))
+    if has_profile and g.get("narrative", {}).get("status") != "approved":
+        steps.extend(["develop-narrative", "validate-narrative", "approve-narrative"])
+    if has_profile and g.get("bible", {}).get("status") != "approved":
+        steps.extend(["architect", "validate-bible", "approve-bible"])
+
+    if not g.get("canon", {}).get("ok"):
+        steps.append("init-canon-registry")
+
+    if g.get("plan", {}).get("status") != "approved":
+        planned = int(g.get("plan", {}).get("chapters_planned", 0))
+        total = int(g.get("plan", {}).get("total", 50))
+        if planned < total or not g.get("plan", {}).get("ok"):
+            steps.append("plan")
+        steps.extend(["fix-plans", "approve-plan"])
+    if not prompts_ready:
+        steps.append("render-prompts")
+
+    seen: set[str] = set()
+    out: list[str] = []
+    for s in steps:
+        if s not in seen:
+            seen.add(s)
+            out.append(s)
+    return out
+
+
+def run_batch_autopilot(
+    workspace_id: str,
+    book: int = 1,
+    *,
+    from_ch: int = 1,
+    to_ch: int | None = None,
+    write_mode: str = "auto",
+) -> dict:
+    """One-click: concept → intent → narrative/bible (gated) → plan → prompts → write ALL.
+
+    Stops on the first failing gate (traceable). Never promotes to catalog — chapters
+    land in ready/needs_fix/needs_review for the human approve→catalog gate.
+    """
+    ws = workspace_dir(workspace_id)
+    mode = "auto" if str(write_mode).strip().lower() == "auto" else "supervised"
+    log: list[str] = []
+    status = pipeline_status(workspace_id, book)
+    if not status["gates"]["concept"]["ok"]:
+        return {"ok": False, "error": "concept chua ready — dien form truoc", **status}
+
+    total = int(status.get("gates", {}).get("plan", {}).get("total", 50))
+    prompts_ready = all(prompt_path(ws, book, ch).exists() for ch in range(1, total + 1))
+    steps = _autopilot_steps(status, prompts_ready=prompts_ready)
+
+    batch_state.add_sync_lock(workspace_id)
+    _write_batch_progress(ws, {"running": True, "phase": "autopilot", "step": "", "log": log})
+    failed = False
+    err_msg = ""
+    try:
+        for action in steps:
+            log.append(f"▶ {action}...")
+            _write_batch_progress(ws, {"running": True, "phase": "autopilot", "step": action, "log": list(log)})
+            result = run_pipeline_step(workspace_id, action, book)
+            if result.get("ok"):
+                extra = ""
+                if result.get("prompts_rendered"):
+                    extra = f" ({result['prompts_rendered']} prompts)"
+                if result.get("chapters_mapped"):
+                    extra = f" ({result['chapters_mapped']} ch map)"
+                log.append(f"✓ {action}{extra}")
+            else:
+                err_msg = result.get("error") or ", ".join(str(e) for e in (result.get("errors") or [])) or "failed"
+                log.append(f"✗ {action}: {err_msg} — DỪNG (gate chặn, không force)")
+                failed = True
+                break
+            status = result
+    except Exception as exc:
+        failed = True
+        err_msg = str(exc)
+        log.append(f"✗ autopilot prep: {err_msg}")
+    finally:
+        batch_state.discard_sync_lock(workspace_id)
+
+    if failed:
+        _write_batch_progress(
+            ws,
+            {"running": False, "phase": "autopilot", "step": "", "ok": False, "error": err_msg, "log": log},
+        )
+        return {"ok": False, "error": err_msg, "log": log, **pipeline_status(workspace_id, book)}
+
+    # Prep passed all gates → write every chapter (no promote).
+    total = get_total_chapters(workspace_id, book)
+    end = min(to_ch or total, total)
+    start = _first_incomplete_chapter(ws, book, from_ch, end)
+    log.append(f"▶ write ch {start}-{end} ({mode})…")
+    _write_batch_progress(ws, {"running": True, "phase": "autopilot-write", "step": f"write {start}-{end}", "log": list(log)})
+    _run_batch_write_loop(
+        workspace_id,
+        book,
+        start,
+        end,
+        stop_on_review=False,
+        write_mode=mode,
+    )
+    final = pipeline_status(workspace_id, book)
+    g = final.get("gates", {})
+    ready = g.get("write", {}).get("ready", 0)
+    log.append(f"✓ autopilot done — {ready} chương ready chờ DUYỆT → catalog (bước tay)")
+    _write_batch_progress(
+        ws,
+        {"running": False, "phase": "autopilot", "step": "", "ok": True, "log": log},
+    )
+    return {"ok": True, "log": log, **final}
+
+
+def start_batch_autopilot(
+    workspace_id: str,
+    book: int = 1,
+    *,
+    from_ch: int = 1,
+    to_ch: int | None = None,
+    write_mode: str = "auto",
+) -> dict:
+    """Background autopilot: concept → chapters, stopping only at catalog approval."""
+    if _batch_is_active(workspace_id):
+        return {
+            "ok": False,
+            "error": "batch dang chay — doi hoac bam Huy lock batch",
+            **get_batch_progress(workspace_id),
+        }
+
+    def _run() -> None:
+        try:
+            run_batch_autopilot(
+                workspace_id,
+                book,
+                from_ch=from_ch,
+                to_ch=to_ch,
+                write_mode=write_mode,
+            )
+        finally:
+            batch_state.unregister_thread(workspace_id)
+
+    t = threading.Thread(target=_run, daemon=True)
+    batch_state.register_thread(workspace_id, t)
+    t.start()
+    return {"ok": True, "started": True, "phase": "autopilot", **get_batch_progress(workspace_id)}
 
 
 def run_batch_prep(workspace_id: str, book: int = 1) -> dict:

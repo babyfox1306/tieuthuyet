@@ -141,6 +141,7 @@ def create_workspace(body: dict) -> dict:
         return {"ok": False, "error": f"workspace '{ws_id}' đã tồn tại"}
 
     title = (body.get("title") or "").strip()
+    pen_name = (body.get("pen_name") or "").strip()
     lang = normalize_language(body.get("target_language") or body.get("language") or "en")
     mode = (body.get("mode") or "blank").strip().lower()
     template_id = (body.get("template") or body.get("from_workspace") or "ceo-contract").strip()
@@ -164,6 +165,7 @@ def create_workspace(body: dict) -> dict:
                 title=title,
                 target_language=lang,
                 total_chapters=int(tc) if tc is not None else None,
+                pen_name=pen_name,
             )
     except FileExistsError as exc:
         return {"ok": False, "error": str(exc)}
@@ -171,6 +173,9 @@ def create_workspace(body: dict) -> dict:
         return {"ok": False, "error": str(exc)}
     except Exception as exc:
         return {"ok": False, "error": str(exc)}
+
+    if pen_name:
+        _sync_pen_name(path, pen_name)
 
     if body.get("total_chapters") is not None:
         from factory.engine.lib.book_config import set_total_chapters
@@ -186,6 +191,30 @@ def create_workspace(body: dict) -> dict:
     }
 
 
+def _sync_pen_name(ws: Path, pen_name: str) -> None:
+    """Write pen_name into direction.yaml + manifest.yaml (export / EPUB SSOT)."""
+    pen = str(pen_name or "").strip()
+    for fname in ("direction.yaml", "manifest.yaml"):
+        path = ws / fname
+        data: dict = {}
+        if path.exists():
+            try:
+                data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+            except (yaml.YAMLError, OSError):
+                data = {}
+        if not isinstance(data, dict):
+            data = {}
+        if str(data.get("pen_name") or "").strip() == pen:
+            continue
+        data["pen_name"] = pen
+        if fname == "direction.yaml" and "id" not in data:
+            data["id"] = ws.name
+        path.write_text(
+            yaml.dump(data, allow_unicode=True, default_flow_style=False, sort_keys=False),
+            encoding="utf-8",
+        )
+
+
 def concept_to_json(ws_id: str) -> dict:
     ws = workspace_dir(ws_id)
     concept = load_concept(ws)
@@ -194,13 +223,22 @@ def concept_to_json(ws_id: str) -> dict:
         concept.get("target_language") or direction.get("target_language") or "vi"
     )
 
+    concept_out = dict(concept) if concept else {}
+    if concept_out.get("chapter_map") is not None:
+        concept_out["chapter_map_text"] = _chapter_map_to_text(concept_out.get("chapter_map"))
+    pen = str(direction.get("pen_name") or concept_out.get("pen_name") or "").strip()
+    if pen:
+        concept_out["pen_name"] = pen
+
     return {
         "workspace": ws_id,
-        "concept": concept,
+        "concept": concept_out,
+        "pen_name": pen,
         "target_language": lang,
         "languages": SUPPORTED_LANGUAGES,
         "direction": {
             "target_language": lang,
+            "pen_name": pen,
             "narrative_profile": direction.get("narrative_profile", ""),
             "narrative_status": direction.get("narrative_status", "draft"),
             "publish_strategy": direction.get("publish_strategy", ""),
@@ -210,6 +248,116 @@ def concept_to_json(ws_id: str) -> dict:
     }
 
 
+def _pov_from_body(body: dict, existing: dict | None = None) -> dict | str | None:
+    """Build concept.pov from form fields; keep existing if form left empty."""
+    raw = body.get("pov")
+    if isinstance(raw, dict):
+        character = str(raw.get("character") or "").strip()
+        mode = str(raw.get("mode") or "").strip()
+        tense = str(raw.get("tense") or "").strip()
+        if character or mode or tense:
+            out: dict = {}
+            if character:
+                out["character"] = character
+            if mode:
+                out["mode"] = mode
+            if tense:
+                out["tense"] = tense
+            if raw.get("single_pov") is not None:
+                out["single_pov"] = bool(raw.get("single_pov"))
+            elif existing and isinstance(existing.get("pov"), dict):
+                if "single_pov" in existing["pov"]:
+                    out["single_pov"] = bool(existing["pov"]["single_pov"])
+            return out
+    elif raw is not None and str(raw).strip():
+        return str(raw).strip()
+
+    character = str(body.get("pov_character") or "").strip()
+    mode = str(body.get("pov_mode") or "").strip()
+    tense = str(body.get("pov_tense") or "").strip()
+    if character or mode or tense:
+        out = {}
+        if character:
+            out["character"] = character
+        if mode:
+            out["mode"] = mode
+        if tense:
+            out["tense"] = tense
+        if body.get("pov_single") is not None:
+            out["single_pov"] = bool(body.get("pov_single"))
+        return out
+
+    if existing and existing.get("pov") is not None:
+        return existing.get("pov")
+    return None
+
+
+def _chapter_map_from_body(body: dict, existing: dict | None = None) -> dict | list | None:
+    """Parse chapter_map from structured body or Ch1:/Ch2: textarea text.
+
+    Returns:
+      - dict/list chapter_map to store
+      - None if caller should leave existing alone (no map fields in body)
+      - empty dict ``{}`` if user cleared the map textarea
+    """
+    from factory.engine.lib.intent_manifest import (
+        _normalize_structured_chapter_map,
+        _parse_chapter_map_from_directive,
+    )
+
+    raw = body.get("chapter_map")
+    if raw is not None and raw != "" and raw != {}:
+        if isinstance(raw, str):
+            parsed = _parse_chapter_map_from_directive(raw)
+            if parsed:
+                return {ch: entry.get("beat") or "" for ch, entry in sorted(parsed.items())}
+        else:
+            normalized = _normalize_structured_chapter_map(raw)
+            if normalized:
+                if isinstance(raw, (dict, list)):
+                    return raw
+                return {ch: entry.get("beat") or "" for ch, entry in sorted(normalized.items())}
+
+    if "chapter_map_text" not in body:
+        if existing and existing.get("chapter_map") is not None:
+            return existing.get("chapter_map")
+        return None
+
+    text = str(body.get("chapter_map_text") or "").strip()
+    existing_map = (existing or {}).get("chapter_map")
+    if existing_map is not None and text == _chapter_map_to_text(existing_map).strip():
+        # Unchanged in UI — keep rich structured map (required_beats, endings…).
+        return existing_map
+    if not text:
+        return {}
+    parsed = _parse_chapter_map_from_directive(text)
+    if parsed:
+        return {ch: entry.get("beat") or "" for ch, entry in sorted(parsed.items())}
+    return {}
+
+
+def _chapter_map_to_text(chapter_map: object) -> str:
+    """Serialize concept.chapter_map for the Concept UI textarea."""
+    from factory.engine.lib.intent_manifest import _normalize_structured_chapter_map
+
+    if not chapter_map:
+        return ""
+    if isinstance(chapter_map, str):
+        return chapter_map.strip()
+    normalized = _normalize_structured_chapter_map(chapter_map)
+    lines: list[str] = []
+    for ch, entry in sorted(normalized.items()):
+        beat = str(entry.get("beat") or "").strip()
+        title = str(entry.get("title") or "").strip()
+        if title and beat and not beat.startswith(title):
+            beat = f"{title} — {beat}"
+        elif title and not beat:
+            beat = title
+        if beat:
+            lines.append(f"Ch{ch}: {beat}")
+    return "\n".join(lines)
+
+
 def save_concept(ws_id: str, body: dict, *, mark_ready: bool = False) -> dict:
     ws = workspace_dir(ws_id)
     ws.mkdir(parents=True, exist_ok=True)
@@ -217,20 +365,42 @@ def save_concept(ws_id: str, body: dict, *, mark_ready: bool = False) -> dict:
     lang = normalize_language(body.get("target_language"))
     _sync_workspace_language(ws, lang)
 
-    data = {
-        "concept_status": "ready" if mark_ready else "draft",
-        "target_language": lang,
-        "title": body.get("title", "") or "",
-        "logline": body.get("logline", "") or "",
-        "author_directive": body.get("author_directive", "") or "",
-        "surface_plot": body.get("surface_plot", "") or "",
-        "true_plot": body.get("true_plot", "") or "",
-        "must_include": body.get("must_include") or [],
-        "must_avoid": body.get("must_avoid") or [],
-        "ending_book1": body.get("ending_book1", "") or "",
-        "hook_book2": body.get("hook_book2", "") or "",
-        "notes": body.get("notes", "") or "",
-    }
+    existing = load_concept(ws) or {}
+    # Merge so rich fields (characters, genre, format…) from hand-edited YAML survive UI save.
+    data = {**existing}
+    data.update(
+        {
+            "concept_status": "ready" if mark_ready else "draft",
+            "target_language": lang,
+            "title": body.get("title", "") or "",
+            "logline": body.get("logline", "") or "",
+            "author_directive": body.get("author_directive", "") or "",
+            "surface_plot": body.get("surface_plot", "") or "",
+            "true_plot": body.get("true_plot", "") or "",
+            "must_include": body.get("must_include") or [],
+            "must_avoid": body.get("must_avoid") or [],
+            "ending_book1": body.get("ending_book1", "") or "",
+            "hook_book2": body.get("hook_book2", "") or "",
+            "notes": body.get("notes", "") or "",
+        }
+    )
+    # pen_name lives on direction/manifest (export), optional mirror on concept
+    if "pen_name" in body:
+        pen = str(body.get("pen_name") or "").strip()
+        data["pen_name"] = pen
+        _sync_pen_name(ws, pen)
+
+    pov = _pov_from_body(body, existing)
+    if pov is not None:
+        data["pov"] = pov
+
+    chapter_map = _chapter_map_from_body(body, existing)
+    if chapter_map is None:
+        pass
+    elif chapter_map == {}:
+        data.pop("chapter_map", None)
+    else:
+        data["chapter_map"] = chapter_map
 
     if not mark_ready:
         path = ws / "concept.yaml"
@@ -522,6 +692,14 @@ class Handler(BaseHTTPRequestHandler):
                         stop_on_review=stop_on_review,
                         auto_from=auto_from,
                         write_mode=write_mode,
+                    )
+                elif mode == "autopilot":
+                    result = wf.start_batch_autopilot(
+                        ws_id,
+                        book,
+                        from_ch=from_ch,
+                        to_ch=to_ch,
+                        write_mode=(write_mode if write_mode == "auto" else "auto"),
                     )
                 else:
                     self._json(400, {"error": f"unknown mode: {mode}"})

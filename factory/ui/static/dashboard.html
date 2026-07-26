@@ -159,10 +159,11 @@
         </div>
         <label class="batch-check" id="batchStopWrap"><input type="checkbox" id="batchStopOnReview" /> Dừng batch khi QC fail (chỉ chế độ giám sát)</label>
         <div class="actions">
-          <button class="btn-success" id="btnBatchPrep">1. Chuẩn bị sách (narrative → plan → prompts)</button>
+          <button class="btn-success" id="btnBatchPrep">1. Chuẩn bị sách (intent → plan → prompts)</button>
           <button class="btn-primary" id="btnBatchWrite">2. Viết hàng loạt</button>
           <button class="btn-ghost" id="btnBatchContinue">↻ Tiếp tục viết</button>
           <button class="btn-warn" id="btnBatchFull">Chạy hết (1 + 2)</button>
+          <button class="btn-warn" id="btnBatchAutopilot" title="Concept → intent → narrative/bible (có gate) → plan → prompts → viết tất cả. Dừng lại ở duyệt chương → catalog.">🤖 Tự động toàn bộ (concept → chương)</button>
           <button class="btn-ghost" id="btnBatchReset" title="Xóa lock khi batch treo sau crash/restart">🔓 Hủy lock batch</button>
         </div>
         <div id="batchLog"></div>
@@ -174,19 +175,21 @@
       </section>
       <section>
         <h2>Hành động pipeline</h2>
-        <p class="meta-line">Chạy tuần tự từ trên xuống. Mỗi bước gọi 9router (có thể mất vài phút).</p>
+        <p class="meta-line">Chuỗi chính: concept → intent → plan → prompts → viết. Narrative/bible = optional, không chặn viết.</p>
         <div class="actions" id="pipelineActions">
-          <button class="btn-primary" data-action="develop-narrative">Sinh narrative (AI)</button>
+          <button class="btn-primary" data-action="compile-intent" title="Python compile IntentManifest từ concept — 0 AI">Compile intent (Python)</button>
+          <button class="btn-success" data-action="approve-intent">Duyệt intent (khóa)</button>
+          <button class="btn-ghost" data-action="develop-narrative">Sinh narrative (AI, optional)</button>
           <button class="btn-ghost" data-action="validate-narrative">Kiểm tra narrative</button>
-          <button class="btn-success" data-action="approve-narrative">Duyệt narrative</button>
-          <button class="btn-primary" data-action="architect">Architect (bible)</button>
+          <button class="btn-ghost" data-action="approve-narrative">Duyệt narrative (G1)</button>
+          <button class="btn-ghost" data-action="architect">Architect (bible, optional)</button>
           <button class="btn-ghost" data-action="validate-bible">Kiểm tra bible</button>
-          <button class="btn-success" data-action="approve-bible">Duyệt bible</button>
+          <button class="btn-ghost" data-action="approve-bible">Duyệt bible</button>
           <button class="btn-primary" data-action="init-canon-registry" title="Tạo canon_registry.yaml từ concept + bible (bắt buộc trước approve-plan)">Tạo canon registry</button>
-          <button class="btn-primary" data-action="plan" title="Sinh plan cho chương còn thiếu (không ghi đè plan đã có)">Plan chương</button>
+          <button class="btn-primary" data-action="plan" title="Sinh plan — chỉ đọc intent (+ narrative đã khóa)">Plan chương</button>
           <button class="btn-ghost" data-action="replan" title="Xóa master_plan hiện tại và sinh lại toàn bộ từ đầu">Tạo lại plan</button>
           <button class="btn-ghost" data-action="fix-plans">Fix plans</button>
-          <button class="btn-success" data-action="approve-plan">Duyệt plan</button>
+          <button class="btn-success" data-action="approve-plan">Duyệt plan (G3+G4)</button>
           <button class="btn-ghost" data-action="render-prompts">Tạo prompts (ch_001…)</button>
         </div>
       </section>
@@ -251,8 +254,13 @@
         <input id="newWsId" type="text" placeholder="midnight-harbor" pattern="[a-z][a-z0-9-]*" />
         <div class="mode-hint">Chữ thường, số, gạch ngang — dùng làm tên thư mục</div>
       </div>
-      <div class="field">
-        <label for="newWsChapters">Số chương mục tiêu</label>
+        <div class="field">
+          <label for="newWsPenName">Bút danh (pen name)</label>
+          <input id="newWsPenName" type="text" placeholder="VD: Nix Vale" />
+          <div class="mode-hint">Tên tác giả trên EPUB — có thể sửa sau ở tab Concept</div>
+        </div>
+        <div class="field">
+          <label for="newWsChapters">Số chương mục tiêu</label>
         <input id="newWsChapters" type="number" min="3" max="200" value="30" />
         <div class="mode-hint">VD: 10, 20, 30 — không cố định 50. Có thể đổi sau ở header.</div>
       </div>
@@ -383,6 +391,7 @@
     function openNewWorkspaceDialog() {
       $("newWsTitleInput").value = "";
       $("newWsId").value = "";
+      $("newWsPenName").value = "";
       $("newWsLang").value = "en";
       $("newWsChapters").value = "30";
       $("newWsMode").value = "blank";
@@ -425,6 +434,7 @@
           body: JSON.stringify({
             id,
             title,
+            pen_name: $("newWsPenName").value.trim() || undefined,
             target_language: $("newWsLang").value,
             total_chapters: parseInt($("newWsChapters").value, 10) || 30,
             mode,
@@ -460,11 +470,12 @@
       }
       const html = [
         gateCard("Concept", g.concept?.status, g.concept?.ok),
-        gateCard("Narrative", g.narrative?.status, g.narrative?.ok, g.narrative?.errors),
-        gateCard("Bible", g.bible?.status, g.bible?.ok, g.bible?.errors),
+        gateCard("Intent", g.intent?.status, g.intent?.ok, null, g.intent?.digest ? `digest ${g.intent.digest}` : `${g.intent?.chapters_mapped || 0} ch map`),
+        gateCard("Narrative (optional)", g.narrative?.status || "skip", g.narrative?.ok || g.plan?.ok, g.plan?.ok ? null : g.narrative?.errors, g.plan?.ok ? "không bắt buộc" : null),
+        gateCard("Bible (optional)", g.bible?.status || "skip", g.bible?.ok || g.plan?.ok, g.plan?.ok ? null : g.bible?.errors, g.plan?.ok ? "không bắt buộc" : null),
         gateCard("Canon", g.canon?.status, g.canon?.ok),
         gateCard("Plan", g.plan?.status, g.plan?.ok, null, `${d.planned_chapters ?? g.plan?.chapters_planned ?? 0}/${total} ch`),
-        gateCard("Write", `${g.write?.in_catalog || 0} catalog`, (g.write?.in_catalog || 0) > 0, null, `${g.write?.ready || 0} ready`),
+        gateCard("Write", `${g.write?.ready || 0}/${total} ready`, !!g.plan?.ok, null, `${g.write?.in_catalog || 0} catalog`),
       ].join("");
       $("gates").innerHTML = html;
       $("nextSteps").innerHTML = "<strong>Tiếp theo:</strong> " + (d.next_steps || []).join(" → ");
@@ -812,7 +823,7 @@
     }
 
     function setBatchButtonsDisabled(disabled) {
-      ["btnBatchPrep", "btnBatchWrite", "btnBatchFull", "btnBatchContinue", "btnChBatchWrite", "btnChBatchContinue"]
+      ["btnBatchPrep", "btnBatchWrite", "btnBatchFull", "btnBatchAutopilot", "btnBatchContinue", "btnChBatchWrite", "btnChBatchContinue"]
         .forEach(id => { const b = $(id); if (b) b.disabled = disabled; });
     }
 
@@ -893,7 +904,7 @@
     }
 
     async function runBatch(mode, extra = {}) {
-      const labels = { prep: "chuan bi sach", write: "viet hang loat", full: "chay het", continue: "tiep tuc viet" };
+      const labels = { prep: "chuan bi sach", write: "viet hang loat", full: "chay het", continue: "tiep tuc viet", autopilot: "tu dong toan bo (concept → chuong)" };
       const opts = mode === "prep" ? {} : batchWriteOpts(extra);
       const range = opts.from_ch ? ` ch${opts.from_ch}–${opts.to_ch}` : "";
       const modeHint = opts.write_mode === "auto"
@@ -939,6 +950,7 @@
     $("btnBatchPrep").addEventListener("click", () => runBatch("prep"));
     $("btnBatchWrite").addEventListener("click", () => runBatch("write"));
     $("btnBatchFull").addEventListener("click", () => runBatch("full"));
+    $("btnBatchAutopilot").addEventListener("click", () => runBatch("autopilot", { write_mode: "auto", auto_from: true }));
     $("btnBatchReset").addEventListener("click", resetBatchLock);
     $("btnBatchContinue").addEventListener("click", () => runBatch("continue", { auto_from: true }));
     $("btnChBatchWrite").addEventListener("click", () => runBatch("write"));
