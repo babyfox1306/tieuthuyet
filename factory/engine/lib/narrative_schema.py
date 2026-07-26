@@ -154,6 +154,33 @@ def load_concept(ws: Path) -> dict[str, Any]:
     return data if isinstance(data, dict) else {}
 
 
+# Top-level concept keys the UI form owns. Anything not listed must survive a
+# load → save round-trip untouched (hand-edited YAML is authoritative).
+CONCEPT_TEXT_FIELDS = (
+    "title",
+    "logline",
+    "author_directive",
+    "surface_plot",
+    "true_plot",
+    "ending_book1",
+    "hook_book2",
+    "notes",
+)
+CONCEPT_LIST_FIELDS = ("must_include", "must_avoid")
+CONCEPT_BOOL_FIELDS = ("intentional_early_reveal",)
+
+
+def coerce_concept_bool(value: Any) -> bool:
+    """YAML/JSON/form truthiness for boolean concept flags."""
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, (int, float)):
+        return bool(value)
+    if isinstance(value, str):
+        return value.strip().lower() in ("true", "1", "yes", "on")
+    return False
+
+
 def intentional_early_reveal(
     ws: Path | None = None,
     concept: dict[str, Any] | None = None,
@@ -167,14 +194,7 @@ def intentional_early_reveal(
         if ws is None:
             return False
         concept = load_concept(ws)
-    val = concept.get("intentional_early_reveal")
-    if isinstance(val, bool):
-        return val
-    if isinstance(val, (int, float)):
-        return bool(val)
-    if isinstance(val, str):
-        return val.strip().lower() in ("true", "1", "yes", "on")
-    return False
+    return coerce_concept_bool(concept.get("intentional_early_reveal"))
 
 
 PLACEHOLDER_MARKERS = (

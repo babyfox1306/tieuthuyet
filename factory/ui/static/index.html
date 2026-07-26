@@ -186,6 +186,13 @@
             <textarea id="true_plot"></textarea>
           </div>
         </div>
+        <div class="field">
+          <h3>Reveal sớm có chủ đích</h3>
+          <div class="hint">Bật khi true plot được lộ ngay từ đầu là CỐ Ý. Gate <code>true_plot_spoil_early</code> + <code>mystery_reveal_too_early</code> hạ xuống cảnh báo, không chặn approve-plan. Cuốn twist/unreliable narrator để TẮT.</div>
+          <label style="display:flex;align-items:center;gap:.5rem;margin-top:.55rem;color:var(--text)">
+            <input type="checkbox" id="intentional_early_reveal" /> Anti-hero — reader biết nhân vật giết từ đầu, cố ý reveal sớm
+          </label>
+        </div>
       </section>
 
       <section>
@@ -295,6 +302,7 @@
         author_directive: $("author_directive").value.trim(),
         surface_plot: $("surface_plot").value.trim(),
         true_plot: $("true_plot").value.trim(),
+        intentional_early_reveal: $("intentional_early_reveal").checked,
         ending_book1: $("ending_book1").value.trim(),
         hook_book2: $("hook_book2").value.trim(),
         must_include: linesToList($("must_include").value),
@@ -342,6 +350,7 @@
       $("author_directive").value = c.author_directive || "";
       $("surface_plot").value = c.surface_plot || "";
       $("true_plot").value = c.true_plot || "";
+      $("intentional_early_reveal").checked = c.intentional_early_reveal === true;
       $("ending_book1").value = c.ending_book1 || "";
       $("hook_book2").value = c.hook_book2 || "";
       $("must_include").value = listToLines(c.must_include);

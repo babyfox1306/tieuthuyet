@@ -51,6 +51,7 @@ def _blank_concept(*, title: str = "", target_language: str = "en") -> dict:
         "author_directive": "",
         "surface_plot": "",
         "true_plot": "",
+        "intentional_early_reveal": False,
         "must_include": [],
         "must_avoid": [],
         "ending_book1": "",

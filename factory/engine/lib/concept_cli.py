@@ -48,6 +48,9 @@ author_directive: |
 surface_plot: ""
 true_plot: ""
 
+# true = anti-hero, reader biết sự thật từ sớm là cố ý (hạ 2 gate reveal xuống WARN)
+intentional_early_reveal: false
+
 must_include: []
 must_avoid: []
 # must_include_by_chapter:

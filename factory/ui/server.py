@@ -19,6 +19,10 @@ import yaml
 from factory.engine.lib.concept_cli import concept_check
 from factory.engine.lib.language import normalize_language
 from factory.engine.lib.narrative_schema import (
+    CONCEPT_BOOL_FIELDS,
+    CONCEPT_LIST_FIELDS,
+    CONCEPT_TEXT_FIELDS,
+    coerce_concept_bool,
     concept_content_errors,
     concept_validation_errors,
     load_concept,
@@ -226,6 +230,8 @@ def concept_to_json(ws_id: str) -> dict:
     concept_out = dict(concept) if concept else {}
     if concept_out.get("chapter_map") is not None:
         concept_out["chapter_map_text"] = _chapter_map_to_text(concept_out.get("chapter_map"))
+    for key in CONCEPT_BOOL_FIELDS:
+        concept_out[key] = coerce_concept_bool(concept_out.get(key))
     pen = str(direction.get("pen_name") or concept_out.get("pen_name") or "").strip()
     if pen:
         concept_out["pen_name"] = pen
@@ -368,22 +374,25 @@ def save_concept(ws_id: str, body: dict, *, mark_ready: bool = False) -> dict:
     existing = load_concept(ws) or {}
     # Merge so rich fields (characters, genre, format…) from hand-edited YAML survive UI save.
     data = {**existing}
-    data.update(
-        {
-            "concept_status": "ready" if mark_ready else "draft",
-            "target_language": lang,
-            "title": body.get("title", "") or "",
-            "logline": body.get("logline", "") or "",
-            "author_directive": body.get("author_directive", "") or "",
-            "surface_plot": body.get("surface_plot", "") or "",
-            "true_plot": body.get("true_plot", "") or "",
-            "must_include": body.get("must_include") or [],
-            "must_avoid": body.get("must_avoid") or [],
-            "ending_book1": body.get("ending_book1", "") or "",
-            "hook_book2": body.get("hook_book2", "") or "",
-            "notes": body.get("notes", "") or "",
-        }
-    )
+    data["concept_status"] = "ready" if mark_ready else "draft"
+    data["target_language"] = lang
+    # Only fields the form actually sent are rewritten; the rest keep their
+    # on-disk value so a partial save never silently drops a key.
+    for key in CONCEPT_TEXT_FIELDS:
+        if key in body:
+            data[key] = body.get(key) or ""
+        else:
+            data.setdefault(key, "")
+    for key in CONCEPT_LIST_FIELDS:
+        if key in body:
+            data[key] = body.get(key) or []
+        else:
+            data.setdefault(key, [])
+    for key in CONCEPT_BOOL_FIELDS:
+        if key in body:
+            data[key] = coerce_concept_bool(body.get(key))
+        else:
+            data.setdefault(key, coerce_concept_bool(existing.get(key)))
     # pen_name lives on direction/manifest (export), optional mirror on concept
     if "pen_name" in body:
         pen = str(body.get("pen_name") or "").strip()
