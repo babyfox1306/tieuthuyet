@@ -272,6 +272,37 @@ class TestCompileChapterNarrative(unittest.TestCase):
         ch5 = compile_chapter_narrative(SAMPLE_LEDGER, nested, SAMPLE_THREADS, 5)
         self.assertEqual(ch5["knowledge"]["effective_milestone"], 1)
 
+    def test_structured_known_items_not_truncated(self):
+        from factory.engine.lib.narrative_compiler import _knowledge_for_chapter
+
+        matrix = {
+            "milestones": [19],
+            "characters": {
+                "Nadia Cole": {
+                    "ch19": {
+                        "known_items": [
+                            "She is the executioner.",
+                            "Her network is under pressure; one member is behaving suspiciously.",
+                        ],
+                        "must_not_know_before": [],
+                        "hidden_truth": "Betrayal not yet known.",
+                    },
+                    "must_not_know_before": {
+                        "Priya is the leak": 24,
+                    },
+                }
+            },
+        }
+        know = _knowledge_for_chapter(matrix, 19)
+        joined = " | ".join(know["may_know"])
+        self.assertIn(
+            "Her network is under pressure; one member is behaving suspiciously.",
+            joined,
+        )
+        self.assertNotIn("{'known_items'", joined)
+        # Must not split the semicolon sentence into a orphan fragment.
+        self.assertFalse(any(x.strip().startswith("one member") for x in know["may_know"]))
+
     def test_clue_details_on_plant(self):
         ch1 = compile_chapter_narrative(SAMPLE_LEDGER, SAMPLE_MATRIX, SAMPLE_THREADS, 1)
         self.assertIn("C001", ch1["clue_details"])
@@ -284,6 +315,94 @@ class TestClueCatalog(unittest.TestCase):
         self.assertEqual(len(cat), 4)
         self.assertEqual(cat["C002"]["plant_chapter"], 3)
         self.assertEqual(cat["C002"]["payoff_chapter"], 8)
+
+    def test_description_only_ledger_fills_content(self):
+        """Architect/ledger style uses description — Outliner must still get prose."""
+        from factory.engine.lib.narrative_compiler import (
+            build_reveal_catalog,
+            clue_semantic_text,
+            reveal_semantic_text,
+        )
+
+        ledger = {
+            "clues": [
+                {
+                    "id": "C001",
+                    "description": "Nadia's thumb-tap tic is noticed by a listener",
+                    "plant_chapter": 1,
+                    "payoff_chapter": 34,
+                    "note": "character marker",
+                },
+                {
+                    "id": "C007",
+                    "description": "A photograph of Julian Croft's yacht shows a fuel line",
+                    "plant_chapter": 18,
+                    "payoff_chapter": 34,
+                },
+            ],
+            "major_reveals": [
+                {
+                    "id": "MR05",
+                    "description": "Full origin reveal: Nadia's first kill — Julian Croft",
+                    "chapter": 34,
+                    "required_clues": ["C001", "C007"],
+                }
+            ],
+            "red_herrings": [
+                {
+                    "id": "RH01",
+                    "description": "Unaffiliated detective circles the network",
+                    "plant_chapter": 12,
+                    "payoff_chapter": 22,
+                }
+            ],
+        }
+        cat = build_clue_catalog(ledger)
+        self.assertIn("thumb-tap", cat["C001"]["content"])
+        self.assertIn("yacht", cat["C007"]["content"])
+        self.assertEqual(clue_semantic_text(ledger["clues"][0]), cat["C001"]["content"])
+
+        rev = build_reveal_catalog(ledger)
+        self.assertIn("Julian Croft", rev["MR05"]["reveal"])
+        self.assertEqual(reveal_semantic_text(ledger["major_reveals"][0]), rev["MR05"]["reveal"])
+
+        ch1 = compile_chapter_narrative(ledger, SAMPLE_MATRIX, SAMPLE_THREADS, 1)
+        self.assertIn("thumb-tap", ch1["clue_details"]["C001"]["content"])
+        ch34 = compile_chapter_narrative(ledger, SAMPLE_MATRIX, SAMPLE_THREADS, 34)
+        self.assertIn("Julian Croft", ch34["reveals"][0]["reveal"])
+        ch12 = compile_chapter_narrative(ledger, SAMPLE_MATRIX, SAMPLE_THREADS, 12)
+        self.assertEqual(ch12["red_herrings_plant"], ["RH01"])
+        ch22 = compile_chapter_narrative(ledger, SAMPLE_MATRIX, SAMPLE_THREADS, 22)
+        self.assertEqual(ch22["red_herrings_dispel"], ["RH01"])
+
+
+class TestColdCaseLedgerSemantics(unittest.TestCase):
+    def test_cold_case_compiler_payload_has_full_semantics(self):
+        ws = Path("factory/workspaces/the-cold-case-girl")
+        if not (ws / "bible" / "narrative" / "mystery_ledger.json").exists():
+            self.skipTest("cold-case workspace missing")
+        act = compile_act_constraints(ws, 1, 3)
+        c001 = act["clue_catalog"]["C001"]["content"].lower()
+        self.assertIn("thumb-tap", c001)
+        self.assertNotIn("boat watcher", c001)
+        c007 = act["clue_catalog"]["C007"]["content"].lower()
+        self.assertIn("yacht", c007)
+        self.assertIn("fuel", c007)
+        mr05 = act["reveal_catalog"]["MR05"]["reveal"].lower()
+        self.assertIn("julian", mr05)
+        self.assertIn("boating", mr05)
+        self.assertTrue(act["plot_boundary"]["true_plot"])
+        choices = act["global_choices"]
+        self.assertTrue(any(c.get("id") == "network_leak" for c in choices))
+        leak = next(c for c in choices if c["id"] == "network_leak")
+        self.assertEqual(leak["cardinality"], 1)
+        self.assertGreaterEqual(len(leak["candidates"]), 3)
+        self.assertEqual(act["chapters"]["1"]["clues_plant"], ["C001"])
+        self.assertIn("thumb-tap", act["chapters"]["1"]["clue_details"]["C001"]["content"].lower())
+        # Red herring plant_chapter (singular) must schedule
+        act12 = compile_act_constraints(ws, 12, 12)
+        self.assertIn("RH01", act12["chapters"]["12"]["red_herrings_plant"])
+
 
 
 class TestWorkspaceIntegration(unittest.TestCase):

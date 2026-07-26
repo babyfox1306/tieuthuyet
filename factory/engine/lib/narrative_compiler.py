@@ -39,6 +39,32 @@ def min_clues_for_reveal(reveal_weight: str) -> int:
     return MIN_CLUES_BY_REVEAL_WEIGHT.get(reveal_weight, MIN_CLUES_BY_REVEAL_WEIGHT[REVEAL_WEIGHT_MAJOR])
 
 
+def _first_text(obj: dict[str, Any], *keys: str) -> str:
+    """Return first non-empty string field (ledger schemas vary: content vs description)."""
+    for key in keys:
+        val = obj.get(key)
+        if val is None:
+            continue
+        text = str(val).strip()
+        if text:
+            return text
+    return ""
+
+
+def clue_semantic_text(clue: dict[str, Any]) -> str:
+    """Canonical clue prose for Outliner/Writer — content preferred, description fallback."""
+    return _first_text(clue, "content", "description")
+
+
+def reveal_semantic_text(rev: dict[str, Any]) -> str:
+    """Canonical reveal prose — reveal preferred, description fallback."""
+    return _first_text(rev, "reveal", "description")
+
+
+def red_herring_semantic_text(rh: dict[str, Any]) -> str:
+    return _first_text(rh, "false_lead", "description")
+
+
 def narrative_compiler_enabled(ws: Path, direction: dict | None = None) -> bool:
     """True when mystery narrative assets exist and narrative is approved.
 
@@ -203,12 +229,15 @@ def _clues_for_chapter(ledger: dict[str, Any], chapter: int) -> tuple[list[str],
             continue
         pc = int(clue.get("plant_chapter") or 0)
         pay = int(clue.get("payoff_chapter") or 0)
+        semantic = clue_semantic_text(clue)
         entry = {
             "id": cid,
-            "content": clue.get("content", ""),
+            "content": semantic,
+            "description": semantic,
             "type": clue.get("type", ""),
             "misdirection": clue.get("misdirection", ""),
-            "true_meaning": clue.get("true_meaning", ""),
+            "true_meaning": _first_text(clue, "true_meaning", "note"),
+            "note": str(clue.get("note") or "").strip(),
             "plant_chapter": pc,
             "payoff_chapter": pay,
         }
@@ -232,17 +261,48 @@ def _reveals_for_chapter(ledger: dict[str, Any], chapter: int) -> list[dict[str,
         weight = str(rev.get("reveal_weight") or REVEAL_WEIGHT_MAJOR).lower()
         if weight not in MIN_CLUES_BY_REVEAL_WEIGHT:
             weight = REVEAL_WEIGHT_MAJOR
+        semantic = reveal_semantic_text(rev)
         out.append(
             {
                 "id": rev.get("id", ""),
-                "reveal": rev.get("reveal", ""),
-                "impact": rev.get("impact", ""),
+                "reveal": semantic,
+                "description": semantic,
+                "impact": _first_text(rev, "impact", "note"),
+                "note": str(rev.get("note") or "").strip(),
                 "reveal_weight": weight,
                 "required_clues": list(rev.get("required_clues") or []),
                 "min_clues_required": min_clues_for_reveal(weight),
             }
         )
     return out
+
+
+def _red_herring_plant_chapters(rh: dict[str, Any]) -> list[int]:
+    raw = rh.get("plant_chapters")
+    if isinstance(raw, list) and raw:
+        out: list[int] = []
+        for x in raw:
+            try:
+                out.append(int(x))
+            except (TypeError, ValueError):
+                continue
+        return out
+    try:
+        single = int(rh.get("plant_chapter") or 0)
+    except (TypeError, ValueError):
+        single = 0
+    return [single] if single else []
+
+
+def _red_herring_dispel_chapter(rh: dict[str, Any]) -> int:
+    for key in ("dispelled_chapter", "payoff_chapter", "dispel_chapter"):
+        try:
+            val = int(rh.get(key) or 0)
+        except (TypeError, ValueError):
+            continue
+        if val:
+            return val
+    return 0
 
 
 def _red_herrings_for_chapter(ledger: dict[str, Any], chapter: int) -> tuple[list[str], list[str]]:
@@ -254,11 +314,9 @@ def _red_herrings_for_chapter(ledger: dict[str, Any], chapter: int) -> tuple[lis
         rid = rh.get("id")
         if not rid:
             continue
-        plants = [int(x) for x in (rh.get("plant_chapters") or [])]
-        dispelled = int(rh.get("dispelled_chapter") or 0)
-        if chapter in plants:
+        if chapter in _red_herring_plant_chapters(rh):
             plant.append(rid)
-        if dispelled == chapter:
+        if _red_herring_dispel_chapter(rh) == chapter:
             dispel.append(rid)
     return plant, dispel
 
@@ -297,6 +355,55 @@ def iter_must_not_know_before(char_data: dict[str, Any]) -> list[tuple[str, int]
     return []
 
 
+def _milestone_knowledge_lists(block: Any) -> tuple[list[str], list[str]]:
+    """Extract knows / does-not-know from a milestone block.
+
+    Structured develop-narrative output uses ``known_items`` lists. Legacy prose
+    uses ``Knows: … Does not know yet: …``. Never ``str(dict)`` — that splits on
+    ``. `` inside JSON and truncates mid-sentence in prompts.
+    """
+    if block is None:
+        return [], []
+    if isinstance(block, dict):
+        known_raw = (
+            block.get("known_items")
+            or block.get("knows")
+            or block.get("known")
+            or block.get("may_know")
+            or []
+        )
+        not_raw = (
+            block.get("does_not_know_yet")
+            or block.get("does_not_know")
+            or block.get("must_not_know")
+            or block.get("unknown")
+            or []
+        )
+        if isinstance(known_raw, str):
+            knows = _split_list_items(known_raw)
+        elif isinstance(known_raw, list):
+            knows = [str(x).strip() for x in known_raw if str(x).strip()]
+        else:
+            knows = []
+        if isinstance(not_raw, str):
+            not_knows = _split_list_items(not_raw)
+        elif isinstance(not_raw, list):
+            # Milestone-local lists are facts, not fact→chapter maps.
+            not_knows = [
+                str(x).strip()
+                for x in not_raw
+                if not isinstance(x, dict) and str(x).strip()
+            ]
+        else:
+            not_knows = []
+        hidden = str(block.get("hidden_truth") or "").strip()
+        if hidden and hidden not in not_knows and hidden not in knows:
+            # Keep as soft context under may_know only when not a future ban.
+            pass
+        return knows, not_knows
+    return _split_knows(str(block))
+
+
 def _knowledge_for_chapter(
     matrix: dict[str, Any],
     chapter: int,
@@ -316,8 +423,8 @@ def _knowledge_for_chapter(
             continue
         pov.append(str(char_name))
         key = f"ch{eff}" if eff else None
-        if key and data.get(key):
-            knows, not_knows = _split_knows(str(data[key]))
+        if key and data.get(key) is not None:
+            knows, not_knows = _milestone_knowledge_lists(data.get(key))
             for k in knows:
                 may_know.append(f"{char_name}: {k}")
             for nk in not_knows:
@@ -364,15 +471,162 @@ def build_clue_catalog(ledger: dict[str, Any]) -> dict[str, dict[str, Any]]:
         if not isinstance(clue, dict) or not clue.get("id"):
             continue
         cid = str(clue["id"])
+        semantic = clue_semantic_text(clue)
         catalog[cid] = {
-            "content": clue.get("content", ""),
+            "content": semantic,
+            "description": semantic,
             "type": clue.get("type", ""),
             "plant_chapter": int(clue.get("plant_chapter") or 0),
             "payoff_chapter": int(clue.get("payoff_chapter") or 0),
             "misdirection": clue.get("misdirection", ""),
-            "true_meaning": clue.get("true_meaning", ""),
+            "true_meaning": _first_text(clue, "true_meaning", "note"),
+            "note": str(clue.get("note") or "").strip(),
         }
     return catalog
+
+
+def build_reveal_catalog(ledger: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    catalog: dict[str, dict[str, Any]] = {}
+    for rev in ledger.get("major_reveals") or []:
+        if not isinstance(rev, dict) or not rev.get("id"):
+            continue
+        rid = str(rev["id"])
+        semantic = reveal_semantic_text(rev)
+        catalog[rid] = {
+            "reveal": semantic,
+            "description": semantic,
+            "chapter": int(rev.get("chapter") or 0),
+            "impact": _first_text(rev, "impact", "note"),
+            "note": str(rev.get("note") or "").strip(),
+            "required_clues": list(rev.get("required_clues") or []),
+            "reveal_weight": str(rev.get("reveal_weight") or REVEAL_WEIGHT_MAJOR).lower(),
+        }
+    return catalog
+
+
+def build_red_herring_catalog(ledger: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    catalog: dict[str, dict[str, Any]] = {}
+    for rh in ledger.get("red_herrings") or []:
+        if not isinstance(rh, dict) or not rh.get("id"):
+            continue
+        rid = str(rh["id"])
+        semantic = red_herring_semantic_text(rh)
+        catalog[rid] = {
+            "description": semantic,
+            "false_lead": semantic,
+            "plant_chapters": _red_herring_plant_chapters(rh),
+            "dispelled_chapter": _red_herring_dispel_chapter(rh),
+            "note": str(rh.get("note") or "").strip(),
+        }
+    return catalog
+
+
+def _network_cast_candidates(ws: Path) -> list[str]:
+    """Supporting network names for deferred leak choice (exclude leads / victims)."""
+    from factory.engine.lib.narrative_schema import load_concept, normalize_concept_characters
+
+    names: list[str] = []
+    try:
+        concept = load_concept(ws)
+    except Exception:
+        return names
+    for row in normalize_concept_characters(concept.get("characters")):
+        role = str(row.get("role") or "").lower()
+        name = str(row.get("name") or "").strip()
+        if not name:
+            continue
+        if any(tok in role for tok in ("network", "lawyer", "coroner", "hacker", "ally")):
+            names.append(name)
+    return names
+
+
+def _extract_deferred_global_choices(
+    ws: Path,
+    ledger: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Plan-time choices the Outliner must resolve once and keep consistent."""
+    from factory.engine.lib.narrative_schema import load_concept
+
+    choices: list[dict[str, Any]] = []
+    try:
+        concept = load_concept(ws)
+    except Exception:
+        concept = {}
+
+    blob = "\n".join(
+        [
+            str(concept.get("author_directive") or ""),
+            "\n".join(str(x) for x in (concept.get("must_include") or [])),
+            str(ledger.get("truth") or ""),
+            json.dumps(ledger.get("major_reveals") or [], ensure_ascii=False),
+        ]
+    ).lower()
+
+    leakish = bool(
+        re.search(r"decide\s+(which|at\s+plan)|decide-at-plan|kept\s+consistent", blob)
+        or re.search(r"\bthe leak\b|\bnetwork betrayal\b|\bone of the three\b", blob)
+    )
+    if leakish:
+        candidates = _network_cast_candidates(ws) or [
+            "Sasha Okafor",
+            "Priya Anand",
+            "Wren Delgado",
+        ]
+        choices.append(
+            {
+                "id": "network_leak",
+                "status": "unresolved_at_plan",
+                "candidates": candidates,
+                "cardinality": 1,
+                "constraint": (
+                    "Choose exactly ONE network member as the leak/betrayer on first "
+                    "concrete betrayal beat; lock that name for the rest of the book. "
+                    "NEVER invent a second leak, alternate mole, or 'also betrayed' "
+                    "character. Until chosen, refer to the role as 'the leak' without "
+                    "naming extras outside candidates."
+                ),
+            }
+        )
+    return choices
+
+
+def _plot_boundary_payload(ws: Path, ledger: dict[str, Any]) -> dict[str, Any]:
+    """Hard true_plot fence so Outliner cannot invent parallel conspiracies."""
+    true_plot = ""
+    surface_plot = ""
+    try:
+        from factory.engine.lib.intent_manifest import load_intent_manifest
+
+        man = load_intent_manifest(ws, 1)
+        true_plot = str(man.get("true_plot") or "").strip()
+        surface_plot = str(man.get("surface_plot") or "").strip()
+    except Exception:
+        pass
+    if not true_plot:
+        try:
+            from factory.engine.lib.narrative_schema import load_concept
+
+            concept = load_concept(ws)
+            true_plot = str(concept.get("true_plot") or "").strip()
+            surface_plot = str(
+                concept.get("surface_plot") or concept.get("surface_mystery") or ""
+            ).strip()
+        except Exception:
+            pass
+    return {
+        "main_mystery": str(ledger.get("main_mystery") or "").strip(),
+        "truth": str(ledger.get("truth") or "").strip(),
+        "true_plot": true_plot,
+        "surface_plot": surface_plot,
+        "forbidden_expansions": [
+            "Do NOT invent serial-killer patterns, multi-decade murder sprees, camps, "
+            "or missing-person side cases unless they already appear in true_plot / "
+            "locked cast / ledger descriptions.",
+            "Do NOT rename or replace ledger clue/reveal semantics — plant/payoff the "
+            "exact content from clue_catalog / reveal_catalog.",
+            "Do NOT expand the conspiracy beyond true_plot + ledger truth.",
+        ],
+    }
 
 
 def compile_book_narrative(ws: Path, *, total_chapters: int | None = None) -> dict[int, dict[str, Any]]:
@@ -394,7 +648,7 @@ def compile_book_narrative(ws: Path, *, total_chapters: int | None = None) -> di
 
 
 def compile_act_constraints(ws: Path, act_from: int, act_to: int) -> dict[str, Any]:
-    """Payload slice for Outliner: constraints + clue catalog for an act range."""
+    """Payload slice for Outliner: constraints + full semantic catalogs for an act range."""
     direction = _load_direction(ws)
     ledger = load_ledger(ws)
     matrix = load_knowledge_matrix(ws)
@@ -408,7 +662,17 @@ def compile_act_constraints(ws: Path, act_from: int, act_to: int) -> dict[str, A
         "target_language": direction.get("target_language", "en"),
         "chapters": chapters,
         "clue_catalog": build_clue_catalog(ledger),
+        "reveal_catalog": build_reveal_catalog(ledger),
+        "red_herring_catalog": build_red_herring_catalog(ledger),
         "canonical_reveal_chapter": ledger.get("canonical_reveal_chapter"),
+        "plot_boundary": _plot_boundary_payload(ws, ledger),
+        "global_choices": _extract_deferred_global_choices(ws, ledger),
+        "semantic_lock": (
+            "Clue/reveal IDs in chapters[] are schedules only. "
+            "MUST use clue_catalog[id].content and reveal_catalog[id].reveal "
+            "verbatim as the planted/paid semantic — do not substitute a different "
+            "object, victim, photo, or conspiracy for the same ID."
+        ),
     }
 
 
@@ -670,7 +934,10 @@ def _ensure_clue_beats_in_must_happen(
 
     for cid in compiled.get("clues_plant") or []:
         cid_s = str(cid)
-        content = str((details.get(cid_s) or {}).get("content") or "")
+        content = str((details.get(cid_s) or {}).get("content") or "").strip()
+        if not content:
+            # Do not inject bare [CLUE id] — that false-greens NC-07.
+            continue
         if _already(cid_s, content):
             continue
         mh.append(f"[CLUE {cid_s}] {content}".strip())
@@ -678,7 +945,9 @@ def _ensure_clue_beats_in_must_happen(
 
     for cid in compiled.get("clues_payoff") or []:
         cid_s = str(cid)
-        content = str((details.get(cid_s) or {}).get("content") or "")
+        content = str((details.get(cid_s) or {}).get("content") or "").strip()
+        if not content:
+            continue
         if _already(cid_s, content):
             continue
         mh.append(f"[PAYOFF {cid_s}] {content}".strip())

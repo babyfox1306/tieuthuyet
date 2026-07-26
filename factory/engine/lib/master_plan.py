@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 import yaml
@@ -117,6 +118,85 @@ def _bible_stub_from_intent(ws: Path, book: int) -> dict:
     }
 
 
+PRIOR_PLANS_TAIL = 6
+
+
+def _trim_prior_plan_for_outliner(plan: dict) -> dict:
+    """Continuity fields only — avoid dumping full narrative.knowledge blobs."""
+    keys = (
+        "chapter",
+        "title",
+        "one_line_summary",
+        "beat_summary",
+        "opens_with",
+        "cliffhanger",
+        "must_happen",
+        "must_not",
+        "carries_to_next",
+        "chapter_task",
+    )
+    out = {k: plan[k] for k in keys if k in plan}
+    narr = plan.get("narrative") if isinstance(plan.get("narrative"), dict) else {}
+    if narr:
+        slim_n: dict = {}
+        for nk in (
+            "clues_plant",
+            "clues_payoff",
+            "reveals",
+            "red_herrings_plant",
+            "red_herrings_dispel",
+            "threads_touch",
+        ):
+            if narr.get(nk) is not None:
+                slim_n[nk] = narr[nk]
+        if slim_n:
+            out["narrative"] = slim_n
+    return out
+
+
+def _chunk_boundary_context(prior: list[dict], act_from: int) -> dict | None:
+    """Explicit handoff from chapter N-1 so chunk resume does not re-fire its beats."""
+    if act_from <= 1:
+        return None
+    prev = next(
+        (p for p in prior if int(p.get("chapter") or 0) == act_from - 1),
+        None,
+    )
+    if not prev:
+        return None
+    narr = prev.get("narrative") if isinstance(prev.get("narrative"), dict) else {}
+    reveal_ids: list[str] = []
+    for rev in narr.get("reveals") or []:
+        if isinstance(rev, dict) and rev.get("id"):
+            reveal_ids.append(str(rev["id"]).strip().upper())
+        elif isinstance(rev, str) and rev.strip():
+            reveal_ids.append(rev.strip().upper())
+    # Also harvest MR## / R## from must_happen text (Outliner sometimes omits narrative.reveals)
+    blob = " ".join(str(x) for x in (prev.get("must_happen") or []))
+    for match in re.finditer(r"\b((?:MR|R)\d{1,3})\b", blob, re.IGNORECASE):
+        rid = match.group(1).upper()
+        if rid not in reveal_ids:
+            reveal_ids.append(rid)
+    return {
+        "previous_chapter": act_from - 1,
+        "title": prev.get("title"),
+        "one_line_summary": prev.get("one_line_summary"),
+        "beat_summary": prev.get("beat_summary"),
+        "must_happen": list(prev.get("must_happen") or []),
+        "cliffhanger": prev.get("cliffhanger"),
+        "carries_to_next": prev.get("carries_to_next"),
+        "reveals_already_fired": reveal_ids,
+        "clues_already_payoff": list(narr.get("clues_payoff") or []),
+        "instruction": (
+            f"Chapter {act_from} CONTINUES from ch{act_from - 1}'s cliffhanger / carries_to_next. "
+            f"Do NOT re-stage the same confrontation, confession, or warehouse scene. "
+            f"Do NOT re-fire reveals {reveal_ids or '(none)'} or re-payoff clues "
+            f"{list(narr.get('clues_payoff') or []) or '(none)'}. "
+            f"must_happen for ch{act_from} must advance the locked map beat for THIS chapter only."
+        ),
+    }
+
+
 def build_outliner_payload(
     ws: Path,
     book: int,
@@ -133,7 +213,7 @@ def build_outliner_payload(
     Does not send raw concept.yaml. Bible is slimmed to titles/cast already locked;
     authority for beats is intent_manifest (+ narrative_lock when approved).
     """
-    from factory.engine.lib.canon_registry import locked_canon_names_payload
+    from factory.engine.lib.canon_registry import locked_canon_names_payload, locked_cast_payload
     from factory.engine.lib.intent_manifest import locked_pack_for_outliner
 
     slim_direction = {
@@ -157,21 +237,40 @@ def build_outliner_payload(
         for k in ("title", "logline", "leads", "cast", "meta", "spice_max")
         if bible.get(k) is not None
     }
+    # Continuity only from chapters BEFORE this chunk — never feed stale plans for
+    # the range being regenerated (that invites copy/paste duplicates).
+    prior_before = sorted(
+        [p for p in prior if int(p.get("chapter") or 0) < act_from],
+        key=lambda p: int(p.get("chapter") or 0),
+    )
+    prior_tail = prior_before[-PRIOR_PLANS_TAIL:]
+    prior_slim = [_trim_prior_plan_for_outliner(p) for p in prior_tail]
     body: dict = {
         "direction": slim_direction,
         "series_bible": slim_bible,
         "book_number": book,
         "act_range": [act_from, act_to],
         "act_name": act_name,
-        "prior_plans": prior,
+        "prior_plans": prior_slim,
         "canon_through": direction.get("canon_through", 3),
     }
+    boundary = _chunk_boundary_context(prior_before, act_from)
+    if boundary:
+        body["chunk_boundary"] = boundary
     locked = locked_canon_names_payload(ws, book)
     if locked:
         body["locked_canon_names"] = locked
+    locked_cast = locked_cast_payload(ws, book)
+    if locked_cast:
+        body["locked_cast"] = locked_cast
     # Primary authority: approved intent pack (raises if missing)
     try:
         body["locked_pack"] = locked_pack_for_outliner(ws, book, act_from, act_to)
+        # Mirror compiler slice at top-level for Outliner roles that read
+        # narrative_constraints without digging into locked_pack.
+        nl = body["locked_pack"].get("narrative_lock") if isinstance(body.get("locked_pack"), dict) else None
+        if isinstance(nl, dict) and isinstance(nl.get("constraints"), dict):
+            body["narrative_constraints"] = nl["constraints"]
     except RuntimeError:
         # Backward-compat during migration: allow plan --force paths without intent
         if narrative_compiler_enabled(ws):
@@ -659,6 +758,12 @@ def plan_book(
     data["chapter_plans"] = merge_narrative_into_plans(ws, data.get("chapter_plans", []))
     save_master_plan(ws, book, data)
 
+    # Advisory only: recurring undeclared people need operator review, but may be
+    # legitimate minor cast and therefore must not auto-block or auto-register.
+    from factory.engine.lib.canon_registry import warn_invented_plan_characters
+
+    warn_invented_plan_characters(ws, data.get("chapter_plans", []), book)
+
     # Deterministic QC only here — LLM fix is a separate step (UI fix-plans / CLI).
     # Avoids silent N× plan_fixer calls that look like a hang after plan_raw_*.
     safe_print("[plan] deterministic QC (spice/word-count)…")
@@ -693,7 +798,11 @@ def _soft_intentional_early_reveal(ws: Path, issue: str) -> bool:
 
 
 def approve_plan(ws: Path, book: int | None = None) -> None:
-    from factory.engine.lib.canon_registry import CanonRegistryError, validate_plan_against_canon_registry
+    from factory.engine.lib.canon_registry import (
+        CanonRegistryError,
+        validate_plan_against_canon_registry,
+        warn_invented_plan_characters,
+    )
     from factory.engine.lib.catalog import safe_print
     from factory.engine.lib.intent_gates import g3_plan_fidelity_errors, g4_prompt_errors
     from factory.engine.lib.intent_manifest import intent_is_approved, load_intent_manifest
@@ -720,6 +829,7 @@ def approve_plan(ws: Path, book: int | None = None) -> None:
     plans = normalize_chapter_plans(data.get("chapter_plans", []))
     # Attach compiler narrative only when Lock1 approved (compiler self-gates).
     plans = merge_narrative_into_plans(ws, plans)
+    warn_invented_plan_characters(ws, plans, book_num)
     plans = [apply_deterministic_plan_fixes(p, direction) for p in plans]
     data["chapter_plans"] = plans
     man = load_intent_manifest(ws, book_num)
