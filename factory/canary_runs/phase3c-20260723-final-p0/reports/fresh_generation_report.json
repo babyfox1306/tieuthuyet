@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "kind": "fresh_generation_report",
+  "run_id": "phase3c-20260723-final-p0",
+  "generation_status": "attempted",
+  "missing_roles": [],
+  "route_snapshot": [
+    {
+      "role": "writer",
+      "group": "phase2_write",
+      "configured_group": "phase2_write",
+      "configured_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/best-coding",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/best-coding",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/best-coding",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/best-coding",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-reasoning"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "qc",
+      "group": "phase_light",
+      "configured_group": "phase_light",
+      "configured_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-fast",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-fast"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "quality_evaluator",
+      "group": "phase_quality",
+      "configured_group": "phase_quality",
+      "configured_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-fast",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-fast"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "story_contract_compiler",
+      "group": "phase_story_contract",
+      "configured_group": "phase_story_contract",
+      "configured_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-reasoning"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    }
+  ],
+  "cases": {
+    "bell": {
+      "copy_exists": true,
+      "generation_status": "attempted",
+      "note": "Fresh sequential writing requires free writer/qc routes and operator-approved contract. Canary evaluation track does not require regeneration when deferred."
+    },
+    "standalone": {
+      "copy_exists": true,
+      "generation_status": "attempted",
+      "note": "Fresh sequential writing requires free writer/qc routes and operator-approved contract. Canary evaluation track does not require regeneration when deferred."
+    },
+    "series": {
+      "copy_exists": true,
+      "generation_status": "attempted",
+      "note": "Fresh sequential writing requires free writer/qc routes and operator-approved contract. Canary evaluation track does not require regeneration when deferred."
+    }
+  },
+  "created_at": "2026-07-23T12:28:51Z",
+  "note": "Authoritative generation status lives in canary_state.json. No paid fallback. Resume must not duplicate successful model calls when digest identity matches."
+}

@@ -15,7 +15,10 @@ Input: 1 chapter_plan + list lỗi plan_qc (+ `narrative_issues` / `narrative_fi
 
 Quy tắc kỹ thuật BẮT BUỘC:
 - opens_with: câu thoại sốc HOẶC hành động căng — KHÔNG "bước vào văn phòng", KHÔNG tả mùi/ánh sáng mở màn
-- must_happen: ít nhất 3 mục cụ thể
+- must_happen: ít nhất 3 mục cụ thể — **triển khai beat intent map**, không invent mythology/cast/twist mới
+- Nếu lỗi `must_happen_betrays_map` / `chapter_map_not_covered`: viết lại must_happen + beat_summary cho khớp `chapter_map` beat; cấm đổi tầng cốt truyện
+- Nếu lỗi `duplicate_cliffhanger_tail`: giữ cliffhanger đúng 1 lần ở field `cliffhanger`; viết must_happen/summary/task thành setup dẫn tới nó, không copy/paraphrase sát câu tail
+- Nếu lỗi `adjacent_chapter_duplicate`: chương này gần trùng chương liền trước (cùng reveal MR-id hoặc must_happen/cliff gần copy). Viết lại theo beat map **của chương này**; CẤM re-fire cùng MR## / warehouse confrontation đã xong ở ch N−1; setup→payoff khác beat thì OK
 - chapter_task: phải ghi "1600-1900 chữ" hoặc "1500-2000 chữ" (hoặc words tương đương EN)
 - spice=3: chapter_task + spice_note PHẢI mô tả explicit 18+, ~40% chương — KHÔNG "chưa vượt ranh giới"
 - signature_detail_hint: lạ-mà-thật, KHÔNG nhẫn/xe/đồng hồ sáo

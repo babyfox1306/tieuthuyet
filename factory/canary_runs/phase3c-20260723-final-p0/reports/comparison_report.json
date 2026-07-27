@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "kind": "comparison_report",
+  "run_id": "phase3c-20260723-final-p0",
+  "cases": {
+    "bell": {
+      "structural": {
+        "book": 1,
+        "ready_frontier": 10,
+        "state_frontier": 6,
+        "current_chapter": 6,
+        "direction_keys": [
+          "arc",
+          "audience",
+          "bible_status",
+          "blurb",
+          "book",
+          "book1_ending",
+          "book_slug",
+          "canon_through",
+          "goal",
+          "id",
+          "narrative_profile",
+          "narrative_status",
+          "pen_name",
+          "plan_status",
+          "platform",
+          "publish_strategy",
+          "setting_hub",
+          "setting_nodes",
+          "source_concept_digest",
+          "source_narrative_digest",
+          "spice_badge",
+          "spice_default",
+          "spice_explicit_chapters",
+          "spice_level",
+          "spice_steamy_chapters",
+          "target_language",
+          "target_platforms",
+          "total_chapters",
+          "tropes"
+        ],
+        "plan_chapter_count": 10,
+        "sample_prose_digests": {
+          "1": "b9a50ad165c918da",
+          "2": "d476e355f29838f6",
+          "3": "f5f7be198ac14850",
+          "4": "3180e768e6b2d83c",
+          "5": "0b3ef55affb3514b",
+          "10": "83e620f5a10bd3da"
+        },
+        "bible_files": [
+          "series.json"
+        ],
+        "gaps": []
+      },
+      "quality_dimension_histogram": {
+        "scene_purpose": {
+          "acceptable": 3
+        },
+        "narrative_progression": {
+          "acceptable": 3
+        },
+        "character_agency": {
+          "acceptable": 3
+        },
+        "tension_or_emotional_pressure": {
+          "acceptable": 3
+        },
+        "revelation_consequence": {
+          "not_applicable": 3
+        },
+        "dialogue_function": {
+          "acceptable": 3
+        },
+        "prose_freshness": {
+          "strong": 3
+        },
+        "repetition_control": {
+          "strong": 3
+        },
+        "chapter_turn": {
+          "acceptable": 3
+        }
+      },
+      "contract_packet_summary": {
+        "auto_safe": 0,
+        "needs_review": 23,
+        "invalid": 0,
+        "compile_ok": true
+      },
+      "bell_scan": {
+        "findings": [],
+        "note": "Uses generic codes only; Bell is a regression benchmark, not production special-case."
+      },
+      "fresh_generation": {
+        "status": "not_run_or_stopped",
+        "note": "Fresh-generation requires free routes; see resource_report."
+      },
+      "repairs": []
+    },
+    "standalone": {
+      "structural": {
+        "book": 1,
+        "ready_frontier": 17,
+        "state_frontier": 16,
+        "current_chapter": 16,
+        "direction_keys": [
+          "arc",
+          "audience",
+          "bible_status",
+          "blurb",
+          "book",
+          "book1_ending",
+          "book_slug",
+          "canon_through",
+          "goal",
+          "id",
+          "narrative_profile",
+          "narrative_status",
+          "pen_name",
+          "plan_status",
+          "platform",
+          "publish_strategy",
+          "setting_hub",
+          "setting_nodes",
+          "spice_badge",
+          "spice_default",
+          "spice_explicit_chapters",
+          "spice_level",
+          "spice_steamy_chapters",
+          "target_language",
+          "target_platforms",
+          "total_chapters",
+          "tropes"
+        ],
+        "plan_chapter_count": 17,
+        "sample_prose_digests": {
+          "1": "163fb3cce17deb32",
+          "2": "40897f7c33812402",
+          "3": "4e4bb46d7185cc5b",
+          "4": "72ec8d6b1d66cfeb",
+          "5": "717112d496be7568",
+          "17": "45f4f45859088b65"
+        },
+        "bible_files": [
+          "series.json"
+        ],
+        "gaps": []
+      },
+      "quality_dimension_histogram": {
+        "scene_purpose": {
+          "acceptable": 3
+        },
+        "narrative_progression": {
+          "acceptable": 3
+        },
+        "character_agency": {
+          "acceptable": 3
+        },
+        "tension_or_emotional_pressure": {
+          "acceptable": 3
+        },
+        "revelation_consequence": {
+          "not_applicable": 3
+        },
+        "dialogue_function": {
+          "acceptable": 3
+        },
+        "prose_freshness": {
+          "strong": 3
+        },
+        "repetition_control": {
+          "strong": 3
+        },
+        "chapter_turn": {
+          "acceptable": 3
+        }
+      },
+      "contract_packet_summary": {
+        "auto_safe": 0,
+        "needs_review": 11,
+        "invalid": 0,
+        "compile_ok": true
+      },
+      "bell_scan": null,
+      "fresh_generation": {
+        "status": "not_run_or_stopped",
+        "note": "Fresh-generation requires free routes; see resource_report."
+      },
+      "repairs": []
+    },
+    "series": {
+      "structural": {
+        "book": 2,
+        "ready_frontier": 10,
+        "state_frontier": 9,
+        "current_chapter": 9,
+        "direction_keys": [
+          "arc",
+          "audience",
+          "bible_status",
+          "blurb",
+          "book",
+          "book1_ending",
+          "book_slug",
+          "canon_through",
+          "goal",
+          "id",
+          "narrative_profile",
+          "narrative_status",
+          "pen_name",
+          "plan_status",
+          "platform",
+          "publish_strategy",
+          "setting_hub",
+          "setting_nodes",
+          "source_concept_digest",
+          "source_narrative_digest",
+          "spice_badge",
+          "spice_default",
+          "spice_explicit_chapters",
+          "spice_level",
+          "spice_steamy_chapters",
+          "target_language",
+          "target_platforms",
+          "total_chapters",
+          "tropes"
+        ],
+        "plan_chapter_count": 10,
+        "sample_prose_digests": {
+          "1": "97c780e523585abc",
+          "2": "5b54e293030c67a4",
+          "3": "8384e6c8b090ba2d",
+          "4": "f506e3374e8c46b2",
+          "5": "355274a45c8e9b3c",
+          "10": "5aa2aeb36c05df44"
+        },
+        "bible_files": [
+          "series.json"
+        ],
+        "gaps": []
+      },
+      "quality_dimension_histogram": {
+        "scene_purpose": {
+          "acceptable": 3
+        },
+        "narrative_progression": {
+          "acceptable": 3
+        },
+        "character_agency": {
+          "acceptable": 3
+        },
+        "tension_or_emotional_pressure": {
+          "acceptable": 3
+        },
+        "revelation_consequence": {
+          "not_applicable": 3
+        },
+        "dialogue_function": {
+          "acceptable": 3
+        },
+        "prose_freshness": {
+          "strong": 3
+        },
+        "repetition_control": {
+          "strong": 3
+        },
+        "chapter_turn": {
+          "acceptable": 3
+        }
+      },
+      "contract_packet_summary": {
+        "auto_safe": 0,
+        "needs_review": 10,
+        "invalid": 0,
+        "compile_ok": true
+      },
+      "bell_scan": null,
+      "fresh_generation": {
+        "status": "not_run_or_stopped",
+        "note": "Fresh-generation requires free routes; see resource_report."
+      },
+      "repairs": []
+    }
+  },
+  "created_at": "2026-07-23T12:28:51Z",
+  "note": "Does not claim bestseller quality. Critical dimensions are not hidden behind one aggregate score."
+}

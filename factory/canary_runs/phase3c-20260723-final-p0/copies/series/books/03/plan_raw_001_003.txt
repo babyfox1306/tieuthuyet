@@ -1,0 +1,81 @@
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Architect's Shadow",
+      "slug": "the-architects-shadow",
+      "one_line_summary": "Pierre Leclerc launches his investigation, convinced Sofia Bellini is the architect behind the tribunal system and summit tragedies.",
+      "beat_summary": "Pierre Leclerc, haunted by the memory of the summits, begins his probe into the tribunal archives. He is certain Sofia Bellini is the architect responsible and builds his case through official testimonies. Sofia Bellini appears for the first time in the records, unwavering in her belief and confession of her role. Pierre’s obsession with finding and exposing the single culprit sets the tone for the inquiry.",
+      "must_happen": [
+        "Pierre Leclerc pores over tribunal archives, highlighting instances that implicate Sofia Bellini as the mastermind.",
+        "Sofia Bellini appears in official testimony, calmly and coherently confirming her role as the system’s architect.",
+        "Chief Adjudicator Rasmus reaffirms the narrative that Sofia Bellini alone built the system.",
+        "Magda Lorenz is mentioned as someone aware of Sofia Bellini’s connection to Nadia Petrescu, but without knowledge of any deeper secrets.",
+        "[ROMANCE] In a recovered transcript, Elias van Doren’s voice is heard defending Sofia Bellini’s character, which Pierre dismisses as irrelevant, but the moment lingers with an odd emotional tension."
+      ],
+      "must_not": [
+        "No suggestion that Sofia Bellini was authored or created by the system.",
+        "No revelation that the official record may be false or rewritten."
+      ],
+      "opens_with": "‘She built it, didn’t she? Every line of the tribunal’s machinery — her signature is everywhere.’",
+      "cliffhanger": "Pierre Leclerc uncovers a sealed folder labeled ‘Bellini: Confidential’ that promises new testimony, but he is interrupted before opening it.",
+      "signature_detail_hint": "A faint scent of iron clings to the tribunal’s ink-stained folders — inexplicably fresh, as if the record itself bleeds.",
+      "emotional_beat": "Pierre’s certainty is edged with desperation, while Sofia Bellini’s measured calm unsettles everyone who reads her words.",
+      "spice": 1,
+      "spice_note": "No explicit content; a subtle emotional undercurrent in the recorded exchange between Sofia Bellini and Elias van Doren.",
+      "chapter_task": "Establish Pierre Leclerc’s obsession with Sofia Bellini as the architect; introduce the official narrative and the records’ tone. Target 1600–1900 words.",
+      "carries_to_next": "The unopened confidential Bellini folder sets up the next phase of Pierre’s investigation."
+    },
+    {
+      "chapter": 2,
+      "title": "Testimony in the Ashes",
+      "slug": "testimony-in-the-ashes",
+      "one_line_summary": "Pierre Leclerc gathers more evidence and testimonies, further cementing his conviction that Sofia Bellini is the sole architect.",
+      "beat_summary": "Pierre Leclerc pursues survivors’ accounts and tribunal records, each piece of evidence pointing to Sofia Bellini’s guilt. Sofia Bellini’s repeated admissions and unwavering composure reinforce the official narrative. Pierre’s single-minded pursuit is contrasted by Magda Lorenz’s reluctance to discuss Sofia Bellini’s past, adding tension to the investigation.",
+      "must_happen": [
+        "Pierre Leclerc interviews Magda Lorenz, who is evasive about Sofia Bellini’s relationship with Nadia Petrescu.",
+        "A new statement from Sofia Bellini is added to the record, mirroring her previous confession — her details are chillingly consistent.",
+        "Pierre Leclerc finds a cross-referenced note citing Chief Adjudicator Rasmus’s trust in the system’s official version.",
+        "[ROMANCE] During the review of old transcripts, Pierre notes an ambiguous line from Elias van Doren about Sofia Bellini’s ‘impossible steadiness,’ hinting at a past bond."
+      ],
+      "must_not": [
+        "No hint that Sofia Bellini’s guilt is a constructed narrative.",
+        "No suggestion that the system itself is altering records or testifying."
+      ],
+      "opens_with": "‘Every testimony points to her. What am I missing — or is that the point?’ Pierre asks himself, pen tapping against the tape recorder.",
+      "cliffhanger": "Pierre receives an anonymous message warning him not to trust every record — but the sender’s identity is left unknown.",
+      "signature_detail_hint": "A line of marginalia in red ink appears in the testimony, but no one recalls writing it.",
+      "emotional_beat": "Pierre’s growing obsession collides with the cold consistency of Sofia Bellini, deepening his isolation.",
+      "spice": 1,
+      "spice_note": "No explicit content; only tension in Pierre’s interpretation of the transcript between Sofia Bellini and Elias van Doren.",
+      "chapter_task": "Deepen the official case against Sofia Bellini through testimony and evidence; show Pierre’s unwillingness to doubt the narrative. Target 1600–1900 words.",
+      "carries_to_next": "The anonymous warning introduces doubt — Pierre is forced to decide whether to follow it or dismiss it."
+    },
+    {
+      "chapter": 3,
+      "title": "The Unbreakable Pattern",
+      "slug": "the-unbreakable-pattern",
+      "one_line_summary": "Pierre Leclerc plants his first clue as he doggedly reinforces the case against Sofia Bellini, refusing to entertain any possibility but her guilt.",
+      "beat_summary": "Pierre Leclerc follows the trail of evidence to a pattern in the tribunal’s communication logs, noting how every line circles back to Sofia Bellini. He records an official clue in the investigation — a newly surfaced message that seems to confirm Sofia Bellini’s guilt. Sofia Bellini’s self-incrimination remains unwavering. Elias van Doren’s earlier defense of Sofia Bellini is revisited, but Pierre reads it only as further proof of her manipulative power.",
+      "must_happen": [
+        "Pierre Leclerc identifies and records an official clue (C001) in the logs, which appears to decisively incriminate Sofia Bellini.",
+        "Sofia Bellini provides yet another confession, repeating details with near-mechanical precision.",
+        "Pierre Leclerc revisits the transcript of Elias van Doren defending Sofia Bellini, this time interpreting his words as evidence of her influence.",
+        "[ROMANCE] Pierre lingers over a line in Elias van Doren’s testimony, noticing the subtle warmth directed at Sofia Bellini, which he immediately rationalizes as bias."
+      ],
+      "must_not": [
+        "No discovery that the clue was planted or fabricated by an external force.",
+        "No questioning of the record’s authenticity or Sofia Bellini’s self-knowledge."
+      ],
+      "opens_with": "‘It always leads back to her. No matter where I start, the pattern ends with Sofia Bellini.’",
+      "cliffhanger": "As Pierre logs the new clue, he notices the file’s metadata has been altered — but the official system reports no changes.",
+      "signature_detail_hint": "A faint, repeated smudge on the page, as if a left-handed writer kept returning to the same line.",
+      "emotional_beat": "Pierre’s certainty starts to feel like a trap, but he shoves aside any doubt, hunting for closure.",
+      "spice": 1,
+      "spice_note": "No explicit content; the closest emotional friction is in Elias van Doren’s gentle phrasing about Sofia Bellini.",
+      "chapter_task": "Plant the first official clue (C001) that appears to confirm Sofia Bellini’s guilt; reinforce Pierre’s tunnel vision and the infallibility of the official record. Target 1600–1900 words.",
+      "carries_to_next": "The altered metadata and the planted clue set up deeper investigation and coming unease."
+    }
+  ]
+}

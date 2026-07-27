@@ -1,0 +1,196 @@
+```json
+{
+  "act": [7, 9],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Escape Plan",
+      "slug": "the-escape-plan",
+      "one_line_summary": "Nora reveals her escape plan to the housekeeper (unnamed narrator), but the details feel too convenient, and the housekeeper (unnamed narrator) suspects a trap.",
+      "beat_summary": "After Julian's confrontation, the housekeeper (unnamed narrator) is cornered. Nora intercepts her in the hallway and pulls her into the sunroom, whispering that she has a plan to escape. Nora reveals she has been hiding cash, a fake passport, and a burner phone for months. She asks the housekeeper (unnamed narrator) to help her flee during Julian's next business trip — in three days. The housekeeper (unnamed narrator) agrees, but internally she notes the plan is too perfect: the cash is in new bills, the passport photo is recent, and Nora seems almost rehearsed. The housekeeper (unnamed narrator) hides her suspicion and plays along, but she begins to wonder if Nora is setting her up to take the fall for something.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) is confronted by Julian in her room. He does not accuse her directly but warns her that Nora has 'destroyed people before.' He leaves without raising his voice, but the housekeeper (unnamed narrator) feels the threat.",
+        "Nora intercepts the housekeeper (unnamed narrator) in the hallway and pulls her into the sunroom. She reveals her escape plan: cash, a fake passport, a burner phone — all hidden in a hollowed-out book in the library.",
+        "The housekeeper (unnamed narrator) examines the escape kit. She notices the cash is in crisp, sequential new bills — not the kind of money someone would save over time. The passport photo is professionally done, not a home job.",
+        "Nora asks the housekeeper (unnamed narrator) to drive her to the train station on the night of Julian's business trip. She says, 'You're the only one I trust.' The housekeeper (unnamed narrator) agrees, touching her earlobe.",
+        "That night, the housekeeper (unnamed narrator) writes in her hidden journal: 'The plan is too clean. She's not running from him. She's running toward something — and she wants me to come along.'"
+      ],
+      "must_not": [
+        "Do not reveal that the escape kit is a prop Nora prepared specifically for the housekeeper (unnamed narrator) to find.",
+        "Do not reveal that Nora's 'escape' is actually the first step of the frame job — she plans to disappear and leave evidence pointing to the housekeeper (unnamed narrator).",
+        "Do not reveal that Julian's warning about Nora destroying people is true."
+      ],
+      "opens_with": "\"I know you've been in my wife's room,\" Julian said, and his voice was soft, almost kind. That was the most terrifying part.",
+      "cliffhanger": "The housekeeper (unnamed narrator) agrees to Nora's plan. But as she leaves the sunroom, she glances back and sees Nora staring at the escape kit with an expression that is not fear — it is satisfaction.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the bills in Nora's escape cash: exactly 47 hundred-dollar bills. She wonders if Nora chose that number deliberately.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold clarity: she is no longer a predator in this house. She is being hunted. Her fear sharpens into calculation.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is psychological and predatory — both women are circling each other like chess players.",
+      "chapter_task": "Write 1700-1900 words planting clue C018 (the too-perfect escape kit) as a seed for Tier 4. Julian's warning should feel genuine but ambiguous — the reader should still suspect him. Nora's escape plan should seem like a lifeline to the reader, but the housekeeper's (unnamed narrator) internal narration should hint that something is wrong. End with Nora's satisfied smile to create a chilling cliffhanger. Maintain the unreliable narrator's voice: the housekeeper (unnamed narrator) is now actively hiding her suspicions from the reader, creating dramatic irony.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has agreed to help Nora escape, but she is now certain she is being set up. She must decide whether to go through with the plan or find evidence of Nora's true intentions before the three-day deadline.",
+      "narrative": {
+        "clues_plant": ["C018"],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T04", "T05", "T06", "T07", "T08", "T09"],
+        "knowledge": {
+          "pov_characters": ["the_housekeeper_narrator", "the_wife", "the_husband", "clara_higgins", "dr_ellis"],
+          "may_know": {
+            "the_housekeeper_narrator": {
+              "knows": ["she is a con artist with a criminal record", "she is entering the house to rob or blackmail the family", "she lied about her past on the job application", "Nora's escape plan feels staged", "the cash is too clean", "the passport photo is professional"],
+              "does_not_know": ["the wife's true plan to frame her", "the wife researched her specifically", "the previous housekeeper's fate"]
+            },
+            "the_wife": {
+              "knows": ["she is the architect of a plan to frame the housekeeper", "the housekeeper's criminal record", "the housekeeper is perfect for her plan", "she has done this before with Clara Higgins", "the husband is her target"],
+              "does_not_know": ["the housekeeper's own hidden agenda (to rob/blackmail)", "the housekeeper will discover her plan"]
+            },
+            "the_husband": {
+              "knows": ["his wife is manipulative and has been gaslighting him for years", "he is not a predator", "his wife controls the narrative of their marriage", "he is afraid of what his wife might do"],
+              "does_not_know": ["his wife is planning to frame the housekeeper for his murder", "the housekeeper is a con artist", "the previous housekeeper was almost framed"]
+            },
+            "clara_higgins": {
+              "knows": ["she was the wife's first attempt at a frame job", "she escaped but left evidence behind", "the wife is dangerous"],
+              "does_not_know": ["the wife has found a new target (the housekeeper)", "her evidence will be discovered by the new housekeeper"]
+            },
+            "dr_ellis": {
+              "knows": ["the husband is stressed and unhappy", "the wife seems frail but he has noticed something 'off' about her"],
+              "does_not_know": ["the wife's true nature", "the murder plan"]
+            }
+          },
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The File",
+      "slug": "the-file",
+      "one_line_summary": "The housekeeper (unnamed narrator) examines the file from the husband's study and realizes she was targeted for this job — she is not an intruder but a pawn in a larger game.",
+      "beat_summary": "With Julian away for the afternoon, the housekeeper (unnamed narrator) breaks into his study. She finds a locked drawer and picks the lock (a skill from her past). Inside, she discovers a file on herself — her real name, her criminal record, a photograph of her from three years ago. Julian knew who she was when he hired her. But the file also contains notes in Nora's handwriting: 'She fits the profile. Clara was too skittish. This one will stay.' The housekeeper (unnamed narrator) realizes she was not hired by Julian — she was selected by Nora. She was chosen specifically because of her criminal past. The question is: for what?",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) waits until Julian leaves for a business call, then breaks into his study using a lockpick she keeps hidden in her shoe.",
+        "She finds a locked drawer in Julian's desk and picks it open. Inside, she discovers a manila folder with her name — her real name, not the alias she used on the job application.",
+        "The file contains her criminal record, a photograph of her from three years ago, and notes in two handwritings: Julian's (clinical, factual) and Nora's (more personal, with observations like 'She lies by touching her ear').",
+        "The housekeeper (unnamed narrator) finds a note in Nora's handwriting: 'Clara was too skittish. This one will stay. She has nowhere else to go.' She realizes she was not an intruder — she was recruited.",
+        "The housekeeper (unnamed narrator) photographs the file with her phone and replaces it exactly as she found it. She leaves the study, her mind racing. She is not the predator. She is the patsy."
+      ],
+      "must_not": [
+        "Do not reveal that Julian's file is a decoy — Nora planted it there to make the housekeeper (unnamed narrator) think Julian is the mastermind.",
+        "Do not reveal that Nora's notes in the file are deliberately misleading — she wants the housekeeper (unnamed narrator) to suspect Julian, not her.",
+        "Do not reveal the housekeeper's (unnamed narrator) real name or full criminal history — only hint at it."
+      ],
+      "opens_with": "The lockpick slid into the drawer like it had been waiting for me. Click. The drawer opened, and my past stared back at me in black and white.",
+      "cliffhanger": "The housekeeper (unnamed narrator) closes the drawer and turns to leave — and sees Nora standing in the doorway, watching her. Nora smiles. 'Found what you were looking for?' she asks. Her voice is not afraid. It is amused.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of times her real name appears in the file: 47 times. She wonders if the universe is still mocking her, or if someone is sending a message.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels the floor drop out from under her. She is not in control. She has never been in control. Every move she made was anticipated. She is terrified and furious.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The power dynamic is inverted: the housekeeper (unnamed narrator) thought she was the predator, but she is the prey.",
+      "chapter_task": "Write 1700-1900 words planting clue C006 (the file with Nora's handwriting) as a seed for Tier 2. The break-in scene should show the housekeeper's (unnamed narrator) competence (she is good at this) but also her vulnerability (she is outmatched). Nora's appearance at the end should be a genuine shock — the reader should feel the trap closing. Maintain the unreliable narrator's voice: the housekeeper (unnamed narrator) is now realizing how much she has been manipulated, but she still doesn't know the full extent.",
+      "carries_to_next": "The housekeeper (unnamed narrator) now knows she was specifically targeted for this job by Nora. She has three days before the 'escape.' She must decide whether to confront Nora, flee, or play along and try to turn the tables.",
+      "narrative": {
+        "clues_plant": ["C006"],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T04", "T05", "T06", "T07", "T08", "T09"],
+        "knowledge": {
+          "pov_characters": ["the_housekeeper_narrator", "the_wife", "the_husband", "clara_higgins", "dr_ellis"],
+          "may_know": {
+            "the_housekeeper_narrator": {
+              "knows": ["she is a con artist with a criminal record", "she is entering the house to rob or blackmail the family", "she lied about her past on the job application", "Nora's escape plan feels staged", "the cash is too clean", "the passport photo is professional", "she was specifically targeted for this job by Nora", "Nora knows her real name and criminal history"],
+              "does_not_know": ["the wife's true plan to frame her", "the previous housekeeper's fate", "that the file was planted by Nora to misdirect her"]
+            },
+            "the_wife": {
+              "knows": ["she is the architect of a plan to frame the housekeeper", "the housekeeper's criminal record", "the housekeeper is perfect for her plan", "she has done this before with Clara Higgins", "the husband is her target", "the housekeeper has found the file"],
+              "does_not_know": ["the housekeeper's own hidden agenda (to rob/blackmail)", "the housekeeper will discover her full plan"]
+            },
+            "the_husband": {
+              "knows": ["his wife is manipulative and has been gaslighting him for years", "he is not a predator", "his wife controls the narrative of their marriage", "he is afraid of what his wife might do"],
+              "does_not_know": ["his wife is planning to frame the housekeeper for his murder", "the housekeeper is a con artist", "the previous housekeeper was almost framed"]
+            },
+            "clara_higgins": {
+              "knows": ["she was the wife's first attempt at a frame job", "she escaped but left evidence behind", "the wife is dangerous"],
+              "does_not_know": ["the wife has found a new target (the housekeeper)", "her evidence will be discovered by the new housekeeper"]
+            },
+            "dr_ellis": {
+              "knows": ["the husband is stressed and unhappy", "the wife seems frail but he has noticed something 'off' about her"],
+              "does_not_know": ["the wife's true nature", "the murder plan"]
+            }
+          },
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "The Basement",
+      "slug": "the-basement",
+      "one_line_summary": "The housekeeper (unnamed narrator) discovers a hidden room in the basement containing evidence of the husband's previous 'housekeepers' — and realizes she is not the first woman he has recruited.",
+      "beat_summary": "After Nora's ambush in the study, the housekeeper (unnamed narrator) retreats to the kitchen to think. She notices a loose floorboard near the pantry and pries it open, finding a staircase to a hidden basement room. Inside, she discovers a small, windowless chamber with a cot, a sink, and a wall covered in photographs — all of women who worked as housekeepers at Blackwood Estate. Some are marked with dates. Some have 'DECEASED' written in red ink. The most recent photograph is Clara Higgins. The housekeeper (unnamed narrator) realizes Julian has been bringing women here for years — but for what purpose? She photographs everything and leaves, her hands shaking. She now believes Julian is a predator of the worst kind. But she also wonders: did Nora know? Was Nora a victim too, or an accomplice?",
+      "must_happen": [
+        "After Nora's ambush, the housekeeper (unnamed narrator) retreats to the kitchen to collect herself. She notices a loose floorboard near the pantry and pries it open, revealing a hidden staircase.",
+        "She descends into a hidden basement room. It is windowless, with a single cot, a sink, and a wall covered in photographs of women — all former housekeepers at Blackwood Estate.",
+        "The housekeeper (unnamed narrator) examines the photographs. Some are marked with dates of employment. Several have 'DECEASED' written in red ink. The most recent is Clara Higgins, marked 'FLED.'",
+        "She finds a photograph of herself — taken from her job interview, already pinned to the wall. Below it, in Julian's handwriting: 'Current. Status: Active.'",
+        "The housekeeper (unnamed narrator) photographs the entire wall with her phone and flees the basement. She realizes Julian is not just a controlling husband — he is a serial predator who has been recruiting vulnerable women for years."
+      ],
+      "must_not": [
+        "Do not reveal that Julian's 'basement of housekeepers' is actually Nora's creation — she planted the photographs and the 'DECEASED' markings to frame Julian for a crime he didn't commit.",
+        "Do not reveal that the women marked 'DECEASED' are alive and living under new identities — Nora helped them escape and used their stories to build her frame job.",
+        "Do not reveal that the housekeeper's (unnamed narrator) photograph was placed there by Nora, not Julian."
+      ],
+      "opens_with": "The floorboard creaked under my foot, and then it gave way, revealing a darkness that smelled of dust and secrets.",
+      "cliffhanger": "The housekeeper (unnamed narrator) returns to her room and locks the door. She spreads the photographs from her phone on the bed. She now has evidence that Julian is a predator. But as she studies the images, she notices something: in every photograph of the 'DECEASED' women, there is a shadow in the corner — a reflection. It is Nora. Watching.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the photographs on the wall: 47. She stops counting after that. The number is no longer a coincidence. It is a signature.",
+      "emotional_beat": "The housekeeper (unnamed narrator) is drowning in paranoia. Every piece of evidence points to Julian, but Nora is always in the frame — literally. She trusts no one. She is alone.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The horror is psychological and claustrophobic. The housekeeper (unnamed narrator) is trapped in a house where everyone is a monster.",
+      "chapter_task": "Write 1700-1900 words planting clue C014 (the basement room with the photograph wall) as a seed for Tier 3. The discovery should feel like a major reveal — the reader should believe Julian is a serial predator. But plant subtle hints that Nora is connected: the reflection in the photographs, the handwriting on the 'DECEASED' markings (which should look similar to Nora's handwriting from the diary). End with the chilling realization that Nora is always watching. Maintain the unreliable narrator's voice: the housekeeper (unnamed narrator) is now terrified and making assumptions based on incomplete evidence.",
+      "carries_to_next": "The housekeeper (unnamed narrator) now has evidence that Julian has been bringing women to the house for years, and that several have died. She has two days until the 'escape.' She must decide whether to run, fight, or try to expose Julian — but Nora's shadow in every photograph suggests she is not a victim. She may be the puppet master.",
+      "narrative": {
+        "clues_plant": ["C014"],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T04", "T05", "T06", "T07", "T08", "T09"],
+        "knowledge": {
+          "pov_characters": ["the_housekeeper_narrator", "the_wife", "the_husband", "clara_higgins", "dr_ellis"],
+          "may_know": {
+            "the_housekeeper_narrator": {
+              "knows": ["she is a con artist with a criminal record", "she is entering the house to rob or blackmail the family", "she lied about her past on the job application", "Nora's escape plan feels staged", "the cash is too clean", "the passport photo is professional", "she was specifically targeted for this job by Nora", "Nora knows her real name and criminal history", "there is a hidden basement room with photographs of former housekeepers", "several women are marked as deceased", "her own photograph is on the wall", "Nora appears in the reflection of every photograph"],
+              "does_not_know": ["the wife's true plan to frame her", "the previous housekeeper's fate", "that the basement was staged by Nora", "that the 'deceased' women are alive"]
+            },
+            "the_wife": {
+              "knows": ["she is the architect of a plan to frame the housekeeper", "the housekeeper's criminal record", "the housekeeper is perfect for her plan", "she has done this before with Clara Higgins", "the husband is her target", "the housekeeper has found the file", "the housekeeper has found the basement"],
+              "does_not_know": ["the housekeeper's own hidden agenda (to rob/blackmail)", "the housekeeper will discover her full plan"]
+            },
+            "the_husband": {
+              "knows": ["his wife is manipulative and has been gaslighting him for years", "he is not a predator", "his wife controls the narrative of their marriage", "he is afraid of what his wife might do"],
+              "does_not_know": ["his wife is planning to frame the housekeeper for his murder", "the housekeeper is a con artist", "the previous housekeeper was almost framed", "his wife has created a false basement evidence room"]
+            },
+            "clara_higgins": {
+              "knows": ["she was the wife's first attempt at a frame job", "she escaped but left evidence behind", "the wife is dangerous"],
+              "does_not_know": ["the wife has found a new target (the housekeeper)", "her evidence will be discovered by the new housekeeper"]
+            },
+            "dr_ellis": {
+              "knows": ["the husband is stressed and unhappy", "the wife seems frail but he has noticed something 'off' about her"],
+              "does_not_know": ["the wife's true nature", "the murder plan"]
+            }
+          },
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

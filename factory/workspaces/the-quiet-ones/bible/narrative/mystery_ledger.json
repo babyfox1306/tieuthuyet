@@ -1,0 +1,255 @@
+{
+  "main_mystery": "Will Elle Reyes survive the two-way hunt with Damien Kroll, and will her secret life as a vigilante executioner be exposed?",
+  "truth": "Elle is a vigilante killer who targets guilty men the system has failed to punish. Damien Kroll is one such man, but unlike her previous targets, he has figured out what she is and has built a case against her, including evidence of her very first kill. The two-way hunt ends with Kroll dead by an 'accident' Elle engineers, but the evidence of her first kill survives in the hands of an unknown third party, turning Elle from hunter to leashed asset.",
+  "canonical_reveal_chapter": 38,
+  "red_herrings": [
+    {
+      "id": "RH01",
+      "description": "Sasha Okafor is the leak — she has access to all of Elle's case files and has been acting nervous in chapters 14-18.",
+      "plant_chapter": 14,
+      "payoff_chapter": 28,
+      "status": "false_lead"
+    },
+    {
+      "id": "RH02",
+      "description": "Wren Delgado is selling Elle's digital trail to an unknown buyer — a data broker contact is mentioned in chapter 19.",
+      "plant_chapter": 19,
+      "payoff_chapter": 28,
+      "status": "false_lead"
+    },
+    {
+      "id": "RH03",
+      "description": "Detective Marcus Holt has a secret informant inside Elle's network — he is seen meeting someone in chapter 22.",
+      "plant_chapter": 22,
+      "payoff_chapter": 33,
+      "status": "false_lead"
+    },
+    {
+      "id": "RH04",
+      "description": "Damien Kroll's dead-man's-switch is a bluff — he has no real evidence, only a fabricated file to scare Elle.",
+      "plant_chapter": 15,
+      "payoff_chapter": 36,
+      "status": "false_lead"
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "MR01",
+      "description": "Elle's origin wound fully revealed: Mara Reyes was murdered by a man who walked free on a technicality; Elle killed him in an 'accident' six months later — her first kill.",
+      "chapter": 34,
+      "required_clues": [
+        "C004",
+        "C006",
+        "C009",
+        "C012"
+      ],
+      "type": "backstory_reveal"
+    },
+    {
+      "id": "MR02",
+      "description": "Priya Anand is the leak — she has been feeding information to Damien Kroll under threat to her family.",
+      "chapter": 28,
+      "required_clues": [
+        "C007",
+        "C010",
+        "C013"
+      ],
+      "type": "betrayal_reveal"
+    },
+    {
+      "id": "MR03",
+      "description": "Damien Kroll has evidence of Elle's first kill and has rigged a dead-man's-switch to release it if he dies.",
+      "chapter": 20,
+      "required_clues": [
+        "C005",
+        "C008",
+        "C011"
+      ],
+      "type": "threat_reveal"
+    },
+    {
+      "id": "MR04",
+      "description": "Elle engineers Kroll's 'accident' — a staged suicide with a recorded confession that airs on her podcast.",
+      "chapter": 36,
+      "required_clues": [
+        "C014",
+        "C015",
+        "C016"
+      ],
+      "type": "resolution_reveal"
+    },
+    {
+      "id": "MR05",
+      "description": "The evidence of Elle's first kill surfaces in the hands of an unknown third party who contacts Elle in the final beat.",
+      "chapter": 38,
+      "required_clues": [
+        "C017",
+        "C018"
+      ],
+      "type": "hook_reveal"
+    },
+    {
+      "id": "MR06",
+      "description": "Detective Marcus Holt is close to connecting Elle to Kroll's death but is distracted by the surfaced evidence.",
+      "chapter": 38,
+      "required_clues": [
+        "C019"
+      ],
+      "type": "threat_reveal"
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "description": "Elle's thumb-tapping habit when making a decision — a tell that she is about to act.",
+      "plant_chapter": 1,
+      "payoff_chapter": 36,
+      "type": "behavioral_clue",
+      "related_to": "Elle's methodology"
+    },
+    {
+      "id": "C002",
+      "description": "Mara Reyes's name appears in an old newspaper clipping in Elle's apartment — a hint of the origin wound.",
+      "plant_chapter": 3,
+      "payoff_chapter": 10,
+      "type": "document_clue",
+      "related_to": "Origin wound"
+    },
+    {
+      "id": "C003",
+      "description": "A deleted audio file on Elle's laptop labeled 'Mara Case — Closed' — a digital footprint of her first kill.",
+      "plant_chapter": 5,
+      "payoff_chapter": 34,
+      "type": "digital_clue",
+      "related_to": "First kill"
+    },
+    {
+      "id": "C004",
+      "description": "Elle's sister's murder case file — shows the killer walked free on a technicality (evidence mishandling).",
+      "plant_chapter": 10,
+      "payoff_chapter": 34,
+      "type": "document_clue",
+      "related_to": "Origin wound"
+    },
+    {
+      "id": "C005",
+      "description": "Damien Kroll's private investigator has been digging into Elle's past — a trail of inquiries about her sister's case.",
+      "plant_chapter": 8,
+      "payoff_chapter": 20,
+      "type": "investigative_clue",
+      "related_to": "Kroll's counter-investigation"
+    },
+    {
+      "id": "C006",
+      "description": "An old photo of Elle with her sister Mara — the reader sees Elle's expression change when she looks at it.",
+      "plant_chapter": 12,
+      "payoff_chapter": 34,
+      "type": "emotional_clue",
+      "related_to": "Origin wound"
+    },
+    {
+      "id": "C007",
+      "description": "Priya Anand's phone records show a series of calls to an unknown number during the week of chapter 18.",
+      "plant_chapter": 18,
+      "payoff_chapter": 28,
+      "type": "digital_clue",
+      "related_to": "The leak"
+    },
+    {
+      "id": "C008",
+      "description": "Kroll's lawyer mentions a 'dead-man's-switch' document during a tense phone call Elle overhears.",
+      "plant_chapter": 15,
+      "payoff_chapter": 20,
+      "type": "verbal_clue",
+      "related_to": "Kroll's dead-man's-switch"
+    },
+    {
+      "id": "C009",
+      "description": "Elle's first kill was staged as a car accident — a detail she reveals to Wren in a moment of vulnerability.",
+      "plant_chapter": 19,
+      "payoff_chapter": 34,
+      "type": "verbal_clue",
+      "related_to": "First kill"
+    },
+    {
+      "id": "C010",
+      "description": "Priya's daughter's school records show an unexplained transfer — a sign of coercion.",
+      "plant_chapter": 22,
+      "payoff_chapter": 28,
+      "type": "document_clue",
+      "related_to": "The leak"
+    },
+    {
+      "id": "C011",
+      "description": "A safe-deposit box key found in Kroll's office — leads to the evidence of Elle's first kill.",
+      "plant_chapter": 24,
+      "payoff_chapter": 36,
+      "type": "physical_clue",
+      "related_to": "Kroll's evidence"
+    },
+    {
+      "id": "C012",
+      "description": "The name of the man who killed Mara Reyes — Lucas Vance — appears in an old court document Elle keeps hidden.",
+      "plant_chapter": 28,
+      "payoff_chapter": 34,
+      "type": "document_clue",
+      "related_to": "Origin wound"
+    },
+    {
+      "id": "C013",
+      "description": "Priya's confession letter — she wrote it but never sent it; Elle finds it in her desk.",
+      "plant_chapter": 30,
+      "payoff_chapter": 33,
+      "type": "document_clue",
+      "related_to": "The leak"
+    },
+    {
+      "id": "C014",
+      "description": "Elle records a fake confession from Kroll using audio editing — a digital manipulation clue.",
+      "plant_chapter": 32,
+      "payoff_chapter": 36,
+      "type": "digital_clue",
+      "related_to": "Kroll's engineered death"
+    },
+    {
+      "id": "C015",
+      "description": "A staged suicide note written in Kroll's style — Elle studies his handwriting and speech patterns.",
+      "plant_chapter": 33,
+      "payoff_chapter": 36,
+      "type": "behavioral_clue",
+      "related_to": "Kroll's engineered death"
+    },
+    {
+      "id": "C016",
+      "description": "Kroll's body is found in his home office with a gun in his hand — the scene is too clean, a tell for Holt.",
+      "plant_chapter": 36,
+      "payoff_chapter": 38,
+      "type": "physical_clue",
+      "related_to": "Kroll's death"
+    },
+    {
+      "id": "C017",
+      "description": "An encrypted email arrives in Elle's inbox after Kroll's death — the dead-man's-switch has been triggered.",
+      "plant_chapter": 37,
+      "payoff_chapter": 38,
+      "type": "digital_clue",
+      "related_to": "First kill evidence"
+    },
+    {
+      "id": "C018",
+      "description": "The email contains a single line: 'You work for us now, Elle. Reply to confirm.' — no signature.",
+      "plant_chapter": 38,
+      "payoff_chapter": 38,
+      "type": "digital_clue",
+      "related_to": "Book 2 hook"
+    },
+    {
+      "id": "C019",
+      "description": "Holt finds a discrepancy in Kroll's time of death — the gunshot doesn't match the time of the supposed suicide.",
+      "plant_chapter": 37,
+      "payoff_chapter": 38,
+      "type": "forensic_clue",
+      "related_to": "Holt's investigation"
+    }
+  ]
+}

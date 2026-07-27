@@ -50,6 +50,7 @@ def _form_body(concept: dict) -> dict:
         "must_include": list(concept.get("must_include") or []),
         "must_avoid": list(concept.get("must_avoid") or []),
         "notes": concept.get("notes", ""),
+        "characters": list(concept.get("characters") or []),
     }
 
 
@@ -151,6 +152,178 @@ class ConceptRoundTripTests(unittest.TestCase):
         self.assertEqual(after["true_plot"], RICH_CONCEPT["true_plot"])
         self.assertEqual(after["must_include"], RICH_CONCEPT["must_include"])
         self.assertTrue(after["intentional_early_reveal"])
+
+    def test_characters_form_field_roundtrip(self):
+        body = _form_body(RICH_CONCEPT)
+        body["characters"] = [
+            {"name": "Elle Reyes", "role": "lead"},
+            {"name": "Elise Marchetti", "role": "cold-case victim"},
+        ]
+        self.server.save_concept("anti-hero-test", body)
+        after = load_concept(self.ws)
+        self.assertEqual(after["characters"][1]["name"], "Elise Marchetti")
+        payload = self.server.concept_to_json("anti-hero-test")
+        self.assertEqual(payload["concept"]["characters"][1]["role"], "cold-case victim")
+
+    def _valid_import(self) -> dict:
+        return {
+            "concept_status": "draft",
+            "target_language": "en",
+            "chapter_count": 2,
+            "title": "The Test",
+            "pen_name": "N. Vale",
+            "logline": "Line one.\nLine two.\n",
+            "surface_plot": "Surface\nplot\n",
+            "true_plot": "True\nplot\n",
+            "intentional_early_reveal": False,
+            "pov": {
+                "character": "Elle Reyes",
+                "mode": "first_person",
+                "tense": "past",
+                "single_pov": True,
+            },
+            "characters": [
+                {"name": "Elle Reyes", "role": "protagonist"},
+                {"name": "Damien Kroll", "role": "antagonist"},
+            ],
+            "chapter_map": {
+                1: "Flat beat",
+                2: {
+                    "title": "The File",
+                    "beat": "Rich beat",
+                    "required_beats": ["Open the file"],
+                    "must_include": ["red thread"],
+                    "must_not_reveal": ["the leak"],
+                    "ending": "A knock",
+                    "final_line": "She knew.",
+                },
+            },
+            "author_directive": "Directive line 1\nDirective line 2\n",
+            "ending_book1": "Case closes.\n",
+            "hook_book2": "The file returns.\n",
+            "must_include": ["Two-way hunt"],
+            "must_avoid": ["Name drift"],
+            "notes": "Note one.\nNote two.\n",
+        }
+
+    def test_import_fails_loud_without_partial_payload(self):
+        raw = self._valid_import()
+        raw.pop("true_plot")
+        result = self.server.parse_concept_yaml(
+            yaml.dump(raw, allow_unicode=True, sort_keys=False),
+            fallback_language="en",
+        )
+        self.assertFalse(result["ok"])
+        self.assertNotIn("concept", result)
+        self.assertTrue(any("true_plot" in error for error in result["errors"]))
+
+    def test_import_reports_yaml_line_and_column(self):
+        result = self.server.parse_concept_yaml(
+            "title: ok\n  broken: indent\n", fallback_language="en"
+        )
+        self.assertFalse(result["ok"])
+        self.assertRegex(result["errors"][0], r"dòng \d+, cột \d+")
+
+    def test_import_rejects_wrong_types_and_incomplete_pov(self):
+        raw = self._valid_import()
+        raw["intentional_early_reveal"] = "false"
+        raw["must_include"] = "not-a-list"
+        raw["pov"].pop("single_pov")
+        result = self.server.parse_concept_yaml(
+            yaml.dump(raw, allow_unicode=True, sort_keys=False),
+            fallback_language="en",
+        )
+        self.assertFalse(result["ok"])
+        joined = "\n".join(result["errors"])
+        self.assertIn("intentional_early_reveal", joined)
+        self.assertIn("must_include", joined)
+        self.assertIn("single_pov", joined)
+
+    def test_unknown_key_warns_and_survives_import_export(self):
+        raw = self._valid_import()
+        raw["future_metadata"] = {"keep": True}
+        imported = self.server.parse_concept_yaml(
+            yaml.dump(raw, allow_unicode=True, sort_keys=False),
+            fallback_language="en",
+        )
+        self.assertTrue(imported["ok"])
+        self.assertTrue(any("future_metadata" in warning for warning in imported["warnings"]))
+        self.assertEqual(imported["passthrough"]["future_metadata"], {"keep": True})
+
+    def test_import_warns_on_machine_qc_foreign_characters_and_does_not_save(self):
+        before = self._raw()
+        raw = self._valid_import()
+        raw["logline"] = "This English concept contains tiếng Việt."
+        imported = self.server.parse_concept_yaml(
+            yaml.dump(raw, allow_unicode=True, sort_keys=False),
+            fallback_language="en",
+        )
+        self.assertTrue(imported["ok"])
+        self.assertTrue(
+            any("logline" in warning and "target_language=en" in warning
+                for warning in imported["warnings"])
+        )
+        self.assertEqual(self._raw(), before)
+
+    def test_export_import_roundtrip_keeps_rich_map_and_multiline_text(self):
+        original = self._valid_import()
+        body = {
+            **{key: original[key] for key in self.server.CONCEPT_FORM_KEYS},
+            "target_language": original["target_language"],
+            "_concept_passthrough": {
+                key: value
+                for key, value in original.items()
+                if key not in self.server.CONCEPT_FORM_KEYS
+            },
+        }
+        exported = self.server.export_concept_yaml("anti-hero-test", body)
+        for key in self.server.CONCEPT_FREE_TEXT_KEYS:
+            self.assertRegex(exported["yaml"], rf"(?m)^{key}: \|")
+
+        imported = self.server.parse_concept_yaml(
+            exported["yaml"], fallback_language="en"
+        )
+        self.assertTrue(imported["ok"], imported.get("errors"))
+        for key in self.server.CONCEPT_FORM_KEYS:
+            self.assertEqual(imported["concept"][key], original[key], key)
+        self.assertEqual(imported["passthrough"]["chapter_count"], 2)
+
+
+class UnnamedPlotRoleGateTests(unittest.TestCase):
+    def test_anonymous_victim_warns_without_cast_name(self):
+        from factory.engine.lib.narrative_schema import warn_unnamed_plot_roles
+
+        warns = warn_unnamed_plot_roles(
+            {
+                "surface_plot": "She reopens the murder of a young woman.",
+                "chapter_map": {3: "cold-case murder of a young woman"},
+                "characters": [],
+                "author_directive": "No locked cast here.",
+            }
+        )
+        self.assertTrue(any("unnamed_plot_role:victim" in e for e in warns))
+
+    def test_role_without_name_blocks(self):
+        from factory.engine.lib.narrative_schema import concept_unnamed_plot_role_errors
+
+        errs = concept_unnamed_plot_role_errors(
+            {"characters": [{"name": "", "role": "cold-case victim"}]}
+        )
+        self.assertTrue(any("role_without_name" in e for e in errs))
+
+    def test_named_victim_in_characters_passes(self):
+        from factory.engine.lib.narrative_schema import (
+            concept_unnamed_plot_role_errors,
+            warn_unnamed_plot_roles,
+        )
+
+        concept = {
+            "surface_plot": "She reopens the murder of a young woman.",
+            "chapter_map": {3: "cold-case murder of a young woman"},
+            "characters": [{"name": "Elise Marchetti", "role": "cold-case victim"}],
+        }
+        self.assertEqual(concept_unnamed_plot_role_errors(concept), [])
+        self.assertEqual(warn_unnamed_plot_roles(concept), [])
 
 
 if __name__ == "__main__":

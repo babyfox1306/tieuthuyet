@@ -1,0 +1,24 @@
+{
+  "running": false,
+  "phase": "prep",
+  "step": "",
+  "ok": true,
+  "error": null,
+  "log": [
+    "▶ compile-intent...",
+    "✓ compile-intent",
+    "▶ approve-intent...",
+    "✓ approve-intent",
+    "▶ init-canon-registry...",
+    "✓ init-canon-registry",
+    "▶ plan...",
+    "✓ plan",
+    "▶ fix-plans...",
+    "✓ fix-plans",
+    "▶ approve-plan...",
+    "✓ approve-plan",
+    "▶ render-prompts...",
+    "✓ render-prompts (18 prompts)"
+  ],
+  "updated_at": "2026-07-27T12:04:36.169513+00:00"
+}

@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "kind": "contract_review_packet",
+  "book": 1,
+  "deterministic_auto_safe": [],
+  "semantic_needs_review": [
+    {
+      "section": "events",
+      "id": "event_ending_book",
+      "summary": "Sloane is arrested. Mara is alive. Rook's network is exposed. Sloane releases her own seven contracts along with the ledger — she does not buy absolution, she chooses the record. Lucian is offered the only escape route and refuses it, standing beside the woman he was contracted to kill. Dawn fills the empty scope with light and leaves nothing hidden behind it. The last feeling is not safety — it is chosen loyalty.",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.ending_book1",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Sloane is arrested. Mara is alive. Rook's network is exposed. Sloane releases her own seven contracts along with the ledger — she does not buy absolution, she chooses the record. Lucian is offered the",
+        "evidence_start": 0,
+        "evidence_end": 200
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_sloane_gave_the_seven_orders_the_reveal_explains",
+      "summary": "Sloane gave the seven orders — the reveal explains the deception, it never makes her innocent",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Sloane gave the seven orders — the reveal explains the deception, it never makes her innocent",
+        "evidence_start": 0,
+        "evidence_end": 93
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_the_dead_stay_dead_mara_s_shooting_is_staged_but",
+      "summary": "The dead stay dead: Mara's shooting is staged, but nobody returns from an actual death",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "The dead stay dead: Mara's shooting is staged, but nobody returns from an actual death",
+        "evidence_start": 0,
+        "evidence_end": 86
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_nobody_explains_the_mystery_in_dialogue_sloane_a",
+      "summary": "Nobody explains the mystery in dialogue — Sloane assembles it from physical evidence",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Nobody explains the mystery in dialogue — Sloane assembles it from physical evidence",
+        "evidence_start": 0,
+        "evidence_end": 84
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_rook_is_alive_from_chapter_1_and_dies_at_chapter",
+      "summary": "Rook is alive from chapter 1 and dies at chapter 17",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Rook is alive from chapter 1 and dies at chapter 17",
+        "evidence_start": 0,
+        "evidence_end": 51
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_only_two_supporting_characters_mara_and_rook_bot",
+      "summary": "Only two supporting characters: Mara and Rook — both act, neither merely knows",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Only two supporting characters: Mara and Rook — both act, neither merely knows",
+        "evidence_start": 0,
+        "evidence_end": 78
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_every_spice_scene_changes_the_plot_ch06_restores",
+      "summary": "Every spice scene changes the plot: ch06 restores a fragment, ch09 unlocks the second recording, ch14 breaks the conditioning",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Every spice scene changes the plot: ch06 restores a fragment, ch09 unlocks the second recording, ch14 breaks the conditioning",
+        "evidence_start": 0,
+        "evidence_end": 125
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_count_the_vice_on_the_page_3_recordings_7_names_",
+      "summary": "Count the vice on the page: 3 recordings, 7 names — all returned by ch14",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Count the vice on the page: 3 recordings, 7 names — all returned by ch14",
+        "evidence_start": 0,
+        "evidence_end": 72
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_sloane_moves_the_power_herself_at_ch12_she_is_ne",
+      "summary": "Sloane moves the power herself at ch12 — she is never rescued",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Sloane moves the power herself at ch12 — she is never rescued",
+        "evidence_start": 0,
+        "evidence_end": 61
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_the_wrist_circle_appears_in_every_act_it_is_the_",
+      "summary": "The wrist circle appears in every act — it is the firing sequence hiding in plain sight",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "The wrist circle appears in every act — it is the firing sequence hiding in plain sight",
+        "evidence_start": 0,
+        "evidence_end": 87
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_hook_book2",
+      "summary": "The seven names Sloane condemned had families. One of them has been reading the public ledger since the night it went live — and has already found her.",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.hook_book2",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "The seven names Sloane condemned had families. One of them has been reading the public ledger since the night it went live — and has already found her.",
+        "evidence_start": 0,
+        "evidence_end": 151
+      }
+    }
+  ],
+  "model_suggestions": [],
+  "invalid_candidates": [],
+  "compile_ok": true,
+  "note": "Omitted items remain unapproved. No approve-all default.",
+  "created_at": "2026-07-23T10:57:02Z"
+}

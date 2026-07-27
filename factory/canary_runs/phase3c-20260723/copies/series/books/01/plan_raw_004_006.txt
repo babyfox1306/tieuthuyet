@@ -1,0 +1,80 @@
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Silence Eats",
+      "slug": "the-silence-eats",
+      "one_line_summary": "The group's false theory crumbles when Lea, who spoke a perfectly clear sentence, is found dead at dawn, forcing Sofia Bellini to confront the possibility that the system doesn't punish mistranslation but something far more personal.",
+      "beat_summary": "The morning after Dmitri's experiment, the group is on edge. Sofia Bellini tries to calm everyone, but the ghost whisper 'Listen' from the recording gnaws at her. Lea, buoyed by her successful translation from the previous dawn, volunteers to test the silence rule by speaking a simple phrase at sunset. She says: 'I am here to understand.' The group waits through a tense night. At dawn, the system replays her words perfectly, with no distortion. Relief spreads. But when the replay ends, Lea does not move. She is dead, her eyes open, a trickle of blood from her ear. Dmitri's theory is shattered. Paranoia spirals. Pierre Leclerc suggests the system didn't touch her words but may target meaning. Sofia Bellini realizes that Lea's phrase 'I am here to understand' was a response to Yuki earlier who asked 'Do we have to understand everything?' and Yuki had stumbled on the word 'understand'. Did Lea speak for Yuki? The connection is thin. The group is lost. Elias van Doren cannot speak because of his stutter and fear, but he writes a note to Sofia Bellini: 'You didn't do this.' She reads it and holds his hand.",
+      "must_happen": [
+        "Lea speaks a clear, simple sentence at sunset, which is perfectly translated at dawn without distortion.",
+        "Despite perfect translation, Lea is found dead after the dawn replay ends, blood from her ear.",
+        "[ROMANCE] Elias van Doren writes a note to Sofia Bellini: 'You didn't do this.' Sofia Bellini grips his hand, tears in her eyes.",
+        "Dmitri Ivanov's mistranslation theory is abandoned by the group; Pierre Leclerc suggests meaning-based targeting."
+      ],
+      "must_not": [
+        "No mention that the system kills based on being spoken for.",
+        "No mention of Nadia Petrescu or her rewritten testimony."
+      ],
+      "opens_with": "Lea's voice on the replay was pristine, every syllable accounted for, every word correct. Which meant the system had no reason to kill her. It killed her anyway.",
+      "cliffhanger": "In the chaos, Sofia Bellini notices a faint overlay on the spectrogram of the replay: the word 'TRANSLATOR' – not spoken by anyone present – and beneath it, a date stamp: 23 years ago.",
+      "signature_detail_hint": "The chairs in the conference hall are bolted to the floor, but one is loose, as if someone tried to move it and gave up.",
+      "emotional_beat": "Sofia Bellini feels the ground of her understanding crumble. Her compulsion to translate for Elias van Doren now feels like a possible weapon, not a shield. But when Elias gives her the note, she feels a surge of hope that maybe they can face this together.",
+      "spice": 1,
+      "spice_note": "Elias van Doren writes her a note; they hold hands. Tender, silent communication amidst horror.",
+      "chapter_task": "Write 1600–1900 words. Execute the death of Lea despite perfect translation, shattering the false theory. Show the group's panic and fragmentation. Plant the spectrogram clue (the word 'TRANSLATOR' and year). Deepen the romance with silent note-passing. Transition Sofia from false certainty to investigative uncertainty.",
+      "carries_to_next": "With the false theory dead, the group has no framework. Sofia Bellini begins to suspect the system is more linguistic and personal than mere translation. The clue on the spectrogram (old date) suggests the system has history. Next: investigation of the summit's archives."
+    },
+    {
+      "chapter": 5,
+      "title": "The Archivist Ghost",
+      "slug": "the-archivist-ghost",
+      "one_line_summary": "Sofia Bellini and Yuki Tanaka uncover a sealed archive of past summit records, where they find evidence that the system has been active for decades and that previous participants died in similar patterns, but a name keeps appearing: 'Nadia Petrescu' – a student who was erased from the record.",
+      "beat_summary": "With the false theory debunked, Sofia Bellini proposes they search the summit's administrative wing for any documentation about the translation system. Pierre Leclerc reveals he is a journalist investigating the summit and provides a keycard he has been hiding. Yuki Tanaka joins Sofia. Elias van Doren, still silent, insists on coming. They find a locked archive room filled with boxes of transcripts from past summits. Sofia begins reading case files. She notices a pattern: in each death, the victim had spoken their native language while someone else had translated or clarified for them. She does not yet grasp the rule. Deep in the files, she finds a folder marked 'DISCIPLINARY – N. Petrescu, 1997'. The folder is nearly empty, as if most contents were removed. Only a single page remains: a memo ordering the 'correction of record' for Petrescu's testimony, signed by an official. Yuki photographs everything. At the end of the day, Elias reaches out and touches Sofia's cheek to get her attention, then shows her a scribbled note: 'I love you.' She's stunned, but before she can respond, the lights dim – nearing the sunset silence window.",
+      "must_happen": [
+        "Pierre Leclerc produces a hidden keycard, revealing he is a journalist investigating the summit.",
+        "Sofia Bellini and Yuki Tanaka discover the archive and find files showing a history of deaths matching the current pattern, including a folder for 'N. Petrescu, 1997' that is nearly empty.",
+        "[ROMANCE] Elias van Doren writes 'I love you' on a note and shows it to Sofia Bellini, a moment of intense silent emotion before the sunset alarm.",
+        "Sofia Bellini notices a pattern: victims were often the subject of clarification or translation by others."
+      ],
+      "must_not": [
+        "No explicit statement that the system kills based on being spoken for.",
+        "No revelation that Nadia Petrescu's testimony being rewritten is the core of the system."
+      ],
+      "opens_with": "Pierre Leclerc held his press badge between two fingers. 'My editor thinks I'm covering a linguistics fair. I'm supposed to expose this place. But I don't think I'm getting out to file the story.'",
+      "cliffhanger": "As Sofia Bellini closes the nearly empty Petrescu file, she notices a single sentence handwritten on the back of the memo: 'That is not what I said.' It is underlined twice. The sunset silence begins, and Sofia cannot ask what it means.",
+      "signature_detail_hint": "The archive room smells of old glue and mold, but one box is completely fresh, as if placed recently.",
+      "emotional_beat": "Sofia Bellini's shock at Elias van Doren's written declaration of love is quickly overtaken by the chilling discovery of the Petrescu file and the underlined sentence. She feels the weight of history repeating.",
+      "spice": 1,
+      "spice_note": "Elias van Doren touches her cheek, writes a love note. A tender moment in the darkness of the archive.",
+      "chapter_task": "Write 1600–1900 words. Uncover the archives, reveal Pierre's secret, introduce the Nadia Petrescu thread. Plant clues about the 'spoken for' pattern (Sofia notices victims who were translated). The love note from Elias creates intense personal stakes. End with the 'That is not what I said' memo, a direct hit from the required quotation.",
+      "carries_to_next": "Sofia Bellini now has a name: Nadia Petrescu. She suspects the key lies in understanding Nadia's story. But the archive was mostly cleaned out. Pierre may have more intel. The sunset silence cuts off inquiry. Next: searching for more clues about Petrescu, perhaps an audio recording."
+    },
+    {
+      "chapter": 6,
+      "title": "The Clarification",
+      "slug": "the-clarification",
+      "one_line_summary": "Sofia Bellini discovers a voice recording from Nadia Petrescu's disciplinary hearing that reveals the system's twisted logic of 'clarification', but the recording is corrupted and only yields fragments – including a phrase that will become the key to survival.",
+      "beat_summary": "After sunset silence, the group is forced to communicate via written notes and gestures. Sofia Bellini is desperate to learn more about Nadia Petrescu. Yuki Tanaka reveals she found a hidden audio cassette labeled 'Petrescu – original testimony' in a gap behind the archive shelf. They cannot play it without breaking silence. They devise a plan: use the building's backup earpiece system to play the tape in the soundproof booth during a 'system silence' window, hoping it will not trigger the dawn replay. Dmitri Ivanov rigs a connection. The group gathers. The tape plays: a woman's voice (Nadia) speaking in Romanian, then being interrupted by an official saying 'Let me clarify that for the record.' The translation system, listening, captures the official's voice 'clarifying' Nadia's statement, and the record shows the clarification as Nadia's own words. Yuki also finds a transcript page listing 'correction counts' for each participant in the hearing, with Nadia having the highest number of clarifications by officials. The fragment ends. Sofia feels a chill: the system treated the clarification as a rewrite of identity. This is a clue. Before she can reflect, the dawn replay begins, and the system plays back the tape's audio – the entire group has now been exposed to the 'clarification' pattern. The replay ends. No one dies. But Sofia realizes that the system now 'knows' they understand. She writes a warning: 'Stop clarifying. Stop finishing sentences.' But it is too late – she remembers she has been finishing Elias's sentences all along. Her eyes meet his. Elias van Doren mouths 'I know' to her.",
+      "must_happen": [
+        "Yuki Tanaka discovers a hidden audio cassette labeled 'Petrescu – original testimony' behind the archive shelf.",
+        "The group plays the tape during a silence window, revealing an official 'clarifying' Nadia Petrescu's statement on the record.",
+        "[ROMANCE] After the replay ends, Elias van Doren mouths 'I know' to Sofia Bellini, acknowledging that her translations for him are exactly the 'clarification' the system punishes.",
+        "Sofia Bellini writes the warning 'Stop clarifying. Stop finishing sentences.' but she realizes she has already done it."
+      ],
+      "must_not": [
+        "No explicit statement that the system kills based on being spoken for (only that it captures clarification).",
+        "No mention that the system was trained directly on Nadia Petrescu's hearing."
+      ],
+      "opens_with": "'Let me clarify that for the record.' The official's voice on the tape was calm, reasonable. When the translation system replayed that sentence at dawn, Nadia Petrescu's words had been erased.",
+      "cliffhanger": "Sofia Bellini's warning note hangs in the air. Elias van Doren catches her hand and presses his lips to her palm without a sound. Then the countdown to the next sunset begins. And somewhere, deep in the building, the translation system hums to life, processing their newest words.",
+      "signature_detail_hint": "The cassette label is handwritten, but the ink is fresh, not decades old – someone has been listening to it recently.",
+      "emotional_beat": "The crushing weight of her own mistake: in trying to save Elias van Doren, Sofia Bellini may have marked him for death. His silent kiss on her palm is both forgiveness and goodbye.",
+      "spice": 1,
+      "spice_note": "Elias van Doren kisses Sofia Bellini's palm. Tender, desperate, on the brink of knowledge.",
+      "chapter_task": "Write 1600–1900 words. Play the Petrescu tape, revealing the clue about clarification. The group realizes the danger of speaking for others. Sofia recognizes her own actions. Plant clues C001 (the tape fragment showing the official's 'Let me clarify...' as a pattern) and C002 (a transcript page found with the tape listing 'correction counts'). Build to the moment when Sofia understands her role in Elias's potential death. End with the kiss on the palm.",
+      "carries_to_next": "Sofia Bellini now understands the true law: the system kills those who are clarified/spoken for. She has translated for Elias van Doren multiple times. His count must be high. She must find a way to reverse the damage. Leads to act3 crisis chapter 7."
+    }
+  ]
+}

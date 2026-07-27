@@ -63,6 +63,7 @@ chapter_task, carries_to_next
 - CẤM re-fire `reveals_already_fired` (vd MR03) hoặc re-payoff `clues_already_payoff` trong bất kỳ chương nào của chunk này.
 - Setup→payoff hợp lệ OK (chương trước plant, chương này spring) — miễn beat map KHÁC và không cùng reveal-id.
 
+<!-- ROMANCE_SECTION_START -->
 ## ROMANCE (OPT-IN — đọc concept / direction / canon_registry)
 **KHÔNG** mặc định ép romance. Chỉ khi workspace **opt-in** (vd. `narrative_profile` chứa `romance`, directive viết romance-thriller, must_include slow-burn).
 
@@ -85,6 +86,7 @@ chapter_task, carries_to_next
 - CẤM: chương action thuần 100% không có khoảnh khắc hai lead với nhau; CẤM micro-beat với nhân vật phụ thay lead.
 - spice=0/1: chỉ micro-beat (sweet/tension), không bắt buộc hôn/giường. spice=2: có thể hôn/gần chạm. spice=3: explicit theo spice_note, vẫn giữ micro-beat ngoài cảnh nóng nếu hợp lý.
 - emotional_beat: ít nhất một từ gợi tension/attraction/vulnerability giữa hai lead, không chỉ plot.
+<!-- ROMANCE_SECTION_END -->
 
 ## ARC
 act1_setup → act2_complications → act3_crisis → act4_resolution. Book kết đúng book1_ending trong direction.

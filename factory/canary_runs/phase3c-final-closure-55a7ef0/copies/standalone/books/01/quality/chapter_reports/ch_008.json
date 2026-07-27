@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "kind": "chapter_quality_report",
+  "book": 1,
+  "chapter": 8,
+  "mode": "off",
+  "source_digests": {
+    "prose": "83c63634cbab7583",
+    "chapter_plan": "d444bbb20531f76b",
+    "chapter_slice": "64e634b4482a411d",
+    "story_contract": "",
+    "execution_contract": "",
+    "quality_profile": "a58b435a402427b0",
+    "prior_quality_state": "2c2981bde9b6e801"
+  },
+  "deterministic_analyzer_version": 1,
+  "evaluator_schema_version": 1,
+  "deterministic_signals": {
+    "analyzer_version": 1,
+    "word_count": 2163,
+    "sentence_count": 286,
+    "paragraph_count": 181,
+    "sentence_length": {
+      "mean": 7.55,
+      "min": 1,
+      "max": 44,
+      "stdev_proxy": 5.76
+    },
+    "paragraph_length": {
+      "mean": 11.93,
+      "min": 1,
+      "max": 44
+    },
+    "duplicate_sentences": [],
+    "repeated_ngrams": [],
+    "body_reactions": [],
+    "dialogue_line_hits": 52,
+    "opening_window_digest": "972020353c8a3980",
+    "ending_window_digest": "8e20d0a98eb09766",
+    "opening_similarity": [],
+    "ending_similarity": [],
+    "shared_sentence_pct_vs_prior": 0.0,
+    "cross_chapter_phrases": [
+      {
+        "phrase": "against the inside of",
+        "chapter": 1,
+        "prose_digest": "163fb3cce17deb32"
+      },
+      {
+        "phrase": "the inside of her",
+        "chapter": 1,
+        "prose_digest": "163fb3cce17deb32"
+      },
+      {
+        "phrase": "inside of her wrist",
+        "chapter": 1,
+        "prose_digest": "163fb3cce17deb32"
+      },
+      {
+        "phrase": "she traced a small",
+        "chapter": 1,
+        "prose_digest": "163fb3cce17deb32"
+      },
+      {
+        "phrase": "turned it exactly one",
+        "chapter": 1,
+        "prose_digest": "163fb3cce17deb32"
+      },
+      {
+        "phrase": "exactly one quarter rotation",
+        "chapter": 1,
+        "prose_digest": "163fb3cce17deb32"
+      },
+      {
+        "phrase": "one quarter rotation away",
+        "chapter": 1,
+        "prose_digest": "163fb3cce17deb32"
+      },
+      {
+        "phrase": "quarter rotation away from",
+        "chapter": 1,
+        "prose_digest": "163fb3cce17deb32"
+      },
+      {
+        "phrase": "rotation away from clarity",
+        "chapter": 1,
+        "prose_digest": "163fb3cce17deb32"
+      },
+      {
+        "phrase": "the air between them",
+        "chapter": 1,
+        "prose_digest": "163fb3cce17deb32"
+      },
+      {
+        "phrase": "circle against her wrist",
+        "chapter": 1,
+        "prose_digest": "163fb3cce17deb32"
+      },
+      {
+        "phrase": "her wrist before she",
+        "chapter": 3,
+        "prose_digest": "4e4bb46d7185cc5b"
+      },
+      {
+        "phrase": "circle on her wrist",
+        "chapter": 3,
+        "prose_digest": "4e4bb46d7185cc5b"
+      },
+      {
+        "phrase": "heel of her palm",
+        "chapter": 4,
+        "prose_digest": "72ec8d6b1d66cfeb"
+      },
+      {
+        "phrase": "his eyes held hers",
+        "chapter": 4,
+        "prose_digest": "72ec8d6b1d66cfeb"
+      },
+      {
+        "phrase": "behind her eyes a",
+        "chapter": 4,
+        "prose_digest": "72ec8d6b1d66cfeb"
+      },
+      {
+        "phrase": "the image vanished sloane",
+        "chapter": 4,
+        "prose_digest": "72ec8d6b1d66cfeb"
+      },
+      {
+        "phrase": "his face went still",
+        "chapter": 4,
+        "prose_digest": "72ec8d6b1d66cfeb"
+      },
+      {
+        "phrase": "she hated that her",
+        "chapter": 6,
+        "prose_digest": "dbf8fd3dc5bf2b22"
+      },
+      {
+        "phrase": "traced a small circle",
+        "chapter": 7,
+        "prose_digest": "6713a8dbd657ffdd"
+      },
+      {
+        "phrase": "circle against the inside",
+        "chapter": 7,
+        "prose_digest": "6713a8dbd657ffdd"
+      },
+      {
+        "phrase": "deeper into the warehouse",
+        "chapter": 7,
+        "prose_digest": "6713a8dbd657ffdd"
+      },
+      {
+        "phrase": "sloane looked at him",
+        "chapter": 7,
+        "prose_digest": "6713a8dbd657ffdd"
+      },
+      {
+        "phrase": "traced a circle against",
+        "chapter": 7,
+        "prose_digest": "6713a8dbd657ffdd"
+      },
+      {
+        "phrase": "the rifle's focus ring",
+        "chapter": 7,
+        "prose_digest": "6713a8dbd657ffdd"
+      }
+    ],
+    "exact_contract_phrase_hits": [],
+    "duplicate_paragraphs": [],
+    "chapter_length_words": 2163
+  },
+  "dimensions": {
+    "scene_purpose": {
+      "score": 0.7,
+      "status": "acceptable",
+      "reason": "change proxy via novelty vs prior",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "narrative_progression": {
+      "score": 0.7,
+      "status": "acceptable",
+      "reason": "shared-sentence progression proxy",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "character_agency": {
+      "score": 0.6,
+      "status": "acceptable",
+      "reason": "agency requires semantic reading",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "tension_or_emotional_pressure": {
+      "score": 0.6,
+      "status": "acceptable",
+      "reason": "pressure curve requires semantic reading",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "revelation_consequence": {
+      "score": null,
+      "status": "not_applicable",
+      "reason": "no revelation assigned",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null
+    },
+    "dialogue_function": {
+      "score": 0.65,
+      "status": "acceptable",
+      "reason": "dialogue present; semantic refine needed",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "prose_freshness": {
+      "score": 0.75,
+      "status": "strong",
+      "reason": "deterministic freshness proxies",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "repetition_control": {
+      "score": 0.75,
+      "status": "strong",
+      "reason": "deterministic repetition scan",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [
+        "PHRASE_REPETITION"
+      ],
+      "repair_targets": [],
+      "severity": "minor",
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "chapter_turn": {
+      "score": 0.7,
+      "status": "acceptable",
+      "reason": "ending similarity proxy",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    }
+  },
+  "cross_chapter_findings": [],
+  "summary": {
+    "below_target": [],
+    "review": [],
+    "strong": [
+      "prose_freshness",
+      "repetition_control"
+    ],
+    "evaluation_complete": true
+  },
+  "secondary_aggregate": {
+    "weighted_mean": 0.6807,
+    "dimensions_scored": 8,
+    "has_critical_dimension": false,
+    "note": "secondary telemetry only — not a promotion gate"
+  },
+  "telemetry": {
+    "semantic_calls": 0,
+    "deterministic_only": true,
+    "compliance_cache_hit": false,
+    "input_chars": 13257,
+    "output_chars": 0,
+    "routes_attempted": [],
+    "context_overhead_chars": 0,
+    "prior_context_chars": 557,
+    "signal_chars": 2802
+  },
+  "evaluator_route": "deterministic",
+  "cache_status": "miss",
+  "created_at": "2026-07-23T13:21:28Z",
+  "note": "Phase 3A shadow quality — diagnostic only; never blocks promotion"
+}

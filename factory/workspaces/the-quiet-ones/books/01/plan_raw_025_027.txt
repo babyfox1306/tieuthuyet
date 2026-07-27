@@ -1,0 +1,151 @@
+```json
+{
+  "act": [25, 27],
+  "chapter_plans": [
+    {
+      "chapter": 25,
+      "title": "The Leak Confirmed",
+      "slug": "the-leak-confirmed",
+      "one_line_summary": "Elle Reyes confronts Wren directly, forcing the truth about the leak — and learns exactly how Kroll has been one step ahead since the beginning.",
+      "beat_summary": "Elle Reyes, now isolated from Sasha and Dr. Lin, decides to confront Wren directly. She tracks Wren to a motel on the outskirts of the city. The confrontation is brutal: Elle Reyes lays out every piece of evidence — the timing of the leaks, the photograph from Kroll's safe, the gambling debt. Wren breaks down and confesses everything: not just the network files, but the specific details of Elle Reyes's first kill that Kroll used to build the 'Project Phoenix' file. Wren reveals that Kroll had a PI following Elle Reyes for months before she even announced his name on her podcast — he knew about her before she knew about him. Elle Reyes realizes the leak is confirmed, but more importantly, Kroll's preparation is far deeper than she imagined. Clue C008 is planted: Wren mentions a detail about Kroll's operation — a woman named 'Voss' who handles his most sensitive work, someone who seems to have a personal stake in taking down Elle Reyes.",
+      "must_happen": [
+        "Elle Reyes tracks Wren to a motel and confronts her directly, laying out every piece of evidence of the betrayal.",
+        "Wren confesses everything: she gave Kroll the network files, the security schedules, and the specific details of Elle Reyes's first kill.",
+        "Wren reveals that Kroll had a PI following Elle Reyes for months before she even announced his name on her podcast — he knew about her before she knew about him.",
+        "Wren mentions a woman named 'Voss' who handles Kroll's most sensitive work and seems to have a personal stake in taking down Elle Reyes — clue C008 is planted.",
+        "Elle Reyes leaves Wren at the motel, telling her she's on her own now — the pact is broken."
+      ],
+      "must_not": [
+        "Do not reveal the full identity or role of 'Voss' — only that she exists and has a personal stake.",
+        "Do not show Elle Reyes reconciling with Wren or offering protection — the confrontation ends with Elle walking away."
+      ],
+      "opens_with": "\"'You look surprised to see me.' I said it through the motel door. 'Open it, Wren. Or I swear to God I'll break it down.'\"",
+      "cliffhanger": "Elle Reyes walks out of the motel room, leaving Wren sobbing on the bed. Her phone buzzes. A text from an unknown number — but not the watcher's usual number. It reads: 'You found the leak. Good. Now find Voss. She's the one who really wants you dead. — Your Friend.'",
+      "signature_detail_hint": "The motel room has a single photograph on the nightstand — Wren's younger sister, the one Kroll threatened. The photograph is in a cheap plastic frame, but the glass is cracked, as if someone slammed it down in anger.",
+      "emotional_beat": "Cold, methodical fury mixed with the hollow satisfaction of confirmation — the leak is found, but the betrayal cuts deeper than she expected, and a new name enters the game.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the confrontation and the new lead.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Confirm the leak, plant clue C008 (Voss), and set up the next phase of the hunt. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "The leak is confirmed; clue C008 is planted (Voss); Elle Reyes now knows Kroll has been preparing for her for months; the watcher sends a text from a new number, hinting at a deeper layer to Kroll's operation.",
+      "narrative": {
+        "clues_plant": ["C008"],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T04", "T05", "T06", "T07"],
+        "knowledge": {
+          "pov_characters": ["Elle Reyes", "Damien Kroll", "Sasha (Lawyer)", "Dr. Lin (Coroner)", "Wren (Hacker)", "Detective Marcus Cole"],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Kroll is systematically dismantling her network', 'Wren has gambling debts (suspicion growing)', \"Kroll has a dead-man's-switch (discovered 'Project Phoenix' file)\", 'Her origin wound is partially exposed to Kroll'], 'does_not_know_yet': ['Wren is the leak', \"The full contents of 'Project Phoenix'\", \"Detective Cole's level of suspicion\"]}",
+            "Damien Kroll: {'knows': [\"He has compromised Wren in Elle's network\", \"He has compiled evidence of Elle's first kill\", \"He has a dead-man's-switch ('Project Phoenix')\", 'Elle is closing in on him'], 'does_not_know_yet': [\"That Elle has discovered 'Project Phoenix'\", 'That Sasha and Dr", "Damien Kroll: Lin are still loyal', 'His own death is imminent']}",
+            "Sasha (Lawyer): {'knows': ['The network is under pressure', 'Wren is acting strangely', 'Kroll is systematically attacking them'], 'does_not_know_yet': ['Wren is the leak', \"The full extent of Kroll's evidence\", \"Detective Cole's investigation\"]}",
+            "Dr. Lin (Coroner): {'knows': ['The network is under pressure', 'Kroll is dangerous', 'Elle is in a two-way hunt'], 'does_not_know_yet': ['Wren is the leak', \"The full extent of Kroll's evidence\", \"Detective Cole's investigation\"]}",
+            "Wren (Hacker): {'knows': ['Kroll has approached her with a threat to her family', 'She is being forced to leak information', 'She is betraying Elle'], 'does_not_know_yet': [\"The full extent of Kroll's evidence\", 'That Elle will discover her betrayal', 'The consequences of her actions']}",
+            "Detective Marcus Cole: {'knows': [\"Multiple deaths connected to Elle's investigations are suspicious\", 'Kroll is under pressure from Elle', 'He is building a case against Elle (circumstantial)'], 'does_not_know_yet': [\"Elle's method\", 'Her network', \"The dead-man's-switch\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 19
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 26,
+      "title": "The Handler's Shadow",
+      "slug": "the-handlers-shadow",
+      "one_line_summary": "Elle Reyes investigates the name 'Voss' and discovers Kroll's operation has a deeper layer — a handler who has been pulling strings longer than Kroll himself.",
+      "beat_summary": "Elle Reyes follows the lead on 'Voss' — the woman Wren mentioned. She digs through Kroll's corporate records, cross-referencing shell companies, and finds a name: Mariana Voss, a lawyer who has been with Kroll's family for decades. But as she digs deeper, she discovers something unsettling: Voss's name appears in records predating Kroll's involvement with the company — she was his father's lawyer, and she handled the 'settlement' for Lucia Vega's family. Elle Reyes realizes that Voss is not just Kroll's lawyer — she is the architect of his impunity. The chapter ends with Elle Reyes visiting Mariana Voss's office under a false identity, planting a listening device, and overhearing a phone call where Voss says: 'He's a liability now. If Elle Reyes takes him down, she takes down everything we built. You know what to do.' The call is to someone Elle Reyes cannot identify, but the implication is clear: Voss is considering cutting Kroll loose.",
+      "must_happen": [
+        "Elle Reyes researches the name 'Voss' and finds Mariana Voss, a lawyer who has been with Kroll's family for decades.",
+        "Elle Reyes discovers that Voss handled the 'settlement' for Lucia Vega's family — she is the architect of Kroll's impunity, not just his lawyer.",
+        "Elle Reyes visits Mariana Voss's office under a false identity and plants a listening device.",
+        "Elle Reyes overhears a phone call where Voss says: 'He's a liability now. If Elle Reyes takes him down, she takes down everything we built. You know what to do.'",
+        "Elle Reyes leaves the office, realizing Voss is considering cutting Kroll loose — which means Voss might be a potential ally, or a more dangerous enemy."
+      ],
+      "must_not": [
+        "Do not reveal who Voss is speaking to on the phone — only that it is someone with authority over her.",
+        "Do not show Elle Reyes confronting Voss directly — only surveillance and information gathering."
+      ],
+      "opens_with": "\"'Mariana Voss.' I said the name aloud in my empty apartment. It felt like a key turning in a lock I didn't know existed.\"",
+      "cliffhanger": "Elle Reyes sits in her car outside Voss's office, the recording of the phone call playing on loop. She stares at the building. Her phone buzzes. A text from the watcher: 'You found Voss. Now you understand. Kroll is not the real target. She is.'",
+      "signature_detail_hint": "Voss's office has a single photograph on her desk — a young woman with the same birthmark as Lucia Vega, but the photograph is old, faded, and the woman's face is scratched out, identical to the one in Kroll's office.",
+      "emotional_beat": "Cold focus mixed with the unsettling realization that the game is larger than she thought — Kroll is a piece on a board, not the player, and the real architect is someone she has never met.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the investigation of Voss and the expansion of the conspiracy.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Investigate Voss, plant the listening device, and reveal the deeper layer of Kroll's operation. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "Voss is identified as the architect of Kroll's impunity; the watcher hints that Voss is the real target; Elle Reyes now has a recording of Voss considering cutting Kroll loose; the game has a new layer.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T04", "T05", "T06", "T07"],
+        "knowledge": {
+          "pov_characters": ["Elle Reyes", "Damien Kroll", "Sasha (Lawyer)", "Dr. Lin (Coroner)", "Wren (Hacker)", "Detective Marcus Cole"],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Kroll is systematically dismantling her network', 'Wren has gambling debts (suspicion growing)', \"Kroll has a dead-man's-switch (discovered 'Project Phoenix' file)\", 'Her origin wound is partially exposed to Kroll'], 'does_not_know_yet': ['Wren is the leak', \"The full contents of 'Project Phoenix'\", \"Detective Cole's level of suspicion\"]}",
+            "Damien Kroll: {'knows': [\"He has compromised Wren in Elle's network\", \"He has compiled evidence of Elle's first kill\", \"He has a dead-man's-switch ('Project Phoenix')\", 'Elle is closing in on him'], 'does_not_know_yet': [\"That Elle has discovered 'Project Phoenix'\", 'That Sasha and Dr", "Damien Kroll: Lin are still loyal', 'His own death is imminent']}",
+            "Sasha (Lawyer): {'knows': ['The network is under pressure', 'Wren is acting strangely', 'Kroll is systematically attacking them'], 'does_not_know_yet': ['Wren is the leak', \"The full extent of Kroll's evidence\", \"Detective Cole's investigation\"]}",
+            "Dr. Lin (Coroner): {'knows': ['The network is under pressure', 'Kroll is dangerous', 'Elle is in a two-way hunt'], 'does_not_know_yet': ['Wren is the leak', \"The full extent of Kroll's evidence\", \"Detective Cole's investigation\"]}",
+            "Wren (Hacker): {'knows': ['Kroll has approached her with a threat to her family', 'She is being forced to leak information', 'She is betraying Elle'], 'does_not_know_yet': [\"The full extent of Kroll's evidence\", 'That Elle will discover her betrayal', 'The consequences of her actions']}",
+            "Detective Marcus Cole: {'knows': [\"Multiple deaths connected to Elle's investigations are suspicious\", 'Kroll is under pressure from Elle', 'He is building a case against Elle (circumstantial)'], 'does_not_know_yet': [\"Elle's method\", 'Her network', \"The dead-man's-switch\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 19
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 27,
+      "title": "The Cornered Animal",
+      "slug": "the-cornered-animal",
+      "one_line_summary": "Elle Reyes strikes back at Kroll by leaking the Voss recording, forcing him into a corner — but his counter-strike proves he is most dangerous when trapped.",
+      "beat_summary": "Elle Reyes decides to use the Voss recording as leverage. She edits it — removing any mention of her name — and leaks it to the same journalist who published the ligature mark discrepancy. The story breaks: 'Kroll's Lawyer Caught Discussing 'Liability' — Is the Empire Cracking?' Kroll's world trembles. He calls Elle Reyes, furious, demanding to know where she got the recording. Elle Reyes tells him nothing, but the call confirms her theory: Kroll is afraid of Voss, not the other way around. But Kroll, cornered, makes his most desperate move yet: he releases the 'Project Phoenix' file to Detective Marcus Cole — not to the public, but to the one person who can legally destroy Elle Reyes. The chapter ends with Elle Reyes receiving a call from Detective Cole: 'Elle Reyes, I need you to come down to the station. We have some questions about a death in Nevada.' The trap is sprung — Kroll has handed her to the law.",
+      "must_happen": [
+        "Elle Reyes edits the Voss recording and leaks it to the journalist, framing it as a story about Kroll's empire cracking.",
+        "The story breaks: 'Kroll's Lawyer Caught Discussing 'Liability' — Is the Empire Cracking?' Kroll calls Elle Reyes, furious and afraid.",
+        "The call confirms Elle Reyes's theory: Kroll is afraid of Voss, not the other way around — Voss is the real power.",
+        "Kroll, cornered, releases the 'Project Phoenix' file to Detective Marcus Cole — not to the public, but to the one person who can legally destroy Elle Reyes.",
+        "Elle Reyes receives a call from Detective Cole: 'Elle Reyes, I need you to come down to the station. We have some questions about a death in Nevada.'"
+      ],
+      "must_not": [
+        "Do not show the full contents of the 'Project Phoenix' file being revealed to Cole — only that Kroll has handed it over.",
+        "Do not show Elle Reyes being arrested — only that Cole has called her in for questioning."
+      ],
+      "opens_with": "\"'You think you're clever, don't you?' Kroll's voice was shaking. I had never heard him shake before. 'You think you've won something.' I smiled. 'I think I've just started.'\"",
+      "cliffhanger": "Elle Reyes hangs up on Detective Cole and stares at her phone. Her thumb taps her ring finger three times. She has twenty-four hours before she has to walk into the station. Twenty-four hours to finish Kroll before he finishes her. She picks up her phone and dials the watcher's number. 'I need your help. The real help. Not the games.' The line is silent for a long moment. Then: 'I was wondering when you'd ask.'",
+      "signature_detail_hint": "The Voss recording has a background sound — the faint ticking of a grandfather clock, which Elle Reyes recognizes from Kroll's study during her visit, confirming Voss was in Kroll's house when she made the call.",
+      "emotional_beat": "Cold satisfaction at cornering Kroll undercut by the sharp realization that he has played his final card — and it is the most dangerous one yet. Elle Reyes is now fighting for her freedom, not just her secret.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the counter-strike and the new stakes.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Execute the counter-strike, show Kroll's desperation, and set up the final confrontation. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "Kroll has released the 'Project Phoenix' file to Detective Cole; Elle Reyes has 24 hours before she must go to the station; she has called the watcher for real help; the endgame is set.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T04", "T05", "T06", "T07"],
+        "knowledge": {
+          "pov_characters": ["Elle Reyes", "Damien Kroll", "Sasha (Lawyer)", "Dr. Lin (Coroner)", "Wren (Hacker)", "Detective Marcus Cole"],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Wren is the leak (confirmed in ch29)', \"Kroll's dead-man's-switch is a digital evidence package on her first kill\", 'Detective Cole is circling closer', 'Her network is fractured but not destroyed'], 'does_not_know_yet': [\"Who now holds the evidence after Kroll's death\", \"Cole's next move\", 'The full cost of the hunt']}",
+            "Damien Kroll: {'knows': ['Wren has been exposed as the leak', \"Elle knows about the dead-man's-switch\", 'Detective Cole is investigating Elle', 'The two-way hunt is reaching its endgame'], 'does_not_know_yet': ['That Elle will engineer his death', 'That his evidence will survive him', 'That the unknown handler exists']}",
+            "Sasha (Lawyer): {'knows': ['Wren is the leak (revealed in ch29)', 'The network is fractured', \"Elle's first kill is the ticking bomb\"], 'does_not_know_yet': ['Who holds the evidence after Kroll', \"Cole's level of suspicion\", 'The unknown handler']}",
+            "Dr. Lin (Coroner): {'knows': ['Wren is the leak', 'The network is fractured', \"Elle's first kill is the ticking bomb\"], 'does_not_know_yet': ['Who holds the evidence after Kroll', \"Cole's level of suspicion\", 'The unknown handler']}",
+            "Wren (Hacker): {'knows': ['She has been leaking to Kroll', 'Elle is closing in on the leak', \"Kroll's dead-man's-switch exists\"], 'does_not_know_yet': ['That Elle has confirmed she is the leak', 'The full cost of her betrayal']}",
+            "Detective Marcus Cole: {'knows': ['Elle is likely a vigilante killer', 'She has a network', 'Kroll is her target', 'He has no concrete evidence'], 'does_not_know_yet': [\"Elle's first kill details\", \"The dead-man's-switch\", 'The unknown handler']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 27
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

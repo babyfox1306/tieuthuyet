@@ -1,0 +1,89 @@
+```json
+{
+  "act": [7, 9],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Profile",
+      "slug": "the-profile",
+      "one_line_summary": "Nadia Cole profiles Victor Rhodes, sees the full weight of how the system failed Elise Marchetti, and her commitment to finish him hardens into something cold and certain.",
+      "beat_summary": "Nadia Cole receives Victor Rhodes's second voicemail and decides to accelerate her investigation. She meets Sasha Okafor to review the complete case file on Elise Marchetti — the evidence Rhodes buried, the witnesses he intimidated, the judge he bought. Nadia Cole builds a psychological profile of Victor Rhodes: a man who kills not in rage but in calculation, who covers his tracks with precision. She sees the pattern of a predator who will never stop. Her commitment to execute him hardens. In a parallel scene, Victor Rhodes reviews the private investigator's first findings on Nadia Cole — he notes her precision, her lack of a paper trail, and begins to suspect she is more than a journalist.",
+      "must_happen": [
+        "Nadia Cole listens to Victor Rhodes's second voicemail — 'Hello, Nadia. I've been looking forward to this' — and decides to accelerate the timeline, contacting Sasha Okafor for an urgent meeting.",
+        "Sasha Okafor provides Nadia Cole with the complete Elise Marchetti case file, including suppressed evidence: a witness recantation coerced by Rhodes's attorney, a deleted voicemail from Elise to a friend saying she was afraid of Rhodes, and a financial trail showing Rhodes paid the judge who dismissed the case.",
+        "Nadia Cole builds a psychological profile of Victor Rhodes — she sees the pattern: he kills only when cornered, he uses leverage not violence, he is patient and methodical. She concludes he will never stop and will kill again.",
+        "Nadia Cole commits to finishing Victor Rhodes — her internal voice is cold and precise: 'The system failed Elise. I won't.' She begins planning the execution.",
+        "Victor Rhodes is shown in a parallel scene: he reviews the private investigator's report on Nadia Cole — the report notes her lack of a digital footprint, her precise movements, and the fact that Julian Croft's death was ruled an accident despite the tampered fuel line. Victor Rhodes tilts his head and writes a note: 'She's not a journalist.'"
+      ],
+      "must_not": [
+        "Do NOT reveal the full execution plan — Nadia Cole's commitment is shown, but the method is not yet detailed.",
+        "Do NOT show Victor Rhodes making direct contact with Nadia Cole — the voicemail from chapter 6 is still fresh; this chapter deepens his suspicion through the parallel investigation scene.",
+        "Do NOT include any romance, attraction, or intimacy — the tension is in the profiling and the two-way hunt."
+      ],
+      "opens_with": "\"The second time Victor Rhodes killed, he didn't touch the body. He made sure someone else did it for him.\" — Nadia Cole, internal, as she reviews the suppressed evidence in Sasha Okafor's office.",
+      "cliffhanger": "Victor Rhodes closes the private investigator's report and picks up his phone. He dials a number and says: 'I need a background check on a medical examiner named Priya Anand. Start with her signatures.'",
+      "signature_detail_hint": "A single detail in the suppressed evidence: Elise Marchetti's deleted voicemail to her friend ends mid-sentence — 'He said if I told anyone, he'd—' — the cut-off is a fingerprint of Rhodes's control, not a technical glitch.",
+      "emotional_beat": "Nadia Cole feels a cold rage as she reads the suppressed evidence — not a hot fury, but a methodical certainty that Victor Rhodes must be stopped. Her grief for Mara Cole surfaces briefly but she suppresses it, focusing on the profile.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show Nadia Cole receiving the full case file on Elise Marchetti, building a psychological profile of Victor Rhodes, and committing to the execution. Include the parallel Victor Rhodes scene where he begins to suspect Nadia is more than a journalist. Plant the thread of Priya Anand's vulnerability (C006) via Rhodes's investigation. End with Rhodes's call to investigate Priya Anand.",
+      "carries_to_next": "Nadia Cole has committed to finishing Victor Rhodes. Victor Rhodes has begun investigating Priya Anand, threatening the network. The two-way hunt escalates."
+    },
+    {
+      "chapter": 8,
+      "title": "The Signature",
+      "slug": "the-signature",
+      "one_line_summary": "Nadia Cole's network meets to plan the execution of Victor Rhodes, but Priya Anand's nervousness about a recent death certificate signature plants a seed of vulnerability, while Victor Rhodes's counter-investigation targets the network's weakest link.",
+      "beat_summary": "Nadia Cole convenes the network — Sasha Okafor, Priya Anand, and Wren Delgado — in a secure location to plan the execution of Victor Rhodes. Priya Anand is visibly nervous: her office is being audited (RH03), and she recently signed a death certificate with a slightly different signature (C006 planted). Nadia Cole notices but dismisses it as stress. Wren Delgado provides digital intelligence on Rhodes's movements and connections. Sasha Okafor outlines legal contingencies. The plan takes shape: the execution will be staged as a car accident, using a tampered brake line. In a parallel scene, Victor Rhodes's private investigator contacts Priya Anand's office under the guise of a routine records request, probing her vulnerability. The chapter ends with Nadia Cole alone, reviewing the plan, her thumb tapping — she feels the watcher thread tightening but pushes forward.",
+      "must_happen": [
+        "Nadia Cole convenes Sasha Okafor, Priya Anand, and Wren Delgado in a secure location — a rented storage unit with soundproofing — to plan the execution of Victor Rhodes.",
+        "Priya Anand is visibly nervous: she mentions her office is being audited (RH03) and shows Nadia Cole a death certificate she signed with a slightly different signature (C006 planted — exact semantic: 'Priya Anand's signature on a death certificate is slightly different from her usual handwriting — a clue that she altered the record').",
+        "Wren Delgado provides digital intelligence: Victor Rhodes's schedule, his attorney's contact, and a pattern of meetings at a private club. Sasha Okafor outlines legal contingencies for the execution (e.g., a fake alibi, a burner phone protocol).",
+        "The network agrees on a plan: the execution will be staged as a car accident using a tampered brake line. Nadia Cole will be the operator; the network provides cover.",
+        "Victor Rhodes is shown in a parallel scene: his private investigator calls to report that Priya Anand's office is under audit and her signature records are accessible — a potential entry point.",
+        "The chapter ends with Nadia Cole alone, reviewing the plan, her thumb tapping. She feels the watcher thread tightening but pushes forward, deciding to proceed with the execution."
+      ],
+      "must_not": [
+        "Do NOT reveal Wren Delgado as the leak — Wren appears loyal and helpful in this chapter, providing digital intelligence without hesitation.",
+        "Do NOT show the execution itself — this is the planning phase, not the action.",
+        "Do NOT include any romance, attraction, or intimacy — the tension is in the network's vulnerability and the planning."
+      ],
+      "opens_with": "\"The storage unit smelled of dust and old cardboard. It was the cleanest place we had.\" — Nadia Cole, internal, as she watches Sasha, Priya, and Wren file into the rented space.",
+      "cliffhanger": "The private investigator hangs up the phone and sends a text to Victor Rhodes: 'Priya Anand's signature records are accessible. I'll have a sample by tomorrow.' Victor Rhodes reads the text and smiles.",
+      "signature_detail_hint": "A detail in the planning: Wren Delgado brings a thermos of coffee and pours it for everyone — she knows how each person takes it, a small gesture of care that masks her future betrayal.",
+      "emotional_beat": "Nadia Cole feels a flicker of paranoia as she notices Priya Anand's nervousness, but she suppresses it, trusting the network. The emotional beat is control slipping — she cannot control the audit or the signature anomaly.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show the network meeting to plan the execution of Victor Rhodes. Plant C006 (Priya Anand's signature anomaly) via the death certificate scene. Include the parallel Victor Rhodes scene where his private investigator targets Priya Anand. End with Nadia Cole's paranoia and Rhodes's smile.",
+      "carries_to_next": "The execution plan is in motion. C006 is planted. Victor Rhodes now has a concrete entry point into the network via Priya Anand's vulnerability."
+    },
+    {
+      "chapter": 9,
+      "title": "The Watcher",
+      "slug": "the-watcher",
+      "one_line_summary": "As Nadia Cole prepares to execute Victor Rhodes, he leaves a voicemail that proves he knows her true nature — the hunter becomes the hunted in the Act 1 climax.",
+      "beat_summary": "Nadia Cole finalizes the execution plan: she will tamper with Victor Rhodes's car brake line during his weekly visit to his private club. She reviews the timeline, the alibi, and the escape route. But before she can act, she receives a voicemail from Victor Rhodes — the third contact. This time, the message is precise: he uses a phrase from her private notes, not her podcast (C003 planted — exact semantic: 'Victor Rhodes leaves a voicemail for Nadia that sounds like a casual fan message, but the wording is too precise — he uses a phrase from her private notes, not her podcast'). Nadia Cole realizes he knows she is the executioner. The chapter ends with Nadia Cole frozen, her thumb pressed to her palm, as she understands the two-way hunt is now live — she is no longer invisible.",
+      "must_happen": [
+        "Nadia Cole finalizes the execution plan with the network: the timeline is set for 48 hours from now, the tampered brake line is the method, and the alibi is a fake podcast recording session.",
+        "Nadia Cole receives a voicemail from Victor Rhodes — the third contact. The message sounds like a casual fan message, but the wording is too precise: he uses a phrase from her private notes, not her podcast (C003 planted — exact semantic from clue_catalog).",
+        "Nadia Cole plays the voicemail three times, analyzing the phrasing. She realizes Victor Rhodes knows she is the executioner — he is not a random fan; he is hunting her back.",
+        "Nadia Cole calls Sasha Okafor and tells her the plan is compromised — the network must go dark. Sasha Okafor argues for proceeding, but Nadia Cole insists on a pause.",
+        "The chapter ends with Nadia Cole alone, her thumb pressed to her palm, as she processes the revelation: the hunter is now the hunted. She is no longer invisible."
+      ],
+      "must_not": [
+        "Do NOT reveal that Wren Delgado is the leak — the voicemail is from Victor Rhodes directly, not through the leak.",
+        "Do NOT show the execution — the plan is paused, not enacted.",
+        "Do NOT include any romance, attraction, or intimacy — the tension is in the revelation and the power shift."
+      ],
+      "opens_with": "\"Forty-eight hours. That's all I needed. Forty-eight hours to finish him and disappear.\" — Nadia Cole, internal, as she reviews the timeline one final time.",
+      "cliffhanger": "Nadia Cole plays the voicemail again. Victor Rhodes's voice is calm, almost friendly: 'I've been following your work for a long time, Nadia. Longer than you think. I know what you do when the cameras are off.' The line goes dead. Nadia Cole's thumb stops tapping.",
+      "signature_detail_hint": "A detail in the voicemail: Victor Rhodes uses the phrase 'clean finish' — the exact phrase Nadia Cole used in her private notes after her first kill, a phrase she has never spoken aloud or published.",
+      "emotional_beat": "Nadia Cole feels a cold dread — not fear of death, but fear of exposure. The emotional beat is the loss of invisibility, the one thing she guarded most.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show Nadia Cole finalizing the execution plan, then receiving Victor Rhodes's voicemail. Plant C003 (the precise phrasing from her private notes) via the voicemail scene. End with Nadia Cole realizing she is no longer invisible — the hunter is now the hunted. The Act 1 climax sets up the Act 2 complications.",
+      "carries_to_next": "The execution plan is paused. C003 is planted (payoff in ch10 with MR03). Nadia Cole knows Victor Rhodes knows her true nature. The two-way hunt is now fully active — Act 2 will escalate the complications."
+    }
+  ]
+}
+```

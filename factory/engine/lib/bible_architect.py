@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -11,6 +12,103 @@ from factory.engine.lib.call_9router import call_9router, parse_json_response
 from factory.engine.lib.narrative_schema import load_concept, narrative_dir
 from factory.engine.lib.prompt_builder import load_direction
 from factory.engine.paths import bible_path, load_config
+
+_LEAK_IDENTITY_RE = re.compile(
+    r"\bis the leak\b|"
+    r"\bthe leak who\b|"
+    r"\bbetrays?\b|"
+    r"\bbetrayal\b|"
+    r"\bmole\b|"
+    r"\binformer\b",
+    re.I,
+)
+_NAMED_BETRAY_RE = re.compile(
+    r"\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b.{0,40}\bbetrays?\b|"
+    r"\bbetrays?\b.{0,40}\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b|"
+    r"\bwhen\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\s+betrays?\b",
+)
+
+
+def concept_defers_leak_identity(concept: dict[str, Any]) -> bool:
+    """True when concept leaves leak/betrayer identity to plan time."""
+    blob = "\n".join(
+        [
+            str(concept.get("author_directive") or ""),
+            str(concept.get("notes") or ""),
+            "\n".join(str(x) for x in (concept.get("must_include") or [])),
+        ]
+    )
+    return bool(
+        re.search(
+            r"decide\s+which.{0,80}plan|"
+            r"decide.{0,40}at\s+plan\s*time|"
+            r"leak.{0,120}decide\s+which|"
+            r"THE LEAK:.{0,200}decide",
+            blob,
+            re.I | re.DOTALL,
+        )
+    )
+
+
+def scrub_premature_leak_lock(bible: dict[str, Any], concept: dict[str, Any]) -> list[str]:
+    """Strip named leak locks when concept deferred the choice to plan.
+
+    Returns list of scrub notes for logging. Mutates bible in place.
+    """
+    if not concept_defers_leak_identity(concept):
+        return []
+    notes: list[str] = []
+    cast = bible.get("supporting_cast")
+    if isinstance(cast, list):
+        for row in cast:
+            if not isinstance(row, dict):
+                continue
+            secret = str(row.get("secret") or "")
+            if not _LEAK_IDENTITY_RE.search(secret):
+                continue
+            name = str(row.get("name") or "cast")
+            # Keep technical role; drop betrayal lock.
+            cleaned = re.split(
+                r"[.;]\s*(?:is the leak|betrays?|the leak who)\b",
+                secret,
+                maxsplit=1,
+                flags=re.I,
+            )[0].strip(" ;,")
+            if not cleaned or _LEAK_IDENTITY_RE.search(cleaned):
+                cleaned = "Network member with a sensitive operational role — loyalty unresolved until plan."
+            row["secret"] = cleaned
+            notes.append(f"scrubbed leak lock from {name}.secret")
+
+    arcs = bible.get("series_arc")
+    if isinstance(arcs, list):
+        for arc in arcs:
+            if not isinstance(arc, dict):
+                continue
+            for key in ("thesis", "ending_hook"):
+                text = str(arc.get(key) or "")
+                if not text or not _NAMED_BETRAY_RE.search(text):
+                    continue
+                arc[key] = _NAMED_BETRAY_RE.sub(
+                    "a network member betrays",
+                    text,
+                )
+                # Normalize awkward doubles
+                arc[key] = re.sub(
+                    r"a network member betrays\s+her",
+                    "a network member betrays her",
+                    str(arc[key]),
+                    flags=re.I,
+                )
+                notes.append(f"scrubbed named betrayer from series_arc.{key}")
+
+    cm = bible.get("central_mystery")
+    if isinstance(cm, dict):
+        for key in ("question", "answer"):
+            text = str(cm.get(key) or "")
+            if _NAMED_BETRAY_RE.search(text):
+                cm[key] = _NAMED_BETRAY_RE.sub("a network member betrays", text)
+                notes.append(f"scrubbed named betrayer from central_mystery.{key}")
+    return notes
 
 
 def _save_bible(ws: Path, bible: dict[str, Any]) -> None:
@@ -132,14 +230,26 @@ def generate_bible_with_retry(
             continue
 
         seeded = seed_central_mystery_from_ledger(bible, ledger)
+        concept = load_concept(ws)
+        scrub_notes = scrub_premature_leak_lock(bible, concept)
+        # Align genre labels with direction when concept forbids romance.
+        profile = str(direction.get("narrative_profile") or "").strip()
+        if profile and "romance" not in profile.lower():
+            meta = bible.get("meta") if isinstance(bible.get("meta"), dict) else {}
+            if str(meta.get("genre") or "").lower().find("romance") >= 0:
+                meta["genre"] = profile
+                bible["meta"] = meta
+            if "romance" in str(bible.get("sub_niche") or "").lower():
+                bible["sub_niche"] = profile
         bible["bible_status"] = "draft"
         last_bible = bible
-        errors = validate_bible(bible)
+        errors = validate_bible(bible, concept=concept)
         attempts_log.append(
             {
                 "attempt": attempt,
                 "errors": list(errors),
                 "seeded_central_mystery": seeded,
+                "scrub_notes": scrub_notes,
                 "usage": log.get("usage"),
             }
         )

@@ -1,0 +1,133 @@
+```json
+{
+  "act": [49, 50],
+  "chapter_plans": [
+    {
+      "chapter": 49,
+      "title": "The Call",
+      "slug": "the-call",
+      "one_line_summary": "The housekeeper (unnamed narrator) wakes, picks up the investigator's card, and decides to call the husband — not to accept his deal, but to make one of her own that will finally sever her ties to the past.",
+      "beat_summary": "The housekeeper (unnamed narrator) wakes in her room above the bakery. The photograph of herself and Nora as children is still in her hand. She has not slept. She places it in the folder, closes it, and slides it under the mattress. On the nightstand is a business card from a private investigator who visited the library the previous week, asking about a woman matching her description. She picks up the card. She knows the investigator is working for Julian — the husband who is still alive, still hunting her. She could call him and accept his deal: help him prove Nora's guilt, and he will clear her name. But she has another idea. She dials Julian's number and offers a counter-deal: she will give him the location of the evidence she hid in the hollow tree — the recording of Nora's confession, the forged documents — in exchange for a signed statement that she was an unwitting pawn. He will never contact her again. He agrees. She hangs up. She has finally severed her ties to the past — but the cost is her last piece of leverage. She is free, but she is also defenseless. The chapter ends with her sitting in the quiet of her room, the silence heavier than any sound.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) wakes at dawn, the childhood photograph still in her hand. She places it in the folder and hides it under the mattress.",
+        "She picks up the private investigator's card from the nightstand. She recognizes the name — he works for Julian Blackwood.",
+        "She dials Julian's number. She does not accept his deal. She offers a counter: the location of the evidence in the hollow tree in exchange for a signed statement that she was an unwitting pawn, and a promise that he will never contact her again.",
+        "Julian hesitates, then agrees. The housekeeper (unnamed narrator) gives him the location. She hears him write it down. 'You'll never hear from me again,' he says, and hangs up.",
+        "The housekeeper (unnamed narrator) sits on the edge of the bed, the phone in her hand. She has no leverage left. She is free, but she is also defenseless.",
+        "She goes to work at the library. She shelves books. She avoids eye contact. She counts the steps from the front door to the biography section: 47. She does not stop counting."
+      ],
+      "must_not": [
+        "Do not reveal that Julian will break his promise — he has already sent a copy of the evidence to the police.",
+        "Do not reveal that the investigator's card was planted by Nora to test the housekeeper (unnamed narrator)'s loyalty.",
+        "Do not reveal that the housekeeper (unnamed narrator) kept a single photograph — the one of herself and Nora as children — hidden in her shoe."
+      ],
+      "opens_with": "\"I have a counter-offer,\" I said into the phone, and the silence on the other end was so long I thought he had hung up. Then Julian Blackwood's voice, cold and measured: 'I'm listening.'",
+      "cliffhanger": "The housekeeper (unnamed narrator) hangs up the phone. She stares at the wall. She has just given away her only weapon. She tells herself it was the right choice — freedom is worth the cost. But as she walks to work, she feels lighter and heavier at the same time, like a bird that has forgotten how to fly.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the steps from her room to the library: 47. She stops at the door and whispers, 'I am not a subject. I am not a target. I am Sarah Cole.' She opens the door and walks inside.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a hollow, fragile peace. She has traded her leverage for freedom, and she does not know if she made the right choice. But for the first time, the choice was hers — and she is learning to live with the consequences.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The intimacy is internal and decisive — the housekeeper (unnamed narrator) makes a choice that severs her ties to the past.",
+      "chapter_task": "Write 1700-1900 words executing the beat map: the housekeeper (unnamed narrator) wakes, picks up the investigator's card, and decides to call the husband — not to accept his deal, but to make one of her own that will finally sever her ties to the past. The phone call should feel like a chess move — the housekeeper (unnamed narrator) is giving up leverage for freedom, and she knows the cost. End with her walking into the library, ready to begin the rest of her life. No romance micro-beat — male lead is Unassigned and romance is not opt-in.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has severed her ties to Julian and the evidence. She is free, but defenseless. Chapter 50 will follow her as she lives a full day as Sarah Cole — and realizes that freedom is a daily choice.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T06",
+          "T07",
+          "T08",
+          "T09",
+          "T10"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['her own hidden agenda is exposed to the reader', 'the wife is the architect of everything', \"the wife's fragility was a performance\", \"the locked room contains the wife's ledger and her own criminal record\", 'the wife has done this before (Clara Higgins)'], 'does_not_know': ['the full extent of the frame job (the planted weapon, the forged letter)', 'the husband is the target, not the predator', 'when the murder will happen']}",
+            "the_wife: {'knows': ['the housekeeper has discovered her ledger and criminal record', 'the housekeeper knows she is the architect', 'the plan is at risk of exposure'], 'does_not_know': ['if the housekeeper will destroy the evidence or use it against her', \"the husband's awareness of her manipulation\"]}",
+            "the_husband: {'knows': [\"the housekeeper has discovered his wife's ledger\", 'the truth about his wife is coming out'], 'does_not_know': ['his wife is planning to kill him within the next 10 chapters']}",
+            "clara_higgins: {'knows': ['the new housekeeper has found her hidden diary or evidence'], 'does_not_know': ['if the housekeeper will use it to expose the wife']}",
+            "dr_ellis: {'knows': ['the husband is afraid of his wife', 'something is very wrong in the house'], 'does_not_know': ['the murder is imminent']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 36
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 50,
+      "title": "The Quiet Life",
+      "slug": "the-quiet-life",
+      "one_line_summary": "The housekeeper (unnamed narrator) lives a full day as Sarah Cole — no calls, no letters, no shadows — and realizes that freedom is not a destination but a daily choice, made in the small, ordinary moments.",
+      "beat_summary": "The housekeeper (unnamed narrator) — now Sarah Cole — wakes in her room above the bakery. The sun is warm through the window. She makes coffee, dresses, and walks to the library. The morning is ordinary: she shelves books, helps an elderly woman find a mystery novel, eats a sandwich alone in the back room. At noon, a child comes in asking for a book about birds. She finds it for him. He smiles and says thank you. She feels something she has not felt in years: the quiet warmth of a normal day. She does not count steps. She does not check over her shoulder. At closing time, she walks home and stops at the bakery for a loaf of bread. Mrs. Pendleton asks about her day. She says it was good. And it was. That night, she sits on her bed and looks at the photograph of herself and Nora — the only piece of evidence she kept. She does not burn it. She does not hide it. She places it in a drawer and closes it. She is not running from the past anymore. She is living beside it. The chapter ends with her turning off the light and lying down, the silence of the room wrapping around her like a blanket. She is not free of the past — but she is free in this moment. And for now, that is enough.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) wakes in her room above the bakery. The sun is warm. She makes coffee, dresses, and walks to the library without counting the steps.",
+        "She shelves books, helps an elderly woman find a mystery novel, eats a sandwich alone in the back room. The morning is ordinary and quiet.",
+        "At noon, a child comes in asking for a book about birds. She finds it for him. He smiles and says thank you. She feels a warmth she has not felt in years.",
+        "At closing time, she walks home and stops at the bakery. Mrs. Pendleton asks about her day. She says it was good. And it was.",
+        "That night, she sits on her bed and looks at the photograph of herself and Nora as children. She does not burn it. She does not hide it. She places it in a drawer and closes it.",
+        "She turns off the light and lies down. The silence of the room wraps around her like a blanket. She is not free of the past — but she is free in this moment. And for now, that is enough."
+      ],
+      "must_not": [
+        "Do not reveal that the child with the bird book was sent by Nora — a final test to see if the housekeeper (unnamed narrator) is truly at peace.",
+        "Do not reveal that Mrs. Pendleton is watching her for Margaret — the housekeeper (unnamed narrator) is not as hidden as she thinks.",
+        "Do not reveal that the housekeeper (unnamed narrator) will return to the photograph in the night and hold it, whispering, 'I will never forget you. But I will not let you destroy me.'"
+      ],
+      "opens_with": "I woke to the sound of birds and the smell of fresh bread from the bakery below. For a moment, I did not know where I was. Then I remembered: Millbrook. My room. My life. And for the first time in months, I did not reach for the folder under the mattress.",
+      "cliffhanger": "The housekeeper (unnamed narrator) lies in the dark, her eyes open. She is not afraid. She is not waiting. She is simply here, in this room, in this life. She closes her eyes and breathes. The silence is not empty — it is full of possibility. She does not know what tomorrow will bring. But she knows she will face it. And for now, that is enough.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) does not count anything today. Not the steps to the library. Not the books on the shelf. Not the seconds until closing time. She lets the numbers go, one by one, like birds released from a cage. She is learning to live without counting. And it is the hardest thing she has ever done.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a fragile, tentative peace. She is not healed. She is not free. But she is here, in this moment, and she is choosing to stay. The quiet life is not a destination — it is a daily choice. And today, she chose it.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The intimacy is internal and peaceful — the housekeeper (unnamed narrator) is learning to live with herself.",
+      "chapter_task": "Write 1700-1900 words executing the beat map: the housekeeper (unnamed narrator) lives a full day as Sarah Cole — no calls, no letters, no shadows — and realizes that freedom is not a destination but a daily choice, made in the small, ordinary moments. The chapter should be quiet, contemplative, and hopeful. The housekeeper (unnamed narrator) does not need to be healed — she just needs to be present. End with her lying in the dark, at peace for the first time. No romance micro-beat — male lead is Unassigned and romance is not opt-in.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has chosen to live. Book 1 closes: the reader knows who framed whom (Nora framed Julian, and the housekeeper was the unwitting pawn). Who dies: Julian is dead (killed by Nora). The housekeeper survives, bound to a secret that could destroy her — the secret of what she chose under the hollow tree, and the photograph she still keeps in her drawer. Book 2 will follow her as she builds a new life — and as Nora returns to collect what she is owed.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T06",
+          "T07",
+          "T08",
+          "T09",
+          "T10"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['the wife engineered the entire hire to frame her', 'the husband is dead', 'she has escaped the frame but is not free', 'a piece of evidence she thought destroyed has resurfaced'], 'does_not_know': ['who has the resurfaced evidence', 'what they want', 'if she will ever be truly free']}",
+            "the_wife: {'knows': ['the husband is dead', 'the housekeeper escaped the frame', 'a piece of evidence (the forged letter or a copy) was sent to an unknown third party'], 'does_not_know': ['who received the evidence', 'if the housekeeper will return', 'if her plan will be fully exposed']}",
+            "the_husband: {'knows': ['he is dead'], 'does_not_know': ['who killed him (the wife)', 'that the housekeeper was framed']}",
+            "clara_higgins: {'knows': ['she is still in hiding', \"the wife's plan has partially succeeded (husband dead)\"], 'does_not_know': ['if the housekeeper survived', 'if the evidence she left will be used']}",
+            "dr_ellis: {'knows': ['the husband is dead', 'the housekeeper is missing'], 'does_not_know': ['the truth about the wife']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 50
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

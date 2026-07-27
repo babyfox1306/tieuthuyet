@@ -1,0 +1,14 @@
+characters:
+  female_lead:
+    canonical: Nadia Cole
+    allowed_aliases:
+    - Nadia
+    - Cole
+    forbidden_aliases: []
+  male_lead:
+    canonical: Victor Rhodes
+    allowed_aliases:
+    - Victor
+    - Rhodes
+    forbidden_aliases: []
+pov_mode: first_person

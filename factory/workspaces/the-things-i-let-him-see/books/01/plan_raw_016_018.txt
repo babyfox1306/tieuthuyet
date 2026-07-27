@@ -1,0 +1,87 @@
+{
+  "act": [16, 18],
+  "chapter_plans": [
+    {
+      "chapter": 16,
+      "title": "No Rescue",
+      "slug": "no-rescue",
+      "one_line_summary": "Grant notices Mae's terminal access and pressures Calder; Calder tells Lena to leave the building; Lena refuses, revokes his personal access, and ends the relationship, permitting only formal witness obligations.",
+      "beat_summary": "Grant notices Mae's terminal access and urgently asks Calder to determine whether Lena obtained building records. Fearing Grant will destroy evidence or re-enter, Calder tells Lena to leave the building and let him control the rest. Lena refuses: leaving would support Grant's abandonment narrative, put her plan under Calder's control, let him repeat Grant's pattern, and break the rules she set. Calder keeps arguing; Lena revokes his personal access and ends the relationship, permitting only the formal witness obligations already transferred to Cross. Calder leaves without touching, recording, or taking anything, not knowing if she will ever speak to him again. Primary turn: Calder loses Lena because he tries to convert protection into control.",
+      "must_happen": [
+        "Grant messages Calder: 'Mae Torres accessed the board terminal yesterday. Find out what she printed and whether Lena was with her.' Calder realizes Grant is suspicious and may attempt to destroy the physical audit or re-enter Lena's unit.",
+        "Calder goes to Lena's apartment and tells her to leave the building immediately and let him handle Grant and the evidence; he argues that her safety and the chain are at risk.",
+        "Lena refuses: leaving would support Grant's abandonment narrative, put her plan under Calder's control, let him repeat Grant's pattern of deciding for her, and violate the rules she established in Chapter Ten.",
+        "Calder keeps arguing; Lena revokes his personal access and ends the relationship, stating that only the formal witness obligations already transferred to Detective Cross are still permitted.",
+        "Calder leaves the apartment without touching Lena, without recording, and without taking any of her belongings or evidence; he does not know if she will ever speak to him again."
+      ],
+      "must_not": [
+        "Do not include any romantic attraction, chemistry, intimacy, or emotional reconciliation; the scene is a confrontation about control, not a breakup with romantic subtext.",
+        "Do not have Calder physically touch Lena, record anything, or take any evidence from the apartment; he leaves empty-handed."
+      ],
+      "opens_with": "\"Mae Torres accessed the board terminal yesterday.\" I read Grant's message aloud, and Lena Hart's face goes still — not the stillness of a trap closing this time, but the stillness of someone calculating how fast a door can be shut.",
+      "cliffhanger": "The door closes between us, and I stand in the hallway with nothing in my hands — no device, no evidence, no plan, no permission to knock again.",
+      "signature_detail_hint": "The doorframe seal Lena checks before opening — a thin strip of clear tape she pressed into the gap the night before, now broken — visible proof that her boundary was intact until she chose to break it.",
+      "emotional_beat": "Fear that Grant will destroy the evidence; rage at Calder for trying to override her decision; grief at ending the alliance on her own terms; isolation in the hallway after the door closes.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven. No physical contact, no intimacy, no attraction.",
+      "chapter_task": "Write 1700-1900 words depicting Grant's message, Calder's argument to leave, Lena's refusal and revocation of personal access, and Calder's exit. Calder's first-person POV must show the shift from believing he is protecting her to understanding he is repeating Grant's pattern of control.",
+      "carries_to_next": "Lena has revoked Calder's personal access and ended the relationship; only formal witness obligations to Cross remain; Grant is suspicious about Mae's terminal access; the settlement session is imminent; Calder does not know if Lena will speak to him again."
+    },
+    {
+      "chapter": 17,
+      "title": "The False Chain",
+      "slug": "the-false-chain",
+      "one_line_summary": "At the settlement session, Grant presents his false chain of custody; Lena forces him to confirm each element, then Calder and Mae produce the independent evidence that exposes the lie.",
+      "beat_summary": "The settlement session in the condominium community room: Lena, Grant, Calder, Mae, and an unnamed mediator/legal staff. Detective Cross is NOT inside the confidential session; she already holds the duplicate. Grant presents edited reports, the certified envelope, the false checklist, resident records, and his abandonment claim; he asserts the envelope was delivered, opened by Lena, then found in shared recycling, and that 'Friday key return' was her plan. Lena makes Grant formally confirm tracking number, clipped corner, checklist, phrase, and recycling-area custody — tying the document to his false chain. She asks Calder whether Grant ever used the phrase before delivery; he says no. Calder produces Grant's Chapter Twelve instruction with the phrase, the original lobby footage of Grant taking the envelope, the matching handwritten timestamp, and the report that omitted the removal. Mae produces the printed access audit placing Grant's credential at Lena's unit during deleted intervals; Calder's originals restore them; the planner supplies physical timestamps. Grant tries to claim Calder fabricated the originals (contradicted by metadata, continuous log, contract, instructions, and the index already delivered to Cross) and that Mae forged the record (contradicted by the terminal verification code). The mediator halts the session; no transfer, no judgment, no physical attack; Cross takes custody afterward. Primary turn: Lena forces Grant to choose and defend the lie that exposes the whole system.",
+      "must_happen": [
+        "Grant presents the certified envelope, the false checklist, edited reports, resident records, and his abandonment claim; he asserts the envelope was delivered to Lena, opened by her, then found discarded in shared recycling, and that the 'Friday key return' phrase was her plan.",
+        "Lena makes Grant formally confirm the tracking number, clipped corner, checklist contents, the phrase, and his recycling-area custody claim — forcing him to commit to each element of his false chain.",
+        "Lena asks Calder whether Grant ever used the phrase 'Friday key return' before the envelope was delivered; Calder answers no.",
+        "Calder produces Grant's Chapter Twelve instruction containing the phrase, the original lobby footage of Grant taking the clipped envelope from Lena's mailbox, the matching handwritten timestamp from his notebook, and the daily report that omitted the removal.",
+        "Mae produces the printed master-access audit showing Grant's credential ID, entry timestamps into Lena's unit during intervals matching the footage gaps, and the terminal verification code.",
+        "Grant tries to claim Calder fabricated the originals (contradicted by metadata, continuous log, contract, instructions, and the evidence index already delivered to Cross) and that Mae forged the record (contradicted by the terminal verification code).",
+        "The mediator halts the session; no property transfer, no judgment, no physical attack; Detective Cross takes custody of all evidence afterward."
+      ],
+      "must_not": [
+        "Do not include any romantic attraction, chemistry, or intimacy; the scene is a procedural settlement session, not a personal moment.",
+        "Do not have Grant confess to stealing the envelope; he only defends the false chain and is exposed by independent evidence.",
+        "Do not have Detective Cross inside the confidential session; she is outside, holding the duplicate, and takes custody afterward."
+      ],
+      "opens_with": "\"This envelope was delivered to my wife on the morning of the eighth,\" Grant Hart says, setting the clipped envelope on the community room table with the practiced calm of a man who has rehearsed this moment. \"She opened it, read the contents, and discarded it in the shared recycling bin. The checklist inside documents her plan to abandon the property.\"",
+      "cliffhanger": "The mediator sets down her pen and looks at the table — at the envelope, the footage still on the screen, the audit printout, the planner, the contract — and says: 'This session is suspended. No transfer will be recorded. I am instructing both parties to preserve all documents and await further direction from the investigating authority.'",
+      "signature_detail_hint": "The clipped corner of the envelope — a precise half-inch diagonal cut that Lena made before mailing, visible in Grant's hand as he presents it, matching the description in her planner and the timestamp in Calder's notebook.",
+      "emotional_beat": "The cold satisfaction of a trap closing; the tension of watching Grant commit to a lie; the procedural relief of the mediator halting the session; the weight of the evidence now beyond Calder's sole custody.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven. No physical contact, no intimacy, no attraction.",
+      "chapter_task": "Write 1700-1900 words depicting the settlement session, Grant's presentation, Lena's systematic confirmation of each element, Calder's and Mae's production of the independent evidence, and the mediator's suspension. The tone should be procedural and tense, emphasizing the weight of the evidence chain rather than emotional resolution.",
+      "carries_to_next": "The settlement session is suspended; no property transfer occurs; Grant's false chain is exposed; Detective Cross has custody of the evidence; Grant loses admin access; an independent condo audit begins; Calder has not contacted Lena since the revocation."
+    },
+    {
+      "chapter": 18,
+      "title": "The Open Curtain",
+      "slug": "the-open-curtain",
+      "one_line_summary": "After the settlement is suspended and Grant's access revoked, Calder gives a full statement to Cross, accepts scrutiny, and does not contact Lena; she later asks him to return without recording equipment, and their second explicit encounter follows her rules.",
+      "beat_summary": "Verified aftermath, no legal miracle: settlement suspended, Lena keeps possession, transfer blocked pending review, Grant loses admin access, an independent condo audit begins, Cross verifies everything, investigators pursue unlawful entry, mail interference, digital evidence tampering, coercive surveillance, and attempted fraud; Grant is not instantly convicted, divorce not finalized. Calder gives a full statement, admits withholding material and the personal relationship, accepts professional and legal scrutiny, does not contact Lena. Only after his evidence is transferred and his witness role no longer needs private access does Lena contact him — asking him to return without a camera, device, contract, report, or a promise she will forgive everything. She verifies the courtyard camera stays disconnected. Their second explicit encounter follows the established rules; Lena chooses when he enters, what he sees, what stays private, when the curtain stays open or closes. Later Mae gives Lena a sealed archived complaint about another condominium using the same security vendor, predating Grant's board role; Lena does not open it. Primary turn: Lena chooses Calder only after observation, evidence, and need no longer determine the relationship.",
+      "must_happen": [
+        "Calder gives a full statement to Detective Cross, admitting that he withheld material evidence during the initial investigation and that he had a personal relationship with Lena Hart; he accepts professional and legal scrutiny without attempting to minimize his conduct.",
+        "Calder does not contact Lena after the settlement session; he waits until she contacts him.",
+        "Lena contacts Calder and asks him to return to her apartment without a camera, recording device, contract, report, or any promise that she will forgive everything; she verifies the courtyard camera remains disconnected.",
+        "Their second explicit encounter follows the rules established in Chapter Ten: Lena gives affirmative verbal consent, directs the pace and boundaries, and chooses when he enters, what he sees, what stays private, and when the curtain stays open or closes.",
+        "Mae gives Lena a sealed archived complaint about another condominium using the same security vendor, predating Grant's board role; Lena places it on a shelf without opening it."
+      ],
+      "must_not": [
+        "Do not include any romantic attraction, chemistry, or intimacy beyond the explicit encounter described in the beat; the scene is a chosen encounter under established rules, not a romantic reconciliation.",
+        "Do not have Grant instantly convicted, the divorce finalized, or the property transferred; the legal resolution remains pending.",
+        "Do not have Lena open the sealed archived complaint; it remains unopened."
+      ],
+      "opens_with": "Detective Cross sets a recorder on the table between us and says: 'Mr. Reed, I need you to tell me everything you withheld, everything you observed, and everything you did that you are not proud of. Start at the beginning.'",
+      "cliffhanger": "Lena Hart stands in her doorway, the courtyard dark behind her, and says: 'No camera. No device. No contract. No report. No promise that I will forgive everything. Just you, if you still understand the rules.'",
+      "signature_detail_hint": "The unopened envelope on Lena's shelf — the sealed archived complaint from another condominium, predating Grant's board role, a thread she chooses not to pull, the curtain she decides to keep closed.",
+      "emotional_beat": "The relief of transferring the weight of the evidence; the grief of admitting the violation; the isolation of waiting without contact; the fragile hope of being chosen after the need is gone.",
+      "spice": 1,
+      "spice_note": "No romance; tension is plot-driven. The explicit encounter is a chosen act under established rules, not a romantic reconciliation. No attraction, chemistry, or intimacy markers.",
+      "chapter_task": "Write 1700-1900 words depicting Calder's statement to Cross, the period of no contact, Lena's invitation, the verification of the camera, and the second explicit encounter under the established rules. Calder's first-person POV must show the shift from being needed as a witness to being chosen without need.",
+      "carries_to_next": "The evidence chain is complete and in Cross's custody; Grant's access is revoked; the divorce and criminal investigation remain pending; Lena has chosen Calder after the need for his witness role ended; the sealed archived complaint remains unopened."
+    }
+  ]
+}

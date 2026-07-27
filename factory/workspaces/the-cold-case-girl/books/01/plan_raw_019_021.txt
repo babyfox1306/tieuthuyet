@@ -1,0 +1,90 @@
+```json
+{
+  "act": [19, 21],
+  "chapter_plans": [
+    {
+      "chapter": 19,
+      "title": "The File",
+      "slug": "the-file",
+      "one_line_summary": "Nadia Cole discovers Victor Rhodes has compiled a case file on her first kill, confirming the hunter has become the hunted and the origin wound is exposed.",
+      "beat_summary": "Nadia Cole, still in the safe house, receives a text from Victor Rhodes: a single photograph — a page from a file showing the Julian Croft boating accident report with handwritten annotations linking it to her. She calls Wren Delgado to trace the source; Wren Delgado confirms the file is real and was accessed from a server in Rhodes's building. Nadia Cole calls Sasha Okafor to assess the legal threat — Sasha Okafor says the file alone is not enough to charge her, but combined with the photograph from the kill site, it could be used to build a case. Nadia Cole realizes Rhodes has been building this file for weeks, possibly months. She isolates in the safe house, reviewing her own copy of the Julian Croft file from the storage box. She runs her thumb over the tampered fuel line photograph, feeling the weight of the origin wound. The chapter ends with Nadia Cole deciding she must find and destroy Rhodes's file before he can use it — but she knows he will have backups.",
+      "must_happen": [
+        "Nadia Cole receives a text from Victor Rhodes containing a photograph of a page from a file — the Julian Croft boating accident report with handwritten annotations linking it to her, confirming he has built a case on her first kill.",
+        "Nadia Cole calls Wren Delgado to trace the source of the file — Wren Delgado confirms the file is real and was accessed from a server in Rhodes's building, confirming he has physical or digital possession of it.",
+        "Nadia Cole calls Sasha Okafor to assess the legal threat — Sasha Okafor says the file alone is not enough to charge her, but combined with the photograph from the kill site, it could be used to build a case.",
+        "Nadia Cole isolates in the safe house, reviewing her own copy of the Julian Croft file from the storage box — she runs her thumb over the tampered fuel line photograph, feeling the weight of the origin wound.",
+        "Nadia Cole decides she must find and destroy Victor Rhodes's file before he can use it — but she knows he will have backups, and the two-way hunt has escalated to a new level."
+      ],
+      "must_not": [
+        "Do NOT reveal that Wren Delgado is the leak — her help in tracing the file is genuine, and her loyalty is not questioned in this chapter.",
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on Nadia Cole's discovery and the weight of the origin wound.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is cold fear and the weight of the origin wound."
+      ],
+      "opens_with": "\"The photograph arrived at 2:14 AM. A page from a file I'd never seen before — the Julian Croft boating accident report, annotated in handwriting I recognized from the voicemail. Victor Rhodes had been building a case on me for months, and I hadn't seen it coming.\" — Nadia Cole, internal, as she stares at the photograph.",
+      "cliffhanger": "Nadia Cole closes the Julian Croft file and looks at her phone. A new message from Victor Rhodes: 'I have three copies, Nadia. One in my office. One in my safe. One with my attorney. You can't destroy them all.' She drops the phone, her thumb pressed to her palm.",
+      "signature_detail_hint": "The handwritten annotations on the file are in blue ink, with a specific loop on the letter 'g' that matches the voicemail transcript — a signature detail that confirms Rhodes wrote them himself.",
+      "emotional_beat": "Fear and cold calculation — Nadia Cole feels the weight of the origin wound and realizes the two-way hunt has escalated to a level she cannot control.",
+      "spice": 1,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show Nadia Cole's discovery of Victor Rhodes's case file on her first kill. Show her calls to Wren Delgado and Sasha Okafor to assess the threat. End with her decision to find and destroy the file, and Rhodes's taunt about having three copies. Do not expose Wren Delgado as the leak.",
+      "carries_to_next": "Victor Rhodes has a case file on Nadia Cole's first kill. The two-way hunt has escalated. Chapter 20 will show Nadia Cole's attempt to find and destroy the file, while the network faces a new threat — the audit on Priya Anand's office."
+    },
+    {
+      "chapter": 20,
+      "title": "The Audit",
+      "slug": "the-audit",
+      "one_line_summary": "Nadia Cole attempts to locate Victor Rhodes's case file while Priya Anand's medical examiner office faces a routine audit that could expose the altered signature.",
+      "beat_summary": "Nadia Cole calls Wren Delgado to locate the physical copies of Victor Rhodes's file — Wren Delgado reports that Rhodes's office is in a secure building with 24/7 surveillance, and his safe is in a private residence with motion sensors. Nadia Cole decides the office is the only viable target. She calls Sasha Okafor to prepare a legal distraction — a fake lawsuit against Rhodes's company that would require him to be deposed, drawing him out of the office. Sasha Okafor agrees but warns that the timeline is tight. Meanwhile, Priya Anand calls Nadia Cole in a panic: her medical examiner office is being audited by the state board — a routine audit, but the auditor is known for being thorough. Priya Anand is terrified the altered signature will be discovered. Nadia Cole tells Priya Anand to stay calm and not alter any records further. She hangs up and realizes the audit is either a coincidence or Victor Rhodes's doing — another pressure point. The chapter ends with Nadia Cole staring at her phone, knowing she cannot protect Priya Anand from a routine audit without drawing attention to herself.",
+      "must_happen": [
+        "Nadia Cole calls Wren Delgado to locate the physical copies of Victor Rhodes's file — Wren Delgado reports that Rhodes's office is in a secure building with 24/7 surveillance, and his safe is in a private residence with motion sensors, making both difficult targets.",
+        "Nadia Cole decides the office is the only viable target and calls Sasha Okafor to prepare a legal distraction — a fake lawsuit against Rhodes's company that would require him to be deposed, drawing him out of the office.",
+        "Sasha Okafor agrees to prepare the fake lawsuit but warns that the timeline is tight — she says Rhodes's legal team will see through it if it's not airtight.",
+        "Priya Anand calls Nadia Cole in a panic: her medical examiner office is being audited by the state board — a routine audit, but the auditor is known for being thorough, and Priya Anand is terrified the altered signature will be discovered (RH03 planted — exact semantic: 'Priya Anand's medical examiner office is audited, suggesting her altered records might be discovered — but the audit is routine and reveals nothing, a false alarm that tests Nadia's paranoia').",
+        "Nadia Cole tells Priya Anand to stay calm and not alter any records further — she hangs up and realizes the audit is either a coincidence or Victor Rhodes's doing, another pressure point.",
+        "The chapter ends with Nadia Cole staring at her phone, knowing she cannot protect Priya Anand from a routine audit without drawing attention to herself."
+      ],
+      "must_not": [
+        "Do NOT reveal that the audit is a dead end — the reader should believe it is a real threat to Priya Anand.",
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on Nadia Cole's attempt to locate the file and the network's vulnerability.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is paranoia and cold calculation."
+      ],
+      "opens_with": "\"Wren's voice was flat, clinical. 'His office is a fortress. Twenty-four-hour security, biometric locks, a server room with offline backups. The safe at his house is worse — motion sensors, a panic room, and a direct line to the police.' I listened, and I calculated. There was only one way in.\" — Nadia Cole, internal, as she reviews Wren Delgado's report on Rhodes's security.",
+      "cliffhanger": "Nadia Cole hangs up with Priya Anand and stares at her phone. She types a message to Victor Rhodes: 'The audit — your doing?' She deletes it without sending. She knows the answer. She closes her eyes and whispers: 'He's not just hunting me. He's dismantling me piece by piece.'",
+      "signature_detail_hint": "The fake lawsuit is drafted on letterhead from a law firm that dissolved three years ago — a detail that would only be caught by someone looking closely, but a risk Nadia Cole is willing to take.",
+      "emotional_beat": "Paranoia and cold calculation — Nadia Cole realizes Victor Rhodes is using multiple pressure points to dismantle her network, and she cannot protect everyone at once.",
+      "spice": 1,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show Nadia Cole's attempt to locate Victor Rhodes's file and the decision to create a legal distraction. Introduce the audit on Priya Anand's office (RH03 planted — exact semantic from red_herring_catalog). End with Nadia Cole realizing Victor Rhodes is using multiple pressure points to dismantle her network. Do not expose Wren Delgado as the leak.",
+      "carries_to_next": "RH03 is planted. Nadia Cole is attempting to locate Victor Rhodes's file. The audit on Priya Anand's office is a false alarm but tests the network's paranoia. Chapter 21 will show Nadia Cole's origin wound surfacing in fragments as she reviews the Julian Croft file and prepares for the next move."
+    },
+    {
+      "chapter": 21,
+      "title": "The Fragments",
+      "slug": "the-fragments",
+      "one_line_summary": "Nadia Cole's origin wound surfaces in fragments as she reviews the Julian Croft file, preparing for the next move against Victor Rhodes.",
+      "beat_summary": "Nadia Cole isolates in the safe house, reviewing the Julian Croft file one more time. She reads Mara Cole's diary entry — the one that mentions 'a developer who came to the house' — and feels the weight of the origin wound. She remembers the night she killed Julian Croft: the boat, the fuel line, the moment she watched him drown. The memory surfaces in fragments — not a full reveal, but enough to remind the reader of the emotional foundation. She calls Sasha Okafor to check on the fake lawsuit — Sasha Okafor says it's ready, but the timing is risky. She calls Priya Anand to check on the audit — Priya Anand says it's ongoing but routine, and the auditor hasn't found anything yet. Nadia Cole realizes the audit is a false alarm, but the paranoia remains. She calls Wren Delgado to prepare the digital breach of Rhodes's office — Wren Delgado confirms the plan but is unusually quiet, a subtle sign of the leak. The chapter ends with Nadia Cole closing the Julian Croft file and whispering: 'I started this for Mara. I will finish it for myself.'",
+      "must_happen": [
+        "Nadia Cole isolates in the safe house, reviewing the Julian Croft file — she reads Mara Cole's diary entry mentioning 'a developer who came to the house' (C005 referenced — exact semantic: 'Nadia's sister Mara's diary entry (found in a box) mentions a \"developer who came to the house\" — a reference to Julian Croft, planting the origin connection') and feels the weight of the origin wound.",
+        "The memory of the night she killed Julian Croft surfaces in fragments — the boat, the fuel line, the moment she watched him drown — reminding the reader of the emotional foundation without a full reveal.",
+        "Nadia Cole calls Sasha Okafor to check on the fake lawsuit — Sasha Okafor says it's ready, but the timing is risky and Rhodes's legal team may see through it.",
+        "Nadia Cole calls Priya Anand to check on the audit — Priya Anand says it's ongoing but routine, and the auditor hasn't found anything yet, confirming the audit is a false alarm (RH03 dispelled — exact semantic: 'Priya Anand's medical examiner office is audited, suggesting her altered records might be discovered — but the audit is routine and reveals nothing, a false alarm that tests Nadia's paranoia').",
+        "Nadia Cole calls Wren Delgado to prepare the digital breach of Victor Rhodes's office — Wren Delgado confirms the plan but is unusually quiet, a subtle sign of the leak.",
+        "The chapter ends with Nadia Cole closing the Julian Croft file and whispering: 'I started this for Mara. I will finish it for myself.'"
+      ],
+      "must_not": [
+        "Do NOT reveal the full origin story — the memory surfaces in fragments, not a complete narrative.",
+        "Do NOT reveal that Wren Delgado is the leak — her quietness is subtle and could be read as focus, not betrayal.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is grief and cold resolve."
+      ],
+      "opens_with": "\"I opened the file for the fourth time that week. Mara's diary entry was on top — the one where she mentioned the developer who came to the house. I read it again, and I felt the old rage rise, cold and familiar. This was where it started. This was where I became what I am.\" — Nadia Cole, internal, as she reviews the Julian Croft file.",
+      "cliffhanger": "Nadia Cole closes the Julian Croft file and looks at her phone. A new message from an unknown number: 'The audit is over. Nothing found. But I know what you did, Nadia. I know about the boat. I know about the fuel line. I know about Julian Croft.' She stares at the screen, her thumb pressed to her palm. The message is from Victor Rhodes, and he knows everything.",
+      "signature_detail_hint": "The memory fragment of the night Nadia Cole killed Julian Croft includes the sound of the boat's engine sputtering — a detail that will be fully revealed in the origin reveal chapter.",
+      "emotional_beat": "Grief and cold resolve — Nadia Cole feels the weight of the origin wound and decides to finish what she started, no matter the cost.",
+      "spice": 1,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show Nadia Cole reviewing the Julian Croft file and the memory of the first kill surfacing in fragments (C005 referenced, not fully revealed). Show the calls to Sasha Okafor, Priya Anand (RH03 dispelled), and Wren Delgado. End with Victor Rhodes's text confirming he knows about Julian Croft. Do not expose Wren Delgado as the leak.",
+      "carries_to_next": "RH03 is dispelled. The origin wound surfaces in fragments. Victor Rhodes now has explicit knowledge of Julian Croft's death. Chapter 22 will show Nadia Cole's response to Rhodes's direct threat and the next phase of the two-way hunt."
+    }
+  ]
+}
+```

@@ -1,0 +1,80 @@
+id: the-things-i-let-him-see
+pen_name: Nix Vale
+target_language: en
+publish_strategy: kdp_ku_exclusive
+narrative_status: draft
+book: 1
+canon_through: 0
+platform: kdp
+audience: women 18-35, mobile reading, hook-driven serial fiction
+goal: end-of-chapter hooks — procedural thriller pace, no romance engine
+setting_hub: The Things I Let Him See — primary setting
+setting_nodes: []
+spice_default: 1
+spice_explicit_chapters: []
+spice_steamy_chapters: []
+book1_ending: 'Central question: once Lena no longer needs Calder as a witness, is
+  anything between them chosen
+
+  rather than engineered? Answer: yes, but only after the surveillance contract, evidence
+  dependency,
+
+  and immediate threat have ended. Lena defeats Grant''s control without being physically
+  rescued and
+
+  remains in her apartment. Calder gives up sole custody of the evidence, exposes
+  his own conduct to
+
+  Detective Cross, and accepts Lena''s refusal to let him decide for her. After those
+  actions can no
+
+  longer benefit her case, Lena asks Calder to return without recording equipment;
+  she grants no
+
+  unrestricted access and chooses when he enters, when he watches, and when the curtain
+  closes. The
+
+  thriller question is also resolved: Lena, not Calder or Grant, controlled the decisive
+  sequence of
+
+  visible events.'
+blurb: 'A surveillance operative hired to prove a separated wife unstable becomes
+
+  obsessed with her ordinary routines, unaware that she identified him almost
+
+  immediately and has begun designing what he sees.
+
+
+  When her husband''s domestic gaslighting escalates toward a forced property
+
+  settlement, the watcher must decide whether to possess the woman directing
+
+  his gaze or preserve the evidence that will return her life to her.'
+tropes: []
+spice_badge: sweet
+target_platforms:
+- kdp
+spice_level: 1
+plan_status: approved
+bible_status: draft
+book_slug: 01-the-things-i-let-him-see
+total_chapters: 18
+arc:
+  act1_setup:
+  - 1
+  - 4
+  act2_complications:
+  - 5
+  - 10
+  act3_crisis:
+  - 11
+  - 15
+  act4_resolution:
+  - 16
+  - 18
+narrative_profile: thriller
+intent_status: approved
+intent_digest: 2f4468b6acd5d9b5
+intent_concept_digest: dbedf9351e51f420
+pov_mode: first_person
+plan_intent_digest: 2f4468b6acd5d9b5

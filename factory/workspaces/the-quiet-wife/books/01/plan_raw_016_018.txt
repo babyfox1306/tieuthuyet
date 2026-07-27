@@ -1,0 +1,201 @@
+```json
+{
+  "act": [16, 18],
+  "chapter_plans": [
+    {
+      "chapter": 16,
+      "title": "The Prisoner",
+      "slug": "the-prisoner",
+      "one_line_summary": "The housekeeper (unnamed narrator) finds a hidden door in the basement and discovers a woman imprisoned there — a previous Subject who was never released, shattering everything she thought she knew about the house.",
+      "beat_summary": "Still shaken from the midnight digging, the housekeeper (unnamed narrator) returns to the basement the next morning. She examines the spot where Nora unearthed the wedding ring and notices a faint seam in the wall — a hidden door. She pries it open and finds a small, windowless room with a cot, a bucket, and a woman chained to the wall. The woman is emaciated, pale, and wearing a tattered dress. She identifies herself as 'Subject 4' — a housekeeper who came to Blackwood Estate five years ago and never left. She tells the housekeeper (unnamed narrator) that Nora is the one who imprisoned her, not Julian. The housekeeper (unnamed narrator) realizes the basement 'experiment' is not a psychological study — it is a prison. She promises to help the woman escape, but as she turns to leave, she hears footsteps on the basement stairs.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) returns to the basement the morning after the midnight digging. She examines the dirt floor and finds a faint seam in the wall that she missed before.",
+        "She pries open the hidden door and discovers a small, windowless room. Inside is a woman chained to the wall — emaciated, pale, wearing a tattered dress. The woman flinches and whispers, 'You're new. She'll keep you here too.'",
+        "The woman identifies herself as 'Subject 4' — a housekeeper who arrived five years ago. She says Nora is the one who imprisoned her, not Julian. 'He doesn't know I'm here. She told him I ran away.'",
+        "The housekeeper (unnamed narrator) examines the chains. They are old but solid. She promises to find the key and come back. The woman grabs her wrist and says, 'Don't trust her. She'll make you think you're the one in charge. But you're just another piece on her board.'",
+        "The housekeeper (unnamed narrator) hears footsteps on the basement stairs. She quickly closes the hidden door and hides behind a stack of boxes, holding her breath."
+      ],
+      "must_not": [
+        "Do not reveal that the imprisoned woman is actually Clara Higgins — Nora's first failed frame attempt who has been held captive, not allowed to flee.",
+        "Do not reveal that the hidden door was deliberately left slightly ajar by Nora for the housekeeper (unnamed narrator) to find — it is a test of her loyalty.",
+        "Do not reveal that the chains are not locked — the woman could leave at any time but has been psychologically broken into believing she cannot."
+      ],
+      "opens_with": "The basement wall was cold under my fingers, and then it gave way — a seam I hadn't seen before, a door that had been waiting for me to find it.",
+      "cliffhanger": "The footsteps stop at the bottom of the stairs. A pause. Then Nora's voice, soft and amused: 'I thought I heard a mouse down here. Don't worry — I'll set a trap.' The housekeeper (unnamed narrator) stays hidden, her hand over her mouth, as Nora's footsteps recede up the stairs. She waits five minutes, then flees the basement, her mind racing.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the links in the woman's chain: 47. She wonders if Nora has been counting everything all along — or if the universe is finally telling her she is trapped in a pattern she cannot escape.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, visceral horror. She is not in a house of mirrors — she is in a tomb. And Nora is the gravekeeper.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The horror is physical and psychological — the discovery of a real prisoner changes the stakes from psychological manipulation to life and death.",
+      "chapter_task": "Write 1700-1900 words executing the beat map: the discovery of the imprisoned woman. This is a major reveal — the reader should feel the shift from 'psychological experiment' to 'actual imprisonment.' Plant subtle hints that the woman may be Clara Higgins (red hair visible despite the grime, a mention of a 'failed escape'). The housekeeper (unnamed narrator) must appear terrified but resolute — she now has a real reason to fight back. End with Nora's voice on the stairs to create tension. Maintain the unreliable narrator's voice: the housekeeper (unnamed narrator) is now making decisions based on incomplete information, but she is no longer paralyzed by confusion — she is driven by a clear goal: free the prisoner and escape.",
+      "carries_to_next": "The housekeeper (unnamed narrator) now knows there is a real prisoner in the basement. She must find the key, free the woman, and escape — all while pretending to cooperate with Nora. The dinner party in Chapter 17 will be her best chance to search for the key.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['the husband has a temper', \"the wife is 'fragile' and seems controlled\", \"a previous housekeeper named Clara Higgins 'left suddenly'\", 'the locked room exists', 'she has pocketed small valuables', 'there is a woman imprisoned in the basement'], 'does_not_know': [\"the wife's full plan\", 'the identity of the imprisoned woman (possibly Clara)', 'the key location']}",
+            "the_wife: {'knows': ['she has planted evidence against the husband (photo of Clara)', \"she has a ledger of past targets and the housekeeper's name\", \"she has the housekeeper's fingerprints on a knife\", \"she is testing the housekeeper's suitability\", 'the imprisoned woman is there', 'she left the door slightly ajar'], 'does_not_know': ['the housekeeper is also running a con', 'the housekeeper has pocketed small valuables']}",
+            "the_husband: {'knows': [\"his wife is 'testing' the new housekeeper\", \"the locked room contains his wife's materials\", 'he is being set up as a villain'], 'does_not_know': [\"the full extent of his wife's plan\", 'that he is the target of a murder plot', 'there is a woman imprisoned in his basement']}",
+            "clara_higgins: {'knows': ['she is in hiding', 'the wife may be looking for her'], 'does_not_know': ['the new housekeeper has found her photograph', 'Nora has imprisoned another woman']}",
+            "dr_ellis: {'knows': ['the husband has a temper', 'the wife is more alert than she appears'], 'does_not_know': ['anything about the frame job', 'the imprisoned woman']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 17,
+      "title": "The Dinner Party",
+      "slug": "the-dinner-party",
+      "one_line_summary": "Julian throws an impromptu dinner party, Nora performs the perfect hostess, and a guest drops a clue that shatters the housekeeper (unnamed narrator)'s understanding of who is really in control.",
+      "beat_summary": "The housekeeper (unnamed narrator) is still reeling from her discovery in the basement when Julian announces an impromptu dinner party that evening. He invites a local couple — the Ellises (Dr. Ellis and his wife) — and a mysterious woman named Margaret, who Julian introduces as an old family friend. Nora transforms into the perfect hostess: charming, elegant, and utterly in control. The housekeeper (unnamed narrator) serves drinks and observes. During a private moment in the kitchen, Margaret corners the housekeeper (unnamed narrator) and warns her: 'Nora Blackwood is not who you think she is. She was the first Subject. She built this house to trap others because she couldn't escape herself.' The housekeeper (unnamed narrator) realizes that Nora is not just a predator — she was once prey, and the experiment is her way of surviving. But Margaret's warning raises a new question: who is Margaret, and how does she know so much?",
+      "must_happen": [
+        "Julian announces an impromptu dinner party at breakfast. Nora looks surprised but quickly recovers, offering to help the housekeeper (unnamed narrator) prepare. The housekeeper (unnamed narrator) suspects Nora planned this all along.",
+        "The guests arrive: Dr. Ellis and his wife, and a woman named Margaret — an 'old family friend' of Julian's. Nora greets them with a warm, practiced smile that the housekeeper (unnamed narrator) now recognizes as a mask.",
+        "The housekeeper (unnamed narrator) serves drinks and observes the dynamics. Julian is relaxed and charming. Nora is the perfect hostess. Margaret watches Nora with a cold, knowing gaze.",
+        "During a break in the kitchen, Margaret corners the housekeeper (unnamed narrator). She whispers: 'Nora Blackwood was the first Subject. She was brought here ten years ago — another vulnerable woman. But she didn't break. She adapted. She built this house to trap others because she couldn't escape herself. You're not her accomplice. You're her replacement.'",
+        "The housekeeper (unnamed narrator) is stunned. She asks Margaret how she knows this. Margaret smiles and says, 'Because I was the one who brought her here. I was her handler. And now I'm here to clean up her mess.'",
+        "The dinner party ends. The housekeeper (unnamed narrator) clears the table, her hands shaking. She now knows Nora was once a victim who became a predator — and that someone even more dangerous (Margaret) is pulling the strings from above."
+      ],
+      "must_not": [
+        "Do not reveal that Margaret is Julian's first wife — presumed dead, but alive and secretly running the entire operation from the shadows.",
+        "Do not reveal that Nora is genuinely afraid of Margaret — she is not the mastermind, she is a middle manager who has outlived her usefulness.",
+        "Do not reveal that the housekeeper (unnamed narrator) is being groomed to replace Nora as Margaret's new 'handler' in the house."
+      ],
+      "opens_with": "\"We're having guests tonight,\" Julian announced at breakfast, and Nora's smile froze for just a second — long enough for me to see the fear behind it.",
+      "cliffhanger": "The housekeeper (unnamed narrator) retreats to her room after the party. She opens her hidden journal to write down everything Margaret told her. But as she turns the page, she finds a note already there, in handwriting she doesn't recognize: 'Meet me in the garden at midnight. I have the key to the basement. — M.'",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of times Nora touches Julian's arm during the dinner party: 47 — a nervous tic she has seen before, but now she recognizes it as fear, not control.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels the ground shift beneath her again. She thought Nora was the mastermind, but Margaret's revelation suggests there is a higher power — and Nora is just as trapped as the woman in the basement.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is social and psychological — the dinner party is a chess match where every smile hides a knife.",
+      "chapter_task": "Write 1700-1900 words executing the beat map: the dinner party where a guest drops a clue that shatters the housekeeper (unnamed narrator)'s understanding. Margaret's revelation should feel like a major twist — the reader should realize that Nora is not the ultimate villain, but a pawn in a larger game. The dinner party dynamics should be rich with subtext: Julian's obliviousness, Nora's forced charm, Margaret's cold control. End with the mysterious note to set up Chapter 18. Maintain the unreliable narrator's voice: the housekeeper (unnamed narrator) is now aware there are layers she hasn't seen, and she is desperate to understand them all.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has a note from Margaret offering the key to the basement. She must decide whether to trust Margaret — who may be even more dangerous than Nora — or continue her own plan to free the prisoner alone.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['the husband has a temper', \"the wife is 'fragile' and seems controlled\", \"a previous housekeeper named Clara Higgins 'left suddenly'\", 'the locked room exists', 'she has pocketed small valuables', 'there is a woman imprisoned in the basement', 'Nora was once a Subject herself', 'Margaret is connected to the experiment'], 'does_not_know': ['Margaret is Julian's first wife', 'the key location', 'Nora's true fear of Margaret']}",
+            "the_wife: {'knows': ['she has planted evidence against the husband (photo of Clara)', \"she has a ledger of past targets and the housekeeper's name\", \"she has the housekeeper's fingerprints on a knife\", \"she is testing the housekeeper's suitability\", 'the imprisoned woman is there', 'Margaret is here', 'Margaret is her handler'], 'does_not_know': ['the housekeeper is also running a con', 'the housekeeper has pocketed small valuables', 'Margaret is planning to replace her']}",
+            "the_husband: {'knows': [\"his wife is 'testing' the new housekeeper\", \"the locked room contains his wife's materials\", 'he is being set up as a villain', 'Margaret is his first wife (believed dead)'], 'does_not_know': [\"the full extent of his wife's plan\", 'that he is the target of a murder plot', 'there is a woman imprisoned in his basement']}",
+            "clara_higgins: {'knows': ['she is in hiding', 'the wife may be looking for her'], 'does_not_know': ['the new housekeeper has found her photograph', 'Nora has imprisoned another woman', 'Margaret has returned']}",
+            "dr_ellis: {'knows': ['the husband has a temper', 'the wife is more alert than she appears'], 'does_not_know': ['anything about the frame job', 'the imprisoned woman', 'Margaret's true identity']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 18,
+      "title": "The First Subject",
+      "slug": "the-first-subject",
+      "one_line_summary": "The housekeeper (unnamed narrator) confronts Nora with Margaret's revelation, and Nora confesses: she was the first Subject, she built the experiment to survive — but now she wants out, and the narrator is her only way.",
+      "beat_summary": "The housekeeper (unnamed narrator) ignores Margaret's note and confronts Nora directly in the sunroom. She demands the truth about Margaret and the imprisoned woman. Nora's mask finally breaks. She confesses everything: she was brought to Blackwood Estate ten years ago as a vulnerable young woman — Margaret's first Subject. But Nora was smarter than the others. She studied Margaret, learned her methods, and eventually turned the tables. She imprisoned Margaret's handler (the woman in the basement) and took over the operation. But now Margaret has returned, and Nora knows she is being marked for replacement. She begs the housekeeper (unnamed narrator) to help her escape — not from Julian, but from Margaret. The housekeeper (unnamed narrator) realizes Nora is not the villain she thought — she is a survivor who became a monster to avoid being prey. And now she wants out. But can she be trusted?",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) ignores Margaret's note and instead confronts Nora in the sunroom. She says, 'I know about Margaret. I know you were the first Subject. Tell me everything.'",
+        "Nora's mask cracks. She confesses that she was brought to Blackwood Estate ten years ago by Margaret — a woman who runs a network of 'safe houses' that are actually prisons for vulnerable women. Nora was Subject 1.",
+        "Nora explains that she survived by studying Margaret, learning her methods, and eventually turning the tables. She imprisoned Margaret's assistant (the woman in the basement) and took over the operation to protect herself.",
+        "Nora reveals that Margaret's return means she is being marked for replacement. She says, 'I know I've done terrible things. But I was trying to survive. And now I need your help to escape — not from Julian, from Margaret.'",
+        "The housekeeper (unnamed narrator) listens, her mind racing. She does not trust Nora, but she also knows Margaret is dangerous. She agrees to help Nora escape — but only if Nora frees the woman in the basement first.",
+        "Nora agrees. She hands the housekeeper (unnamed narrator) a key — the key to the basement chains. 'Free her tonight,' Nora says. 'Then we all leave together. But we have to move fast — Margaret is watching.'"
+      ],
+      "must_not": [
+        "Do not reveal that Nora's confession is partially a lie — she is still manipulating the housekeeper (unnamed narrator) to serve her own escape plan, which involves leaving the housekeeper (unnamed narrator) behind as a sacrifice.",
+        "Do not reveal that the key Nora gives the housekeeper (unnamed narrator) is a fake — it will not open the chains, and Nora plans to lock the housekeeper (unnamed narrator) in the basement with the prisoner.",
+        "Do not reveal that Margaret's note was genuine — she genuinely wants to help the housekeeper (unnamed narrator) escape, but the housekeeper (unnamed narrator) chose the wrong ally."
+      ],
+      "opens_with": "\"I was the first one,\" Nora said, and her voice was hollow, like she was reading from a script she had memorized years ago. \"Margaret brought me here when I was twenty-two. Broke, alone, desperate. Just like you.\"",
+      "cliffhanger": "The housekeeper (unnamed narrator) takes the key from Nora and hides it in her pocket. She leaves the sunroom, intending to free the prisoner at midnight. But as she passes the foyer, she sees Margaret standing in the shadows, watching her. Margaret holds up a finger to her lips — a warning to stay silent. Then she points to the basement door and shakes her head slowly. The housekeeper (unnamed narrator) realizes she has been given two conflicting instructions: Nora's key, Margaret's warning. She trusts neither. She must decide alone.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of tears Nora sheds during her confession: exactly 47. She wonders if Nora is still performing, even now — counting her own tears as part of the act.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a profound loneliness. She is surrounded by women who have all been victims, but each one is willing to sacrifice the others to survive. She realizes she can only trust herself.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The intimacy is emotional and manipulative — Nora's confession is a form of seduction, but it is desperate and self-serving, not romantic.",
+      "chapter_task": "Write 1700-1900 words executing the beat map: Nora's confession that she was the first Subject and her plea for help. The confession should feel raw and genuine — the reader should sympathize with Nora even while recognizing her manipulation. The housekeeper (unnamed narrator) must appear to accept Nora's story while internally questioning everything. End with Margaret's silent warning to create a powerful cliffhanger that sets up Act 4. Maintain the unreliable narrator's voice: the housekeeper (unnamed narrator) is now the only person she trusts, and her decisions from here on will be made alone.",
+      "carries_to_next": "The housekeeper (unnamed narrator) now has two conflicting offers: Nora's key (to free the prisoner and escape together) and Margaret's warning (to stay silent). She must decide which path to take — and whether to trust either woman. Act 4 will force her to make a choice that will determine who survives the night.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['the husband has a temper', \"the wife is 'fragile' and seems controlled\", \"a previous housekeeper named Clara Higgins 'left suddenly'\", 'the locked room exists', 'she has pocketed small valuables', 'there is a woman imprisoned in the basement', 'Nora was once a Subject herself', 'Margaret is connected to the experiment', 'Nora wants to escape Margaret', 'Nora gave her a key to the basement chains'], 'does_not_know': ['the key is a fake', 'Margaret is Julian's first wife', 'Nora plans to sacrifice her']}",
+            "the_wife: {'knows': ['she has planted evidence against the husband (photo of Clara)', \"she has a ledger of past targets and the housekeeper's name\", \"she has the housekeeper's fingerprints on a knife\", \"she is testing the housekeeper's suitability\", 'the imprisoned woman is there', 'Margaret is here', 'Margaret is her handler', 'she gave the housekeeper a fake key'], 'does_not_know': ['the housekeeper is also running a con', 'the housekeeper has pocketed small valuables', 'Margaret is planning to replace her']}",
+            "the_husband: {'knows': [\"his wife is 'testing' the new housekeeper\", \"the locked room contains his wife's materials\", 'he is being set up as a villain', 'Margaret is his first wife (believed dead)'], 'does_not_know': [\"the full extent of his wife's plan\", 'that he is the target of a murder plot', 'there is a woman imprisoned in his basement']}",
+            "clara_higgins: {'knows': ['she is in hiding', 'the wife may be looking for her'], 'does_not_know': ['the new housekeeper has found her photograph', 'Nora has imprisoned another woman', 'Margaret has returned']}",
+            "dr_ellis: {'knows': ['the husband has a temper', 'the wife is more alert than she appears'], 'does_not_know': ['anything about the frame job', 'the imprisoned woman', 'Margaret's true identity']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

@@ -1,0 +1,871 @@
+{
+  "book": 1,
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Bell at 2:17",
+      "slug": "the-bell-at-2-17",
+      "one_line_summary": "Female Lead is awakened by the impossible ringing of the Saint Orison’s bell at 2:17 a.m., marking the start of a new death cycle in Morrow Wick.",
+      "beat_summary": "Female Lead is jolted awake at 2:17 a.m. by the bell that should not exist. She tries to rationalize the event, but the community’s silent dread and the recent deaths make denial impossible. She connects the timing to the town’s infamous tragedies and her mother’s anxious warnings. Male Lead appears at the scene, deflecting questions and steering the investigation away from the town archives. Female Lead begins her own inquiry, noticing how the victims seem compelled to follow specific, repeated actions. The town’s fear intensifies as dawn approaches.",
+      "must_happen": [
+        "Female Lead is roused from sleep by the bell, which rings at 2:17 a.m. despite having been removed decades ago.",
+        "Female Lead observes the immediate aftermath: neighbors emerging, a sense of ritual dread, and an unspoken expectation that someone will die before sunrise.",
+        "Female Lead notes her mother Ada Voss’s old warnings about the church and town secrets.",
+        "Male Lead arrives, officially taking charge but quietly steering Female Lead away from the municipal records and the church.",
+        "Female Lead witnesses the chosen victim compulsively reenacting the prior victim’s final actions.",
+        "Female Lead recognizes the repetition but cannot discern a deeper pattern."
+      ],
+      "must_not": [
+        "Do not reveal the true mechanism behind the bell’s choice or the chain of testimony.",
+        "Do not state or imply that the deaths are anything but a mysterious curse or supernatural event."
+      ],
+      "opens_with": "\"Who else heard it this time?\" Female Lead snaps, before her feet touch the floor.",
+      "cliffhanger": "Female Lead finds a fresh name written in soot on her front steps just before sunrise.",
+      "signature_detail_hint": "A faint, oily fingerprint—left on the window latch by someone who could not have reached it from the ground.",
+      "emotional_beat": "Rising dread, denial battling with logical curiosity, and the first glimmer of obsession.",
+      "spice": 1,
+      "spice_note": "No romantic or sexual content; tension is psychological and procedural.",
+      "chapter_task": "Establish the impossible bell event, the cycle of ritual death, and the atmospheric dread of Morrow Wick in 1600–1900 words. Set up Female Lead’s practical skepticism and Male Lead’s secretive resistance. Do not reveal the truth behind the bell.",
+      "carries_to_next": "Female Lead is driven to investigate the official records and the church for explanations, setting the stage for further discoveries.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T1",
+          "T4",
+          "T5"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elena Voss",
+            "Gideon Rusk",
+            "Ada Voss (deceased)",
+            "Victim Chain (composite)"
+          ],
+          "may_know": [
+            "Elena Voss: Knows only the apparent rules: the bell rings at 2:17 a.m",
+            "Elena Voss: for one person, who soon dies after reenacting the previous victim’s actions",
+            "Elena Voss: Believes the bell might choose randomly or supernaturally",
+            "Elena Voss: No reason to suspect a pattern or deeper logic",
+            "Elena Voss: Aware of recent deaths and her mother Ada's connection to town records.",
+            "Gideon Rusk: Possesses partial knowledge of the loop’s mechanics and is actively suppressing records and evidence",
+            "Gideon Rusk: Knows the bell’s pattern is not random but does not understand the full supernatural mechanism",
+            "Gideon Rusk: Is aware of the 1974 erasures and his father’s involvement.",
+            "Ada Voss (deceased): Known by Elena as her late mother, a municipal records official with a history of anxiety regarding the church fire and town secrets",
+            "Ada Voss (deceased): No suspicion of deeper involvement.",
+            "Victim Chain (composite): Victims are believed to be chosen at random and compelled to repeat previous actions",
+            "Victim Chain (composite): Pattern is not recognized."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Elena Voss: Knows only the apparent rules: the bell rings at 2:17 a.m",
+            "Elena Voss: for one person, who soon dies after reenacting the previous victim’s actions",
+            "Elena Voss: Believes the bell might choose randomly or supernaturally",
+            "Elena Voss: No reason to suspect a pattern or deeper logic",
+            "Elena Voss: Aware of recent deaths and her mother Ada's connection to town records.",
+            "Gideon Rusk: Possesses partial knowledge of the loop’s mechanics and is actively suppressing records and evidence",
+            "Gideon Rusk: Knows the bell’s pattern is not random but does not understand the full supernatural mechanism",
+            "Gideon Rusk: Is aware of the 1974 erasures and his father’s involvement.",
+            "Ada Voss (deceased): Known by Elena as her late mother, a municipal records official with a history of anxiety regarding the church fire and town secrets",
+            "Ada Voss (deceased): No suspicion of deeper involvement.",
+            "Victim Chain (composite): Victims are believed to be chosen at random and compelled to repeat previous actions",
+            "Victim Chain (composite): Pattern is not recognized."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The deaths are not a random curse and the bell is not choosing sinners. The loop is an unfinished chain of testimony created by seven children who died beneath Saint Orison’s Church in 1974 and were erased from the town’s official records. Each victim is forced to carry one fragment of their final memory to the next person capable of exposing the truth. Elena is not the final sacrifice. She is the final witness.",
+            "[kernel.core_question] Can Elena break the cycle of ritual deaths and restore the erased names of the seven children before she becomes the final victim herself?"
+          ],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 2,
+      "title": "Ash and Ledger",
+      "slug": "ash-and-ledger",
+      "one_line_summary": "Female Lead discovers a scorched 1974 attendance ledger with missing names and altered signatures, raising suspicions about the deaths’ connection to the church fire.",
+      "beat_summary": "Compelled by the soot-written name, Female Lead begins combing the municipal archives and discovers the partially destroyed 1974 church attendance ledger. She notes the missing names and altered signatures, suspecting a link to the chain of deaths and the fire. Male Lead intercepts her, attempting to distract her with procedural tasks and casting doubt on her findings. Evidence surfaces that Ada Voss, her late mother, was anxious about the bell deaths and the church records’ integrity. Female Lead questions the randomness of the victim chain for the first time, but lacks proof.",
+      "must_happen": [
+        "Female Lead investigates the archives and discovers the 1974 attendance ledger, scorched and with names missing.",
+        "Female Lead notices altered signatures and recurring inconsistencies in death records.",
+        "Clue C001 is planted: A particular alteration in the ledger points to an official signature pattern.",
+        "Male Lead redirects Female Lead, trying to prevent her from accessing the sealed records related to the church fire.",
+        "Female Lead finds evidence of Ada Voss’s anxiety about the bell deaths and the town’s official files.",
+        "Female Lead begins to question whether the chain of deaths is truly random."
+      ],
+      "must_not": [
+        "Do not reveal the exact reason for the missing names or the nature of the attendance ledger’s importance.",
+        "Do not allow Female Lead to uncover the chamber beneath the church or the full scope of Ada Voss’s involvement."
+      ],
+      "opens_with": "\"If you want the truth, you’ll need to burn your gloves,\" the archivist mutters as Female Lead enters the records room.",
+      "cliffhanger": "A second name appears overnight—again in soot, but written inside the church’s locked vestry.",
+      "signature_detail_hint": "The charred edge of the ledger curls around a pressed wildflower, perfectly preserved despite the fire.",
+      "emotional_beat": "Suspicion, refusal to accept coincidence, and the sting of personal betrayal by trusted authority.",
+      "spice": 1,
+      "spice_note": "No romantic or sexual content; psychological tension only.",
+      "chapter_task": "Introduce the archival investigation and the physical evidence (ledger, signatures, soot). Plant Clue C001. Build Female Lead’s suspicion about the chain’s randomness and hint at Ada Voss’s indirect involvement in 1600–1900 words.",
+      "carries_to_next": "Female Lead’s focus on the ledger and soot-written names will drive her to reexamine other town records and question the official narrative.",
+      "narrative": {
+        "clues_plant": [
+          "C001"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elena Voss",
+            "Gideon Rusk",
+            "Ada Voss (deceased)",
+            "Victim Chain (composite)"
+          ],
+          "may_know": [
+            "Elena Voss: Discovers the scorch-marked 1974 attendance ledger with missing names and altered signatures",
+            "Elena Voss: Notices inconsistencies in official records and the recurrence of soot-written names",
+            "Elena Voss: Begins to question the randomness of the victim chain",
+            "Elena Voss: suspects a link to the church fire but has no proof.",
+            "Gideon Rusk: Continues to redirect suspicion and manipulate documents to prevent discovery of the attendance ledger and sealed chamber",
+            "Gideon Rusk: Begins to realize Elena is getting too close to the truth.",
+            "Ada Voss (deceased): Evidence emerges (altered records, anxious correspondence, hesitation in official files) that Ada was aware of irregularities in the town records and the bell deaths.",
+            "Victim Chain (composite): Pattern emerges: each victim’s actions are not identical, and the soot-written names mirror official signatures",
+            "Victim Chain (composite): Early witnesses begin to suspect a ritualistic or rule-based pattern."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Elena Voss: Discovers the scorch-marked 1974 attendance ledger with missing names and altered signatures",
+            "Elena Voss: Notices inconsistencies in official records and the recurrence of soot-written names",
+            "Elena Voss: Begins to question the randomness of the victim chain",
+            "Elena Voss: suspects a link to the church fire but has no proof.",
+            "Gideon Rusk: Continues to redirect suspicion and manipulate documents to prevent discovery of the attendance ledger and sealed chamber",
+            "Gideon Rusk: Begins to realize Elena is getting too close to the truth.",
+            "Ada Voss (deceased): Evidence emerges (altered records, anxious correspondence, hesitation in official files) that Ada was aware of irregularities in the town records and the bell deaths.",
+            "Victim Chain (composite): Pattern emerges: each victim’s actions are not identical, and the soot-written names mirror official signatures",
+            "Victim Chain (composite): Early witnesses begin to suspect a ritualistic or rule-based pattern."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The deaths are not a random curse and the bell is not choosing sinners. The loop is an unfinished chain of testimony created by seven children who died beneath Saint Orison’s Church in 1974 and were erased from the town’s official records. Each victim is forced to carry one fragment of their final memory to the next person capable of exposing the truth. Elena is not the final sacrifice. She is the final witness.",
+            "[kernel.core_question] Can Elena break the cycle of ritual deaths and restore the erased names of the seven children before she becomes the final victim herself?"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 3,
+      "title": "Names Written in Soot",
+      "slug": "names-written-in-soot",
+      "one_line_summary": "Female Lead connects the soot-written victim names to official signatures and suspects a ritualistic pattern guiding the deaths.",
+      "beat_summary": "Female Lead traces the recurrence of soot-written names, realizing they mirror the altered signatures in the ledger. She consults earlier death records and finds new inconsistencies. Male Lead intensifies his interference, warning Female Lead about pursuing old tragedies. Evidence mounts that Ada Voss recognized the pattern but tried to conceal it. Female Lead is drawn toward the sealed chamber and the possibility that the chain is more than supernatural fate. Clue C002 is planted, deepening the mystery.",
+      "must_happen": [
+        "Female Lead compares the soot-written victim names to the altered official signatures and notes a striking similarity.",
+        "Female Lead investigates older death records and uncovers further inconsistencies and omissions.",
+        "Clue C002 is planted: A sequence of names appears in both soot and the altered ledger, with one entry half-erased.",
+        "Male Lead warns Female Lead about the dangers of prying into the church fire and town secrets.",
+        "Evidence emerges that Ada Voss was aware of a deeper pattern and took steps to hide it.",
+        "Female Lead suspects the deaths are part of a ritualistic or rule-based cycle rather than mere chance."
+      ],
+      "must_not": [
+        "Do not let Female Lead discover the full ritual logic or the true purpose of the chain.",
+        "Do not reveal the identities or fates of the erased children."
+      ],
+      "opens_with": "“No one writes in soot by accident,” Female Lead says, laying two death registers side by side.",
+      "cliffhanger": "Female Lead finds a locked drawer in Ada Voss’s desk containing a key marked only with the church’s sigil.",
+      "signature_detail_hint": "A faint ring of ash stains the inside of Female Lead’s left wrist after handling the registers.",
+      "emotional_beat": "Obsession, the chill of recognition, and the first shudder of genuine fear.",
+      "spice": 1,
+      "spice_note": "No romantic or sexual content; intensity is derived from psychological danger.",
+      "chapter_task": "Deepen the procedural and psychological tension as Female Lead connects the soot names to the official records. Plant Clue C002. Build toward the realization of a ritualistic cycle in 1600–1900 words.",
+      "carries_to_next": "Female Lead now has the key to investigate the church and Ada Voss’s hidden records, setting up a confrontation with Male Lead over access to the truth.",
+      "narrative": {
+        "clues_plant": [
+          "C002"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elena Voss",
+            "Gideon Rusk",
+            "Ada Voss (deceased)",
+            "Victim Chain (composite)"
+          ],
+          "may_know": [
+            "Elena Voss: Discovers the scorch-marked 1974 attendance ledger with missing names and altered signatures",
+            "Elena Voss: Notices inconsistencies in official records and the recurrence of soot-written names",
+            "Elena Voss: Begins to question the randomness of the victim chain",
+            "Elena Voss: suspects a link to the church fire but has no proof.",
+            "Gideon Rusk: Continues to redirect suspicion and manipulate documents to prevent discovery of the attendance ledger and sealed chamber",
+            "Gideon Rusk: Begins to realize Elena is getting too close to the truth.",
+            "Ada Voss (deceased): Evidence emerges (altered records, anxious correspondence, hesitation in official files) that Ada was aware of irregularities in the town records and the bell deaths.",
+            "Victim Chain (composite): Pattern emerges: each victim’s actions are not identical, and the soot-written names mirror official signatures",
+            "Victim Chain (composite): Early witnesses begin to suspect a ritualistic or rule-based pattern."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Elena Voss: Discovers the scorch-marked 1974 attendance ledger with missing names and altered signatures",
+            "Elena Voss: Notices inconsistencies in official records and the recurrence of soot-written names",
+            "Elena Voss: Begins to question the randomness of the victim chain",
+            "Elena Voss: suspects a link to the church fire but has no proof.",
+            "Gideon Rusk: Continues to redirect suspicion and manipulate documents to prevent discovery of the attendance ledger and sealed chamber",
+            "Gideon Rusk: Begins to realize Elena is getting too close to the truth.",
+            "Ada Voss (deceased): Evidence emerges (altered records, anxious correspondence, hesitation in official files) that Ada was aware of irregularities in the town records and the bell deaths.",
+            "Victim Chain (composite): Pattern emerges: each victim’s actions are not identical, and the soot-written names mirror official signatures",
+            "Victim Chain (composite): Early witnesses begin to suspect a ritualistic or rule-based pattern."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The deaths are not a random curse and the bell is not choosing sinners. The loop is an unfinished chain of testimony created by seven children who died beneath Saint Orison’s Church in 1974 and were erased from the town’s official records. Each victim is forced to carry one fragment of their final memory to the next person capable of exposing the truth. Elena is not the final sacrifice. She is the final witness.",
+            "[kernel.core_question] Can Elena break the cycle of ritual deaths and restore the erased names of the seven children before she becomes the final victim herself?"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 4,
+      "title": "The Rule of Deviations",
+      "slug": "the-rule-of-deviations",
+      "one_line_summary": "Female Lead confirms that each death cycle repeats with one deliberate change, suggesting a ritualistic escalation tied to the church fire.",
+      "beat_summary": "Female Lead meticulously reconstructs the last three death cycles, charting the deviations in each victim’s reenactment. She notices the deviations are not random, but always reveal a new clue connected to the 1974 fire. Male Lead’s resistance sharpens, as he begins to actively erase evidence from the archives and church. Female Lead finds a cryptic new clue (C003), planted among Ada Voss’s altered correspondence, deepening her suspicion that the cycle is orchestrated by strict but hidden rules. The phrase 'THE BELL CHOOSES THE NEXT NAME.' is repeated among the townspeople, both as warning and denial. Tension spikes as Female Lead realizes the pattern is accelerating, with each deviation bringing her closer to the church’s sealed chamber.",
+      "must_happen": [
+        "Female Lead analyzes the reenactments of at least three victims and identifies a unique deviation in each cycle.",
+        "Female Lead connects each deviation to a clue about the 1974 fire, building a visual timeline.",
+        "Male Lead is caught removing or altering documents in the church archives, escalating the procedural conflict.",
+        "Female Lead discovers Clue C003 hidden within Ada Voss’s old correspondence and notes.",
+        "The phrase 'THE BELL CHOOSES THE NEXT NAME.' is repeated throughout the town, reinforcing the perceived supernatural order."
+      ],
+      "must_not": [
+        "Do not reveal the true logic behind the bell’s choice or the purpose of the deviations.",
+        "Do not allow Female Lead to access the sealed chamber or fully decode Ada Voss’s intentions."
+      ],
+      "opens_with": "\"How many times will they follow the same steps before someone refuses?\" Female Lead mutters, pinning another deviation on her wall.",
+      "cliffhanger": "Female Lead intercepts a partially burned letter from Ada Voss that references a key hidden inside Saint Orison’s pulpit.",
+      "signature_detail_hint": "A wisp of scorched paper clings to the inside of the municipal safe, as if someone closed it on a burning page.",
+      "emotional_beat": "Mounting obsession, dread at the growing pattern, and isolation as trust in authority crumbles.",
+      "spice": 1,
+      "spice_note": "No romantic or sexual content; psychological and investigative tension only.",
+      "chapter_task": "Map the structure of repeated death cycles and highlight each deliberate deviation. Plant Clue C003. Escalate Female Lead’s procedural investigation and her confrontation with Male Lead. Word count: 1600–1900 words.",
+      "carries_to_next": "Female Lead now searches for Ada Voss’s hidden key and prepares to confront Male Lead directly about the altered evidence.",
+      "narrative": {
+        "clues_plant": [
+          "C003"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elena Voss",
+            "Gideon Rusk",
+            "Ada Voss (deceased)",
+            "Victim Chain (composite)"
+          ],
+          "may_know": [
+            "Elena Voss: Discovers the scorch-marked 1974 attendance ledger with missing names and altered signatures",
+            "Elena Voss: Notices inconsistencies in official records and the recurrence of soot-written names",
+            "Elena Voss: Begins to question the randomness of the victim chain",
+            "Elena Voss: suspects a link to the church fire but has no proof.",
+            "Gideon Rusk: Continues to redirect suspicion and manipulate documents to prevent discovery of the attendance ledger and sealed chamber",
+            "Gideon Rusk: Begins to realize Elena is getting too close to the truth.",
+            "Ada Voss (deceased): Evidence emerges (altered records, anxious correspondence, hesitation in official files) that Ada was aware of irregularities in the town records and the bell deaths.",
+            "Victim Chain (composite): Pattern emerges: each victim’s actions are not identical, and the soot-written names mirror official signatures",
+            "Victim Chain (composite): Early witnesses begin to suspect a ritualistic or rule-based pattern."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Elena Voss: Discovers the scorch-marked 1974 attendance ledger with missing names and altered signatures",
+            "Elena Voss: Notices inconsistencies in official records and the recurrence of soot-written names",
+            "Elena Voss: Begins to question the randomness of the victim chain",
+            "Elena Voss: suspects a link to the church fire but has no proof.",
+            "Gideon Rusk: Continues to redirect suspicion and manipulate documents to prevent discovery of the attendance ledger and sealed chamber",
+            "Gideon Rusk: Begins to realize Elena is getting too close to the truth.",
+            "Ada Voss (deceased): Evidence emerges (altered records, anxious correspondence, hesitation in official files) that Ada was aware of irregularities in the town records and the bell deaths.",
+            "Victim Chain (composite): Pattern emerges: each victim’s actions are not identical, and the soot-written names mirror official signatures",
+            "Victim Chain (composite): Early witnesses begin to suspect a ritualistic or rule-based pattern."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The deaths are not a random curse and the bell is not choosing sinners. The loop is an unfinished chain of testimony created by seven children who died beneath Saint Orison’s Church in 1974 and were erased from the town’s official records. Each victim is forced to carry one fragment of their final memory to the next person capable of exposing the truth. Elena is not the final sacrifice. She is the final witness.",
+            "[kernel.core_question] Can Elena break the cycle of ritual deaths and restore the erased names of the seven children before she becomes the final victim herself?"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "The Locked Pulpit",
+      "slug": "the-locked-pulpit",
+      "one_line_summary": "Female Lead retrieves Ada Voss’s hidden key from Saint Orison’s pulpit and uncovers evidence of the sealed chamber, while Male Lead intensifies his efforts to block her.",
+      "beat_summary": "Guided by Ada Voss’s cryptic letter, Female Lead sneaks into Saint Orison’s Church after hours. She finds a concealed compartment in the pulpit, using the clue to retrieve a small, tarnished key. With the key, she accesses a secondary records drawer, discovering blueprints and references to a sealed chamber beneath the church—proof the authorities have actively hidden part of the building’s history. Male Lead confronts her inside the church, warning her to abandon the search and physically attempting to bar her from the archives. Female Lead plants Clue C004: evidence that Ada Voss tried to restore one or more erased children’s names, but was threatened into silence. 'THE BELL CHOOSES THE NEXT NAME.' is repeated as an ominous warning.",
+      "must_happen": [
+        "Female Lead uses the clue from Ada Voss’s letter to recover a hidden key from inside the church pulpit.",
+        "Female Lead accesses a secret records drawer and finds architectural plans referencing a sealed chamber beneath Saint Orison’s.",
+        "Clue C004 is planted: Evidence that Ada Voss attempted to restore erased names but was stopped.",
+        "Male Lead confronts Female Lead in the church, raising the stakes and physically blocking her access.",
+        "The phrase 'THE BELL CHOOSES THE NEXT NAME.' is uttered by both leads as a tense refrain."
+      ],
+      "must_not": [
+        "Do not allow Female Lead to open the sealed chamber or discover the full list of erased names.",
+        "Do not reveal the ultimate motive for Male Lead’s interference."
+      ],
+      "opens_with": "\"You shouldn’t be here past vespers,\" Male Lead warns, but Female Lead’s hand is already inside the pulpit.",
+      "cliffhanger": "As Female Lead leaves the church, she finds the key’s teeth blackened with soot—and a fresh victim’s name carved into the wood.",
+      "signature_detail_hint": "The hidden compartment in the pulpit is lined with a child’s Sunday school drawing, faded but untouched by time.",
+      "emotional_beat": "Desperation, the cold edge of threat, and the thrill of uncovering forbidden history.",
+      "spice": 1,
+      "spice_note": "No romantic or sexual content; the intensity is drawn from confrontation and unearthed secrets.",
+      "chapter_task": "Have Female Lead recover Ada Voss’s key, access new evidence, and escalate her clash with Male Lead. Plant Clue C004. Maintain gothic tension and procedural focus. Word count: 1600–1900 words.",
+      "carries_to_next": "Female Lead now holds proof of the sealed chamber’s existence and Ada Voss’s attempted intervention; she must decide whether to break into the chamber or rally outside help.",
+      "narrative": {
+        "clues_plant": [
+          "C004"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elena Voss",
+            "Gideon Rusk",
+            "Ada Voss (deceased)",
+            "Victim Chain (composite)"
+          ],
+          "may_know": [
+            "Elena Voss: Knows at least three completed cycles, each with one unique deviation",
+            "Elena Voss: Has observed that each deviation unveils a new clue tied to the 1974 fire",
+            "Elena Voss: Recognizes that the victims are not random and that each is selected for their connection to the case or access to records",
+            "Elena Voss: Finds evidence of a sealed chamber beneath Saint Orison’s Church but cannot access it yet.",
+            "Gideon Rusk: Becomes more aggressive in sabotaging Elena’s investigation",
+            "Gideon Rusk: Attempts to physically block access to the church and remove evidence of the children’s deaths",
+            "Gideon Rusk: Knows victims are being selected for specific reasons, but underestimates Elena’s determination.",
+            "Ada Voss (deceased): Elena uncovers that Ada attempted to restore some erased children’s names but was threatened by Gideon",
+            "Ada Voss (deceased): Ada’s actions are still ambiguous but increasingly central to the victim pattern.",
+            "Victim Chain (composite): Clear that each new victim is selected for their connection to the 1974 event or their access to town records",
+            "Victim Chain (composite): Each cycle escalates, with deviations revealing further evidence."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Elena Voss: Knows at least three completed cycles, each with one unique deviation",
+            "Elena Voss: Has observed that each deviation unveils a new clue tied to the 1974 fire",
+            "Elena Voss: Recognizes that the victims are not random and that each is selected for their connection to the case or access to records",
+            "Elena Voss: Finds evidence of a sealed chamber beneath Saint Orison’s Church but cannot access it yet.",
+            "Gideon Rusk: Becomes more aggressive in sabotaging Elena’s investigation",
+            "Gideon Rusk: Attempts to physically block access to the church and remove evidence of the children’s deaths",
+            "Gideon Rusk: Knows victims are being selected for specific reasons, but underestimates Elena’s determination.",
+            "Ada Voss (deceased): Elena uncovers that Ada attempted to restore some erased children’s names but was threatened by Gideon",
+            "Ada Voss (deceased): Ada’s actions are still ambiguous but increasingly central to the victim pattern.",
+            "Victim Chain (composite): Clear that each new victim is selected for their connection to the 1974 event or their access to town records",
+            "Victim Chain (composite): Each cycle escalates, with deviations revealing further evidence."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The deaths are not a random curse and the bell is not choosing sinners. The loop is an unfinished chain of testimony created by seven children who died beneath Saint Orison’s Church in 1974 and were erased from the town’s official records. Each victim is forced to carry one fragment of their final memory to the next person capable of exposing the truth. Elena is not the final sacrifice. She is the final witness.",
+            "[kernel.core_question] Can Elena break the cycle of ritual deaths and restore the erased names of the seven children before she becomes the final victim herself?"
+          ],
+          "effective_milestone": 5
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "Blueprints and Barriers",
+      "slug": "blueprints-and-barriers",
+      "one_line_summary": "Female Lead attempts to access the sealed chamber beneath Saint Orison’s, but is thwarted by Male Lead’s escalating sabotage and a fresh cycle of ritual death.",
+      "beat_summary": "With the key and blueprints in hand, Female Lead returns to the church at night, seeking the sealed entrance. She deciphers the architectural plans, finding the hidden doorway, but her progress is blocked by Male Lead, who has destroyed part of the entry mechanism and removed key evidence. As a new victim is claimed by the bell and a fresh ritual begins, Female Lead plants Clue C005: evidence that each new death reveals a fragment of the truth about the 1974 fire. The phrase 'THE BELL CHOOSES THE NEXT NAME.' echoes through the town, now with a note of panic. Female Lead is left with no clear path forward as the cycle grows more violent and the barriers—both physical and procedural—tighten.",
+      "must_happen": [
+        "Female Lead uses the blueprints and key to locate the sealed chamber’s hidden entrance in the church basement.",
+        "Male Lead sabotages the entry mechanism and removes evidence, physically preventing Female Lead from opening the chamber.",
+        "A new victim is claimed by the bell, and the ritual death cycle begins again with an observable deviation.",
+        "Clue C005 is planted: Each new death yields a specific clue tied to the 1974 fire.",
+        "The phrase 'THE BELL CHOOSES THE NEXT NAME.' becomes a town-wide chant, escalating the sense of dread."
+      ],
+      "must_not": [
+        "Do not permit Female Lead to enter the sealed chamber or discover the names of the erased children.",
+        "Do not reveal the source of the bell’s power or the true selection mechanism."
+      ],
+      "opens_with": "\"If you break the seal, the town will burn again,\" Male Lead hisses as Female Lead forces the blueprint flat under her palm.",
+      "cliffhanger": "Female Lead is locked inside the church basement as the bell rings and the lights flicker—someone has turned the key from the outside.",
+      "signature_detail_hint": "A faint outline of a child’s hand is impressed in dust on the basement wall, only visible in slanting dawn light.",
+      "emotional_beat": "Helplessness, rage at enforced ignorance, and the terror of being so close yet utterly blocked.",
+      "spice": 1,
+      "spice_note": "No romantic or sexual content; horror and suspense are the only heat.",
+      "chapter_task": "Increase procedural tension as Female Lead attempts and fails to access the chamber, facing sabotage and a new cycle of violence. Plant Clue C005. Word count: 1600–1900 words.",
+      "carries_to_next": "Female Lead must escape the basement, confront Male Lead’s growing desperation, and decide whether to involve others as the ritual deaths spiral out of control.",
+      "narrative": {
+        "clues_plant": [
+          "C005"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elena Voss",
+            "Gideon Rusk",
+            "Ada Voss (deceased)",
+            "Victim Chain (composite)"
+          ],
+          "may_know": [
+            "Elena Voss: Knows at least three completed cycles, each with one unique deviation",
+            "Elena Voss: Has observed that each deviation unveils a new clue tied to the 1974 fire",
+            "Elena Voss: Recognizes that the victims are not random and that each is selected for their connection to the case or access to records",
+            "Elena Voss: Finds evidence of a sealed chamber beneath Saint Orison’s Church but cannot access it yet.",
+            "Gideon Rusk: Becomes more aggressive in sabotaging Elena’s investigation",
+            "Gideon Rusk: Attempts to physically block access to the church and remove evidence of the children’s deaths",
+            "Gideon Rusk: Knows victims are being selected for specific reasons, but underestimates Elena’s determination.",
+            "Ada Voss (deceased): Elena uncovers that Ada attempted to restore some erased children’s names but was threatened by Gideon",
+            "Ada Voss (deceased): Ada’s actions are still ambiguous but increasingly central to the victim pattern.",
+            "Victim Chain (composite): Clear that each new victim is selected for their connection to the 1974 event or their access to town records",
+            "Victim Chain (composite): Each cycle escalates, with deviations revealing further evidence."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Elena Voss: Knows at least three completed cycles, each with one unique deviation",
+            "Elena Voss: Has observed that each deviation unveils a new clue tied to the 1974 fire",
+            "Elena Voss: Recognizes that the victims are not random and that each is selected for their connection to the case or access to records",
+            "Elena Voss: Finds evidence of a sealed chamber beneath Saint Orison’s Church but cannot access it yet.",
+            "Gideon Rusk: Becomes more aggressive in sabotaging Elena’s investigation",
+            "Gideon Rusk: Attempts to physically block access to the church and remove evidence of the children’s deaths",
+            "Gideon Rusk: Knows victims are being selected for specific reasons, but underestimates Elena’s determination.",
+            "Ada Voss (deceased): Elena uncovers that Ada attempted to restore some erased children’s names but was threatened by Gideon",
+            "Ada Voss (deceased): Ada’s actions are still ambiguous but increasingly central to the victim pattern.",
+            "Victim Chain (composite): Clear that each new victim is selected for their connection to the 1974 event or their access to town records",
+            "Victim Chain (composite): Each cycle escalates, with deviations revealing further evidence."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The deaths are not a random curse and the bell is not choosing sinners. The loop is an unfinished chain of testimony created by seven children who died beneath Saint Orison’s Church in 1974 and were erased from the town’s official records. Each victim is forced to carry one fragment of their final memory to the next person capable of exposing the truth. Elena is not the final sacrifice. She is the final witness.",
+            "[kernel.core_question] Can Elena break the cycle of ritual deaths and restore the erased names of the seven children before she becomes the final victim herself?"
+          ],
+          "effective_milestone": 5
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 7,
+      "title": "The Unbroken Chain",
+      "slug": "the-unbroken-chain",
+      "one_line_summary": "Female Lead is forced to confront the recurring logic of the deaths while two new clues tie the soot signatures to the hidden victim cycle.",
+      "beat_summary": "Female Lead, still trapped in the church basement, retraces every deviation in the victim chain using the physical evidence she’s amassed. The realization that the pattern is not random intensifies, as she discovers two new clues left behind during the latest reenactment. A breakthrough occurs when Female Lead deciphers the connection between the soot-written names and the altered signatures from the ledger, confirming the cycle’s deliberate handoff. Male Lead, acting under increasing desperation, tries to block her access to critical documents. The town’s refrain—'THE BELL CHOOSES THE NEXT NAME.'—is chanted in both fear and denial, drowning out any logic. With the clues in hand, Female Lead pieces together the ritual’s surface logic but cannot yet see its true intent.",
+      "must_happen": [
+        "Female Lead escapes the locked church basement using a hidden panel and discovers two new clues (C006 and C007) left during the latest victim's reenactment.",
+        "Female Lead pays off Clue C002 by recognizing the repeated patterns in soot and ledger signatures, confirming that each death hands off to a new, necessary witness.",
+        "Male Lead intercepts Female Lead and tries to confiscate her notes and clues, escalating their confrontation.",
+        "Female Lead maps the logic of the chain up to this point, realizing the victim’s actions are not random.",
+        "‘THE BELL CHOOSES THE NEXT NAME.’ echoes in the town as both a warning and a denial."
+      ],
+      "must_not": [
+        "Do not directly reveal the underlying mechanism that compels each victim.",
+        "Do not allow Female Lead to learn the true purpose behind the chain or access the sealed chamber."
+      ],
+      "opens_with": "\"If you’re waiting for a sign, the bell already rang,\" Female Lead mutters as she presses her ear to the basement door.",
+      "cliffhanger": "Female Lead discovers a coded message in Ada Voss’s handwriting hidden beneath the latest soot signature, hinting at what must be done to break the chain.",
+      "signature_detail_hint": "A scrap of hymnbook page, folded and wedged inside a cracked tile, is marked with the same soot-smudged spiral found in every victim’s final room.",
+      "emotional_beat": "Mounting dread, the rush of piecing together a harrowing pattern, and the isolation of being the only one who sees the logic.",
+      "spice": 1,
+      "spice_note": "No romantic or sexual content; all tension is investigative and psychological.",
+      "chapter_task": "Advance Female Lead’s understanding of the victim cycle by having her escape, recover two new clues, and recognize the non-random pattern in 1600–1900 words. Do not reveal the god-truth or the full chain mechanism. Maintain procedural focus and gothic dread.",
+      "carries_to_next": "Female Lead now has the evidence to confront Male Lead and test whether the chain can be stopped by breaking the ritual logic.",
+      "narrative": {
+        "clues_plant": [
+          "C006",
+          "C007"
+        ],
+        "clues_payoff": [
+          "C002"
+        ],
+        "reveals": [
+          {
+            "id": "MR001",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C002",
+              "C003"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elena Voss",
+            "Gideon Rusk",
+            "Ada Voss (deceased)",
+            "Victim Chain (composite)"
+          ],
+          "may_know": [],
+          "must_not_know": [],
+          "iris_knows": [],
+          "truth_background": [
+            "[kernel.true_case] The deaths are not a random curse and the bell is not choosing sinners. The loop is an unfinished chain of testimony created by seven children who died beneath Saint Orison’s Church in 1974 and were erased from the town’s official records. Each victim is forced to carry one fragment of their final memory to the next person capable of exposing the truth. Elena is not the final sacrifice. She is the final witness.",
+            "[kernel.core_question] Can Elena break the cycle of ritual deaths and restore the erased names of the seven children before she becomes the final victim herself?"
+          ],
+          "effective_milestone": 7
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Logic of the Bell",
+      "slug": "the-logic-of-the-bell",
+      "one_line_summary": "Female Lead makes a major breakthrough: the bell does not choose at random—each victim must name the next necessary witness to the unfinished testimony.",
+      "beat_summary": "Female Lead, armed with the new clues and Ada Voss’s coded message, reconstructs the recent reenactment and realizes the chain’s progression is not supernatural fate but enforced logic. She demonstrates, through failed restraint and physical evidence, that each victim is compelled to name the next person with unique knowledge or access. Male Lead, sensing the chain is reaching its end, tries to destroy key documents and block Female Lead from acting. Female Lead finds Ada’s handwriting in the corrections, and the evidence of deliberate intervention in the record. The town’s last defenses crumble as the reason for the chain becomes undeniable.",
+      "must_happen": [
+        "Female Lead pays off Clues C003 and C006 by mapping the forced handoff: victims must name the next person with necessary knowledge or access to keep the chain moving.",
+        "Female Lead tests the chain by attempting to isolate or restrain a chosen witness, only to see the compulsion override physical barriers.",
+        "Male Lead is caught destroying or hiding documents that could end the cycle, revealing his desperation.",
+        "Female Lead discovers Ada Voss’s handwriting in the corrections, linking Ada directly to the altered testimony.",
+        "Female Lead plants Clue C008: evidence that the chain is a mechanism for restoring lost testimony."
+      ],
+      "must_not": [
+        "Do not reveal the full list of erased children or the ultimate outcome of Ada’s intervention.",
+        "Do not allow Female Lead to stop the cycle or open the sealed chamber yet."
+      ],
+      "opens_with": "\"You think the bell chooses? Watch who’s left standing,\" Female Lead whispers as she lines up the names and signatures.",
+      "cliffhanger": "Male Lead sets fire to the last set of records as the bell’s tone begins to shift, signaling the chain’s approach to completion.",
+      "signature_detail_hint": "A drop of sealing wax, melted onto the ledger’s margin, bears the imprint of a child’s thumbprint instead of a town official’s.",
+      "emotional_beat": "Shock at the revelation, urgency to act before the chain claims another, and the betrayal of realizing past interventions were not accidents.",
+      "spice": 1,
+      "spice_note": "No romantic or sexual content; stakes are existential and procedural.",
+      "chapter_task": "Deliver the major revelation that each victim is compelled to name the next necessary witness, not chosen at random. Let Female Lead expose the logic through experiment and evidence, and escalate Male Lead’s sabotage. Word count: 1600–1900.",
+      "carries_to_next": "With the chain’s logic exposed, Female Lead must race to preserve the last pieces of testimony before Male Lead destroys them and the cycle claims its final victim.",
+      "narrative": {
+        "clues_plant": [
+          "C008"
+        ],
+        "clues_payoff": [
+          "C003",
+          "C006"
+        ],
+        "reveals": [
+          {
+            "id": "MR002",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C003",
+              "C006"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elena Voss",
+            "Gideon Rusk",
+            "Ada Voss (deceased)",
+            "Victim Chain (composite)"
+          ],
+          "may_know": [
+            "Elena Voss: Major breakthrough: Realizes the bell does not choose at random",
+            "Elena Voss: Understands (via loop deviation, failed restraint, and physical evidence) that each victim must name the next person with necessary knowledge or access to continue the chain of testimony",
+            "Elena Voss: Begins to suspect a deliberate cover-up and a historical pattern tied to the erased children, but does not yet know the full extent of Ada or Gideon's roles.",
+            "Gideon Rusk: Understands that Elena is now the chain’s target and that the chain may be completed",
+            "Gideon Rusk: Attempts to destroy or hide final pieces of evidence before Elena can act",
+            "Gideon Rusk: Realizes Ada’s alteration played a role but does not know the full extent.",
+            "Ada Voss (deceased): Clues strongly point to Ada’s direct intervention—her handwriting is found in corrections and her connection to the chain is undeniable",
+            "Ada Voss (deceased): Elena suspects Ada altered the record to protect her.",
+            "Victim Chain (composite): The chain’s true logic is revealed: the bell does not choose",
+            "Victim Chain (composite): each victim is compelled to name the next critical witness",
+            "Victim Chain (composite): The chain is a mechanism for restoring erased testimony."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Elena Voss: Major breakthrough: Realizes the bell does not choose at random",
+            "Elena Voss: Understands (via loop deviation, failed restraint, and physical evidence) that each victim must name the next person with necessary knowledge or access to continue the chain of testimony",
+            "Elena Voss: Begins to suspect a deliberate cover-up and a historical pattern tied to the erased children, but does not yet know the full extent of Ada or Gideon's roles.",
+            "Gideon Rusk: Understands that Elena is now the chain’s target and that the chain may be completed",
+            "Gideon Rusk: Attempts to destroy or hide final pieces of evidence before Elena can act",
+            "Gideon Rusk: Realizes Ada’s alteration played a role but does not know the full extent.",
+            "Ada Voss (deceased): Clues strongly point to Ada’s direct intervention—her handwriting is found in corrections and her connection to the chain is undeniable",
+            "Ada Voss (deceased): Elena suspects Ada altered the record to protect her.",
+            "Victim Chain (composite): The chain’s true logic is revealed: the bell does not choose",
+            "Victim Chain (composite): each victim is compelled to name the next critical witness",
+            "Victim Chain (composite): The chain is a mechanism for restoring erased testimony."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The deaths are not a random curse and the bell is not choosing sinners. The loop is an unfinished chain of testimony created by seven children who died beneath Saint Orison’s Church in 1974 and were erased from the town’s official records. Each victim is forced to carry one fragment of their final memory to the next person capable of exposing the truth. Elena is not the final sacrifice. She is the final witness.",
+            "[kernel.core_question] Can Elena break the cycle of ritual deaths and restore the erased names of the seven children before she becomes the final victim herself?"
+          ],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "Testimony in Ash",
+      "slug": "testimony-in-ash",
+      "one_line_summary": "Female Lead and Male Lead clash over the remaining evidence as the chain’s logic and Ada’s direct intervention become undeniable.",
+      "beat_summary": "As the chain nears completion, Female Lead consolidates all available evidence, confronting Male Lead in a final effort to halt the destruction of testimony. The compulsion to name the next witness overrides any attempt at evasion. Female Lead recognizes Ada’s intervention as the act that positioned her in the chain, and the town’s history of denial collapses under the mounting proof. The bell’s peal grows distorted, echoing the urgency of the unfinished business. The town is on the verge of panic and violence as the truth threatens to surface. Female Lead must decide whether to risk the final step into the sealed chamber.",
+      "must_happen": [
+        "Female Lead retrieves and secures the last unburned documents that prove the chain’s logic and Ada Voss’s alteration of the record.",
+        "Male Lead, frantic, attempts to physically stop Female Lead and destroy the final testimony, but is overpowered by the compulsion of the chain.",
+        "Female Lead accepts that Ada Voss’s intervention placed her in the chain, and that the mechanism will not stop until the testimony is complete.",
+        "The town’s remaining deniers are forced to confront the evidence as the bell’s new, warped tone echoes across Morrow Wick."
+      ],
+      "must_not": [
+        "Do not permit access to the sealed chamber or reveal the names of the erased children.",
+        "Do not allow the chain to end or the cycle to break this chapter."
+      ],
+      "opens_with": "\"If you destroy what’s left, the bell will ring for you,\" Female Lead warns as she blocks Male Lead in the archive.",
+      "cliffhanger": "As dawn approaches, Female Lead stands before the sealed chamber’s threshold, the last key in her hand, and the bell tolling a fractured, urgent sequence.",
+      "signature_detail_hint": "The scent of scorched beeswax and iron filings rises from the locked chamber door as the bell’s echoes splinter the silence.",
+      "emotional_beat": "Desperation, grim resolve, and the weight of inherited obligation.",
+      "spice": 1,
+      "spice_note": "No romantic or sexual content; the only heat is from the threat of irreversible loss.",
+      "chapter_task": "Have Female Lead consolidate the evidence, directly confront Male Lead, and bring the stakes to a crisis point where the chain’s compulsion is undeniable. Do not allow the chamber to be opened or the cycle to end. 1600–1900 words.",
+      "carries_to_next": "Female Lead is poised to enter the sealed chamber at sunrise, setting up the final confrontation with Male Lead and the buried truth.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [
+          {
+            "id": "MR003",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C001",
+              "C005"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elena Voss",
+            "Gideon Rusk",
+            "Ada Voss (deceased)",
+            "Victim Chain (composite)"
+          ],
+          "may_know": [
+            "Elena Voss: Major breakthrough: Realizes the bell does not choose at random",
+            "Elena Voss: Understands (via loop deviation, failed restraint, and physical evidence) that each victim must name the next person with necessary knowledge or access to continue the chain of testimony",
+            "Elena Voss: Begins to suspect a deliberate cover-up and a historical pattern tied to the erased children, but does not yet know the full extent of Ada or Gideon's roles.",
+            "Gideon Rusk: Understands that Elena is now the chain’s target and that the chain may be completed",
+            "Gideon Rusk: Attempts to destroy or hide final pieces of evidence before Elena can act",
+            "Gideon Rusk: Realizes Ada’s alteration played a role but does not know the full extent.",
+            "Ada Voss (deceased): Clues strongly point to Ada’s direct intervention—her handwriting is found in corrections and her connection to the chain is undeniable",
+            "Ada Voss (deceased): Elena suspects Ada altered the record to protect her.",
+            "Victim Chain (composite): The chain’s true logic is revealed: the bell does not choose",
+            "Victim Chain (composite): each victim is compelled to name the next critical witness",
+            "Victim Chain (composite): The chain is a mechanism for restoring erased testimony."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Elena Voss: Major breakthrough: Realizes the bell does not choose at random",
+            "Elena Voss: Understands (via loop deviation, failed restraint, and physical evidence) that each victim must name the next person with necessary knowledge or access to continue the chain of testimony",
+            "Elena Voss: Begins to suspect a deliberate cover-up and a historical pattern tied to the erased children, but does not yet know the full extent of Ada or Gideon's roles.",
+            "Gideon Rusk: Understands that Elena is now the chain’s target and that the chain may be completed",
+            "Gideon Rusk: Attempts to destroy or hide final pieces of evidence before Elena can act",
+            "Gideon Rusk: Realizes Ada’s alteration played a role but does not know the full extent.",
+            "Ada Voss (deceased): Clues strongly point to Ada’s direct intervention—her handwriting is found in corrections and her connection to the chain is undeniable",
+            "Ada Voss (deceased): Elena suspects Ada altered the record to protect her.",
+            "Victim Chain (composite): The chain’s true logic is revealed: the bell does not choose",
+            "Victim Chain (composite): each victim is compelled to name the next critical witness",
+            "Victim Chain (composite): The chain is a mechanism for restoring erased testimony."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The deaths are not a random curse and the bell is not choosing sinners. The loop is an unfinished chain of testimony created by seven children who died beneath Saint Orison’s Church in 1974 and were erased from the town’s official records. Each victim is forced to carry one fragment of their final memory to the next person capable of exposing the truth. Elena is not the final sacrifice. She is the final witness.",
+            "[kernel.core_question] Can Elena break the cycle of ritual deaths and restore the erased names of the seven children before she becomes the final victim herself?"
+          ],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 10,
+      "title": "The Bell Names the Dead",
+      "slug": "the-bell-names-the-dead",
+      "one_line_summary": "Female Lead enters the sealed chamber, exposes the remains and records, enters the seven names into the register, and ends the death loop as Male Lead’s sabotage is revealed.",
+      "beat_summary": "At sunrise, Female Lead stands at the threshold of the sealed chamber beneath Saint Orison’s, the final key in her grasp. Inside, she discovers the skeletal remains of the seven forgotten children, the original attendance ledger, and Ada Voss’s correction page. The full truth crystallizes: Ada altered the record to ensure Female Lead became the final witness, not a victim. As Male Lead makes a last, violent attempt to stop her, Female Lead records every name, reading them aloud into the silence. The bell’s impossible tone splinters, then ceases. The evidence of the 1974 cover-up is undeniable, and the town’s cycle of ritual deaths ends. Male Lead is exposed and arrested, Ada Voss’s legacy is confronted, and the children’s names are restored at last.",
+      "must_happen": [
+        "Female Lead unlocks the sealed chamber beneath Saint Orison’s and finds the remains of the seven children, the unaltered attendance ledger, and Ada Voss’s correction page.",
+        "Female Lead realizes and voices the binding truth: The bell never chooses. Each dying victim is compelled to name the one person whose hidden knowledge, access, or evidence is required to advance the unfinished testimony.",
+        "Female Lead enters all seven erased names into the official death register, reads them aloud beneath the bell frame, and completes the chain.",
+        "Male Lead is caught in a final act of sabotage and attacks Female Lead, but is subdued and exposed as the antagonist who suppressed the truth.",
+        "The supernatural mechanism ceases: the bell falls silent, the cycle of deaths is broken, and the evidence is preserved for authorities.",
+        "Female Lead must decide how to reconcile Ada Voss’s actions and legacy, as the town’s history is rewritten.",
+        "[PAYOFF C001]",
+        "[PAYOFF C004]",
+        "[PAYOFF C005]",
+        "[PAYOFF C007]",
+        "[PAYOFF C008]"
+      ],
+      "must_not": [
+        "Do not introduce any further supernatural elements beyond the established mechanism.",
+        "Do not allow the bell cycle to continue or any ambiguity about the restoration of the children’s names."
+      ],
+      "opens_with": "\"The bell never chooses. Each dying victim is compelled to name the one person whose hidden knowledge, access, or evidence is required to advance the unfinished testimony.\" Female Lead recites, voice echoing in the stone chamber as dawn breaks.",
+      "cliffhanger": "As the final echo fades, Female Lead faces the daylight—free at last—but the question remains: can Morrow Wick live with the truth now exposed?",
+      "signature_detail_hint": "A single pressed wildflower, still vibrant, rests atop the register beside the remains—a token placed decades ago by Ada Voss.",
+      "emotional_beat": "Grief, vindication, and the haunted relief of fulfilling both justice and inheritance.",
+      "spice": 1,
+      "spice_note": "No romantic or sexual content; the emotional intensity is derived from confrontation, loss, and closure.",
+      "chapter_task": "Deliver the full procedural and emotional resolution: Female Lead finds the chamber, restores the children’s names, exposes Male Lead, and ends the supernatural loop. Address Ada Voss’s legacy and the aftermath for the town. Word count: 1600–1900. No ambiguity—close the case with concrete physical and emotional beats.",
+      "carries_to_next": "The immediate cycle is ended, but Morrow Wick must reckon with its exposed history and the consequences of Ada Voss’s choices.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C001",
+          "C004",
+          "C005",
+          "C007",
+          "C008"
+        ],
+        "reveals": [
+          {
+            "id": "MR004",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C001",
+              "C004",
+              "C007",
+              "C008"
+            ],
+            "min_clues_required": 2
+          },
+          {
+            "id": "MR005",
+            "reveal_weight": "minor",
+            "required_clues": [
+              "C001"
+            ],
+            "min_clues_required": 1
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T1",
+          "T2",
+          "T3",
+          "T4",
+          "T5"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elena Voss",
+            "Gideon Rusk",
+            "Ada Voss (deceased)",
+            "Victim Chain (composite)"
+          ],
+          "may_know": [
+            "Elena Voss: Knows the full truth: Ada altered the register to set Elena as the final witness, not victim",
+            "Elena Voss: The remains of the seven children, the original attendance ledger, and the hidden correction page are found in the sealed chamber",
+            "Elena Voss: Elena enters all seven names into the death register, reads them aloud, and ends the loop",
+            "Elena Voss: Gideon's sabotage is exposed",
+            "Elena Voss: The case is closed, and the supernatural mechanism ceases.",
+            "Gideon Rusk: Is exposed as the human antagonist who suppressed the truth and attacked Elena",
+            "Gideon Rusk: Knows Ada’s full intervention only after the records are restored and the remains found",
+            "Gideon Rusk: Is arrested after his final sabotage fails.",
+            "Ada Voss (deceased): The full truth is revealed: Ada discovered the 1974 cover-up, lost her nerve after being threatened, and altered the register so Elena would become the final witness",
+            "Ada Voss (deceased): Her legacy is exposed, and Elena must decide how to reckon with her mother’s actions.",
+            "Victim Chain (composite): The chain completes with the restoration of the seven children’s names, the discovery of physical evidence, and the cessation of the bell",
+            "Victim Chain (composite): The loop ends and the mechanism is understood."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Elena Voss: Knows the full truth: Ada altered the register to set Elena as the final witness, not victim",
+            "Elena Voss: The remains of the seven children, the original attendance ledger, and the hidden correction page are found in the sealed chamber",
+            "Elena Voss: Elena enters all seven names into the death register, reads them aloud, and ends the loop",
+            "Elena Voss: Gideon's sabotage is exposed",
+            "Elena Voss: The case is closed, and the supernatural mechanism ceases.",
+            "Gideon Rusk: Is exposed as the human antagonist who suppressed the truth and attacked Elena",
+            "Gideon Rusk: Knows Ada’s full intervention only after the records are restored and the remains found",
+            "Gideon Rusk: Is arrested after his final sabotage fails.",
+            "Ada Voss (deceased): The full truth is revealed: Ada discovered the 1974 cover-up, lost her nerve after being threatened, and altered the register so Elena would become the final witness",
+            "Ada Voss (deceased): Her legacy is exposed, and Elena must decide how to reckon with her mother’s actions.",
+            "Victim Chain (composite): The chain completes with the restoration of the seven children’s names, the discovery of physical evidence, and the cessation of the bell",
+            "Victim Chain (composite): The loop ends and the mechanism is understood."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The deaths are not a random curse and the bell is not choosing sinners. The loop is an unfinished chain of testimony created by seven children who died beneath Saint Orison’s Church in 1974 and were erased from the town’s official records. Each victim is forced to carry one fragment of their final memory to the next person capable of exposing the truth. Elena is not the final sacrifice. She is the final witness.",
+            "[kernel.core_question] Can Elena break the cycle of ritual deaths and restore the erased names of the seven children before she becomes the final victim herself?"
+          ],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    }
+  ],
+  "total_chapters": 10,
+  "title": "The Bell Names the Dead",
+  "status": "draft",
+  "created_at": "2026-07-23T04:55:32.900582+00:00",
+  "source_concept_digest": "091c723472fe67c9",
+  "source_narrative_digest": "6f28e9d26d675266"
+}

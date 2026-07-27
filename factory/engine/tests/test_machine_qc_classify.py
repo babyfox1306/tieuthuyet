@@ -30,17 +30,26 @@ def tempfile_workspace():
 
 
 class ClassifyMachineIssuesTests(unittest.TestCase):
-    def test_markdown_advisory_not_format_only(self):
+    def test_markdown_leaks_is_format_only(self):
         issues = {
-            "markdown_advisory": [{"id": 0, "kind": "italic", "match": "*click*"}],
+            "markdown_leaks": [{"id": 0, "kind": "italic", "match": "*click*"}],
             "word_count": 1500,
             "target_language": "en",
         }
         cls = classify_machine_issues(issues)
-        self.assertFalse(cls["format_only"])
-        self.assertFalse(cls["has_format"])
+        self.assertTrue(cls["format_only"])
+        self.assertTrue(cls["has_format"])
         self.assertFalse(has_content_fail(issues))
-        self.assertNotIn("markdown", issues_to_needs_fix(issues))
+        self.assertTrue(any(f.startswith("markdown:") for f in issues_to_needs_fix(issues)))
+
+    def test_legacy_markdown_advisory_still_format(self):
+        issues = {
+            "markdown_advisory": [{"id": 0, "kind": "italic", "match": "*click*"}],
+            "word_count": 1500,
+        }
+        cls = classify_machine_issues(issues)
+        self.assertTrue(cls["has_format"])
+        self.assertTrue(cls["format_only"])
 
     def test_quotes_advisory_not_format(self):
         issues = {"quotes_advisory": [{"line": 1, "snippet": "he said"}], "word_count": 1500}
@@ -70,15 +79,16 @@ class ClassifyMachineIssuesTests(unittest.TestCase):
         self.assertTrue(cls["has_content"])
         self.assertNotIn("missing_quotes:dialogue", issues_to_needs_fix(issues))
 
-    def test_markdown_advisory_does_not_block_machine_pass(self):
+    def test_markdown_leaks_block_machine_pass(self):
         text = "# Chapter 1: X\n\nThe *click* echoed.\n\n" + ("word\n" * 200)
         issues = machine_qc(text, min_words=100)
-        self.assertIn("markdown_advisory", issues)
-        self.assertNotIn("markdown", issues)
-        self.assertTrue(machine_pass(issues))
+        self.assertIn("markdown_leaks", issues)
+        self.assertNotIn("markdown_advisory", issues)
+        self.assertFalse(machine_pass(issues))
+        self.assertTrue(is_format_only_issues(issues))
         reasons = format_machine_reasons(issues)
-        self.assertTrue(any("markdown advisory" in r for r in reasons))
-        self.assertEqual(issues_to_needs_fix(issues), [])
+        self.assertTrue(any("markdown leak" in r for r in reasons))
+        self.assertTrue(any(f.startswith("markdown:") for f in issues_to_needs_fix(issues)))
 
 
 class DialogueQuoteHeuristicTests(unittest.TestCase):
@@ -244,18 +254,17 @@ class DraftNoFormatRetryTests(unittest.TestCase):
         self.assertTrue(machine_pass(issues))
         self.assertEqual(issues_to_needs_fix(issues), [])
 
-    def test_markdown_alone_does_not_force_format_retry(self):
+    def test_markdown_alone_forces_format_needs_fix(self):
         text = (
             "# Chapter 1: Test\n\n"
             "The *click* echoed in the hall.\n\n"
             + ("word\n" * 400)
         )
         issues = machine_qc(text, min_words=100)
-        self.assertIn("markdown_advisory", issues)
-        self.assertNotIn("markdown", issues)
-        self.assertFalse(is_format_only_issues(issues))
-        self.assertTrue(machine_pass(issues))
-        self.assertEqual(issues_to_needs_fix(issues), [])
+        self.assertIn("markdown_leaks", issues)
+        self.assertTrue(is_format_only_issues(issues))
+        self.assertFalse(machine_pass(issues))
+        self.assertTrue(any(f.startswith("markdown:") for f in issues_to_needs_fix(issues)))
     def test_content_retries_capped_at_two(self):
         from factory.engine.run_factory import _draft_chapter_prose
 

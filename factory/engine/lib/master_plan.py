@@ -30,6 +30,7 @@ from factory.engine.lib.narrative_compiler import (
     compile_act_constraints,
     merge_narrative_into_plans,
     narrative_compiler_enabled,
+    seal_plan_semantics,
 )
 from factory.engine.lib.plan_normalize import (
     normalize_chapter_plan,
@@ -275,6 +276,10 @@ def build_outliner_payload(
         # Backward-compat during migration: allow plan --force paths without intent
         if narrative_compiler_enabled(ws):
             body["narrative_constraints"] = compile_act_constraints(ws, act_from, act_to)
+    choices = (body.get("narrative_constraints") or {}).get("global_choices")
+    if choices:
+        # Top-level too: a resolved leak must be impossible to miss.
+        body["plan_choices"] = choices
     return body
 
 
@@ -483,10 +488,47 @@ def load_master_plan(ws: Path, book: int) -> dict:
 
 
 def save_master_plan(ws: Path, book: int, data: dict) -> Path:
+    """Persist a plan only after all compiler-owned locks are re-applied.
+
+    Outliner and plan_fixer are both untrusted prose generators.  Centralizing
+    the deterministic seals here prevents either path from writing semantic,
+    romance, intent, or cast drift back into ``master_plan.json``.
+    """
+    from factory.engine.lib.canon_registry import (
+        collect_allowed_cast_names,
+        scrub_recurring_invented_plan_characters,
+    )
+    from factory.engine.lib.intent_gates import seal_plans_to_intent
+    from factory.engine.lib.intent_manifest import intent_is_approved
+    from factory.engine.lib.romance_policy import (
+        enforce_romance_off,
+        romance_is_forbidden,
+    )
+
     path = master_plan_path(ws, book)
     path.parent.mkdir(parents=True, exist_ok=True)
     data = dict(data)
-    data["chapter_plans"] = normalize_chapter_plans(data.get("chapter_plans", []))
+    plans = normalize_chapter_plans(data.get("chapter_plans", []))
+
+    # Narrative seal owns clue/reveal IDs and exact semantics.
+    if narrative_compiler_enabled(ws):
+        plans = merge_narrative_into_plans(ws, plans)
+
+    # Approved intent is the primary chapter-level story contract.
+    plans, _ = seal_plans_to_intent(ws, plans, book=book)
+
+    # Anti-romance is a hard output policy, including fixer output.
+    direction = load_direction(ws)
+    if romance_is_forbidden(direction, ws):
+        plans, _, _ = enforce_romance_off(plans)
+
+    # Recurring named people must come from the approved cast.  One-off texture
+    # is allowed; plot characters recurring across chapters are anonymized.
+    if intent_is_approved(ws, book, direction):
+        allowed = collect_allowed_cast_names(ws, book)
+        plans, _ = scrub_recurring_invented_plan_characters(plans, allowed)
+
+    data["chapter_plans"] = normalize_chapter_plans(plans)
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
     return path
 
@@ -551,10 +593,21 @@ OUTLINER_MAX_TOKENS = 24576
 
 
 def _fetch_act_plans(
-    ws: Path, book: int, act_from: int, act_to: int, act_name: str
-) -> tuple[list[dict], dict]:
+    ws: Path,
+    book: int,
+    act_from: int,
+    act_to: int,
+    act_name: str,
+    *,
+    corrections: list[str] | None = None,
+) -> tuple[list[dict], dict, list[str]]:
     from factory.engine.lib.canon_registry import sync_bible_leads_from_registry
     from factory.engine.lib.prompt_builder import load_series_bible
+    from factory.engine.lib.romance_policy import (
+        enforce_romance_off,
+        outliner_system_prompt,
+        romance_is_forbidden,
+    )
 
     sync_bible_leads_from_registry(ws, book)
     direction = load_direction(ws)
@@ -567,21 +620,37 @@ def _fetch_act_plans(
     if not prior:
         prior = initial_prior_plans(ws, direction)
 
-    payload = json.dumps(
-        build_outliner_payload(
-            ws,
-            book,
-            act_from,
-            act_to,
-            act_name,
-            bible=bible,
-            direction=direction,
-            prior=prior,
-        ),
-        ensure_ascii=False,
-        indent=2,
+    body = build_outliner_payload(
+        ws,
+        book,
+        act_from,
+        act_to,
+        act_name,
+        bible=bible,
+        direction=direction,
+        prior=prior,
     )
-    raw, log = call_9router("outliner", payload, max_tokens=OUTLINER_MAX_TOKENS, direction=direction)
+    romance_off = romance_is_forbidden(direction, ws)
+    if romance_off:
+        body["romance_policy"] = {
+            "status": "forbidden",
+            "rule": (
+                "No romance, attraction, chemistry, intimacy or [ROMANCE] beats "
+                "anywhere. Use [ISOLATION] for solitude. The antagonist is a target, "
+                "never a love interest."
+            ),
+        }
+    if corrections:
+        body["regen_notes"] = corrections
+    payload = json.dumps(body, ensure_ascii=False, indent=2)
+    system_override = outliner_system_prompt(direction, ws)
+    raw, log = call_9router(
+        "outliner",
+        payload,
+        max_tokens=OUTLINER_MAX_TOKENS,
+        direction=direction,
+        system_override=system_override,
+    )
     bd = book_workspace_dir(ws, book)
     raw_path = bd / f"plan_raw_{act_from:03d}_{act_to:03d}.txt"
     raw_path.write_text(raw, encoding="utf-8")
@@ -620,14 +689,56 @@ def _fetch_act_plans(
             raise RuntimeError(
                 f"Plan ch{act_from}-{act_to} thiếu chapter_plans[]. Xem {raw_path}"
             )
-    new_plans = normalize_chapter_plans(merge_narrative_into_plans(ws, chapter_plans))
+    # Semantic seal BEFORE merge: an ID must never ride on contradicting prose.
+    sealed, seal_notes = seal_plan_semantics(ws, chapter_plans)
+    for note in seal_notes[:12]:
+        safe_print(f"  [seal] {note}")
+    if len(seal_notes) > 12:
+        safe_print(f"  [seal] … (+{len(seal_notes) - 12} more)")
+
+    violations: list[str] = []
+    if romance_off:
+        sealed, romance_notes, violations = enforce_romance_off(sealed)
+        if romance_notes:
+            safe_print(f"  [romance-off] scrubbed {len(romance_notes)} spot(s)")
+
+    new_plans = normalize_chapter_plans(merge_narrative_into_plans(ws, sealed))
     new_plans = filter_complete_chapter_plans(new_plans, lo=act_from, hi=act_to)
-    return new_plans, log
+    return new_plans, log, violations
+
+
+ROMANCE_REGEN_ATTEMPTS = 2
+
+
+def _fetch_act_plans_guarded(
+    ws: Path, book: int, act_from: int, act_to: int, act_name: str
+) -> tuple[list[dict], dict]:
+    """Generate a chunk; re-generate in place when romance semantics survive scrub."""
+    corrections: list[str] = []
+    plans: list[dict] = []
+    log: dict = {}
+    for attempt in range(1, ROMANCE_REGEN_ATTEMPTS + 1):
+        plans, log, violations = _fetch_act_plans(
+            ws, book, act_from, act_to, act_name, corrections=corrections or None
+        )
+        if not violations:
+            return plans, log
+        safe_print(
+            f"  [romance-off] ch{act_from}-{act_to} còn attraction semantics "
+            f"({len(violations)}) — re-gen {attempt}/{ROMANCE_REGEN_ATTEMPTS}"
+        )
+        corrections = [
+            "Bản trước VI PHẠM lệnh cấm romance. Sinh lại KHÔNG có bất kỳ attraction / "
+            "intimacy / chemistry / [ROMANCE] nào.",
+            *[f"vi phạm: {v}" for v in violations[:8]],
+        ]
+    safe_print("  [romance-off] hết lượt re-gen — giữ bản đã scrub (không chặn operator)")
+    return plans, log
 
 
 def plan_act(ws: Path, book: int, act_from: int, act_to: int, act_name: str) -> tuple[list[dict], dict]:
     expected = act_to - act_from + 1
-    plans, log = _fetch_act_plans(ws, book, act_from, act_to, act_name)
+    plans, log = _fetch_act_plans_guarded(ws, book, act_from, act_to, act_name)
     if len(plans) >= expected:
         return plans, log
 
@@ -641,8 +752,8 @@ def plan_act(ws: Path, book: int, act_from: int, act_to: int, act_name: str) -> 
             f"Chạy lại: plan --acts {act_from}-{act_to}"
         )
     mid = (act_from + act_to) // 2
-    p1, log1 = _fetch_act_plans(ws, book, act_from, mid, f"{act_name}a")
-    p2, log2 = _fetch_act_plans(ws, book, mid + 1, act_to, f"{act_name}b")
+    p1, _log1 = _fetch_act_plans_guarded(ws, book, act_from, mid, f"{act_name}a")
+    p2, log2 = _fetch_act_plans_guarded(ws, book, mid + 1, act_to, f"{act_name}b")
     merged = merge_plans(p1, p2)
     complete = filter_complete_chapter_plans(merged, lo=act_from, hi=act_to)
     if len(complete) < expected:
@@ -699,8 +810,13 @@ def plan_book(
 ) -> tuple[Path, int]:
     from factory.engine.lib.canon_registry import sync_bible_leads_from_registry
     from factory.engine.lib.intent_manifest import intent_is_approved
+    from factory.engine.lib.plan_choices import resolve_plan_choices
 
     sync_bible_leads_from_registry(ws, book)
+    # Deferred concept choices (e.g. "one of the three is the leak") are decided
+    # once, here, so no chunk can re-decide and invent a second betrayer.
+    for cid, entry in (resolve_plan_choices(ws) or {}).items():
+        safe_print(f"[plan] choice {cid} = {entry.get('value')} ({entry.get('resolved_by')})")
     direction = load_direction(ws)
     bible = load_series_bible(ws)
     if not intent_is_approved(ws, book, direction):
@@ -811,6 +927,11 @@ def approve_plan(ws: Path, book: int | None = None) -> None:
 
     direction = load_direction(ws)
     book_num = int(book if book is not None else direction.get("book") or 1)
+    # Approval must inspect the post-seal artifact on the first click.  Previously
+    # canon/G3 validated the stale in-memory plan, then save_master_plan repaired
+    # the file, forcing the operator to click Approve a second time.
+    initial = load_master_plan(ws, book_num)
+    save_master_plan(ws, book_num, initial)
     conflicts = validate_plan_against_canon_registry(ws, book_num)
 
     if not intent_is_approved(ws, book_num, direction):
@@ -837,6 +958,10 @@ def approve_plan(ws: Path, book: int | None = None) -> None:
         data["intent_digest"] = man.get("manifest_digest")
         data["intent_concept_digest"] = man.get("concept_digest")
     save_master_plan(ws, book_num, data)
+    # ``save_master_plan`` is the central hard-lock boundary.  Reload its result
+    # before G3/QC/prompt projection so validation and disk are identical.
+    data = load_master_plan(ws, book_num)
+    plans = normalize_chapter_plans(data.get("chapter_plans", []))
 
     for err in g3_plan_fidelity_errors(ws, plans, book=book_num):
         conflicts.append(

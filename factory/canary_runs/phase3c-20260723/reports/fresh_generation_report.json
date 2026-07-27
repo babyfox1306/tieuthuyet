@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "kind": "fresh_generation_report",
+  "run_id": "phase3c-20260723",
+  "stopped_for_unavailable_routes": false,
+  "deferred_without_live_attempt": false,
+  "missing_roles": [],
+  "route_snapshot": [
+    {
+      "role": "writer",
+      "group": "phase2_write",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/best-coding",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "qc",
+      "group": "phase_light",
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-fast",
+      "success": true,
+      "code": "OK",
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "quality_evaluator",
+      "group": "phase_quality",
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-fast",
+      "success": true,
+      "code": "OK",
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "story_contract_compiler",
+      "group": "phase_story_contract",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    }
+  ],
+  "cases": {
+    "bell": {
+      "copy_exists": true,
+      "status": "ready_not_started",
+      "note": "Fresh sequential writing requires free writer/qc routes and operator-approved contract. Canary evaluation track does not require regeneration when deferred."
+    },
+    "standalone": {
+      "copy_exists": true,
+      "status": "ready_not_started",
+      "note": "Fresh sequential writing requires free writer/qc routes and operator-approved contract. Canary evaluation track does not require regeneration when deferred."
+    },
+    "series": {
+      "copy_exists": true,
+      "status": "ready_not_started",
+      "note": "Fresh sequential writing requires free writer/qc routes and operator-approved contract. Canary evaluation track does not require regeneration when deferred."
+    }
+  },
+  "created_at": "2026-07-23T11:01:59Z",
+  "note": "No paid fallback. Resume must not duplicate successful model calls when digest identity matches."
+}

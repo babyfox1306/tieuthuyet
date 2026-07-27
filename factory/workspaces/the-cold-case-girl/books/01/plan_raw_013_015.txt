@@ -1,0 +1,86 @@
+{
+  "act": [13, 15],
+  "chapter_plans": [
+    {
+      "chapter": 13,
+      "title": "The Fracture",
+      "slug": "the-fracture",
+      "one_line_summary": "Nadia Cole convenes the network to debate whether to proceed with the execution, and a rule bends under the weight of loyalty and fear.",
+      "beat_summary": "Nadia Cole calls an emergency meeting with Sasha Okafor, Priya Anand, and Wren Delgado. She lays out Victor Rhodes's counter-moves — the leaked article, the voicemail — and asks the network to vote on whether to abort or accelerate. Sasha Okafor argues for a pause, citing legal exposure. Priya Anand is visibly shaken, worried her signature anomaly will be discovered during the audit. Wren Delgado offers to run a deep trace on the leak source, but Nadia Cole notices a flicker of hesitation. Nadia Cole decides to proceed alone if the network won't follow — a rule bends as she accepts solo risk. The chapter ends with Wren Delgado volunteering to stay, but Nadia Cole wonders if that loyalty is real.",
+      "must_happen": [
+        "Nadia Cole convenes Sasha Okafor, Priya Anand, and Wren Delgado in a secure location and reveals Victor Rhodes's counter-moves — the leaked article about her sister and Julian Croft, and the voicemail that used a phrase from her private notes.",
+        "Sasha Okafor argues for a pause, citing legal exposure and the new detective circling the network — she says the risk is too high for everyone.",
+        "Priya Anand admits she is shaken by the audit and the signature anomaly (C006) — she asks if they can wait until her audit passes, revealing her fear.",
+        "Wren Delgado offers to run a deep trace on the leak source but hesitates when Nadia Cole asks for a full access log of the network's encrypted files — a subtle refusal that Nadia Cole notices.",
+        "Nadia Cole decides to proceed with the execution alone if the network won't follow — she tells them she will not let Victor Rhodes win by waiting. Wren Delgado volunteers to stay, but Nadia Cole wonders if that loyalty is real."
+      ],
+      "must_not": [
+        "Do NOT reveal that Wren Delgado is the leak — her hesitation is subtle and could be read as caution, not betrayal.",
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on the network fracture.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is fear, loyalty, and cold resolve."
+      ],
+      "opens_with": "\"I watched their faces as I laid it out. Sasha's jaw tightened. Priya's hands trembled. Wren's eyes went still. I knew the answer before they spoke.\" — Nadia Cole, internal, as she waits for the network to respond.",
+      "cliffhanger": "Nadia Cole closes the meeting and looks at her phone. A new email from Victor Rhodes: 'I admire your network, Nadia. Loyalty is rare. Let's see how long it lasts.' She stares at the screen, her thumb pressed to her palm.",
+      "signature_detail_hint": "Wren Delgado's hesitation when asked for the full access log — her fingers hover over the keyboard for a half-second too long before she says she'll need time.",
+      "emotional_beat": "Fear and cold resolve — Nadia Cole feels the network fraying but hardens her commitment to finish Victor Rhodes alone if necessary.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show the network debate over whether to proceed with the execution. Reveal the fracture: Sasha Okafor's caution, Priya Anand's fear, Wren Delgado's subtle hesitation. End with Nadia Cole's decision to proceed alone and Victor Rhodes's taunting email. Do not expose Wren Delgado as the leak.",
+      "carries_to_next": "The network is fractured. Nadia Cole decides to proceed alone. Victor Rhodes's email confirms he knows about the network. Chapter 14 will escalate the threat to a network member."
+    },
+    {
+      "chapter": 14,
+      "title": "The Leak",
+      "slug": "the-leak",
+      "one_line_summary": "A network member is exposed and endangered when Victor Rhodes's counter-investigation targets Priya Anand directly, forcing Nadia Cole to bend her method to protect her own.",
+      "beat_summary": "Nadia Cole wakes to a call from Priya Anand: her medical examiner office has been raided by the police — the detective (Marcus Webb) has seized her files, including the death certificate with the altered signature. Priya Anand is being questioned. Nadia Cole calls Sasha Okafor to arrange legal representation. She calls Wren Delgado to dig into how the detective found Priya Anand so quickly. Wren Delgado reports that the tip came from an anonymous email traced to a burner — the same method Victor Rhodes used. Nadia Cole realizes Victor Rhodes is using the detective as a proxy to dismantle her network. She decides to plant a false trail to mislead the detective (bending her rule of not involving innocents). In a parallel scene, Victor Rhodes reviews the deleted search history on his computer — he has researched 'podcaster + unsolved murder + boating accident' (C004 planted — exact semantic: 'A deleted search history on Rhodes's computer shows he researched \"podcaster + unsolved murder + boating accident\" — linking him to Julian Croft's case'). He smiles, knowing the connection will surface soon.",
+      "must_happen": [
+        "Nadia Cole receives a call from Priya Anand: her medical examiner office has been raided by Detective Marcus Webb, who has seized files including the death certificate with the altered signature (C006). Priya Anand is being questioned at the station.",
+        "Nadia Cole calls Sasha Okafor to arrange legal representation for Priya Anand — Sasha Okafor agrees but warns that the signature anomaly could be a criminal charge if discovered.",
+        "Nadia Cole calls Wren Delgado to trace how the detective found Priya Anand so quickly — Wren Delgado reports the tip came from an anonymous email traced to a burner, matching Victor Rhodes's method.",
+        "Nadia Cole decides to plant a false trail — she asks Wren Delgado to create a fake digital footprint linking the altered signature to a different case, misdirecting the detective (a rule bend: involving an innocent case to protect Priya).",
+        "In a parallel scene, Victor Rhodes reviews his computer's deleted search history — it shows he researched 'podcaster + unsolved murder + boating accident' (C004 planted — exact semantic from clue_catalog), linking him to Julian Croft's case. He smiles, knowing the connection will surface."
+      ],
+      "must_not": [
+        "Do NOT reveal that Wren Delgado is the leak — Wren Delgado appears helpful in tracing the tip, but the reader should not suspect her yet.",
+        "Do NOT show Priya Anand's interrogation in full — the focus is on Nadia Cole's response and the rule bend.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is protective rage and cold calculation."
+      ],
+      "opens_with": "\"The phone rang at 6:14 AM. Priya's voice was tight, controlled — the voice of someone who knew exactly how much trouble she was in. 'They took everything, Nadia. The files. The signatures. Everything.'\" — Nadia Cole, internal, as she answers the call.",
+      "cliffhanger": "Nadia Cole hangs up with Wren Delgado and stares at her laptop. She types a single line in her encrypted notes: 'I will not let him destroy them to get to me.' She closes the laptop and picks up her keys, heading to the one place she swore she'd never go again — the storage unit where she keeps her first kill's file.",
+      "signature_detail_hint": "The false trail Nadia Cole plants — a fabricated email from a rival medical examiner's office, accusing Priya Anand of altering records for a different case entirely, creating a plausible but false lead for the detective.",
+      "emotional_beat": "Protective rage and cold resolve — Nadia Cole feels the network being dismantled and bends her rules to protect Priya Anand, knowing she is the cause.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show the raid on Priya Anand's office and her call to Nadia Cole. Show Nadia Cole's response: legal representation, tracing the tip, and the decision to plant a false trail. Plant C004 (exact semantic from clue_catalog) in the parallel Victor Rhodes scene. End with Nadia Cole heading to retrieve her first kill's file, escalating the stakes.",
+      "carries_to_next": "Priya Anand is endangered. C004 is planted. Nadia Cole bends a rule to protect the network. Chapter 15 will introduce a new external threat — a rival podcaster — and deepen Nadia Cole's paranoia."
+    },
+    {
+      "chapter": 15,
+      "title": "The Rival",
+      "slug": "the-rival",
+      "one_line_summary": "A rival podcaster starts digging into Nadia Cole's past, hinting at a 'dark secret,' while Nadia Cole retrieves her first kill's file and faces the weight of what she has done.",
+      "beat_summary": "Nadia Cole retrieves the storage unit box containing Julian Croft's case file — the only physical evidence of her first kill. She reviews the file: the boating accident report, the tampered fuel line photo, her own notes. She feels the weight of the origin wound but hardens herself. Later, she receives a call from Sasha Okafor: a rival podcaster named Maya Torres has started a new series titled 'The Dark Side of Justice,' hinting that a famous true-crime podcaster has a secret. Nadia Cole realizes Victor Rhodes is feeding Maya Torres information to create public pressure. She calls Wren Delgado to monitor Maya Torres's sources. Wren Delgado reports that the information is coming from a burner email — the same pattern. Nadia Cole decides to confront Victor Rhodes directly, breaking her rule of never meeting a target face-to-face. The chapter ends with Nadia Cole sending a text to Victor Rhodes: 'I know what you're doing. Let's talk.'",
+      "must_happen": [
+        "Nadia Cole retrieves the storage unit box containing Julian Croft's case file — she reviews the boating accident report, the tampered fuel line photo, and her own notes, feeling the weight of her first kill but hardening herself.",
+        "Sasha Okafor calls Nadia Cole to report that a rival podcaster named Maya Torres has started a new series titled 'The Dark Side of Justice,' hinting that a famous true-crime podcaster has a secret — the content matches information only Victor Rhodes would know.",
+        "Nadia Cole calls Wren Delgado to monitor Maya Torres's sources — Wren Delgado reports the information is coming from a burner email, matching Victor Rhodes's method (RH02 planted — exact semantic: 'A rival podcaster starts digging into Nadia's past, hinting at a \"dark secret\" — the reader suspects the rival will uncover the first kill, but the rival's investigation is a dead end').",
+        "Nadia Cole decides to confront Victor Rhodes directly — she sends a text to his known number: 'I know what you're doing. Let's talk.' This breaks her rule of never meeting a target face-to-face.",
+        "The chapter ends with Nadia Cole staring at her phone, waiting for Victor Rhodes's reply. Her thumb taps once on her palm."
+      ],
+      "must_not": [
+        "Do NOT show Victor Rhodes's reply — the cliffhanger is the text sent, not the response.",
+        "Do NOT reveal that Maya Torres's investigation is a dead end — the reader should believe it is a real threat.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is cold resolve and the weight of the origin wound."
+      ],
+      "opens_with": "\"The box was exactly where I left it — behind a false wall in a storage unit I paid for with cash under a name that doesn't exist. I hadn't opened it in three years. I opened it now.\" — Nadia Cole, internal, as she lifts the lid of the box.",
+      "cliffhanger": "Nadia Cole's phone buzzes. A single word from an unknown number: 'Where?' She stares at the screen, her thumb pressed to her palm. The two-way hunt is about to become a face-to-face confrontation.",
+      "signature_detail_hint": "The tampered fuel line photo in Julian Croft's case file — a close-up of the brass fitting, showing a single scratch mark where the wrench slipped, a detail only the person who tampered it would know.",
+      "emotional_beat": "Cold resolve mixed with the weight of the origin wound — Nadia Cole retrieves her first kill's file and feels the gravity of her past, but hardens herself to confront Victor Rhodes.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show Nadia Cole retrieving Julian Croft's case file and facing the weight of her first kill. Introduce the rival podcaster Maya Torres (RH02 planted — exact semantic from red_herring_catalog). End with Nadia Cole breaking her rule and texting Victor Rhodes for a direct meeting. Do not show Rhodes's reply — the cliffhanger is the text sent.",
+      "carries_to_next": "RH02 is planted. Nadia Cole has broken her rule and initiated a direct confrontation with Victor Rhodes. The two-way hunt escalates to a face-to-face meeting in chapter 16."
+    }
+  ]
+}

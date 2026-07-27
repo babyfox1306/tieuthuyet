@@ -1,0 +1,77 @@
+{
+  "book_number": 1,
+  "total_chapters": 38,
+  "target_language": "en",
+  "case_closed": true,
+  "case_open": "Will Elle Reyes finish Damien Kroll before he exposes her secret life as a vigilante executioner?",
+  "lead_internal_arc": {
+    "elle_reyes": {
+      "starting_state": "Confident, methodical, believes her system is flawless. She has never been hunted before.",
+      "arc_summary": "From invisible executioner to exposed hunter. Elle learns that her network is fragile, her past is a weapon, and her rule against killing innocents will be tested. She survives the two-way hunt but loses secrecy forever.",
+      "ending_state": "Alive, network fractured, method proven but no longer invisible. She is now a leashed asset — the hunter has become the hunted."
+    },
+    "damien_kroll": {
+      "starting_state": "Arrogant, protected by wealth and connections, believes he walked free permanently.",
+      "arc_summary": "From untouchable predator to cornered prey. Kroll realizes he is being hunted by a vigilante, not a journalist. He builds a case against Elle, but his arrogance and need to control the narrative lead to his downfall.",
+      "ending_state": "Dead by an engineered accident. His case against Elle survives in a dead-man's-switch, now in unknown hands."
+    }
+  },
+  "act_structure": [
+    {
+      "act": 1,
+      "label": "The Hunt Begins",
+      "chapters": [
+        1,
+        10
+      ],
+      "summary": "Establish Elle's method, fame, and network. She selects Damien Kroll as her next target. End of act: someone (Kroll) knows what she is — the two-way hunt begins.",
+      "key_events": [
+        "Chapter 1: Cold open — Elle finishes a kill (not Kroll), establishing her true nature. Reader knows she is a killer.",
+        "Chapter 3: Elle's podcast announces the reopening of the Kroll cold case. Network members are introduced.",
+        "Chapter 6: First hint that Kroll is not a passive target — he is investigating the podcaster who reopened his case.",
+        "Chapter 9: Kroll confronts Elle indirectly (a message, a planted item). Act ends with Elle realizing she is being hunted back."
+      ]
+    },
+    {
+      "act": 2,
+      "label": "The Two-Way Hunt",
+      "chapters": [
+        11,
+        21
+      ],
+      "summary": "The cat-and-mouse intensifies. Elle closes on Kroll; Kroll closes on Elle. The network begins to fracture. Midpoint: Elle becomes the hunted. Act-2 end: false victory — Elle believes she has won, but Kroll's dead-man's-switch triggers.",
+      "key_events": [
+        "Chapter 14: First network fracture — a member (the leak) begins feeding Kroll information.",
+        "Chapter 19 (Midpoint): Kroll turns the tables — Elle is publicly accused of something (not murder, but ethical breach), damaging her credibility. Hunter becomes hunted.",
+        "Chapter 22: Elle discovers the leak exists but does not know who yet.",
+        "Chapter 25: Elle's origin wound (Mara's murder) is fully revealed to the reader.",
+        "Chapter 28: Elle engineers what she believes is Kroll's death. False victory. But Kroll's dead-man's-switch activates — evidence of Elle's first kill is now in motion."
+      ]
+    },
+    {
+      "act": 3,
+      "label": "The Trap Springs",
+      "chapters": [
+        22,
+        32
+      ],
+      "summary": "Elle realizes Kroll is not dead or that his contingency plan is live. She must turn his method against him. The leak is revealed. Final confrontation via physical evidence. Kroll dies for real. Book-2 hook lands.",
+      "key_events": [
+        "Chapter 30: Elle confirms Kroll is alive or that his switch was triggered before she thought she killed him.",
+        "Chapter 33: The leak is revealed (Dr. Lila Vance, the coroner). Confrontation and fallout.",
+        "Chapter 35: Elle and Kroll's final confrontation — not a monologue, but a physical evidence duel. Elle wins by engineering an accident that kills Kroll.",
+        "Chapter 37: Kroll is dead. The podcast frames it as justice. Elle's network is fractured but not destroyed.",
+        "Chapter 38: The dead-man's-switch evidence surfaces in someone else's hands. Elle is now on a leash. Series hook."
+      ]
+    },
+    {
+      "act": 4,
+      "name": "Resolution",
+      "chapters": [
+        33,
+        38
+      ],
+      "summary": ""
+    }
+  ]
+}

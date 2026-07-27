@@ -1,0 +1,89 @@
+{
+  "description": "Narrative threads for The Cold Case Girl, Book 1. Each thread has an opening chapter, a required payoff window, and a clear Book 1 resolution or Book 2 promise. The romance thread is kept at faint texture (spice 1) and never drives the plot. The network betrayal thread is designed to hurt — loyalty is built before it breaks.",
+  "threads": [
+    {
+      "id": "T01",
+      "name": "Hunt Victor Rhodes",
+      "opened_chapter": 1,
+      "must_close_by": 38,
+      "must_payoff_by": 38,
+      "status": "open",
+      "book1_resolution": "Victor Rhodes is dead, the Elise Marchetti case is publicly solved through the podcast, and Nadia's method is proven.",
+      "book2_promise": "Rhodes's dead-man's-switch surfaces evidence of Nadia's first kill to an unknown third party.",
+      "book1_payoff": "Rhodes dies in a way that looks like an accident or clean frame, closing the cold case.",
+      "note": "This is the main thriller thread — the two-way hunt. Nadia closes on Rhodes; Rhodes closes on Nadia. Must escalate every 3-4 chapters."
+    },
+    {
+      "id": "T02",
+      "name": "Network loyalty and betrayal",
+      "opened_chapter": 3,
+      "must_close_by": 34,
+      "must_payoff_by": 34,
+      "status": "open",
+      "book1_resolution": "The betrayer is revealed and dealt with — either killed, exiled, or turned into a liability for the network.",
+      "book2_promise": "The remaining network members are shaken but loyal; the betrayal leaves a permanent scar on trust.",
+      "book1_payoff": "Betrayal occurs around chapter 28-30, after genuine loyalty has been shown. It hurts Nadia and forces her to work alone for the final act.",
+      "note": "The leak is one of the three network members. Decide at plan time: Sasha, Priya, or Wren. Once chosen, keep consistent. Build real loyalty before the break."
+    },
+    {
+      "id": "T03",
+      "name": "Origin wound — Mara Cole's murder",
+      "opened_chapter": 2,
+      "must_close_by": 34,
+      "must_payoff_by": 34,
+      "status": "open",
+      "book1_resolution": "Nadia's first kill (Julian Croft) is fully revealed to the reader — how she killed him, why, and the emotional weight of it. The origin wound is paid off.",
+      "book2_promise": "The first-kill evidence surfaces in someone else's hands, becoming the Book 2 hook.",
+      "book1_payoff": "Full origin reveal at chapter 34: Nadia's sister Mara, Julian Croft's walk, and Nadia's first kill (boating accident cover).",
+      "note": "Seed early (chapters 2-5), gradually reveal across the book. The first-kill file is the ticking bomb. Do not pay off before chapter 34."
+    },
+    {
+      "id": "T04",
+      "name": "Podcast as cover and weapon",
+      "opened_chapter": 1,
+      "must_close_by": 38,
+      "must_payoff_by": 38,
+      "status": "open",
+      "book1_resolution": "The podcast publicly solves the Elise Marchetti case, framing Rhodes's death as justice. Nadia's public face is intact.",
+      "book2_promise": "The podcast becomes a double-edged sword — it's her cover, but it also makes her visible to the person who now holds her first-kill evidence.",
+      "book1_payoff": "Final episode of the season airs after Rhodes's death, cementing Nadia's reputation and providing the public cover for the kill.",
+      "note": "The podcast is Nadia's public identity. It must be used strategically — to manipulate public perception, to feed information to the network, and to create alibis."
+    },
+    {
+      "id": "T05",
+      "name": "Romance (faint texture only)",
+      "opened_chapter": 8,
+      "must_close_by": 38,
+      "must_payoff_by": 38,
+      "status": "open",
+      "book1_resolution": "A faint romantic tension exists (e.g., with a detective circling her, or a network member), but it is unresolved — no commitment, no confession, no plot-driving romance.",
+      "book2_promise": "The romantic tension may develop in later books, but it never drives the plot in Book 1.",
+      "book1_payoff": "A single charged moment (a look, a touch, a near-kiss) that raises the temperature but does not resolve. Spice 1 only.",
+      "note": "Romance is faint texture only. Never a tracked narrative thread. Do not let it take over the thriller engine. If no natural romantic tension emerges, this thread can remain minimal."
+    },
+    {
+      "id": "T06",
+      "name": "The two-way hunt — Rhodes's counter-investigation",
+      "opened_chapter": 10,
+      "must_close_by": 38,
+      "must_payoff_by": 38,
+      "status": "open",
+      "book1_resolution": "Rhodes's dead-man's-switch is triggered after his death, surfacing evidence of Nadia's first kill to an unknown third party.",
+      "book2_promise": "The third party now holds the leash on Nadia — they want her to work for them.",
+      "book1_payoff": "Rhodes's counter-investigation is revealed in pieces across Acts 2 and 3. He has built a case on Nadia's first kill, but she doesn't know the full extent until the final beat.",
+      "note": "This is the antagonist's thread. Rhodes is intelligent, patient, and uses information as his weapon. His investigation is the ticking bomb that Nadia must defuse or survive."
+    },
+    {
+      "id": "T07",
+      "name": "Nadia's rule — never kill an innocent",
+      "opened_chapter": 1,
+      "must_close_by": 38,
+      "must_payoff_by": 38,
+      "status": "open",
+      "book1_resolution": "Nadia's rule is tested but upheld. She does not kill an innocent person in Book 1.",
+      "book2_promise": "The rule may be tested more severely in future books, especially if the third party forces her hand.",
+      "book1_payoff": "A moment in Act 3 where Nadia could kill someone who is not provably guilty, and she chooses not to — reinforcing her moral code.",
+      "note": "This thread is about Nadia's internal boundary. It must be tested at least once (e.g., a network member who betrayed her, or a witness who could expose her). She must choose not to kill them."
+    }
+  ]
+}

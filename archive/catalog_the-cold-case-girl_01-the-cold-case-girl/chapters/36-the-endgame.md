@@ -1,0 +1,129 @@
+---
+series: the-cold-case-girl
+book: 1
+chapter: 36
+title: The Endgame
+spice: 1
+word_count: 919
+status: draft
+needs_fix: []
+promoted_at: '2026-07-26T11:11:46Z'
+---
+
+Victor reached the pistol first.
+
+He had it by the grip but not the trigger when I caught his wrist with both hands. I drove it against the floor until his fingers opened, then kicked the weapon beneath the sofa.
+
+He rolled toward the injector.
+
+I caught it an instant before he did.
+
+Victor struck my injured shoulder. The room flashed white. I nearly lost the injector, but his wounded leg failed as he tried to rise. I caught him from behind, found the outer edge of his injured thigh below the old bandage, and pressed the device once.
+
+The mechanism clicked.
+
+He turned with both hands around my wrist.
+
+"You still lose," he said.
+
+"Maybe."
+
+I held his gaze while the strength left his grip.
+
+He tried to reach the kitchen. Not the door. The silver drive.
+
+I lowered him before he could strike the desk. His breathing changed, then stopped. I waited for the absence between heartbeats to become final.
+
+My thumb pressed into my palm. Once.
+
+Victor Rhodes was the fourth man I had killed.
+
+I did not close his eyes. I did not give the act a name it had not earned.
+
+The study bore the marks of a struggle but not a shooting. A chair lay overturned. Papers covered the floor. The pistol remained beneath the sofa. I left the weapon where it was; moving it would create a lie harder to explain. David knew Victor kept a gun and could say he found it there.
+
+I returned the chair upright and took my confession drive from the laptop. Victor had already destroyed the doorbell recording. My presence in the house still existed in neighborhood cameras and traffic data. The plan did not depend on erasing reality. It depended on no one having a reason to assemble it before the body was gone.
+
+The silver drive waited on the kitchen counter.
+
+I put it in my pocket.
+
+Then I left through the front door and sent David the agreed word.
+
+Still.
+
+David entered the house twenty-three minutes later. I listened to his emergency call from a phone Sasha held on speaker.
+
+"My brother is on the floor," he said. "He isn't breathing."
+
+The dispatcher guided him through resuscitation until paramedics arrived. They documented the scene, attempted additional measures, placed lines, and transmitted Victor's cardiac history to the hospital. The pistol was noted but unfired. No one reported blood, forced entry, or an obvious wound.
+
+At 11:08 PM, Victor was pronounced dead.
+
+At 11:31, the unattended-death case rotated to Priya.
+
+Chance held.
+
+I waited with Sasha in a car two neighborhoods away. Neither of us spoke until Priya called near dawn.
+
+"David identified him," she said first. "I confirmed his hospital imaging against the prior records."
+
+Identity was never the weak point. Cause was.
+
+"External findings?" Sasha asked.
+
+"The recent thigh injury is documented from Mason Street. The new bruising is consistent with collapse and resuscitation. There is a fresh puncture beside the healing thigh wound that the paramedic record does not explain. I recorded it as related to prior treatment. That is false, and it is the first place a second review would break my conclusion."
+
+"Toxicology?"
+
+"Not ordered. No police hold. I certified sudden fatal arrhythmia."
+
+Priya sounded neither relieved nor proud.
+
+"David requested no autopsy and signed the existing cremation preauthorization," she continued. "The permit is approved. The funeral home has the first lawful slot this afternoon."
+
+"What can still stop it?" I asked.
+
+"A family objection. A police hold. A second review of my disposition. A mechanical delay at the crematory. Until it happens, nothing is finished."
+
+The vulnerable window had a shape and an end.
+
+We waited.
+
+News of Victor's death appeared before noon. Former prosecutor and true-crime host found dead at home. Known heart condition. Recent recovery from an assault. Family requests privacy.
+
+C-010 remained held.
+
+Vance sent Sasha a copy of the hold with a new signature and the date of Victor's death. Holt confirmed that his sealed copy would remain unopened absent judicial authorization. David's lawyers filed the evidence clearing Lena and the Meridian documents against Victor in federal court. Those records no longer depended on us.
+
+At 4:42 PM, the crematory confirmed completion and issued the certificate of cremation.
+
+The body was gone.
+
+If the case reopened, investigators could still examine records, our movements, Priya's decision, and preserved medical samples. Cremation had closed the strongest forensic window; it had not erased the rest of the case.
+
+Priya left the call without saying goodbye.
+
+Sasha stared through the windshield. "It's done."
+
+"His part is."
+
+I took out the silver drive.
+
+Its metadata showed the contents had been written the previous afternoon at 4:12, exactly as Evelyn had reported. Victor had prepared it before inviting me and left it where his glance would lead me.
+
+The top-level file was named READ AFTER.
+
+Inside was a copy of the Croft dossier and a short note.
+
+David can destroy paper. Vance can discover caution. Evelyn Shaw preserved C-011 before either of them understood its value. She will contact you within forty-eight hours of my death. That is not a release deadline. It is the time she requested to decide your price.
+
+There was no supernatural switch.
+
+There was a broker with a copy and her own intention.
+
+Victor had not controlled what happened after his death. He had merely sold Evelyn the opportunity to try.
+
+The difference did not make me safe.
+
+It told me where the next threat began.

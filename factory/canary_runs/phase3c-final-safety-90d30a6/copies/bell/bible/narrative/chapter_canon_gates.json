@@ -1,0 +1,66 @@
+{
+  "source": "concept.yaml",
+  "compiled_by": "sync_chapter_canon_gates",
+  "enforcement": "forbidden_phrase_gates.unlock_chapter applies to EVERY chapter number strictly less than unlock_chapter via compile_chapter_canon_rules(concept, ch) at write/prompt time. per_chapter_preview is an operator sample only — missing a preview entry does NOT mean that chapter is ungated.",
+  "surface_order": {
+    "event_id": "the_bell_chooses_the_next_name",
+    "exact_text": "THE BELL CHOOSES THE NEXT NAME.",
+    "visible_from_chapter": 1
+  },
+  "binding_condition": {
+    "event_id": "the_bell_chooses_the_next_name",
+    "canonical_text": "The bell never chooses. Each dying victim is compelled to name the one person whose hidden knowledge, access, or evidence is required to advance the unfinished testimony.",
+    "reveal_chapter": 8,
+    "exact_wording_required_when_explicitly_stated": true
+  },
+  "forbidden_phrases_forever": [
+    "if I remember",
+    "if you remember",
+    "little did she know",
+    "for some reason",
+    "something felt off",
+    "her blood ran cold",
+    "a chill ran down her spine",
+    "she released a breath she did not know she was holding",
+    "it was all a dream",
+    "nothing could have prepared her",
+    "the silence was deafening",
+    "time seemed to stand still",
+    "before she could react",
+    "dark secrets",
+    "ancient evil"
+  ],
+  "forbidden_phrase_gates": [],
+  "per_chapter_preview": {
+    "1": {
+      "allowed_exact_quotes": [
+        "THE BELL CHOOSES THE NEXT NAME."
+      ],
+      "forbidden_facts": [
+        "The bell never chooses. Each dying victim is compelled to name the one person whose hidden knowledge, access, or evidence is required to advance the unfinished testimony."
+      ],
+      "required_exact_wording": [],
+      "reveal_state": "surface_only"
+    },
+    "7": {
+      "allowed_exact_quotes": [
+        "THE BELL CHOOSES THE NEXT NAME."
+      ],
+      "forbidden_facts": [
+        "The bell never chooses. Each dying victim is compelled to name the one person whose hidden knowledge, access, or evidence is required to advance the unfinished testimony."
+      ],
+      "required_exact_wording": [],
+      "reveal_state": "surface_only"
+    },
+    "8": {
+      "allowed_exact_quotes": [
+        "THE BELL CHOOSES THE NEXT NAME."
+      ],
+      "forbidden_facts": [],
+      "required_exact_wording": [
+        "The bell never chooses. Each dying victim is compelled to name the one person whose hidden knowledge, access, or evidence is required to advance the unfinished testimony."
+      ],
+      "reveal_state": "binding_revealed"
+    }
+  }
+}

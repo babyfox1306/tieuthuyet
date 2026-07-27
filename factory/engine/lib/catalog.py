@@ -111,9 +111,9 @@ def resolve_chapter_display(
 
 def parse_chapter_header(text: str) -> tuple[int | None, str | None, str]:
     lines = text.strip().splitlines()
-    if lines and lines[0].startswith("#"):
+    if lines:
         m = re.match(
-            r"#\s*(?:Chapter|Chương)\s*(\d+)\s*:?\s*(.*)$",
+            r"^#*\s*(?:Chapter|Chương)\s*(\d+)\s*:?\s*(.*)$",
             lines[0].strip(),
             re.IGNORECASE,
         )
@@ -557,9 +557,22 @@ def promote_chapter(
         return None, []
 
     text = ready_path.read_text(encoding="utf-8")
-    ch_num, parsed_title, _ = parse_chapter_header(text)
-    ch_num = ch_num or ch
+    parsed_num, parsed_title, _ = parse_chapter_header(text)
     lang = export_language(workspace_id)
+    # Pipeline slot (filename ch) is the source of truth for numbering — the
+    # writer's header number is unreliable (models sometimes emit the wrong
+    # "Chapter N"), and trusting it corrupts a *different* chapter's catalog file.
+    ch_num = ch
+    if parsed_num is not None and parsed_num != ch:
+        label = f"Chapter {ch}" if lang == "en" else f"Chương {ch}"
+        text = re.sub(
+            r"^\s*#*\s*(?:Chapter|Chương)\s+\d+",
+            label,
+            text,
+            count=1,
+            flags=re.IGNORECASE,
+        )
+        ready_path.write_text(text, encoding="utf-8")
     plan_beat = chapter_beat_from_plan(workspace_id, book, ch_num)
 
     if parsed_title:

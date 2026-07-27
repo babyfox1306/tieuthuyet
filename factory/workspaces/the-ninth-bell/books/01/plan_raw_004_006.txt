@@ -1,0 +1,89 @@
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Confession in Pieces",
+      "slug": "the-confession-in-pieces",
+      "one_line_summary": "Clara traces every syllable of her confession back to stolen fragments from family tapes and professional interviews, proving the recording was surgically assembled by someone who accessed her archive across multiple locations.",
+      "beat_summary": "Clara magnifies the confession waveform and identifies micro-splices where syllables were excised and reassembled. She cross-references each stolen word against her personal family recordings, matching room tone and background noise to confirm origin. She then discovers fragments pulled from her own professional broadcast interviews—recordings stored hundreds of miles away—proving the maker had access beyond the tower. The confession is a deliberate fabrication, but the maker's identity and motive remain unknown.",
+      "must_happen": [
+        "Clara magnifies the confession recording and identifies micro-splices at every syllable boundary.",
+        "She matches stolen syllables to specific family recordings by comparing room tone and background artifacts.",
+        "She finds additional fragments sourced from her own professional interviews conducted at remote broadcast facilities.",
+        "She proves the confession was deliberately assembled through forensic splice analysis, not spontaneous speech.",
+        "The maker and their motive remain unidentified despite the evidence trail."
+      ],
+      "must_not": [
+        "Reveal who built the acoustic surveillance system or its full infrastructure.",
+        "Identify Thomas Vale as the maker of the confession tape.",
+        "Allow Clara to access the sealed chamber or its contents.",
+        "Provide a complete explanation of how the recordings are captured."
+      ],
+      "opens_with": "At 400x magnification, the confession split into jagged continents—each syllable an island with a shoreline that didn't match its neighbor.",
+      "cliffhanger": "The final word of the confession—\"anyway\"—traces to a broadcast interview Clara gave in Manchester, three hundred miles from the tower, proving the maker reached well beyond the family archive to silence her.",
+      "signature_detail_hint": "The micro-splices leave a consistent pattern of overlapping magnetic oxide particles, like two fingerprints pressed into the same space at slightly different angles.",
+      "emotional_beat": "Forensic focus turning to violation—someone harvested her own voice to build her condemnation, and the precision of it is more terrifying than any ghost.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words. Structure it as a tightening spiral of forensic discovery: Clara begins with technical confidence, each splice match narrows the field of possibility, and the final revelation—that the maker accessed her remote professional archive—collapses her assumption that the threat is local to the tower. End on the Manchester trace as both proof of deliberate fabrication and proof of the maker's reach.",
+      "carries_to_next": "The confession is proven fabricated, but Clara's own memories of Elin's death remain fragmented and unreliable, setting up her need to revisit what she actually remembers versus what she was told."
+    },
+    {
+      "chapter": 5,
+      "title": "The Memory They Gave Me",
+      "slug": "the-memory-they-gave-me",
+      "one_line_summary": "Mara Venn reveals that Thomas systematically questioned young Clara after Elin's death, reshaping her fragmented memories into a coherent guilt narrative, and Clara recognizes that her own conviction of culpability may have been installed rather than remembered.",
+      "beat_summary": "Mara contacts Clara and reveals what she witnessed after Elin's death: Thomas repeatedly questioned the young Clara, pressing her for details she couldn't recall, then providing his own version until she adopted it. Clara recognizes specific phrases from her own guilt that first appeared in Thomas's voice, not her own memories. The investigation stays grounded in evidence—no perfect recovered memory is claimed—but Clara now understands that her emotional certainty of guilt may be a manufactured artifact, as fabricated as the confession tape.",
+      "must_happen": [
+        "Mara reveals that Clara's memory of the period after Elin's death was fragmented and unreliable.",
+        "Mara describes how Thomas repeatedly questioned young Clara and supplied his own version of events.",
+        "Clara recognizes that her guilt narrative contains language and phrasing that originated with Thomas, not with her own recollection.",
+        "Clara acknowledges that guilt may have been taught rather than remembered, without claiming perfect recovery of the true memory.",
+        "Clara identifies specific verbal patterns in her own guilt that match Thomas's questioning style, providing evidence-based grounds for doubt."
+      ],
+      "must_not": [
+        "Reveal the full mechanism of the acoustic surveillance system.",
+        "Allow Clara to perfectly recover what actually happened on the day of Elin's death.",
+        "Identify Thomas as the builder of the system or the maker of the confession tape.",
+        "Resolve the question of what Thomas's true motive was for shaping Clara's memory."
+      ],
+      "opens_with": "Mara's voice on the phone was steady in the way people are steady when they have rehearsed a sentence for eighteen years.",
+      "cliffhanger": "Clara pulls her own childhood testimony from the family file and finds the phrase \"I left her there\"—a phrase Thomas used in his first questioning session, recorded on a tape she had never been allowed to hear.",
+      "signature_detail_hint": "The family file contains a cassette labeled only with a date and the word \"clarification\" in Thomas's handwriting, its tape counter frozen at 14:37 as though stopped mid-sentence.",
+      "emotional_beat": "Vertigo of identity—Clara has built her entire adult life around a guilt she now suspects was given to her, and dismantling it means confronting who she is without it.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words. Mara's testimony must feel like testimony—specific, grounded, slightly reluctant, full of the details someone remembers when they have carried guilt for a secret. Clara's response should be analytical first, emotional second: she tests Mara's account against physical evidence (the tapes, the file). The climax is the discovery of the \"clarification\" cassette and the planted phrase. Do NOT give Clara full recovered memory; let her arrive at reasonable, evidence-supported doubt.",
+      "carries_to_next": "Clara now suspects Thomas deliberately shaped her memory, but she needs physical evidence of his involvement in the tower itself—not just his psychological manipulation—to prove the connection."
+    },
+    {
+      "chapter": 6,
+      "title": "The Space Behind the Wall",
+      "slug": "the-space-behind-the-wall",
+      "one_line_summary": "Cross-referencing Thomas's official tower records against the actual structure, Clara discovers a sealed section of wall that conceals an entrance to a hidden chamber, proving the tower contains architecture that Thomas deliberately excluded from all documentation.",
+      "beat_summary": "Clara compares Thomas's documented account of the tower's layout against physical measurements and discovers a gap: a section of the seventh-floor wall is thicker than any structural plan permits. Acoustic analysis reveals the wall dampens sound in a pattern consistent with an adjacent void. She maps inconsistencies between Thomas's testimony and the tower's actual infrastructure, confirming that a sealed room exists behind apparently solid masonry. She proves the entrance is concealed but does not yet open it or learn its contents.",
+      "must_happen": [
+        "Clara identifies inconsistencies between Thomas's documented account and the tower's physical measurements.",
+        "Acoustic analysis of the seventh-floor wall reveals a void behind the masonry inconsistent with the published layout.",
+        "Clara maps infrastructure elements—pipes, cables, structural supports—that do not appear in any official tower documentation.",
+        "She proves that an apparently solid section of wall conceals an entrance to a hidden space.",
+        "The purpose and contents of the concealed chamber remain unknown."
+      ],
+      "must_not": [
+        "Open the sealed chamber or reveal its full contents.",
+        "Reveal the complete truth of Elin's death.",
+        "Expose the full acoustic surveillance system.",
+        "Allow Clara to enter the hidden space in this chapter."
+      ],
+      "opens_with": "The wall was supposed to be thirty-two centimeters thick. Clara's tap meter read forty-seven.",
+      "cliffhanger": "Clara presses her palm against the sealed wall and feels vibration—not from the bells above, but from somewhere behind the stone, a low mechanical pulse that matches the resonance signature she isolated in every recording.",
+      "signature_detail_hint": "The mortar in the sealed section is a different composition than the rest of the tower—calcium silicate instead of lime—and its carbon-dating would place it at least fifteen years after the tower's original construction.",
+      "emotional_beat": "Claustrophobic anticipation and a fracture in Clara's trust of physical space—every surface in the tower could be hiding something, and the architecture itself has been lying.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words. Structure it as an investigation of physical space: Clara moves from document analysis to measurement to acoustic testing, each step confirming that something is hidden. The chapter should feel architectural and tactile—stone, mortar, vibration, air pressure. Build toward the wall as a threshold: proved to exist, not yet breached. The final vibration behind the stone must connect back to the resonance anomaly from chapters 2-3, creating a direct link between the recordings and the hidden infrastructure.",
+      "carries_to_next": "The concealed chamber is proven to exist and connected to the recording system, driving Clara to find a way inside and confront whoever sealed it."
+    }
+  ]
+}

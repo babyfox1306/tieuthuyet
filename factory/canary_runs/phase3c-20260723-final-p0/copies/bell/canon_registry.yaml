@@ -1,0 +1,14 @@
+characters:
+  female_lead:
+    canonical: Female Lead
+    allowed_aliases:
+    - Female
+    - Lead
+    forbidden_aliases: []
+  male_lead:
+    canonical: Male Lead
+    allowed_aliases:
+    - Male
+    - Lead
+    forbidden_aliases: []
+pov_mode: third_person_limited

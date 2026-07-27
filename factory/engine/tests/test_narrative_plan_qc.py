@@ -135,6 +135,21 @@ class TestNarrativePlanQC(unittest.TestCase):
         nc05 = [i for i in issues if "NC-05" in i]
         self.assertEqual(nc05, [], issues)
 
+    def test_nc05_legacy_unweighted_reveal_does_not_invent_clues(self):
+        import json
+
+        ledger_path = self.ws / "bible" / "narrative" / "mystery_ledger.json"
+        ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+        reveal = ledger["major_reveals"][0]
+        reveal["required_clues"] = []
+        reveal.pop("reveal_weight", None)
+        ledger_path.write_text(json.dumps(ledger, indent=2), encoding="utf-8")
+
+        ch = int(reveal["chapter"])
+        plan = merge_narrative_into_plans(self.ws, [_full_plan(ch)])[0]
+        issues = validate_narrative_plan(plan, self.ws, all_plans=[plan])
+        self.assertFalse([i for i in issues if "NC-05" in i], issues)
+
     def test_nc06_knowledge_violation_in_must_happen(self):
         plans = merge_narrative_into_plans(self.ws, [_full_plan(5)])
         plans[0]["must_happen"] = list(plans[0]["must_happen"]) + [

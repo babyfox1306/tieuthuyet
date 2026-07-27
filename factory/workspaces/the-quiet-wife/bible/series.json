@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "series_id": "the-quiet-wife",
+    "genre": "psychological thriller with slow-burn female intimacy, domestic noir, and a four-tier twist structure. First-person unreliable narrator.",
+    "target_language": "en"
+  },
+  "title": "The Quiet Wife",
+  "sub_niche": "psychological thriller with slow-burn female intimacy, domestic noir, and a four-tier twist structure. First-person unreliable narrator.",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "A live-in housekeeper believes she's rescuing a fragile wife from a controlling husband — until she discovers the wife hired her to be framed for murder, and both women have been lying since day one.",
+  "tropes": [
+    "Unreliable narrator",
+    "Domestic noir",
+    "Slow-burn female intimacy",
+    "Framed for murder",
+    "Con artist protagonist",
+    "Rich husband / fragile wife",
+    "Twist ladder",
+    "Betrayal by trusted ally"
+  ],
+  "leads": {
+    "female": {
+      "name": "the housekeeper (unnamed narrator)",
+      "age": 29,
+      "voice": "I watch people. That's how I survive. I notice the way a man holds his glass, the tremor in a woman's hand, the seconds of silence that mean more than words.",
+      "tics": [
+        "Compulsively counts steps between rooms",
+        "Touches her left earlobe when lying"
+      ],
+      "boundary": "Nora will not kill directly — she will manipulate others into doing it for her. She draws the line at physical violence against the innocent, but she will let a guilty person die if it serves her purpose.",
+      "internal_voice": "I came here to bleed this family dry. But the wife — she's different. She sees me. And that terrifies me."
+    },
+    "male": {
+      "name": "Unassigned (no male lead)",
+      "age": 45,
+      "voice": "My wife is unwell. You must be patient with her. She has episodes. I trust you to keep her safe — that's why I hired you.",
+      "tics": [
+        "Straightens his tie when nervous",
+        "Never raises his voice, even when angry"
+      ],
+      "boundary": "Julian will never physically harm his wife, but he will control her through isolation and gaslighting. He believes he is protecting her from the world, not imprisoning her.",
+      "wound": "His first wife died under mysterious circumstances — he was never charged, but the suspicion haunts him."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Elena Ashford",
+      "relation_to": "Nora Kessler",
+      "relation_type": "employer",
+      "alive": true,
+      "secret": "She is the true architect of the frame — she hired Nora specifically because of her criminal past."
+    },
+    {
+      "name": "Elena Ashford",
+      "relation_to": "Julian Ashford",
+      "relation_type": "wife",
+      "alive": true,
+      "secret": "She is not as fragile as she appears; she has been planning her husband's murder for years."
+    },
+    {
+      "name": "Dr. Margaret Lin",
+      "relation_to": "Elena Ashford",
+      "relation_type": "attending physician",
+      "alive": true,
+      "secret": "She is aware of Elena's mental state but has been manipulated into prescribing sedatives that Elena hides instead of takes."
+    },
+    {
+      "name": "Cora Baines",
+      "relation_to": "Nora Kessler",
+      "relation_type": "former colleague",
+      "alive": false,
+      "secret": "Cora was the previous housekeeper who 'left suddenly' — she was killed by Elena after discovering the plan."
+    }
+  ],
+  "central_mystery": {
+    "question": "Who is conning whom, and who dies?",
+    "answer": "The wife engineered the entire hire to frame the housekeeper for the husband's murder, choosing her precisely because her criminal past makes her disposable and believable as a killer. The husband is not the predator; he is the target. The housekeeper is also running a con (she came to rob or blackmail this family), but the wife's con is deeper and older. The deepest betrayal: the one ally the housekeeper (and the reader) trusted most is the trap.",
+    "reveal_chapter": 44
+  },
+  "bloodline": {
+    "description": "No blood relations among leads. Nora is an only child of deceased parents (both died in a car accident when she was 12). Julian has no siblings; his parents are alive but estranged. Elena has a younger brother living abroad. No shared ancestry.",
+    "hard_rules": [
+      "female_lead and male_lead are not blood relatives",
+      "female_lead and female supporting lead (Elena) are not blood relatives",
+      "male_lead and female supporting lead (Elena) are married, not blood related"
+    ],
+    "lead_relation": "employer-employee"
+  },
+  "world_rules": [
+    "The story takes place in a wealthy suburban estate in upstate New York, isolated by woods.",
+    "Time is present-day, no supernatural elements.",
+    "All twists must be supported by physical evidence (documents, objects, recordings) found by the narrator.",
+    "The reader's understanding must be overturned every 2-3 chapters via a seed or shift.",
+    "No character confesses the truth in a monologue; truth is always discovered."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "Nora arrives at the Ashford estate believing she is conning a wealthy family; she forms a bond with Elena, whom she sees as a victim. By the end, she discovers Elena orchestrated everything to frame her for Julian's murder. Nora survives but is now complicit in the cover-up.",
+      "ending_hook": "Nora holds the planted evidence that could prove her innocence — but using it would expose her own criminal past. She burns it. The final line: 'I am now exactly who she needed me to be.'"
+    }
+  ],
+  "content_rules": [
+    "No sexual content (spice level 1).",
+    "All characters are 18+.",
+    "No supernatural or paranormal elements.",
+    "No explicit violence against animals or children.",
+    "Consent and psychological safety of vulnerable characters must be respected in narrative treatment."
+  ],
+  "bible_status": "approved"
+}

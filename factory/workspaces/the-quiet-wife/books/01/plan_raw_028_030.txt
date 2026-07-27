@@ -1,0 +1,217 @@
+```json
+{
+  "act": [28, 30],
+  "chapter_plans": [
+    {
+      "chapter": 28,
+      "title": "The Road",
+      "slug": "the-road",
+      "one_line_summary": "The housekeeper (unnamed narrator) drives away from Raven's Creek, carrying the weight of Nora's blood and the evidence, but the wife's voice still echoes in her head — and a text from Emily changes everything.",
+      "beat_summary": "The housekeeper (unnamed narrator) drives through the night, her hands still shaking from the attic confrontation. She has Nora's gun in the passenger seat, the photographs on her phone, and the memory of Nora's whisper — 'You're just like me' — looping in her mind. She pulls over at a rest stop and reviews the evidence, trying to piece together what she will do next. Her phone buzzes with a text from an unknown number: Emily. Emily says she knows where Nora hid the original frame documents — the ones that prove the housekeeper (unnamed narrator) was the target all along. She offers to meet at dawn. The housekeeper (unnamed narrator) agrees, but she is already planning to use this meeting as a trap — for Emily, for Nora, or for whoever is pulling the strings.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) drives away from Raven's Creek, her hands shaking on the wheel. She reviews the photographs on her phone — the evidence wall, the letters, Nora's confession — and realizes she still doesn't know who to trust.",
+        "She pulls over at a rest stop and examines Nora's gun. It's empty. Nora fired the last round into the floor during their struggle. The housekeeper (unnamed narrator) realizes Nora never intended to kill her — she wanted to be stopped.",
+        "Her phone buzzes with a text from an unknown number: 'It's Emily. I know where she hid the originals. Meet me at the grain silo outside town at dawn. Come alone.' The housekeeper (unnamed narrator) stares at the message, calculating.",
+        "The housekeeper (unnamed narrator) searches the car and finds a hidden compartment under the driver's seat. Inside is a folder with her real name — her birth name, which she hasn't used in years. Nora knew everything about her from the beginning.",
+        "The housekeeper (unnamed narrator) decides to meet Emily, but she will not come alone. She texts back: 'Dawn. I'll be there.' Then she drives to a pawn shop and buys a disposable phone. She is done being played.",
+        "She parks near the grain silo and waits, watching the horizon lighten. She counts the seconds until dawn: 47 minutes. Of course."
+      ],
+      "must_not": [
+        "Do not reveal that Emily is working with Nora — the text is a trap to lure the housekeeper (unnamed narrator) into a second confrontation.",
+        "Do not reveal that the folder with her birth name contains a photograph of her as a child, with Nora's handwriting on the back: 'Subject 0 — The One Who Got Away.'",
+        "Do not reveal that the housekeeper (unnamed narrator) is being tracked by a GPS device Nora planted in the car."
+      ],
+      "opens_with": "The highway stretched ahead like a black ribbon, and Nora's blood was drying under my fingernails. I had won. So why did it feel like I had lost everything?",
+      "cliffhanger": "The housekeeper (unnamed narrator) waits at the grain silo as dawn breaks. A figure emerges from the mist — not Emily, but a woman she recognizes from the evidence wall: Clara Higgins. Clara is alive, holding a folder. 'She told me you would come,' Clara says. 'I'm here to finish what she started.'",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of grains of sand on the dashboard of the borrowed car: 47. She wonders if she is still counting, or if the number has become a curse she cannot break.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, hollow exhaustion. She has won the battle, but the war is not over. She is surrounded by ghosts — Nora, Emily, Clara — and she does not know which one will strike first.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is paranoid and strategic — the housekeeper (unnamed narrator) is a hunter who has become the hunted.",
+      "chapter_task": "Write 1600-1900 words executing the beat map: the housekeeper (unnamed narrator) drives away from the town, carrying the evidence and the weight of murder, but the wife's voice still echoes in her head. The rest stop scene should feel like a moment of reckoning — the housekeeper (unnamed narrator) reviews the evidence and realizes she is still a pawn in a larger game. End with Clara's appearance at the grain silo to create a cliffhanger that sets up Chapter 29. No romance micro-beat — male lead is Unassigned and romance is not opt-in.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has been ambushed by Clara Higgins, who claims to be working with Nora. She must now decide whether to trust Clara, fight her, or use her as a bargaining chip to draw out Nora.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['she believes the husband murdered Clara Higgins', 'she is committed to protecting the wife', 'the husband is evasive with police', 'the wife is scared of the husband'], 'does_not_know': ['the wife planted evidence against the husband', 'she herself is being set up', 'the wife is the architect']}",
+            "the_wife: {'knows': ['the housekeeper believes the husband is guilty', \"the police are investigating Clara's disappearance\", 'the frame is progressing as planned'], 'does_not_know': [\"the housekeeper's true motive\", 'the housekeeper will eventually find the locked room']}",
+            "the_husband: {'knows': [\"the police suspect him in Clara's disappearance\", 'his wife is behind the planted evidence', 'he is losing control of the situation'], 'does_not_know': ['his wife intends to kill him', 'the housekeeper is also a con artist']}",
+            "clara_higgins: {'knows': ['the wife has successfully framed the husband in the public eye'], 'does_not_know': ['the new housekeeper is investigating her disappearance']}",
+            "dr_ellis: {'knows': [\"the police are investigating Clara's disappearance\", 'the husband is the prime suspect'], 'does_not_know': [\"the wife's role\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 25
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 29,
+      "title": "The Bargain",
+      "slug": "the-bargain",
+      "one_line_summary": "Clara Higgins delivers a message from the wife — who is alive and bargaining — offering the housekeeper (unnamed narrator) a deal that could free them both, but the price is the narrator's soul.",
+      "beat_summary": "Clara Higgins sits across from the housekeeper (unnamed narrator) in the cold morning light. She explains that Nora survived the gunshot — Emily found her and called an ambulance. Nora is now in hiding, but she has one last card to play: she will give the housekeeper (unnamed narrator) the original frame documents — the ones that prove the housekeeper (unnamed narrator) was the target all along — in exchange for one final favor. She wants the housekeeper (unnamed narrator) to deliver a package to Julian's lawyer, containing a false confession that will clear Nora's name and implicate Julian in the experiment. The housekeeper (unnamed narrator) realizes that if she delivers the package, she becomes an accomplice to Nora's escape. If she refuses, Nora will release the evidence that frames her for Julian's assault and Subject 6's staged death. The housekeeper (unnamed narrator) has no good choices. She takes the package, but she does not intend to deliver it. She will use it as bait to draw Nora out.",
+      "must_happen": [
+        "Clara Higgins sits across from the housekeeper (unnamed narrator) at the grain silo. She explains that Nora survived the gunshot — Emily found her and called an ambulance. Nora is now in hiding, recovering.",
+        "Clara delivers Nora's offer: the original frame documents in exchange for one final favor — deliver a package to Julian's lawyer containing a false confession that will clear Nora's name.",
+        "The housekeeper (unnamed narrator) examines the package. It is sealed with wax and stamped with Nora's initial: 'N.' She considers opening it but decides against it — it could be booby-trapped or tracked.",
+        "Clara warns the housekeeper (unnamed narrator) that if she refuses, Nora will release the evidence that frames her for Julian's assault and Subject 6's staged death. 'She has videos, photographs, and a signed statement from the delivery driver. You have no choice.'",
+        "The housekeeper (unnamed narrator) takes the package. She tells Clara she will deliver it. But in her internal narration, she admits she is lying — she will use the package as bait to draw Nora out and end this on her own terms.",
+        "Clara leaves. The housekeeper (unnamed narrator) sits alone in the car, holding the package. She weighs it in her hands. It feels like a bomb. She decides to open it — and finds a single photograph inside: a picture of herself as a child, standing next to a young girl with red hair. The girl is Nora. They knew each other before. The housekeeper (unnamed narrator) has no memory of this."
+      ],
+      "must_not": [
+        "Do not reveal that the package contains a GPS tracker — Nora will know exactly where the housekeeper (unnamed narrator) takes it.",
+        "Do not reveal that Clara is not acting on Nora's behalf — she is working for Margaret, who wants the housekeeper (unnamed narrator) to deliver the package to a different address.",
+        "Do not reveal that the photograph of the housekeeper (unnamed narrator) and Nora as children is real — they grew up in the same town and Nora has been watching her since childhood."
+      ],
+      "opens_with": "\"She's alive,\" Clara said, and the words hit me like a punch to the chest. 'You didn't think it would be that easy, did you? Nora Blackwood doesn't die. She survives.'",
+      "cliffhanger": "The housekeeper (unnamed narrator) stares at the photograph of herself as a child, standing next to a young Nora. She has no memory of this moment. She turns the photograph over. On the back, in a child's handwriting: 'Me and my best friend. We will always be together.' The housekeeper (unnamed narrator) realizes Nora has been planning this for decades — and she has been the target all along, not just for this job, but for her entire life.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of times she has been betrayed since arriving at Blackwood Estate: 47. She wonders if she will ever stop counting, or if the number will follow her to the grave.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a profound, existential dread. She is not a random target — she was chosen as a child. Nora has been watching her, waiting for her, and she walked into the trap willingly. The game is not over — it has barely begun.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The intimacy is psychological and predatory — Nora's reach extends decades into the past, and the housekeeper (unnamed narrator) is only now beginning to understand the scope of the trap.",
+      "chapter_task": "Write 1600-1900 words executing the beat map: the housekeeper (unnamed narrator) receives a call from the wife, who is alive and bargaining — she offers the narrator a deal that could free them both, but the price is the narrator's soul. The conversation with Clara should feel like a chess match — both women are lying, both are calculating. The discovery of the childhood photograph should be a genuine shock that reframes the entire story. End with the photograph's inscription to create a chilling cliffhanger that sets up Chapter 30. No romance micro-beat — male lead is Unassigned and romance is not opt-in.",
+      "carries_to_next": "The housekeeper (unnamed narrator) now knows that Nora has been watching her since childhood. She has the package and the photograph. She must decide whether to deliver the package as instructed, use it as bait, or destroy it and run — but Nora will always find her.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['she believes the husband murdered Clara Higgins', 'she is committed to protecting the wife', 'the husband is evasive with police', 'the wife is scared of the husband'], 'does_not_know': ['the wife planted evidence against the husband', 'she herself is being set up', 'the wife is the architect']}",
+            "the_wife: {'knows': ['the housekeeper believes the husband is guilty', \"the police are investigating Clara's disappearance\", 'the frame is progressing as planned'], 'does_not_know': [\"the housekeeper's true motive\", 'the housekeeper will eventually find the locked room']}",
+            "the_husband: {'knows': [\"the police suspect him in Clara's disappearance\", 'his wife is behind the planted evidence', 'he is losing control of the situation'], 'does_not_know': ['his wife intends to kill him', 'the housekeeper is also a con artist']}",
+            "clara_higgins: {'knows': ['the wife has successfully framed the husband in the public eye'], 'does_not_know': ['the new housekeeper is investigating her disappearance']}",
+            "dr_ellis: {'knows': [\"the police are investigating Clara's disappearance\", 'the husband is the prime suspect'], 'does_not_know': [\"the wife's role\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 25
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 30,
+      "title": "The Choice",
+      "slug": "the-choice",
+      "one_line_summary": "The housekeeper (unnamed narrator) makes her choice — she will not trust the wife's deal, but she will use it as bait to draw the wife out and end the game on her own terms, paying off the clues planted in Act 1.",
+      "beat_summary": "The housekeeper (unnamed narrator) does not deliver the package to Julian's lawyer. Instead, she drives to a neutral location — a motel on the outskirts of town — and sends Nora a text: 'I have the package. I know about the photograph. Meet me at the motel, Room 47, at midnight. Come alone, or I burn it all.' She then sets a trap: she hides the package in the bathroom, keeps the photograph in her pocket, and waits with Nora's empty gun. At midnight, the door opens. It is not Nora — it is Emily. Emily explains that Nora sent her as a proxy. The housekeeper (unnamed narrator) realizes Nora is still playing games. She grabs Emily, holds the empty gun to her head, and demands Nora's real location. Emily breaks and gives her an address: a cabin deeper in the woods. The housekeeper (unnamed narrator) lets Emily go and drives to the cabin, ready to end this — but when she arrives, she finds the cabin empty, with a single note on the table: 'You passed the test. Now the real game begins. — N.' The chapter ends with the housekeeper (unnamed narrator) realizing Nora has been testing her all along — and she has passed, earning a place in Nora's inner circle.",
+      "must_happen": [
+        "[PAYOFF C010, C011, C012] The housekeeper (unnamed narrator) does not deliver the package. Instead, she drives to a motel and sends Nora a text demanding a meeting. She sets a trap: hides the package in the bathroom, keeps the photograph in her pocket, and waits with Nora's empty gun.",
+        "At midnight, the door opens. It is Emily, not Nora. Emily says Nora sent her as a proxy. 'She wanted to see if you would come alone. You passed.'",
+        "The housekeeper (unnamed narrator) grabs Emily and holds the empty gun to her head. She demands Nora's real location. Emily, trembling, gives her an address: a cabin deeper in the woods, off Raven's Creek Road.",
+        "The housekeeper (unnamed narrator) lets Emily go. She drives to the cabin, her hands steady. She is done being a pawn. She will end this tonight.",
+        "She arrives at the cabin. It is dark and empty. She searches every room — no Nora, no evidence, nothing. On the kitchen table, a single note: 'You passed the test. Now the real game begins. — N.'",
+        "The housekeeper (unnamed narrator) stands alone in the empty cabin, the note in her hand. She realizes Nora has been testing her loyalty, her cunning, her willingness to use violence. She has passed. And now she is no longer a target — she is a recruit. The chapter ends with her phone buzzing: a new text from Nora, with a single word: 'Welcome.'"
+      ],
+      "must_not": [
+        "Do not reveal that the cabin is a safe house Nora uses for new recruits — the housekeeper (unnamed narrator) has been invited into the organization, not trapped.",
+        "Do not reveal that Emily is Nora's actual sister and has been working with her for years — the 'proxy' story was a lie to test the housekeeper (unnamed narrator)'s willingness to use violence.",
+        "Do not reveal that the package contains not a false confession, but a map to Nora's next target — and the housekeeper (unnamed narrator) is now expected to help hunt her."
+      ],
+      "opens_with": "I didn't deliver the package. I didn't run. I drove to a motel that smelled of bleach and bad decisions, and I sent Nora a text: 'Room 47. Midnight. Come alone, or I burn it all.'",
+      "cliffhanger": "The housekeeper (unnamed narrator) stands alone in the empty cabin, Nora's note in her hand. Her phone buzzes. She looks at the screen. A single word: 'Welcome.' Below it, an address — a new location, a new target. She realizes she has been recruited into Nora's world. She has a choice: walk away and spend her life looking over her shoulder, or accept the invitation and become the predator she was always meant to be. She stares at the address. Her thumb hovers over the screen. The chapter ends as she types her reply: 'When and where.'",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of steps from the cabin door to the kitchen table: 47. She stops counting. The number is no longer a curse — it is a welcome. She is home.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a strange, terrifying peace. She has been fighting her nature her whole life — but Nora has shown her that she is not a victim. She is a predator. And for the first time, she is not afraid of what she is.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The intimacy is psychological and transformative — the housekeeper (unnamed narrator) accepts her true nature and joins Nora's world.",
+      "chapter_task": "Write 1700-1900 words paying off clues C010, C011, and C012 (the locked door from Chapter 1, Nora's cryptic comment about the housekeeper's past, and the diary with inconsistent handwriting from Chapter 4) — reveal that the locked door was always meant to be found, Nora's comment was a test, and the diary was a plant to gauge the housekeeper's investigative instincts. The motel confrontation with Emily should be tense and violent. The empty cabin scene should feel like a rebirth — the housekeeper (unnamed narrator) sheds her old identity and accepts a new one. End with her reply to Nora's text to create a powerful final cliffhanger for Act 3. No romance micro-beat — male lead is Unassigned and romance is not opt-in.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has accepted Nora's invitation. She is now a recruit in Nora's organization, tasked with hunting the next target. Act 4 will explore her transformation from prey to predator — and the cost of embracing her true nature.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C010",
+          "C011",
+          "C012"
+        ],
+        "reveals": [
+          {
+            "id": "MR03",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C010",
+              "C011",
+              "C012"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['she believes the husband murdered Clara Higgins', 'she is committed to protecting the wife', 'the husband is evasive with police', 'the wife is scared of the husband'], 'does_not_know': ['the wife planted evidence against the husband', 'she herself is being set up', 'the wife is the architect']}",
+            "the_wife: {'knows': ['the housekeeper believes the husband is guilty', \"the police are investigating Clara's disappearance\", 'the frame is progressing as planned'], 'does_not_know': [\"the housekeeper's true motive\", 'the housekeeper will eventually find the locked room']}",
+            "the_husband: {'knows': [\"the police suspect him in Clara's disappearance\", 'his wife is behind the planted evidence', 'he is losing control of the situation'], 'does_not_know': ['his wife intends to kill him', 'the housekeeper is also a con artist']}",
+            "clara_higgins: {'knows': ['the wife has successfully framed the husband in the public eye'], 'does_not_know': ['the new housekeeper is investigating her disappearance']}",
+            "dr_ellis: {'knows': [\"the police are investigating Clara's disappearance\", 'the husband is the prime suspect'], 'does_not_know': [\"the wife's role\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 25
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "kind": "quality_state",
+  "book": 2,
+  "frontier": 10,
+  "source_chapter_digests": {
+    "1": "97c780e523585abc",
+    "5": "355274a45c8e9b3c",
+    "10": "5aa2aeb36c05df44"
+  },
+  "motif_ledger": {},
+  "phrase_ledger": {
+    "let the record show": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "just enough for sofia": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "enough for sofia to": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "the last surviving witness": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "last surviving witness of": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "surviving witness of the": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "witness of the summit": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "one of the junior": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "barely above a whisper": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "you mr van doren": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "version of events that": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "the system could not": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "edge of her vision": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "finds no evidence of": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "papers trembling in his": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "the weight of the": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "the summit was her": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "summit was her experiment": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "the record is sealed": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "mercy so sharp it": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    }
+  },
+  "scene_function_history": [
+    {
+      "chapter": 1,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "97c780e523585abc"
+    },
+    {
+      "chapter": 5,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "355274a45c8e9b3c"
+    },
+    {
+      "chapter": 10,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "5aa2aeb36c05df44"
+    }
+  ],
+  "chapter_turn_history": [
+    {
+      "chapter": 1,
+      "status": "acceptable",
+      "score": 0.7,
+      "codes": [],
+      "prose_digest": "97c780e523585abc"
+    },
+    {
+      "chapter": 5,
+      "status": "acceptable",
+      "score": 0.7,
+      "codes": [],
+      "prose_digest": "355274a45c8e9b3c"
+    },
+    {
+      "chapter": 10,
+      "status": "acceptable",
+      "score": 0.7,
+      "codes": [],
+      "prose_digest": "5aa2aeb36c05df44"
+    }
+  ],
+  "pressure_curve": [
+    {
+      "chapter": 1,
+      "score": 0.6,
+      "status": "acceptable",
+      "prose_digest": "97c780e523585abc"
+    },
+    {
+      "chapter": 5,
+      "score": 0.6,
+      "status": "acceptable",
+      "prose_digest": "355274a45c8e9b3c"
+    },
+    {
+      "chapter": 10,
+      "score": 0.6,
+      "status": "acceptable",
+      "prose_digest": "5aa2aeb36c05df44"
+    }
+  ],
+  "agency_history": {
+    "1": {
+      "score": 0.6,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "97c780e523585abc"
+    },
+    "5": {
+      "score": 0.6,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "355274a45c8e9b3c"
+    },
+    "10": {
+      "score": 0.6,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "5aa2aeb36c05df44"
+    }
+  },
+  "unresolved_quality_warnings": []
+}

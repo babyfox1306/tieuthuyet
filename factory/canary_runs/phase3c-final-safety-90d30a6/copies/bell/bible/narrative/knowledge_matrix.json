@@ -1,0 +1,54 @@
+{
+  "description": "Knowledge progression for 'The Bell Names the Dead' (Book 1): Each chapter milestone reflects what Elena Voss and key characters could reasonably know based on physical evidence, revealed loop mechanics, and escalated supernatural events. This matrix enforces the rule that no core truth, Ada's alteration, or the true purpose of the bell loop is revealed before the explicitly locked chapters. Forbidden phrases and surface/binding conditions are observed. Milestones are set at the start (ch1), early escalation (ch2), midpoint (ch5), revelation onset (ch8 - matching binding condition and forbidden phrase unlocks), and resolution (ch10).",
+  "target_language": "en",
+  "milestones": [
+    1,
+    2,
+    5,
+    7,
+    8,
+    10
+  ],
+  "characters": {
+    "Elena Voss": {
+      "ch1": "Knows only the apparent rules: the bell rings at 2:17 a.m. for one person, who soon dies after reenacting the previous victim’s actions. Believes the bell might choose randomly or supernaturally. No reason to suspect a pattern or deeper logic. Aware of recent deaths and her mother Ada's connection to town records.",
+      "ch2": "Discovers the scorch-marked 1974 attendance ledger with missing names and altered signatures. Notices inconsistencies in official records and the recurrence of soot-written names. Begins to question the randomness of the victim chain; suspects a link to the church fire but has no proof.",
+      "ch5": "Knows at least three completed cycles, each with one unique deviation. Has observed that each deviation unveils a new clue tied to the 1974 fire. Recognizes that the victims are not random and that each is selected for their connection to the case or access to records. Finds evidence of a sealed chamber beneath Saint Orison’s Church but cannot access it yet.",
+      "ch8": "Major breakthrough: Realizes the bell does not choose at random. Understands (via loop deviation, failed restraint, and physical evidence) that each victim must name the next person with necessary knowledge or access to continue the chain of testimony. Begins to suspect a deliberate cover-up and a historical pattern tied to the erased children, but does not yet know the full extent of Ada or Gideon's roles.",
+      "ch10": "Knows the full truth: Ada altered the register to set Elena as the final witness, not victim. The remains of the seven children, the original attendance ledger, and the hidden correction page are found in the sealed chamber. Elena enters all seven names into the death register, reads them aloud, and ends the loop. Gideon's sabotage is exposed. The case is closed, and the supernatural mechanism ceases."
+    },
+    "Gideon Rusk": {
+      "ch1": "Possesses partial knowledge of the loop’s mechanics and is actively suppressing records and evidence. Knows the bell’s pattern is not random but does not understand the full supernatural mechanism. Is aware of the 1974 erasures and his father’s involvement.",
+      "ch2": "Continues to redirect suspicion and manipulate documents to prevent discovery of the attendance ledger and sealed chamber. Begins to realize Elena is getting too close to the truth.",
+      "ch5": "Becomes more aggressive in sabotaging Elena’s investigation. Attempts to physically block access to the church and remove evidence of the children’s deaths. Knows victims are being selected for specific reasons, but underestimates Elena’s determination.",
+      "ch8": "Understands that Elena is now the chain’s target and that the chain may be completed. Attempts to destroy or hide final pieces of evidence before Elena can act. Realizes Ada’s alteration played a role but does not know the full extent.",
+      "ch10": "Is exposed as the human antagonist who suppressed the truth and attacked Elena. Knows Ada’s full intervention only after the records are restored and the remains found. Is arrested after his final sabotage fails."
+    },
+    "Ada Voss (deceased)": {
+      "ch1": "Known by Elena as her late mother, a municipal records official with a history of anxiety regarding the church fire and town secrets. No suspicion of deeper involvement.",
+      "ch2": "Evidence emerges (altered records, anxious correspondence, hesitation in official files) that Ada was aware of irregularities in the town records and the bell deaths.",
+      "ch5": "Elena uncovers that Ada attempted to restore some erased children’s names but was threatened by Gideon. Ada’s actions are still ambiguous but increasingly central to the victim pattern.",
+      "ch8": "Clues strongly point to Ada’s direct intervention—her handwriting is found in corrections and her connection to the chain is undeniable. Elena suspects Ada altered the record to protect her.",
+      "ch10": "The full truth is revealed: Ada discovered the 1974 cover-up, lost her nerve after being threatened, and altered the register so Elena would become the final witness. Her legacy is exposed, and Elena must decide how to reckon with her mother’s actions."
+    },
+    "Victim Chain (composite)": {
+      "ch1": "Victims are believed to be chosen at random and compelled to repeat previous actions. Pattern is not recognized.",
+      "ch2": "Pattern emerges: each victim’s actions are not identical, and the soot-written names mirror official signatures. Early witnesses begin to suspect a ritualistic or rule-based pattern.",
+      "ch5": "Clear that each new victim is selected for their connection to the 1974 event or their access to town records. Each cycle escalates, with deviations revealing further evidence.",
+      "ch8": "The chain’s true logic is revealed: the bell does not choose; each victim is compelled to name the next critical witness. The chain is a mechanism for restoring erased testimony.",
+      "ch10": "The chain completes with the restoration of the seven children’s names, the discovery of physical evidence, and the cessation of the bell. The loop ends and the mechanism is understood."
+    }
+  },
+  "must_not_know_before": {
+    "true_purpose_of_loop": 8,
+    "Ada_alteration": 9,
+    "full_list_of_erased_children": 10,
+    "sealed_chamber_access": 10,
+    "Gideon’s_sabotage_exposed": 10
+  },
+  "hidden_truth": {
+    "The_bell_never_chooses": "The bell does not select victims at random. Each victim, before death, is compelled to name the next person whose knowledge or access can advance the unfinished testimony of the erased children. This is not explicitly revealed until Chapter 8.",
+    "Ada’s_true_role": "Ada Voss altered the official death register so that Elena, her daughter, would become the final witness and not another disposable victim. The full extent of Ada’s intervention is not revealed until Chapter 9.",
+    "The_loop’s_completion": "The supernatural mechanism ceases only when the seven children’s names are entered into the official death register and read aloud beneath the bell frame, with the physical remains and records recovered. This is completed in Chapter 10."
+  }
+}

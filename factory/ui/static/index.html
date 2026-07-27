@@ -232,6 +232,17 @@
       </section>
 
       <section>
+        <h2>Cast khóa tên (bắt buộc nếu có vai plot)</h2>
+        <div class="hint">
+          Mỗi dòng: <code>Tên Đầy Đủ — vai</code>. Vai plot-critical (victim, killer, leak…)
+          <strong>phải có tên</strong> — để trống = Outliner bịa (Elise/Julian class). Texture phụ (công ty, phố) không cần.
+        </div>
+        <div class="field">
+          <textarea id="characters_text" class="tall" placeholder="Nadia Cole — protagonist&#10;Victor Rhodes — antagonist&#10;Elise Marchetti — cold-case victim&#10;Julian Croft — origin killer"></textarea>
+        </div>
+      </section>
+
+      <section>
         <h2>Chapter map (bắt buộc — compile-intent)</h2>
         <div class="hint">Mỗi dòng một chương: <code>Ch1: beat khóa</code>, <code>Ch2: …</code>. Cần đủ để plan (sách dài nên map phần lớn số chương).</div>
         <textarea id="chapter_map_text" class="xtall" placeholder="Ch1: Housekeeper arrives; seeds wrong theory about the husband&#10;Ch2: First private conversation with the wife&#10;Ch3: …"></textarea>
@@ -275,6 +286,9 @@
       </section>
 
       <div class="toolbar">
+        <input type="file" id="yamlFile" accept=".yaml,.yml,application/yaml,text/yaml" hidden />
+        <button type="button" class="btn-ghost" id="btnImportYaml">Import YAML</button>
+        <button type="button" class="btn-ghost" id="btnExportYaml">Export YAML</button>
         <button type="button" class="btn-ghost" id="btnCheck">Kiểm tra</button>
         <button type="button" class="btn-primary" id="btnSave">Lưu nháp</button>
         <button type="button" class="btn-success" id="btnReady">Đánh dấu sẵn sàng</button>
@@ -287,35 +301,115 @@
     const $ = (id) => document.getElementById(id);
     const linesToList = (s) => s.split("\n").map((x) => x.trim()).filter(Boolean);
     const listToLines = (arr) => (Array.isArray(arr) ? arr.join("\n") : "");
+    const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (ch) => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    })[ch]);
+    let conceptPassthrough = null;
+    let preservedChapterMap = null;
+    let preservedChapterMapText = "";
+    let preservedCharacters = null;
+    let preservedCharactersText = "";
+    let preservedMustInclude = null;
+    let preservedMustIncludeText = "";
+    let preservedMustAvoid = null;
+    let preservedMustAvoidText = "";
+    let preservedPov = null;
+    let preservedPovControls = "";
+
+    function charactersToText(arr) {
+      if (!Array.isArray(arr)) return "";
+      return arr
+        .map((row) => {
+          if (!row || typeof row !== "object") return String(row || "").trim();
+          const name = (row.name || "").trim();
+          const role = (row.role || "").trim();
+          if (!name) return "";
+          return role ? `${name} — ${role}` : name;
+        })
+        .filter(Boolean)
+        .join("\n");
+    }
+
+    function textToCharacters(s) {
+      return linesToList(s).map((line) => {
+        let name = line;
+        let role = "";
+        if (line.includes("—")) {
+          const parts = line.split("—");
+          name = (parts[0] || "").trim();
+          role = parts.slice(1).join("—").trim();
+        } else if (line.includes(" - ")) {
+          const parts = line.split(" - ");
+          name = (parts[0] || "").trim();
+          role = parts.slice(1).join(" - ").trim();
+        } else if (line.includes(":")) {
+          const parts = line.split(":");
+          name = (parts[0] || "").trim();
+          role = parts.slice(1).join(":").trim();
+        }
+        return role ? { name, role } : { name };
+      });
+    }
 
     const LANG_HINTS = {
       vi: "Ngôn ngữ vi: viết toàn bộ logline, chỉ đạo, plot… bằng tiếng Việt. AI sinh narrative + viết chương bằng tiếng Việt.",
       en: "Language en: write logline, directive, plots… in English. AI generates narrative + chapters in English.",
     };
 
-    function formData() {
+    function povControls() {
       return {
+        character: $("pov_character").value,
+        mode: $("pov_mode").value,
+        tense: $("pov_tense").value,
+        single_pov: $("pov_single").checked,
+      };
+    }
+
+    function preserveStructuredFields(c) {
+      preservedChapterMap = c?.chapter_map ?? null;
+      preservedChapterMapText = (c?.chapter_map_text || "").trim();
+      preservedCharacters = Array.isArray(c?.characters) ? c.characters : null;
+      preservedCharactersText = $("characters_text").value;
+      preservedMustInclude = Array.isArray(c?.must_include) ? c.must_include : null;
+      preservedMustIncludeText = $("must_include").value;
+      preservedMustAvoid = Array.isArray(c?.must_avoid) ? c.must_avoid : null;
+      preservedMustAvoidText = $("must_avoid").value;
+      preservedPov = c?.pov && typeof c.pov === "object" && !Array.isArray(c.pov) ? c.pov : null;
+      preservedPovControls = JSON.stringify(povControls());
+    }
+
+    function formData() {
+      const data = {
         target_language: $("target_language").value,
         title: $("title").value.trim(),
         pen_name: $("pen_name").value.trim(),
-        logline: $("logline").value.trim(),
-        author_directive: $("author_directive").value.trim(),
-        surface_plot: $("surface_plot").value.trim(),
-        true_plot: $("true_plot").value.trim(),
+        logline: $("logline").value,
+        author_directive: $("author_directive").value,
+        surface_plot: $("surface_plot").value,
+        true_plot: $("true_plot").value,
         intentional_early_reveal: $("intentional_early_reveal").checked,
-        ending_book1: $("ending_book1").value.trim(),
-        hook_book2: $("hook_book2").value.trim(),
-        must_include: linesToList($("must_include").value),
-        must_avoid: linesToList($("must_avoid").value),
-        notes: $("notes").value.trim(),
-        pov: {
-          character: $("pov_character").value.trim(),
-          mode: $("pov_mode").value,
-          tense: $("pov_tense").value,
-          single_pov: $("pov_single").checked,
-        },
-        chapter_map_text: $("chapter_map_text").value.trim(),
+        ending_book1: $("ending_book1").value,
+        hook_book2: $("hook_book2").value,
+        must_include: preservedMustInclude !== null && $("must_include").value === preservedMustIncludeText
+          ? preservedMustInclude : linesToList($("must_include").value),
+        must_avoid: preservedMustAvoid !== null && $("must_avoid").value === preservedMustAvoidText
+          ? preservedMustAvoid : linesToList($("must_avoid").value),
+        notes: $("notes").value,
+        characters: preservedCharacters !== null && $("characters_text").value === preservedCharactersText
+          ? preservedCharacters : textToCharacters($("characters_text").value),
+        pov: preservedPov !== null && JSON.stringify(povControls()) === preservedPovControls
+          ? preservedPov : povControls(),
       };
+      const chapterText = $("chapter_map_text").value.trim();
+      if (preservedChapterMap !== null && chapterText === preservedChapterMapText) {
+        data.chapter_map = preservedChapterMap;
+      } else {
+        data.chapter_map_text = chapterText;
+      }
+      if (conceptPassthrough !== null) {
+        data._concept_passthrough = conceptPassthrough;
+      }
+      return data;
     }
 
     function fillPov(c) {
@@ -357,6 +451,7 @@
       $("must_avoid").value = listToLines(c.must_avoid);
       $("notes").value = c.notes || "";
       fillPov(c);
+      $("characters_text").value = charactersToText(c.characters);
       $("chapter_map_text").value = c.chapter_map_text || "";
     }
 
@@ -365,7 +460,9 @@
       el.className = kind || "";
       let html = msg;
       if (errors && errors.length) {
-        html += "<ul class='errors'>" + errors.map((e) => `<li>${e}</li>`).join("") + "</ul>";
+        html += "<ul class='errors'>" + errors.map((e) => {
+          return `<li>${escapeHtml(e)}</li>`;
+        }).join("") + "</ul>";
       }
       el.innerHTML = html;
     }
@@ -384,7 +481,11 @@
     async function api(path, opts) {
       const res = await fetch(path, opts);
       const data = await res.json();
-      if (!res.ok && !data.validation_errors) throw new Error(data.error || JSON.stringify(data));
+      if (!res.ok && !data.validation_errors) {
+        const error = new Error(data.error || (data.errors || []).join("; ") || JSON.stringify(data));
+        error.data = data;
+        throw error;
+      }
       return data;
     }
 
@@ -413,7 +514,9 @@
     async function loadConcept() {
       const ws = $("workspace").value;
       const data = await api(`/api/concept/${ws}`);
+      conceptPassthrough = null;
       fillForm(data.concept);
+      preserveStructuredFields(data.concept);
       if (data.direction?.pen_name) $("pen_name").value = data.direction.pen_name;
       else if (data.pen_name) $("pen_name").value = data.pen_name;
       const lang = data.target_language || data.direction?.target_language || "vi";
@@ -442,6 +545,78 @@
           : "Đã chọn Tiếng Việt — nhớ viết nội dung form bằng tiếng Việt trước khi Lưu.",
         "warn"
       );
+    });
+
+    $("btnImportYaml").addEventListener("click", () => $("yamlFile").click());
+
+    $("yamlFile").addEventListener("change", async (event) => {
+      const file = event.target.files && event.target.files[0];
+      event.target.value = "";
+      if (!file) return;
+      if (!/\.ya?ml$/i.test(file.name)) {
+        showStatus("Import thất bại", "bad", ["Chỉ chấp nhận file .yaml hoặc .yml"]);
+        return;
+      }
+      if (file.size > 5 * 1024 * 1024) {
+        showStatus("Import thất bại", "bad", ["File YAML vượt giới hạn 5 MiB"]);
+        return;
+      }
+      $("btnImportYaml").disabled = true;
+      try {
+        const yamlText = await file.text();
+        const ws = $("workspace").value;
+        const data = await api(`/api/concept/${ws}/import-yaml`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            yaml_text: yamlText,
+            target_language: $("target_language").value,
+          }),
+        });
+        conceptPassthrough = data.passthrough || {};
+        fillForm(data.concept);
+        preserveStructuredFields(data.concept);
+        updateLangHint($("target_language").value);
+        updateSteps({ concept: { ...data.concept, concept_status: "draft" } });
+        const warningCount = (data.warnings || []).length;
+        showStatus(
+          `Đã import <strong>${escapeHtml(file.name)}</strong> vào form — chưa lưu. Hãy review rồi bấm <strong>Lưu nháp</strong>.`
+            + (warningCount ? ` Có ${warningCount} cảnh báo:` : ""),
+          warningCount ? "warn" : "ok",
+          data.warnings
+        );
+      } catch (e) {
+        const details = e.data?.errors || [e.message];
+        showStatus("Import thất bại — form hiện tại không bị thay đổi:", "bad", details);
+      } finally {
+        $("btnImportYaml").disabled = false;
+      }
+    });
+
+    $("btnExportYaml").addEventListener("click", async () => {
+      const ws = $("workspace").value;
+      $("btnExportYaml").disabled = true;
+      try {
+        const data = await api(`/api/concept/${ws}/export-yaml`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData()),
+        });
+        const blob = new Blob([data.yaml], { type: "application/yaml;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = data.filename || "concept.yaml";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+        showStatus("Đã export concept hiện trong form — không thay đổi dữ liệu trên đĩa.", "ok");
+      } catch (e) {
+        showStatus("Export thất bại: " + e.message, "bad", e.data?.errors);
+      } finally {
+        $("btnExportYaml").disabled = false;
+      }
     });
 
     $("btnSave").addEventListener("click", async () => {

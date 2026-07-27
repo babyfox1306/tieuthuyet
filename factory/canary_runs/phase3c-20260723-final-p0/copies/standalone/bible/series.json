@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "series_id": "his-final-target",
+    "genre": "thriller_romance",
+    "target_language": "en"
+  },
+  "title": "His Final Target",
+  "sub_niche": "thriller_romance",
+  "spice_level": 3,
+  "planned_books": 5,
+  "hook_central": "A firearms investigator and the assassin she hired must recover her erased memories before dawn—or he is contractually bound to expose her crimes and kill her.",
+  "tropes": [
+    "Amnesia",
+    "Enemies to Lovers",
+    "Contract Killing",
+    "Memory Recovery",
+    "Betrayal",
+    "Countdown",
+    "Framed"
+  ],
+  "leads": {
+    "female": {
+      "name": "Sloane Mercer",
+      "age": 30,
+      "voice": "Her need for control sounds like relentless factual questions, especially when the answers threaten to make her a stranger to herself.",
+      "tics": [
+        "When frightened she traces a small circle against the inside of her left wrist — unaware it is the first motion of an old firing sequence."
+      ],
+      "boundary": "She will never knowingly trade another life for her own — yet saving her sister requires reactivating the command system that once turned deaths into transactions. She refuses to surrender this principle: a person is defined by the choices she can remember making, and no hidden past has the right to own her present."
+    },
+    "male": {
+      "name": "Lucian Vey",
+      "age": 35,
+      "voice": "His control slips into frightening tenderness — every quiet endearment reveals knowledge of a woman Sloane cannot remember being.",
+      "tics": [
+        "Before obeying an order he hates, he turns the rifle's focus ring exactly one quarter rotation away from clarity."
+      ],
+      "boundary": "He never breaks a contract accepted with full knowledge — yet loving Sloane forces him to choose whether her forgotten command deserves more loyalty than the woman standing in front of him. He refuses to surrender this principle: a promise remains binding even when the person who demanded it no longer remembers why.",
+      "wound": "He was trained to value contract over emotion; this leaves him conflicted when Sloane's true self emerges."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Mara Mercer",
+      "relation_to": "Sloane Mercer",
+      "relation_type": "younger sister",
+      "alive": true,
+      "secret": "She consented to a staged rooftop shooting because Sloane's forgotten plan required Lucian to make the death look real even to Sloane. She also signals Sloane through the scope at chapter 11, her hand rhythm carries the true firing sequence at chapter 12, and she releases the ledger at chapter 16."
+    },
+    {
+      "name": "Cassian Rook",
+      "relation_to": "Sloane Mercer",
+      "relation_type": "former intelligence handler",
+      "alive": true,
+      "secret": "He altered Sloane's seven target files so Lucian unknowingly eliminated the witnesses capable of exposing Cassian's private weapons network. He contacts the roof at chapter 4, fires on Sloane at chapter 8, captures Mara at chapter 11, enters during the blind interval wearing Lucian's mask at chapter 15, and dies reaching for the rifle at chapter 17."
+    }
+  ],
+  "central_mystery": {
+    "question": "Why did Sloane hire Lucian to shoot Mara, erase her own memories, and order Lucian to kill her if those memories returned?",
+    "answer": "Sloane discovered that Cassian had used her assassination system to eliminate seven innocent witnesses, so she staged Mara's death as bait, hid Cassian's complete transaction ledger inside her own conditioned firing sequence, erased her conscious memory to survive interrogation, and ordered Lucian to kill her if Cassian successfully restored the obedient identity he had created.",
+    "reveal_chapter": 13
+  },
+  "bloodline": {
+    "description": "Sloane and Mara Mercer are full blood siblings. Cassian Rook is Sloane's former handler and no blood relation. Lucian Vey is unrelated to both. No familial ties exist between leads.",
+    "hard_rules": [
+      "Female lead and male lead are not related by blood.",
+      "No shared parentage or familial connections between leads.",
+      "Mara and Sloane are blood relatives, but this does not affect the lead relationship."
+    ],
+    "lead_relation": "former lovers turned contract issuer/assassin; no blood relation"
+  },
+  "world_rules": [
+    "Memory erasure can delete conscious recall but leaves procedural or conditioned motor memory intact.",
+    "Assassination contracts are binding once accepted with full knowledge; violation is punishable by the network.",
+    "The firing sequence is a conditioned response; the wrist circle motion triggers hidden evidence recall.",
+    "No supernatural or fantasy elements; all events adhere to real-world logic.",
+    "A transaction ledger exists that records all contract details and can be hidden within physical conditioning.",
+    "The network operates in shadows; law enforcement is unaware of the full system."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "Trapped on a rooftop, a firearms investigator must recover her erased memories before dawn to uncover why she hired the assassin beside her to kill her own sister.",
+      "ending_hook": "Sloane is arrested. Mara is alive. Rook's network is exposed. Sloane releases her own seven contracts along with the ledger — she does not buy absolution, she chooses the record. Lucian is offered the only escape route and refuses it, standing beside the woman he was contracted to kill. Dawn fills the empty scope with light and leaves nothing hidden behind it. The last feeling is not safety — it is chosen loyalty."
+    },
+    {
+      "book": 2,
+      "thesis": "While Sloane awaits trial, Lucian tracks the conditioner who erased her memory, but a new threat emerges: the full ledger is being weaponized by unknown hands.",
+      "ending_hook": "The conditioner escapes with crucial data; Mara is caught in the crossfire, forcing Sloane to use her firing sequence in a desperate act to save her sister."
+    },
+    {
+      "book": 3,
+      "thesis": "As Sloane and Lucian decode the ledger fragments, they discover the conditioner's ultimate plan—to put the firing sequence up for auction to the highest bidder.",
+      "ending_hook": "They expose the auction but lose the conditioner; Mara is severely injured, and Sloane is forced to take the witness stand with her crimes exposed."
+    },
+    {
+      "book": 4,
+      "thesis": "Sloane faces the public consequences of her past while Lucian must confront his own contracts; their relationship strains under the weight of guilt and loyalty.",
+      "ending_hook": "Lucian breaks his own code to protect Sloane, and they discover that the conditioner was working for a larger network—one that includes a ghost from Sloane's past."
+    },
+    {
+      "book": 5,
+      "thesis": "The final confrontation with the network requires Sloane to activate the firing sequence in a full broadcast, sacrificing any remaining privacy and control to bring down the system.",
+      "ending_hook": "Sloane and Lucian emerge alive but changed: she enters protective custody with him, their future defined by chosen loyalty rather than past contracts. The ledger is sealed, but the cost is all they have left."
+    }
+  ],
+  "content_rules": [
+    "18+ content valid because spice level is 3; all sexual encounters must include explicit consent and be between adults.",
+    "No minors appear in the story; all characters are 18 or older.",
+    "No real people or organizations are depicted; all are fictional.",
+    "The central mystery is revealed through physical evidence and action, not dialogue exposition.",
+    "Sloane's past crimes are not forgiven; she remains complicit and guilty throughout.",
+    "No resurrection: the dead stay dead.",
+    "Only two supporting characters (Mara and Rook) are allowed; no additional characters that merely know things.",
+    "All spice scenes must advance the plot: restore a memory fragment, unlock a recording, or break conditioning.",
+    "Sloane must actively move the story forward; she is never rescued by Lucian at the climax.",
+    "The wrist circle gesture must appear in every act as a clue to the firing sequence."
+  ],
+  "bible_status": "approved"
+}

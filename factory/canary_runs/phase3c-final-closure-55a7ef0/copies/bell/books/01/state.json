@@ -1,0 +1,97 @@
+{
+  "current_book": 1,
+  "current_chapter": 6,
+  "timeline": [
+    "Ch2: Elena Voss enters the archive records room and interacts with the archivist.",
+    "Ch2: Elena examines a battered box containing a burned ledger from Saint Orison’s Church, dated 1974.",
+    "Ch2: Elena discovers a perfectly preserved wildflower inside the burned ledger.",
+    "Ch2: She notices missing names and overwritten signatures in the attendance records from the week of the fire.",
+    "Ch2: Elena identifies a recurring official’s signature, always with a trailing 'V', sometimes Ada Voss, sometimes 'A. V.'.",
+    "Ch2: Elena observes a cryptic sideways cross mark on altered pages, which appears to have been added after the fire.",
+    "Ch3: Elena compares the 1974 burned ledger and a recent death register, noting identical handwriting and the same 'V' flourish.",
+    "Ch3: Elena links the soot-black signature from the vestry wall to Ada Voss’s handwriting.",
+    "Ch3: Elena observes a faint ring of ash on her wrist, possibly a sign or residue from handling the ledgers.",
+    "Ch3: The sideways cross mark appears on post-fire entries, sometimes shaky or nearly erased in soot.",
+    "Ch3: Elena deduces Ada wanted certain names remembered only by those who would look closely.",
+    "Ch3: Elena finds a half-erased entry where the soot signature survives but the ink does not.",
+    "Ch3: Elena proposes the names form a sequence, not a random code: those who see the soot are meant to act next.",
+    "Ch3: Elena requests photographs from the church fire and the council’s keys to Saint Orison’s, suspecting someone unlocked the vestry recently.",
+    "Ch6: Elena examines a century-old blueprint of Saint Orison’s Church, discovering a ghostly overlay in faded pencil: a spiral staircase marked 'EXIT OF FIRE' and an unlabelled rectangle x-ed out in red.",
+    "Ch6: Gideon warns Elena that breaking the seal will cause the town to burn again.",
+    "Ch6: Elena uses the council key, which is warm and smudged with soot, to unlock a concealed basement door behind the altar.",
+    "Ch6: Gideon mutters, 'THE BELL CHOOSES THE NEXT NAME,' as Elena descends into the darkness beneath the church."
+  ],
+  "character_status": {
+    "Elena Voss": {
+      "location": "Descending into the basement beneath Saint Orison’s Church",
+      "knows": [
+        "The church blueprint contains hidden overlays: a spiral staircase labeled 'EXIT OF FIRE' and a red X-ed out rectangle.",
+        "The basement door behind the altar is old but recently oiled, suggesting recent use.",
+        "Gideon believes breaking the seal could trigger disaster.",
+        "The council key is connected to soot, possibly linking it to the soot signatures."
+      ],
+      "relationship_other": "Tense confrontation with Gideon; professional wariness toward Sergeant Pryce.",
+      "mood": "Determined, on edge, defiant."
+    },
+    "Gideon": {
+      "location": "Nave and drafting room of Saint Orison’s Church",
+      "knows": [
+        "Details of the church blueprints and hidden overlays.",
+        "The significance of the sealed chamber and the warning about the town burning.",
+        "Cryptic knowledge about 'THE BELL CHOOSES THE NEXT NAME.'"
+      ],
+      "relationship_other": "Obstructive, anxious toward Elena.",
+      "mood": "Agitated, fearful, defensive."
+    },
+    "Sergeant Pryce": {
+      "location": "Not present in this scene (referenced only)",
+      "knows": [
+        "Elena is conducting official business in the church."
+      ],
+      "relationship_other": "Potential backup for Elena; source of authority.",
+      "mood": "N/A in this scene."
+    }
+  },
+  "open_threads": [
+    "What is the significance of the preserved wildflower in the burned ledger?",
+    "Why are some names missing or erased from the attendance records?",
+    "Who is responsible for the recurring 'V' signature and what does it mean?",
+    "What does the cryptic sideways cross mark signify, and who added it after the fire?",
+    "What is the sequence or logic behind the names written in soot and registers?",
+    "Who accessed the vestry recently and why?",
+    "What is the purpose of the spiral staircase and the red X-ed out chamber beneath the church?",
+    "What disaster does Gideon fear if the seal is broken?",
+    "What does 'THE BELL CHOOSES THE NEXT NAME' mean?"
+  ],
+  "facts_established": [
+    "A burned ledger from Saint Orison’s Church, dated 1974, survived a fire and is now in the archive.",
+    "A wildflower was found perfectly preserved inside the burned ledger.",
+    "Several names are missing or erased from the attendance records for the week of the fire.",
+    "A recurring official’s signature with a trailing 'V' (sometimes Ada Voss, sometimes 'A. V.') appears on multiple entries.",
+    "A cryptic sideways cross mark was added to some pages after the fire.",
+    "The soot-black signature from the vestry wall matches Ada Voss’s handwriting.",
+    "The sideways cross mark appears on post-fire entries and is sometimes shaky or nearly erased.",
+    "The soot signature can survive erasure attempts that remove ink.",
+    "The names in soot and registers overlap and may form a deliberate sequence.",
+    "Someone recently accessed the vestry, requiring council keys.",
+    "The blueprint of Saint Orison’s Church contains a hidden overlay: a spiral staircase labeled 'EXIT OF FIRE' and a red X-ed out rectangle, possibly a concealed chamber.",
+    "The basement door behind the altar is old but recently oiled, indicating recent use.",
+    "Gideon believes breaking the seal on the chamber could cause the town to burn again.",
+    "The council key Elena uses is warm and smudged with soot."
+  ],
+  "spice_progression": "Physical confrontation and warnings escalate; discovery of hidden church architecture and ominous warnings; supernatural or ritual danger implied.",
+  "phrases_used": [
+    "burn your gloves",
+    "Gloves are for people with something to hide",
+    "Fire’s a selective thing",
+    "If it’s not in the register, it’s not real",
+    "No one writes in soot by accident",
+    "Coincidence is for lovers, not coroners",
+    "If you break the seal, the town will burn again",
+    "THE BELL CHOOSES THE NEXT NAME"
+  ],
+  "promoted_chapters": [
+    1,
+    7
+  ]
+}

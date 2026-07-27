@@ -1,0 +1,113 @@
+---
+series: the-cold-case-girl
+book: 1
+chapter: 25
+title: The Canary
+spice: 1
+word_count: 789
+status: draft
+needs_fix: []
+promoted_at: '2026-07-26T11:04:42Z'
+---
+
+The second test began with a file that proved nothing.
+
+I wrote a two-page memo claiming the original Meridian ledger had been moved to locker 317 at Union Station. The number was invented. So was the transfer receipt, the name of the clerk, and the sentence I placed halfway down the second page:
+
+The system's blind spot is always the person paid to look away.
+
+I had never used that sentence anywhere else.
+
+On a laptop bought that morning with cash, I saved the memo to a memory card and handed the card to Sasha. She inserted it into the legacy archive from a terminal in her office while I watched. We placed the file in a maintenance partition that ordinary members could not browse. Only the archive administrator could open it.
+
+Only Wren.
+
+"She'll see the upload in the maintenance queue," Sasha said. "You don't need to ask her to access it."
+
+"If I ask, she can explain the access."
+
+"And if you don't, she can claim she was doing routine maintenance."
+
+"Either way, access alone isn't proof." I removed the card and snapped it in half. "The sentence is."
+
+Sasha looked at the new laptop. "You trust this machine?"
+
+"It has never been online. After today, it stays with you. We build the replacement archive here, offline, and Wren never touches it."
+
+That was the containment line. The old archive would remain alive long enough to show Wren what we wanted her to see. Anything real moved to the replacement system one physical copy at a time.
+
+My phone rang before we finished. Priya.
+
+"The audit closed," she said. Relief loosened her voice. "No findings. The Vargas amendment was a legitimate coding correction, and the three compressed signatures came from the same scanner setting. The auditor never reached Marcus Webb's certification."
+
+Rhodes had known about RH03 because Wren knew about it. He had not created the review; he had used a second tip and Priya's distorted scans to make it feel targeted. The distinction mattered. A dangerous man did not become supernatural just because fear supplied him with good lighting.
+
+"Do not open old files anyway," I said. "And don't use the archive."
+
+"Why?"
+
+"We're rotating systems."
+
+"Because of Wren?"
+
+I looked at Sasha. "Because the old one is compromised."
+
+Priya understood what I would not say over a phone. "Tell me when we're safe."
+
+When the call ended, Sasha closed the replacement laptop and locked it in a steel document case.
+
+"Now we wait," she said.
+
+At 3:17 AM, the old archive recorded an administrator recovery token opening the maintenance partition. The token was not my root key. It was a credential Wren had created years ago for disaster recovery and never listed in the key register.
+
+At 3:21, the memo was exported.
+
+At 3:26, an encrypted packet left Wren's relay and reached a server leased to a private investigations firm used by Rhodes's attorney.
+
+The server address did not prove Rhodes read the packet. The packet was encrypted; its contents were invisible. But the times formed a line that no former contractor could explain.
+
+At 3:41, Rhodes sent me a message.
+
+People paid to look away rarely stay bought. Locker 317 is a poor hiding place.
+
+He had repeated both canaries.
+
+I sat in Sasha's dark office with the phone in one hand and the recovery-token log in the other. The pain came cleanly, without surprise. Betrayal was easier to hold once it had a timestamp.
+
+"That's enough," Sasha said.
+
+"Enough to contain her. Not enough to understand her."
+
+"Understanding isn't safety."
+
+"No. But motive tells us what else she gave him."
+
+We revoked every credential visible in the old register. We did not revoke the hidden recovery token. If it stopped working too soon, Wren would know we had found it. Instead, we narrowed the old archive to staged documents and watched the exit.
+
+The real case files went into the steel box. Sasha would keep one key. I would keep the other. No remote access. No recovery endpoint. No one-person administrator.
+
+At dawn, I called Wren.
+
+"The archive threw a checksum error overnight," I said. "Can you look at it?"
+
+There was half a beat of silence.
+
+"Of course," she said. "I'll check the maintenance partition."
+
+She did not ask how I knew which partition had failed.
+
+I closed my eyes.
+
+"Send me the log when you're done."
+
+"Always."
+
+The word hurt more than the lie.
+
+After the call, I placed Rhodes's message beside the first envelope. Old pier. Locker 317. The system's blind spot.
+
+The location test had shown the leak.
+
+The digital canary had shown the route.
+
+Now I needed to know what held Wren at the other end of it.

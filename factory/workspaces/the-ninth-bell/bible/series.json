@@ -1,0 +1,105 @@
+{
+  "title": "The Ninth Bell",
+  "logline": "Forensic audio specialist Clara Vale inherits the condemned bell tower where her sister Elin died. Inside, she discovers recordings said to preserve the voices of the dead—including a recording in Clara's own voice confessing that she knowingly left Elin to die. To prove whether the confession is memory, prophecy, or fabrication, Clara must reconstruct the tower's hidden acoustic system and reopen a chamber her family sealed eighteen years earlier.",
+  "bible_status": "draft",
+  "spice_max": 0,
+  "leads": {
+    "female": {
+      "name": "Clara Vale",
+      "age": 38,
+      "voice": "analytical, precise, skeptical, emotionally guarded",
+      "tics": [
+        "analytical",
+        "precise",
+        "skeptical",
+        "emotionally guarded",
+        "distrusts her own memory"
+      ],
+      "boundary": "Clara believes her final argument with Elin may have caused Elin's death. Her fragmented memory and years of repeated questioning have turned guilt into something she trusts more t",
+      "internal_voice": ""
+    },
+    "male": {
+      "name": "Unassigned (no male lead)"
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Gabriel Rook",
+      "relation_type": "tower caretaker and compromised witness",
+      "relation_to": "Clara Vale",
+      "alive": true
+    },
+    {
+      "name": "Thomas Vale",
+      "relation_type": "Clara and Elin's father; human antagonist",
+      "relation_to": "Clara Vale",
+      "alive": true
+    },
+    {
+      "name": "Mara Venn",
+      "relation_type": "Clara's childhood friend",
+      "relation_to": "Clara Vale",
+      "alive": true
+    },
+    {
+      "name": "Elin Vale",
+      "relation_type": "Clara's deceased sister",
+      "relation_to": "Clara Vale",
+      "alive": false
+    }
+  ],
+  "cast": [
+    {
+      "name": "Clara Vale"
+    },
+    {
+      "name": "Gabriel Rook"
+    },
+    {
+      "name": "Thomas Vale"
+    },
+    {
+      "name": "Mara Venn"
+    },
+    {
+      "name": "Elin Vale"
+    }
+  ],
+  "world_rules": [],
+  "content_rules": [
+    "Romance",
+    "Sexual content",
+    "Graphic gore",
+    "Multiple POV",
+    "Third-person narration",
+    "Present-tense narration",
+    "Clara murdering or pushing Elin",
+    "Clara knowingly leaving Elin in immediate danger",
+    "Gabriel as mastermind",
+    "Mara causing Elin's death",
+    "Elin secretly alive",
+    "Thomas wanting Clara dead",
+    "Thomas dying",
+    "Clara forgiving Thomas",
+    "Cults",
+    "Demons",
+    "Ghost villains",
+    "Secret societies",
+    "Government programs",
+    "Additional murderers",
+    "Artificial intelligence",
+    "Futuristic or magical technology",
+    "Confirmed afterlife",
+    "Perfect recovered memory without evidence",
+    "Dream revelations",
+    "Hallucinations replacing evidence",
+    "Villain monologue explaining everything",
+    "New characters solving the mystery",
+    "Changing the number of bells",
+    "Changing the period or coastal English setting",
+    "Fully explaining the final supernatural recording"
+  ],
+  "meta": {
+    "source": "intent_manifest_stub"
+  }
+}

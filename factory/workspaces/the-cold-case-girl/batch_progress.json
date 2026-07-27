@@ -1,0 +1,25 @@
+{
+  "running": false,
+  "phase": "write",
+  "write_mode": "supervised",
+  "ok": true,
+  "written": 0,
+  "failed_ch": null,
+  "issue_chapters": [
+    37
+  ],
+  "skipped_chapters": [],
+  "error": "",
+  "log": [
+    "Viet chuong 37–38 (giam sat — loi de lai, chay het)",
+    "▶ ch37 dang viet... (write #1; content cap 2 ben trong writer)",
+    "⚠ ch37: needs_fix — [format_fix — chỉ sửa tay, không rewrite]; markdown leak (1 hit) — *Buried Truths* — vào needs_fix, dùng UI strip * /**; quotes advisory (7 hit) — L53: ---; … [content_retries=0/2]",
+    "  → [format_fix — chỉ sửa tay, không rewrite]",
+    "  → markdown leak (1 hit) — *Buried Truths* — vào needs_fix, dùng UI strip * /**",
+    "  → quotes advisory (7 hit) — L53: ---; L81: ---; L113: --- — heuristic sai lớp, không chặn promote",
+    "⏸ ch37: chỉ lỗi format (vd. *) → needs_fix — user sửa tay, AUTO không rewrite",
+    "⊘ ch38: da co (catalog) — bo qua",
+    "--- Ket thuc batch: 0 ch da viet; 1 ready (bo qua); 1 can sua: ch37"
+  ],
+  "updated_at": "2026-07-27T03:57:39.928361+00:00"
+}

@@ -1,0 +1,151 @@
+```json
+{
+  "act": [10, 12],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Source",
+      "slug": "the-source",
+      "one_line_summary": "Elle Reyes hunts the source of the message that knows about Maya, and finds the first concrete sign that Damien Kroll is not a normal target—he has a partner.",
+      "beat_summary": "Elle Reyes traces the burner phone that sent the Maya text through Wren's digital forensics. The signal bounces through three countries before landing on a local cell tower near Kroll's estate—but the message wasn't sent from Kroll's phone. It was sent from a secondary device registered to a shell company. Elle Reyes realizes Kroll has a partner, someone who handles his dirty work. She pressures Wren for more, but Wren deflects. Elle Reyes visits the cell tower location and finds a single Black Serpent cigarette butt, confirming the watcher is physically present in the city. She plants clue C004: a partial fingerprint on the cigarette butt that doesn't match Kroll's known prints.",
+      "must_happen": [
+        "Elle Reyes asks Wren to trace the burner phone that sent the Maya text; Wren traces it to a cell tower near Kroll's estate, but the device is registered to a shell company.",
+        "Elle Reyes realizes Kroll has a partner or employee who sent the message—not Kroll himself.",
+        "Elle Reyes visits the physical location of the cell tower and finds a Black Serpent cigarette butt, confirming the watcher is local.",
+        "Elle Reyes collects the cigarette butt and notes a partial fingerprint that doesn't match Kroll's known prints—clue C004 is planted.",
+        "Wren deflects when Elle Reyes asks why she seems nervous, deepening the secret between them."
+      ],
+      "must_not": [
+        "Do not reveal the identity of Kroll's partner or the fingerprint match—only that a second person exists.",
+        "Do not show Wren confessing her gambling debt or the approach from the debt collector—only her evasiveness."
+      ],
+      "opens_with": "\"'The phone bounced through Singapore, Zurich, and London before it hit a tower three miles from his house.' Wren sounded impressed. I felt sick.\"",
+      "cliffhanger": "Elle Reyes holds the cigarette butt in a plastic bag. She turns it over and sees a partial fingerprint—smaller than Kroll's, perhaps a woman's. Her phone buzzes. A text: 'Found my calling card? Good. I was hoping you'd come.'",
+      "signature_detail_hint": "The cigarette butt has a faint lipstick smudge on the filter—a shade of deep red that Elle Reyes recognizes as a brand discontinued five years ago.",
+      "emotional_beat": "Cold focus undercut by the creeping realization that Kroll's operation is larger than one man—and that the watcher is playing a game with her.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. Elle Reyes is fully operational, hunting the source of the threat.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Plant clue C004. Show Elle's methodical approach to tracing the watcher. Touch threads T01, T02, T03, T05, T06, T07.",
+      "carries_to_next": "Clue C004 is planted; the watcher is confirmed as a separate person from Kroll; Wren's secret is deepening; Elle Reyes now knows Kroll has a partner.",
+      "narrative": {
+        "clues_plant": ["C004"],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T05", "T06", "T07"],
+        "knowledge": {
+          "pov_characters": ["Elle Reyes", "Damien Kroll", "Sasha (Lawyer)", "Dr. Lin (Coroner)", "Wren (Hacker)", "Detective Marcus Cole"],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Kroll has a partner or employee', 'The watcher is local and physically present', 'The watcher is playing a game with her'], 'does_not_know_yet': ['The identity of the partner', 'Wren is compromised', 'Kroll\\'s full evidence package']}",
+            "Damien Kroll: {'knows': ['Elle is tracing the burner phone', 'She found the cigarette butt', 'His partner is engaging her directly'], 'does_not_know_yet': ['Elle has a partial fingerprint', 'Elle has pivoted to public exposure', 'Wren is still loyal (for now)']}",
+            "Sasha (Lawyer): {'knows': ['Kroll has a partner', 'The network is at risk'], 'does_not_know_yet': ['Wren\\'s vulnerability', 'The dead-man\\'s-switch', 'Elle\\'s full origin story']}",
+            "Dr. Lin (Coroner): {'knows': ['Kroll has a partner', 'The network is at risk'], 'does_not_know_yet': ['Wren\\'s vulnerability', 'The dead-man\\'s-switch', 'Elle\\'s full origin story']}",
+            "Wren (Hacker): {'knows': ['Kroll has a partner', 'The network is at risk', 'She is hiding her gambling debt from Elle'], 'does_not_know_yet': ['That Kroll will exploit her debt', 'The dead-man\\'s-switch', 'Elle\\'s full origin story']}",
+            "Detective Marcus Cole: {'knows': ['Kroll\\'s case has unusual patterns', 'Elle is more involved than a typical podcaster', 'He has a gut feeling something is wrong'], 'does_not_know_yet': ['Elle is a killer', 'Her network', 'The two-way hunt']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 11,
+      "title": "The First Leak",
+      "slug": "the-first-leak",
+      "one_line_summary": "Damien Kroll counters by leaking a piece of Elle Reyes's past to the press—an anonymous tip about her connection to a suspicious death—forcing her to go on the defensive.",
+      "beat_summary": "A story appears on a crime blog: an anonymous source claims that podcaster Elle Reyes was present in the same city as a suspicious death one week before it occurred. The article doesn't name the victim or accuse her directly, but the implication is clear. Elle Reyes's phone explodes with media requests. She goes on the offensive, recording a podcast episode denying any wrongdoing and framing the leak as a smear campaign by Kroll. But privately, she knows this is just the first piece. She calls an emergency network meeting and tells them Kroll is leaking her past piece by piece. She needs to find the dead man's switch before he releases the full package. The chapter ends with Elle Reyes realizing she needs to go on the offensive—she leaks the first piece of evidence against Kroll (the ligature mark discrepancy) to a trusted journalist, starting a public war.",
+      "must_happen": [
+        "A crime blog publishes an article: an anonymous source claims Elle Reyes was in the same city as a suspicious death one week before it occurred—the article is vague but damaging.",
+        "Elle Reyes records a podcast episode denying any wrongdoing and framing the leak as a smear campaign by Kroll.",
+        "Elle Reyes calls an emergency network meeting; she tells them Kroll is leaking her past piece by piece and they need to find the dead man's switch.",
+        "Elle Reyes decides to go on the offensive: she leaks the ligature mark discrepancy (clue C003) to a trusted journalist, starting a public war with Kroll.",
+        "Wren is visibly more nervous during the meeting, and Elle Reyes notices but doesn't press."
+      ],
+      "must_not": [
+        "Do not reveal the full contents of Kroll's evidence package—only that he has started leaking pieces.",
+        "Do not show Elle Reyes being genuinely panicked—she is strategic and adapts quickly, but the pressure is mounting."
+      ],
+      "opens_with": "\"'Podcaster Elle Reyes reportedly present at scene of suspicious death.' I read the headline three times before I felt my thumb start tapping.\"",
+      "cliffhanger": "Elle Reyes hangs up after sending the ligature mark evidence to the journalist. Her phone buzzes immediately. A text from Kroll: 'Nice try. But I have more than one piece of evidence. How many do you have?'",
+      "signature_detail_hint": "The crime blog article is written by a journalist who uses the pseudonym 'Nightingale'—the same pseudonym used by a reporter who covered Lucia Vega's original case and wrote sympathetic articles about Kroll.",
+      "emotional_beat": "Controlled fury undercut by the cold awareness that Kroll is playing a longer game—he has multiple pieces of evidence, and she only has one.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is purely strategic: a public war is now joined.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Show the public leak and Elle's counter-move. Touch threads T01, T02, T03, T05, T06, T07.",
+      "carries_to_next": "The public war is joined; Kroll has leaked the first piece of Elle's past; Elle has leaked the first piece of evidence against Kroll; Wren's nervousness is growing.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T05", "T06", "T07"],
+        "knowledge": {
+          "pov_characters": ["Elle Reyes", "Damien Kroll", "Sasha (Lawyer)", "Dr. Lin (Coroner)", "Wren (Hacker)", "Detective Marcus Cole"],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Kroll has started leaking her past', 'She needs to find the dead man\\'s switch', 'She has started a public war with Kroll'], 'does_not_know_yet': ['The identity of Kroll\\'s partner', 'Wren is compromised', 'The full scope of Kroll\\'s evidence']}",
+            "Damien Kroll: {'knows': ['Elle has leaked the ligature mark discrepancy', 'She is fighting back publicly', 'He has more evidence to leak'], 'does_not_know_yet': ['Elle has a partial fingerprint on his partner', 'Elle has pivoted to public exposure as her endgame', 'The journalist is loyal to Elle']}",
+            "Sasha (Lawyer): {'knows': ['Kroll has started leaking Elle\\'s past', 'The network is at risk', 'Elle has started a public war'], 'does_not_know_yet': ['Wren\\'s vulnerability', 'The dead-man\\'s-switch', 'Elle\\'s full origin story']}",
+            "Dr. Lin (Coroner): {'knows': ['Kroll has started leaking Elle\\'s past', 'The network is at risk', 'Elle has started a public war'], 'does_not_know_yet': ['Wren\\'s vulnerability', 'The dead-man\\'s-switch', 'Elle\\'s full origin story']}",
+            "Wren (Hacker): {'knows': ['Kroll has started leaking Elle\\'s past', 'The network is at risk', 'She is hiding her gambling debt from Elle'], 'does_not_know_yet': ['That Kroll will exploit her debt', 'The dead-man\\'s-switch', 'Elle\\'s full origin story']}",
+            "Detective Marcus Cole: {'knows': ['The crime blog article about Elle', 'Kroll\\'s case has unusual patterns', 'Elle is more involved than a typical podcaster'], 'does_not_know_yet': ['Elle is a killer', 'Her network', 'The two-way hunt']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 12,
+      "title": "The Pressure Point",
+      "slug": "the-pressure-point",
+      "one_line_summary": "Kroll applies more pressure by targeting one of Elle's network members directly, forcing her to make a choice between protecting her people and finishing the case.",
+      "beat_summary": "Kroll escalates. Dr. Lin's office is broken into—nothing is stolen, but her files are scattered and a single Black Serpent cigarette is left on her desk. The message is clear: Kroll knows who Elle's network is. Elle Reyes confronts Dr. Lin, who is shaken but refuses to back out. Elle Reyes then receives a call from Sasha: her law firm has been served with a subpoena for all records related to Elle Reyes's podcast—Kroll is using his legal connections to squeeze her network. Elle Reyes realizes she can't protect everyone. She makes a choice: she will accelerate the plan to publicly destroy Kroll, even if it means her network is exposed. The chapter ends with Elle Reyes making a desperate call to the witness from Kroll's company—the one person who can break the case open—and arranging a meeting for the next day. But she knows Kroll is likely watching.",
+      "must_happen": [
+        "Dr. Lin's office is broken into; nothing is stolen, but a Black Serpent cigarette is left on her desk as a warning.",
+        "Elle Reyes confronts Dr. Lin, who is shaken but refuses to back out of the network.",
+        "Sasha calls Elle Reyes: her law firm has been served with a subpoena for all records related to Elle's podcast—Kroll is using legal pressure.",
+        "Elle Reyes realizes she can't protect everyone and makes a choice: accelerate the plan to publicly destroy Kroll.",
+        "Elle Reyes calls the witness from Kroll's company and arranges a meeting for the next day, knowing Kroll may be watching."
+      ],
+      "must_not": [
+        "Do not show the witness meeting happening—only that it is arranged for the next chapter.",
+        "Do not show any network member being seriously harmed—only threatened."
+      ],
+      "opens_with": "\"Lin's office looked like a tornado had hit it. But the only thing missing was my sense of control.\"",
+      "cliffhanger": "Elle Reyes hangs up after arranging the witness meeting. She stares at her phone, knowing Kroll is likely tracking her calls. A text arrives from an unknown number: 'Tomorrow. 3 PM. The riverbank. Come alone. Or she dies.'",
+      "signature_detail_hint": "The Black Serpent cigarette left on Dr. Lin's desk is placed precisely at a 45-degree angle, pointing toward the door—a deliberate signal, not a random drop.",
+      "emotional_beat": "Cold fury undercut by the sharp realization that Kroll is targeting her network, and she is running out of options—she must act before she loses everything.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is operational: Elle Reyes's network is under direct attack.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Show Kroll's escalation against the network and Elle's decision to accelerate. Touch threads T01, T02, T03, T05, T06, T07.",
+      "carries_to_next": "Kroll has directly threatened the network; Elle has arranged the witness meeting; the text about the riverbank sets up the next confrontation; Wren's vulnerability is still hidden.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T05", "T06", "T07"],
+        "knowledge": {
+          "pov_characters": ["Elle Reyes", "Damien Kroll", "Sasha (Lawyer)", "Dr. Lin (Coroner)", "Wren (Hacker)", "Detective Marcus Cole"],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Kroll knows who her network is', 'He has directly threatened Dr. Lin', 'She must accelerate the plan', 'She arranged a witness meeting for tomorrow'], 'does_not_know_yet': ['The identity of Kroll\\'s partner', 'Wren is compromised', 'The full scope of Kroll\\'s evidence']}",
+            "Damien Kroll: {'knows': ['He has successfully threatened Dr. Lin', 'He has served a subpoena on Sasha\\'s firm', 'Elle is accelerating her plan'], 'does_not_know_yet': ['Elle has a partial fingerprint on his partner', 'The witness is still willing to talk', 'Elle has a backup plan']}",
+            "Sasha (Lawyer): {'knows': ['Kroll has threatened Dr. Lin', 'Her firm is under subpoena', 'Elle is accelerating the plan'], 'does_not_know_yet': ['Wren\\'s vulnerability', 'The dead-man\\'s-switch', 'Elle\\'s full origin story']}",
+            "Dr. Lin (Coroner): {'knows': ['Kroll has directly threatened her', 'Elle is accelerating the plan', 'She is still committed to the network'], 'does_not_know_yet': ['Wren\\'s vulnerability', 'The dead-man\\'s-switch', 'Elle\\'s full origin story']}",
+            "Wren (Hacker): {'knows': ['Kroll has threatened Dr. Lin', 'Elle is accelerating the plan', 'She is hiding her gambling debt from Elle'], 'does_not_know_yet': ['That Kroll will exploit her debt', 'The dead-man\\'s-switch', 'Elle\\'s full origin story']}",
+            "Detective Marcus Cole: {'knows': ['Dr. Lin\\'s office was broken into', 'Kroll\\'s case has unusual patterns', 'Elle is more involved than a typical podcaster'], 'does_not_know_yet': ['Elle is a killer', 'Her network', 'The two-way hunt']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

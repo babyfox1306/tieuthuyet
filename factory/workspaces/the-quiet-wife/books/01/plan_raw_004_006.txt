@@ -1,0 +1,157 @@
+```json
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Diary",
+      "slug": "the-diary",
+      "one_line_summary": "The housekeeper (unnamed narrator) uses the key to unlock a hidden drawer, finds a diary that paints the husband as a monster, and begins to suspect the wife's story is too perfect.",
+      "beat_summary": "The housekeeper (unnamed narrator) uses the key Nora gave her to unlock a locked drawer in Nora's vanity. Inside, she finds a leather-bound diary. The entries describe a woman terrified of her husband — controlling behavior, isolation, threats. But as the housekeeper reads deeper, she notices the handwriting changes slightly in the later entries, and the timeline doesn't match the bruises. Something feels staged. She hides the diary and pretends nothing happened. That night, Nora asks her to brush her hair, a gesture of intimacy that makes the housekeeper feel both protective and suspicious.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) uses the key to unlock the locked drawer in Nora's vanity and discovers a diary dated from the past year, written in Nora's hand.",
+        "The diary entries describe Julian's escalating control: locking her in rooms, confiscating her phone, threatening to commit her. The housekeeper feels rage on Nora's behalf.",
+        "The housekeeper notices that the last three entries are written in slightly darker ink and the handwriting is steadier — Nora's earlier entries were shaky, but these are calm. She senses a discrepancy.",
+        "The housekeeper hides the diary back in the drawer and lies to Nora about having found anything, touching her earlobe. Nora watches her but says nothing.",
+        "Nora asks the housekeeper to brush her hair before bed. The housekeeper does so, feeling a strange mix of tenderness and unease. Nora closes her eyes and says, 'You're the only one who sees me.'"
+      ],
+      "must_not": [
+        "Do not reveal that Nora wrote the later entries deliberately to be discovered, with a controlled hand to plant a false timeline.",
+        "Do not reveal that the housekeeper's suspicion of the diary is the first crack in her belief in Nora's victimhood.",
+        "Do not reveal the true contents of the diary's final pages (which will be revealed later as a frame blueprint)."
+      ],
+      "opens_with": "The key slid into the lock like it had been waiting for me my whole life.",
+      "cliffhanger": "As the housekeeper leaves Nora's room, she passes Julian's study. The door is ajar. She hears him on the phone: 'No, she doesn't know about Clara. And she never will.'",
+      "signature_detail_hint": "The housekeeper counts the brush strokes while brushing Nora's hair: exactly 47 — the same number as the steps from the gate to the front door on her first day.",
+      "emotional_beat": "The housekeeper's protective love for Nora is now shadowed by a growing, unspoken suspicion. She wants to believe Nora, but the details don't fit.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The hair-brushing scene is intimate but platonic, loaded with unspoken tension and the housekeeper's internal conflict.",
+      "chapter_task": "Write 1700-1900 words planting clue C012 (the diary with inconsistent handwriting) as a seed for Tier 3. The housekeeper's suspicion must feel earned but not conclusive — the reader should still believe Nora is a victim, but feel a faint prickle of doubt. Maintain the unreliable narrator's self-deception: the housekeeper wants to protect Nora, so she rationalizes the inconsistency. End with Julian's phone call as a red herring that reinforces the surface plot.",
+      "carries_to_next": "The housekeeper now has two pieces of evidence (the locked room diary from Clara, the vanity diary from Nora) that paint very different pictures. Julian's phone call about Clara deepens the mystery. The con is no longer simple — the housekeeper is starting to question which version of the truth is real.",
+      "narrative": {
+        "clues_plant": ["C012"],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T04", "T06", "T07", "T08", "T09"],
+        "knowledge": {
+          "pov_characters": ["the_housekeeper_narrator", "the_wife", "the_husband", "clara_higgins", "dr_ellis"],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['she is a con artist with a criminal record', 'she is entering the house to rob or blackmail the family', 'she lied about her past on the job application', 'she found a diary in Nora's drawer that describes Julian as controlling', 'the diary handwriting changes in the last three entries'], 'does_not_know': [\"the wife's true plan to frame her\", 'the wife researched her specifically', 'the diary was planted for her to find', 'the previous housekeeper was almost framed']}",
+            "the_wife: {'knows': ['she is the architect of a plan to frame the housekeeper', \"the housekeeper's criminal record\", 'the housekeeper is perfect for her plan', 'she has done this before with Clara Higgins', 'the husband is her target', 'the housekeeper found the diary'], 'does_not_know': [\"the housekeeper's own hidden agenda (to rob/blackmail)\", 'the housekeeper noticed the handwriting change']}",
+            "the_husband: {'knows': ['his wife is manipulative and has been gaslighting him for years', 'he is not a predator', 'his wife controls the narrative of their marriage', 'he is afraid of what his wife might do', 'he is on the phone about Clara Higgins'], 'does_not_know': ['his wife is planning to frame the housekeeper for his murder', 'the housekeeper is a con artist', 'the previous housekeeper was almost framed']}",
+            "clara_higgins: {'knows': [\"she was the wife's first attempt at a frame job\", 'she escaped but left evidence behind', 'the wife is dangerous'], 'does_not_know': ['the wife has found a new target (the housekeeper)', 'her evidence will be discovered by the new housekeeper']}",
+            "dr_ellis: {'knows': ['the husband is stressed and unhappy', \"the wife seems frail but he has noticed something 'off' about her\"], 'does_not_know': [\"the wife's true nature\", 'the murder plan']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {
+          "C012": "The diary's handwriting inconsistency is subtle — the housekeeper notices the last three entries are written in darker ink with a steadier hand. She tells herself it means nothing, but the detail lingers."
+        }
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "The Delivery",
+      "slug": "the-delivery",
+      "one_line_summary": "A delivery driver tells the housekeeper (unnamed narrator) that the previous housekeeper left suddenly under mysterious circumstances, deepening her unease and forcing her to question who is really in control.",
+      "beat_summary": "A delivery driver named Leo arrives with a package for Nora. While the housekeeper signs for it, Leo mentions he used to deliver here regularly and asks, 'What happened to the last girl? The one with the red hair?' The housekeeper presses him for details. He says the previous housekeeper — Clara Higgins — left suddenly in the middle of the night about two years ago. No one knows why. The housekeeper's suspicion deepens. She begins to wonder if the locked room's contents (Clara's journal) and Nora's diary are connected. That evening, Nora asks the housekeeper to help her hide a 'gift' for Julian — a bottle of expensive wine that the housekeeper notices has already been opened and resealed.",
+      "must_happen": [
+        "A delivery driver named Leo arrives with a package for Nora. While the housekeeper (unnamed narrator) signs for it, Leo casually asks, 'What happened to the last girl? The one with the red hair?'",
+        "The housekeeper questions Leo. He tells her the previous housekeeper, Clara Higgins, left suddenly about two years ago — no notice, no forwarding address. He says Julian seemed 'relieved' when she left.",
+        "The housekeeper returns to the locked room and re-examines Clara's journal, looking for any mention of Nora or the diary. She finds a single entry: 'She watches me. I think she knows.'",
+        "That evening, Nora asks the housekeeper to help her hide a bottle of expensive wine she bought as a 'surprise' for Julian. The housekeeper notices the seal has been broken and the bottle is slightly lighter than a full one.",
+        "The housekeeper hides the wine in the pantry, but not before memorizing the brand and vintage. She tells herself Nora is just being thoughtful. But the opened seal bothers her."
+      ],
+      "must_not": [
+        "Do not reveal that the wine is poisoned and intended for Julian.",
+        "Do not reveal that Nora deliberately sent the delivery driver to plant the story about Clara.",
+        "Do not reveal that Clara's journal entry ('She watches me') refers to Nora, not Julian."
+      ],
+      "opens_with": "\"What happened to the last girl?\" the delivery driver asked, and the pen in my hand stopped moving.",
+      "cliffhanger": "That night, the housekeeper wakes at 2 AM to the sound of footsteps. She peers through her door crack and sees Nora walking down the hallway in her nightgown, carrying something — and heading toward Julian's room.",
+      "signature_detail_hint": "The housekeeper counts the number of times Nora touches her wedding ring during their conversation about the wine: exactly 12 times in 10 minutes — a nervous tic the housekeeper files away.",
+      "emotional_beat": "The housekeeper's protective feelings for Nora are now mixed with a growing, cold unease. She is starting to suspect she is not the predator in this house — she is the prey.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is psychological, not romantic. The housekeeper's connection to Nora is becoming a trap, not a bond.",
+      "chapter_task": "Write 1700-1900 words planting clue C004 (the opened wine bottle) as a seed for Tier 2. The delivery driver scene should feel like a natural conversation, not an exposition dump. The housekeeper's re-examination of Clara's journal should be brief but haunting. End with the 2 AM footsteps to create a cliffhanger that sets up Chapter 6. Maintain the unreliable narrator's voice: the housekeeper is still rationalizing Nora's behavior, but the cracks are showing.",
+      "carries_to_next": "The housekeeper now knows about Clara Higgins and has seen the opened wine bottle. She is starting to connect dots she doesn't want to connect. Nora's 2 AM walk to Julian's room suggests something is about to happen — either a crime or a trap.",
+      "narrative": {
+        "clues_plant": ["C004"],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T04", "T05", "T06", "T07", "T08", "T09"],
+        "knowledge": {
+          "pov_characters": ["the_housekeeper_narrator", "the_wife", "the_husband", "clara_higgins", "dr_ellis"],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['she is a con artist with a criminal record', 'she is entering the house to rob or blackmail the family', 'she lied about her past on the job application', 'the previous housekeeper Clara Higgins left suddenly two years ago', 'the diary handwriting changed in the last three entries', 'the wine bottle Nora gave her had a broken seal'], 'does_not_know': [\"the wife's true plan to frame her\", 'the wife researched her specifically', 'the wine is poisoned', 'Clara was almost framed by Nora']}",
+            "the_wife: {'knows': ['she is the architect of a plan to frame the housekeeper', \"the housekeeper's criminal record\", 'the housekeeper is perfect for her plan', 'she has done this before with Clara Higgins', 'the husband is her target', 'the housekeeper found the diary and the wine'], 'does_not_know': [\"the housekeeper's own hidden agenda (to rob/blackmail)\", 'the housekeeper noticed the handwriting change', 'the housekeeper talked to the delivery driver']}",
+            "the_husband: {'knows': ['his wife is manipulative and has been gaslighting him for years', 'he is not a predator', 'his wife controls the narrative of their marriage', 'he is afraid of what his wife might do', 'Clara Higgins left suddenly'], 'does_not_know': ['his wife is planning to frame the housekeeper for his murder', 'the housekeeper is a con artist', 'the wine is poisoned', 'his wife is walking to his room at night']}",
+            "clara_higgins: {'knows': [\"she was the wife's first attempt at a frame job\", 'she escaped but left evidence behind', 'the wife is dangerous'], 'does_not_know': ['the wife has found a new target (the housekeeper)', 'her evidence will be discovered by the new housekeeper']}",
+            "dr_ellis: {'knows': ['the husband is stressed and unhappy', \"the wife seems frail but he has noticed something 'off' about her\"], 'does_not_know': [\"the wife's true nature\", 'the murder plan']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {
+          "C004": "The wine bottle's broken seal is a small detail — the housekeeper notices it because she has experience resealing bottles herself (a con artist's trick). The brand and vintage are memorized for later verification."
+        }
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "The Confession",
+      "slug": "the-confession",
+      "one_line_summary": "Nora invites the housekeeper (unnamed narrator) into her private space for the first time, sharing a secret that binds them — while the housekeeper hides her own agenda from the reader.",
+      "beat_summary": "The morning after the 2 AM footsteps, Nora is subdued. She invites the housekeeper into her private sitting room — a space Julian has forbidden the housekeeper from entering. Nora confesses that she is afraid Julian is poisoning her. She shows the housekeeper a bottle of her medication that looks 'wrong' — the pills are a different shape than usual. The housekeeper promises to investigate. But as she leaves, she notices a small detail: the medication bottle has Nora's name on it, but the prescription date is from three months ago — before the housekeeper even arrived. Nora's timeline doesn't add up. The housekeeper hides her suspicion and agrees to help, all while planning her own escape with whatever she can steal.",
+      "must_happen": [
+        "The morning after the 2 AM footsteps, Nora is pale and withdrawn. She invites the housekeeper (unnamed narrator) into her private sitting room — a room Julian has explicitly forbidden the housekeeper from entering.",
+        "Nora confesses that she believes Julian is slowly poisoning her. She shows the housekeeper a bottle of her anxiety medication, claiming the pills look different than usual — a different shape, a different color.",
+        "The housekeeper examines the pills and promises to investigate. She hides the bottle in her pocket, planning to check the pills against a known database.",
+        "As the housekeeper leaves the sitting room, she notices the prescription date on the bottle: three months ago — before she even arrived at Blackwood Estate. Nora's claim that the pills were recently tampered with doesn't fit.",
+        "The housekeeper lies to Nora, saying she will help. But in her internal narration, she admits she is now planning her exit strategy — she will steal what she can and leave before she becomes the next 'missing housekeeper.'"
+      ],
+      "must_not": [
+        "Do not reveal that the medication is actually Nora's own plan — she switched the pills herself to frame Julian and manipulate the housekeeper.",
+        "Do not reveal that the housekeeper's plan to steal and flee will be interrupted by Nora's next move.",
+        "Do not reveal the true contents of the pills (they are harmless — the 'wrong shape' is a different manufacturer's batch Nora bought online)."
+      ],
+      "opens_with": "\"I need to show you something,\" Nora whispered, and for the first time, she didn't sound like a victim. She sounded like a co-conspirator.",
+      "cliffhanger": "The housekeeper hides the medication bottle in her room and begins packing her escape bag. But as she zips it shut, she hears a knock at her door. It's Julian. He says, 'I know you've been in my wife's room. We need to talk.'",
+      "signature_detail_hint": "The housekeeper counts the pills in the bottle: 47 — the same number as the steps from the gate. She wonders if the universe is mocking her.",
+      "emotional_beat": "The housekeeper's empathy for Nora has curdled into cold calculation. She no longer believes Nora is a victim, but she doesn't yet know what Nora is. She is afraid — and when the housekeeper is afraid, she runs.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The intimacy is emotional and manipulative — Nora is using vulnerability as a weapon, and the housekeeper is beginning to see it.",
+      "chapter_task": "Write 1700-1900 words planting clue C005 (the medication bottle with the incorrect prescription date) as a seed for Tier 2. The sitting room scene should feel like a turning point: Nora is no longer just a victim, she is actively recruiting the housekeeper into a conspiracy. The housekeeper's internal shift from protector to potential escapee must be clear. End with Julian's knock to create a cliffhanger that sets up Act 2. Maintain the unreliable narrator's voice: the housekeeper is now keeping secrets from the reader (her escape plan, her growing suspicion of Nora).",
+      "carries_to_next": "The housekeeper now has physical evidence (the medication bottle) that contradicts Nora's story. Julian knows she has been in Nora's room. The housekeeper is caught between two liars — and she is the third. Act 2 will force her to choose a side or create her own.",
+      "narrative": {
+        "clues_plant": ["C005"],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T04", "T05", "T06", "T07", "T08", "T09"],
+        "knowledge": {
+          "pov_characters": ["the_housekeeper_narrator", "the_wife", "the_husband", "clara_higgins", "dr_ellis"],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['she is a con artist with a criminal record', 'she is entering the house to rob or blackmail the family', 'she lied about her past on the job application', 'the previous housekeeper Clara Higgins left suddenly', 'the diary handwriting changed', 'the wine bottle had a broken seal', 'Nora claims Julian is poisoning her', 'the medication bottle has a prescription date from three months ago — before she arrived', 'she is planning to steal and escape'], 'does_not_know': [\"the wife's true plan to frame her\", 'the wife researched her specifically', 'the pills are harmless', 'Nora switched the pills herself', 'Julian knows more than he lets on']}",
+            "the_wife: {'knows': ['she is the architect of a plan to frame the housekeeper', \"the housekeeper's criminal record\", 'the housekeeper is perfect for her plan', 'she has done this before with Clara Higgins', 'the husband is her target', 'the housekeeper found the diary, the wine, and the medication bottle', 'the housekeeper is now suspicious'], 'does_not_know': [\"the housekeeper's own hidden agenda (to rob/blackmail)\", 'the housekeeper is planning to escape', 'Julian has confronted the housekeeper']}",
+            "the_husband: {'knows': ['his wife is manipulative and has been gaslighting him for years', 'he is not a predator', 'his wife controls the narrative of their marriage', 'he is afraid of what his wife might do', 'the housekeeper has been in his wife's private room'], 'does_not_know': ['his wife is planning to frame the housekeeper for his murder', 'the housekeeper is a con artist', 'the wine is poisoned', 'the medication bottle has been tampered with']}",
+            "clara_higgins: {'knows': [\"she was the wife's first attempt at a frame job\", 'she escaped but left evidence behind', 'the wife is dangerous'], 'does_not_know': ['the wife has found a new target (the housekeeper)', 'her evidence will be discovered by the new housekeeper']}",
+            "dr_ellis: {'knows': ['the husband is stressed and unhappy', \"the wife seems frail but he has noticed something 'off' about her\"], 'does_not_know': [\"the wife's true nature\", 'the murder plan']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {
+          "C005": "The prescription date on the medication bottle is the key detail — three months before the housekeeper's arrival, which means Nora's claim of recent tampering is false. The housekeeper notices but doesn't yet understand the implication."
+        }
+      }
+    }
+  ]
+}
+```

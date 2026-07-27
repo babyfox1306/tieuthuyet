@@ -1,0 +1,115 @@
+{
+  "description": "Threads for The Things I Let Him See, Book 1. Each thread tracks a narrative line through the 18-chapter arc. Romance thread is a slow-burn that begins as surveillance violation and earns consent only after confrontation. All opened and closed chapters are within [1,18].",
+  "threads": [
+    {
+      "id": "T01",
+      "name": "Surveillance Contract",
+      "opened_chapter": 1,
+      "must_close_by": 18,
+      "status": "closed",
+      "book1_resolution": "Calder produces the original contract at the settlement, establishing Grant's instructions and timeline. The contract enters official custody with Cross.",
+      "book2_promise": "None. This thread is fully resolved in Book 1.",
+      "book1_payoff": "Contract used as evidence in Chapter 17 to show Grant's hiring purpose and Calder's original assignment scope.",
+      "note": "Calder prints one copy in Chapter 16 before meeting Cross. No duplicate survives beyond official intake."
+    },
+    {
+      "id": "T02",
+      "name": "Grant's Environmental Manipulation",
+      "opened_chapter": 1,
+      "must_close_by": 18,
+      "status": "closed",
+      "book1_resolution": "Grant's manipulation is exposed via the envelope chain, unedited footage, access audit, field notebook, planner, and contract. Grant loses admin access and the settlement is halted.",
+      "book2_promise": "None. Grant is defeated and does not secretly control any new problem.",
+      "book1_payoff": "Complete exposure in Chapter 17; Lena retains her apartment and Grant's active control ends.",
+      "note": "Manipulation began 7 weeks before Chapter 1. All channels (duplicate key, master credential, admin access, portal edits) are documented by Chapter 17."
+    },
+    {
+      "id": "T03",
+      "name": "Lena Detects Surveillance",
+      "opened_chapter": 3,
+      "must_close_by": 14,
+      "status": "closed",
+      "book1_resolution": "Lena's full detection and control strategy is revealed in Chapter 14. Calder learns she has been designing what he sees since Chapter 3.",
+      "book2_promise": "None. The detection thread is fully resolved.",
+      "book1_payoff": "Chapter 14 reframes all prior visible behavior as diagnostic and controlled, not unconscious or deteriorating.",
+      "note": "Lena detects Calder in Chapter 3 via reflected status light and message timing. She does not know his full identity until Chapter 9."
+    },
+    {
+      "id": "T04",
+      "name": "Certified Honeytoken",
+      "opened_chapter": 8,
+      "must_close_by": 18,
+      "status": "closed",
+      "book1_resolution": "Grant authenticates the envelope at the settlement and asserts a false recycling-area custody claim. Calder's unedited footage shows Grant removing the clipped envelope from Lena's mailbox, contradicting Grant's claim.",
+      "book2_promise": "None. The honeytoken is fully resolved as evidence.",
+      "book1_payoff": "Chapter 12: Grant uses the unique phrase 'Friday key return,' proving mail interception. Chapter 17: physical envelope and footage complete the evidence chain.",
+      "note": "Value One (information leak) pays off in Chapter 12. Value Two (physical corroboration) pays off in Chapter 17. Lena does not know the theft was recorded when she mails it."
+    },
+    {
+      "id": "T05",
+      "name": "Surveillance Alliance",
+      "opened_chapter": 9,
+      "must_close_by": 15,
+      "status": "closed",
+      "book1_resolution": "Calder transfers one encrypted duplicate of the archive to Cross in Chapter 15. Evidence no longer depends on Calder's loyalty or survival.",
+      "book2_promise": "None. The alliance is fully resolved.",
+      "book1_payoff": "Chapter 15: evidence transfer; Chapter 17: Calder authenticates originals at the settlement.",
+      "note": "Alliance begins in Chapter 9 after Lena confronts Calder. Rules are set in Chapter 10. Calder obeys all limits."
+    },
+    {
+      "id": "T06",
+      "name": "Romance Slow Burn (Calder & Lena)",
+      "opened_chapter": 1,
+      "must_close_by": 18,
+      "status": "closed",
+      "book1_resolution": "Lena asks Calder to return without recording equipment in Chapter 18. She grants no unrestricted access and chooses when he enters, when he watches, and when the curtain closes. The romance is earned only after the surveillance contract, evidence dependency, and immediate threat have ended.",
+      "book2_promise": "The relationship continues into Book 2 under Lena's terms, but the core question (chosen rather than engineered) is answered in Book 1.",
+      "book1_payoff": "Chapter 11: first consensual encounter after affirmative consent and camera shutdown. Chapter 16: Lena withdraws access; Calder obeys immediately. Chapter 18: chosen reunion without recording equipment.",
+      "note": "Calder's initial surveillance is never retroactively redefined as consent. Attraction becomes explicit only after confrontation in Chapter 9. Sexual content only in Chapters 11 and 18. Chapter 16 shows Calder obeying withdrawal of consent immediately."
+    },
+    {
+      "id": "T07",
+      "name": "Mae's Belief Shift",
+      "opened_chapter": 1,
+      "must_close_by": 18,
+      "status": "closed",
+      "book1_resolution": "Mae prints the local credential audit in Chapter 13 and hides it in a cookbook. She presents it at the settlement in Chapter 17, confirming Grant's access manipulation.",
+      "book2_promise": "Mae gives Lena a sealed archived complaint from another condominium (Book 2 hook).",
+      "book1_payoff": "Chapter 13: Mae accesses the board terminal and prints the audit. Chapter 17: audit used as evidence.",
+      "note": "Mae initially trusts Grant's systems. She changes her belief after printing the audit in Chapter 13."
+    },
+    {
+      "id": "T08",
+      "name": "Detective Cross Investigation",
+      "opened_chapter": 15,
+      "must_close_by": 18,
+      "status": "open",
+      "book1_resolution": "Cross receives the evidence index and encrypted duplicate in Chapter 15. She attends the settlement in Chapter 17 with a declared legal reason (evidence chain verification). She confirms the material establishes offenses but requires independent verification.",
+      "book2_promise": "Cross's investigation continues into Book 2, potentially examining the archived complaint from another condominium.",
+      "book1_payoff": "Chapter 17: Cross verifies the evidence chain and takes custody of originals. No instant arrest or conviction.",
+      "note": "Cross refuses to treat one accusation as sufficient. She requires independent verification before further action."
+    },
+    {
+      "id": "T09",
+      "name": "Calder's Internal Arc: Possession vs. Preservation",
+      "opened_chapter": 1,
+      "must_close_by": 18,
+      "status": "closed",
+      "book1_resolution": "Calder chooses preservation over possession. He transfers evidence out of his sole custody in Chapter 15, obeys Lena's withdrawal of access in Chapter 16, and enters the climax without romantic reassurance. He accepts Cross's scrutiny and does not attempt to control Lena's strategy.",
+      "book2_promise": "Calder's arc continues into Book 2 as he navigates the consequences of his choices and the relationship under Lena's terms.",
+      "book1_payoff": "Chapter 18: Calder returns without recording equipment, accepting Lena's terms. The final curtain image represents chosen visibility.",
+      "note": "Calder's corrective action is not a rescue. He returns with a method to preserve Lena's plan and accepts her decisions."
+    },
+    {
+      "id": "T10",
+      "name": "Grant's Villain Ledger",
+      "opened_chapter": 1,
+      "must_close_by": 18,
+      "status": "closed",
+      "book1_resolution": "Grant's three-stage manipulation is fully exposed. He loses admin access, his false chain of custody is contradicted by independent evidence, and the settlement is halted. He does not confess to stealing the envelope.",
+      "book2_promise": "None. Grant is defeated and does not secretly control any new problem.",
+      "book1_payoff": "Chapter 17: Grant authenticates the envelope and asserts a false chain, then is contradicted by footage, audit, notebook, planner, and contract.",
+      "note": "Grant never admits taking the envelope. He is defeated by contradictory evidence, not confession. No redemption."
+    }
+  ]
+}

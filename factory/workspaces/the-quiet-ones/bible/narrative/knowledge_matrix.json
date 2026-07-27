@@ -1,0 +1,424 @@
+{
+  "description": "Knowledge matrix tracking what each character knows at each milestone across Book 1 (38 chapters). Derived from kernel, mystery ledger, threads, and author directive. Milestones are computed as 5 slots from 38 chapters: ch1 (2%), ch8 (20%), ch19 (50%), ch27 (72%), ch38 (100%). Character keys use exact milestone chapter numbers.",
+  "target_language": "en",
+  "milestones": [
+    1,
+    8,
+    19,
+    27,
+    38
+  ],
+  "characters": {
+    "Elle Reyes": {
+      "ch1": {
+        "known_facts": [
+          "She is a vigilante executioner who kills guilty men the system failed to punish.",
+          "Her public identity is a famous true-crime podcaster.",
+          "Her origin wound: her sister Mara Reyes was murdered by a man who walked free.",
+          "Her first kill was the man who murdered Mara — a staged car accident.",
+          "She has a hidden network: Sasha Okafor (lawyer), Priya Anand (coroner), Wren Delgado (hacker).",
+          "Her new target is Damien Kroll, guilty of a cold-case murder."
+        ],
+        "must_not_know_before": [],
+        "hidden_truth": "Damien Kroll will figure out what she is by chapter 8."
+      },
+      "ch8": {
+        "known_facts": [
+          "All facts from ch1.",
+          "Damien Kroll has figured out that she is a vigilante executioner.",
+          "Kroll has begun a counter-investigation into her past, including her sister's case.",
+          "Her network is still loyal (no betrayal yet).",
+          "She is now aware of the two-way hunt."
+        ],
+        "must_not_know_before": [
+          "Priya Anand is the leak (known only at ch28).",
+          "Kroll's dead-man's-switch evidence (known at ch20)."
+        ],
+        "hidden_truth": "Priya Anand is being coerced by Kroll (unknown to Elle until ch28)."
+      },
+      "ch19": {
+        "known_facts": [
+          "All facts from ch8.",
+          "Kroll has evidence of her first kill and a dead-man's-switch (revealed at ch20, but Elle suspects by ch19).",
+          "The network is starting to fracture; tension with Priya is noticeable.",
+          "Elle has revealed to Wren that her first kill was a car accident (in a moment of vulnerability).",
+          "Midpoint: hunter becomes hunted — Elle realizes Kroll has the upper hand."
+        ],
+        "must_not_know_before": [
+          "Priya is the leak (known at ch28).",
+          "The full details of Kroll's dead-man's-switch (known at ch20)."
+        ],
+        "hidden_truth": "Kroll's dead-man's-switch is real and contains the evidence."
+      },
+      "ch27": {
+        "known_facts": [
+          "All facts from ch19.",
+          "Kroll's dead-man's-switch is confirmed (from ch20).",
+          "Elle suspects someone in her network is leaking (but not sure who).",
+          "She has located the safe-deposit box key (ch24).",
+          "She is closing in on Kroll, but he is also closing in on her."
+        ],
+        "must_not_know_before": [
+          "Priya is the leak (known at ch28).",
+          "The full contents of the safe-deposit box (known at ch36)."
+        ],
+        "hidden_truth": "Priya's betrayal will be revealed in ch28."
+      },
+      "ch38": {
+        "known_facts": [
+          "All facts from ch27.",
+          "Priya Anand is the leak (revealed at ch28, motive: Kroll threatened her family).",
+          "Elle's origin wound fully revealed (ch34): Mara's killer was Lucas Vance; Elle killed him in a staged accident.",
+          "Elle engineered Kroll's death as a staged suicide (ch36), with a fake confession aired on her podcast.",
+          "Kroll's dead-man's-switch evidence of her first kill has been triggered (ch37).",
+          "An encrypted email from an unknown third party arrives (ch38): 'You work for us now, Elle. Reply to confirm.'",
+          "Detective Marcus Holt suspects Kroll's death is not a suicide (ch38)."
+        ],
+        "must_not_know_before": [],
+        "hidden_truth": "The unknown third party holds the evidence and will be the antagonist of Book 2."
+      }
+    },
+    "Damien Kroll": {
+      "ch1": {
+        "known_facts": [
+          "He is guilty of the cold-case murder Elle is reopening.",
+          "He walked free once already, using money and connections.",
+          "He is intelligent, patient, and information-driven.",
+          "He knows Elle is a famous podcaster investigating him."
+        ],
+        "must_not_know_before": [
+          "Elle is a vigilante executioner (he figures this out by ch8)."
+        ],
+        "hidden_truth": "Elle is not just a podcaster — she is the executioner."
+      },
+      "ch8": {
+        "known_facts": [
+          "All facts from ch1.",
+          "Elle is a vigilante executioner — she kills guilty men.",
+          "She has a network (he doesn't know the full identities yet).",
+          "He has started a counter-investigation into Elle's past, including her sister's case."
+        ],
+        "must_not_know_before": [
+          "The full identities of Elle's network (known gradually).",
+          "The details of Elle's first kill (he discovers this by ch12)."
+        ],
+        "hidden_truth": "He will discover evidence of Elle's first kill by ch12."
+      },
+      "ch19": {
+        "known_facts": [
+          "All facts from ch8.",
+          "He has evidence of Elle's first kill (the staged car accident of Lucas Vance).",
+          "He has rigged a dead-man's-switch to release the evidence if he dies.",
+          "He is using coercion on Priya Anand (threatening her family) to leak information.",
+          "He knows the two-way hunt is active."
+        ],
+        "must_not_know_before": [
+          "Elle knows about the dead-man's-switch (she finds out at ch20).",
+          "Priya's loyalty is wavering (she will confess at ch30)."
+        ],
+        "hidden_truth": "His dead-man's-switch is real and will survive his death."
+      },
+      "ch27": {
+        "known_facts": [
+          "All facts from ch19.",
+          "Elle is closing in on him; the two-way hunt is at its peak.",
+          "His network (lawyer, private investigator) is active.",
+          "He knows Elle has found the safe-deposit box key (ch24).",
+          "He is preparing for a final confrontation."
+        ],
+        "must_not_know_before": [
+          "Elle's plan to engineer his death (she executes it in ch36).",
+          "Priya's confession letter (ch30)."
+        ],
+        "hidden_truth": "He will die by Elle's hand in ch36."
+      },
+      "ch38": {
+        "known_facts": [
+          "All facts from ch27.",
+          "He is dead (killed in ch36 by Elle's engineered suicide).",
+          "His dead-man's-switch has been triggered (ch37).",
+          "His evidence of Elle's first kill is now in the hands of an unknown third party."
+        ],
+        "must_not_know_before": [],
+        "hidden_truth": "His death was not a suicide but a murder staged by Elle."
+      }
+    },
+    "Sasha Okafor": {
+      "ch1": {
+        "known_facts": [
+          "She is a defense lawyer and part of Elle's hidden network.",
+          "She knows which guilty men walked free.",
+          "She feeds Elle names and case details.",
+          "She is loyal to Elle (not the leak)."
+        ],
+        "must_not_know_before": [
+          "Elle is a vigilante executioner (she knows Elle is a podcaster, not a killer).",
+          "Priya is the leak (unknown until ch28)."
+        ],
+        "hidden_truth": "Elle is a killer, not just a crusading journalist."
+      },
+      "ch8": {
+        "known_facts": [
+          "All facts from ch1.",
+          "Elle's new target is Damien Kroll.",
+          "Kroll is dangerous and has resources.",
+          "She is providing legal analysis on Kroll's past cases."
+        ],
+        "must_not_know_before": [
+          "Kroll has figured out Elle is a killer (unknown to Sasha).",
+          "Priya is being coerced (unknown until ch28)."
+        ],
+        "hidden_truth": "The two-way hunt is escalating, but Sasha is not yet aware of the full threat."
+      },
+      "ch19": {
+        "known_facts": [
+          "All facts from ch8.",
+          "The network is under pressure; Priya is acting strangely.",
+          "Elle is more secretive than usual.",
+          "Sasha suspects something is wrong but doesn't know what."
+        ],
+        "must_not_know_before": [
+          "Priya is the leak (unknown until ch28).",
+          "Kroll's dead-man's-switch (unknown to Sasha)."
+        ],
+        "hidden_truth": "Priya's betrayal will shock Sasha."
+      },
+      "ch27": {
+        "known_facts": [
+          "All facts from ch19.",
+          "Elle has confirmed Kroll's dead-man's-switch (but Sasha doesn't know details).",
+          "Sasha is still loyal and providing legal cover.",
+          "She is unaware of Priya's betrayal."
+        ],
+        "must_not_know_before": [
+          "Priya is the leak (known at ch28).",
+          "The full extent of Elle's first kill (unknown to Sasha)."
+        ],
+        "hidden_truth": "Priya's betrayal will be revealed in ch28."
+      },
+      "ch38": {
+        "known_facts": [
+          "All facts from ch27.",
+          "Priya is the leak (revealed at ch28).",
+          "Elle engineered Kroll's death (Sasha suspects but doesn't know details).",
+          "The network is fractured but Sasha remains loyal.",
+          "She knows about the encrypted email (Elle told her).",
+          "She is helping Elle manage the fallout."
+        ],
+        "must_not_know_before": [
+          "The full details of Elle's first kill (Sasha knows Elle killed Mara's murderer, but not the specifics).",
+          "The identity of the unknown third party."
+        ],
+        "hidden_truth": "Sasha will be a key ally in Book 2, but her loyalty will be tested."
+      }
+    },
+    "Priya Anand": {
+      "ch1": {
+        "known_facts": [
+          "She is a medical examiner and part of Elle's hidden network.",
+          "She can read or adjust cause of death.",
+          "She is loyal to Elle (not yet the leak).",
+          "She knows Elle is a vigilante executioner (she has helped stage accidents)."
+        ],
+        "must_not_know_before": [
+          "Kroll will threaten her family (this happens in ch14)."
+        ],
+        "hidden_truth": "She will become the leak under coercion."
+      },
+      "ch8": {
+        "known_facts": [
+          "All facts from ch1.",
+          "Elle's new target is Damien Kroll.",
+          "Kroll is dangerous and resourceful.",
+          "She is providing forensic analysis on Kroll's cold case."
+        ],
+        "must_not_know_before": [
+          "Kroll has figured out Elle is a killer (unknown to Priya).",
+          "Kroll will target her family (happens in ch14)."
+        ],
+        "hidden_truth": "Kroll will begin threatening her family in ch14."
+      },
+      "ch19": {
+        "known_facts": [
+          "All facts from ch8.",
+          "Kroll has threatened her family (her daughter's school transfer, ch22).",
+          "She has been leaking information to Kroll under duress.",
+          "She is conflicted and afraid.",
+          "She has made phone calls to an unknown number (ch18)."
+        ],
+        "must_not_know_before": [
+          "Elle knows about the leak (unknown until ch28).",
+          "Kroll's dead-man's-switch (unknown to Priya)."
+        ],
+        "hidden_truth": "She will confess in a letter (ch30) that Elle finds."
+      },
+      "ch27": {
+        "known_facts": [
+          "All facts from ch19.",
+          "She is still leaking information to Kroll.",
+          "She is terrified of being discovered.",
+          "She has written a confession letter but hasn't sent it (ch30)."
+        ],
+        "must_not_know_before": [
+          "Elle is about to discover the leak (ch28).",
+          "Kroll will die in ch36 (unknown to Priya)."
+        ],
+        "hidden_truth": "Elle will discover the leak in ch28."
+      },
+      "ch38": {
+        "known_facts": [
+          "All facts from ch27.",
+          "Elle discovered she was the leak (ch28).",
+          "Elle confronted her (ch33); Priya was exiled from the network but not killed.",
+          "Kroll is dead (ch36).",
+          "Priya is now a loose end — she may return as an asset or threat in Book 2."
+        ],
+        "must_not_know_before": [
+          "The identity of the unknown third party (ch38).",
+          "The full details of Elle's first kill (Priya knows Elle killed Mara's murderer, but not the specifics)."
+        ],
+        "hidden_truth": "Priya may be contacted by the unknown third party in Book 2."
+      }
+    },
+    "Wren Delgado": {
+      "ch1": {
+        "known_facts": [
+          "He is a hacker and part of Elle's hidden network.",
+          "He pulls digital trails for Elle.",
+          "He is loyal to Elle (not the leak).",
+          "He knows Elle is a vigilante executioner (he has helped cover digital traces)."
+        ],
+        "must_not_know_before": [
+          "Kroll has figured out Elle is a killer (unknown to Wren).",
+          "Priya is the leak (unknown until ch28)."
+        ],
+        "hidden_truth": "Wren's loyalty is real, and he will be a key emotional support for Elle."
+      },
+      "ch8": {
+        "known_facts": [
+          "All facts from ch1.",
+          "Elle's new target is Damien Kroll.",
+          "Kroll is digitally sophisticated.",
+          "Wren is tracking Kroll's digital footprint."
+        ],
+        "must_not_know_before": [
+          "Kroll has figured out Elle is a killer (unknown to Wren).",
+          "Priya is being coerced (unknown until ch28)."
+        ],
+        "hidden_truth": "The two-way hunt will put Wren at risk."
+      },
+      "ch19": {
+        "known_facts": [
+          "All facts from ch8.",
+          "Elle revealed to Wren that her first kill was a car accident (ch19).",
+          "Wren is now one of the few people who knows Elle's full secret.",
+          "He is helping Elle counter Kroll's digital attacks.",
+          "The charged tension between Elle and Wren is building."
+        ],
+        "must_not_know_before": [
+          "Priya is the leak (unknown until ch28).",
+          "Kroll's dead-man's-switch (unknown to Wren until ch20)."
+        ],
+        "hidden_truth": "Wren's feelings for Elle are deepening, but he won't act on them."
+      },
+      "ch27": {
+        "known_facts": [
+          "All facts from ch19.",
+          "Kroll's dead-man's-switch is confirmed (ch20).",
+          "Wren is helping Elle locate the safe-deposit box (ch24).",
+          "He suspects someone in the network is leaking but doesn't know who."
+        ],
+        "must_not_know_before": [
+          "Priya is the leak (known at ch28).",
+          "The full contents of the safe-deposit box (known at ch36)."
+        ],
+        "hidden_truth": "Priya's betrayal will hurt Wren deeply."
+      },
+      "ch38": {
+        "known_facts": [
+          "All facts from ch27.",
+          "Priya is the leak (ch28).",
+          "Elle engineered Kroll's death (Wren helped with the digital trail).",
+          "The dead-man's-switch was triggered (ch37).",
+          "The encrypted email from the unknown third party (ch38).",
+          "Wren is still loyal and helping Elle manage the fallout."
+        ],
+        "must_not_know_before": [
+          "The identity of the unknown third party.",
+          "The full details of Elle's first kill (Wren knows the basics, but not the specifics)."
+        ],
+        "hidden_truth": "Wren's romantic tension with Elle will be a subtext in Book 2."
+      }
+    },
+    "Detective Marcus Holt": {
+      "ch1": {
+        "known_facts": [
+          "He is a detective investigating cold cases.",
+          "He knows Elle Reyes as a famous true-crime podcaster.",
+          "He is professional and suspicious by nature.",
+          "He has no knowledge of Elle's vigilantism."
+        ],
+        "must_not_know_before": [
+          "Elle is a vigilante executioner (unknown until ch9).",
+          "Kroll's guilt (unknown until later)."
+        ],
+        "hidden_truth": "He will begin to suspect Elle in ch9."
+      },
+      "ch8": {
+        "known_facts": [
+          "All facts from ch1.",
+          "He has been assigned to a case that tangentially involves Kroll.",
+          "He notices Elle's interest in Kroll's case.",
+          "He is starting to find Elle's involvement suspicious."
+        ],
+        "must_not_know_before": [
+          "Elle is a killer (unknown until ch9).",
+          "Kroll is guilty (unknown until later)."
+        ],
+        "hidden_truth": "He will begin investigating Elle in ch9."
+      },
+      "ch19": {
+        "known_facts": [
+          "All facts from ch8.",
+          "He suspects Elle is hiding something.",
+          "He has started a quiet investigation into Elle's past.",
+          "He has a secret informant (red herring RH03, but not real).",
+          "He is unaware of Kroll's dead-man's-switch."
+        ],
+        "must_not_know_before": [
+          "Elle is a vigilante executioner (he suspects but has no proof).",
+          "Kroll's dead-man's-switch (unknown to Holt)."
+        ],
+        "hidden_truth": "He is close to connecting Elle to Kroll's death by ch38."
+      },
+      "ch27": {
+        "known_facts": [
+          "All facts from ch19.",
+          "He has gathered circumstantial evidence linking Elle to Kroll.",
+          "He is aware of Kroll's death (but it hasn't happened yet — this is ch27).",
+          "He is preparing to make a move."
+        ],
+        "must_not_know_before": [
+          "Elle's plan to kill Kroll (unknown until ch36).",
+          "Kroll's dead-man's-switch (unknown to Holt)."
+        ],
+        "hidden_truth": "He will be distracted by the surfaced evidence in ch38."
+      },
+      "ch38": {
+        "known_facts": [
+          "All facts from ch27.",
+          "Kroll is dead (ch36).",
+          "Holt suspects Kroll's death was not a suicide (discrepancy in time of death, ch37).",
+          "He is close to connecting Elle to Kroll's death.",
+          "He is distracted by the surfaced evidence of Elle's first kill (the dead-man's-switch).",
+          "He does not know the identity of the unknown third party."
+        ],
+        "must_not_know_before": [
+          "The full details of Elle's first kill (he has only circumstantial evidence).",
+          "The identity of the unknown third party."
+        ],
+        "hidden_truth": "Holt will be a major threat in Book 2."
+      }
+    }
+  }
+}

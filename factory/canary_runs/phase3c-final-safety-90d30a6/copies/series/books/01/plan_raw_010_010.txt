@@ -1,0 +1,71 @@
+{
+  "act": [10, 10],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Wordless Pact",
+      "slug": "the-wordless-pact",
+      "one_line_summary": "The survivors navigate Stage Two of the summit's final test, learning that true freedom means letting every voice be its own, as Sofia Bellini and Elias van Doren face their last silence together.",
+      "beat_summary": "The group is in the basement. The speakers announce 'Stage Two: Prove your voice is your own.' The door requires a group voiceprint, but only if no one speaks for another. Tension rises as different students struggle with words. Elias van Doren leads, speaking clearly when needed. The final door has a transcript of Nadia Petrescu's last words. Sofia Bellini reads it silently, then says to the group: 'The system kills whoever has been spoken for the most — trained on Nadia Petrescu's rewritten testimony.' The door unlocks. The line 'That is not what I said' plays from the speaker as they leave, Nadia's voice finally heard clearly. Outside, the cold air hits them. Elias van Doren wraps his jacket around Sofia Bellini's shoulders. They see a waiting car with a folder named 'New Summit — Transcripts'.",
+      "must_happen": [
+        "The group navigates 'Stage Two' by proving they understand the true cost of interpretation, resisting the urge to finish each other's sentences.",
+        "Sofia Bellini speaks the exact wording of the true law into the final lock mechanism: 'The system kills whoever has been spoken for the most — trained on Nadia Petrescu's rewritten testimony.'",
+        "[ROMANCE] Without a word, Elias van Doren drapes his jacket over Sofia Bellini's shoulders and presses a kiss to the top of her head—a silent, final declaration of his own voice.",
+        "The survivors exit into sunrise, but the waiting car and the folder on the dashboard reveal the larger conspiracy, setting up the next book.",
+        "The phrase 'That is not what I said' echoes from the building's final replay, the true voice of Nadia Petrescu finally heard."
+      ],
+      "must_not": [
+        "No destruction of the whole system or the organization (leaves hook for book 2).",
+        "Elias van Doren does not revert to silent fear; he emerges as a young man who can speak for himself.",
+        "No explicit sexual content; spice remains at 1."
+      ],
+      "opens_with": "The basement corridor smelled of rust and old tape. The speaker above them whispered 'Stage two' in twelve languages, and Sofia Bellini understood the final rule: to leave, they had to prove they had stopped speaking for each other.",
+      "cliffhanger": "The sunrise burned through the mist as they stumbled out. Behind them, the building hummed. Ahead, a single car idled in the parking lot, engine running, door open — as if expecting them. On the dashboard lay a folder stamped with the same logo as the earpieces, labeled 'New Summit — Transcripts'.",
+      "signature_detail_hint": "The exit door's lock wasn't a keycard. It was a transparent glass plate with an inscription: 'Every voice must be its own. —Department of Linguistic Correction.' Behind the glass lay one of the earpieces, shattered.",
+      "emotional_beat": "The weary relief of survival, the quiet vulnerability of two people who have learned that love is not speaking for someone, but standing silently beside them and trusting them to find their own words.",
+      "spice": 1,
+      "spice_note": "A gentle kiss on the top of the head, a jacket draped over shoulders. Love in silence.",
+      "chapter_task": "Write 1600–1900 words. Conclude the summit's 'Stage Two' by having the group use their knowledge of the true law. Ensure Sofia Bellini says the required exact wording of the true law into the lock. Execute the romance resolution with a quiet, non-verbal moment. Plant the seeds for Book 2 with the folder on the dashboard. Include the line 'That is not what I said' in the final building replay.",
+      "carries_to_next": "The survivors are free from the summit, but the Department of Linguistic Correction and the organization are still active. Other summits are running. Sofia Bellini and Elias van Doren must decide whether to stay silent and safe or expose the truth and risk their voices being consumed again.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "group_survival",
+          "mystery_law",
+          "romance_slow_burn"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sofia Bellini",
+            "Elias van Doren"
+          ],
+          "may_know": [
+            "Sofia Bellini: Sofia fully understands the mechanism and the cost of speaking for others",
+            "Sofia Bellini: She either saves Elias by letting him speak for himself or carries the lesson into the aftermath",
+            "Sofia Bellini: The case is closed.",
+            "Elias van Doren: Elias knows the full truth",
+            "Elias van Doren: He grapples with the revelation and either survives or chooses to speak for himself regardless of risk."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Sofia Bellini: Sofia fully understands the mechanism and the cost of speaking for others",
+            "Sofia Bellini: She either saves Elias by letting him speak for himself or carries the lesson into the aftermath",
+            "Sofia Bellini: The case is closed.",
+            "Elias van Doren: Elias knows the full truth",
+            "Elias van Doren: He grapples with the revelation and either survives or chooses to speak for himself regardless of risk."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The system does not punish being mistranslated—it punishes being spoken for. It was trained on the disciplinary hearing of Nadia Petrescu, a refugee student whose testimony was repeatedly clarified until the official record contained nothing that was actually hers.",
+            "[kernel.core_question] What is the true law of the translation system?"
+          ],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}

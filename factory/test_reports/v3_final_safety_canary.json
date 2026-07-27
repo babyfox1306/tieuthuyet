@@ -1,0 +1,22 @@
+{
+  "run_id": "phase3c-final-safety-90d30a6",
+  "git_head": "90d30a6ef5d6b8fc97b3120a5ca67cae2643e8e3",
+  "verdict": "CONDITIONAL_PASS",
+  "production_unchanged": true,
+  "refusal_ok": true,
+  "isolation_ok": true,
+  "digests_before": {
+    "bell": "4729bc85c0738a1a",
+    "standalone": "f2ea10033648b02f",
+    "series": "c8f8b98a29ac23fe"
+  },
+  "digests_after": {
+    "bell": "4729bc85c0738a1a",
+    "standalone": "f2ea10033648b02f",
+    "series": "c8f8b98a29ac23fe"
+  },
+  "generation_status": "blocked_live_route",
+  "conditions": [
+    "Fresh-generation blocked_live_route: required live free-route probes failed (SAFETY_ONLY_CANARY_NO_LIVE_PROBE); canary refuses paid fallback. Evaluation track still valid → CONDITIONAL_PASS."
+  ]
+}

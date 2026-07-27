@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "kind": "quality_state",
+  "book": 1,
+  "frontier": 17,
+  "source_chapter_digests": {
+    "1": "163fb3cce17deb32",
+    "8": "83c63634cbab7583",
+    "17": "45f4f45859088b65"
+  },
+  "motif_ledger": {},
+  "phrase_ledger": {
+    "against the inside of": {
+      "chapters": [
+        8
+      ],
+      "count": 1
+    },
+    "the inside of her": {
+      "chapters": [
+        8,
+        17
+      ],
+      "count": 2
+    },
+    "inside of her wrist": {
+      "chapters": [
+        8,
+        17
+      ],
+      "count": 2
+    },
+    "she traced a small": {
+      "chapters": [
+        8
+      ],
+      "count": 1
+    },
+    "turned it exactly one": {
+      "chapters": [
+        8,
+        17
+      ],
+      "count": 2
+    },
+    "exactly one quarter rotation": {
+      "chapters": [
+        8,
+        17
+      ],
+      "count": 2
+    },
+    "one quarter rotation away": {
+      "chapters": [
+        8,
+        17
+      ],
+      "count": 2
+    },
+    "quarter rotation away from": {
+      "chapters": [
+        8,
+        17
+      ],
+      "count": 2
+    },
+    "rotation away from clarity": {
+      "chapters": [
+        8,
+        17
+      ],
+      "count": 2
+    },
+    "the air between them": {
+      "chapters": [
+        8
+      ],
+      "count": 1
+    },
+    "looked down at the": {
+      "chapters": [
+        17
+      ],
+      "count": 1
+    },
+    "circle against her wrist": {
+      "chapters": [
+        17
+      ],
+      "count": 1
+    },
+    "her close enough that": {
+      "chapters": [
+        17
+      ],
+      "count": 1
+    }
+  },
+  "scene_function_history": [
+    {
+      "chapter": 1,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "163fb3cce17deb32"
+    },
+    {
+      "chapter": 8,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "83c63634cbab7583"
+    },
+    {
+      "chapter": 17,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "45f4f45859088b65"
+    }
+  ],
+  "chapter_turn_history": [
+    {
+      "chapter": 1,
+      "status": "acceptable",
+      "score": 0.7,
+      "codes": [],
+      "prose_digest": "163fb3cce17deb32"
+    },
+    {
+      "chapter": 8,
+      "status": "acceptable",
+      "score": 0.7,
+      "codes": [],
+      "prose_digest": "83c63634cbab7583"
+    },
+    {
+      "chapter": 17,
+      "status": "acceptable",
+      "score": 0.7,
+      "codes": [],
+      "prose_digest": "45f4f45859088b65"
+    }
+  ],
+  "pressure_curve": [
+    {
+      "chapter": 1,
+      "score": 0.6,
+      "status": "acceptable",
+      "prose_digest": "163fb3cce17deb32"
+    },
+    {
+      "chapter": 8,
+      "score": 0.6,
+      "status": "acceptable",
+      "prose_digest": "83c63634cbab7583"
+    },
+    {
+      "chapter": 17,
+      "score": 0.6,
+      "status": "acceptable",
+      "prose_digest": "45f4f45859088b65"
+    }
+  ],
+  "agency_history": {
+    "1": {
+      "score": 0.6,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "163fb3cce17deb32"
+    },
+    "8": {
+      "score": 0.6,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "83c63634cbab7583"
+    },
+    "17": {
+      "score": 0.6,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "45f4f45859088b65"
+    }
+  },
+  "unresolved_quality_warnings": []
+}

@@ -1,0 +1,66 @@
+{
+  "act": [37, 38],
+  "chapter_plans": [
+    {
+      "chapter": 37,
+      "title": "The Loose End",
+      "slug": "the-loose-end",
+      "one_line_summary": "Nadia Cole races to stop Victor Rhodes's second dead-man's-switch before the Julian Croft file goes public, but the final confrontation with Wren Delgado forces her to choose between justice and the network's survival.",
+      "beat_summary": "Nadia Cole stares at the flash drive on her table, the file open on her laptop. Victor Rhodes's note is clear: the file will be released in 48 hours. She calls Sasha Okafor and tells her about the second dead-man's-switch. Sasha Okafor is silent, then says: 'There's only one way to stop it. We need to get to Rhodes's attorney before the deadline — but he's already gone dark. He's not answering calls, and his office is locked.' Nadia Cole hangs up and calls Priya Anand. Priya Anand answers, her voice tight. Nadia Cole tells her: 'I need you to find a way into the attorney's office. Tonight.' Priya Anand hesitates, then says: 'I know someone who can get us in. But Nadia — if we get caught, it's over.' Nadia Cole tells her she knows. She hangs up and stares at the photograph of Mara Cole. She whispers: 'I'm not losing everything because of one dead man's posthumous game.' The chapter cuts to Nadia Cole meeting Priya Anand at the attorney's office building at midnight. Priya Anand's contact — a janitor with a key — lets them in. They find the sealed envelope in a locked drawer. Inside: a single piece of paper with a phone number and a note: 'Call this number. The file is already in motion.' Nadia Cole dials the number. A voice answers: 'You're early, Nadia. But I was expecting you.' The voice is calm, measured — a woman's voice. 'Victor Rhodes paid me to hold the file. If you want it destroyed, you'll have to pay me double. And I don't take checks.' Nadia Cole's thumb presses against her palm. She asks: 'Who are you?' The voice laughs. 'Someone who knows exactly what you are, Nadia Cole. And someone who's going to make you work for your freedom.' The chapter ends with Nadia Cole hanging up, her hand shaking. She turns to Priya Anand and says: 'We're not done. The file is still out there. And the person holding it wants more than money.'",
+      "must_happen": [
+        "Nadia Cole calls Sasha Okafor and tells her about the second dead-man's-switch — Sasha Okafor says the only way to stop it is to get to Rhodes's attorney before the deadline, but the attorney has gone dark.",
+        "Nadia Cole calls Priya Anand and tells her to find a way into the attorney's office — Priya Anand says she has a contact (a janitor) who can get them in, but warns of the risk.",
+        "Nadia Cole and Priya Anand break into the attorney's office at midnight — they find the sealed envelope in a locked drawer with a phone number and a note: 'Call this number. The file is already in motion.'",
+        "Nadia Cole dials the number — a woman's voice answers, revealing that Victor Rhodes paid her to hold the file, and she demands double payment to destroy it.",
+        "The woman on the phone says: 'Someone who knows exactly what you are, Nadia Cole. And someone who's going to make you work for your freedom.' — confirming the file is still active and the third party is not just a courier.",
+        "The chapter ends with Nadia Cole telling Priya Anand: 'We're not done. The file is still out there. And the person holding it wants more than money.'"
+      ],
+      "must_not": [
+        "Do NOT show Victor Rhodes's perspective in this chapter — he is dead, and the focus is on Nadia Cole racing to stop the second dead-man's-switch.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is cold calculation and the weight of the ticking clock.",
+        "Do NOT re-fire any clues already paid off (C001, C002, C005, C007) or re-reveal any reveals already fired (MR05).",
+        "Do NOT reveal the identity of the woman on the phone — she is the Book 2 hook, and her identity is not revealed here."
+      ],
+      "opens_with": "\"'There's only one way to stop it,' Sasha Okafor said, her voice flat but edged with urgency. 'We need to get to Rhodes's attorney before the deadline — but he's already gone dark. He's not answering calls, and his office is locked.' I stared at the flash drive in my hand, Victor Rhodes's note still burning in my mind. 'Then we break in,' I said. 'Tonight.'\" — Nadia Cole, internal, as she calls Sasha Okafor.",
+      "cliffhanger": "Nadia Cole hangs up the phone, her hand shaking. She turns to Priya Anand, who is staring at her with wide eyes. 'Who was that?' Priya Anand whispers. Nadia Cole shakes her head. 'I don't know. But she knows everything — about Rhodes, about the file, about me. And she's not done with me yet.' Priya Anand's face goes pale. 'Then what do we do?' Nadia Cole looks at the sealed envelope in her hand. 'We find out who she is. And we make sure she can't use that file against me.'",
+      "signature_detail_hint": "The sealed envelope is stamped with a wax seal — a phoenix rising from flames, a symbol Nadia Cole has never seen before, hinting at a larger network.",
+      "emotional_beat": "Cold calculation mixed with a growing dread — Nadia Cole knows the trap is still active, and the cost of stopping it is mounting.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show Nadia Cole's calls with Sasha Okafor and Priya Anand, the break-in at the attorney's office, the discovery of the sealed envelope, and the phone call with the unknown woman. End with the cliffhanger — the woman knows everything, and the file is still active.",
+      "carries_to_next": "The second dead-man's-switch is still active — a woman holding the Julian Croft file has demanded payment and revealed she knows Nadia Cole's true nature. Chapter 38 will show the final resolution: the podcast frames the Rhodes case as justice served, but the woman's demand forces Nadia Cole to confront the cost of her secrecy."
+    },
+    {
+      "chapter": 38,
+      "title": "The Cost of Secrecy",
+      "slug": "the-cost-of-secrecy",
+      "one_line_summary": "Nadia Cole closes the Rhodes case with a podcast episode framing it as justice served, but the unknown woman's demand forces her to accept a leash — the Book 2 hook is set, and Nadia Cole is no longer invisible.",
+      "beat_summary": "Nadia Cole sits in the safe house, the sealed envelope from the attorney's office on the table. Her phone buzzes — a text from the unknown woman: 'Payment due in 24 hours. Cash. No trace. I'll send the location.' Nadia Cole stares at the message, her thumb pressed to her palm. She calls Sasha Okafor and tells her about the demand. Sasha Okafor is silent, then says: 'You can't pay her. If you do, she'll own you. And if you don't, she'll release the file. Either way, you lose.' Nadia Cole tells her she knows. She hangs up and calls Priya Anand. Priya Anand answers, her voice tight. Nadia Cole tells her: 'I'm going to pay her. But I'm going to do it on my terms.' Priya Anand asks: 'What does that mean?' Nadia Cole says: 'It means I'm going to find out who she is first. And then I'm going to make sure she can't use that file against me.' The chapter cuts to Nadia Cole recording the final podcast episode for the Elise Marchetti case. She sits in her home studio, the microphone in front of her. She speaks: 'Victor Rhodes is dead. The system failed Elise Marchetti, but justice has finally been served. This case is closed.' She stops the recording and stares at the wall. She knows the podcast is a lie — she killed Victor Rhodes, and the world will never know. But the cost of that lie is mounting. She receives a second text from the unknown woman: 'Change of plans. I don't want your money. I want you to work for me. One job. Then the file is destroyed.' Nadia Cole's hand freezes over the phone. She types a reply: 'What kind of job?' The woman responds: 'A man named Marcus Webb. He killed his wife and walked. You know the type. I want you to finish him — the same way you finished Julian Croft. Do this, and the file is gone. Refuse, and it goes public.' Nadia Cole stares at the message. She knows she has no choice. She types: 'I'll do it.' She sends the message and drops the phone. She whispers: 'I'm not free. I'm just on a different leash.' The chapter ends with Nadia Cole looking at the photograph of Mara Cole. She says: 'I did this for you, Mara. And I'll keep doing it. But I'm not the one in control anymore.' The final scene: a close-up of the unknown woman's hands typing a message: 'She accepted. The hunt begins.' The screen fades to black.",
+      "must_happen": [
+        "Nadia Cole receives a text from the unknown woman demanding payment in 24 hours — cash, no trace, with a location to follow.",
+        "Nadia Cole calls Sasha Okafor and tells her about the demand — Sasha Okafor warns that paying the woman will give her leverage, but not paying will release the file.",
+        "Nadia Cole records the final podcast episode for the Elise Marchetti case — she announces Victor Rhodes's death as justice served, closing the case publicly.",
+        "Nadia Cole receives a second text from the unknown woman changing the demand: she wants Nadia Cole to work for her — one job (killing Marcus Webb) in exchange for the file being destroyed.",
+        "Nadia Cole agrees to the job — she types 'I'll do it' and sends the message, accepting the leash.",
+        "The chapter ends with Nadia Cole whispering: 'I'm not free. I'm just on a different leash.' — the Book 2 hook is set.",
+        "C010 is paid off: the sealed envelope from the attorney's office confirms the dead-man's-switch trigger (exact semantic: 'Rhodes's attorney's office receives a sealed envelope with instructions to release it upon his death — the dead-man's-switch trigger.').",
+        "C011 is paid off: the flash drive with the Julian Croft file is confirmed as the evidence that surfaces (exact semantic: 'A flash drive found in Rhodes's safe contains a single file: 'JULIAN CROFT — BOATING ACCIDENT — FULL REPORT' with annotations that link the accident to Nadia.').",
+        "MR06 is revealed: Rhodes's dead-man's-switch surfaces evidence of Nadia's first kill to an unknown third party (exact semantic: 'Rhodes's dead-man's-switch: after his death, evidence of Nadia's first kill surfaces to an unknown third party, setting up the Book 2 hook.')."
+      ],
+      "must_not": [
+        "Do NOT show the unknown woman's face or identity — she is the Book 2 hook, and her identity is not revealed here.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is cold resignation and the weight of the new leash.",
+        "Do NOT re-fire any clues already paid off (C001, C002, C005, C007) or re-reveal any reveals already fired (MR05).",
+        "Do NOT kill Marcus Webb in this chapter — he is the Book 2 target, and the kill is not shown."
+      ],
+      "opens_with": "\"'Payment due in 24 hours. Cash. No trace. I'll send the location.' I read the text three times, each word a new weight on my chest. I called Sasha Okafor. 'She wants money,' I said. Sasha Okafor was silent for a long moment. 'Then she owns you. And if you don't pay, she releases the file. Either way, you lose.' I stared at the wall. 'I know.'\" — Nadia Cole, internal, as she receives the demand.",
+      "cliffhanger": "The screen fades to black. A woman's hands type a message: 'She accepted. The hunt begins.' The message is sent. The camera pulls back to reveal a desk cluttered with files — each one a cold case, each one with a name crossed out. The woman's face is hidden in shadow. She picks up a photograph of Marcus Webb and smiles. 'Welcome to the game, Nadia Cole.'",
+      "signature_detail_hint": "The unknown woman's desk has a brass paperweight shaped like a phoenix — the same symbol from the wax seal on the envelope, hinting at a hidden organization.",
+      "emotional_beat": "Cold resignation mixed with a flicker of defiance — Nadia Cole has accepted the leash, but she is already planning how to slip it.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Pay off C010 and C011 (exact semantics from clue_catalog). Reveal MR06 (exact semantic from reveal_catalog). Show Nadia Cole receiving the demand, calling Sasha Okafor, recording the final podcast episode, and accepting the job from the unknown woman. End with the final scene of the unknown woman's hands typing 'She accepted. The hunt begins.' — the Book 2 hook is set.",
+      "carries_to_next": "Book 1 closes: Victor Rhodes is dead, the podcast frames it as justice served, and Nadia Cole survives with her network mostly intact. But the unknown woman now holds the Julian Croft file, and Nadia Cole has accepted a job to kill Marcus Webb in exchange for its destruction. Book 2 will show Nadia Cole hunting Marcus Webb while the unknown woman pulls the strings — and Nadia Cole planning to slip the leash."
+    }
+  ]
+}

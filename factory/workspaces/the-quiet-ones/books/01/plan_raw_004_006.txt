@@ -1,0 +1,151 @@
+```json
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Network Meeting",
+      "slug": "the-network-meeting",
+      "one_line_summary": "Elle Reyes convenes her hidden network to start gathering evidence on Damien Kroll, but the watcher's text and Wren's gambling debts create cracks in her wall of control.",
+      "beat_summary": "Elle Reyes calls a meeting with Sasha, Dr. Lin, and Wren at a rented office. She lays out the Kroll case and assigns tasks: Sasha will dig for civil suits and sealed records, Dr. Lin will review the autopsy from the Vega case, and Wren will trace Kroll's digital trail. Elle Reyes hides the watcher's text from them, but Wren's evasiveness about her gambling debts catches Elle's attention. The chapter ends with Elle Reyes alone, reviewing the Vega case file, and planting a clue (C002) — a small discrepancy in the original police report that suggests a witness was paid off.",
+      "must_happen": [
+        "Elle Reyes convenes a meeting with Sasha, Dr. Lin, and Wren in a rented office space; she assigns each a task related to the Kroll case.",
+        "Elle Reyes hides the watcher's text from her network, telling no one about the threat.",
+        "Wren deflects when Elle Reyes asks about her finances, suggesting her gambling debts are deeper than she admitted.",
+        "Elle Reyes reviews the Lucia Vega case file and notices a discrepancy: a witness statement mentions a second car at the scene that was never investigated — clue C002 is planted.",
+        "Sasha reveals she has a contact inside Kroll's company who might be willing to talk, but it's risky."
+      ],
+      "must_not": [
+        "Do not reveal the identity of the watcher or any connection between the watcher and Kroll at this stage.",
+        "Do not show Wren being coerced by Kroll yet — only hint at her vulnerability through her evasiveness."
+      ],
+      "opens_with": "\"I trusted them with everything except the one thing that could get us all killed.\"",
+      "cliffhanger": "As Elle Reyes leaves the office, she notices a black sedan parked across the street, engine running. The driver's face is obscured, but the car doesn't move until she does.",
+      "signature_detail_hint": "The witness statement in the Vega file is signed with a shaky 'X' — the witness was illiterate, yet the statement is written in articulate legal language, suggesting it was coached.",
+      "emotional_beat": "Controlled competence undermined by the growing sense that her network is not as secure as she believed, and that someone is tracking her movements.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. Elle Reyes is focused on the case and her network's vulnerabilities.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Establish the network dynamic and plant clue C002. Show Wren's vulnerability without revealing Kroll's involvement. Touch threads T01, T02, T03, T06, T07.",
+      "carries_to_next": "The network is activated; clue C002 is planted; the black sedan tail is established; Wren's vulnerability is a growing concern.",
+      "narrative": {
+        "clues_plant": ["C002"],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T06", "T07"],
+        "knowledge": {
+          "pov_characters": ["Elle Reyes", "Damien Kroll", "Sasha (Lawyer)", "Dr. Lin (Coroner)", "Wren (Hacker)", "Detective Marcus Cole"],
+          "may_know": [
+            "Elle Reyes: {'knows': ['She is a vigilante killer', 'She has killed before (Maya\\'s murderer)', 'Her method: engineered accidents', 'Her network exists (Sasha, Dr. Lin, Wren)', 'She is targeting Damien Kroll for a cold case', 'Someone is watching her (the watcher text)'], 'does_not_know_yet': ['Kroll has figured her out', 'Wren is vulnerable to coercion', 'Her first kill evidence is being compiled']}",
+            "Damien Kroll: {'knows': ['He is guilty of the cold case murder', 'He walked free on money and connections', 'Elle Reyes is investigating him', 'Elle is more than a podcaster (suspicion)'], 'does_not_know_yet': ['Elle\\'s full method', 'Her network\\'s composition', 'Her first kill details']}",
+            "Sasha (Lawyer): {'knows': ['Elle is a vigilante killer', 'She feeds Elle names of guilty men who walked free', 'She is part of a hidden network', 'Elle\\'s rule: only the guilty'], 'does_not_know_yet': ['Elle\\'s first kill details', 'Kroll\\'s threat level', 'That Wren will betray them', 'The watcher text']}",
+            "Dr. Lin (Coroner): {'knows': ['Elle is a vigilante killer', 'She adjusts cause of death when needed', 'She is part of a hidden network'], 'does_not_know_yet': ['Elle\\'s first kill details', 'Kroll\\'s threat level', 'That Wren will betray them', 'The watcher text']}",
+            "Wren (Hacker): {'knows': ['Elle is a vigilante killer', 'She provides digital trails and cover', 'She is part of a hidden network', 'She has gambling debts (hidden from others)'], 'does_not_know_yet': ['Elle\\'s first kill details', 'Kroll\\'s threat level to her personally', 'That Kroll will target her vulnerability', 'The watcher text']}",
+            "Detective Marcus Cole: {'knows': ['Elle Reyes is a famous podcaster', 'She reopens cold cases', 'He has no evidence against her'], 'does_not_know_yet': ['Elle is a vigilante killer', 'Her network exists', 'Kroll\\'s case is connected to her']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "The Rules of the Game",
+      "slug": "the-rules-of-the-game",
+      "one_line_summary": "Elle Reyes establishes the rules of her network — only the guilty, no collateral damage — while Kroll makes his first move by targeting her past.",
+      "beat_summary": "Elle Reyes visits Dr. Lin at the coroner's office to review the original Vega autopsy. Dr. Lin confirms the official cause of death (strangulation) but notes something odd: the ligature marks don't match the rope found at the scene. Elle Reyes establishes her rule: she only targets the provably guilty, and Kroll must be proven before she acts. Meanwhile, Kroll hires a private investigator to dig into Elle Reyes's past, specifically her first known kill — the Maya case. The chapter ends with Kroll receiving a preliminary report: Elle Reyes was in the same city as her first target the week before he died. Clue C003 is planted: a single hair found on the victim's jacket that didn't belong to the victim or the accused — it belongs to someone else, possibly Elle Reyes.",
+      "must_happen": [
+        "Elle Reyes meets Dr. Lin at the coroner's office; Dr. Lin shows her the original Vega autopsy, noting the ligature mark discrepancy — clue C003 is planted.",
+        "Elle Reyes explicitly states her rule to Dr. Lin: 'We only move when the evidence is absolute. No innocents. No guesses.'",
+        "Kroll hires a private investigator, giving him a file on Elle Reyes and a specific instruction: find her first kill.",
+        "Kroll receives a preliminary report: Elle Reyes was in the same city as her first target (Maya's murderer) the week before his 'accident.'",
+        "The private investigator finds a single hair on the victim's jacket from the Maya case that doesn't match the victim or the accused — it matches Elle Reyes's DNA profile (unknown to her)."
+      ],
+      "must_not": [
+        "Do not reveal that the hair evidence exists to Elle Reyes or her network — only Kroll and the PI know.",
+        "Do not show Kroll having concrete proof yet — only suspicion and circumstantial evidence."
+      ],
+      "opens_with": "\"'We only move when the evidence is absolute.' I said it to Lin, but I was really saying it to myself.\"",
+      "cliffhanger": "Kroll studies the preliminary report and smiles. 'She's good,' he says to the PI. 'But everyone leaves a hair somewhere. Find me the rest.'",
+      "signature_detail_hint": "The ligature mark on the Vega autopsy photo is slightly wider on the left side — suggesting the killer was left-handed, but Kroll is right-handed, casting doubt on the original case.",
+      "emotional_beat": "Righteous certainty in her rules undercut by the growing awareness that Kroll is not just defending himself — he is hunting her back.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. Focus is on the procedural establishment of Elle's rules and Kroll's counter-investigation.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV, with a brief POV shift to Kroll (third-person limited). Establish Elle's rules and plant clue C003. Show Kroll's methodical approach to dismantling her. Touch threads T01, T02, T03, T06, T07.",
+      "carries_to_next": "Clue C003 is planted; Kroll is actively building a case against Elle Reyes; Elle's rule is established; the hair evidence is a ticking time bomb.",
+      "narrative": {
+        "clues_plant": ["C003"],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T06", "T07"],
+        "knowledge": {
+          "pov_characters": ["Elle Reyes", "Damien Kroll", "Sasha (Lawyer)", "Dr. Lin (Coroner)", "Wren (Hacker)", "Detective Marcus Cole"],
+          "may_know": [
+            "Elle Reyes: {'knows': ['She is a vigilante killer', 'She has killed before (Maya\\'s murderer)', 'Her method: engineered accidents', 'Her network exists (Sasha, Dr. Lin, Wren)', 'She is targeting Damien Kroll for a cold case', 'Someone is watching her', 'The Vega autopsy has a discrepancy'], 'does_not_know_yet': ['Kroll has figured her out', 'Wren is vulnerable to coercion', 'Her first kill evidence is being compiled', 'The hair evidence exists']}",
+            "Damien Kroll: {'knows': ['He is guilty of the cold case murder', 'He walked free on money and connections', 'Elle Reyes is investigating him', 'Elle is more than a podcaster (suspicion)', 'Elle was in the same city as her first target before his death', 'A hair from the Maya case may match Elle'], 'does_not_know_yet': ['Elle\\'s full method', 'Her network\\'s composition', 'Her first kill details (conclusive proof)']}",
+            "Sasha (Lawyer): {'knows': ['Elle is a vigilante killer', 'She feeds Elle names of guilty men who walked free', 'She is part of a hidden network', 'Elle\\'s rule: only the guilty'], 'does_not_know_yet': ['Elle\\'s first kill details', 'Kroll\\'s threat level', 'That Wren will betray them', 'The watcher text', 'The hair evidence']}",
+            "Dr. Lin (Coroner): {'knows': ['Elle is a vigilante killer', 'She adjusts cause of death when needed', 'She is part of a hidden network', 'The Vega autopsy has a discrepancy'], 'does_not_know_yet': ['Elle\\'s first kill details', 'Kroll\\'s threat level', 'That Wren will betray them', 'The watcher text', 'The hair evidence']}",
+            "Wren (Hacker): {'knows': ['Elle is a vigilante killer', 'She provides digital trails and cover', 'She is part of a hidden network', 'She has gambling debts (hidden from others)'], 'does_not_know_yet': ['Elle\\'s first kill details', 'Kroll\\'s threat level to her personally', 'That Kroll will target her vulnerability', 'The watcher text', 'The hair evidence']}",
+            "Detective Marcus Cole: {'knows': ['Elle Reyes is a famous podcaster', 'She reopens cold cases', 'He has no evidence against her'], 'does_not_know_yet': ['Elle is a vigilante killer', 'Her network exists', 'Kroll\\'s case is connected to her', 'The hair evidence']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "The First Crack",
+      "slug": "the-first-crack",
+      "one_line_summary": "Wren's gambling debts are exploited by Kroll, creating the first crack in Elle Reyes's network, while Elle closes in on a new piece of evidence against Kroll.",
+      "beat_summary": "Wren is approached by a man claiming to be a debt collector for her bookie. He offers her a deal: information on Elle Reyes in exchange for wiping her debt. Wren refuses, but the threat is clear. Elle Reyes, unaware of this, follows a lead from Sasha's contact inside Kroll's company: a former employee who witnessed Kroll threatening Lucia Vega before her death. The witness agrees to talk, but only if Elle Reyes guarantees his safety. The chapter ends with Elle Reyes setting up a meeting with the witness, unaware that Kroll has just gained a foothold in her network. Thread T05 (Wren's betrayal) is touched for the first time.",
+      "must_happen": [
+        "Wren is approached by a man posing as a debt collector; he offers to clear her gambling debts in exchange for information on Elle Reyes — Wren refuses but is visibly shaken.",
+        "Wren does not tell Elle Reyes about the approach, creating a secret between them.",
+        "Elle Reyes meets Sasha's contact — a former employee of Kroll's company — who claims he saw Kroll threaten Lucia Vega at a company party days before her death.",
+        "The former witness agrees to testify, but only if Elle Reyes provides him with protection and relocation funds.",
+        "Elle Reyes begins planning the witness meeting, unaware that Kroll now knows Wren is the weak link in her network."
+      ],
+      "must_not": [
+        "Do not show Wren agreeing to betray Elle yet — only that she is under pressure and keeping secrets.",
+        "Do not reveal Kroll's direct involvement in the approach to Wren — only hint that someone is targeting her vulnerability."
+      ],
+      "opens_with": "\"Wren looked at me differently that day. I thought it was the case weighing on her. I was wrong.\"",
+      "cliffhanger": "As Elle Reyes finalizes the witness meeting, her phone buzzes with an unknown number. She answers. A voice says: 'I know about the hair, Elle. Do you?'",
+      "signature_detail_hint": "The former employee's name tag in the security photo from the company party is partially obscured by a smudge, but the first letter is visible: 'M.'",
+      "emotional_beat": "Hope from the new witness lead undercut by the cold dread that Kroll is already inside her network and knows more about her past than she realized.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is purely operational: the network is fracturing.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV, with a brief POV shift to Wren (third-person limited) during the approach. Establish the first crack in the network and plant the witness lead. Touch threads T01, T02, T03, T05, T06, T07.",
+      "carries_to_next": "Wren is under pressure and keeping secrets; the witness lead is active; Kroll now has a direct line into Elle's network; the hair evidence is being used as leverage.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T05", "T06", "T07"],
+        "knowledge": {
+          "pov_characters": ["Elle Reyes", "Damien Kroll", "Sasha (Lawyer)", "Dr. Lin (Coroner)", "Wren (Hacker)", "Detective Marcus Cole"],
+          "may_know": [
+            "Elle Reyes: {'knows': ['She is a vigilante killer', 'She has killed before (Maya\\'s murderer)', 'Her method: engineered accidents', 'Her network exists (Sasha, Dr. Lin, Wren)', 'She is targeting Damien Kroll for a cold case', 'Someone is watching her', 'The Vega autopsy has a discrepancy', 'A witness exists who saw Kroll threaten Vega'], 'does_not_know_yet': ['Kroll has figured her out', 'Wren is vulnerable to coercion and has been approached', 'Her first kill evidence is being compiled', 'The hair evidence exists', 'Kroll knows about the hair']}",
+            "Damien Kroll: {'knows': ['He is guilty of the cold case murder', 'He walked free on money and connections', 'Elle Reyes is investigating him', 'Elle is more than a podcaster (suspicion)', 'Elle was in the same city as her first target before his death', 'A hair from the Maya case may match Elle', 'Wren has gambling debts and is the weak link'], 'does_not_know_yet': ['Elle\\'s full method', 'Her network\\'s composition (full)', 'Her first kill details (conclusive proof)', 'The witness exists']}",
+            "Sasha (Lawyer): {'knows': ['Elle is a vigilante killer', 'She feeds Elle names of guilty men who walked free', 'She is part of a hidden network', 'Elle\\'s rule: only the guilty', 'She has a contact inside Kroll\\'s company'], 'does_not_know_yet': ['Elle\\'s first kill details', 'Kroll\\'s threat level', 'That Wren will betray them', 'The watcher text', 'The hair evidence', 'Wren was approached']}",
+            "Dr. Lin (Coroner): {'knows': ['Elle is a vigilante killer', 'She adjusts cause of death when needed', 'She is part of a hidden network', 'The Vega autopsy has a discrepancy'], 'does_not_know_yet': ['Elle\\'s first kill details', 'Kroll\\'s threat level', 'That Wren will betray them', 'The watcher text', 'The hair evidence', 'Wren was approached']}",
+            "Wren (Hacker): {'knows': ['Elle is a vigilante killer', 'She provides digital trails and cover', 'She is part of a hidden network', 'She has gambling debts (hidden from others)', 'Someone approached her about selling Elle out'], 'does_not_know_yet': ['Elle\\'s first kill details', 'Kroll\\'s threat level to her personally', 'That Kroll is behind the approach', 'The watcher text', 'The hair evidence']}",
+            "Detective Marcus Cole: {'knows': ['Elle Reyes is a famous podcaster', 'She reopens cold cases', 'He has no evidence against her'], 'does_not_know_yet': ['Elle is a vigilante killer', 'Her network exists', 'Kroll\\'s case is connected to her', 'The hair evidence']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

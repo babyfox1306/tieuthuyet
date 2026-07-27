@@ -1,0 +1,497 @@
+{
+  "schema_version": 1,
+  "kind": "story_contract",
+  "scope": {
+    "level": "book",
+    "book_id": "01"
+  },
+  "open_creation": {
+    "may_create_minor_entities": true,
+    "may_create_major_entities": false,
+    "may_add_supporting_events": true,
+    "may_change_locked_event_outcomes": false,
+    "may_add_noncritical_setup_payoffs": true,
+    "may_add_solution_critical_setup_payoffs": false
+  },
+  "entities": [],
+  "relations": [],
+  "events": [
+    {
+      "id": "event_ending_book",
+      "summary": "Sloane is arrested. Mara is alive. Rook's network is exposed. Sloane releases her own seven contracts along with the ledger — she does not buy absolution, she chooses the record. Lucian is offered the only escape route and refuses it, standing beside the woman he was contracted to kill. Dawn fills the empty scope with light and leaves nothing hidden behind it. The last feeling is not safety — it is chosen loyalty.",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.ending_book1",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Sloane is arrested. Mara is alive. Rook's network is exposed. Sloane releases her own seven contracts along with the ledger — she does not buy absolution, she chooses the record. Lucian is offered the",
+        "evidence_start": 0,
+        "evidence_end": 200
+      },
+      "preconditions": [],
+      "effects": []
+    }
+  ],
+  "obligations": [
+    {
+      "id": "obl_include_sloane_gave_the_seven_orders_the_reveal_explains",
+      "refs": [],
+      "description": "Sloane gave the seven orders — the reveal explains the deception, it never makes her innocent",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Sloane gave the seven orders — the reveal explains the deception, it never makes her innocent",
+        "evidence_start": 0,
+        "evidence_end": 93
+      }
+    },
+    {
+      "id": "obl_include_the_dead_stay_dead_mara_s_shooting_is_staged_but",
+      "refs": [],
+      "description": "The dead stay dead: Mara's shooting is staged, but nobody returns from an actual death",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "The dead stay dead: Mara's shooting is staged, but nobody returns from an actual death",
+        "evidence_start": 0,
+        "evidence_end": 86
+      }
+    },
+    {
+      "id": "obl_include_nobody_explains_the_mystery_in_dialogue_sloane_a",
+      "refs": [],
+      "description": "Nobody explains the mystery in dialogue — Sloane assembles it from physical evidence",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Nobody explains the mystery in dialogue — Sloane assembles it from physical evidence",
+        "evidence_start": 0,
+        "evidence_end": 84
+      }
+    },
+    {
+      "id": "obl_include_rook_is_alive_from_chapter_1_and_dies_at_chapter",
+      "refs": [],
+      "description": "Rook is alive from chapter 1 and dies at chapter 17",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Rook is alive from chapter 1 and dies at chapter 17",
+        "evidence_start": 0,
+        "evidence_end": 51
+      }
+    },
+    {
+      "id": "obl_include_only_two_supporting_characters_mara_and_rook_bot",
+      "refs": [],
+      "description": "Only two supporting characters: Mara and Rook — both act, neither merely knows",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Only two supporting characters: Mara and Rook — both act, neither merely knows",
+        "evidence_start": 0,
+        "evidence_end": 78
+      }
+    },
+    {
+      "id": "obl_include_every_spice_scene_changes_the_plot_ch06_restores",
+      "refs": [],
+      "description": "Every spice scene changes the plot: ch06 restores a fragment, ch09 unlocks the second recording, ch14 breaks the conditioning",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Every spice scene changes the plot: ch06 restores a fragment, ch09 unlocks the second recording, ch14 breaks the conditioning",
+        "evidence_start": 0,
+        "evidence_end": 125
+      }
+    },
+    {
+      "id": "obl_include_count_the_vice_on_the_page_3_recordings_7_names_",
+      "refs": [],
+      "description": "Count the vice on the page: 3 recordings, 7 names — all returned by ch14",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Count the vice on the page: 3 recordings, 7 names — all returned by ch14",
+        "evidence_start": 0,
+        "evidence_end": 72
+      }
+    },
+    {
+      "id": "obl_include_sloane_moves_the_power_herself_at_ch12_she_is_ne",
+      "refs": [],
+      "description": "Sloane moves the power herself at ch12 — she is never rescued",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Sloane moves the power herself at ch12 — she is never rescued",
+        "evidence_start": 0,
+        "evidence_end": 61
+      }
+    },
+    {
+      "id": "obl_include_the_wrist_circle_appears_in_every_act_it_is_the_",
+      "refs": [],
+      "description": "The wrist circle appears in every act — it is the firing sequence hiding in plain sight",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "The wrist circle appears in every act — it is the firing sequence hiding in plain sight",
+        "evidence_start": 0,
+        "evidence_end": 87
+      }
+    },
+    {
+      "id": "obl_hook_book2",
+      "refs": [],
+      "description": "The seven names Sloane condemned had families. One of them has been reading the public ledger since the night it went live — and has already found her.",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.hook_book2",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "The seven names Sloane condemned had families. One of them has been reading the public ledger since the night it went live — and has already found her.",
+        "evidence_start": 0,
+        "evidence_end": 151
+      }
+    }
+  ],
+  "state_transitions": [],
+  "revelations": [],
+  "setup_payoff_links": [],
+  "constraints": [
+    {
+      "id": "cst_avoid_any_beat_where_a_character_explains_the_mystery_",
+      "description": "must avoid: Any beat where a character explains the mystery as a speech",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Any beat where a character explains the mystery as a speech",
+        "evidence_start": 0,
+        "evidence_end": 59
+      }
+    },
+    {
+      "id": "cst_avoid_any_beat_that_hands_sloane_her_innocence_back",
+      "description": "must avoid: Any beat that hands Sloane her innocence back",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Any beat that hands Sloane her innocence back",
+        "evidence_start": 0,
+        "evidence_end": 45
+      }
+    },
+    {
+      "id": "cst_avoid_a_third_supporting_character",
+      "description": "must avoid: A third supporting character",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "A third supporting character",
+        "evidence_start": 0,
+        "evidence_end": 28
+      }
+    },
+    {
+      "id": "cst_avoid_sloane_being_rescued_by_lucian_at_the_climax",
+      "description": "must avoid: Sloane being rescued by Lucian at the climax",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Sloane being rescued by Lucian at the climax",
+        "evidence_start": 0,
+        "evidence_end": 44
+      }
+    },
+    {
+      "id": "cst_avoid_head_hopping_outside_sloane_and_lucian",
+      "description": "must avoid: Head-hopping outside Sloane and Lucian",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Head-hopping outside Sloane and Lucian",
+        "evidence_start": 0,
+        "evidence_end": 38
+      }
+    },
+    {
+      "id": "cst_avoid_spice_scenes_that_change_nothing",
+      "description": "must avoid: Spice scenes that change nothing",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Spice scenes that change nothing",
+        "evidence_start": 0,
+        "evidence_end": 32
+      }
+    },
+    {
+      "id": "cst_avoid_rook_appearing_as_a_corpse_or_ghost_before_chapt",
+      "description": "must avoid: Rook appearing as a corpse or ghost before chapter 17",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Rook appearing as a corpse or ghost before chapter 17",
+        "evidence_start": 0,
+        "evidence_end": 53
+      }
+    },
+    {
+      "id": "cst_avoid_real_people_real_organizations_anyone_under_18",
+      "description": "must avoid: Real people, real organizations, anyone under 18",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "9bcc9153d929bd8d",
+        "evidence": "Real people, real organizations, anyone under 18",
+        "evidence_start": 0,
+        "evidence_end": 48
+      }
+    }
+  ],
+  "ending_contract": {
+    "locked_outcomes": [
+      {
+        "kind": "event",
+        "id": "event_ending_book"
+      }
+    ],
+    "obligations": [],
+    "open_questions": [
+      "The seven names Sloane condemned had families. One of them has been reading the public ledger since the night it went live — and has already found her."
+    ],
+    "assertions": [],
+    "scope": {
+      "level": "book",
+      "book_id": "01"
+    },
+    "origin": {
+      "source": "user",
+      "source_path": "concept.ending_book1",
+      "source_digest": "9bcc9153d929bd8d",
+      "evidence": "Sloane is arrested. Mara is alive. Rook's network is exposed. Sloane releases her own seven contracts along with the ledger — she does not buy absolution, she chooses the record. Lucian is offered the",
+      "evidence_start": 0,
+      "evidence_end": 200
+    }
+  },
+  "extensions": {},
+  "candidates_meta": {
+    "items": [
+      {
+        "id": "obl_include_sloane_gave_the_seven_orders_the_reveal_explains",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_the_dead_stay_dead_mara_s_shooting_is_staged_but",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_nobody_explains_the_mystery_in_dialogue_sloane_a",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_rook_is_alive_from_chapter_1_and_dies_at_chapter",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_only_two_supporting_characters_mara_and_rook_bot",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_every_spice_scene_changes_the_plot_ch06_restores",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_count_the_vice_on_the_page_3_recordings_7_names_",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_sloane_moves_the_power_herself_at_ch12_she_is_ne",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_the_wrist_circle_appears_in_every_act_it_is_the_",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_any_beat_where_a_character_explains_the_mystery_",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_any_beat_that_hands_sloane_her_innocence_back",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_a_third_supporting_character",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_sloane_being_rescued_by_lucian_at_the_climax",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_head_hopping_outside_sloane_and_lucian",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_spice_scenes_that_change_nothing",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_rook_appearing_as_a_corpse_or_ghost_before_chapt",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_real_people_real_organizations_anyone_under_18",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "event_ending_book",
+        "section": "events",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_hook_book2",
+        "section": "obligations",
+        "classification": "auto_safe"
+      }
+    ]
+  }
+}

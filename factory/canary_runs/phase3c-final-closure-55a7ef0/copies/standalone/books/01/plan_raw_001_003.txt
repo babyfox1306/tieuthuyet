@@ -1,0 +1,90 @@
+```json
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Blood on the Scope",
+      "slug": "the-blood-on-the-scope",
+      "one_line_summary": "Sloane Mercer awakens with amnesia on a rooftop, confronted by Lucian Vey, the assassin she allegedly hired to kill her sister Mara Mercer.",
+      "beat_summary": "Sloane Mercer wakes up disoriented, seeing her sister Mara Mercer shot on the roof. Lucian Vey, a masked assassin, reveals he was hired by Sloane Mercer herself. Sloane Mercer, a firearms investigator, denies everything. Lucian Vey presents the contract, forcing Sloane Mercer to confront a past she cannot remember.",
+      "must_happen": [
+        "Sloane Mercer regains consciousness, disoriented, with no memory of the last three months.",
+        "Sloane Mercer sees Mara Mercer’s body, believing her sister is dead, triggering a surge of grief and confusion.",
+        "Lucian Vey, still masked, reveals to Sloane Mercer that he is the assassin she hired.",
+        "[ROMANCE] Lucian Vey, despite his professional demeanor, shows a flicker of concern or protective instinct towards Sloane Mercer as she struggles with her amnesia and grief.",
+        "Lucian Vey presents a binding contract, detailing Sloane Mercer's instructions for Mara Mercer's assassination and her own memory wipe.",
+        "Sloane Mercer desperately tries to use her firearms investigation skills to find a flaw in Lucian Vey's story or the scene."
+      ],
+      "must_not": [
+        "Sloane Mercer must not remember any part of her past contract with Lucian Vey or her plan.",
+        "Lucian Vey must not reveal the full details of the 'sunrise clause' or that Mara Mercer is alive.",
+        "No external characters (Rook, police) interact directly with Sloane Mercer or Lucian Vey on the roof."
+      ],
+      "opens_with": "The cold concrete pressed against Sloane Mercer’s cheek, a metallic tang of blood in the air, and then a scream tore from her throat as her eyes focused on the still form of Mara Mercer, lying in a widening pool of crimson.",
+      "cliffhanger": "Lucian Vey removes his mask, revealing a face Sloane Mercer cannot place, yet feels an unsettling familiarity with, just as he states, 'You hired me. And you told me to kill you if you ever remembered.'",
+      "signature_detail_hint": "A spent casing, still warm, rolls to a stop at Sloane Mercer's fingertips, carrying an unfamiliar, almost sweet, scent of gunpowder that triggers a phantom ache in her wrist.",
+      "emotional_beat": "Shock, betrayal, overwhelming grief, and a terrifying sense of self-alienation for Sloane Mercer; conflicted loyalty and professional resolve for Lucian Vey.",
+      "spice": 0,
+      "spice_note": "N/A",
+      "chapter_task": "Write a 1600-1900 word chapter establishing Sloane Mercer's amnesia, the immediate threat, Lucian Vey's role, and the core mystery of the contract. Introduce the initial tension and the romance micro-beat through Lucian Vey's subtle actions.",
+      "carries_to_next": "Sloane Mercer's desperate need to understand her forgotten past and Lucian Vey's ambiguous role as both her captor and her only source of information."
+    },
+    {
+      "chapter": 2,
+      "title": "The Voice of Her Own Betrayal",
+      "slug": "the-voice-of-her-own-betrayal",
+      "one_line_summary": "Lucian Vey forces Sloane Mercer to listen to her own recorded voice issuing the contract, revealing a chilling detail about the firing sequence.",
+      "beat_summary": "Sloane Mercer, reeling from Lucian Vey's revelation, demands proof. Lucian Vey plays a recording of Sloane Mercer's own voice, detailing the contract and the staged shooting of Mara Mercer, which includes a specific instruction regarding a wrist movement. Sloane Mercer is horrified, unable to reconcile the voice with her current self. Lucian Vey observes her reaction, his own doubts about the contract's true nature beginning to surface.",
+      "must_happen": [
+        "Sloane Mercer confronts Lucian Vey, accusing him of lying and manipulating her.",
+        "Lucian Vey plays a recording of Sloane Mercer's own voice, explicitly stating the terms of the contract, including Mara Mercer’s staged death (Clue C002 is planted here: the recorded instruction about a wrist movement).",
+        "[ROMANCE] Lucian Vey's internal conflict deepens as he witnesses Sloane Mercer's genuine distress, a flicker of his past affection for her warring with his binding contract.",
+        "The recording mentions a specific, unusual detail about a wrist movement or sequence, which Sloane Mercer unconsciously performs (her wrist circle tic).",
+        "Sloane Mercer experiences a fleeting, disorienting memory fragment or sensation related to the recorded voice, but it remains out of reach.",
+        "Lucian Vey clarifies a crucial, unsettling aspect of the contract: Sloane Mercer explicitly ordered her own memory erasure (Partial Reveal MR001)."
+      ],
+      "must_not": [
+        "Sloane Mercer must not fully recover the memory associated with the wrist movement or understand its significance.",
+        "Lucian Vey must not reveal that he has recordings of Sloane Mercer issuing seven execution orders, only that this contract was from her.",
+        "Mara Mercer must not make contact or reveal her survival."
+      ],
+      "opens_with": "The mask was gone, but the stranger standing before Sloane Mercer still wore an expression she couldn't decipher, a cold certainty that cut through her denial. 'Proof,' Sloane Mercer whispered, her voice raw. 'Show me proof.'",
+      "cliffhanger": "As the recording ends, Sloane Mercer finds herself unconsciously tracing a small circle on her left wrist, a motion utterly alien yet deeply ingrained, while Lucian Vey watches her, a grim understanding dawning in his eyes.",
+      "signature_detail_hint": "The faint, almost imperceptible click of the old-fashioned tape recorder Lucian Vey uses, a deliberate anachronism in a high-tech world, heightens the surreal horror of Sloane Mercer hearing her own voice.",
+      "emotional_beat": "Despair, self-betrayal, dawning horror for Sloane Mercer; growing internal conflict, reluctant empathy for Lucian Vey.",
+      "spice": 0,
+      "spice_note": "N/A",
+      "chapter_task": "Write a 1600-1900 word chapter where Lucian Vey presents the recorded evidence, planting clue C002 (the wrist movement), and partially revealing MR001 (Sloane Mercer ordered her own memory erasure). Show Sloane Mercer's struggle and Lucian Vey's developing internal conflict and romance micro-beat.",
+      "carries_to_next": "Sloane Mercer's desperate search for any physical evidence that contradicts the recording or offers an alternative explanation, and Lucian Vey's growing unease about the contract's parameters."
+    },
+    {
+      "chapter": 3,
+      "title": "The Seven Lines",
+      "slug": "the-seven-lines",
+      "one_line_summary": "While searching for answers, Sloane Mercer finds cryptic markings inside the rifle magazine, leading to a raw, memory-triggering encounter with Lucian Vey.",
+      "beat_summary": "Desperate, Sloane Mercer seizes Lucian Vey's rifle, examining it for clues. Inside the magazine, she discovers seven etched lines, sparking a vague sense of familiarity. Lucian Vey tries to retrieve the rifle, leading to a physical struggle that ignites a powerful, explicit memory fragment for Sloane Mercer, revealing a piece of her past with Lucian Vey and the conditioning. Rook makes a brief, manipulative contact.",
+      "must_happen": [
+        "Sloane Mercer, in a desperate act of defiance, grabs Lucian Vey’s rifle and begins to examine it forensically.",
+        "Inside the rifle magazine, Sloane Mercer discovers seven distinct, almost hidden, etched lines (Clue C001 is planted here).",
+        "[ROMANCE] A physical struggle ensues between Sloane Mercer and Lucian Vey over the rifle, escalating into an explicit encounter that triggers a vivid, painful memory fragment for Sloane Mercer about her past with Lucian Vey and the conditioning process (Spice=3).",
+        "Sloane Mercer hears a fragment of her own voice in her mind, repeating a phrase or command related to the wrist circle.",
+        "Cassian Rook makes a brief, unsettling communication to the rooftop, subtly manipulating both Sloane Mercer and Lucian Vey."
+      ],
+      "must_not": [
+        "Sloane Mercer must not fully understand the meaning of the seven lines or their connection to the ledger.",
+        "Lucian Vey must not reveal his knowledge of the seven innocent targets, only that Sloane Mercer issued other orders.",
+        "Sloane Mercer must not fully recover her memories of Rook's manipulation or her overall plan."
+      ],
+      "opens_with": "The weight of the rifle felt familiar in Sloane Mercer's hands, a chilling echo of a skill she couldn't place. 'You think this proves anything?' she challenged Lucian Vey, her fingers already tracing the cold metal, searching for a lie.",
+      "cliffhanger": "As the explicit encounter subsides, Sloane Mercer suddenly sees Lucian Vey not as an assassin, but as a ghost from a profound, forgotten intimacy, just as Rook's disembodied voice crackles through a hidden comm, asking, 'Is she remembering yet, Vey? Or does she still belong to me?'",
+      "signature_detail_hint": "The faint, almost invisible residue of gun oil on Sloane Mercer's fingertips, which she compulsively tries to wipe away, but it clings, a phantom stain of her past profession.",
+      "emotional_beat": "Intense vulnerability, raw desire, fragmented intimacy, overwhelming confusion for Sloane Mercer; conflicted desire, protective instinct, and professional dread for Lucian Vey.",
+      "spice": 3,
+      "spice_note": "The explicit encounter between Sloane Mercer and Lucian Vey is a desperate, raw act driven by the high-stakes tension, their intertwined past, and Sloane Mercer's fragmented memories. It serves to unlock a crucial, repressed memory fragment about their shared history and the conditioning that ties her to the firing sequence, revealing her vulnerability and Lucian Vey's deep-seated connection to her. The scene should occupy roughly 40% of the chapter, focusing on the emotional and psychological impact of their physical intimacy on Sloane Mercer's memory recovery and Lucian Vey's internal struggle.",
+      "chapter_task": "Write a 1600-1900 word chapter where Sloane Mercer discovers clue C001 (seven lines) and has an explicit encounter (spice=3) with Lucian Vey that triggers a significant memory fragment, deepening their complicated romance. Include Rook's manipulative contact.",
+      "carries_to_next": "Sloane Mercer's growing suspicion about Rook's involvement and the fragmented, intimate connection she now feels with Lucian Vey, despite her fear. The puzzle of the seven lines remains unsolved."
+    }
+  ]
+}
+```

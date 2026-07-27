@@ -1,0 +1,16 @@
+suite: v3_final_closure
+ok: True
+git_head: 32f0b1028659d56b2913be5dd67f1ee72ae3d54e
+command: python -m factory.engine.tests.run_isolated_suite
+tests_run: 717
+passed: 716
+failures: 0
+errors: 0
+skipped: 1
+duration_seconds: 116.664
+production_leaks: 0
+preexisting_test_shaped:
+  preexisting:catalog:D:\tieuthuyet\tieuthuyet\catalog\demo
+  preexisting:catalog:D:\tieuthuyet\tieuthuyet\catalog\enf
+  preexisting:catalog:D:\tieuthuyet\tieuthuyet\catalog\ws
+  preexisting:workspaces:D:\tieuthuyet\tieuthuyet\factory\workspaces\demo

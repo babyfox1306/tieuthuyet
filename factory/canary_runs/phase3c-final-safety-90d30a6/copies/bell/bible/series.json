@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "series_id": "the-bell-names-the-dead",
+    "genre": "gothic_psychological_horror",
+    "target_language": "en"
+  },
+  "title": "The Bell Names the Dead",
+  "sub_niche": "gothic_psychological_horror",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "Each night at 2:17 a removed church bell rings for one person in Morrow Wick. By sunrise, the victim will be forced to reenact the previous death, uncover a buried fragment of a 1974 massacre, and name who dies next.",
+  "tropes": [
+    "repetition_with_mutation",
+    "buried_truth",
+    "haunted_records",
+    "small_town_secrets",
+    "sins_of_the_past",
+    "survivor_guilt",
+    "locked_room_mystery",
+    "noir_investigation"
+  ],
+  "leads": {
+    "female": {
+      "name": "Female Lead",
+      "age": 33,
+      "voice": "Precise, quietly sardonic, clipped—rarely uses metaphors; disbelief always edges her tone.",
+      "tics": [
+        "rubs thumb over paper’s watermark when anxious",
+        "counts windowpanes before speaking",
+        "rechecks locks three times before sleep"
+      ],
+      "boundary": "Refuses all supernatural explanations; will not accept incomplete records or official ambiguity; never permits emotional outburst in public.",
+      "internal_voice": "If I can't prove it, it didn't happen. Superstition is for the frightened, not the responsible."
+    },
+    "male": {
+      "name": "Male Lead",
+      "age": 47,
+      "voice": "Measured, officious, always on the verge of patronizing; every phrase hedged with plausible deniability.",
+      "tics": [
+        "taps index finger against his lips while thinking",
+        "obsessively straightens his tie when nervous",
+        "never makes direct eye contact during confrontation"
+      ],
+      "boundary": "Never admits fault; will not destroy original documents but manipulates their context; refuses to let anyone alone with archives.",
+      "wound": "Carrying the shame of his father's legacy, Gideon believes only he can 'manage' the town’s secrets, seeing exposure as a greater evil than truth."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Ada Voss",
+      "relation_to": "Elena Voss",
+      "relation_type": "mother",
+      "alive": false,
+      "secret": "Altered the death register to make Elena the final witness, not a victim."
+    },
+    {
+      "name": "Edmund Rusk",
+      "relation_to": "Gideon Rusk",
+      "relation_type": "father",
+      "alive": false,
+      "secret": "Erased the victims’ records in 1974 and sealed the church chamber."
+    },
+    {
+      "name": "Martha Bellamy",
+      "relation_to": "Elena Voss",
+      "relation_type": "childhood friend, local doctor",
+      "alive": true,
+      "secret": ""
+    },
+    {
+      "name": "Father Malcolm Hewer",
+      "relation_to": "Saint Orison’s Church",
+      "relation_type": "former priest",
+      "alive": false,
+      "secret": "Participated in the disciplinary ritual in 1974."
+    },
+    {
+      "name": "Sergeant Colin Pryce",
+      "relation_to": "Elena Voss",
+      "relation_type": "local constable",
+      "alive": true,
+      "secret": ""
+    },
+    {
+      "name": "Seven Forgotten Children",
+      "relation_to": "Saint Orison’s Church",
+      "relation_type": "1974 victims",
+      "alive": false,
+      "secret": "Their erased names drive the loop."
+    }
+  ],
+  "central_mystery": {
+    "question": "Why does the bell, removed from Saint Orison’s Church in 1974, ring at 2:17 a.m. for selected victims in Morrow Wick—and what unfinished business compels each victim to reenact the previous death, reveal a new fragment of the past, and name the next to die?",
+    "answer": "The bell’s loop is an unfinished chain of testimony created by seven children who died, erased from the records, beneath Saint Orison’s Church in 1974. Each victim is compelled to reenact their predecessor’s final hours with one deliberate deviation, which reveals a sensory memory from the fire. The next victim is always chosen for their potential to advance the buried truth. Only by restoring the children’s names to the official death register can the cycle end.",
+    "reveal_chapter": 8
+  },
+  "bloodline": {
+    "description": "Elena Voss is the daughter of Ada Voss, who was not involved in the original 1974 crime. Gideon Rusk is the son of Edmund Rusk, the official who falsified the records. There is no blood relation between Elena and Gideon.",
+    "hard_rules": [
+      "female_lead and male_lead are not blood relatives",
+      "no hidden familial connections between victims and lead",
+      "all leads’ ancestry is known and does not overlap the erased children",
+      "no secret sibling, parent, or child plot twist"
+    ],
+    "lead_relation": "rivals"
+  },
+  "world_rules": [
+    "The bell from Saint Orison’s rings at 2:17 a.m. for the next chosen victim, despite being physically removed decades ago.",
+    "After hearing the bell, the named victim compulsively reenacts the previous victim’s last hours until sunrise.",
+    "Each reenactment contains one deliberate deviation, which reveals a new sensory memory from the 1974 fire.",
+    "Shortly before death, the victim writes the next person’s name in soot on an accessible surface.",
+    "The next victim is always someone with necessary knowledge, access, ancestry, or evidence to advance the testimony.",
+    "Victims cannot escape the loop by leaving Morrow Wick; they unconsciously return.",
+    "Physical restraint causes bystanders to perform fragments of the reenactment.",
+    "Victims die at sunrise unless the chain of testimony is completed.",
+    "All supernatural revelations must be verifiable with physical evidence.",
+    "No magic, demon, possession, or ghostly exposition; horror emerges from mutation of the familiar and loss of agency."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "A practical woman faces the supernatural consequences of a 24-year-old cover-up, and must decide whether her mother’s reputation matters more than justice for seven erased children.",
+      "ending_hook": "With the Saint Orison case closed, a single, identical bell tone is heard in distant Black Fen—Saint Agnes’s Church."
+    }
+  ],
+  "content_rules": [
+    "No sexual or romantic content.",
+    "Violence is disturbing but restrained; no gratuitous gore.",
+    "No comedy or comic relief.",
+    "No children or minors as on-page present-day victims.",
+    "All supernatural events must be justified by the established rules.",
+    "No non-consensual possession or erasure of personality.",
+    "No 18+ content; strictly psychological and procedural horror."
+  ],
+  "bible_status": "approved"
+}

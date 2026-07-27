@@ -1,0 +1,105 @@
+---
+series: the-cold-case-girl
+book: 1
+chapter: 24
+title: The Trap Within
+spice: 1
+word_count: 691
+status: draft
+needs_fix: []
+promoted_at: '2026-07-27T02:52:57Z'
+---
+
+Wren answered my return call with a name.
+
+"Elias Venn," she said. "The contractor I told you about. He queried an old recovery endpoint three nights ago. That could explain the access under my credentials."
+
+"Could?"
+
+"The endpoint should have been dead. I killed it when I rebuilt the archive."
+
+She gave me an address, two aliases, and a history of financial disputes before I asked for any of them. The detail was impressive. It was also too ready, a complete suspect assembled while I was still deciding whether a crime had occurred.
+
+"Don't contact him again," I said. "Freeze the logs and send me a read-only copy."
+
+"Already done."
+
+When the call ended, I did not open the link she sent. Wren had built our encrypted archive. She had designed its recovery system, rotated its keys, and taught the rest of us which warnings to ignore. Any evidence she delivered through that system could be genuine, altered, or both.
+
+I needed a test she could not administer.
+
+I bought three prepaid phones from three stores and made three calls from three different neighborhoods. The time of the proposed operation stayed the same. Only the location changed.
+
+I told Sasha that Rhodes had moved the original Meridian ledger into the courthouse records annex.
+
+I told Priya it was hidden in the marina's medical-transfer bay.
+
+I told Wren it was sealed beneath a loose deck plate at the old pier.
+
+Each version carried the same request: stay silent until I confirmed the retrieval. I did not put any version in the archive. I did not send a text. The words existed only in three calls.
+
+Sasha asked what legal authority I thought would get me into a sealed annex.
+
+Priya warned me that the transfer bay had cameras and a night attendant.
+
+Wren said, "The old pier has been condemned for two years. If Rhodes chose it, he chose it because no one would hear you."
+
+"Can you check the cameras?"
+
+"There aren't any."
+
+That was the only answer she gave.
+
+I returned to the safe house and placed all three phones on the table. Rain tapped against the single window. The room smelled of wet plaster and the bleach the landlord used in the hall.
+
+For four hours, nothing happened.
+
+At 1:12 AM, my personal phone lit with a message from Victor Rhodes.
+
+The old pier is unsafe after dark. You should bring a light.
+
+I read it once.
+
+Then again.
+
+He had not named the courthouse annex. He had not named the marina. He had repeated the location I had given only Wren.
+
+The result did not tell me why she had done it. It did not show me what she had sent or how long she had been sending it. But it eliminated coincidence.
+
+I photographed the message with a camera that had never touched our network, removed its memory card, and sealed the card in an envelope. On the front I wrote the date, the time, and one word:
+
+WREN.
+
+I called Sasha from a fourth phone.
+
+"I ran a canary," I said. "Three locations. Rhodes repeated Wren's."
+
+The silence on her end lasted several seconds. "Could he have learned it another way?"
+
+"Not from me."
+
+"That isn't the same as no."
+
+It was why Sasha was still alive. She distrusted conclusions that arrived before proof.
+
+"I know," I said. "I need a second test."
+
+"And if it points to her again?"
+
+"Then we contain her access before we confront her."
+
+"Nadia, she built the access."
+
+"Which is why she can't know we're moving."
+
+After we hung up, I powered down the three prepaid phones and removed their batteries. The personal phone remained on the table, Rhodes's message still visible.
+
+The old pier.
+
+One location. One recipient. One answer.
+
+I had spent days letting paranoia turn every silence into evidence. This was different. This was a controlled result.
+
+But a controlled result was not yet a confession, and Wren still held the map to everything we had built.
+
+For the next test, I would give her a door that opened into an empty room and see who arrived.

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "repair_canary_report",
+  "run_id": "phase3c-20260723",
+  "picks": [],
+  "results": [],
+  "resources": {
+    "writer_calls": 0,
+    "qc_calls": 0,
+    "integrity_extractor_calls": 0,
+    "integrity_verifier_calls": 0,
+    "contract_compiler_calls": 0,
+    "contract_compliance_calls": 0,
+    "quality_evaluator_calls": 0,
+    "quality_repairer_calls": 0,
+    "total_semantic_calls": 0,
+    "cache_hits": 0,
+    "cache_misses": 0,
+    "input_chars": 0,
+    "output_chars": 0,
+    "latency_seconds": 0.0,
+    "routes_failed": 0,
+    "operator_actions": 0,
+    "deterministic_checks": 0,
+    "stopped_for_unavailable_routes": 0
+  },
+  "families_covered": [],
+  "created_at": "2026-07-23T10:58:25Z"
+}

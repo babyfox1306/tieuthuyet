@@ -1,0 +1,161 @@
+---
+series: the-cold-case-girl
+book: 1
+chapter: 30
+title: The Old Place
+spice: 1
+word_count: 908
+status: draft
+needs_fix: []
+promoted_at: '2026-07-27T02:53:26Z'
+---
+
+"You took your time," Evelyn Shaw said.
+
+"I was saving the favor."
+
+"Favors depreciate."
+
+The diner smelled of burned coffee and old grease. Evelyn had chosen the booth with a view of both doors. A gray coat lay folded beside her, dry despite the rain.
+
+I placed Wren's photograph of the C-010 and C-011 labels on the table.
+
+"I need the release architecture," I said. "Not a door. Not a distraction. The truth."
+
+Evelyn glanced at the photograph. "Victor hired me to design the physical layer. His attorney handles C-010. His brother David co-controls C-011."
+
+"What is in each?"
+
+"C-010 is a press package. Croft timelines, allegations about your network, enough authentic material to make reporters ask for the rest. C-011 is the evidentiary file: original marina footage, the fitting recovered from Julian's yacht, witness contact, chain-of-custody documents."
+
+"Where?"
+
+"A private vault in Seattle. Victor and David are co-controllers. Either can inspect, remove, or order destruction. If one dies, the other remains sole controller."
+
+"Why give David that power?"
+
+"Because Victor believed the forged trusts made David incapable of using that authority against him. Machines fail without fear. Family rarely does."
+
+Evelyn slid a thin folder across the table.
+
+Inside were trust documents naming David's twenty-three-year-old daughter, Lena Rhodes, as beneficial owner of three Meridian accounts. Her signature appeared on each page.
+
+"Forged?" I asked.
+
+"Copied from college financial-aid forms. Lena has never seen the accounts. Victor moved money through her name and kept the documents as leverage. If David refused an instruction, Victor could make his daughter look like a willing nominee in a corruption scheme."
+
+The motive had a face now.
+
+"Does David know?"
+
+"He knows Victor threatened Lena. He has never seen the underlying papers."
+
+"You have."
+
+"I built the contingency."
+
+No apology. No claim of innocence.
+
+"Were you loyal to him?" I asked.
+
+Evelyn took a slow drink of coffee. "Loyalty is what clients call exclusivity after they stop paying for it."
+
+"Is Victor still paying?"
+
+"Enough to make this conversation expensive."
+
+"Name the price."
+
+"My debt to you ends tonight. In exchange, I give you a way to put those documents in David's hands and the evidence that makes Vance vulnerable. Later, I may offer you work. You will be free to refuse."
+
+The last sentence was too carefully phrased.
+
+"And if I refuse later?"
+
+"Then we will both know where we stand."
+
+She placed a second folder beside the first. It contained billing records showing Gerald Vance's firm paid the private investigators who threatened Helena Cruz's employer. A recorded call authorization bore Vance's initials. Enough for professional discipline. Possibly witness tampering.
+
+"Vance is not brave," Evelyn said. "He carries C-010 because Victor's secrets protect him. Show him that the same secrets can indict him, and he may prefer a written hold."
+
+"May."
+
+"Certainty is for people selling religion."
+
+I turned to the last page: a weekly schedule for a supervised family-visitation center in Seattle. David Rhodes volunteered there on Wednesdays. Lena worked in the same building as a counselor.
+
+"You want me to approach them together."
+
+"I want David to see what Victor did before he has time to decide the papers are another trick."
+
+"And C-011?"
+
+"David can enter the vault, inspect it, and authorize destruction. He will not do that merely because he hates his brother. He might do it to free his daughter."
+
+Evelyn looked through the rain-streaked window. A dark sedan passed and kept going.
+
+"One more thing," she said. "A detective named Marcus Holt has been tracing the access market Victor used. Contractor records, false credentials, surveillance brokers. He questioned Priya because her audit touched one of our routes."
+
+Our.
+
+"Your network," I said.
+
+"My business."
+
+"Holt corrupt?"
+
+"Persistent."
+
+It was not an answer.
+
+"Did Victor use Holt?"
+
+"No. Victor used the audit after Wren told him about it. Holt was following the same contractor for his own case."
+
+That removed another piece of Rhodes's mythology. He had not planted every person in our path. He had recognized pressure and leaned on it.
+
+"Why tell me?"
+
+"Because when people mistake coincidence for control, they give men like Victor powers they do not have."
+
+She gathered her coat.
+
+"You still haven't told me why you're helping beyond an old debt."
+
+"Victor believed hiring my network meant owning it. I dislike clients who confuse access with possession."
+
+It sounded personal because it was profitable.
+
+At the door, Evelyn stopped.
+
+"If you kill him before Vance signs the hold, C-010 may move on his standing instruction. If David has not cleared the vault, C-011 remains available to whoever can control him. If you wait beyond the deadline, C-010 moves anyway. Sequence is the only mercy you get."
+
+"How do I reach David?"
+
+"You don't." She nodded toward the folder. "Sasha approaches as counsel. You stay out of sight until he asks to meet you."
+
+"You know Sasha's name."
+
+Evelyn smiled without warmth. "I know everyone's name."
+
+Then she stepped into the rain.
+
+On the table, beneath her coffee cup, she had left a final slip of paper.
+
+It contained a current cardiology appointment for Victor Rhodes and a diagnosis of recurrent ventricular arrhythmia.
+
+Not a weapon. A vulnerability.
+
+I put it in the folder and called Sasha from the blank phone.
+
+"Evelyn gave us terms," I said.
+
+"Did she give us truth?"
+
+"Enough to verify."
+
+"Good. We verify first."
+
+No proof, no move.
+
+Wren's betrayal had taught us that much.

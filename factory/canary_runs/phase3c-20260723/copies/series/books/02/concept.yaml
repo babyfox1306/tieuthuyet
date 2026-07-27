@@ -1,0 +1,119 @@
+concept_status: ready
+concept_schema_version: 2
+target_language: en
+chapter_count: 10
+title: The Record of the Dead
+logline: Sofia Bellini survived the summit — the only witness left, the girl who broke
+  the machine. Now a closed tribunal has called her to testify, and Elias van Doren
+  has come back to clear her name. He should not have looked so closely. Because the
+  system that rewrites people to death was not trained on Nadia Petrescu by accident.
+  It was built by her daughter. And Sofia has been the architect all along.
+author_directive: "CENTRAL TWIST (reveal ch8-9, must land):\nSofia is the architect\
+  \ of the system, and Nadia Petrescu's daughter. The entire premise of Book 1 — Sofia\
+  \ as sympathetic survivor — was a mask. Every \"kind\" act of speaking-for-others\
+  \ was her exercising control. This does NOT contradict Book 1; it re-motivates it.\
+  \ Nothing in Book 1's events changes — only WHY Sofia did them.\n\nLEADS:\n- Sofia\
+  \ Bellini (female, now 19). Antagonist disguised as protagonist for 8 chapters.\
+  \ Cold underneath warmth. Her tell: she reframes everyone's words \"to help.\" Reader\
+  \ should like her, then feel sick realizing what that likability was. Do NOT make\
+  \ her cartoonishly evil — she believes she is right, that she is protecting people\
+  \ from weakness.\n  CRUCIALLY: Sofia sees herself as a SAVIOR. Each summit death,\
+  \ in her mind, is a soul saved from the weakness that killed her mother. She feels\
+  \ merciful while doing monstrous things. The reader sees the gap; she never does.\n\
+  - Elias van Doren (male, 19, stutters). The one person she never broke — his refusal\
+  \ to be spoken for is why he survived. He returns believing Sofia is a victim, and\
+  \ investigates to clear her. His love is genuine. His investigation is what unmasks\
+  \ her. He is the moral center; the reader's trust lives in him.\n\nSTRUCTURE (10\
+  \ ch, tribunal):\n- Ch1-3: The tribunal convenes. Sofia the star witness, \"helping\"\
+  \ everyone. Elias returns to clear her name. First new death — a witness whose testimony\
+  \ was \"cleaned up\" in the record. Reader still trusts Sofia.\n- Ch4-5: Elias grows\
+  \ uneasy — Sofia \"helps\" him too much. Reader still sympathetic.\n- Ch5-6: Intimacy\
+  \ between Sofia and Elias (peak spice 2). Must read as tender now, and sickening\
+  \ on reread — she is studying him even here.\n- Ch6: Elias finds the Petrescu maternity\
+  \ record. Sofia = Nadia's daughter.\n- Ch7: Elias realizes the system wasn't trained\
+  \ by accident. Someone built it from Nadia's file.\n- Ch8: TWIST fully lands — Sofia\
+  \ is the architect. The summit was her experiment. She confesses without remorse.\n\
+  - Ch9: Elias confronts her publicly with the truth. The room, primed by the tribunal's\
+  \ framing, hears him as an obsessed, unstable witness. Sofia does not argue — she\
+  \ says one small, merciful-sounding line (\"He's been through so much\") that reframes\
+  \ him as broken. The system consumes that framing and marks him. She kills him with\
+  \ counterfeit compassion — the \"kind\" act as death sentence, exactly like Book\
+  \ 1.\n- Ch10: Elias dies — the last control variable, confirming her model. Sofia\
+  \ says \"That is exactly what I said.\" Cold victory. She walks free, now the system's\
+  \ living operator.\n\nSPICE MAP:\n- Default spice 1. Peak spice 2 only ch5-6. NO\
+  \ explicit. The horror is the retroactive coldness — on reread the reader realizes\
+  \ she was studying him even in the tender moments. Heat is not the point; the wrongness\
+  \ underneath it is.\n\nPOV: third-limited anchored to Sofia — BUT the narration\
+  \ must NEVER lie outright. It withholds her true motive (she simply doesn't dwell\
+  \ on it on-page) rather than stating false feelings. Example: \"She was protecting\
+  \ Elias\" is allowed (technically true — she protects her control variable); \"\
+  She loved him with all her heart\" is FORBIDDEN (a lie the reader could later call\
+  \ cheating). On reread, every line must hold up as technically honest. This is the\
+  \ core craft challenge — QA will check this line by line.\n\nSIGNATURE:\n- The inverted\
+  \ final line: \"That is exactly what I said.\"\n- Nadia appears only through file/recording,\
+  \ never as a ghost.\n- The tribunal's official transcript visibly diverging in real\
+  \ time from what witnesses actually say.\n\nFORBIDDEN (canon):\n- NO brain chips,\
+  \ NO body-horror sci-fi, NO invented characters named Rook, NO sister for Sofia.\
+  \ Sofia's only blood tie is Nadia, her mother.\n- NO redemption arc for Sofia. She\
+  \ wins. The ending is cold.\n- Twist must NOT be revealed before ch8.\n- Do NOT\
+  \ contradict any factual event of Book 1 — only reinterpret motive.\n- NO gothic-well\
+  \ names: Vance, Thorne, Blackwood, Clara, Elara.\n- Narration must not state false\
+  \ emotions — withhold, never lie."
+surface_plot: A survivor's tribunal. Sofia — the girl who beat the language-machine
+  — is questioned about the summit deaths while the same rewriting system quietly
+  runs the court's official record, and witnesses who get "clarified" into the transcript
+  begin dying again. Everyone treats Sofia as the traumatized survivor helping to
+  solve it. Elias returns, digging through the archives to exonerate the girl he loves.
+true_plot: 'Sofia is Nadia Petrescu''s daughter. She did not survive the system —
+  she BUILT it. After watching officials rewrite her mother to death, she drew the
+  wrong lesson: the weak are those who let themselves be spoken for, and she would
+  never be one of them — she would be the one who speaks for others. She engineered
+  the machine from her mother''s case file and ran the summit as a live experiment
+  on eleven test subjects. "Protecting" Elias was not love — he was her control variable,
+  the one subject she could never fully manipulate. Nadia''s dying words, "That is
+  not what I said," were not spoken to the court. They were spoken to her own daughter,
+  who was already becoming the thing that killed her. Sofia took that final sentence
+  and made it the signature of her killing system.'
+must_include:
+- Sofia revealed as Nadia's daughter and the system's architect at ch8
+- Book 1 events reinterpreted, never contradicted
+- Elias dies unmasking her — his love is what exposes her
+- Sofia kills Elias with one merciful-sounding line, not a random system death
+- Sofia sees herself as a savior throughout — feels merciful while doing monstrous
+  things
+- 'Inverted final line: "That is exactly what I said"'
+- Cold ending — Sofia wins, no redemption
+must_avoid:
+- Brain chips or body-horror sci-fi
+- Invented characters (Rook, or a sister for Sofia)
+- Sofia redemption or death
+- Twist revealed before chapter 8
+- Narration stating false emotions (it withholds, never lies)
+ending_book1: The tribunal "solves" the case — wrongly. Elias is dead, filed as an
+  unstable witness. Sofia is cleared and walks free. The reader now understands Book
+  1 was narrated by the villain. The case closes on a lie the reader can see through
+  but no character can.
+hook_book2: The system no longer needs a dead woman's case file to learn from. It
+  has a living operator who believes in it completely — Sofia, now inside the institution
+  that owns it, choosing who gets rewritten next, certain she is saving them.
+notes: 10 chapters. Book 2 of series the-language-of-the-dead
+forbidden_phrases:
+- Vance
+- Thorne
+- Blackwood
+- Elara
+- Clara
+- brain chip
+- implant
+- Rook
+surface_order:
+  event_id: sofia_identity
+  exact_text: Sofia Bellini is the last surviving witness of the summit.
+  visible_from_chapter: 1
+  appears_unconditional: true
+binding_condition:
+  event_id: sofia_identity
+  canonical_text: Sofia Bellini is Nadia Petrescu's daughter and the architect of
+    the system; the summit was her experiment.
+  reveal_chapter: 8
+  exact_wording_required_when_explicitly_stated: true

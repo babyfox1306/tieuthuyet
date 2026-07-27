@@ -1,0 +1,734 @@
+{
+  "ok": true,
+  "passed": true,
+  "skipped": false,
+  "workspace_id": "the-second-wife",
+  "book_slug": "01-the-second-wife",
+  "checked_at": "2026-07-25T13:34:19.498353+00:00",
+  "chapter_count": 10,
+  "expected_chapters": 10,
+  "target_language": "en",
+  "checks": [
+    {
+      "id": "EG-01",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-02",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-03",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-06",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-08",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-10",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-11",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-13",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-12",
+      "severity": "warn",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-16",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-16b",
+      "severity": "error",
+      "passed": true,
+      "chapter": 1
+    },
+    {
+      "id": "EG-01",
+      "severity": "error",
+      "passed": true,
+      "chapter": 2
+    },
+    {
+      "id": "EG-02",
+      "severity": "error",
+      "passed": true,
+      "chapter": 2
+    },
+    {
+      "id": "EG-03",
+      "severity": "error",
+      "passed": true,
+      "chapter": 2
+    },
+    {
+      "id": "EG-06",
+      "severity": "error",
+      "passed": true,
+      "chapter": 2
+    },
+    {
+      "id": "EG-08",
+      "severity": "error",
+      "passed": true,
+      "chapter": 2
+    },
+    {
+      "id": "EG-10",
+      "severity": "error",
+      "passed": true,
+      "chapter": 2
+    },
+    {
+      "id": "EG-11",
+      "severity": "error",
+      "passed": true,
+      "chapter": 2
+    },
+    {
+      "id": "EG-13",
+      "severity": "error",
+      "passed": true,
+      "chapter": 2
+    },
+    {
+      "id": "EG-12",
+      "severity": "warn",
+      "passed": true,
+      "chapter": 2
+    },
+    {
+      "id": "EG-16",
+      "severity": "error",
+      "passed": true,
+      "chapter": 2
+    },
+    {
+      "id": "EG-16b",
+      "severity": "error",
+      "passed": true,
+      "chapter": 2
+    },
+    {
+      "id": "EG-01",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-02",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-03",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-06",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-08",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-10",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-11",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-13",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-12",
+      "severity": "warn",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-16",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-16b",
+      "severity": "error",
+      "passed": true,
+      "chapter": 3
+    },
+    {
+      "id": "EG-01",
+      "severity": "error",
+      "passed": true,
+      "chapter": 4
+    },
+    {
+      "id": "EG-02",
+      "severity": "error",
+      "passed": true,
+      "chapter": 4
+    },
+    {
+      "id": "EG-03",
+      "severity": "error",
+      "passed": true,
+      "chapter": 4
+    },
+    {
+      "id": "EG-06",
+      "severity": "error",
+      "passed": true,
+      "chapter": 4
+    },
+    {
+      "id": "EG-08",
+      "severity": "error",
+      "passed": true,
+      "chapter": 4
+    },
+    {
+      "id": "EG-10",
+      "severity": "error",
+      "passed": true,
+      "chapter": 4
+    },
+    {
+      "id": "EG-11",
+      "severity": "error",
+      "passed": true,
+      "chapter": 4
+    },
+    {
+      "id": "EG-13",
+      "severity": "error",
+      "passed": true,
+      "chapter": 4
+    },
+    {
+      "id": "EG-12",
+      "severity": "warn",
+      "passed": true,
+      "chapter": 4
+    },
+    {
+      "id": "EG-16",
+      "severity": "error",
+      "passed": true,
+      "chapter": 4
+    },
+    {
+      "id": "EG-16b",
+      "severity": "error",
+      "passed": true,
+      "chapter": 4
+    },
+    {
+      "id": "EG-01",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-02",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-03",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-06",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-08",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-10",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-11",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-13",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-12",
+      "severity": "warn",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-16",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-16b",
+      "severity": "error",
+      "passed": true,
+      "chapter": 5
+    },
+    {
+      "id": "EG-01",
+      "severity": "error",
+      "passed": true,
+      "chapter": 6
+    },
+    {
+      "id": "EG-02",
+      "severity": "error",
+      "passed": true,
+      "chapter": 6
+    },
+    {
+      "id": "EG-03",
+      "severity": "error",
+      "passed": true,
+      "chapter": 6
+    },
+    {
+      "id": "EG-06",
+      "severity": "error",
+      "passed": true,
+      "chapter": 6
+    },
+    {
+      "id": "EG-08",
+      "severity": "error",
+      "passed": true,
+      "chapter": 6
+    },
+    {
+      "id": "EG-10",
+      "severity": "error",
+      "passed": true,
+      "chapter": 6
+    },
+    {
+      "id": "EG-11",
+      "severity": "error",
+      "passed": true,
+      "chapter": 6
+    },
+    {
+      "id": "EG-13",
+      "severity": "error",
+      "passed": true,
+      "chapter": 6
+    },
+    {
+      "id": "EG-12",
+      "severity": "warn",
+      "passed": true,
+      "chapter": 6
+    },
+    {
+      "id": "EG-16",
+      "severity": "error",
+      "passed": true,
+      "chapter": 6
+    },
+    {
+      "id": "EG-16b",
+      "severity": "error",
+      "passed": true,
+      "chapter": 6
+    },
+    {
+      "id": "EG-01",
+      "severity": "error",
+      "passed": true,
+      "chapter": 7
+    },
+    {
+      "id": "EG-02",
+      "severity": "error",
+      "passed": true,
+      "chapter": 7
+    },
+    {
+      "id": "EG-03",
+      "severity": "error",
+      "passed": true,
+      "chapter": 7
+    },
+    {
+      "id": "EG-06",
+      "severity": "error",
+      "passed": true,
+      "chapter": 7
+    },
+    {
+      "id": "EG-08",
+      "severity": "error",
+      "passed": true,
+      "chapter": 7
+    },
+    {
+      "id": "EG-10",
+      "severity": "error",
+      "passed": true,
+      "chapter": 7
+    },
+    {
+      "id": "EG-11",
+      "severity": "error",
+      "passed": true,
+      "chapter": 7
+    },
+    {
+      "id": "EG-13",
+      "severity": "error",
+      "passed": true,
+      "chapter": 7
+    },
+    {
+      "id": "EG-12",
+      "severity": "warn",
+      "passed": true,
+      "chapter": 7
+    },
+    {
+      "id": "EG-16",
+      "severity": "error",
+      "passed": true,
+      "chapter": 7
+    },
+    {
+      "id": "EG-16b",
+      "severity": "error",
+      "passed": true,
+      "chapter": 7
+    },
+    {
+      "id": "EG-01",
+      "severity": "error",
+      "passed": true,
+      "chapter": 8
+    },
+    {
+      "id": "EG-02",
+      "severity": "error",
+      "passed": true,
+      "chapter": 8
+    },
+    {
+      "id": "EG-03",
+      "severity": "error",
+      "passed": true,
+      "chapter": 8
+    },
+    {
+      "id": "EG-06",
+      "severity": "error",
+      "passed": true,
+      "chapter": 8
+    },
+    {
+      "id": "EG-08",
+      "severity": "error",
+      "passed": true,
+      "chapter": 8
+    },
+    {
+      "id": "EG-10",
+      "severity": "error",
+      "passed": true,
+      "chapter": 8
+    },
+    {
+      "id": "EG-11",
+      "severity": "error",
+      "passed": true,
+      "chapter": 8
+    },
+    {
+      "id": "EG-13",
+      "severity": "error",
+      "passed": true,
+      "chapter": 8
+    },
+    {
+      "id": "EG-12",
+      "severity": "warn",
+      "passed": true,
+      "chapter": 8
+    },
+    {
+      "id": "EG-16",
+      "severity": "error",
+      "passed": true,
+      "chapter": 8
+    },
+    {
+      "id": "EG-16b",
+      "severity": "error",
+      "passed": true,
+      "chapter": 8
+    },
+    {
+      "id": "EG-01",
+      "severity": "error",
+      "passed": true,
+      "chapter": 9
+    },
+    {
+      "id": "EG-02",
+      "severity": "error",
+      "passed": true,
+      "chapter": 9
+    },
+    {
+      "id": "EG-03",
+      "severity": "error",
+      "passed": true,
+      "chapter": 9
+    },
+    {
+      "id": "EG-06",
+      "severity": "error",
+      "passed": true,
+      "chapter": 9
+    },
+    {
+      "id": "EG-08",
+      "severity": "error",
+      "passed": true,
+      "chapter": 9
+    },
+    {
+      "id": "EG-10",
+      "severity": "error",
+      "passed": true,
+      "chapter": 9
+    },
+    {
+      "id": "EG-11",
+      "severity": "error",
+      "passed": true,
+      "chapter": 9
+    },
+    {
+      "id": "EG-13",
+      "severity": "error",
+      "passed": true,
+      "chapter": 9
+    },
+    {
+      "id": "EG-12",
+      "severity": "warn",
+      "passed": true,
+      "chapter": 9
+    },
+    {
+      "id": "EG-16",
+      "severity": "error",
+      "passed": true,
+      "chapter": 9
+    },
+    {
+      "id": "EG-16b",
+      "severity": "error",
+      "passed": true,
+      "chapter": 9
+    },
+    {
+      "id": "EG-01",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-02",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-03",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-06",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-08",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-10",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-11",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-13",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-12",
+      "severity": "warn",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-16",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-16b",
+      "severity": "error",
+      "passed": true,
+      "chapter": 10
+    },
+    {
+      "id": "EG-04",
+      "severity": "error",
+      "passed": true,
+      "detail": "chapters 1..10 complete"
+    },
+    {
+      "id": "EG-05",
+      "severity": "warn",
+      "passed": true
+    },
+    {
+      "id": "EG-07",
+      "severity": "warn",
+      "passed": true
+    },
+    {
+      "id": "EG-09",
+      "severity": "error",
+      "passed": true
+    },
+    {
+      "id": "EG-14",
+      "severity": "error",
+      "passed": true,
+      "detail": "pen_name='Reynard Frost'"
+    },
+    {
+      "id": "EG-15",
+      "severity": "error",
+      "passed": true,
+      "detail": "current_chapter=10 timeline_ch=10"
+    },
+    {
+      "id": "EG-18",
+      "severity": "warn",
+      "passed": false,
+      "chapter": 7,
+      "detail": "EG-18:reveal_replayed thread=_unscoped chapters=[7, 8, 10] «all of it» → \"She told you?\"\n\n\"Yes.\"\n\n\"All of it?\"\n\n\"Enough.\"\n\nHe sat down across from me.",
+      "snippet": "\"She told you?\"\n\n\"Yes.\"\n\n\"All of it?\"\n\n\"Enough.\"\n\nHe sat down across from me."
+    },
+    {
+      "id": "EG-18",
+      "severity": "warn",
+      "passed": false,
+      "chapter": 8,
+      "detail": "EG-18:reveal_replayed thread=_unscoped chapters=[7, 8, 10] «all of it» → All of it.",
+      "snippet": "All of it."
+    },
+    {
+      "id": "EG-18",
+      "severity": "warn",
+      "passed": false,
+      "chapter": 10,
+      "detail": "EG-18:reveal_replayed thread=_unscoped chapters=[7, 8, 10] «all of it» → After all of it.”\n\nI stayed in the shadows near the bookshelf, the locket pressed against my chest.",
+      "snippet": "After all of it.”\n\nI stayed in the shadows near the bookshelf, the locket pressed against my chest."
+    }
+  ],
+  "errors": 0,
+  "warnings": 3,
+  "needs_fix_chapters": [],
+  "summary": "Export gate PASS — 3 warning(s)"
+}

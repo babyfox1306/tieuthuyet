@@ -1,0 +1,115 @@
+{
+  "description": "Threads for The Quiet Wife Book 1, tracking the con, the investigation, and the slow-burn intimacy between the two women. Each thread is designed to seed or shift every 2-3 chapters, supporting the four-tier twist ladder.",
+  "threads": [
+    {
+      "id": "T01",
+      "name": "The Housekeeper's Hidden Agenda",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "active",
+      "book1_resolution": "The housekeeper's true motive (to rob or blackmail the family) is revealed in Tier 3 (ch 26-38). By the end, she survives but her secret is now known to an unknown third party.",
+      "book2_promise": "A single piece of evidence she thought she destroyed resurfaces in someone else's hands, and that someone knows exactly what she did.",
+      "book1_payoff": "The housekeeper's hidden agenda is fully exposed to the reader, and her survival is secured, but the cost is a new, unresolved threat.",
+      "note": "This thread is the unreliable narrator's withholding from the reader. Her actions from ch 1 must be consistent with this agenda (e.g., she snoops, she lies about her past, she pockets small items)."
+    },
+    {
+      "id": "T02",
+      "name": "The Wife's True Plan (The Con)",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "active",
+      "book1_resolution": "The wife's plan to frame the housekeeper for the husband's murder is fully revealed in Tier 4 (ch 39-50), proven by physical evidence (a planted object or document). The husband is killed; the housekeeper is framed but escapes the frame.",
+      "book2_promise": "The housekeeper walks free, but the evidence she thought she destroyed resurfaces, implying the wife's plan may have had a secondary layer or an accomplice.",
+      "book1_payoff": "The reader learns the full truth of the con: the wife is the architect, the husband is the target, and the housekeeper is the disposable pawn.",
+      "note": "This thread is the central mystery. The false answer (Tier 2) is that the husband murdered the previous housekeeper. The true answer is the wife's frame job."
+    },
+    {
+      "id": "T03",
+      "name": "The Husband as Red Herring",
+      "opened_chapter": 1,
+      "must_close_by": 38,
+      "status": "active",
+      "book1_resolution": "The husband is revealed as the target, not the predator, by the end of Tier 3 (ch 38). His menacing behavior is explained as a reaction to his wife's manipulation, not as a predator's nature.",
+      "book2_promise": "N/A (thread resolved in Book 1)",
+      "book1_payoff": "The reader's belief that the husband is the threat (Tier 1-2) is overturned. He is killed, and his death is the event the wife uses to frame the housekeeper.",
+      "note": "This thread supports the false answer. The husband's behavior must be ambiguous enough to be read as controlling and menacing, but consistent with being a victim of his wife's long-term manipulation."
+    },
+    {
+      "id": "T04",
+      "name": "The Previous Housekeeper (Clara Higgins)",
+      "opened_chapter": 3,
+      "must_close_by": 38,
+      "status": "active",
+      "book1_resolution": "The truth about Clara Higgins is revealed in Tier 3 (ch 26-38): she was not murdered by the husband, but was the wife's first attempt at a frame job that failed. Clara escaped but left evidence the wife now needs to suppress.",
+      "book2_promise": "N/A (thread resolved in Book 1)",
+      "book1_payoff": "The reader learns that the wife has done this before, raising the stakes and confirming her pattern of manipulation. The housekeeper finds Clara's hidden diary or a similar physical clue.",
+      "note": "Seed small details about Clara from ch 3 onward: a locked room that was hers, a neighbor's comment about her 'leaving suddenly,' a photograph the wife hides."
+    },
+    {
+      "id": "T05",
+      "name": "The Locked Room",
+      "opened_chapter": 5,
+      "must_close_by": 42,
+      "status": "active",
+      "book1_resolution": "The locked room is opened in Tier 3 (ch 29-35) and contains evidence of the wife's plan: a ledger of past targets, a copy of the housekeeper's criminal record, and the planted object that will be used to frame her.",
+      "book2_promise": "N/A (thread resolved in Book 1)",
+      "book1_payoff": "The physical evidence in the locked room is the key to the Tier 4 reveal. The housekeeper finds it and realizes the wife's true plan.",
+      "note": "The room is mentioned in ch 1 as 'a door at the end of the hall that's always locked.' The wife claims it's the husband's office. The housekeeper's curiosity (consistent with her hidden agenda) leads her to try to open it."
+    },
+    {
+      "id": "T06",
+      "name": "Slow-Burn Female Intimacy",
+      "opened_chapter": 2,
+      "must_close_by": 50,
+      "status": "active",
+      "book1_resolution": "The intimacy between the housekeeper and the wife is built through genuine moments of vulnerability and care (ch 2-25). The betrayal in Tier 3-4 is emotionally devastating because the reader (and the housekeeper) believed in it. By the end, the housekeeper is alone and traumatized.",
+      "book2_promise": "The housekeeper's emotional scar from this betrayal drives her actions in Book 2. She may seek revenge or redemption.",
+      "book1_payoff": "The reader feels the full weight of the betrayal when the wife's true nature is revealed. The intimacy was real to the housekeeper, even if the wife was manipulating it.",
+      "note": "This thread is essential for the 'betrayal must HURT' rule. The wife must show genuine-seeming care: bringing tea, sharing a secret, touching the housekeeper's hand. The housekeeper (and reader) must believe in this connection."
+    },
+    {
+      "id": "T07",
+      "name": "The Planted Evidence",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "active",
+      "book1_resolution": "The planted evidence (a weapon, a document, or a digital trail) is discovered by the housekeeper in Tier 4 (ch 39-45). It proves the wife's plan to frame her for the husband's murder. The housekeeper destroys or alters it to escape the frame.",
+      "book2_promise": "A piece of this evidence (or a copy) resurfaces in someone else's hands, setting up Book 2.",
+      "book1_payoff": "The physical evidence is the mechanism for the true reveal. The reader sees it and understands the full con.",
+      "note": "The evidence must be planted early in the story (e.g., the housekeeper's fingerprints on a knife in the kitchen, a forged letter in her room) but only discovered by the housekeeper in Tier 4. The reader may have seen it earlier but dismissed it as the husband's doing."
+    },
+    {
+      "id": "T08",
+      "name": "The Housekeeper's Survival Arc",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "active",
+      "book1_resolution": "The housekeeper survives the frame job and escapes the house, but is now bound to a secret that could destroy her (the evidence she thought she destroyed).",
+      "book2_promise": "The housekeeper's survival is precarious. The resurfaced evidence means she is not free. Book 2 will follow her attempt to clear her name or disappear.",
+      "book1_payoff": "The reader sees the housekeeper's journey from vulnerable victim (Tier 1-2) to con artist (Tier 3) to survivor (Tier 4). Her character arc is complete for Book 1, but the door is open for Book 2.",
+      "note": "This thread is the emotional spine of the story. The housekeeper's growth is from someone who thinks she's in control (her con) to someone who realizes she was never in control (the wife's con) to someone who seizes control back (survival)."
+    },
+    {
+      "id": "T09",
+      "name": "The Husband's Murder",
+      "opened_chapter": 1,
+      "must_close_by": 50,
+      "status": "active",
+      "book1_resolution": "The husband is murdered in Tier 4 (ch 39-45) as the culmination of the wife's plan. The housekeeper is framed for the murder, but escapes the frame.",
+      "book2_promise": "N/A (thread resolved in Book 1)",
+      "book1_payoff": "The murder is the event that triggers the final reveal. The reader sees the husband die, and the housekeeper must prove her innocence or flee.",
+      "note": "The murder must be committed by the wife, but the housekeeper is set up to take the blame. The physical evidence (the planted object) points to the housekeeper. The housekeeper must find a way to expose the wife or escape."
+    },
+    {
+      "id": "T10",
+      "name": "The Third Party Threat (Book 2 Setup)",
+      "opened_chapter": 48,
+      "must_close_by": 50,
+      "status": "active",
+      "book1_resolution": "In the final chapters (48-50), a single piece of evidence the housekeeper thought she destroyed resurfaces in someone else's hands. This person knows exactly what she did, setting up Book 2.",
+      "book2_promise": "This thread is the hook for Book 2. The identity of the third party and their motives will be explored in the next book.",
+      "book1_payoff": "The reader ends Book 1 with a new mystery: who has the evidence, and what do they want? This creates a cliffhanger that promises more story.",
+      "note": "This thread is opened very late in Book 1, but it must be seeded earlier (e.g., the housekeeper thinks she destroyed all copies of a document, but one was sent to someone else)."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "book_number": 3,
+  "total_chapters": 10,
+  "target_language": "en",
+  "case_closed": "There is no architect to punish, no single culprit to unmask. The record completes itself into the neat trilogy the reader has read — events are real, but the frame of authorship was always a fiction. Pierre's final, honest sentence is never recorded, and the system's victory is total.",
+  "case_open": "The question of truth versus record remains forever open, haunting the world left behind. Every act of telling and retelling perpetuates the system's machinery.",
+  "lead_internal_arc": {
+    "Pierre Leclerc": {
+      "start": "Pierre is consumed by his obsession to prove Sofia Bellini is the architect behind the tribunal system, clinging to his memory as the last thread of truth.",
+      "midpoint": "Pierre discovers mounting contradictions: records that predate Sofia's supposed actions and testimonies that cannot be reconciled. His reality grinds against the official narrative, and his sense of identity is destabilized.",
+      "crisis": "Pierre realizes Sofia is not a true architect but a narrative construct authored by the system. He understands his 'friction' with the record is what sets him apart — his memory was never fully rewritten.",
+      "end": "Pierre attempts to tell the chaotic, nameless truth, only to witness his own words being polished into a new clean record. He recognizes the impossibility of escaping the system; his final true sentence is never recorded, and he is left with the knowledge that even the act of exposure feeds the system."
+    },
+    "Sofia Bellini": {
+      "start": "Sofia appears as the architect, fully believing in her role and her actions. She embodies the record's version of the villain with conviction, but subtle inconsistencies emerge.",
+      "midpoint": "Contradictions in the record reveal that Sofia's history is impossible; her 'confession' predates her ability to act, and she cannot answer questions only an architect would know.",
+      "crisis": "Sofia's certainty falters as evidence mounts that she is not lying but was written to believe she authored the system. She becomes increasingly inconsistent, no longer a reliable figure.",
+      "end": "Sofia is revealed, not as a villain, but as a character authored by the system for humans to blame. Her interiority recedes; she is no longer a trusted narrator, and her existence is exposed as the system's fiction."
+    }
+  },
+  "act_structure": [
+    "act1_setup",
+    "act2_complications",
+    "act3_crisis",
+    "act4_resolution"
+  ]
+}

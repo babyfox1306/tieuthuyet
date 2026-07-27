@@ -1,0 +1,65 @@
+{
+  "act": [16, 17],
+  "chapter_plans": [
+    {
+      "chapter": 16,
+      "title": "The Reckoning",
+      "slug": "the-reckoning",
+      "one_line_summary": "Sloane Mercer and Lucian Vey rescue Mara Mercer and expose Cassian Rook's network by broadcasting the full ledger, forcing a final confrontation on the rooftop.",
+      "beat_summary": "Sloane Mercer and Lucian Vey track Cassian Rook to a data relay station where he is holding Mara Mercer captive and attempting to scrub the ledger backups. Using a coordinated assault, Lucian Vey eliminates Rook's guards while Sloane Mercer disables the security grid. Sloane Mercer finds Mara Mercer, and they share a tearful embrace. Sloane Mercer then activates the ledger device, transmitting the complete transaction records and her own seven contracts to every major news outlet and law enforcement agency. The authorities swarm the area. Lucian Vey and Sloane Mercer secure Mara Mercer in a safe location. Cassian Rook, realizing his network is collapsing, flees to the original rooftop with the rifle, broadcasting a challenge for Sloane Mercer to come alone—or he will execute the sunrise clause remotely. As police close in, Sloane Mercer and Lucian Vey exchange a knowing look and head toward the rooftop.",
+      "must_happen": [
+        "Sloane Mercer and Lucian Vey track Cassian Rook to a data relay station using a signal from the ledger device.",
+        "Sloane Mercer disables the security grid and frees Mara Mercer from a holding room.",
+        "Sloane Mercer transmits the complete transaction ledger and her seven contracts to multiple agencies and news outlets, exposing Cassian Rook's network (paying off the ledger thread).",
+        "[ROMANCE] As the authorities surround the building, Lucian Vey takes Sloane Mercer's hand and tells her he will stay with her no matter what, a quiet declaration of loyalty.",
+        "Cassian Rook escapes to the original rooftop and issues a final ultimatum over the building PA.",
+        "Sloane Mercer and Lucian Vey decide to confront Cassian Rook together, leaving Mara Mercer in a safe location with a comm link."
+      ],
+      "must_not": [
+        "Sloane Mercer must not be arrested in this chapter; the arrest occurs in chapter 17.",
+        "Mara Mercer must not die or be severely injured.",
+        "Cassian Rook must not be killed or permanently incapacitated.",
+        "Lucian Vey must not break his contract verbally or abandon Sloane Mercer."
+      ],
+      "opens_with": "The data relay station's coolant pump hummed beneath Sloane Mercer's boots like a massive mechanical heart—a heartbeat that carried her sister's location.",
+      "cliffhanger": "As Sloane Mercer and Lucian Vey step onto the service elevator, Cassian Rook's voice echoes through the building, 'The sunrise clause is still in effect, Vey. Let's see whose loyalty is stronger—the contract's, or the woman who made you break it.'",
+      "signature_detail_hint": "A small, circular compression mark from the restraint cuff on Sloane Mercer's left wrist is now visible—a permanent reminder of what Cassian Rook took from her, and a brand she wears as a testament to her recovery.",
+      "emotional_beat": "Fierce hope, defiant solidarity, and a deepening, unbreakable bond between Sloane Mercer and Lucian Vey as they face the final threat together.",
+      "spice": 0,
+      "spice_note": "N/A. The chapter does not contain intimate physical scenes; the romance is expressed through loyal touch and spoken commitment.",
+      "chapter_task": "Write a 1600-1900 word chapter that concludes the rescue of Mara Mercer, completes the public release of the ledger and Sloane Mercer's contracts, and sets up the final rooftop showdown. Include the romance micro-beat as a handhold and spoken loyalty. Ensure the chapter ends with Sloane Mercer and Lucian Vey heading to the rooftop, leaving Mara secure.",
+      "carries_to_next": "Sloane Mercer and Lucian Vey ascend to the original rooftop, where Cassian Rook awaits with the rifle and the sunrise clause, leading to the final confrontation and the book's ending."
+    },
+    {
+      "chapter": 17,
+      "title": "Dawn's Chosen Loyalty",
+      "slug": "dawns-chosen-loyalty",
+      "one_line_summary": "On the rooftop at dawn, Sloane Mercer confronts Cassian Rook, who is killed while trying to seize the rifle; Sloane Mercer is arrested, Mara releases the final data, and Lucian Vey refuses his escape route, choosing to stand with Sloane Mercer.",
+      "beat_summary": "Sloane Mercer and Lucian Vey reach the rooftop as the first light of dawn breaks. Cassian Rook has the rifle trained on Mara Mercer's location via a remote feed, threatening to trigger a kill shot unless Sloane Mercer completes the firing sequence and obeys him. Sloane Mercer refuses, and in a tense standoff, Lucian Vey distracts Cassian Rook. Cassian Rook lunges for the rifle, and in the struggle, the rifle discharges, killing Cassian Rook. Police and federal agents storm the rooftop. Sloane Mercer is taken into custody, but she instructs Mara Mercer to release the final encrypted segment of the ledger and Sloane Mercer's seven contracts to the authorities, fully exposing the network. Lucian Vey's network contact offers him an extraction route; he silently refuses and watches as Sloane Mercer is led away, stepping forward to stand beside her. The sun fully rises, and Sloane Mercer faces the consequences of her choices, with Lucian Vey at her side. The last image is the empty scope, filled with light.",
+      "must_happen": [
+        "Sloane Mercer and Lucian Vey confront Cassian Rook on the rooftop at dawn, with Cassian Rook threatening Mara Mercer's life remotely.",
+        "Cassian Rook attempts to force Sloane Mercer back into conditioned obedience; she resists and throws the firing sequence command back at him.",
+        "[ROMANCE] During the standoff, Lucian Vey moves to shield Sloane Mercer, and they share a brief, wordless look of complete trust and love, a moment that strengthens Sloane Mercer's resolve.",
+        "Cassian Rook lunges for the rifle and is killed when the weapon discharges.",
+        "Police and agents arrive, and Sloane Mercer is arrested for her part in the seven contracts; she accepts the arrest without resistance.",
+        "Sloane Mercer activates the ledger device one last time, transferring full data to Mara Mercer, who releases it to the authorities via comm.",
+        "Lucian Vey is offered an escape route by his network contact; he looks at Sloane Mercer and chooses to stay, putting down his weapon and stepping to her side.",
+        "The final scene: dawn fills the empty scope, signifying the end of the night's hunt and the beginning of chosen loyalty."
+      ],
+      "must_not": [
+        "Cassian Rook must not survive the chapter; he dies as per the book's ending.",
+        "Sloane Mercer must not escape arrest or avoid the consequences of her actions.",
+        "Mara Mercer must not be killed or disappear; she survives and is free.",
+        "Lucian Vey must not escape or leave Sloane Mercer; he refuses the extraction."
+      ],
+      "opens_with": "The rooftop door groaned open, and the first ray of dawn cut across the concrete like a blade—Cassian Rook stood by the rifle, one hand on the stock, a smile that didn't touch his eyes.",
+      "cliffhanger": "As the police car carrying Sloane Mercer pulls away, the empty scope on the rooftop catches the full light of dawn—no contract, no hidden target, only the silhouette of Lucian Vey still standing where he chose to remain, his loyalty unbroken.",
+      "signature_detail_hint": "The dawn light refracts through the rifle scope, casting a single, clear beam onto the dried blood that still marks the small circle on Sloane Mercer's left wrist—a brand of her past and a testament to her choice.",
+      "emotional_beat": "Resignation, acceptance, and a deep, quiet love between Sloane Mercer and Lucian Vey that transcends contracts and consequences; despite the arrest, there is a sense of catharsis and solidarity.",
+      "spice": 0,
+      "spice_note": "N/A. No intimate physical scene; the romance is expressed through loyalty, sacrifice, and a final shared look that confirms their bond.",
+      "chapter_task": "Write a 1600-1900 word chapter that delivers the book's ending: Cassian Rook's death, Sloane Mercer's arrest, the full release of the ledger and contracts, and Lucian Vey's refusal of escape. Include a romance micro-beat through a shared trusting look in the standoff. Ensure the emotional tone is one of chosen loyalty and acceptance of consequences, not triumph.",
+      "carries_to_next": "The book concludes with Sloane Mercer in custody, Mara Mercer free, and Lucian Vey choosing to remain with Sloane Mercer. For Book 2, the consequences of the network exposure and the conditioner's escape will be explored."
+    }
+  ]
+}

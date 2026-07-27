@@ -1,0 +1,202 @@
+```json
+{
+  "act": [37, 39],
+  "chapter_plans": [
+    {
+      "chapter": 37,
+      "title": "The Forged Confession",
+      "slug": "the-forged-confession",
+      "one_line_summary": "The housekeeper (unnamed narrator) realizes the forged confession has been sent to the police and she has hours to clear her name before she is arrested — forcing her to turn to the one person she swore she'd never trust again.",
+      "beat_summary": "The housekeeper (unnamed narrator) wakes in her motel room to the sound of a news report: the police have received an anonymous confession for the murder of Julian Blackwood, signed with her real name. Her photograph is on the screen. She has hours before they trace her. Panicked, she reviews the evidence she still has — the photographs on her phone, the key to the safety deposit box, Nora's note from the pier. She realizes the only person who can help her clear her name is Julian himself, who is still alive. She drives back to the motel where she found him, but he is gone. The room is empty. A single piece of paper is on the bed: 'You should have taken my deal. — J.' She is out of options. She calls the only number she has left — Nora's burner phone. Nora answers on the first ring. 'I knew you'd come back. Meet me at the estate. I'll help you — but it will cost you everything.'",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) wakes to a news report: an anonymous confession for Julian's murder has been sent to the police, signed with her real name. Her photograph is on the screen.",
+        "She panics and reviews her remaining evidence: the photographs on her phone, the safety deposit box key, Nora's pier note. She realizes only Julian can clear her name.",
+        "She drives to the motel where she last saw Julian. The room is empty. A note on the bed reads: 'You should have taken my deal. — J.' He has fled.",
+        "With no other options, she calls Nora's burner phone. Nora answers immediately, as if she was waiting. 'Meet me at the estate. I'll help you — but it will cost you everything.'",
+        "The housekeeper (unnamed narrator) agrees. She drives toward Blackwood Estate, her hands steady on the wheel. She is walking into the lion's den, but she has no choice.",
+        "She arrives at the estate gates. The house is dark. Nora is standing on the porch, holding a folder. 'Welcome home, Subject 8.'"
+      ],
+      "must_not": [
+        "Do not reveal that Nora sent the forged confession herself to force the housekeeper (unnamed narrator) back to the estate.",
+        "Do not reveal that Julian is hiding in the estate's basement, waiting to ambush both women.",
+        "Do not reveal that the folder Nora is holding contains the original frame documents — the ones that prove the housekeeper (unnamed narrator) was the target all along."
+      ],
+      "opens_with": "The motel TV flickered to life with the morning news, and my face stared back at me. 'Police have received an anonymous confession in the Blackwood murder case,' the anchor said. 'The suspect is believed to be armed and dangerous.'",
+      "cliffhanger": "The housekeeper (unnamed narrator) steps through the front door of Blackwood Estate. Nora closes the door behind her and locks it. 'We have until dawn,' Nora says. 'Then the police will be here. If we're going to fix this, we need to work together. And we need to find Julian before he finds us.'",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of steps from the gate to the front door: 47. She stops at the threshold and whispers, 'I never left.'",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, hollow resignation. She has returned to the place where everything began, and she knows she may not leave again. But she is no longer afraid — she is ready to fight.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is desperate and strategic — the housekeeper (unnamed narrator) is cornered and must ally with her enemy.",
+      "chapter_task": "Write 1700-1900 words executing the beat map: the housekeeper (unnamed narrator) realizes the forged confession has been sent to the police and she has hours to clear her name before she is arrested — forcing her to turn to the one person she swore she'd never trust again. The motel scene should feel like a trap closing. The call to Nora should be a moment of bitter surrender. End with the housekeeper (unnamed narrator) entering the estate to set up Chapter 38.",
+      "carries_to_next": "The housekeeper (unnamed narrator) and Nora are now allied against Julian, who is hiding somewhere in the estate. They have until dawn to find the evidence that will clear her name — or the police will arrest her.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['her own hidden agenda is exposed to the reader', 'the wife is the architect of everything', \"the wife's fragility was a performance\", \"the locked room contains the wife's ledger and her own criminal record\", 'the wife has done this before (Clara Higgins)'], 'does_not_know': ['the full extent of the frame job (the planted weapon, the forged letter)', 'the husband is the target, not the predator', 'when the murder will happen']}",
+            "the_wife: {'knows': ['the housekeeper has discovered her ledger and criminal record', 'the housekeeper knows she is the architect', 'the plan is at risk of exposure'], 'does_not_know': ['if the housekeeper will destroy the evidence or use it against her', \"the husband's awareness of her manipulation\"]}",
+            "the_husband: {'knows': [\"the housekeeper has discovered his wife's ledger\", 'the truth about his wife is coming out'], 'does_not_know': ['his wife is planning to kill him within the next 10 chapters']}",
+            "clara_higgins: {'knows': ['the new housekeeper has found her hidden diary or evidence'], 'does_not_know': ['if the housekeeper will use it to expose the wife']}",
+            "dr_ellis: {'knows': ['the husband is afraid of his wife', 'something is very wrong in the house'], 'does_not_know': ['the murder is imminent']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 36
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 38,
+      "title": "The Final Piece",
+      "slug": "the-final-piece",
+      "one_line_summary": "The housekeeper (unnamed narrator) meets the husband at the estate, where they search for the wife's final piece of evidence — but they find the wife waiting for them instead, and the final confrontation begins.",
+      "beat_summary": "The housekeeper (unnamed narrator) and Nora search the estate for Julian. They find evidence that he has been living in the basement — a cot, empty food cans, and a wall of photographs tracking Nora's movements. Julian has been watching her as closely as she watched him. They hear a noise from the study. Julian is there, waiting. He has a gun. He accuses Nora of trying to kill him and the housekeeper (unnamed narrator) of being her accomplice. Nora denies everything, claiming Julian is the one who sent the forged confession. The housekeeper (unnamed narrator) stands between them, realizing both are lying. She demands the truth. Julian throws a folder on the table — the final piece of evidence: a recording of Nora confessing to the experiment, made years ago. Nora's face goes pale. She lunges for the recording, but the housekeeper (unnamed narrator) grabs it first. The three of them stand in a triangle, each holding a piece of the truth, each waiting for the others to make a move.",
+      "must_happen": [
+        "[PLANT C020] The housekeeper (unnamed narrator) and Nora search the estate. They find Julian's hidden room in the basement — a cot, empty food cans, and a wall of photographs tracking Nora's movements. Julian has been stalking her.",
+        "They hear a noise from the study. Julian is there, holding a gun. He accuses Nora of trying to kill him and the housekeeper (unnamed narrator) of being her accomplice.",
+        "Nora denies everything, claiming Julian sent the forged confession. The housekeeper (unnamed narrator) stands between them, realizing both are lying.",
+        "Julian throws a folder on the table — a recording of Nora confessing to the experiment, made years ago. Nora's face goes pale. She lunges for it, but the housekeeper (unnamed narrator) grabs it first.",
+        "The three of them stand in a triangle: the housekeeper (unnamed narrator) holding the recording, Nora holding the folder of evidence, Julian holding the gun. Each waiting for the others to make a move.",
+        "The housekeeper (unnamed narrator) speaks: 'I'm not your pawn. I'm not your victim. I'm the one who walks out of this house alive.' She pockets the recording and walks toward the door. Julian raises the gun."
+      ],
+      "must_not": [
+        "Do not reveal that the recording is a forgery Julian created to frame Nora — he has been planning this as long as she has.",
+        "Do not reveal that the housekeeper (unnamed narrator) has a plan to escape with both pieces of evidence and leave them both to face the police.",
+        "Do not reveal that the gun Julian is holding is empty — Nora removed the bullets before they arrived."
+      ],
+      "opens_with": "The basement smelled of dust and desperation. Julian's hidden room was a shrine to his obsession — a wall of photographs, all of Nora, tracking her every move. He had been watching her as closely as she had been watching me.",
+      "cliffhanger": "Julian raises the gun. The housekeeper (unnamed narrator) freezes. Nora steps between them. 'Don't,' Nora says. 'She's the only one who can prove we're both innocent.' Julian hesitates. The housekeeper (unnamed narrator) sees her chance. She throws the recording at Julian's feet and runs. The gun goes off. She feels a burning pain in her shoulder — but she keeps running, out the door, into the dark.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of photographs on Julian's wall: 47. She realizes everyone in this house has been counting — Nora, Julian, and now her. The number is no longer a coincidence. It is a curse they all share.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a sharp, clarifying pain as the bullet grazes her shoulder. She is running, bleeding, and finally free — but she knows the confrontation is not over. She has the evidence. She has the power. And she will not let either of them take it from her.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is violent and final — the three-way confrontation is a standoff that can only end in blood.",
+      "chapter_task": "Write 1700-1900 words executing the beat map: the housekeeper (unnamed narrator) meets the husband at the estate, where they search for the wife's final piece of evidence — but they find the wife waiting for them instead, and the final confrontation begins. Plant clue C020 (the recording of Nora's confession) as a seed for Tier 4. The basement discovery should feel like a revelation — Julian is not a victim; he is a predator in his own right. End with the gunshot and the housekeeper (unnamed narrator) fleeing to set up Chapter 39.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has been shot and is fleeing the estate with the recording and the folder of evidence. She must decide whether to go to the police, destroy the evidence, or use it to negotiate her freedom. Julian and Nora are still inside, and the final confrontation is not over.",
+      "narrative": {
+        "clues_plant": [
+          "C020"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['her own hidden agenda is exposed to the reader', 'the wife is the architect of everything', \"the wife's fragility was a performance\", \"the locked room contains the wife's ledger and her own criminal record\", 'the wife has done this before (Clara Higgins)'], 'does_not_know': ['the full extent of the frame job (the planted weapon, the forged letter)', 'the husband is the target, not the predator', 'when the murder will happen']}",
+            "the_wife: {'knows': ['the housekeeper has discovered her ledger and criminal record', 'the housekeeper knows she is the architect', 'the plan is at risk of exposure'], 'does_not_know': ['if the housekeeper will destroy the evidence or use it against her', \"the husband's awareness of her manipulation\"]}",
+            "the_husband: {'knows': [\"the housekeeper has discovered his wife's ledger\", 'the truth about his wife is coming out'], 'does_not_know': ['his wife is planning to kill him within the next 10 chapters']}",
+            "clara_higgins: {'knows': ['the new housekeeper has found her hidden diary or evidence'], 'does_not_know': ['if the housekeeper will use it to expose the wife']}",
+            "dr_ellis: {'knows': ['the husband is afraid of his wife', 'something is very wrong in the house'], 'does_not_know': ['the murder is imminent']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 36
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 39,
+      "title": "The Choice",
+      "slug": "the-choice",
+      "one_line_summary": "The housekeeper (unnamed narrator) makes her choice — she betrays the husband, but in doing so, she turns the wife's game against her, securing her own freedom and leaving both the wife and the husband to face the consequences.",
+      "beat_summary": "The housekeeper (unnamed narrator) is bleeding in the garden, the recording and folder clutched to her chest. She hears sirens in the distance — the police are coming. She has a choice: go to the police with the evidence and clear her name, but risk being charged for her own crimes; or destroy the evidence and disappear, leaving Nora and Julian to destroy each other. She chooses the latter. She takes the recording and the folder and hides them in the hollow tree where Nora hid the key in Chapter 1. She calls the police from a burner phone and gives them the address of the estate, telling them there has been a shooting. Then she walks to the bus station, bleeding, and boards the first bus out of town. As the bus pulls away, she watches the estate's lights flicker in the distance. She is free — but she is bound to a secret that could destroy her if anyone ever finds out where she hid the evidence. She has won, but the victory tastes like ash.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) is bleeding in the garden, holding the recording and the folder. She hears sirens in the distance. The police are coming.",
+        "She makes a choice: she will not go to the police. She will not clear her name. She will disappear and leave Nora and Julian to destroy each other.",
+        "She hides the recording and the folder in the hollow tree where Nora hid the key in Chapter 1 — a full circle, a secret returned to its origin.",
+        "She calls the police from a burner phone and gives them the estate's address, reporting a shooting. She does not give her name.",
+        "She walks to the bus station, bleeding from her shoulder wound. She boards the first bus out of town. She does not look back.",
+        "As the bus pulls away, she watches the estate's lights flicker in the distance. She is free, but she is bound to a secret that could destroy her. The chapter ends with her internal voice: 'I am no one now. And that is the only way to survive.'"
+      ],
+      "must_not": [
+        "Do not reveal that the housekeeper (unnamed narrator) kept a single piece of evidence — a photograph of herself as a child with Nora, which she will use as leverage in Book 2.",
+        "Do not reveal that Nora survived the confrontation and will return in Book 2 to hunt the housekeeper (unnamed narrator) for the hidden evidence.",
+        "Do not reveal that the bus is headed to the same town where the housekeeper (unnamed narrator)'s mother lives — she is going home."
+      ],
+      "opens_with": "I pressed my hand to my shoulder and felt the wet warmth of my own blood. The sirens were getting closer. I had minutes to decide: stay and fight, or run and disappear. I chose the third option: I chose myself.",
+      "cliffhanger": "The bus pulls away from Raven's Creek. The housekeeper (unnamed narrator) presses her forehead against the cold window and watches the estate's lights disappear. Her phone buzzes. A text from an unknown number: 'You think you've won. But I know where you hid it. And I know where you're going. See you soon, Subject 8. — N.' The housekeeper (unnamed narrator) closes her eyes. She is not free. She is just in a larger cage. But for now, she is moving. And moving is all she knows how to do.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of steps from the garden to the bus station: 47. She stops counting. The number is no longer a curse — it is a farewell. She is done with Blackwood Estate, done with Nora, done with the counting. She is free.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a hollow, quiet peace. She has won, but the victory tastes like ash. She is free, but she is also alone — and Nora's final text proves the game is not over. She is a fugitive, bound to a secret that could destroy her. But she is alive. And for now, that is enough.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The intimacy is internal and final — the housekeeper (unnamed narrator) makes her choice and accepts the consequences.",
+      "chapter_task": "Write 1700-1900 words executing the beat map: the housekeeper (unnamed narrator) makes her choice — she betrays the husband, but in doing so, she turns the wife's game against her, securing her own freedom and leaving both the wife and the husband to face the consequences. The garden scene should feel like a moment of reckoning — the housekeeper (unnamed narrator) chooses herself over revenge. The bus scene should feel like a bittersweet victory. End with Nora's text to set up Book 2. No romance micro-beat — male lead is Unassigned and romance is not opt-in.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has escaped, but she is bound to a secret that could destroy her: she hid the evidence in the hollow tree, and Nora knows where it is. She is heading toward her mother's town, but Nora's final text suggests she is being followed. Book 2 will follow her as she tries to build a new life — and as Nora closes in.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['her own hidden agenda is exposed to the reader', 'the wife is the architect of everything', \"the wife's fragility was a performance\", \"the locked room contains the wife's ledger and her own criminal record\", 'the wife has done this before (Clara Higgins)'], 'does_not_know': ['the full extent of the frame job (the planted weapon, the forged letter)', 'the husband is the target, not the predator', 'when the murder will happen']}",
+            "the_wife: {'knows': ['the housekeeper has discovered her ledger and criminal record', 'the housekeeper knows she is the architect', 'the plan is at risk of exposure'], 'does_not_know': ['if the housekeeper will destroy the evidence or use it against her', \"the husband's awareness of her manipulation\"]}",
+            "the_husband: {'knows': [\"the housekeeper has discovered his wife's ledger\", 'the truth about his wife is coming out'], 'does_not_know': ['his wife is planning to kill him within the next 10 chapters']}",
+            "clara_higgins: {'knows': ['the new housekeeper has found her hidden diary or evidence'], 'does_not_know': ['if the housekeeper will use it to expose the wife']}",
+            "dr_ellis: {'knows': ['the husband is afraid of his wife', 'something is very wrong in the house'], 'does_not_know': ['the murder is imminent']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 36
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

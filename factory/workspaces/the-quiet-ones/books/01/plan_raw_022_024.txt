@@ -1,0 +1,203 @@
+```json
+{
+  "act": [22, 24],
+  "chapter_plans": [
+    {
+      "chapter": 22,
+      "title": "The Fracture",
+      "slug": "the-fracture",
+      "one_line_summary": "Wren's betrayal is confirmed to the network, and the trust that held Elle Reyes's operation together shatters — leaving her exposed and alone.",
+      "beat_summary": "Elle Reyes returns from Kroll's estate and calls an emergency meeting with Sasha and Dr. Lin. She shows them the photograph of Wren shaking hands with Kroll. The network fractures: Sasha is furious, Dr. Lin is devastated. They debate whether to cut ties completely or try to find Wren. Elle Reyes argues they need Wren to find the dead man's switch, but Sasha points out that Wren knows everything about their methods. The chapter ends with Elle Reyes realizing she cannot trust anyone — not even the two who stayed. She decides to hunt the switch alone, isolating herself from the remnants of her network. Clue C007 is planted: a single detail in the photograph — a reflection in the glass table shows a third person in the room, someone whose face is obscured but whose hand rests on Kroll's shoulder.",
+      "must_happen": [
+        "Elle Reyes convenes an emergency meeting with Sasha and Dr. Lin in the rented office.",
+        "Elle Reyes shows Sasha and Dr. Lin the photograph of Wren shaking hands with Kroll, confirming the betrayal.",
+        "Sasha argues they should cut Wren loose and rebuild; Dr. Lin wants to find Wren and confront her; Elle Reyes argues they need Wren to find the dead man's switch.",
+        "The meeting ends without a decision — the network is fractured, and trust is broken.",
+        "Elle Reyes examines the photograph and notices a reflection in the glass table: a third person in the room, hand on Kroll's shoulder — clue C007 is planted."
+      ],
+      "must_not": [
+        "Do not reveal the identity of the third person in the photograph — only that someone else was present.",
+        "Do not show Elle Reyes reconciling with Sasha or Dr. Lin — the fracture is real and unresolved."
+      ],
+      "opens_with": "\"'He has her.' I laid the photograph on the table. Sasha picked it up. Her face went pale. 'When?' she asked. 'Before any of this started.'\"",
+      "cliffhanger": "Elle Reyes is alone in the office after Sasha and Dr. Lin leave. She stares at the photograph, her thumb tapping her ring finger three times. Her phone buzzes. A text from Wren: 'I'm sorry. I can't undo what I did. But I can tell you where the switch is. Meet me at the riverbank. Midnight. Come alone.'",
+      "signature_detail_hint": "The reflection in the glass table shows a hand with a distinctive ring — a signet ring with a crest that matches the logo on the Black Serpent cigarette pack.",
+      "emotional_beat": "Cold, controlled fury undercut by the hollow ache of betrayal — the network she built is crumbling, and she is now truly alone.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the fracture of the network and the isolation of Elle Reyes.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Show the network fracture, plant clue C007, and set up the riverbank meeting with Wren. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "The network is fractured; clue C007 is planted; Wren has texted Elle Reyes to meet at the riverbank at midnight; Elle Reyes is operating alone.",
+      "narrative": {
+        "clues_plant": [
+          "C007"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elle Reyes",
+            "Damien Kroll",
+            "Sasha (Lawyer)",
+            "Dr. Lin (Coroner)",
+            "Wren (Hacker)",
+            "Detective Marcus Cole"
+          ],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Kroll is systematically dismantling her network', 'Wren has gambling debts (suspicion growing)', \"Kroll has a dead-man's-switch (discovered 'Project Phoenix' file)\", 'Her origin wound is partially exposed to Kroll'], 'does_not_know_yet': ['Wren is the leak', \"The full contents of 'Project Phoenix'\", \"Detective Cole's level of suspicion\"]}",
+            "Damien Kroll: {'knows': [\"He has compromised Wren in Elle's network\", \"He has compiled evidence of Elle's first kill\", \"He has a dead-man's-switch ('Project Phoenix')\", 'Elle is closing in on him'], 'does_not_know_yet': [\"That Elle has discovered 'Project Phoenix'\", 'That Sasha and Dr",
+            "Damien Kroll: Lin are still loyal', 'His own death is imminent']}",
+            "Sasha (Lawyer): {'knows': ['The network is under pressure', 'Wren is acting strangely', 'Kroll is systematically attacking them'], 'does_not_know_yet': ['Wren is the leak', \"The full extent of Kroll's evidence\", \"Detective Cole's investigation\"]}",
+            "Dr. Lin (Coroner): {'knows': ['The network is under pressure', 'Kroll is dangerous', 'Elle is in a two-way hunt'], 'does_not_know_yet': ['Wren is the leak', \"The full extent of Kroll's evidence\", \"Detective Cole's investigation\"]}",
+            "Wren (Hacker): {'knows': ['Kroll has approached her with a threat to her family', 'She is being forced to leak information', 'She is betraying Elle'], 'does_not_know_yet': [\"The full extent of Kroll's evidence\", 'That Elle will discover her betrayal', 'The consequences of her actions']}",
+            "Detective Marcus Cole: {'knows': [\"Multiple deaths connected to Elle's investigations are suspicious\", 'Kroll is under pressure from Elle', 'He is building a case against Elle (circumstantial)'], 'does_not_know_yet': [\"Elle's method\", 'Her network', \"The dead-man's-switch\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 19
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 23,
+      "title": "The Riverbank Pact",
+      "slug": "the-riverbank-pact",
+      "one_line_summary": "Elle Reyes meets Wren at the riverbank, where Wren reveals the full extent of Kroll's coercion — and offers a way to destroy the dead man's switch.",
+      "beat_summary": "Elle Reyes goes to the riverbank at midnight, unarmed but with the Minox hidden in her jacket. Wren is there, trembling and tearful. She confesses everything: Kroll threatened her family — her younger sister, who has a gambling debt Wren was trying to cover. Wren gave Kroll the network files, the security camera schedules, and the location of Elle's first kill evidence. But she kept one thing back: the dead man's switch is not a single object. It is a set of three encrypted USB drives, each hidden in a different location. Wren knows where two of them are. She offers to help Elle retrieve them in exchange for protection for her sister. Elle Reyes agrees, but makes Wren promise that after this, they are done. The chapter ends with Wren giving Elle Reyes the location of the first drive: a safety deposit box at a bank Kroll owns. But as they part, Elle Reyes notices a car parked on the bridge above — watching them. Clue C007 is paid off: the reflection in the photograph is identified as Kroll's lawyer, a woman named Mariana Voss.",
+      "must_happen": [
+        "Elle Reyes meets Wren at the riverbank at midnight; Wren is trembling and tearful, and confesses everything about Kroll's coercion.",
+        "Wren reveals that Kroll threatened her younger sister, who has a gambling debt Wren was trying to cover — this is why she betrayed the network.",
+        "Wren explains that the dead man's switch is not a single object but three encrypted USB drives hidden in different locations; she knows where two are.",
+        "Wren offers to help Elle Reyes retrieve the first drive from a safety deposit box at a bank Kroll owns, in exchange for protection for her sister.",
+        "Elle Reyes agrees, but tells Wren they are done after this. As they part, Elle Reyes notices a car on the bridge above — watching them. Clue C007 is paid off: the reflection is identified as Kroll's lawyer, Mariana Voss."
+      ],
+      "must_not": [
+        "Do not show the retrieval of the USB drive — only that the location is given.",
+        "Do not reveal Mariana Voss's full role — only that she is Kroll's lawyer and was present during the photograph."
+      ],
+      "opens_with": "\"'I didn't have a choice, Elle.' Wren's voice cracked. 'He has my sister. He said he would kill her if I didn't help him.'\"",
+      "cliffhanger": "Elle Reyes watches Wren disappear into the darkness along the riverbank. She turns to leave, but stops. The car on the bridge — a black sedan — is still there. The engine starts. The headlights flash once, then the car drives away. Her phone buzzes. A text from an unknown number: 'I see you made a new friend. Be careful, Elle. Not everyone who offers you a hand wants to save you.'",
+      "signature_detail_hint": "The safety deposit box key Wren gives Elle Reyes is stamped with the number '0417' — the same numbers that appear on the license plate of the car that snatched the witness at the riverbank in chapter 14.",
+      "emotional_beat": "Cold pragmatism mixed with a flicker of pity for Wren — but the pity is quickly buried under the weight of survival. Elle Reyes is done trusting.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the confession and the pact between Elle Reyes and Wren.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Reveal Wren's full confession, set up the retrieval of the first USB drive, and pay off clue C007. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "Wren's full confession is revealed; the dead man's switch is confirmed as three USB drives; the first drive is in a safety deposit box at Kroll's bank; clue C007 is paid off; Mariana Voss is identified as Kroll's lawyer.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C007"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elle Reyes",
+            "Damien Kroll",
+            "Sasha (Lawyer)",
+            "Dr. Lin (Coroner)",
+            "Wren (Hacker)",
+            "Detective Marcus Cole"
+          ],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Kroll is systematically dismantling her network', 'Wren has gambling debts (suspicion growing)', \"Kroll has a dead-man's-switch (discovered 'Project Phoenix' file)\", 'Her origin wound is partially exposed to Kroll'], 'does_not_know_yet': ['Wren is the leak', \"The full contents of 'Project Phoenix'\", \"Detective Cole's level of suspicion\"]}",
+            "Damien Kroll: {'knows': [\"He has compromised Wren in Elle's network\", \"He has compiled evidence of Elle's first kill\", \"He has a dead-man's-switch ('Project Phoenix')\", 'Elle is closing in on him'], 'does_not_know_yet': [\"That Elle has discovered 'Project Phoenix'\", 'That Sasha and Dr",
+            "Damien Kroll: Lin are still loyal', 'His own death is imminent']}",
+            "Sasha (Lawyer): {'knows': ['The network is under pressure', 'Wren is acting strangely', 'Kroll is systematically attacking them'], 'does_not_know_yet': ['Wren is the leak', \"The full extent of Kroll's evidence\", \"Detective Cole's investigation\"]}",
+            "Dr. Lin (Coroner): {'knows': ['The network is under pressure', 'Kroll is dangerous', 'Elle is in a two-way hunt'], 'does_not_know_yet': ['Wren is the leak', \"The full extent of Kroll's evidence\", \"Detective Cole's investigation\"]}",
+            "Wren (Hacker): {'knows': ['Kroll has approached her with a threat to her family', 'She is being forced to leak information', 'She is betraying Elle'], 'does_not_know_yet': [\"The full extent of Kroll's evidence\", 'That Elle will discover her betrayal', 'The consequences of her actions']}",
+            "Detective Marcus Cole: {'knows': [\"Multiple deaths connected to Elle's investigations are suspicious\", 'Kroll is under pressure from Elle', 'He is building a case against Elle (circumstantial)'], 'does_not_know_yet': [\"Elle's method\", 'Her network', \"The dead-man's-switch\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 19
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 24,
+      "title": "The Poisoned Circle",
+      "slug": "the-poisoned-circle",
+      "one_line_summary": "Paranoia poisons the remaining circle as Elle Reyes suspects Sasha or Dr. Lin might also be compromised — and she isolates the suspected leak.",
+      "beat_summary": "After the riverbank meeting, Elle Reyes returns to her apartment and finds Sasha waiting for her. Sasha is furious that Elle went to meet Wren alone. Elle Reyes deflects, but a seed of paranoia is planted: how did Sasha know where she was? Elle Reyes begins to suspect that Sasha or Dr. Lin might also be compromised. She reviews the timeline: the break-in at Dr. Lin's office was too clean, the subpoena on Sasha's firm too precise. She isolates herself from both of them, telling them she needs to work alone. She calls Wren and arranges to retrieve the first USB drive without telling Sasha or Dr. Lin. The chapter ends with Elle Reyes at the bank, the safety deposit box key in her hand, as she realizes she is truly alone — and that is exactly how she wants it. The beat of the chapter is fulfilled: Elle isolates the suspected leak (the entire remaining network) and paranoia poisons the circle.",
+      "must_happen": [
+        "Elle Reyes returns to her apartment to find Sasha waiting for her; Sasha is furious that Elle went to meet Wren alone.",
+        "Elle Reyes deflects Sasha's questions, but begins to suspect that Sasha or Dr. Lin might also be compromised — the break-in at Lin's office was too clean, the subpoena too precise.",
+        "Elle Reyes tells Sasha and Dr. Lin that she needs to work alone, isolating herself from the remaining network.",
+        "Elle Reyes calls Wren and arranges to retrieve the first USB drive from the safety deposit box without telling Sasha or Dr. Lin.",
+        "Elle Reyes arrives at the bank, the safety deposit box key in her hand, and inserts it into the lock."
+      ],
+      "must_not": [
+        "Do not show the contents of the safety deposit box — only that Elle Reyes is about to open it.",
+        "Do not confirm whether Sasha or Dr. Lin are actually compromised — only that Elle Reyes suspects them."
+      ],
+      "opens_with": "\"'You went alone.' Sasha's voice was cold. 'After everything, you went to her alone.' I didn't answer. I was too busy wondering how she knew.\"",
+      "cliffhanger": "Elle Reyes turns the key in the safety deposit box lock. The mechanism clicks. She pulls open the drawer. Inside is a single USB drive — and a photograph of her sister, the one who was murdered years ago. The photograph is old, faded, and on the back is written in red ink: 'I know why you started, Elle. I know everything.'",
+      "signature_detail_hint": "The photograph of Elle's sister is taken from the same angle as the crime scene photo in the original police file — meaning Kroll has access to sealed records from Elle's sister's case, not just her first kill.",
+      "emotional_beat": "Cold paranoia mixed with the sharp sting of a personal blow — Kroll has reached into her origin wound, and the isolation she chose feels both necessary and devastating.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on paranoia and isolation.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Show the paranoia poisoning the circle, Elle's decision to isolate herself, and the discovery in the safety deposit box. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "The first USB drive is retrieved; Kroll has access to sealed records from Elle's sister's case; Elle is now fully isolated from her network; paranoia has poisoned the circle.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elle Reyes",
+            "Damien Kroll",
+            "Sasha (Lawyer)",
+            "Dr. Lin (Coroner)",
+            "Wren (Hacker)",
+            "Detective Marcus Cole"
+          ],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Kroll is systematically dismantling her network', 'Wren has gambling debts (suspicion growing)', \"Kroll has a dead-man's-switch (discovered 'Project Phoenix' file)\", 'Her origin wound is partially exposed to Kroll'], 'does_not_know_yet': ['Wren is the leak', \"The full contents of 'Project Phoenix'\", \"Detective Cole's level of suspicion\"]}",
+            "Damien Kroll: {'knows': [\"He has compromised Wren in Elle's network\", \"He has compiled evidence of Elle's first kill\", \"He has a dead-man's-switch ('Project Phoenix')\", 'Elle is closing in on him'], 'does_not_know_yet': [\"That Elle has discovered 'Project Phoenix'\", 'That Sasha and Dr",
+            "Damien Kroll: Lin are still loyal', 'His own death is imminent']}",
+            "Sasha (Lawyer): {'knows': ['The network is under pressure', 'Wren is acting strangely', 'Kroll is systematically attacking them'], 'does_not_know_yet': ['Wren is the leak', \"The full extent of Kroll's evidence\", \"Detective Cole's investigation\"]}",
+            "Dr. Lin (Coroner): {'knows': ['The network is under pressure', 'Kroll is dangerous', 'Elle is in a two-way hunt'], 'does_not_know_yet': ['Wren is the leak', \"The full extent of Kroll's evidence\", \"Detective Cole's investigation\"]}",
+            "Wren (Hacker): {'knows': ['Kroll has approached her with a threat to her family', 'She is being forced to leak information', 'She is betraying Elle'], 'does_not_know_yet': [\"The full extent of Kroll's evidence\", 'That Elle will discover her betrayal', 'The consequences of her actions']}",
+            "Detective Marcus Cole: {'knows': [\"Multiple deaths connected to Elle's investigations are suspicious\", 'Kroll is under pressure from Elle', 'He is building a case against Elle (circumstantial)'], 'does_not_know_yet': [\"Elle's method\", 'Her network', \"The dead-man's-switch\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 19
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

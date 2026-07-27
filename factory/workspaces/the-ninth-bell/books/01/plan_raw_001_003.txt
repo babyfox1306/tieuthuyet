@@ -1,0 +1,86 @@
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Bell Before Arrival",
+      "slug": "the-bell-before-arrival",
+      "one_line_summary": "Clara Vale arrives at the condemned bell tower, hears a damaged recording of her dead sister Elin's voice, and detects a mysterious metallic double pulse beneath it.",
+      "beat_summary": "Gabriel Rook informs Clara that the ninth bell rang before she crossed the causeway. Clara enters the inherited tower, learns the village legend that bells preserve the voices of the dead, and plays a damaged recording containing Elin's voice. She detects a faint metallic double pulse beneath the recording, which cuts off abruptly on the second playback after Elin's voice addresses her.",
+      "must_happen": [
+        "Gabriel tells Clara the ninth bell rang before she crossed the causeway.",
+        "Clara enters the condemned tower she has inherited.",
+        "The village legend says the bells preserve the voices of the dead.",
+        "Clara hears a damaged recording containing Elin's voice.",
+        "Clara detects a faint metallic double pulse beneath the recording."
+      ],
+      "must_not": [
+        "Reveal the origin or mechanism behind the recordings.",
+        "Introduce Thomas Vale or his involvement in the tower.",
+        "Explain the truth of Elin's fall or imply Clara's guilt."
+      ],
+      "opens_with": "Gabriel’s voice cut through the mist: 'The ninth bell tolled an hour before you crossed the causeway.'",
+      "cliffhanger": "On the second playback, Elin's damaged voice clearly addresses Clara before the metallic double pulse cuts the recording dead.",
+      "signature_detail_hint": "The way sound bends around the corroded bronze of the bells, creating a faint, unsettling echo in the stairwell.",
+      "emotional_beat": "Isolation and creeping dread as Clara confronts her sister's ghost in a place she swore never to return.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words, establishing the setting, introducing the core mystery through Clara's forensic perspective, and ending with the cliffhanger of Elin's addressed voice and abrupt cutoff.",
+      "carries_to_next": "Clara's detection of the metallic double pulse and her determination to analyze the recording's anomalies further."
+    },
+    {
+      "chapter": 2,
+      "title": "Eight Dead Voices",
+      "slug": "eight-dead-voices",
+      "one_line_summary": "Clara analyzes eight archived recordings linked to village deaths, discovers repeated editing artifacts and a shared resonance, concluding that physical manipulation is possible but the method remains unknown.",
+      "beat_summary": "Clara examines eight recordings associated with village deaths, and her forensic confidence begins to return. She finds repeated editing artifacts and detects the same unexplained resonance across all recordings. She concludes there may be physical manipulation but cannot yet determine how or by whom, isolating an anomaly shared by all eight and Elin's tape.",
+      "must_happen": [
+        "Clara examines eight archived recordings associated with village deaths.",
+        "Her forensic confidence begins to return.",
+        "She finds repeated editing artifacts.",
+        "She detects the same unexplained resonance across the recordings.",
+        "She concludes there may be physical manipulation but not how or by whom."
+      ],
+      "must_not": [
+        "Reveal the acoustic surveillance system or its components.",
+        "Explain the source of the resonance or editing artifacts.",
+        "Introduce Thomas Vale or link the manipulation to him directly."
+      ],
+      "opens_with": "The first recording crackled to life—a fisherman’s final words swallowed by static—and Clara’s hands steadied over the waveform analyzer.",
+      "cliffhanger": "Clara isolates an anomaly shared by all eight recordings and Elin's tape: a consistent 0.2-second dropout at 340 Hz that shouldn’t exist in natural sound.",
+      "signature_detail_hint": "The dropout occurs precisely when each recording captures the toll of a specific bell, suggesting a mechanical link.",
+      "emotional_beat": "Professional focus mixed with growing unease as Clara realizes the manipulation is systematic and recent.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words, detailing Clara’s forensic analysis, building tension through technical discoveries, and culminating in the shared anomaly that points to a hidden pattern.",
+      "carries_to_next": "The shared anomaly leads Clara to suspect the tower's physical structure is involved in the recordings."
+    },
+    {
+      "chapter": 3,
+      "title": "The Voice That Has Not Spoken Yet",
+      "slug": "the-voice-that-has-not-spoken-yet",
+      "one_line_summary": "Clara proves the metallic double pulse marks edit seams, hears her own voice confessing from the ninth bell, and begins to question whether the confession is suppressed memory, prophecy, or fabrication.",
+      "beat_summary": "Clara proves the metallic double pulse marks edit seams in the recordings. The silent ninth bell produces her apparent confession in her exact voice. She considers possibilities—suppressed memory, prediction, fabrication—but no final explanation is permitted, and she identifies that the confession contains pieces from different recordings.",
+      "must_happen": [
+        "Clara proves the metallic double pulse marks edit seams.",
+        "The silent ninth bell produces Clara's apparent confession.",
+        "The exact confession is heard in Clara's own voice.",
+        "Clara considers suppressed memory, prediction, and fabrication.",
+        "Clara identifies the first sign that the confession contains pieces from different recordings."
+      ],
+      "must_not": [
+        "Reveal the full truth of the acoustic system or who built it.",
+        "Provide a definitive explanation for the confession's origin.",
+        "Allow Clara to remember or prove her innocence regarding Elin's death yet."
+      ],
+      "opens_with": "The ninth bell rang with a sound like cracking bone, and from its bronze throat spilled Clara’s own voice: 'I knew she would fall.'",
+      "cliffhanger": "Clara identifies that the confession tape contains a background hiss matching a recording made three years after Elin's death, proving it’s assembled from fragments.",
+      "signature_detail_hint": "The confession tape’s surface shows microscopic scratches that align with the same pattern found on the eight death recordings.",
+      "emotional_beat": "Crisis of identity and guilt as Clara confronts a version of herself she cannot recall or reconcile.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words, focusing on Clara’s technical proof of edit seams, the shocking reveal of her confession, and her internal turmoil, ending with the clue that the confession is fabricated from multiple sources.",
+      "carries_to_next": "The realization that the confession is assembled from different recordings, driving Clara to investigate the tower’s hidden acoustic system further."
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+The road looked perfect on a map. No cameras. No streetlights. A single curve where a sudden pull might carry a surprised driver into the railing and the water below. I'd driven it three times that week, timing every second.
+
+I sat in my parked car at the turnout, engine off, windows down. The air smelled like wet asphalt and pine. Late October chill crept through my jacket, but I didn't move. I was counting.
+
+From the poker game's end to this curve: eighteen minutes. Victor Rhodes drove a 2023 Mercedes S-Class—adaptive cruise control, collision detection, split hydraulic circuits, enough safety systems that one damaged connection would degrade control rather than simply erase every brake.
+
+I knew. I kept treating those systems as details rather than defenses.
+
+The curve was tight enough that any experienced driver would tap the brakes going into it. The railing was old, rusted through in spots. Below it, a thirty-foot drop into water deep enough to swallow a car whole. Recovery would take time. Water might obscure handling marks, but it would not erase a scored fitting; the plan still depended on the damage being read as failure rather than sabotage.
+
+I held my hands still and watched the empty road. The ritual had faded. The cold had not.
+
+My phone buzzed. Sasha's encrypted line.
+
+"Tell me you're not sitting on that road right now," she said.
+
+"Define 'sitting.'"
+
+"Nadia."
+
+"I'm scouting. There's a difference."
+
+"There isn't, and you know it." I heard papers shuffling on her end. "I've got the timeline locked. His poker game runs from eight to eleven every Thursday. Same four players, same private club. He drives himself home because he doesn't trust his partners to know where he lives."
+
+"Paranoid," I said.
+
+"Smart. Which is why you need to be smarter."
+
+"I am."
+
+I pulled up the map on my phone. The route from the poker game to Rhodes's house was predictable—GPS logs from the past three months, courtesy of Wren's tracking script, showed he took the same path ninety-four percent of the time. The curve was at mile 11.3. No alternate routes that added less than twenty minutes.
+
+He'd take this road. He almost always did.
+
+"The brake line," Sasha said. "How are you accessing the vehicle?"
+
+"Valet. Underground garage. He uses the same lot every Thursday because street parking near the game is impossible. The attendant doesn't check IDs after ten. I'll be in and out in under four minutes."
+
+"The line itself?"
+
+"Scored around the stress point and left under tension. It may hold until he makes a hard brake application. If it splits there, the sudden pull begins after he's committed to the turn."
+
+Silence.
+
+"Sasha?"
+
+"I'm still here." Her voice was lower now. "You've thought about this a lot."
+
+"I've had time."
+
+"That's not what I meant."
+
+I knew what she meant. The precision. The clinical nature of it. She'd seen this side of me before, during Julian Croft, but that had been different—messier, more emotional, a sister's rage dressed up as justice. This was calculated. This was architecture.
+
+"Are you in?" I asked.
+
+"I'm in. I just need to hear you say you're sure."
+
+"I'm sure."
+
+She didn't push. She never did. Sasha understood what we carried—clients who walked free, victims who never got their day, a system that traded justice for plea deals. She'd joined my network for the same reason I'd built it.
+
+Because the alternative was accepting that nothing changed.
+
+"Your cover," she said. "Thursday night. The episode upload is scheduled for 11:15 PM, social media posts are queued, and a grocery delivery is timestamped at 7:42. Those markers support a routine. They do not prove you stayed home."
+
+"Grocery delivery?"
+
+"You're a creature of habit. Milk, eggs, bread, coffee. The security camera in your building's lobby will show the delivery driver. It won't show you leaving because you won't leave through the lobby."
+
+"Fire escape. Roof access. Adjacent building."
+
+"You've done this before."
+
+I didn't answer. She knew I had.
+
+We ended the call with the usual checklist—confirm, confirm, confirm. I wrote nothing down. Every detail lived in my head, cross-referenced, timed, rehearsed. The network was a machine, and I was the operator.
+
+But machines had weak points.
+
+I called Wren next.
+
+The line connected on the second ring. No greeting.
+
+"GPS spoofing," I said. "Is it ready?"
+
+"Yes." One word. Flat.
+
+"Wren."
+
+"I said yes."
+
+I leaned back in my seat. The road stretched empty in front of me, dark and patient. "You sound tight."
+
+"I'm fine."
+
+"You're not fine. You're clipped. You're rushing me off the phone."
+
+A pause. I heard her breathing, measured and controlled, the way someone breathes when they're deciding what to say.
+
+"The script is ready," she said. "It'll ping his car's GPS to a location ten miles from the actual crash site. Any investigation that starts with his last known position will hit a dead end. It's solid."
+
+"But."
+
+"No but. It's solid."
+
+"Wren."
+
+"It's fine, Nadia. I'm just—" She stopped. The silence stretched long enough that I checked the call timer. "I've been getting some strange queries. Nothing serious. Just someone pinging old IP addresses. Could be nothing."
+
+"Could be Rhodes."
+
+"Could be."
+
+"Can you trace the queries?"
+
+"I can try. But if I push too hard, I'll leave a footprint. You want me to risk that?"
+
+I considered it. Rhodes was methodical. If he was probing the network, he'd do it carefully, leaving minimal traces. Wren was better than most at covering tracks, but she was also paranoid—a trait I valued until it became a liability.
+
+"No," I said. "Lock down the script. Focus on Thursday."
+
+"Understood."
+
+She ended the call before I could ask anything else.
+
+Wren's terseness wasn't normal. She was usually chatty, almost eager, always wanting to explain the technical details of her work. The silence was new. The silence meant something.
+
+I filed it away. Later. After.
+
+I called Priya.
+
+She answered on the first ring, but her voice was thin. "Nadia."
+
+"The audit. Update me."
+
+"It's ongoing." A pause. "Routine."
+
+"Priya."
+
+"What?"
+
+"Your voice."
+
+She laughed, but it didn't reach her words. "I'm fine. Really. The audit is standard—they're reviewing death certificates from the past six months. Mine, three others. There's no pattern. No reason to flag anything."
+
+"But."
+
+"But I've been losing sleep. That's all. Every knock on my door feels like a warrant. Every email feels like a subpoena. I know it's paranoia. I know it's nothing."
+
+"You're not wrong to be scared."
+
+"I'm not scared. I'm careful."
+
+"There's a difference."
+
+"I know." Her voice steadied. "I'm holding, Nadia. I'll hold through Thursday. Just—make sure it works. Make sure he's gone."
+
+"I will."
+
+"One less monster."
+
+"One less."
+
+We hung up. I sat in the silence of my car, the engine still cold, the road still empty. The network was fraying. Wren's terseness. Priya's tremor. Sasha's hesitation. They all felt the pressure of what we were about to do.
+
+So was I.
+
+But I was better at hiding it.
+
+I drove home.
+
+My apartment was dark when I entered. I didn't turn on the lights. I moved through the familiar space by memory—kitchen, hallway, bedroom, closet. I unlocked the storage box at the bottom of my closet and lifted the lid.
+
+Julian Croft's file.
+
+I'd kept it for about three years. The photographs, the notes, the newspaper clippings about the boating fire. His body had been recovered three days later, and the official investigation had closed on an accident. The world had moved on.
+
+I pulled out the tampered fuel-line photograph. The image was grainy, taken on an old phone, but clear enough. The brass coupling sat a fraction out of alignment, almost invisible unless you knew where its seal should rest.
+
+I turned the photograph over. The same cold returned.
+
+I'd learned so much since then. The loosened fuel coupling had been crude—effective, but crude. I wanted to call the scored brake fitting elegant and the GPS spoofing a masterpiece. In truth, each added system created another way for the execution to escape my control.
+
+Victor Rhodes would be my fourth.
+
+I placed the photograph back in the box and closed the lid.
+
+The checklist was complete. Site selected. Digital cover prepared. No physical alibi. GPS spoofing ready. Priya holding. Sasha locked. Wren—Wren was a question mark, but I couldn't afford to address it now.
+
+I pulled out my phone.
+
+The message was simple. Direct. A hook that Rhodes couldn't resist.
+
+"Thursday. 11:20 PM. North Ridge turnout."
+
+North Ridge overlooked the road I had scouted and offered the kind of private meeting Rhodes preferred. The location was bait, not a confession; he only needed to believe I would be there with evidence.
+
+I hit send.
+
+The screen glowed for a moment, then dimmed.
+
+I waited.
+
+One minute. Two. Five.
+
+The phone remained dark. No typing indicator. No reply.
+
+I set it face-down on my desk. The silence was louder than any answer, heavier than any confession. I could not know whether he'd seen the message, whether he was deciding how to respond, or whether he was already moving.
+
+I whispered into the dark.
+
+"He knows. But he'll still come."
+
+The bait depended on one theory: Victor Rhodes could not resist watching an opponent surrender on ground he believed he controlled. If the theory held, he would come.
+
+And I'd be waiting.

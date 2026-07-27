@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "kind": "contract_review_packet",
+  "book": 2,
+  "deterministic_auto_safe": [],
+  "semantic_needs_review": [
+    {
+      "section": "events",
+      "id": "event_ending_book",
+      "summary": "The tribunal \"solves\" the case — wrongly. Elias is dead, filed as an unstable witness. Sofia is cleared and walks free. The reader now understands Book 1 was narrated by the villain. The case closes on a lie the reader can see through but no character can.",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.ending_book1",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "The tribunal \"solves\" the case — wrongly. Elias is dead, filed as an unstable witness. Sofia is cleared and walks free. The reader now understands Book 1 was narrated by the villain. The case closes o",
+        "evidence_start": 0,
+        "evidence_end": 200
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_sofia_revealed_as_nadia_s_daughter_and_the_syste",
+      "summary": "Sofia revealed as Nadia's daughter and the system's architect at ch8",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Sofia revealed as Nadia's daughter and the system's architect at ch8",
+        "evidence_start": 0,
+        "evidence_end": 68
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_book_1_events_reinterpreted_never_contradicted",
+      "summary": "Book 1 events reinterpreted, never contradicted",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Book 1 events reinterpreted, never contradicted",
+        "evidence_start": 0,
+        "evidence_end": 47
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_elias_dies_unmasking_her_his_love_is_what_expose",
+      "summary": "Elias dies unmasking her — his love is what exposes her",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Elias dies unmasking her — his love is what exposes her",
+        "evidence_start": 0,
+        "evidence_end": 55
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_sofia_kills_elias_with_one_merciful_sounding_lin",
+      "summary": "Sofia kills Elias with one merciful-sounding line, not a random system death",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Sofia kills Elias with one merciful-sounding line, not a random system death",
+        "evidence_start": 0,
+        "evidence_end": 76
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_sofia_sees_herself_as_a_savior_throughout_feels_",
+      "summary": "Sofia sees herself as a savior throughout — feels merciful while doing monstrous things",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Sofia sees herself as a savior throughout — feels merciful while doing monstrous things",
+        "evidence_start": 0,
+        "evidence_end": 87
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_inverted_final_line_that_is_exactly_what_i_said",
+      "summary": "Inverted final line: \"That is exactly what I said\"",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Inverted final line: \"That is exactly what I said\"",
+        "evidence_start": 0,
+        "evidence_end": 50
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_cold_ending_sofia_wins_no_redemption",
+      "summary": "Cold ending — Sofia wins, no redemption",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Cold ending — Sofia wins, no redemption",
+        "evidence_start": 0,
+        "evidence_end": 39
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_hook_book2",
+      "summary": "The system no longer needs a dead woman's case file to learn from. It has a living operator who believes in it completely — Sofia, now inside the institution that owns it, choosing who gets rewritten next, certain she is saving them.",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.hook_book2",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "The system no longer needs a dead woman's case file to learn from. It has a living operator who believes in it completely — Sofia, now inside the institution that owns it, choosing who gets rewritten ",
+        "evidence_start": 0,
+        "evidence_end": 200
+      }
+    },
+    {
+      "section": "revelations",
+      "id": "sofia_identity",
+      "summary": "",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.binding_condition",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Sofia Bellini is Nadia Petrescu's daughter and the architect of the system; the summit was her experiment.",
+        "evidence_start": 0,
+        "evidence_end": 106
+      }
+    }
+  ],
+  "model_suggestions": [],
+  "invalid_candidates": [],
+  "compile_ok": true,
+  "note": "Omitted items remain unapproved. No approve-all default.",
+  "created_at": "2026-07-23T13:21:29Z"
+}

@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "code": null,
+  "failures": [],
+  "authorized_shared_changes": [],
+  "before": {
+    "book1": {
+      "book": 1,
+      "root": "D:\\tieuthuyet\\tieuthuyet\\factory\\canary_runs\\phase3c-final-closure-55a7ef0\\copies\\series\\books\\01",
+      "artifacts": {
+        "master_plan.json": "500d1ae1976b5705",
+        "state.json": "e1b5bf7b4fa2dde9",
+        "integrity_state.json": null,
+        "execution_contract.json": null,
+        "contract": null,
+        "quality": null,
+        "pipeline/ready": "14c413803ad89a6a",
+        "narrative_snapshot": null
+      },
+      "aggregate": "69f53d9be2c5e5da"
+    },
+    "book2": {
+      "book": 2,
+      "root": "D:\\tieuthuyet\\tieuthuyet\\factory\\canary_runs\\phase3c-final-closure-55a7ef0\\copies\\series\\books\\02",
+      "artifacts": {
+        "master_plan.json": "7fc4654c27d4896e",
+        "state.json": "b0009f3e0a5d7039",
+        "integrity_state.json": null,
+        "execution_contract.json": null,
+        "contract": null,
+        "quality": null,
+        "pipeline/ready": "626676dd586d2de2",
+        "narrative_snapshot": null
+      },
+      "aggregate": "615a376c4963d761"
+    },
+    "shared": {
+      "bible": "aaa398f53d6de940",
+      "series": null,
+      "direction.yaml": "a72487fb6453ab21",
+      "manifest.yaml": "67682ac46867d6b5"
+    }
+  },
+  "after": {
+    "book1": {
+      "book": 1,
+      "root": "D:\\tieuthuyet\\tieuthuyet\\factory\\canary_runs\\phase3c-final-closure-55a7ef0\\copies\\series\\books\\01",
+      "artifacts": {
+        "master_plan.json": "500d1ae1976b5705",
+        "state.json": "e1b5bf7b4fa2dde9",
+        "integrity_state.json": null,
+        "execution_contract.json": null,
+        "contract": null,
+        "quality": null,
+        "pipeline/ready": "14c413803ad89a6a",
+        "narrative_snapshot": null
+      },
+      "aggregate": "69f53d9be2c5e5da"
+    },
+    "book2": {
+      "book": 2,
+      "root": "D:\\tieuthuyet\\tieuthuyet\\factory\\canary_runs\\phase3c-final-closure-55a7ef0\\copies\\series\\books\\02",
+      "artifacts": {
+        "master_plan.json": "7fc4654c27d4896e",
+        "state.json": "b0009f3e0a5d7039",
+        "integrity_state.json": null,
+        "execution_contract.json": null,
+        "contract": "7cf1a701dbe2d637",
+        "quality": "4b14b125b3d3a253",
+        "pipeline/ready": "626676dd586d2de2",
+        "narrative_snapshot": null
+      },
+      "aggregate": "d11a17bb85af1ef5"
+    },
+    "shared": {
+      "bible": "aaa398f53d6de940",
+      "series": null,
+      "direction.yaml": "a72487fb6453ab21",
+      "manifest.yaml": "67682ac46867d6b5"
+    }
+  }
+}

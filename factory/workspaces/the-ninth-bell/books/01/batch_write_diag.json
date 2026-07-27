@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-07-25T05:48:29.871235+00:00",
+  "workspace": "the-ninth-bell",
+  "book": 1,
+  "range": [
+    9,
+    10
+  ],
+  "auto": false,
+  "counts": {
+    "needs_fix": 2
+  },
+  "fault_counts": {
+    "WRITER": 2
+  },
+  "results": [
+    {
+      "chapter": 9,
+      "status": "needs_fix",
+      "fault": "WRITER",
+      "detail": "Writer output failed machine format/length after retries: format/markdown",
+      "evidence": "foreign_chars; word_count; target_language; quotes_advisory; warnings",
+      "error": null
+    },
+    {
+      "chapter": 10,
+      "status": "needs_fix",
+      "fault": "WRITER",
+      "detail": "Writer output failed machine format/length after retries: format/markdown",
+      "evidence": "foreign_chars; word_count; target_language",
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,541 @@
+{
+  "version": 1,
+  "book": 1,
+  "status": "approved",
+  "concept_digest": "e91f1f9ebb4f84a6",
+  "title": "The Quiet Wife",
+  "logline": "When a live-in housekeeper takes a job caring for a wealthy man's fragile wife, she's certain she's there to save the woman from him — until she realizes the wife hired her for something else entirely, and neither of them is who they claimed to be.",
+  "pov": "the housekeeper (unnamed narrator) | first_person | past",
+  "cast": [],
+  "chapter_count": 50,
+  "chapter_map": [
+    {
+      "chapter": 1,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) arrives at the estate, meets the controlling husband and the frail wife, and senses that the wife knows more about her than she should.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 2,
+      "title": "",
+      "beat": "The housekeeper settles in as live-in help, the wife presents herself as a prisoner, and a small kindness from the narrator will later read as recruitment.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 3,
+      "title": "",
+      "beat": "The husband asserts household rules, menace without clear crime, and the narrator files him as the threat.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 4,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) uses the key the wife gave her to unlock the locked drawer, finding a diary that paints the husband as a monster — but something feels too perfect.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 5,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) learns from a delivery driver that the previous housekeeper left suddenly under mysterious circumstances, deepening her unease.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 6,
+      "title": "",
+      "beat": "The wife invites the housekeeper (unnamed narrator) into her private space for the first time, sharing a secret that binds them — while the housekeeper (unnamed narrator) hides her own agenda from the reader.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 7,
+      "title": "",
+      "beat": "The wife reveals her escape plan to the housekeeper (unnamed narrator), but the details feel too convenient, and the housekeeper (unnamed narrator) suspects a trap.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 8,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) examines the file from the husband's study and realizes she was targeted for this job — she is not an intruder but a pawn in a larger game.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 9,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) discovers a hidden room in the basement containing evidence of the husband's previous 'housekeepers' — and realizes she is not the first woman he has recruited.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 10,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) confronts the wife about the hidden room, and the wife reveals the truth: she is not a victim, but the husband's partner in a long-running psychological experiment — and the housekeeper (unnamed narrator) is the next subject.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 11,
+      "title": "",
+      "beat": "The wife gives the housekeeper (unnamed narrator) access to the study files, where she reads about the previous subjects — including Clara's fate — and realizes the experiment is far more dangerous than she assumed.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 12,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) confronts the wife about Subject 7, and the wife admits she is not a victim — she is the architect of the husband's collection, and the narrator is now part of it.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 13,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) studies the file on the wife's next target — a young woman named Maya — and begins the grooming process, while secretly plotting to warn Maya and escape.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 14,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) approaches Maya at the diner, pretending to be a friendly stranger, but Maya is sharper than expected — and the wife's surveillance makes every move dangerous.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 15,
+      "title": "",
+      "beat": "The wife confronts the housekeeper (unnamed narrator) about the note, forcing her to double down on her loyalty, while Maya agrees to visit the estate — sealing her fate.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 16,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) finds a way to open the hidden door in the basement and discovers a woman imprisoned there — a previous Subject who was never released.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 17,
+      "title": "",
+      "beat": "The husband returns and throws an impromptu dinner party, where the wife performs the perfect hostess, the housekeeper (unnamed narrator) plays her role, and a guest drops a clue that shatters the narrator's understanding of who is in control.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 18,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) confronts the wife with the discovery of her maiden name, and the wife confesses: she was the first Subject, and she built the experiment to survive — but now she wants out, and the narrator is her only way.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 19,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) opens the husband's safe and finds evidence of the experiment's true scope — including a list of future targets and a signed confession from the wife — but the wife's motives remain dangerously unclear.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 20,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) confronts the wife about the unsigned letter, and the wife admits she planned to frame the husband — but reveals that he is already planning to frame her, and the only way out is to destroy both of them.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 21,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) and the wife attempt to free Subject 6 and escape the estate, but the husband catches them, and the night ends with a death, a betrayal, and a secret that binds the survivor forever.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 22,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator), the wife, and Subject 6 drive into the night, but the wife's plan is already fraying — and Subject 6 speaks for the first time, revealing a truth that changes everything.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 23,
+      "title": "",
+      "beat": "While the wife is inside the gas station, the housekeeper (unnamed narrator) presses Subject 6 for the truth — and learns that the wife was the one who imprisoned her, not the husband, and the experiment was her idea from the start.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 24,
+      "title": "",
+      "beat": "The three women arrive at the wife's safe house, but the housekeeper (unnamed narrator) discovers evidence that confirms Subject 6's story — and realizes the wife has been playing her from the very first day.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 25,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) wakes in the safe house to find Subject 6 dead and the wife gone, forcing her to decide whether to flee or hunt the woman who has manipulated her from the start.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 26,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) arrives in the wife's hometown and finds a woman who knew the wife before she changed her name — and learns that the wife's first victim was her own sister.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 27,
+      "title": "",
+      "beat": "The wife corners the housekeeper (unnamed narrator) in the attic, and the two women have a final confrontation where the truth about the husband's death and the experiment is revealed — but the wife offers a choice that will bind them forever.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 28,
+      "title": "",
+      "beat": "the housekeeper (unnamed narrator) drives away from the town, carrying the evidence and the weight of murder, but the wife's voice still echoes in her head.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 29,
+      "title": "",
+      "beat": "the housekeeper (unnamed narrator) receives a call from the wife, who is alive and bargaining — she offers the narrator a deal that could free them both, but the price is the narrator's soul.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 30,
+      "title": "",
+      "beat": "the housekeeper (unnamed narrator) makes her choice — she will not trust the wife's deal, but she will use it as bait to draw the wife out and end the game on her own terms.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 31,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) forces the wife to confess on a recording device, but the wife's confession reveals a final twist — the husband was not dead, and the wife has been protecting him from the real threat.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 32,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) tracks down the husband to a motel on the edge of town, where he reveals his side of the story — and offers her a way out that requires her to betray the wife completely.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 33,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) examines the husband's evidence and realizes it is incomplete — he has been editing the truth to protect himself — and she must make a final choice: destroy them both, or walk away with the only thing that matters.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 34,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) arrives in a new city and begins building a false identity, but a chance encounter with a stranger forces her to confront the possibility that the wife has followed her.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 35,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) takes a job as a waitress to blend in, but a customer's casual comment about a missing woman triggers a chain of memories that forces her to relive the experiment.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 36,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) receives a text from an unknown number containing a photograph of her new room — the wife has found her, and the final game begins.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 37,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) realizes the forged confession has been sent to the police and she has hours to clear her name before she is arrested — forcing her to turn to the one person she swore she'd never trust again.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 38,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) meets the husband at the estate, where they search for the wife's final piece of evidence — but they find the wife waiting for them instead, and the final confrontation begins.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 39,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) makes her choice — she betrays the husband, but in doing so, she turns the wife's game against her, securing her own freedom and leaving both the wife and the husband to face the consequences.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 40,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) arrives in a new city, but the wife's shadow follows her through a newspaper headline that forces her to confront the unresolved fate of Subject 6.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 41,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) traces the newspaper story about Clara Higgins to a local tip line and finds planted physical evidence that proves the wife is still hunting her.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 42,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) confronts the wife in a final, desperate gambit — she turns the forged confession against her, forcing a stalemate that leaves both women free but bound by a secret that can never be spoken.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 43,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) tries to build a new life in a coastal town, but a chance sighting of a woman who looks like the wife forces her to confront the fact that she may never be free.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 44,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) receives a letter with no return address — inside is a single photograph of the estate, with the wife's handwriting on the back: 'You forgot something.'",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 45,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) returns to the estate to find the wife waiting for her — and discovers that what she 'forgot' was not an object, but a choice: to become the wife's partner or her final victim.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 46,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) walks away from the estate into the night, but the wife's final words echo as she faces an uncertain future on an empty road.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 47,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) arrives in a small inland town, adopts a new identity, and takes a job at a library — but the quiet life feels foreign, and she struggles to trust the peace.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 48,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) — now Sarah Cole — faces a choice when a stranger arrives at the library asking for her by her old name, forcing her to decide whether to run again or stand her ground.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 49,
+      "title": "",
+      "beat": "the housekeeper (unnamed narrator) wakes, picks up the investigator's card, and decides to call the husband — not to accept his deal, but to make one of her own that will finally sever her ties to the past.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    },
+    {
+      "chapter": 50,
+      "title": "",
+      "beat": "The housekeeper (unnamed narrator) lives a full day as Sarah Cole — no calls, no letters, no shadows — and realizes that freedom is not a destination but a daily choice, made in the small, ordinary moments.",
+      "must_include": [],
+      "must_happen": [],
+      "must_not_reveal": [],
+      "ending": "",
+      "final_line": ""
+    }
+  ],
+  "must_include_by_chapter": {
+    "50": [
+      "Book 1 closes the central con: the reader learns who framed whom and who dies. The housekeeper survives but is now bound to a secret that could destroy her."
+    ]
+  },
+  "must_avoid": [
+    "Supernatural or paranormal elements",
+    "Villain confession speech as the reveal mechanism",
+    "Copying names, characters, or plot from any existing book",
+    "Flat stretches with no seed or shift for 4+ chapters",
+    "Making the twist obvious before its intended chapter"
+  ],
+  "must_include_book": [
+    "Unreliable first-person narrator who hides her own motive",
+    "Four-tier twist ladder, each tier re-reads the last",
+    "At least one fully-believable false answer before the true reveal",
+    "Truth revealed by physical evidence, not monologue",
+    "Genuine intimacy between the two women before the betrayal"
+  ],
+  "ending_book1": "Book 1 closes the central con: the reader learns who framed whom and who dies. The housekeeper survives but is now bound to a secret that could destroy her.",
+  "hook_book2": "The housekeeper walks free — but a single piece of evidence she thought she destroyed resurfaces in someone else's hands, and that someone knows exactly what she did.",
+  "surface_plot": "Reader thinks: A struggling housekeeper with a hidden past enters the perfect home of a rich couple and slowly uncovers that the controlling husband is dangerous and the frail wife is his victim. The housekeeper must protect the wife and escape before she becomes the next casualty.",
+  "true_plot": "Actually: The \"fragile wife\" orchestrated the entire hire. She chose this specific housekeeper because of the housekeeper's criminal past — she needs someone disposable to frame for a murder she has been planning for years. The husband isn't the predator; he's the target. And the housekeeper's own hidden agenda (she came to rob or blackmail this family) means both women are running long cons on each other. The real victim is the one reader trusted most.",
+  "final_supernatural_residue": "",
+  "genre_profile": "psychological thriller with slow-burn female intimacy, domestic noir, and a four-tier twist structure. First-person unreliable narrator. The reader is always building a theory that fits current facts but will be overturned by the next reveal.",
+  "language": "en",
+  "reveal_ladder": {},
+  "manifest_digest": "3647c908910ba507"
+}

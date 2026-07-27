@@ -319,7 +319,9 @@ def cmd_validate_bible(args: argparse.Namespace) -> None:
         return
     bible = load_json(path)
     direction = load_direction(ws)
-    errors = validate_bible(bible)
+    from factory.engine.lib.narrative_schema import load_concept
+
+    errors = validate_bible(bible, concept=load_concept(ws))
     if errors:
         print(f"[validate-bible] FAIL ({len(errors)} issues):")
         for e in errors:
@@ -339,7 +341,9 @@ def cmd_approve_bible(args: argparse.Namespace) -> None:
         print(f"[approve-bible] FAIL — missing {path}")
         return
     bible = load_json(path)
-    errors = validate_bible(bible)
+    from factory.engine.lib.narrative_schema import load_concept
+
+    errors = validate_bible(bible, concept=load_concept(ws))
     if errors:
         print(f"[approve-bible] BLOCKED — validate-bible fail ({len(errors)} issues)")
         for e in errors[:10]:
@@ -403,7 +407,11 @@ def _clear_chapter_pipeline(ws: Path, book: int, ch: int) -> None:
 
 def build_writer_payload(ws: Path, book: int, ch: int, cfg: dict) -> str:
     """Writer authority = locked disk prompt (SoT). Optional live rebuild only if digest matches."""
-    from factory.engine.lib.intent_gates import assert_prompt_matches_disk
+    from factory.engine.lib.intent_gates import (
+        assert_prompt_matches_disk,
+        is_prompt_hand_locked,
+        strip_prompt_hand_lock_banner,
+    )
 
     pp = prompt_path(ws, book, ch)
     if not pp.exists():
@@ -412,23 +420,27 @@ def build_writer_payload(ws: Path, book: int, ch: int, cfg: dict) -> str:
     lang = target_language(direction, cfg)
     disk_prompt = pp.read_text(encoding="utf-8")
 
-    # Verify live projection still matches disk (detect bible/registry drift).
-    plan = load_chapter_plan(ws, book, ch)
-    plan_path = book_workspace_dir(ws, book) / "master_plan.json"
-    data = json.loads(plan_path.read_text(encoding="utf-8"))
-    plans = normalize_chapter_plans(data.get("chapter_plans", data.get("chapter_beats", [])))
-    prior = [p for p in plans if p.get("chapter", 0) < ch]
-    live = build_chapter_prompt(
-        plan,
-        prior_plans=prior,
-        direction=direction,
-        chapter=ch,
-        cfg=cfg,
-        series_bible=load_series_bible(ws),
-        ws=ws,
-    )
-    assert_prompt_matches_disk(disk_prompt, live, ch)
-    prompt = disk_prompt
+    # Hand-locked: operator owns disk; skip live rebuild equality.
+    if is_prompt_hand_locked(disk_prompt):
+        prompt = strip_prompt_hand_lock_banner(disk_prompt)
+    else:
+        # Verify live projection still matches disk (detect bible/registry drift).
+        plan = load_chapter_plan(ws, book, ch)
+        plan_path = book_workspace_dir(ws, book) / "master_plan.json"
+        data = json.loads(plan_path.read_text(encoding="utf-8"))
+        plans = normalize_chapter_plans(data.get("chapter_plans", data.get("chapter_beats", [])))
+        prior = [p for p in plans if p.get("chapter", 0) < ch]
+        live = build_chapter_prompt(
+            plan,
+            prior_plans=prior,
+            direction=direction,
+            chapter=ch,
+            cfg=cfg,
+            series_bible=load_series_bible(ws),
+            ws=ws,
+        )
+        assert_prompt_matches_disk(disk_prompt, live, ch)
+        prompt = disk_prompt
 
     excerpt = load_prior_chapter_excerpt(ws, book, ch)
     if excerpt:

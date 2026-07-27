@@ -1,0 +1,62 @@
+```json
+{
+  "act": [
+    37,
+    38
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 37,
+      "title": "The Public Frame",
+      "slug": "the-public-frame",
+      "one_line_summary": "Elle Reyes and her network frame Kroll's death as justice served through her podcast, tying off loose ends while a new threat surfaces.",
+      "beat_summary": "After Kroll's death is ruled an accident, Elle Reyes records a final podcast episode framing the case as 'justice served' by the system she supposedly exposed. Sasha and Dr. Lin help her plant evidence linking Kroll to the murder of Lucia Vega, ensuring the public narrative is sealed. Wren is gone, but Mira watches from the shadows. The chapter ends with Elle Reyes receiving an anonymous package containing the Project Phoenix file — evidence of her first kill — proving someone else now holds the leash. Clue C003 (the ligature mark discrepancy) and C005 (the partial license plate) are paid off as part of the frame.",
+      "must_happen": [
+        "Elle Reyes records the final podcast episode of the Kroll investigation, publicly framing his death as 'justice finally served' by the system she exposed.",
+        "Sasha and Dr. Lin help Elle Reyes plant evidence — the ligature mark discrepancy (C003) and the partial license plate (C005) — to seal the public narrative against Kroll.",
+        "Elle Reyes receives an anonymous package containing the Project Phoenix file — evidence of her first kill — proving someone else now controls her fate.",
+        "Elle Reyes burns the package but keeps the USB drive, her thumb tapping her ring finger three times.",
+        "Mira sends a text: 'You're not free, Elle. You're just on a longer leash.'"
+      ],
+      "must_not": [
+        "Do not reveal the identity of the person who sent the Project Phoenix file — only that it exists and is now in unknown hands.",
+        "Do not show Elle Reyes confessing to murder on the podcast — only framing Kroll's death as justice."
+      ],
+      "opens_with": "\"'This is The Quiet Ones, and I'm Elle Reyes. Today, we close the case of Lucia Vega — and we name the man who killed her.' I paused, my thumb tapping the microphone stand. 'His name was Damien Kroll. And he will never hurt anyone again.'\"",
+      "cliffhanger": "Elle Reyes holds the USB drive from the anonymous package. Her phone buzzes. A text from an unknown number: 'Nice podcast. Now listen: you work for me now. Next target will find you.'",
+      "signature_detail_hint": "The USB drive is the same model as the one from Kroll's safety deposit box — a black Kingston DataTraveler with a scratch in the shape of a 'V' on the casing.",
+      "emotional_beat": "Cold satisfaction at closing the case undercut by the hollow dread of a new leash — she is no longer invisible, and someone else is pulling the strings.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. Elle Reyes is focused on the frame and the new threat.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Execute the public frame, pay off clues C003 and C005, and set up the Book 2 hook. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "The public frame is set; the Project Phoenix file is in unknown hands; Elle Reyes is on a leash held by an unknown handler; the network is intact but shaken; Book 2 hook is planted."
+    },
+    {
+      "chapter": 38,
+      "title": "The New Leash",
+      "slug": "the-new-leash",
+      "one_line_summary": "The case closes publicly as justice served, but the evidence of Elle's first kill surfaces in the hands of an unknown handler — and the hunt for her begins anew.",
+      "beat_summary": "The Kroll case is officially closed. The podcast episode goes viral, and the public narrative solidifies: Damien Kroll was a killer who finally faced justice. Elle Reyes meets with Sasha and Dr. Lin one last time, telling them she is going underground — but not disappearing. She needs to find out who holds the leash. Mira contacts her with a name: the handler is someone who has been watching Elle for years, someone who knew about her sister. The chapter ends with Elle Reyes at her sister's grave, leaving a single white gardenia, when her phone buzzes with a text: 'Your next target is someone who knows what you did to Kroll. Find him before he finds you. — Your Handler.' The hunt is no longer her choice. Clues C007 (the reflection in the photograph) and C009 (the strand of hair planted on Kroll) are paid off as part of the forensic trail that leads to the handler.",
+      "must_happen": [
+        "The Kroll case is officially closed; the podcast episode goes viral, and the public narrative solidifies: Damien Kroll was a killer who finally faced justice.",
+        "Elle Reyes meets with Sasha and Dr. Lin one last time, telling them she is going underground — but not disappearing. She needs to find out who holds the leash.",
+        "Mira contacts Elle Reyes with a name: the handler is someone who has been watching Elle for years, someone who knew about her sister.",
+        "Clues C007 (the reflection in the photograph) and C009 (the strand of hair planted on Kroll) are paid off as part of the forensic trail that leads to the handler's identity.",
+        "Elle Reyes visits her sister's grave, leaving a single white gardenia, when she receives a text: 'Your next target is someone who knows what you did to Kroll. Find him before he finds you. — Your Handler.'"
+      ],
+      "must_not": [
+        "Do not reveal the full identity of the handler — only that they have been watching Elle for years and knew about her sister.",
+        "Do not show Elle Reyes accepting the handler's terms — only that she is now on a leash and must find the target."
+      ],
+      "opens_with": "\"'The case is closed, Elle.' Sasha's voice was tired but satisfied. 'Kroll is dead. Lucia Vega's family has closure. You won.' I looked at the USB drive in my hand — the one from the anonymous package. 'Did I?' I asked. 'Because I don't feel like I won.'\"",
+      "cliffhanger": "Elle Reyes stands at her sister's grave, the white gardenia already beginning to wilt in the cold air. Her phone buzzes. She reads the text: 'Your next target is someone who knows what you did to Kroll. Find him before he finds you. — Your Handler.' She looks up at the gray sky, her thumb tapping her ring finger three times. The hunt is over. The hunt is just beginning.",
+      "signature_detail_hint": "The handler's text is sent from a number with the same area code as the town where Elle's sister was murdered — a deliberate message that the handler knows everything.",
+      "emotional_beat": "Bitter relief mixed with the cold dread of a new leash — she has won the battle, but the war is just beginning, and she is no longer fighting for justice; she is fighting for survival.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the closure of the Kroll case and the opening of a new hunt.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Close the Kroll case, pay off clues C007 and C009, and deliver the Book 1 ending with the Book 2 hook. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "Book 1 closes: Kroll is dead, the case is closed, Elle is free but exposed. The handler is introduced as the new antagonist for Book 2. Elle Reyes's method is proven, but her secrecy is shattered — she is now on a leash, and the hunt for her has begun."
+    }
+  ]
+}
+```

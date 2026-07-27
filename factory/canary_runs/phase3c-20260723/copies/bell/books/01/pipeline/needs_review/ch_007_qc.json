@@ -1,0 +1,45 @@
+{
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "[format_fix — chỉ sửa tay, không rewrite]",
+    "khoảng trắng thừa cuối dòng (stray whitespace)"
+  ],
+  "source": "machine_content_cap",
+  "content_retries": 0,
+  "max_content_retries": 2,
+  "classification": {
+    "format_fix": {
+      "stray_whitespace": true
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "llm_qc_before_machine_fail": {
+    "foreign_chars": [],
+    "word_count": 3302,
+    "voice_drift": {
+      "flag": false,
+      "details": ""
+    },
+    "continuity_conflict": {
+      "flag": true,
+      "details": "Chapter 7 places Elena in the basement and nave of Saint Orison’s Church, interacting with Gideon Rusk and discovering new clues, but according to story_state and prior_chapter_excerpt, Elena was last established in the Morrow Wick archive records room, with no transition or event moving her to the church. This is a major location and event continuity conflict."
+    },
+    "cliffhanger_strength": 4,
+    "pacing_issue": false,
+    "signature_detail_present": true,
+    "spice_ok": true,
+    "content_boundary_ok": true,
+    "verdict": "FAIL",
+    "fail_reasons": [
+      "continuity_conflict: Elena's location and activities in this chapter contradict the established story_state, which had her in the archive records room with no transition to the church.",
+      "verdict_fail",
+      "continuity_conflict"
+    ]
+  }
+}

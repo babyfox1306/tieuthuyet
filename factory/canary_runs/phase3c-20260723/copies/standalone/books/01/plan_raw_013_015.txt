@@ -1,0 +1,96 @@
+```json
+{
+  "act": [
+    13,
+    15
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 13,
+      "title": "The Architect of Lies",
+      "slug": "the-architect-of-lies",
+      "one_line_summary": "Sloane Mercer fully deciphers the ledger, revealing her elaborate plan to expose Cassian Rook, Mara Mercer's staged death, and her own self-execution clause.",
+      "beat_summary": "Cassian Rook's attempt to seize the rifle is thwarted by Lucian Vey in a brutal struggle. Sloane Mercer, with the ledger now fully visible, recalls the entire truth (MR005): she discovered Cassian Rook used her system to kill innocent witnesses, staged Mara Mercer's death as bait, hid the ledger in her firing sequence, erased her memory to survive interrogation, and ordered Lucian Vey to kill her if Cassian Rook restored her conditioned self. [ROMANCE] Lucian Vey witnesses the full weight of her sacrifice and, despite his contract, chooses to stand by Sloane Mercer, accepting the impossible choice. Cassian Rook escapes, but not before Sloane Mercer broadcasts a crucial part of the ledger.",
+      "must_happen": [
+        "Lucian Vey engages Cassian Rook in a fierce struggle for control of the rifle, preventing Cassian Rook from seizing it or disrupting the ledger transmission.",
+        "Sloane Mercer uses the chaos to access the fully unlocked transaction ledger (Clue C001, C004, and C005 are paid off), reading the entries that detail Cassian Rook's manipulation and her own seven contracts.",
+        "Major Reveal MR005 occurs: Sloane Mercer fully recovers the central mystery, understanding that she discovered Cassian Rook used her system to eliminate innocent witnesses, staged Mara Mercer's death as bait, hid the complete transaction ledger within her conditioned firing sequence, erased her conscious memory to survive interrogation, and ordered Lucian Vey to kill her if Cassian Rook successfully restored the obedient identity he had created.",
+        "[ROMANCE] Lucian Vey, upon witnessing the full depth of Sloane Mercer's sacrifice and her love for Mara Mercer, makes a silent, internal choice to protect Sloane Mercer despite his binding contract, a profound shift in his loyalty.",
+        "Sloane Mercer understands Mara Mercer's full complicity in the plan, her survival, and the true meaning of the coded signal.",
+        "Sloane Mercer broadcasts a significant portion of the transaction ledger data, exposing Cassian Rook's network to an unknown audience, before Cassian Rook manages to escape the rooftop."
+      ],
+      "must_not": [
+        "Cassian Rook must not be captured or killed in this chapter; he must escape to remain a threat.",
+        "Sloane Mercer must not feel absolved of her past actions; her guilt and responsibility must remain clear.",
+        "Lucian Vey must not verbally break his contract yet, only internalize his unwavering loyalty to Sloane Mercer.",
+        "Sloane Mercer and Lucian Vey must not escape the rooftop at this point."
+      ],
+      "opens_with": "The masked figure lunged, a dark echo of Lucian Vey, but it was Cassian Rook, his hand reaching for the rifle, and for the ledger now scrolling in stark green across the scope.",
+      "cliffhanger": "As the final lines of Cassian Rook's ledger stream into the pre-dawn sky, Cassian Rook’s voice, raw with fury, snarls, 'You will pay for this, Sloane Mercer.' He vanishes into the chaos, leaving Sloane Mercer and Lucian Vey alone on the rooftop, the rising sun illuminating the rifle, and the impossible choice of the sunrise clause still hanging between them.",
+      "signature_detail_hint": "The ledger's data stream, instead of being green, now pulses with a stark, incriminating red, reflecting the blood of the innocent targets and Sloane Mercer's own guilt.",
+      "emotional_beat": "Devastating truth, profound guilt, desperate love, and unshakeable loyalty for Sloane Mercer; agonizing internal conflict, grim determination, and a chosen devotion to Sloane Mercer for Lucian Vey.",
+      "spice": 0,
+      "spice_note": "N/A",
+      "chapter_task": "Write a 1600-1900 word chapter where the central mystery (MR005) is fully revealed through Sloane Mercer accessing the ledger (C001, C004, C005 payoffs). Detail the fight between Lucian Vey and Cassian Rook, Cassian Rook's escape, and Lucian Vey's crucial internal choice about his loyalty. Ensure Sloane Mercer broadcasts the ledger.",
+      "carries_to_next": "Sloane Mercer and Lucian Vey are left with the full, horrifying truth of the plan, the still active sunrise clause, and the immediate threat of Cassian Rook's retaliation, forcing them to find Mara Mercer and complete their mission."
+    },
+    {
+      "chapter": 14,
+      "title": "The Sister's Sacrifice",
+      "slug": "the-sisters-sacrifice",
+      "one_line_summary": "Sloane Mercer contacts Mara Mercer, who confirms her full complicity in the plan, revealing her own sacrifice to expose Cassian Rook, just as Cassian Rook's forces launch a full assault on the rooftop.",
+      "beat_summary": "Sloane Mercer, using the now-decoded ledger device, establishes direct contact with Mara Mercer. Mara Mercer confirms her survival and explains her full, willing participation in Sloane Mercer's dangerous plan (MR006), including the staged shooting, her role as bait, and the specific coded signals she sent. [ROMANCE] Lucian Vey, witnessing the sisters' deep bond and shared sacrifice, feels his contractual obligation crumble under the weight of his unwavering loyalty to Sloane Mercer. As Cassian Rook's forces initiate a full-scale assault on the rooftop, Sloane Mercer and Lucian Vey fight side-by-side, using their combined skills to defend the rifle and the exposed ledger, with Sloane Mercer actively using the rifle to protect Lucian Vey.",
+      "must_happen": [
+        "Sloane Mercer uses the now-functional ledger device to establish direct, verifiable communication with Mara Mercer, confirming Mara Mercer's survival and current location.",
+        "Major Reveal MR006 occurs: Mara Mercer fully explains her complicity and willing participation in Sloane Mercer's plan, including consenting to the staged rooftop shooting, acting as bait, and sending the coded hand rhythm signals.",
+        "[ROMANCE] Lucian Vey observes the emotional exchange between Sloane Mercer and Mara Mercer, deepening his understanding of their bond and Mara Mercer's sacrifice, which solidifies his internal decision to prioritize Sloane Mercer over his contract.",
+        "Cassian Rook's forces launch a full-scale, overwhelming assault on the rooftop, attempting to recover the rifle, the ledger device, and capture Sloane Mercer and Lucian Vey.",
+        "Sloane Mercer and Lucian Vey fight as a coordinated unit, moving and defending the rifle and the exposed ledger against the encroaching forces.",
+        "Sloane Mercer actively uses the rifle's capabilities to target and disable key enemy assets, providing crucial cover and protection for Lucian Vey during the assault."
+      ],
+      "must_not": [
+        "Cassian Rook must not directly confront Sloane Mercer or Lucian Vey in this chapter; the focus remains on his forces.",
+        "Sloane Mercer and Lucian Vey must not successfully escape the rooftop by the end of the chapter.",
+        "Lucian Vey must not verbally declare his intention to break the contract, only demonstrate his internal shift through actions and expressions."
+      ],
+      "opens_with": "The ledger device hummed to life, connecting Sloane Mercer to a voice she thought was lost forever. 'Mara?' she whispered, her hand trembling.",
+      "cliffhanger": "As the rooftop is overrun and Mara Mercer's image flickers a silent goodbye on the device, Cassian Rook's voice, amplified across the building, booms: 'The ledger is mine. And now, Mara Mercer is mine as well.'",
+      "signature_detail_hint": "The faint, persistent static on Mara Mercer's comm, a constant reminder of the distance and danger between the sisters, even as they speak, highlights the fragile nature of their connection.",
+      "emotional_beat": "Shared sacrifice, desperate hope, fierce sisterly love, and Lucian Vey's unwavering loyalty to Sloane Mercer amidst overwhelming odds.",
+      "spice": 0,
+      "spice_note": "N/A",
+      "chapter_task": "Write a 1600-1900 word chapter where Sloane Mercer contacts Mara Mercer, Mara Mercer fully reveals her complicity (MR006), Cassian Rook's forces launch a full assault, and Lucian Vey's loyalty to Sloane Mercer solidifies. Ensure Sloane Mercer actively participates in the defense.",
+      "carries_to_next": "Mara Mercer is captured by Cassian Rook, and Sloane Mercer and Lucian Vey are trapped on the rooftop with the ledger, facing the full might of Cassian Rook's forces and the imminent threat of the sunrise clause."
+    },
+    {
+      "chapter": 15,
+      "title": "Dawn's Blind Interval",
+      "slug": "dawns-blind-interval",
+      "one_line_summary": "Cassian Rook, wearing Lucian Vey's mask, captures Sloane Mercer and attempts to force her obedience, but Lucian Vey intervenes, leading to a steamy confrontation and their escape.",
+      "beat_summary": "Cassian Rook, having captured Mara Mercer and now wearing a mask identical to Lucian Vey's, physically confronts Sloane Mercer on the overrun rooftop, attempting to use the rifle and the threat of Mara Mercer to force Sloane Mercer back into her conditioned obedience. Lucian Vey, having secretly evaded Cassian Rook's forces, appears and creates a crucial distraction, allowing Sloane Mercer to fight back. [ROMANCE] In a desperate, steamy struggle, Sloane Mercer and Lucian Vey use their combined physical prowess against Cassian Rook, their bodies colliding with desperate desire and fierce loyalty, momentarily disorienting Cassian Rook. Sloane Mercer uses her intimate knowledge of Cassian Rook's conditioning against him, gaining a tactical advantage. This allows Sloane Mercer and Lucian Vey to escape the overrun rooftop, leaving Cassian Rook temporarily thwarted but still dangerous.",
+      "must_happen": [
+        "Cassian Rook, wearing a mask identical to Lucian Vey's, appears on the rooftop and physically confronts Sloane Mercer, holding Mara Mercer captive as leverage.",
+        "Cassian Rook attempts to reactivate Sloane Mercer's conditioned obedient identity using the rifle and the direct threat to Mara Mercer, exploiting the 'blind interval' in the surveillance.",
+        "Lucian Vey, having covertly navigated the overrun rooftop, makes a dramatic entrance, creating a crucial diversion that allows Sloane Mercer to resist Cassian Rook's conditioning attempt.",
+        "[ROMANCE] Sloane Mercer and Lucian Vey engage Cassian Rook in a close-quarters, desperate physical struggle. This includes a steamy, intense moment where their bodies press together, fueled by adrenaline, shared danger, and their deep, undeniable connection, momentarily disrupting Cassian Rook's focus and reaffirming their bond.",
+        "Sloane Mercer uses her intimate knowledge of Cassian Rook's conditioning methods and vulnerabilities to disrupt his control over her and gain a tactical advantage in the fight.",
+        "Sloane Mercer and Lucian Vey, working in perfect sync, manage to escape the overrun rooftop and Cassian Rook's immediate grasp, leaving him momentarily incapacitated or distracted."
+      ],
+      "must_not": [
+        "Cassian Rook must not be killed or permanently incapacitated; he must remain a threat for the final chapters.",
+        "Sloane Mercer must not fully revert to her conditioned self or lose her current identity.",
+        "Lucian Vey must not be captured or seriously injured by Cassian Rook's forces.",
+        "Mara Mercer must remain Cassian Rook's captive by the end of the chapter."
+      ],
+      "opens_with": "The figure stepped out of the pre-dawn shadows, a rifle in one hand, Mara Mercer struggling in the other. He wore Lucian Vey's mask, but Sloane Mercer knew the cold certainty in his eyes: Cassian Rook.",
+      "cliffhanger": "As Sloane Mercer and Lucian Vey plummet from the rooftop to a lower ledge, leaving Cassian Rook raging above, Lucian Vey's eyes meet Sloane Mercer's, a silent promise burning between them: 'We will save her. Together.'",
+      "signature_detail_hint": "The reflection of the rising sun glints off the identical masks of Cassian Rook and Lucian Vey, creating a disorienting visual that blurs the line between former lover and current enemy for Sloane Mercer for a split second.",
+      "emotional_beat": "Desperate defiance, raw desire, unwavering loyalty, and the fierce, unifying bond of Sloane Mercer and Lucian Vey against their shared enemy.",
+      "spice": 2,
+      "spice_note": "The steamy encounter during the fight is a brief, intense, and plot-critical moment where Sloane Mercer and Lucian Vey's bodies collide and press together in a desperate struggle against Cassian Rook. Their physical intimacy, fueled by adrenaline and the stakes of their survival, momentarily disorients Cassian Rook and reaffirms their deep, undeniable bond and loyalty, enabling them to gain a tactical advantage and escape. It should be intense and charged, but not explicit intercourse.",
+      "chapter_task": "Write a 1600-1900 word chapter where Cassian Rook confronts Sloane Mercer on the rooftop, wearing Lucian Vey's mask and threatening Mara Mercer. Include Lucian Vey's dramatic intervention and a steamy, plot-critical physical encounter (spice=2) between Sloane Mercer and Lucian Vey during the fight, leading to their escape from the rooftop.",
+      "carries_to_next": "Sloane Mercer and Lucian Vey have escaped the immediate threat but Mara Mercer remains Cassian Rook's captive, and the sunrise clause looms, forcing them to find a way to expose Cassian Rook fully and rescue Mara Mercer before dawn."
+    }
+  ]
+}
+```

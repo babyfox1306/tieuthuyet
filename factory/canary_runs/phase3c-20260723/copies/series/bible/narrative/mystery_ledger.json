@@ -1,0 +1,89 @@
+{
+  "main_mystery": "Who truly authored the tribunal system that caused the summit tragedies, and what is Sofia Bellini's real nature and role in the events? Is the narrative frame that Sofia is the architect itself a lie?",
+  "truth": "No one built the system; it authored 'Sofia Bellini' as a culprit so humans would have someone to blame instead of themselves. The tribunal system and the deaths were real, but the record generated the narrative of a single architect. Sofia is a character created by the system, not a real author. Pierre is the only one whose memory resists the rewriting, and when he tries to expose the truth, his testimony is itself rewritten into a new record.",
+  "canonical_reveal_chapter": 7,
+  "red_herrings": [
+    {
+      "id": "RH001",
+      "description": "Pierre uncovers a file (C006) containing Sofia's 'architect confession,' apparently dated before the first summit. The impossible timestamp suggests Sofia was orchestrating events long before anyone suspected.",
+      "planted_chapter": 3,
+      "debunked_chapter": 7
+    },
+    {
+      "id": "RH002",
+      "description": "A witness claims to have seen Sofia orchestrating events in a location she could not have been present — seemingly confirming her as the mastermind.",
+      "planted_chapter": 4,
+      "debunked_chapter": 7
+    },
+    {
+      "id": "RH003",
+      "description": "Sofia's own conviction that she is the architect, recounted with perfect recall and consistent motivation, further cements her guilt in Pierre's mind.",
+      "planted_chapter": 2,
+      "debunked_chapter": 7
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "description": "Pierre finds the C006 file — a record of Sofia's confession to building the system, dated before the first summit. The timestamp is impossible.",
+      "plant_chapter": 3,
+      "payoff_chapter": 7
+    },
+    {
+      "id": "C002",
+      "description": "Testimony from a witness describes Sofia's actions in a place and time where she could not have been present, according to all other evidence.",
+      "plant_chapter": 4,
+      "payoff_chapter": 7
+    },
+    {
+      "id": "C003",
+      "description": "When Pierre confronts Sofia, she insists on her role as architect but cannot answer basic technical questions only a true creator could know. Her memories are too consistent, almost archetypal.",
+      "plant_chapter": 5,
+      "payoff_chapter": 7
+    },
+    {
+      "id": "C004",
+      "description": "Pierre notices that the narrative perspective has shifted from Sofia (Books 1-2) to himself, and the act of telling the story seems to generate a new, cleaner version of events.",
+      "plant_chapter": 6,
+      "payoff_chapter": 10
+    },
+    {
+      "id": "C005",
+      "description": "Pierre realizes his own memories do not match the official record, and every attempt to tell the truth is smoothed and rewritten as he speaks.",
+      "plant_chapter": 8,
+      "payoff_chapter": 10
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "MR001",
+      "chapter": 7,
+      "description": "The impossible timestamp and contradictory evidence reveal that Sofia Bellini was not the architect. The system itself generated Sofia as a scapegoat — there never was an author.",
+      "reveal_weight": "major",
+      "required_clues": [
+        "C001",
+        "C002",
+        "C003"
+      ]
+    },
+    {
+      "id": "MR002",
+      "chapter": 9,
+      "description": "Pierre understands that any attempt to tell the true, chaotic version only results in the narrative being rewritten into a new, clean record. The act of exposure itself feeds the system.",
+      "reveal_weight": "major",
+      "required_clues": [
+        "C004",
+        "C005"
+      ]
+    },
+    {
+      "id": "MR003",
+      "chapter": 10,
+      "description": "Pierre's final true sentence exists for one instant, but is never recorded; the record completes itself, denying even this last resistance. The reader is left complicit and unsettled.",
+      "reveal_weight": "minor",
+      "required_clues": [
+        "C005"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "act": [10, 10],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Bell Names the Dead",
+      "slug": "the-bell-names-the-dead",
+      "one_line_summary": "Female Lead enters the sealed chamber, exposes the remains and records, enters the seven names into the register, and ends the death loop as Male Lead’s sabotage is revealed.",
+      "beat_summary": "At sunrise, Female Lead stands at the threshold of the sealed chamber beneath Saint Orison’s, the final key in her grasp. Inside, she discovers the skeletal remains of the seven forgotten children, the original attendance ledger, and Ada Voss’s correction page. The full truth crystallizes: Ada altered the record to ensure Female Lead became the final witness, not a victim. As Male Lead makes a last, violent attempt to stop her, Female Lead records every name, reading them aloud into the silence. The bell’s impossible tone splinters, then ceases. The evidence of the 1974 cover-up is undeniable, and the town’s cycle of ritual deaths ends. Male Lead is exposed and arrested, Ada Voss’s legacy is confronted, and the children’s names are restored at last.",
+      "must_happen": [
+        "Female Lead unlocks the sealed chamber beneath Saint Orison’s and finds the remains of the seven children, the unaltered attendance ledger, and Ada Voss’s correction page.",
+        "Female Lead realizes and voices the binding truth: The bell never chooses. Each dying victim is compelled to name the one person whose hidden knowledge, access, or evidence is required to advance the unfinished testimony.",
+        "Female Lead enters all seven erased names into the official death register, reads them aloud beneath the bell frame, and completes the chain.",
+        "Male Lead is caught in a final act of sabotage and attacks Female Lead, but is subdued and exposed as the antagonist who suppressed the truth.",
+        "The supernatural mechanism ceases: the bell falls silent, the cycle of deaths is broken, and the evidence is preserved for authorities.",
+        "Female Lead must decide how to reconcile Ada Voss’s actions and legacy, as the town’s history is rewritten."
+      ],
+      "must_not": [
+        "Do not introduce any further supernatural elements beyond the established mechanism.",
+        "Do not allow the bell cycle to continue or any ambiguity about the restoration of the children’s names."
+      ],
+      "opens_with": "\"The bell never chooses. Each dying victim is compelled to name the one person whose hidden knowledge, access, or evidence is required to advance the unfinished testimony.\" Female Lead recites, voice echoing in the stone chamber as dawn breaks.",
+      "cliffhanger": "As the final echo fades, Female Lead faces the daylight—free at last—but the question remains: can Morrow Wick live with the truth now exposed?",
+      "signature_detail_hint": "A single pressed wildflower, still vibrant, rests atop the register beside the remains—a token placed decades ago by Ada Voss.",
+      "emotional_beat": "Grief, vindication, and the haunted relief of fulfilling both justice and inheritance.",
+      "spice": 0,
+      "spice_note": "No romantic or sexual content; the emotional intensity is derived from confrontation, loss, and closure.",
+      "chapter_task": "Deliver the full procedural and emotional resolution: Female Lead finds the chamber, restores the children’s names, exposes Male Lead, and ends the supernatural loop. Address Ada Voss’s legacy and the aftermath for the town. Word count: 1600–1900. No ambiguity—close the case with concrete physical and emotional beats.",
+      "carries_to_next": "The immediate cycle is ended, but Morrow Wick must reckon with its exposed history and the consequences of Ada Voss’s choices."
+    }
+  ]
+}

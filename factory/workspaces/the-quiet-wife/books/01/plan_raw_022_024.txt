@@ -1,0 +1,200 @@
+{
+  "act": [22, 24],
+  "chapter_plans": [
+    {
+      "chapter": 22,
+      "title": "The Drive",
+      "slug": "the-drive",
+      "one_line_summary": "The housekeeper (unnamed narrator), Nora, and Subject 6 flee into the night, but the wife's control is already fraying — and Subject 6 speaks for the first time, revealing a truth that changes everything.",
+      "beat_summary": "The housekeeper (unnamed narrator) wakes in the dark basement, chained. She hears a scraping sound — Subject 6 has returned with a key she stole from Nora during the chaos. Together, they unlock the chains and flee through the garden. Nora catches them at the garage, but instead of stopping them, she offers a ride. 'Get in. We have to go now.' The three women drive into the night. Subject 6 is silent in the back seat, wrapped in a blanket. After an hour of tense silence, Subject 6 speaks for the first time: 'She was the one who put me there. Not him. Her.' The housekeeper (unnamed narrator) looks at Nora, whose hands tighten on the steering wheel but who says nothing.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) wakes chained in the basement. Subject 6 returns with a key she stole from Nora during the escape attempt, and unlocks her chains. They flee through the garden together.",
+        "Nora catches them at the garage. She doesn't stop them — instead, she opens the car door and says, 'Get in. We have to go now. Julian is still alive and he'll call the police.'",
+        "The three women drive into the night. Subject 6 is silent, wrapped in a blanket in the back seat. The atmosphere is thick with unspoken accusations.",
+        "After an hour of tense silence, Subject 6 speaks for the first time. Her voice is hoarse from disuse: 'She was the one who put me there. Not him. Her. The wife.'",
+        "The housekeeper (unnamed narrator) looks at Nora. Nora's knuckles are white on the steering wheel. She does not deny it. She says, 'It's not that simple.'",
+        "The housekeeper (unnamed narrator) demands the truth. Nora pulls over on a dark country road and turns to face them. 'Fine. You want the truth? I'll tell you. But you won't like it.'"
+      ],
+      "must_not": [
+        "Do not reveal that Subject 6's key was planted by Nora — she deliberately let Subject 6 escape to create a witness who would support her version of events.",
+        "Do not reveal that Nora's 'confession' in the car is still a manipulated performance — she is testing the housekeeper (unnamed narrator)'s loyalty.",
+        "Do not reveal that Julian is already dead — the blow from the paperweight killed him, and Nora is now a murderer with nothing to lose."
+      ],
+      "opens_with": "The dark was absolute, and then I heard the scrape of metal against stone — a key in the lock, and a whisper: 'Don't make a sound. She's gone.'",
+      "cliffhanger": "Nora pulls the car over on a deserted country road. She turns off the engine. The headlights cut a path through the dark. She looks at the housekeeper (unnamed narrator) in the rearview mirror. 'The truth,' she says, 'is that I've been planning this for ten years. And neither of you are getting out of this car until I decide otherwise.'",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of times Subject 6 blinks during her confession: 47 slow, deliberate blinks — as if she is counting too, as if she learned the habit from Nora.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, sharp clarity. She is trapped in a car with two women she cannot trust, and the only way out is to play them against each other.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is claustrophobic and psychological — three women in a car, each holding a knife the others cannot see.",
+      "chapter_task": "Write 1600-1900 words executing the beat map: the housekeeper (unnamed narrator), the wife, and Subject 6 drive into the night, but the wife's plan is already fraying — and Subject 6 speaks for the first time, revealing a truth that changes everything. The car scene should be tense and claustrophobic. Subject 6's first words should land like a bomb. Nora's reaction should be ambiguous — is she guilty, or is she being framed? End with Nora's threat to create a cliffhanger. No romance micro-beat — male lead is Unassigned and romance is not opt-in.",
+      "carries_to_next": "The three women are stranded on a dark country road. Nora has admitted she imprisoned Subject 6. The housekeeper (unnamed narrator) must now decide whether to side with Subject 6 against Nora, or pretend to trust Nora while gathering more evidence.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['the husband has a temper', \"the wife is 'fragile' and seems controlled\", \"a previous housekeeper named Clara Higgins 'left suddenly'\", 'the locked room exists', 'she has pocketed small valuables'], 'does_not_know': [\"the wife's manipulation\", \"the locked room contains the wife's planning materials\", 'the wife is testing her suitability as a patsy']}",
+            "the_wife: {'knows': ['she has planted evidence against the husband (photo of Clara)', \"she has a ledger of past targets and the housekeeper's name\", \"she has the housekeeper's fingerprints on a knife\", \"she is testing the housekeeper's suitability\"], 'does_not_know': ['the housekeeper is also running a con', 'the housekeeper has pocketed small valuables']}",
+            "the_husband: {'knows': [\"his wife is 'testing' the new housekeeper\", \"the locked room contains his wife's materials\", 'he is being set up as a villain'], 'does_not_know': [\"the full extent of his wife's plan\", 'that he is the target of a murder plot']}",
+            "clara_higgins: {'knows': ['she is in hiding', 'the wife may be looking for her'], 'does_not_know': ['the new housekeeper has found her photograph']}",
+            "dr_ellis: {'knows': ['the husband has a temper', 'the wife is more alert than she appears'], 'does_not_know': ['anything about the frame job']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 23,
+      "title": "The Gas Station",
+      "slug": "the-gas-station",
+      "one_line_summary": "While Nora is inside the gas station, the housekeeper (unnamed narrator) presses Subject 6 for the truth — and learns that Nora was the one who imprisoned her, not Julian, and the experiment was her idea from the start.",
+      "beat_summary": "Nora pulls into a gas station. She goes inside to pay, leaving the housekeeper (unnamed narrator) and Subject 6 alone in the car. The housekeeper (unnamed narrator) turns to Subject 6 and demands the full story. Subject 6 — whose name is revealed as Elena — tells her everything: Nora brought her to the estate five years ago, pretended to be a fellow victim, then imprisoned her in the basement when Elena discovered the truth. Nora is not a victim. She is a predator who has been running this operation for years, using the 'experiment' as a cover to trap women she can control. Elena begs the housekeeper (unnamed narrator) to help her escape when Nora returns. The housekeeper (unnamed narrator) agrees — but she is already planning to use Elena as leverage against Nora.",
+      "must_happen": [
+        "Nora pulls into a gas station. She says she needs to pay and use the restroom. She locks the car doors from the outside, trapping the housekeeper (unnamed narrator) and Subject 6 inside.",
+        "The moment Nora disappears inside, the housekeeper (unnamed narrator) turns to Subject 6 and demands the truth. 'Tell me everything. Who put you in that basement?'",
+        "Subject 6 — Elena — reveals that Nora brought her to the estate five years ago. Nora pretended to be a fellow victim, but when Elena discovered Nora's true nature, Nora imprisoned her. 'She told Julian I ran away. He believed her.'",
+        "Elena explains that Nora has been running this operation for years — finding vulnerable women, trapping them, and using them as leverage or disposal pawns. 'The experiment was her idea. The husband was just a prop.'",
+        "The housekeeper (unnamed narrator) promises to help Elena escape. In her internal narration, she admits she is lying — she will use Elena as a bargaining chip to get what she wants from Nora.",
+        "Nora returns to the car. She notices the tension immediately but says nothing. She starts the engine and drives. The housekeeper (unnamed narrator) watches Nora's eyes in the rearview mirror and realizes Nora knows exactly what was discussed."
+      ],
+      "must_not": [
+        "Do not reveal that Elena is actually Clara Higgins — Nora's first failed frame attempt who has been held captive, not allowed to flee.",
+        "Do not reveal that Nora locked the car doors deliberately to give the housekeeper (unnamed narrator) time to question Elena — she wants the housekeeper (unnamed narrator) to know the truth so she can test her loyalty.",
+        "Do not reveal that the housekeeper (unnamed narrator)'s plan to use Elena as leverage will backfire — Nora has already anticipated this move."
+      ],
+      "opens_with": "The car door clicked shut, and Nora's footsteps faded toward the gas station's fluorescent glow. I turned to the woman in the back seat. 'Now. Tell me everything.'",
+      "cliffhanger": "Nora returns to the car. She starts the engine without a word. But as she pulls back onto the highway, she glances in the rearview mirror — not at the road, but at the housekeeper (unnamed narrator). 'She told you, didn't she?' Nora's voice is calm, almost amused. 'Good. Now you know the real me. And now you have a choice: help me finish what I started, or become the next Subject 9.'",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of cracks in the gas station's fluorescent lights: 47. She wonders if she is seeing patterns that aren't there — or if Nora has infected her mind with the counting disease.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, calculating rage. She now knows the full truth about Nora — and she knows she cannot trust Elena either. She is alone in a car with two liars, and the only person she can rely on is herself.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is paranoid and strategic — the housekeeper (unnamed narrator) is gathering information like weapons, preparing for a confrontation she knows is coming.",
+      "chapter_task": "Write 1600-1900 words executing the beat map: while the wife is inside the gas station, the housekeeper (unnamed narrator) presses Subject 6 for the truth — and learns that the wife was the one who imprisoned her, not the husband, and the experiment was her idea from the start. The gas station scene should feel like a pressure cooker — the housekeeper (unnamed narrator) has only minutes to extract the truth before Nora returns. Elena's confession should be raw and desperate. End with Nora's cold offer to create a cliffhanger. No romance micro-beat — male lead is Unassigned and romance is not opt-in.",
+      "carries_to_next": "The housekeeper (unnamed narrator) now knows the full truth: Nora is the predator, Elena is a victim, and Julian was a dupe. She has a choice to make — side with Nora and survive, or side with Elena and risk everything. Chapter 24 will force her to decide.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['the husband has a temper', \"the wife is 'fragile' and seems controlled\", \"a previous housekeeper named Clara Higgins 'left suddenly'\", 'the locked room exists', 'she has pocketed small valuables'], 'does_not_know': [\"the wife's manipulation\", \"the locked room contains the wife's planning materials\", 'the wife is testing her suitability as a patsy']}",
+            "the_wife: {'knows': ['she has planted evidence against the husband (photo of Clara)', \"she has a ledger of past targets and the housekeeper's name\", \"she has the housekeeper's fingerprints on a knife\", \"she is testing the housekeeper's suitability\"], 'does_not_know': ['the housekeeper is also running a con', 'the housekeeper has pocketed small valuables']}",
+            "the_husband: {'knows': [\"his wife is 'testing' the new housekeeper\", \"the locked room contains his wife's materials\", 'he is being set up as a villain'], 'does_not_know': [\"the full extent of his wife's plan\", 'that he is the target of a murder plot']}",
+            "clara_higgins: {'knows': ['she is in hiding', 'the wife may be looking for her'], 'does_not_know': ['the new housekeeper has found her photograph']}",
+            "dr_ellis: {'knows': ['the husband has a temper', 'the wife is more alert than she appears'], 'does_not_know': ['anything about the frame job']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 24,
+      "title": "The Safe House",
+      "slug": "the-safe-house",
+      "one_line_summary": "The three women arrive at Nora's safe house, but the housekeeper (unnamed narrator) discovers evidence that confirms Subject 6's story — and realizes Nora has been playing her from the very first day.",
+      "beat_summary": "Nora drives the three women to a remote cabin in the woods — her 'safe house.' Inside, the housekeeper (unnamed narrator) finds a room filled with evidence of Nora's planning: photographs of every Subject, a wall of timelines, and a detailed blueprint of the frame job. But the most damning evidence is a stack of letters — all written by Nora to Julian, confessing to the experiment and begging for forgiveness. The letters are dated years ago, proving Nora has been planning this for a long time. The housekeeper (unnamed narrator) photographs everything while Nora is in the kitchen. When Nora returns, she finds the housekeeper (unnamed narrator) holding the letters. Nora's face goes cold. 'You weren't supposed to find those,' she says. The chapter ends with Nora pulling out a knife — not to attack, but to cut the phone line. 'No one is leaving,' she says. 'Not until I'm done.'",
+      "must_happen": [
+        "Nora drives the three women to a remote cabin in the woods. She unlocks the door and gestures for them to enter. 'Welcome to my safe house. It's not much, but it's mine.'",
+        "Inside, the housekeeper (unnamed narrator) explores the cabin while Nora makes tea. She finds a locked bedroom door and picks the lock (a skill from her past). Inside, she discovers a wall of evidence: photographs of every Subject, timelines, and a detailed blueprint of the frame job.",
+        "She finds a stack of letters — all written by Nora to Julian, confessing to the experiment and begging for forgiveness. The letters are dated from three to five years ago, proving Nora has been planning this for years.",
+        "The housekeeper (unnamed narrator) photographs everything with her phone. She hears Nora's footsteps approaching and quickly closes the door, but Nora sees her coming out of the room.",
+        "Nora enters the room and sees the open drawer of letters. Her face goes cold. She picks up one of the letters and reads it silently. Then she looks at the housekeeper (unnamed narrator) and says, 'You weren't supposed to find those.'",
+        "Nora pulls out a knife — not to attack, but to cut the phone line. She holds the severed cord in her hand. 'No one is leaving this cabin,' she says, 'until I'm done. And I'm not done yet.'"
+      ],
+      "must_not": [
+        "Do not reveal that the letters are forgeries Nora created to manipulate the housekeeper (unnamed narrator) — she planted them in the cabin specifically to be found.",
+        "Do not reveal that Nora's 'safe house' is actually a trap — she has been leading the housekeeper (unnamed narrator) here all along to finish the frame job.",
+        "Do not reveal that Elena is not in the cabin — she escaped during the chaos and is now running through the woods to find help."
+      ],
+      "opens_with": "The cabin smelled of pine and secrets. Nora unlocked the door and stepped aside, her smile a blade in the dim light. 'Welcome to my sanctuary. I hope you like it — because you might be here for a while.'",
+      "cliffhanger": "The housekeeper (unnamed narrator) stands in the cabin, the letters in her hand, the severed phone line at her feet. Nora watches her from across the room, the knife still in her hand. 'You have two choices,' Nora says. 'Help me finish the plan, and I'll let you walk away. Or try to stop me — and I'll add your name to the wall.' The housekeeper (unnamed narrator) looks at the wall of photographs and sees an empty frame at the center — with a label beneath it: 'Subject 9.' Her photograph is already pinned to the corner.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of letters in the drawer: 47. She stops counting. The number is no longer a coincidence. It is a signature — Nora's way of telling her she has been counted, catalogued, and condemned.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, final clarity. She has been outplayed from the beginning. But she also feels a spark of defiance — she is not dead yet, and she has evidence that could destroy Nora. The game is not over.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is claustrophobic and fatalistic — the housekeeper (unnamed narrator) is trapped in a cabin with a predator, and the only way out is to become one herself.",
+      "chapter_task": "Write 1600-1900 words executing the beat map: the three women arrive at the wife's safe house, but the housekeeper (unnamed narrator) discovers evidence that confirms Subject 6's story — and realizes the wife has been playing her from the very first day. The discovery of the letters should feel like a major reveal, but plant subtle doubts: the letters are too neatly stacked, the room is too staged. The housekeeper (unnamed narrator) must appear to accept the evidence while internally questioning everything. End with Nora's ultimatum and the empty frame to create a powerful cliffhanger that sets up Act 4. No romance micro-beat — male lead is Unassigned and romance is not opt-in.",
+      "carries_to_next": "The housekeeper (unnamed narrator) is trapped in the cabin with Nora, who has revealed her full hand. Elena has escaped into the woods. The housekeeper (unnamed narrator) has photographic evidence of Nora's crimes. She must decide whether to fight, flee, or play along — and whether to trust Elena to bring help or assume she is another pawn in Nora's game.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['the husband has a temper', \"the wife is 'fragile' and seems controlled\", \"a previous housekeeper named Clara Higgins 'left suddenly'\", 'the locked room exists', 'she has pocketed small valuables'], 'does_not_know': [\"the wife's manipulation\", \"the locked room contains the wife's planning materials\", 'the wife is testing her suitability as a patsy']}",
+            "the_wife: {'knows': ['she has planted evidence against the husband (photo of Clara)', \"she has a ledger of past targets and the housekeeper's name\", \"she has the housekeeper's fingerprints on a knife\", \"she is testing the housekeeper's suitability\"], 'does_not_know': ['the housekeeper is also running a con', 'the housekeeper has pocketed small valuables']}",
+            "the_husband: {'knows': [\"his wife is 'testing' the new housekeeper\", \"the locked room contains his wife's materials\", 'he is being set up as a villain'], 'does_not_know': [\"the full extent of his wife's plan\", 'that he is the target of a murder plot']}",
+            "clara_higgins: {'knows': ['she is in hiding', 'the wife may be looking for her'], 'does_not_know': ['the new housekeeper has found her photograph']}",
+            "dr_ellis: {'knows': ['the husband has a temper', 'the wife is more alert than she appears'], 'does_not_know': ['anything about the frame job']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}

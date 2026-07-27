@@ -1,0 +1,25 @@
+{
+  "book_number": 1,
+  "total_chapters": 18,
+  "target_language": "en",
+  "case_closed": "Grant's manipulation is exposed at the settlement via contradictory evidence (envelope chain of custody, unedited footage, access audit, field notebook, planner, contract). Lena retains her apartment; Grant loses admin access; evidence enters official custody; legal proceedings continue but Grant no longer controls Lena's environment.",
+  "case_open": "Grant Hart has manufactured a pattern of instability around Lena for seven weeks before Chapter One via duplicate mailbox key, master-access credential, admin control of footage and incident records, and timed environmental disturbances. Calder is hired for 21 days of surveillance and independently retains unedited originals. Lena detects Calder in Chapter Three, controls what he sees via diagnostic tests (folded red receipts, doorframe seals, paper planner, repeated routines, certified honeytoken envelope), and builds an evidence chain that culminates in Grant exposing his own false chain of custody at the settlement. Calder's attraction develops through observation; Lena's attraction begins only after confrontation and negotiated consent in Chapters Nine–Ten. The romance is earned only after the surveillance contract, evidence dependency, and immediate threat end — Lena asks Calder to return without recording equipment after he has transferred evidence out of his sole custody and accepted her refusal to let him decide for her.",
+  "lead_internal_arc": {
+    "calder_reed": {
+      "starting_belief": "Sustained observation gives ownership of Lena's reality; he is a neutral instrument serving a legitimate contract.",
+      "ending_belief": "Observing someone does not entitle him to decide for them; preserving evidence and obeying her limits is the only way to earn chosen access.",
+      "arc_summary": "Calder begins believing his hidden gaze grants him superior knowledge and a form of possession. Through Lena's detection, confrontation, controlled visibility, and eventual consent, he learns that attention without consent is violation, and that the only intimacy worth having is one he cannot engineer or control. His final act is to give up sole custody of the evidence and accept Lena's refusal to let him decide for her."
+    },
+    "lena_hart": {
+      "starting_belief": "She is isolated, her environment is being manipulated, and she can trust no one — but she can test and document.",
+      "ending_belief": "She can design her own visibility, choose whom to trust, and defeat control without being rescued — and she can grant conditional access to a man who has proven he will obey her limits.",
+      "arc_summary": "Lena begins as a target of manufactured instability, responding with diagnostic tests and physical records. She detects Calder, uses his observation as an evidence channel, confronts him, and negotiates terms. She controls the decisive sequence of events, defeats Grant at the settlement, and — after Calder has proven he will obey her refusal — chooses to let him return without recording equipment, on her terms."
+    }
+  },
+  "act_structure": [
+    "act1_setup",
+    "act2_complications",
+    "act3_crisis",
+    "act4_resolution"
+  ]
+}

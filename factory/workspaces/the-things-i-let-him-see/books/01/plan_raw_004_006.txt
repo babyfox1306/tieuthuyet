@@ -1,0 +1,80 @@
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Missing Mail",
+      "slug": "the-missing-mail",
+      "one_line_summary": "Lena tells Mae Torres that a utility notice vanished from her mailbox; Grant later claims to have found it in the shared recycling, framing Lena as forgetful and Mae as an uncertain witness.",
+      "beat_summary": "Lena reports a missing utility notice to Mae Torres in the lobby. Grant later claims he found the same notice in the shared recycling area, suggesting Lena discarded it and forgot. Mae is uncertain. Calder observes the exchange and notes Grant's pattern: converting an ordinary missing letter into witness-supported instability.",
+      "must_happen": [
+        "Calder observes Lena and Mae Torres in the lobby; Lena shows Mae an empty mailbox and explains that a utility notice she placed there yesterday is gone.",
+        "Grant arrives, produces the same utility notice from his pocket, and claims he found it in the shared recycling bin; Lena's expression shifts from confusion to controlled anger.",
+        "Mae looks between them, uncertain; Calder notes that Grant has now created a witness who saw Lena 'forget' about a document she insisted was stolen.",
+        "Calder reviews his lobby footage and confirms that Grant entered the building through the board-access door during Lena's morning walk, consistent with the mug incident."
+      ],
+      "must_not": [
+        "Do not reveal that Grant took the notice from Lena's mailbox; keep his method ambiguous to Calder.",
+        "Do not include any romantic attraction, chemistry, or intimacy between Calder and Lena."
+      ],
+      "opens_with": "\"It was right here. I put it in the slot yesterday afternoon, and now it's gone.\" Lena Hart's voice carries through the lobby as she pulls the empty mailbox door open for Mae Torres to see.",
+      "cliffhanger": "Calder watches Grant walk away from the recycling bin and realizes that Grant is not just manufacturing instability—he is building a record with a living witness, and Calder is helping him do it.",
+      "signature_detail_hint": "The utility notice is a generic county tax bill, but Calder notices the corner is slightly bent—identical to the crease on every document Grant handles, as if he folds them all the same way before planting them.",
+      "emotional_beat": "Calder feels a cold professional dread: he is documenting a pattern he now believes is fabricated, but his contract and evidence chain require him to continue recording.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven. Focus on Grant's manipulation and Calder's growing unease.",
+      "chapter_task": "Write 1700-1900 words depicting the lobby confrontation, Calder's observation of Grant's method, and Calder's internal conflict about continuing the assignment. Maintain Calder's first-person POV and professional detachment.",
+      "carries_to_next": "Calder has witnessed Grant use Mae as an unwitting witness; Calder's suspicion of Grant's manipulation is now stronger than his professional neutrality; Lena has shown controlled anger rather than confusion."
+    },
+    {
+      "chapter": 5,
+      "title": "The Private Copy",
+      "slug": "the-private-copy",
+      "one_line_summary": "Calder watches Lena dance alone in her kitchen through the common-facing blinds, records it, but removes it from Grant's report; Lena places a folded red receipt beside the moved mug, building her physical timeline.",
+      "beat_summary": "Calder observes Lena dance alone in her kitchen, visible through the common-facing blinds. He records it but deliberately excludes it from Grant's compressed report. Lena places a folded red receipt beside the previously moved mug, creating a physical marker. Primary turn: Calder begins keeping a private version of Lena he withholds from Grant.",
+      "must_happen": [
+        "Calder watches Lena move through her kitchen in an unguarded moment: she sways to music only she can hear, a brief private dance visible through the common-facing blinds.",
+        "Calder records the dance but does not include it in the compressed report to Grant; he marks the footage for his local archive only.",
+        "Lena finishes her coffee, then deliberately places a folded red receipt on the counter beside the mug that Grant moved days earlier.",
+        "Calder notes the receipt's position and time-stamps it, recognizing it as a marker—either for her own memory or to test whether he is watching."
+      ],
+      "must_not": [
+        "Do not describe any nudity, bedroom, or bathroom activity; the dance is fully clothed in the kitchen.",
+        "Do not include any romantic attraction, chemistry, or intimacy; Calder's decision to withhold footage is professional paranoia and personal investment in the evidence, not desire."
+      ],
+      "opens_with": "The music reaches me through the courtyard before I see her: a low bass line from a speaker I hadn't noticed in her kitchen, and then Lena Hart steps away from the counter and begins to move like no one is watching.",
+      "cliffhanger": "Calder closes the file on the dance footage and looks back at the live feed; Lena is standing at the counter, staring directly at her own window—not at his camera, but at the space where she danced—and she is smiling.",
+      "signature_detail_hint": "The red receipt is from a hardware store Calder passed yesterday; the fold is precise, a triangle with the store logo centered, as if she prepared it before placing it.",
+      "emotional_beat": "Calder feels a sharp proprietary thrill at keeping the dance footage private, followed by unease that he is now actively choosing what Grant does not see.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven. Calder's withholding of footage is about control and evidence integrity, not attraction.",
+      "chapter_task": "Write 1700-1900 words focusing on the dance moment, Calder's decision to exclude it from the report, and his observation of the red receipt marker. Maintain Calder's first-person POV and professional ambiguity about Lena's awareness.",
+      "carries_to_next": "Calder has established a private evidence channel separate from Grant's reports; Lena has placed a physical marker that Calder recognizes as a test; the power dynamic continues to shift."
+    },
+    {
+      "chapter": 6,
+      "title": "The Direct Look",
+      "slug": "the-direct-look",
+      "one_line_summary": "Lena repeats her routine with unnatural precision, then looks directly at Calder's dark window; Grant later asks whether Lena is 'performing for someone,' proving Grant reacts to reports but not that every detail reaches him.",
+      "beat_summary": "Lena repeats her morning routine with exaggerated precision, each action timed to the second. She then stops, turns, and looks directly at Calder's dark window. Grant later messages Calder asking if Lena is 'performing for someone,' confirming Grant reacts to reports but not that every detail reaches him. Primary turn: Calder starts believing Lena may be communicating with him deliberately.",
+      "must_happen": [
+        "Lena performs her morning routine with mechanical precision: coffee poured at exactly 6:47, walk begins at 6:52, returns at 7:20, each movement timed as if following a script.",
+        "After returning, Lena stands at the kitchen counter, turns her head slowly toward Calder's dark window, and holds his gaze—not at the hallway camera, but directly at his position—for a full five seconds.",
+        "Calder receives a message from Grant: 'Is she performing for someone? She seems different today.' Calder realizes Grant is reacting to his compressed report, but the direct look was not in it.",
+        "Calder rewinds the footage of the direct look and watches it multiple times, beginning to believe Lena is communicating with him—not with Grant, and not by accident."
+      ],
+      "must_not": [
+        "Do not confirm Lena's internal reasoning; the prose must remain in Calder's uncertain POV.",
+        "Do not include any romantic attraction, chemistry, or intimacy; Calder's belief that Lena is communicating with him is professional and paranoid, not romantic."
+      ],
+      "opens_with": "At 6:47, Lena Hart pours her coffee. At 6:48, she sets the mug down. At 6:49, she takes her first sip. I have never seen anyone perform morning routine like a rehearsed stage block, but today she does.",
+      "cliffhanger": "Calder closes the footage file and looks at the live feed; Lena is now sitting at her kitchen table, writing in a paper planner, and she does not look up again—but the message has been delivered, and he received it.",
+      "signature_detail_hint": "The direct look is held for exactly five seconds, which Calder later realizes is the same duration as the status light reflection in Chapter Three—she is mirroring the moment she first detected him.",
+      "emotional_beat": "Calder feels a cold certainty that he is no longer the only one watching the performance; Lena is watching him watch her, and she is in control of what he sees.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven. Calder's realization is about power and awareness, not attraction.",
+      "chapter_task": "Write 1700-1900 words depicting the precision routine, the direct look, Grant's reaction, and Calder's shift in understanding. Maintain Calder's first-person POV and uncertainty about Lena's intent.",
+      "carries_to_next": "Calder now believes Lena is deliberately communicating with him through her visible behavior; Grant has confirmed he reacts to reports but does not see everything; Calder's private archive and his growing personal investment are now in direct tension with his contract."
+    }
+  ]
+}

@@ -35,6 +35,13 @@ pov:
   tense: past
   single_pov: true
 
+# Cast khóa tên (UI: Cast) — vai plot-critical PHẢI có name, không để trống:
+characters:
+  - name: ""
+    role: "protagonist"
+  # - name: "Elise Marchetti"
+  #   role: "cold-case victim"
+
 # Chapter map — mỗi chương một beat (hoặc Ch1:/Ch2: trong author_directive):
 chapter_map:
   1: "beat khóa chương 1"
@@ -42,8 +49,9 @@ chapter_map:
 
 author_directive: |
   (ĐIỀN CHỈ ĐẠO CỦA BẠN)
-  CAST:
-  - Name: ...
+  LOCKED CAST:
+  - PROTAGONIST: Name — ...
+  # Vai victim/killer phải có FIXED name — để trống = Outliner bịa.
 
 surface_plot: ""
 true_plot: ""

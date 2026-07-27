@@ -1,0 +1,88 @@
+```json
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The First Seed",
+      "slug": "the-first-seed",
+      "one_line_summary": "Nadia Cole begins her investigation into Elise Marchetti's murder, uncovering a police file that contains a boating accident report from three years ago — the same report that details Julian Croft's death, planting the first seed of her origin.",
+      "beat_summary": "Nadia Cole, after receiving Victor Rhodes's voicemail, decides to move forward with the Elise Marchetti case. She meets with Sasha Okafor to review the case file. Sasha provides a police report that includes a secondary document: a boating accident report from three years ago involving Julian Croft. Nadia recognizes it but says nothing. The chapter plants C002 — the boating accident report with a tampered fuel line detail buried in fine print. Nadia feels the watcher thread tighten but focuses on the case.",
+      "must_happen": [
+        "Nadia Cole meets Sasha Okafor in a private location to review the Elise Marchetti case file — Sasha provides a stack of documents including police reports, witness statements, and a secondary file.",
+        "Nadia Cole notices a boating accident report from three years ago (Julian Croft's death) included in the file — the report is clean, but she spots a detail in the fine print: a note about a tampered fuel line (C002 planted).",
+        "Nadia Cole internally acknowledges the report but does not react visibly — she files the memory and focuses on the Elise Marchetti evidence.",
+        "Victor Rhodes is shown in a brief parallel scene: he reviews his own files on Nadia Cole, noting her podcast schedule and public appearances, preparing his counter-investigation.",
+        "The chapter ends with Nadia Cole alone, reviewing the boating accident report in private, her thumb tapping her palm — a rare moment of emotional crack."
+      ],
+      "must_not": [
+        "Do NOT reveal that the boating accident report is Nadia's first kill — the reader should only sense a connection, not understand it.",
+        "Do NOT show Victor Rhodes making direct contact again — the voicemail from chapter 3 is still fresh; this chapter deepens the watcher thread through his parallel scene.",
+        "Do NOT include any romance, attraction, or intimacy — the tension is in the procedural investigation and the buried past."
+      ],
+      "opens_with": "\"The file on Elise Marchetti was thin. That was the first sign the system had failed her.\" — Nadia Cole, internal, as she flips through the police report in a dimly lit room.",
+      "cliffhanger": "Nadia Cole's thumb stops tapping. She reads the fine print on the boating accident report again: 'Fuel line: evidence of tampering, not pursued.' Her face is unreadable, but the reader knows — this is her first kill.",
+      "signature_detail_hint": "The boating accident report has a coffee ring on the corner — Nadia Cole's own coffee ring from when she first filed it three years ago, a detail she notices and deliberately ignores.",
+      "emotional_beat": "Nadia Cole feels a cold spike of recognition when she sees the report — fear that her past is bleeding into the present, and rage that Julian Croft's name still haunts her.",
+      "spice": 1,
+      "spice_note": "No romance; tension is plot-driven and procedural.",
+      "chapter_task": "Write 1600-1900 words. Plant C002 (boating accident report with tampered fuel line detail) via Sasha Okafor's file handoff. Show Nadia Cole's internal recognition without revealing the full origin. Include a parallel Victor Rhodes scene that deepens his counter-investigation. End with Nadia alone, reading the report, her thumb tapping.",
+      "carries_to_next": "C002 is planted. The watcher thread (Victor Rhodes) deepens through his parallel scene. Nadia Cole is now emotionally off-balance — the Elise Marchetti case is pulling her toward her own buried past."
+    },
+    {
+      "chapter": 5,
+      "title": "The Wound",
+      "slug": "the-wound",
+      "one_line_summary": "Nadia Cole confronts her origin wound — the murder of her sister Mara Cole and Julian Croft's walk free — in a raw, emotional flashback triggered by the boating accident report, while Victor Rhodes begins his quiet counter-investigation.",
+      "beat_summary": "The boating accident report triggers a flashback: Nadia Cole recalls the night Mara Cole was murdered, the trial that let Julian Croft walk free, and the moment she decided to become the executioner. The chapter reveals MR01 — the emotional foundation of her origin wound. Victor Rhodes is shown in a parallel scene, researching Nadia Cole's past, finding the connection to Julian Croft. The chapter ends with Nadia Cole accepting that her past is not as buried as she thought.",
+      "must_happen": [
+        "Nadia Cole experiences a flashback triggered by the boating accident report — she remembers the night Mara Cole was murdered, the trial, and Julian Croft's walk free (MR01 revealed — partial origin wound, not the first kill).",
+        "Nadia Cole reflects on her rule: she only kills the provably guilty, and Julian Croft was the first to meet that standard — but the full first-kill details remain hidden.",
+        "Victor Rhodes is shown in a parallel scene: he accesses public records on Nadia Cole's past, finding a mention of Mara Cole's murder and Julian Croft as the prime suspect — he tilts his head, filing the information.",
+        "Nadia Cole calls Sasha Okafor to confirm the boating accident report is clean — Sasha confirms it is, but Nadia Cole feels the watcher thread tighten.",
+        "The chapter ends with Nadia Cole alone, looking at a photograph of Mara Cole, her thumb tapping — a moment of grief and resolve."
+      ],
+      "must_not": [
+        "Do NOT reveal the full first-kill details (Julian Croft's staged boating accident) — MR01 is the emotional foundation only, not the procedural truth.",
+        "Do NOT show Victor Rhodes making a move yet — his counter-investigation is still in the information-gathering phase.",
+        "Do NOT include any romance, attraction, or intimacy — the emotional weight is grief and rage, not affection."
+      ],
+      "opens_with": "\"She had a laugh that filled a room. And then the room went silent.\" — Nadia Cole, internal, as she stares at a photograph of Mara Cole, the flashback beginning.",
+      "cliffhanger": "Victor Rhodes closes his laptop after finding the Mara Cole connection. He picks up his phone and dials a number: 'I need a background check on a podcaster named Nadia Cole. Everything.'",
+      "signature_detail_hint": "In the flashback, Nadia Cole notices the prosecutor's tie was crooked during the closing arguments — a detail that symbolized the sloppiness of the case, and one she remembers with cold precision.",
+      "emotional_beat": "Nadia Cole experiences raw grief and rage during the flashback — the wound is exposed, but she channels it into cold resolve, reaffirming her mission.",
+      "spice": 1,
+      "spice_note": "No romance; tension is plot-driven and emotional.",
+      "chapter_task": "Write 1600-1900 words. Reveal MR01 (Nadia's origin wound) through a flashback to Mara Cole's murder and Julian Croft's walk free. Do not reveal the first-kill details. Show Victor Rhodes's parallel research scene. End with Nadia Cole's grief and resolve, and Victor Rhodes's call to his contact.",
+      "carries_to_next": "MR01 is revealed — the emotional foundation is laid. Victor Rhodes has now connected Nadia Cole to Julian Croft, escalating his counter-investigation. Nadia Cole is aware her past is surfacing."
+    },
+    {
+      "chapter": 6,
+      "title": "The Diary",
+      "slug": "the-diary",
+      "one_line_summary": "Nadia Cole finds Mara Cole's diary in a box of old belongings, and a single entry mentioning a 'developer who came to the house' plants the emotional clue C005, while Victor Rhodes's counter-investigation takes a concrete step forward.",
+      "beat_summary": "Nadia Cole goes through a box of Mara Cole's belongings stored at Sasha Okafor's office. She finds Mara's diary and reads an entry that mentions a 'developer who came to the house' — a reference to Julian Croft (C005 planted). The clue humanizes the origin wound. Victor Rhodes is shown in a parallel scene: he hires a private investigator to dig into Nadia Cole's past, specifically her connection to Julian Croft. The chapter ends with Nadia Cole closing the diary, her thumb tapping, as she realizes the Elise Marchetti case is pulling her toward a confrontation with her own history.",
+      "must_happen": [
+        "Nadia Cole retrieves a box of Mara Cole's belongings from Sasha Okafor's office — Sasha offers to help, but Nadia Cole insists on going through it alone.",
+        "Nadia Cole finds Mara Cole's diary and reads an entry that mentions a 'developer who came to the house' — a reference to Julian Croft (C005 planted, exact semantic from clue_catalog).",
+        "Nadia Cole feels a pang of grief and guilt — she realizes Mara knew Julian Croft before the murder, deepening the emotional wound.",
+        "Victor Rhodes is shown in a parallel scene: he meets with a private investigator, providing Nadia Cole's name and a list of questions about her past, including her connection to Julian Croft.",
+        "The chapter ends with Nadia Cole closing the diary, her thumb tapping, as she resolves to push forward with the Elise Marchetti case despite the emotional cost."
+      ],
+      "must_not": [
+        "Do NOT reveal the full first-kill details — C005 is an emotional clue, not a procedural one.",
+        "Do NOT show Victor Rhodes's private investigator making contact with Nadia Cole's network yet — this is the hiring phase.",
+        "Do NOT include any romance, attraction, or intimacy — the emotional beat is grief and resolve, not affection."
+      ],
+      "opens_with": "\"The box was heavy. Not because of what was inside, but because of what I knew I'd find.\" — Nadia Cole, internal, as she lifts a cardboard box from Sasha Okafor's storage room.",
+      "cliffhanger": "Victor Rhodes hands the private investigator an envelope of cash. 'I want to know everything about Nadia Cole. Where she grew up, who she knew, and what happened to a man named Julian Croft.'",
+      "signature_detail_hint": "The diary has a pressed flower between two pages — a dried violet that Mara Cole kept, a detail that Nadia Cole touches but does not remove, leaving it in place as a relic.",
+      "emotional_beat": "Nadia Cole experiences a mix of grief and guilt as she reads Mara's diary — the origin wound bleeds, but she channels it into cold determination, refusing to let the past stop her.",
+      "spice": 1,
+      "spice_note": "No romance; tension is plot-driven and emotional.",
+      "chapter_task": "Write 1600-1900 words. Plant C005 (Mara Cole's diary entry mentioning a 'developer') via the box of belongings scene. Show Nadia Cole's emotional response without revealing the full origin. Include Victor Rhodes's parallel scene hiring a private investigator. End with Nadia Cole's resolve and Victor Rhodes's concrete step forward.",
+      "carries_to_next": "C005 is planted. Victor Rhodes has hired a private investigator, escalating his counter-investigation. Nadia Cole is now emotionally anchored to the past but committed to the Elise Marchetti case."
+    }
+  ]
+}
+```

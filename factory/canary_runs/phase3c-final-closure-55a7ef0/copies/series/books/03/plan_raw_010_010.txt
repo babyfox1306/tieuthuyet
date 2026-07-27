@@ -1,0 +1,35 @@
+{
+  "act": [10, 10],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Sentence Unwritten",
+      "slug": "the-sentence-unwritten",
+      "one_line_summary": "Pierre Leclerc writes the final, unrecorded truth as the archive completes its loop and erases itself, leaving only the system’s version behind.",
+      "beat_summary": "Pierre Leclerc, gripped by both clarity and despair, sits before the tribunal record and writes his final sentence—the only honest line left. The moment it is committed to the archive, it vanishes, never to appear in any official document. The record seals itself perfectly: Sofia Bellini passes out of agency, existing only as a finished entry in the archive. Chief Adjudicator Rasmus, Magda Lorenz, and Tomasz Havel continue their roles, unable to grasp the core truth or break from the narrative. Elias van Doren remains only as a memory, his presence a closed loop. The archive is now flawless, and Pierre Leclerc understands the system’s victory is total—the truth cannot survive in the record.",
+      "must_happen": [
+        "Pierre Leclerc composes his last statement, aware it is the only true line he will ever write.",
+        "As Pierre Leclerc completes the entry, he sees the words disappear from the record, replaced by the closed, official version.",
+        "Sofia Bellini’s role collapses entirely; she is now only a character in the finished archive, without agency or presence.",
+        "Chief Adjudicator Rasmus, Magda Lorenz, and Tomasz Havel remain locked in their functions, unable to recognize or voice what has changed.",
+        "Elias van Doren appears only in the memory of the archive, his presence now only a trace in the system’s loop.",
+        "[PAYOFF C004]",
+        "[PAYOFF C005]",
+        "The record closes with the required phrase: No one built the system; it authored \"Sofia Bellini\" as a culprit so humans would have someone to blame instead of themselves."
+      ],
+      "must_not": [
+        "No character breaks out of their narrative role to acknowledge the nature of the system.",
+        "No supernatural or overtly technological explanation is given for the erasure or the loop.",
+        "No explicit awareness by any character (except Pierre Leclerc, privately, and only for a moment) of the archive’s self-writing nature."
+      ],
+      "opens_with": "\"If this is the last line I write, let it be the truth—though no one will ever read it.\"",
+      "cliffhanger": "As the archive seals itself, Pierre Leclerc’s final sentence is erased, and the only thing left is the official story: Sofia Bellini built the system.",
+      "signature_detail_hint": "A faint, vanishing indentation remains where Pierre Leclerc’s last words were pressed into the paper, gone as soon as the page is turned.",
+      "emotional_beat": "Pierre Leclerc’s heartbreak and resignation as his truth is wiped away; the suffocating finality as the system wins without resistance.",
+      "spice": 1,
+      "spice_note": "No explicit content; intensity is existential and psychological—the loss of truth and total isolation.",
+      "chapter_task": "Deliver the series’ final reckoning: Pierre Leclerc’s true sentence is written and lost, Sofia Bellini becomes only a character in the closed archive, and all others remain trapped in their roles. Close the loop with the binding phrase. Target 1600–1900 words.",
+      "carries_to_next": "The system’s victory is absolute: the official record stands, the true line erased, and the cycle is ready to repeat."
+    }
+  ]
+}

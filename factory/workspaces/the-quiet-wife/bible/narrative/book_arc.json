@@ -1,0 +1,25 @@
+{
+  "book_number": 1,
+  "total_chapters": 50,
+  "target_language": "en",
+  "case_closed": true,
+  "case_open": "Who is conning whom, and who dies?",
+  "lead_internal_arc": {
+    "housekeeper": {
+      "starting_state": "Desperate, hiding a criminal past, enters the household with a secret agenda to rob or blackmail the family.",
+      "arc": "From self-serving con artist to a woman who experiences genuine intimacy and trust for the first time, then is betrayed and forced to survive using her wits. Ends hardened, carrying a secret that could destroy her.",
+      "ending_state": "Survivor, free but bound to a dangerous secret; emotionally scarred by the wife's betrayal, but now more dangerous herself."
+    },
+    "the_wife": {
+      "starting_state": "Fragile, pitied prisoner of a controlling husband; master manipulator who has been planning a murder for years.",
+      "arc": "From seemingly helpless victim to revealed architect of a con to frame the housekeeper for her husband's murder. Her arc is a descent into full villainy as her plan succeeds — but she underestimates the housekeeper's survival instincts.",
+      "ending_state": "Succeeds in framing the housekeeper for the husband's murder, but the housekeeper escapes and the wife is left with a loose end she cannot control."
+    }
+  },
+  "act_structure": [
+    "act1_setup",
+    "act2_complications",
+    "act3_crisis",
+    "act4_resolution"
+  ]
+}

@@ -1,0 +1,899 @@
+concept_status: ready
+target_language: en
+title: The Things I Let Him See
+logline: 'A surveillance operative hired to prove a separated wife unstable becomes
+
+  obsessed with her ordinary routines, unaware that she identified him almost
+
+  immediately and has begun designing what he sees.
+
+
+  When her husband''s domestic gaslighting escalates toward a forced property
+
+  settlement, the watcher must decide whether to possess the woman directing
+
+  his gaze or preserve the evidence that will return her life to her.
+
+  '
+author_directive: "==================================================================\n\
+  PREMISE ANSWERS (P0–P7)\n==================================================================\n\
+  \nP1 — SUSTAINABILITY. Grant's manipulation runs seven weeks before Chapter One\n\
+  and through the 21-day assignment. Maintained via: duplicate mailbox access;\nmaster-credential\
+  \ apartment access; admin control of footage; admin control of\nresident incident\
+  \ records; knowledge of Lena's routine; Calder's selected reports;\ntimed concern\
+  \ messages; small environmental disturbances, not dramatic incidents.\nWhy Lena\
+  \ doesn't immediately prove it: she notices but lacks an independent witness,\n\
+  reliable digital record, or proof of retained access / entry / mail reaching Grant\
+  \ /\ndeleted intervals; she responds by building seals, red-receipt markers, a paper\n\
+  planner, a certified honeytoken, and repeated visible routines. Why Mae doesn't\n\
+  detect it: she trusts Grant's board role, the edited dashboard, the portal, his\
+  \ public\nconcern, and Calder's apparent independence; she sees isolated events,\
+  \ not the pattern.\nWhy Calder doesn't detect it: he enters after a seven-week narrative\
+  \ is already built;\nhis baseline comes from Grant, edited records, selected history,\
+  \ Mae's uncertainty, and\nLena's genuine stress; he only finds the physical entry\
+  \ because his independent archive\npreserved a deleted interval. Cost/risk to Grant:\
+  \ Calder's fee, repeated physical access,\ncredential logs, postal tracking, physical\
+  \ seals, the risk Calder keeps originals, the\nrisk Mae accesses the local audit,\
+  \ and repeating a pattern near the deadline.\n\nP2 — POV FEASIBILITY. Calder can\
+  \ misunderstand Lena because first-person POV limits him\nto what she allows him\
+  \ to observe; the courtyard separates them; he cannot see the whole\napartment;\
+  \ blinds give only a narrow sightline; her pauses and looks stay ambiguous;\nrepeated\
+  \ routines can read as stress, compulsion, flirtation, or testing; she knows only\n\
+  his surname before confronting him; she infers Grant's role rather than confirming\
+  \ it;\nshe doesn't know about the originals until Ch9 or that the removal was captured\
+  \ until Ch12;\nafter Ch9 Calder knows she's aware but not the extent of her staging\
+  \ until Ch14. The hidden\nfact changes over time (Ch1–3 Lena unaware of Calder;\
+  \ Ch3–9 knows an observer exists but not\nloyalty/archive; Ch9–12 knows role and\
+  \ archive policy but not which tests produced evidence;\nCh12–14 knows the envelope\
+  \ has two layers but withholds the full strategy; Ch14+ Calder knows\nthe complete\
+  \ method).\n\nP3 — RELATIONSHIP TRUTH. Central relationship is Calder and Lena.\
+  \ Calder believes she is an\nunaware target whose attraction grows because he watches;\
+  \ truth: she detects him in Ch3, uses\nhis attention diagnostically, and develops\
+  \ genuine attraction only after confrontation and\nnegotiated consent. Central question:\
+  \ does Lena want Calder when he is no longer useful as a\nwitness, no longer controls\
+  \ the only evidence, has no contract, no surveillance access, and she\ncan reject\
+  \ him without losing the case? Book One answers yes only after those dependencies\
+  \ end.\n\nP4 — VILLAIN LEDGER (three stages).\nStage One (Ch1–6). Grant knows: Calder\
+  \ accepted the contract; can observe Lena's\ncourtyard-facing rooms; Lena is noticing\
+  \ displaced objects and missing mail; Mae expressed\nuncertainty; reports support\
+  \ instability; the deadline nears. Channels: compressed reports,\nhis own entries,\
+  \ portal records, his messages, admin access, Mae's ordinary board comms.\nBlind\
+  \ to: Calder's unedited archive; the handwritten log; Lena's detection of the reflected\n\
+  light; the meaning of red receipts; the doorframe seals; Calder withholding private\
+  \ footage.\nStage Two (Ch7–12). Grant knows: Calder still submits usable reports;\
+  \ Lena remains; may be\npacking; Mae supports her; Calder refuses to enter; the\
+  \ envelope holds a false checklist and\nthe \"Friday key return\" phrase. Channels:\
+  \ his theft/opening of the envelope; edited reports;\nadmin access; direct instructions;\
+  \ his own entries; possession of the envelope. Blind to:\nCalder's recording of\
+  \ the Ch7 entry; the recording of the envelope removal; the honeytoken\npurpose;\
+  \ Lena's copy of the checklist; the tracking record; the Ch9 alliance; the consent\n\
+  rules; the door-seal planner; that the unique phrase came only from the envelope.\
+  \ Grant reads\nCalder's refusal to enter as caution because reports keep arriving.\n\
+  Stage Three (Ch13–18). Grant knows: Mae accessed the terminal; Calder's reports\
+  \ are thinner;\nLena remains; Calder will attend the session; Grant holds the envelope\
+  \ and false checklist;\nthe edited dashboard no longer shows his entries; the envelope\
+  \ looks useful. Channels: admin\nactivity logs; existing reports; possession of\
+  \ the envelope; settlement prep; direct\nobservation; legal comms. Blind to: what\
+  \ Mae printed; where the audit is hidden; the terminal\nverification code; the evidence\
+  \ index delivered to Cross; the encrypted duplicate; Lena's plan\nto make him state\
+  \ a false chain of custody; the continuous notebook; the complete planner;\nCalder's\
+  \ intent to authenticate the originals; that the honeytoken was designed to expose\
+  \ the\nleak. Grant proceeds believing all official digital records remain his and\
+  \ that Calder's\nfinancial dependence outweighs any attachment.\n\nP5 — TIME ANCHOR.\
+  \ Manipulation begins seven weeks before Ch1; Ch1 begins 21 days before the\nsettlement;\
+  \ the active story lasts 21 days. Ch3 first detection; Ch7 first proof of entry;\
+  \ Ch8\nhoneytoken mailing; Ch9 partial confrontation; Ch12 honeytoken confirmation;\
+  \ Ch14 full control\nreveal; Ch15 evidence transferred out of Calder's sole custody;\
+  \ Ch17 settlement climax; Ch18\nverified aftermath. No child, pregnancy, hidden\
+  \ birth, age-dependent identity, impersonation,\nor long-term body substitution.\n\
+  \nP6 — AFTERMATH LOGIC. The settlement is halted, not converted into a judgment.\
+  \ No ownership\ntransfer; Lena keeps possession; Grant loses admin access; physical\
+  \ and digital evidence enters\nofficial custody; the condo begins an independent\
+  \ audit; Cross verifies before further action.\nOffenses investigated: unlawful\
+  \ entry, mail interference, digital evidence tampering, coercive\nsurveillance,\
+  \ attempted fraud, false documentary representations. Calder faces possible\nconsequences\
+  \ for withholding evidence from a client, continuing after discovering misconduct,\n\
+  a personal relationship with a target, and licensing/agency violations. No instant\
+  \ conviction,\narrest, divorce, transfer, or automatic professional immunity.\n\n\
+  P7 — WHY NOW. The final settlement is scheduled 21 days after Ch1. If Lena does\
+  \ not surrender\nher interest, the dispute moves to an adversarial phase requiring\
+  \ financial disclosure, formal\nevidence, scrutiny of condo records, a potential\
+  \ forced buyout, and greater legal expense for\nGrant. Prior emotional pressure\
+  \ has failed, so Grant hires Calder to produce an apparently\nindependent record\
+  \ of instability and abandonment before the date.\n\n==================================================================\n\
+  BELIEF MAP\n==================================================================\n\
+  Calder believes Lena is an unaware target whose attraction grows because he watches\
+  \ / truth:\nshe detects him in Ch3 and develops attraction only after confrontation\
+  \ and negotiated consent\n/ he believes the false version because her visible behavior\
+  \ stays ambiguous and he equates\nobservation with intimacy.\nLena believes Calder\
+  \ may be Grant's observer but may preserve independent records / truth: he\nis Grant's\
+  \ contracted operative and independently retains originals / she suspects after\
+  \ Ch7,\nconfirms in Ch9.\nGrant believes Calder is a controllable paid observer\
+  \ / truth: Calder stops serving Grant's\nobjective in Ch7 / Grant keeps believing\
+  \ because Calder sends staged reports matching his\nexpectations.\nMae believes\
+  \ Lena may be stressed and Grant's systems accurate / truth: Grant is altering both\n\
+  Lena's environment and the digital record / Mae changes her belief after printing\
+  \ the audit in Ch13.\nDetective Cross believes the material may establish offenses\
+  \ but requires independent verification\n/ truth: established via footage, tracking,\
+  \ access records, instructions, and physical custody /\nshe refuses to treat one\
+  \ accusation as sufficient.\n\n==================================================================\n\
+  CANONICAL EVENTS\n==================================================================\n\
+  EV1 Surveillance Contract — Grant & Calder; management office + Calder's apartment;\
+  \ signed\ncontract + camera access; Calder begins observation and creates independent\
+  \ originals; Ch1.\nEV2 Environmental Manipulation Campaign — Grant & Lena; her apartment,\
+  \ mailbox, portal;\nduplicate key, master credential, object displacement, mail\
+  \ removal, footage deletion, concern\nmessages; Lena appears unstable through ordinary\
+  \ disturbances; begins pre-Ch1; mechanism reveal\nCh7; complete proof Ch17.\nEV3\
+  \ Lena Detects Surveillance — Lena & Calder; courtyard sightline; reflected status\
+  \ light +\nmessage timing; she begins diagnostic testing; Ch3; partial disclosure\
+  \ Ch3,5,6,9,11,12; full\ninterpretation Ch14.\nEV4 Grant's Recorded Entry — Grant,\
+  \ Calder, absent Lena; hallway + apartment entrance; master\ncredential during a\
+  \ deleted interval; Calder learns Grant manufactures evidence; Ch7.\nEV5 Certified\
+  \ Honeytoken — Lena, Grant, Calder; postal kiosk + mailbox; certified self-mailing\n\
+  with false info and a unique phrase; Grant exposes access by repeating the phrase,\
+  \ footage later\ncorroborates the theft; Ch8; information-leak payoff Ch12; physical-evidence\
+  \ payoff Ch17.\nEV6 Surveillance Alliance — Lena & Calder; laundry room + stairwell;\
+  \ Lena confronts and tests\nhis archive policy; Calder changes allegiance under\
+  \ explicit limits; Ch9; rules Ch10.\nEV7 Consensual Access — Lena & Calder; her\
+  \ apartment; device shutdown, camera obstruction,\naffirmative consent; intimacy\
+  \ begins without redefining prior surveillance as consent; Ch11.\nEV8 Physical Access\
+  \ Audit — Mae, Lena, Calder; board terminal + Mae's apartment; printed local\ncredential\
+  \ audit; independent physical evidence survives digital deletion; Ch13.\nEV9 Control\
+  \ Reveal — Lena & Calder; her apartment; planner, receipts, seals, explanation;\
+  \ Calder\nlearns Lena controlled visible behavior without knowing every result in\
+  \ advance; Ch14.\nEV10 Evidence Transfer — Lena, Calder, Mae, Cross; Mae's apartment;\
+  \ one encrypted duplicate +\nindexed preservation packet; evidence no longer depends\
+  \ on Calder's loyalty or survival; Ch15.\nEV11 Relationship Severance — Lena & Calder;\
+  \ apartment entrance; Lena revokes access after Calder\ntries to override her; Calder\
+  \ enters the climax without romantic reassurance; Ch16.\nEV12 False Chain Exposure\
+  \ — Lena, Calder, Grant, Mae, incidental legal staff; community room;\nGrant authenticates\
+  \ the envelope and asserts a false chain, independent records contradict him;\n\
+  Ch17.\n\n==================================================================\nINVARIANTS\n\
+  ==================================================================\nH1 Lena never\
+  \ signs away or voluntarily abandons her ownership interest during the book.\nH2\
+  \ Calder never alters, fabricates, or destroys an original piece of evidence.\n\
+  H3 Calder does not enter Lena's apartment before her explicit invitation in Ch11.\n\
+  H4 All sexual contact occurs only after direct consent and remains subject to immediate\
+  \ withdrawal.\nH5 Lena's victory comes from planning, corroboration, and Grant's\
+  \ own statements, never from\n   physical rescue or violence.\nH6 Lena is not hallucinating,\
+  \ secretly amnesiac, or mistaken about the core manipulation.\nH7 Grant is never\
+  \ omniscient; every action derives from a channel in the villain ledger.\nH8 The\
+  \ prose stays inside Calder's single first-person POV.\nH9 Calder may desire control\
+  \ but cannot be rewarded for overriding Lena's stated decision.\nH10 The Book One\
+  \ ending removes Grant's active control over Lena even as legal proceedings continue.\n\
+  \n==================================================================\nPROP LIFECYCLE\n\
+  ==================================================================\nPR1 Original\
+  \ Surveillance Archive — Calder's local system from Ch1; sources = common-area feed\
+  \ +\n   courtyard camera; custody Calder Ch1–17; Grant gets compressed edited exports\
+  \ only; one\n   encrypted duplicate permitted Ch16/Ch15 to Cross; payoff Ch17–18;\
+  \ never destroyed.\nPR2 Calder's Field Notebook — handwritten timestamps from Ch1;\
+  \ custody Calder throughout; no copy\n   before official intake; payoff Ch17; never\
+  \ destroyed.\nPR3 Grant's Edited Daily Reports — Calder-created from Ch1; held by\
+  \ Calder and Grant; no interior\n   footage, no private sexual material; Grant presents\
+  \ selected reports Ch17, timestamps compared;\n   never destroyed.\nPR4 Door-Seal\
+  \ Planner — Lena uses clear doorframe seals + paper planner after Ch3; first visible\n\
+  \   Ch5; shown to Calder Ch11; custody Lena through Ch17; payoff Ch17; never destroyed.\n\
+  PR5 Certified Decoy Envelope — Lena mails blank/false-checklist certified envelope\
+  \ to herself,\n   clips lower-right corner, records tracking Ch8; custody: postal\
+  \ system, Lena's mailbox, Grant\n   after removal, mediation table, Cross after\
+  \ Ch17; postal tracking independent; no duplicate\n   physical envelope; payoff\
+  \ Ch17; never destroyed.\nPR6 Printed Master-Access Audit — Mae prints from board\
+  \ terminal Ch13; hidden in a cookbook until\n   Ch17; Grant knows the terminal was\
+  \ accessed but not what/where; final custody Cross; never destroyed.\nPR7 Surveillance\
+  \ Contract — signed Ch1; digital custody Calder & Grant; Calder prints one copy\
+  \ Ch16\n   before meeting Cross; establishes Grant's instructions Ch17; never destroyed.\n\
+  HARD CONSTRAINT: No USB drive, hidden cloud service, secret safe, unknown camera,\
+  \ new forensic\ndevice, or unlisted evidence source may appear.\n\n==================================================================\n\
+  RELATIONSHIP ARC\n==================================================================\n\
+  Calder begins believing sustained observation gives him ownership of Lena's reality.\
+  \ Lena first\ntreats him as a dangerous evidence channel, not a partner. Attraction\
+  \ becomes explicit only after\nconfrontation. The first consensual encounter gives\
+  \ physical access while proving Lena controls its\nlimits. The Ch14 reveal humiliates\
+  \ Calder — the watcher learns he was watched, predicted, and\ndirected. In Ch16\
+  \ Calder repeats Grant's controlling pattern by trying to make Lena leave; she ends\n\
+  access immediately. His corrective action is not a rescue — he returns with a method\
+  \ to preserve her\nplan and accepts Cross's scrutiny. The ending turns romantic\
+  \ only after Lena's legal strategy no\nlonger depends on Calder's cooperation.\n\
+  \n==================================================================\nWRITER GUIDANCE\
+  \ (execution risks flagged in QA)\n==================================================================\n\
+  - Ch12: Grant repeating the exact phrase \"Friday key return\" must feel natural\
+  \ (e.g. he believes it\n  is Lena's own wording and reuses it to probe), not like\
+  \ a careless slip. Value Two (footage) is the\n  safety net if this reads thin.\n\
+  - Ch17: write Grant confidently constructing a false chain of custody so the contradiction\
+  \ lands hard;\n  he must never state he took the envelope.\n- Gate-blind checks\
+  \ for human review: reveal order (Ch3 detect -> Ch14 full held evenly); the Ch14\n\
+  \  reversal must reframe meaning, not merely announce mechanism; the Ch16 severance\
+  \ must genuinely hurt\n  (Calder repeating Grant's control pattern is the emotional\
+  \ cost).\n"
+surface_plot: 'The reader appears to be following Calder Reed, a private surveillance
+
+  operative hired by Grant Hart to document the deteriorating behavior of
+
+  Grant''s separated wife, Lena. Grant claims Lena has become forgetful,
+
+  paranoid, and incapable of safely managing the condominium apartment they
+
+  jointly own.
+
+
+  Calder observes Lena from a rented apartment across the condominium''s narrow
+
+  interior courtyard, plus authorized access to selected common-area camera
+
+  feeds through Grant''s position as board president.
+
+
+  Calder believes: Lena does not know she is being watched; Grant is
+
+  manipulative but may be telling the truth about her instability; her repeated
+
+  routines and misplaced objects indicate deterioration; his hidden observation
+
+  gives him greater knowledge than she has; her direct looks toward his window
+
+  are unconscious; any attraction she develops begins because he watched her;
+
+  Grant''s worst crime is exploiting Lena''s condition rather than manufacturing it.
+
+
+  The apparent story is a dark-romance cat-and-mouse in which the watcher may
+
+  become either Lena''s protector or another man trying to own her reality.
+
+  '
+true_plot: 'TP1 — Grant''s manipulation. Grant Hart has spent seven weeks manufacturing
+  a
+
+  pattern of instability around Lena before Chapter One. He holds a duplicate
+
+  mailbox key from the marriage, a condominium master-access credential through
+
+  his board role, administrator access to common-area footage, and admin access
+
+  to the resident incident portal. During Lena''s predictable morning walks he
+
+  enters and changes one ordinary detail (moves a mug, alters a thermostat,
+
+  returns a removed item, opens a closed cabinet, removes mail, edits a resident
+
+  request), then deletes only the short footage interval covering the entry, then
+
+  messages her asking whether she has forgotten another task. He is building a
+
+  record that she cannot safely maintain the jointly owned apartment, to pressure
+
+  her into surrendering her ownership interest at the settlement session rather
+
+  than force him to disclose finances and buy out her share.
+
+
+  TP2 — Calder''s assignment. Grant hires Calder for a twenty-one-day surveillance
+
+  assignment ending on the settlement date. Calder gets common-area camera access,
+
+  the courtyard-facing apartment, and instructions to document confusion, unsafe
+
+  behavior, unusual visitors, and intent to abandon the property. Grant receives
+
+  only compressed daily reports and selected stills. Calder independently retains
+
+  the unedited local recordings, a handwritten field notebook, original timestamps,
+
+  and copies of Grant''s written instructions, because he never lets a client hold
+
+  the sole version of what he observed. Grant does not know the complete originals
+  exist.
+
+
+  TP3 — Lena detects the surveillance. Lena detects it during Chapter Three: a
+
+  status light from Calder''s courtyard camera reflects in his dark window at the
+
+  same moment Grant messages about something she just noticed. She cannot see his
+
+  equipment clearly and does not yet know his identity, loyalty, recording method,
+
+  or whether he stores originals. She learns the surname "Reed" from a lobby package
+
+  label and infers Grant hired him from timing. She confirms his role only when she
+
+  confronts him in Chapter Nine.
+
+
+  TP4 — Lena''s controlled visibility. From Chapter Three, Lena controls portions
+  of
+
+  what Calder can observe. She has no complete plan; she builds diagnostic tests,
+
+  each retaining at least one useful outcome even if Calder works entirely for Grant.
+
+  She repeats routines to test what reaches Grant, places folded red receipts beside
+
+  disturbed objects to build a physical timeline, uses clear doorframe seals to detect
+
+  entries during her walks, writes in a paper planner that cannot be remotely altered,
+
+  allows certain harmless intimate moments to be visible to test whether they reach
+
+  Grant, and withholds other behavior to map the limits of Calder''s observation.
+
+
+  TP5 — The certified honeytoken. In Chapter Eight Lena mails a certified envelope
+  to
+
+  herself containing a false packing checklist, a false "Friday key return" plan,
+  and
+
+  a unique phrase — no legal admission, no signed surrender. She clips the lower-right
+
+  corner and records tracking number, delivery time, clip mark, and the phrase in
+  her
+
+  planner. Value One (information leak): even with no camera, if Grant later acts
+  on
+
+  information available only inside the sealed envelope, interception is proven —
+  and
+
+  in Chapter Twelve Grant tells Calder to watch for a "Friday key return," the exact
+
+  phrase, confirming mail interception without video. Value Two (physical corroboration):
+
+  Calder''s unedited lobby footage also records Grant removing the clipped envelope
+  with
+
+  the duplicate key; Lena does not know this footage exists when she mails it and
+  learns
+
+  in Chapter Nine that Calder keeps originals. The honeytoken begins as an information
+
+  test and later becomes part of the physical evidence chain.
+
+
+  TP6 — The final evidence trap. Grant plans to use the intercepted envelope at the
+
+  settlement, falsely claiming it was delivered to Lena, opened by her, then found
+
+  discarded in a shared recycling area — proof she meant to abandon the property and
+
+  later forgot or denied it. Grant does NOT admit taking the envelope. At the session
+
+  Lena makes Grant formally establish the document he relies on: tracking number,
+
+  clipped corner, checklist, the phrase "Friday key return," and his false recycling-area
+
+  custody claim. Only after Grant fixes his false chain of custody does Calder produce
+
+  the unedited lobby footage showing Grant removing the same clipped envelope from
+  Lena''s
+
+  mailbox. Access audit, field notebook, planner, contract, and originals then establish
+
+  the broader pattern. Grant loses because he commits to a calculated lie that contradicts
+
+  independent evidence — NOT because he accidentally confesses.
+
+
+  TP7 — The romance. Calder''s initial surveillance is a violation and is never
+
+  retroactively redefined as consent. Lena may deliberately expose selected harmless
+
+  moments after detecting him, but that grants no consent to physical contact, interior
+
+  recording, sexual recording, entry, image distribution, or decisions on her behalf.
+
+  The romantic and sexual relationship begins only after Lena confronts Calder and
+  sets
+
+  explicit, revocable terms in Chapter Ten. Calder is drawn to possession and control;
+
+  Lena is drawn to focused attention but refuses to treat attention as ownership.
+  Calder
+
+  earns continued access only by preserving evidence, disobeying Grant without rewriting
+
+  Lena''s plan, accepting that she may use his observation without belonging to him,
+
+  obeying withdrawal of consent immediately, transferring evidence out of his sole
+
+  custody, and completing his witness role even believing she may never resume the
+
+  relationship.
+
+  '
+intentional_early_reveal: true
+must_include:
+- The folded red receipt appears only in Chapters Three, Five, Eight, Eleven, and
+  Fourteen.
+- The reflected camera status light appears only in Chapters One, Three, Seven, and
+  Fourteen.
+- Ordinary displaced objects function as primary evidence only in Chapters Two, Four,
+  Seven, and Twelve.
+- The phrase 'You keep the originals' appears only in Chapters Nine and Seventeen.
+- The phrase 'Friday key return' appears only in Chapters Eight, Twelve, Fifteen,
+  and Seventeen.
+- The phrase 'Look at me' may appear only in Chapters Nine, Eleven, and Eighteen.
+- Explicit sexual content occurs only in Chapters Eleven and Eighteen.
+- Chapter Eleven must show the courtyard camera powered off and physically covered,
+  then affirmative consent before sexual contact.
+- Chapter Sixteen must show Lena withdrawing access and Calder obeying immediately.
+- Calder must enter Chapter Seventeen without romantic reconciliation.
+- The certified envelope must first function as an information honeytoken; Grant must
+  use the unique phrase before Lena learns the theft was recorded.
+- Grant must formally authenticate the envelope, clipped corner, checklist, unique
+  phrase, and alleged recycling-area custody before Calder reveals contradictory footage;
+  Grant must never state that he took the envelope.
+- Chapter Seventeen must use the envelope, postal tracking, original archive, field
+  notebook, access audit, door-seal planner, reports, contract, and evidence index.
+- Calder must transfer the archive duplicate before the climax; Lena must remain the
+  designer of the evidentiary sequence; the final curtain image must represent chosen
+  visibility.
+must_avoid:
+- No secret twin, impostor, body double, memory-loss twist, hidden pregnancy, or false
+  identity twist.
+- No hallucination explanation for Lena's observations.
+- No hidden camera inside Lena's apartment; no bedroom or bathroom recording; no recording
+  of nudity or sexual activity.
+- No sexual assault presented as romance; no sexual contact before the Chapter Ten
+  rules.
+- No gun, knife, kidnapping, physical assault, chase climax, or violent rescue.
+- No hacker friend, secret server, unexplained cloud backup, mystery USB drive, or
+  surprise forensic device.
+- No new evidence introduced after Chapter Fifteen.
+- No scene outside Calder's POV; no omniscient action by Grant or Lena.
+- No police action based on one recording or accusation; no detective attending the
+  confidential settlement without a declared legal reason; no instant arrest during
+  the settlement scene.
+- No instant divorce judgment, property transfer, or criminal conviction.
+- No named character outside the locked cast; no child, pregnancy, or custody subplot.
+- No mafia, organized crime, billionaire fantasy, cult, or international conspiracy.
+- No redemption for Grant; no revelation that Calder designed Lena's counterstrategy.
+- No romance payoff for Calder ignoring Lena's refusal; no Book Two villain physically
+  appearing in Book One.
+- No version of the climax requiring Grant to confess that he stole the envelope.
+- No portrayal of Lena's Chapter Eight action as certainty that Calder recorded the
+  envelope theft.
+ending_book1: 'Central question: once Lena no longer needs Calder as a witness, is
+  anything between them chosen
+
+  rather than engineered? Answer: yes, but only after the surveillance contract, evidence
+  dependency,
+
+  and immediate threat have ended. Lena defeats Grant''s control without being physically
+  rescued and
+
+  remains in her apartment. Calder gives up sole custody of the evidence, exposes
+  his own conduct to
+
+  Detective Cross, and accepts Lena''s refusal to let him decide for her. After those
+  actions can no
+
+  longer benefit her case, Lena asks Calder to return without recording equipment;
+  she grants no
+
+  unrestricted access and chooses when he enters, when he watches, and when the curtain
+  closes. The
+
+  thriller question is also resolved: Lena, not Calder or Grant, controlled the decisive
+  sequence of
+
+  visible events.
+
+  '
+hook_book2: 'Mae gives Lena a sealed archived complaint from another condominium that
+  used the same security
+
+  vendor. The complaint predates Grant''s board position and describes short camera
+  gaps paired with
+
+  resident instability reports. Lena does not open it during Book One. Grant remains
+  defeated and does
+
+  not secretly control the new problem; no replacement antagonist appears on-page.
+  The hook offers a
+
+  future choice: leave the surveillance world behind, or examine whether the mechanism
+  existed before
+
+  Grant learned to exploit it.
+
+  '
+notes: 'Claustrophobic, intimate, methodical, erotic, and psychologically tense. Fear
+  must grow from
+
+  ordinary domestic details: a mug placed at the wrong angle; a door seal broken;
+  a missing letter;
+
+  a familiar key used silently; a message arriving too quickly; a repeated phrase
+  that should be
+
+  private; a camera light reflected in glass; a checklist returning through another
+  person''s mouth.
+
+  Calder''s voice is precise and controlled; his unreliability concerns interpretation,
+  not physical
+
+  reality. He may misread Lena''s attraction, fear, intention, his own importance,
+  and the relationship
+
+  between access and consent. He may not misreport timestamps, physical evidence,
+  spoken phrases, his
+
+  own actions, or custody. Lena must never read as superhuman: every successful move
+  arises from a test
+
+  that still yields information if one channel fails, evidence already preserved by
+  someone else, or a
+
+  decision made after she receives new information.
+
+  '
+pen_name: Nix Vale
+chapter_count: 18
+pov:
+  character: Calder Reed
+  mode: first_person
+  tense: past
+  single_pov: true
+characters:
+- name: Calder Reed
+  role: protagonist / private surveillance operative / dark-romance lead
+- name: Lena Hart
+  role: surveillance target / condominium co-owner / Grant's separated wife / dark-romance
+    heroine / architect of the evidence trap
+- name: Grant Hart
+  role: antagonist / Lena's separated husband / condominium board president / Calder's
+    client
+- name: Mae Torres
+  role: Lena's neighbor / condominium board secretary / independent witness
+- name: Imani Cross
+  role: investigating detective / police authority
+chapter_map:
+  '1': 'The Contract. Grant hires Calder for a 21-day assignment ending on the settlement
+
+    date; provides common-area camera access and the courtyard apartment. Calder
+
+    activates his local archive and handwritten notebook; Grant receives only compressed
+
+    reports. Primary turn: Calder accepts and creates an evidence channel Grant does
+    not
+
+    fully control.
+
+    '
+  '2': 'The Baseline. Calder records Lena''s ordinary routine. After her walk she
+    finds a
+
+    kitchen mug moved; Grant messages moments later asking if she forgot something.
+
+    Primary turn: Grant establishes Lena''s alleged instability as Calder''s baseline.
+
+    '
+  '3': 'The Reflection. The status light from Calder''s courtyard camera reflects
+    in his dark
+
+    window. Lena pauses, looks first at the visible camera then at Calder''s window,
+    and
+
+    continues. Canonical: Lena detects the observer here; prose does not explain it.
+
+    Primary turn: Calder reads her pause as instinct and becomes personally invested.
+
+    '
+  '4': 'The Missing Mail. Lena tells Mae a utility notice vanished; Grant later claims
+    to
+
+    have found it in shared recycling, framing her as forgetful and accusatory. Mae
+    is
+
+    uncertain. Primary turn: Grant converts an ordinary missing letter into
+
+    witness-supported instability.
+
+    '
+  '5': 'The Private Copy. Calder watches Lena dance alone in her kitchen through
+
+    common-facing blinds (no nudity, no bedroom/bathroom view). He records it but
+    removes
+
+    it from Grant''s report. Lena places a folded red receipt beside the moved mug.
+
+    Primary turn: Calder begins keeping a private version of Lena he withholds from
+    Grant.
+
+    '
+  '6': 'The Direct Look. Lena repeats her routine with unnatural precision, then looks
+
+    directly at Calder''s dark window. Grant later asks whether Lena is "performing
+    for
+
+    someone," proving Grant reacts to reports but not that every detail reaches him.
+
+    Primary turn: Calder starts believing Lena may be communicating with him.
+
+    '
+  '7': 'The Deleted Minutes. Grant deletes a short dashboard interval; Calder''s local
+    original
+
+    preserves it, showing Grant entering Lena''s apartment with the master credential
+    while
+
+    she walks. Calder omits it from Grant''s report, notes it in his notebook.
+
+    Primary turn: Calder learns Grant is manufacturing the instability.
+
+    '
+  '8': 'The Honeytoken. Calder follows Lena to a postal kiosk; she mails a certified
+    envelope
+
+    to herself, clips the lower-right corner, records the tracking number, folds a
+    red
+
+    receipt into her planner. After delivery, Calder''s lobby footage records Grant
+
+    removing the clipped envelope with the duplicate key; Grant opens it off-camera.
+    Lena
+
+    makes no accusation and does not know the removal was recorded. Primary turn:
+    Lena
+
+    creates an information-leak test whose full value neither she nor Calder yet grasps.
+
+    '
+  '9': 'The Originals. In the laundry room Lena holds a handwritten note toward the
+    camera:
+
+    "You keep the originals. Good." In the stairwell she states Grant hired him (part
+
+    inference, part test); Calder confirms Grant gets only selected reports. She does
+    not
+
+    reveal the envelope''s contents or purpose. She offers a choice: keep serving
+    Grant,
+
+    preserve the truth without taking control of her plan, or walk away.
+
+    Primary turn: Calder and Lena acknowledge the surveillance and form a conditional
+    alliance.
+
+    '
+  '10': 'The Terms. Lena explains Grant is manufacturing evidence to force her out
+    before the
+
+    settlement. Rules: no recording device in her apartment; the courtyard camera
+    never
+
+    records nudity or sex; Calder disables and covers it before entering; no physical
+
+    contact without a direct yes; no private image to Grant; no decisions on her behalf;
+
+    consent withdrawable without negotiation; preserve but never fabricate evidence;
+    Lena
+
+    controls when the alliance ends. Calder agrees, keeps sending Grant edited reports
+    of
+
+    staged behavior. Primary turn: relationship shifts from unilateral surveillance
+    to
+
+    negotiated access.
+
+    '
+  '11': 'Inside. Lena invites Calder in after he stops the courtyard recording, disconnects
+
+    power, covers the lens, leaves devices outside, and lets her verify none are active.
+
+    Their first explicit encounter occurs only after affirmative consent, Lena directing
+
+    pace and boundaries. Afterward she shows the doorframe seals, red receipts, planner,
+
+    and break dates — but not the envelope contents, the phrase, the full staging,
+    or her
+
+    climax plan. Primary turn: Calder gains intimacy but discovers access stays conditional.
+
+    '
+  '12': 'The Returned Phrase. Grant tells Calder to watch for packing and asks if
+    Lena seems
+
+    ready for a "Friday key return." Calder has never heard the phrase; when he repeats
+    it
+
+    to Lena she shows the false checklist she sealed in the envelope — the phrase
+    exists
+
+    only there. She now knows Grant intercepted and read it. Calder tells her his
+    footage
+
+    also shows Grant taking the envelope; the test gains a second layer. Grant separately
+
+    orders Calder to photograph unsafe interior conditions; Calder refuses, claiming
+
+    exterior observation is more credible; Lena stages one harmless visible packing
+    action
+
+    to preserve Grant''s confidence. Primary turn: the envelope proves theft, then
+    gains
+
+    physical corroboration.
+
+    '
+  '13': 'The Paper Audit. Lena brings Calder to Mae''s apartment. Mae explains the
+    board terminal
+
+    prints a local master-credential audit even when the cloud dashboard is edited.
+    Mae
+
+    prints it (Grant''s credential ID, entry timestamps, Lena''s unit, intervals matching
+
+    missing footage, a terminal verification code) and hides it in a cookbook. Grant''s
+
+    account logs that the terminal was accessed, not what was printed or where it
+    is held.
+
+    Primary turn: the plan gains an independent physical record Grant cannot remotely
+    erase.
+
+    '
+  '14': 'What She Let Him See. Lena shows the complete planner and explains: she detected
+    the
+
+    reflected light in Chapter Three; red receipts marked suspected intrusions; repeated
+
+    routines tested what reached Grant; the visible packing was controlled; the envelope
+
+    began as a honeytoken; she did not know Calder kept originals until Chapter Nine,
+    nor
+
+    that the removal was recorded until Chapter Twelve; some intimate views were left
+
+    visible deliberately; other parts of her life were kept outside his sightline.
+    Her plan
+
+    changed as she learned; she designed tests with multiple outcomes and kept only
+
+    independently verifiable results. Primary turn: Calder and reader learn Lena controlled
+
+    the meaning of the surveillance since Chapter Three without impossible knowledge.
+
+    '
+  '15': 'The Chain. The chapter deliberately lowers the emotional temperature. Lena,
+    Calder, and
+
+    Mae reconstruct and verify the evidence chain (tracking number, clipped corner,
+
+    honeytoken phrase, Grant''s Ch12 instruction, original lobby footage, notebook
+    timestamp,
+
+    door-seal planner, master-access audit, contract, daily reports). Calder makes
+    one
+
+    encrypted duplicate in their presence. Detective Imani Cross receives the duplicate,
+
+    contract copy, tracking record, Grant''s instruction message, and an evidence
+    index. Cross
+
+    promises no arrest; she will verify, preserve, remain available, and prevent the
+    evidence
+
+    from depending solely on Calder. No reconciliation, no sexual contact. Primary
+    turn: the
+
+    evidence survives even if Calder disappears or changes sides.
+
+    '
+  '16': 'No Rescue. Grant notices Mae''s terminal access and urgently asks Calder
+    to determine
+
+    whether Lena obtained building records. Fearing Grant will destroy evidence or
+    re-enter,
+
+    Calder tells Lena to leave the building and let him control the rest. Lena refuses:
+
+    leaving would support Grant''s abandonment narrative, put her plan under Calder''s
+    control,
+
+    let him repeat Grant''s pattern, and break the rules. Calder keeps arguing; Lena
+    revokes
+
+    his personal access and ends the relationship, permitting only the formal witness
+
+    obligations already transferred to Cross. Calder leaves without touching, recording,
+    or
+
+    taking anything, not knowing if she will ever speak to him again. Primary turn:
+    Calder
+
+    loses Lena because he tries to convert protection into control.
+
+    '
+  '17': 'The False Chain. The settlement session in the condominium community room
+    (Lena, Grant,
+
+    Calder, Mae, unnamed mediator/legal staff; Cross is NOT inside the confidential
+    session,
+
+    already holding the duplicate). Grant presents edited reports, the certified envelope,
+
+    the false checklist, resident records, and his abandonment claim; he asserts the
+    envelope
+
+    was delivered, opened by Lena, then found in shared recycling, and that "Friday
+    key return"
+
+    was her plan. Lena makes Grant formally confirm tracking number, clipped corner,
+    checklist,
+
+    phrase, and recycling-area custody — tying the document to his false chain. She
+    asks Calder
+
+    whether Grant ever used the phrase before delivery; he says no. Calder produces
+    Grant''s
+
+    Ch12 instruction with the phrase, the original lobby footage of Grant taking the
+    envelope,
+
+    the matching handwritten timestamp, and the report that omitted the removal. Mae
+    produces
+
+    the printed access audit placing Grant''s credential at Lena''s unit during deleted
+    intervals;
+
+    Calder''s originals restore them; the planner supplies physical timestamps. Grant
+    tries to
+
+    claim Calder fabricated the originals (contradicted by metadata, continuous log,
+    contract,
+
+    instructions, and the index already delivered to Cross) and that Mae forged the
+    record
+
+    (contradicted by the terminal verification code). The mediator halts the session;
+    no transfer,
+
+    no judgment, no physical attack; Cross takes custody afterward. Primary turn:
+    Lena forces
+
+    Grant to choose and defend the lie that exposes the whole system.
+
+    '
+  '18': 'The Open Curtain. Verified aftermath, no legal miracle: settlement suspended,
+    Lena keeps
+
+    possession, transfer blocked pending review, Grant loses admin access, an independent
+
+    condo audit begins, Cross verifies everything, investigators pursue unlawful entry,
+    mail
+
+    interference, digital evidence tampering, coercive surveillance, and attempted
+    fraud;
+
+    Grant is not instantly convicted, divorce not finalized. Calder gives a full statement,
+
+    admits withholding material and the personal relationship, accepts professional
+    and legal
+
+    scrutiny, does not contact Lena. Only after his evidence is transferred and his
+    witness role
+
+    no longer needs private access does Lena contact him — asking him to return without
+    a camera,
+
+    device, contract, report, or a promise she will forgive everything. She verifies
+    the courtyard
+
+    camera stays disconnected. Their second explicit encounter follows the established
+    rules; Lena
+
+    chooses when he enters, what he sees, what stays private, when the curtain stays
+    open or closes.
+
+    Later Mae gives Lena a sealed archived complaint about another condominium using
+    the same
+
+    security vendor, predating Grant''s board role; Lena does not open it. Primary
+    turn: Lena chooses
+
+    Calder only after observation, evidence, and need no longer determine the relationship.
+
+    '

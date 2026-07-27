@@ -1,0 +1,1099 @@
+{
+  "book": 2,
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Survivor's Record",
+      "slug": "the-survivors-record",
+      "one_line_summary": "Sofia Bellini is presented as the last surviving witness of the summit and is called to testify before the tribunal.",
+      "beat_summary": "Sofia Bellini sits before the tribunal, her demeanor calm as she faces officials who see her as a sympathetic survivor. The narrative establishes the deaths at the summit, the system’s chilling power, and Sofia Bellini’s gentle, measured responses. The tribunal leans on the official record, while Pierre Leclerc, posing as a fellow survivor, watches her warily. The chapter closes as Sofia Bellini offers subtle reassurance to the tribunal, reinforcing her role as a helpful, harmless witness.",
+      "must_happen": [
+        "Sofia Bellini is formally introduced as the last surviving witness of the summit.",
+        "The tribunal discusses the deaths during the summit, relying on the system's official record.",
+        "Pierre Leclerc observes Sofia Bellini's testimony and quietly notes inconsistencies.",
+        "[ROMANCE] Elias van Doren, though not present, is referenced as a person who believes in Sofia Bellini’s innocence and is determined to clear her name.",
+        "Sofia Bellini offers gentle reassurance to the tribunal and reframes questions to de-escalate tension.",
+        "[CLUE C001]"
+      ],
+      "must_not": [
+        "Reveal or even hint that Sofia Bellini is Nadia Petrescu's daughter or the architect of the system.",
+        "Describe any character knowing or suspecting Sofia Bellini’s true motive or secret role."
+      ],
+      "opens_with": "\"Your testimony is all that remains. Why do you think you survived, Sofia Bellini?\"",
+      "cliffhanger": "Pierre Leclerc quietly slips a note under the table, signaling that he wants to speak with Sofia Bellini in secret about what really happened.",
+      "signature_detail_hint": "A faint, persistent hum from the recording device in the tribunal chamber makes every word feel permanent.",
+      "emotional_beat": "Dread and isolation, with Sofia Bellini’s warmth masking the tension beneath every official statement.",
+      "spice": 1,
+      "spice_note": "Psychological intimacy only; no explicit content. The focus is on subtle emotional tension and Elias van Doren’s protective belief in Sofia Bellini.",
+      "chapter_task": "Establish the tribunal setting and Sofia Bellini’s surface role as a survivor; seed underlying dread and suspicion. Target length: 1600-1900 words.",
+      "carries_to_next": "Sofia Bellini receives Pierre Leclerc’s secret note, setting up their covert meeting and the first hint of cracks in the official narrative.",
+      "narrative": {
+        "clues_plant": [
+          "C001"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sofia Bellini",
+            "Elias van Doren",
+            "The Tribunal",
+            "Nadia Petrescu (historical presence)",
+            "Pierre Leclerc"
+          ],
+          "may_know": [
+            "Sofia Bellini: Sofia presents herself as the last surviving witness of the summit, helping the tribunal in good faith",
+            "Sofia Bellini: She is aware of the deaths and the system, and is seen as a sympathetic survivor",
+            "Sofia Bellini: She is internally calm and in control, with no sign of her true motive visible.",
+            "Elias van Doren: Elias is absent at the tribunal's start, but is aware of the official narrative: Sofia is the survivor, and the deaths are being reinvestigated",
+            "Elias van Doren: He believes Sofia is a victim and plans to clear her name.",
+            "The Tribunal: The tribunal believes Sofia is the traumatized survivor and relies on the system's official record for proceedings",
+            "The Tribunal: They are unaware of the true cause of the deaths and trust the system's integrity.",
+            "Nadia Petrescu (historical presence): Nadia exists only through old records and tribunal files",
+            "Nadia Petrescu (historical presence): Her erased testimony is the foundation of the system, but this is not known to any living character.",
+            "Pierre Leclerc: Pierre is a journalist posing as a survivor",
+            "Pierre Leclerc: He suspects a cover-up but has no insight into Sofia's true role."
+          ],
+          "must_not_know": [
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect"
+          ],
+          "iris_knows": [
+            "Sofia Bellini: Sofia presents herself as the last surviving witness of the summit, helping the tribunal in good faith",
+            "Sofia Bellini: She is aware of the deaths and the system, and is seen as a sympathetic survivor",
+            "Sofia Bellini: She is internally calm and in control, with no sign of her true motive visible.",
+            "Elias van Doren: Elias is absent at the tribunal's start, but is aware of the official narrative: Sofia is the survivor, and the deaths are being reinvestigated",
+            "Elias van Doren: He believes Sofia is a victim and plans to clear her name.",
+            "The Tribunal: The tribunal believes Sofia is the traumatized survivor and relies on the system's official record for proceedings",
+            "The Tribunal: They are unaware of the true cause of the deaths and trust the system's integrity.",
+            "Nadia Petrescu (historical presence): Nadia exists only through old records and tribunal files",
+            "Nadia Petrescu (historical presence): Her erased testimony is the foundation of the system, but this is not known to any living character.",
+            "Pierre Leclerc: Pierre is a journalist posing as a survivor",
+            "Pierre Leclerc: He suspects a cover-up but has no insight into Sofia's true role."
+          ],
+          "truth_background": [
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect",
+            "[kernel.true_case] Sofia is Nadia Petrescu's daughter and the architect of the system. She did not survive the summit — she built it. Having watched officials rewrite her mother's testimony until it killed her, Sofia drew the wrong lesson: the weak are those who let themselves be spoken for, and she will never be weak again. She engineered the machine from her mother's case file and ran the summit as a live experiment. Her acts of 'helping' others were always about control. 'Protecting' Elias was never love, but the preservation of her one control variable. Nadia's dying words, 'That is not what I said,' were spoken to Sofia, who was already becoming the system. Sofia took that line and made it the signature of her killing method.",
+            "[kernel.core_question] Who truly controls the system that rewrites people to death, and what was Sofia's real role in the tragedy?"
+          ],
+          "effective_milestone": 1
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 2,
+      "title": "Echoes in the Record",
+      "slug": "echoes-in-the-record",
+      "one_line_summary": "Elias van Doren returns to the tribunal, Sofia Bellini’s interventions shape the testimonies, and the system’s oddities begin to surface.",
+      "beat_summary": "Elias van Doren arrives at the tribunal, determined to defend Sofia Bellini. As Sofia Bellini reframes another witness’s statement, small changes ripple through the official transcript. The tribunal attributes recent witness deaths to stress or system errors, but Pierre Leclerc grows more suspicious. An archival reference to Nadia Petrescu’s disciplinary hearing is unearthed, but its significance remains veiled. The chapter ends with Sofia Bellini noticing someone has tampered with the official record.",
+      "must_happen": [
+        "Elias van Doren returns, his genuine care for Sofia Bellini evident as he insists on her innocence to the tribunal.",
+        "Sofia Bellini gently intervenes in a witness testimony, reframing their words and soothing tribunal tensions.",
+        "[ROMANCE] A brief, loaded glance passes between Sofia Bellini and Elias van Doren, hinting at trust and shared history.",
+        "The tribunal discusses a recent unexplained death among the witnesses, blaming system errors.",
+        "An archive reference to Nadia Petrescu’s disciplinary hearing is mentioned but not explained.",
+        "[CLUE C002]"
+      ],
+      "must_not": [
+        "Reveal that Sofia Bellini or Nadia Petrescu are connected by blood or system authorship.",
+        "Show any character uncovering the true cause behind the deaths or the system’s design."
+      ],
+      "opens_with": "\"If there’s a mistake in the record, we have to correct it—before it kills someone else,\" Elias van Doren says, voice trembling.",
+      "cliffhanger": "Sofia Bellini notices a line in the transcript she did not speak, suggesting someone else is altering the record.",
+      "signature_detail_hint": "Tribunal notes are marked with tiny, identical corrections in blue ink—no one recalls making them.",
+      "emotional_beat": "Mistrust and subtle intimacy, as Sofia Bellini and Elias van Doren navigate an environment where every word is dangerous.",
+      "spice": 1,
+      "spice_note": "Emotional tension and micro-beat between Sofia Bellini and Elias van Doren; no explicit content.",
+      "chapter_task": "Deepen the tribunal’s reliance on the system and Sofia Bellini’s role; introduce Elias van Doren’s emotional stake and the first signs of transcript manipulation. Target length: 1600-1900 words.",
+      "carries_to_next": "Sofia Bellini decides to investigate the altered transcript, enlisting Elias van Doren’s help as the system’s unreliability becomes more apparent.",
+      "narrative": {
+        "clues_plant": [
+          "C002"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sofia Bellini",
+            "Elias van Doren",
+            "The Tribunal",
+            "Nadia Petrescu (historical presence)",
+            "Pierre Leclerc"
+          ],
+          "may_know": [
+            "Sofia Bellini: Sofia continues to 'help' others, reframing testimonies and offering support",
+            "Sofia Bellini: She is trusted by the tribunal and Elias, and her interventions precede subtle changes in the official record",
+            "Sofia Bellini: She feels justified in her actions, believing she is protecting others.",
+            "Elias van Doren: Elias returns and begins his investigation",
+            "Elias van Doren: He trusts Sofia and is motivated by genuine care for her",
+            "Elias van Doren: He notices oddities in the tribunal record but attributes them to system errors.",
+            "The Tribunal: The tribunal notes witness deaths but attributes them to stress or system errors",
+            "The Tribunal: They accept Sofia's interventions as helpful and do not question the official record.",
+            "Nadia Petrescu (historical presence): Her disciplinary hearing is referenced in the archive",
+            "Nadia Petrescu (historical presence): Some details are accessible, but the full connection to Sofia and the system remains concealed.",
+            "Pierre Leclerc: He observes the tribunal and notes oddities in the deaths and transcripts",
+            "Pierre Leclerc: He is skeptical of the official story."
+          ],
+          "must_not_know": [
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect"
+          ],
+          "iris_knows": [
+            "Sofia Bellini: Sofia continues to 'help' others, reframing testimonies and offering support",
+            "Sofia Bellini: She is trusted by the tribunal and Elias, and her interventions precede subtle changes in the official record",
+            "Sofia Bellini: She feels justified in her actions, believing she is protecting others.",
+            "Elias van Doren: Elias returns and begins his investigation",
+            "Elias van Doren: He trusts Sofia and is motivated by genuine care for her",
+            "Elias van Doren: He notices oddities in the tribunal record but attributes them to system errors.",
+            "The Tribunal: The tribunal notes witness deaths but attributes them to stress or system errors",
+            "The Tribunal: They accept Sofia's interventions as helpful and do not question the official record.",
+            "Nadia Petrescu (historical presence): Her disciplinary hearing is referenced in the archive",
+            "Nadia Petrescu (historical presence): Some details are accessible, but the full connection to Sofia and the system remains concealed.",
+            "Pierre Leclerc: He observes the tribunal and notes oddities in the deaths and transcripts",
+            "Pierre Leclerc: He is skeptical of the official story."
+          ],
+          "truth_background": [
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect",
+            "[kernel.true_case] Sofia is Nadia Petrescu's daughter and the architect of the system. She did not survive the summit — she built it. Having watched officials rewrite her mother's testimony until it killed her, Sofia drew the wrong lesson: the weak are those who let themselves be spoken for, and she will never be weak again. She engineered the machine from her mother's case file and ran the summit as a live experiment. Her acts of 'helping' others were always about control. 'Protecting' Elias was never love, but the preservation of her one control variable. Nadia's dying words, 'That is not what I said,' were spoken to Sofia, who was already becoming the system. Sofia took that line and made it the signature of her killing method.",
+            "[kernel.core_question] Who truly controls the system that rewrites people to death, and what was Sofia's real role in the tragedy?"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 3,
+      "title": "Testimony Distorted",
+      "slug": "testimony-distorted",
+      "one_line_summary": "Sofia Bellini and Elias van Doren begin probing the altered record, uncovering subtle manipulations as the system’s threat grows.",
+      "beat_summary": "Sofia Bellini and Elias van Doren meet privately to review the tribunal’s transcript. Their investigation reveals small but crucial differences between what was said and what is officially recorded. The tribunal officials continue to trust the system, but an undercurrent of fear grows as yet another witness falls ill. Pierre Leclerc challenges Sofia Bellini with pointed questions, suspecting more than the surface. The chapter ends as Sofia Bellini finds her own words subtly changed in the record.",
+      "must_happen": [
+        "Sofia Bellini and Elias van Doren privately compare their memories to the official transcript and notice discrepancies.",
+        "[ROMANCE] During a tense moment, Elias van Doren’s hand brushes Sofia Bellini’s—an unspoken promise of trust.",
+        "Pierre Leclerc confronts Sofia Bellini about inconsistencies in her statements, but she deftly redirects the conversation.",
+        "Another witness collapses after their testimony is 'corrected' by the system.",
+        "Sofia Bellini notices her own words have been altered in the official record, deepening her unease.",
+        "[CLUE C003]"
+      ],
+      "must_not": [
+        "Reveal or suggest Sofia Bellini’s authorship of the system or her connection to Nadia Petrescu.",
+        "Allow any character to make a direct accusation about the true nature of the system or Sofia Bellini’s intentions."
+      ],
+      "opens_with": "\"This isn’t what I said,\" Sofia Bellini whispers, staring at the transcript.",
+      "cliffhanger": "A tribunal officer demands Sofia Bellini explain the discrepancy in her testimony—on record, in front of everyone.",
+      "signature_detail_hint": "A single page in the transcript is missing its official seal, though no one admits to removing it.",
+      "emotional_beat": "Rising paranoia and intimate trust—Sofia Bellini and Elias van Doren must rely on each other as the system’s manipulations escalate.",
+      "spice": 1,
+      "spice_note": "Micro-romantic beat (touch, trust) under psychological tension; no explicit content.",
+      "chapter_task": "Escalate the mystery of transcript distortions; show Sofia Bellini and Elias van Doren’s growing alliance and the dangers of speaking out. Target length: 1600-1900 words.",
+      "carries_to_next": "Sofia Bellini is forced into the spotlight to defend her own words, as suspicion and fear over the system’s power reach a breaking point.",
+      "narrative": {
+        "clues_plant": [
+          "C003"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sofia Bellini",
+            "Elias van Doren",
+            "The Tribunal",
+            "Nadia Petrescu (historical presence)",
+            "Pierre Leclerc"
+          ],
+          "may_know": [
+            "Sofia Bellini: Sofia continues to 'help' others, reframing testimonies and offering support",
+            "Sofia Bellini: She is trusted by the tribunal and Elias, and her interventions precede subtle changes in the official record",
+            "Sofia Bellini: She feels justified in her actions, believing she is protecting others.",
+            "Elias van Doren: Elias returns and begins his investigation",
+            "Elias van Doren: He trusts Sofia and is motivated by genuine care for her",
+            "Elias van Doren: He notices oddities in the tribunal record but attributes them to system errors.",
+            "The Tribunal: The tribunal notes witness deaths but attributes them to stress or system errors",
+            "The Tribunal: They accept Sofia's interventions as helpful and do not question the official record.",
+            "Nadia Petrescu (historical presence): Her disciplinary hearing is referenced in the archive",
+            "Nadia Petrescu (historical presence): Some details are accessible, but the full connection to Sofia and the system remains concealed.",
+            "Pierre Leclerc: He observes the tribunal and notes oddities in the deaths and transcripts",
+            "Pierre Leclerc: He is skeptical of the official story."
+          ],
+          "must_not_know": [
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect"
+          ],
+          "iris_knows": [
+            "Sofia Bellini: Sofia continues to 'help' others, reframing testimonies and offering support",
+            "Sofia Bellini: She is trusted by the tribunal and Elias, and her interventions precede subtle changes in the official record",
+            "Sofia Bellini: She feels justified in her actions, believing she is protecting others.",
+            "Elias van Doren: Elias returns and begins his investigation",
+            "Elias van Doren: He trusts Sofia and is motivated by genuine care for her",
+            "Elias van Doren: He notices oddities in the tribunal record but attributes them to system errors.",
+            "The Tribunal: The tribunal notes witness deaths but attributes them to stress or system errors",
+            "The Tribunal: They accept Sofia's interventions as helpful and do not question the official record.",
+            "Nadia Petrescu (historical presence): Her disciplinary hearing is referenced in the archive",
+            "Nadia Petrescu (historical presence): Some details are accessible, but the full connection to Sofia and the system remains concealed.",
+            "Pierre Leclerc: He observes the tribunal and notes oddities in the deaths and transcripts",
+            "Pierre Leclerc: He is skeptical of the official story."
+          ],
+          "truth_background": [
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect",
+            "[kernel.true_case] Sofia is Nadia Petrescu's daughter and the architect of the system. She did not survive the summit — she built it. Having watched officials rewrite her mother's testimony until it killed her, Sofia drew the wrong lesson: the weak are those who let themselves be spoken for, and she will never be weak again. She engineered the machine from her mother's case file and ran the summit as a live experiment. Her acts of 'helping' others were always about control. 'Protecting' Elias was never love, but the preservation of her one control variable. Nadia's dying words, 'That is not what I said,' were spoken to Sofia, who was already becoming the system. Sofia took that line and made it the signature of her killing method.",
+            "[kernel.core_question] Who truly controls the system that rewrites people to death, and what was Sofia's real role in the tragedy?"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 4,
+      "title": "Beneath the Transcript",
+      "slug": "beneath-the-transcript",
+      "one_line_summary": "Sofia Bellini’s interventions escalate as the tribunal ignores warning signs, and Elias van Doren begins to doubt the safety of every word recorded.",
+      "beat_summary": "Sofia Bellini continues to gently reframe other witnesses' statements, her guidance always received as benevolent by the tribunal. Elias van Doren, growing more anxious, quietly compares his memory to the official transcript and notices subtle discrepancies. The tribunal, shaken by mounting deaths, clings to Sofia Bellini’s apparent composure, while Pierre Leclerc’s skepticism sharpens. The chapter closes as Elias van Doren voices his fear that the system itself is dangerous—right as a new correction appears in the record, not matching anyone’s recollection.",
+      "must_happen": [
+        "Sofia Bellini subtly alters the phrasing of another witness’s testimony during tribunal proceedings, de-escalating conflict.",
+        "Elias van Doren compares his notes with the transcript and discovers inconsistencies, growing more unsettled.",
+        "The tribunal debates whether the recent death was due to stress or a transcription error, ultimately dismissing deeper investigation.",
+        "[ROMANCE] Sofia Bellini meets Elias van Doren’s gaze after a tense exchange, silently reaffirming trust despite rising fear."
+      ],
+      "must_not": [
+        "Reveal or suggest that Sofia Bellini is Nadia Petrescu’s daughter or the architect of the system.",
+        "Allow any character to explicitly question Sofia Bellini’s innocence or cooperative role."
+      ],
+      "opens_with": "\"That’s not what I wrote,\" Elias van Doren says, his voice barely above a whisper as the transcript is projected on the wall.",
+      "cliffhanger": "A tribunal official quietly hands Sofia Bellini a revised transcript—one line has changed since the hearing, and no one claims responsibility.",
+      "signature_detail_hint": "A faint scent of ozone lingers around the transcript printer, strongest whenever a correction appears.",
+      "emotional_beat": "Paranoia and fragile trust—Sofia Bellini and Elias van Doren share an unspoken alliance as reality grows unstable.",
+      "spice": 1,
+      "spice_note": "Psychological intimacy and silent understanding between Sofia Bellini and Elias van Doren; no explicit content.",
+      "chapter_task": "Deepen the growing sense of mistrust toward the system; spotlight Sofia Bellini's influence and Elias van Doren’s unease; escalate the tribunal’s refusal to see the danger. Target length: 1600-1900 words.",
+      "carries_to_next": "Sofia Bellini and Elias van Doren resolve to privately compare all their records, searching for the source and intent behind the transcript changes.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sofia Bellini",
+            "Elias van Doren",
+            "The Tribunal",
+            "Nadia Petrescu (historical presence)",
+            "Pierre Leclerc"
+          ],
+          "may_know": [
+            "Sofia Bellini: Sofia continues to 'help' others, reframing testimonies and offering support",
+            "Sofia Bellini: She is trusted by the tribunal and Elias, and her interventions precede subtle changes in the official record",
+            "Sofia Bellini: She feels justified in her actions, believing she is protecting others.",
+            "Elias van Doren: Elias returns and begins his investigation",
+            "Elias van Doren: He trusts Sofia and is motivated by genuine care for her",
+            "Elias van Doren: He notices oddities in the tribunal record but attributes them to system errors.",
+            "The Tribunal: The tribunal notes witness deaths but attributes them to stress or system errors",
+            "The Tribunal: They accept Sofia's interventions as helpful and do not question the official record.",
+            "Nadia Petrescu (historical presence): Her disciplinary hearing is referenced in the archive",
+            "Nadia Petrescu (historical presence): Some details are accessible, but the full connection to Sofia and the system remains concealed.",
+            "Pierre Leclerc: He observes the tribunal and notes oddities in the deaths and transcripts",
+            "Pierre Leclerc: He is skeptical of the official story."
+          ],
+          "must_not_know": [
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect"
+          ],
+          "iris_knows": [
+            "Sofia Bellini: Sofia continues to 'help' others, reframing testimonies and offering support",
+            "Sofia Bellini: She is trusted by the tribunal and Elias, and her interventions precede subtle changes in the official record",
+            "Sofia Bellini: She feels justified in her actions, believing she is protecting others.",
+            "Elias van Doren: Elias returns and begins his investigation",
+            "Elias van Doren: He trusts Sofia and is motivated by genuine care for her",
+            "Elias van Doren: He notices oddities in the tribunal record but attributes them to system errors.",
+            "The Tribunal: The tribunal notes witness deaths but attributes them to stress or system errors",
+            "The Tribunal: They accept Sofia's interventions as helpful and do not question the official record.",
+            "Nadia Petrescu (historical presence): Her disciplinary hearing is referenced in the archive",
+            "Nadia Petrescu (historical presence): Some details are accessible, but the full connection to Sofia and the system remains concealed.",
+            "Pierre Leclerc: He observes the tribunal and notes oddities in the deaths and transcripts",
+            "Pierre Leclerc: He is skeptical of the official story."
+          ],
+          "truth_background": [
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect",
+            "[kernel.true_case] Sofia is Nadia Petrescu's daughter and the architect of the system. She did not survive the summit — she built it. Having watched officials rewrite her mother's testimony until it killed her, Sofia drew the wrong lesson: the weak are those who let themselves be spoken for, and she will never be weak again. She engineered the machine from her mother's case file and ran the summit as a live experiment. Her acts of 'helping' others were always about control. 'Protecting' Elias was never love, but the preservation of her one control variable. Nadia's dying words, 'That is not what I said,' were spoken to Sofia, who was already becoming the system. Sofia took that line and made it the signature of her killing method.",
+            "[kernel.core_question] Who truly controls the system that rewrites people to death, and what was Sofia's real role in the tragedy?"
+          ],
+          "effective_milestone": 2
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 5,
+      "title": "The Kindness Algorithm",
+      "slug": "the-kindness-algorithm",
+      "one_line_summary": "Sofia Bellini’s surface ‘kindness’ grows more strategic as Elias van Doren’s suspicions intensify, while tribunal trust begins to erode.",
+      "beat_summary": "Sofia Bellini’s rapport with Elias van Doren deepens as she offers reassurance in the tribunal chamber, yet she studies his reactions with increasing intensity. Elias van Doren, loyal yet unsettled, senses something unsettling beneath Sofia Bellini’s helpfulness but cannot articulate it. The tribunal, facing more unexplained deaths, questions the system’s clarifications but ultimately accepts Sofia Bellini’s narrative. Pierre Leclerc scours the archives for a pattern, while fragments of Nadia Petrescu’s file surface but yield no clear answers. The chapter closes as Elias van Doren is asked to vouch for Sofia Bellini’s reliability in front of the entire tribunal.",
+      "must_happen": [
+        "Sofia Bellini reassures a panicked official, her gentle intervention restoring order but tightening her perceived control.",
+        "Elias van Doren is called to speak on Sofia Bellini’s behalf, wrestling with his growing doubts and his lingering emotional loyalty.",
+        "[ROMANCE] During the testimony, Sofia Bellini’s gaze lingers on Elias van Doren, communicating trust and dependency in front of all.",
+        "Fragments of Nadia Petrescu’s file are passed to Elias van Doren, but their deeper significance remains hidden.",
+        "Pierre Leclerc presents a surface-level finding from the system’s archive, but the tribunal dismisses it as irrelevant."
+      ],
+      "must_not": [
+        "Suggest or reveal any connection between Sofia Bellini and Nadia Petrescu beyond official records.",
+        "Reveal or state Sofia Bellini’s authorship or secret role in the system."
+      ],
+      "opens_with": "\"Would you trust her with your life?\" the chief adjudicator asks Elias van Doren, the tribunal chamber silent and expectant.",
+      "cliffhanger": "Elias van Doren is left alone with the fragments of Nadia Petrescu’s file—one page is missing, and only Sofia Bellini notices.",
+      "signature_detail_hint": "A single hairline crack runs through the glass of the tribunal’s evidence case, widening with each hearing.",
+      "emotional_beat": "Suspicion and longing—Elias van Doren’s fear is masked by his desire to protect Sofia Bellini, even as her influence grows.",
+      "spice": 1,
+      "spice_note": "Subtle emotional tension and longing between Sofia Bellini and Elias van Doren; no explicit content.",
+      "chapter_task": "Show Sofia Bellini’s growing control of the tribunal through kindness; explore Elias van Doren’s conflicted loyalty and suspicion; introduce surface clues from the archive. Target length: 1600-1900 words.",
+      "carries_to_next": "Elias van Doren and Sofia Bellini agree to investigate the system and its archive, searching for the missing piece in Nadia Petrescu’s file.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sofia Bellini",
+            "Elias van Doren",
+            "The Tribunal",
+            "Nadia Petrescu (historical presence)",
+            "Pierre Leclerc"
+          ],
+          "may_know": [
+            "Sofia Bellini: Sofia's rapport with Elias deepens, and she studies him closely",
+            "Sofia Bellini: She maintains her mask of kindness and helpfulness, but her control becomes more apparent (on reread)",
+            "Sofia Bellini: She is preparing for the tribunal's final decisions and monitoring the system's effects.",
+            "Elias van Doren: Elias grows uneasy as Sofia's interventions feel increasingly intrusive",
+            "Elias van Doren: He senses something is wrong with the system and Sofia's role but cannot articulate it",
+            "Elias van Doren: He is still emotionally loyal to her.",
+            "The Tribunal: The tribunal becomes concerned about mounting deaths but continues to trust the system's clarifications",
+            "The Tribunal: They see Sofia as a cooperative witness.",
+            "Nadia Petrescu (historical presence): Fragments of Nadia's file are examined by Elias, but the significance is not understood.",
+            "Pierre Leclerc: Pierre investigates the system's code and archive but finds only surface-level clues."
+          ],
+          "must_not_know": [
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect"
+          ],
+          "iris_knows": [
+            "Sofia Bellini: Sofia's rapport with Elias deepens, and she studies him closely",
+            "Sofia Bellini: She maintains her mask of kindness and helpfulness, but her control becomes more apparent (on reread)",
+            "Sofia Bellini: She is preparing for the tribunal's final decisions and monitoring the system's effects.",
+            "Elias van Doren: Elias grows uneasy as Sofia's interventions feel increasingly intrusive",
+            "Elias van Doren: He senses something is wrong with the system and Sofia's role but cannot articulate it",
+            "Elias van Doren: He is still emotionally loyal to her.",
+            "The Tribunal: The tribunal becomes concerned about mounting deaths but continues to trust the system's clarifications",
+            "The Tribunal: They see Sofia as a cooperative witness.",
+            "Nadia Petrescu (historical presence): Fragments of Nadia's file are examined by Elias, but the significance is not understood.",
+            "Pierre Leclerc: Pierre investigates the system's code and archive but finds only surface-level clues."
+          ],
+          "truth_background": [
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect",
+            "[kernel.true_case] Sofia is Nadia Petrescu's daughter and the architect of the system. She did not survive the summit — she built it. Having watched officials rewrite her mother's testimony until it killed her, Sofia drew the wrong lesson: the weak are those who let themselves be spoken for, and she will never be weak again. She engineered the machine from her mother's case file and ran the summit as a live experiment. Her acts of 'helping' others were always about control. 'Protecting' Elias was never love, but the preservation of her one control variable. Nadia's dying words, 'That is not what I said,' were spoken to Sofia, who was already becoming the system. Sofia took that line and made it the signature of her killing method.",
+            "[kernel.core_question] Who truly controls the system that rewrites people to death, and what was Sofia's real role in the tragedy?"
+          ],
+          "effective_milestone": 5
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 6,
+      "title": "Archive Fault",
+      "slug": "archive-fault",
+      "one_line_summary": "Sofia Bellini and Elias van Doren’s alliance deepens as they uncover a planted clue in the archive, but their bond is tested by new doubts.",
+      "beat_summary": "Sofia Bellini and Elias van Doren meet privately to examine the tribunal’s archive, their trust deepened but fraught with tension. They discover a cryptic entry (C004) that appears recently inserted but matches no known testimony. Sofia Bellini’s mask of kindness is more deliberate than ever, her every word measured as tribunal deaths continue. Elias van Doren grows increasingly uneasy with Sofia Bellini’s interventions but remains emotionally loyal. Pierre Leclerc shadows their investigation, suspecting only that the system itself is flawed. The chapter ends as Sofia Bellini is summoned back to the tribunal, the mysterious clue in hand.",
+      "must_happen": [
+        "Sofia Bellini and Elias van Doren secretly investigate the archive and find an unexplained, newly planted document (C004).",
+        "Pierre Leclerc tries to observe their meeting, suspecting only system malfunction.",
+        "[ROMANCE] When Elias van Doren expresses his fear, Sofia Bellini gently reassures him by touching his hand—a gesture of both comfort and control.",
+        "The tribunal discusses mounting deaths but continues to trust Sofia Bellini’s clarifications.",
+        "Sofia Bellini is called to return to the tribunal with the new clue, tension rising."
+      ],
+      "must_not": [
+        "Reveal or suggest Sofia Bellini’s authorship of the system or any connection to Nadia Petrescu beyond public record.",
+        "Allow any character to articulate the true purpose or meaning of the planted clue."
+      ],
+      "opens_with": "\"I found something—they say it shouldn’t exist,\" Elias van Doren whispers as he passes the document to Sofia Bellini in the archive alcove.",
+      "cliffhanger": "As Sofia Bellini re-enters the tribunal chamber, the lights flicker—the system has flagged her name for review.",
+      "signature_detail_hint": "A faint thumbprint, perfectly preserved in dust, marks the corner of the mysterious document.",
+      "emotional_beat": "Fragile alliance and dread—Sofia Bellini and Elias van Doren are bound by trust and mutual uncertainty as they face the tribunal.",
+      "spice": 1,
+      "spice_note": "Micro-beat of touch and reassurance between Sofia Bellini and Elias van Doren; no explicit content.",
+      "chapter_task": "Advance the archive investigation; plant clue C004; test the trust and alliance between Sofia Bellini and Elias van Doren; sustain tribunal tension. Target length: 1600-1900 words.",
+      "carries_to_next": "Sofia Bellini must answer for the newly discovered document as the tribunal’s suspicion and the system’s scrutiny intensify.",
+      "narrative": {
+        "clues_plant": [
+          "C004"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sofia Bellini",
+            "Elias van Doren",
+            "The Tribunal",
+            "Nadia Petrescu (historical presence)",
+            "Pierre Leclerc"
+          ],
+          "may_know": [
+            "Sofia Bellini: Sofia's rapport with Elias deepens, and she studies him closely",
+            "Sofia Bellini: She maintains her mask of kindness and helpfulness, but her control becomes more apparent (on reread)",
+            "Sofia Bellini: She is preparing for the tribunal's final decisions and monitoring the system's effects.",
+            "Elias van Doren: Elias grows uneasy as Sofia's interventions feel increasingly intrusive",
+            "Elias van Doren: He senses something is wrong with the system and Sofia's role but cannot articulate it",
+            "Elias van Doren: He is still emotionally loyal to her.",
+            "The Tribunal: The tribunal becomes concerned about mounting deaths but continues to trust the system's clarifications",
+            "The Tribunal: They see Sofia as a cooperative witness.",
+            "Nadia Petrescu (historical presence): Fragments of Nadia's file are examined by Elias, but the significance is not understood.",
+            "Pierre Leclerc: Pierre investigates the system's code and archive but finds only surface-level clues."
+          ],
+          "must_not_know": [
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect"
+          ],
+          "iris_knows": [
+            "Sofia Bellini: Sofia's rapport with Elias deepens, and she studies him closely",
+            "Sofia Bellini: She maintains her mask of kindness and helpfulness, but her control becomes more apparent (on reread)",
+            "Sofia Bellini: She is preparing for the tribunal's final decisions and monitoring the system's effects.",
+            "Elias van Doren: Elias grows uneasy as Sofia's interventions feel increasingly intrusive",
+            "Elias van Doren: He senses something is wrong with the system and Sofia's role but cannot articulate it",
+            "Elias van Doren: He is still emotionally loyal to her.",
+            "The Tribunal: The tribunal becomes concerned about mounting deaths but continues to trust the system's clarifications",
+            "The Tribunal: They see Sofia as a cooperative witness.",
+            "Nadia Petrescu (historical presence): Fragments of Nadia's file are examined by Elias, but the significance is not understood.",
+            "Pierre Leclerc: Pierre investigates the system's code and archive but finds only surface-level clues."
+          ],
+          "truth_background": [
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect",
+            "[kernel.true_case] Sofia is Nadia Petrescu's daughter and the architect of the system. She did not survive the summit — she built it. Having watched officials rewrite her mother's testimony until it killed her, Sofia drew the wrong lesson: the weak are those who let themselves be spoken for, and she will never be weak again. She engineered the machine from her mother's case file and ran the summit as a live experiment. Her acts of 'helping' others were always about control. 'Protecting' Elias was never love, but the preservation of her one control variable. Nadia's dying words, 'That is not what I said,' were spoken to Sofia, who was already becoming the system. Sofia took that line and made it the signature of her killing method.",
+            "[kernel.core_question] Who truly controls the system that rewrites people to death, and what was Sofia's real role in the tragedy?"
+          ],
+          "effective_milestone": 5
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 7,
+      "title": "Ancestral Record",
+      "slug": "ancestral-record",
+      "one_line_summary": "Elias van Doren uncovers the maternity record linking Sofia Bellini to Nadia Petrescu, raising dangerous suspicions just as the tribunal’s focus intensifies.",
+      "beat_summary": "Elias van Doren, driven by mounting dread, pores through archival files and discovers a maternity record connecting Sofia Bellini to Nadia Petrescu. Sofia Bellini, outwardly calm, becomes increasingly vigilant as she senses Elias’s suspicions and moves to protect her narrative. The tribunal debates whether the system's training data is flawed, but clings to the theory of technical error. Pierre Leclerc confides his anxieties to Elias van Doren, but cannot see the full pattern. As Sofia Bellini plants a cryptic clue (C005) to redirect attention, she braces for exposure. The chapter closes with Elias van Doren staring at Sofia Bellini, silent accusation in his eyes.",
+      "must_happen": [
+        "Elias van Doren finds a maternity record that proves Sofia Bellini is related to Nadia Petrescu.",
+        "Sofia Bellini senses Elias van Doren’s investigation and becomes intensely vigilant, masking her anxiety with supportive words.",
+        "Pierre Leclerc approaches Elias van Doren and shares his suspicions about the deaths, but does not uncover Sofia Bellini’s identity.",
+        "The tribunal discusses the possibility of flawed training data but still believes the system’s errors are not intentional.",
+        "Sofia Bellini discreetly plants a misleading clue (C005) to direct suspicion away from herself.",
+        "[ROMANCE] In a moment of private tension, Sofia Bellini’s hand lingers a second too long as she passes Elias van Doren a file, her touch both warning and comfort."
+      ],
+      "must_not": [
+        "Have Sofia Bellini admit or reveal to anyone that she is Nadia Petrescu’s daughter or the architect of the system.",
+        "Allow the tribunal or Pierre Leclerc to realize the full connection between Sofia Bellini and Nadia Petrescu."
+      ],
+      "opens_with": "\"You’re not supposed to have this,\" Elias van Doren mutters, clutching the maternity record with trembling hands.",
+      "cliffhanger": "Sofia Bellini catches Elias van Doren watching her, the maternity record visible in his grip—if she cannot redirect suspicion, everything will unravel.",
+      "signature_detail_hint": "The hospital file's paper edges are uneven, as if it was hastily torn from another document.",
+      "emotional_beat": "Tension and surveillance—Sofia Bellini and Elias van Doren circle each other with suspicion and a flicker of old trust.",
+      "spice": 1,
+      "spice_note": "Micro-beat of tactile contact and psychological tension; no explicit content.",
+      "chapter_task": "Reveal the maternity record linking Sofia Bellini and Nadia Petrescu; escalate suspicion between Sofia Bellini and Elias van Doren; plant clue C005; sustain tribunal’s denial. Target length: 1600-1900 words.",
+      "carries_to_next": "The tribunal’s focus shifts as Elias van Doren prepares to confront Sofia Bellini with his discovery.",
+      "narrative": {
+        "clues_plant": [
+          "C005"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sofia Bellini",
+            "Elias van Doren",
+            "The Tribunal",
+            "Nadia Petrescu (historical presence)",
+            "Pierre Leclerc"
+          ],
+          "may_know": [
+            "Sofia Bellini: Sofia senses Elias is getting closer to the truth",
+            "Sofia Bellini: She remains outwardly supportive but internally vigilant, ensuring her narrative holds",
+            "Sofia Bellini: She is aware that her connection to Nadia risks exposure, but no one else knows.",
+            "Elias van Doren: Elias uncovers the maternity record linking Sofia to Nadia Petrescu and notices patterns in the deaths",
+            "Elias van Doren: He suspects the system was not trained by accident and that Sofia may be involved.",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: Some suspicion arises about the system's training data, but the prevailing theory is still technical error",
+            "The Tribunal: The tribunal does not suspect Sofia.",
+            "Nadia Petrescu (historical presence): Elias finds the maternity record linking Nadia to Sofia, revealing their relationship.",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: He shares suspicions with Elias but does not uncover the true rule or Sofia's identity."
+          ],
+          "must_not_know": [
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect"
+          ],
+          "iris_knows": [
+            "Sofia Bellini: Sofia senses Elias is getting closer to the truth",
+            "Sofia Bellini: She remains outwardly supportive but internally vigilant, ensuring her narrative holds",
+            "Sofia Bellini: She is aware that her connection to Nadia risks exposure, but no one else knows.",
+            "Elias van Doren: Elias uncovers the maternity record linking Sofia to Nadia Petrescu and notices patterns in the deaths",
+            "Elias van Doren: He suspects the system was not trained by accident and that Sofia may be involved.",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: Some suspicion arises about the system's training data, but the prevailing theory is still technical error",
+            "The Tribunal: The tribunal does not suspect Sofia.",
+            "Nadia Petrescu (historical presence): Elias finds the maternity record linking Nadia to Sofia, revealing their relationship.",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: He shares suspicions with Elias but does not uncover the true rule or Sofia's identity."
+          ],
+          "truth_background": [
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect",
+            "[kernel.true_case] Sofia is Nadia Petrescu's daughter and the architect of the system. She did not survive the summit — she built it. Having watched officials rewrite her mother's testimony until it killed her, Sofia drew the wrong lesson: the weak are those who let themselves be spoken for, and she will never be weak again. She engineered the machine from her mother's case file and ran the summit as a live experiment. Her acts of 'helping' others were always about control. 'Protecting' Elias was never love, but the preservation of her one control variable. Nadia's dying words, 'That is not what I said,' were spoken to Sofia, who was already becoming the system. Sofia took that line and made it the signature of her killing method.",
+            "[kernel.core_question] Who truly controls the system that rewrites people to death, and what was Sofia's real role in the tragedy?"
+          ],
+          "effective_milestone": 7
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Architect Unmasked",
+      "slug": "the-architect-unmasked",
+      "one_line_summary": "Sofia Bellini’s true identity and role are exposed: she is Nadia Petrescu’s daughter and the architect of the system, but only Elias van Doren grasps the horror.",
+      "beat_summary": "Elias van Doren, realizing the full truth from the accumulated clues, publicly accuses Sofia Bellini of being Nadia Petrescu’s daughter and the architect of the system. Sofia Bellini, with calm composure, confesses to her lineage and her creation of the tribunal’s deadly system, reframing her actions as acts of mercy and control. The tribunal, rattled by Elias van Doren’s outburst, dismisses him as unstable and sides with Sofia Bellini, whose gentle words recast her motives as benevolent. Pierre Leclerc is shocked by the confrontation but, like the tribunal, cannot see past Sofia Bellini’s narrative. The true horror is exposed for the reader, even as the tribunal itself remains blind.",
+      "must_happen": [
+        "Elias van Doren pieces together all clues and confronts Sofia Bellini before the tribunal, stating she is Nadia Petrescu’s daughter and the architect of the system.",
+        "Sofia Bellini calmly confesses, expressing that every kindness has been control and her actions were merciful by her logic.",
+        "The tribunal interprets Elias van Doren’s accusation as instability and dismisses his claims, reassured by Sofia Bellini’s composure.",
+        "Pierre Leclerc is stunned by the accusation but ultimately doubts Elias van Doren, swayed by Sofia Bellini’s framing.",
+        "The meaning of clues C001–C005 is revealed, tying them to Sofia Bellini’s lineage and system authorship.",
+        "[PAYOFF C002]",
+        "[PAYOFF C003]",
+        "[PAYOFF C004]"
+      ],
+      "must_not": [
+        "Allow the tribunal or Pierre Leclerc to truly comprehend the full rule or horror behind the system.",
+        "Depict Sofia Bellini facing any legal penalty or losing her composure."
+      ],
+      "opens_with": "\"You’re not a victim. You built this,\" Elias van Doren says, his voice raw in the silent chamber.",
+      "cliffhanger": "The tribunal votes to clear Sofia Bellini, while Elias van Doren is forcibly removed for ‘instability’—and Sofia Bellini’s gentle smile is the last thing he sees.",
+      "signature_detail_hint": "The tribunal’s record logs a line no one remembers speaking: ‘Mercy is the severest form of judgment.’",
+      "emotional_beat": "Cold revelation and heartbreak—Elias van Doren’s horror meets Sofia Bellini’s unwavering self-righteousness.",
+      "spice": 1,
+      "spice_note": "A single moment of devastating emotional exposure—Elias van Doren’s heartbreak, Sofia Bellini’s serene detachment.",
+      "chapter_task": "Deliver the major reveal: Sofia Bellini is Nadia Petrescu’s daughter and the system’s architect; let Elias van Doren expose the truth to deaf ears; payoff clues C001–C005. Target length: 1600-1900 words.",
+      "carries_to_next": "Sofia Bellini stands vindicated as the tribunal closes ranks around her; Elias van Doren’s fate is left in shadow, and the reader alone sees the monstrous truth.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C001",
+          "C002",
+          "C003",
+          "C004",
+          "C005"
+        ],
+        "reveals": [
+          {
+            "id": "MR001",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C003",
+              "C004",
+              "C005"
+            ],
+            "min_clues_required": 2
+          },
+          {
+            "id": "MR002",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C001",
+              "C002",
+              "C005"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sofia Bellini",
+            "Elias van Doren",
+            "The Tribunal",
+            "Nadia Petrescu (historical presence)",
+            "Pierre Leclerc"
+          ],
+          "may_know": [
+            "Sofia Bellini: Sofia's true nature is revealed: she is Nadia Petrescu's daughter and the architect of the system",
+            "Sofia Bellini: She confesses without remorse, seeing herself as a savior",
+            "Sofia Bellini: She believes her actions are merciful, saving others from weakness, and every kindness has been an act of control",
+            "Sofia Bellini: She is fully aware of her role and motive.",
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: Elias pieces together the truth: Sofia is Nadia's daughter and the architect of the system",
+            "Elias van Doren: He realizes every act of kindness was control, and the summit was her experiment",
+            "Elias van Doren: He is horrified, but no one else believes him.",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: Elias attempts to reveal the truth, but the tribunal interprets his confrontation as instability",
+            "The Tribunal: Sofia's merciful-sounding line reframes Elias as broken, and the tribunal sides with her",
+            "The Tribunal: They never learn the true rule or Sofia's identity.",
+            "Nadia Petrescu (historical presence): It becomes clear that Nadia's erasure inspired Sofia to build the system",
+            "Nadia Petrescu (historical presence): her last words and lost identity are the core of the tribunal's horror.",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: Pierre is shocked by Elias's public accusation but, like the tribunal, is swayed by Sofia's framing",
+            "Pierre Leclerc: He remains in the dark about the truth."
+          ],
+          "must_not_know": [
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect"
+          ],
+          "iris_knows": [
+            "Sofia Bellini: Sofia's true nature is revealed: she is Nadia Petrescu's daughter and the architect of the system",
+            "Sofia Bellini: She confesses without remorse, seeing herself as a savior",
+            "Sofia Bellini: She believes her actions are merciful, saving others from weakness, and every kindness has been an act of control",
+            "Sofia Bellini: She is fully aware of her role and motive.",
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: Elias pieces together the truth: Sofia is Nadia's daughter and the architect of the system",
+            "Elias van Doren: He realizes every act of kindness was control, and the summit was her experiment",
+            "Elias van Doren: He is horrified, but no one else believes him.",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: Elias attempts to reveal the truth, but the tribunal interprets his confrontation as instability",
+            "The Tribunal: Sofia's merciful-sounding line reframes Elias as broken, and the tribunal sides with her",
+            "The Tribunal: They never learn the true rule or Sofia's identity.",
+            "Nadia Petrescu (historical presence): It becomes clear that Nadia's erasure inspired Sofia to build the system",
+            "Nadia Petrescu (historical presence): her last words and lost identity are the core of the tribunal's horror.",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: Pierre is shocked by Elias's public accusation but, like the tribunal, is swayed by Sofia's framing",
+            "Pierre Leclerc: He remains in the dark about the truth."
+          ],
+          "truth_background": [
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect",
+            "[kernel.true_case] Sofia is Nadia Petrescu's daughter and the architect of the system. She did not survive the summit — she built it. Having watched officials rewrite her mother's testimony until it killed her, Sofia drew the wrong lesson: the weak are those who let themselves be spoken for, and she will never be weak again. She engineered the machine from her mother's case file and ran the summit as a live experiment. Her acts of 'helping' others were always about control. 'Protecting' Elias was never love, but the preservation of her one control variable. Nadia's dying words, 'That is not what I said,' were spoken to Sofia, who was already becoming the system. Sofia took that line and made it the signature of her killing method.",
+            "[kernel.core_question] Who truly controls the system that rewrites people to death, and what was Sofia's real role in the tragedy?"
+          ],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "Mercy’s Closing Statement",
+      "slug": "mercys-closing-statement",
+      "one_line_summary": "Sofia Bellini stands vindicated before the tribunal, her control complete as the system’s horror is sealed and a new clue is quietly planted.",
+      "beat_summary": "With Elias van Doren removed and the tribunal’s official record secured, Sofia Bellini delivers her final testimony. She reframes her actions as necessary mercy, her words soothing the tribunal and erasing the last traces of doubt. Pierre Leclerc, shaken by the previous confrontation, watches as the hearing ends and Sofia Bellini gently plants a new clue (C006) in the system, setting the stage for future consequences. The tribunal, convinced of Sofia Bellini’s innocence, closes the summit case. Only the reader and Sofia Bellini know the true extent of her control and the system’s ongoing threat.",
+      "must_happen": [
+        "Sofia Bellini delivers a closing statement to the tribunal, recasting her actions as acts of mercy and control.",
+        "The tribunal votes to clear Sofia Bellini of all suspicion, sealing the official record.",
+        "Pierre Leclerc, disturbed, tries to raise concerns but cannot articulate the horror he senses.",
+        "Sofia Bellini plants clue C006 in the system, unseen by others, foreshadowing the next threat.",
+        "[ROMANCE] In a final, silent exchange, Sofia Bellini’s eyes linger on the absent seat of Elias van Doren—a moment of cold triumph and farewell."
+      ],
+      "must_not": [
+        "Let the tribunal or Pierre Leclerc uncover Sofia Bellini’s ongoing manipulation or the true rule behind the system.",
+        "Allow Sofia Bellini to express remorse or vulnerability."
+      ],
+      "opens_with": "\"For every life preserved, there is a kindness that costs everything,\" Sofia Bellini intones, voice steady as the tribunal records its verdict.",
+      "cliffhanger": "As the tribunal chamber empties, Sofia Bellini pauses by the sealed record—her reflection in the glass is the only witness to the truth.",
+      "signature_detail_hint": "A silent clock in the chamber stops ticking as the final verdict is read.",
+      "emotional_beat": "Icy closure and loneliness—Sofia Bellini’s ultimate victory is shadowed by the absence of Elias van Doren.",
+      "spice": 1,
+      "spice_note": "A single look loaded with finality—Sofia Bellini’s cold dominance, Elias van Doren’s absence.",
+      "chapter_task": "Conclude the tribunal’s case, ensuring Sofia Bellini’s victory and the system’s legacy; plant clue C006 for the next arc; highlight the emotional cost of triumph. Target length: 1600-1900 words.",
+      "carries_to_next": "The system remains in operation; Sofia Bellini’s power is unchallenged, and the consequences of her actions are left to unfold.",
+      "narrative": {
+        "clues_plant": [
+          "C006"
+        ],
+        "clues_payoff": [],
+        "reveals": [
+          {
+            "id": "MR003",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C006",
+              "C003"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T04",
+          "T05"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sofia Bellini",
+            "Elias van Doren",
+            "The Tribunal",
+            "Nadia Petrescu (historical presence)",
+            "Pierre Leclerc"
+          ],
+          "may_know": [
+            "Sofia Bellini: Sofia's true nature is revealed: she is Nadia Petrescu's daughter and the architect of the system",
+            "Sofia Bellini: She confesses without remorse, seeing herself as a savior",
+            "Sofia Bellini: She believes her actions are merciful, saving others from weakness, and every kindness has been an act of control",
+            "Sofia Bellini: She is fully aware of her role and motive.",
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: Elias pieces together the truth: Sofia is Nadia's daughter and the architect of the system",
+            "Elias van Doren: He realizes every act of kindness was control, and the summit was her experiment",
+            "Elias van Doren: He is horrified, but no one else believes him.",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: Elias attempts to reveal the truth, but the tribunal interprets his confrontation as instability",
+            "The Tribunal: Sofia's merciful-sounding line reframes Elias as broken, and the tribunal sides with her",
+            "The Tribunal: They never learn the true rule or Sofia's identity.",
+            "Nadia Petrescu (historical presence): It becomes clear that Nadia's erasure inspired Sofia to build the system",
+            "Nadia Petrescu (historical presence): her last words and lost identity are the core of the tribunal's horror.",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: Pierre is shocked by Elias's public accusation but, like the tribunal, is swayed by Sofia's framing",
+            "Pierre Leclerc: He remains in the dark about the truth."
+          ],
+          "must_not_know": [
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect"
+          ],
+          "iris_knows": [
+            "Sofia Bellini: Sofia's true nature is revealed: she is Nadia Petrescu's daughter and the architect of the system",
+            "Sofia Bellini: She confesses without remorse, seeing herself as a savior",
+            "Sofia Bellini: She believes her actions are merciful, saving others from weakness, and every kindness has been an act of control",
+            "Sofia Bellini: She is fully aware of her role and motive.",
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: Elias pieces together the truth: Sofia is Nadia's daughter and the architect of the system",
+            "Elias van Doren: He realizes every act of kindness was control, and the summit was her experiment",
+            "Elias van Doren: He is horrified, but no one else believes him.",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: Elias attempts to reveal the truth, but the tribunal interprets his confrontation as instability",
+            "The Tribunal: Sofia's merciful-sounding line reframes Elias as broken, and the tribunal sides with her",
+            "The Tribunal: They never learn the true rule or Sofia's identity.",
+            "Nadia Petrescu (historical presence): It becomes clear that Nadia's erasure inspired Sofia to build the system",
+            "Nadia Petrescu (historical presence): her last words and lost identity are the core of the tribunal's horror.",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: Pierre is shocked by Elias's public accusation but, like the tribunal, is swayed by Sofia's framing",
+            "Pierre Leclerc: He remains in the dark about the truth."
+          ],
+          "truth_background": [
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect",
+            "[kernel.true_case] Sofia is Nadia Petrescu's daughter and the architect of the system. She did not survive the summit — she built it. Having watched officials rewrite her mother's testimony until it killed her, Sofia drew the wrong lesson: the weak are those who let themselves be spoken for, and she will never be weak again. She engineered the machine from her mother's case file and ran the summit as a live experiment. Her acts of 'helping' others were always about control. 'Protecting' Elias was never love, but the preservation of her one control variable. Nadia's dying words, 'That is not what I said,' were spoken to Sofia, who was already becoming the system. Sofia took that line and made it the signature of her killing method.",
+            "[kernel.core_question] Who truly controls the system that rewrites people to death, and what was Sofia's real role in the tragedy?"
+          ],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 10,
+      "title": "The Living Record",
+      "slug": "the-living-record",
+      "one_line_summary": "Sofia Bellini is cleared and institutionalized as the system’s operator; Elias van Doren is erased and the tribunal’s truth is sealed.",
+      "beat_summary": "Sofia Bellini stands before the tribunal, her composure unshakable as she is exonerated and recognized as the system’s living operator. The official record is closed: Sofia Bellini is celebrated as the last surviving witness of the summit and the architect of the system; her triumph is cold and absolute. The tribunal’s verdict becomes the new history, rewriting Elias van Doren as unstable and erasing his investigation. Pierre Leclerc files his report, uneasy but unable to break the surface. Only Sofia Bellini and the reader hold the real truth, as the system’s legacy is institutionalized. The story ends with Sofia Bellini’s silent victory over everyone who tried to define her.",
+      "must_happen": [
+        "Sofia Bellini is formally cleared by the tribunal and acknowledged as the system’s living operator.",
+        "The tribunal’s verdict is entered into the official record, cementing Sofia Bellini’s narrative and erasing all doubts.",
+        "Elias van Doren is recorded as unstable and his investigation is deleted from the archive.",
+        "Pierre Leclerc files a report about the tribunal, suspecting a cover-up but unable to prove anything.",
+        "Sofia Bellini experiences a moment of cold triumph as her control is institutionalized and the summit case is closed.",
+        "[PAYOFF C006]",
+        "Use the exact phrase: \"Sofia Bellini is Nadia Petrescu's daughter and the architect of the system; the summit was her experiment.\""
+      ],
+      "must_not": [
+        "Depict Sofia Bellini expressing remorse, vulnerability, or any loss of composure.",
+        "Allow any character (other than the reader and Sofia Bellini herself) to know the full horror behind the system or recover the true record."
+      ],
+      "opens_with": "\"The tribunal finds Sofia Bellini exonerated. All charges are dismissed, and the record is sealed,\" the adjudicator intones as the chamber falls silent.",
+      "cliffhanger": "As Sofia Bellini leaves the sealed chamber, her reflection in the glass lingers—a final, silent acknowledgment that the truth now lives only in her.",
+      "signature_detail_hint": "A single thread of gold is woven into Sofia Bellini’s tribunal badge, visible only as she turns away from the chamber.",
+      "emotional_beat": "Icy triumph and isolation—Sofia Bellini’s control is complete, but she is utterly alone in her victory.",
+      "spice": 1,
+      "spice_note": "No romance; emotional tension is focused on Sofia Bellini’s cold satisfaction and the total erasure of Elias van Doren.",
+      "chapter_task": "Conclude the tribunal arc: institutionalize Sofia Bellini’s control, seal the official record, and show the erasure of dissent. Deliver the exact wording required by canon. Target length: 1600-1900 words.",
+      "carries_to_next": "Sofia Bellini steps into an uncertain future as the sole custodian of the system’s truth; the tribunal’s history is now a lie, and only the reader knows what was lost.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C006"
+        ],
+        "reveals": [
+          {
+            "id": "MR004",
+            "reveal_weight": "minor",
+            "required_clues": [
+              "C006"
+            ],
+            "min_clues_required": 1
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T04",
+          "T05",
+          "T06"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sofia Bellini",
+            "Elias van Doren",
+            "The Tribunal",
+            "Nadia Petrescu (historical presence)",
+            "Pierre Leclerc"
+          ],
+          "may_know": [
+            "Sofia Bellini: Sofia has won",
+            "Sofia Bellini: She is cleared by the tribunal, now fully recognized as the system's living operator",
+            "Sofia Bellini: She feels cold triumph as her control is institutionalized",
+            "Sofia Bellini: The truth is hidden from all but herself and the reader.",
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: Elias is dead, killed by the system after Sofia reframes him as unstable",
+            "Elias van Doren: In his final moments, he knows the truth but is powerless to stop her",
+            "Elias van Doren: His investigation is erased from the record.",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: The tribunal closes the case, exonerating Sofia and institutionalizing her control",
+            "The Tribunal: The official history records Elias as unstable and Sofia as a hero",
+            "The Tribunal: The real story is lost to all but the reader.",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Nadia Petrescu (historical presence): Nadia remains a silent presence, never appearing directly",
+            "Nadia Petrescu (historical presence): Her legacy is the system's logic, now wielded by her daughter.",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: Pierre files his report on the tribunal, unaware that the official record is a lie",
+            "Pierre Leclerc: He suspects something remains hidden but cannot prove it.",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect"
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Sofia Bellini: Sofia has won",
+            "Sofia Bellini: She is cleared by the tribunal, now fully recognized as the system's living operator",
+            "Sofia Bellini: She feels cold triumph as her control is institutionalized",
+            "Sofia Bellini: The truth is hidden from all but herself and the reader.",
+            "Sofia Bellini: sofia_is_nadia_daughter",
+            "Sofia Bellini: sofia_is_architect",
+            "Elias van Doren: Elias is dead, killed by the system after Sofia reframes him as unstable",
+            "Elias van Doren: In his final moments, he knows the truth but is powerless to stop her",
+            "Elias van Doren: His investigation is erased from the record.",
+            "Elias van Doren: sofia_is_nadia_daughter",
+            "Elias van Doren: sofia_is_architect",
+            "The Tribunal: The tribunal closes the case, exonerating Sofia and institutionalizing her control",
+            "The Tribunal: The official history records Elias as unstable and Sofia as a hero",
+            "The Tribunal: The real story is lost to all but the reader.",
+            "The Tribunal: sofia_is_nadia_daughter",
+            "The Tribunal: sofia_is_architect",
+            "Nadia Petrescu (historical presence): Nadia remains a silent presence, never appearing directly",
+            "Nadia Petrescu (historical presence): Her legacy is the system's logic, now wielded by her daughter.",
+            "Nadia Petrescu (historical presence): full_connection_to_sofia",
+            "Pierre Leclerc: Pierre files his report on the tribunal, unaware that the official record is a lie",
+            "Pierre Leclerc: He suspects something remains hidden but cannot prove it.",
+            "Pierre Leclerc: sofia_is_nadia_daughter",
+            "Pierre Leclerc: sofia_is_architect"
+          ],
+          "truth_background": [
+            "[kernel.true_case] Sofia is Nadia Petrescu's daughter and the architect of the system. She did not survive the summit — she built it. Having watched officials rewrite her mother's testimony until it killed her, Sofia drew the wrong lesson: the weak are those who let themselves be spoken for, and she will never be weak again. She engineered the machine from her mother's case file and ran the summit as a live experiment. Her acts of 'helping' others were always about control. 'Protecting' Elias was never love, but the preservation of her one control variable. Nadia's dying words, 'That is not what I said,' were spoken to Sofia, who was already becoming the system. Sofia took that line and made it the signature of her killing method.",
+            "[kernel.core_question] Who truly controls the system that rewrites people to death, and what was Sofia's real role in the tragedy?"
+          ],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    }
+  ],
+  "total_chapters": 10,
+  "title": "The Record of the Dead",
+  "status": "draft",
+  "created_at": "2026-07-21T05:16:26.913248+00:00",
+  "source_concept_digest": "7b3691ba307c191c",
+  "source_narrative_digest": "3f728be6e1914bdf"
+}

@@ -1,0 +1,93 @@
+```json
+{
+  "act": [7, 9],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "What Gabriel Helped Hide",
+      "slug": "what-gabriel-helped-hide",
+      "one_line_summary": "Clara confronts Gabriel with acoustic evidence of a witness positioned at Elin's fall, and he admits helping Thomas conceal part of the surveillance system—but withholds the sealed chamber.",
+      "beat_summary": "Clara confronts Gabriel in the tower stairwell with her resonance mapping from chapter 6, showing the vibration behind the sealed wall matches the shared anomaly in all recordings. Gabriel, cornered, admits he helped Thomas route and conceal the pipe-and-cable infrastructure that feeds the acoustic system—he knew it was surveillance, not supernatural preservation. He describes how Thomas recruited him in the late 1990s under the guise of structural maintenance. Clara presses for what the system captured on the day Elin died; Gabriel reveals that the resonance pattern locks onto a listener position at the platform edge—where Thomas claimed no one was standing. Gabriel still withholds the existence and location of the sealed chamber, insisting he doesn't have access.",
+      "must_happen": [
+        "Gabriel admits helping conceal part of the acoustic surveillance system by routing pipes and cables during supposed maintenance.",
+        "Thomas's role in designing and building the system becomes substantially established through Gabriel's description of his recruitment and Thomas's technical directives.",
+        "Acoustic evidence—resonance mapping—shows someone was positioned at the maintenance platform edge during Elin's final confrontation, contradicting Thomas's account.",
+        "Gabriel still withholds the complete truth about the sealed chamber and its contents.",
+        "Clara reclassifies Gabriel from potential ally to compromised witness whose testimony is incomplete."
+      ],
+      "must_not": [
+        "Reveal the sealed chamber's location, how to open it, or its contents.",
+        "Show Thomas present or confronting Clara directly in this chapter.",
+        "Reveal what actually happened to Elin on the platform beyond the resonance positioning evidence.",
+        "Present Gabriel as the primary architect or mastermind of the system."
+      ],
+      "opens_with": "\"You routed those pipes yourself,\" Clara said, pressing the resonance map against the railing. \"Section by section, for three months in 1998. That's what the maintenance logs actually cover.\"",
+      "cliffhanger": "Gabriel's resonance projection places the listener forty centimeters from the platform edge at the exact frequency of Elin's recorded voice—directly where Thomas swore in his statement that nobody had been standing.",
+      "signature_detail_hint": "Gabriel's palms carry calluses in parallel ridges consistent with years of feeding cable through narrow conduit, not the distributed wear of a general caretaker.",
+      "emotional_beat": "Betrayal and complicity—Gabriel's partial confession makes him simultaneously the most honest and most evasive person Clara has ever depended on.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words. Structure it as a confrontation that unfolds in layers: Clara presents evidence methodically, Gabriel resists, admits incrementally, and stops short at the threshold of the sealed chamber. The tower's interior should feel like a throat closing around them. Gabriel's admissions must feel earned—not a full confession but a series of specific, verifiable details that Clara can check. End on the resonance projection that places a witness at the platform, forcing both Clara and the reader to ask why Thomas lied about his position.",
+      "carries_to_next": "Gabriel's admission that the system is physical infrastructure, combined with his refusal to discuss the chamber, confirms that the sealed wall from chapter 6 is the key—and that Gabriel either cannot or will not help Clara open it."
+    },
+    {
+      "chapter": 8,
+      "title": "Behind the West Wall",
+      "slug": "behind-the-west-wall",
+      "one_line_summary": "Gabriel provides the chamber key under pressure, Clara opens the concealed entrance and discovers the illegal archive, editing equipment, and Elin's damaged master tape—along with physical proof that Thomas has recently been inside.",
+      "beat_summary": "After Gabriel's partial admission, Clara demands the means to access the chamber he helped conceal. Gabriel produces a brass key from inside the bell mechanism housing—a hiding place that confirms his长期 complicity. Clara opens the concealed entrance behind the seventh-floor wall and enters a small, climate-controlled chamber packed with analog recording equipment, a bank of reel-to-reel decks, rows of labeled tapes constituting the illegal archive, and—on the editing desk—Elin's damaged master cassette. The equipment is outdated but functional; wear patterns on the transport controls and fresh fingerprints on the tape reels prove recent use. Clara recognizes the architecture of the system: the bronze bells are microphones, the stone walls are conduits, the pipes carry vibrations to this room where they are captured, edited, and reconstructed.",
+      "must_happen": [
+        "Gabriel gives Clara the brass key, revealing his long-term access to the concealed chamber.",
+        "Clara opens the sealed entrance behind the seventh-floor wall.",
+        "Clara enters the chamber and discovers the complete illegal archive of edited recordings on reel-to-reel equipment.",
+        "She finds Elin's damaged master tape on the editing desk, positioned as though it was the most recent tape handled.",
+        "Physical evidence—fresh fingerprints, warm motor housings, displaced dust patterns—proves Thomas (or someone) has accessed the chamber recently despite it being officially sealed."
+      ],
+      "must_not": [
+        "Reveal the full content of Elin's master tape—that reconstruction happens in chapter 9.",
+        "Have Thomas physically enter or appear in the chamber during this chapter.",
+        "Fully explain every technical component of the acoustic surveillance system.",
+        "Present the chamber as having been sealed and undisturbed for eighteen years.",
+        "Allow Clara to play or reconstruct Elin's tape in this chapter."
+      ],
+      "opens_with": "The key was warm in Clara's palm, and its brass teeth showed fresh abrasion—as though it had turned in a lock within the last forty-eight hours.",
+      "cliffhanger": "Clara finds a recent maintenance log tucked behind the editing desk, its final entry dated three weeks ago in Thomas's handwriting: 'Archive accessed. Tape 9E secured. Do not disturb.'",
+      "signature_detail_hint": "The editing desk's tape counter on the active deck reads 14:37—matching exactly the frozen counter on the 'clarification' cassette from the family file Clara found in chapter 5.",
+      "emotional_beat": "Violation and revelation—every surface in the chamber is evidence of what Thomas built to listen, to edit, to control narrative, and Elin's tape sitting on the desk means her voice has been in his hands recently.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words. Structure it as a threshold crossing: the chapter begins with obtaining the key, builds through the physical labor and emotional weight of opening the sealed wall, and climaxes with the full survey of the chamber's contents. Make the chamber feel like the inside of a machine—tight, humming, precisely organized for a single purpose. Every object Clara discovers must serve as both evidence and emotional wound. The recent-access evidence should escalate the threat: Thomas knows Clara is here, and he has been maintaining the system. End on the maintenance log as proof that the investigation has triggered Thomas to act.",
+      "carries_to_next": "Clara now has the archive, the editing equipment, and Elin's master tape. The chamber is open and the system is exposed, but Elin's decisive recording—what she actually said and what Thomas did—remains unreconstructed."
+    },
+    {
+      "chapter": 9,
+      "title": "The Hand She Was Waiting For",
+      "slug": "the-hand-she-was-waiting-for",
+      "one_line_summary": "Clara reconstructs Elin's damaged master tape and hears her sister confront Thomas about the surveillance system, proving he was close enough to save her—then Thomas arrives to destroy the evidence.",
+      "beat_summary": "Working through the night in the chamber, Clara uses Thomas's own editing equipment to reconstruct Elin's damaged master tape by matching splice patterns and restoring excised segments from the archive. The reconstructed recording captures Elin confronting Thomas on the maintenance platform: she has discovered the surveillance system, she is recording him with a handheld device, and she demands he dismantle it. Thomas's responses are evasive, defensive, then silent. The recording captures a mechanical shift—the platform beginning to fail—and Elin calling out. Thomas's breathing is audible at close range, consistent with the resonance positioning from chapter 7. He was within arm's reach. He did not take her hand. The recording ends with the platform collapse. Thomas arrives at the chamber door attempting to retrieve or destroy the tape; Clara and Gabriel secure the entrance from inside. The chapter ends as the inner lock engages while Thomas is on the other side holding a copy of Elin's tape.",
+      "must_happen": [
+        "Clara reconstructs Elin's damaged master tape using the archive and editing equipment in the chamber.",
+        "The reconstructed recording proves Elin confronted Thomas about the surveillance system before her death.",
+        "Audio evidence confirms Thomas was within arm's reach of Elin when the platform failed—he was close enough to save her.",
+        "Thomas arrives at the chamber and attempts to enter to retrieve or destroy the decisive tape.",
+        "Clara and Gabriel secure the chamber from inside, preventing Thomas from reaching the archive before it is preserved."
+      ],
+      "must_not": [
+        "Have Clara forgive, absolve, or express understanding for Thomas's actions.",
+        "Kill or physically injure Thomas.",
+        "Fully explain the mechanism behind the final supernatural recording from the ninth bell—that remains unresolved per must_avoid.",
+        "Reveal the complete truth of every recording in the archive; only Elin's tape is reconstructed here.",
+        "Show the public confession or legal resolution—that is the book's ending, not chapter 9's."
+      ],
+      "opens_with": "The waveform resolved at 3:47 a.m.—Elin's voice, eighteen years silent, suddenly clear and furious and asking their father why he had been listening to all of them.",
+      "cliffhanger": "The inner lock engaged with a sound like bone settling into socket, and through the door Thomas's voice dropped to a whisper: 'That tape is the only version. You play that and everything I built collapses.' On the other side of the door, Clara heard him slide a cassette into a deck.",
+      "signature_detail_hint": "Elin's master tape has a tear at the leader matching the pattern of a cassette pulled from a recorder mid-operation—a panic eject, not a careful removal.",
+      "emotional_beat": "Grief and fury in collision—hearing Elin alive, hearing her fight, hearing the silence that followed when Thomas chose not to reach for her.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words. This is the emotional and evidentiary climax of act 3. Structure it in two movements: the reconstruction (technical, methodical, building dread as Elin's voice emerges) and the confrontation (Thomas arriving, the lock engaging, the standoff). The reconstructed recording must feel like the most important piece of audio Clara has ever processed—every technical detail she applies is also an act of listening to her dead sister. Do NOT dramatize the platform collapse through flashback; it exists only as sound on the tape. End on the lock engaging and the cassette sliding on the other side—Thomas is not locked out to be trapped; he is locked out with a copy, and Clara must decide what to do with the original.",
+      "carries_to_next": "Elin's reconstructed recording proves Thomas's proximity and inaction. Thomas is outside the chamber with a copy of the tape. The evidence is secured but the confrontation is unresolved, driving toward the book's final chapters where Thomas must face public accountability."
+    }
+  ]
+}
+```

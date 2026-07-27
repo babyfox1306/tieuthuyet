@@ -1,0 +1,82 @@
+{
+  "act": [
+    1,
+    3
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Sound of Dawn",
+      "slug": "01-the-sound-of-dawn",
+      "one_line_summary": "Twelve students from twelve nations arrive at the sealed summit, but when the translation system replays their first words at dawn, Amara Okafor's voice is twisted beyond recognition — and she does not survive the replay.",
+      "beat_summary": "Sofia Bellini and Elias van Doren arrive at the sealed Summit Building with ten other student delegates. The moderator explains the rules of the 72-hour immersion experiment: no outside contact, silence after sunset, and full reliance on the building's translation earpieces. During the opening roll call, Elias struggles to articulate his name due to his stutter. Sofia instinctively finishes his sentence, speaking for him. The first night is fraught with strange mechanical echoes from the walls. At dawn, the system replays the previous day's words. Every translation is slightly corrupted, but Amara Okafor's innocent 'Goodnight' is twisted into a distorted scream in a dead language. She collapses, bleeding from the ear, as the replay ends.",
+      "must_happen": [
+        "Sofia Bellini instinctively completes Elias van Doren's sentence during the roll call, marking her as his de facto voice.",
+        "Amara Okafor speaks a simple phrase before bed; the dawn replay translates it into a garbled, agonized scream.",
+        "[ROMANCE] Elias van Doren stares at Sofia Bellini with a mix of gratitude and shame for needing her voice; she squeezes his hand under the conference table."
+      ],
+      "must_not": [
+        "No character explicitly dies on screen; Amara's collapse is the climax.",
+        "No mention of Nadia Petrescu or the system's true mechanism."
+      ],
+      "opens_with": "\"You speak for him?\" the summit coordinator asked, looking from Elias van Doren's clenched jaw to Sofia Bellini's ready lips. \"Yes,\" she said, before Elias could force his voice out.",
+      "cliffhanger": "The speaker crackled. The word had been 'Goodnight.' What echoed back was a strangled plea in a language no one in the room could name — and Amara Okafor was on the floor, blood trickling from her ear.",
+      "signature_detail_hint": "The earpieces fit perfectly, but their weight is wrong — they pull the ear down, as if filled with lead.",
+      "emotional_beat": "A quiet dread settles over Sofia as she realizes the comfort she gave Elias might have drawn the system's attention, yet she cannot stop herself from wanting to protect him.",
+      "spice": 1,
+      "spice_note": "Hand touch under table, shared look of panic.",
+      "chapter_task": "Write 1600–1900 words. Establish the sealed summit setting, the twelve students, the translation earpieces, and the dawn replay mechanic. Show Sofia's instinct to speak for Elias and end with Amara's collapse from the corrupted replay.",
+      "carries_to_next": "The group panics. Amara is unconscious and dying. No one knows if the system is malfunctioning or weaponized. The false theory of 'most mistranslated dies' begins to form."
+    },
+    {
+      "chapter": 2,
+      "title": "The Silence Rule",
+      "slug": "02-the-silence-rule",
+      "one_line_summary": "Amara is dead, and the group adopts the rule that the system kills whoever is mistranslated the most, forcing Sofia Bellini to become the sole voice of the group while Elias van Doren retreats into grateful silence.",
+      "beat_summary": "Amara's body is discovered cold in her room. The remaining eleven students gather in the main hall. Dmitri Ivanov, a linguistics student, posits that the system kills the person whose words are most distorted in translation. The group adopts this as their operating theory. Sofia Bellini volunteers to be the group's official translator, believing she can filter their speech to prevent further deaths. Elias van Doren, increasingly afraid of his own voice, allows Sofia to speak for him. Yuki Tanaka begins documenting everything obsessively. Pierre Leclerc watches silently, taking notes of his own. The second dawn brings a test: a student, Lea, speaks a clear sentence, and the system translates it correctly. The group feels a brief, fragile hope.",
+      "must_happen": [
+        "Dmitri Ivanov formally proposes the 'mistranslation equals death' theory, which the entire group accepts as fact.",
+        "Sofia Bellini volunteers as the group's designated speaker and translator.",
+        "[ROMANCE] Elias van Doren finds Sofia alone and mouths 'Thank you' to avoid speaking aloud; she presses her palm briefly against his chest, feeling his rapid heartbeat.",
+        "A volunteer student (Lea) successfully tests the system with a simple phrase, confirming the group's false theory."
+      ],
+      "must_not": [
+        "Elias van Doren does not speak aloud in this chapter.",
+        "No hint that Sofia's translating for Elias is the danger."
+      ],
+      "opens_with": "Dawn broke grey over the sealed summit, and the silence from Amara Okafor's room was the loudest thing Sofia Bellini had ever heard.",
+      "cliffhanger": "Lea smiled, having survived the perfect translation. But on the recording, a single word echoed in the background that none of the group spoke: 'Translator.' It lingered for a second longer than the rest. Only Sofia heard it.",
+      "signature_detail_hint": "The power cables for the translation system run along the ceiling, but they are not plugged into any visible socket.",
+      "emotional_beat": "Sofia's guilt at profiting from Amara's death warring with her relief that she can keep Elias safe by being his voice.",
+      "spice": 1,
+      "spice_note": "Soft touch, shared breath in a quiet moment. Fear-bonding.",
+      "chapter_task": "Write 1600–1900 words. Formalize the group's wrong theory. Establish Sofia's translator-leader role and Elias's silent dependency. End with the subtle whisper in the replay that only Sofia catches — a fracture in the safe theory.",
+      "carries_to_next": "The whisper unsettles Sofia, but she cannot explain it to the group without sounding hysterical. She begins to privately question the rules."
+    },
+    {
+      "chapter": 3,
+      "title": "The Nonsense Experiment",
+      "slug": "03-the-nonsense-experiment",
+      "one_line_summary": "Dmitri Ivanov tests the system by deliberately speaking nonsense, but the dawn replay twists his sounds into a coherent threat against Sofia Bellini, dividing the group and deepening Sofia's secret fear that the system targets her specifically.",
+      "beat_summary": "Life under the silence rule is grinding the group down. Dmitri Ivanov, chafing against the restriction, announces an experiment: he will speak deliberate nonsense at the sunset boundary to test the system's limits. The group is terrified but powerless to stop him. Overnight, the tension is palpable. At dawn, the system replays Dmitri's nonsense. It is translated into a perfectly coherent sentence in the summit's official language: 'Sofia Bellini is the voice of many. She will be the next silence.' Paranoia explodes. Some students accuse Sofia of drawing the system's attention. Elias van Doren physically steps in front of her, shielding her with his silent body. The group fractures into factions. Sofia confronts Dmitri, demanding he be the test subject again.",
+      "must_happen": [
+        "Dmitri Ivanov speaks a string of random syllables at the sunset boundary, directly challenging the silence rule.",
+        "The dawn replay translates his nonsense into a specific death threat against Sofia Bellini.",
+        "[ROMANCE] Elias van Doren physically positions himself between Sofia Bellini and the accusing students, his silent defiance speaking louder than any words.",
+        "Sofia Bellini confronts Dmitri Ivanov, angrily demanding he be the subject of his own experiments."
+      ],
+      "must_not": [
+        "No mention of the system being trained on anyone's testimony.",
+        "No character suggests the system kills because of being 'spoken for'."
+      ],
+      "opens_with": "\"If we stop speaking, we die,\" Dmitri Ivanov said, his voice a defiant scratch in the perfect silence of the summit. \"So let's make the system choke on our words.\"",
+      "cliffhanger": "The replay of Dmitri's nonsense had a secondary layer — a ghost recording. A woman's voice, layered beneath the translated words, whispered a single word in a language older than the summit: 'Listen.'",
+      "signature_detail_hint": "The ventilation grilles in the walls are all sealed shut, but fresh air flows from somewhere, carrying the faintest smell of old paper and dust.",
+      "emotional_beat": "Sofia feels the group slipping away from her, but her compulsion to translate, to smooth over conflict, is stronger than her fear. She reaches for Elias's hand to ground herself.",
+      "spice": 1,
+      "spice_note": "Elias physically shields Sofia. He is her silent protector. An intense, charged moment of eye contact.",
+      "chapter_task": "Write 1600–1900 words. Execute Dmitri's experiment. Create the linguistic horror of the 'translated threat'. Deepen the fracture in the group. Reveal the ghostly second voice on the recording as a subtle clue to the true system.",
+      "carries_to_next": "The ghost voice is a clue to the system's hidden history. Dmitri's experiment proves the system interprets meaning, not just words. The group is scared and divided."
+    }
+  ]
+}

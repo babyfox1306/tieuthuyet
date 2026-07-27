@@ -1,0 +1,206 @@
+```json
+{
+  "act": [31, 33],
+  "chapter_plans": [
+    {
+      "chapter": 31,
+      "title": "The Tapes",
+      "slug": "the-tapes",
+      "one_line_summary": "The housekeeper (unnamed narrator) forces the wife to confess on a recording device, but the wife's confession reveals a final twist — the husband was not dead, and the wife has been protecting him from the real threat.",
+      "beat_summary": "The housekeeper (unnamed narrator) corners Nora in the motel room and demands a recorded confession. Nora, still weak from the gunshot, agrees. She confesses to the experiment, to framing Julian, and to imprisoning Subject 6. But as the recording continues, Nora reveals a final twist: Julian is not dead. She faked his death to protect him from Margaret, who was the real threat all along. Nora claims she has been hiding Julian in a safe location, and the entire frame job was designed to make Margaret believe Julian was dead so she would stop hunting him. The housekeeper (unnamed narrator) is stunned. She now has a recording that could destroy Nora — but also a confession that paints Nora as a protector, not a predator.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) corners Nora in the motel room. She pulls out a recording device and demands a full confession. Nora, pale and weak, agrees.",
+        "Nora confesses to the experiment, the frame job, and imprisoning Subject 6. She speaks clearly and deliberately, as if she has rehearsed this moment.",
+        "Midway through the confession, Nora reveals that Julian is not dead. She faked his death to protect him from Margaret, who was the real threat. 'I framed him to save him. Margaret would have killed him.'",
+        "The housekeeper (unnamed narrator) is stunned. She stops the recording and demands proof. Nora shows her a photograph of Julian, alive, in an undisclosed location.",
+        "Nora explains that Margaret is the head of a network that preys on vulnerable women. Julian was Margaret's original target, but Nora intervened. 'I didn't trap Julian. I saved him. And I've been running from Margaret ever since.'",
+        "The housekeeper (unnamed narrator) pockets the recording device. She does not know whether to believe Nora. She leaves the motel room, her mind racing."
+      ],
+      "must_not": [
+        "Do not reveal that the photograph of Julian is a forgery — Nora created it to manipulate the housekeeper (unnamed narrator).",
+        "Do not reveal that Margaret is not a threat — she is a rival predator, not a savior.",
+        "Do not reveal that the recording device has been tampered with — Nora switched it with a blank one during the confession."
+      ],
+      "opens_with": "\"You want a confession?\" Nora said, her voice barely a whisper. 'Fine. Turn on your little recorder. Let me tell you the truth — all of it.'",
+      "cliffhanger": "The housekeeper (unnamed narrator) leaves the motel room and checks the recording. The file is blank. Nora switched the devices. She turns to go back — but the room is empty. Nora is gone. On the bed, a single photograph: Julian, alive, holding a newspaper dated that morning. Below it, a note: 'Find him before Margaret does. — N.'",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of times Nora's voice cracked during the confession: 47. She wonders if Nora was telling the truth, or if she was counting her own lies.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, familiar dread. She has been outplayed again. But she also feels a spark of curiosity — if Julian is alive, the game is not over. It has just entered a new phase.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is psychological and revelatory — the confession scene is a chess match between two women who are both lying and both telling the truth.",
+      "chapter_task": "Write 1600-1900 words executing the beat map: the housekeeper (unnamed narrator) forces the wife to confess on a recording device, but the wife's confession reveals a final twist — the husband was not dead, and the wife has been protecting him from the real threat. The confession scene should feel raw and ambiguous — the reader should believe Nora is telling the truth, but the housekeeper (unnamed narrator) should have doubts. End with the blank recording and the photograph to create a cliffhanger that sets up Chapter 32.",
+      "carries_to_next": "The housekeeper (unnamed narrator) now has a photograph of Julian alive and a note from Nora directing her to find him before Margaret does. She must decide whether to trust Nora's story or assume it is another layer of the trap.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['she believes the husband murdered Clara Higgins', 'she is committed to protecting the wife', 'the husband is evasive with police', 'the wife is scared of the husband'], 'does_not_know': ['the wife planted evidence against the husband', 'she herself is being set up', 'the wife is the architect']}",
+            "the_wife: {'knows': ['the housekeeper believes the husband is guilty', \"the police are investigating Clara's disappearance\", 'the frame is progressing as planned'], 'does_not_know': [\"the housekeeper's true motive\", 'the housekeeper will eventually find the locked room']}",
+            "the_husband: {'knows': [\"the police suspect him in Clara's disappearance\", 'his wife is behind the planted evidence', 'he is losing control of the situation'], 'does_not_know': ['his wife intends to kill him', 'the housekeeper is also a con artist']}",
+            "clara_higgins: {'knows': ['the wife has successfully framed the husband in the public eye'], 'does_not_know': ['the new housekeeper is investigating her disappearance']}",
+            "dr_ellis: {'knows': [\"the police are investigating Clara's disappearance\", 'the husband is the prime suspect'], 'does_not_know': [\"the wife's role\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 25
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 32,
+      "title": "The Motel",
+      "slug": "the-motel",
+      "one_line_summary": "The housekeeper (unnamed narrator) tracks down the husband to a motel on the edge of town, where he reveals his side of the story — and offers her a way out that requires her to betray the wife completely.",
+      "beat_summary": "Using the photograph's clues, the housekeeper (unnamed narrator) tracks Julian to a motel on the outskirts of Raven's Creek. He is alive, but clearly afraid. He tells her his side of the story: Nora is not protecting him — she is holding him hostage. He has been a prisoner in the motel for weeks, afraid to leave because Nora threatened to kill him if he did. He offers the housekeeper (unnamed narrator) a deal: help him escape to the police, and he will testify that Nora framed him for the experiment. In exchange, he will give her the original frame documents that prove her innocence. The housekeeper (unnamed narrator) listens, but she notices that Julian's story is too perfect — he is calm, articulate, and has an answer for everything. She realizes he may be lying too. She takes his offer but does not commit. She leaves the motel with a new piece of evidence: a key to a safety deposit box that Julian claims contains the documents.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) uses the clues in the photograph to track Julian to a motel on the outskirts of Raven's Creek. She finds him in Room 12, alive but visibly shaken.",
+        "Julian tells her his side of the story: Nora has been holding him hostage in the motel for weeks. He has been afraid to leave because she threatened to kill him if he did. 'She's not protecting me. She's imprisoning me.'",
+        "Julian offers a deal: help him escape to the police, and he will testify that Nora framed him for the experiment. In exchange, he will give her the original frame documents that prove her innocence.",
+        "The housekeeper (unnamed narrator) listens carefully. She notices that Julian's story is too smooth — he is calm, articulate, and has an answer for every question. She suspects he is lying, or at least editing the truth.",
+        "Julian gives her a key to a safety deposit box at a bank in Raven's Creek. 'The documents are there. Take them. Use them to protect yourself.'",
+        "The housekeeper (unnamed narrator) takes the key but does not promise anything. She leaves the motel, her mind a storm of contradictions. She now has two conflicting stories — Nora's and Julian's — and no way to verify either."
+      ],
+      "must_not": [
+        "Do not reveal that Julian's safety deposit box key is a trap — the box contains evidence that implicates the housekeeper (unnamed narrator) in Julian's assault.",
+        "Do not reveal that Julian is working with Margaret — he is not a victim; he is a double agent.",
+        "Do not reveal that the motel room is bugged — Nora is listening to every word."
+      ],
+      "opens_with": "Room 12. The paint was peeling, and the curtains were drawn tight. I knocked twice. The door opened a crack, and Julian Blackwood looked out at me — alive, terrified, and desperate.",
+      "cliffhanger": "The housekeeper (unnamed narrator) leaves the motel and drives toward the bank to check the safety deposit box. But as she pulls into the parking lot, she sees Nora's car — parked in the corner, empty. A note is tucked under the windshield wiper: 'I know where you've been. Don't open the box. — N.'",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of times Julian straightens his tie during the conversation: 47. She realizes he is lying — the tie-straightening is his tell, and he did it every time he lied in the interview.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, weary cynicism. Everyone in this story is a liar, and the only truth she can trust is her own survival instinct.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is paranoid and strategic — the housekeeper (unnamed narrator) is caught between two liars, and both are offering her a way out that will cost her something.",
+      "chapter_task": "Write 1600-1900 words executing the beat map: the housekeeper (unnamed narrator) tracks down the husband to a motel on the edge of town, where he reveals his side of the story — and offers her a way out that requires her to betray the wife completely. Pay off clue C004 (the opened wine bottle from Chapter 5) — reveal that Julian was the one who poisoned the wine, not Nora, and he was trying to kill her. The motel scene should feel tense and claustrophobic. End with Nora's note on the windshield to create a cliffhanger that sets up Chapter 33.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has two conflicting offers: Nora's plea to find Julian before Margaret, and Julian's offer to betray Nora. She also has a key to a safety deposit box that both of them warn her not to open. She must decide which thread to pull — and whether to trust either of them.",
+      "narrative": {
+        "clues_plant": [
+          "C017"
+        ],
+        "clues_payoff": [
+          "C004"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['she believes the husband murdered Clara Higgins', 'she is committed to protecting the wife', 'the husband is evasive with police', 'the wife is scared of the husband'], 'does_not_know': ['the wife planted evidence against the husband', 'she herself is being set up', 'the wife is the architect']}",
+            "the_wife: {'knows': ['the housekeeper believes the husband is guilty', \"the police are investigating Clara's disappearance\", 'the frame is progressing as planned'], 'does_not_know': [\"the housekeeper's true motive\", 'the housekeeper will eventually find the locked room']}",
+            "the_husband: {'knows': [\"the police suspect him in Clara's disappearance\", 'his wife is behind the planted evidence', 'he is losing control of the situation'], 'does_not_know': ['his wife intends to kill him', 'the housekeeper is also a con artist']}",
+            "clara_higgins: {'knows': ['the wife has successfully framed the husband in the public eye'], 'does_not_know': ['the new housekeeper is investigating her disappearance']}",
+            "dr_ellis: {'knows': [\"the police are investigating Clara's disappearance\", 'the husband is the prime suspect'], 'does_not_know': [\"the wife's role\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 25
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 33,
+      "title": "The Box",
+      "slug": "the-box",
+      "one_line_summary": "The housekeeper (unnamed narrator) examines the husband's evidence and realizes it is incomplete — he has been editing the truth to protect himself — and she must make a final choice: destroy them both, or walk away with the only thing that matters.",
+      "beat_summary": "The housekeeper (unnamed narrator) ignores Nora's warning and opens the safety deposit box. Inside, she finds a stack of documents — Julian's side of the story, including bank records, phone logs, and a signed statement from Clara Higgins claiming Nora forced her to participate in the experiment. But as she examines the documents more closely, she notices inconsistencies: dates that don't match, signatures that look forged, and a missing page that would complete the timeline. She realizes Julian has been editing the truth — he is not innocent, but he is not as guilty as Nora claims. He is a man who has been manipulating evidence to protect himself. The housekeeper (unnamed narrator) now has enough evidence to destroy both Nora and Julian. She could go to the police, expose the entire operation, and walk away free. But doing so would also expose her own criminal past. She makes a choice: she takes the documents, the photographs, and the recording device, and she burns them all in a trash can behind the bank. She walks away with nothing but her freedom — and the secret that could destroy her if anyone ever finds out.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) ignores Nora's warning and opens the safety deposit box at the bank. Inside, she finds a stack of documents: bank records, phone logs, and a signed statement from Clara Higgins.",
+        "She examines the documents closely. She notices that the dates on the bank records don't match the timeline of the experiment. Clara's signature looks slightly different from the one on the diary. Something is off.",
+        "She realizes Julian has been editing the truth — the documents are partial, missing key pages that would complete the timeline. He is not innocent, but he is not as guilty as Nora claims. He is a man who has been manipulating evidence to protect himself.",
+        "The housekeeper (unnamed narrator) now has enough evidence to destroy both Nora and Julian. But using it would also expose her own criminal past — her real name, her record, her con.",
+        "She makes a choice: she takes the documents, the photographs, and the recording device, and she burns them all in a trash can behind the bank. She watches the flames consume the evidence of everyone's guilt.",
+        "She walks away from the bank with nothing but her freedom. She is now bound to a secret that could destroy her — but she is also free for the first time in her life. The chapter ends with her driving away from Raven's Creek, the town shrinking in her rearview mirror."
+      ],
+      "must_not": [
+        "Do not reveal that the housekeeper (unnamed narrator) kept one piece of evidence — a single photograph of herself as a child, standing next to Nora, which she will use as leverage in Book 2.",
+        "Do not reveal that Nora was watching from across the street and saw the housekeeper (unnamed narrator) burn the evidence — she now knows the housekeeper (unnamed narrator) chose freedom over revenge.",
+        "Do not reveal that Julian's missing page was the one that proved he was working with Margaret — the housekeeper (unnamed narrator) destroyed the evidence of the real threat."
+      ],
+      "opens_with": "The key turned in the lock, and the box slid open like a mouth full of secrets. I reached inside and pulled out a stack of paper that smelled of ink and desperation.",
+      "cliffhanger": "The housekeeper (unnamed narrator) drives away from Raven's Creek, the flames of the burning evidence still flickering in her memory. Her phone buzzes. A text from an unknown number: 'You chose wisely. Now run. — M.' She realizes Margaret was watching. She has made an enemy of the most dangerous player in the game. She presses the accelerator and drives into the dark, not knowing where she is going — only that she must keep moving.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of documents she burned: 47. She stops counting. The number is no longer a curse — it is a farewell. She is done with Nora, done with Julian, done with the counting. She is free.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a hollow, quiet peace. She has destroyed the evidence of her own guilt, but she has also destroyed the evidence of everyone else's. She is free, but she is also alone — and she has made a powerful enemy in Margaret. The road ahead is dark, but for the first time, she is the one driving.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The intimacy is internal and transformative — the housekeeper (unnamed narrator) sheds her old life and embraces a new, uncertain future.",
+      "chapter_task": "Write 1700-1900 words executing the beat map: the housekeeper (unnamed narrator) examines the husband's evidence and realizes it is incomplete — he has been editing the truth to protect himself — and she must make a final choice: destroy them both, or walk away with the only thing that matters. The bank scene should feel like a moral reckoning — the housekeeper (unnamed narrator) has the power to destroy everyone, but she chooses freedom instead. The burning of the evidence should be a cathartic, symbolic act. End with Margaret's text to set up Book 2. No romance micro-beat — male lead is Unassigned and romance is not opt-in.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has burned the evidence and chosen freedom. She is now on the run from Margaret, who knows what she did. She has no allies, no evidence, and no plan — but she has her freedom, and for now, that is enough. Book 2 will follow her as she builds a new life — and as Margaret closes in.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['she believes the husband murdered Clara Higgins', 'she is committed to protecting the wife', 'the husband is evasive with police', 'the wife is scared of the husband'], 'does_not_know': ['the wife planted evidence against the husband', 'she herself is being set up', 'the wife is the architect']}",
+            "the_wife: {'knows': ['the housekeeper believes the husband is guilty', \"the police are investigating Clara's disappearance\", 'the frame is progressing as planned'], 'does_not_know': [\"the housekeeper's true motive\", 'the housekeeper will eventually find the locked room']}",
+            "the_husband: {'knows': [\"the police suspect him in Clara's disappearance\", 'his wife is behind the planted evidence', 'he is losing control of the situation'], 'does_not_know': ['his wife intends to kill him', 'the housekeeper is also a con artist']}",
+            "clara_higgins: {'knows': ['the wife has successfully framed the husband in the public eye'], 'does_not_know': ['the new housekeeper is investigating her disappearance']}",
+            "dr_ellis: {'knows': [\"the police are investigating Clara's disappearance\", 'the husband is the prime suspect'], 'does_not_know': [\"the wife's role\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 25
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

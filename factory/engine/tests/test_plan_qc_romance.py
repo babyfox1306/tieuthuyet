@@ -136,6 +136,35 @@ class RomanceOptInTests(unittest.TestCase):
                 ok,
             )
 
+    def test_romance_profile_does_not_override_no_subplot_directive(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp)
+            (ws / "concept.yaml").write_text(
+                yaml.dump(
+                    {
+                        "must_avoid": ["Romance subplot driving the plot"],
+                        "author_directive": (
+                            "Do NOT create a standalone romance thread or romance "
+                            "plotline. Romance stays as faint texture only, never a "
+                            "tracked narrative thread."
+                        ),
+                    },
+                    allow_unicode=True,
+                ),
+                encoding="utf-8",
+            )
+            direction = {
+                "narrative_profile": "romance_thriller",
+                "spice_default": 1,
+                "spice_level": 1,
+            }
+            self.assertFalse(romance_microbeat_required(direction, ws=ws))
+            issues = validate_plan(_minimal_plan(with_romance=False), direction, ws=ws)
+            self.assertFalse(
+                any("missing_romance_micro_beat" in i for i in issues),
+                issues,
+            )
+
     def test_forbidden_workspace_flags_invented_romance(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             ws = Path(tmp)

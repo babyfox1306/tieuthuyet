@@ -1,0 +1,33 @@
+{
+  "act": [10, 10],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Living Record",
+      "slug": "the-living-record",
+      "one_line_summary": "Sofia Bellini is cleared and institutionalized as the system’s operator; Elias van Doren is erased and the tribunal’s truth is sealed.",
+      "beat_summary": "Sofia Bellini stands before the tribunal, her composure unshakable as she is exonerated and recognized as the system’s living operator. The official record is closed: Sofia Bellini is celebrated as the last surviving witness of the summit and the architect of the system; her triumph is cold and absolute. The tribunal’s verdict becomes the new history, rewriting Elias van Doren as unstable and erasing his investigation. Pierre Leclerc files his report, uneasy but unable to break the surface. Only Sofia Bellini and the reader hold the real truth, as the system’s legacy is institutionalized. The story ends with Sofia Bellini’s silent victory over everyone who tried to define her.",
+      "must_happen": [
+        "Sofia Bellini is formally cleared by the tribunal and acknowledged as the system’s living operator.",
+        "The tribunal’s verdict is entered into the official record, cementing Sofia Bellini’s narrative and erasing all doubts.",
+        "Elias van Doren is recorded as unstable and his investigation is deleted from the archive.",
+        "Pierre Leclerc files a report about the tribunal, suspecting a cover-up but unable to prove anything.",
+        "Sofia Bellini experiences a moment of cold triumph as her control is institutionalized and the summit case is closed.",
+        "[PAYOFF C006]",
+        "Use the exact phrase: \"Sofia Bellini is Nadia Petrescu's daughter and the architect of the system; the summit was her experiment.\""
+      ],
+      "must_not": [
+        "Depict Sofia Bellini expressing remorse, vulnerability, or any loss of composure.",
+        "Allow any character (other than the reader and Sofia Bellini herself) to know the full horror behind the system or recover the true record."
+      ],
+      "opens_with": "\"The tribunal finds Sofia Bellini exonerated. All charges are dismissed, and the record is sealed,\" the adjudicator intones as the chamber falls silent.",
+      "cliffhanger": "As Sofia Bellini leaves the sealed chamber, her reflection in the glass lingers—a final, silent acknowledgment that the truth now lives only in her.",
+      "signature_detail_hint": "A single thread of gold is woven into Sofia Bellini’s tribunal badge, visible only as she turns away from the chamber.",
+      "emotional_beat": "Icy triumph and isolation—Sofia Bellini’s control is complete, but she is utterly alone in her victory.",
+      "spice": 1,
+      "spice_note": "No romance; emotional tension is focused on Sofia Bellini’s cold satisfaction and the total erasure of Elias van Doren.",
+      "chapter_task": "Conclude the tribunal arc: institutionalize Sofia Bellini’s control, seal the official record, and show the erasure of dissent. Deliver the exact wording required by canon. Target length: 1600-1900 words.",
+      "carries_to_next": "Sofia Bellini steps into an uncertain future as the sole custodian of the system’s truth; the tribunal’s history is now a lie, and only the reader knows what was lost."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+```json
+{
+  "chapter_plan": {
+    "chapter": 10,
+    "title": "The Subject",
+    "one_line_summary": "The housekeeper (unnamed narrator) confronts the wife about the hidden room, and the wife reveals the truth: she is not a victim, but the husband's partner in a long-running psychological experiment — and the housekeeper (unnamed narrator) is the next subject.",
+    "beat_summary": "The wife is at the top of the basement stairs, watching. She does not accuse — she invites the housekeeper (unnamed narrator) to the kitchen for tea. There, she calmly explains the wall of photographs: the husband is a psychologist studying 'adaptation under coercive control.' The wife is his research assistant and primary subject. The previous housekeepers were all part of the study — they were recruited, observed, and debriefed. The wife says the housekeeper (unnamed narrator) was chosen because of her criminal record: she is a 'high-risk subject.' The housekeeper (unnamed narrator) is stunned, furious, but also calculating — she now has leverage. She demands to see the study files. The wife agrees, but only if the housekeeper (unnamed narrator) stays until the end of the experiment. The housekeeper (unnamed narrator) pretends to agree, but she is already planning her escape — and her revenge.",
+    "opens_with": "The wife poured tea with steady hands and said, 'You found the basement. Good. I was wondering how long it would take you.'",
+    "cliffhanger": "I took the teacup, smiled, and said, 'I'll stay.' But I was already planning how to burn this house to the ground.",
+    "chapter_task": "Write Chapter 10 (1600-1900 words). The wife's reveal must reframe everything: she is not a victim, but an architect. The narrator's response must show her shifting from protector to predator. End on the cliffhanger of her cold internal resolve. No romance beats — no male lead exists.",
+    "must_happen": [
+      "[CLUE C007] The wife invites the housekeeper (unnamed narrator) to the kitchen and explains the study, revealing that the husband is a psychologist and she is his research assistant.",
+      "[CLUE C007] The wife confirms the previous housekeepers were test subjects, and that the housekeeper (unnamed narrator) was chosen because of her criminal record.",
+      "The housekeeper (unnamed narrator) demands to see the study files.",
+      "The wife offers a deal: stay until the end of the experiment in exchange for the files.",
+      "The housekeeper (unnamed narrator) pretends to agree, but internally plans to escape and expose them.",
+      "The wife's explanation must include a specific detail about the study's methodology that plants the clue C007 (e.g., 'We track how long it takes for a subject to break the rules — you lasted nine days. That's a record.')."
+    ],
+    "must_not": [
+      "Reveal the full scope of the husband's research or its ethical violations.",
+      "Have the husband return during this conversation.",
+      "Show the housekeeper (unnamed narrator) expressing genuine empathy for the wife — she is now purely strategic.",
+      "Reveal what happened to Clara or any other previous housekeeper after they left."
+    ],
+    "carries_to_next": "The housekeeper (unnamed narrator) is now playing a double game: she appears to cooperate while gathering evidence to destroy the husband and wife. She has planted the clue C007 (the study's methodology) in the reader's mind, but its full meaning will only be clear later."
+  }
+}
+```

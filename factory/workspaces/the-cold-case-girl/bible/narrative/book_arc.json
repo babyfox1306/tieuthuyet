@@ -1,0 +1,25 @@
+{
+  "book_number": 1,
+  "total_chapters": 38,
+  "target_language": "en",
+  "case_closed": "Victor Rhodes is dead, the Elise Marchetti case is publicly solved through the podcast, and Nadia's method is proven. The cold case is closed in the eyes of the world.",
+  "case_open": "The evidence Rhodes built about Nadia's first kill (Julian Croft) did not die with him. It surfaces in the hands of an unknown third party who doesn't want money or a story — they want Nadia to work for them. The hunter is now on a leash.",
+  "lead_internal_arc": {
+    "nadia_cole": {
+      "starting_state": "Nadia is fully committed to her mission as executioner. She is cold, methodical, and believes she controls every variable. Her public persona (warm crusader) and private self (cold killer) are perfectly compartmentalized. She trusts her network absolutely.",
+      "midpoint_shift": "At chapter 19 (hunter becomes hunted), Nadia realizes Rhodes has built a case on her first kill. Her network is compromised. For the first time, she is not in control — she is prey. This forces her to confront that her method has a fatal flaw: it relies on secrecy, and secrecy can be taken from her.",
+      "ending_state": "Nadia kills Rhodes, but not cleanly. She survives, but her invisibility is gone. She has learned that she cannot operate alone forever — but also that her network's loyalty is not absolute. She ends the book more isolated, more wary, and with a leash around her neck. Her arc is a loss of innocence: she can no longer believe she is untouchable."
+    },
+    "victor_rhodes": {
+      "starting_state": "Victor believes he is untouchable. He has walked free once and has the wealth and connections to do it again. He sees Nadia as a nuisance — a podcaster chasing a story he already buried.",
+      "midpoint_shift": "At chapter 19, Victor realizes Nadia is not just a journalist. She is the executioner. His hunt shifts from defense to offense: he will not just survive her — he will expose her and destroy her network. He becomes the hunter.",
+      "ending_state": "Victor dies, but he wins a posthumous victory. His dead-man's-switch surfaces Nadia's first kill to an unknown third party. He never confesses, never monologues, never shows remorse. He dies believing he has proven that the truth is just a story the powerful tell — and he has written the final chapter."
+    }
+  },
+  "act_structure": [
+    "act1_setup",
+    "act2_complications",
+    "act3_crisis",
+    "act4_resolution"
+  ]
+}

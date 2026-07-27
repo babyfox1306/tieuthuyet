@@ -1,0 +1,84 @@
+{
+  "title": "The Things I Let Him See",
+  "logline": "A surveillance operative hired to prove a separated wife unstable becomes\nobsessed with her ordinary routines, unaware that she identified him almost\nimmediately and has begun designing what he sees.\n\nWhen her husband's domestic gaslighting escalates toward a forced property\nsettlement, the watcher must decide whether to possess the woman directing\nhis gaze or preserve the evidence that will return her life to her.",
+  "bible_status": "draft",
+  "spice_max": 0,
+  "leads": {
+    "female": {
+      "name": "Calder Reed",
+      "age": "",
+      "voice": "protagonist / private surveillance operative / dark-romance lead",
+      "tics": [],
+      "boundary": "",
+      "internal_voice": ""
+    },
+    "male": {
+      "name": "Unassigned (no male lead)"
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Lena Hart",
+      "relation_type": "surveillance target / condominium co-owner / Grant's separated wife / dark-romance heroine / architect of the evidence trap",
+      "relation_to": "Calder Reed",
+      "alive": true
+    },
+    {
+      "name": "Grant Hart",
+      "relation_type": "antagonist / Lena's separated husband / condominium board president / Calder's client",
+      "relation_to": "Calder Reed",
+      "alive": true
+    },
+    {
+      "name": "Mae Torres",
+      "relation_type": "Lena's neighbor / condominium board secretary / independent witness",
+      "relation_to": "Calder Reed",
+      "alive": true
+    },
+    {
+      "name": "Imani Cross",
+      "relation_type": "investigating detective / police authority",
+      "relation_to": "Calder Reed",
+      "alive": true
+    }
+  ],
+  "cast": [
+    {
+      "name": "Calder Reed"
+    },
+    {
+      "name": "Lena Hart"
+    },
+    {
+      "name": "Grant Hart"
+    },
+    {
+      "name": "Mae Torres"
+    },
+    {
+      "name": "Imani Cross"
+    }
+  ],
+  "world_rules": [],
+  "content_rules": [
+    "No secret twin, impostor, body double, memory-loss twist, hidden pregnancy, or false identity twist.",
+    "No hallucination explanation for Lena's observations.",
+    "No hidden camera inside Lena's apartment; no bedroom or bathroom recording; no recording of nudity or sexual activity.",
+    "No sexual assault presented as romance; no sexual contact before the Chapter Ten rules.",
+    "No gun, knife, kidnapping, physical assault, chase climax, or violent rescue.",
+    "No hacker friend, secret server, unexplained cloud backup, mystery USB drive, or surprise forensic device.",
+    "No new evidence introduced after Chapter Fifteen.",
+    "No scene outside Calder's POV; no omniscient action by Grant or Lena.",
+    "No police action based on one recording or accusation; no detective attending the confidential settlement without a declared legal reason; no instant arrest during the settlement scene.",
+    "No instant divorce judgment, property transfer, or criminal conviction.",
+    "No named character outside the locked cast; no child, pregnancy, or custody subplot.",
+    "No mafia, organized crime, billionaire fantasy, cult, or international conspiracy.",
+    "No redemption for Grant; no revelation that Calder designed Lena's counterstrategy.",
+    "No romance payoff for Calder ignoring Lena's refusal; no Book Two villain physically appearing in Book One.",
+    "No version of the climax requiring Grant to confess that he stole the envelope.",
+    "No portrayal of Lena's Chapter Eight action as certainty that Calder recorded the envelope theft."
+  ],
+  "meta": {
+    "source": "intent_manifest_stub"
+  }
+}

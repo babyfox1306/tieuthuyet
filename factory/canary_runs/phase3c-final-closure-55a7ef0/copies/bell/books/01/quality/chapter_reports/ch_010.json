@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "kind": "chapter_quality_report",
+  "book": 1,
+  "chapter": 10,
+  "mode": "off",
+  "source_digests": {
+    "prose": "83e620f5a10bd3da",
+    "chapter_plan": "deb3cb928e1abce5",
+    "chapter_slice": "b2053a96aff8ebbc",
+    "story_contract": "",
+    "execution_contract": "",
+    "quality_profile": "a58b435a402427b0",
+    "prior_quality_state": "81dfe643659925c1"
+  },
+  "deterministic_analyzer_version": 1,
+  "evaluator_schema_version": 1,
+  "deterministic_signals": {
+    "analyzer_version": 1,
+    "word_count": 1715,
+    "sentence_count": 146,
+    "paragraph_count": 49,
+    "sentence_length": {
+      "mean": 11.2,
+      "min": 1,
+      "max": 39,
+      "stdev_proxy": 7.6
+    },
+    "paragraph_length": {
+      "mean": 33.37,
+      "min": 3,
+      "max": 83
+    },
+    "duplicate_sentences": [],
+    "repeated_ngrams": [],
+    "body_reactions": [],
+    "dialogue_line_hits": 9,
+    "opening_window_digest": "038430b5def44dad",
+    "ending_window_digest": "3c837f7c44975e4c",
+    "opening_similarity": [],
+    "ending_similarity": [],
+    "shared_sentence_pct_vs_prior": 0.0,
+    "cross_chapter_phrases": [
+      {
+        "phrase": "one two three four",
+        "chapter": 4,
+        "prose_digest": "3180e768e6b2d83c"
+      },
+      {
+        "phrase": "two three four five",
+        "chapter": 4,
+        "prose_digest": "3180e768e6b2d83c"
+      },
+      {
+        "phrase": "she stared at the",
+        "chapter": 4,
+        "prose_digest": "3180e768e6b2d83c"
+      },
+      {
+        "phrase": "behind her gideon s",
+        "chapter": 5,
+        "prose_digest": "0b3ef55affb3514b"
+      },
+      {
+        "phrase": "too deliberate to be",
+        "chapter": 7,
+        "prose_digest": "33f144a7be87748e"
+      },
+      {
+        "phrase": "victim is compelled to",
+        "chapter": 7,
+        "prose_digest": "33f144a7be87748e"
+      },
+      {
+        "phrase": "for the first time",
+        "chapter": 7,
+        "prose_digest": "33f144a7be87748e"
+      },
+      {
+        "phrase": "her thumb traced the",
+        "chapter": 8,
+        "prose_digest": "45767057c2c2ff05"
+      },
+      {
+        "phrase": "the bell never chooses",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "bell never chooses each",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "never chooses each dying",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "chooses each dying victim",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "each dying victim is",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "dying victim is compelled",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "compelled to name the",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "name the one person",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "the one person whose",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "one person whose hidden",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "person whose hidden knowledge",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "whose hidden knowledge access",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "hidden knowledge access or",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "knowledge access or evidence",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "access or evidence is",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "evidence is required to",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      },
+      {
+        "phrase": "required to advance the",
+        "chapter": 9,
+        "prose_digest": "87ab41ef79b79bb5"
+      }
+    ],
+    "exact_contract_phrase_hits": [],
+    "duplicate_paragraphs": [],
+    "chapter_length_words": 1715
+  },
+  "dimensions": {
+    "scene_purpose": {
+      "score": 0.7,
+      "status": "acceptable",
+      "reason": "change proxy via novelty vs prior",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "narrative_progression": {
+      "score": 0.7,
+      "status": "acceptable",
+      "reason": "shared-sentence progression proxy",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "character_agency": {
+      "score": 0.6,
+      "status": "acceptable",
+      "reason": "agency requires semantic reading",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "tension_or_emotional_pressure": {
+      "score": 0.6,
+      "status": "acceptable",
+      "reason": "pressure curve requires semantic reading",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "revelation_consequence": {
+      "score": null,
+      "status": "not_applicable",
+      "reason": "no revelation assigned",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null
+    },
+    "dialogue_function": {
+      "score": 0.65,
+      "status": "acceptable",
+      "reason": "dialogue present; semantic refine needed",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "prose_freshness": {
+      "score": 0.75,
+      "status": "strong",
+      "reason": "deterministic freshness proxies",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "repetition_control": {
+      "score": 0.75,
+      "status": "strong",
+      "reason": "deterministic repetition scan",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [
+        "PHRASE_REPETITION"
+      ],
+      "repair_targets": [],
+      "severity": "minor",
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "chapter_turn": {
+      "score": 0.7,
+      "status": "acceptable",
+      "reason": "ending similarity proxy",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    }
+  },
+  "cross_chapter_findings": [],
+  "summary": {
+    "below_target": [],
+    "review": [],
+    "strong": [
+      "prose_freshness",
+      "repetition_control"
+    ],
+    "evaluation_complete": true
+  },
+  "secondary_aggregate": {
+    "weighted_mean": 0.6807,
+    "dimensions_scored": 8,
+    "has_critical_dimension": false,
+    "note": "secondary telemetry only — not a promotion gate"
+  },
+  "telemetry": {
+    "semantic_calls": 0,
+    "deterministic_only": true,
+    "compliance_cache_hit": false,
+    "input_chars": 9858,
+    "output_chars": 0,
+    "routes_attempted": [],
+    "context_overhead_chars": 0,
+    "prior_context_chars": 1561,
+    "signal_chars": 2820
+  },
+  "evaluator_route": "deterministic",
+  "cache_status": "miss",
+  "created_at": "2026-07-23T13:21:27Z",
+  "note": "Phase 3A shadow quality — diagnostic only; never blocks promotion"
+}

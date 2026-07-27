@@ -1,0 +1,318 @@
+{
+  "description": "Knowledge matrix for The Quiet Wife Book 1, tracking what each character knows and does not know at each milestone of the 50-chapter arc. Milestones are derived from total_chapters (50): ch1 (2%), ch10 (20%), ch25 (50%), ch36 (72%), ch50 (100%).",
+  "target_language": "en",
+  "milestones": [
+    1,
+    10,
+    25,
+    36,
+    50
+  ],
+  "characters": {
+    "the_housekeeper_narrator": {
+      "ch1": {
+        "knows": [
+          "she is a con artist with a criminal record",
+          "she is entering the house to rob or blackmail the family",
+          "she lied about her past on the job application"
+        ],
+        "does_not_know": [
+          "the wife's true plan to frame her",
+          "the wife researched her specifically",
+          "the previous housekeeper's fate"
+        ]
+      },
+      "ch10": {
+        "knows": [
+          "the husband has a temper",
+          "the wife is 'fragile' and seems controlled",
+          "a previous housekeeper named Clara Higgins 'left suddenly'",
+          "the locked room exists",
+          "she has pocketed small valuables"
+        ],
+        "does_not_know": [
+          "the wife's manipulation",
+          "the locked room contains the wife's planning materials",
+          "the wife is testing her suitability as a patsy"
+        ]
+      },
+      "ch25": {
+        "knows": [
+          "she believes the husband murdered Clara Higgins",
+          "she is committed to protecting the wife",
+          "the husband is evasive with police",
+          "the wife is scared of the husband"
+        ],
+        "does_not_know": [
+          "the wife planted evidence against the husband",
+          "she herself is being set up",
+          "the wife is the architect"
+        ]
+      },
+      "ch36": {
+        "knows": [
+          "her own hidden agenda is exposed to the reader",
+          "the wife is the architect of everything",
+          "the wife's fragility was a performance",
+          "the locked room contains the wife's ledger and her own criminal record",
+          "the wife has done this before (Clara Higgins)"
+        ],
+        "does_not_know": [
+          "the full extent of the frame job (the planted weapon, the forged letter)",
+          "the husband is the target, not the predator",
+          "when the murder will happen"
+        ]
+      },
+      "ch50": {
+        "knows": [
+          "the wife engineered the entire hire to frame her",
+          "the husband is dead",
+          "she has escaped the frame but is not free",
+          "a piece of evidence she thought destroyed has resurfaced"
+        ],
+        "does_not_know": [
+          "who has the resurfaced evidence",
+          "what they want",
+          "if she will ever be truly free"
+        ]
+      },
+      "must_not_know_before": [
+        "the wife's true plan before ch30",
+        "the planted evidence before ch39",
+        "the resurfaced evidence before ch48"
+      ],
+      "hidden_truth": "She is a con artist who entered the house to rob or blackmail the family, not to save the wife. Her innocence was a performance for the reader."
+    },
+    "the_wife": {
+      "ch1": {
+        "knows": [
+          "she is the architect of a plan to frame the housekeeper",
+          "the housekeeper's criminal record",
+          "the housekeeper is perfect for her plan",
+          "she has done this before with Clara Higgins",
+          "the husband is her target"
+        ],
+        "does_not_know": [
+          "the housekeeper's own hidden agenda (to rob/blackmail)",
+          "the housekeeper will discover her plan"
+        ]
+      },
+      "ch10": {
+        "knows": [
+          "she has planted evidence against the husband (photo of Clara)",
+          "she has a ledger of past targets and the housekeeper's name",
+          "she has the housekeeper's fingerprints on a knife",
+          "she is testing the housekeeper's suitability"
+        ],
+        "does_not_know": [
+          "the housekeeper is also running a con",
+          "the housekeeper has pocketed small valuables"
+        ]
+      },
+      "ch25": {
+        "knows": [
+          "the housekeeper believes the husband is guilty",
+          "the police are investigating Clara's disappearance",
+          "the frame is progressing as planned"
+        ],
+        "does_not_know": [
+          "the housekeeper's true motive",
+          "the housekeeper will eventually find the locked room"
+        ]
+      },
+      "ch36": {
+        "knows": [
+          "the housekeeper has discovered her ledger and criminal record",
+          "the housekeeper knows she is the architect",
+          "the plan is at risk of exposure"
+        ],
+        "does_not_know": [
+          "if the housekeeper will destroy the evidence or use it against her",
+          "the husband's awareness of her manipulation"
+        ]
+      },
+      "ch50": {
+        "knows": [
+          "the husband is dead",
+          "the housekeeper escaped the frame",
+          "a piece of evidence (the forged letter or a copy) was sent to an unknown third party"
+        ],
+        "does_not_know": [
+          "who received the evidence",
+          "if the housekeeper will return",
+          "if her plan will be fully exposed"
+        ]
+      },
+      "must_not_know_before": [
+        "the housekeeper's hidden agenda before ch30",
+        "that the housekeeper found the locked room before ch32"
+      ],
+      "hidden_truth": "She is not a fragile victim but a cold, calculating architect who has framed others before. Her fragility is a performance. She is the true predator in the house."
+    },
+    "the_husband": {
+      "ch1": {
+        "knows": [
+          "his wife is manipulative and has been gaslighting him for years",
+          "he is not a predator",
+          "his wife controls the narrative of their marriage",
+          "he is afraid of what his wife might do"
+        ],
+        "does_not_know": [
+          "his wife is planning to frame the housekeeper for his murder",
+          "the housekeeper is a con artist",
+          "the previous housekeeper was almost framed"
+        ]
+      },
+      "ch10": {
+        "knows": [
+          "his wife is 'testing' the new housekeeper",
+          "the locked room contains his wife's materials",
+          "he is being set up as a villain"
+        ],
+        "does_not_know": [
+          "the full extent of his wife's plan",
+          "that he is the target of a murder plot"
+        ]
+      },
+      "ch25": {
+        "knows": [
+          "the police suspect him in Clara's disappearance",
+          "his wife is behind the planted evidence",
+          "he is losing control of the situation"
+        ],
+        "does_not_know": [
+          "his wife intends to kill him",
+          "the housekeeper is also a con artist"
+        ]
+      },
+      "ch36": {
+        "knows": [
+          "the housekeeper has discovered his wife's ledger",
+          "the truth about his wife is coming out"
+        ],
+        "does_not_know": [
+          "his wife is planning to kill him within the next 10 chapters"
+        ]
+      },
+      "ch50": {
+        "knows": [
+          "he is dead"
+        ],
+        "does_not_know": [
+          "who killed him (the wife)",
+          "that the housekeeper was framed"
+        ]
+      },
+      "must_not_know_before": [
+        "the wife's murder plan before ch38",
+        "the housekeeper's criminal past before ch30"
+      ],
+      "hidden_truth": "He is not the predator but the target. His controlling behavior is a reaction to his wife's long-term gaslighting and manipulation. He is a victim, not a villain."
+    },
+    "clara_higgins": {
+      "ch1": {
+        "knows": [
+          "she was the wife's first attempt at a frame job",
+          "she escaped but left evidence behind",
+          "the wife is dangerous"
+        ],
+        "does_not_know": [
+          "the wife has found a new target (the housekeeper)",
+          "her evidence will be discovered by the new housekeeper"
+        ]
+      },
+      "ch10": {
+        "knows": [
+          "she is in hiding",
+          "the wife may be looking for her"
+        ],
+        "does_not_know": [
+          "the new housekeeper has found her photograph"
+        ]
+      },
+      "ch25": {
+        "knows": [
+          "the wife has successfully framed the husband in the public eye"
+        ],
+        "does_not_know": [
+          "the new housekeeper is investigating her disappearance"
+        ]
+      },
+      "ch36": {
+        "knows": [
+          "the new housekeeper has found her hidden diary or evidence"
+        ],
+        "does_not_know": [
+          "if the housekeeper will use it to expose the wife"
+        ]
+      },
+      "ch50": {
+        "knows": [
+          "she is still in hiding",
+          "the wife's plan has partially succeeded (husband dead)"
+        ],
+        "does_not_know": [
+          "if the housekeeper survived",
+          "if the evidence she left will be used"
+        ]
+      },
+      "must_not_know_before": [
+        "the housekeeper's identity before ch6",
+        "the wife's new plan before ch30"
+      ],
+      "hidden_truth": "She was not murdered by the husband. She was the wife's first attempt at a frame job that failed. She escaped and is in hiding, leaving behind evidence that the housekeeper will find."
+    },
+    "dr_ellis": {
+      "ch1": {
+        "knows": [
+          "the husband is stressed and unhappy",
+          "the wife seems frail but he has noticed something 'off' about her"
+        ],
+        "does_not_know": [
+          "the wife's true nature",
+          "the murder plan"
+        ]
+      },
+      "ch10": {
+        "knows": [
+          "the husband has a temper",
+          "the wife is more alert than she appears"
+        ],
+        "does_not_know": [
+          "anything about the frame job"
+        ]
+      },
+      "ch25": {
+        "knows": [
+          "the police are investigating Clara's disappearance",
+          "the husband is the prime suspect"
+        ],
+        "does_not_know": [
+          "the wife's role"
+        ]
+      },
+      "ch36": {
+        "knows": [
+          "the husband is afraid of his wife",
+          "something is very wrong in the house"
+        ],
+        "does_not_know": [
+          "the murder is imminent"
+        ]
+      },
+      "ch50": {
+        "knows": [
+          "the husband is dead",
+          "the housekeeper is missing"
+        ],
+        "does_not_know": [
+          "the truth about the wife"
+        ]
+      },
+      "must_not_know_before": [
+        "the wife's plan before ch40"
+      ],
+      "hidden_truth": "He is a peripheral character who has noticed inconsistencies in the wife's behavior but dismissed them as her illness. He will be a witness to the aftermath but not the truth."
+    }
+  }
+}

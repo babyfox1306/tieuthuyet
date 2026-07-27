@@ -1,0 +1,214 @@
+```json
+{
+  "act": [43, 45],
+  "chapter_plans": [
+    {
+      "chapter": 43,
+      "title": "The Ghost",
+      "slug": "the-ghost",
+      "one_line_summary": "The housekeeper tries to build a new life in a coastal town, but a chance sighting of a woman who looks like Nora forces her to confront the fact that she may never be free.",
+      "beat_summary": "The housekeeper (unnamed narrator) has been living in Port Haven for three weeks under a new alias. She works a night shift at a gas station and lives in a studio apartment above a laundromat. She has stopped counting steps. She has stopped checking over her shoulder. She almost believes she is safe. Then, during her shift, a woman walks in to buy cigarettes — tall, dark hair, familiar posture. The housekeeper freezes. The woman pays and leaves without a word. The housekeeper follows her into the parking lot, but the woman is gone. She spends the rest of the night shaking, telling herself it was a stranger. But she knows the truth: Nora is still out there, and she will never stop looking over her shoulder.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) works a night shift at a gas station in Port Haven. She has a routine: count the register, stock the cigarettes, avoid eye contact with customers.",
+        "A woman enters the station — tall, dark hair, a familiar way of moving. The housekeeper's hand freezes on the coffee pot. The woman buys cigarettes and leaves without acknowledging her.",
+        "The housekeeper (unnamed narrator) follows the woman into the parking lot, heart pounding. The lot is empty. The woman has vanished. She searches behind the dumpster, the street corner — nothing.",
+        "The housekeeper (unnamed narrator) returns to the station and finishes her shift with shaking hands. She tells herself it was a coincidence, a stranger who looked like Nora.",
+        "At dawn, she walks home and counts the steps from the gas station to her apartment: 47. She stops in the middle of the sidewalk and laughs bitterly. The number is back.",
+        "She locks her door, checks the window, and sits on the edge of her bed, staring at the wall. She knows she will never be free. The ghost of Nora Blackwood will follow her forever."
+      ],
+      "must_not": [
+        "Do not reveal that the woman in the gas station was actually Clara Higgins, sent by Nora to test the housekeeper's vigilance.",
+        "Do not reveal that the housekeeper's apartment has been bugged by Nora — she is being watched.",
+        "Do not reveal that the housekeeper has stopped counting steps deliberately, as a way to break Nora's influence — but the number 47 still haunts her."
+      ],
+      "opens_with": "She walked in at 2 AM, and the bell above the door chimed like a warning I had been too stupid to hear. Tall, dark hair, the same way of holding herself — as if the world owed her something. I knew that walk. I had seen it in my nightmares for three weeks.",
+      "cliffhanger": "The housekeeper (unnamed narrator) lies awake in her apartment, staring at the ceiling. Her phone is dark on the nightstand. She reaches for it, hesitates, then puts it down. She will not call Nora. She will not run. She will stay and fight — even if the fight is only in her own mind. But as she closes her eyes, she hears a sound from the hallway: footsteps, soft and deliberate, stopping outside her door. She holds her breath. The footsteps do not move.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of steps from the gas station to her apartment for the first time in three weeks: 47. She stops in the middle of the sidewalk and laughs — a hollow, broken sound. The number has found her again.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, creeping dread. She thought she had escaped, but the ghost of Nora Blackwood is still watching. She is not free — she is just in a larger cage. But beneath the fear is a spark of defiance: she will not run again.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is psychological and paranoid — the housekeeper is haunted by a ghost who is still alive.",
+      "chapter_task": "Write 1700-1900 words establishing the housekeeper's new life and the return of her paranoia. The gas station encounter should feel ambiguous — the reader should not know if it was Nora, Clara, or a stranger. The return of the counting habit should feel like a relapse. End with the footsteps outside her door to create a cliffhanger.",
+      "carries_to_next": "The housekeeper has been found — or she is losing her mind. The footsteps outside her door suggest Nora (or someone working for her) knows where she is. Chapter 44 will bring the confrontation closer.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['her own hidden agenda is exposed to the reader', 'the wife is the architect of everything', \"the wife's fragility was a performance\", \"the locked room contains the wife's ledger and her own criminal record\", 'the wife has done this before (Clara Higgins)'], 'does_not_know': ['the full extent of the frame job (the planted weapon, the forged letter)', 'the husband is the target, not the predator', 'when the murder will happen']}",
+            "the_wife: {'knows': ['the housekeeper has discovered her ledger and criminal record', 'the housekeeper knows she is the architect', 'the plan is at risk of exposure'], 'does_not_know': ['if the housekeeper will destroy the evidence or use it against her', \"the husband's awareness of her manipulation\"]}",
+            "the_husband: {'knows': [\"the housekeeper has discovered his wife's ledger\", 'the truth about his wife is coming out'], 'does_not_know': ['his wife is planning to kill him within the next 10 chapters']}",
+            "clara_higgins: {'knows': ['the new housekeeper has found her hidden diary or evidence'], 'does_not_know': ['if the housekeeper will use it to expose the wife']}",
+            "dr_ellis: {'knows': ['the husband is afraid of his wife', 'something is very wrong in the house'], 'does_not_know': ['the murder is imminent']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 36
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 44,
+      "title": "The Letter",
+      "slug": "the-letter",
+      "one_line_summary": "The housekeeper receives a letter with no return address — inside is a single photograph of the estate, with Nora's handwriting on the back: 'You forgot something.'",
+      "beat_summary": "The morning after the footsteps, the housekeeper (unnamed narrator) finds a letter slipped under her door. No return address. No stamp. Inside is a single photograph: Blackwood Estate, taken from the garden, the sun setting behind the main house. On the back, in Nora's handwriting: 'You forgot something.' The housekeeper's blood runs cold. She knows what she forgot: the evidence she hid in the hollow tree. She has been so focused on running that she left the most dangerous weapon behind. She has a choice: ignore the letter and hope Nora never finds it, or return to the estate and retrieve the evidence before Nora does. She chooses to return. She packs a bag, leaves Port Haven, and drives back toward Raven's Creek — walking into the trap she swore she would never enter again.",
+      "must_happen": [
+        "[PAYOFF C017, C018, C019, C020, C021] The housekeeper (unnamed narrator) wakes to find a letter slipped under her door. No return address. No stamp. Inside is a single photograph: Blackwood Estate at sunset.",
+        "She turns the photograph over. On the back, in Nora's handwriting: 'You forgot something.' The housekeeper's blood runs cold. She knows exactly what Nora is referring to: the evidence hidden in the hollow tree.",
+        "The housekeeper (unnamed narrator) spends an hour debating her options. She could run again, change her identity, disappear deeper. But Nora will always find her. The only way to be free is to retrieve the evidence and destroy it permanently.",
+        "She packs a bag — a change of clothes, her lockpicks, the burner phone. She leaves Port Haven without telling anyone. She drives toward Raven's Creek, the photograph on the passenger seat.",
+        "During the drive, she reviews the clues she has collected over the past weeks: the newspaper article about Clara's body, the planted evidence in the locker, the recording of Nora's confession. She realizes Nora has been leading her back to the estate all along.",
+        "She arrives at the outskirts of Raven's Creek as the sun sets. The estate looms in the distance. She parks the car and walks the rest of the way, her footsteps echoing on the gravel. She is home — and home is the most dangerous place she knows."
+      ],
+      "must_not": [
+        "Do not reveal that the photograph was taken the night before — Nora is still living at the estate and has been waiting for the housekeeper to return.",
+        "Do not reveal that the evidence in the hollow tree is still there — Nora has not retrieved it because she wants the housekeeper to come back and retrieve it herself.",
+        "Do not reveal that the housekeeper has a plan to use the evidence as leverage one final time — she is not coming to destroy it; she is coming to use it."
+      ],
+      "opens_with": "The letter was waiting for me when I woke — a white envelope on the floor, slipped under the door sometime in the night. No return address. No stamp. Just my name, written in a handwriting I would recognize in my sleep.",
+      "cliffhanger": "The housekeeper (unnamed narrator) stands at the edge of the estate's driveway, the photograph in her hand. The house is dark, but she sees a light flicker in the upstairs window — Nora's bedroom. She takes a step forward. Then another. She is walking into the lion's den, but she has no choice. The evidence is in the hollow tree. And Nora is waiting.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of steps from her car to the estate gate: 47. She stops at the gate and looks at the photograph. She wonders if Nora chose the number deliberately, or if she has finally stopped caring about the pattern and started using it as a leash.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, weary resignation. She has been led back to the estate like a dog on a leash. But beneath the resignation is a spark of defiance: she is not coming to surrender. She is coming to end this, once and for all.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is paranoid and strategic — the housekeeper is walking into a trap, but she has a plan.",
+      "chapter_task": "Write 1700-1900 words paying off clues C017 through C021 (the safety deposit box key, the too-perfect escape kit, the photograph of her mother, the recording of Nora's confession, and the newspaper article about Clara's body). The letter scene should feel like a summons. The drive back to Raven's Creek should be a montage of the housekeeper reviewing everything she has learned. End with her approaching the estate to set up Chapter 45. No romance micro-beat — male lead is Unassigned and romance is not opt-in.",
+      "carries_to_next": "The housekeeper has returned to Blackwood Estate. Nora is waiting. The evidence is in the hollow tree. Chapter 45 will be the final confrontation between the two women.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C017",
+          "C018",
+          "C019",
+          "C020",
+          "C021"
+        ],
+        "reveals": [
+          {
+            "id": "MR05",
+            "reveal": "The housekeeper realizes that Nora has been leading her back to the estate all along — every clue, every planted piece of evidence, every text was designed to bring her home for a final choice.",
+            "impact": "The housekeeper understands the full scope of Nora's manipulation. She is not a fugitive who escaped — she is a pawn who was allowed to run free so she would return willingly.",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C017",
+              "C018",
+              "C019",
+              "C020",
+              "C021"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['her own hidden agenda is exposed to the reader', 'the wife is the architect of everything', \"the wife's fragility was a performance\", \"the locked room contains the wife's ledger and her own criminal record\", 'the wife has done this before (Clara Higgins)'], 'does_not_know': ['the full extent of the frame job (the planted weapon, the forged letter)', 'the husband is the target, not the predator', 'when the murder will happen']}",
+            "the_wife: {'knows': ['the housekeeper has discovered her ledger and criminal record', 'the housekeeper knows she is the architect', 'the plan is at risk of exposure'], 'does_not_know': ['if the housekeeper will destroy the evidence or use it against her', \"the husband's awareness of her manipulation\"]}",
+            "the_husband: {'knows': [\"the housekeeper has discovered his wife's ledger\", 'the truth about his wife is coming out'], 'does_not_know': ['his wife is planning to kill him within the next 10 chapters']}",
+            "clara_higgins: {'knows': ['the new housekeeper has found her hidden diary or evidence'], 'does_not_know': ['if the housekeeper will use it to expose the wife']}",
+            "dr_ellis: {'knows': ['the husband is afraid of his wife', 'something is very wrong in the house'], 'does_not_know': ['the murder is imminent']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 36
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 45,
+      "title": "The Hollow Tree",
+      "slug": "the-hollow-tree",
+      "one_line_summary": "The housekeeper returns to the estate to find Nora waiting for her — and discovers that what she 'forgot' was not an object, but a choice: to become Nora's partner or her final victim.",
+      "beat_summary": "The housekeeper (unnamed narrator) approaches the hollow tree where she hid the evidence. Nora is already there, sitting on the ground, the folder of evidence open in her lap. She has been waiting. Nora explains that she has known about the hidden evidence since the night the housekeeper buried it — she watched from the window. She has been waiting for the housekeeper to return, not for the evidence, but for the choice. Nora offers her one final deal: become her partner in the experiment, and together they will find new targets, build a new network, and never be victims again. The housekeeper (unnamed narrator) listens. She looks at the evidence in Nora's hands — the key to her freedom. She has a choice: take the evidence and walk away, knowing Nora will always hunt her; or accept the offer and become the predator she was always meant to be. The chapter ends with the housekeeper (unnamed narrator) reaching for the folder — and the reader does not know whether she is taking the evidence or accepting Nora's hand.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) approaches the hollow tree at the edge of the garden. Nora is already there, sitting on the ground, the folder of evidence open in her lap. 'I've been waiting,' she says. 'I knew you would come back.'",
+        "Nora explains that she has known about the hidden evidence since the night the housekeeper buried it. She watched from the window. She has been waiting for the housekeeper to return — not for the evidence, but for the choice.",
+        "Nora offers her one final deal: become her partner in the experiment. 'Together, we will never be victims again. We will be the ones who choose.'",
+        "The housekeeper (unnamed narrator) listens. She looks at the evidence in Nora's hands — the key to her freedom. She realizes that taking the evidence will not free her; Nora will always hunt her. But accepting the offer means becoming the thing she feared most.",
+        "The housekeeper (unnamed narrator) reaches for the folder. Her hand hovers over it. She looks at Nora's face — calm, patient, waiting. She does not know what she will choose until her fingers touch the paper.",
+        "The chapter ends with her hand closing over the folder. The reader does not know whether she is taking the evidence or accepting Nora's hand. The screen fades to black."
+      ],
+      "must_not": [
+        "Do not reveal the housekeeper's choice — leave it ambiguous for Book 2.",
+        "Do not reveal that Nora has a gun hidden in her coat, in case the housekeeper chooses wrong.",
+        "Do not reveal that Julian is watching from the house, waiting to see which woman walks away alive."
+      ],
+      "opens_with": "She was sitting under the hollow tree like she had been waiting for me my whole life. The folder was open in her lap, the evidence spilling out like autumn leaves. 'I knew you would come back,' she said. 'You were always going to come back. The only question was when.'",
+      "cliffhanger": "The housekeeper (unnamed narrator) closes her hand over the folder. She looks at Nora. Nora looks back. Neither of them speaks. The wind moves through the leaves, and somewhere in the distance, a car door slams — Julian, coming to find them. The housekeeper (unnamed narrator) stands up, the folder in her hand. She does not know what she will do next. She only knows that she is no longer running. She is choosing. And whatever she chooses, she will never be the same.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) does not count the steps to the hollow tree. She does not count the leaves on the ground. She does not count anything. For the first time in her life, she stops counting — because the only number that matters is the one she is about to choose: one life, one choice, one future.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a profound, terrifying stillness. She is standing at the edge of a cliff, and she does not know if she will jump or step back. But for the first time, the choice is hers — and she is not afraid.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The intimacy is psychological and final — the two women face each other as equals, and the choice the housekeeper makes will define the rest of her life.",
+      "chapter_task": "Write 1700-1900 words executing the beat map: the housekeeper returns to the estate to find the wife waiting for her — and discovers that what she 'forgot' was not an object, but a choice: to become the wife's partner or her final victim. The scene under the hollow tree should feel like a coronation — the housekeeper is being offered a throne, and she must decide if she is willing to sit on it. End with the ambiguous choice to set up Book 2. No romance micro-beat — male lead is Unassigned and romance is not opt-in.",
+      "carries_to_next": "The housekeeper has made her choice — but the reader does not know what it is. Book 2 will reveal whether she became Nora's partner, destroyed the evidence and walked away, or found a third option. The central con is closed: the reader now knows who framed whom and who died (Julian, or someone else). The housekeeper survives, bound to a secret that could destroy her — the secret of what she chose under the hollow tree.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['her own hidden agenda is exposed to the reader', 'the wife is the architect of everything', \"the wife's fragility was a performance\", \"the locked room contains the wife's ledger and her own criminal record\", 'the wife has done this before (Clara Higgins)'], 'does_not_know': ['the full extent of the frame job (the planted weapon, the forged letter)', 'the husband is the target, not the predator', 'when the murder will happen']}",
+            "the_wife: {'knows': ['the housekeeper has discovered her ledger and criminal record', 'the housekeeper knows she is the architect', 'the plan is at risk of exposure'], 'does_not_know': ['if the housekeeper will destroy the evidence or use it against her', \"the husband's awareness of her manipulation\"]}",
+            "the_husband: {'knows': [\"the housekeeper has discovered his wife's ledger\", 'the truth about his wife is coming out'], 'does_not_know': ['his wife is planning to kill him within the next 10 chapters']}",
+            "clara_higgins: {'knows': ['the new housekeeper has found her hidden diary or evidence'], 'does_not_know': ['if the housekeeper will use it to expose the wife']}",
+            "dr_ellis: {'knows': ['the husband is afraid of his wife', 'something is very wrong in the house'], 'does_not_know': ['the murder is imminent']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 36
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

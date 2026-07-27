@@ -396,7 +396,13 @@ class TestColdCaseLedgerSemantics(unittest.TestCase):
         self.assertTrue(any(c.get("id") == "network_leak" for c in choices))
         leak = next(c for c in choices if c["id"] == "network_leak")
         self.assertEqual(leak["cardinality"], 1)
-        self.assertGreaterEqual(len(leak["candidates"]), 3)
+        if leak["status"] == "resolved":
+            # plan_choices.yaml already decided: payload names one leak + non-leaks.
+            self.assertTrue(leak["value"])
+            self.assertGreaterEqual(len(leak["non_leaks"]), 1)
+            self.assertNotIn(leak["value"], leak["non_leaks"])
+        else:
+            self.assertGreaterEqual(len(leak["candidates"]), 3)
         self.assertEqual(act["chapters"]["1"]["clues_plant"], ["C001"])
         self.assertIn("thumb-tap", act["chapters"]["1"]["clue_details"]["C001"]["content"].lower())
         # Red herring plant_chapter (singular) must schedule

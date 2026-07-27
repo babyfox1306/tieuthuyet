@@ -1,0 +1,96 @@
+```json
+{
+  "act": [31, 33],
+  "chapter_plans": [
+    {
+      "chapter": 31,
+      "title": "The Unraveling",
+      "slug": "the-unraveling",
+      "one_line_summary": "Nadia Cole confronts the impossible choice — kill Victor Rhodes and trigger his dead-man's-switch, or let him live and be hunted — and makes a desperate decision that fractures the network further.",
+      "beat_summary": "Nadia Cole sits in the safe house, Victor Rhodes's text still glowing on her phone: 'The real file is in a safety deposit box with my brother's name on it.' She knows the fire at the attorney's office was a wasted move. She calls Sasha Okafor and tells her the dead-man's-switch is still active. Sasha Okafor is silent, then says: 'There's one option left. You have to force his hand — make him come to you. But that means giving him something he wants.' Nadia Cole hangs up and stares at the photograph of Mara Cole. She picks up her phone and calls Victor Rhodes directly — the first time she has initiated contact. He answers on the first ring. 'I knew you'd call,' he says. 'You're out of moves, Nadia.' She tells him she wants to meet — face to face, no network, no intermediaries. He agrees, but his voice is too smooth, too satisfied. She knows he's setting a trap. She hangs up and calls Priya Anand to prepare the fake death certificate — a document that will make it look like Victor Rhodes died of a heart attack. Priya Anand hesitates, then says: 'I'll do it. But Nadia — if this goes wrong, we all go down.' Nadia Cole hangs up and opens a drawer. She pulls out a burner phone and types a message to an unknown number: 'The meeting is set. Be ready.' She doesn't send it. She stares at the message, her thumb pressed to her palm. The choice is no longer theoretical — she has committed to killing Victor Rhodes, and the dead-man's-switch will trigger regardless. She sends the message. The chapter ends with Nadia Cole whispering: 'I made my choice. Now I have to live with it — or die with it.'",
+      "opens_with": "\"'The real file is in a safety deposit box with my brother's name on it. You can't burn every building in the city.' I read Victor Rhodes's text for the tenth time, each word a nail in the coffin. The fire was pointless. The dead-man's-switch was still active. And I was running out of time.\" — Nadia Cole, internal, as she stares at the text.",
+      "cliffhanger": "Nadia Cole's phone buzzes. A text from Victor Rhodes: 'Tomorrow night. The old warehouse on Mason Street. Come alone. And Nadia — don't bother bringing your network. I've already made sure they won't be able to help you.' She drops the phone, her thumb pressed to her palm. She knows the warehouse is a trap. But she has no other move. She whispers: 'I'm walking into his trap. But I'm bringing my own.'",
+      "must_happen": [
+        "Nadia Cole calls Sasha Okafor and tells her the dead-man's-switch is still active — Sasha Okafor says the only option is to force Victor Rhodes's hand by giving him something he wants, setting up the direct confrontation.",
+        "Nadia Cole calls Victor Rhodes directly for the first time — she tells him she wants to meet face to face, no network, no intermediaries; he agrees, but his voice is too smooth, too satisfied, confirming he is setting a trap.",
+        "Nadia Cole calls Priya Anand and tells her to prepare the fake death certificate for Victor Rhodes — a document that will make it look like he died of a heart attack; Priya Anand hesitates but agrees, acknowledging the risk.",
+        "Nadia Cole pulls out a burner phone and types a message to an unknown contact — 'The meeting is set. Be ready.' — she stares at the message, then sends it, committing to the plan.",
+        "The chapter ends with Nadia Cole receiving a text from Victor Rhodes confirming the meeting location — the old warehouse on Mason Street — and warning her not to bring her network, confirming the trap."
+      ],
+      "must_not": [
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on Nadia Cole's internal struggle and the decision to meet him.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is cold calculation and the weight of the impossible choice.",
+        "Do NOT re-fire any clues already paid off (C008, C009) or re-reveal any reveals already fired (MR04).",
+        "Do NOT open the PDF or reveal the full contents of the Julian Croft file."
+      ],
+      "opens_with": "I read Victor Rhodes's text for the tenth time, each word a nail in the coffin. The fire was pointless. The dead-man's-switch was still active. And I was running out of time.",
+      "cliffhanger": "Nadia Cole's phone buzzes. A text from Victor Rhodes: 'Tomorrow night. The old warehouse on Mason Street. Come alone. And Nadia — don't bother bringing your network. I've already made sure they won't be able to help you.' She drops the phone, her thumb pressed to her palm. She knows the warehouse is a trap. But she has no other move.",
+      "signature_detail_hint": "Nadia Cole presses her thumb so hard into her palm that she leaves a crescent-shaped bruise — a physical reminder of the choice she has made.",
+      "emotional_beat": "Cold fury mixed with grief — Nadia Cole has accepted that killing Victor Rhodes will trigger the dead-man's-switch, but she cannot let him live. The choice is a sacrifice of her own freedom for the mission.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show Nadia Cole's decision to meet Victor Rhodes directly — the call with Sasha Okafor (forcing his hand), the call with Victor Rhodes (setting the meeting), the call with Priya Anand (fake death certificate). Show the burner phone message to the unknown contact. End with the cliffhanger — Victor Rhodes confirms the warehouse meeting and warns her not to bring her network. Do not include any romance or attraction.",
+      "carries_to_next": "Nadia Cole has committed to killing Victor Rhodes at the warehouse meeting. The dead-man's-switch is still active. Chapter 32 will show the confrontation at the warehouse — the trap is set, and Nadia Cole must survive long enough to execute her plan."
+    },
+    {
+      "chapter": 32,
+      "title": "The Trap Springs",
+      "slug": "the-trap-springs",
+      "one_line_summary": "Nadia Cole walks into Victor Rhodes's trap at the warehouse, but she has her own counter-trap — a desperate gambit that forces a direct confrontation and leaves both of them wounded.",
+      "beat_summary": "Nadia Cole arrives at the old warehouse on Mason Street. The building is abandoned, the windows boarded, the air thick with dust and silence. She steps inside, her hand on the concealed knife in her jacket. Victor Rhodes is waiting in the center of the room, standing beside a metal table. He is alone — or appears to be. 'I knew you'd come,' he says. 'You don't know when to stop.' Nadia Cole tells him the meeting is about leverage — she has something he wants. She pulls out a flash drive and places it on the table. 'This is the full file on your connection to Elise Marchetti's murder. The evidence that will put you away.' Victor Rhodes laughs. 'You think I care about that? I have the file on Julian Croft. Your first kill. If I die, it goes public.' Nadia Cole tells him she knows. She also knows he has copies. She places a second item on the table — a photograph of his brother. 'Your brother has a safety deposit box with the file. But I have people watching him. If anything happens to me, they'll take the file and destroy it.' Victor Rhodes's smile falters. 'You're bluffing.' Nadia Cole stares at him. 'Try me.' The standoff breaks when Victor Rhodes pulls a gun. He aims it at her chest. 'I don't need to kill you, Nadia. I just need to hurt you enough to make you back off.' He fires. The bullet grazes her shoulder — a flesh wound. Nadia Cole doesn't flinch. She pulls the knife from her jacket and throws it, hitting him in the thigh. He drops the gun, screaming. She picks up the gun and aims it at his head. 'This ends now, Victor.' He laughs through the pain. 'You can't kill me. The file goes public.' She lowers the gun. 'I know. But I can make you wish I had.' She turns and walks out of the warehouse, leaving him bleeding on the floor. The chapter ends with Nadia Cole driving away, her shoulder bleeding, her phone buzzing. A text from an unknown number: 'The file is safe. But your window is closing. 28 days.'",
+      "opens_with": "\"'I knew you'd come,' Victor Rhodes said, his voice echoing in the empty warehouse. 'You don't know when to stop.' I stepped into the light, my hand on the knife in my jacket. 'I know exactly when to stop, Victor. When you're dead.'\" — Nadia Cole, internal, as she walks into the warehouse.",
+      "cliffhanger": "Nadia Cole drives away from the warehouse, her shoulder bleeding, her hand shaking. She pulls over and examines the wound — it's superficial, but it's a reminder that Victor Rhodes is willing to hurt her. Her phone buzzes. A text from Sasha Okafor: 'I heard about the warehouse. Are you okay?' She types a reply: 'I'm alive. But he's not dead. And I have 28 days to figure out how to kill him without destroying myself.' She sends it and stares at the road ahead. The trap didn't spring the way she planned — but she's still alive, and Victor Rhodes is wounded. The war is far from over.",
+      "must_happen": [
+        "Nadia Cole arrives at the old warehouse on Mason Street — Victor Rhodes is waiting, alone, with a metal table and a gun.",
+        "Nadia Cole places a flash drive on the table — she claims it contains the evidence linking Victor Rhodes to Elise Marchetti's murder, but it's a bluff (the real evidence is elsewhere).",
+        "Nadia Cole places a photograph of Victor Rhodes's brother on the table — she claims she has people watching him, threatening to destroy the safety deposit box file if anything happens to her.",
+        "Victor Rhodes pulls a gun and shoots Nadia Cole in the shoulder — a flesh wound, but it shows he is willing to escalate to violence.",
+        "Nadia Cole throws a knife into Victor Rhodes's thigh — he drops the gun, and she picks it up, aiming it at his head.",
+        "Nadia Cole lowers the gun — she cannot kill him without triggering the dead-man's-switch, so she leaves him wounded on the warehouse floor.",
+        "Nadia Cole drives away, her shoulder bleeding — she receives a text from an unknown number reminding her that the window is closing (28 days left)."
+      ],
+      "must_not": [
+        "Do NOT kill Victor Rhodes — the dead-man's-switch is still active, and his death would trigger the release of the Julian Croft file.",
+        "Do NOT reveal the full details of the Julian Croft file — the origin reveal (MR05) is chapter 34.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is cold fury and the pain of the wound.",
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on Nadia Cole's confrontation and her choice to leave him alive."
+      ],
+      "signature_detail_hint": "Nadia Cole's knife throw is precise — she aims for the femoral artery but deliberately misses, hitting muscle instead. The wound is painful but not fatal, a calculated mercy that shows her control.",
+      "emotional_beat": "Cold fury mixed with the pain of the wound — Nadia Cole has proven she can hurt Victor Rhodes but cannot kill him without destroying herself. The frustration is palpable.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show the warehouse confrontation: Nadia Cole's arrival, the standoff with Victor Rhodes, the bluff about the flash drive and the photograph of his brother, the gunshot wound to her shoulder, the knife throw to his thigh, and her choice to leave him alive. End with the text from the unknown number (28 days left). Do not include any romance or attraction.",
+      "carries_to_next": "Nadia Cole is wounded but alive. Victor Rhodes is wounded but alive. The dead-man's-switch is still active, and the 28-day window is ticking. Chapter 33 will show Nadia Cole rebuilding trust with the loyal network members — Sasha Okafor and Priya Anand — and forming a new plan to finish Victor Rhodes without triggering the switch."
+    },
+    {
+      "chapter": 33,
+      "title": "The Loyal Remain",
+      "slug": "the-loyal-remain",
+      "one_line_summary": "Nadia Cole rebuilds trust with Sasha Okafor and Priya Anand, forms a new plan to finish Victor Rhodes without triggering the dead-man's-switch, and faces the weight of the fractured network — but the plan requires a sacrifice she isn't sure she can make.",
+      "beat_summary": "Nadia Cole sits in the safe house, her shoulder bandaged, the wound throbbing. She calls Sasha Okafor and tells her everything — the warehouse confrontation, the wound, the bluff about Victor Rhodes's brother. Sasha Okafor is silent for a long moment, then says: 'You're running out of time. The dead-man's-switch is still active, and Rhodes is going to retaliate. You need a new plan.' Nadia Cole tells her she has an idea — a way to kill Victor Rhodes without triggering the switch. She needs Sasha Okafor to find a loophole in the legal system, a way to make Victor Rhodes's death look like a natural cause that doesn't trigger the release of the file. Sasha Okafor says she'll look into it, but warns that the legal system is slow and Victor Rhodes has already planned for every move. Nadia Cole hangs up and calls Priya Anand. Priya Anand answers, her voice tight with fear. Nadia Cole tells her the plan — the fake death certificate, the staged heart attack. Priya Anand says she has the document ready, but she needs a body to make it work. Nadia Cole tells her she'll get the body. Priya Anand is silent, then whispers: 'I trust you, Nadia. But if this goes wrong, I'm going to prison.' Nadia Cole tells her it won't go wrong. She hangs up and stares at the photograph of Mara Cole. She whispers: 'I'm doing this for you, Mara. And I'm not going to let Victor Rhodes destroy everything we built.' The chapter ends with Nadia Cole opening her laptop and typing a message to an unknown contact: 'I need a body. No questions asked. 48 hours.' She sends it and closes the laptop. The plan is in motion. But the cost is mounting.",
+      "opens_with": "\"'You're running out of time,' Sasha Okafor said, her voice flat but edged with exhaustion. 'The dead-man's-switch is still active, and Victor Rhodes is going to retaliate. You need a new plan.' I stared at my bandaged shoulder, the wound a constant reminder of the warehouse. 'I have one,' I said. 'But it's ugly.'\" — Nadia Cole, internal, as she calls Sasha Okafor.",
+      "cliffhanger": "Nadia Cole's phone buzzes. A text from an unknown number: 'Body secured. 24 hours. Same place as before.' She stares at the message, her thumb pressed to her palm. The plan is in motion — a fake death certificate, a staged heart attack, a body to make it real. But she knows the cost: if this goes wrong, she loses everything. She whispers: 'I have 27 days left. And I'm about to gamble it all on a lie.'",
+      "must_happen": [
+        "Nadia Cole calls Sasha Okafor and tells her about the warehouse confrontation — Sasha Okafor warns that the dead-man's-switch is still active and Victor Rhodes will retaliate, pushing for a new plan.",
+        "Nadia Cole tells Sasha Okafor her idea — a way to kill Victor Rhodes without triggering the switch by making his death look like a natural cause; Sasha Okafor agrees to find a legal loophole but warns it's risky.",
+        "Nadia Cole calls Priya Anand and tells her the plan — the fake death certificate and the staged heart attack; Priya Anand has the document ready but needs a body to make it work.",
+        "Nadia Cole tells Priya Anand she will get the body — Priya Anand is silent, then whispers that she trusts Nadia Cole but fears the consequences.",
+        "Nadia Cole opens her laptop and sends a message to an unknown contact: 'I need a body. No questions asked. 48 hours.' — she sends it, committing to the plan.",
+        "The chapter ends with Nadia Cole receiving a confirmation text: 'Body secured. 24 hours. Same place as before.' — the plan is in motion."
+      ],
+      "must_not": [
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on Nadia Cole rebuilding trust with Sasha Okafor and Priya Anand.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is cold calculation and the weight of the plan.",
+        "Do NOT reveal the full details of the body procurement — the contact is an unknown figure from Nadia Cole's past, and the details are not important for this scene.",
+        "Do NOT re-fire any clues already paid off (C008, C009) or re-reveal any reveals already fired (MR04)."
+      ],
+      "signature_detail_hint": "Nadia Cole types the message to the unknown contact using a keyboard with a broken 'E' key — she has to press it twice to register, a small imperfection in her otherwise flawless equipment.",
+      "emotional_beat": "Cold determination mixed with grief — Nadia Cole is rebuilding trust with the loyal network members, but the cost of the plan is mounting, and she knows she may not survive the endgame.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show Nadia Cole's calls with Sasha Okafor (legal loophole) and Priya Anand (fake death certificate, need for a body). Show the message to the unknown contact to procure a body. End with the confirmation text — the plan is in motion. Do not include any romance or attraction.",
+      "carries_to_next": "The plan is in motion: a fake death certificate, a staged heart attack, and a body to make it real. Nadia Cole has 27 days left before the dead-man's-switch triggers. Chapter 34 will show the full origin reveal (MR05) — the emotional and procedural weight of Nadia Cole's first kill, Julian Croft, and how it connects to the current crisis."
+    }
+  ]
+}
+```

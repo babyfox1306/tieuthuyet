@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "kind": "contract_review_packet",
+  "book": 1,
+  "deterministic_auto_safe": [],
+  "semantic_needs_review": [
+    {
+      "section": "events",
+      "id": "event_ending_book",
+      "summary": "Elena enters the sealed chamber beneath Saint Orison’s before sunrise and finds the remains of the seven children, the original attendance ledger, and Ada’s hidden correction page.\n\nGideon attempts to burn the evidence and stop Elena from reading the children’s names. Elena has already mailed copies of the recovered records to three outside authorities. She completes the chain by entering all seven names into the official death register and reading them aloud beneath the empty bell frame.\n\nThe final bell does not ring. Elena survives sunrise.\n\nThe remains are recovered, the 1974 deaths are formally recorded, Gideon is arrested after attacking Elena, and Ada’s role is exposed: she discovered the truth, concealed it for years, and finally altered the register to give Elena one chance to finish what she could not.\n\nThe immediate victim loop ends completely. The Saint Orison case is solved.",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.ending_book1",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Elena enters the sealed chamber beneath Saint Orison’s before sunrise and finds the remains of the seven children, the original attendance ledger, and Ada’s hidden correction page.\n\nGideon attempts to",
+        "evidence_start": 0,
+        "evidence_end": 200
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_a_removed_church_bell_heard_at_exactly_2_17_a_m",
+      "summary": "A removed church bell heard at exactly 2:17 a.m.",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A removed church bell heard at exactly 2:17 a.m.",
+        "evidence_start": 0,
+        "evidence_end": 48
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_a_clear_and_testable_victim_loop_rule_system",
+      "summary": "A clear and testable victim-loop rule system",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A clear and testable victim-loop rule system",
+        "evidence_start": 0,
+        "evidence_end": 44
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_at_least_four_completed_victim_cycles",
+      "summary": "At least four completed victim cycles",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "At least four completed victim cycles",
+        "evidence_start": 0,
+        "evidence_end": 37
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_one_unique_deviation_in_every_cycle",
+      "summary": "One unique deviation in every cycle",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "One unique deviation in every cycle",
+        "evidence_start": 0,
+        "evidence_end": 35
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_each_deviation_reveals_a_fragment_of_the_1974_ev",
+      "summary": "Each deviation reveals a fragment of the 1974 event",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Each deviation reveals a fragment of the 1974 event",
+        "evidence_start": 0,
+        "evidence_end": 51
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_physical_records_that_support_every_supernatural",
+      "summary": "Physical records that support every supernatural revelation",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Physical records that support every supernatural revelation",
+        "evidence_start": 0,
+        "evidence_end": 59
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_a_sealed_chamber_beneath_saint_orison_s_church",
+      "summary": "A sealed chamber beneath Saint Orison’s Church",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A sealed chamber beneath Saint Orison’s Church",
+        "evidence_start": 0,
+        "evidence_end": 46
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_seven_erased_children",
+      "summary": "Seven erased children",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Seven erased children",
+        "evidence_start": 0,
+        "evidence_end": 21
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_ada_voss_s_hidden_correction_page",
+      "summary": "Ada Voss’s hidden correction page",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Ada Voss’s hidden correction page",
+        "evidence_start": 0,
+        "evidence_end": 33
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_gideon_rusk_obstructing_the_investigation",
+      "summary": "Gideon Rusk obstructing the investigation",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Gideon Rusk obstructing the investigation",
+        "evidence_start": 0,
+        "evidence_end": 41
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_elena_s_name_appearing_before_the_midpoint_ends",
+      "summary": "Elena’s name appearing before the midpoint ends",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Elena’s name appearing before the midpoint ends",
+        "evidence_start": 0,
+        "evidence_end": 47
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_a_failed_attempt_to_restrain_one_victim",
+      "summary": "A failed attempt to restrain one victim",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A failed attempt to restrain one victim",
+        "evidence_start": 0,
+        "evidence_end": 39
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_a_victim_reenactment_occurring_in_a_public_place",
+      "summary": "A victim reenactment occurring in a public place",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A victim reenactment occurring in a public place",
+        "evidence_start": 0,
+        "evidence_end": 48
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_a_chapter_in_which_elena_begins_reenacting_the_p",
+      "summary": "A chapter in which Elena begins reenacting the previous victim",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A chapter in which Elena begins reenacting the previous victim",
+        "evidence_start": 0,
+        "evidence_end": 62
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_the_true_purpose_of_the_loop_revealed_no_earlier",
+      "summary": "The true purpose of the loop revealed no earlier than Chapter 8",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "The true purpose of the loop revealed no earlier than Chapter 8",
+        "evidence_start": 0,
+        "evidence_end": 63
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_the_full_truth_about_ada_revealed_in_chapter_9",
+      "summary": "The full truth about Ada revealed in Chapter 9",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "The full truth about Ada revealed in Chapter 9",
+        "evidence_start": 0,
+        "evidence_end": 46
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_a_rule_based_solution_completed_before_sunrise",
+      "summary": "A rule-based solution completed before sunrise",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A rule-based solution completed before sunrise",
+        "evidence_start": 0,
+        "evidence_end": 46
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_the_current_case_fully_closed_in_chapter_10",
+      "summary": "The current case fully closed in Chapter 10",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "The current case fully closed in Chapter 10",
+        "evidence_start": 0,
+        "evidence_end": 43
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_a_final_hook_pointing_toward_saint_agnes_in_blac",
+      "summary": "A final hook pointing toward Saint Agnes in Black Fen",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A final hook pointing toward Saint Agnes in Black Fen",
+        "evidence_start": 0,
+        "evidence_end": 53
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_include_a_strong_final_line",
+      "summary": "A strong final line",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A strong final line",
+        "evidence_start": 0,
+        "evidence_end": 19
+      }
+    },
+    {
+      "section": "obligations",
+      "id": "obl_hook_book2",
+      "summary": "While cataloguing the restored ledger, Elena discovers an eighth entry written in ink that is still wet:\n\nSAINT AGNES, BLACK FEN — ELEVEN NAMES UNRETURNED.\n\nThat night, a telephone rings inside the disconnected church office. When Elena answers, a child asks whether Morrow Wick has finally learned how to keep the names of its dead.",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.hook_book2",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "While cataloguing the restored ledger, Elena discovers an eighth entry written in ink that is still wet:\n\nSAINT AGNES, BLACK FEN — ELEVEN NAMES UNRETURNED.\n\nThat night, a telephone rings inside the di",
+        "evidence_start": 0,
+        "evidence_end": 200
+      }
+    },
+    {
+      "section": "revelations",
+      "id": "the_bell_chooses_the_next_name",
+      "summary": "",
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.binding_condition",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "The bell never chooses. Each dying victim is compelled to name the one person whose hidden knowledge, access, or evidence is required to advance the unfinished testimony.",
+        "evidence_start": 0,
+        "evidence_end": 170
+      }
+    }
+  ],
+  "model_suggestions": [],
+  "invalid_candidates": [],
+  "compile_ok": true,
+  "note": "Omitted items remain unapproved. No approve-all default.",
+  "created_at": "2026-07-23T12:25:19Z"
+}

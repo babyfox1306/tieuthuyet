@@ -1,0 +1,198 @@
+```json
+{
+  "act": [31, 33],
+  "chapter_plans": [
+    {
+      "chapter": 31,
+      "title": "The Kill Choice",
+      "slug": "the-kill-choice",
+      "one_line_summary": "Elle Reyes faces the impossible choice: kill Damien Kroll and trigger the second dead man's switch, or let him live and stay hunted.",
+      "beat_summary": "Elle Reyes and Mira arrive at Kroll's estate. Mira goes to intercept Mariana Voss in the study, while Elle Reyes moves toward Kroll's private quarters. She finds him waiting for her — he knew she would come. Kroll offers her one final deal: walk away, and he will destroy the Project Phoenix file and the second switch. He admits he is afraid of Voss, and that if Elle kills him, Voss will destroy everything Elle has built. Elle Reyes realizes the impossible choice is real: kill him and lose her network, or let him live and stay hunted. She makes her decision — she will kill him, but she will do it in a way that frames Voss for his death, creating a chain of evidence that will neutralize both threats. The chapter ends with Elle Reyes injecting Kroll with the sedative, her hands steady, as she whispers: 'This is for Lucia. And for my sister.' Clue C009 is planted: a single strand of Mariana Voss's hair, which Elle Reyes plants on Kroll's collar to frame her.",
+      "must_happen": [
+        "Elle Reyes and Mira arrive at Kroll's estate; Mira goes to intercept Mariana Voss in the study.",
+        "Elle Reyes finds Damien Kroll waiting for her in his private quarters — he knew she would come and offers a final deal: walk away and he destroys both evidence packages.",
+        "Elle Reyes realizes the impossible choice is real: kill Kroll and trigger the second switch, or let him live and stay hunted.",
+        "Elle Reyes decides to kill Kroll in a way that frames Mariana Voss for his death, planting a strand of Voss's hair on his collar — clue C009 is planted.",
+        "Elle Reyes injects Damien Kroll with the sedative, whispering: 'This is for Lucia. And for my sister.'"
+      ],
+      "must_not": [
+        "Do not show Kroll's death — only the injection of the sedative.",
+        "Do not reveal Mira's confrontation with Voss — only that she has gone to intercept her."
+      ],
+      "opens_with": "\"'I knew you'd come, Elle. You're too predictable.' Kroll was sitting in his armchair, a glass of whiskey in his hand. 'The question is: are you predictable enough to make the same mistake twice?'\"",
+      "cliffhanger": "Elle Reyes watches the sedative take effect. Kroll's eyes flutter closed. She plants the strand of hair on his collar and steps back. Her phone buzzes — a text from Mira: 'Voss is neutralized. But she had a dead man's switch of her own. The network files are already in transit. You have six hours.'",
+      "signature_detail_hint": "The strand of hair Elle Reyes plants is the same shade of deep red as the lipstick smudge on the Black Serpent cigarette butt she found in chapter 10 — Mariana Voss's signature color.",
+      "emotional_beat": "Cold, methodical resolve mixed with the hollow weight of the choice — she has killed Kroll, but the cost is still unfolding, and she is not sure she can outrun it.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the impossible choice and the execution of the plan.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Execute the kill choice, plant clue C009, and set up the six-hour countdown. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "Kroll is sedated (death imminent); clue C009 is planted; Mira has neutralized Voss but the network files are in transit; Elle Reyes has six hours to intercept them before they go public.",
+      "narrative": {
+        "clues_plant": [
+          "C009"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elle Reyes",
+            "Damien Kroll",
+            "Sasha (Lawyer)",
+            "Dr. Lin (Coroner)",
+            "Wren (Hacker)",
+            "Detective Marcus Cole"
+          ],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Wren is the leak (confirmed in ch29)', \"Kroll's dead-man's-switch is a digital evidence package on her first kill\", 'Detective Cole is circling closer', 'Her network is fractured but not destroyed'], 'does_not_know_yet': [\"Who now holds the evidence after Kroll's death\", \"Cole's next move\", 'The full cost of the hunt']}",
+            "Damien Kroll: {'knows': ['Wren has been exposed as the leak', \"Elle knows about the dead-man's-switch\", 'Detective Cole is investigating Elle', 'The two-way hunt is reaching its endgame'], 'does_not_know_yet': ['That Elle will engineer his death', 'That his evidence will survive him', 'That the unknown handler exists']}",
+            "Sasha (Lawyer): {'knows': ['Wren is the leak (revealed in ch29)', 'The network is fractured', \"Elle's first kill is the ticking bomb\"], 'does_not_know_yet': ['Who holds the evidence after Kroll', \"Cole's level of suspicion\", 'The unknown handler']}",
+            "Dr. Lin (Coroner): {'knows': ['Wren is the leak', 'The network is fractured', \"Elle's first kill is the ticking bomb\"], 'does_not_know_yet': ['Who holds the evidence after Kroll', \"Cole's level of suspicion\", 'The unknown handler']}",
+            "Wren (Hacker): {'knows': ['She has been leaking to Kroll', 'Elle is closing in on the leak', \"Kroll's dead-man's-switch exists\"], 'does_not_know_yet': ['That Elle has confirmed she is the leak', 'The full cost of her betrayal']}",
+            "Detective Marcus Cole: {'knows': ['Elle is likely a vigilante killer', 'She has a network', 'Kroll is her target', 'He has no concrete evidence'], 'does_not_know_yet': [\"Elle's first kill details\", \"The dead-man's-switch\", 'The unknown handler']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 27
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 32,
+      "title": "The Final Race",
+      "slug": "the-final-race",
+      "one_line_summary": "With six hours before the network files go public, Elle Reyes races to intercept them — but Detective Cole closes in, and she must choose between her freedom and her network.",
+      "beat_summary": "Elle Reyes and Mira race against the clock. Mira reveals that the network files are being delivered to a journalist via a dead drop at the airport. They split up: Mira will intercept the courier, and Elle Reyes will go to the police station to buy time with Detective Cole. Elle Reyes walks into the station and faces Cole, who has the Project Phoenix file but no concrete evidence linking her to the murder. She plays the victim, claiming Kroll framed her because of her investigation. Cole is skeptical but has no arrest warrant. He lets her go, but warns her: 'If I find one piece of evidence linking you to a death, I will bring you down.' Elle Reyes leaves the station and receives a text from Mira: 'Courier intercepted. Files destroyed. But Cole has a tail on you. You can't go home.' The chapter ends with Elle Reyes on the run, her network safe but her freedom lost. She must now disappear — exactly as she planned.",
+      "must_happen": [
+        "Mira reveals that the network files are being delivered to a journalist via a dead drop at the airport; she and Elle Reyes split up to intercept them.",
+        "Elle Reyes goes to the police station to buy time with Detective Cole, playing the victim and claiming Kroll framed her.",
+        "Detective Cole lets Elle Reyes go but warns her: 'If I find one piece of evidence linking you to a death, I will bring you down.'",
+        "Mira intercepts the courier and destroys the network files — the network is safe.",
+        "Elle Reyes receives a text from Mira: 'Courier intercepted. Files destroyed. But Cole has a tail on you. You can't go home.' Elle Reyes is on the run."
+      ],
+      "must_not": [
+        "Do not show the full contents of the network files or how Mira destroyed them — only that they are destroyed.",
+        "Do not show Elle Reyes being arrested — only that she is on the run and cannot go home."
+      ],
+      "opens_with": "\"'Six hours.' I said it to myself as I walked into the police station. 'Six hours to save everything I built, and then I disappear.'\"",
+      "cliffhanger": "Elle Reyes stands at a bus station, a one-way ticket to a city she has never visited in her hand. Her phone buzzes. A text from Sasha: 'Cole just called me. He knows about the network. Not the details, but enough. He's coming for all of us. Run, Elle. Run and don't look back.'",
+      "signature_detail_hint": "The bus station has a vending machine with a single brand of cigarettes — Black Serpent — that Elle Reyes has never seen in a public vending machine before. It is a message from Mira, confirming she is watching.",
+      "emotional_beat": "Cold relief that the network is safe undercut by the hollow ache of losing her freedom — she has won, but the cost is everything she was.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the race against time and the loss of freedom.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Execute the race against time, the confrontation with Cole, and the beginning of Elle's disappearance. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "The network files are destroyed; Cole is closing in; Elle Reyes is on the run; the network is safe but fractured; Elle must now rebuild trust with the loyal members and plan her next move.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elle Reyes",
+            "Damien Kroll",
+            "Sasha (Lawyer)",
+            "Dr. Lin (Coroner)",
+            "Wren (Hacker)",
+            "Detective Marcus Cole"
+          ],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Wren is the leak (confirmed in ch29)', \"Kroll's dead-man's-switch is a digital evidence package on her first kill\", 'Detective Cole is circling closer', 'Her network is fractured but not destroyed'], 'does_not_know_yet': [\"Who now holds the evidence after Kroll's death\", \"Cole's next move\", 'The full cost of the hunt']}",
+            "Damien Kroll: {'knows': ['Wren has been exposed as the leak', \"Elle knows about the dead-man's-switch\", 'Detective Cole is investigating Elle', 'The two-way hunt is reaching its endgame'], 'does_not_know_yet': ['That Elle will engineer his death', 'That his evidence will survive him', 'That the unknown handler exists']}",
+            "Sasha (Lawyer): {'knows': ['Wren is the leak (revealed in ch29)', 'The network is fractured', \"Elle's first kill is the ticking bomb\"], 'does_not_know_yet': ['Who holds the evidence after Kroll', \"Cole's level of suspicion\", 'The unknown handler']}",
+            "Dr. Lin (Coroner): {'knows': ['Wren is the leak', 'The network is fractured', \"Elle's first kill is the ticking bomb\"], 'does_not_know_yet': ['Who holds the evidence after Kroll', \"Cole's level of suspicion\", 'The unknown handler']}",
+            "Wren (Hacker): {'knows': ['She has been leaking to Kroll', 'Elle is closing in on the leak', \"Kroll's dead-man's-switch exists\"], 'does_not_know_yet': ['That Elle has confirmed she is the leak', 'The full cost of her betrayal']}",
+            "Detective Marcus Cole: {'knows': ['Elle is likely a vigilante killer', 'She has a network', 'Kroll is her target', 'He has no concrete evidence'], 'does_not_know_yet': [\"Elle's first kill details\", \"The dead-man's-switch\", 'The unknown handler']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 27
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 33,
+      "title": "The Loyal Circle",
+      "slug": "the-loyal-circle",
+      "one_line_summary": "Elle Reyes rebuilds trust with the loyal network members — Sasha and Dr. Lin — and they form a plan to keep the network alive while Elle disappears.",
+      "beat_summary": "Elle Reyes goes underground, staying at a motel on the outskirts of the city. She calls Sasha and Dr. Lin to a secret meeting. The reunion is tense: Sasha is furious that Elle cut them out, Dr. Lin is relieved she is alive. Elle Reyes apologizes and explains everything — the watcher (Mira), the second dead man's switch, the kill, the frame on Voss. She tells them she is going to disappear, but she wants the network to continue without her. Sasha and Dr. Lin agree to keep the network alive, using the methods Elle taught them. The chapter ends with Elle Reyes giving Sasha the Minox camera — her most trusted tool — and telling her: 'You're in charge now. Trust your gut. And never leave a trace.' The network is rebuilt, and Elle Reyes walks away into the night, ready to disappear.",
+      "must_happen": [
+        "Elle Reyes calls Sasha and Dr. Lin to a secret meeting at a motel on the outskirts of the city.",
+        "The reunion is tense: Sasha is furious that Elle cut them out, Dr. Lin is relieved she is alive.",
+        "Elle Reyes explains everything — the watcher (Mira), the second dead man's switch, the kill, the frame on Voss — and tells them she is going to disappear.",
+        "Sasha and Dr. Lin agree to keep the network alive, using the methods Elle taught them.",
+        "Elle Reyes gives Sasha the Minox camera and tells her: 'You're in charge now. Trust your gut. And never leave a trace.' Elle Reyes walks away into the night."
+      ],
+      "must_not": [
+        "Do not show Elle Reyes's final destination or what she plans to do next — only that she is disappearing.",
+        "Do not show the network taking any new cases — only that they agree to continue."
+      ],
+      "opens_with": "\"'I'm sorry.' I said it before I even sat down. Sasha's eyes were cold. 'Sorry doesn't bring back the trust, Elle. But it's a start.'\"",
+      "cliffhanger": "Elle Reyes stands at the edge of the motel parking lot, the cold wind biting her face. She looks back once — Sasha and Dr. Lin are standing in the doorway, watching her go. She raises her hand in a silent goodbye. Then she turns and walks into the darkness, her thumb tapping her ring finger three times. She is gone.",
+      "signature_detail_hint": "The Minox camera Elle Reyes gives to Sasha has a small scratch on the lens — the same scratch that appears in every photograph Elle has ever taken with it, a signature flaw that only she would notice.",
+      "emotional_beat": "Bittersweet relief mixed with the hollow ache of leaving her network behind — she has rebuilt trust, but she has lost her place in the circle, and she must start over alone.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the rebuilding of trust and the farewell.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Execute the reunion, the rebuilding of trust, and the farewell. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "The network is rebuilt under Sasha's leadership; Elle Reyes has disappeared; the Kroll case is closed; the hunt is over, but Elle's story is not finished — she will return in Book 2.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elle Reyes",
+            "Damien Kroll",
+            "Sasha (Lawyer)",
+            "Dr. Lin (Coroner)",
+            "Wren (Hacker)",
+            "Detective Marcus Cole"
+          ],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Wren is the leak (confirmed in ch29)', \"Kroll's dead-man's-switch is a digital evidence package on her first kill\", 'Detective Cole is circling closer', 'Her network is fractured but not destroyed'], 'does_not_know_yet': [\"Who now holds the evidence after Kroll's death\", \"Cole's next move\", 'The full cost of the hunt']}",
+            "Damien Kroll: {'knows': ['Wren has been exposed as the leak', \"Elle knows about the dead-man's-switch\", 'Detective Cole is investigating Elle', 'The two-way hunt is reaching its endgame'], 'does_not_know_yet': ['That Elle will engineer his death', 'That his evidence will survive him', 'That the unknown handler exists']}",
+            "Sasha (Lawyer): {'knows': ['Wren is the leak (revealed in ch29)', 'The network is fractured', \"Elle's first kill is the ticking bomb\"], 'does_not_know_yet': ['Who holds the evidence after Kroll', \"Cole's level of suspicion\", 'The unknown handler']}",
+            "Dr. Lin (Coroner): {'knows': ['Wren is the leak', 'The network is fractured', \"Elle's first kill is the ticking bomb\"], 'does_not_know_yet': ['Who holds the evidence after Kroll', \"Cole's level of suspicion\", 'The unknown handler']}",
+            "Wren (Hacker): {'knows': ['She has been leaking to Kroll', 'Elle is closing in on the leak', \"Kroll's dead-man's-switch exists\"], 'does_not_know_yet': ['That Elle has confirmed she is the leak', 'The full cost of her betrayal']}",
+            "Detective Marcus Cole: {'knows': ['Elle is likely a vigilante killer', 'She has a network', 'Kroll is her target', 'He has no concrete evidence'], 'does_not_know_yet': [\"Elle's first kill details\", \"The dead-man's-switch\", 'The unknown handler']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 27
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

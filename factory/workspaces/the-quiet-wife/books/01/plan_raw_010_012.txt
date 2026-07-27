@@ -1,0 +1,152 @@
+{
+  "act": [10, 12],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Experiment",
+      "slug": "the-experiment",
+      "one_line_summary": "The housekeeper (unnamed narrator) confronts the wife about the hidden basement room, and the wife reveals she is not a victim but the husband's partner in a long-running psychological experiment — and the housekeeper (unnamed narrator) is the next subject.",
+      "beat_summary": "The housekeeper (unnamed narrator) corners Nora in the sunroom and demands the truth about the basement photographs. Nora calmly explains that Julian has been running a psychological study on vulnerable women for years — observing their behavior under stress, documenting their reactions. She shows the housekeeper (unnamed narrator) a ledger with names, dates, and behavioral notes. The housekeeper (unnamed narrator) is listed as 'Subject 8.' Nora claims she is Julian's unwilling assistant, forced to participate. But as the housekeeper (unnamed narrator) examines the ledger, she notices Nora's handwriting in the margins — observations that feel too personal, too eager.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) confronts Nora in the sunroom, demanding an explanation for the basement photographs and the 'DECEASED' markings. Nora's face shifts from fragile to calculating.",
+        "Nora reveals that Julian has been running a psychological experiment on vulnerable women for years — the basement is his observation room. She shows the housekeeper (unnamed narrator) a leather-bound ledger labeled 'Subjects.'",
+        "The ledger lists eight women, including Clara Higgins ('Subject 7 — Status: FLED') and the housekeeper (unnamed narrator) ('Subject 8 — Status: ACTIVE'). The entries include behavioral notes, stress triggers, and 'break points.'",
+        "Nora claims she is Julian's unwilling assistant — forced to help because he threatens her with institutionalization. She cries, but the housekeeper (unnamed narrator) notices her tears don't reach her eyes.",
+        "The housekeeper (unnamed narrator) examines the ledger closely and sees marginal notes in Nora's handwriting: 'Subject 8 responds to maternal cues. Use vulnerability.' She realizes Nora is not a victim — she is an active participant.",
+        "The housekeeper (unnamed narrator) pockets a small object from the sunroom — a paperweight — as a potential weapon, and tells Nora she needs time to process. She leaves, her mind racing."
+      ],
+      "must_not": [
+        "Do not reveal that Nora is the sole architect of the 'experiment' — Julian is not a partner, he is a dupe who believes the basement is Nora's art therapy space.",
+        "Do not reveal that the 'DECEASED' women are alive and living under new identities Nora helped them create.",
+        "Do not reveal that the ledger is a forgery Nora created to frame Julian and manipulate the housekeeper (unnamed narrator)."
+      ],
+      "opens_with": "\"You want the truth?\" Nora said, and her voice was no longer a whisper. It was a blade. \"Fine. Let me show you what your husband really is.\"",
+      "cliffhanger": "The housekeeper (unnamed narrator) retreats to her room and examines the ledger page she tore out. She notices something she missed: in the margin next to 'Subject 7 — Clara Higgins,' Nora has written: 'Failed. Must choose more carefully next time.' The housekeeper (unnamed narrator) realizes Nora is not a pawn. She is the queen.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of times Nora blinks during the confrontation: 47 blinks in 10 minutes. She wonders if Nora is counting her own lies.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, clarifying rage. She was not the predator. She was not even the prey. She was a specimen in a jar, and Nora was the one holding the magnifying glass.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The intimacy is psychological — Nora's manipulation is a form of seduction, but it is predatory, not romantic.",
+      "chapter_task": "Write 1700-1900 words planting clue C007 (the ledger with Nora's marginal notes) as a seed for Tier 2. The confrontation scene should feel like a power shift: Nora drops the victim mask and reveals herself as a cold, calculating observer. The housekeeper (unnamed narrator) must appear to believe Nora's story about Julian while internally recognizing Nora's active role. End with the torn ledger page and the chilling realization that Nora is the architect. Maintain the unreliable narrator's voice: the housekeeper (unnamed narrator) is now actively hiding her discoveries from both Nora and the reader.",
+      "carries_to_next": "The housekeeper (unnamed narrator) now has evidence that Nora is the mastermind behind the 'experiment.' She must decide how to use this information — confront Nora directly, gather more evidence, or flee before she becomes the next 'Subject' marked 'DECEASED.'",
+      "narrative": {
+        "clues_plant": ["C007"],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T04", "T05", "T06", "T07", "T08", "T09"],
+        "knowledge": {
+          "pov_characters": ["the_housekeeper_narrator", "the_wife", "the_husband", "clara_higgins", "dr_ellis"],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['the husband has a temper', \"the wife is 'fragile' and seems controlled\", \"a previous housekeeper named Clara Higgins 'left suddenly'\", 'the locked room exists', 'she has pocketed small valuables', 'the wife is an active participant in the experiment', 'the wife has a ledger with behavioral notes'], 'does_not_know': [\"the wife's manipulation is the frame job\", 'the locked room contains the wife's planning materials', 'the wife is testing her suitability as a patsy']}",
+            "the_wife: {'knows': ['she has planted evidence against the husband (photo of Clara)', \"she has a ledger of past targets and the housekeeper's name\", \"she has the housekeeper's fingerprints on a knife\", \"she is testing the housekeeper's suitability\"], 'does_not_know': ['the housekeeper is also running a con', 'the housekeeper has pocketed small valuables']}",
+            "the_husband: {'knows': [\"his wife is 'testing' the new housekeeper\", \"the locked room contains his wife's materials\", 'he is being set up as a villain'], 'does_not_know': [\"the full extent of his wife's plan\", 'that he is the target of a murder plot']}",
+            "clara_higgins: {'knows': ['she is in hiding', 'the wife may be looking for her'], 'does_not_know': ['the new housekeeper has found her photograph']}",
+            "dr_ellis: {'knows': ['the husband has a temper', 'the wife is more alert than she appears'], 'does_not_know': ['anything about the frame job']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 11,
+      "title": "The Subjects",
+      "slug": "the-subjects",
+      "one_line_summary": "The wife gives the housekeeper (unnamed narrator) access to the study files, where she reads about the previous subjects — including Clara's fate — and realizes the experiment is far more dangerous than she assumed.",
+      "beat_summary": "The morning after the confrontation, Nora approaches the housekeeper (unnamed narrator) with a proposition: she will give the housekeeper (unnamed narrator) full access to Julian's study files so she can see the truth for herself. The housekeeper (unnamed narrator) agrees, knowing it is a trap but needing the information. In the study, she finds a locked cabinet containing detailed dossiers on each 'Subject' — psychological profiles, recorded conversations, video transcripts. Clara Higgins's file is thickest. It describes her gradual breakdown over six months, her growing paranoia, and her eventual 'escape' — which the notes suggest was staged by Julian. The housekeeper (unnamed narrator) photographs everything. She now believes Julian is a monster. But she also knows Nora is feeding her this information deliberately. She is being led, and she doesn't know where.",
+      "must_happen": [
+        "Nora approaches the housekeeper (unnamed narrator) in the kitchen and offers her access to Julian's study files. She says, 'You want to know the truth? Read his files. He keeps everything.'",
+        "The housekeeper (unnamed narrator) enters the study and finds a locked cabinet. She picks the lock and discovers detailed dossiers on each 'Subject' — including psychological profiles, recorded conversations, and video transcripts.",
+        "She reads Clara Higgins's file. It describes Clara's growing paranoia over six months, her accusations against Julian, and her eventual 'escape' — which the file notes as 'Stage 4: Termination. Subject fled as expected.'",
+        "The housekeeper (unnamed narrator) finds her own file. It is already partially filled — with notes on her compulsive counting, her earlobe-touch lie, her protective feelings toward Nora. She realizes she has been observed since day one.",
+        "She photographs every page of her file and Clara's file. As she leaves the study, she notices a small camera hidden in the bookshelf, pointed directly at the cabinet. Nora is watching her.",
+        "The housekeeper (unnamed narrator) returns to her room and reviews the photos. She sees a note in Clara's file that reads: 'Subject 7 was too empathetic. Subject 8 is more pragmatic. She will stay longer.'"
+      ],
+      "must_not": [
+        "Do not reveal that the study files are Nora's forgeries — Julian has no knowledge of the 'experiment' or the dossiers.",
+        "Do not reveal that the hidden camera was placed by Nora, not Julian.",
+        "Do not reveal that Clara's 'escape' was actually Nora's failed frame attempt — Clara fled before Nora could complete the setup."
+      ],
+      "opens_with": "\"He keeps everything,\" Nora said, handing me the key to Julian's study. \"Every word we've ever spoken. Every move you've made. He's been watching you since the moment you walked through the door.\"",
+      "cliffhanger": "The housekeeper (unnamed narrator) is about to leave the study when she notices a manila envelope taped to the underside of the desk. Inside is a single photograph: Clara Higgins, alive and well, holding a newspaper dated three months ago. Written on the back in Clara's handwriting: 'She's still looking for me. Don't trust the files.'",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of pages in her own file: 47. She wonders if Nora has a counting compulsion too — or if she is being mocked.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels the walls closing in. Every piece of evidence she finds contradicts the last. She trusts no one — not Julian, not Nora, and not her own judgment.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is paranoid and claustrophobic. The housekeeper (unnamed narrator) is alone in a house of mirrors.",
+      "chapter_task": "Write 1700-1900 words planting clue C016 (Clara's photograph with the warning message) as a seed for Tier 3. The study scene should feel like a revelation — the reader should believe Julian is a predator — but plant subtle contradictions: the camera is too obvious, the files are too neat, Clara's warning contradicts the narrative. The housekeeper (unnamed narrator) must appear to accept Nora's version while internally questioning everything. End with Clara's photograph to create a new mystery. Maintain the unreliable narrator's voice: the housekeeper (unnamed narrator) is drowning in information and cannot tell truth from manipulation.",
+      "carries_to_next": "The housekeeper (unnamed narrator) now has contradictory evidence: Nora's files paint Julian as a predator, but Clara's photograph suggests Nora is the one to fear. She must decide which thread to pull — and whether to confront Nora with Clara's warning or keep it hidden.",
+      "narrative": {
+        "clues_plant": ["C016"],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T04", "T05", "T06", "T07", "T08", "T09"],
+        "knowledge": {
+          "pov_characters": ["the_housekeeper_narrator", "the_wife", "the_husband", "clara_higgins", "dr_ellis"],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['the husband has a temper', \"the wife is 'fragile' and seems controlled\", \"a previous housekeeper named Clara Higgins 'left suddenly'\", 'the locked room exists', 'she has pocketed small valuables', 'the wife is an active participant in the experiment', 'the wife has a ledger with behavioral notes', 'Clara Higgins is alive and warned her not to trust the files'], 'does_not_know': [\"the wife's manipulation is the frame job\", 'the locked room contains the wife's planning materials', 'the wife is testing her suitability as a patsy']}",
+            "the_wife: {'knows': ['she has planted evidence against the husband (photo of Clara)', \"she has a ledger of past targets and the housekeeper's name\", \"she has the housekeeper's fingerprints on a knife\", \"she is testing the housekeeper's suitability\"], 'does_not_know': ['the housekeeper is also running a con', 'the housekeeper has pocketed small valuables', 'Clara Higgins left a warning']}",
+            "the_husband: {'knows': [\"his wife is 'testing' the new housekeeper\", \"the locked room contains his wife's materials\", 'he is being set up as a villain'], 'does_not_know': [\"the full extent of his wife's plan\", 'that he is the target of a murder plot']}",
+            "clara_higgins: {'knows': ['she is in hiding', 'the wife may be looking for her'], 'does_not_know': ['the new housekeeper has found her photograph']}",
+            "dr_ellis: {'knows': ['the husband has a temper', 'the wife is more alert than she appears'], 'does_not_know': ['anything about the frame job']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 12,
+      "title": "The Architect",
+      "slug": "the-architect",
+      "one_line_summary": "The housekeeper (unnamed narrator) confronts the wife about Subject 7, and the wife admits she is not a victim — she is the architect of the husband's collection, and the narrator is now part of it.",
+      "beat_summary": "Armed with Clara's photograph and warning, the housekeeper (unnamed narrator) confronts Nora in the sunroom. She demands to know the truth about Subject 7. Nora's mask finally cracks. She admits that she — not Julian — is the architect of the 'experiment.' She has been collecting vulnerable women for years, studying them, and using them as pawns in a larger game. She needed someone disposable to frame for Julian's murder, and the housekeeper (unnamed narrator) was perfect. But Nora reveals one more thing: she has already planted evidence linking the housekeeper (unnamed narrator) to a crime — the murder of Clara Higgins, whose body Nora claims is buried in the garden. The housekeeper (unnamed narrator) is trapped. If she runs, the police will find the evidence. If she stays, Nora will use her. The chapter ends with Nora offering a deal: help her kill Julian, and she will destroy the evidence.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) confronts Nora in the sunroom, holding Clara's photograph. She demands the truth about Subject 7.",
+        "Nora's mask cracks. She admits she is the architect of the 'experiment' — Julian is not a predator, he is a dupe. She has been collecting vulnerable women for years, using them as pawns.",
+        "Nora reveals that she has planted evidence linking the housekeeper (unnamed narrator) to Clara Higgins's murder — fingerprints on a knife, a journal entry confessing to the crime, and a witness (the delivery driver Leo) who will testify that the housekeeper (unnamed narrator) threatened Clara.",
+        "The housekeeper (unnamed narrator) realizes she is trapped. If she runs, the police will find the evidence. If she stays, Nora will use her as a patsy for Julian's murder.",
+        "Nora offers a deal: help her kill Julian, and she will destroy the evidence. The housekeeper (unnamed narrator) pretends to consider it, buying time.",
+        "The housekeeper (unnamed narrator) excuses herself to 'think about it.' In her room, she begins planning her counter-con — she will not kill Julian, but she will find a way to expose Nora and escape."
+      ],
+      "must_not": [
+        "Do not reveal that Clara Higgins is still alive — the 'murder' is a bluff Nora is using to control the housekeeper (unnamed narrator).",
+        "Do not reveal that the planted evidence is incomplete — Nora has the knife and the journal, but the witness (Leo) is a paid actor who will recant under pressure.",
+        "Do not reveal that the housekeeper (unnamed narrator) has already photographed all the evidence in the study and the basement, giving her leverage she doesn't yet know how to use."
+      ],
+      "opens_with": "\"You want to know about Subject 7?\" Nora said, and her voice was silk over steel. \"I'll tell you. But first, you need to understand something: you're not here to save me. You're here to take my place.\"",
+      "cliffhanger": "The housekeeper (unnamed narrator) returns to her room and opens her hidden journal. She writes: 'Nora thinks she has me. But she doesn't know about the photographs. She doesn't know I've been planning my own escape since the day I arrived. And she doesn't know that I've already found Clara's phone number in the study files. Tomorrow, I call Clara. And then I burn this house to the ground.'",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of lies Nora told during the confrontation: 47. She stops counting after that. The number is no longer a coincidence. It is a declaration of war.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, clear purpose. She is no longer afraid. She is no longer confused. She knows exactly who her enemy is, and she will not go down without a fight.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The power dynamic is inverted: Nora thought she was the puppet master, but the housekeeper (unnamed narrator) has been playing her own game all along.",
+      "chapter_task": "Write 1700-1900 words paying off clues C001 (the key/note from Chapter 1) and C002 (the journal/photos from Chapter 2) — reveal that they were planted by Nora to test the housekeeper (unnamed narrator). Plant clue C008 (the housekeeper's (unnamed narrator) hidden journal with her counter-plan) as a seed for Tier 2. The confrontation scene should be the emotional climax of the act — Nora's full reveal as the villain, and the housekeeper's (unnamed narrator) transformation from prey to predator. End with the housekeeper's (unnamed narrator) resolve to fight back. Maintain the unreliable narrator's voice: the housekeeper (unnamed narrator) is now keeping her counter-plan secret from the reader, creating dramatic irony.",
+      "carries_to_next": "The housekeeper (unnamed narrator) now knows the full truth: Nora is the architect of a frame job, and she is the patsy. She has 24 hours to decide whether to accept Nora's deal, call Clara for help, or execute her own escape plan. Act 3 will be a battle of wits between two women who are both running long cons.",
+      "narrative": {
+        "clues_plant": ["C008"],
+        "clues_payoff": ["C001", "C002"],
+        "reveals": [{"id": "MR01", "reveal": "Nora is the architect of the frame job — she has been collecting vulnerable women for years and using them as pawns.", "impact": "The reader now knows Nora is the true villain, not Julian.", "reveal_weight": "major", "required_clues": ["C001", "C002", "C003", "C004"], "min_clues_required": 2}],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T04", "T05", "T06", "T07", "T08", "T09"],
+        "knowledge": {
+          "pov_characters": ["the_housekeeper_narrator", "the_wife", "the_husband", "clara_higgins", "dr_ellis"],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['the husband has a temper', \"the wife is 'fragile' and seems controlled\", \"a previous housekeeper named Clara Higgins 'left suddenly'\", 'the locked room exists', 'she has pocketed small valuables', 'the wife is an active participant in the experiment', 'the wife has a ledger with behavioral notes', 'Clara Higgins is alive and warned her not to trust the files', 'Nora is the architect of the frame job', 'Nora has planted evidence against her'], 'does_not_know': [\"Clara's phone number is real\", 'the witness Leo is a paid actor']}",
+            "the_wife: {'knows': ['she has planted evidence against the husband (photo of Clara)', \"she has a ledger of past targets and the housekeeper's name\", \"she has the housekeeper's fingerprints on a knife\", \"she is testing the housekeeper's suitability\", 'the housekeeper now knows her true role'], 'does_not_know': ['the housekeeper is also running a con', 'the housekeeper has pocketed small valuables', 'Clara Higgins left a warning', 'the housekeeper has photographed all the evidence']}",
+            "the_husband: {'knows': [\"his wife is 'testing' the new housekeeper\", \"the locked room contains his wife's materials\", 'he is being set up as a villain'], 'does_not_know': [\"the full extent of his wife's plan\", 'that he is the target of a murder plot']}",
+            "clara_higgins: {'knows': ['she is in hiding', 'the wife may be looking for her'], 'does_not_know': ['the new housekeeper has found her photograph', 'the new housekeeper has her phone number']}",
+            "dr_ellis: {'knows': ['the husband has a temper', 'the wife is more alert than she appears'], 'does_not_know': ['anything about the frame job']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}

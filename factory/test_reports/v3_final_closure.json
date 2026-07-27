@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "kind": "v3_final_closure",
+  "ok": true,
+  "git_head": "32f0b1028659d56b2913be5dd67f1ee72ae3d54e",
+  "command": "python -m factory.engine.tests.run_isolated_suite",
+  "tests_run": 717,
+  "passed": 716,
+  "failures": [],
+  "errors": [],
+  "skipped": [
+    {
+      "test": "test_spice_exceeds_max_fails_not_clamp (test_canon_registry.CanonRegistrySecondShadowTests)",
+      "reason": "fixture ch1 still contains forbidden names — spice isolation only"
+    }
+  ],
+  "failure_count": 0,
+  "error_count": 0,
+  "skip_count": 1,
+  "duration_seconds": 116.664,
+  "isolation_seed": {
+    "catalog_dirs": 22,
+    "workspace_dirs": 0,
+    "workspaces_dirs": 19
+  },
+  "production_snapshot_before": {
+    "roots": {
+      "catalog": "D:\\tieuthuyet\\tieuthuyet\\catalog",
+      "workspaces": "D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces",
+      "archive": "D:\\tieuthuyet\\tieuthuyet\\archive",
+      "canary_runs": "D:\\tieuthuyet\\tieuthuyet\\factory\\canary_runs"
+    },
+    "file_counts": {
+      "catalog": 565,
+      "workspaces": 1826,
+      "archive": 363,
+      "canary_runs": 1826
+    }
+  },
+  "production_snapshot_after": {
+    "roots": {
+      "catalog": "D:\\tieuthuyet\\tieuthuyet\\catalog",
+      "workspaces": "D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces",
+      "archive": "D:\\tieuthuyet\\tieuthuyet\\archive",
+      "canary_runs": "D:\\tieuthuyet\\tieuthuyet\\factory\\canary_runs"
+    },
+    "file_counts": {
+      "catalog": 565,
+      "workspaces": 1826,
+      "archive": 363,
+      "canary_runs": 1826
+    }
+  },
+  "preexisting_test_shaped_paths": {
+    "catalog": [
+      "D:\\tieuthuyet\\tieuthuyet\\catalog\\demo",
+      "D:\\tieuthuyet\\tieuthuyet\\catalog\\enf",
+      "D:\\tieuthuyet\\tieuthuyet\\catalog\\ws"
+    ],
+    "workspaces": [
+      "D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces\\demo"
+    ]
+  },
+  "production_leaks": [],
+  "leak_count": 0,
+  "leak_error": null,
+  "created_at": "2026-07-24T05:58:55.454217+00:00"
+}

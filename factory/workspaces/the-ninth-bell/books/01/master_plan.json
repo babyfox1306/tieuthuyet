@@ -1,0 +1,292 @@
+{
+  "book": 1,
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Bell Before Arrival",
+      "slug": "the-bell-before-arrival",
+      "one_line_summary": "Clara Vale arrives at the condemned bell tower, hears a damaged recording of her dead sister Elin's voice, and detects a mysterious metallic double pulse beneath it.",
+      "beat_summary": "Gabriel Rook informs Clara that the ninth bell rang before she crossed the causeway. Clara enters the inherited tower, learns the village legend that bells preserve the voices of the dead, and plays a damaged recording containing Elin's voice. She detects a faint metallic double pulse beneath the recording, which cuts off abruptly on the second playback after Elin's voice addresses her.",
+      "must_happen": [
+        "Gabriel tells Clara the ninth bell rang before she crossed the causeway.",
+        "Clara enters the condemned tower she has inherited.",
+        "The village legend says the bells preserve the voices of the dead.",
+        "Clara hears a damaged recording containing Elin's voice.",
+        "Clara detects a faint metallic double pulse beneath the recording."
+      ],
+      "must_not": [
+        "Reveal the origin or mechanism behind the recordings.",
+        "Introduce Thomas Vale or his involvement in the tower.",
+        "Explain the truth of Elin's fall or imply Clara's guilt."
+      ],
+      "opens_with": "Gabriel’s voice cut through the mist: 'The ninth bell tolled an hour before you crossed the causeway.'",
+      "cliffhanger": "On the second playback, Elin's damaged voice clearly addresses Clara before the metallic double pulse cuts the recording dead.",
+      "signature_detail_hint": "The way sound bends around the corroded bronze of the bells, creating a faint, unsettling echo in the stairwell.",
+      "emotional_beat": "Isolation and creeping dread as Clara confronts her sister's ghost in a place she swore never to return.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words, establishing the setting, introducing the core mystery through Clara's forensic perspective, and ending with the cliffhanger of Elin's addressed voice and abrupt cutoff.",
+      "carries_to_next": "Clara's detection of the metallic double pulse and her determination to analyze the recording's anomalies further."
+    },
+    {
+      "chapter": 2,
+      "title": "Eight Dead Voices",
+      "slug": "eight-dead-voices",
+      "one_line_summary": "Clara analyzes eight archived recordings linked to village deaths, discovers repeated editing artifacts and a shared resonance, concluding that physical manipulation is possible but the method remains unknown.",
+      "beat_summary": "Clara examines eight recordings associated with village deaths, and her forensic confidence begins to return. She finds repeated editing artifacts and detects the same unexplained resonance across all recordings. She concludes there may be physical manipulation but cannot yet determine how or by whom, isolating an anomaly shared by all eight and Elin's tape.",
+      "must_happen": [
+        "Clara examines eight archived recordings associated with village deaths.",
+        "Her forensic confidence begins to return.",
+        "She finds repeated editing artifacts.",
+        "She detects the same unexplained resonance across the recordings.",
+        "She concludes there may be physical manipulation but not how or by whom."
+      ],
+      "must_not": [
+        "Reveal the acoustic surveillance system or its components.",
+        "Explain the source of the resonance or editing artifacts.",
+        "Introduce Thomas Vale or link the manipulation to him directly."
+      ],
+      "opens_with": "The first recording crackled to life—a fisherman’s final words swallowed by static—and Clara’s hands steadied over the waveform analyzer.",
+      "cliffhanger": "Clara isolates an anomaly shared by all eight recordings and Elin's tape: a consistent 0.2-second dropout at 340 Hz that shouldn’t exist in natural sound.",
+      "signature_detail_hint": "The dropout occurs precisely when each recording captures the toll of a specific bell, suggesting a mechanical link.",
+      "emotional_beat": "Professional focus mixed with growing unease as Clara realizes the manipulation is systematic and recent.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words, detailing Clara’s forensic analysis, building tension through technical discoveries, and culminating in the shared anomaly that points to a hidden pattern.",
+      "carries_to_next": "The shared anomaly leads Clara to suspect the tower's physical structure is involved in the recordings."
+    },
+    {
+      "chapter": 3,
+      "title": "The Voice That Has Not Spoken Yet",
+      "slug": "the-voice-that-has-not-spoken-yet",
+      "one_line_summary": "Clara proves the metallic double pulse marks edit seams, hears her own voice confessing from the ninth bell, and begins to question whether the confession is suppressed memory, prophecy, or fabrication.",
+      "beat_summary": "Clara proves the metallic double pulse marks edit seams in the recordings. The silent ninth bell produces her apparent confession in her exact voice. She considers possibilities—suppressed memory, prediction, fabrication—but no final explanation is permitted, and she identifies that the confession contains pieces from different recordings.",
+      "must_happen": [
+        "Clara proves the metallic double pulse marks edit seams.",
+        "The silent ninth bell produces Clara's apparent confession.",
+        "The exact confession is heard in Clara's own voice.",
+        "Clara considers suppressed memory, prediction, and fabrication.",
+        "Clara identifies the first sign that the confession contains pieces from different recordings."
+      ],
+      "must_not": [
+        "Reveal the full truth of the acoustic system or who built it.",
+        "Provide a definitive explanation for the confession's origin.",
+        "Allow Clara to remember or prove her innocence regarding Elin's death yet."
+      ],
+      "opens_with": "The ninth bell rang with a sound like cracking bone, and from its bronze throat spilled Clara’s own voice: 'I knew she would fall.'",
+      "cliffhanger": "Clara identifies that the confession tape contains a background hiss matching a recording made three years after Elin's death, proving it’s assembled from fragments.",
+      "signature_detail_hint": "The confession tape’s surface shows microscopic scratches that align with the same pattern found on the eight death recordings.",
+      "emotional_beat": "Crisis of identity and guilt as Clara confronts a version of herself she cannot recall or reconcile.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words, focusing on Clara’s technical proof of edit seams, the shocking reveal of her confession, and her internal turmoil, ending with the clue that the confession is fabricated from multiple sources.",
+      "carries_to_next": "The realization that the confession is assembled from different recordings, driving Clara to investigate the tower’s hidden acoustic system further."
+    },
+    {
+      "chapter": 4,
+      "title": "The Confession in Pieces",
+      "slug": "the-confession-in-pieces",
+      "one_line_summary": "Clara traces every syllable of her confession back to stolen fragments from family tapes and professional interviews, proving the recording was surgically assembled by someone who accessed her archive across multiple locations.",
+      "beat_summary": "Clara magnifies the confession waveform and identifies micro-splices where syllables were excised and reassembled. She cross-references each stolen word against her personal family recordings, matching room tone and background noise to confirm origin. She then discovers fragments pulled from her own professional broadcast interviews—recordings stored hundreds of miles away—proving the maker had access beyond the tower. The confession is a deliberate fabrication, but the maker's identity and motive remain unknown.",
+      "must_happen": [
+        "Clara magnifies the confession recording and identifies micro-splices at every syllable boundary.",
+        "She matches stolen syllables to specific family recordings by comparing room tone and background artifacts.",
+        "She finds additional fragments sourced from her own professional interviews conducted at remote broadcast facilities.",
+        "She proves the confession was deliberately assembled through forensic splice analysis, not spontaneous speech.",
+        "The maker and their motive remain unidentified despite the evidence trail."
+      ],
+      "must_not": [
+        "Reveal who built the acoustic surveillance system or its full infrastructure.",
+        "Identify Thomas Vale as the maker of the confession tape.",
+        "Allow Clara to access the sealed chamber or its contents.",
+        "Provide a complete explanation of how the recordings are captured."
+      ],
+      "opens_with": "At 400x magnification, the confession split into jagged continents—each syllable an island with a shoreline that didn't match its neighbor.",
+      "cliffhanger": "The final word of the confession—\"anyway\"—traces to a broadcast interview Clara gave in Manchester, three hundred miles from the tower, proving the maker reached well beyond the family archive to silence her.",
+      "signature_detail_hint": "The micro-splices leave a consistent pattern of overlapping magnetic oxide particles, like two fingerprints pressed into the same space at slightly different angles.",
+      "emotional_beat": "Forensic focus turning to violation—someone harvested her own voice to build her condemnation, and the precision of it is more terrifying than any ghost.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words. Structure it as a tightening spiral of forensic discovery: Clara begins with technical confidence, each splice match narrows the field of possibility, and the final revelation—that the maker accessed her remote professional archive—collapses her assumption that the threat is local to the tower. End on the Manchester trace as both proof of deliberate fabrication and proof of the maker's reach.",
+      "carries_to_next": "The confession is proven fabricated, but Clara's own memories of Elin's death remain fragmented and unreliable, setting up her need to revisit what she actually remembers versus what she was told."
+    },
+    {
+      "chapter": 5,
+      "title": "The Memory They Gave Me",
+      "slug": "the-memory-they-gave-me",
+      "one_line_summary": "Mara Venn reveals that Thomas systematically questioned young Clara after Elin's death, reshaping her fragmented memories into a coherent guilt narrative, and Clara recognizes that her own conviction of culpability may have been installed rather than remembered.",
+      "beat_summary": "Mara contacts Clara and reveals what she witnessed after Elin's death: Thomas repeatedly questioned the young Clara, pressing her for details she couldn't recall, then providing his own version until she adopted it. Clara recognizes specific phrases from her own guilt that first appeared in Thomas's voice, not her own memories. The investigation stays grounded in evidence—no perfect recovered memory is claimed—but Clara now understands that her emotional certainty of guilt may be a manufactured artifact, as fabricated as the confession tape.",
+      "must_happen": [
+        "Mara reveals that Clara's memory of the period after Elin's death was fragmented and unreliable.",
+        "Mara describes how Thomas repeatedly questioned young Clara and supplied his own version of events.",
+        "Clara recognizes that her guilt narrative contains language and phrasing that originated with Thomas, not with her own recollection.",
+        "Clara acknowledges that guilt may have been taught rather than remembered, without claiming perfect recovery of the true memory.",
+        "Clara identifies specific verbal patterns in her own guilt that match Thomas's questioning style, providing evidence-based grounds for doubt."
+      ],
+      "must_not": [
+        "Reveal the full mechanism of the acoustic surveillance system.",
+        "Allow Clara to perfectly recover what actually happened on the day of Elin's death.",
+        "Identify Thomas as the builder of the system or the maker of the confession tape.",
+        "Resolve the question of what Thomas's true motive was for shaping Clara's memory."
+      ],
+      "opens_with": "Mara's voice on the phone was steady in the way people are steady when they have rehearsed a sentence for eighteen years.",
+      "cliffhanger": "Clara pulls her own childhood testimony from the family file and finds the phrase \"I left her there\"—a phrase Thomas used in his first questioning session, recorded on a tape she had never been allowed to hear.",
+      "signature_detail_hint": "The family file contains a cassette labeled only with a date and the word \"clarification\" in Thomas's handwriting, its tape counter frozen at 14:37 as though stopped mid-sentence.",
+      "emotional_beat": "Vertigo of identity—Clara has built her entire adult life around a guilt she now suspects was given to her, and dismantling it means confronting who she is without it.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words. Mara's testimony must feel like testimony—specific, grounded, slightly reluctant, full of the details someone remembers when they have carried guilt for a secret. Clara's response should be analytical first, emotional second: she tests Mara's account against physical evidence (the tapes, the file). The climax is the discovery of the \"clarification\" cassette and the planted phrase. Do NOT give Clara full recovered memory; let her arrive at reasonable, evidence-supported doubt.",
+      "carries_to_next": "Clara now suspects Thomas deliberately shaped her memory, but she needs physical evidence of his involvement in the tower itself—not just his psychological manipulation—to prove the connection."
+    },
+    {
+      "chapter": 6,
+      "title": "The Space Behind the Wall",
+      "slug": "the-space-behind-the-wall",
+      "one_line_summary": "Cross-referencing Thomas's official tower records against the actual structure, Clara discovers a sealed section of wall that conceals an entrance to a hidden chamber, proving the tower contains architecture that Thomas deliberately excluded from all documentation.",
+      "beat_summary": "Clara compares Thomas's documented account of the tower's layout against physical measurements and discovers a gap: a section of the seventh-floor wall is thicker than any structural plan permits. Acoustic analysis reveals the wall dampens sound in a pattern consistent with an adjacent void. She maps inconsistencies between Thomas's testimony and the tower's actual infrastructure, confirming that a sealed room exists behind apparently solid masonry. She proves the entrance is concealed but does not yet open it or learn its contents.",
+      "must_happen": [
+        "Clara identifies inconsistencies between Thomas's documented account and the tower's physical measurements.",
+        "Acoustic analysis of the seventh-floor wall reveals a void behind the masonry inconsistent with the published layout.",
+        "Clara maps infrastructure elements—pipes, cables, structural supports—that do not appear in any official tower documentation.",
+        "She proves that an apparently solid section of wall conceals an entrance to a hidden space.",
+        "The purpose and contents of the concealed chamber remain unknown."
+      ],
+      "must_not": [
+        "Open the sealed chamber or reveal its full contents.",
+        "Reveal the complete truth of Elin's death.",
+        "Expose the full acoustic surveillance system.",
+        "Allow Clara to enter the hidden space in this chapter."
+      ],
+      "opens_with": "The wall was supposed to be thirty-two centimeters thick. Clara's tap meter read forty-seven.",
+      "cliffhanger": "Clara presses her palm against the sealed wall and feels vibration—not from the bells above, but from somewhere behind the stone, a low mechanical pulse that matches the resonance signature she isolated in every recording.",
+      "signature_detail_hint": "The mortar in the sealed section is a different composition than the rest of the tower—calcium silicate instead of lime—and its carbon-dating would place it at least fifteen years after the tower's original construction.",
+      "emotional_beat": "Claustrophobic anticipation and a fracture in Clara's trust of physical space—every surface in the tower could be hiding something, and the architecture itself has been lying.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words. Structure it as an investigation of physical space: Clara moves from document analysis to measurement to acoustic testing, each step confirming that something is hidden. The chapter should feel architectural and tactile—stone, mortar, vibration, air pressure. Build toward the wall as a threshold: proved to exist, not yet breached. The final vibration behind the stone must connect back to the resonance anomaly from chapters 2-3, creating a direct link between the recordings and the hidden infrastructure.",
+      "carries_to_next": "The concealed chamber is proven to exist and connected to the recording system, driving Clara to find a way inside and confront whoever sealed it."
+    },
+    {
+      "chapter": 7,
+      "title": "What Gabriel Helped Hide",
+      "slug": "what-gabriel-helped-hide",
+      "one_line_summary": "Clara confronts Gabriel with acoustic evidence of a witness positioned at Elin's fall, and he admits helping Thomas conceal part of the surveillance system—but withholds the sealed chamber.",
+      "beat_summary": "Clara confronts Gabriel in the tower stairwell with her resonance mapping from chapter 6, showing the vibration behind the sealed wall matches the shared anomaly in all recordings. Gabriel, cornered, admits he helped Thomas route and conceal the pipe-and-cable infrastructure that feeds the acoustic system—he knew it was surveillance, not supernatural preservation. He describes how Thomas recruited him in the late 1990s under the guise of structural maintenance. Clara presses for what the system captured on the day Elin died; Gabriel reveals that the resonance pattern locks onto a listener position at the platform edge—where Thomas claimed no one was standing. Gabriel still withholds the existence and location of the sealed chamber, insisting he doesn't have access.",
+      "must_happen": [
+        "Gabriel admits helping conceal part of the acoustic surveillance system by routing pipes and cables during supposed maintenance.",
+        "Thomas's role in designing and building the system becomes substantially established through Gabriel's description of his recruitment and Thomas's technical directives.",
+        "Acoustic evidence—resonance mapping—shows someone was positioned at the maintenance platform edge during Elin's final confrontation, contradicting Thomas's account.",
+        "Gabriel still withholds the complete truth about the sealed chamber and its contents.",
+        "Clara reclassifies Gabriel from potential ally to compromised witness whose testimony is incomplete."
+      ],
+      "must_not": [
+        "Reveal the sealed chamber's location, how to open it, or its contents.",
+        "Show Thomas present or confronting Clara directly in this chapter.",
+        "Reveal what actually happened to Elin on the platform beyond the resonance positioning evidence.",
+        "Present Gabriel as the primary architect or mastermind of the system."
+      ],
+      "opens_with": "\"You routed those pipes yourself,\" Clara said, pressing the resonance map against the railing. \"Section by section, for three months in 1998. That's what the maintenance logs actually cover.\"",
+      "cliffhanger": "Gabriel's resonance projection places the listener forty centimeters from the platform edge at the exact frequency of Elin's recorded voice—directly where Thomas swore in his statement that nobody had been standing.",
+      "signature_detail_hint": "Gabriel's palms carry calluses in parallel ridges consistent with years of feeding cable through narrow conduit, not the distributed wear of a general caretaker.",
+      "emotional_beat": "Betrayal and complicity—Gabriel's partial confession makes him simultaneously the most honest and most evasive person Clara has ever depended on.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words. Structure it as a confrontation that unfolds in layers: Clara presents evidence methodically, Gabriel resists, admits incrementally, and stops short at the threshold of the sealed chamber. The tower's interior should feel like a throat closing around them. Gabriel's admissions must feel earned—not a full confession but a series of specific, verifiable details that Clara can check. End on the resonance projection that places a witness at the platform, forcing both Clara and the reader to ask why Thomas lied about his position.",
+      "carries_to_next": "Gabriel's admission that the system is physical infrastructure, combined with his refusal to discuss the chamber, confirms that the sealed wall from chapter 6 is the key—and that Gabriel either cannot or will not help Clara open it."
+    },
+    {
+      "chapter": 8,
+      "title": "Behind the West Wall",
+      "slug": "behind-the-west-wall",
+      "one_line_summary": "Gabriel provides the chamber key under pressure, Clara opens the concealed entrance and discovers the illegal archive, editing equipment, and Elin's damaged master tape—along with physical proof that Thomas has recently been inside.",
+      "beat_summary": "After Gabriel's partial admission, Clara demands the means to access the chamber he helped conceal. Gabriel produces a brass key from inside the bell mechanism housing—a hiding place that confirms his长期 complicity. Clara opens the concealed entrance behind the seventh-floor wall and enters a small, climate-controlled chamber packed with analog recording equipment, a bank of reel-to-reel decks, rows of labeled tapes constituting the illegal archive, and—on the editing desk—Elin's damaged master cassette. The equipment is outdated but functional; wear patterns on the transport controls and fresh fingerprints on the tape reels prove recent use. Clara recognizes the architecture of the system: the bronze bells are microphones, the stone walls are conduits, the pipes carry vibrations to this room where they are captured, edited, and reconstructed.",
+      "must_happen": [
+        "Gabriel gives Clara the brass key, revealing his long-term access to the concealed chamber.",
+        "Clara opens the sealed entrance behind the seventh-floor wall.",
+        "Clara enters the chamber and discovers the complete illegal archive of edited recordings on reel-to-reel equipment.",
+        "She finds Elin's damaged master tape on the editing desk, positioned as though it was the most recent tape handled.",
+        "Physical evidence—fresh fingerprints, warm motor housings, displaced dust patterns—proves Thomas (or someone) has accessed the chamber recently despite it being officially sealed."
+      ],
+      "must_not": [
+        "Reveal the full content of Elin's master tape—that reconstruction happens in chapter 9.",
+        "Have Thomas physically enter or appear in the chamber during this chapter.",
+        "Fully explain every technical component of the acoustic surveillance system.",
+        "Present the chamber as having been sealed and undisturbed for eighteen years.",
+        "Allow Clara to play or reconstruct Elin's tape in this chapter."
+      ],
+      "opens_with": "The key was warm in Clara's palm, and its brass teeth showed fresh abrasion—as though it had turned in a lock within the last forty-eight hours.",
+      "cliffhanger": "Clara finds a recent maintenance log tucked behind the editing desk, its final entry dated three weeks ago in Thomas's handwriting: 'Archive accessed. Tape 9E secured. Do not disturb.'",
+      "signature_detail_hint": "The editing desk's tape counter on the active deck reads 14:37—matching exactly the frozen counter on the 'clarification' cassette from the family file Clara found in chapter 5.",
+      "emotional_beat": "Violation and revelation—every surface in the chamber is evidence of what Thomas built to listen, to edit, to control narrative, and Elin's tape sitting on the desk means her voice has been in his hands recently.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words. Structure it as a threshold crossing: the chapter begins with obtaining the key, builds through the physical labor and emotional weight of opening the sealed wall, and climaxes with the full survey of the chamber's contents. Make the chamber feel like the inside of a machine—tight, humming, precisely organized for a single purpose. Every object Clara discovers must serve as both evidence and emotional wound. The recent-access evidence should escalate the threat: Thomas knows Clara is here, and he has been maintaining the system. End on the maintenance log as proof that the investigation has triggered Thomas to act.",
+      "carries_to_next": "Clara now has the archive, the editing equipment, and Elin's master tape. The chamber is open and the system is exposed, but Elin's decisive recording—what she actually said and what Thomas did—remains unreconstructed."
+    },
+    {
+      "chapter": 9,
+      "title": "The Hand She Was Waiting For",
+      "slug": "the-hand-she-was-waiting-for",
+      "one_line_summary": "Clara reconstructs Elin's damaged master tape and hears her sister confront Thomas about the surveillance system, proving he was close enough to save her—then Thomas arrives to destroy the evidence.",
+      "beat_summary": "Working through the night in the chamber, Clara uses Thomas's own editing equipment to reconstruct Elin's damaged master tape by matching splice patterns and restoring excised segments from the archive. The reconstructed recording captures Elin confronting Thomas on the maintenance platform: she has discovered the surveillance system, she is recording him with a handheld device, and she demands he dismantle it. Thomas's responses are evasive, defensive, then silent. The recording captures a mechanical shift—the platform beginning to fail—and Elin calling out. Thomas's breathing is audible at close range, consistent with the resonance positioning from chapter 7. He was within arm's reach. He did not take her hand. The recording ends with the platform collapse. Thomas arrives at the chamber door attempting to retrieve or destroy the tape; Clara and Gabriel secure the entrance from inside. The chapter ends as the inner lock engages while Thomas is on the other side holding a copy of Elin's tape.",
+      "must_happen": [
+        "Clara reconstructs Elin's damaged master tape using the archive and editing equipment in the chamber.",
+        "The reconstructed recording proves Elin confronted Thomas about the surveillance system before her death.",
+        "Audio evidence confirms Thomas was within arm's reach of Elin when the platform failed—he was close enough to save her.",
+        "Thomas arrives at the chamber and attempts to enter to retrieve or destroy the decisive tape.",
+        "Clara and Gabriel secure the chamber from inside, preventing Thomas from reaching the archive before it is preserved."
+      ],
+      "must_not": [
+        "Have Clara forgive, absolve, or express understanding for Thomas's actions.",
+        "Kill or physically injure Thomas.",
+        "Fully explain the mechanism behind the final supernatural recording from the ninth bell—that remains unresolved per must_avoid.",
+        "Reveal the complete truth of every recording in the archive; only Elin's tape is reconstructed here.",
+        "Show the public confession or legal resolution—that is the book's ending, not chapter 9's."
+      ],
+      "opens_with": "The waveform resolved at 3:47 a.m.—Elin's voice, eighteen years silent, suddenly clear and furious and asking their father why he had been listening to all of them.",
+      "cliffhanger": "The inner lock engaged with a sound like bone settling into socket, and through the door Thomas's voice dropped to a whisper: 'That tape is the only version. You play that and everything I built collapses.' On the other side of the door, Clara heard him slide a cassette into a deck.",
+      "signature_detail_hint": "Elin's master tape has a tear at the leader matching the pattern of a cassette pulled from a recorder mid-operation—a panic eject, not a careful removal.",
+      "emotional_beat": "Grief and fury in collision—hearing Elin alive, hearing her fight, hearing the silence that followed when Thomas chose not to reach for her.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words. This is the emotional and evidentiary climax of act 3. Structure it in two movements: the reconstruction (technical, methodical, building dread as Elin's voice emerges) and the confrontation (Thomas arriving, the lock engaging, the standoff). The reconstructed recording must feel like the most important piece of audio Clara has ever processed—every technical detail she applies is also an act of listening to her dead sister. Do NOT dramatize the platform collapse through flashback; it exists only as sound on the tape. End on the lock engaging and the cassette sliding on the other side—Thomas is not locked out to be trapped; he is locked out with a copy, and Clara must decide what to do with the original.",
+      "carries_to_next": "Elin's reconstructed recording proves Thomas's proximity and inaction. Thomas is outside the chamber with a copy of the tape. The evidence is secured but the confrontation is unresolved, driving toward the book's final chapters where Thomas must face public accountability."
+    },
+    {
+      "chapter": 10,
+      "title": "What the Ninth Bell Kept",
+      "slug": "what-the-ninth-bell-kept",
+      "one_line_summary": "Clara saves Elin's tape, Gabriel and Thomas publicly confess to building the surveillance system, Clara refuses to carry guilt she didn't earn, and a dead machine speaks a voice that should not exist.",
+      "beat_summary": "Clara makes a backup of Elin's reconstructed tape on the chamber's second deck at the exact moment Thomas hits erase on his copy through the wall. Gabriel leads her out via the concealed infrastructure he helped install. In the tower nave below, Mara and two village council members are waiting—Gabriel contacted them before the lock engaged. Gabriel steps forward and publicly admits his role in building and concealing the acoustic surveillance system. Faced with Gabriel's testimony and Clara's audio evidence—Elin's reconstructed confrontation with Thomas at the platform—Thomas confesses publicly: the system, the manipulated recordings, the fabricated ninth-bell confession, and his presence at the platform edge when Elin fell, close enough to reach her and failing to do so. The archive is surrendered to the council as evidence. Clara stands before Thomas and the assembled witnesses and names the theft: her guilt was manufactured, her memory rewritten, her voice stolen to condemn her. She does not forgive him. She does not absolve him. She declares his narrative over. In the aftermath, the acoustic system is visibly disconnected, the bells fall silent, and Clara sits alone in the tower holding Elin's tape. The ninth bell—unwired, unconnected to any infrastructure—rings once, and Elin's voice comes through clear and warm: 'You came back.'",
+      "must_happen": [
+        "Clara creates a backup of Elin's reconstructed tape on the chamber's second deck while Thomas destroys his copy on the other side of the door.",
+        "Gabriel leads Clara out through the concealed pipe-and-cable infrastructure to the tower nave below.",
+        "Gabriel publicly admits his role in building and concealing the acoustic surveillance system in front of Mara and village council witnesses.",
+        "Physical and acoustic evidence—Elin's reconstructed tape and the resonance positioning data from chapters 7 and 9—is presented as the basis for the public confession, confirming Thomas was within arm's reach when Elin's platform collapsed.",
+        "Thomas publicly confesses to building the illegal surveillance system, fabricating the ninth-bell confession from stolen fragments, manipulating Clara's memory through the 'clarification' sessions, and his failure to take Elin's hand when the platform failed.",
+        "Thomas surrenders the full illegal archive to the village council as evidence.",
+        "Clara rejects the guilt that was constructed for her, naming Thomas's manipulation of her memory and theft of her voice without forgiving or absolving him.",
+        "The human mystery is completely resolved: Elin's death was a platform collapse witnessed by Thomas, who froze; Clara did not knowingly leave her in danger; the guilt was manufactured.",
+        "After the acoustic system is visibly disconnected and the tape deck is empty, Clara hears Elin whisper 'You came back' from the ninth bell—an unexplained final recording."
+      ],
+      "must_not": [
+        "Have Clara forgive or express understanding for Thomas's actions at any point.",
+        "Kill, physically injure, or have Thomas arrested in a violent confrontation.",
+        "Fully explain the mechanism behind Elin's final whispered recording—it remains unexplained.",
+        "Allow Thomas to successfully destroy or remove Elin's original master tape.",
+        "Show Clara claiming perfect recovered memory of Elin's death; she names what the evidence proves, not what she personally remembers."
+      ],
+      "opens_with": "Clara pressed record. Through the wall, she heard Thomas press erase.",
+      "cliffhanger": "The ninth bell—disconnected, unwired, silent for eighteen years—rang once from its bronze throat, and Elin's voice came through clear and warm: 'You came back.'",
+      "signature_detail_hint": "Every tape in the surrendered archive is labeled in Thomas's handwriting with three fields: a name, a date, and a single status word—'captured,' 'edited,' or 'released'—as though the voices of the dead were inventory in a warehouse he managed alone.",
+      "emotional_beat": "Resolution without absolution—truth delivered without catharsis, silence earned but never peaceful, a sister's voice returning from inside a machine that should no longer work.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words. This is the final chapter of Book 1 and must resolve the human mystery completely while preserving the unexplained supernatural coda. Structure it in three movements: (1) the chamber escape—Clara backs up Elin's tape while Thomas erases his copy, establishing the race between preservation and destruction in under 400 words; (2) the public reckoning—Gabriel confesses first (his testimony earns the scene), Thomas breaks under the weight of evidence and confesses fully, the archive is surrendered, and Clara delivers a short devastating statement naming the theft of her memory and voice, all in roughly 900 words; (3) the coda—the aftermath of silence, the system disconnected, and the impossible voice from the ninth bell in roughly 300 words. Clara's final statement must be precise and forensic in tone—she names facts, she does not perform emotion. The coda must feel like an open door, not a closed book. Do NOT explain the whisper. Do NOT have Clara react with fear or joy—leave her stillness ambiguous. Final line: 'You came back.'",
+      "carries_to_next": "Final chapter of Book 1. The supernatural recording—Elin's whispered 'You came back' from an unwired, disconnected bell—remains unexplained and carries forward as the unresolved mystery beyond the human conspiracy. Thomas is alive and in legal custody. The human story is closed; the acoustic haunting is not."
+    }
+  ],
+  "title": "",
+  "intent_digest": "b7affaac37beb220",
+  "intent_concept_digest": "1f40ee6be867b96e"
+}

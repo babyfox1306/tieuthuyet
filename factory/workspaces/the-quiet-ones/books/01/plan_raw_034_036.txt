@@ -1,0 +1,198 @@
+```json
+{
+  "act": [34, 36],
+  "chapter_plans": [
+    {
+      "chapter": 34,
+      "title": "The Switch Hunt",
+      "slug": "the-switch-hunt",
+      "one_line_summary": "Elle Reyes turns Kroll's own method against him, hunting the dead-man's-switch while the network reunites to cover her tracks.",
+      "beat_summary": "Elle Reyes, having disappeared after the kill, receives a text from Mira: the dead-man's-switch is not the digital file she destroyed — it's a second physical drive hidden in Kroll's safety deposit box at a bank she doesn't control. Elle Reyes must retrieve it before Cole or Voss's associates find it. She calls Sasha and Dr. Lin back into action, rebuilding the network's trust as they work together to intercept the drive. Sasha uses her legal contacts to get a court order for the box, while Dr. Lin provides a distraction at the coroner's office. Elle Reyes retrieves the drive and destroys it, but not before noticing a single detail: the drive contains a file labeled 'Lucia Vega — Full Truth,' which she does not open. The chapter ends with Elle Reyes burning the drive, the network reunited, and a new understanding: the hunt is over, but the cost is still being counted.",
+      "must_happen": [
+        "Elle Reyes receives a text from Mira revealing the location of the second dead-man's-switch: a safety deposit box at a bank Kroll controlled.",
+        "Elle Reyes calls Sasha and Dr. Lin, asking for their help to retrieve the drive — the network reunites for the first time since the fracture.",
+        "Sasha uses her legal contacts to secure a court order for the safety deposit box, claiming it's part of an ongoing investigation into Kroll's estate.",
+        "Dr. Lin creates a distraction at the coroner's office by calling in a false report about a suspicious death, pulling Cole's attention away from the bank.",
+        "Elle Reyes retrieves the drive from the safety deposit box and destroys it by burning it in a trash barrel behind the bank. She notices a file labeled 'Lucia Vega — Full Truth' but does not open it."
+      ],
+      "must_not": [
+        "Do not reveal the contents of the 'Lucia Vega — Full Truth' file — only that it exists and Elle Reyes chooses not to open it.",
+        "Do not show Elle Reyes being caught or identified during the retrieval — the operation is clean."
+      ],
+      "opens_with": "\"'The switch isn't dead, Elle. Kroll was smarter than that.' Mira's voice was flat through the burner phone. 'There's a second drive. And if Voss's people find it before you do, everything you just burned comes back.'\"",
+      "cliffhanger": "Elle Reyes watches the last of the drive melt into ash. Her phone buzzes. A text from Sasha: 'Cole just called. He found Kroll's body. He's asking questions about you. I told him you were with me all night. You owe me, Elle.'",
+      "signature_detail_hint": "The safety deposit box key is stamped with the number '0417' — the same numbers from the license plate of the car that snatched the witness in chapter 14, confirming Kroll's operation was interconnected.",
+      "emotional_beat": "Cold relief at destroying the switch undercut by the weight of the file she chose not to open — she will never know the full truth about Lucia Vega, and that will haunt her.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the network reunion and the destruction of the dead-man's-switch.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Execute the retrieval of the second drive, reunite the network, and set up the final confrontation. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "The second dead-man's-switch is destroyed; the network is reunited; Cole is closing in on Elle; the file she chose not to open will be a lingering thread for Book 2.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elle Reyes",
+            "Damien Kroll",
+            "Sasha (Lawyer)",
+            "Dr. Lin (Coroner)",
+            "Wren (Hacker)",
+            "Detective Marcus Cole"
+          ],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Wren is the leak (confirmed in ch29)', \"Kroll's dead-man's-switch is destroyed\", 'Detective Cole is circling closer', 'Her network is reunited but fragile'], 'does_not_know_yet': [\"Cole's next move\", 'The full cost of the hunt', 'The truth about Lucia Vega']}",
+            "Damien Kroll: {'knows': ['He is dead', 'His operation is destroyed'], 'does_not_know_yet': []}",
+            "Sasha (Lawyer): {'knows': ['The network is reunited', 'Kroll is dead', 'Cole is investigating Elle'], 'does_not_know_yet': [\"The full extent of Kroll's evidence\", \"Cole's level of suspicion\", 'The unknown handler']}",
+            "Dr. Lin (Coroner): {'knows': ['The network is reunited', 'Kroll is dead', 'Cole is investigating Elle'], 'does_not_know_yet': [\"The full extent of Kroll's evidence\", \"Cole's level of suspicion\", 'The unknown handler']}",
+            "Wren (Hacker): {'knows': ['She has been leaking to Kroll', 'Elle is closing in on the leak', \"Kroll's dead-man's-switch exists\"], 'does_not_know_yet': ['That Elle has confirmed she is the leak', 'The full cost of her betrayal']}",
+            "Detective Marcus Cole: {'knows': ['Kroll is dead', 'Elle is a suspect', 'He has no concrete evidence'], 'does_not_know_yet': [\"Elle's method\", 'Her network', \"The dead-man's-switch\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 34
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 35,
+      "title": "The Loose End",
+      "slug": "the-loose-end",
+      "one_line_summary": "A loose end from the Kroll case surfaces — a witness who saw Elle at the riverbank — forcing her to tie it off before it unravels everything.",
+      "beat_summary": "Elle Reyes receives a call from Mira: there is a witness — a homeless man who camped near the riverbank the night Elle met the fake witness. He saw her face and recognized her from the podcast. He has been picked up by Cole's team and is being held as a material witness. Elle Reyes must decide: let the witness talk and risk exposure, or silence him. She chooses a third option: she goes to the witness, not to threaten him, but to tell him the truth. She explains that she is a journalist investigating Kroll, and that the man she met was a plant. She asks him to tell Cole what he saw — but to leave out her face, claiming he only saw a figure in the dark. The witness agrees, moved by her honesty. Elle Reyes leaves, knowing she has tied off the loose end, but also knowing that her method is changing — she is no longer just a killer; she is becoming something else. The chapter ends with Elle Reyes receiving a text from Mira: 'You're learning. Now finish it.'",
+      "must_happen": [
+        "Elle Reyes receives a call from Mira: a homeless man who camped near the riverbank the night of the trap has been picked up by Detective Cole as a material witness.",
+        "Elle Reyes decides not to silence the witness but to go to him and tell him the truth — that she is a journalist investigating Kroll, and the man she met was a plant.",
+        "Elle Reyes meets the witness at the station, convincing him to tell Cole he only saw a figure in the dark, not her face.",
+        "The witness agrees, moved by Elle's honesty — she ties off the loose end without violence.",
+        "Elle Reyes leaves the station and receives a text from Mira: 'You're learning. Now finish it.'"
+      ],
+      "must_not": [
+        "Do not show the witness being harmed or threatened — Elle Reyes uses honesty, not violence.",
+        "Do not show Cole interviewing the witness — only that Elle Reyes has neutralized the threat."
+      ],
+      "opens_with": "\"'There's a witness, Elle. A homeless man who saw you at the riverbank. Cole has him.' Mira's voice was calm, but the words hit like a punch. 'You need to decide what to do about it.'\"",
+      "cliffhanger": "Elle Reyes walks away from the station, the witness's promise still ringing in her ears. Her phone buzzes. A text from an unknown number — not Mira's, not the watcher's old number. It reads: 'You're getting soft, Elle. But I like it. See you at the end.'",
+      "signature_detail_hint": "The homeless man's name is 'Caleb' — the same name as the witness who recanted in the original Vega trial, a detail Elle Reyes noticed in the transcripts but never followed up on.",
+      "emotional_beat": "Cold pragmatism mixed with a flicker of something new — she chose honesty over violence, and it worked. She is changing, and she is not sure if that is a strength or a weakness.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the moral evolution of Elle Reyes.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Tie off the loose end and show Elle's evolving method. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "The loose end is tied; Elle Reyes is changing her methods; the unknown text hints at a final confrontation; the endgame is set for chapter 36.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elle Reyes",
+            "Damien Kroll",
+            "Sasha (Lawyer)",
+            "Dr. Lin (Coroner)",
+            "Wren (Hacker)",
+            "Detective Marcus Cole"
+          ],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Wren is the leak (confirmed in ch29)', \"Kroll's dead-man's-switch is destroyed\", 'Detective Cole is circling closer', 'Her network is reunited but fragile'], 'does_not_know_yet': [\"Cole's next move\", 'The full cost of the hunt', 'The truth about Lucia Vega']}",
+            "Damien Kroll: {'knows': ['He is dead', 'His operation is destroyed'], 'does_not_know_yet': []}",
+            "Sasha (Lawyer): {'knows': ['The network is reunited', 'Kroll is dead', 'Cole is investigating Elle'], 'does_not_know_yet': [\"The full extent of Kroll's evidence\", \"Cole's level of suspicion\", 'The unknown handler']}",
+            "Dr. Lin (Coroner): {'knows': ['The network is reunited', 'Kroll is dead', 'Cole is investigating Elle'], 'does_not_know_yet': [\"The full extent of Kroll's evidence\", \"Cole's level of suspicion\", 'The unknown handler']}",
+            "Wren (Hacker): {'knows': ['She has been leaking to Kroll', 'Elle is closing in on the leak', \"Kroll's dead-man's-switch exists\"], 'does_not_know_yet': ['That Elle has confirmed she is the leak', 'The full cost of her betrayal']}",
+            "Detective Marcus Cole: {'knows': ['Kroll is dead', 'Elle is a suspect', 'He has no concrete evidence'], 'does_not_know_yet': [\"Elle's method\", 'Her network', \"The dead-man's-switch\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 34
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 36,
+      "title": "The Final Confrontation",
+      "slug": "the-final-confrontation",
+      "one_line_summary": "The final confrontation with Detective Cole — earned through physical evidence, not confession — ends with Kroll's death framed as justice, but Elle's secrecy is shattered.",
+      "beat_summary": "Elle Reyes receives a summons from Detective Cole: he has enough circumstantial evidence to bring her in for questioning, but not enough to arrest her. She goes to the station, knowing this is the final confrontation. Cole lays out his case: the timeline, the witness, the riverbank photograph, the Voss recording. He doesn't have a confession, but he has enough to make her life hell. Elle Reyes plays her final card: she reveals the Lucia Vega file — the one she didn't open — and tells Cole that Kroll's own evidence proves his guilt. She offers to hand over the file in exchange for immunity for her network. Cole, a man who believes in the system, hesitates. He knows Kroll was guilty. He knows Elle is a vigilante. But he also knows that putting her away will destroy the only chance Lucia Vega's family has for closure. He makes a choice: he lets Elle walk, but warns her that if she ever kills again, he will find her. The chapter ends with Elle Reyes leaving the station, her thumb tapping her ring finger three times. She is free, but she is no longer invisible. The hunt is over. The cost is counted. And the reader knows: Elle Reyes will never be the same.",
+      "must_happen": [
+        "Elle Reyes receives a summons from Detective Cole: he has enough circumstantial evidence to bring her in for questioning, but not enough to arrest her.",
+        "Elle Reyes goes to the station for the final confrontation with Cole; he lays out his case: the timeline, the witness, the riverbank photograph, the Voss recording.",
+        "Elle Reyes plays her final card: she reveals the Lucia Vega file and offers to hand it over in exchange for immunity for her network.",
+        "Cole hesitates, knowing Kroll was guilty and that putting Elle away will destroy the only chance for Lucia Vega's family to get closure.",
+        "Cole lets Elle walk, but warns her: 'If you ever kill again, I will find you.' Elle leaves the station, her secrecy shattered, her freedom intact. Clue C008 is paid off: the 'Voss' thread is resolved — Voss is arrested for conspiracy to obstruct justice."
+      ],
+      "must_not": [
+        "Do not show Elle Reyes confessing to murder — only that she offers the Vega file as leverage.",
+        "Do not show Cole arresting Elle — only that he lets her walk with a warning."
+      ],
+      "opens_with": "\"'Sit down, Elle.' Detective Cole's voice was tired. He gestured to the chair across from him. 'We need to talk about Damien Kroll.' I sat. My thumb started tapping before I could stop it.\"",
+      "cliffhanger": "Elle Reyes walks out of the station into the cold night air. She is free, but she is no longer invisible. Her phone buzzes. A text from Mira: 'You did it. Now what?' Elle types back: 'Now I disappear. For real this time.' She looks up at the sky, takes a breath, and walks into the darkness. The hunt is over. But the quiet ones are never truly gone.",
+      "signature_detail_hint": "The Lucia Vega file Elle Reyes hands over to Cole contains a single photograph — the same old, faded photograph of a young woman with the same birthmark as Lucia, the one with the face scratched out. The photograph is dated 1998, five years before Lucia's murder, suggesting Kroll's pattern of violence started long before anyone knew.",
+      "emotional_beat": "Cold relief mixed with the hollow ache of victory — she has won, but she has lost her invisibility, and the hunt that defined her is over. She is free, but she is also empty.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the final confrontation and the cost of victory.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Execute the final confrontation with Cole, pay off clue C008, and deliver the book 1 ending. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "Book 1 closes: Kroll is dead, the case is closed, Elle is free but exposed. The network is intact but fractured. The thread of the unknown handler (the person who texted Elle in chapter 35) is left open for Book 2. Elle Reyes's method is proven, but her secrecy is shattered — she will never be invisible again.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C008"
+        ],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elle Reyes",
+            "Damien Kroll",
+            "Sasha (Lawyer)",
+            "Dr. Lin (Coroner)",
+            "Wren (Hacker)",
+            "Detective Marcus Cole"
+          ],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Kroll is dead', 'Cole knows she is a vigilante but has no evidence', 'Her network is intact but fractured', 'She is no longer invisible'], 'does_not_know_yet': [\"The identity of the unknown handler\", 'The full cost of her lost secrecy']}",
+            "Damien Kroll: {'knows': ['He is dead'], 'does_not_know_yet': []}",
+            "Sasha (Lawyer): {'knows': ['Elle is free', 'The network is intact', 'Cole knows about them but has no evidence'], 'does_not_know_yet': [\"The unknown handler\", \"Elle's next move\"]}",
+            "Dr. Lin (Coroner): {'knows': ['Elle is free', 'The network is intact', 'Cole knows about them but has no evidence'], 'does_not_know_yet': [\"The unknown handler\", \"Elle's next move\"]}",
+            "Wren (Hacker): {'knows': ['Elle has confirmed she is the leak', 'She has been cut from the network'], 'does_not_know_yet': ['The full cost of her betrayal', \"Elle's next move\"]}",
+            "Detective Marcus Cole: {'knows': ['Elle is a vigilante killer', 'She has a network', 'Kroll is dead', 'He has no concrete evidence to arrest her'], 'does_not_know_yet': ['The identity of the unknown handler', \"Elle's next move\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 36
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

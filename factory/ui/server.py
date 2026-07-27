@@ -17,7 +17,7 @@ if str(ROOT) not in sys.path:
 import yaml
 
 from factory.engine.lib.concept_cli import concept_check
-from factory.engine.lib.language import normalize_language
+from factory.engine.lib.language import find_foreign_chars, normalize_language
 from factory.engine.lib.narrative_schema import (
     CONCEPT_BOOL_FIELDS,
     CONCEPT_LIST_FIELDS,
@@ -26,12 +26,13 @@ from factory.engine.lib.narrative_schema import (
     concept_content_errors,
     concept_validation_errors,
     load_concept,
+    normalize_concept_characters,
 )
 from factory.engine.paths import bible_path, load_config, workspace_dir
 
 from factory.ui import factory_workflow
 
-UI_VERSION = "2026-07-12b"
+UI_VERSION = "2026-07-27-concept-yaml-import-export"
 
 _workflow_lock = __import__("threading").Lock()
 _workflow_cache = None  # type: ignore[var-annotated]
@@ -87,6 +88,310 @@ SUPPORTED_LANGUAGES = [
     {"code": "vi", "label": "Tiếng Việt", "hint": "Viết toàn bộ nội dung form bằng tiếng Việt"},
     {"code": "en", "label": "English", "hint": "Write all story content in English"},
 ]
+
+CONCEPT_FORM_KEYS = (
+    "title",
+    "pen_name",
+    "logline",
+    "surface_plot",
+    "true_plot",
+    "intentional_early_reveal",
+    "pov",
+    "characters",
+    "chapter_map",
+    "author_directive",
+    "ending_book1",
+    "hook_book2",
+    "must_include",
+    "must_avoid",
+    "notes",
+)
+CONCEPT_REQUIRED_IMPORT_KEYS = frozenset(CONCEPT_FORM_KEYS)
+CONCEPT_KNOWN_METADATA_KEYS = frozenset(
+    {
+        "concept_status",
+        "target_language",
+        "chapter_count",
+        "genre",
+        "genre_profile",
+        "format",
+        "setting",
+        "surface_mystery",
+        "reveal_ladder",
+        "must_include_by_chapter",
+        "gate_overrides",
+        "operator_notes",
+        "final_supernatural_residue",
+    }
+)
+CONCEPT_FREE_TEXT_KEYS = frozenset(
+    {
+        "logline",
+        "surface_plot",
+        "true_plot",
+        "author_directive",
+        "ending_book1",
+        "hook_book2",
+        "notes",
+    }
+)
+_CHAPTER_MAP_RICH_KEYS = frozenset(
+    {
+        "title",
+        "beat",
+        "required_beats",
+        "must_include",
+        "must_not_reveal",
+        "ending",
+        "final_line",
+    }
+)
+
+
+def _yaml_type_name(value: object) -> str:
+    if value is None:
+        return "null"
+    if isinstance(value, bool):
+        return "bool"
+    if isinstance(value, dict):
+        return "map"
+    if isinstance(value, list):
+        return "list"
+    if isinstance(value, str):
+        return "string"
+    return type(value).__name__
+
+
+def _validate_chapter_map(raw: object) -> list[str]:
+    errors: list[str] = []
+    if not isinstance(raw, dict):
+        return [f"chapter_map: phải là map, nhận {_yaml_type_name(raw)}"]
+    normalized_chapters: dict[int, object] = {}
+    for raw_ch, entry in raw.items():
+        try:
+            chapter = int(str(raw_ch).lstrip("chCH"))
+        except (TypeError, ValueError):
+            errors.append(f"chapter_map.{raw_ch}: key chương phải là số dương")
+            continue
+        if chapter <= 0:
+            errors.append(f"chapter_map.{raw_ch}: key chương phải là số dương")
+        if chapter in normalized_chapters:
+            errors.append(
+                f"chapter_map.{raw_ch}: trùng chương {chapter} với key "
+                f"{normalized_chapters[chapter]!r}"
+            )
+        else:
+            normalized_chapters[chapter] = raw_ch
+        path = f"chapter_map.{raw_ch}"
+        if isinstance(entry, str):
+            continue
+        if not isinstance(entry, dict):
+            errors.append(
+                f"{path}: phải là string beat hoặc rich map, nhận {_yaml_type_name(entry)}"
+            )
+            continue
+        unknown = sorted(str(k) for k in set(entry) - _CHAPTER_MAP_RICH_KEYS)
+        if unknown:
+            errors.append(f"{path}: rich map có sub-key lạ: {', '.join(unknown)}")
+        for key in ("title", "beat", "ending", "final_line"):
+            if key in entry and not isinstance(entry[key], str):
+                errors.append(
+                    f"{path}.{key}: phải là string, nhận {_yaml_type_name(entry[key])}"
+                )
+        for key in ("required_beats", "must_include", "must_not_reveal"):
+            if key not in entry:
+                continue
+            value = entry[key]
+            if not isinstance(value, list):
+                errors.append(
+                    f"{path}.{key}: phải là list string, nhận {_yaml_type_name(value)}"
+                )
+            elif any(not isinstance(item, str) for item in value):
+                errors.append(f"{path}.{key}: mọi phần tử phải là string")
+    return errors
+
+
+def _iter_text_values(value: object):
+    if isinstance(value, str):
+        yield value
+    elif isinstance(value, dict):
+        for child in value.values():
+            yield from _iter_text_values(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from _iter_text_values(child)
+
+
+def validate_imported_concept(data: object, *, fallback_language: str = "vi") -> tuple[list[str], list[str]]:
+    """Strict validation for YAML import. It never mutates or partially normalizes input."""
+    if not isinstance(data, dict):
+        return [f"YAML root phải là map/object, nhận {_yaml_type_name(data)}"], []
+
+    errors: list[str] = []
+    warnings: list[str] = []
+    missing = [key for key in CONCEPT_FORM_KEYS if key not in data]
+    if missing:
+        errors.append("Thiếu field bắt buộc: " + ", ".join(missing))
+
+    for key in (
+        "title",
+        "pen_name",
+        "logline",
+        "surface_plot",
+        "true_plot",
+        "author_directive",
+        "ending_book1",
+        "hook_book2",
+        "notes",
+    ):
+        if key in data and not isinstance(data[key], str):
+            errors.append(f"{key}: phải là string, nhận {_yaml_type_name(data[key])}")
+
+    if "intentional_early_reveal" in data and type(data["intentional_early_reveal"]) is not bool:
+        errors.append(
+            "intentional_early_reveal: phải là bool true/false, nhận "
+            + _yaml_type_name(data["intentional_early_reveal"])
+        )
+
+    for key in ("must_include", "must_avoid"):
+        if key not in data:
+            continue
+        value = data[key]
+        if not isinstance(value, list):
+            errors.append(f"{key}: phải là list string, nhận {_yaml_type_name(value)}")
+        elif any(not isinstance(item, str) for item in value):
+            errors.append(f"{key}: mọi phần tử phải là string")
+
+    if "pov" in data:
+        pov = data["pov"]
+        if not isinstance(pov, dict):
+            errors.append(f"pov: phải là map, nhận {_yaml_type_name(pov)}")
+        else:
+            missing_pov = [
+                key for key in ("character", "mode", "tense", "single_pov") if key not in pov
+            ]
+            if missing_pov:
+                errors.append("pov: thiếu sub-key " + ", ".join(missing_pov))
+            unknown_pov = sorted(
+                str(key)
+                for key in set(pov) - {"character", "mode", "tense", "single_pov"}
+            )
+            if unknown_pov:
+                errors.append("pov: có sub-key lạ " + ", ".join(unknown_pov))
+            for key in ("character", "mode", "tense"):
+                if key in pov and not isinstance(pov[key], str):
+                    errors.append(
+                        f"pov.{key}: phải là string, nhận {_yaml_type_name(pov[key])}"
+                    )
+            if "single_pov" in pov and type(pov["single_pov"]) is not bool:
+                errors.append(
+                    "pov.single_pov: phải là bool true/false, nhận "
+                    + _yaml_type_name(pov["single_pov"])
+                )
+
+    if "characters" in data:
+        characters = data["characters"]
+        if not isinstance(characters, list):
+            errors.append(
+                f"characters: phải là list {{name, role}}, nhận {_yaml_type_name(characters)}"
+            )
+        else:
+            for index, row in enumerate(characters):
+                path = f"characters[{index}]"
+                if not isinstance(row, dict):
+                    errors.append(f"{path}: phải là map {{name, role}}")
+                    continue
+                missing_character = [key for key in ("name", "role") if key not in row]
+                if missing_character:
+                    errors.append(f"{path}: thiếu key " + ", ".join(missing_character))
+                unknown_character = sorted(
+                    str(key) for key in set(row) - {"name", "role"}
+                )
+                if unknown_character:
+                    errors.append(f"{path}: có key lạ " + ", ".join(unknown_character))
+                for key in ("name", "role"):
+                    if key in row and not isinstance(row[key], str):
+                        errors.append(
+                            f"{path}.{key}: phải là string, nhận {_yaml_type_name(row[key])}"
+                        )
+
+    if "chapter_map" in data:
+        errors.extend(_validate_chapter_map(data["chapter_map"]))
+
+    known = CONCEPT_REQUIRED_IMPORT_KEYS | CONCEPT_KNOWN_METADATA_KEYS
+    unknown = sorted(str(key) for key in set(data) - known)
+    if unknown:
+        warnings.append(
+            "Key ngoài schema đã biết (vẫn được giữ nguyên): " + ", ".join(unknown)
+        )
+
+    raw_language = data.get("target_language") or fallback_language
+    normalized_language = normalize_language(str(raw_language))
+    if "target_language" in data and str(raw_language).strip().lower() not in ("vi", "en"):
+        errors.append(f"target_language: chỉ hỗ trợ vi/en, nhận {raw_language!r}")
+    for key in CONCEPT_FORM_KEYS:
+        if key not in data:
+            continue
+        foreign = find_foreign_chars(
+            "\n".join(_iter_text_values(data[key])), normalized_language
+        )
+        if foreign:
+            preview = " ".join(foreign[:20])
+            suffix = " …" if len(foreign) > 20 else ""
+            warnings.append(
+                f"{key}: có ký tự ngoài target_language={normalized_language}: "
+                f"{preview}{suffix}"
+            )
+    return errors, warnings
+
+
+def parse_concept_yaml(text: str, *, fallback_language: str = "vi") -> dict:
+    if not isinstance(text, str):
+        return {"ok": False, "errors": ["yaml_text: phải là string"], "warnings": []}
+    try:
+        data = yaml.safe_load(text)
+    except yaml.YAMLError as exc:
+        mark = getattr(exc, "problem_mark", None)
+        problem = getattr(exc, "problem", None) or str(exc).splitlines()[0]
+        if mark is not None:
+            message = f"Lỗi parse YAML dòng {mark.line + 1}, cột {mark.column + 1}: {problem}"
+        else:
+            message = f"Lỗi parse YAML: {problem}"
+        return {"ok": False, "errors": [message], "warnings": []}
+
+    errors, warnings = validate_imported_concept(
+        data, fallback_language=fallback_language
+    )
+    if errors:
+        return {"ok": False, "errors": errors, "warnings": warnings}
+    assert isinstance(data, dict)
+    concept = {key: data[key] for key in CONCEPT_FORM_KEYS}
+    concept["target_language"] = normalize_language(
+        str(data.get("target_language") or fallback_language)
+    )
+    concept["chapter_map_text"] = _chapter_map_to_text(concept["chapter_map"])
+    passthrough = {key: value for key, value in data.items() if key not in CONCEPT_FORM_KEYS}
+    return {
+        "ok": True,
+        "concept": concept,
+        "passthrough": passthrough,
+        "warnings": warnings,
+    }
+
+
+class _LiteralString(str):
+    pass
+
+
+class _ConceptYamlDumper(yaml.SafeDumper):
+    pass
+
+
+def _represent_literal_string(dumper, value):
+    return dumper.represent_scalar("tag:yaml.org,2002:str", str(value), style="|")
+
+
+_ConceptYamlDumper.add_representer(_LiteralString, _represent_literal_string)
 
 
 def _load_direction(ws: Path) -> dict:
@@ -364,20 +669,50 @@ def _chapter_map_to_text(chapter_map: object) -> str:
     return "\n".join(lines)
 
 
-def save_concept(ws_id: str, body: dict, *, mark_ready: bool = False) -> dict:
-    ws = workspace_dir(ws_id)
-    ws.mkdir(parents=True, exist_ok=True)
+def _characters_from_body(body: dict, existing: dict | None = None) -> list[dict] | None:
+    """Parse Cast textarea / structured list. None = leave existing alone."""
+    if "characters" not in body and "characters_text" not in body:
+        return None
+    raw = body.get("characters")
+    if raw is None:
+        raw = body.get("characters_text")
+    if raw is None:
+        return None
+    normalized = normalize_concept_characters(raw)
+    # Explicit empty clear from form.
+    if isinstance(raw, (list, str)) and not normalized:
+        return []
+    if normalized:
+        return normalized
+    if existing and existing.get("characters") is not None:
+        return normalize_concept_characters(existing.get("characters"))
+    return []
 
-    lang = normalize_language(body.get("target_language"))
-    _sync_workspace_language(ws, lang)
 
+def _concept_from_form_body(
+    ws: Path,
+    body: dict,
+    *,
+    concept_status: str | None = None,
+) -> dict:
+    """Assemble the form into concept data without writing or triggering sync."""
     existing = load_concept(ws) or {}
-    # Merge so rich fields (characters, genre, format…) from hand-edited YAML survive UI save.
     data = {**existing}
-    data["concept_status"] = "ready" if mark_ready else "draft"
-    data["target_language"] = lang
-    # Only fields the form actually sent are rewritten; the rest keep their
-    # on-disk value so a partial save never silently drops a key.
+
+    passthrough = body.get("_concept_passthrough")
+    if passthrough is not None:
+        if not isinstance(passthrough, dict):
+            raise ValueError("_concept_passthrough phải là object")
+        for key, value in passthrough.items():
+            if key not in CONCEPT_FORM_KEYS:
+                data[key] = value
+
+    if concept_status is not None:
+        data["concept_status"] = concept_status
+    elif "concept_status" not in data:
+        data["concept_status"] = "draft"
+    data["target_language"] = normalize_language(body.get("target_language"))
+
     for key in CONCEPT_TEXT_FIELDS:
         if key in body:
             data[key] = body.get(key) or ""
@@ -393,15 +728,20 @@ def save_concept(ws_id: str, body: dict, *, mark_ready: bool = False) -> dict:
             data[key] = coerce_concept_bool(body.get(key))
         else:
             data.setdefault(key, coerce_concept_bool(existing.get(key)))
-    # pen_name lives on direction/manifest (export), optional mirror on concept
+
     if "pen_name" in body:
-        pen = str(body.get("pen_name") or "").strip()
-        data["pen_name"] = pen
-        _sync_pen_name(ws, pen)
+        data["pen_name"] = str(body.get("pen_name") or "").strip()
 
     pov = _pov_from_body(body, existing)
     if pov is not None:
         data["pov"] = pov
+
+    characters = _characters_from_body(body, existing)
+    if characters is not None:
+        if characters:
+            data["characters"] = characters
+        else:
+            data.pop("characters", None)
 
     chapter_map = _chapter_map_from_body(body, existing)
     if chapter_map is None:
@@ -410,6 +750,45 @@ def save_concept(ws_id: str, body: dict, *, mark_ready: bool = False) -> dict:
         data.pop("chapter_map", None)
     else:
         data["chapter_map"] = chapter_map
+    return data
+
+
+def export_concept_yaml(ws_id: str, body: dict) -> dict:
+    """Render current unsaved form state as YAML; no disk write or pipeline side effect."""
+    ws = workspace_dir(ws_id)
+    data = _concept_from_form_body(ws, body)
+    for key in CONCEPT_FREE_TEXT_KEYS:
+        if isinstance(data.get(key), str):
+            data[key] = _LiteralString(data[key])
+    rendered = yaml.dump(
+        data,
+        Dumper=_ConceptYamlDumper,
+        allow_unicode=True,
+        default_flow_style=False,
+        sort_keys=False,
+        width=4096,
+    )
+    return {
+        "ok": True,
+        "yaml": rendered,
+        "filename": "concept.yaml",
+    }
+
+
+def save_concept(ws_id: str, body: dict, *, mark_ready: bool = False) -> dict:
+    ws = workspace_dir(ws_id)
+    ws.mkdir(parents=True, exist_ok=True)
+
+    lang = normalize_language(body.get("target_language"))
+    _sync_workspace_language(ws, lang)
+
+    data = _concept_from_form_body(
+        ws, body, concept_status="ready" if mark_ready else "draft"
+    )
+    # pen_name lives on direction/manifest (export), optional mirror on concept
+    if "pen_name" in body:
+        pen = str(body.get("pen_name") or "").strip()
+        _sync_pen_name(ws, pen)
 
     if not mark_ready:
         path = ws / "concept.yaml"
@@ -611,6 +990,43 @@ class Handler(BaseHTTPRequestHandler):
                 self._json(500, {"error": str(exc)})
             return
 
+        if path.startswith("/api/concept/") and path.endswith("/import-yaml"):
+            ws_id = path[len("/api/concept/") : -len("/import-yaml")].strip("/")
+            if not ws_id or "/" in ws_id:
+                self._json(400, {"error": "invalid workspace"})
+                return
+            text = body.get("yaml_text")
+            if isinstance(text, str) and len(text.encode("utf-8")) > 5 * 1024 * 1024:
+                self._json(
+                    413,
+                    {
+                        "ok": False,
+                        "errors": ["File YAML vượt giới hạn 5 MiB"],
+                        "warnings": [],
+                    },
+                )
+                return
+            existing = load_concept(workspace_dir(ws_id))
+            fallback_language = normalize_language(
+                body.get("target_language") or existing.get("target_language")
+            )
+            result = parse_concept_yaml(
+                text, fallback_language=fallback_language
+            )
+            self._json(200 if result.get("ok") else 400, result)
+            return
+
+        if path.startswith("/api/concept/") and path.endswith("/export-yaml"):
+            ws_id = path[len("/api/concept/") : -len("/export-yaml")].strip("/")
+            if not ws_id or "/" in ws_id:
+                self._json(400, {"error": "invalid workspace"})
+                return
+            try:
+                self._json(200, export_concept_yaml(ws_id, body or {}))
+            except Exception as exc:
+                self._json(400, {"ok": False, "error": str(exc)})
+            return
+
         if path.startswith("/api/concept/") and path.endswith("/ready"):
             ws_id = path[len("/api/concept/") : -len("/ready")].strip("/")
             try:
@@ -763,6 +1179,15 @@ class Handler(BaseHTTPRequestHandler):
                         result = _workflow().chapter_approve(ws_id, ch, book)
                     elif action == "discard":
                         result = _workflow().chapter_discard(ws_id, ch, book)
+                    elif action == "markdown-fix":
+                        result = _workflow().chapter_markdown_fix(
+                            ws_id,
+                            ch,
+                            book,
+                            mode=str(body.get("mode") or ""),
+                            hit_id=body.get("hit_id"),
+                            apply_all=bool(body.get("apply_all")),
+                        )
                     else:
                         self._json(400, {"error": f"unknown action: {action}"})
                         return

@@ -1,0 +1,77 @@
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "A Record That Cannot Shift",
+      "slug": "a-record-that-cannot-shift",
+      "one_line_summary": "Pierre Leclerc doubles down on his conviction, planting a new clue against Sofia Bellini as the official case grows airtight.",
+      "beat_summary": "Pierre Leclerc, driven by a mounting sense of inevitability, meticulously documents a second clue (C002) that appears to further implicate Sofia Bellini. His investigation leads to a chilling interview with Magda Lorenz, whose unease and evasions only reinforce Pierre’s certainty. Sofia Bellini, unwavering under scrutiny, answers each question with mechanical precision. The official narrative hardens, and Pierre, refusing doubt, records his findings with grim satisfaction.",
+      "must_happen": [
+        "Pierre Leclerc plants a new official clue (C002) in the tribunal records, linking Sofia Bellini to the system’s most damning evidence yet.",
+        "Pierre Leclerc interrogates Magda Lorenz, who avoids direct answers about Sofia Bellini but admits her fear of the record itself.",
+        "Sofia Bellini provides a detailed, emotionless response to each accusation, reinforcing her established narrative of guilt."
+      ],
+      "must_not": [
+        "No suggestion that the clue (C002) is fabricated or manipulated.",
+        "No questioning of Sofia Bellini’s self-knowledge or the authenticity of her confessions."
+      ],
+      "opens_with": "\"This is the line that won’t erase — Sofia Bellini built the system. Say it again, for the record.\"",
+      "cliffhanger": "As Pierre Leclerc files the new clue, he notices a page in the transcript with two dates stamped over each other — one impossibly old, one from today.",
+      "signature_detail_hint": "The tribunal’s case folders are warped at the corners, as if pressed between books that never existed.",
+      "emotional_beat": "Pierre Leclerc’s growing certainty is shadowed by a sense of something wrong beneath the surface, but he buries all doubt.",
+      "spice": 1,
+      "spice_note": "No explicit content; only the subtle, uncanny tension in Sofia Bellini’s mechanical composure under Pierre Leclerc’s scrutiny.",
+      "chapter_task": "Advance the inquiry by planting clue C002 against Sofia Bellini; escalate Pierre Leclerc’s obsession and show the official record tightening around her. Target 1600–1900 words.",
+      "carries_to_next": "The double-dated transcript and Magda Lorenz’s fear suggest the records themselves may hide more than they reveal."
+    },
+    {
+      "chapter": 5,
+      "title": "Irrefutable Evidence",
+      "slug": "irrefutable-evidence",
+      "one_line_summary": "Pierre Leclerc plants a third clue, entrenching Sofia Bellini’s guilt as the case becomes almost unassailable.",
+      "beat_summary": "Pierre Leclerc, driven by the momentum of his investigation, prepares and plants a third clue (C003) in the record. He reviews cross-examinations with Tomasz Havel and Chief Adjudicator Rasmus, both of whom reinforce the official narrative of Sofia Bellini’s responsibility. Sofia Bellini’s unwavering admissions, echoing the same precise details, make the case appear airtight. Pierre’s certainty leaves him isolated, but he cannot stop documenting each ‘fact’.",
+      "must_happen": [
+        "Pierre Leclerc documents and submits clue C003, which appears to confirm Sofia Bellini’s authorship of a critical tribunal directive.",
+        "A tense exchange occurs with Tomasz Havel, who repeats the official line about Sofia Bellini, further cementing her role in the events.",
+        "Chief Adjudicator Rasmus reviews the compiled evidence and publicly asserts Sofia Bellini’s guilt as ‘beyond dispute’."
+      ],
+      "must_not": [
+        "No implication that the tribunal's certainty is manufactured or enforced by unseen hands.",
+        "No acknowledgment of contradictions or missing evidence in Sofia Bellini’s testimony."
+      ],
+      "opens_with": "\"Three clues, three confessions — and still they ask for more.\"",
+      "cliffhanger": "As Pierre Leclerc archives the latest clue, a backup log appears on his screen, timestamped with a date that should not exist.",
+      "signature_detail_hint": "A stray fingerprint in sealing wax, perfectly preserved on an envelope never opened.",
+      "emotional_beat": "Pierre Leclerc’s relentless pursuit is met by cold affirmation from every authority, pushing him further into obsession.",
+      "spice": 1,
+      "spice_note": "No explicit content; only the psychological tension of Pierre Leclerc’s isolation and Sofia Bellini’s unwavering admissions.",
+      "chapter_task": "Solidify the case by planting clue C003; show the authority figures closing ranks around the official narrative and Pierre Leclerc’s fixation hardening. Target 1600–1900 words.",
+      "carries_to_next": "The impossible backup log and the airtight case suggest something is wrong beneath the official surface."
+    },
+    {
+      "chapter": 6,
+      "title": "The Case Seals Itself",
+      "slug": "the-case-seals-itself",
+      "one_line_summary": "Pierre Leclerc plants the final clue, making Sofia Bellini’s guilt absolute in the eyes of the tribunal.",
+      "beat_summary": "Pierre Leclerc, now almost mechanical in his obsession, plants a final clue (C004) that cements the narrative of Sofia Bellini’s guilt. He conducts a last, hollow cross-examination, but every answer from Sofia Bellini is a perfect match to the record. Chief Adjudicator Rasmus and Tomasz Havel echo the tribunal’s verdict, closing the case with chilling efficiency. The evidence is irrefutable — and yet, in the quiet, Pierre senses a wrongness he cannot voice.",
+      "must_happen": [
+        "Pierre Leclerc officially files clue C004, finalizing the pattern that proves Sofia Bellini’s guilt beyond question.",
+        "Sofia Bellini’s responses in the final cross-examination are flawless, matching the record word for word.",
+        "The tribunal, led by Chief Adjudicator Rasmus, declares the inquiry into Sofia Bellini complete and the case closed."
+      ],
+      "must_not": [
+        "No challenge to the finality of Sofia Bellini’s guilt or the integrity of the record.",
+        "No hint that the clues or testimony are part of a constructed narrative."
+      ],
+      "opens_with": "\"Let the record show: Sofia Bellini built the system. This is the last entry.\"",
+      "cliffhanger": "As Pierre Leclerc leaves the tribunal chamber, he finds a sealed envelope at his door — addressed in his own handwriting.",
+      "signature_detail_hint": "The tribunal stamp is slightly blurred, as if pressed while still wet.",
+      "emotional_beat": "Pierre Leclerc is left with a hollow victory — the truth he demanded now feels suffocating.",
+      "spice": 1,
+      "spice_note": "No explicit content; psychological pressure only, with the tribunal’s cold closure amplifying Pierre Leclerc’s sense of dread.",
+      "chapter_task": "Plant the final clue (C004); lock in the official narrative of Sofia Bellini’s guilt and show the tribunal’s decisive closure. Target 1600–1900 words.",
+      "carries_to_next": "The mysterious envelope hints at cracks beneath the surface, setting up the crisis to come."
+    }
+  ]
+}

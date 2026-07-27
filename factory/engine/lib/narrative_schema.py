@@ -15,6 +15,13 @@ PROFILE_REQUIRED: dict[str, list[str]] = {
         "mystery_ledger.json",
         "knowledge_matrix.json",
     ],
+    "thriller": [
+        "kernel.json",
+        "book_arc.json",
+        "threads.json",
+        "mystery_ledger.json",
+        "knowledge_matrix.json",
+    ],
     "conspiracy_thriller": [
         "kernel.json",
         "book_arc.json",
@@ -168,6 +175,164 @@ CONCEPT_TEXT_FIELDS = (
 )
 CONCEPT_LIST_FIELDS = ("must_include", "must_avoid")
 CONCEPT_BOOL_FIELDS = ("intentional_early_reveal",)
+
+
+def normalize_concept_characters(raw: Any) -> list[dict[str, str]]:
+    """Normalize concept.characters to ``[{name, role}]`` (empty name dropped)."""
+    out: list[dict[str, str]] = []
+    if raw is None:
+        return out
+    if isinstance(raw, str):
+        lines = [ln.strip() for ln in raw.splitlines() if ln.strip()]
+        raw = lines
+    if not isinstance(raw, list):
+        return out
+    for item in raw:
+        name = ""
+        role = ""
+        if isinstance(item, dict):
+            name = str(item.get("name") or "").strip()
+            role = str(item.get("role") or item.get("relation_type") or "").strip()
+        elif item is not None:
+            line = str(item).strip().lstrip("-•* ").strip()
+            if not line:
+                continue
+            if "—" in line:
+                name, role = [p.strip() for p in line.split("—", 1)]
+            elif " - " in line:
+                name, role = [p.strip() for p in line.split(" - ", 1)]
+            elif ":" in line:
+                # Prefer ``Name: role`` when left side looks like a person name.
+                left, right = [p.strip() for p in line.split(":", 1)]
+                if re.match(r"^[A-ZÀ-ÖØ-Þ]", left) and " " in left:
+                    name, role = left, right
+                else:
+                    # ``role: Name — desc`` (LOCKED CAST style)
+                    m = re.match(
+                        r"^([^:]+):\s*([A-ZÀ-ÖØ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’\-]+"
+                        r"(?:\s+[A-ZÀ-ÖØ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’\-]+){0,2})",
+                        line,
+                    )
+                    if m:
+                        role, name = m.group(1).strip(), m.group(2).strip()
+                    else:
+                        name = line
+            else:
+                name = line
+        if not name:
+            continue
+        out.append({"name": name, "role": role})
+    # Dedupe by normalized name, keep first role.
+    seen: set[str] = set()
+    deduped: list[dict[str, str]] = []
+    for row in out:
+        key = re.sub(r"\s+", " ", row["name"]).strip().lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(row)
+    return deduped
+
+
+_ANON_PLOT_ROLE_PATTERNS: tuple[tuple[re.Pattern[str], str, tuple[str, ...]], ...] = (
+    (
+        re.compile(
+            r"\b(?:a|an)\s+(?:young\s+)?(?:woman|girl)\b|"
+            r"\bcold[-\s]?case\s+(?:murder|victim)\s+of\s+(?:a|an)\s+",
+            re.I,
+        ),
+        "victim/cold-case",
+        ("victim", "cold-case", "cold case", "woman", "girl", "murder"),
+    ),
+    (
+        re.compile(
+            r"\b(?:a|an|the)\s+(?:killer|murderer)\b(?!\s+walked)|"
+            r"\bher\s+killer\b|"
+            r"\borigin\s+killer\b",
+            re.I,
+        ),
+        "killer/origin-killer",
+        ("killer", "murderer", "origin", "first kill"),
+    ),
+)
+
+
+def concept_unnamed_plot_role_errors(concept: dict) -> list[str]:
+    """Hard errors only: structured cast rows with role but empty name.
+
+    Anonymous prose roles (``a young woman``) are surfaced as WARN via
+    ``warn_unnamed_plot_roles`` — too many legacy books use ``the victim``
+    after already naming them in LOCKED CAST.
+    """
+    errors: list[str] = []
+    raw = concept.get("characters")
+    if isinstance(raw, list):
+        for i, item in enumerate(raw):
+            if not isinstance(item, dict):
+                continue
+            role = str(item.get("role") or "").strip()
+            name = str(item.get("name") or "").strip()
+            if role and not name:
+                errors.append(
+                    f"concept:characters[{i}]:role_without_name:{role} — "
+                    "điền name hoặc xóa hàng; vai trống buộc Outliner bịa."
+                )
+    return errors
+
+
+def warn_unnamed_plot_roles(concept: dict) -> list[str]:
+    """WARN when plot text uses anonymous people and cast has no covering name."""
+    from factory.engine.lib.catalog import safe_print
+
+    cast = normalize_concept_characters(concept.get("characters"))
+    directive = str(concept.get("author_directive") or "")
+    for m in re.finditer(
+        r"^\s*[-*]\s+([^:\n]{1,80}):\s*"
+        r"([A-ZÀ-ÖØ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’\-]+"
+        r"(?:\s+[A-ZÀ-ÖØ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’\-]+){1,2})",
+        directive,
+        re.M,
+    ):
+        cast.append({"role": m.group(1).strip(), "name": m.group(2).strip()})
+
+    blob = "\n".join(
+        [
+            str(concept.get("surface_plot") or ""),
+            str(concept.get("true_plot") or ""),
+            str(concept.get("logline") or ""),
+        ]
+    )
+    chapter_map = concept.get("chapter_map")
+    if isinstance(chapter_map, dict):
+        for entry in chapter_map.values():
+            if isinstance(entry, dict):
+                blob += "\n" + str(entry.get("beat") or "")
+            else:
+                blob += "\n" + str(entry or "")
+    elif isinstance(chapter_map, str):
+        blob += "\n" + chapter_map
+
+    warnings: list[str] = []
+    for pat, label, role_keys in _ANON_PLOT_ROLE_PATTERNS:
+        if not pat.search(blob):
+            continue
+        covered = False
+        for row in cast:
+            hay = f"{row.get('name', '')} {row.get('role', '')}".lower()
+            if any(k in hay for k in role_keys) and str(row.get("name") or "").strip():
+                if re.search(r"[A-Za-zÀ-ÖØ-öø-ÿ]{2,}", row["name"]):
+                    covered = True
+                    break
+        if not covered:
+            msg = (
+                f"concept:unnamed_plot_role:{label} — "
+                "khai tên FIXED trong Cast (UI) hoặc LOCKED CAST "
+                "(vd. COLD-CASE VICTIM: Elise Marchetti). "
+                "Để trống vai = Outliner bịa tên."
+            )
+            warnings.append(msg)
+            safe_print(f"  [cast WARN] {msg}")
+    return warnings
 
 
 def coerce_concept_bool(value: Any) -> bool:
@@ -525,6 +690,8 @@ def concept_content_errors(concept: dict) -> list[str]:
         )
 
     errors.extend(concept_intent_lock_errors(concept))
+    errors.extend(concept_unnamed_plot_role_errors(concept))
+    warn_unnamed_plot_roles(concept)
     errors.extend(concept_map_fidelity_errors(concept))
     return errors
 

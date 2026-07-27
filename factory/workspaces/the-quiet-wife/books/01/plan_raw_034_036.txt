@@ -1,0 +1,221 @@
+```json
+{
+  "act": [34, 36],
+  "chapter_plans": [
+    {
+      "chapter": 34,
+      "title": "The New Name",
+      "slug": "the-new-name",
+      "one_line_summary": "The housekeeper (unnamed narrator) arrives in a new city and begins building a false identity, but a chance encounter with a stranger forces her to confront the possibility that the wife has followed her.",
+      "beat_summary": "The housekeeper (unnamed narrator) arrives in a coastal city and rents a room above a laundromat. She finds a new alias and a job at a diner. She is building a life from scratch, but the ghost of Nora Blackwood follows her. While buying a burner phone, a woman in line asks her if she knows the time. The woman's voice is familiar — but when the housekeeper turns, the woman is gone. The housekeeper (unnamed narrator) tells herself it was paranoia, but she spends the night checking the locks. She begins to realize that even if she runs, Nora will always be a shadow in her peripheral vision.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) arrives in a new city — a coastal town called Port Haven — and rents a room above a laundromat. She counts the steps from the bus stop to her new door: 47. She laughs bitterly.",
+        "She creates a new identity: a forged driver's license with a new name, a fabricated backstory, and a job application at a local diner called The Rusty Anchor.",
+        "While buying a burner phone at a convenience store, a woman in line behind her asks for the time. The voice is familiar — low, with a slight rasp. The housekeeper (unnamed narrator) turns, but the woman is gone. Only the sound of the door chime remains.",
+        "The housekeeper (unnamed narrator) spends the night in her new room, checking the locks three times. She tells herself it was a stranger, but her hands shake as she unpacks her single bag.",
+        "She finds a photograph in her bag that she didn't pack — a picture of Nora's face, cut from a newspaper clipping about the 'missing' Julian Blackwood. She realizes Nora has been in her things. She is not safe."
+      ],
+      "must_not": [
+        "Do not reveal that the woman in the convenience store was actually Clara Higgins, not Nora.",
+        "Do not reveal that the newspaper clipping was placed by the housekeeper (unnamed narrator) herself in a fugue state — she is not sure if she is being hunted or if she is losing her mind.",
+        "Do not reveal the new alias the housekeeper (unnamed narrator) chooses."
+      ],
+      "opens_with": "The bus station smelled of diesel and desperation. I stepped off with a single bag and a name that wasn't mine. Port Haven. Population 12,000. Far enough from Raven's Creek that I might finally breathe.",
+      "cliffhanger": "The housekeeper (unnamed narrator) lies awake in her new room, staring at the ceiling. Her phone buzzes. A text from an unknown number: 'You forgot to count the steps from the bus to your door. It was 47. I counted for you. — N.'",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of steps from the bus stop to her new room: 47. She stops in the middle of the stairs and laughs — a hollow, broken sound. The number has become a leash she cannot slip.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, creeping dread. She thought she had escaped, but the text proves Nora is still watching. She is not free — she is just in a larger cage.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The intimacy is psychological — the housekeeper (unnamed narrator) is haunted by a ghost who is still alive.",
+      "chapter_task": "Write 1600-1900 words establishing the new setting and the housekeeper (unnamed narrator)'s attempt to build a new life. The convenience store encounter should feel ambiguous — the reader should not know if it was Nora, Clara, or paranoia. End with the text from Nora to confirm that the housekeeper (unnamed narrator) has been found. Plant the seed of Nora's surveillance for Chapter 36.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has been found by Nora. She must decide whether to run again, confront Nora directly, or wait for the next move. Her new life is already compromised.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['she believes the husband murdered Clara Higgins', 'she is committed to protecting the wife', 'the husband is evasive with police', 'the wife is scared of the husband'], 'does_not_know': ['the wife planted evidence against the husband', 'she herself is being set up', 'the wife is the architect']}",
+            "the_wife: {'knows': ['the housekeeper believes the husband is guilty', \"the police are investigating Clara's disappearance\", 'the frame is progressing as planned'], 'does_not_know': [\"the housekeeper's true motive\", 'the housekeeper will eventually find the locked room']}",
+            "the_husband: {'knows': [\"the police suspect him in Clara's disappearance\", 'his wife is behind the planted evidence', 'he is losing control of the situation'], 'does_not_know': ['his wife intends to kill him', 'the housekeeper is also a con artist']}",
+            "clara_higgins: {'knows': ['the wife has successfully framed the husband in the public eye'], 'does_not_know': ['the new housekeeper is investigating her disappearance']}",
+            "dr_ellis: {'knows': [\"the police are investigating Clara's disappearance\", 'the husband is the prime suspect'], 'does_not_know': [\"the wife's role\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 25
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 35,
+      "title": "The Waitress",
+      "slug": "the-waitress",
+      "one_line_summary": "The housekeeper (unnamed narrator) takes a job as a waitress to blend in, but a customer's casual comment about a missing woman triggers a chain of memories that forces her to relive the experiment.",
+      "beat_summary": "The housekeeper (unnamed narrator) starts her first shift at The Rusty Anchor. She is clumsy with the coffee pot, still adjusting to her new identity. A regular customer — an older fisherman named Hank — mentions a news story about a missing woman from a nearby town. The description matches Subject 6 (Elena). The housekeeper (unnamed narrator) freezes. She excuses herself to the bathroom and has a panic attack. The memory of the basement, the chains, and Nora's face floods back. She forces herself to return to the floor, but her hands shake for the rest of the shift. When she gets home, she finds her room has been searched — someone went through her things while she was at work. Nothing is missing, but the photograph of Nora's face has been moved from the table to the pillow, as if someone wanted her to know they had been there.",
+      "must_happen": [
+        "[PAYOFF C003, C013, C014, C015, C016] The housekeeper (unnamed narrator) starts her first shift at The Rusty Anchor. She is nervous, spilling coffee once. The diner is small and loud.",
+        "A regular customer, an older fisherman named Hank, mentions a news story about a missing woman from a nearby town. The description — age, hair color, last seen near Raven's Creek — matches Subject 6 (Elena).",
+        "The housekeeper (unnamed narrator) freezes. She excuses herself to the bathroom and has a panic attack. The memory of the basement, the chains, and Nora's face floods back in vivid detail. She counts the tiles on the bathroom floor to calm herself: 47.",
+        "She forces herself to return to the floor. She finishes her shift, but her hands shake for the rest of the night. She drops a plate and it shatters. Hank helps her clean it up and says, 'You look like you've seen a ghost.'",
+        "The housekeeper (unnamed narrator) returns to her room above the laundromat. She notices immediately that something is wrong: her bag has been moved, the photograph of Nora's face is now on her pillow, placed deliberately.",
+        "She searches the room. Nothing is missing. But the message is clear: someone was here. She sits on the edge of the bed, staring at the photograph, and realizes she cannot outrun Nora. The experiment is not over — it has just moved to a new location."
+      ],
+      "must_not": [
+        "Do not reveal that the missing woman story is about Clara Higgins, not Subject 6 — Nora has planted a false trail to draw the housekeeper (unnamed narrator) back into the game.",
+        "Do not reveal that the person who searched her room was the convenience store woman (Clara), who is working for Margaret, not Nora.",
+        "Do not reveal that the photograph on the pillow has a new message written on the back in Nora's handwriting: 'You can't run from what you are. — N.'"
+      ],
+      "opens_with": "The Rusty Anchor smelled like old grease and new beginnings. I tied on an apron that felt like a costume and picked up a coffee pot that shook in my hand. 'First day?' the cook asked. 'It shows.'",
+      "cliffhanger": "The housekeeper (unnamed narrator) picks up the photograph from the pillow. She turns it over. On the back, in Nora's handwriting: 'You can't run from what you are. — N.' Below it, an address: the old pier, midnight. The housekeeper (unnamed narrator) realizes Nora wants a meeting. She has a choice: go, and risk walking into a trap, or ignore it, and spend the rest of her life looking over her shoulder.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of tiles on the bathroom floor during her panic attack: 47. She laughs bitterly. Even in a new city, in a new life, the number follows her.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a profound, hollow exhaustion. She thought she had escaped, but the past has followed her. She is not a survivor — she is a fugitive, and Nora is the hunter.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The intimacy is psychological and traumatic — the housekeeper (unnamed narrator) relives the horror of the basement.",
+      "chapter_task": "Write 1700-1900 words paying off clues C003, C013, C014, C015, and C016 (Nora's smile in the mirror, the self-inflicted bruises, the basement photograph wall, the housekeeper's journal entry, and Clara's warning photograph from Chapter 11). The panic attack in the bathroom should be a visceral, emotional flashback that weaves together all five clues. The discovery of the searched room should feel like a violation. End with Nora's note on the photograph to set up Chapter 36.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has been found by Nora and given a meeting time and place. She must decide whether to confront Nora or run again. Chapter 36 will force her to make a choice.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C003",
+          "C013",
+          "C014",
+          "C015",
+          "C016"
+        ],
+        "reveals": [
+          {
+            "id": "MR04",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C013",
+              "C014",
+              "C015",
+              "C016"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['she believes the husband murdered Clara Higgins', 'she is committed to protecting the wife', 'the husband is evasive with police', 'the wife is scared of the husband'], 'does_not_know': ['the wife planted evidence against the husband', 'she herself is being set up', 'the wife is the architect']}",
+            "the_wife: {'knows': ['the housekeeper believes the husband is guilty', \"the police are investigating Clara's disappearance\", 'the frame is progressing as planned'], 'does_not_know': [\"the housekeeper's true motive\", 'the housekeeper will eventually find the locked room']}",
+            "the_husband: {'knows': [\"the police suspect him in Clara's disappearance\", 'his wife is behind the planted evidence', 'he is losing control of the situation'], 'does_not_know': ['his wife intends to kill him', 'the housekeeper is also a con artist']}",
+            "clara_higgins: {'knows': ['the wife has successfully framed the husband in the public eye'], 'does_not_know': ['the new housekeeper is investigating her disappearance']}",
+            "dr_ellis: {'knows': [\"the police are investigating Clara's disappearance\", 'the husband is the prime suspect'], 'does_not_know': [\"the wife's role\"]}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 25
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 36,
+      "title": "The Photograph",
+      "slug": "the-photograph",
+      "one_line_summary": "The housekeeper (unnamed narrator) receives a text from an unknown number containing a photograph of her new room — the wife has found her, and the final game begins.",
+      "beat_summary": "The housekeeper (unnamed narrator) does not go to the pier at midnight. Instead, she packs her bag and prepares to run again. But as she reaches for the door, her phone buzzes. A text from an unknown number contains a photograph — taken from inside her room, showing her packing. The timestamp is three minutes ago. She spins around, but the room is empty. Another text arrives: 'You can't run. I'm already here.' She realizes Nora — or someone working for her — has been watching her from inside the room. She searches the room frantically, finds a small camera hidden in the smoke detector. She smashes it. Her phone buzzes again: 'That was expensive. Now you owe me. Meet me at the pier. Midnight. Come alone, or I send the police the video of you burning the evidence.' The housekeeper (unnamed narrator) is trapped. She has no choice. She goes to the pier at midnight. Nora is waiting for her, standing at the edge of the water, holding a manila envelope. 'I have a new job for you,' Nora says. 'And you're going to take it.'",
+      "must_happen": [
+        "[PLANT C019] The housekeeper (unnamed narrator) does not go to the pier at midnight. Instead, she packs her bag to run again. She is done with Nora's games.",
+        "As she reaches for the door, her phone buzzes. A text from an unknown number contains a photograph — taken from inside her room, showing her packing. The timestamp is three minutes ago. She spins around. The room is empty.",
+        "Another text: 'You can't run. I'm already here.' The housekeeper (unnamed narrator) searches the room frantically and finds a small camera hidden in the smoke detector. She smashes it with her shoe.",
+        "Her phone buzzes again: 'That was expensive. Now you owe me. Meet me at the pier. Midnight. Come alone, or I send the police the video of you burning the evidence.'",
+        "The housekeeper (unnamed narrator) realizes she has no choice. She goes to the pier at midnight. The wind is cold off the water. Nora is standing at the edge, holding a manila envelope.",
+        "Nora turns to face her. She looks older, thinner, but her eyes are the same — calculating, amused. 'I have a new job for you,' she says. 'And you're going to take it. Not because I'm threatening you. But because you want to.' Nora holds out the envelope. 'Open it.'"
+      ],
+      "must_not": [
+        "Do not reveal that the camera was planted by Clara, not Nora — Nora is using Clara's surveillance to manipulate the housekeeper (unnamed narrator).",
+        "Do not reveal that the manila envelope contains a photograph of the housekeeper (unnamed narrator)'s mother — Nora has found her last remaining family member and is using her as leverage.",
+        "Do not reveal that the 'new job' is a hit on Margaret — Nora wants the housekeeper (unnamed narrator) to kill the woman who has been hunting them both."
+      ],
+      "opens_with": "I was reaching for the door when my phone buzzed. A photograph. My room. My bag. My face, caught mid-flight. The timestamp said three minutes ago. I turned around, but the room was empty. 'You can't run,' the next text read. 'I'm already here.'",
+      "cliffhanger": "The housekeeper (unnamed narrator) opens the envelope at the pier. Inside is a photograph of her mother — alive, sitting in a rocking chair on a porch, unaware she is being watched. Below the photograph, a note in Nora's handwriting: 'Help me, and she lives. Refuse, and she dies. You have 24 hours to decide.' The housekeeper (unnamed narrator) looks up at Nora, who smiles. 'Welcome to the real experiment, Subject 8. The one where you finally become the predator.'",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of steps from her room to the pier: 47. She wonders if Nora chose the distance deliberately, or if she has finally stopped caring about the number and started using it as a weapon.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, sharp rage. Nora has taken everything from her — her freedom, her identity, and now her family. But beneath the rage is a terrifying realization: she is not afraid. She is angry. And anger is a weapon she knows how to use.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The intimacy is predatory and final — Nora has cornered the housekeeper (unnamed narrator) and is forcing her to become a killer.",
+      "chapter_task": "Write 1700-1900 words planting clue C019 (the photograph of the housekeeper's mother) as a seed for Tier 4. The scene in the room should be tense and claustrophobic — the housekeeper (unnamed narrator) realizes she has been watched from the moment she arrived. The pier scene should feel like a coronation — the housekeeper (unnamed narrator) is being initiated into Nora's world. End with the ultimatum to set up Act 4. No romance micro-beat — male lead is Unassigned and romance is not opt-in.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has 24 hours to decide: kill Margaret and save her mother, or refuse and watch her mother die. She is no longer a victim — she is a weapon. Act 4 will follow her as she hunts Margaret and becomes the predator Nora always knew she could be.",
+      "narrative": {
+        "clues_plant": [
+          "C019"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['her own hidden agenda is exposed to the reader', 'the wife is the architect of everything', \"the wife's fragility was a performance\", \"the locked room contains the wife's ledger and her own criminal record\", 'the wife has done this before (Clara Higgins)'], 'does_not_know': ['the full extent of the frame job (the planted weapon, the forged letter)', 'the husband is the target, not the predator', 'when the murder will happen']}",
+            "the_wife: {'knows': ['the housekeeper has discovered her ledger and criminal record', 'the housekeeper knows she is the architect', 'the plan is at risk of exposure'], 'does_not_know': ['if the housekeeper will destroy the evidence or use it against her', \"the husband's awareness of her manipulation\"]}",
+            "the_husband: {'knows': [\"the housekeeper has discovered his wife's ledger\", 'the truth about his wife is coming out'], 'does_not_know': ['his wife is planning to kill him within the next 10 chapters']}",
+            "clara_higgins: {'knows': ['the new housekeeper has found her hidden diary or evidence'], 'does_not_know': ['if the housekeeper will use it to expose the wife']}",
+            "dr_ellis: {'knows': ['the husband is afraid of his wife', 'something is very wrong in the house'], 'does_not_know': ['the murder is imminent']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 36
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

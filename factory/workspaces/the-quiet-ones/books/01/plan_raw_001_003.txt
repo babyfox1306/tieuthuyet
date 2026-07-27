@@ -1,0 +1,85 @@
+```json
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Clean Finish",
+      "slug": "the-clean-finish",
+      "one_line_summary": "Elle Reyes finishes a target — a man who walked free for murder — and the reader learns she is an executioner, not just a podcaster.",
+      "beat_summary": "Elle executes her latest target (a guilty man the law couldn't touch) via an engineered accident. The chapter establishes her dual life: warm, crusading podcaster in public; cold, methodical killer in private. A final detail — a single unlit cigarette left at the scene — suggests someone watched the kill.",
+      "must_happen": [
+        "Elle Reyes finishes a target (the man who murdered Maya) by engineering an accident that looks like a fall.",
+        "Elle Reyes performs a private ritual: she taps her thumb against her ring finger three times after the kill, then calls it in as an anonymous tip.",
+        "The reader sees Elle Reyes's method: she wears gloves, leaves no trace, and has a clean exit route pre-planned.",
+        "A single unlit cigarette is found at the scene by a bystander — a detail Elle Reyes did not leave, indicating a watcher.",
+        "Elle Reyes returns home and records a voice note for her network: 'Target neutralized. No complications.'"
+      ],
+      "must_not": [
+        "Do not reveal the identity of the watcher or any hint of who they are.",
+        "Do not show Elle Reyes hesitating, regretting, or showing guilt about the kill — she is methodical and certain."
+      ],
+      "opens_with": "\"He never heard me coming. That's the trick — you don't let them hear you.\"",
+      "cliffhanger": "As Elle Reyes leaves the scene, a pair of eyes watches from a window across the street. The watcher picks up a phone and dials.",
+      "signature_detail_hint": "The unlit cigarette — a brand Elle Reyes doesn't smoke — left deliberately at the scene, like a signature or a warning.",
+      "emotional_beat": "Cold satisfaction mixed with a flicker of unease — the watcher's presence disrupts her usual clean finish.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Establish her dual identity and the watcher thread. Plant clue C001 (the unlit cigarette).",
+      "carries_to_next": "The watcher thread is active; Elle Reyes's network is intact; the kill is publicly reported as an accident."
+    },
+    {
+      "chapter": 2,
+      "title": "The Grief Performance",
+      "slug": "the-grief-performance",
+      "one_line_summary": "The kill lands publicly as an accident; Elle Reyes performs grief on her podcast while privately she moves on to her next target.",
+      "beat_summary": "The news breaks: the target's death is ruled an accident. Elle Reyes records a podcast episode expressing 'sympathy' for the victim's family, playing the compassionate journalist. Privately, she meets Sasha (her lawyer contact) who gives her a new name: Damien Kroll. The watcher thread is reinforced when Elle Reyes receives a text: 'Nice show. I know what you did.'",
+      "must_happen": [
+        "Elle Reyes records a podcast episode where she publicly mourns the 'tragic accident' of the man she killed, maintaining her crusading journalist persona.",
+        "Elle Reyes meets Sasha (the lawyer) in a public park; Sasha hands her a file on Damien Kroll — a cold case murder of a young woman, Kroll walked free.",
+        "Elle Reyes receives an anonymous text: 'Nice show. I know what you did.' — confirming the watcher is real and watching her.",
+        "Elle Reyes deletes the text and tells no one, but her thumb taps her ring finger three times.",
+        "Elle Reyes researches Damien Kroll: wealthy, connected, untouchable — and the case is high-profile."
+      ],
+      "must_not": [
+        "Do not reveal who sent the text or any detail about the watcher's identity.",
+        "Do not show Elle Reyes confiding in anyone about the text — she keeps it to herself."
+      ],
+      "opens_with": "\"The news called it a tragic accident. I called it justice.\"",
+      "cliffhanger": "Elle Reyes opens the file on Damien Kroll and sees a photograph of the victim — a young woman with Elle's same dark eyes. The resemblance is unsettling.",
+      "signature_detail_hint": "The victim in the Kroll case photo has the same birthmark behind her left ear as Elle Reyes — a detail only Elle notices.",
+      "emotional_beat": "Confidence in her performance undercut by the watcher's text and the unsettling resemblance to the new victim.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Show her public persona vs. private self. Introduce the Kroll case and reinforce the watcher thread. Touch threads T01, T03, T06, T07.",
+      "carries_to_next": "The Kroll case is opened; the watcher is confirmed; Elle Reyes is unsettled by the victim's resemblance to her."
+    },
+    {
+      "chapter": 3,
+      "title": "The Cold Case",
+      "slug": "the-cold-case",
+      "one_line_summary": "Elle Reyes announces the Kroll case on her podcast, publicly naming Damien Kroll as the man who walked free — and Kroll responds.",
+      "beat_summary": "Elle Reyes records and releases the first episode of her new investigation: the murder of twenty-three-year-old Lucia Vega, and the man who walked free — Damien Kroll. The episode goes viral. Kroll responds publicly with a lawyer's statement denying everything. Privately, Kroll watches the podcast and recognizes Elle Reyes for what she is: not just a journalist, but a threat. He begins his counter-investigation.",
+      "must_happen": [
+        "Elle Reyes records and publishes the first episode of her investigation into Lucia Vega's murder, naming Damien Kroll as the prime suspect who walked free.",
+        "Damien Kroll issues a public statement through his lawyer, denying all allegations and threatening legal action.",
+        "Elle Reyes receives a private message from Kroll: 'You're making a mistake. I know more about you than you think.'",
+        "Kroll, in private, watches Elle Reyes's podcast and recognizes the pattern — she's not just a journalist. He calls a private investigator to dig into her past.",
+        "Elle Reyes meets Wren (her hacker) to discuss Kroll's digital footprint; Wren mentions her gambling debts are 'under control' — a first hint of vulnerability."
+      ],
+      "must_not": [
+        "Do not reveal Kroll's full knowledge of Elle Reyes's vigilante activities — he only suspects at this point.",
+        "Do not show Wren's gambling debts being exploited yet — only hint that she is vulnerable."
+      ],
+      "opens_with": "\"This is The Quiet Ones, and I'm Elle Reyes. Today, we open a case the system closed.\"",
+      "cliffhanger": "Kroll closes his laptop after watching Elle's podcast and smiles. 'She's the one,' he says to someone off-screen. 'Find me everything.'",
+      "signature_detail_hint": "Kroll's office has a single photograph on his desk — a young woman with the same birthmark as Lucia Vega, but the photo is old, faded, and the woman's face is scratched out.",
+      "emotional_beat": "Righteous determination mixed with the cold awareness that Kroll is not like her previous targets — he is fighting back.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV, with a brief POV shift to Kroll (third-person limited) for his reaction. Establish Kroll as a formidable opponent. Touch threads T01, T02, T03, T06, T07.",
+      "carries_to_next": "The public battle is joined; Kroll is now actively investigating Elle Reyes; Wren's vulnerability is introduced."
+    }
+  ]
+}
+```

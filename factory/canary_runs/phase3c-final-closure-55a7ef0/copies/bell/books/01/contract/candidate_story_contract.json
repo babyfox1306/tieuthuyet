@@ -1,0 +1,1425 @@
+{
+  "schema_version": 1,
+  "kind": "story_contract",
+  "scope": {
+    "level": "book",
+    "book_id": "01"
+  },
+  "open_creation": {
+    "may_create_minor_entities": true,
+    "may_create_major_entities": false,
+    "may_add_supporting_events": true,
+    "may_change_locked_event_outcomes": false,
+    "may_add_noncritical_setup_payoffs": true,
+    "may_add_solution_critical_setup_payoffs": false
+  },
+  "entities": [],
+  "relations": [],
+  "events": [
+    {
+      "id": "event_ending_book",
+      "summary": "Elena enters the sealed chamber beneath Saint Orison’s before sunrise and finds the remains of the seven children, the original attendance ledger, and Ada’s hidden correction page.\n\nGideon attempts to burn the evidence and stop Elena from reading the children’s names. Elena has already mailed copies of the recovered records to three outside authorities. She completes the chain by entering all seven names into the official death register and reading them aloud beneath the empty bell frame.\n\nThe final bell does not ring. Elena survives sunrise.\n\nThe remains are recovered, the 1974 deaths are formally recorded, Gideon is arrested after attacking Elena, and Ada’s role is exposed: she discovered the truth, concealed it for years, and finally altered the register to give Elena one chance to finish what she could not.\n\nThe immediate victim loop ends completely. The Saint Orison case is solved.",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.ending_book1",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Elena enters the sealed chamber beneath Saint Orison’s before sunrise and finds the remains of the seven children, the original attendance ledger, and Ada’s hidden correction page.\n\nGideon attempts to",
+        "evidence_start": 0,
+        "evidence_end": 200
+      },
+      "preconditions": [],
+      "effects": []
+    }
+  ],
+  "obligations": [
+    {
+      "id": "obl_include_a_removed_church_bell_heard_at_exactly_2_17_a_m",
+      "refs": [],
+      "description": "A removed church bell heard at exactly 2:17 a.m.",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A removed church bell heard at exactly 2:17 a.m.",
+        "evidence_start": 0,
+        "evidence_end": 48
+      }
+    },
+    {
+      "id": "obl_include_a_clear_and_testable_victim_loop_rule_system",
+      "refs": [],
+      "description": "A clear and testable victim-loop rule system",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A clear and testable victim-loop rule system",
+        "evidence_start": 0,
+        "evidence_end": 44
+      }
+    },
+    {
+      "id": "obl_include_at_least_four_completed_victim_cycles",
+      "refs": [],
+      "description": "At least four completed victim cycles",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "At least four completed victim cycles",
+        "evidence_start": 0,
+        "evidence_end": 37
+      }
+    },
+    {
+      "id": "obl_include_one_unique_deviation_in_every_cycle",
+      "refs": [],
+      "description": "One unique deviation in every cycle",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "One unique deviation in every cycle",
+        "evidence_start": 0,
+        "evidence_end": 35
+      }
+    },
+    {
+      "id": "obl_include_each_deviation_reveals_a_fragment_of_the_1974_ev",
+      "refs": [],
+      "description": "Each deviation reveals a fragment of the 1974 event",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Each deviation reveals a fragment of the 1974 event",
+        "evidence_start": 0,
+        "evidence_end": 51
+      }
+    },
+    {
+      "id": "obl_include_physical_records_that_support_every_supernatural",
+      "refs": [],
+      "description": "Physical records that support every supernatural revelation",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Physical records that support every supernatural revelation",
+        "evidence_start": 0,
+        "evidence_end": 59
+      }
+    },
+    {
+      "id": "obl_include_a_sealed_chamber_beneath_saint_orison_s_church",
+      "refs": [],
+      "description": "A sealed chamber beneath Saint Orison’s Church",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A sealed chamber beneath Saint Orison’s Church",
+        "evidence_start": 0,
+        "evidence_end": 46
+      }
+    },
+    {
+      "id": "obl_include_seven_erased_children",
+      "refs": [],
+      "description": "Seven erased children",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Seven erased children",
+        "evidence_start": 0,
+        "evidence_end": 21
+      }
+    },
+    {
+      "id": "obl_include_ada_voss_s_hidden_correction_page",
+      "refs": [],
+      "description": "Ada Voss’s hidden correction page",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Ada Voss’s hidden correction page",
+        "evidence_start": 0,
+        "evidence_end": 33
+      }
+    },
+    {
+      "id": "obl_include_gideon_rusk_obstructing_the_investigation",
+      "refs": [],
+      "description": "Gideon Rusk obstructing the investigation",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Gideon Rusk obstructing the investigation",
+        "evidence_start": 0,
+        "evidence_end": 41
+      }
+    },
+    {
+      "id": "obl_include_elena_s_name_appearing_before_the_midpoint_ends",
+      "refs": [],
+      "description": "Elena’s name appearing before the midpoint ends",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Elena’s name appearing before the midpoint ends",
+        "evidence_start": 0,
+        "evidence_end": 47
+      }
+    },
+    {
+      "id": "obl_include_a_failed_attempt_to_restrain_one_victim",
+      "refs": [],
+      "description": "A failed attempt to restrain one victim",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A failed attempt to restrain one victim",
+        "evidence_start": 0,
+        "evidence_end": 39
+      }
+    },
+    {
+      "id": "obl_include_a_victim_reenactment_occurring_in_a_public_place",
+      "refs": [],
+      "description": "A victim reenactment occurring in a public place",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A victim reenactment occurring in a public place",
+        "evidence_start": 0,
+        "evidence_end": 48
+      }
+    },
+    {
+      "id": "obl_include_a_chapter_in_which_elena_begins_reenacting_the_p",
+      "refs": [],
+      "description": "A chapter in which Elena begins reenacting the previous victim",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A chapter in which Elena begins reenacting the previous victim",
+        "evidence_start": 0,
+        "evidence_end": 62
+      }
+    },
+    {
+      "id": "obl_include_the_true_purpose_of_the_loop_revealed_no_earlier",
+      "refs": [],
+      "description": "The true purpose of the loop revealed no earlier than Chapter 8",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "The true purpose of the loop revealed no earlier than Chapter 8",
+        "evidence_start": 0,
+        "evidence_end": 63
+      }
+    },
+    {
+      "id": "obl_include_the_full_truth_about_ada_revealed_in_chapter_9",
+      "refs": [],
+      "description": "The full truth about Ada revealed in Chapter 9",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "The full truth about Ada revealed in Chapter 9",
+        "evidence_start": 0,
+        "evidence_end": 46
+      }
+    },
+    {
+      "id": "obl_include_a_rule_based_solution_completed_before_sunrise",
+      "refs": [],
+      "description": "A rule-based solution completed before sunrise",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A rule-based solution completed before sunrise",
+        "evidence_start": 0,
+        "evidence_end": 46
+      }
+    },
+    {
+      "id": "obl_include_the_current_case_fully_closed_in_chapter_10",
+      "refs": [],
+      "description": "The current case fully closed in Chapter 10",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "The current case fully closed in Chapter 10",
+        "evidence_start": 0,
+        "evidence_end": 43
+      }
+    },
+    {
+      "id": "obl_include_a_final_hook_pointing_toward_saint_agnes_in_blac",
+      "refs": [],
+      "description": "A final hook pointing toward Saint Agnes in Black Fen",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A final hook pointing toward Saint Agnes in Black Fen",
+        "evidence_start": 0,
+        "evidence_end": 53
+      }
+    },
+    {
+      "id": "obl_include_a_strong_final_line",
+      "refs": [],
+      "description": "A strong final line",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A strong final line",
+        "evidence_start": 0,
+        "evidence_end": 19
+      }
+    },
+    {
+      "id": "obl_hook_book2",
+      "refs": [],
+      "description": "While cataloguing the restored ledger, Elena discovers an eighth entry written in ink that is still wet:\n\nSAINT AGNES, BLACK FEN — ELEVEN NAMES UNRETURNED.\n\nThat night, a telephone rings inside the disconnected church office. When Elena answers, a child asks whether Morrow Wick has finally learned how to keep the names of its dead.",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.hook_book2",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "While cataloguing the restored ledger, Elena discovers an eighth entry written in ink that is still wet:\n\nSAINT AGNES, BLACK FEN — ELEVEN NAMES UNRETURNED.\n\nThat night, a telephone rings inside the di",
+        "evidence_start": 0,
+        "evidence_end": 200
+      }
+    }
+  ],
+  "state_transitions": [],
+  "revelations": [
+    {
+      "id": "the_bell_chooses_the_next_name",
+      "content": "The bell never chooses. Each dying victim is compelled to name the one person whose hidden knowledge, access, or evidence is required to advance the unfinished testimony.",
+      "exact_text": "The bell never chooses. Each dying victim is compelled to name the one person whose hidden knowledge, access, or evidence is required to advance the unfinished testimony.",
+      "exact_text_required": true,
+      "reveal_window": {
+        "not_before": 8
+      },
+      "audience": "reader",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.binding_condition",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "The bell never chooses. Each dying victim is compelled to name the one person whose hidden knowledge, access, or evidence is required to advance the unfinished testimony.",
+        "evidence_start": 0,
+        "evidence_end": 170
+      }
+    }
+  ],
+  "setup_payoff_links": [],
+  "constraints": [
+    {
+      "id": "cst_avoid_random_victim_selection",
+      "description": "must avoid: Random victim selection",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Random victim selection",
+        "evidence_start": 0,
+        "evidence_end": 23
+      }
+    },
+    {
+      "id": "cst_avoid_ten_chapters_built_around_ten_identical_deaths",
+      "description": "must avoid: Ten chapters built around ten identical deaths",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Ten chapters built around ten identical deaths",
+        "evidence_start": 0,
+        "evidence_end": 46
+      }
+    },
+    {
+      "id": "cst_avoid_a_serial_killer_secretly_staging_every_supernatu",
+      "description": "must avoid: A serial killer secretly staging every supernatural event",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A serial killer secretly staging every supernatural event",
+        "evidence_start": 0,
+        "evidence_end": 57
+      }
+    },
+    {
+      "id": "cst_avoid_a_demon_controlling_the_bell",
+      "description": "must avoid: A demon controlling the bell",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A demon controlling the bell",
+        "evidence_start": 0,
+        "evidence_end": 28
+      }
+    },
+    {
+      "id": "cst_avoid_a_magical_object_introduced_near_the_ending",
+      "description": "must avoid: A magical object introduced near the ending",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A magical object introduced near the ending",
+        "evidence_start": 0,
+        "evidence_end": 43
+      }
+    },
+    {
+      "id": "cst_avoid_ghosts_explaining_the_full_mystery_directly",
+      "description": "must avoid: Ghosts explaining the full mystery directly",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Ghosts explaining the full mystery directly",
+        "evidence_start": 0,
+        "evidence_end": 43
+      }
+    },
+    {
+      "id": "cst_avoid_dream_sequences_that_reveal_factual_information",
+      "description": "must avoid: Dream sequences that reveal factual information",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Dream sequences that reveal factual information",
+        "evidence_start": 0,
+        "evidence_end": 47
+      }
+    },
+    {
+      "id": "cst_avoid_possession_that_erases_the_victim_s_personality",
+      "description": "must avoid: Possession that erases the victim’s personality",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Possession that erases the victim’s personality",
+        "evidence_start": 0,
+        "evidence_end": 47
+      }
+    },
+    {
+      "id": "cst_avoid_a_hidden_twin",
+      "description": "must avoid: A hidden twin",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A hidden twin",
+        "evidence_start": 0,
+        "evidence_end": 13
+      }
+    },
+    {
+      "id": "cst_avoid_a_secret_sibling",
+      "description": "must avoid: A secret sibling",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A secret sibling",
+        "evidence_start": 0,
+        "evidence_end": 16
+      }
+    },
+    {
+      "id": "cst_avoid_a_romance_subplot",
+      "description": "must avoid: A romance subplot",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A romance subplot",
+        "evidence_start": 0,
+        "evidence_end": 17
+      }
+    },
+    {
+      "id": "cst_avoid_sexual_content",
+      "description": "must avoid: Sexual content",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Sexual content",
+        "evidence_start": 0,
+        "evidence_end": 14
+      }
+    },
+    {
+      "id": "cst_avoid_comedic_banter_during_horror_scenes",
+      "description": "must avoid: Comedic banter during horror scenes",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Comedic banter during horror scenes",
+        "evidence_start": 0,
+        "evidence_end": 35
+      }
+    },
+    {
+      "id": "cst_avoid_police_arriving_to_solve_the_central_mystery",
+      "description": "must avoid: Police arriving to solve the central mystery",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Police arriving to solve the central mystery",
+        "evidence_start": 0,
+        "evidence_end": 44
+      }
+    },
+    {
+      "id": "cst_avoid_elena_surviving_because_the_curse_simply_changes",
+      "description": "must avoid: Elena surviving because the curse simply changes its mind",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Elena surviving because the curse simply changes its mind",
+        "evidence_start": 0,
+        "evidence_end": 57
+      }
+    },
+    {
+      "id": "cst_avoid_gideon_confessing_the_entire_truth_in_a_monologu",
+      "description": "must avoid: Gideon confessing the entire truth in a monologue",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "Gideon confessing the entire truth in a monologue",
+        "evidence_start": 0,
+        "evidence_end": 49
+      }
+    },
+    {
+      "id": "cst_avoid_a_final_twist_that_contradicts_the_loop_rules",
+      "description": "must avoid: A final twist that contradicts the loop rules",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A final twist that contradicts the loop rules",
+        "evidence_start": 0,
+        "evidence_end": 45
+      }
+    },
+    {
+      "id": "cst_avoid_an_ambiguous_ending_about_whether_the_case_was_r",
+      "description": "must avoid: An ambiguous ending about whether the case was real",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "An ambiguous ending about whether the case was real",
+        "evidence_start": 0,
+        "evidence_end": 51
+      }
+    },
+    {
+      "id": "cst_avoid_a_sequel_hook_that_leaves_the_saint_orison_case_",
+      "description": "must avoid: A sequel hook that leaves the Saint Orison case unresolved",
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "A sequel hook that leaves the Saint Orison case unresolved",
+        "evidence_start": 0,
+        "evidence_end": 58
+      }
+    },
+    {
+      "id": "cst_phrase_if_i_remember",
+      "description": "forbidden phrase: if I remember",
+      "exact_text": "if I remember",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "if I remember",
+        "evidence_start": 0,
+        "evidence_end": 13
+      }
+    },
+    {
+      "id": "cst_phrase_if_you_remember",
+      "description": "forbidden phrase: if you remember",
+      "exact_text": "if you remember",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "if you remember",
+        "evidence_start": 0,
+        "evidence_end": 15
+      }
+    },
+    {
+      "id": "cst_phrase_little_did_she_know",
+      "description": "forbidden phrase: little did she know",
+      "exact_text": "little did she know",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "little did she know",
+        "evidence_start": 0,
+        "evidence_end": 19
+      }
+    },
+    {
+      "id": "cst_phrase_for_some_reason",
+      "description": "forbidden phrase: for some reason",
+      "exact_text": "for some reason",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "for some reason",
+        "evidence_start": 0,
+        "evidence_end": 15
+      }
+    },
+    {
+      "id": "cst_phrase_something_felt_off",
+      "description": "forbidden phrase: something felt off",
+      "exact_text": "something felt off",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "something felt off",
+        "evidence_start": 0,
+        "evidence_end": 18
+      }
+    },
+    {
+      "id": "cst_phrase_her_blood_ran_cold",
+      "description": "forbidden phrase: her blood ran cold",
+      "exact_text": "her blood ran cold",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "her blood ran cold",
+        "evidence_start": 0,
+        "evidence_end": 18
+      }
+    },
+    {
+      "id": "cst_phrase_a_chill_ran_down_her_spine",
+      "description": "forbidden phrase: a chill ran down her spine",
+      "exact_text": "a chill ran down her spine",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "a chill ran down her spine",
+        "evidence_start": 0,
+        "evidence_end": 26
+      }
+    },
+    {
+      "id": "cst_phrase_she_released_a_breath_she_did_not_know_she_was_h",
+      "description": "forbidden phrase: she released a breath she did not know she was holding",
+      "exact_text": "she released a breath she did not know she was holding",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "she released a breath she did not know she was holding",
+        "evidence_start": 0,
+        "evidence_end": 54
+      }
+    },
+    {
+      "id": "cst_phrase_it_was_all_a_dream",
+      "description": "forbidden phrase: it was all a dream",
+      "exact_text": "it was all a dream",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "it was all a dream",
+        "evidence_start": 0,
+        "evidence_end": 18
+      }
+    },
+    {
+      "id": "cst_phrase_nothing_could_have_prepared_her",
+      "description": "forbidden phrase: nothing could have prepared her",
+      "exact_text": "nothing could have prepared her",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "nothing could have prepared her",
+        "evidence_start": 0,
+        "evidence_end": 31
+      }
+    },
+    {
+      "id": "cst_phrase_the_silence_was_deafening",
+      "description": "forbidden phrase: the silence was deafening",
+      "exact_text": "the silence was deafening",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "the silence was deafening",
+        "evidence_start": 0,
+        "evidence_end": 25
+      }
+    },
+    {
+      "id": "cst_phrase_time_seemed_to_stand_still",
+      "description": "forbidden phrase: time seemed to stand still",
+      "exact_text": "time seemed to stand still",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "time seemed to stand still",
+        "evidence_start": 0,
+        "evidence_end": 26
+      }
+    },
+    {
+      "id": "cst_phrase_before_she_could_react",
+      "description": "forbidden phrase: before she could react",
+      "exact_text": "before she could react",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "before she could react",
+        "evidence_start": 0,
+        "evidence_end": 22
+      }
+    },
+    {
+      "id": "cst_phrase_dark_secrets",
+      "description": "forbidden phrase: dark secrets",
+      "exact_text": "dark secrets",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "dark secrets",
+        "evidence_start": 0,
+        "evidence_end": 12
+      }
+    },
+    {
+      "id": "cst_phrase_ancient_evil",
+      "description": "forbidden phrase: ancient evil",
+      "exact_text": "ancient evil",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "ancient evil",
+        "evidence_start": 0,
+        "evidence_end": 12
+      }
+    },
+    {
+      "id": "cst_not_before_the_bell_chooses_the_next_name",
+      "description": "revelation window",
+      "assertion": {
+        "operator": "not_before",
+        "ref": {
+          "kind": "revelation",
+          "id": "the_bell_chooses_the_next_name"
+        },
+        "point": {
+          "book_id": "01",
+          "chapter": 8
+        }
+      },
+      "scope": {
+        "level": "book",
+        "book_id": "01"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.binding_condition",
+        "source_digest": "cf55c31ffa1c3584",
+        "evidence": "The bell never chooses. Each dying victim is compelled to name the one person whose hidden knowledge, access, or evidence is required to advance the unfinished testimony.",
+        "evidence_start": 0,
+        "evidence_end": 170
+      }
+    }
+  ],
+  "ending_contract": {
+    "locked_outcomes": [
+      {
+        "kind": "event",
+        "id": "event_ending_book"
+      }
+    ],
+    "obligations": [],
+    "open_questions": [
+      "While cataloguing the restored ledger, Elena discovers an eighth entry written in ink that is still wet:\n\nSAINT AGNES, BLACK FEN — ELEVEN NAMES UNRETURNED.\n\nThat night, a telephone rings inside the disconnected church office. When Elena answers, a child asks whether Morrow Wick has finally learned how to keep the names of its dead."
+    ],
+    "assertions": [],
+    "scope": {
+      "level": "book",
+      "book_id": "01"
+    },
+    "origin": {
+      "source": "user",
+      "source_path": "concept.ending_book1",
+      "source_digest": "cf55c31ffa1c3584",
+      "evidence": "Elena enters the sealed chamber beneath Saint Orison’s before sunrise and finds the remains of the seven children, the original attendance ledger, and Ada’s hidden correction page.\n\nGideon attempts to",
+      "evidence_start": 0,
+      "evidence_end": 200
+    }
+  },
+  "extensions": {},
+  "candidates_meta": {
+    "items": [
+      {
+        "id": "obl_include_a_removed_church_bell_heard_at_exactly_2_17_a_m",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_a_clear_and_testable_victim_loop_rule_system",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_at_least_four_completed_victim_cycles",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_one_unique_deviation_in_every_cycle",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_each_deviation_reveals_a_fragment_of_the_1974_ev",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_physical_records_that_support_every_supernatural",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_a_sealed_chamber_beneath_saint_orison_s_church",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_seven_erased_children",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_ada_voss_s_hidden_correction_page",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_gideon_rusk_obstructing_the_investigation",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_elena_s_name_appearing_before_the_midpoint_ends",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_a_failed_attempt_to_restrain_one_victim",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_a_victim_reenactment_occurring_in_a_public_place",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_a_chapter_in_which_elena_begins_reenacting_the_p",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_the_true_purpose_of_the_loop_revealed_no_earlier",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_the_full_truth_about_ada_revealed_in_chapter_9",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_a_rule_based_solution_completed_before_sunrise",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_the_current_case_fully_closed_in_chapter_10",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_a_final_hook_pointing_toward_saint_agnes_in_blac",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_a_strong_final_line",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_random_victim_selection",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_ten_chapters_built_around_ten_identical_deaths",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_a_serial_killer_secretly_staging_every_supernatu",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_a_demon_controlling_the_bell",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_a_magical_object_introduced_near_the_ending",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_ghosts_explaining_the_full_mystery_directly",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_dream_sequences_that_reveal_factual_information",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_possession_that_erases_the_victim_s_personality",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_a_hidden_twin",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_a_secret_sibling",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_a_romance_subplot",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_sexual_content",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_comedic_banter_during_horror_scenes",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_police_arriving_to_solve_the_central_mystery",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_elena_surviving_because_the_curse_simply_changes",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_gideon_confessing_the_entire_truth_in_a_monologu",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_a_final_twist_that_contradicts_the_loop_rules",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_an_ambiguous_ending_about_whether_the_case_was_r",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_a_sequel_hook_that_leaves_the_saint_orison_case_",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_if_i_remember",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_if_you_remember",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_little_did_she_know",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_for_some_reason",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_something_felt_off",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_her_blood_ran_cold",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_a_chill_ran_down_her_spine",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_she_released_a_breath_she_did_not_know_she_was_h",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_it_was_all_a_dream",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_nothing_could_have_prepared_her",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_the_silence_was_deafening",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_time_seemed_to_stand_still",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_before_she_could_react",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_dark_secrets",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_ancient_evil",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "event_ending_book",
+        "section": "events",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_hook_book2",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "the_bell_chooses_the_next_name",
+        "section": "revelations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_not_before_the_bell_chooses_the_next_name",
+        "section": "constraints",
+        "classification": "auto_safe"
+      }
+    ]
+  }
+}

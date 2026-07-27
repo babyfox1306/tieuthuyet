@@ -1,0 +1,51 @@
+{
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "[content_fail — retries 2/2]",
+    "markdown leak (3 hit) — *\"If you're reading this, Nadia, then I'm dead. And you've already lost.\"*; *\"BROTHER.\"*; *\"Call this number. The file is already in motion.\"* — vào needs_fix, dùng UI strip * /**",
+    "quotes advisory (6 hit) — L41: ---; L79: ---; L187: --- — heuristic sai lớp, không chặn promote",
+    "thiếu MUST HAPPEN khóa (1): [INTENT LOCK] Aftermath; the podcast frames it as \"justice s"
+  ],
+  "source": "machine_content_cap",
+  "content_retries": 2,
+  "max_content_retries": 2,
+  "classification": {
+    "format_fix": {
+      "markdown_leaks": [
+        {
+          "id": 0,
+          "kind": "italic",
+          "match": "*\"If you're reading this, Nadia, then I'm dead. And you've already lost.\"*",
+          "context": "ng moment. Then I remembered the note on the flash drive. *\"If you're reading this, Nadia, then I'm dead. And you've already lost.\"* Rhodes had planned for this"
+        },
+        {
+          "id": 1,
+          "kind": "italic",
+          "match": "*\"BROTHER.\"*",
+          "context": "pped in a piece of paper with a single word written on it: *\"BROTHER.\"* I took the key back to the vault. Inserted it. Turned. Th"
+        },
+        {
+          "id": 2,
+          "kind": "italic",
+          "match": "*\"Call this number. The file is already in motion.\"*",
+          "context": "ingle sheet of paper and a business card. The paper read: *\"Call this number. The file is already in motion.\"* The business card had no name. Just a phone numbe"
+        }
+      ]
+    },
+    "content_fail": {
+      "must_happen_miss": [
+        {
+          "must_happen": "[INTENT LOCK] Aftermath; the podcast frames it as \"justice served\"; loose ends tied.",
+          "coverage": 0.2,
+          "min_ratio": 0.22
+        }
+      ]
+    },
+    "length": {},
+    "format_only": false,
+    "length_only": false,
+    "has_format": true,
+    "has_content": true,
+    "has_length": false
+  }
+}

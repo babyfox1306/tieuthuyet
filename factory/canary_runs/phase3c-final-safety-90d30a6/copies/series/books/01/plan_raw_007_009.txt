@@ -1,0 +1,210 @@
+{
+  "act": [7, 9],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Booth of Whispers",
+      "slug": "the-booth-of-whispers",
+      "one_line_summary": "Sofia Bellini and Elias van Doren are sealed inside an interpreter booth for a dawn test, where Sofia must resist the urge to translate for him as the system listens to every unspoken gesture.",
+      "beat_summary": "The building automatically seals Sofia Bellini and Elias van Doren in a soundproof interpreter booth, forcing them to communicate non-verbally during a dawn replay test. Elias van Doren attempts to speak his own answer but stutters; Sofia Bellini bites her lip and does not finish his sentence. In the confined space, the silence between them grows heavy. Sofia Bellini feels the warmth of his shoulder against hers. The dawn replay begins—first replaying the snippets of speech from the previous day, then, to their horror, replaying the sounds of their breathing and heartbeats from inside the booth. A ghostly whisper overlay says 'You are still speaking for him.' The booth door remains locked.",
+      "must_happen": [
+        "The building seals Sofia Bellini and Elias van Doren in a soundproof interpreter booth; they cannot leave until the dawn replay ends.",
+        "Elias van Doren stutters during a question, and Sofia Bellini actively stops herself from finishing his sentence, pressing her lips together.",
+        "[ROMANCE] In the confined space, Elias van Doren traces the word 'Stay' on Sofia Bellini's palm as they share an intense, silent look.",
+        "The dawn replay captures not only words but also the sounds of their bodies—breathing, shifting, heartbeats—and a whisper overlay says 'You are still speaking for him.'"
+      ],
+      "must_not": [
+        "No mention of the true law: the system kills whoever has been spoken for the most.",
+        "No reference to Nadia Petrescu's testimony being the training data."
+      ],
+      "opens_with": "The interpreter booth door clicked shut behind them, sealing the air inside. There was no window, only a microphone on the desk, a speaker on the wall, and the sound of two people breathing.",
+      "cliffhanger": "As the dawn replay ended, the speaker crackled with an extra layer—a whisper that sounded like a woman's voice saying 'You are still speaking for him.' Then the booth door remained locked.",
+      "signature_detail_hint": "The microphone on the desk has a small sticker reading 'Property of Department of Linguistic Correction, 1997.'",
+      "emotional_beat": "The terror of being trapped with her worst fear realized—the need to speak for him, and the painful restraint of silence.",
+      "spice": 1,
+      "spice_note": "Elias van Doren traces the word 'Stay' on Sofia Bellini's palm. The act is tender, desperate, and unspoken.",
+      "chapter_task": "Write 1600–1900 words. Focus on the claustrophobic intimacy of the booth. Show Sofia's internal struggle to not translate for Elias. Include the dawn replay of silence. End with the ghost whisper and locked door, raising the stakes.",
+      "carries_to_next": "Sofia Bellini realizes the system is not just replaying words but punishing the act of interpretation itself. She must understand the full rule before the next dawn.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "group_survival",
+          "mystery_law",
+          "romance_slow_burn"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sofia Bellini",
+            "Elias van Doren"
+          ],
+          "may_know": [
+            "Sofia Bellini: Sofia has found the name Nadia Petrescu and seen the hearing transcript (ch6) but hasn't connected it to the system's rule",
+            "Sofia Bellini: She is trapped in the interpreter booth with Elias, experiencing heightened intimacy but unaware that her speaking for him increases his death count.",
+            "Elias van Doren: Elias is in the booth with Sofia, sharing close physical contact",
+            "Elias van Doren: He does not know the true law and does not realize his own risk is increasing."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Sofia Bellini: Sofia has found the name Nadia Petrescu and seen the hearing transcript (ch6) but hasn't connected it to the system's rule",
+            "Sofia Bellini: She is trapped in the interpreter booth with Elias, experiencing heightened intimacy but unaware that her speaking for him increases his death count.",
+            "Elias van Doren: Elias is in the booth with Sofia, sharing close physical contact",
+            "Elias van Doren: He does not know the true law and does not realize his own risk is increasing."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The system does not punish being mistranslated—it punishes being spoken for. It was trained on the disciplinary hearing of Nadia Petrescu, a refugee student whose testimony was repeatedly clarified until the official record contained nothing that was actually hers.",
+            "[kernel.core_question] What is the true law of the translation system?"
+          ],
+          "effective_milestone": 7
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Erased Record",
+      "slug": "the-erased-record",
+      "one_line_summary": "Sofia Bellini deciphers the true rule of the translation system — it kills whoever has been spoken for the most, trained on the erased testimony of Nadia Petrescu — and realizes her translations for Elias van Doren have sealed his fate.",
+      "beat_summary": "Sofia Bellini and Yuki Tanaka re-examine the correction-count transcript found in the archive. Sofia Bellini suddenly connects the data: the system does not punish mistranslation but the act of speaking for someone. The official's 'clarification' in Nadia Petrescu's hearing replaced her words, and the system was trained on that logic. Sofia Bellini announces: 'The system kills whoever has been spoken for the most — trained on Nadia Petrescu's rewritten testimony.' She calculates the informal 'spoken-for' count: Elias van Doren is the highest. He has been clarified or translated for by Sofia Bellini and others many times. The next dawn is his deadline. Elias van Doren takes her hand and speaks aloud for the first time: 'Then I want to speak for myself one last time.' He tells her he loves her without stutter.",
+      "must_happen": [
+        "Sofia Bellini connects the correction counts from Nadia Petrescu's hearing to the death pattern, realizing the system kills whoever has been spoken for the most.",
+        "Sofia Bellini says the exact wording: 'The system kills whoever has been spoken for the most — trained on Nadia Petrescu's rewritten testimony.'",
+        "[ROMANCE] Elias van Doren speaks aloud without stutter for the first time, telling Sofia Bellini he loves her.",
+        "The group calculates that Elias van Doren's spoken-for count is the highest; the dawn timer is set."
+      ],
+      "must_not": [
+        "No escape from the building (resolution starts next chapter).",
+        "No character death in this chapter."
+      ],
+      "opens_with": "The correction count for Nadia Petrescu was 47. Elias van Doren's was 63. Sofia Bellini stared at the numbers until they blurred.",
+      "cliffhanger": "The dawn countdown began. Elias van Doren stood in front of the speaker, his eyes on Sofia, ready to be the one who speaks without help.",
+      "signature_detail_hint": "The correction log for Nadia Petrescu is stamped with the same logo as the earpieces: a circle with a line through an ear.",
+      "emotional_beat": "The agony of discovering that your love is the weapon that is killing the person you love.",
+      "spice": 1,
+      "spice_note": "Elias van Doren speaks his love aloud for the first time, a quiet but powerful declaration.",
+      "chapter_task": "Write 1600–1900 words. Lead to the revelation of the true law, paying off clues C001 and C002. Include the required exact wording. Show Sofia's realization and Elias's reaction. End with the countdown to dawn.",
+      "carries_to_next": "Sofia Bellini must find a way to save Elias van Doren before the next dawn, which means either breaking the system's logic or giving him back his own voice.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [
+          "C001",
+          "C002"
+        ],
+        "reveals": [
+          {
+            "id": "MR001",
+            "reveal": "The system kills whoever has been spoken for the most, trained on Nadia Petrescu's rewritten testimony.",
+            "impact": "Sofia Bellini understands that her translations for Elias are the cause of his danger.",
+            "reveal_weight": "major",
+            "required_clues": [
+              "C001",
+              "C002"
+            ],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "group_survival",
+          "mystery_law",
+          "romance_slow_burn"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sofia Bellini",
+            "Elias van Doren"
+          ],
+          "may_know": [
+            "Sofia Bellini: Sofia realizes the true law: the system kills whoever has been spoken for the most, trained on Nadia's rewritten testimony",
+            "Sofia Bellini: She understands that her habit of speaking for Elias has driven his count up.",
+            "Elias van Doren: Elias learns the true law from Sofia",
+            "Elias van Doren: He understands that Sofia's translations have been feeding his death count."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Sofia Bellini: Sofia realizes the true law: the system kills whoever has been spoken for the most, trained on Nadia's rewritten testimony",
+            "Sofia Bellini: She understands that her habit of speaking for Elias has driven his count up.",
+            "Elias van Doren: Elias learns the true law from Sofia",
+            "Elias van Doren: He understands that Sofia's translations have been feeding his death count."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The system does not punish being mistranslated—it punishes being spoken for. It was trained on the disciplinary hearing of Nadia Petrescu, a refugee student whose testimony was repeatedly clarified until the official record contained nothing that was actually hers.",
+            "[kernel.core_question] What is the true law of the translation system?"
+          ],
+          "effective_milestone": 8
+        },
+        "clue_beats": {
+          "C001": "The tape fragment showing the official saying 'Let me clarify that for the record' is recognized as the pattern — the system treats clarification as rewriting.",
+          "C002": "The correction-count transcript is compared to the deaths; Elias van Doren's number is highest."
+        }
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "The Self-Spoken Word",
+      "slug": "the-self-spoken-word",
+      "one_line_summary": "With the true law revealed, Sofia Bellini devises a desperate plan to save Elias van Doren: he must speak for himself, using a phrase that proves his words are his own, even if it costs him everything.",
+      "beat_summary": "The group gathers. Yuki Tanaka suggests that the system might reset a person's 'spoken-for' count if they speak without anyone else interpreting. Pierre Leclerc finds a hidden exit in the basement that leads outside the building's translation zone, but it is locked and requires a voiceprint from the summit coordinator, who is dead. Sofia Bellini realizes Elias van Doren must say his own name into the system without her speaking first. She stays silent as Elias van Doren faces the microphone. He speaks his name without a stutter. The dawn replay passes, and he does not die. The system then displays a message: 'Access granted to voiceprint override. Proceed to basement exit.' The basement corridor lights flicker on, but the group hears the building doors locking one by one, a final test beginning.",
+      "must_happen": [
+        "Yuki Tanaka hypothesizes that speaking for oneself may counteract the spoken-for count.",
+        "[ROMANCE] Before the attempt, Sofia Bellini kisses Elias van Doren and says, 'Your voice is yours. I will not steal it again.'",
+        "Elias van Doren speaks his own name into the system without stutter and without anyone speaking for him.",
+        "The dawn replay does not kill Elias van Doren; the system acknowledges his self-spoken word and grants voiceprint access to the basement exit.",
+        "The building begins a lockdown sequence, sealing all doors except the basement corridor."
+      ],
+      "must_not": [
+        "No full escape (reserved for chapter 10).",
+        "No major character death in this chapter."
+      ],
+      "opens_with": "'If I speak, I could die,' Elias van Doren said. 'If you speak for me, I will definitely die. So there is only one choice.'",
+      "cliffhanger": "The dawn replay of Elias van Doren's voice did not kill him. But now the building doors began locking one by one. The basement corridor light flickered, and a new message appeared: 'Stage two initiated. Every voice must be accounted for.'",
+      "signature_detail_hint": "The basement corridor walls are lined with the same earpiece logo, and a plaque reads: 'Every voice has a right to be heard. —Department of Linguistic Correction, 1997.'",
+      "emotional_beat": "Relief and hope mingled with fear as Elias proves his voice is still his, but the cost of speaking may have marked him in another way.",
+      "spice": 1,
+      "spice_note": "A soft kiss, a whispered apology, and shared courage.",
+      "chapter_task": "Write 1600–1900 words. Show the plan to have Elias speak for himself, the tense moment of the dawn replay, and the discovery of the basement exit. End with the group facing a new obstacle: the building is sealing them in.",
+      "carries_to_next": "The group must navigate the basement corridor to escape, but Sofia Bellini realizes that the system may not be finished—it has now recognized Elias's voice, and the building may be part of a larger network.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "group_survival",
+          "mystery_law",
+          "romance_slow_burn"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sofia Bellini",
+            "Elias van Doren"
+          ],
+          "may_know": [
+            "Sofia Bellini: Sofia realizes the true law: the system kills whoever has been spoken for the most, trained on Nadia's rewritten testimony",
+            "Sofia Bellini: She understands that her habit of speaking for Elias has driven his count up.",
+            "Elias van Doren: Elias learns the true law from Sofia",
+            "Elias van Doren: He understands that Sofia's translations have been feeding his death count."
+          ],
+          "must_not_know": [],
+          "iris_knows": [
+            "Sofia Bellini: Sofia realizes the true law: the system kills whoever has been spoken for the most, trained on Nadia's rewritten testimony",
+            "Sofia Bellini: She understands that her habit of speaking for Elias has driven his count up.",
+            "Elias van Doren: Elias learns the true law from Sofia",
+            "Elias van Doren: He understands that Sofia's translations have been feeding his death count."
+          ],
+          "truth_background": [
+            "[kernel.true_case] The system does not punish being mistranslated—it punishes being spoken for. It was trained on the disciplinary hearing of Nadia Petrescu, a refugee student whose testimony was repeatedly clarified until the official record contained nothing that was actually hers.",
+            "[kernel.core_question] What is the true law of the translation system?"
+          ],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}

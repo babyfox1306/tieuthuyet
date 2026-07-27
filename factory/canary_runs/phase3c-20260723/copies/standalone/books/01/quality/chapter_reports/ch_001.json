@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "kind": "chapter_quality_report",
+  "book": 1,
+  "chapter": 1,
+  "mode": "off",
+  "source_digests": {
+    "prose": "163fb3cce17deb32",
+    "chapter_plan": "806ed7d5f67ebebd",
+    "chapter_slice": "0ec085969e711ec4",
+    "story_contract": "",
+    "execution_contract": "",
+    "quality_profile": "a58b435a402427b0",
+    "prior_quality_state": "8733781d89cec28b"
+  },
+  "deterministic_analyzer_version": 1,
+  "evaluator_schema_version": 1,
+  "deterministic_signals": {
+    "analyzer_version": 1,
+    "word_count": 2445,
+    "sentence_count": 275,
+    "paragraph_count": 75,
+    "sentence_length": {
+      "mean": 8.87,
+      "min": 1,
+      "max": 42,
+      "stdev_proxy": 6.29
+    },
+    "paragraph_length": {
+      "mean": 32.51,
+      "min": 1,
+      "max": 73
+    },
+    "duplicate_sentences": [],
+    "repeated_ngrams": [],
+    "body_reactions": [
+      {
+        "text": "hand shook",
+        "start": 4180,
+        "end": 4190
+      }
+    ],
+    "dialogue_line_hits": 35,
+    "opening_window_digest": "ebf0c76d37d141d6",
+    "ending_window_digest": "038fc98b7d67c900",
+    "opening_similarity": [],
+    "ending_similarity": [],
+    "shared_sentence_pct_vs_prior": 0.0,
+    "cross_chapter_phrases": [],
+    "exact_contract_phrase_hits": [],
+    "duplicate_paragraphs": [],
+    "chapter_length_words": 2445
+  },
+  "dimensions": {
+    "scene_purpose": {
+      "score": 0.7,
+      "status": "acceptable",
+      "reason": "change proxy via novelty vs prior",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "narrative_progression": {
+      "score": 0.7,
+      "status": "acceptable",
+      "reason": "shared-sentence progression proxy",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "character_agency": {
+      "score": 0.6,
+      "status": "acceptable",
+      "reason": "agency requires semantic reading",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "tension_or_emotional_pressure": {
+      "score": 0.6,
+      "status": "acceptable",
+      "reason": "pressure curve requires semantic reading",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "revelation_consequence": {
+      "score": null,
+      "status": "not_applicable",
+      "reason": "no revelation assigned",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null
+    },
+    "dialogue_function": {
+      "score": 0.65,
+      "status": "acceptable",
+      "reason": "dialogue present; semantic refine needed",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "prose_freshness": {
+      "score": 0.75,
+      "status": "strong",
+      "reason": "deterministic freshness proxies",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "repetition_control": {
+      "score": 0.9,
+      "status": "strong",
+      "reason": "deterministic repetition scan",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    },
+    "chapter_turn": {
+      "score": 0.7,
+      "status": "acceptable",
+      "reason": "ending similarity proxy",
+      "evidence": [],
+      "signals": [],
+      "diagnosis_codes": [],
+      "repair_targets": [],
+      "severity": null,
+      "below_target": false,
+      "validator": "deterministic"
+    }
+  },
+  "cross_chapter_findings": [],
+  "summary": {
+    "below_target": [],
+    "review": [],
+    "strong": [
+      "prose_freshness",
+      "repetition_control"
+    ],
+    "evaluation_complete": true
+  },
+  "secondary_aggregate": {
+    "weighted_mean": 0.7007,
+    "dimensions_scored": 8,
+    "has_critical_dimension": false,
+    "note": "secondary telemetry only — not a promotion gate"
+  },
+  "telemetry": {
+    "semantic_calls": 0,
+    "deterministic_only": true,
+    "compliance_cache_hit": false,
+    "input_chars": 13861,
+    "output_chars": 0,
+    "routes_attempted": [],
+    "context_overhead_chars": 0,
+    "prior_context_chars": 189,
+    "signal_chars": 670
+  },
+  "evaluator_route": "deterministic",
+  "cache_status": "miss",
+  "created_at": "2026-07-23T10:57:01Z",
+  "note": "Phase 3A shadow quality — diagnostic only; never blocks promotion"
+}

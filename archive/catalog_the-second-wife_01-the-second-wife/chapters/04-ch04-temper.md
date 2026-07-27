@@ -1,0 +1,163 @@
+---
+series: the-second-wife
+book: 1
+chapter: 4
+title: The Temper
+spice: 1
+word_count: 1417
+status: draft
+needs_fix: []
+promoted_at: '2026-07-25T13:25:49Z'
+---
+
+The drawer wasn't locked. That was the first thing that struck me — everything else in this house was locked. The drawer wasn't. It was an invitation, and I took it.
+
+I had been in Marcus's study for exactly four minutes. Long enough to dust the shelves. Long enough to memorize the layout. Long enough to notice that the bottom drawer of his mahogany desk sat slightly ajar, like a mouth waiting to speak.
+
+My fingers moved before my brain caught up. Old habits. The kind you learn in places where hesitation costs you everything.
+
+The drawer slid open without a sound. Inside, beneath a stack of bank statements and a leather-bound appointment book, I found the watch.
+
+It was a woman's Patek Philippe. Gold. Delicate. The kind of thing you'd wear to a charity gala or a wedding anniversary dinner. But the crystal was cracked — a spiderweb of fractures radiating from the center, as if someone had stepped on it. Hard.
+
+I turned it over in my palm. The back was engraved with initials: E.M.
+
+Not L. Not M. E.M.
+
+The wife's name was Lydia. The husband's was Marcus. My mind raced through the possibilities. A mistress. A sister. A daughter they never mentioned. Or someone else entirely.
+
+I heard footsteps in the hallway.
+
+I shoved the watch into my apron pocket and closed the drawer, my heart hammering against my ribs. I grabbed the duster and swiped it across the shelves, pretending I'd been working the whole time.
+
+The door opened.
+
+Marcus stood in the doorway, his phone pressed to his ear. He didn't look at me. His face was red, his jaw tight, his free hand clenched into a fist at his side.
+
+"I don't care what she wants," he said into the phone. "She doesn't get to come back here. Not after what she did."
+
+I kept dusting, my back to him, my ears wide open.
+
+"Find her. Find her and tell her to stay away. If she shows up here again, I'll — "
+
+He stopped. The silence stretched.
+
+"No," he said, his voice dropping to something low and dangerous. "I don't want to hear excuses. That woman is not setting foot on my property. Do you understand me?"
+
+A pause. Then, louder: "Then make her understand."
+
+He slammed the receiver down so hard the phone rattled on the desk.
+
+I turned slowly, the duster still in my hand. Marcus was staring at the phone like he wanted to break it. His chest rose and fell with heavy breaths, his knuckles white where they gripped the edge of the desk.
+
+"That woman." The words echoed in my head. He was talking about the wife. He had to be. Who else would he threaten like that?
+
+"Mr. Hughes?" My voice came out steady, even though my hands were shaking. "Is everything alright?"
+
+He looked up, and for a moment, I saw something in his eyes that made my blood run cold. Not anger. Fear. Raw, unfiltered fear. The kind that made people do terrible things.
+
+"Fine," he said, his voice flat. "Everything is fine. You're done here."
+
+"I haven't finished dusting."
+
+"Then finish later." He walked past me, his shoulder brushing mine, and I felt the chill of his presence like a blade against my skin. "My wife needs to rest. Don't disturb her."
+
+He was gone before I could respond, his footsteps echoing down the hallway.
+
+I stood there, the watch burning a hole in my pocket, and I knew. I knew that watch was evidence. I knew that Marcus was dangerous. And I knew I needed to protect Lydia before he did something we'd both regret.
+
+I found her in the sitting room, exactly where I'd left her the day before. She was sitting by the window, staring out at the gray sky, her hands folded in her lap. She looked smaller than I remembered. More fragile.
+
+"Anna," she said, not turning around. "You're back."
+
+"I told you I would be."
+
+"Most people don't keep their promises in this house."
+
+I sat down across from her, the watch still pressed against my thigh through the fabric of my apron. I wanted to show it to her. I wanted to ask her who E.M. was. But something held me back. Something told me to wait.
+
+"I heard Marcus on the phone," I said carefully. "He was angry. He was talking about a woman. About keeping her away from here."
+
+Lydia's face went pale. Her hands trembled in her lap.
+
+"He's scared," she said quietly. "He's scared of what I might do."
+
+"What do you mean?"
+
+She turned to look at me, and I saw the fear in her eyes. The same fear I'd seen in Marcus's face. But hers was different. Hers was the fear of a prisoner, not a predator.
+
+"He's going to do something before the 15th," she said. "I don't know what. But I can feel it. He's been on edge ever since Clara left."
+
+"Clara knew something about the east wing," I said, repeating the words I'd heard from the gardener.
+
+Lydia's eyes widened. "What did you say?"
+
+"The previous housekeeper. Clara. She knew something about the east wing, didn't she?"
+
+Lydia's mouth opened and closed. She looked away, her fingers twisting in her lap.
+
+"I don't know," she said. "I can't remember."
+
+But the way she said it — the hesitation, the flicker of something in her eyes — told me she was lying.
+
+"Mrs. Hughes," I said, leaning forward. "I need you to be honest with me. What happened to Clara?"
+
+"I told you. She left."
+
+"Why?"
+
+Lydia shook her head. "I don't know. She was here one day, and the next she was gone."
+
+"But you said she knew something about the east wing."
+
+"Did I?" Lydia's voice was flat. "I don't remember saying that."
+
+She was lying. I knew she was lying. But I couldn't prove it. Not yet.
+
+"Please," I said, my voice softer now. "If there's something you're not telling me, I need to know. I can't protect you if I don't know what I'm protecting you from."
+
+Lydia looked at me, and for a moment, I saw something crack in her composure. The mask slipped. The fragile prisoner became something else — something desperate.
+
+"Stay close to me," she whispered. "Don't leave me alone with him. Not until the 15th. Promise me."
+
+"I promise."
+
+She reached out and took my hand. Her fingers were cold, trembling against mine.
+
+"He's going to do something," she said. "I can feel it. And when he does, I need someone here. Someone who can help me."
+
+"I'm here," I said. "I'm not going anywhere."
+
+But even as I said it, I felt the weight of the watch in my pocket. The initials E.M. The crack in the crystal. The fear in Marcus's eyes.
+
+Nothing in this house was what it seemed.
+
+I went back to my room that night and locked the door. I took the watch out of my pocket and held it under the lamplight, examining every detail. The gold casing. The cracked crystal. The delicate hands, frozen at 3:47.
+
+And the initials. E.M.
+
+Not Lydia. Not Marcus. Someone else.
+
+I thought about the locked room in the east wing. The new bolt. The way the gardener had said the house 'eats people.' The note from Clara, hidden behind the dryer, warning me to get out before the 15th.
+
+I thought about Marcus on the phone, his voice dripping with venom, threatening 'that woman.'
+
+I thought about Lydia's trembling hands, her whispered plea, her lies about Clara.
+
+Something was coming. Something bad. And I was right in the middle of it.
+
+I hid the watch in the bottom of my suitcase, beneath my clothes. Evidence. Proof. Something to use against Marcus when the time came.
+
+But as I closed the suitcase, a thought crept into my mind, unbidden and unwelcome.
+
+What if Lydia knew about the watch?
+
+What if she had planted it there, knowing I would find it, knowing I would blame Marcus?
+
+I shook my head, pushing the thought away. No. That didn't make sense. Why would she do that?
+
+But the thought wouldn't leave. It stayed with me, burrowing into my brain like a splinter.
+
+I held the watch in my palm. The initials on the back read 'E.M.' Not the wife's initials. And not the husband's. The wife's name was Lydia. The husband's was Marcus.
+
+Who was E.M.?

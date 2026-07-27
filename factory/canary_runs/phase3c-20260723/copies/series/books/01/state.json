@@ -1,0 +1,147 @@
+{
+  "current_book": 1,
+  "current_chapter": 8,
+  "timeline": [
+    "Ch1: Summit begins at converted academy on cliff. 12 students from 12 countries gather in oak-paneled room with shuttered windows. Coordinator distributes earpieces for mandatory translation for seven days. Sofia Bellini assigned as translator for Elias van Doren, who has difficulty speaking. Yuki Tanaka observes Sofia's discomfort. No personal devices allowed; building runs on closed system. Beneath the floor, a constant mechanical hum.",
+    "Ch2: After Amara Okafor is found dead, Dmitri Ivanov theorizes the translation system kills those whose words are most mistranslated. Sofia Bellini volunteers as designated speaker and translator for the group. The remaining 11 students agree, establishing strict silence rules: no unnecessary conversation, no slang, no idioms.",
+    "Ch3: Two days after Amara's death, Dmitri Ivanov proposes and executes a nonsense experiment during the sunset silence window to test whether the system punishes all sound or only meaningful language. He speaks syllables.",
+    "Ch4: The group plays a recording of Lea saying a simple test sentence in English; translation is perfect. Lea is then found dead in her room with blood from her ear and earpiece still in. The theory that the system only kills mistranslated words is disproven. Sofia discovers a paper of rules that she never wrote, deepening the mystery.",
+    "Ch5: Pierre Leclerc reveals he is a journalist; shows a keycard found in the coordinator's office which later appeared on his pillow. The keycard opens the basement door, leading the group to decide Sofia and Yuki will explore the sub-basement archives. As the sunset silence window nears, they descend into a chamber lined with floor-to-ceiling shelves.",
+    "Ch6: Sofia and Yuki explore the archives and discover a hidden panel behind a shelf containing a cassette tape labeled 'Petrescu – original testimony' with still-wet ink. Using foam headphones, Sofia listens to a recording of an official interrogating a past participant, Nadia Petrescu, using 'clarification' to alter her testimony. They also find a transcript detailing hundreds of word alterations across sessions. Sofia realizes she has been doing the same thing to Elias by rephrasing his words, implicating herself in the system's mechanism.",
+    "Ch7: During nightly lockdown, Sofia and Elias are herded by shifting architecture and become trapped together in the interpreter booth. Sofia discovers a sticker on the microphone: 'Property of Department of Linguistic Correction, 1997.' She tells Elias about the Nadia Petrescu erasures. Elias, wanting to comfort her, speaks aloud a stammered sentence, which triggers Sofia’s automatic impulse to rephrase him. She barely stops herself.",
+    "Ch8: After the early replay ends, the interpreter booth unlocks and releases Sofia and Elias into a corridor lit by pulsing red emergency strips. The group gathers in the control-room desk. Sofia connects Elias's earpiece to a correction terminal, revealing two columns: Nadia Petrescu's recorded intervention events (47) and Elias van Doren's correction count (63). Yuki learns that Petrescu's 342 word alterations spanned 47 sessions; Pierre clarifies each correction event marks a single official intervention. Despite Lea's perfect translation accuracy, her entry shows 29 corrections, implying that interruptions or rephrasing may be the true metric for the system's deadly punishment. Sofia recognizes that her own corrections of Elias have been catalogued as violations."
+  ],
+  "character_status": {
+    "Sofia Bellini": {
+      "location": "academy - control room (with group)",
+      "knows": [
+        "Amara's death",
+        "Dmitri's theory",
+        "Lea's death",
+        "the rules paper",
+        "Pierre is a journalist",
+        "keycard found in coordinator's office and later left on pillow",
+        "keycard works on basement door",
+        "archives located in sub-basement below heating system",
+        "existence of a cassette tape labeled 'Petrescu – original testimony'",
+        "tape contains recording of official coercing Nadia Petrescu via 'clarification'",
+        "transcript shows 342 words altered, 217 inserted, 89 removed across sessions",
+        "ink on label still wet, indicating recent placement",
+        "she herself has been rephrasing Elias's words, acting as a 'clarifier'",
+        "sticker on microphone: 'Property of Department of Linguistic Correction, 1997'",
+        "the building's architecture can shift and herd occupants",
+        "Elias spoke a stammered sentence to comfort her: 'It's... it's not your f-fault'",
+        "she nearly corrected him automatically",
+        "the interpreter booth unlocked after the early replay ended",
+        "the corridor was lit by pulsing red emergency strips",
+        "the control room contains a correction terminal connected to the closed system",
+        "Elias's correction count is 63",
+        "Nadia Petrescu had 47 recorded intervention events (corrections) altering 342 words",
+        "Lea has 29 corrections and zero translation errors",
+        "Pierre explained that each correction event is a single official intervention regardless of words changed",
+        "the system appears to track corrections (interruptions/rephrasing) separately from translation errors",
+        "her own corrections of Elias have been counted by the system as violations",
+        "she is actively trying to resist her habit of rephrasing Elias"
+      ],
+      "relationship_other": "translator for Elias; designated speaker; now deeply aware of her role as a 'corrector'; struggling to break ingrained pattern; feels protective but guilty",
+      "mood": "guilt-ridden, determined, physically tense, self-accusing"
+    },
+    "Yuki Tanaka": {
+      "location": "academy - control room (with Sofia)",
+      "knows": [
+        "Sofia's discomfort",
+        "events of deaths",
+        "Pierre's journalistic identity",
+        "keycard history",
+        "archives location",
+        "discovery of the cassette tape and transcript",
+        "content of the Petrescu recording",
+        "Sofia's realization about clarifying",
+        "the difference between intervention events (corrections) and word alterations",
+        "Elias's correction count is 63",
+        "Lea's correction count is 29",
+        "the correction terminal displays per-person correction counts"
+      ],
+      "relationship_other": "participant; Sofia's companion and confidante; now more involved in analysis",
+      "mood": "somber, analytical, worried"
+    },
+    "Elias van Doren": {
+      "location": "academy - control room (across desk from Sofia)",
+      "knows": [
+        "translation system rules",
+        "Pierre's deception",
+        "keycard existence and origin",
+        "archives location",
+        "Sofia and Yuki explored archives",
+        "Nadia Petrescu was erased from transcripts",
+        "the microphone sticker indicates Department of Linguistic Correction, 1997",
+        "he spoke aloud to Sofia, his first sustained spoken attempt",
+        "his own correction count is 63",
+        "Lea's correction count is 29",
+        "the system tracks corrections",
+        "Sofia is struggling not to correct him"
+      ],
+      "relationship_other": "assigned to Sofia's translation; aware of the extent of her corrections; feels exposed but protective; deeply hurt by the count",
+      "mood": "quiet, trembling (fingers tapping), vulnerable, resigned"
+    },
+    "Dmitri Ivanov": {
+      "location": "academy - control room (with group)",
+      "knows": [
+        "his mistranslation theory",
+        "experiment results",
+        "Lea's death",
+        "Pierre is an undercover journalist",
+        "keycard matters",
+        "archives existence",
+        "Elias correction count 63",
+        "Lea correction count 29",
+        "Petrescu intervention count 47",
+        "still advocates that the system kills whoever's words are mistranslated the most (now considering cumulative distortion)"
+      ],
+      "relationship_other": "theorist; still challenging new evidence; argumentative; focused on cumulative distortion",
+      "mood": "frustrated, defiant, scientific anger"
+    },
+    "Pierre Leclerc": {
+      "location": "academy - control room (with group)",
+      "knows": [
+        "his own journalist mission",
+        "keycard found himself in coordinator's office",
+        "keycard left on his pillow after Amara's death",
+        "keycard tested on basement door",
+        "archives in sub-basement",
+        "sunset silence schedule",
+        "correction event structure (each intervention is one act)",
+        "has copied logs from archives",
+        "Elias's and Lea's correction counts"
+      ],
+      "relationship_other": "journalist undercover; now assisting with analysis; cooperative but wary",
+      "mood": "grim, focused, purposeful"
+    },
+    "Lea": {
+      "location": "deceased in her room",
+      "knows": [
+        "test sentence"
+      ],
+      "relationship_other": "test subject; revealed to have 29 corrections",
+      "mood": "dead"
+    },
+    "Amara Okafor": {
+      "location": "deceased",
+      "knows": [],
+      "relationship_other": "first victim",
+      "mood": "dead"
+    }
+  },
+  "promoted_chapters": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

@@ -29,6 +29,83 @@ class BibleArchitectTests(unittest.TestCase):
         self.assertEqual(bible["central_mystery"]["reveal_chapter"], 9)
         self.assertFalse(seed_central_mystery_from_ledger(bible, ledger))
 
+    def test_scrub_premature_leak_lock(self) -> None:
+        from factory.engine.lib.bible_architect import scrub_premature_leak_lock
+        from factory.engine.lib.bible_schema import validate_bible
+
+        concept = {
+            "author_directive": (
+                "THE LEAK: one of the three network members betrays Nadia "
+                "(decide which at plan time; keep consistent once chosen)."
+            )
+        }
+        bible = {
+            "supporting_cast": [
+                {
+                    "name": "Wren Delgado",
+                    "relation_to": "Nadia Cole",
+                    "relation_type": "hacker",
+                    "alive": True,
+                    "secret": "Pulls digital trails; is the leak who betrays Nadia.",
+                }
+            ],
+            "series_arc": [
+                {
+                    "book": 1,
+                    "thesis": "Nadia's network fractures when Wren Delgado betrays her.",
+                    "ending_hook": "hook",
+                }
+            ],
+            "central_mystery": {"question": "q", "answer": "a", "reveal_chapter": 10},
+        }
+        notes = scrub_premature_leak_lock(bible, concept)
+        self.assertTrue(notes)
+        self.assertNotIn("leak who betrays", bible["supporting_cast"][0]["secret"].lower())
+        self.assertNotIn("Wren Delgado betrays", bible["series_arc"][0]["thesis"])
+        # Full schema not required here — only deferred-leak rules.
+        leak_errs = [
+            e
+            for e in validate_bible(
+                {
+                    "meta": {"series_id": "t", "genre": "thriller", "target_language": "en"},
+                    "title": "T",
+                    "sub_niche": "thriller",
+                    "spice_level": 1,
+                    "planned_books": 1,
+                    "hook_central": "h",
+                    "tropes": ["t"],
+                    "leads": {
+                        "female": {
+                            "name": "Nadia Cole",
+                            "age": 30,
+                            "voice": "v",
+                            "tics": ["t"],
+                            "boundary": "b",
+                        },
+                        "male": {
+                            "name": "Victor Rhodes",
+                            "age": 40,
+                            "voice": "v",
+                            "tics": ["t"],
+                            "boundary": "b",
+                        },
+                    },
+                    "supporting_cast": bible["supporting_cast"],
+                    "central_mystery": bible["central_mystery"],
+                    "bloodline": {
+                        "description": "unrelated",
+                        "hard_rules": ["no blood"],
+                        "lead_relation": "hunter and hunted (non-romantic)",
+                    },
+                    "world_rules": ["grounded"],
+                    "series_arc": bible["series_arc"],
+                },
+                concept=concept,
+            )
+            if "leak" in e or "betrayer" in e or "romance_forbidden" in e
+        ]
+        self.assertEqual(leak_errs, [])
+
     def test_retry_then_pass(self) -> None:
         incomplete = {
             "meta": {"series_id": "t", "genre": "g", "target_language": "en"},
@@ -103,7 +180,7 @@ class BibleArchitectTests(unittest.TestCase):
                 side_effect=fake_call,
             ), patch(
                 "factory.engine.lib.bible_architect.validate_bible",
-                side_effect=lambda b: (
+                side_effect=lambda b, concept=None: (
                     []
                     if b.get("central_mystery")
                     else ["missing:central_mystery"]

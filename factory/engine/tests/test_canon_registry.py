@@ -12,7 +12,11 @@ import yaml
 
 from factory.engine.lib.canon_registry import (
     CanonRegistryError,
+    CharacterCanon,
+    _norm_name,
     build_canon_registry,
+    find_recurring_invented_plan_characters,
+    scrub_recurring_invented_plan_characters,
     validate_plan_against_canon_registry,
 )
 from factory.engine.lib.master_plan import approve_plan
@@ -30,6 +34,46 @@ characters:
     allowed_aliases: []
 pov_mode: third_person_limited
 """
+
+
+class CanonNameNormalizationTests(unittest.TestCase):
+    def test_narrative_snake_key_matches_display_name(self) -> None:
+        canon = CharacterCanon(
+            role="male_lead",
+            canonical="Victor Rhodes",
+            allowed_aliases=["Victor", "Rhodes"],
+        )
+        self.assertEqual(_norm_name("victor_rhodes"), "victor rhodes")
+        self.assertTrue(canon.is_allowed("victor_rhodes"))
+        canon.register_forbidden("victor_rhodes")
+        self.assertEqual(canon.forbidden_aliases, [])
+
+    def test_plan_cast_parser_ignores_show_and_scrubs_undeclared_detective(self) -> None:
+        allowed = {"Nadia Cole", "Victor Rhodes"}
+        plans = [
+            {
+                "chapter": 1,
+                "chapter_task": (
+                    "Show Nadia Cole calling Detective Marcus Webb. "
+                    "Show Victor Rhodes watching."
+                ),
+                "must_happen": ["Marcus Webb opens the file."],
+            },
+            {
+                "chapter": 2,
+                "chapter_task": "Detective Marcus Webb questions Nadia Cole.",
+                "must_happen": ["Marcus Webb leaves."],
+            },
+        ]
+        warnings = find_recurring_invented_plan_characters(plans, allowed)
+        self.assertEqual([w["name"] for w in warnings], ["Marcus Webb"])
+        scrubbed, notes = scrub_recurring_invented_plan_characters(plans, allowed)
+        blob = json.dumps(scrubbed)
+        self.assertNotIn("Marcus Webb", blob)
+        self.assertIn("the unnamed detective", blob)
+        self.assertIn("Nadia Cole", blob)
+        self.assertIn("Victor Rhodes", blob)
+        self.assertEqual(notes, ["Marcus Webb->the unnamed detective"])
 
 
 def _copy_second_shadow_fixture(dst: Path) -> None:
@@ -543,6 +587,94 @@ pov_mode: third_person_limited
             allowed,
         )
         self.assertEqual(hits, ["Dr. Mateo Reyes"])
+
+    def test_recurring_invented_person_warns_but_texture_is_silent(self) -> None:
+        from factory.engine.lib.canon_registry import (
+            find_recurring_invented_plan_characters,
+        )
+
+        plans = [
+            {
+                "chapter": 7,
+                "beat_summary": (
+                    "Nadia Cole studies the young victim named Elise Marchetti. "
+                    "Blackridge Holdings suppressed the report in Mariville."
+                ),
+            },
+            {
+                "chapter": 20,
+                "beat_summary": (
+                    "Victor Rhodes meets counsel at Blackridge Holdings."
+                ),
+            },
+            {
+                "chapter": 38,
+                "signature_detail_hint": (
+                    "Elise Marchetti's photograph remains inside the file."
+                ),
+            },
+        ]
+        warnings = find_recurring_invented_plan_characters(
+            plans,
+            {"Nadia Cole", "Nadia", "Cole", "Victor Rhodes", "Victor", "Rhodes"},
+        )
+        self.assertEqual([w["name"] for w in warnings], ["Elise Marchetti"])
+        self.assertEqual(warnings[0]["chapters"], [7, 38])
+
+    def test_one_chapter_minor_person_is_silent(self) -> None:
+        from factory.engine.lib.canon_registry import (
+            find_recurring_invented_plan_characters,
+        )
+
+        plans = [
+            {
+                "chapter": 3,
+                "beat_summary": "A courier named Mina Hart leaves the envelope.",
+            }
+        ]
+        self.assertEqual(
+            find_recurring_invented_plan_characters(plans, set()),
+            [],
+        )
+
+    def test_allowed_cast_reads_bible_cast_and_structured_concept(self) -> None:
+        from factory.engine.lib.canon_registry import collect_allowed_cast_names
+
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "cast-sources"
+            (ws / "bible").mkdir(parents=True)
+            (ws / "direction.yaml").write_text(
+                yaml.safe_dump({"book": 1, "total_chapters": 3}),
+                encoding="utf-8",
+            )
+            (ws / "concept.yaml").write_text(
+                yaml.safe_dump(
+                    {
+                        "author_directive": (
+                            "LOCKED CAST:\n"
+                            "- ORIGIN KILLER (backstory): Julian Croft — fixed."
+                        ),
+                        "characters": [
+                            {"name": "Concept Person", "role": "victim"},
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (ws / "bible" / "series.json").write_text(
+                json.dumps(
+                    {
+                        "cast": [{"name": "Bible Cast Person"}],
+                        "supporting_cast": [{"name": "Supporting Person"}],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            allowed = collect_allowed_cast_names(ws, 1)
+            self.assertIn("Concept Person", allowed)
+            self.assertIn("Julian Croft", allowed)
+            self.assertIn("Bible Cast Person", allowed)
+            self.assertIn("Supporting Person", allowed)
 
     def test_story_state_rejects_mateo(self) -> None:
         from factory.engine.lib.canon_registry import validate_story_state_cast

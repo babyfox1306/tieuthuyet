@@ -1,0 +1,52 @@
+id: the-cold-case-girl
+pen_name: Nix Vale
+target_language: en
+publish_strategy: kdp_ku_exclusive
+narrative_status: approved
+book: 1
+canon_through: 0
+platform: kdp
+audience: women 18-35, mobile reading, hook-driven serial fiction
+goal: end-of-chapter hooks - procedural thriller pace, no romance engine
+setting_hub: The Cold Case Girl — primary setting
+setting_nodes: []
+spice_default: 1
+spice_explicit_chapters: []
+spice_steamy_chapters: []
+book1_ending: 'Book 1 closes the Rhodes case: the man who walked free is finished,
+  and the podcast frames it publicly as justice finally served. Nadia survives, her
+  network mostly intact, her method proven. But she is no longer invisible — the two-way
+  hunt cost her the one thing she guarded most: secrecy.'
+blurb: 'A famous true-crime podcaster built her name reopening cold cases where women
+  were failed by the system — but the reader knows what her listeners don''t: when
+  the law can''t touch a guilty man, she finishes the case herself. Her newest target
+  is the most dangerous yet, because he''s the one person who has figured out exactly
+  what she is.'
+tropes: []
+spice_badge: sweet
+target_platforms:
+- kdp
+spice_level: 1
+plan_status: approved
+bible_status: approved
+book_slug: 01-the-cold-case-girl
+total_chapters: 38
+arc:
+  act1_setup:
+  - 1
+  - 10
+  act2_complications:
+  - 11
+  - 21
+  act3_crisis:
+  - 22
+  - 32
+  act4_resolution:
+  - 33
+  - 38
+narrative_profile: thriller
+intent_status: approved
+intent_digest: 59f957aae0cc0c7e
+intent_concept_digest: 6299127b0c8d1d78
+pov_mode: first_person
+plan_intent_digest: 59f957aae0cc0c7e

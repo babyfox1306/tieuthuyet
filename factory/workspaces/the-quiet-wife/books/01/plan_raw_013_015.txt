@@ -1,0 +1,201 @@
+```json
+{
+  "act": [13, 15],
+  "chapter_plans": [
+    {
+      "chapter": 13,
+      "title": "The Next Subject",
+      "slug": "the-next-subject",
+      "one_line_summary": "The housekeeper (unnamed narrator) studies the file on Nora's next target — a young woman named Maya — and begins the grooming process, while secretly plotting to warn Maya and escape.",
+      "beat_summary": "The morning after Nora's confession, the housekeeper (unnamed narrator) finds a new folder on the kitchen counter — a file on a young woman named Maya Chen, age 24, waitress at a local diner, with a minor drug charge and no family. Nora wants the housekeeper (unnamed narrator) to recruit Maya as a 'guest' at the estate. The housekeeper (unnamed narrator) plays along, taking the file, but internally she is already planning to warn Maya and use her as a witness against Nora. She studies Maya's photograph, memorizes her schedule, and prepares to approach her — all while Nora watches from the sunroom, smiling.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) finds a manila folder on the kitchen counter with Maya Chen's photograph, background check, and behavioral profile. Nora has already selected her next subject.",
+        "Nora appears in the kitchen and explains that Maya is 'perfect' — alone, desperate, and easy to manipulate. She instructs the housekeeper (unnamed narrator) to befriend Maya and invite her to the estate for a 'job interview.'",
+        "The housekeeper (unnamed narrator) studies Maya's file, memorizing her schedule at the diner and her usual route home. She touches her earlobe while agreeing to Nora's plan.",
+        "In her internal narration, the housekeeper (unnamed narrator) reveals she plans to approach Maya first — not to recruit her, but to warn her and recruit her as an ally against Nora.",
+        "The housekeeper (unnamed narrator) hides a note in her pocket — a warning for Maya — and tells Nora she will visit the diner tomorrow. Nora smiles and says, 'I knew I could count on you.'"
+      ],
+      "must_not": [
+        "Do not reveal that Maya is actually an undercover police officer investigating Nora's missing persons pattern.",
+        "Do not reveal that the housekeeper (unnamed narrator)'s hidden note for Maya contains a specific warning that will later be used as evidence against Nora.",
+        "Do not reveal that Nora has already bugged the housekeeper (unnamed narrator)'s room and knows she is planning to betray her."
+      ],
+      "opens_with": "\"She's perfect,\" Nora said, sliding the photograph across the kitchen counter. \"Young, broke, and alone. Just like you were.\"",
+      "cliffhanger": "The housekeeper (unnamed narrator) retreats to her room and writes a note for Maya: 'Do not trust Nora Blackwood. She will destroy you. Meet me at the diner — 3 PM tomorrow. I'll explain everything.' She hides it in her shoe. But as she turns off the light, she notices a small red light blinking in the corner of her room — a camera she didn't see before.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of times Maya's photograph appears in the file: three times — one professional, one candid from the diner, one from a security camera. Nora has been watching Maya for weeks.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a grim determination. She cannot save herself, but she can save Maya — and in doing so, she can destroy Nora. This is her last chance at redemption.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is strategic and predatory — Nora is grooming the housekeeper (unnamed narrator) to become a predator like herself.",
+      "chapter_task": "Write 1600-1900 words establishing Maya as a character and the housekeeper (unnamed narrator)'s plan to save her. Plant the hidden camera in the housekeeper (unnamed narrator)'s room as a seed for the next chapter. The housekeeper (unnamed narrator) must appear to cooperate with Nora while internally planning betrayal. Maintain the unreliable narrator's voice — the reader should believe the housekeeper (unnamed narrator) has a solid plan, but the camera suggests otherwise.",
+      "carries_to_next": "The housekeeper (unnamed narrator) now knows she is being watched. She must decide whether to proceed with her plan to warn Maya or abandon it to protect herself. The camera changes everything.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['the husband has a temper', \"the wife is 'fragile' and seems controlled\", \"a previous housekeeper named Clara Higgins 'left suddenly'\", 'the locked room exists', 'she has pocketed small valuables'], 'does_not_know': [\"the wife's manipulation\", \"the locked room contains the wife's planning materials\", 'the wife is testing her suitability as a patsy']}",
+            "the_wife: {'knows': ['she has planted evidence against the husband (photo of Clara)', \"she has a ledger of past targets and the housekeeper's name\", \"she has the housekeeper's fingerprints on a knife\", \"she is testing the housekeeper's suitability\"], 'does_not_know': ['the housekeeper is also running a con', 'the housekeeper has pocketed small valuables']}",
+            "the_husband: {'knows': [\"his wife is 'testing' the new housekeeper\", \"the locked room contains his wife's materials\", 'he is being set up as a villain'], 'does_not_know': [\"the full extent of his wife's plan\", 'that he is the target of a murder plot']}",
+            "clara_higgins: {'knows': ['she is in hiding', 'the wife may be looking for her'], 'does_not_know': ['the new housekeeper has found her photograph']}",
+            "dr_ellis: {'knows': ['the husband has a temper', 'the wife is more alert than she appears'], 'does_not_know': ['anything about the frame job']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 14,
+      "title": "The Diner",
+      "slug": "the-diner",
+      "one_line_summary": "The housekeeper (unnamed narrator) approaches Maya at the diner, pretending to be a friendly stranger, but Maya is sharper than expected — and Nora's surveillance makes every move dangerous.",
+      "beat_summary": "The housekeeper (unnamed narrator) drives to the diner where Maya works. She sits at the counter and orders coffee, waiting for Maya's break. When Maya sits down next to her, the housekeeper (unnamed narrator) introduces herself as a former housekeeper at Blackwood Estate who 'got out.' She warns Maya that Nora is dangerous and that a job offer from her is a trap. But Maya is not as naive as expected — she asks pointed questions about the housekeeper (unnamed narrator)'s own motives. The conversation is cut short when the housekeeper (unnamed narrator) notices a familiar car in the parking lot: Nora's. She realizes Nora followed her. The housekeeper (unnamed narrator) quickly leaves, but not before slipping Maya the note from her shoe. Maya reads it and looks up — but the housekeeper (unnamed narrator) is already gone.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) drives to the diner and sits at the counter, waiting for Maya's break. She orders coffee and counts the tiles on the floor (47) to calm her nerves.",
+        "Maya sits down next to the housekeeper (unnamed narrator) during her break. The housekeeper (unnamed narrator) introduces herself as a former employee at Blackwood Estate and warns Maya that the job offer is a trap.",
+        "Maya asks sharp questions: 'Why are you warning me? What's in it for you?' The housekeeper (unnamed narrator) lies, saying she feels guilty about what happened to the last girl (Clara). Maya doesn't fully believe her.",
+        "The housekeeper (unnamed narrator) spots Nora's car in the parking lot. She panics, slips Maya the hidden note, and leaves quickly, saying, 'Don't trust anyone from that house. Not even me.'",
+        "Maya reads the note as the housekeeper (unnamed narrator) drives away. The note says: 'Nora is watching. Burn this. Meet me at the library tomorrow at noon.'"
+      ],
+      "must_not": [
+        "Do not reveal that Maya is an undercover police officer — she is genuinely a vulnerable young woman, but she is sharper than Nora anticipated.",
+        "Do not reveal that Nora has already contacted Maya's landlord and is setting up a financial trap to force Maya to accept the job.",
+        "Do not reveal that the note the housekeeper (unnamed narrator) gave Maya will be intercepted by Nora before Maya can read it fully."
+      ],
+      "opens_with": "The diner smelled of grease and desperation — my kind of place. I found a seat at the counter and waited for the girl in the photograph to find me.",
+      "cliffhanger": "The housekeeper (unnamed narrator) drives back to the estate, her hands shaking. She parks the car and walks inside. Nora is waiting in the foyer, holding a glass of wine. She smiles. 'How was the diner? The pie there is terrible, isn't it?' The housekeeper (unnamed narrator) realizes Nora knows everything.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of tiles on the diner floor: 47 rows from the counter to the door. She wonders if she is counting toward her own grave.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a cold, creeping dread. She is not the hunter — she is the bait. Nora is using her to draw Maya in, and every move she makes is being watched.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is paranoid and claustrophobic — the housekeeper (unnamed narrator) is trapped in a game where she has no moves left.",
+      "chapter_task": "Write 1600-1900 words planting clue C009 (the note to Maya) as a seed for Tier 2. The diner scene should feel tense and urgent — Maya is a potential ally, but the housekeeper (unnamed narrator) cannot trust her fully. Nora's appearance in the parking lot should be a genuine shock. End with Nora's cold smile in the foyer to create a cliffhanger that sets up Chapter 15. Maintain the unreliable narrator's voice: the housekeeper (unnamed narrator) is now realizing how thoroughly she is being manipulated.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has been caught. Nora knows she tried to warn Maya. The housekeeper (unnamed narrator) must now face the consequences — and decide whether to double down on her betrayal or beg for forgiveness.",
+      "narrative": {
+        "clues_plant": [
+          "C009"
+        ],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['the husband has a temper', \"the wife is 'fragile' and seems controlled\", \"a previous housekeeper named Clara Higgins 'left suddenly'\", 'the locked room exists', 'she has pocketed small valuables'], 'does_not_know': [\"the wife's manipulation\", \"the locked room contains the wife's planning materials\", 'the wife is testing her suitability as a patsy']}",
+            "the_wife: {'knows': ['she has planted evidence against the husband (photo of Clara)', \"she has a ledger of past targets and the housekeeper's name\", \"she has the housekeeper's fingerprints on a knife\", \"she is testing the housekeeper's suitability\"], 'does_not_know': ['the housekeeper is also running a con', 'the housekeeper has pocketed small valuables']}",
+            "the_husband: {'knows': [\"his wife is 'testing' the new housekeeper\", \"the locked room contains his wife's materials\", 'he is being set up as a villain'], 'does_not_know': [\"the full extent of his wife's plan\", 'that he is the target of a murder plot']}",
+            "clara_higgins: {'knows': ['she is in hiding', 'the wife may be looking for her'], 'does_not_know': ['the new housekeeper has found her photograph']}",
+            "dr_ellis: {'knows': ['the husband has a temper', 'the wife is more alert than she appears'], 'does_not_know': ['anything about the frame job']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 15,
+      "title": "The Trap",
+      "slug": "the-trap",
+      "one_line_summary": "Nora confronts the housekeeper (unnamed narrator) about the note, forcing her to double down on her loyalty, while Maya agrees to visit the estate — sealing her fate.",
+      "beat_summary": "Nora corners the housekeeper (unnamed narrator) in the foyer. She already knows about the note and the diner meeting. The housekeeper (unnamed narrator) panics and claims she was only testing Maya's loyalty — she pretended to warn her so that Maya would trust her, making it easier to recruit her. Nora considers this, then smiles. She tells the housekeeper (unnamed narrator) that Maya called the estate an hour ago and accepted the job interview. The trap is set. The housekeeper (unnamed narrator) has no choice but to play along. That night, she lies in bed, staring at the blinking red camera light, and realizes she has become exactly what Nora wanted: a predator who hunts her own kind.",
+      "must_happen": [
+        "Nora confronts the housekeeper (unnamed narrator) in the foyer, holding the note. She says, 'I knew you would try to warn her. I was counting on it.'",
+        "The housekeeper (unnamed narrator) improvises a lie: she claims she was testing Maya's loyalty — pretending to warn her to see if Maya would report the warning or keep it secret. She says Maya passed the test by keeping the note.",
+        "Nora considers the lie, then smiles. She tells the housekeeper (unnamed narrator) that Maya called and accepted the job interview for next week. 'You did well,' she says. 'She trusts you now.'",
+        "The housekeeper (unnamed narrator) realizes her lie has made things worse — Maya now believes the housekeeper (unnamed narrator) is a friend, making her more vulnerable to Nora's trap.",
+        "That night, the housekeeper (unnamed narrator) lies in bed, staring at the camera light. She writes in her hidden journal: 'I am not the hero of this story. I am the bait. And Maya is the fish.'"
+      ],
+      "must_not": [
+        "Do not reveal that Nora's camera feed is being watched by someone else — a third party who has been blackmailing Nora for years.",
+        "Do not reveal that Maya is not coming for the job — she is coming to confront Nora about Clara Higgins, whom Maya knew personally.",
+        "Do not reveal that the housekeeper (unnamed narrator)'s journal entry will be discovered by Nora and used against her in the next act."
+      ],
+      "opens_with": "\"I knew you would try to warn her,\" Nora said, holding up the crumpled note. \"I was counting on it. You're so predictable, darling.\"",
+      "cliffhanger": "The housekeeper (unnamed narrator) wakes at 3 AM to the sound of footsteps. She peers through the crack in her door and sees Nora walking down the hallway — not toward Julian's room, but toward the basement stairs. Nora is carrying a shovel. The housekeeper (unnamed narrator) follows her and watches from the top of the stairs as Nora digs in the dirt floor of the basement. She unearths a small box — and inside is a wedding ring. Not Nora's. Someone else's.",
+      "signature_detail_hint": "The housekeeper (unnamed narrator) counts the number of times Nora blinks during the confrontation: 47. She realizes Nora is mirroring her own counting compulsion — a deliberate mockery.",
+      "emotional_beat": "The housekeeper (unnamed narrator) feels a profound despair. She has been outplayed at every turn. She is not a con artist anymore — she is a tool, and Nora is the hand that wields her.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The intimacy is psychological and predatory — Nora is breaking the housekeeper (unnamed narrator) down and rebuilding her as an accomplice.",
+      "chapter_task": "Write 1600-1900 words paying off the camera reveal from Chapter 13 and setting up the mystery of the buried wedding ring. The confrontation scene should feel like a chess match: Nora is always three moves ahead. The housekeeper (unnamed narrator) must appear to submit while internally planning her next move. End with the midnight digging scene to create a powerful cliffhanger that sets up Act 3. Maintain the unreliable narrator's voice: the housekeeper (unnamed narrator) is now aware she is being watched and recorded, so her internal narration becomes more guarded — she is hiding her true plans from both Nora and the reader.",
+      "carries_to_next": "The housekeeper (unnamed narrator) has discovered a buried wedding ring in the basement — evidence of another victim. Maya is coming to the estate. The trap is set. Act 3 will force the housekeeper (unnamed narrator) to choose between saving Maya and saving herself.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07",
+          "T08",
+          "T09"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "the_housekeeper_narrator",
+            "the_wife",
+            "the_husband",
+            "clara_higgins",
+            "dr_ellis"
+          ],
+          "may_know": [
+            "the_housekeeper_narrator: {'knows': ['the husband has a temper', \"the wife is 'fragile' and seems controlled\", \"a previous housekeeper named Clara Higgins 'left suddenly'\", 'the locked room exists', 'she has pocketed small valuables'], 'does_not_know': [\"the wife's manipulation\", \"the locked room contains the wife's planning materials\", 'the wife is testing her suitability as a patsy']}",
+            "the_wife: {'knows': ['she has planted evidence against the husband (photo of Clara)', \"she has a ledger of past targets and the housekeeper's name\", \"she has the housekeeper's fingerprints on a knife\", \"she is testing the housekeeper's suitability\"], 'does_not_know': ['the housekeeper is also running a con', 'the housekeeper has pocketed small valuables']}",
+            "the_husband: {'knows': [\"his wife is 'testing' the new housekeeper\", \"the locked room contains his wife's materials\", 'he is being set up as a villain'], 'does_not_know': [\"the full extent of his wife's plan\", 'that he is the target of a murder plot']}",
+            "clara_higgins: {'knows': ['she is in hiding', 'the wife may be looking for her'], 'does_not_know': ['the new housekeeper has found her photograph']}",
+            "dr_ellis: {'knows': ['the husband has a temper', 'the wife is more alert than she appears'], 'does_not_know': ['anything about the frame job']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 10
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

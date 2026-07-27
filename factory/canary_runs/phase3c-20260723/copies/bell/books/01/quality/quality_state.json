@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "kind": "quality_state",
+  "book": 1,
+  "frontier": 10,
+  "source_chapter_digests": {
+    "1": "b9a50ad165c918da",
+    "5": "0b3ef55affb3514b",
+    "10": "83e620f5a10bd3da"
+  },
+  "motif_ledger": {},
+  "phrase_ledger": {
+    "her thumb over the": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "thumb over the watermark": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "saint orison s church": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "the bell doesn t": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "the bell chooses the": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "bell chooses the next": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "chooses the next name": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "the next name she": {
+      "chapters": [
+        5
+      ],
+      "count": 1
+    },
+    "one two three four": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "two three four five": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "she stared at the": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "behind her gideon s": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "too deliberate to be": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "victim is compelled to": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "for the first time": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "her thumb traced the": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "the bell never chooses": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    },
+    "bell never chooses each": {
+      "chapters": [
+        10
+      ],
+      "count": 1
+    }
+  },
+  "scene_function_history": [
+    {
+      "chapter": 1,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "b9a50ad165c918da"
+    },
+    {
+      "chapter": 5,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "0b3ef55affb3514b"
+    },
+    {
+      "chapter": 10,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "83e620f5a10bd3da"
+    }
+  ],
+  "chapter_turn_history": [
+    {
+      "chapter": 1,
+      "status": "acceptable",
+      "score": 0.7,
+      "codes": [],
+      "prose_digest": "b9a50ad165c918da"
+    },
+    {
+      "chapter": 5,
+      "status": "acceptable",
+      "score": 0.7,
+      "codes": [],
+      "prose_digest": "0b3ef55affb3514b"
+    },
+    {
+      "chapter": 10,
+      "status": "acceptable",
+      "score": 0.7,
+      "codes": [],
+      "prose_digest": "83e620f5a10bd3da"
+    }
+  ],
+  "pressure_curve": [
+    {
+      "chapter": 1,
+      "score": 0.6,
+      "status": "acceptable",
+      "prose_digest": "b9a50ad165c918da"
+    },
+    {
+      "chapter": 5,
+      "score": 0.6,
+      "status": "acceptable",
+      "prose_digest": "0b3ef55affb3514b"
+    },
+    {
+      "chapter": 10,
+      "score": 0.6,
+      "status": "acceptable",
+      "prose_digest": "83e620f5a10bd3da"
+    }
+  ],
+  "agency_history": {
+    "1": {
+      "score": 0.6,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "b9a50ad165c918da"
+    },
+    "5": {
+      "score": 0.6,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "0b3ef55affb3514b"
+    },
+    "10": {
+      "score": 0.6,
+      "status": "acceptable",
+      "codes": [],
+      "prose_digest": "83e620f5a10bd3da"
+    }
+  },
+  "unresolved_quality_warnings": []
+}

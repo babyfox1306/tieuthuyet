@@ -1,0 +1,9 @@
+{
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "qc_infra_skipped"
+  ],
+  "source": "qc_infra_skipped",
+  "detail": "All models failed (['auto/best-fast', 'auto/fast', 'gh/claude-opus-4.7', 'gh/claude-opus-4.6', 'gh/claude-sonnet-4.6', 'gh/gpt-5.4', 'gh/claude-sonnet-4.5', 'gh/gpt-4.1', 'gh/gpt-4o']): Error code: 401 - {'error': {'message': '[github] All 1 connection(s) banned by upstream — please reconnect in the dashboard', 'type': 'authentication_error', 'code': 'invalid_api_key'}}",
+  "upstream": "qc_transport_error"
+}

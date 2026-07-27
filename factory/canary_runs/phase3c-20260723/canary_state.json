@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "kind": "canary_state",
+  "run_id": "phase3c-20260723",
+  "completed_steps": [
+    "baseline",
+    "fresh_generation",
+    "execute"
+  ],
+  "current_case": null,
+  "current_book": null,
+  "current_chapter": null,
+  "source_digests": {},
+  "successful_role_calls": [],
+  "cached_outputs": {},
+  "pending_operator_action": null,
+  "failure_reason": null,
+  "updated_at": "2026-07-23T11:02:00Z"
+}

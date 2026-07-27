@@ -1,0 +1,179 @@
+---
+series: the-cold-case-girl
+book: 1
+chapter: 15
+title: The Rival
+spice: 1
+word_count: 1364
+status: draft
+needs_fix: []
+promoted_at: '2026-07-27T02:51:07Z'
+---
+
+The box was exactly where I'd left it—behind a false wall in a storage unit I paid for with cash under a name that didn't exist. I hadn't opened it in three years. I opened it then.
+
+The metal lid groaned as I lifted it, the sound echoing off the concrete walls. Inside, the file sat exactly as I'd arranged it. Top folder: the official boating accident report. Second folder: my photographs. Third folder: my notes.
+
+I pulled out the accident report first. The official narrative was polished, professional, utterly false. Julian Croft had died after a loosened fuel-line coupling leaked into the engine compartment, igniting a fire that consumed his cabin cruiser before he could escape. The Coast Guard had ruled it accidental. The insurance company had paid out. Case closed.
+
+I remembered the night I'd made it look that way. The careful work in the dark, the borrowed tools, the way my hands hadn't shaken until I was three blocks away, sitting in my car, staring at the grease under my fingernails.
+
+I set the report aside and reached for the photographs.
+
+The first one was a wide shot of the marina. Julian's yacht bobbed gently at its slip. The second was a close-up of the engine compartment, the fuel line still intact, the brass fitting gleaming in the harsh light of my camera flash.
+
+The third photograph was the one I'd studied a hundred times. A close-up of the brass fitting, showing a single scratch mark where the wrench had slipped. A detail only the person who tampered with it would know.
+
+I touched the scratch with my fingertip, remembering the moment. The slight jerk of my hand, the sharp intake of breath, the way I'd frozen, certain someone had heard. But no one had. The marina was empty. The night was silent. And I'd finished the job.
+
+I went still.
+
+Three years. Three years since I'd taken my first life. Three years since I'd crossed a line I couldn't uncross. I'd told myself it was justice. I'd told myself Julian Croft deserved to die for what he'd done to Mara. I'd told myself the system had failed, and I was the correction.
+
+And I'd believed it.
+
+I still believed it.
+
+But with that photograph and its evidence in my hands, I felt something I hadn't expected. Not guilt. Not regret. Something colder.
+
+The knowledge that I could do it again.
+
+That I would do it again, if I had to.
+
+I slipped the photographs back into the folder and pulled out my notes. The pages were covered in my handwriting, precise and clinical. Dates. Times. Distances. The torque I'd used to break the coupling's seal. The time I left the engine compartment. The exact moment I'd watched Julian's yacht go up in flames.
+
+I'd written everything down. Every detail. Every thought. Every justification.
+
+And then I'd buried it.
+
+I closed the box and slid it back into the false wall, pressing the panel into place. The storage unit looked empty again, just another anonymous space filled with nothing.
+
+A call interrupted me.
+
+Sasha.
+
+I stepped out of the unit, pulling the rolling door down behind me, and answered.
+
+"Nadia." Her voice was sharp, clipped. "You need to hear this."
+
+"I'm listening."
+
+"I just got a tip from a source in the media. There's a new podcast dropping tomorrow. A rival show called The Dark Side of Justice."
+
+The name hit me like a cold wind. "Who's behind it?"
+
+"Maya Torres. She's a freelance investigative journalist, been doing true crime for about two years. Nothing major, but she's got connections."
+
+"And?"
+
+"And the trailer just went live. She's teasing a story about a famous true-crime podcaster who has a dark secret. She doesn't name names, but the description matches your show. The format. The style. The kind of cases you cover."
+
+"What's the secret?"
+
+"She doesn't say. But she drops a hint. Something about a case that was solved too neatly. A death that was ruled an accident when it wasn't."
+
+The words landed like a punch.
+
+"She's talking about Julian Croft."
+
+"I don't know," Sasha said. "But the timing is too perfect. If Rhodes is feeding information to the press, a rival podcaster gives him distance."
+
+"It's a proxy," I said. "Rhodes is using her to do his dirty work. He gives her enough information to point the finger, she runs with it, and he stays untouched."
+
+"Which means someone knows about Julian."
+
+"It means we trace Maya before we decide how much," I said.
+
+I paced the length of the storage unit, my footsteps echoing off the concrete. The gray light from the overhead fixtures cast long shadows, turning the space into a cage.
+
+"I need Wren," I said. "I need to know where Maya Torres is getting her information."
+
+"She's already on it. I called her before I called you."
+
+"Good. I'll talk to her."
+
+"Nadia, what are you going to do about Rhodes?"
+
+I stopped pacing. The question hung in the air, heavy and inevitable.
+
+"What I should have done from the beginning."
+
+"What does that mean?"
+
+"It means I'm done playing defense."
+
+I hung up and dialed Wren.
+
+She answered on the first ring. "I'm already in."
+
+"Tell me."
+
+"Maya Torres's email account is a burner. Created six weeks ago, no connection to her real identity. The IP address routes through three different VPNs, but I tracked the origin back to a server in Eastern Europe."
+
+"Rhodes's server?"
+
+"Not directly. But the encryption protocol matches. It's the same signature I found on the voicemail he left you."
+
+"So she's his mouthpiece."
+
+"Looks that way. But here's the thing — she's not getting the information directly from him. She's getting it through a cutout. Someone else is feeding her the details, and that someone is using the same burner protocol Rhodes uses for his other operations."
+
+"Can you trace the cutout?"
+
+"Give me twenty-four hours. Maybe less. But Nadia, if she drops that first episode tomorrow, you're going to have a problem. The true crime community is small. People talk. If she hints that you're hiding something, the speculation alone could be damaging."
+
+"I know."
+
+"What are you going to do?"
+
+I looked at my phone. At the contact I'd saved under a false name, a number I'd sworn I'd never use.
+
+"I'm going to end this."
+
+I hung up before she could argue.
+
+The number was still in my phone, buried under a dozen other contacts, a ghost I'd kept close even when I'd told myself I'd moved on. Victor Rhodes. The man responsible for Elise Marchetti's death. The man who'd made a career out of destroying people. The man who was now trying to destroy me.
+
+I'd never contacted him directly. Never sent a message, never made a call. I'd kept my distance, studied him from the shadows, planned my approach with the precision of a surgeon.
+
+But the rules had changed.
+
+He'd found Priya. He'd found Maya Torres. He'd found the one detail that could unravel everything I'd built.
+
+And if I waited any longer, he'd find the rest.
+
+I typed the message slowly, each word deliberate.
+
+"I know what you're doing. Let's talk."
+
+My finger hovered over the send button. The message reduced three years of suspicion to one irreversible invitation.
+
+This was the point of no return.
+
+Every target I'd ever handled had been a stranger. I'd studied them from a distance, learned their habits, their weaknesses, their routines. I'd never met them face-to-face. Never spoken to them. Never given them a chance to look into my eyes and see the person who was coming for them.
+
+But Victor Rhodes wasn't like the others.
+
+He was the hunter who'd become the hunted.
+
+And I was breaking every rule I'd ever made.
+
+I pressed send.
+
+The message vanished into the network of servers and protocols that connected my phone to his. I waited.
+
+One second.
+
+Two.
+
+Three.
+
+His reply arrived.
+
+A single word from an unknown number.
+
+"Where?"
+
+I read the screen once more. The two-way hunt was about to become a face-to-face confrontation.
+
+And I had no idea who would walk away.

@@ -1,0 +1,151 @@
+```json
+{
+  "act": [13, 15],
+  "chapter_plans": [
+    {
+      "chapter": 13,
+      "title": "The Rule Bends",
+      "slug": "the-rule-bends",
+      "one_line_summary": "Elle Reyes convenes her network to debate the risk of accelerating the plan, and a rule she swore by is bent for the first time.",
+      "beat_summary": "Elle Reyes calls an emergency meeting with Sasha, Dr. Lin, and Wren in the rented office. She lays out Kroll's escalation — the break-in at Lin's office, the subpoena on Sasha, the text about the riverbank meeting. The network debates: should they accelerate the public exposure plan, or pull back and protect themselves? Sasha argues for caution; Lin wants to strike back; Wren is silent. Elle Reyes makes a decision: she will meet the witness at the riverbank, but she will not go alone — she will bring a recorder and a hidden camera, breaking her own rule of never putting evidence gathering ahead of operational security. The rule bends: she is willing to risk exposure to finish Kroll. The chapter ends with Elle Reyes preparing for the meeting, knowing she is walking into a trap.",
+      "must_happen": [
+        "Elle Reyes convenes Sasha, Dr. Lin, and Wren for an emergency network meeting in the rented office.",
+        "The network debates the risk: Sasha argues for caution, Lin wants to strike back, Wren remains silent and avoids eye contact.",
+        "Elle Reyes decides to meet the witness at the riverbank, but she will bring a recorder and hidden camera — bending her rule of never prioritizing evidence over operational security.",
+        "Elle Reyes notices Wren's silence and makes a mental note to check on her after the meeting.",
+        "Elle Reyes prepares for the riverbank meeting, packing a concealed recorder and a compact camera in her bag."
+      ],
+      "must_not": [
+        "Do not show the riverbank meeting happening — only the preparation and decision to go.",
+        "Do not reveal Wren's secret or her connection to Kroll — only her silence and avoidance."
+      ],
+      "opens_with": "\"'I'm not asking for permission. I'm telling you what I'm going to do.' I said it to Sasha, but I was really saying it to myself.\"",
+      "cliffhanger": "Elle Reyes checks her bag one last time: recorder, camera, pepper spray. Her phone buzzes. A text from the unknown number: 'I know you're bringing toys, Elle. Bring them. I want to see what you do when they don't save you.'",
+      "signature_detail_hint": "The hidden camera Elle Reyes packs is a vintage Minox — a film camera from the 1970s, not digital — because she trusts analog more than digital security.",
+      "emotional_beat": "Determination undercut by the cold awareness that she is bending her own rules, and that the watcher is one step ahead.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is strategic: the network debates risk, and a rule is bent.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Show the network debate and Elle's decision to bend her rule. Touch threads T01, T02, T03, T05, T06, T07.",
+      "carries_to_next": "Elle Reyes is walking into a trap at the riverbank; the watcher knows her plan; Wren's silence is a growing concern; the rule is bent.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T05", "T06", "T07"],
+        "knowledge": {
+          "pov_characters": ["Elle Reyes", "Damien Kroll", "Sasha (Lawyer)", "Dr. Lin (Coroner)", "Wren (Hacker)", "Detective Marcus Cole"],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Kroll knows what she is', 'The hunt is now two-way', \"Kroll left a message: 'I know what you did to the others'\"], 'does_not_know_yet': [\"Kroll's full evidence package\", 'Who in her network is compromised', \"The dead-man's-switch exists\"]}",
+            "Damien Kroll: {'knows': ['Elle is a vigilante killer', 'She has killed before', 'Her modus operandi: engineered accidents', 'He is building a case against her'], 'does_not_know_yet': [\"Her network's full scope\", \"Her first kill victim's identity\", 'That Elle will turn his own method against him']}",
+            "Sasha (Lawyer): {'knows': ['Kroll has figured out Elle', 'The hunt is now two-way', 'The network is at risk'], 'does_not_know_yet': [\"Wren's vulnerability\", \"The dead-man's-switch\", \"Elle's full origin story\"]}",
+            "Dr. Lin (Coroner): {'knows': ['Kroll knows about Elle', 'The network is at risk'], 'does_not_know_yet': [\"Wren's vulnerability\", \"The dead-man's-switch\", \"Elle's full origin story\"]}",
+            "Wren (Hacker): {'knows': ['Kroll knows about Elle', 'The network is at risk', 'Kroll has started investigating the network members'], 'does_not_know_yet': ['That Kroll will exploit her gambling debt', \"The dead-man's-switch\", \"Elle's full origin story\"]}",
+            "Detective Marcus Cole: {'knows': [\"Kroll's case has unusual patterns\", 'Elle is more involved than a typical podcaster', 'He has a gut feeling something is wrong'], 'does_not_know_yet': ['Elle is a killer', 'Her network', 'The two-way hunt']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 14,
+      "title": "The Trap Springs",
+      "slug": "the-trap-springs",
+      "one_line_summary": "Elle Reyes walks into the riverbank trap — the witness is a setup, and a network member is exposed and endangered, proving Kroll's reach is deeper than she thought.",
+      "beat_summary": "Elle Reyes arrives at the riverbank at 3 PM. The witness is there — a nervous man in a trench coat. But before they can speak, headlights flash from the treeline. A car screeches toward them. Elle Reyes dives behind a boulder as the witness is snatched by two men. She captures a partial license plate on her Minox before running. She returns to the office to find Sasha waiting: the witness was a plant, and Kroll now has a photograph of Elle Reyes at the riverbank — proof she was meeting a 'known criminal.' Worse, Sasha reveals that her law firm's files have been copied by an unknown party — meaning Kroll now has the names of every client Sasha has ever represented, including Elle Reyes. A network member (Sasha) is exposed and endangered. The chapter ends with Elle Reyes realizing Kroll has been two steps ahead the entire time — and that she has no choice but to go directly to him.",
+      "must_happen": [
+        "Elle Reyes arrives at the riverbank at 3 PM; the witness is there but seems nervous and keeps glancing toward the treeline.",
+        "Headlights flash from the treeline; a car screeches toward them; Elle Reyes dives behind a boulder as two men snatch the witness.",
+        "Elle Reyes captures a partial license plate on her Minox camera — clue C005 is planted.",
+        "Elle Reyes returns to the office to find Sasha waiting: the witness was a plant, and Kroll now has a photograph of Elle at the riverbank meeting a 'known criminal.'",
+        "Sasha reveals her law firm's files have been copied — Kroll now has the names of every client Sasha has ever represented, including Elle Reyes. Sasha is exposed and endangered."
+      ],
+      "must_not": [
+        "Do not reveal the identity of the men who snatched the witness — only that they work for Kroll.",
+        "Do not show Elle Reyes being physically harmed — only that she is outmaneuvered and her network is compromised."
+      ],
+      "opens_with": "\"'You came.' The witness's voice was shaking. I should have known then. But I was too focused on winning.\"",
+      "cliffhanger": "Elle Reyes stares at the photograph Kroll sent to her phone: her face, clear as day, at the riverbank, with the witness blurred in the background. A text follows: 'Now everyone knows you're dirty. Come see me. Alone. Or I release this to every news outlet in the country.'",
+      "signature_detail_hint": "The partial license plate Elle Reyes captured is missing the last two digits, but the first four — 'LUC1' — suggest a vanity plate referencing Lucia Vega's name.",
+      "emotional_beat": "Cold fury mixed with the sick realization that she has been outmaneuvered — Kroll is not just defending himself, he is systematically dismantling her network.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is operational: Elle Reyes is trapped and must decide her next move.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Show the trap at the riverbank and the exposure of Sasha. Plant clue C005. Pay off clue C002 (the witness statement discrepancy is now revealed as a setup). Touch threads T01, T02, T03, T05, T06, T07.",
+      "carries_to_next": "Clue C005 is planted; clue C002 is paid off; Sasha is exposed; Elle Reyes must decide whether to meet Kroll alone; the network is fracturing.",
+      "narrative": {
+        "clues_plant": ["C005"],
+        "clues_payoff": ["C002"],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T05", "T06", "T07"],
+        "knowledge": {
+          "pov_characters": ["Elle Reyes", "Damien Kroll", "Sasha (Lawyer)", "Dr. Lin (Coroner)", "Wren (Hacker)", "Detective Marcus Cole"],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Kroll knows what she is', 'The hunt is now two-way', \"Kroll left a message: 'I know what you did to the others'\"], 'does_not_know_yet': [\"Kroll's full evidence package\", 'Who in her network is compromised', \"The dead-man's-switch exists\"]}",
+            "Damien Kroll: {'knows': ['Elle is a vigilante killer', 'She has killed before', 'Her modus operandi: engineered accidents', 'He is building a case against her'], 'does_not_know_yet': [\"Her network's full scope\", \"Her first kill victim's identity\", 'That Elle will turn his own method against him']}",
+            "Sasha (Lawyer): {'knows': ['Kroll has figured out Elle', 'The hunt is now two-way', 'The network is at risk'], 'does_not_know_yet': [\"Wren's vulnerability\", \"The dead-man's-switch\", \"Elle's full origin story\"]}",
+            "Dr. Lin (Coroner): {'knows': ['Kroll knows about Elle', 'The network is at risk'], 'does_not_know_yet': [\"Wren's vulnerability\", \"The dead-man's-switch\", \"Elle's full origin story\"]}",
+            "Wren (Hacker): {'knows': ['Kroll knows about Elle', 'The network is at risk', 'Kroll has started investigating the network members'], 'does_not_know_yet': ['That Kroll will exploit her gambling debt', \"The dead-man's-switch\", \"Elle's full origin story\"]}",
+            "Detective Marcus Cole: {'knows': [\"Kroll's case has unusual patterns\", 'Elle is more involved than a typical podcaster', 'He has a gut feeling something is wrong'], 'does_not_know_yet': ['Elle is a killer', 'Her network', 'The two-way hunt']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 15,
+      "title": "The Lion's Den",
+      "slug": "the-lions-den",
+      "one_line_summary": "Elle Reyes agrees to meet Damien Kroll face-to-face, walking into his home — a calculated risk that changes the nature of their war.",
+      "beat_summary": "Elle Reyes agrees to meet Kroll at his estate. She tells no one — not Sasha, not Lin, not Wren. She goes alone, unarmed except for the Minox hidden in her jacket. Kroll greets her at the door with a glass of wine and a smile. He is charming, polite, and terrifying. He shows her his 'evidence room' — a wall of photographs and documents tracing her every move, including the Maya case. He offers her a final deal: walk away, and he will destroy the evidence. Refuse, and he will destroy her. Elle Reyes listens, then asks one question: 'Why Lucia Vega?' Kroll's smile falters for the first time. He doesn't answer. Elle Reyes leaves knowing two things: Kroll is vulnerable on the Lucia question, and she has just seen the layout of his house — including the locked study where the dead man's switch is likely stored. The chapter ends with Elle Reyes outside, her thumb tapping her ring finger three times. She has a new plan.",
+      "must_happen": [
+        "Elle Reyes agrees to meet Kroll at his estate, telling no one in her network.",
+        "Kroll greets Elle Reyes at the door with a glass of wine and a smile; he shows her his 'evidence room' — a wall of photographs and documents tracing her every move, including the Maya case.",
+        "Kroll offers Elle Reyes a final deal: walk away and he destroys the evidence; refuse and he destroys her.",
+        "Elle Reyes asks Kroll: 'Why Lucia Vega?' Kroll's smile falters — he does not answer, revealing a vulnerability.",
+        "Elle Reyes notes the layout of Kroll's house, including a locked study where the dead man's switch is likely stored — she has a new plan."
+      ],
+      "must_not": [
+        "Do not show Kroll answering the Lucia question — only that his smile falters, revealing a vulnerability.",
+        "Do not show Elle Reyes revealing her new plan — only that she has one and is already calculating."
+      ],
+      "opens_with": "\"'Wine? I have a particularly good Cabernet.' He opened the door like I was an old friend. I wanted to break his jaw. Instead, I smiled.\"",
+      "cliffhanger": "Elle Reyes stands outside Kroll's estate, the cold air biting her face. Her thumb taps her ring finger three times. She pulls out her phone and dials Sasha. 'I know how to finish him. But I'm going to need you to trust me.'",
+      "signature_detail_hint": "In Kroll's evidence room, there is a single photograph of a young woman with the same birthmark as Lucia Vega — but the photograph is old, faded, and the woman's face is scratched out, just like the one in his office.",
+      "emotional_beat": "Cold calculation mixed with the sharp realization that Kroll has a weakness — the Lucia question — and she now has the layout of his house. She is no longer just reacting; she is planning.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is psychological: a face-to-face confrontation that changes the nature of the war.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Show the face-to-face meeting with Kroll and Elle's discovery of his vulnerability. Touch threads T01, T02, T03, T05, T06, T07.",
+      "carries_to_next": "Elle Reyes has a new plan; Kroll's vulnerability (the Lucia question) is revealed; the layout of Kroll's house is noted; the network is still fractured but Elle is now leading again.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": ["T01", "T02", "T03", "T05", "T06", "T07"],
+        "knowledge": {
+          "pov_characters": ["Elle Reyes", "Damien Kroll", "Sasha (Lawyer)", "Dr. Lin (Coroner)", "Wren (Hacker)", "Detective Marcus Cole"],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Kroll knows what she is', 'The hunt is now two-way', \"Kroll left a message: 'I know what you did to the others'\"], 'does_not_know_yet': [\"Kroll's full evidence package\", 'Who in her network is compromised', \"The dead-man's-switch exists\"]}",
+            "Damien Kroll: {'knows': ['Elle is a vigilante killer', 'She has killed before', 'Her modus operandi: engineered accidents', 'He is building a case against her'], 'does_not_know_yet': [\"Her network's full scope\", \"Her first kill victim's identity\", 'That Elle will turn his own method against him']}",
+            "Sasha (Lawyer): {'knows': ['Kroll has figured out Elle', 'The hunt is now two-way', 'The network is at risk'], 'does_not_know_yet': [\"Wren's vulnerability\", \"The dead-man's-switch\", \"Elle's full origin story\"]}",
+            "Dr. Lin (Coroner): {'knows': ['Kroll knows about Elle', 'The network is at risk'], 'does_not_know_yet': [\"Wren's vulnerability\", \"The dead-man's-switch\", \"Elle's full origin story\"]}",
+            "Wren (Hacker): {'knows': ['Kroll knows about Elle', 'The network is at risk', 'Kroll has started investigating the network members'], 'does_not_know_yet': ['That Kroll will exploit her gambling debt', \"The dead-man's-switch\", \"Elle's full origin story\"]}",
+            "Detective Marcus Cole: {'knows': [\"Kroll's case has unusual patterns\", 'Elle is more involved than a typical podcaster', 'He has a gut feeling something is wrong'], 'does_not_know_yet': ['Elle is a killer', 'Her network', 'The two-way hunt']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

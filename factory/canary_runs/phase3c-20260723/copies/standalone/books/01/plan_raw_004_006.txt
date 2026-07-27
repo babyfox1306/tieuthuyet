@@ -1,0 +1,83 @@
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "The Handler's Shadow",
+      "slug": "the-handlers-shadow",
+      "one_line_summary": "Sloane Mercer and Lucian Vey flee Rook's surveillance, but Sloane Mercer finds a hidden comm device that reveals she knew this moment would come.",
+      "beat_summary": "After Rook's interruption, Lucian Vey destroys the comms and forces a rapid descent from the rooftop. Inside the stairwell, Sloane Mercer discovers a communication device sewn into her coat, a failsafe she left for herself. [ROMANCE] Lucian Vey steadies Sloane Mercer, cupping her jaw, a gesture that sparks a fleeting sense of intimacy. Rook's voice echoes through a building-wide PA system, confirming he controls the perimeter, forcing them deeper underground. Sloane Mercer realizes she anticipated Rook's trap and hid a contingency.",
+      "must_happen": [
+        "Sloane Mercer and Lucian Vey leave the rooftop after Rook's contact.",
+        "Sloane Mercer finds a hidden comm device in her coat lining, which she left for herself.",
+        "[ROMANCE] Lucian Vey cups Sloane Mercer's jaw, forcing her to focus, his thumb brushing her cheek.",
+        "Rook's voice broadcasts through the building's PA system, announcing the perimeter is locked.",
+        "Sloane Mercer plays a recorded message from her past self, instructing her to trust Lucian Vey."
+      ],
+      "must_not": [
+        "Sloane Mercer must not fully understand the firing sequence's purpose.",
+        "Rook must not physically intercept them yet."
+      ],
+      "opens_with": "\"Vey, answer me.\" The speaker hissed and died as Lucian Vey closed his fist around it. But Sloane Mercer heard the echo in her skull: Rook knew. He had always known.",
+      "cliffhanger": "As Sloane Mercer presses play on the hidden device, her own voice whispers, \"If you are hearing this, I am already gone. The only truth left is Vey. Trust him, even when he becomes the enemy.\"",
+      "signature_detail_hint": "The comm device is wrapped in friction tape, the same brand she used to secure her first gun in training—the residue leaves a black stain on her fingertips that won't wash off.",
+      "emotional_beat": "Constant dread, growing trust, vulnerability, and the odd comfort of Lucian Vey's presence.",
+      "spice": 0,
+      "spice_note": "N/A",
+      "chapter_task": "Write a 1600-1900 word chapter transitioning the rooftop to a new setting, revealing Sloane Mercer's hidden message and deepening the reluctant intimacy between Sloane Mercer and Lucian Vey. Include Rook's PA threat and the romance micro-beat as a stabilizing touch.",
+      "carries_to_next": "Sloane Mercer's trust in Lucian Vey is validated by her own recorded message; the hunt for Rook intensifies, but they must evade him first."
+    },
+    {
+      "chapter": 5,
+      "title": "The Weapon I Am",
+      "slug": "the-weapon-i-am",
+      "one_line_summary": "In a hidden weapons cache, Sloane Mercer discovers a dossier on her own conditioning, and a micro-beat with Lucian Vey reveals he once saved her life.",
+      "beat_summary": "Sloane Mercer and Lucian Vey take refuge in a basement safe room that doubles as a weapons locker Sloane Mercer apparently rented. Inside, she finds a dossier on 'Project Reset' detailing her conditioning. [ROMANCE] As she trembles with rage, Lucian Vey covers her hand on a knife, his body a shield against the door. A video log from her past self warns about Rook's next move. Sloane Mercer demands to know everything Lucian Vey knows about her lost self.",
+      "must_happen": [
+        "Sloane Mercer locates a hidden safe room with weapons and a file labeled 'Project Reset'.",
+        "Sloane Mercer reads about her conditioning program, including the wrist circle trigger.",
+        "[ROMANCE] Lucian Vey places his hand over Sloane Mercer's as she grips a combat knife, steadying her, their eyes meeting.",
+        "Sloane Mercer finds a video log where her past self explains the mission to stop Rook.",
+        "Lucian Vey admits he was ordered to eliminate her after the mission, but he has not followed that order."
+      ],
+      "must_not": [
+        "Sloane Mercer must not recover the specific memory of the seven targets yet.",
+        "Lucian Vey must not reveal the complete sunrise clause or the unedited recordings."
+      ],
+      "opens_with": "The fluorescent light flickered once, then held, illuminating row after row of black cases. Sloane Mercer knew this room. She had built it. She just couldn't remember why.",
+      "cliffhanger": "As Sloane Mercer watches the video log, her face on screen says, \"If Rook wins, I need you to be the weapon you were made to be. Start with the list in the coat.\" The screen goes dark, but Sloane Mercer is already reaching for the coat.",
+      "signature_detail_hint": "A heat signature sticker on the knife handle, worn to almost clear plastic—the same wear pattern as on the rifle, linking them as a set she assembled.",
+      "emotional_beat": "Rage, desolation, but also clarity; Lucian Vey's quiet support becomes a lifeline.",
+      "spice": 0,
+      "spice_note": "N/A",
+      "chapter_task": "Write a 1600-1900 word chapter where Sloane Mercer discovers a dossier on her conditioning and a video message from her past self, setting up the clue for chapter 6. Incorporate the romance micro-beat with Lucian Vey's protective gesture.",
+      "carries_to_next": "Sloane Mercer is ready to act on the list from her coat; the confrontation with Rook's trap becomes imminent."
+    },
+    {
+      "chapter": 6,
+      "title": "The List of Seven",
+      "slug": "the-list-of-seven",
+      "one_line_summary": "Sloane Mercer finds the list of seven innocent targets in her coat, triggering a devastating memory of her confrontation with Rook, and she and Lucian Vey forge a pact.",
+      "beat_summary": "Sloane Mercer retrieves the list from her coat lining (Clue C003 planted and paid off), a sheet with seven names, dates, and locations—evidence Rook tampered with the target files. The sight triggers a memory: Sloane Mercer standing in Rook's office, screaming as he threatens Mara. [ROMANCE] Lucian Vey wraps his arms around her, grounding her. Sloane Mercer realizes the full scope of Rook's manipulation and shares her guilt with Lucian Vey. They agree to find Mara and expose Rook, no matter the cost.",
+      "must_happen": [
+        "Sloane Mercer discovers the folded list of seven names with coordinates inside her coat lining (Clue C003 planted and paid off).",
+        "The list triggers a memory fragment of Sloane Mercer confronting Rook about the seven targets being innocent (Major Reveal MR002).",
+        "[ROMANCE] Lucian Vey embraces Sloane Mercer from behind, his cheek against her hair, a silent sharing of burden.",
+        "Sloane Mercer admits her guilt in the killings and Lucian Vey admits he knew the targets were questionable but followed her orders.",
+        "They decide to draw out Rook by leaking a false location for the ledger."
+      ],
+      "must_not": [
+        "Sloane Mercer must not remember the exact location of the ledger (her firing sequence).",
+        "Mara must not appear; only referenced."
+      ],
+      "opens_with": "The paper crackled as Sloane Mercer unfolded it: seven names, seven dates, seven coordinates—each one a person she had been told was a threat, each one a lie Rook had fed her.",
+      "cliffhanger": "Lucian Vey's phone buzzes with a text from an unknown number: \"Mara is at the warehouse on River Road. Come alone, or she disappears.\" Lucian Vey and Sloane Mercer exchange a look—it's the trap, but they have to spring it.",
+      "signature_detail_hint": "The list's paper has a watermark that only appears under UV—a serial number that matches Rook's personal file code, confirming his hands were all over it.",
+      "emotional_beat": "Guilt, anger, catharsis in shared guilt, and a renewed determination.",
+      "spice": 0,
+      "spice_note": "N/A",
+      "chapter_task": "Write a 1600-1900 word chapter that plants and pays off clue C003 (the list) and delivers major reveal MR002 (memory of Rook's corruption). Include the romance micro-beat of Lucian Vey's comforting embrace and set up the next act's trap.",
+      "carries_to_next": "Sloane Mercer and Lucian Vey head to the warehouse, walking into Rook's trap with their eyes open."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+version: 1
+choices:
+  network_leak:
+    value: Wren Delgado
+    candidates:
+    - Sasha Okafor
+    - Priya Anand
+    - Wren Delgado
+    not_chosen:
+    - Sasha Okafor
+    - Priya Anand
+    cardinality: 1
+    resolved_by: auto
+    rationale: named in 2 betrayal-clue/reveal description(s) in mystery_ledger

@@ -1,0 +1,163 @@
+{
+  "main_mystery": "Can Nadia Cole execute Victor Rhodes and escape justice, or will her own buried first kill surface and destroy everything she built?",
+  "truth": "Nadia Cole is the executioner. She kills guilty men the system failed to punish. Victor Rhodes is her current target — he is not only guilty of the murder she's investigating, but he has figured out her true nature and is building a case against her, including evidence of her very first kill (Julian Croft). The two-way hunt ends with Rhodes's death, but his dead-man's-switch surfaces the first-kill evidence to an unknown third party, leaving Nadia on a leash.",
+  "canonical_reveal_chapter": 38,
+  "red_herrings": [
+    {
+      "id": "RH01",
+      "description": "A detective (unaffiliated with Rhodes) begins circling Nadia's network after a suspicious death is flagged — the reader is led to believe this detective will expose Nadia, but the thread fizzles when the detective is reassigned or the case is dropped by a higher authority.",
+      "plant_chapter": 12,
+      "payoff_chapter": 22,
+      "note": "This is a false alarm — the detective is a red herring to raise tension in Act 2, but the real threat is Rhodes's counter-investigation."
+    },
+    {
+      "id": "RH02",
+      "description": "A rival podcaster starts digging into Nadia's past, hinting at a 'dark secret' — the reader suspects the rival will uncover the first kill, but the rival's investigation is a dead end (they find nothing concrete).",
+      "plant_chapter": 15,
+      "payoff_chapter": 28,
+      "note": "This red herring misdirects the reader from Rhodes's more dangerous investigation."
+    },
+    {
+      "id": "RH03",
+      "description": "Priya Anand's medical examiner office is audited, suggesting her altered records might be discovered — but the audit is routine and reveals nothing, a false alarm that tests Nadia's paranoia.",
+      "plant_chapter": 20,
+      "payoff_chapter": 25,
+      "note": "This red herring builds tension around the network's vulnerability but is a dead end."
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "MR01",
+      "description": "Nadia's origin wound: Mara Cole's murder and Julian Croft's walk free, establishing why Nadia kills.",
+      "chapter": 5,
+      "required_clues": [],
+      "note": "Partial reveal — not the full first-kill details, but the emotional foundation."
+    },
+    {
+      "id": "MR02",
+      "description": "The network is introduced: Sasha Okafor, Priya Anand, Wren Delgado — each with a role and a secret.",
+      "chapter": 3,
+      "required_clues": [],
+      "note": "Establish the network early so the betrayal hurts later."
+    },
+    {
+      "id": "MR03",
+      "description": "Victor Rhodes is not a passive target — he has figured out Nadia is the executioner and is building a case against her.",
+      "chapter": 10,
+      "required_clues": [
+        "C003"
+      ],
+      "note": "This is the Act 1 end reveal that flips the narrative from hunter to hunted."
+    },
+    {
+      "id": "MR04",
+      "description": "The network betrayal: one of the three (Sasha, Priya, or Wren) leaks information to Rhodes or an outside party, causing a major setback for Nadia.",
+      "chapter": 28,
+      "required_clues": [
+        "C008",
+        "C009"
+      ],
+      "note": "The betrayer is decided at plan time and kept consistent. This reveal must hurt — loyalty was built before the break."
+    },
+    {
+      "id": "MR05",
+      "description": "Full origin reveal: Nadia's first kill — Julian Croft, killed in a staged boating accident — is shown in detail, including the emotional and procedural weight.",
+      "chapter": 34,
+      "required_clues": [
+        "C002",
+        "C005",
+        "C007"
+      ],
+      "note": "This is the emotional climax of the origin thread. Must be fully paid off here, not earlier."
+    },
+    {
+      "id": "MR06",
+      "description": "Rhodes's dead-man's-switch: after his death, evidence of Nadia's first kill surfaces to an unknown third party, setting up the Book 2 hook.",
+      "chapter": 38,
+      "required_clues": [
+        "C010",
+        "C011"
+      ],
+      "note": "This is the final reveal — the ticking bomb that survives Rhodes's death."
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "description": "Nadia's thumb-tap tic is noticed by a listener in a podcast comment, but dismissed as a nervous habit — a subtle clue to her methodical nature.",
+      "plant_chapter": 1,
+      "payoff_chapter": 34,
+      "note": "This clue is a character marker that pays off in the origin reveal when Nadia's cold precision is fully shown."
+    },
+    {
+      "id": "C002",
+      "description": "A boating accident report from three years ago mentions Julian Croft's death — the report is clean, but a detail (e.g., the fuel line was tampered) is buried in the fine print.",
+      "plant_chapter": 4,
+      "payoff_chapter": 34,
+      "note": "This is the first seed of Nadia's first kill. The reader may not recognize it until the origin reveal."
+    },
+    {
+      "id": "C003",
+      "description": "Victor Rhodes leaves a voicemail for Nadia that sounds like a casual fan message, but the wording is too precise — he uses a phrase from her private notes, not her podcast.",
+      "plant_chapter": 9,
+      "payoff_chapter": 10,
+      "note": "This clue triggers the Act 1 end reveal that Rhodes knows her true nature."
+    },
+    {
+      "id": "C004",
+      "description": "A deleted search history on Rhodes's computer shows he researched 'podcaster + unsolved murder + boating accident' — linking him to Julian Croft's case.",
+      "plant_chapter": 14,
+      "payoff_chapter": 22,
+      "note": "This clue shows Rhodes's counter-investigation is deeper than Nadia realizes."
+    },
+    {
+      "id": "C005",
+      "description": "Nadia's sister Mara's diary entry (found in a box) mentions a 'developer who came to the house' — a reference to Julian Croft, planting the origin connection.",
+      "plant_chapter": 6,
+      "payoff_chapter": 34,
+      "note": "This clue is emotional — it humanizes the origin wound before the full reveal."
+    },
+    {
+      "id": "C006",
+      "description": "Priya Anand's signature on a death certificate is slightly different from her usual handwriting — a clue that she altered the record.",
+      "plant_chapter": 8,
+      "payoff_chapter": 25,
+      "note": "This clue is a red herring seed (RH03) but also a genuine vulnerability in the network."
+    },
+    {
+      "id": "C007",
+      "description": "A photograph of Julian Croft's yacht shows a fuel line that looks recently replaced — a visual clue to the staged accident.",
+      "plant_chapter": 18,
+      "payoff_chapter": 34,
+      "note": "This is a visual clue that pays off in the origin reveal."
+    },
+    {
+      "id": "C008",
+      "description": "A text message from an unknown number to Rhodes contains details about Nadia's private schedule — only a network member would know this.",
+      "plant_chapter": 24,
+      "payoff_chapter": 28,
+      "note": "This clue is the first concrete evidence of the network betrayal."
+    },
+    {
+      "id": "C009",
+      "description": "Wren Delgado's encrypted file access logs show an unusual download at 3 AM — a clue that the hacker may be the leak, or that someone else is using Wren's credentials.",
+      "plant_chapter": 26,
+      "payoff_chapter": 28,
+      "note": "This clue points to the betrayer but leaves room for misdirection (it could be a frame)."
+    },
+    {
+      "id": "C010",
+      "description": "Rhodes's attorney's office receives a sealed envelope with instructions to release it upon his death — the dead-man's-switch trigger.",
+      "plant_chapter": 30,
+      "payoff_chapter": 38,
+      "note": "This clue is planted in Act 3 to set up the Book 2 hook."
+    },
+    {
+      "id": "C011",
+      "description": "A flash drive found in Rhodes's safe contains a single file: 'JULIAN CROFT — BOATING ACCIDENT — FULL REPORT' with annotations that link the accident to Nadia.",
+      "plant_chapter": 36,
+      "payoff_chapter": 38,
+      "note": "This is the final clue — the evidence that survives Rhodes's death and becomes the Book 2 hook."
+    }
+  ]
+}

@@ -1,0 +1,637 @@
+{
+  "schema_version": 1,
+  "kind": "story_contract",
+  "scope": {
+    "level": "book",
+    "book_id": "02"
+  },
+  "open_creation": {
+    "may_create_minor_entities": true,
+    "may_create_major_entities": false,
+    "may_add_supporting_events": true,
+    "may_change_locked_event_outcomes": false,
+    "may_add_noncritical_setup_payoffs": true,
+    "may_add_solution_critical_setup_payoffs": false
+  },
+  "entities": [],
+  "relations": [],
+  "events": [
+    {
+      "id": "event_ending_book",
+      "summary": "The tribunal \"solves\" the case — wrongly. Elias is dead, filed as an unstable witness. Sofia is cleared and walks free. The reader now understands Book 1 was narrated by the villain. The case closes on a lie the reader can see through but no character can.",
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.ending_book1",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "The tribunal \"solves\" the case — wrongly. Elias is dead, filed as an unstable witness. Sofia is cleared and walks free. The reader now understands Book 1 was narrated by the villain. The case closes o",
+        "evidence_start": 0,
+        "evidence_end": 200
+      },
+      "preconditions": [],
+      "effects": []
+    }
+  ],
+  "obligations": [
+    {
+      "id": "obl_include_sofia_revealed_as_nadia_s_daughter_and_the_syste",
+      "refs": [],
+      "description": "Sofia revealed as Nadia's daughter and the system's architect at ch8",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Sofia revealed as Nadia's daughter and the system's architect at ch8",
+        "evidence_start": 0,
+        "evidence_end": 68
+      }
+    },
+    {
+      "id": "obl_include_book_1_events_reinterpreted_never_contradicted",
+      "refs": [],
+      "description": "Book 1 events reinterpreted, never contradicted",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Book 1 events reinterpreted, never contradicted",
+        "evidence_start": 0,
+        "evidence_end": 47
+      }
+    },
+    {
+      "id": "obl_include_elias_dies_unmasking_her_his_love_is_what_expose",
+      "refs": [],
+      "description": "Elias dies unmasking her — his love is what exposes her",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Elias dies unmasking her — his love is what exposes her",
+        "evidence_start": 0,
+        "evidence_end": 55
+      }
+    },
+    {
+      "id": "obl_include_sofia_kills_elias_with_one_merciful_sounding_lin",
+      "refs": [],
+      "description": "Sofia kills Elias with one merciful-sounding line, not a random system death",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Sofia kills Elias with one merciful-sounding line, not a random system death",
+        "evidence_start": 0,
+        "evidence_end": 76
+      }
+    },
+    {
+      "id": "obl_include_sofia_sees_herself_as_a_savior_throughout_feels_",
+      "refs": [],
+      "description": "Sofia sees herself as a savior throughout — feels merciful while doing monstrous things",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Sofia sees herself as a savior throughout — feels merciful while doing monstrous things",
+        "evidence_start": 0,
+        "evidence_end": 87
+      }
+    },
+    {
+      "id": "obl_include_inverted_final_line_that_is_exactly_what_i_said",
+      "refs": [],
+      "description": "Inverted final line: \"That is exactly what I said\"",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Inverted final line: \"That is exactly what I said\"",
+        "evidence_start": 0,
+        "evidence_end": 50
+      }
+    },
+    {
+      "id": "obl_include_cold_ending_sofia_wins_no_redemption",
+      "refs": [],
+      "description": "Cold ending — Sofia wins, no redemption",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_include",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Cold ending — Sofia wins, no redemption",
+        "evidence_start": 0,
+        "evidence_end": 39
+      }
+    },
+    {
+      "id": "obl_hook_book2",
+      "refs": [],
+      "description": "The system no longer needs a dead woman's case file to learn from. It has a living operator who believes in it completely — Sofia, now inside the institution that owns it, choosing who gets rewritten next, certain she is saving them.",
+      "assertions": [],
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.hook_book2",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "The system no longer needs a dead woman's case file to learn from. It has a living operator who believes in it completely — Sofia, now inside the institution that owns it, choosing who gets rewritten ",
+        "evidence_start": 0,
+        "evidence_end": 200
+      }
+    }
+  ],
+  "state_transitions": [],
+  "revelations": [
+    {
+      "id": "sofia_identity",
+      "content": "Sofia Bellini is Nadia Petrescu's daughter and the architect of the system; the summit was her experiment.",
+      "exact_text": "Sofia Bellini is Nadia Petrescu's daughter and the architect of the system; the summit was her experiment.",
+      "exact_text_required": true,
+      "reveal_window": {
+        "not_before": 8
+      },
+      "audience": "reader",
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.binding_condition",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Sofia Bellini is Nadia Petrescu's daughter and the architect of the system; the summit was her experiment.",
+        "evidence_start": 0,
+        "evidence_end": 106
+      }
+    }
+  ],
+  "setup_payoff_links": [],
+  "constraints": [
+    {
+      "id": "cst_avoid_brain_chips_or_body_horror_sci_fi",
+      "description": "must avoid: Brain chips or body-horror sci-fi",
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Brain chips or body-horror sci-fi",
+        "evidence_start": 0,
+        "evidence_end": 33
+      }
+    },
+    {
+      "id": "cst_avoid_invented_characters_rook_or_a_sister_for_sofia",
+      "description": "must avoid: Invented characters (Rook, or a sister for Sofia)",
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Invented characters (Rook, or a sister for Sofia)",
+        "evidence_start": 0,
+        "evidence_end": 49
+      }
+    },
+    {
+      "id": "cst_avoid_sofia_redemption_or_death",
+      "description": "must avoid: Sofia redemption or death",
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Sofia redemption or death",
+        "evidence_start": 0,
+        "evidence_end": 25
+      }
+    },
+    {
+      "id": "cst_avoid_twist_revealed_before_chapter_8",
+      "description": "must avoid: Twist revealed before chapter 8",
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Twist revealed before chapter 8",
+        "evidence_start": 0,
+        "evidence_end": 31
+      }
+    },
+    {
+      "id": "cst_avoid_narration_stating_false_emotions_it_withholds_ne",
+      "description": "must avoid: Narration stating false emotions (it withholds, never lies)",
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.must_avoid",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Narration stating false emotions (it withholds, never lies)",
+        "evidence_start": 0,
+        "evidence_end": 59
+      }
+    },
+    {
+      "id": "cst_phrase_vance",
+      "description": "forbidden phrase: Vance",
+      "exact_text": "Vance",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Vance",
+        "evidence_start": 0,
+        "evidence_end": 5
+      }
+    },
+    {
+      "id": "cst_phrase_thorne",
+      "description": "forbidden phrase: Thorne",
+      "exact_text": "Thorne",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Thorne",
+        "evidence_start": 0,
+        "evidence_end": 6
+      }
+    },
+    {
+      "id": "cst_phrase_blackwood",
+      "description": "forbidden phrase: Blackwood",
+      "exact_text": "Blackwood",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Blackwood",
+        "evidence_start": 0,
+        "evidence_end": 9
+      }
+    },
+    {
+      "id": "cst_phrase_elara",
+      "description": "forbidden phrase: Elara",
+      "exact_text": "Elara",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Elara",
+        "evidence_start": 0,
+        "evidence_end": 5
+      }
+    },
+    {
+      "id": "cst_phrase_clara",
+      "description": "forbidden phrase: Clara",
+      "exact_text": "Clara",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Clara",
+        "evidence_start": 0,
+        "evidence_end": 5
+      }
+    },
+    {
+      "id": "cst_phrase_brain_chip",
+      "description": "forbidden phrase: brain chip",
+      "exact_text": "brain chip",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "brain chip",
+        "evidence_start": 0,
+        "evidence_end": 10
+      }
+    },
+    {
+      "id": "cst_phrase_implant",
+      "description": "forbidden phrase: implant",
+      "exact_text": "implant",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "implant",
+        "evidence_start": 0,
+        "evidence_end": 7
+      }
+    },
+    {
+      "id": "cst_phrase_rook",
+      "description": "forbidden phrase: Rook",
+      "exact_text": "Rook",
+      "exact_text_required": true,
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.forbidden_phrases",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Rook",
+        "evidence_start": 0,
+        "evidence_end": 4
+      }
+    },
+    {
+      "id": "cst_not_before_sofia_identity",
+      "description": "revelation window",
+      "assertion": {
+        "operator": "not_before",
+        "ref": {
+          "kind": "revelation",
+          "id": "sofia_identity"
+        },
+        "point": {
+          "book_id": "02",
+          "chapter": 8
+        }
+      },
+      "scope": {
+        "level": "book",
+        "book_id": "02"
+      },
+      "strength": "hard",
+      "origin": {
+        "source": "user",
+        "source_path": "concept.binding_condition",
+        "source_digest": "6ef2eceb6d5a4342",
+        "evidence": "Sofia Bellini is Nadia Petrescu's daughter and the architect of the system; the summit was her experiment.",
+        "evidence_start": 0,
+        "evidence_end": 106
+      }
+    }
+  ],
+  "ending_contract": {
+    "locked_outcomes": [
+      {
+        "kind": "event",
+        "id": "event_ending_book"
+      }
+    ],
+    "obligations": [],
+    "open_questions": [
+      "The system no longer needs a dead woman's case file to learn from. It has a living operator who believes in it completely — Sofia, now inside the institution that owns it, choosing who gets rewritten next, certain she is saving them."
+    ],
+    "assertions": [],
+    "scope": {
+      "level": "book",
+      "book_id": "02"
+    },
+    "origin": {
+      "source": "user",
+      "source_path": "concept.ending_book1",
+      "source_digest": "6ef2eceb6d5a4342",
+      "evidence": "The tribunal \"solves\" the case — wrongly. Elias is dead, filed as an unstable witness. Sofia is cleared and walks free. The reader now understands Book 1 was narrated by the villain. The case closes o",
+      "evidence_start": 0,
+      "evidence_end": 200
+    }
+  },
+  "extensions": {},
+  "candidates_meta": {
+    "items": [
+      {
+        "id": "obl_include_sofia_revealed_as_nadia_s_daughter_and_the_syste",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_book_1_events_reinterpreted_never_contradicted",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_elias_dies_unmasking_her_his_love_is_what_expose",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_sofia_kills_elias_with_one_merciful_sounding_lin",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_sofia_sees_herself_as_a_savior_throughout_feels_",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_inverted_final_line_that_is_exactly_what_i_said",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_include_cold_ending_sofia_wins_no_redemption",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_brain_chips_or_body_horror_sci_fi",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_invented_characters_rook_or_a_sister_for_sofia",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_sofia_redemption_or_death",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_twist_revealed_before_chapter_8",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_avoid_narration_stating_false_emotions_it_withholds_ne",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_vance",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_thorne",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_blackwood",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_elara",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_clara",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_brain_chip",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_implant",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_phrase_rook",
+        "section": "constraints",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "event_ending_book",
+        "section": "events",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "obl_hook_book2",
+        "section": "obligations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "sofia_identity",
+        "section": "revelations",
+        "classification": "auto_safe"
+      },
+      {
+        "id": "cst_not_before_sofia_identity",
+        "section": "constraints",
+        "classification": "auto_safe"
+      }
+    ]
+  }
+}

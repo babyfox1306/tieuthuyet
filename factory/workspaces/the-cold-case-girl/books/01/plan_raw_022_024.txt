@@ -1,0 +1,94 @@
+```json
+{
+  "act": [22, 24],
+  "chapter_plans": [
+    {
+      "chapter": 22,
+      "title": "The Fracture",
+      "slug": "the-fracture",
+      "one_line_summary": "Nadia Cole confronts the network's fracture after Victor Rhodes's taunt, pays off the clue linking him to Julian Croft, and dispels the detective red herring.",
+      "beat_summary": "Nadia Cole stares at the text from Victor Rhodes — 'I know about Julian Croft' — and feels the ground shift. She calls Sasha Okafor to confirm the fake lawsuit is ready; Sasha Okafor says it is, but warns that Rhodes's legal team is already circling. Nadia Cole calls Wren Delgado to trace the source of Rhodes's knowledge about Julian Croft; Wren Delgado reports that Rhodes's computer has a deleted search history showing he researched 'podcaster + unsolved murder + boating accident' — the first concrete link between Rhodes and Julian Croft's case (C004 paid off — exact semantic: 'A deleted search history on Rhodes's computer shows he researched \"podcaster + unsolved murder + boating accident\" — linking him to Julian Croft's case.'). Nadia Cole realizes the search history means Rhodes has been building his case for weeks. She calls Priya Anand to check on the audit; Priya Anand says it's over and the auditor found nothing, but mentions a detective from the state bureau stopped by asking questions about a suspicious death from six months ago — a case unrelated to Nadia. Nadia Cole dismisses it as a routine inquiry, but the reader is left to wonder if the detective (RH01 dispelled — exact semantic: 'A detective (unaffiliated with Rhodes) begins circling Nadia's network after a suspicious death is flagged — the reader is led to believe this detective will expose Nadia, but the thread fizzles when the detective is reassigned or the case is dropped by a higher authority.') is a real threat. The chapter ends with Nadia Cole alone in the safe house, reviewing the deleted search history screenshot Wren Delgado sent her. She whispers: 'He's been building this case for weeks. And I didn't see it.'",
+      "opens_with": "\"'I know about the boat. I know about the fuel line. I know about Julian Croft.' I read the text three times, each word a hammer blow. He didn't guess. He researched. And now I had to find out how deep his investigation went.\" — Nadia Cole, internal, as she stares at Victor Rhodes's text.",
+      "cliffhanger": "Nadia Cole's phone buzzes again. A new text from Victor Rhodes: 'The detective who stopped by Priya's office — I sent him. Not to find anything. To remind you that I can reach anyone in your circle.' She drops the phone, her thumb pressed to her palm. The detective was Rhodes's move, not a coincidence.",
+      "must_happen": [
+        "Nadia Cole calls Wren Delgado to trace the source of Victor Rhodes's knowledge about Julian Croft — Wren Delgado reports that Rhodes's computer has a deleted search history showing he researched 'podcaster + unsolved murder + boating accident' (C004 paid off — exact semantic from clue_catalog: 'A deleted search history on Rhodes's computer shows he researched \"podcaster + unsolved murder + boating accident\" — linking him to Julian Croft's case.'), confirming Rhodes has been building his case for weeks.",
+        "Nadia Cole calls Sasha Okafor to confirm the fake lawsuit is ready — Sasha Okafor says it is, but warns that Rhodes's legal team is already circling, suggesting the leak may have tipped them off.",
+        "Nadia Cole calls Priya Anand to check on the audit — Priya Anand says it's over and the auditor found nothing, but mentions a detective from the state bureau stopped by asking questions about a suspicious death from six months ago (RH01 dispelled — exact semantic from red_herring_catalog: 'A detective (unaffiliated with Rhodes) begins circling Nadia's network after a suspicious death is flagged — the reader is led to believe this detective will expose Nadia, but the thread fizzles when the detective is reassigned or the case is dropped by a higher authority.'), a routine inquiry that fizzles.",
+        "Nadia Cole realizes the detective was sent by Victor Rhodes — a reminder that he can reach anyone in her circle, escalating the psychological pressure.",
+        "The chapter ends with Nadia Cole alone in the safe house, reviewing the deleted search history screenshot — she whispers: 'He's been building this case for weeks. And I didn't see it.'"
+      ],
+      "must_not": [
+        "Do NOT reveal that Wren Delgado is the leak — her report on the search history is accurate, and her loyalty is not questioned in this chapter.",
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on Nadia Cole's discovery of the search history and the dispelling of the detective red herring.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is cold fear and the weight of the origin wound."
+      ],
+      "opens_with": "\"'I know about the boat. I know about the fuel line. I know about Julian Croft.' I read the text three times, each word a hammer blow. He didn't guess. He researched. And now I had to find out how deep his investigation went.\" — Nadia Cole, internal, as she stares at Victor Rhodes's text.",
+      "cliffhanger": "Nadia Cole's phone buzzes again. A new text from Victor Rhodes: 'The detective who stopped by Priya's office — I sent him. Not to find anything. To remind you that I can reach anyone in your circle.' She drops the phone, her thumb pressed to her palm. The detective was Rhodes's move, not a coincidence.",
+      "signature_detail_hint": "Nadia Cole runs her thumb over the edge of her phone screen, tracing the outline of the deleted search history screenshot — a gesture that mirrors her thumb-tap tic but is now a physical marker of her growing paranoia.",
+      "emotional_beat": "Cold fear and paranoia — Nadia Cole realizes Victor Rhodes has been building a case on her first kill for weeks, and the detective visit proves he can pressure her network.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show Nadia Cole's discovery of the deleted search history (C004 paid off — exact semantic from clue_catalog). Show the calls to Wren Delgado, Sasha Okafor, and Priya Anand. Dispell RH01 (exact semantic from red_herring_catalog) via Priya's mention of the detective. End with Victor Rhodes's text confirming he sent the detective. Do not expose Wren Delgado as the leak.",
+      "carries_to_next": "C004 is paid off. RH01 is dispelled. Victor Rhodes has confirmed he can reach anyone in Nadia Cole's circle. Chapter 23 will show the network fracture deepening as trust breaks."
+    },
+    {
+      "chapter": 23,
+      "title": "The Break",
+      "slug": "the-break",
+      "one_line_summary": "Nadia Cole's network fractures as Wren Delgado's strange behavior and Sasha Okafor's discovery of a leak in the system force a confrontation about who can be trusted.",
+      "beat_summary": "Nadia Cole, still in the safe house, receives a call from Sasha Okafor: the fake lawsuit has been filed, but Rhodes's legal team responded within hours — too fast, as if they were expecting it. Sasha Okafor says someone in the network must have tipped them off. Nadia Cole calls Wren Delgado to ask about the leak; Wren Delgado is defensive, saying she's been monitoring the system and hasn't seen anything unusual. But Nadia Cole notices Wren Delgado's voice is tight, evasive. She presses, and Wren Delgado admits she noticed unusual access logs on her own system at 3 AM — someone may be using her credentials (C009 referenced — exact semantic: 'Wren Delgado's encrypted file access logs show an unusual download at 3 AM — a clue that the hacker may be the leak, or that someone else is using Wren's credentials.'). Wren Delgado says she didn't report it because she thought it was a glitch. Nadia Cole hangs up, her mind racing. She calls Priya Anand to check if she's seen anything strange; Priya Anand says no, but her voice is shaky — she's still rattled by the audit and the detective visit. Nadia Cole isolates in the safe house, running through every interaction with her network. She realizes the leak is real, and it's one of the three. The chapter ends with Nadia Cole staring at her phone, knowing she cannot trust anyone.",
+      "opens_with": "\"'They responded within three hours, Nadia. Three hours. That's not a coincidence — that's a tip-off.' Sasha's voice was flat, clinical, but I heard the accusation underneath. Someone in my network had sold me out. The question was who.\" — Nadia Cole, internal, as she listens to Sasha Okafor's report on the fake lawsuit.",
+      "cliffhanger": "Nadia Cole hangs up with Wren Delgado and stares at her phone. She scrolls through her contacts: Sasha Okafor, Priya Anand, Wren Delgado. Three names. One betrayer. She whispers: 'I built this network to protect me. Now it's the thing that will destroy me.'",
+      "must_happen": [
+        "Nadia Cole receives a call from Sasha Okafor: the fake lawsuit has been filed, but Victor Rhodes's legal team responded within hours — too fast, as if they were expecting it, confirming a leak in the network.",
+        "Nadia Cole calls Wren Delgado to ask about the leak — Wren Delgado is defensive and evasive, then admits she noticed unusual access logs on her own system at 3 AM (C009 referenced — exact semantic: 'Wren Delgado's encrypted file access logs show an unusual download at 3 AM — a clue that the hacker may be the leak, or that someone else is using Wren's credentials.'), saying she thought it was a glitch.",
+        "Nadia Cole calls Priya Anand to check if she's seen anything strange — Priya Anand says no, but her voice is shaky, still rattled by the audit and the detective visit.",
+        "Nadia Cole isolates in the safe house, running through every interaction with her network — she realizes the leak is real and it's one of the three: Sasha Okafor, Priya Anand, or Wren Delgado.",
+        "The chapter ends with Nadia Cole staring at her phone, knowing she cannot trust anyone — the network is fractured, and paranoia poisons the circle."
+      ],
+      "must_not": [
+        "Do NOT reveal that Wren Delgado is the leak — her evasiveness and the access logs are suspicious, but the reader should suspect all three.",
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on Nadia Cole's realization that the network is compromised.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is paranoia and isolation."
+      ],
+      "opens_with": "\"'They responded within three hours, Nadia. Three hours. That's not a coincidence — that's a tip-off.' Sasha's voice was flat, clinical, but I heard the accusation underneath. Someone in my network had sold me out. The question was who.\" — Nadia Cole, internal, as she listens to Sasha Okafor's report on the fake lawsuit.",
+      "cliffhanger": "Nadia Cole hangs up with Wren Delgado and stares at her phone. She scrolls through her contacts: Sasha Okafor, Priya Anand, Wren Delgado. Three names. One betrayer. She whispers: 'I built this network to protect me. Now it's the thing that will destroy me.'",
+      "signature_detail_hint": "Nadia Cole traces the outline of her phone screen with her thumb, leaving a faint smudge on the glass — a physical marker of her isolation and the weight of the betrayal.",
+      "emotional_beat": "Paranoia and cold isolation — Nadia Cole realizes the network she built to protect her is now the thing that will destroy her.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show the network fracture: Sasha Okafor's report on the fast response to the fake lawsuit, Wren Delgado's evasiveness and the access logs (C009 referenced), and Priya Anand's shaky voice. End with Nadia Cole alone, realizing the leak is one of the three. Do not reveal Wren Delgado as the leak.",
+      "carries_to_next": "The network is fractured. Nadia Cole knows one of the three is the leak. Chapter 24 will show her attempt to isolate the suspected leak and the planting of C008."
+    },
+    {
+      "chapter": 24,
+      "title": "The Trap Within",
+      "slug": "the-trap-within",
+      "one_line_summary": "Nadia Cole isolates the suspected leak by setting a trap, planting a clue that will expose the betrayer, and faces the paranoia that now poisons her circle.",
+      "beat_summary": "Nadia Cole, still in the safe house, decides to set a trap. She calls each member of her network with a different piece of false information about her next move: to Sasha Okafor, she says she's planning to break into Rhodes's office on Friday; to Priya Anand, she says she's planning to confront Rhodes at a public event on Saturday; to Wren Delgado, she says she's planning to hack Rhodes's server on Sunday. She waits. Within hours, Victor Rhodes sends a text referencing the Friday break-in — the same information she gave Sasha Okafor. Nadia Cole now knows Sasha Okafor is not the leak (confirmed non-leak per global_choices). She eliminates Sasha Okafor and Priya Anand (also confirmed non-leak) from suspicion, leaving only Wren Delgado. But she cannot confront Wren Delgado yet — she needs more evidence. Nadia Cole calls Wren Delgado and asks her to monitor Rhodes's communications for any mention of the false moves; Wren Delgado agrees, but her voice is too eager, too helpful. Nadia Cole ends the call and plants a new clue: she sends a text to an unknown number (a burner phone she controls) that contains details about her private schedule — the text is intercepted by Victor Rhodes, who now has concrete evidence of the leak (C008 planted — exact semantic: 'A text message from an unknown number to Rhodes contains details about Nadia's private schedule — only a network member would know this.'). The chapter ends with Nadia Cole staring at her phone, knowing Wren Delgado is the leak but unable to act without risking the entire network.",
+      "opens_with": "\"I called Sasha and told her Friday. I called Priya and told her Saturday. I called Wren and told her Sunday. Three lies, three targets, one truth: the leak would surface within hours. I just had to wait.\" — Nadia Cole, internal, as she sets the trap for the leak.",
+      "cliffhanger": "Nadia Cole's phone buzzes. A text from Victor Rhodes: 'Friday sounds good. I'll be at the office. Don't be late.' She drops the phone, her thumb pressed to her palm. The trap worked. Sasha Okafor is clean. But the leak is still out there, and now Rhodes knows she's hunting him.",
+      "must_happen": [
+        "Nadia Cole sets a trap for the leak: she calls each member of her network with a different piece of false information about her next move — to Sasha Okafor (Friday break-in), to Priya Anand (Saturday confrontation), to Wren Delgado (Sunday hack).",
+        "Within hours, Victor Rhodes sends a text referencing the Friday break-in — the same information she gave Sasha Okafor, confirming Sasha Okafor is not the leak (per global_choices: Sasha Okafor is a confirmed non-leak).",
+        "Nadia Cole eliminates Sasha Okafor and Priya Anand (both confirmed non-leaks) from suspicion, leaving only Wren Delgado — but she cannot confront Wren Delgado yet without more evidence.",
+        "Nadia Cole plants C008: she sends a text to an unknown number (a burner phone she controls) that contains details about her private schedule — the text is intercepted by Victor Rhodes, who now has concrete evidence of the leak (C008 planted — exact semantic: 'A text message from an unknown number to Rhodes contains details about Nadia's private schedule — only a network member would know this.').",
+        "The chapter ends with Nadia Cole staring at her phone, knowing Wren Delgado is the leak but unable to act without risking the entire network — the paranoia poisons the circle."
+      ],
+      "must_not": [
+        "Do NOT reveal that Wren Delgado is the leak explicitly — the reader should suspect her based on the trap results, but the confirmation comes in chapter 28.",
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on Nadia Cole's trap and the planting of C008.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is cold calculation and paranoia."
+      ],
+      "opens_with": "\"I called Sasha and told her Friday. I called Priya and told her Saturday. I called Wren and told her Sunday. Three lies, three targets, one truth: the leak would surface within hours. I just had to wait.\" — Nadia Cole, internal, as she sets the trap for the leak.",
+      "cliffhanger": "Nadia Cole's phone buzzes. A text from Victor Rhodes: 'Friday sounds good. I'll be at the office. Don't be late.' She drops the phone, her thumb pressed to her palm. The trap worked. Sasha Okafor is clean. But the leak is still out there, and now Rhodes knows she's hunting him.",
+      "signature_detail_hint": "Nadia Cole types the false information into her phone with deliberate slowness, each tap of the keyboard a calculated move in the trap — a physical marker of her cold precision.",
+      "emotional_beat": "Cold calculation and paranoia — Nadia Cole sets a trap for the leak and confirms Sasha Okafor is clean, but the betrayal poisons the circle.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show Nadia Cole's trap: three different false moves to each network member. Show Victor Rhodes's response confirming Sasha Okafor is clean. Plant C008 (exact semantic from clue_catalog: 'A text message from an unknown number to Rhodes contains details about Nadia's private schedule — only a network member would know this.') via the burner phone. End with Nadia Cole knowing Wren Delgado is the leak but unable to act. Do not reveal Wren Delgado as the leak explicitly.",
+      "carries_to_next": "C008 is planted. Sasha Okafor is confirmed clean. The leak is narrowed to Wren Delgado. Chapter 25 will show Nadia Cole's next move against Victor Rhodes, now that she knows the leak is within her circle."
+    }
+  ]
+}
+```

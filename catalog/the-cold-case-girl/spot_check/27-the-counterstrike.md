@@ -1,0 +1,93 @@
+---
+series: the-cold-case-girl
+book: 1
+chapter: 27
+title: The Counterstrike
+spice: 1
+word_count: 794
+status: draft
+needs_fix: []
+promoted_at: '2026-07-26T11:06:36Z'
+---
+
+Before we went to Wren's locker, I gave the compromised archive one last secret.
+
+According to the staged plan, Sasha and I would enter Rhodes's office through the service garage at 2:30 PM and take the original Meridian ledger from his wall safe. The plan included our route, the tools we would carry, and the phrase proceed even if watched.
+
+None of it was true.
+
+At 2:16, two black sedans arrived outside Rhodes's office. At 2:22, a private security team blocked the service garage. At 2:28, Rhodes texted me.
+
+You should have chosen a quieter entrance.
+
+For the first time, his reach had an edge I could see. He knew what Wren's abandoned channel told him. Nothing more.
+
+While his security watched an empty garage, Sasha and I entered the central bus terminal from opposite doors. I wore a courier jacket and carried an empty document tube. Sasha looked exactly like what she was—a lawyer moving too quickly to be stopped.
+
+The locker key waited beneath the table shown in Wren's photograph. Locker 804 held a padded envelope, a cheap audio recorder, and a black memory drive with three labels written in silver ink:
+
+BLACKMAIL.
+
+EXPORTS.
+
+CONFESSION.
+
+We took the contents to Sasha's office and used the isolated laptop. The drive had no network functions and no hidden executable files. Wren had known exactly how suspicious we would be.
+
+The BLACKMAIL folder contained the draft federal complaint she had described, photographs of Sasha's house, Priya walking her daughter into school, and a list of Wren's intrusions at the defense contractor. Some of the evidence was real. Some had been sharpened into a conspiracy that would make headlines before any lawyer could dismantle it.
+
+The EXPORTS folder contained Wren's own ledger. Date. File opened. Material sent. Demand received. She had documented every compromise, including the administrator recovery token and the private-language file.
+
+The CONFESSION file was encrypted.
+
+"Do you know the password?" Sasha asked.
+
+I looked at the audio recorder. "No. But she left us a voice."
+
+The recording began with Wren breathing close to the microphone.
+
+"Nadia, if you're hearing this, the location test worked and I ran out of time. The password is the first rule you gave me. Lowercase. No spaces."
+
+I typed noproofnokill.
+
+The file opened.
+
+Wren sat against a blank wall, hair tied back, no makeup, no attempt to control what fear had done to her face.
+
+"Rhodes contacted me eleven weeks ago," she said on-screen. "He had my contractor case and fragments of Julian Croft. He wanted the network index. I refused. I sent old schedules and dead routes to convince him I was cooperating. Then he added Sasha and Priya to the complaint. Then Priya's daughter."
+
+She looked away from the camera.
+
+"I told myself every small disclosure bought time. It did, until it didn't. I sent the Croft operational record. I sent Nadia's language index. I forwarded the old-pier location and the maintenance canary. Those were choices. The threats explain them. They do not excuse them."
+
+Sasha folded her arms but said nothing.
+
+"I never sent the current member index. I never gave him Nadia's root key because I didn't have it. The recovery token was mine. He believes it is the only hidden credential. It is dead now."
+
+Wren leaned closer to the camera.
+
+"His attorney holds a release package labeled C-010. It is damaging, but it is not the original Croft evidence. That file is C-011, physical, under a second authorization Rhodes would not name. He said the second signer was family. I traced one contact to an information broker named Evelyn Shaw. If you ask Evelyn for loyalty, she will sell you the answer you want and the answer to the next buyer. Ask her for terms."
+
+The name pulled an old memory into focus: Evelyn in a hotel bar years before Mara died, trading three passports for a corporate confession and smiling as if both were equally ordinary.
+
+Sasha paused the video. "You know her?"
+
+"I owe her a favor I never used."
+
+"That's not the same as knowing her."
+
+"With Evelyn, it is as close as anyone gets."
+
+The video continued.
+
+"I am going dark. Do not call me. Do not use anything I built. If I survive, I will testify to this ledger. If I don't, the recorder is my statement."
+
+The screen went black.
+
+At the same moment, alerts began appearing on my phone. Maya Torres's "The Dark Side of Justice" account had posted a teaser accusing me of concealing evidence in the Croft case.
+
+Rhodes had found the limits of his access, so he was using what Wren had already given him.
+
+It was not omniscience. It was ammunition.
+
+And now I knew which box held the live round.

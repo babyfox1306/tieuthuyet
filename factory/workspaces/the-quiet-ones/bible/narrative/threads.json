@@ -1,0 +1,93 @@
+{
+  "description": "Threads for Book 1 of The Quiet Ones — a feminist revenge thriller where the reader knows from chapter 1 that Elle Reyes is a vigilante executioner. The threads track the two-way hunt between Elle and Damien Kroll, the network's fracture, the origin wound reveal, and the ticking bomb of Elle's first kill.",
+  "threads": [
+    {
+      "id": "T01",
+      "name": "The Kroll Hunt — Elle's pursuit of Damien Kroll",
+      "opened_chapter": 1,
+      "must_close_by": 36,
+      "status": "open",
+      "book1_resolution": "Elle engineers an 'accident' that kills Damien Kroll in chapter 36; his death is framed as a suicide after a public confession (recorded by Elle) surfaces on her podcast.",
+      "book2_promise": "Kroll's dead-man's-switch evidence of Elle's first kill survives and surfaces in unknown hands in chapter 38.",
+      "book1_payoff": "The guilty man is dead, justice is served in the public eye, but Elle's secret is no longer safe.",
+      "note": "This is the central thread of the book. Every other thread feeds into or complicates this one."
+    },
+    {
+      "id": "T02",
+      "name": "The Two-Way Hunt — Damien Kroll hunts Elle",
+      "opened_chapter": 8,
+      "must_close_by": 36,
+      "status": "open",
+      "book1_resolution": "Kroll is killed in chapter 36, but his evidence of Elle's first kill has already been distributed via dead-man's-switch.",
+      "book2_promise": "The evidence of Elle's first kill is now in the hands of an unknown third party, who contacts Elle in the final beat of chapter 38.",
+      "book1_payoff": "The hunter becomes the hunted; Elle realizes she is no longer invisible.",
+      "note": "Kroll figures out what Elle is by chapter 8. From then on, the two-way hunt escalates. He builds a case on her first kill and rigs a dead-man's-switch."
+    },
+    {
+      "id": "T03",
+      "name": "The Network — loyalty and betrayal",
+      "opened_chapter": 2,
+      "must_close_by": 34,
+      "status": "open",
+      "book1_resolution": "The leak is revealed to be Priya Anand (the coroner) in chapter 28. Her betrayal is motivated by fear — Kroll threatened her family. Elle confronts her in chapter 33; Priya is exiled from the network but not killed.",
+      "book2_promise": "The network is fractured. Sasha and Wren remain loyal but shaken. Priya's fate is unknown — she may return as an asset or a threat in Book 2.",
+      "book1_payoff": "The betrayal hurts because loyalty was real. Elle's trust in her network is damaged but not destroyed.",
+      "note": "The leak is Priya Anand. Build her loyalty across chapters 2-27 before the betrayal in chapter 28. Her motive: Kroll threatened her family."
+    },
+    {
+      "id": "T04",
+      "name": "Origin Wound — Mara Reyes's murder",
+      "opened_chapter": 3,
+      "must_close_by": 34,
+      "status": "open",
+      "book1_resolution": "Elle's origin wound is fully revealed in chapter 34: Mara was murdered by a man who walked free on a technicality. Elle killed him in an 'accident' six months later — her first kill.",
+      "book2_promise": "The evidence of this first kill is what Kroll found and weaponized. It now threatens to expose Elle entirely.",
+      "book1_payoff": "The reader understands the full depth of Elle's wound and why she does what she does. The first kill is no longer a secret — it's a ticking bomb.",
+      "note": "Seed the origin wound gradually: chapter 3 (hint of a sister), chapter 10 (mention of Mara's murder), chapter 19 (first details of the killer who walked free), chapter 28 (Elle's emotional response to the betrayal triggers a memory), chapter 34 (full reveal)."
+    },
+    {
+      "id": "T05",
+      "name": "The First Kill — Elle's buried evidence",
+      "opened_chapter": 12,
+      "must_close_by": 38,
+      "status": "open",
+      "book1_resolution": "Kroll's dead-man's-switch evidence of Elle's first kill is triggered after his death. It surfaces in chapter 38 in the hands of an unknown third party.",
+      "book2_promise": "The unknown third party contacts Elle in the final beat of chapter 38, demanding she work for them. The hunter is now on a leash.",
+      "book1_payoff": "The ticking bomb doesn't explode in Book 1, but it is now active. The reader knows Elle's secret is no longer safe.",
+      "note": "Kroll discovers evidence of Elle's first kill around chapter 12. He uses it as leverage but never reveals it publicly — he saves it for his dead-man's-switch."
+    },
+    {
+      "id": "T06",
+      "name": "The Podcast — Elle's public cover",
+      "opened_chapter": 1,
+      "must_close_by": 38,
+      "status": "open",
+      "book1_resolution": "Elle's podcast frames Kroll's death as a suicide after a public confession. The final episode of the season airs in chapter 37, cementing her public persona as a crusading journalist.",
+      "book2_promise": "The podcast continues to be her cover, but the leak and the first-kill evidence threaten to expose her. The podcast may become a liability in Book 2.",
+      "book1_payoff": "The podcast serves as both cover and weapon. Elle uses it to manipulate public perception and recruit her network.",
+      "note": "The podcast is a recurring element. Elle records episodes, interviews sources, and uses the production process to gather information. Each episode advances the plot."
+    },
+    {
+      "id": "T07",
+      "name": "The Detective — Marcus Holt circles Elle",
+      "opened_chapter": 9,
+      "must_close_by": 38,
+      "status": "open",
+      "book1_resolution": "Holt suspects Elle but lacks proof. He is close to connecting her to Kroll's death in chapter 38, but the evidence of her first kill surfaces and distracts him.",
+      "book2_promise": "Holt will be a major threat in Book 2. He is smart, persistent, and he knows Elle is hiding something.",
+      "book1_payoff": "Holt's suspicion adds tension but does not result in Elle's exposure. He is a loose end.",
+      "note": "Holt is not the leak. He is a separate threat. His tension with Elle is charged but never romantic — he is a professional who senses something wrong."
+    },
+    {
+      "id": "T08",
+      "name": "Romance — charged tension, not plot-driving",
+      "opened_chapter": 14,
+      "must_payoff_by": 38,
+      "status": "open",
+      "book1_resolution": "A charged moment between Elle and Wren Delgado in chapter 30 — a shared vulnerability that hints at deeper connection, but neither acts on it. The tension is unresolved.",
+      "book2_promise": "The romantic thread may develop in Book 2, but it will never drive the plot. It remains a subtextual layer.",
+      "book1_payoff": "The reader senses the possibility of connection, but the thriller engine remains primary.",
+      "note": "Romance is level 0-1. The charged tension is with Wren Delgado (the hacker), not with Holt or Kroll. It is a slow-burn subtext, not a plot driver."
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "per_case": {
+    "bell": {
+      "writer_calls": 0,
+      "qc_calls": 0,
+      "integrity_extractor_calls": 0,
+      "integrity_verifier_calls": 0,
+      "contract_compiler_calls": 0,
+      "contract_compliance_calls": 0,
+      "quality_evaluator_calls": 0,
+      "quality_repairer_calls": 0,
+      "total_semantic_calls": 0,
+      "cache_hits": 0,
+      "cache_misses": 3,
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency_seconds": 0.0,
+      "routes_failed": 0,
+      "operator_actions": 0,
+      "deterministic_checks": 3,
+      "stopped_for_unavailable_routes": 4
+    },
+    "standalone": {
+      "writer_calls": 0,
+      "qc_calls": 0,
+      "integrity_extractor_calls": 0,
+      "integrity_verifier_calls": 0,
+      "contract_compiler_calls": 0,
+      "contract_compliance_calls": 0,
+      "quality_evaluator_calls": 0,
+      "quality_repairer_calls": 0,
+      "total_semantic_calls": 0,
+      "cache_hits": 0,
+      "cache_misses": 3,
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency_seconds": 0.0,
+      "routes_failed": 0,
+      "operator_actions": 0,
+      "deterministic_checks": 3,
+      "stopped_for_unavailable_routes": 0
+    },
+    "series": {
+      "writer_calls": 0,
+      "qc_calls": 0,
+      "integrity_extractor_calls": 0,
+      "integrity_verifier_calls": 0,
+      "contract_compiler_calls": 0,
+      "contract_compliance_calls": 0,
+      "quality_evaluator_calls": 0,
+      "quality_repairer_calls": 0,
+      "total_semantic_calls": 0,
+      "cache_hits": 0,
+      "cache_misses": 3,
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency_seconds": 0.0,
+      "routes_failed": 0,
+      "operator_actions": 0,
+      "deterministic_checks": 3,
+      "stopped_for_unavailable_routes": 0
+    }
+  },
+  "totals": {
+    "writer_calls": 0,
+    "qc_calls": 0,
+    "integrity_extractor_calls": 0,
+    "integrity_verifier_calls": 0,
+    "contract_compiler_calls": 0,
+    "contract_compliance_calls": 0,
+    "quality_evaluator_calls": 0,
+    "quality_repairer_calls": 0,
+    "total_semantic_calls": 0,
+    "cache_hits": 0,
+    "cache_misses": 9,
+    "input_chars": 0,
+    "output_chars": 0,
+    "latency_seconds": 0.0,
+    "routes_failed": 0,
+    "operator_actions": 0,
+    "deterministic_checks": 9,
+    "stopped_for_unavailable_routes": 4
+  },
+  "notes": [
+    "Character counts are not exact tokens; any token figure must be labeled estimate.",
+    "No paid routes permitted."
+  ],
+  "created_at": "2026-07-23T11:01:59Z",
+  "route_resolution": [
+    {
+      "role": "integrity_extractor",
+      "group": "phase_integrity",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "integrity_verifier",
+      "group": "phase_integrity",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "story_contract_compiler",
+      "group": "phase_story_contract",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "contract_compliance_evaluator",
+      "group": "phase_story_contract",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "quality_evaluator",
+      "group": "phase_quality",
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-fast",
+      "success": true,
+      "code": "OK",
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "quality_repairer",
+      "group": "phase_quality",
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-fast",
+      "success": true,
+      "code": "OK",
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "writer",
+      "group": "phase2_write",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/best-coding",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "qc",
+      "group": "phase_light",
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-fast",
+      "success": true,
+      "code": "OK",
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    }
+  ],
+  "live_probes": [
+    {
+      "role": "quality_evaluator",
+      "success": false,
+      "code": "ROUTE_CALL_FAILED",
+      "message": "All models failed (['auto/best-fast', 'auto/fast']): Error code: 404 - {'error': {'message': 'No active credentials for provider: auto', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+      "resolved_route": "auto/best-fast",
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 0,
+      "latency_seconds": 3.712,
+      "cache_hit": false,
+      "at": "2026-07-23T11:01:58Z"
+    },
+    {
+      "role": "quality_repairer",
+      "success": false,
+      "code": "ROUTE_CALL_FAILED",
+      "message": "All models failed (['auto/best-fast', 'auto/fast']): Error code: 404 - {'error': {'message': 'No active credentials for provider: auto', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+      "resolved_route": "auto/best-fast",
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 0,
+      "latency_seconds": 0.197,
+      "cache_hit": false,
+      "at": "2026-07-23T11:01:58Z"
+    },
+    {
+      "role": "contract_compliance_evaluator",
+      "success": false,
+      "code": "ROUTE_CALL_FAILED",
+      "message": "All models failed (['auto/best-reasoning', 'auto/best-fast', 'auto/fast']): Error code: 404 - {'error': {'message': 'No active credentials for provider: auto', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+      "resolved_route": "auto/best-reasoning",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 0,
+      "latency_seconds": 0.264,
+      "cache_hit": false,
+      "at": "2026-07-23T11:01:59Z"
+    },
+    {
+      "role": "story_contract_compiler",
+      "success": false,
+      "code": "ROUTE_CALL_FAILED",
+      "message": "All models failed (['auto/best-reasoning', 'auto/best-fast', 'auto/fast']): Error code: 404 - {'error': {'message': 'No active credentials for provider: auto', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+      "resolved_route": "auto/best-reasoning",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 0,
+      "latency_seconds": 0.256,
+      "cache_hit": false,
+      "at": "2026-07-23T11:01:59Z"
+    }
+  ]
+}

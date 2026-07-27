@@ -26,6 +26,59 @@ _TEMPLATE_AUDIENCE_VI = "nữ 18-35, đọc điện thoại, lướt nhanh"
 _SPICE_BADGES = {1: "sweet", 2: "steamy", 3: "16+"}
 
 
+_TEMPLATE_GOAL_THRILLER_EN = (
+    "end-of-chapter hooks — procedural thriller pace, no romance engine"
+)
+_TEMPLATE_GOAL_THRILLER_VI = (
+    "móc cuối chương — nhịp thriller thủ tục, không engine romance"
+)
+
+
+def concept_forbids_romance(concept: dict) -> bool:
+    """True when concept opts out of romance (must_avoid / directive)."""
+    for item in concept.get("must_avoid") or []:
+        text = str(item).strip().lower()
+        if re.search(
+            r"\bromance\b|"
+            r"love interest|"
+            r"slow[\s-]?burn|"
+            r"subplot taking over",
+            text,
+        ):
+            return True
+    blob = "\n".join(
+        str(concept.get(k) or "")
+        for k in (
+            "author_directive",
+            "notes",
+            "surface_plot",
+            "true_plot",
+            "logline",
+            "bloodline",
+        )
+    ).lower()
+    # Also fold structured bloodline if present as dict.
+    bl = concept.get("bloodline")
+    if isinstance(bl, dict):
+        blob += "\n" + " ".join(str(v) for v in bl.values()).lower()
+    return bool(
+        re.search(
+            r"\bnot a romance\b|"
+            r"\bno romance\b|"
+            r"\bromance of any kind\b|"
+            r"\bromance never\b|"
+            r"\bnever drives the plot\b.{0,40}\bromance\b|"
+            r"\bromance\b.{0,40}\bnever drives\b|"
+            r"\bnon[-\s]?romantic\b|"
+            r"\bforbid(?:s|den)?\s+romance\b|"
+            r"\bdo not create a standalone romance\b|"
+            r"\bnot a love interest\b",
+            blob,
+            re.I | re.DOTALL,
+        )
+    )
+
+
 def load_kernel_narrative_profile(ws: Path) -> str | None:
     path = ws / "bible" / "narrative" / "kernel.json"
     if not path.exists():
@@ -39,41 +92,98 @@ def load_kernel_narrative_profile(ws: Path) -> str | None:
 
 
 def infer_narrative_profile_from_concept(concept: dict) -> str | None:
-    """Derive narrative_profile from concept text — no hardcoded romance default."""
+    """Derive narrative_profile from concept text — no hardcoded romance default.
+
+    Anti-romance / intentional anti-hero thrillers must NOT become
+    ``romance_thriller`` just because the word \"Romance\" appears in must_avoid.
+    """
     blob = "\n".join(
-        str(concept.get(k) or "")
-        for k in ("author_directive", "notes", "surface_plot", "true_plot", "title", "logline")
+        [
+            str(concept.get(k) or "")
+            for k in ("author_directive", "notes", "surface_plot", "true_plot", "title", "logline")
+        ]
+        + [str(x) for x in (concept.get("must_avoid") or [])]
+        + [str(x) for x in (concept.get("must_include") or [])]
     ).lower()
     if not blob.strip():
         return None
-    if "not a romance" in blob or "gothic" in blob or "psychological horror" in blob:
+
+    forbids = concept_forbids_romance(concept)
+    wants_thriller = bool(
+        re.search(
+            r"\bthriller\b|"
+            r"\brevenge\b|"
+            r"\bprocedural\b|"
+            r"\btwo-way hunt\b|"
+            r"\bcold case\b|"
+            r"\banti-hero\b|"
+            r"\bgood for her\b",
+            blob,
+        )
+    )
+    wants_gothic = bool(
+        re.search(r"\bgothic\b|\bpsychological horror\b|\bhorror\b", blob)
+    )
+    wants_conspiracy = "conspiracy" in blob and "thriller" in blob
+    wants_romance = bool(
+        re.search(r"\bromance\b|\bslow[\s-]?burn\b|\blove interest\b", blob)
+    ) and not forbids
+
+    if forbids:
+        if wants_gothic and not wants_thriller:
+            return "gothic_psychological_horror"
+        if wants_conspiracy:
+            return "conspiracy_thriller"
+        if wants_thriller or wants_gothic:
+            return "thriller"
+        return "thriller" if "thriller" in blob else None
+
+    if "not a romance" in blob or (
+        wants_gothic and not wants_romance
+    ):
         return "gothic_psychological_horror"
-    if "conspiracy" in blob and "thriller" in blob:
+    if wants_conspiracy:
         return "conspiracy_thriller"
-    if "romance" in blob and "thriller" in blob:
+    if wants_romance and "thriller" in blob:
         return "romance_thriller"
-    if "horror" in blob:
+    if wants_thriller and not wants_romance:
+        return "thriller"
+    if wants_gothic:
         return "gothic_psychological_horror"
     return None
 
 
 def resolve_narrative_profile(ws: Path, concept: dict | None = None) -> str | None:
-    """Kernel wins, then concept inference."""
-    profile = load_kernel_narrative_profile(ws)
-    if profile:
-        return profile
+    """Concept anti-romance beats a stale romance_* kernel; else kernel, else infer."""
     concept = concept if concept is not None else _load_concept(ws)
-    return infer_narrative_profile_from_concept(concept)
+    inferred = infer_narrative_profile_from_concept(concept)
+    kernel = load_kernel_narrative_profile(ws)
+    if concept_forbids_romance(concept):
+        if inferred:
+            return inferred
+        if kernel and "romance" in kernel.lower():
+            return "thriller"
+    if kernel:
+        return kernel
+    return inferred
 
 
 def is_template_goal(direction: dict) -> bool:
     goal = str(direction.get("goal") or "").strip()
-    return goal in (_TEMPLATE_GOAL_ROMANCE_EN, _TEMPLATE_GOAL_ROMANCE_VI)
+    return goal in (
+        _TEMPLATE_GOAL_ROMANCE_EN,
+        _TEMPLATE_GOAL_ROMANCE_VI,
+        _TEMPLATE_GOAL_THRILLER_EN,
+        _TEMPLATE_GOAL_THRILLER_VI,
+        _TEMPLATE_GOAL_GOTHIC_EN,
+    )
 
 
 def default_goal_for_profile(profile: str | None, lang: str) -> str | None:
     if profile == "gothic_psychological_horror":
         return _TEMPLATE_GOAL_GOTHIC_EN
+    if profile == "thriller":
+        return _TEMPLATE_GOAL_THRILLER_EN if lang == "en" else _TEMPLATE_GOAL_THRILLER_VI
     if profile in ("romance_thriller", "conspiracy_thriller"):
         return _TEMPLATE_GOAL_ROMANCE_EN if lang == "en" else _TEMPLATE_GOAL_ROMANCE_VI
     return None
@@ -313,6 +423,7 @@ def sync_manifest_from_direction(ws: Path) -> dict[str, Any]:
 
     keys = (
         "id",
+        "pen_name",
         "target_language",
         "spice_level",
         "publish_strategy",

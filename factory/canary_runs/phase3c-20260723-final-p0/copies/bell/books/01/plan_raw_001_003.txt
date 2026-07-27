@@ -1,0 +1,86 @@
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Bell at 2:17",
+      "slug": "the-bell-at-2-17",
+      "one_line_summary": "Female Lead is awakened by the impossible ringing of the Saint Orison’s bell at 2:17 a.m., marking the start of a new death cycle in Morrow Wick.",
+      "beat_summary": "Female Lead is jolted awake at 2:17 a.m. by the bell that should not exist. She tries to rationalize the event, but the community’s silent dread and the recent deaths make denial impossible. She connects the timing to the town’s infamous tragedies and her mother’s anxious warnings. Male Lead appears at the scene, deflecting questions and steering the investigation away from the town archives. Female Lead begins her own inquiry, noticing how the victims seem compelled to follow specific, repeated actions. The town’s fear intensifies as dawn approaches.",
+      "must_happen": [
+        "Female Lead is roused from sleep by the bell, which rings at 2:17 a.m. despite having been removed decades ago.",
+        "Female Lead observes the immediate aftermath: neighbors emerging, a sense of ritual dread, and an unspoken expectation that someone will die before sunrise.",
+        "Female Lead notes her mother Ada Voss’s old warnings about the church and town secrets.",
+        "Male Lead arrives, officially taking charge but quietly steering Female Lead away from the municipal records and the church.",
+        "Female Lead witnesses the chosen victim compulsively reenacting the prior victim’s final actions.",
+        "Female Lead recognizes the repetition but cannot discern a deeper pattern."
+      ],
+      "must_not": [
+        "Do not reveal the true mechanism behind the bell’s choice or the chain of testimony.",
+        "Do not state or imply that the deaths are anything but a mysterious curse or supernatural event."
+      ],
+      "opens_with": "\"Who else heard it this time?\" Female Lead snaps, before her feet touch the floor.",
+      "cliffhanger": "Female Lead finds a fresh name written in soot on her front steps just before sunrise.",
+      "signature_detail_hint": "A faint, oily fingerprint—left on the window latch by someone who could not have reached it from the ground.",
+      "emotional_beat": "Rising dread, denial battling with logical curiosity, and the first glimmer of obsession.",
+      "spice": 0,
+      "spice_note": "No romantic or sexual content; tension is psychological and procedural.",
+      "chapter_task": "Establish the impossible bell event, the cycle of ritual death, and the atmospheric dread of Morrow Wick in 1600–1900 words. Set up Female Lead’s practical skepticism and Male Lead’s secretive resistance. Do not reveal the truth behind the bell.",
+      "carries_to_next": "Female Lead is driven to investigate the official records and the church for explanations, setting the stage for further discoveries."
+    },
+    {
+      "chapter": 2,
+      "title": "Ash and Ledger",
+      "slug": "ash-and-ledger",
+      "one_line_summary": "Female Lead discovers a scorched 1974 attendance ledger with missing names and altered signatures, raising suspicions about the deaths’ connection to the church fire.",
+      "beat_summary": "Compelled by the soot-written name, Female Lead begins combing the municipal archives and discovers the partially destroyed 1974 church attendance ledger. She notes the missing names and altered signatures, suspecting a link to the chain of deaths and the fire. Male Lead intercepts her, attempting to distract her with procedural tasks and casting doubt on her findings. Evidence surfaces that Ada Voss, her late mother, was anxious about the bell deaths and the church records’ integrity. Female Lead questions the randomness of the victim chain for the first time, but lacks proof.",
+      "must_happen": [
+        "Female Lead investigates the archives and discovers the 1974 attendance ledger, scorched and with names missing.",
+        "Female Lead notices altered signatures and recurring inconsistencies in death records.",
+        "Clue C001 is planted: A particular alteration in the ledger points to an official signature pattern.",
+        "Male Lead redirects Female Lead, trying to prevent her from accessing the sealed records related to the church fire.",
+        "Female Lead finds evidence of Ada Voss’s anxiety about the bell deaths and the town’s official files.",
+        "Female Lead begins to question whether the chain of deaths is truly random."
+      ],
+      "must_not": [
+        "Do not reveal the exact reason for the missing names or the nature of the attendance ledger’s importance.",
+        "Do not allow Female Lead to uncover the chamber beneath the church or the full scope of Ada Voss’s involvement."
+      ],
+      "opens_with": "\"If you want the truth, you’ll need to burn your gloves,\" the archivist mutters as Female Lead enters the records room.",
+      "cliffhanger": "A second name appears overnight—again in soot, but written inside the church’s locked vestry.",
+      "signature_detail_hint": "The charred edge of the ledger curls around a pressed wildflower, perfectly preserved despite the fire.",
+      "emotional_beat": "Suspicion, refusal to accept coincidence, and the sting of personal betrayal by trusted authority.",
+      "spice": 0,
+      "spice_note": "No romantic or sexual content; psychological tension only.",
+      "chapter_task": "Introduce the archival investigation and the physical evidence (ledger, signatures, soot). Plant Clue C001. Build Female Lead’s suspicion about the chain’s randomness and hint at Ada Voss’s indirect involvement in 1600–1900 words.",
+      "carries_to_next": "Female Lead’s focus on the ledger and soot-written names will drive her to reexamine other town records and question the official narrative."
+    },
+    {
+      "chapter": 3,
+      "title": "Names Written in Soot",
+      "slug": "names-written-in-soot",
+      "one_line_summary": "Female Lead connects the soot-written victim names to official signatures and suspects a ritualistic pattern guiding the deaths.",
+      "beat_summary": "Female Lead traces the recurrence of soot-written names, realizing they mirror the altered signatures in the ledger. She consults earlier death records and finds new inconsistencies. Male Lead intensifies his interference, warning Female Lead about pursuing old tragedies. Evidence mounts that Ada Voss recognized the pattern but tried to conceal it. Female Lead is drawn toward the sealed chamber and the possibility that the chain is more than supernatural fate. Clue C002 is planted, deepening the mystery.",
+      "must_happen": [
+        "Female Lead compares the soot-written victim names to the altered official signatures and notes a striking similarity.",
+        "Female Lead investigates older death records and uncovers further inconsistencies and omissions.",
+        "Clue C002 is planted: A sequence of names appears in both soot and the altered ledger, with one entry half-erased.",
+        "Male Lead warns Female Lead about the dangers of prying into the church fire and town secrets.",
+        "Evidence emerges that Ada Voss was aware of a deeper pattern and took steps to hide it.",
+        "Female Lead suspects the deaths are part of a ritualistic or rule-based cycle rather than mere chance."
+      ],
+      "must_not": [
+        "Do not let Female Lead discover the full ritual logic or the true purpose of the chain.",
+        "Do not reveal the identities or fates of the erased children."
+      ],
+      "opens_with": "“No one writes in soot by accident,” Female Lead says, laying two death registers side by side.",
+      "cliffhanger": "Female Lead finds a locked drawer in Ada Voss’s desk containing a key marked only with the church’s sigil.",
+      "signature_detail_hint": "A faint ring of ash stains the inside of Female Lead’s left wrist after handling the registers.",
+      "emotional_beat": "Obsession, the chill of recognition, and the first shudder of genuine fear.",
+      "spice": 0,
+      "spice_note": "No romantic or sexual content; intensity is derived from psychological danger.",
+      "chapter_task": "Deepen the procedural and psychological tension as Female Lead connects the soot names to the official records. Plant Clue C002. Build toward the realization of a ritualistic cycle in 1600–1900 words.",
+      "carries_to_next": "Female Lead now has the key to investigate the church and Ada Voss’s hidden records, setting up a confrontation with Male Lead over access to the truth."
+    }
+  ]
+}

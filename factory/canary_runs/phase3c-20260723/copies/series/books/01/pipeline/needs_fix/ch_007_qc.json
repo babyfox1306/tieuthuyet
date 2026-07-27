@@ -1,0 +1,8 @@
+{
+  "verdict": "FAIL",
+  "fail_reasons": [
+    "truncated_by_length",
+    "finish_reason=length — output hit token/body cap; incomplete chapter"
+  ],
+  "source": "truncated_by_length"
+}

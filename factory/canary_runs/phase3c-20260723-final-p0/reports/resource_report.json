@@ -1,0 +1,659 @@
+{
+  "per_case": {
+    "bell": {
+      "writer_calls": 0,
+      "qc_calls": 0,
+      "state_updater_calls": 0,
+      "narrative_developer_calls": 0,
+      "architect_calls": 0,
+      "outliner_calls": 0,
+      "plan_fixer_calls": 0,
+      "integrity_extractor_calls": 0,
+      "integrity_verifier_calls": 0,
+      "contract_compiler_calls": 0,
+      "story_contract_compiler_calls": 0,
+      "contract_compliance_calls": 0,
+      "quality_evaluator_calls": 0,
+      "quality_repairer_calls": 0,
+      "total_semantic_calls": 0,
+      "cache_hits": 0,
+      "cache_misses": 3,
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency_seconds": 0.0,
+      "routes_failed": 0,
+      "operator_actions": 0,
+      "deterministic_checks": 3,
+      "stopped_for_unavailable_routes": 2
+    },
+    "standalone": {
+      "writer_calls": 0,
+      "qc_calls": 0,
+      "state_updater_calls": 0,
+      "narrative_developer_calls": 0,
+      "architect_calls": 0,
+      "outliner_calls": 0,
+      "plan_fixer_calls": 0,
+      "integrity_extractor_calls": 0,
+      "integrity_verifier_calls": 0,
+      "contract_compiler_calls": 0,
+      "story_contract_compiler_calls": 0,
+      "contract_compliance_calls": 0,
+      "quality_evaluator_calls": 0,
+      "quality_repairer_calls": 0,
+      "total_semantic_calls": 0,
+      "cache_hits": 0,
+      "cache_misses": 3,
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency_seconds": 0.0,
+      "routes_failed": 0,
+      "operator_actions": 0,
+      "deterministic_checks": 3,
+      "stopped_for_unavailable_routes": 0
+    },
+    "series": {
+      "writer_calls": 0,
+      "qc_calls": 0,
+      "state_updater_calls": 0,
+      "narrative_developer_calls": 0,
+      "architect_calls": 0,
+      "outliner_calls": 0,
+      "plan_fixer_calls": 0,
+      "integrity_extractor_calls": 0,
+      "integrity_verifier_calls": 0,
+      "contract_compiler_calls": 0,
+      "story_contract_compiler_calls": 0,
+      "contract_compliance_calls": 0,
+      "quality_evaluator_calls": 0,
+      "quality_repairer_calls": 0,
+      "total_semantic_calls": 0,
+      "cache_hits": 0,
+      "cache_misses": 3,
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency_seconds": 0.0,
+      "routes_failed": 0,
+      "operator_actions": 0,
+      "deterministic_checks": 3,
+      "stopped_for_unavailable_routes": 0
+    }
+  },
+  "totals": {
+    "writer_calls": 0,
+    "qc_calls": 0,
+    "state_updater_calls": 0,
+    "narrative_developer_calls": 0,
+    "architect_calls": 0,
+    "outliner_calls": 0,
+    "plan_fixer_calls": 0,
+    "integrity_extractor_calls": 0,
+    "integrity_verifier_calls": 0,
+    "contract_compiler_calls": 0,
+    "story_contract_compiler_calls": 0,
+    "contract_compliance_calls": 0,
+    "quality_evaluator_calls": 0,
+    "quality_repairer_calls": 0,
+    "total_semantic_calls": 0,
+    "cache_hits": 0,
+    "cache_misses": 9,
+    "input_chars": 0,
+    "output_chars": 0,
+    "latency_seconds": 0.0,
+    "routes_failed": 0,
+    "operator_actions": 0,
+    "deterministic_checks": 9,
+    "stopped_for_unavailable_routes": 2
+  },
+  "notes": [
+    "Character counts are not exact tokens; any token figure must be labeled estimate.",
+    "No paid routes permitted."
+  ],
+  "created_at": "2026-07-23T12:28:51Z",
+  "route_resolution": [
+    {
+      "role": "architect",
+      "group": "phase1_plan",
+      "configured_group": "phase1_plan",
+      "configured_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-reasoning"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "contract_compliance_evaluator",
+      "group": "phase_story_contract",
+      "configured_group": "phase_story_contract",
+      "configured_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-reasoning"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "integrity_extractor",
+      "group": "phase_integrity",
+      "configured_group": "phase_integrity",
+      "configured_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-reasoning"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "integrity_verifier",
+      "group": "phase_integrity",
+      "configured_group": "phase_integrity",
+      "configured_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-reasoning"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "narrative_developer",
+      "group": "phase1_plan",
+      "configured_group": "phase1_plan",
+      "configured_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-reasoning"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "outliner",
+      "group": "phase1_plan",
+      "configured_group": "phase1_plan",
+      "configured_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-reasoning"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "plan_fixer",
+      "group": "phase_light",
+      "configured_group": "phase_light",
+      "configured_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-fast",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-fast"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "qc",
+      "group": "phase_light",
+      "configured_group": "phase_light",
+      "configured_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-fast",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-fast"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "quality_evaluator",
+      "group": "phase_quality",
+      "configured_group": "phase_quality",
+      "configured_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-fast",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-fast"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "quality_repairer",
+      "group": "phase_quality",
+      "configured_group": "phase_quality",
+      "configured_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-fast",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-fast"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "state_updater",
+      "group": "phase_light",
+      "configured_group": "phase_light",
+      "configured_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-fast",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-fast"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "story_contract_compiler",
+      "group": "phase_story_contract",
+      "configured_group": "phase_story_contract",
+      "configured_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-reasoning"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    },
+    {
+      "role": "writer",
+      "group": "phase2_write",
+      "configured_group": "phase2_write",
+      "configured_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/best-coding",
+        "auto/fast"
+      ],
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/best-coding",
+        "auto/fast"
+      ],
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/best-coding",
+        "auto/fast"
+      ],
+      "removed_nonfree_routes": [],
+      "accepted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/best-coding",
+        "auto/fast"
+      ],
+      "resolved_route": "auto/best-reasoning",
+      "success": true,
+      "code": "OK",
+      "availability": {
+        "ok": true,
+        "code": "OK",
+        "resolved_route": "auto/best-reasoning"
+      },
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency": 0,
+      "cache": "n/a"
+    }
+  ],
+  "live_probes": [
+    {
+      "role": "quality_evaluator",
+      "success": false,
+      "code": "ROUTE_CALL_FAILED",
+      "message": "All models failed (['auto/best-fast', 'auto/fast']): Error code: 400 - {'error': {'message': '[400]: Invalid model. Please select a different model to continue.', 'type': 'invalid_request_error', 'code': 'bad_request'}}",
+      "resolved_route": "auto/best-fast",
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 0,
+      "latency_seconds": 81.937,
+      "cache_hit": false,
+      "at": "2026-07-23T12:26:42Z"
+    },
+    {
+      "role": "quality_repairer",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-fast",
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 225,
+      "latency_seconds": 10.385,
+      "cache_hit": false,
+      "at": "2026-07-23T12:26:53Z"
+    },
+    {
+      "role": "contract_compliance_evaluator",
+      "success": false,
+      "code": "ROUTE_CALL_FAILED",
+      "message": "All models failed (['auto/best-reasoning', 'auto/best-fast', 'auto/fast']): Error code: 400 - {'error': {'message': '[400]: Invalid model. Please select a different model to continue.', 'type': 'invalid_request_error', 'code': 'bad_request'}}",
+      "resolved_route": "auto/best-reasoning",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 0,
+      "latency_seconds": 88.747,
+      "cache_hit": false,
+      "at": "2026-07-23T12:28:21Z"
+    },
+    {
+      "role": "story_contract_compiler",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-fast",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 88,
+      "latency_seconds": 29.791,
+      "cache_hit": false,
+      "at": "2026-07-23T12:28:51Z"
+    }
+  ]
+}

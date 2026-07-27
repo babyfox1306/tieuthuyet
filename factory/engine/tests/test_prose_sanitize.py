@@ -5,7 +5,13 @@ from __future__ import annotations
 import unittest
 
 from factory.engine.lib.machine_qc import machine_pass, machine_qc
-from factory.engine.lib.prose_sanitize import find_markdown_artifacts, prose_is_clean, sanitize_prose
+from factory.engine.lib.prose_sanitize import (
+    apply_markdown_leak_fix,
+    find_markdown_artifacts,
+    find_markdown_leaks,
+    prose_is_clean,
+    sanitize_prose,
+)
 
 
 class SanitizeTests(unittest.TestCase):
@@ -43,8 +49,26 @@ class MachineQcMarkdownTests(unittest.TestCase):
     def test_markdown_fails_machine_pass(self):
         text = "# Chapter 1: X\n\n" + '**"Bold dialogue"**' + " " * 1400
         issues = machine_qc(text, min_words=100)
-        self.assertIn("markdown", issues)
+        self.assertIn("markdown_leaks", issues)
         self.assertFalse(machine_pass(issues))
+
+
+class MarkdownAdvisorTests(unittest.TestCase):
+    def test_find_and_quotes_fix(self):
+        raw = '# Chapter 1: X\n\nShe said *hello* then left.'
+        leaks = find_markdown_leaks(raw)
+        self.assertEqual(len(leaks), 1)
+        self.assertEqual(leaks[0]["kind"], "italic")
+        fixed, log = apply_markdown_leak_fix(raw, mode="quotes", apply_all=True)
+        self.assertEqual(len(log), 1)
+        self.assertIn('"hello"', fixed)
+        self.assertNotIn("*hello*", fixed)
+        self.assertFalse(find_markdown_leaks(fixed))
+
+    def test_strip_fix(self):
+        raw = 'The **bold** word.'
+        fixed, _ = apply_markdown_leak_fix(raw, mode="strip", apply_all=True)
+        self.assertEqual(fixed, "The bold word.")
 
 
 if __name__ == "__main__":

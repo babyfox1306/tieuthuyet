@@ -1,0 +1,88 @@
+```json
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Clean Finish",
+      "slug": "the-clean-finish",
+      "one_line_summary": "Nadia Cole finishes a target — a guilty man the system failed to punish — and the reader learns she is the executioner, not just a podcaster.",
+      "beat_summary": "Nadia Cole executes a target (a guilty man who walked free) in a staged accident. She performs grief on her podcast as cover. A single detail — a podcast comment noting her thumb-tap tic — suggests someone was watching.",
+      "must_happen": [
+        "Nadia Cole stages the death of a guilty man (un-named target) as an accident — the reader sees her method: precision, no witnesses, clean exit.",
+        "Nadia Cole records a podcast episode expressing sorrow over the 'tragic accident,' using her warm public voice to sell the cover.",
+        "A listener posts a comment on the podcast episode noting Nadia Cole's thumb-tap tic during the recording, dismissing it as a nervous habit — clue C001 is planted.",
+        "Nadia Cole reflects internally on her rule: she only kills the provably guilty, and her origin wound (Mara Cole's murder) is referenced but not detailed.",
+        "The chapter ends with a single shot of Victor Rhodes — unseen by Nadia — watching her podcast feed, his expression unreadable."
+      ],
+      "must_not": [
+        "Do NOT reveal the target's name or any details of the victim's crime — the target is a generic guilty man to establish the pattern.",
+        "Do NOT show Nadia Cole's network (Sasha, Priya, Wren) yet — the reader only knows she works alone in the kill.",
+        "Do NOT include any romance, attraction, or intimacy — the tension is purely procedural and predatory."
+      ],
+      "opens_with": "\"The second time I killed a man, it was almost boring.\" — Nadia Cole's internal voice, cold and clinical, as she tightens a valve on a gas line.",
+      "cliffhanger": "A close-up on Victor Rhodes's face as he watches Nadia Cole's podcast on his laptop — he tilts his head, then writes something in a notebook.",
+      "signature_detail_hint": "Nadia Cole uses a specific brand of nitrile gloves that leave no fibers — she discards them in a public incinerator on a timed route.",
+      "emotional_beat": "Cold satisfaction mixed with a flicker of grief for Mara Cole — the origin wound that justifies the kill.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven and procedural.",
+      "chapter_task": "Write 1600-1900 words. Establish Nadia Cole's dual identity: warm podcaster in public, cold executioner in private. Plant C001 (thumb-tap tic) via a podcast comment. End with the watcher thread (Victor Rhodes).",
+      "carries_to_next": "Victor Rhodes is watching — he is not a random fan. The kill is clean, but the watcher thread is now live."
+    },
+    {
+      "chapter": 2,
+      "title": "Grief on Air",
+      "slug": "grief-on-air",
+      "one_line_summary": "Nadia Cole performs public grief over the 'accident' on her podcast, while a private call with Sasha Okafor confirms the kill landed cleanly and the watcher thread deepens.",
+      "beat_summary": "The kill lands publicly as an 'accident.' Nadia Cole performs grief on-air, drawing sympathy and credibility. Sasha Okafor calls to confirm the kill is clean. A second watcher detail: someone (Victor Rhodes) leaves a voicemail that sounds like a fan but is too precise — he uses a phrase from Nadia's private notes.",
+      "must_happen": [
+        "Nadia Cole records a second podcast episode expressing 'shock' and 'grief' over the target's death, reinforcing her public persona as a crusading journalist.",
+        "Sasha Okafor calls Nadia Cole to confirm the kill is clean — no loose ends, no forensic flags. Their conversation is coded (e.g., 'the package arrived safely').",
+        "Nadia Cole receives a voicemail from a 'fan' (Victor Rhodes) who uses a phrase from her private notes — a phrase she never said on air. She notices but dismisses it as a coincidence.",
+        "Nadia Cole reviews the podcast comments — the thumb-tap comment (C001) is still there, dismissed by other listeners as a nervous habit.",
+        "The chapter ends with Nadia Cole opening a file labeled 'Elise Marchetti' — her next case."
+      ],
+      "must_not": [
+        "Do NOT reveal Victor Rhodes by name yet — the voicemail is from an unnamed 'fan.'",
+        "Do NOT show the network meeting — only the phone call with Sasha Okafor.",
+        "Do NOT include any romance, attraction, or intimacy — the tension is in the watcher thread and the next case."
+      ],
+      "opens_with": "\"I never met him, but I feel like I knew him. That's the tragedy of these cases — we only meet them after they're gone.\" — Nadia Cole, on air, her voice warm and measured.",
+      "cliffhanger": "Nadia Cole opens the Elise Marchetti file — the first page shows a photograph of a woman with a kind face and a coroner's stamp: 'Cause of Death: Undetermined.'",
+      "signature_detail_hint": "The voicemail from the 'fan' uses the phrase 'the system's blind spot' — a phrase Nadia Cole wrote in her private notebook but never spoke aloud.",
+      "emotional_beat": "A flicker of paranoia as Nadia Cole replays the voicemail — but she suppresses it, focusing on the next target.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven and procedural.",
+      "chapter_task": "Write 1600-1900 words. Show Nadia Cole's public grief performance. Introduce Sasha Okafor's coded call. Plant the watcher thread via the voicemail (Victor Rhodes's first contact). End with the Elise Marchetti case opening.",
+      "carries_to_next": "The Elise Marchetti case is now open. The watcher (Victor Rhodes) has made contact via voicemail — Nadia Cole is unaware of the danger."
+    },
+    {
+      "chapter": 3,
+      "title": "The Network",
+      "slug": "the-network",
+      "one_line_summary": "Nadia Cole assembles her network — Sasha Okafor, Priya Anand, and Wren Delgado — to plan the investigation into Elise Marchetti's murder, while Victor Rhodes walks free and untouchable.",
+      "beat_summary": "Nadia Cole announces the new season: the cold-case murder of Elise Marchetti. She meets with her network — Sasha Okafor (lawyer), Priya Anand (coroner), and Wren Delgado (hacker) — to plan the investigation. Victor Rhodes, the prime suspect who walked free, is introduced as the target. The network is revealed as a hidden support system that feeds Nadia information and covers her tracks.",
+      "must_happen": [
+        "Nadia Cole records a podcast episode announcing the new season: the unsolved murder of Elise Marchetti, with Victor Rhodes as the prime suspect who walked free.",
+        "Nadia Cole meets with Sasha Okafor, Priya Anand, and Wren Delgado in a secure location — the network is revealed to the reader (MR02).",
+        "Each network member's role is established: Sasha keeps the ledger of guilty men, Priya alters records, Wren pulls digital trails.",
+        "Victor Rhodes is shown in a parallel scene — calm, confident, untouchable — as he receives news of the podcast announcement and begins his own counter-investigation.",
+        "The chapter ends with Victor Rhodes leaving a second voicemail for Nadia Cole — this time, he names her directly: 'Hello, Nadia. I've been looking forward to this.'"
+      ],
+      "must_not": [
+        "Do NOT reveal that Wren Delgado is the leak — Wren appears loyal and helpful in this chapter.",
+        "Do NOT show Victor Rhodes's full counter-investigation — only that he is aware and preparing.",
+        "Do NOT include any romance, attraction, or intimacy — the network is a professional alliance, not a found-family cliché."
+      ],
+      "opens_with": "\"The new season is called 'The One Who Walked.' And today, we're going to talk about Elise Marchetti.\" — Nadia Cole, on air, her voice carrying the weight of a promise.",
+      "cliffhanger": "Nadia Cole's phone buzzes with a new voicemail. She plays it: 'Hello, Nadia. I've been looking forward to this.' The voice is calm, measured, almost friendly — Victor Rhodes.",
+      "signature_detail_hint": "Sasha Okafor's ledger is a leather-bound book with names and dates — each entry is a guilty man who walked free. Victor Rhodes's name is the newest, written in red ink.",
+      "emotional_beat": "A surge of purpose and control as Nadia Cole assembles her network — but a thread of unease as Victor Rhodes's voice fills her ear.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven and procedural.",
+      "chapter_task": "Write 1600-1900 words. Reveal the network (MR02) through the meeting scene. Introduce Victor Rhodes as the target. End with the second voicemail — the hunter is now hunted.",
+      "carries_to_next": "Victor Rhodes has made direct contact. The two-way hunt begins — Nadia Cole is no longer invisible."
+    }
+  ]
+}
+```

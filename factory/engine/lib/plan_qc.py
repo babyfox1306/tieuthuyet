@@ -118,6 +118,144 @@ def _has_romance_micro_beat(plan: dict) -> bool:
     return "[ROMANCE]" in combined
 
 
+_PLAN_TAIL_WORD_RE = re.compile(r"[A-Za-zÀ-ỹ0-9']+")
+
+
+def _plan_tail_tokens(text: str) -> set[str]:
+    return {
+        token.lower()
+        for token in _PLAN_TAIL_WORD_RE.findall(str(text or ""))
+        if len(token) >= 3
+    }
+
+
+def duplicate_cliffhanger_tail_field(plan: dict) -> str | None:
+    """Return field that near-duplicates the explicit cliffhanger instruction.
+
+    A plan that repeats the same tail in ``must_happen``/summary/task encourages
+    the Writer to dramatize it and then paste it again. Semantic overlap is
+    legitimate; this gate only catches dense lexical duplication.
+    """
+    cliff = str(plan.get("cliffhanger") or "").strip()
+    cliff_tokens = _plan_tail_tokens(cliff)
+    if len(cliff_tokens) < 8:
+        return None
+
+    candidates: list[tuple[str, str]] = []
+    for index, item in enumerate(plan.get("must_happen") or []):
+        candidates.append((f"must_happen[{index}]", str(item or "")))
+    for field in ("beat_summary", "chapter_task", "one_line_summary"):
+        candidates.append((field, str(plan.get(field) or "")))
+
+    for field, text in candidates:
+        tokens = _plan_tail_tokens(text)
+        if len(tokens) < 8:
+            continue
+        overlap = len(cliff_tokens & tokens)
+        containment = overlap / len(cliff_tokens)
+        union = len(cliff_tokens | tokens)
+        jaccard = overlap / union if union else 0.0
+        if containment >= 0.90 or jaccard >= 0.82:
+            return field
+    return None
+
+
+_REVEAL_ID_RE = re.compile(r"\b((?:MR|R)\d{1,3})\b", re.IGNORECASE)
+
+
+def _plan_reveal_ids(plan: dict) -> set[str]:
+    """Reveal IDs from narrative.reveals plus [MR]/]/] / MR## markers in beats."""
+    ids: set[str] = set()
+    narr = plan.get("narrative") if isinstance(plan.get("narrative"), dict) else {}
+    for rev in narr.get("reveals") or []:
+        if isinstance(rev, dict) and rev.get("id"):
+            ids.add(str(rev["id"]).strip().upper())
+        elif isinstance(rev, str) and rev.strip():
+            ids.add(rev.strip().upper())
+    blob = " ".join(
+        [
+            str(plan.get("beat_summary") or ""),
+            str(plan.get("one_line_summary") or ""),
+            " ".join(str(x) for x in (plan.get("must_happen") or [])),
+        ]
+    )
+    for match in _REVEAL_ID_RE.finditer(blob):
+        ids.add(match.group(1).upper())
+    return {x for x in ids if x}
+
+
+def _token_jaccard(a: str, b: str) -> float:
+    ta, tb = _plan_tail_tokens(a), _plan_tail_tokens(b)
+    if not ta or not tb:
+        return 0.0
+    return len(ta & tb) / len(ta | tb)
+
+
+def adjacent_chapter_duplicate_errors(
+    plan: dict,
+    all_plans: list[dict],
+) -> list[str]:
+    """BLOCK when consecutive chapters are near-copies (chunk-boundary echo).
+
+    Legitimate setup→payoff (different must_happen / different reveal) must pass.
+    Same major reveal ID across adjacent chapters, or near-identical cliff + beats,
+    is the chunk-resume failure mode.
+    """
+    if plan.get("locked"):
+        return []
+    ch = int(plan.get("chapter") or 0)
+    if ch <= 1:
+        return []
+    prev = next(
+        (
+            p
+            for p in all_plans
+            if int(p.get("chapter") or 0) == ch - 1 and not p.get("locked")
+        ),
+        None,
+    )
+    if not prev:
+        return []
+
+    issues: list[str] = []
+    shared_reveals = sorted(_plan_reveal_ids(plan) & _plan_reveal_ids(prev))
+    if shared_reveals:
+        issues.append(
+            f"ch{ch}:adjacent_chapter_duplicate:shared_reveal:{','.join(shared_reveals)}:ch{ch - 1}"
+        )
+
+    cliff_sim = _token_jaccard(
+        str(plan.get("cliffhanger") or ""),
+        str(prev.get("cliffhanger") or ""),
+    )
+    beat_sim = _token_jaccard(
+        str(plan.get("beat_summary") or ""),
+        str(prev.get("beat_summary") or ""),
+    )
+    opens_sim = _token_jaccard(
+        str(plan.get("opens_with") or ""),
+        str(prev.get("opens_with") or ""),
+    )
+    mh_sim = _token_jaccard(
+        " ".join(str(x) for x in (plan.get("must_happen") or [])),
+        " ".join(str(x) for x in (prev.get("must_happen") or [])),
+    )
+
+    # Dense copy: same cliff + (same must_happen OR same open/beat).
+    # mh alone must be very high — setup/payoff pairs often share vocabulary.
+    if cliff_sim >= 0.85 and (mh_sim >= 0.38 or beat_sim >= 0.55 or opens_sim >= 0.55):
+        issues.append(
+            f"ch{ch}:adjacent_chapter_duplicate:near_copy:ch{ch - 1}"
+            f":cliff={cliff_sim:.2f}:mh={mh_sim:.2f}:beat={beat_sim:.2f}"
+        )
+    elif mh_sim >= 0.62 and beat_sim >= 0.45:
+        issues.append(
+            f"ch{ch}:adjacent_chapter_duplicate:must_happen_echo:ch{ch - 1}"
+            f":mh={mh_sim:.2f}:beat={beat_sim:.2f}"
+        )
+    return issues
+
+
 def _ledger_clue_index(ledger: dict[str, Any]) -> dict[str, dict]:
     return {
         str(c["id"]): c
@@ -397,7 +535,8 @@ def validate_narrative_plan(
         # Only real clue IDs count — reveal IDs mistakenly listed as clues are ignored here
         # (ledger schema validate flags them separately).
         required = [cid for cid in required if cid in clues_idx]
-        weight = str(rev.get("reveal_weight") or "major").lower()
+        explicit_weight = str(rev.get("reveal_weight") or "").strip().lower()
+        weight = explicit_weight or "major"
         min_clues = min_clues_for_reveal(weight)
         needed = min(min_clues, len(required)) if required else min_clues
         planted_count = 0
@@ -411,8 +550,11 @@ def validate_narrative_plan(
             issues.append(
                 f"ch{ch}:NC-05:reveal_insufficient_clues:{rid}:{planted_count}<{needed}"
             )
-        elif not required and min_clues > 0:
-            # Major/minor reveal with empty required_clues — still flag insufficient setup
+        elif not required and explicit_weight and min_clues > 0:
+            # Only an explicitly weighted reveal promises clue prerequisites.
+            # Legacy ledgers often omit both required_clues and reveal_weight for
+            # setup disclosures (cast/network introduction, origin wound).  Do
+            # not invent two nonexistent clues and make approval impossible.
             issues.append(
                 f"ch{ch}:NC-05:reveal_insufficient_clues:{rid}:0<{min_clues}"
             )
@@ -694,6 +836,19 @@ _ROMANCE_OPT_IN_RE = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 
+# A romance-like profile is not permission to force a beat into every chapter
+# when the operator explicitly keeps romance out of the tracked plot.
+_ROMANCE_MICROBEAT_SUPPRESSED_RE = re.compile(
+    r"\bdo not create\b.{0,50}\b(?:romance|romantic)\b.{0,30}"
+    r"\b(?:thread|plotline|subplot|arc)\b|"
+    r"\b(?:romance|romantic)\b.{0,30}\b(?:thread|plotline|subplot|arc)\b"
+    r".{0,40}\b(?:never|not|no|without)\b|"
+    r"\bromance stays\b.{0,30}\b(?:faint|background|texture)\b|"
+    r"\bnever a tracked narrative thread\b|"
+    r"\bromance subplot\b.{0,30}\b(?:taking over|driv(?:e|es|ing))\b",
+    re.IGNORECASE | re.DOTALL,
+)
+
 
 def _load_concept_for_qc(ws: Path | None) -> dict[str, Any]:
     if ws is None:
@@ -755,6 +910,10 @@ def romance_microbeat_required(direction: dict, *, ws: Path | None = None) -> bo
         return False
 
     concept = _load_concept_for_qc(ws)
+    concept_blob = _concept_direction_blob({}, concept)
+    if _ROMANCE_MICROBEAT_SUPPRESSED_RE.search(concept_blob):
+        return False
+
     profile = str(direction.get("narrative_profile") or "").strip().lower()
     if "romance" in profile:
         return True
@@ -834,7 +993,7 @@ def validate_plan(
             issues.append(f"ch{ch}:opens_scene:{pat}")
 
     task = str(plan.get("chapter_task", "")).lower()
-    if "1250" not in task and "1500" not in task and "1600" not in task and "1700" not in task:
+    if not any(target in task for target in ("1250", "1500", "1600", "1700", "1800")):
         issues.append(f"ch{ch}:task_no_word_target")
 
     mh = plan.get("must_happen", [])
@@ -860,6 +1019,9 @@ def validate_plan(
     cliff = str(plan.get("cliffhanger", ""))
     if len(cliff) < 15:
         issues.append(f"ch{ch}:cliffhanger_weak")
+    duplicate_tail_field = duplicate_cliffhanger_tail_field(plan)
+    if duplicate_tail_field:
+        issues.append(f"ch{ch}:duplicate_cliffhanger_tail:{duplicate_tail_field}")
 
     male_absent = _male_lead_absent(bible, ws)
     romance_off = romance_forbidden(direction, ws=ws) or male_absent
@@ -886,6 +1048,7 @@ def validate_plan(
     issues.extend(validate_plan_language(plan, lang))
     if all_plans:
         issues.extend(validate_duplicate_beats(plan, all_plans))
+        issues.extend(adjacent_chapter_duplicate_errors(plan, all_plans))
 
     if ws is not None:
         issues.extend(
@@ -926,7 +1089,11 @@ def ensure_task_word_count(plan: dict, direction: dict | None = None, cfg: dict 
     """Patch nhẹ nếu thiếu mục tiêu chữ."""
     task = plan.get("chapter_task", "")
     patch = word_count_patch(language_profile(direction=direction, cfg=cfg))
-    if "1250" not in task and "1500" not in task and "1600" not in task and "chữ" not in task.lower() and "word" not in task.lower():
+    if (
+        not any(target in task for target in ("1250", "1500", "1600", "1700", "1800"))
+        and "chữ" not in task.lower()
+        and "word" not in task.lower()
+    ):
         plan = dict(plan)
         plan["chapter_task"] = task.rstrip(".") + ". " + patch
     return plan

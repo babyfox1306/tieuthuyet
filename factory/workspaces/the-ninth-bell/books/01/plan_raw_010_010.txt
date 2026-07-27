@@ -1,0 +1,40 @@
+```json
+{
+  "act": [10, 10],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "What the Ninth Bell Kept",
+      "slug": "what-the-ninth-bell-kept",
+      "one_line_summary": "Clara saves Elin's tape, Gabriel and Thomas publicly confess to building the surveillance system, Clara refuses to carry guilt she didn't earn, and a dead machine speaks a voice that should not exist.",
+      "beat_summary": "Clara makes a backup of Elin's reconstructed tape on the chamber's second deck at the exact moment Thomas hits erase on his copy through the wall. Gabriel leads her out via the concealed infrastructure he helped install. In the tower nave below, Mara and two village council members are waiting—Gabriel contacted them before the lock engaged. Gabriel steps forward and publicly admits his role in building and concealing the acoustic surveillance system. Faced with Gabriel's testimony and Clara's audio evidence—Elin's reconstructed confrontation with Thomas at the platform—Thomas confesses publicly: the system, the manipulated recordings, the fabricated ninth-bell confession, and his presence at the platform edge when Elin fell, close enough to reach her and failing to do so. The archive is surrendered to the council as evidence. Clara stands before Thomas and the assembled witnesses and names the theft: her guilt was manufactured, her memory rewritten, her voice stolen to condemn her. She does not forgive him. She does not absolve him. She declares his narrative over. In the aftermath, the acoustic system is visibly disconnected, the bells fall silent, and Clara sits alone in the tower holding Elin's tape. The ninth bell—unwired, unconnected to any infrastructure—rings once, and Elin's voice comes through clear and warm: 'You came back.'",
+      "must_happen": [
+        "Clara creates a backup of Elin's reconstructed tape on the chamber's second deck while Thomas destroys his copy on the other side of the door.",
+        "Gabriel leads Clara out through the concealed pipe-and-cable infrastructure to the tower nave below.",
+        "Gabriel publicly admits his role in building and concealing the acoustic surveillance system in front of Mara and village council witnesses.",
+        "Physical and acoustic evidence—Elin's reconstructed tape and the resonance positioning data from chapters 7 and 9—is presented as the basis for the public confession, confirming Thomas was within arm's reach when Elin's platform collapsed.",
+        "Thomas publicly confesses to building the illegal surveillance system, fabricating the ninth-bell confession from stolen fragments, manipulating Clara's memory through the 'clarification' sessions, and his failure to take Elin's hand when the platform failed.",
+        "Thomas surrenders the full illegal archive to the village council as evidence.",
+        "Clara rejects the guilt that was constructed for her, naming Thomas's manipulation of her memory and theft of her voice without forgiving or absolving him.",
+        "The human mystery is completely resolved: Elin's death was a platform collapse witnessed by Thomas, who froze; Clara did not knowingly leave her in danger; the guilt was manufactured.",
+        "After the acoustic system is visibly disconnected and the tape deck is empty, Clara hears Elin whisper 'You came back' from the ninth bell—an unexplained final recording."
+      ],
+      "must_not": [
+        "Have Clara forgive or express understanding for Thomas's actions at any point.",
+        "Kill, physically injure, or have Thomas arrested in a violent confrontation.",
+        "Fully explain the mechanism behind Elin's final whispered recording—it remains unexplained.",
+        "Allow Thomas to successfully destroy or remove Elin's original master tape.",
+        "Show Clara claiming perfect recovered memory of Elin's death; she names what the evidence proves, not what she personally remembers."
+      ],
+      "opens_with": "Clara pressed record. Through the wall, she heard Thomas press erase.",
+      "cliffhanger": "The ninth bell—disconnected, unwired, silent for eighteen years—rang once from its bronze throat, and Elin's voice came through clear and warm: 'You came back.'",
+      "signature_detail_hint": "Every tape in the surrendered archive is labeled in Thomas's handwriting with three fields: a name, a date, and a single status word—'captured,' 'edited,' or 'released'—as though the voices of the dead were inventory in a warehouse he managed alone.",
+      "emotional_beat": "Resolution without absolution—truth delivered without catharsis, silence earned but never peaceful, a sister's voice returning from inside a machine that should no longer work.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write this chapter to be 1600-1900 words. This is the final chapter of Book 1 and must resolve the human mystery completely while preserving the unexplained supernatural coda. Structure it in three movements: (1) the chamber escape—Clara backs up Elin's tape while Thomas erases his copy, establishing the race between preservation and destruction in under 400 words; (2) the public reckoning—Gabriel confesses first (his testimony earns the scene), Thomas breaks under the weight of evidence and confesses fully, the archive is surrendered, and Clara delivers a short devastating statement naming the theft of her memory and voice, all in roughly 900 words; (3) the coda—the aftermath of silence, the system disconnected, and the impossible voice from the ninth bell in roughly 300 words. Clara's final statement must be precise and forensic in tone—she names facts, she does not perform emotion. The coda must feel like an open door, not a closed book. Do NOT explain the whisper. Do NOT have Clara react with fear or joy—leave her stillness ambiguous. Final line: 'You came back.'",
+      "carries_to_next": "Final chapter of Book 1. The supernatural recording—Elin's whispered 'You came back' from an unwired, disconnected bell—remains unexplained and carries forward as the unresolved mystery beyond the human conspiracy. Thomas is alive and in legal custody. The human story is closed; the acoustic haunting is not."
+    }
+  ]
+}
+```

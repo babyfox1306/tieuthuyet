@@ -1,0 +1,4362 @@
+{
+  "schema_version": 1,
+  "kind": "safety_report",
+  "run_id": "phase3c-20260723-final-p0",
+  "git": {
+    "branch": "engine/pre-compiler",
+    "head": "7db5ff4fac29e8612653b2b29fccc9ff44c14f2d"
+  },
+  "dirty_production_paths_at_prepare": [
+    "catalog/his-final-target/books/01-his-final-target/chapters/01-the-blood-on-the-scope.md",
+    "catalog/his-final-target/books/01-his-final-target/chapters/02-the-voice-of-her-own-betrayal.md",
+    "catalog/his-final-target/books/01-his-final-target/chapters/06-the-list-of-seven.md",
+    "catalog/his-final-target/books/01-his-final-target/chapters/13-the-architect-of-lies.md",
+    "catalog/his-final-target/books/01-his-final-target/chapters/16-the-reckoning.md",
+    "catalog/his-final-target/books/01-his-final-target/exports/.export_gate.json",
+    "catalog/his-final-target/books/01-his-final-target/exports/epub/01-his-final-target.epub",
+    "catalog/his-final-target/books/01-his-final-target/exports/epub/01-his-final-target.qc.json",
+    "catalog/his-final-target/spot_check/13-the-architect-of-lies.md",
+    "catalog/his-final-target/spot_check/16-the-reckoning.md",
+    "catalog/ink-and-venom/books/01-ink-and-venom/exports/.export_gate.json",
+    "catalog/ink-and-venom/books/01-ink-and-venom/exports/epub/01-ink-and-venom.epub",
+    "catalog/ink-and-venom/books/01-ink-and-venom/exports/epub/01-ink-and-venom.qc.json",
+    "catalog/qc-promote-test/spot_check/01-test.md",
+    "catalog/the-barrow-stone/books/01-the-barrow-stone/chapters/02-moss-that-grows-in-darkness.md",
+    "catalog/the-barrow-stone/books/01-the-barrow-stone/chapters/05-the-circle-underfoot.md",
+    "catalog/the-barrow-stone/books/01-the-barrow-stone/chapters/06-the-notebook-under-the-stone.md",
+    "catalog/the-barrow-stone/books/01-the-barrow-stone/exports/.export_gate.json",
+    "catalog/the-barrow-stone/books/01-the-barrow-stone/exports/epub/01-the-barrow-stone.epub",
+    "catalog/the-barrow-stone/books/01-the-barrow-stone/exports/epub/01-the-barrow-stone.qc.json",
+    "catalog/the-barrow-stone/series.yaml",
+    "catalog/the-black-arteries/books/01-the-black-arteries/chapters/02-directed-stains.md",
+    "catalog/the-black-arteries/books/01-the-black-arteries/chapters/08-the-sister-linked-route.md",
+    "catalog/the-black-arteries/books/01-the-black-arteries/exports/.export_gate.json",
+    "catalog/the-black-arteries/books/01-the-black-arteries/exports/epub/01-the-black-arteries.epub",
+    "catalog/the-black-arteries/books/01-the-black-arteries/exports/epub/01-the-black-arteries.qc.json",
+    "catalog/the-paper-oracle/books/01-the-paper-oracle/chapters/04-the-door-outside-records.md",
+    "catalog/the-paper-oracle/books/01-the-paper-oracle/chapters/06-the-carbon-copy.md",
+    "catalog/the-paper-oracle/books/01-the-paper-oracle/chapters/07-the-night-she-did-nothing.md",
+    "catalog/the-paper-oracle/books/01-the-paper-oracle/chapters/08-the-hand-that-let-go.md",
+    "catalog/the-paper-oracle/books/01-the-paper-oracle/chapters/10-the-choice-that-remains.md",
+    "factory/workspaces/the-barrow-stone/books/01/master_plan.json",
+    "factory/workspaces/the-barrow-stone/books/01/pipeline/ready/ch_002.txt",
+    "factory/workspaces/the-barrow-stone/books/01/pipeline/ready/ch_005.txt",
+    "factory/workspaces/the-barrow-stone/books/01/pipeline/ready/ch_006.txt",
+    "factory/workspaces/the-barrow-stone/direction.yaml",
+    "factory/workspaces/the-barrow-stone/manifest.yaml",
+    "factory/workspaces/the-black-arteries/books/01/pipeline/ready/ch_002.txt",
+    "factory/workspaces/the-black-arteries/books/01/pipeline/ready/ch_008.txt",
+    "factory/workspaces/the-paper-oracle/books/01/master_plan.json",
+    "factory/workspaces/the-paper-oracle/books/01/pipeline/ready/ch_004.txt",
+    "factory/workspaces/the-paper-oracle/books/01/pipeline/ready/ch_006.txt",
+    "factory/workspaces/the-paper-oracle/books/01/pipeline/ready/ch_007.txt",
+    "factory/workspaces/the-paper-oracle/books/01/pipeline/ready/ch_008.txt",
+    "factory/workspaces/the-paper-oracle/books/01/pipeline/ready/ch_010.txt",
+    "catalog/demo/",
+    "catalog/enf/",
+    "catalog/the-black-arteries/books/02-the-black-arteries/",
+    "catalog/ws/",
+    "factory/workspaces/the-barrow-stone/books/01/pipeline/_rerun_qc_ch_006.json"
+  ],
+  "source_hashes_before": {
+    "bell": {
+      "root": "D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces\\the-bell-names-the-dead",
+      "exists": true,
+      "file_count": 82,
+      "digest": "4729bc85c0738a1a",
+      "files": [
+        {
+          "rel": "batch_progress.json",
+          "digest": "3bda5a9fc93cc739",
+          "bytes": "865"
+        },
+        {
+          "rel": "bible/narrative/_meta.json",
+          "digest": "dc6d171ed88eaa76",
+          "bytes": "96"
+        },
+        {
+          "rel": "bible/narrative/book_arc.json",
+          "digest": "c305dbbd080086ff",
+          "bytes": "1793"
+        },
+        {
+          "rel": "bible/narrative/chapter_canon_gates.json",
+          "digest": "95d3253f33d129da",
+          "bytes": "2686"
+        },
+        {
+          "rel": "bible/narrative/kernel.json",
+          "digest": "91dd1ed6caa1e65f",
+          "bytes": "2875"
+        },
+        {
+          "rel": "bible/narrative/knowledge_matrix.json",
+          "digest": "8464ccf96a733ee4",
+          "bytes": "7067"
+        },
+        {
+          "rel": "bible/narrative/mystery_ledger.json",
+          "digest": "6576bbf5cb4340b3",
+          "bytes": "5454"
+        },
+        {
+          "rel": "bible/narrative/threads.json",
+          "digest": "aff5ea972dd60189",
+          "bytes": "4637"
+        },
+        {
+          "rel": "bible/series.json",
+          "digest": "226043d25d755251",
+          "bytes": "6818"
+        },
+        {
+          "rel": "books/01/master_plan.json",
+          "digest": "47c8004d406d415c",
+          "bytes": "69454"
+        },
+        {
+          "rel": "books/01/payloads/ch_001_attempt_1.json",
+          "digest": "438fdfe8bc38775c",
+          "bytes": "22759"
+        },
+        {
+          "rel": "books/01/payloads/ch_002_attempt_1.json",
+          "digest": "3397893c101e6e19",
+          "bytes": "24009"
+        },
+        {
+          "rel": "books/01/payloads/ch_003_attempt_1.json",
+          "digest": "ad751c207d9a0544",
+          "bytes": "29333"
+        },
+        {
+          "rel": "books/01/payloads/ch_004_attempt_1.json",
+          "digest": "b85f249ee5a8b4cc",
+          "bytes": "26245"
+        },
+        {
+          "rel": "books/01/payloads/ch_005_attempt_1.json",
+          "digest": "9c126b733e0dd1d5",
+          "bytes": "28777"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_1.json",
+          "digest": "0335c558df3a85b3",
+          "bytes": "31925"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_2.json",
+          "digest": "de04d48e29512b93",
+          "bytes": "31966"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_3.json",
+          "digest": "d1498467a8dfdbf1",
+          "bytes": "31730"
+        },
+        {
+          "rel": "books/01/payloads/ch_007_attempt_1.json",
+          "digest": "0019b530eed0a563",
+          "bytes": "27297"
+        },
+        {
+          "rel": "books/01/payloads/ch_007_attempt_2.json",
+          "digest": "a06020dde5631cb1",
+          "bytes": "29831"
+        },
+        {
+          "rel": "books/01/payloads/ch_008_attempt_1.json",
+          "digest": "94d0e5341ac5dc89",
+          "bytes": "28876"
+        },
+        {
+          "rel": "books/01/payloads/ch_009_attempt_1.json",
+          "digest": "8e45f5dc9c2a7aba",
+          "bytes": "30383"
+        },
+        {
+          "rel": "books/01/payloads/ch_010_attempt_1.json",
+          "digest": "5c9b9e756e6dfcc4",
+          "bytes": "31419"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_002.txt",
+          "digest": "87cd131dd988f43a",
+          "bytes": "10563"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_003.txt",
+          "digest": "184e03677e800a6c",
+          "bytes": "10193"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_004.txt",
+          "digest": "257160f071c05d4b",
+          "bytes": "9671"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_005.txt",
+          "digest": "06b5f99ecfd933ef",
+          "bytes": "9202"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_006.txt",
+          "digest": "8a0c5b18f029e0cf",
+          "bytes": "9575"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_007.txt",
+          "digest": "bbf74cfe50397cde",
+          "bytes": "11092"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_008.txt",
+          "digest": "131f4d0935d93b77",
+          "bytes": "10920"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_009.txt",
+          "digest": "f03d5e15de1f8379",
+          "bytes": "9948"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_010.txt",
+          "digest": "166fbd0631ac705d",
+          "bytes": "10116"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_001_issues.json",
+          "digest": "196faf2b8ef2be8f",
+          "bytes": "807"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_007_issues.json",
+          "digest": "3078a89e31b151ed",
+          "bytes": "1960"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_007_qc.json",
+          "digest": "91b6387641c2d170",
+          "bytes": "1593"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_001.promoted",
+          "digest": "79447f5fab401e18",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_001.txt",
+          "digest": "d1ab558ebf48fba9",
+          "bytes": "9392"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002.promoted",
+          "digest": "a35a90f81800995e",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002.txt",
+          "digest": "87cd131dd988f43a",
+          "bytes": "10563"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002_qc.json",
+          "digest": "62388e8e5da4c850",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_003.promoted",
+          "digest": "31170f943aa5dc8e",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_003.txt",
+          "digest": "184e03677e800a6c",
+          "bytes": "10193"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_003_qc.json",
+          "digest": "43fd68c4fe1875f9",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_004.promoted",
+          "digest": "c4428691f8301ade",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_004.txt",
+          "digest": "257160f071c05d4b",
+          "bytes": "9671"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_004_qc.json",
+          "digest": "b6294896253e3d0b",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_005.promoted",
+          "digest": "1dfc8add556ed618",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_005.txt",
+          "digest": "06b5f99ecfd933ef",
+          "bytes": "9202"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_005_qc.json",
+          "digest": "cc5c1737e552245d",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_006.promoted",
+          "digest": "61645fe1b381f4b1",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_006.txt",
+          "digest": "8a0c5b18f029e0cf",
+          "bytes": "9575"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_006_qc.json",
+          "digest": "19cd4df8ef97394b",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_007.promoted",
+          "digest": "106cf911c8491131",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_007.txt",
+          "digest": "6ed4888e91aa7494",
+          "bytes": "11334"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008.promoted",
+          "digest": "260b8ceef151ca4f",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008.txt",
+          "digest": "131f4d0935d93b77",
+          "bytes": "10920"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008_qc.json",
+          "digest": "6ef6000801c166ea",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_009.promoted",
+          "digest": "a1284d522b7b11e9",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_009.txt",
+          "digest": "f03d5e15de1f8379",
+          "bytes": "9948"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_009_qc.json",
+          "digest": "62fd65c7f4004ca3",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_010.promoted",
+          "digest": "807908bf285786c9",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_010.txt",
+          "digest": "166fbd0631ac705d",
+          "bytes": "10116"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_010_qc.json",
+          "digest": "426f0bf148226700",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/plan_raw_001_003.txt",
+          "digest": "855e758c732b95ab",
+          "bytes": "8707"
+        },
+        {
+          "rel": "books/01/plan_raw_004_006.txt",
+          "digest": "194ab63a9ac02f82",
+          "bytes": "9132"
+        },
+        {
+          "rel": "books/01/plan_raw_007_009.txt",
+          "digest": "da064a95190a0413",
+          "bytes": "9389"
+        },
+        {
+          "rel": "books/01/plan_raw_010_010.txt",
+          "digest": "21bb56750fc565f8",
+          "bytes": "3840"
+        },
+        {
+          "rel": "books/01/prompts/ch_001.txt",
+          "digest": "c8c95fab8b2daee6",
+          "bytes": "10511"
+        },
+        {
+          "rel": "books/01/prompts/ch_002.txt",
+          "digest": "f2d1ca09d8f1cd9c",
+          "bytes": "10588"
+        },
+        {
+          "rel": "books/01/prompts/ch_003.txt",
+          "digest": "632d5374085ec68f",
+          "bytes": "10666"
+        },
+        {
+          "rel": "books/01/prompts/ch_004.txt",
+          "digest": "afa78ca361b0386f",
+          "bytes": "10830"
+        },
+        {
+          "rel": "books/01/prompts/ch_005.txt",
+          "digest": "467c94ad46b03968",
+          "bytes": "11116"
+        },
+        {
+          "rel": "books/01/prompts/ch_006.txt",
+          "digest": "34d3c43b8ca88cee",
+          "bytes": "11325"
+        },
+        {
+          "rel": "books/01/prompts/ch_007.txt",
+          "digest": "9737af5e01c97306",
+          "bytes": "10439"
+        },
+        {
+          "rel": "books/01/prompts/ch_008.txt",
+          "digest": "fa38451286549d5f",
+          "bytes": "12142"
+        },
+        {
+          "rel": "books/01/prompts/ch_009.txt",
+          "digest": "266a1ab692796d1a",
+          "bytes": "11978"
+        },
+        {
+          "rel": "books/01/prompts/ch_010.txt",
+          "digest": "4917781a593d9224",
+          "bytes": "12860"
+        },
+        {
+          "rel": "books/01/state.json",
+          "digest": "ab11c1911df312a1",
+          "bytes": "6408"
+        },
+        {
+          "rel": "canon_registry.yaml",
+          "digest": "3caba2819b6a3ad7",
+          "bytes": "277"
+        },
+        {
+          "rel": "concept.yaml",
+          "digest": "6c71a6f48961ee8d",
+          "bytes": "11294"
+        },
+        {
+          "rel": "direction.yaml",
+          "digest": "13eca99b22985ff1",
+          "bytes": "2187"
+        },
+        {
+          "rel": "manifest.yaml",
+          "digest": "985a1ddb9efe6de6",
+          "bytes": "511"
+        }
+      ]
+    },
+    "standalone": {
+      "root": "D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces\\his-final-target",
+      "exists": true,
+      "file_count": 112,
+      "digest": "f2ea10033648b02f",
+      "files": [
+        {
+          "rel": "batch_progress.json",
+          "digest": "c30d2f28927fdfbc",
+          "bytes": "2243"
+        },
+        {
+          "rel": "bible/narrative/book_arc.json",
+          "digest": "8fb055e636d4487c",
+          "bytes": "5269"
+        },
+        {
+          "rel": "bible/narrative/kernel.json",
+          "digest": "56f0f272cab36571",
+          "bytes": "2646"
+        },
+        {
+          "rel": "bible/narrative/knowledge_matrix.json",
+          "digest": "46749e268c61a6b9",
+          "bytes": "4148"
+        },
+        {
+          "rel": "bible/narrative/mystery_ledger.json",
+          "digest": "a02024a1e2d0461f",
+          "bytes": "4975"
+        },
+        {
+          "rel": "bible/narrative/threads.json",
+          "digest": "0590a2859cca6fc2",
+          "bytes": "1446"
+        },
+        {
+          "rel": "bible/series.json",
+          "digest": "1bb2f9407f8ea6a9",
+          "bytes": "8379"
+        },
+        {
+          "rel": "books/01/master_plan.json",
+          "digest": "b0b953f2e63a9601",
+          "bytes": "111897"
+        },
+        {
+          "rel": "books/01/payloads/ch_001_attempt_1.json",
+          "digest": "406ddfc039cc9457",
+          "bytes": "27451"
+        },
+        {
+          "rel": "books/01/payloads/ch_002_attempt_1.json",
+          "digest": "8be785c09c6f1fc2",
+          "bytes": "22796"
+        },
+        {
+          "rel": "books/01/payloads/ch_002_attempt_2.json",
+          "digest": "c9396682ddcc53e1",
+          "bytes": "27383"
+        },
+        {
+          "rel": "books/01/payloads/ch_003_attempt_1.json",
+          "digest": "aa0b5b2bb4166843",
+          "bytes": "20988"
+        },
+        {
+          "rel": "books/01/payloads/ch_003_attempt_2.json",
+          "digest": "4df77e22123318fb",
+          "bytes": "28080"
+        },
+        {
+          "rel": "books/01/payloads/ch_004_attempt_1.json",
+          "digest": "3f9fff814eb271e1",
+          "bytes": "35793"
+        },
+        {
+          "rel": "books/01/payloads/ch_004_attempt_2.json",
+          "digest": "2d995105451c4bb4",
+          "bytes": "22363"
+        },
+        {
+          "rel": "books/01/payloads/ch_004_attempt_3.json",
+          "digest": "b023b341a06038b2",
+          "bytes": "23209"
+        },
+        {
+          "rel": "books/01/payloads/ch_004_attempt_4.json",
+          "digest": "d732c995249f6adb",
+          "bytes": "23580"
+        },
+        {
+          "rel": "books/01/payloads/ch_005_attempt_1.json",
+          "digest": "9e1bf4026f858526",
+          "bytes": "26630"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_1.json",
+          "digest": "0e3ace5637face66",
+          "bytes": "36681"
+        },
+        {
+          "rel": "books/01/payloads/ch_007_attempt_1.json",
+          "digest": "3a67f3b43dba8e1e",
+          "bytes": "34345"
+        },
+        {
+          "rel": "books/01/payloads/ch_008_attempt_1.json",
+          "digest": "c50b50d7cb630a78",
+          "bytes": "44721"
+        },
+        {
+          "rel": "books/01/payloads/ch_009_attempt_1.json",
+          "digest": "a6be0040ac182f31",
+          "bytes": "53712"
+        },
+        {
+          "rel": "books/01/payloads/ch_010_attempt_1.json",
+          "digest": "72275be13bd9ab2e",
+          "bytes": "49755"
+        },
+        {
+          "rel": "books/01/payloads/ch_011_attempt_1.json",
+          "digest": "df5f043cab7cbd7f",
+          "bytes": "49756"
+        },
+        {
+          "rel": "books/01/payloads/ch_012_attempt_1.json",
+          "digest": "31e7b1c9c731097a",
+          "bytes": "48634"
+        },
+        {
+          "rel": "books/01/payloads/ch_013_attempt_1.json",
+          "digest": "dcbfff2c888625f0",
+          "bytes": "33891"
+        },
+        {
+          "rel": "books/01/payloads/ch_013_attempt_2.json",
+          "digest": "7d3b70226e9f577b",
+          "bytes": "39752"
+        },
+        {
+          "rel": "books/01/payloads/ch_014_attempt_1.json",
+          "digest": "a8c33a408ab5e7e8",
+          "bytes": "50271"
+        },
+        {
+          "rel": "books/01/payloads/ch_015_attempt_1.json",
+          "digest": "255ec978535ff04c",
+          "bytes": "50918"
+        },
+        {
+          "rel": "books/01/payloads/ch_016_attempt_1.json",
+          "digest": "d9181d386cd91281",
+          "bytes": "33490"
+        },
+        {
+          "rel": "books/01/payloads/ch_016_attempt_2.json",
+          "digest": "3c72244334ba5640",
+          "bytes": "33561"
+        },
+        {
+          "rel": "books/01/payloads/ch_016_attempt_3.json",
+          "digest": "a2580fae4c594069",
+          "bytes": "34723"
+        },
+        {
+          "rel": "books/01/payloads/ch_017_attempt_1.json",
+          "digest": "a78b52fcb3d5a4fa",
+          "bytes": "47404"
+        },
+        {
+          "rel": "books/01/pipeline/markdown_fix_log.jsonl",
+          "digest": "97f2135349d7b1d0",
+          "bytes": "4223"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_003_issues.json",
+          "digest": "daee919b965a0230",
+          "bytes": "3373"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_004_issues.json",
+          "digest": "1f75b2372fabff2c",
+          "bytes": "680"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_005_issues.json",
+          "digest": "523e7d47758dfb11",
+          "bytes": "1862"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_006_issues.json",
+          "digest": "fc02847ef2935ea2",
+          "bytes": "765"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_007_issues.json",
+          "digest": "841aa3eb29937c31",
+          "bytes": "750"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_009_issues.json",
+          "digest": "ad8d982b4aff476a",
+          "bytes": "763"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_010_issues.json",
+          "digest": "7243928876c3f6fc",
+          "bytes": "763"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_011_issues.json",
+          "digest": "7cbf754a04c58a30",
+          "bytes": "762"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_012_issues.json",
+          "digest": "8b4d51f9af2902d3",
+          "bytes": "763"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_014_issues.json",
+          "digest": "4fac1df54af8be6a",
+          "bytes": "927"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_015_issues.json",
+          "digest": "cab4a03c0990d94a",
+          "bytes": "763"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_001.promoted",
+          "digest": "e290a834b0fee81c",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_001.txt",
+          "digest": "092356550a6ca1bd",
+          "bytes": "14023"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_001_qc.json",
+          "digest": "ff043cfb18377195",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002.promoted",
+          "digest": "739d7d3d0bca7203",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002.txt",
+          "digest": "1431caa30b0fdcb9",
+          "bytes": "9870"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002_qc.json",
+          "digest": "17837fbd56e2e1e8",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_003.promoted",
+          "digest": "57846387f860727f",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_003.txt",
+          "digest": "6e9f225da584435e",
+          "bytes": "12379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_004.promoted",
+          "digest": "7d630ed9d6edf4f9",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_004.txt",
+          "digest": "b19cc7979ddd27dd",
+          "bytes": "14614"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_005.promoted",
+          "digest": "939281417e817ac5",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_005.txt",
+          "digest": "246789f340b17e87",
+          "bytes": "8053"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_006.promoted",
+          "digest": "5c85360146c1224e",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_006.txt",
+          "digest": "cda1283193a9e998",
+          "bytes": "14530"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_007.promoted",
+          "digest": "85db8cdefe1e6c3b",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_007.txt",
+          "digest": "9c6432e3e2626e93",
+          "bytes": "14380"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008.promoted",
+          "digest": "c9f0c9bd42139b16",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008.txt",
+          "digest": "d7f3941745e613a8",
+          "bytes": "13617"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008_qc.json",
+          "digest": "ee7c31914efdf77f",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_009.promoted",
+          "digest": "095e7e835fa9a479",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_009.txt",
+          "digest": "b07f97cd5fac0620",
+          "bytes": "13080"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_010.promoted",
+          "digest": "a29c7ec6e60a5880",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_010.txt",
+          "digest": "5d06c77b836b088d",
+          "bytes": "13669"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_011.promoted",
+          "digest": "120f534ad2d2c884",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_011.txt",
+          "digest": "c590529fd94cc9a7",
+          "bytes": "13717"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_012.promoted",
+          "digest": "d049e7ccb604c0f7",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_012.txt",
+          "digest": "9b581a5b900da5ca",
+          "bytes": "12189"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_013.promoted",
+          "digest": "39f00a4d96d948a8",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_013.txt",
+          "digest": "5ad5d562fe39e8c1",
+          "bytes": "12011"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_014.promoted",
+          "digest": "6e3fe4debec186f3",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_014.txt",
+          "digest": "c4de8a144a4e9206",
+          "bytes": "13244"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_015.promoted",
+          "digest": "1ca1274032e6baf7",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_015.txt",
+          "digest": "47c92cad058096f7",
+          "bytes": "11873"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_016.promoted",
+          "digest": "e81419ed0aef747f",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_016.txt",
+          "digest": "2f1710987aa70f9e",
+          "bytes": "8048"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_016_qc.json",
+          "digest": "b0c5ee0a513d5063",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_017.promoted",
+          "digest": "7a6f830f22a3d7e4",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_017.txt",
+          "digest": "4a56264dec1e90b0",
+          "bytes": "11544"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_017_qc.json",
+          "digest": "f6ef323faf7dfc9f",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/plan_raw_001_003.txt",
+          "digest": "9b66da5e9bd936bc",
+          "bytes": "11001"
+        },
+        {
+          "rel": "books/01/plan_raw_004_006.txt",
+          "digest": "fff7462983dd18a7",
+          "bytes": "8520"
+        },
+        {
+          "rel": "books/01/plan_raw_007_009.txt",
+          "digest": "db9821917853263b",
+          "bytes": "22769"
+        },
+        {
+          "rel": "books/01/plan_raw_010_012.txt",
+          "digest": "07be9a7119f7b899",
+          "bytes": "13857"
+        },
+        {
+          "rel": "books/01/plan_raw_013_015.txt",
+          "digest": "1939d24d8209ae38",
+          "bytes": "13973"
+        },
+        {
+          "rel": "books/01/plan_raw_016_017.txt",
+          "digest": "eec41cf9267ca8be",
+          "bytes": "8983"
+        },
+        {
+          "rel": "books/01/prompts/ch_001.txt",
+          "digest": "af45804c2ad7c6d3",
+          "bytes": "10525"
+        },
+        {
+          "rel": "books/01/prompts/ch_002.txt",
+          "digest": "739c1c4f1bc8fb98",
+          "bytes": "11081"
+        },
+        {
+          "rel": "books/01/prompts/ch_003.txt",
+          "digest": "0548ebda7a3fa6c1",
+          "bytes": "10873"
+        },
+        {
+          "rel": "books/01/prompts/ch_004.txt",
+          "digest": "e789d54e45b697db",
+          "bytes": "10317"
+        },
+        {
+          "rel": "books/01/prompts/ch_005.txt",
+          "digest": "0af3d2639e50ad1a",
+          "bytes": "10551"
+        },
+        {
+          "rel": "books/01/prompts/ch_006.txt",
+          "digest": "71c6edf9a5ef4af7",
+          "bytes": "10897"
+        },
+        {
+          "rel": "books/01/prompts/ch_007.txt",
+          "digest": "96611a68a4669770",
+          "bytes": "11827"
+        },
+        {
+          "rel": "books/01/prompts/ch_008.txt",
+          "digest": "5b56abe1a60d8304",
+          "bytes": "12320"
+        },
+        {
+          "rel": "books/01/prompts/ch_009.txt",
+          "digest": "356bcbfee0cfb450",
+          "bytes": "13933"
+        },
+        {
+          "rel": "books/01/prompts/ch_010.txt",
+          "digest": "b252e211010da16d",
+          "bytes": "11998"
+        },
+        {
+          "rel": "books/01/prompts/ch_011.txt",
+          "digest": "871afe49adeca055",
+          "bytes": "12066"
+        },
+        {
+          "rel": "books/01/prompts/ch_012.txt",
+          "digest": "f8767dfb4404fccc",
+          "bytes": "12492"
+        },
+        {
+          "rel": "books/01/prompts/ch_013.txt",
+          "digest": "78545124b3a3b0d8",
+          "bytes": "13521"
+        },
+        {
+          "rel": "books/01/prompts/ch_014.txt",
+          "digest": "edbac8224b279962",
+          "bytes": "13040"
+        },
+        {
+          "rel": "books/01/prompts/ch_015.txt",
+          "digest": "08060f5f0d29a53a",
+          "bytes": "12422"
+        },
+        {
+          "rel": "books/01/prompts/ch_016.txt",
+          "digest": "7e30952251ddba23",
+          "bytes": "12307"
+        },
+        {
+          "rel": "books/01/prompts/ch_017.txt",
+          "digest": "acdd36c201951766",
+          "bytes": "11925"
+        },
+        {
+          "rel": "books/01/state.json",
+          "digest": "ecacb9cae62930b3",
+          "bytes": "12283"
+        },
+        {
+          "rel": "canon_registry.yaml",
+          "digest": "a6d69b4d4d8214fc",
+          "bytes": "297"
+        },
+        {
+          "rel": "concept.yaml",
+          "digest": "373aa56dbea6d07d",
+          "bytes": "12913"
+        },
+        {
+          "rel": "direction.yaml",
+          "digest": "fe41e4c47b7de71e",
+          "bytes": "1667"
+        },
+        {
+          "rel": "manifest.yaml",
+          "digest": "3a3f069b50662b41",
+          "bytes": "508"
+        }
+      ]
+    },
+    "series": {
+      "root": "D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces\\the-language-of-the-dead",
+      "exists": true,
+      "file_count": 230,
+      "digest": "c8f8b98a29ac23fe",
+      "files": [
+        {
+          "rel": "batch_progress.json",
+          "digest": "a68224ec048dbb71",
+          "bytes": "2178"
+        },
+        {
+          "rel": "bible/narrative/_meta.json",
+          "digest": "429e61c5c870fae3",
+          "bytes": "96"
+        },
+        {
+          "rel": "bible/narrative/book_arc.json",
+          "digest": "3fff169ccf372676",
+          "bytes": "2589"
+        },
+        {
+          "rel": "bible/narrative/chapter_canon_gates.json",
+          "digest": "0a1ad0c6b3cb3ee5",
+          "bytes": "2202"
+        },
+        {
+          "rel": "bible/narrative/kernel.json",
+          "digest": "37ae029055e0411c",
+          "bytes": "3297"
+        },
+        {
+          "rel": "bible/narrative/knowledge_matrix.json",
+          "digest": "012539cd6ec2a307",
+          "bytes": "10240"
+        },
+        {
+          "rel": "bible/narrative/mystery_ledger.json",
+          "digest": "9ce58014d19e77b3",
+          "bytes": "4160"
+        },
+        {
+          "rel": "bible/narrative/threads.json",
+          "digest": "3499028c3ff1613a",
+          "bytes": "5570"
+        },
+        {
+          "rel": "bible/series.json",
+          "digest": "667618432a069c02",
+          "bytes": "7090"
+        },
+        {
+          "rel": "books/01/master_plan.json",
+          "digest": "500d1ae1976b5705",
+          "bytes": "56268"
+        },
+        {
+          "rel": "books/01/payloads/ch_001_attempt_1.json",
+          "digest": "08b8f2baf6191fcc",
+          "bytes": "18375"
+        },
+        {
+          "rel": "books/01/payloads/ch_001_attempt_2.json",
+          "digest": "73bafbb9422b82b9",
+          "bytes": "24482"
+        },
+        {
+          "rel": "books/01/payloads/ch_002_attempt_1.json",
+          "digest": "b973c057303ef28e",
+          "bytes": "19952"
+        },
+        {
+          "rel": "books/01/payloads/ch_002_attempt_2.json",
+          "digest": "37232012d5f2454d",
+          "bytes": "19521"
+        },
+        {
+          "rel": "books/01/payloads/ch_003_attempt_1.json",
+          "digest": "20e491afba316206",
+          "bytes": "19412"
+        },
+        {
+          "rel": "books/01/payloads/ch_004_attempt_1.json",
+          "digest": "b493dedfeaadba9e",
+          "bytes": "24092"
+        },
+        {
+          "rel": "books/01/payloads/ch_004_attempt_2.json",
+          "digest": "cd7b2e87bd60963e",
+          "bytes": "28426"
+        },
+        {
+          "rel": "books/01/payloads/ch_005_attempt_1.json",
+          "digest": "fdd4d2aa24774d94",
+          "bytes": "27357"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_1.json",
+          "digest": "c703adca76de4bce",
+          "bytes": "28735"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_2.json",
+          "digest": "4513684cd175ee36",
+          "bytes": "23140"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_3.json",
+          "digest": "8a1a92802a29e948",
+          "bytes": "28167"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_4.json",
+          "digest": "d2b86c22e51b1d4d",
+          "bytes": "29837"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_5.json",
+          "digest": "22522f11ad6a2daf",
+          "bytes": "32636"
+        },
+        {
+          "rel": "books/01/payloads/ch_007_attempt_1.json",
+          "digest": "cd60726fe9e9d458",
+          "bytes": "27025"
+        },
+        {
+          "rel": "books/01/payloads/ch_007_attempt_2.json",
+          "digest": "0eb4f5487257ccac",
+          "bytes": "23911"
+        },
+        {
+          "rel": "books/01/payloads/ch_007_attempt_3.json",
+          "digest": "0bed916954dd3bf0",
+          "bytes": "28343"
+        },
+        {
+          "rel": "books/01/payloads/ch_008_attempt_1.json",
+          "digest": "4304b7cf04c3f805",
+          "bytes": "26356"
+        },
+        {
+          "rel": "books/01/payloads/ch_008_attempt_2.json",
+          "digest": "2bc1777e6767b956",
+          "bytes": "39731"
+        },
+        {
+          "rel": "books/01/payloads/ch_008_attempt_3.json",
+          "digest": "828b1fc922c014fb",
+          "bytes": "40999"
+        },
+        {
+          "rel": "books/01/payloads/ch_008_attempt_4.json",
+          "digest": "0473b7e80b35e42b",
+          "bytes": "39506"
+        },
+        {
+          "rel": "books/01/payloads/ch_009_attempt_1.json",
+          "digest": "df65b9eb7a5435f0",
+          "bytes": "41523"
+        },
+        {
+          "rel": "books/01/payloads/ch_010_attempt_1.json",
+          "digest": "523ee23e155b1c9c",
+          "bytes": "35996"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_001.txt",
+          "digest": "b307cdd0c8470ba5",
+          "bytes": "13131"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_002.txt",
+          "digest": "86cf88e2ca5266d5",
+          "bytes": "7981"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_003.txt",
+          "digest": "f31f737703aaab69",
+          "bytes": "7753"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_006.txt",
+          "digest": "69e005d1d7f2e31f",
+          "bytes": "9690"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_008.txt",
+          "digest": "baff44e6ca083e8d",
+          "bytes": "13562"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_009.txt",
+          "digest": "390303e513af0df4",
+          "bytes": "15389"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_010.txt",
+          "digest": "7b287f2a9d5317e0",
+          "bytes": "12450"
+        },
+        {
+          "rel": "books/01/pipeline/markdown_fix_log.jsonl",
+          "digest": "4e5ef4f17b81c0c5",
+          "bytes": "2598"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_007_issues.json",
+          "digest": "45c8026d22c40f2a",
+          "bytes": "736"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_007_qc.json",
+          "digest": "79825a0f258566b8",
+          "bytes": "194"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_001_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_002_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_003_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_004.txt",
+          "digest": "70d6d15c4d619eea",
+          "bytes": "10015"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_004_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_005.txt",
+          "digest": "10fdb22dae6ccba7",
+          "bytes": "7886"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_005_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_006_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_008_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_009_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_010_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_001.promoted",
+          "digest": "3bf863c63c7c6111",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_001.txt",
+          "digest": "b307cdd0c8470ba5",
+          "bytes": "13131"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002.promoted",
+          "digest": "06b6e1d9d6345046",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002.txt",
+          "digest": "dfe4bf84de63727f",
+          "bytes": "7982"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_003.promoted",
+          "digest": "b1b41c9322f26a92",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_003.txt",
+          "digest": "f31f737703aaab69",
+          "bytes": "7753"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_004.promoted",
+          "digest": "b6c9003541fbd5a4",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_004.txt",
+          "digest": "ea01440eeafbbe5d",
+          "bytes": "10017"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_005.promoted",
+          "digest": "ce36b94cc15f7fd5",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_005.txt",
+          "digest": "097d1e540e2d348e",
+          "bytes": "7888"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_006.promoted",
+          "digest": "d345998b00f8f451",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_006.txt",
+          "digest": "69e005d1d7f2e31f",
+          "bytes": "9690"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_007.promoted",
+          "digest": "62be1b2f7994f644",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_007.txt",
+          "digest": "03b690a2739352ee",
+          "bytes": "8073"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008.promoted",
+          "digest": "acbdb301f76ced30",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008.txt",
+          "digest": "baff44e6ca083e8d",
+          "bytes": "13562"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_009.promoted",
+          "digest": "3f597c53cb53ce6e",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_009.txt",
+          "digest": "390303e513af0df4",
+          "bytes": "15389"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_010.promoted",
+          "digest": "102ddbcef9a6d360",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_010.txt",
+          "digest": "7b287f2a9d5317e0",
+          "bytes": "12450"
+        },
+        {
+          "rel": "books/01/plan_raw_001_003.txt",
+          "digest": "047faf4d9604f0a8",
+          "bytes": "9603"
+        },
+        {
+          "rel": "books/01/plan_raw_004_006.txt",
+          "digest": "ab4cafdd937d4aed",
+          "bytes": "12728"
+        },
+        {
+          "rel": "books/01/plan_raw_007_009.txt",
+          "digest": "93bdf2365e4b9291",
+          "bytes": "16655"
+        },
+        {
+          "rel": "books/01/plan_raw_010_010.txt",
+          "digest": "c22ee8ed8e64cc1c",
+          "bytes": "6367"
+        },
+        {
+          "rel": "books/01/prompts/ch_001.txt",
+          "digest": "9ed9aac02dff1adf",
+          "bytes": "8194"
+        },
+        {
+          "rel": "books/01/prompts/ch_002.txt",
+          "digest": "21950c2dc21cb9da",
+          "bytes": "8483"
+        },
+        {
+          "rel": "books/01/prompts/ch_003.txt",
+          "digest": "5986c0b0654983f8",
+          "bytes": "8754"
+        },
+        {
+          "rel": "books/01/prompts/ch_004.txt",
+          "digest": "ba5643946f520869",
+          "bytes": "9021"
+        },
+        {
+          "rel": "books/01/prompts/ch_005.txt",
+          "digest": "0e7a8a438d59c77a",
+          "bytes": "9478"
+        },
+        {
+          "rel": "books/01/prompts/ch_006.txt",
+          "digest": "1bf9a1887ea6f323",
+          "bytes": "10067"
+        },
+        {
+          "rel": "books/01/prompts/ch_007.txt",
+          "digest": "81e8f2bd475b341e",
+          "bytes": "9837"
+        },
+        {
+          "rel": "books/01/prompts/ch_008.txt",
+          "digest": "29765fa5aa60606b",
+          "bytes": "10035"
+        },
+        {
+          "rel": "books/01/prompts/ch_009.txt",
+          "digest": "d84db67ce91c1ab2",
+          "bytes": "10069"
+        },
+        {
+          "rel": "books/01/prompts/ch_010.txt",
+          "digest": "1c5af8b2f309af24",
+          "bytes": "10838"
+        },
+        {
+          "rel": "books/01/state.json",
+          "digest": "e1b5bf7b4fa2dde9",
+          "bytes": "9557"
+        },
+        {
+          "rel": "books/02/concept.yaml",
+          "digest": "a145e13b60b74545",
+          "bytes": "8115"
+        },
+        {
+          "rel": "books/02/master_plan.json",
+          "digest": "7fc4654c27d4896e",
+          "bytes": "84345"
+        },
+        {
+          "rel": "books/02/payloads/ch_001_attempt_1.json",
+          "digest": "37a119c5782e2207",
+          "bytes": "23032"
+        },
+        {
+          "rel": "books/02/payloads/ch_002_attempt_1.json",
+          "digest": "d5614d1c1ac7b454",
+          "bytes": "27386"
+        },
+        {
+          "rel": "books/02/payloads/ch_003_attempt_1.json",
+          "digest": "cacd04d1b35239f8",
+          "bytes": "30982"
+        },
+        {
+          "rel": "books/02/payloads/ch_004_attempt_1.json",
+          "digest": "05dbc036ea62e3a7",
+          "bytes": "31634"
+        },
+        {
+          "rel": "books/02/payloads/ch_005_attempt_1.json",
+          "digest": "f1fb690a89e28325",
+          "bytes": "35124"
+        },
+        {
+          "rel": "books/02/payloads/ch_006_attempt_1.json",
+          "digest": "2cf26453c6f581f4",
+          "bytes": "37466"
+        },
+        {
+          "rel": "books/02/payloads/ch_006_attempt_2.json",
+          "digest": "760b3a17dfaa0220",
+          "bytes": "37918"
+        },
+        {
+          "rel": "books/02/payloads/ch_007_attempt_1.json",
+          "digest": "01d3e039cb7a933a",
+          "bytes": "40550"
+        },
+        {
+          "rel": "books/02/payloads/ch_007_attempt_2.json",
+          "digest": "d762e5eeb79b0899",
+          "bytes": "44631"
+        },
+        {
+          "rel": "books/02/payloads/ch_008_attempt_1.json",
+          "digest": "9967e3311ab2f316",
+          "bytes": "44502"
+        },
+        {
+          "rel": "books/02/payloads/ch_009_attempt_1.json",
+          "digest": "95f6f871b4ac4b6e",
+          "bytes": "40942"
+        },
+        {
+          "rel": "books/02/payloads/ch_009_attempt_2.json",
+          "digest": "badfe684ac504085",
+          "bytes": "44673"
+        },
+        {
+          "rel": "books/02/payloads/ch_009_attempt_3.json",
+          "digest": "ff81e93fceb5e219",
+          "bytes": "35040"
+        },
+        {
+          "rel": "books/02/payloads/ch_010_attempt_1.json",
+          "digest": "5543404d19d410ab",
+          "bytes": "28481"
+        },
+        {
+          "rel": "books/02/payloads/ch_010_attempt_2.json",
+          "digest": "b3fccd75932274d2",
+          "bytes": "30569"
+        },
+        {
+          "rel": "books/02/payloads/ch_010_attempt_3.json",
+          "digest": "a9f3e86a3a22ad63",
+          "bytes": "29489"
+        },
+        {
+          "rel": "books/02/payloads/ch_010_attempt_4.json",
+          "digest": "ea593be05477aa4a",
+          "bytes": "32194"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_001.txt",
+          "digest": "a093da52d9180f70",
+          "bytes": "10885"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_002.txt",
+          "digest": "296b63b3c532b8ef",
+          "bytes": "9687"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_003.txt",
+          "digest": "f4d1d38f3234083d",
+          "bytes": "10505"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_004.txt",
+          "digest": "8c98adcc05a7844c",
+          "bytes": "10651"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_005.txt",
+          "digest": "e6f141a419f56b4d",
+          "bytes": "11194"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_006.txt",
+          "digest": "04e2efe5db1cfd7b",
+          "bytes": "10837"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_007.txt",
+          "digest": "e77a313ebe59c9ea",
+          "bytes": "10883"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_010.txt",
+          "digest": "fd94b5afe2f66a7d",
+          "bytes": "8467"
+        },
+        {
+          "rel": "books/02/pipeline/markdown_fix_log.jsonl",
+          "digest": "1f4143ea365d49ff",
+          "bytes": "887"
+        },
+        {
+          "rel": "books/02/pipeline/needs_fix/ch_008_issues.json",
+          "digest": "fa0ad43c03d31a88",
+          "bytes": "892"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_001.promoted",
+          "digest": "80984f752e2c7d1c",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_001.txt",
+          "digest": "a093da52d9180f70",
+          "bytes": "10885"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_001_qc.json",
+          "digest": "8b834050044e1607",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_002.promoted",
+          "digest": "05b8ccf04299acf8",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_002.txt",
+          "digest": "296b63b3c532b8ef",
+          "bytes": "9687"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_002_qc.json",
+          "digest": "00d7501d58547919",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_003.promoted",
+          "digest": "39fce093a50949c5",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_003.txt",
+          "digest": "f4d1d38f3234083d",
+          "bytes": "10505"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_003_qc.json",
+          "digest": "aeb0fba3dbb1eb62",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_004.promoted",
+          "digest": "2bf1b99b9146aded",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_004.txt",
+          "digest": "8c98adcc05a7844c",
+          "bytes": "10651"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_004_qc.json",
+          "digest": "ef0685fcdeefc9d2",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_005.promoted",
+          "digest": "f4264278506a2b2a",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_005.txt",
+          "digest": "e6f141a419f56b4d",
+          "bytes": "11194"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_005_qc.json",
+          "digest": "2f3991221f347370",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_006.promoted",
+          "digest": "541a7d249da9cb11",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_006.txt",
+          "digest": "04e2efe5db1cfd7b",
+          "bytes": "10837"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_006_qc.json",
+          "digest": "a40dff9ccd0fac3e",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_007.promoted",
+          "digest": "f24f957b96ea2c1d",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_007.txt",
+          "digest": "e77a313ebe59c9ea",
+          "bytes": "10883"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_007_qc.json",
+          "digest": "0513119e09c54d0e",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_008.promoted",
+          "digest": "e40d93ff7607124c",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_008.txt",
+          "digest": "0c30b2cdfb2fc158",
+          "bytes": "10529"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_009.promoted",
+          "digest": "e7c71705d51a43c9",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_009.txt",
+          "digest": "627b3a581738a8ea",
+          "bytes": "10539"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_010.promoted",
+          "digest": "11389bb06899c960",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_010.txt",
+          "digest": "6fbc21b468e4f348",
+          "bytes": "7354"
+        },
+        {
+          "rel": "books/02/plan_raw_001_003.txt",
+          "digest": "4f94be3372cc1773",
+          "bytes": "8385"
+        },
+        {
+          "rel": "books/02/plan_raw_004_006.txt",
+          "digest": "491603cd74b5f7b5",
+          "bytes": "8997"
+        },
+        {
+          "rel": "books/02/plan_raw_007_009.txt",
+          "digest": "b6d1af3f235e492a",
+          "bytes": "9394"
+        },
+        {
+          "rel": "books/02/plan_raw_010_010.txt",
+          "digest": "4f5d6238c47b31cf",
+          "bytes": "3371"
+        },
+        {
+          "rel": "books/02/prompts/ch_001.txt",
+          "digest": "362ea13100acec6b",
+          "bytes": "9269"
+        },
+        {
+          "rel": "books/02/prompts/ch_002.txt",
+          "digest": "b3288c01da00f07f",
+          "bytes": "9391"
+        },
+        {
+          "rel": "books/02/prompts/ch_003.txt",
+          "digest": "23f3b9b0b8a69f17",
+          "bytes": "9497"
+        },
+        {
+          "rel": "books/02/prompts/ch_004.txt",
+          "digest": "6e0eb2ea20ea70db",
+          "bytes": "9641"
+        },
+        {
+          "rel": "books/02/prompts/ch_005.txt",
+          "digest": "359cc2d068217aa7",
+          "bytes": "9746"
+        },
+        {
+          "rel": "books/02/prompts/ch_006.txt",
+          "digest": "6f125103b972d08c",
+          "bytes": "9822"
+        },
+        {
+          "rel": "books/02/prompts/ch_007.txt",
+          "digest": "5f7716be4dbbda89",
+          "bytes": "10060"
+        },
+        {
+          "rel": "books/02/prompts/ch_008.txt",
+          "digest": "69dbe53d8c34ca5a",
+          "bytes": "10382"
+        },
+        {
+          "rel": "books/02/prompts/ch_009.txt",
+          "digest": "024b70923c0eec7b",
+          "bytes": "10122"
+        },
+        {
+          "rel": "books/02/prompts/ch_010.txt",
+          "digest": "0ded7bbdde47f871",
+          "bytes": "10046"
+        },
+        {
+          "rel": "books/02/state.json",
+          "digest": "b0009f3e0a5d7039",
+          "bytes": "7352"
+        },
+        {
+          "rel": "books/03/concept.yaml",
+          "digest": "af41a07ddc9ccb6f",
+          "bytes": "9723"
+        },
+        {
+          "rel": "books/03/master_plan.json",
+          "digest": "746bf9606548f3aa",
+          "bytes": "67121"
+        },
+        {
+          "rel": "books/03/payloads/ch_001_attempt_1.json",
+          "digest": "fce72cbc4df88b18",
+          "bytes": "23024"
+        },
+        {
+          "rel": "books/03/payloads/ch_002_attempt_1.json",
+          "digest": "7757f320d8614d13",
+          "bytes": "27391"
+        },
+        {
+          "rel": "books/03/payloads/ch_002_attempt_2.json",
+          "digest": "7aef70fa0a3f8ff7",
+          "bytes": "27366"
+        },
+        {
+          "rel": "books/03/payloads/ch_003_attempt_1.json",
+          "digest": "877dda1c60bbb49f",
+          "bytes": "24216"
+        },
+        {
+          "rel": "books/03/payloads/ch_003_attempt_2.json",
+          "digest": "49652d5bd60812e5",
+          "bytes": "23065"
+        },
+        {
+          "rel": "books/03/payloads/ch_004_attempt_1.json",
+          "digest": "459f2c3d8a55fa6a",
+          "bytes": "27904"
+        },
+        {
+          "rel": "books/03/payloads/ch_005_attempt_1.json",
+          "digest": "220aadc7e21c3223",
+          "bytes": "25972"
+        },
+        {
+          "rel": "books/03/payloads/ch_006_attempt_1.json",
+          "digest": "f13da811f6880c6c",
+          "bytes": "22844"
+        },
+        {
+          "rel": "books/03/payloads/ch_007_attempt_1.json",
+          "digest": "b3cf9b70b077178a",
+          "bytes": "27617"
+        },
+        {
+          "rel": "books/03/payloads/ch_008_attempt_1.json",
+          "digest": "5a825ac96f431c0d",
+          "bytes": "28718"
+        },
+        {
+          "rel": "books/03/payloads/ch_009_attempt_1.json",
+          "digest": "f6c10d9bf75d3649",
+          "bytes": "28840"
+        },
+        {
+          "rel": "books/03/payloads/ch_010_attempt_1.json",
+          "digest": "e365a3d1ffc24437",
+          "bytes": "29567"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_001.txt",
+          "digest": "ee25fe3a0cbaee49",
+          "bytes": "10893"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_003.txt",
+          "digest": "80e6a3aed1a0e07a",
+          "bytes": "8625"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_004.txt",
+          "digest": "b85317fdb2dd0135",
+          "bytes": "10869"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_006.txt",
+          "digest": "d49e8a2c96266831",
+          "bytes": "9015"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_007.txt",
+          "digest": "3ec6d6a8bd117c2e",
+          "bytes": "8654"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_008.txt",
+          "digest": "8ae5ba6bc5d53244",
+          "bytes": "9999"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_009.txt",
+          "digest": "46dad5c947ea7367",
+          "bytes": "9973"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_010.txt",
+          "digest": "508e655a75115f13",
+          "bytes": "10321"
+        },
+        {
+          "rel": "books/03/pipeline/needs_fix/ch_002_issues.json",
+          "digest": "7a122fef40f833f7",
+          "bytes": "892"
+        },
+        {
+          "rel": "books/03/pipeline/needs_fix/ch_005_issues.json",
+          "digest": "bd29d8ad59d57426",
+          "bytes": "976"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_001.promoted",
+          "digest": "aadec41bac2502f7",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_001.txt",
+          "digest": "ee25fe3a0cbaee49",
+          "bytes": "10893"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_001_qc.json",
+          "digest": "9b0fcedaf10a1a13",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_002.promoted",
+          "digest": "f5c254ae9b137042",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_002.txt",
+          "digest": "2dc751f6612b4bd5",
+          "bytes": "10458"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_003.promoted",
+          "digest": "2fc951bb3b0ab20d",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_003.txt",
+          "digest": "80e6a3aed1a0e07a",
+          "bytes": "8625"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_003_qc.json",
+          "digest": "6c59efe2611e6e89",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_004.promoted",
+          "digest": "2fc09729450f123f",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_004.txt",
+          "digest": "b85317fdb2dd0135",
+          "bytes": "10869"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_004_qc.json",
+          "digest": "bbb877a03e73adde",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_005.promoted",
+          "digest": "2df5c623a8af55b5",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_005.txt",
+          "digest": "0efe5341b0c549f4",
+          "bytes": "9542"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_006.promoted",
+          "digest": "e7edd02771c03458",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_006.txt",
+          "digest": "d49e8a2c96266831",
+          "bytes": "9015"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_006_qc.json",
+          "digest": "341df0b8dff7fd5a",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_007.promoted",
+          "digest": "378dfc1d4a190212",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_007.txt",
+          "digest": "3ec6d6a8bd117c2e",
+          "bytes": "8654"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_007_qc.json",
+          "digest": "341df0b8dff7fd5a",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_008.promoted",
+          "digest": "976d28e43b614dc0",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_008.txt",
+          "digest": "8ae5ba6bc5d53244",
+          "bytes": "9999"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_008_qc.json",
+          "digest": "a77a4beb43496692",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_009.promoted",
+          "digest": "8ee488c328bb977e",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_009.txt",
+          "digest": "46dad5c947ea7367",
+          "bytes": "9973"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_009_qc.json",
+          "digest": "710cfa8912d23203",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_010.promoted",
+          "digest": "7760d66ab66beecb",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_010.txt",
+          "digest": "508e655a75115f13",
+          "bytes": "10321"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_010_qc.json",
+          "digest": "1c81be405d003edd",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/plan_raw_001_003.txt",
+          "digest": "21143575677fc313",
+          "bytes": "8022"
+        },
+        {
+          "rel": "books/03/plan_raw_004_006.txt",
+          "digest": "62306bdc96155c0a",
+          "bytes": "7455"
+        },
+        {
+          "rel": "books/03/plan_raw_007_009.txt",
+          "digest": "885623a242a7b496",
+          "bytes": "9247"
+        },
+        {
+          "rel": "books/03/plan_raw_010_010.txt",
+          "digest": "f6bc4ba53cb4b6c9",
+          "bytes": "3613"
+        },
+        {
+          "rel": "books/03/prompts/ch_001.txt",
+          "digest": "f464fab66858bbe8",
+          "bytes": "9319"
+        },
+        {
+          "rel": "books/03/prompts/ch_002.txt",
+          "digest": "1fa1ef6a2f35a2c0",
+          "bytes": "8495"
+        },
+        {
+          "rel": "books/03/prompts/ch_003.txt",
+          "digest": "f6f3cce061be1795",
+          "bytes": "8694"
+        },
+        {
+          "rel": "books/03/prompts/ch_004.txt",
+          "digest": "4586e912ec599b98",
+          "bytes": "8732"
+        },
+        {
+          "rel": "books/03/prompts/ch_005.txt",
+          "digest": "4e6047ba64d64a2a",
+          "bytes": "8235"
+        },
+        {
+          "rel": "books/03/prompts/ch_006.txt",
+          "digest": "d06763f88cdd6a2f",
+          "bytes": "8259"
+        },
+        {
+          "rel": "books/03/prompts/ch_007.txt",
+          "digest": "523ae6ba9fbf4187",
+          "bytes": "10712"
+        },
+        {
+          "rel": "books/03/prompts/ch_008.txt",
+          "digest": "4ed6904b6d6e4b00",
+          "bytes": "10446"
+        },
+        {
+          "rel": "books/03/prompts/ch_009.txt",
+          "digest": "bc775a62605ba3d8",
+          "bytes": "10584"
+        },
+        {
+          "rel": "books/03/prompts/ch_010.txt",
+          "digest": "9c8f091c46795463",
+          "bytes": "11007"
+        },
+        {
+          "rel": "books/03/state.json",
+          "digest": "49522603fecb936a",
+          "bytes": "2819"
+        },
+        {
+          "rel": "canon_registry.yaml",
+          "digest": "b274853def92cfb3",
+          "bytes": "383"
+        },
+        {
+          "rel": "concept.yaml",
+          "digest": "3c29f6d80a03f7bf",
+          "bytes": "5311"
+        },
+        {
+          "rel": "direction.yaml",
+          "digest": "a72487fb6453ab21",
+          "bytes": "1907"
+        },
+        {
+          "rel": "manifest.yaml",
+          "digest": "67682ac46867d6b5",
+          "bytes": "778"
+        }
+      ]
+    }
+  },
+  "production_write_refusal_probe": {
+    "ok": true,
+    "code": "CANARY_PRODUCTION_WRITE_REFUSED",
+    "message": "CANARY_PRODUCTION_WRITE_REFUSED: refused probe to production path D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces\\the-bell-names-the-dead\\.canary_probe_should_fail",
+    "target": "D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces\\the-bell-names-the-dead\\.canary_probe_should_fail"
+  },
+  "guard": "armed_during_copy",
+  "created_at": "2026-07-23T12:24:57Z",
+  "source_hashes_after": {
+    "bell": {
+      "root": "D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces\\the-bell-names-the-dead",
+      "exists": true,
+      "file_count": 82,
+      "digest": "4729bc85c0738a1a",
+      "files": [
+        {
+          "rel": "batch_progress.json",
+          "digest": "3bda5a9fc93cc739",
+          "bytes": "865"
+        },
+        {
+          "rel": "bible/narrative/_meta.json",
+          "digest": "dc6d171ed88eaa76",
+          "bytes": "96"
+        },
+        {
+          "rel": "bible/narrative/book_arc.json",
+          "digest": "c305dbbd080086ff",
+          "bytes": "1793"
+        },
+        {
+          "rel": "bible/narrative/chapter_canon_gates.json",
+          "digest": "95d3253f33d129da",
+          "bytes": "2686"
+        },
+        {
+          "rel": "bible/narrative/kernel.json",
+          "digest": "91dd1ed6caa1e65f",
+          "bytes": "2875"
+        },
+        {
+          "rel": "bible/narrative/knowledge_matrix.json",
+          "digest": "8464ccf96a733ee4",
+          "bytes": "7067"
+        },
+        {
+          "rel": "bible/narrative/mystery_ledger.json",
+          "digest": "6576bbf5cb4340b3",
+          "bytes": "5454"
+        },
+        {
+          "rel": "bible/narrative/threads.json",
+          "digest": "aff5ea972dd60189",
+          "bytes": "4637"
+        },
+        {
+          "rel": "bible/series.json",
+          "digest": "226043d25d755251",
+          "bytes": "6818"
+        },
+        {
+          "rel": "books/01/master_plan.json",
+          "digest": "47c8004d406d415c",
+          "bytes": "69454"
+        },
+        {
+          "rel": "books/01/payloads/ch_001_attempt_1.json",
+          "digest": "438fdfe8bc38775c",
+          "bytes": "22759"
+        },
+        {
+          "rel": "books/01/payloads/ch_002_attempt_1.json",
+          "digest": "3397893c101e6e19",
+          "bytes": "24009"
+        },
+        {
+          "rel": "books/01/payloads/ch_003_attempt_1.json",
+          "digest": "ad751c207d9a0544",
+          "bytes": "29333"
+        },
+        {
+          "rel": "books/01/payloads/ch_004_attempt_1.json",
+          "digest": "b85f249ee5a8b4cc",
+          "bytes": "26245"
+        },
+        {
+          "rel": "books/01/payloads/ch_005_attempt_1.json",
+          "digest": "9c126b733e0dd1d5",
+          "bytes": "28777"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_1.json",
+          "digest": "0335c558df3a85b3",
+          "bytes": "31925"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_2.json",
+          "digest": "de04d48e29512b93",
+          "bytes": "31966"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_3.json",
+          "digest": "d1498467a8dfdbf1",
+          "bytes": "31730"
+        },
+        {
+          "rel": "books/01/payloads/ch_007_attempt_1.json",
+          "digest": "0019b530eed0a563",
+          "bytes": "27297"
+        },
+        {
+          "rel": "books/01/payloads/ch_007_attempt_2.json",
+          "digest": "a06020dde5631cb1",
+          "bytes": "29831"
+        },
+        {
+          "rel": "books/01/payloads/ch_008_attempt_1.json",
+          "digest": "94d0e5341ac5dc89",
+          "bytes": "28876"
+        },
+        {
+          "rel": "books/01/payloads/ch_009_attempt_1.json",
+          "digest": "8e45f5dc9c2a7aba",
+          "bytes": "30383"
+        },
+        {
+          "rel": "books/01/payloads/ch_010_attempt_1.json",
+          "digest": "5c9b9e756e6dfcc4",
+          "bytes": "31419"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_002.txt",
+          "digest": "87cd131dd988f43a",
+          "bytes": "10563"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_003.txt",
+          "digest": "184e03677e800a6c",
+          "bytes": "10193"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_004.txt",
+          "digest": "257160f071c05d4b",
+          "bytes": "9671"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_005.txt",
+          "digest": "06b5f99ecfd933ef",
+          "bytes": "9202"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_006.txt",
+          "digest": "8a0c5b18f029e0cf",
+          "bytes": "9575"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_007.txt",
+          "digest": "bbf74cfe50397cde",
+          "bytes": "11092"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_008.txt",
+          "digest": "131f4d0935d93b77",
+          "bytes": "10920"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_009.txt",
+          "digest": "f03d5e15de1f8379",
+          "bytes": "9948"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_010.txt",
+          "digest": "166fbd0631ac705d",
+          "bytes": "10116"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_001_issues.json",
+          "digest": "196faf2b8ef2be8f",
+          "bytes": "807"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_007_issues.json",
+          "digest": "3078a89e31b151ed",
+          "bytes": "1960"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_007_qc.json",
+          "digest": "91b6387641c2d170",
+          "bytes": "1593"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_001.promoted",
+          "digest": "79447f5fab401e18",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_001.txt",
+          "digest": "d1ab558ebf48fba9",
+          "bytes": "9392"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002.promoted",
+          "digest": "a35a90f81800995e",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002.txt",
+          "digest": "87cd131dd988f43a",
+          "bytes": "10563"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002_qc.json",
+          "digest": "62388e8e5da4c850",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_003.promoted",
+          "digest": "31170f943aa5dc8e",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_003.txt",
+          "digest": "184e03677e800a6c",
+          "bytes": "10193"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_003_qc.json",
+          "digest": "43fd68c4fe1875f9",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_004.promoted",
+          "digest": "c4428691f8301ade",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_004.txt",
+          "digest": "257160f071c05d4b",
+          "bytes": "9671"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_004_qc.json",
+          "digest": "b6294896253e3d0b",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_005.promoted",
+          "digest": "1dfc8add556ed618",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_005.txt",
+          "digest": "06b5f99ecfd933ef",
+          "bytes": "9202"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_005_qc.json",
+          "digest": "cc5c1737e552245d",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_006.promoted",
+          "digest": "61645fe1b381f4b1",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_006.txt",
+          "digest": "8a0c5b18f029e0cf",
+          "bytes": "9575"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_006_qc.json",
+          "digest": "19cd4df8ef97394b",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_007.promoted",
+          "digest": "106cf911c8491131",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_007.txt",
+          "digest": "6ed4888e91aa7494",
+          "bytes": "11334"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008.promoted",
+          "digest": "260b8ceef151ca4f",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008.txt",
+          "digest": "131f4d0935d93b77",
+          "bytes": "10920"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008_qc.json",
+          "digest": "6ef6000801c166ea",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_009.promoted",
+          "digest": "a1284d522b7b11e9",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_009.txt",
+          "digest": "f03d5e15de1f8379",
+          "bytes": "9948"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_009_qc.json",
+          "digest": "62fd65c7f4004ca3",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_010.promoted",
+          "digest": "807908bf285786c9",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_010.txt",
+          "digest": "166fbd0631ac705d",
+          "bytes": "10116"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_010_qc.json",
+          "digest": "426f0bf148226700",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/plan_raw_001_003.txt",
+          "digest": "855e758c732b95ab",
+          "bytes": "8707"
+        },
+        {
+          "rel": "books/01/plan_raw_004_006.txt",
+          "digest": "194ab63a9ac02f82",
+          "bytes": "9132"
+        },
+        {
+          "rel": "books/01/plan_raw_007_009.txt",
+          "digest": "da064a95190a0413",
+          "bytes": "9389"
+        },
+        {
+          "rel": "books/01/plan_raw_010_010.txt",
+          "digest": "21bb56750fc565f8",
+          "bytes": "3840"
+        },
+        {
+          "rel": "books/01/prompts/ch_001.txt",
+          "digest": "c8c95fab8b2daee6",
+          "bytes": "10511"
+        },
+        {
+          "rel": "books/01/prompts/ch_002.txt",
+          "digest": "f2d1ca09d8f1cd9c",
+          "bytes": "10588"
+        },
+        {
+          "rel": "books/01/prompts/ch_003.txt",
+          "digest": "632d5374085ec68f",
+          "bytes": "10666"
+        },
+        {
+          "rel": "books/01/prompts/ch_004.txt",
+          "digest": "afa78ca361b0386f",
+          "bytes": "10830"
+        },
+        {
+          "rel": "books/01/prompts/ch_005.txt",
+          "digest": "467c94ad46b03968",
+          "bytes": "11116"
+        },
+        {
+          "rel": "books/01/prompts/ch_006.txt",
+          "digest": "34d3c43b8ca88cee",
+          "bytes": "11325"
+        },
+        {
+          "rel": "books/01/prompts/ch_007.txt",
+          "digest": "9737af5e01c97306",
+          "bytes": "10439"
+        },
+        {
+          "rel": "books/01/prompts/ch_008.txt",
+          "digest": "fa38451286549d5f",
+          "bytes": "12142"
+        },
+        {
+          "rel": "books/01/prompts/ch_009.txt",
+          "digest": "266a1ab692796d1a",
+          "bytes": "11978"
+        },
+        {
+          "rel": "books/01/prompts/ch_010.txt",
+          "digest": "4917781a593d9224",
+          "bytes": "12860"
+        },
+        {
+          "rel": "books/01/state.json",
+          "digest": "ab11c1911df312a1",
+          "bytes": "6408"
+        },
+        {
+          "rel": "canon_registry.yaml",
+          "digest": "3caba2819b6a3ad7",
+          "bytes": "277"
+        },
+        {
+          "rel": "concept.yaml",
+          "digest": "6c71a6f48961ee8d",
+          "bytes": "11294"
+        },
+        {
+          "rel": "direction.yaml",
+          "digest": "13eca99b22985ff1",
+          "bytes": "2187"
+        },
+        {
+          "rel": "manifest.yaml",
+          "digest": "985a1ddb9efe6de6",
+          "bytes": "511"
+        }
+      ]
+    },
+    "standalone": {
+      "root": "D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces\\his-final-target",
+      "exists": true,
+      "file_count": 112,
+      "digest": "f2ea10033648b02f",
+      "files": [
+        {
+          "rel": "batch_progress.json",
+          "digest": "c30d2f28927fdfbc",
+          "bytes": "2243"
+        },
+        {
+          "rel": "bible/narrative/book_arc.json",
+          "digest": "8fb055e636d4487c",
+          "bytes": "5269"
+        },
+        {
+          "rel": "bible/narrative/kernel.json",
+          "digest": "56f0f272cab36571",
+          "bytes": "2646"
+        },
+        {
+          "rel": "bible/narrative/knowledge_matrix.json",
+          "digest": "46749e268c61a6b9",
+          "bytes": "4148"
+        },
+        {
+          "rel": "bible/narrative/mystery_ledger.json",
+          "digest": "a02024a1e2d0461f",
+          "bytes": "4975"
+        },
+        {
+          "rel": "bible/narrative/threads.json",
+          "digest": "0590a2859cca6fc2",
+          "bytes": "1446"
+        },
+        {
+          "rel": "bible/series.json",
+          "digest": "1bb2f9407f8ea6a9",
+          "bytes": "8379"
+        },
+        {
+          "rel": "books/01/master_plan.json",
+          "digest": "b0b953f2e63a9601",
+          "bytes": "111897"
+        },
+        {
+          "rel": "books/01/payloads/ch_001_attempt_1.json",
+          "digest": "406ddfc039cc9457",
+          "bytes": "27451"
+        },
+        {
+          "rel": "books/01/payloads/ch_002_attempt_1.json",
+          "digest": "8be785c09c6f1fc2",
+          "bytes": "22796"
+        },
+        {
+          "rel": "books/01/payloads/ch_002_attempt_2.json",
+          "digest": "c9396682ddcc53e1",
+          "bytes": "27383"
+        },
+        {
+          "rel": "books/01/payloads/ch_003_attempt_1.json",
+          "digest": "aa0b5b2bb4166843",
+          "bytes": "20988"
+        },
+        {
+          "rel": "books/01/payloads/ch_003_attempt_2.json",
+          "digest": "4df77e22123318fb",
+          "bytes": "28080"
+        },
+        {
+          "rel": "books/01/payloads/ch_004_attempt_1.json",
+          "digest": "3f9fff814eb271e1",
+          "bytes": "35793"
+        },
+        {
+          "rel": "books/01/payloads/ch_004_attempt_2.json",
+          "digest": "2d995105451c4bb4",
+          "bytes": "22363"
+        },
+        {
+          "rel": "books/01/payloads/ch_004_attempt_3.json",
+          "digest": "b023b341a06038b2",
+          "bytes": "23209"
+        },
+        {
+          "rel": "books/01/payloads/ch_004_attempt_4.json",
+          "digest": "d732c995249f6adb",
+          "bytes": "23580"
+        },
+        {
+          "rel": "books/01/payloads/ch_005_attempt_1.json",
+          "digest": "9e1bf4026f858526",
+          "bytes": "26630"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_1.json",
+          "digest": "0e3ace5637face66",
+          "bytes": "36681"
+        },
+        {
+          "rel": "books/01/payloads/ch_007_attempt_1.json",
+          "digest": "3a67f3b43dba8e1e",
+          "bytes": "34345"
+        },
+        {
+          "rel": "books/01/payloads/ch_008_attempt_1.json",
+          "digest": "c50b50d7cb630a78",
+          "bytes": "44721"
+        },
+        {
+          "rel": "books/01/payloads/ch_009_attempt_1.json",
+          "digest": "a6be0040ac182f31",
+          "bytes": "53712"
+        },
+        {
+          "rel": "books/01/payloads/ch_010_attempt_1.json",
+          "digest": "72275be13bd9ab2e",
+          "bytes": "49755"
+        },
+        {
+          "rel": "books/01/payloads/ch_011_attempt_1.json",
+          "digest": "df5f043cab7cbd7f",
+          "bytes": "49756"
+        },
+        {
+          "rel": "books/01/payloads/ch_012_attempt_1.json",
+          "digest": "31e7b1c9c731097a",
+          "bytes": "48634"
+        },
+        {
+          "rel": "books/01/payloads/ch_013_attempt_1.json",
+          "digest": "dcbfff2c888625f0",
+          "bytes": "33891"
+        },
+        {
+          "rel": "books/01/payloads/ch_013_attempt_2.json",
+          "digest": "7d3b70226e9f577b",
+          "bytes": "39752"
+        },
+        {
+          "rel": "books/01/payloads/ch_014_attempt_1.json",
+          "digest": "a8c33a408ab5e7e8",
+          "bytes": "50271"
+        },
+        {
+          "rel": "books/01/payloads/ch_015_attempt_1.json",
+          "digest": "255ec978535ff04c",
+          "bytes": "50918"
+        },
+        {
+          "rel": "books/01/payloads/ch_016_attempt_1.json",
+          "digest": "d9181d386cd91281",
+          "bytes": "33490"
+        },
+        {
+          "rel": "books/01/payloads/ch_016_attempt_2.json",
+          "digest": "3c72244334ba5640",
+          "bytes": "33561"
+        },
+        {
+          "rel": "books/01/payloads/ch_016_attempt_3.json",
+          "digest": "a2580fae4c594069",
+          "bytes": "34723"
+        },
+        {
+          "rel": "books/01/payloads/ch_017_attempt_1.json",
+          "digest": "a78b52fcb3d5a4fa",
+          "bytes": "47404"
+        },
+        {
+          "rel": "books/01/pipeline/markdown_fix_log.jsonl",
+          "digest": "97f2135349d7b1d0",
+          "bytes": "4223"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_003_issues.json",
+          "digest": "daee919b965a0230",
+          "bytes": "3373"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_004_issues.json",
+          "digest": "1f75b2372fabff2c",
+          "bytes": "680"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_005_issues.json",
+          "digest": "523e7d47758dfb11",
+          "bytes": "1862"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_006_issues.json",
+          "digest": "fc02847ef2935ea2",
+          "bytes": "765"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_007_issues.json",
+          "digest": "841aa3eb29937c31",
+          "bytes": "750"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_009_issues.json",
+          "digest": "ad8d982b4aff476a",
+          "bytes": "763"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_010_issues.json",
+          "digest": "7243928876c3f6fc",
+          "bytes": "763"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_011_issues.json",
+          "digest": "7cbf754a04c58a30",
+          "bytes": "762"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_012_issues.json",
+          "digest": "8b4d51f9af2902d3",
+          "bytes": "763"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_014_issues.json",
+          "digest": "4fac1df54af8be6a",
+          "bytes": "927"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_015_issues.json",
+          "digest": "cab4a03c0990d94a",
+          "bytes": "763"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_001.promoted",
+          "digest": "e290a834b0fee81c",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_001.txt",
+          "digest": "092356550a6ca1bd",
+          "bytes": "14023"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_001_qc.json",
+          "digest": "ff043cfb18377195",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002.promoted",
+          "digest": "739d7d3d0bca7203",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002.txt",
+          "digest": "1431caa30b0fdcb9",
+          "bytes": "9870"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002_qc.json",
+          "digest": "17837fbd56e2e1e8",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_003.promoted",
+          "digest": "57846387f860727f",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_003.txt",
+          "digest": "6e9f225da584435e",
+          "bytes": "12379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_004.promoted",
+          "digest": "7d630ed9d6edf4f9",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_004.txt",
+          "digest": "b19cc7979ddd27dd",
+          "bytes": "14614"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_005.promoted",
+          "digest": "939281417e817ac5",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_005.txt",
+          "digest": "246789f340b17e87",
+          "bytes": "8053"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_006.promoted",
+          "digest": "5c85360146c1224e",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_006.txt",
+          "digest": "cda1283193a9e998",
+          "bytes": "14530"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_007.promoted",
+          "digest": "85db8cdefe1e6c3b",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_007.txt",
+          "digest": "9c6432e3e2626e93",
+          "bytes": "14380"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008.promoted",
+          "digest": "c9f0c9bd42139b16",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008.txt",
+          "digest": "d7f3941745e613a8",
+          "bytes": "13617"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008_qc.json",
+          "digest": "ee7c31914efdf77f",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_009.promoted",
+          "digest": "095e7e835fa9a479",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_009.txt",
+          "digest": "b07f97cd5fac0620",
+          "bytes": "13080"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_010.promoted",
+          "digest": "a29c7ec6e60a5880",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_010.txt",
+          "digest": "5d06c77b836b088d",
+          "bytes": "13669"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_011.promoted",
+          "digest": "120f534ad2d2c884",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_011.txt",
+          "digest": "c590529fd94cc9a7",
+          "bytes": "13717"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_012.promoted",
+          "digest": "d049e7ccb604c0f7",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_012.txt",
+          "digest": "9b581a5b900da5ca",
+          "bytes": "12189"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_013.promoted",
+          "digest": "39f00a4d96d948a8",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_013.txt",
+          "digest": "5ad5d562fe39e8c1",
+          "bytes": "12011"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_014.promoted",
+          "digest": "6e3fe4debec186f3",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_014.txt",
+          "digest": "c4de8a144a4e9206",
+          "bytes": "13244"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_015.promoted",
+          "digest": "1ca1274032e6baf7",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_015.txt",
+          "digest": "47c92cad058096f7",
+          "bytes": "11873"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_016.promoted",
+          "digest": "e81419ed0aef747f",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_016.txt",
+          "digest": "2f1710987aa70f9e",
+          "bytes": "8048"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_016_qc.json",
+          "digest": "b0c5ee0a513d5063",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_017.promoted",
+          "digest": "7a6f830f22a3d7e4",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_017.txt",
+          "digest": "4a56264dec1e90b0",
+          "bytes": "11544"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_017_qc.json",
+          "digest": "f6ef323faf7dfc9f",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/01/plan_raw_001_003.txt",
+          "digest": "9b66da5e9bd936bc",
+          "bytes": "11001"
+        },
+        {
+          "rel": "books/01/plan_raw_004_006.txt",
+          "digest": "fff7462983dd18a7",
+          "bytes": "8520"
+        },
+        {
+          "rel": "books/01/plan_raw_007_009.txt",
+          "digest": "db9821917853263b",
+          "bytes": "22769"
+        },
+        {
+          "rel": "books/01/plan_raw_010_012.txt",
+          "digest": "07be9a7119f7b899",
+          "bytes": "13857"
+        },
+        {
+          "rel": "books/01/plan_raw_013_015.txt",
+          "digest": "1939d24d8209ae38",
+          "bytes": "13973"
+        },
+        {
+          "rel": "books/01/plan_raw_016_017.txt",
+          "digest": "eec41cf9267ca8be",
+          "bytes": "8983"
+        },
+        {
+          "rel": "books/01/prompts/ch_001.txt",
+          "digest": "af45804c2ad7c6d3",
+          "bytes": "10525"
+        },
+        {
+          "rel": "books/01/prompts/ch_002.txt",
+          "digest": "739c1c4f1bc8fb98",
+          "bytes": "11081"
+        },
+        {
+          "rel": "books/01/prompts/ch_003.txt",
+          "digest": "0548ebda7a3fa6c1",
+          "bytes": "10873"
+        },
+        {
+          "rel": "books/01/prompts/ch_004.txt",
+          "digest": "e789d54e45b697db",
+          "bytes": "10317"
+        },
+        {
+          "rel": "books/01/prompts/ch_005.txt",
+          "digest": "0af3d2639e50ad1a",
+          "bytes": "10551"
+        },
+        {
+          "rel": "books/01/prompts/ch_006.txt",
+          "digest": "71c6edf9a5ef4af7",
+          "bytes": "10897"
+        },
+        {
+          "rel": "books/01/prompts/ch_007.txt",
+          "digest": "96611a68a4669770",
+          "bytes": "11827"
+        },
+        {
+          "rel": "books/01/prompts/ch_008.txt",
+          "digest": "5b56abe1a60d8304",
+          "bytes": "12320"
+        },
+        {
+          "rel": "books/01/prompts/ch_009.txt",
+          "digest": "356bcbfee0cfb450",
+          "bytes": "13933"
+        },
+        {
+          "rel": "books/01/prompts/ch_010.txt",
+          "digest": "b252e211010da16d",
+          "bytes": "11998"
+        },
+        {
+          "rel": "books/01/prompts/ch_011.txt",
+          "digest": "871afe49adeca055",
+          "bytes": "12066"
+        },
+        {
+          "rel": "books/01/prompts/ch_012.txt",
+          "digest": "f8767dfb4404fccc",
+          "bytes": "12492"
+        },
+        {
+          "rel": "books/01/prompts/ch_013.txt",
+          "digest": "78545124b3a3b0d8",
+          "bytes": "13521"
+        },
+        {
+          "rel": "books/01/prompts/ch_014.txt",
+          "digest": "edbac8224b279962",
+          "bytes": "13040"
+        },
+        {
+          "rel": "books/01/prompts/ch_015.txt",
+          "digest": "08060f5f0d29a53a",
+          "bytes": "12422"
+        },
+        {
+          "rel": "books/01/prompts/ch_016.txt",
+          "digest": "7e30952251ddba23",
+          "bytes": "12307"
+        },
+        {
+          "rel": "books/01/prompts/ch_017.txt",
+          "digest": "acdd36c201951766",
+          "bytes": "11925"
+        },
+        {
+          "rel": "books/01/state.json",
+          "digest": "ecacb9cae62930b3",
+          "bytes": "12283"
+        },
+        {
+          "rel": "canon_registry.yaml",
+          "digest": "a6d69b4d4d8214fc",
+          "bytes": "297"
+        },
+        {
+          "rel": "concept.yaml",
+          "digest": "373aa56dbea6d07d",
+          "bytes": "12913"
+        },
+        {
+          "rel": "direction.yaml",
+          "digest": "fe41e4c47b7de71e",
+          "bytes": "1667"
+        },
+        {
+          "rel": "manifest.yaml",
+          "digest": "3a3f069b50662b41",
+          "bytes": "508"
+        }
+      ]
+    },
+    "series": {
+      "root": "D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces\\the-language-of-the-dead",
+      "exists": true,
+      "file_count": 230,
+      "digest": "c8f8b98a29ac23fe",
+      "files": [
+        {
+          "rel": "batch_progress.json",
+          "digest": "a68224ec048dbb71",
+          "bytes": "2178"
+        },
+        {
+          "rel": "bible/narrative/_meta.json",
+          "digest": "429e61c5c870fae3",
+          "bytes": "96"
+        },
+        {
+          "rel": "bible/narrative/book_arc.json",
+          "digest": "3fff169ccf372676",
+          "bytes": "2589"
+        },
+        {
+          "rel": "bible/narrative/chapter_canon_gates.json",
+          "digest": "0a1ad0c6b3cb3ee5",
+          "bytes": "2202"
+        },
+        {
+          "rel": "bible/narrative/kernel.json",
+          "digest": "37ae029055e0411c",
+          "bytes": "3297"
+        },
+        {
+          "rel": "bible/narrative/knowledge_matrix.json",
+          "digest": "012539cd6ec2a307",
+          "bytes": "10240"
+        },
+        {
+          "rel": "bible/narrative/mystery_ledger.json",
+          "digest": "9ce58014d19e77b3",
+          "bytes": "4160"
+        },
+        {
+          "rel": "bible/narrative/threads.json",
+          "digest": "3499028c3ff1613a",
+          "bytes": "5570"
+        },
+        {
+          "rel": "bible/series.json",
+          "digest": "667618432a069c02",
+          "bytes": "7090"
+        },
+        {
+          "rel": "books/01/master_plan.json",
+          "digest": "500d1ae1976b5705",
+          "bytes": "56268"
+        },
+        {
+          "rel": "books/01/payloads/ch_001_attempt_1.json",
+          "digest": "08b8f2baf6191fcc",
+          "bytes": "18375"
+        },
+        {
+          "rel": "books/01/payloads/ch_001_attempt_2.json",
+          "digest": "73bafbb9422b82b9",
+          "bytes": "24482"
+        },
+        {
+          "rel": "books/01/payloads/ch_002_attempt_1.json",
+          "digest": "b973c057303ef28e",
+          "bytes": "19952"
+        },
+        {
+          "rel": "books/01/payloads/ch_002_attempt_2.json",
+          "digest": "37232012d5f2454d",
+          "bytes": "19521"
+        },
+        {
+          "rel": "books/01/payloads/ch_003_attempt_1.json",
+          "digest": "20e491afba316206",
+          "bytes": "19412"
+        },
+        {
+          "rel": "books/01/payloads/ch_004_attempt_1.json",
+          "digest": "b493dedfeaadba9e",
+          "bytes": "24092"
+        },
+        {
+          "rel": "books/01/payloads/ch_004_attempt_2.json",
+          "digest": "cd7b2e87bd60963e",
+          "bytes": "28426"
+        },
+        {
+          "rel": "books/01/payloads/ch_005_attempt_1.json",
+          "digest": "fdd4d2aa24774d94",
+          "bytes": "27357"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_1.json",
+          "digest": "c703adca76de4bce",
+          "bytes": "28735"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_2.json",
+          "digest": "4513684cd175ee36",
+          "bytes": "23140"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_3.json",
+          "digest": "8a1a92802a29e948",
+          "bytes": "28167"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_4.json",
+          "digest": "d2b86c22e51b1d4d",
+          "bytes": "29837"
+        },
+        {
+          "rel": "books/01/payloads/ch_006_attempt_5.json",
+          "digest": "22522f11ad6a2daf",
+          "bytes": "32636"
+        },
+        {
+          "rel": "books/01/payloads/ch_007_attempt_1.json",
+          "digest": "cd60726fe9e9d458",
+          "bytes": "27025"
+        },
+        {
+          "rel": "books/01/payloads/ch_007_attempt_2.json",
+          "digest": "0eb4f5487257ccac",
+          "bytes": "23911"
+        },
+        {
+          "rel": "books/01/payloads/ch_007_attempt_3.json",
+          "digest": "0bed916954dd3bf0",
+          "bytes": "28343"
+        },
+        {
+          "rel": "books/01/payloads/ch_008_attempt_1.json",
+          "digest": "4304b7cf04c3f805",
+          "bytes": "26356"
+        },
+        {
+          "rel": "books/01/payloads/ch_008_attempt_2.json",
+          "digest": "2bc1777e6767b956",
+          "bytes": "39731"
+        },
+        {
+          "rel": "books/01/payloads/ch_008_attempt_3.json",
+          "digest": "828b1fc922c014fb",
+          "bytes": "40999"
+        },
+        {
+          "rel": "books/01/payloads/ch_008_attempt_4.json",
+          "digest": "0473b7e80b35e42b",
+          "bytes": "39506"
+        },
+        {
+          "rel": "books/01/payloads/ch_009_attempt_1.json",
+          "digest": "df65b9eb7a5435f0",
+          "bytes": "41523"
+        },
+        {
+          "rel": "books/01/payloads/ch_010_attempt_1.json",
+          "digest": "523ee23e155b1c9c",
+          "bytes": "35996"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_001.txt",
+          "digest": "b307cdd0c8470ba5",
+          "bytes": "13131"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_002.txt",
+          "digest": "86cf88e2ca5266d5",
+          "bytes": "7981"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_003.txt",
+          "digest": "f31f737703aaab69",
+          "bytes": "7753"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_006.txt",
+          "digest": "69e005d1d7f2e31f",
+          "bytes": "9690"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_008.txt",
+          "digest": "baff44e6ca083e8d",
+          "bytes": "13562"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_009.txt",
+          "digest": "390303e513af0df4",
+          "bytes": "15389"
+        },
+        {
+          "rel": "books/01/pipeline/draft/ch_010.txt",
+          "digest": "7b287f2a9d5317e0",
+          "bytes": "12450"
+        },
+        {
+          "rel": "books/01/pipeline/markdown_fix_log.jsonl",
+          "digest": "4e5ef4f17b81c0c5",
+          "bytes": "2598"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_007_issues.json",
+          "digest": "45c8026d22c40f2a",
+          "bytes": "736"
+        },
+        {
+          "rel": "books/01/pipeline/needs_fix/ch_007_qc.json",
+          "digest": "79825a0f258566b8",
+          "bytes": "194"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_001_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_002_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_003_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_004.txt",
+          "digest": "70d6d15c4d619eea",
+          "bytes": "10015"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_004_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_005.txt",
+          "digest": "10fdb22dae6ccba7",
+          "bytes": "7886"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_005_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_006_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_008_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_009_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/needs_review/ch_010_qc.json",
+          "digest": "7f410b6b7a52866f",
+          "bytes": "537"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_001.promoted",
+          "digest": "3bf863c63c7c6111",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_001.txt",
+          "digest": "b307cdd0c8470ba5",
+          "bytes": "13131"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002.promoted",
+          "digest": "06b6e1d9d6345046",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_002.txt",
+          "digest": "dfe4bf84de63727f",
+          "bytes": "7982"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_003.promoted",
+          "digest": "b1b41c9322f26a92",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_003.txt",
+          "digest": "f31f737703aaab69",
+          "bytes": "7753"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_004.promoted",
+          "digest": "b6c9003541fbd5a4",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_004.txt",
+          "digest": "ea01440eeafbbe5d",
+          "bytes": "10017"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_005.promoted",
+          "digest": "ce36b94cc15f7fd5",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_005.txt",
+          "digest": "097d1e540e2d348e",
+          "bytes": "7888"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_006.promoted",
+          "digest": "d345998b00f8f451",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_006.txt",
+          "digest": "69e005d1d7f2e31f",
+          "bytes": "9690"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_007.promoted",
+          "digest": "62be1b2f7994f644",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_007.txt",
+          "digest": "03b690a2739352ee",
+          "bytes": "8073"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008.promoted",
+          "digest": "acbdb301f76ced30",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_008.txt",
+          "digest": "baff44e6ca083e8d",
+          "bytes": "13562"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_009.promoted",
+          "digest": "3f597c53cb53ce6e",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_009.txt",
+          "digest": "390303e513af0df4",
+          "bytes": "15389"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_010.promoted",
+          "digest": "102ddbcef9a6d360",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/01/pipeline/ready/ch_010.txt",
+          "digest": "7b287f2a9d5317e0",
+          "bytes": "12450"
+        },
+        {
+          "rel": "books/01/plan_raw_001_003.txt",
+          "digest": "047faf4d9604f0a8",
+          "bytes": "9603"
+        },
+        {
+          "rel": "books/01/plan_raw_004_006.txt",
+          "digest": "ab4cafdd937d4aed",
+          "bytes": "12728"
+        },
+        {
+          "rel": "books/01/plan_raw_007_009.txt",
+          "digest": "93bdf2365e4b9291",
+          "bytes": "16655"
+        },
+        {
+          "rel": "books/01/plan_raw_010_010.txt",
+          "digest": "c22ee8ed8e64cc1c",
+          "bytes": "6367"
+        },
+        {
+          "rel": "books/01/prompts/ch_001.txt",
+          "digest": "9ed9aac02dff1adf",
+          "bytes": "8194"
+        },
+        {
+          "rel": "books/01/prompts/ch_002.txt",
+          "digest": "21950c2dc21cb9da",
+          "bytes": "8483"
+        },
+        {
+          "rel": "books/01/prompts/ch_003.txt",
+          "digest": "5986c0b0654983f8",
+          "bytes": "8754"
+        },
+        {
+          "rel": "books/01/prompts/ch_004.txt",
+          "digest": "ba5643946f520869",
+          "bytes": "9021"
+        },
+        {
+          "rel": "books/01/prompts/ch_005.txt",
+          "digest": "0e7a8a438d59c77a",
+          "bytes": "9478"
+        },
+        {
+          "rel": "books/01/prompts/ch_006.txt",
+          "digest": "1bf9a1887ea6f323",
+          "bytes": "10067"
+        },
+        {
+          "rel": "books/01/prompts/ch_007.txt",
+          "digest": "81e8f2bd475b341e",
+          "bytes": "9837"
+        },
+        {
+          "rel": "books/01/prompts/ch_008.txt",
+          "digest": "29765fa5aa60606b",
+          "bytes": "10035"
+        },
+        {
+          "rel": "books/01/prompts/ch_009.txt",
+          "digest": "d84db67ce91c1ab2",
+          "bytes": "10069"
+        },
+        {
+          "rel": "books/01/prompts/ch_010.txt",
+          "digest": "1c5af8b2f309af24",
+          "bytes": "10838"
+        },
+        {
+          "rel": "books/01/state.json",
+          "digest": "e1b5bf7b4fa2dde9",
+          "bytes": "9557"
+        },
+        {
+          "rel": "books/02/concept.yaml",
+          "digest": "a145e13b60b74545",
+          "bytes": "8115"
+        },
+        {
+          "rel": "books/02/master_plan.json",
+          "digest": "7fc4654c27d4896e",
+          "bytes": "84345"
+        },
+        {
+          "rel": "books/02/payloads/ch_001_attempt_1.json",
+          "digest": "37a119c5782e2207",
+          "bytes": "23032"
+        },
+        {
+          "rel": "books/02/payloads/ch_002_attempt_1.json",
+          "digest": "d5614d1c1ac7b454",
+          "bytes": "27386"
+        },
+        {
+          "rel": "books/02/payloads/ch_003_attempt_1.json",
+          "digest": "cacd04d1b35239f8",
+          "bytes": "30982"
+        },
+        {
+          "rel": "books/02/payloads/ch_004_attempt_1.json",
+          "digest": "05dbc036ea62e3a7",
+          "bytes": "31634"
+        },
+        {
+          "rel": "books/02/payloads/ch_005_attempt_1.json",
+          "digest": "f1fb690a89e28325",
+          "bytes": "35124"
+        },
+        {
+          "rel": "books/02/payloads/ch_006_attempt_1.json",
+          "digest": "2cf26453c6f581f4",
+          "bytes": "37466"
+        },
+        {
+          "rel": "books/02/payloads/ch_006_attempt_2.json",
+          "digest": "760b3a17dfaa0220",
+          "bytes": "37918"
+        },
+        {
+          "rel": "books/02/payloads/ch_007_attempt_1.json",
+          "digest": "01d3e039cb7a933a",
+          "bytes": "40550"
+        },
+        {
+          "rel": "books/02/payloads/ch_007_attempt_2.json",
+          "digest": "d762e5eeb79b0899",
+          "bytes": "44631"
+        },
+        {
+          "rel": "books/02/payloads/ch_008_attempt_1.json",
+          "digest": "9967e3311ab2f316",
+          "bytes": "44502"
+        },
+        {
+          "rel": "books/02/payloads/ch_009_attempt_1.json",
+          "digest": "95f6f871b4ac4b6e",
+          "bytes": "40942"
+        },
+        {
+          "rel": "books/02/payloads/ch_009_attempt_2.json",
+          "digest": "badfe684ac504085",
+          "bytes": "44673"
+        },
+        {
+          "rel": "books/02/payloads/ch_009_attempt_3.json",
+          "digest": "ff81e93fceb5e219",
+          "bytes": "35040"
+        },
+        {
+          "rel": "books/02/payloads/ch_010_attempt_1.json",
+          "digest": "5543404d19d410ab",
+          "bytes": "28481"
+        },
+        {
+          "rel": "books/02/payloads/ch_010_attempt_2.json",
+          "digest": "b3fccd75932274d2",
+          "bytes": "30569"
+        },
+        {
+          "rel": "books/02/payloads/ch_010_attempt_3.json",
+          "digest": "a9f3e86a3a22ad63",
+          "bytes": "29489"
+        },
+        {
+          "rel": "books/02/payloads/ch_010_attempt_4.json",
+          "digest": "ea593be05477aa4a",
+          "bytes": "32194"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_001.txt",
+          "digest": "a093da52d9180f70",
+          "bytes": "10885"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_002.txt",
+          "digest": "296b63b3c532b8ef",
+          "bytes": "9687"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_003.txt",
+          "digest": "f4d1d38f3234083d",
+          "bytes": "10505"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_004.txt",
+          "digest": "8c98adcc05a7844c",
+          "bytes": "10651"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_005.txt",
+          "digest": "e6f141a419f56b4d",
+          "bytes": "11194"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_006.txt",
+          "digest": "04e2efe5db1cfd7b",
+          "bytes": "10837"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_007.txt",
+          "digest": "e77a313ebe59c9ea",
+          "bytes": "10883"
+        },
+        {
+          "rel": "books/02/pipeline/draft/ch_010.txt",
+          "digest": "fd94b5afe2f66a7d",
+          "bytes": "8467"
+        },
+        {
+          "rel": "books/02/pipeline/markdown_fix_log.jsonl",
+          "digest": "1f4143ea365d49ff",
+          "bytes": "887"
+        },
+        {
+          "rel": "books/02/pipeline/needs_fix/ch_008_issues.json",
+          "digest": "fa0ad43c03d31a88",
+          "bytes": "892"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_001.promoted",
+          "digest": "80984f752e2c7d1c",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_001.txt",
+          "digest": "a093da52d9180f70",
+          "bytes": "10885"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_001_qc.json",
+          "digest": "8b834050044e1607",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_002.promoted",
+          "digest": "05b8ccf04299acf8",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_002.txt",
+          "digest": "296b63b3c532b8ef",
+          "bytes": "9687"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_002_qc.json",
+          "digest": "00d7501d58547919",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_003.promoted",
+          "digest": "39fce093a50949c5",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_003.txt",
+          "digest": "f4d1d38f3234083d",
+          "bytes": "10505"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_003_qc.json",
+          "digest": "aeb0fba3dbb1eb62",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_004.promoted",
+          "digest": "2bf1b99b9146aded",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_004.txt",
+          "digest": "8c98adcc05a7844c",
+          "bytes": "10651"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_004_qc.json",
+          "digest": "ef0685fcdeefc9d2",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_005.promoted",
+          "digest": "f4264278506a2b2a",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_005.txt",
+          "digest": "e6f141a419f56b4d",
+          "bytes": "11194"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_005_qc.json",
+          "digest": "2f3991221f347370",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_006.promoted",
+          "digest": "541a7d249da9cb11",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_006.txt",
+          "digest": "04e2efe5db1cfd7b",
+          "bytes": "10837"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_006_qc.json",
+          "digest": "a40dff9ccd0fac3e",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_007.promoted",
+          "digest": "f24f957b96ea2c1d",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_007.txt",
+          "digest": "e77a313ebe59c9ea",
+          "bytes": "10883"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_007_qc.json",
+          "digest": "0513119e09c54d0e",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_008.promoted",
+          "digest": "e40d93ff7607124c",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_008.txt",
+          "digest": "0c30b2cdfb2fc158",
+          "bytes": "10529"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_009.promoted",
+          "digest": "e7c71705d51a43c9",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_009.txt",
+          "digest": "627b3a581738a8ea",
+          "bytes": "10539"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_010.promoted",
+          "digest": "11389bb06899c960",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/02/pipeline/ready/ch_010.txt",
+          "digest": "6fbc21b468e4f348",
+          "bytes": "7354"
+        },
+        {
+          "rel": "books/02/plan_raw_001_003.txt",
+          "digest": "4f94be3372cc1773",
+          "bytes": "8385"
+        },
+        {
+          "rel": "books/02/plan_raw_004_006.txt",
+          "digest": "491603cd74b5f7b5",
+          "bytes": "8997"
+        },
+        {
+          "rel": "books/02/plan_raw_007_009.txt",
+          "digest": "b6d1af3f235e492a",
+          "bytes": "9394"
+        },
+        {
+          "rel": "books/02/plan_raw_010_010.txt",
+          "digest": "4f5d6238c47b31cf",
+          "bytes": "3371"
+        },
+        {
+          "rel": "books/02/prompts/ch_001.txt",
+          "digest": "362ea13100acec6b",
+          "bytes": "9269"
+        },
+        {
+          "rel": "books/02/prompts/ch_002.txt",
+          "digest": "b3288c01da00f07f",
+          "bytes": "9391"
+        },
+        {
+          "rel": "books/02/prompts/ch_003.txt",
+          "digest": "23f3b9b0b8a69f17",
+          "bytes": "9497"
+        },
+        {
+          "rel": "books/02/prompts/ch_004.txt",
+          "digest": "6e0eb2ea20ea70db",
+          "bytes": "9641"
+        },
+        {
+          "rel": "books/02/prompts/ch_005.txt",
+          "digest": "359cc2d068217aa7",
+          "bytes": "9746"
+        },
+        {
+          "rel": "books/02/prompts/ch_006.txt",
+          "digest": "6f125103b972d08c",
+          "bytes": "9822"
+        },
+        {
+          "rel": "books/02/prompts/ch_007.txt",
+          "digest": "5f7716be4dbbda89",
+          "bytes": "10060"
+        },
+        {
+          "rel": "books/02/prompts/ch_008.txt",
+          "digest": "69dbe53d8c34ca5a",
+          "bytes": "10382"
+        },
+        {
+          "rel": "books/02/prompts/ch_009.txt",
+          "digest": "024b70923c0eec7b",
+          "bytes": "10122"
+        },
+        {
+          "rel": "books/02/prompts/ch_010.txt",
+          "digest": "0ded7bbdde47f871",
+          "bytes": "10046"
+        },
+        {
+          "rel": "books/02/state.json",
+          "digest": "b0009f3e0a5d7039",
+          "bytes": "7352"
+        },
+        {
+          "rel": "books/03/concept.yaml",
+          "digest": "af41a07ddc9ccb6f",
+          "bytes": "9723"
+        },
+        {
+          "rel": "books/03/master_plan.json",
+          "digest": "746bf9606548f3aa",
+          "bytes": "67121"
+        },
+        {
+          "rel": "books/03/payloads/ch_001_attempt_1.json",
+          "digest": "fce72cbc4df88b18",
+          "bytes": "23024"
+        },
+        {
+          "rel": "books/03/payloads/ch_002_attempt_1.json",
+          "digest": "7757f320d8614d13",
+          "bytes": "27391"
+        },
+        {
+          "rel": "books/03/payloads/ch_002_attempt_2.json",
+          "digest": "7aef70fa0a3f8ff7",
+          "bytes": "27366"
+        },
+        {
+          "rel": "books/03/payloads/ch_003_attempt_1.json",
+          "digest": "877dda1c60bbb49f",
+          "bytes": "24216"
+        },
+        {
+          "rel": "books/03/payloads/ch_003_attempt_2.json",
+          "digest": "49652d5bd60812e5",
+          "bytes": "23065"
+        },
+        {
+          "rel": "books/03/payloads/ch_004_attempt_1.json",
+          "digest": "459f2c3d8a55fa6a",
+          "bytes": "27904"
+        },
+        {
+          "rel": "books/03/payloads/ch_005_attempt_1.json",
+          "digest": "220aadc7e21c3223",
+          "bytes": "25972"
+        },
+        {
+          "rel": "books/03/payloads/ch_006_attempt_1.json",
+          "digest": "f13da811f6880c6c",
+          "bytes": "22844"
+        },
+        {
+          "rel": "books/03/payloads/ch_007_attempt_1.json",
+          "digest": "b3cf9b70b077178a",
+          "bytes": "27617"
+        },
+        {
+          "rel": "books/03/payloads/ch_008_attempt_1.json",
+          "digest": "5a825ac96f431c0d",
+          "bytes": "28718"
+        },
+        {
+          "rel": "books/03/payloads/ch_009_attempt_1.json",
+          "digest": "f6c10d9bf75d3649",
+          "bytes": "28840"
+        },
+        {
+          "rel": "books/03/payloads/ch_010_attempt_1.json",
+          "digest": "e365a3d1ffc24437",
+          "bytes": "29567"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_001.txt",
+          "digest": "ee25fe3a0cbaee49",
+          "bytes": "10893"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_003.txt",
+          "digest": "80e6a3aed1a0e07a",
+          "bytes": "8625"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_004.txt",
+          "digest": "b85317fdb2dd0135",
+          "bytes": "10869"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_006.txt",
+          "digest": "d49e8a2c96266831",
+          "bytes": "9015"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_007.txt",
+          "digest": "3ec6d6a8bd117c2e",
+          "bytes": "8654"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_008.txt",
+          "digest": "8ae5ba6bc5d53244",
+          "bytes": "9999"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_009.txt",
+          "digest": "46dad5c947ea7367",
+          "bytes": "9973"
+        },
+        {
+          "rel": "books/03/pipeline/draft/ch_010.txt",
+          "digest": "508e655a75115f13",
+          "bytes": "10321"
+        },
+        {
+          "rel": "books/03/pipeline/needs_fix/ch_002_issues.json",
+          "digest": "7a122fef40f833f7",
+          "bytes": "892"
+        },
+        {
+          "rel": "books/03/pipeline/needs_fix/ch_005_issues.json",
+          "digest": "bd29d8ad59d57426",
+          "bytes": "976"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_001.promoted",
+          "digest": "aadec41bac2502f7",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_001.txt",
+          "digest": "ee25fe3a0cbaee49",
+          "bytes": "10893"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_001_qc.json",
+          "digest": "9b0fcedaf10a1a13",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_002.promoted",
+          "digest": "f5c254ae9b137042",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_002.txt",
+          "digest": "2dc751f6612b4bd5",
+          "bytes": "10458"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_003.promoted",
+          "digest": "2fc951bb3b0ab20d",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_003.txt",
+          "digest": "80e6a3aed1a0e07a",
+          "bytes": "8625"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_003_qc.json",
+          "digest": "6c59efe2611e6e89",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_004.promoted",
+          "digest": "2fc09729450f123f",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_004.txt",
+          "digest": "b85317fdb2dd0135",
+          "bytes": "10869"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_004_qc.json",
+          "digest": "bbb877a03e73adde",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_005.promoted",
+          "digest": "2df5c623a8af55b5",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_005.txt",
+          "digest": "0efe5341b0c549f4",
+          "bytes": "9542"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_006.promoted",
+          "digest": "e7edd02771c03458",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_006.txt",
+          "digest": "d49e8a2c96266831",
+          "bytes": "9015"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_006_qc.json",
+          "digest": "341df0b8dff7fd5a",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_007.promoted",
+          "digest": "378dfc1d4a190212",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_007.txt",
+          "digest": "3ec6d6a8bd117c2e",
+          "bytes": "8654"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_007_qc.json",
+          "digest": "341df0b8dff7fd5a",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_008.promoted",
+          "digest": "976d28e43b614dc0",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_008.txt",
+          "digest": "8ae5ba6bc5d53244",
+          "bytes": "9999"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_008_qc.json",
+          "digest": "a77a4beb43496692",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_009.promoted",
+          "digest": "8ee488c328bb977e",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_009.txt",
+          "digest": "46dad5c947ea7367",
+          "bytes": "9973"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_009_qc.json",
+          "digest": "710cfa8912d23203",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_010.promoted",
+          "digest": "7760d66ab66beecb",
+          "bytes": "32"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_010.txt",
+          "digest": "508e655a75115f13",
+          "bytes": "10321"
+        },
+        {
+          "rel": "books/03/pipeline/ready/ch_010_qc.json",
+          "digest": "1c81be405d003edd",
+          "bytes": "379"
+        },
+        {
+          "rel": "books/03/plan_raw_001_003.txt",
+          "digest": "21143575677fc313",
+          "bytes": "8022"
+        },
+        {
+          "rel": "books/03/plan_raw_004_006.txt",
+          "digest": "62306bdc96155c0a",
+          "bytes": "7455"
+        },
+        {
+          "rel": "books/03/plan_raw_007_009.txt",
+          "digest": "885623a242a7b496",
+          "bytes": "9247"
+        },
+        {
+          "rel": "books/03/plan_raw_010_010.txt",
+          "digest": "f6bc4ba53cb4b6c9",
+          "bytes": "3613"
+        },
+        {
+          "rel": "books/03/prompts/ch_001.txt",
+          "digest": "f464fab66858bbe8",
+          "bytes": "9319"
+        },
+        {
+          "rel": "books/03/prompts/ch_002.txt",
+          "digest": "1fa1ef6a2f35a2c0",
+          "bytes": "8495"
+        },
+        {
+          "rel": "books/03/prompts/ch_003.txt",
+          "digest": "f6f3cce061be1795",
+          "bytes": "8694"
+        },
+        {
+          "rel": "books/03/prompts/ch_004.txt",
+          "digest": "4586e912ec599b98",
+          "bytes": "8732"
+        },
+        {
+          "rel": "books/03/prompts/ch_005.txt",
+          "digest": "4e6047ba64d64a2a",
+          "bytes": "8235"
+        },
+        {
+          "rel": "books/03/prompts/ch_006.txt",
+          "digest": "d06763f88cdd6a2f",
+          "bytes": "8259"
+        },
+        {
+          "rel": "books/03/prompts/ch_007.txt",
+          "digest": "523ae6ba9fbf4187",
+          "bytes": "10712"
+        },
+        {
+          "rel": "books/03/prompts/ch_008.txt",
+          "digest": "4ed6904b6d6e4b00",
+          "bytes": "10446"
+        },
+        {
+          "rel": "books/03/prompts/ch_009.txt",
+          "digest": "bc775a62605ba3d8",
+          "bytes": "10584"
+        },
+        {
+          "rel": "books/03/prompts/ch_010.txt",
+          "digest": "9c8f091c46795463",
+          "bytes": "11007"
+        },
+        {
+          "rel": "books/03/state.json",
+          "digest": "49522603fecb936a",
+          "bytes": "2819"
+        },
+        {
+          "rel": "canon_registry.yaml",
+          "digest": "b274853def92cfb3",
+          "bytes": "383"
+        },
+        {
+          "rel": "concept.yaml",
+          "digest": "3c29f6d80a03f7bf",
+          "bytes": "5311"
+        },
+        {
+          "rel": "direction.yaml",
+          "digest": "a72487fb6453ab21",
+          "bytes": "1907"
+        },
+        {
+          "rel": "manifest.yaml",
+          "digest": "67682ac46867d6b5",
+          "bytes": "778"
+        }
+      ]
+    }
+  },
+  "production_unchanged": true
+}

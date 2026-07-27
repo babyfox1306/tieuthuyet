@@ -1,0 +1,15 @@
+characters:
+  female_lead:
+    canonical: Sofia Bellini
+    allowed_aliases:
+    - Sofia
+    - Bellini
+    forbidden_aliases: []
+  male_lead:
+    # Book 3 POV protagonist (Books 1–2 male lead Elias is supporting / transcript-only)
+    canonical: Pierre Leclerc
+    allowed_aliases:
+    - Pierre
+    - Leclerc
+    forbidden_aliases: []
+pov_mode: third_person_limited

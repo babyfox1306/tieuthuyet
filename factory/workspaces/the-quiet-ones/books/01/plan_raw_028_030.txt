@@ -1,0 +1,85 @@
+```json
+{
+  "act": [28, 30],
+  "chapter_plans": [
+    {
+      "chapter": 28,
+      "title": "The False Victory",
+      "slug": "the-false-victory",
+      "one_line_summary": "Elle Reyes believes she has cornered Kroll by leaking the Voss recording, but his counter-strike — releasing the Project Phoenix file to Detective Cole — proves he had a dead man's switch all along.",
+      "beat_summary": "Elle Reyes leaks the edited Voss recording to the journalist, and the story breaks — Kroll's empire is cracking. She feels the rush of a false victory. Kroll calls her, furious and shaken, confirming her theory that he fears Voss more than her. But the call is a delay tactic. While she's gloating, Kroll triggers his dead man's switch: he releases the full Project Phoenix file — evidence of Elle's first kill — to Detective Marcus Cole. Elle receives a call from Cole, who asks her to come to the station for questioning about a death in Nevada. The false victory flips: she hasn't won; she's been outmaneuvered. The chapter ends with Elle staring at her phone, realizing Kroll has handed her to the law.",
+      "must_happen": [
+        "Elle Reyes leaks the edited Voss recording to the journalist; the story breaks publicly, shaking Kroll's empire.",
+        "Damien Kroll calls Elle Reyes, furious and shaken — the call confirms Kroll fears Voss more than Elle.",
+        "While Elle Reyes is processing the call, Damien Kroll triggers his dead man's switch: he releases the full Project Phoenix file to Detective Marcus Cole.",
+        "Detective Marcus Cole calls Elle Reyes and asks her to come to the station for questioning about a death in Nevada — the trap is sprung.",
+        "Elle Reyes realizes the false victory: she hasn't won; Kroll has handed her to the law, and she has 24 hours before she must walk into the station."
+      ],
+      "must_not": [
+        "Do not show the full contents of the Project Phoenix file being revealed to Cole — only that Kroll has released it.",
+        "Do not show Elle Reyes being arrested — only that Cole has called her in for questioning."
+      ],
+      "opens_with": "\"'You think you've won something.' Kroll's voice was shaking. I had never heard him shake before. 'You think you're clever.' I smiled. 'I think I've just started.'\"",
+      "cliffhanger": "Elle Reyes hangs up on Detective Cole and stares at her phone. Her thumb taps her ring finger three times. She has twenty-four hours before she has to walk into the station. Twenty-four hours to finish Kroll before he finishes her. She picks up her phone and dials the watcher's number. 'I need your help. The real help. Not the games.' The line is silent for a long moment. Then: 'I was wondering when you'd ask.'",
+      "signature_detail_hint": "During Kroll's call, Elle Reyes hears the faint ticking of a grandfather clock in the background — the same clock she heard in the Voss recording, confirming Voss was in his study when the call was made.",
+      "emotional_beat": "Cold satisfaction at cornering Kroll undercut by the sharp realization that he has played his final card — and it is the most dangerous one yet. Elle Reyes is now fighting for her freedom, not just her secret.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the false victory and its reversal.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Execute the leak, show Kroll's desperation, and deliver the false victory flip. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "Kroll has released the Project Phoenix file to Detective Cole; Elle Reyes has 24 hours before she must go to the station; she has called the watcher for real help; the endgame is set."
+    },
+    {
+      "chapter": 29,
+      "title": "The Impossible Choice",
+      "slug": "the-impossible-choice",
+      "one_line_summary": "With 24 hours before she must face Detective Cole, Elle Reyes must choose between running, destroying the evidence, or finishing Kroll — and the watcher reveals a hidden path.",
+      "beat_summary": "Elle Reyes meets the watcher face-to-face for the first time — a woman named Mira, who has been tracking Kroll for years. Mira reveals that Kroll's dead man's switch is not just the Project Phoenix file; he has a second package that will go public if he dies, containing evidence of Elle's entire network. Elle Reyes faces an impossible choice: run and lose everything, destroy the evidence and risk the second package, or finish Kroll and accept that her network will be exposed. Mira offers a fourth option: Elle can finish Kroll in a way that makes his death look natural, and Mira will ensure the second package is destroyed — but only if Elle agrees to leave the city afterward and never hunt again. The chapter ends with Elle Reyes weighing the choice, her origin wound fully surfacing: she started because her sister was murdered and the system failed. She is not just a vigilante; she is a woman who has been running from grief for years. She makes her decision: she will finish Kroll, and then she will disappear.",
+      "must_happen": [
+        "Elle Reyes meets the watcher face-to-face for the first time — a woman named Mira, who reveals she has been tracking Damien Kroll for years.",
+        "Mira reveals that Damien Kroll has a second dead man's switch: if he dies, a package containing evidence of Elle Reyes's entire network will go public.",
+        "Elle Reyes faces the impossible choice: run, destroy the evidence, finish Kroll and accept network exposure, or accept Mira's offer: finish Kroll cleanly, and Mira destroys the second package — but Elle must leave the city and never hunt again.",
+        "Elle Reyes's origin wound fully surfaces in a flashback: her sister was murdered, the system failed, and she executed the killer herself — she has been running from grief for years.",
+        "Elle Reyes makes her decision: she will finish Damien Kroll, and then she will disappear. Clues C004 (the partial fingerprint) and C006 (the reflection in the video) are paid off — the fingerprint belongs to Mira, and the reflection was Mira watching the riverbank meeting."
+      ],
+      "must_not": [
+        "Do not show the actual kill of Kroll — only that Elle Reyes decides to do it.",
+        "Do not reveal Mira's full backstory — only that she has been tracking Kroll for years and has a personal stake."
+      ],
+      "opens_with": "\"'I've been watching you for longer than you know, Elle Reyes.' The woman across the table was younger than I expected. Her eyes were older. 'I'm the one who left the cigarette. I'm the one who's been trying to help you.'\"",
+      "cliffhanger": "Elle Reyes stares at Mira across the table. Her thumb taps her ring finger three times. 'I'll do it,' she says. 'I'll finish him. And then I'll disappear.' Mira nods slowly. 'Good. Because if you don't, he'll destroy everything you've built. And I can't let that happen.'",
+      "signature_detail_hint": "Mira's left hand has a scar across the knuckles — the same pattern as the ligature mark on Lucia Vega's autopsy photo, suggesting Mira has personal experience with Kroll's violence.",
+      "emotional_beat": "Cold resolve mixed with the raw ache of her origin wound — she is finally admitting that she has been running from grief, and that this hunt is the last thing she will ever do as Elle Reyes the vigilante.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the impossible choice and the origin wound revelation.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Reveal the watcher (Mira), present the impossible choice, and pay off clues C004 and C006. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "Elle Reyes has chosen to finish Kroll and then disappear; Mira is now an active ally; the second dead man's switch is revealed; the origin wound is fully exposed; the endgame is set."
+    },
+    {
+      "chapter": 30,
+      "title": "The Weight of the Choice",
+      "slug": "the-weight-of-the-choice",
+      "one_line_summary": "Elle Reyes prepares for her final move against Kroll, saying goodbye to her network and confronting the full weight of her origin — but a final twist from Mira changes everything.",
+      "beat_summary": "Elle Reyes spends the chapter preparing for her final move. She calls Sasha and Dr. Lin one last time, telling them she is going to finish Kroll and that they need to disappear afterward. She visits her sister's grave for the first time in years, confronting the grief that started it all. She returns to her apartment to find Mira waiting with a final piece of information: the second dead man's switch is not a digital file — it is a person. Mariana Voss holds the key to the network evidence. If Kroll dies, Voss will release it. Elle Reyes realizes she cannot just kill Kroll; she must also neutralize Voss. The chapter ends with Elle Reyes and Mira planning a two-pronged attack: Mira will handle Voss, and Elle will handle Kroll. The weight of the choice settles on Elle: she is about to end the hunt that has defined her life, and she is not sure who she will be afterward.",
+      "must_happen": [
+        "Elle Reyes calls Sasha and Dr. Lin one last time, telling them she is going to finish Damien Kroll and that they need to disappear afterward.",
+        "Elle Reyes visits her sister's grave for the first time in years, confronting the grief that started her vigilante path.",
+        "Mira reveals that the second dead man's switch is not a digital file — it is Mariana Voss, who will release the network evidence if Kroll dies.",
+        "Elle Reyes realizes she cannot just kill Kroll; she must also neutralize Voss, requiring a two-pronged attack.",
+        "Elle Reyes and Mira plan the final move: Mira will handle Voss, and Elle will handle Kroll. The weight of the choice settles on Elle."
+      ],
+      "must_not": [
+        "Do not show the actual attack on Kroll or Voss — only the planning and preparation.",
+        "Do not show Elle Reyes backing down or changing her mind — she is committed, but the weight of the choice is heavy."
+      ],
+      "opens_with": "\"'I'm going to finish him.' I said it to Sasha on the phone. Her silence was louder than any argument. 'And then I'm going to disappear.'\"",
+      "cliffhanger": "Elle Reyes stands at her sister's grave, the cold wind biting her face. Her thumb taps her ring finger three times. She turns to leave — and sees a figure standing at the edge of the cemetery. It's Mira. 'It's time,' Mira says. 'Voss is at Kroll's estate. They're meeting tonight. If we move now, we can end this.' Elle Reyes nods. 'Let's go.'",
+      "signature_detail_hint": "At her sister's grave, Elle Reyes notices a single white gardenia — the same flower she leaves for victims — placed on the headstone by someone else. There is no card, but the flower is fresh.",
+      "emotional_beat": "Cold resolve mixed with the heavy weight of finality — she is about to end the hunt that has defined her, and she is not sure who she will be afterward.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on the preparation and the weight of the choice.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Show the preparations, the visit to her sister's grave, and the revelation about Voss. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "Elle and Mira have a plan: Mira will handle Voss, Elle will handle Kroll; the final confrontation is set; Elle has said goodbye to her network; the endgame is imminent."
+    }
+  ]
+}
+```

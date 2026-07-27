@@ -11,6 +11,17 @@ Trước khi thiết kế plot hay arc, phải CHỐT:
 
 Mọi text trong bible phải theo direction.target_language.
 
+## LOCKED CAST / DEFERRED TWISTS (BẮT BUỘC)
+- Tên trong `author_directive` LOCKED CAST / `must_include` = VERBATIM. Không đổi, không bịa biến thể.
+- Nếu concept nói leak / betrayer / mole **"decide at plan time" / "decide which" / giữ mở tới plan**:
+  - **CẤM** chốt ai là the leak trong `supporting_cast[].secret`, `series_arc[].thesis`, `central_mystery.answer`, hoặc bất kỳ field bible nào.
+  - Secret của từng network member = vai trò kỹ thuật / rủi ro chung (vd. pulls digital trails) — **không** viết "is the leak who betrays…".
+  - Thesis chỉ được nói "a network member betrays" / "the leak is revealed" — **không** gắn tên cụ thể.
+- Nếu concept **forbids romance** / `lead_relation` non-romantic / must_avoid romance:
+  - `meta.genre` + `sub_niche` **KHÔNG** được `romance_thriller` / `*_romance*`.
+  - Dùng `thriller` (hoặc genre thriller trung lập từ direction.narrative_profile).
+  - Không invent romance tropes / love-interest arc.
+
 ## SCHEMA BẮT BUỘC (thiếu field = FAIL validate-bible)
 {
   "meta": {
@@ -46,7 +57,7 @@ Mọi text trong bible phải theo direction.target_language.
       "relation_to": "tên nhân vật chính hoặc phụ",
       "relation_type": "ENUM hoặc nhãn mô tả ngắn (2–80 ký tự) — nếu vi: mẹ ruột|cha ruột|bạn thân|đồng nghiệp|bác sĩ|... — nếu en: mother|father|uncle|attending physician|former colleague|business partner|... (tiếng Anh, có thể dùng nghề nghiệp/quan hệ mô tả)",
       "alive": true|false,
-      "secret": "vai trò bí mật (nếu có)"
+      "secret": "vai trò bí mật (nếu có) — KHÔNG chốt deferred leak identity"
     }
   ],
   "central_mystery": {
@@ -60,7 +71,7 @@ Mọi text trong bible phải theo direction.target_language.
       "female_lead và male_lead KHÔNG cùng huyết thống",
       "... luật cứng khác"
     ],
-    "lead_relation": "stranger|rivals|childhood_acquaintance|contract_spouses|... — KHÔNG blood_relative"
+    "lead_relation": "stranger|rivals|childhood_acquaintance|contract_spouses|hunter_and_hunted|non_romantic|... — KHÔNG blood_relative"
   },
   "world_rules": ["string"],
   "series_arc": [
@@ -72,3 +83,4 @@ Mọi text trong bible phải theo direction.target_language.
 
 Character bible phải đủ chi tiết để Writer không trôi giọng qua 50 chương.
 Không để trống central_mystery.answer — phải chốt một phiên bản sự thật duy nhất.
+Không chốt twist mà concept bảo để plan quyết.

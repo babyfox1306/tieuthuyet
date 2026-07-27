@@ -1,0 +1,159 @@
+---
+series: the-cold-case-girl
+book: 1
+chapter: 12
+title: The Detective
+spice: 1
+word_count: 1419
+status: draft
+needs_fix: []
+promoted_at: '2026-07-27T02:51:02Z'
+---
+
+The rebuilt Thursday plan left no room for the unexpected. But the unexpected had already arrived.
+
+The execution plan filled my laptop in cold, precise cells. Victor Rhodes's Thursday routine. The private club's service-garage code, courtesy of Wren's surveillance. The make and model of his car—a Mercedes S-Class, leased through a shell company that traced back to a firm he'd never put his name on. A scored brake fitting remained the leading option. After the poker game ended at eleven, his route followed the river highway to a sharp curve at mile 11.3. He should reach it at 11:18 PM. No witnesses at that hour. No cameras for a quarter mile in either direction.
+
+I'd run the math six times. At 55 miles per hour, a sudden front-left pressure loss on that curve could pull him toward the guardrail before the remaining circuit and stability system compensated. The weak railing made a breach possible, not certain. I wasn't counting on fire. I was counting on surprise, impact, and his confidence. Calling those variables a plan did not make them controllable.
+
+Priya would handle the certification only if the body reached her office and the police reconstruction still supported an accident.
+
+But the spreadsheet showed a problem I couldn't solve with math: the exposure window. A podcast upload scheduled for 11:15 PM could create a public marker without proving I was home. The plan could not depend on a false witness or a digital trail pretending to establish my physical location.
+
+Sasha Okafor's face appeared on my screen as the video call connected. Her office was dim behind her, the late afternoon light casting long shadows across law books stacked like fortifications.
+
+"Thursday," she said. No greeting. She'd already read the plan. "That's aggressive."
+
+"The podcast is gaining traction. Elise Marchetti's family reached out yesterday. They want to do an interview." I minimized the spreadsheet and pulled up the email. "Rhodes knows. He quoted the operational archive in a voicemail. He's watching."
+
+"And if he's watching, he's waiting for you to make a move."
+
+"Which means I can't wait."
+
+Sasha's jaw tightened. She was in her late forties, with the kind of face that had argued too many losing cases. The lines around her mouth were carved from watching guilty men walk free. She'd been with me since the beginning, since Julian Croft's yacht burned at Marina del Rey and the authorities called it an accident.
+
+"The brake-line plan is sound," I said. "Wren confirmed the garage code hasn't changed in six months. Rhodes doesn't vary his route. He's a creature of habit."
+
+"Creatures of habit get suspicious when their habits are disrupted."
+
+"He won't notice until it's too late."
+
+Sasha leaned back, her chair creaking. "And if he does notice? If he gets a mechanic to check the car?"
+
+"Then we pivot. But we don't plan for failure. We plan for success."
+
+Her phone buzzed on the desk. She glanced at the screen, and something flickered across her face—not surprise, but recognition. The kind of look that said she'd been expecting this call.
+
+"I need to take this."
+
+"Who is it?"
+
+"A police contact. One I've used before." She picked up the phone and stepped out of frame. I heard her voice, low and measured, but couldn't make out the words.
+
+I turned to my second monitor, where Wren Delgado's chat window was open. She'd been running background checks on Rhodes's known associates, cross-referencing phone records, looking for anyone who might have tipped him off about my investigation.
+
+Wren wrote: "Priya's signature was flagged. A detective is reviewing her recent death certifications."
+
+My blood went cold.
+
+I replied: "Which detective?"
+
+Wren wrote: "Just a badge number. No name on the request yet."
+
+I replied: "Why Priya?"
+
+Wren wrote: "The Vargas overdose. A clerk corrected the manner-of-death code after Priya signed. No connection to us or Rhodes. A police liaison is asking why an outside contractor queried her signature samples."
+
+A second message appeared before I could answer.
+
+Wren added: "And this isn't the first search. Someone using a private-security account pulled samples of Priya's signature yesterday. I traced the billing contact to Rhodes."
+
+There it was—not a fact from some future file, but a live move on the board. Rhodes had found Priya. The detective might have been coincidence; the signature search was not.
+
+I closed my eyes. A house fire. A drug dealer. No connection to me, no connection to Victor Rhodes. Just a coincidence that felt like a knife pressed against my throat.
+
+Sasha returned to the frame. Her face was composed, but her hands were shaking slightly. I'd never seen Sasha Okafor's hands shake.
+
+"That was my contact," she said. "A detective—no name yet, just a request through the system—has joined the Vargas coding review. They're requesting an internal review of Priya's last six months of cases."
+
+"Vargas. The overdose."
+
+Sasha's eyes narrowed. "You already know."
+
+"Wren told me."
+
+"Then you know what this means."
+
+"It means a coincidence." I kept my voice flat. "A detective with nothing better to do is chasing a ghost. Priya's legitimate signatures hold up. I made sure of that."
+
+"Enough for a routine review. Not enough for targeted scrutiny."
+
+"Then we handle it."
+
+"How?"
+
+I pulled up my contacts and dialed Priya's number. She answered on the second ring.
+
+"I know," she said before I could speak. Her voice was tight, controlled, but I could hear the tremor underneath. "The request came through this morning. Internal review of my certifications for the last six months."
+
+"Can you survive it?"
+
+"If it stays on Vargas. The toxicology supports overdose, and the clerk's worksheet explains the amendment. But if they use the outside query to widen the review—"
+
+"Then Marcus Chen sits beside you before you answer. Request certified copies of the worksheet and toxicology addendum now."
+
+"I already did. The clerk says two business days."
+
+"Then we wait for the documents. No altered records. No disappearing files."
+
+She was quiet for a long moment. I could hear her breathing, shallow and quick. When she spoke again, her voice was smaller. "If the detective accelerates before the copies arrive—"
+
+"You invoke counsel and stop."
+
+I ended the call and turned back to the video feed. Sasha was watching me, her expression unreadable.
+
+"Thursday remains provisional," I said. "Priya's certified documents should arrive before the review expands. If the review reaches any unrelated case, the garage operation is off."
+
+"Or he'll find enough to open a formal investigation."
+
+"Then we challenge the review and find out what he actually has."
+
+"Nadia." Sasha's voice was sharp. "You can't kill a detective. That's not the same as killing a murderer. That's killing a cop."
+
+"I'm not going to kill him. I'm going to bury him in paperwork." I pulled up Wren's chat again and typed: "Run the badge number on the detective. I want his unit, active assignments, and any disclosed connection to Rhodes."
+
+Wren replied: "On it."
+
+Sasha shook her head. "This is getting too hot. Too many moving parts."
+
+"That's exactly why we prepare now without committing to the hit. Rhodes is expecting me to react defensively. He's waiting for me to slip up, to make a mistake. The detective is another variable."
+
+"Variables compound."
+
+"So do countermeasures." I closed the spreadsheet and stood up. "We hold the plan at readiness. Tighten operations. No digital footprint. No contact with Priya until counsel has the certified documents. If the detective gets too close, Thursday is dead."
+
+"How?"
+
+Because Wren was the best hacker I'd ever met. Because I had resources Rhodes couldn't imagine. Because I'd been doing this for three years, and no one had caught me yet.
+
+"I have my ways."
+
+Sasha sighed. "You're going to do this regardless of what I say."
+
+"I'm going to do this because it's the right thing. Elise Marchetti deserves justice. So does every other woman Rhodes destroyed and the system failed."
+
+"And what about you, Nadia? What do you deserve?"
+
+I didn't answer.
+
+The call ended. I sat in the dark of my apartment with the spreadsheet open. Its numbers could describe a risk; they could not make a promise.
+
+I pulled out my notebook and wrote the badge number.
+
+No name. No face. Just a badge number and a suspicion that could unravel everything.
+
+I closed my laptop. The ink of the badge number was still wet, bleeding into the paper like a wound.
+
+"Who sent you?"
+
+The question hung in the dark room, unanswered.

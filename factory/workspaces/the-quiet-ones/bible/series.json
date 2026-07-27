@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "series_id": "the-quiet-ones",
+    "genre": "romance_thriller",
+    "target_language": "en"
+  },
+  "title": "The Quiet Ones",
+  "sub_niche": "romance_thriller",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "A famous true-crime podcaster who executes guilty men the system failed must survive a two-way hunt with her most dangerous target yet — the one person who knows exactly what she is.",
+  "tropes": [
+    "anti-hero protagonist",
+    "two-way hunt",
+    "hidden network of women",
+    "origin wound",
+    "competence kink",
+    "feminist revenge",
+    "betrayal by ally",
+    "dead man's switch"
+  ],
+  "leads": {
+    "female": {
+      "name": "Elle Reyes",
+      "age": 32,
+      "voice": "Warm, articulate, crusading in public; cold, methodical, precise in private.",
+      "tics": [
+        "taps her ring finger twice before making a decision",
+        "never leaves a room without checking the exits",
+        "speaks in complete sentences even under duress"
+      ],
+      "boundary": "She will only kill the provably guilty; an innocent is absolutely off-limits, and this rule will be tested.",
+      "internal_voice": "I am not a monster. I am the last appeal. The system failed them — I don't."
+    },
+    "male": {
+      "name": "Unassigned (no male lead)",
+      "age": 45,
+      "voice": "Calm, patient, unnervingly polite; uses silence as a weapon.",
+      "tics": [
+        "smiles without warmth when he has the upper hand",
+        "speaks in measured, deliberate sentences",
+        "never raises his voice — even when threatening"
+      ],
+      "boundary": "He will not use physical violence directly; his weapon is information and legal leverage.",
+      "wound": "He was once caught and humiliated by a woman — the experience taught him that the system can be turned against anyone with enough evidence."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Sasha Okafor",
+      "relation_to": "Elle Reyes",
+      "relation_type": "network member (lawyer)",
+      "alive": true,
+      "secret": "Knows which guilty men walked free; later becomes the leak who betrays Elle to protect her own family."
+    },
+    {
+      "name": "Priya Anand",
+      "relation_to": "Elle Reyes",
+      "relation_type": "network member (coroner)",
+      "alive": true,
+      "secret": "Has adjusted cause of death on at least two of Elle's previous cases."
+    },
+    {
+      "name": "Wren Delgado",
+      "relation_to": "Elle Reyes",
+      "relation_type": "network member (hacker)",
+      "alive": true,
+      "secret": "Pulls digital trails; has a personal vendetta against a corporation that protected a killer."
+    },
+    {
+      "name": "Mara Reyes",
+      "relation_to": "Elle Reyes",
+      "relation_type": "younger sister (deceased)",
+      "alive": false,
+      "secret": "Her murder and the killer walking free is Elle's origin wound; the killer's identity is revealed in Book 1 to be connected to Damien Kroll."
+    }
+  ],
+  "central_mystery": {
+    "question": "Will Elle Reyes survive the two-way hunt with Damien Kroll, and will her secret life as a vigilante executioner be exposed?",
+    "answer": "Elle is a vigilante killer who targets guilty men the system has failed to punish. Damien Kroll is one such man, but unlike her previous targets, he has figured out what she is and has built a case against her, including evidence of her very first kill. The two-way hunt ends with Kroll dead by an 'accident' Elle engineers, but the evidence of her first kill survives in the hands of an unknown third party, turning Elle from hunter to leashed asset.",
+    "reveal_chapter": 38
+  },
+  "bloodline": {
+    "description": "Elle Reyes and Damien Kroll are unrelated by blood. Elle's sister Mara is deceased, no other blood relatives appear in Book 1. The network members are not blood-related to Elle.",
+    "hard_rules": [
+      "female_lead and male_lead are not blood relatives",
+      "no incest or familial romantic relationships",
+      "all romantic tension is non-blood-related"
+    ],
+    "lead_relation": "hunter_and_prey"
+  },
+  "world_rules": [
+    "Grounded, modern, procedural — no supernatural elements.",
+    "The justice system is portrayed as genuinely broken for certain victims (especially women).",
+    "Physical evidence and competence drive all victories; no confession monologues.",
+    "The reader knows from chapter 1 that Elle kills; she is not an unreliable narrator hiding it.",
+    "Every 3-4 chapters must contain a reveal, a reversal, or a rise in threat.",
+    "Names are fixed and canonical — no drift across chapters."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "Elle Reyes, a famous true-crime podcaster, targets Damien Kroll, a man who walked free from a cold-case murder. But Kroll is not a passive target — he figures out what Elle is and turns the hunt into a two-way game of cat and mouse. Elle's network fractures when one member betrays her, and the book ends with Kroll dead by Elle's engineered 'accident,' but the evidence of her first kill survives in the hands of an unknown third party.",
+      "ending_hook": "Elle closes the Kroll case and the podcast frames it as justice finally served. She survives, but she is no longer invisible. The evidence of her first kill is out there, and someone else now holds the leash."
+    }
+  ],
+  "content_rules": [
+    "No children in danger or on-page sexual violence.",
+    "No supernatural or paranormal elements.",
+    "No romance subplot driving the plot.",
+    "Spice level 1 — charged tension allowed, no explicit content.",
+    "All characters are 18+.",
+    "Consent is implied in all interpersonal dynamics."
+  ],
+  "bible_status": "approved"
+}

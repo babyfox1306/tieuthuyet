@@ -1,0 +1,86 @@
+{
+  "act": [10, 12],
+  "chapter_plans": [
+    {
+      "chapter": 10,
+      "title": "The Reveal",
+      "slug": "the-reveal",
+      "one_line_summary": "Nadia Cole hunts the source of the voicemail and confirms Victor Rhodes knows she is the executioner, flipping the hunt from hunter to hunted.",
+      "beat_summary": "Nadia Cole plays Victor Rhodes's voicemail repeatedly, analyzing the phrasing. She calls Sasha Okafor and Wren Delgado to trace the call and the phrase source. Wren Delgado traces the call to a burner phone purchased near Rhodes's office, confirming the source. Nadia Cole realizes the phrase from her private notes could only have come from a network leak or a physical breach of her files. She confronts the network, asking each member directly — Sasha Okafor and Priya Anand deny involvement; Wren Delgado deflects but offers to tighten security. Nadia Cole isolates in her apartment, reviewing her private notes for any sign of tampering. She finds none but knows her secrecy is compromised. The chapter ends with Nadia Cole accepting that Victor Rhodes is not a passive target — he has figured out she is the executioner and is building a case against her (MR03 revealed).",
+      "must_happen": [
+        "Nadia Cole plays Victor Rhodes's voicemail three times, analyzing the phrasing — she recognizes a specific phrase from her private notes, not her podcast (C003 paid off — exact semantic: 'Victor Rhodes leaves a voicemail for Nadia that sounds like a casual fan message, but the wording is too precise — he uses a phrase from her private notes, not her podcast').",
+        "Nadia Cole calls Wren Delgado to trace the call — Wren Delgado confirms the call originated from a burner phone purchased near Victor Rhodes's office, confirming Rhodes as the source.",
+        "Nadia Cole confronts Sasha Okafor, Priya Anand, and Wren Delgado individually, asking each if they have shared her private notes — all deny it, but Nadia Cole notes Wren Delgado's deflection when Wren offers to tighten security rather than answering directly.",
+        "Nadia Cole isolates in her apartment, reviewing her private notes for signs of tampering — she finds none, but the knowledge that Victor Rhodes has accessed her private thoughts is confirmed (MR03 revealed — exact semantic: 'Victor Rhodes is not a passive target — he has figured out Nadia is the executioner and is building a case against her').",
+        "The chapter ends with Nadia Cole's thumb pressed to her palm as she accepts the new reality: she is no longer invisible, and Victor Rhodes is building a case against her."
+      ],
+      "must_not": [
+        "Do NOT reveal that Wren Delgado is the leak — Wren Delgado deflects suspicion but is not exposed in this chapter.",
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on Nadia Cole's investigation and the reveal.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is paranoia and cold acceptance."
+      ],
+      "opens_with": "\"I played the voicemail again. The words were mine — not the podcast version, not the public version. The version I keep in a locked drawer.\" — Nadia Cole, internal, as she listens to Victor Rhodes's message in her dark apartment.",
+      "cliffhanger": "Nadia Cole closes her private notebook and looks at her phone. She whispers to herself: 'He knows. And he's not done.' The screen shows a new email from an unknown sender: 'Enjoying the game, Nadia? — V.R.'",
+      "signature_detail_hint": "The voicemail phrase is 'the system failed her, but I won't' — a variation of Nadia Cole's public motto, but with a subtle word order change that only appears in her private journal, which she keeps in a locked drawer at her apartment.",
+      "emotional_beat": "Paranoia — Nadia Cole realizes her private space has been breached, and the safety of secrecy is gone. She processes the fear with cold precision, but the reader feels the isolation.",
+      "spice": 1,
+      "spice_note": "No romance; tension is plot-driven paranoia and the power shift from hunter to hunted.",
+      "chapter_task": "Write 1600-1900 words. Pay off C003 (exact semantic from clue_catalog) via the voicemail analysis. Reveal MR03 (exact semantic from reveal_catalog) as Nadia Cole accepts that Victor Rhodes knows her true nature. Do not expose Wren Delgado as the leak. End with Nadia Cole's isolation and the new email from Rhodes.",
+      "carries_to_next": "MR03 is revealed. Nadia Cole knows Victor Rhodes is building a case against her. The network is under suspicion, but the leak is not yet identified. Victor Rhodes escalates his counter-investigation in chapter 11."
+    },
+    {
+      "chapter": 11,
+      "title": "The Counter",
+      "slug": "the-counter",
+      "one_line_summary": "Victor Rhodes counters Nadia Cole by leaking pieces of her past to the press, forcing her to go on the defensive while the network scrambles to contain the damage.",
+      "beat_summary": "Nadia Cole wakes to find a leaked article on a local news site: an anonymous source has revealed that Nadia Cole's sister Mara Cole was murdered and the prime suspect, Julian Croft, died in a boating accident. The article implies Nadia Cole has a personal vendetta against Victor Rhodes, undermining her podcast's credibility. Nadia Cole calls Sasha Okafor to assess the legal threat — Sasha Okafor says the article is protected speech but warns that more leaks could follow. Nadia Cole calls Wren Delgado to trace the leak source; Wren Delgado finds the article was sent from a burner email but cannot identify the sender. Priya Anand calls Nadia Cole, panicked: her office audit has been escalated, and she is worried the signature anomaly (C006) will be discovered. Nadia Cole calms Priya Anand but feels the network fraying. The chapter ends with Nadia Cole deciding to accelerate the execution timeline, knowing Victor Rhodes is building a public case against her.",
+      "must_happen": [
+        "Nadia Cole wakes to a notification from Sasha Okafor: a local news site has published an article citing an anonymous source who reveals Nadia Cole's sister Mara Cole was murdered and the prime suspect Julian Croft died in a boating accident — the article implies Nadia Cole has a personal vendetta against Victor Rhodes.",
+        "Nadia Cole calls Sasha Okafor to assess the legal threat — Sasha Okafor confirms the article is protected speech but warns that more leaks could follow, suggesting the network go dark on communications.",
+        "Nadia Cole calls Wren Delgado to trace the leak — Wren Delgado reports the article was sent from a burner email and the IP is masked, but notes that the leak contains details only someone with access to Nadia Cole's past would know (a subtle hint at the network leak).",
+        "Priya Anand calls Nadia Cole in a panic: her office audit has been escalated, and she is worried the signature anomaly (C006) will be discovered — Nadia Cole calms her but internally feels the network vulnerability.",
+        "The chapter ends with Nadia Cole deciding to accelerate the execution timeline, knowing Victor Rhodes is building a public case against her — she tells Sasha Okafor to prepare the network for a faster operation."
+      ],
+      "must_not": [
+        "Do NOT reveal that Wren Delgado is the leak — the article leak is attributed to Victor Rhodes's counter-investigation, not the network leak.",
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on Nadia Cole's defensive response.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is panic and cold resolve."
+      ],
+      "opens_with": "\"The notification lit up my phone at 4:17 AM. By 4:19, I knew Victor Rhodes had made his first public move.\" — Nadia Cole, internal, as she reads the leaked article on her phone in bed.",
+      "cliffhanger": "Nadia Cole hangs up with Sasha Okafor and opens her laptop. She types a single line in her encrypted notes: 'Forty-eight hours. New plan.' The cursor blinks as she begins to write.",
+      "signature_detail_hint": "The leaked article mentions the 'boating accident' that killed Julian Croft — the same phrasing from the police report Nadia Cole saw in chapter 4, suggesting Victor Rhodes has accessed the same file.",
+      "emotional_beat": "Panic and cold resolve — Nadia Cole's past is being weaponized, and she must accelerate the timeline to regain control. The network's vulnerability is exposed.",
+      "spice": 1,
+      "spice_note": "No romance; tension is plot-driven panic and the need to accelerate the execution.",
+      "chapter_task": "Write 1600-1900 words. Show Victor Rhodes's counter-move: a leaked article that reveals Nadia Cole's connection to Julian Croft. Show the network's response: Sasha Okafor's legal assessment, Wren Delgado's tracing attempt, and Priya Anand's panic about the audit. End with Nadia Cole deciding to accelerate the execution timeline. Do not expose Wren Delgado as the leak.",
+      "carries_to_next": "Victor Rhodes has leaked Nadia Cole's past to the press, escalating the two-way hunt. The network is fraying under pressure. Nadia Cole accelerates the execution timeline, setting up the Act 2 complications in chapter 12."
+    },
+    {
+      "chapter": 12,
+      "title": "The Detective",
+      "slug": "the-detective",
+      "one_line_summary": "As Nadia Cole accelerates the execution plan, a detective begins circling her network after a suspicious death is flagged — a false alarm that tests her paranoia and forces the network to tighten operations.",
+      "beat_summary": "Nadia Cole finalizes the accelerated execution plan: a staged car accident for Victor Rhodes, using a tampered brake line, set for 72 hours from now. She meets Sasha Okafor and Wren Delgado to review the new timeline and alibi. During the meeting, Sasha Okafor receives a call from a contact in the police department: a detective (unaffiliated with Victor Rhodes) has flagged a recent suspicious death — a man who died in a house fire with no clear cause — and is reviewing medical examiner records, including Priya Anand's signatures (RH01 planted). Nadia Cole feels the net tightening but decides to proceed. She calls Priya Anand to warn her; Priya Anand is already aware and is preparing to request a transfer to a different office to avoid scrutiny. The chapter ends with Nadia Cole alone, reviewing the detective's name — Detective Marcus Webb — and deciding to have Wren Delgado run a background check, a precaution that feels increasingly necessary.",
+      "must_happen": [
+        "Nadia Cole finalizes the accelerated execution plan: a staged car accident for Victor Rhodes, using a tampered brake line, set for 72 hours from now — she reviews the timeline and alibi with Sasha Okafor and Wren Delgado.",
+        "During the meeting, Sasha Okafor receives a call from a police contact: a detective named Marcus Webb (unaffiliated with Victor Rhodes) has flagged a recent suspicious death (a house fire) and is reviewing medical examiner records, including Priya Anand's signatures (RH01 planted — exact semantic: 'A detective (unaffiliated with Rhodes) begins circling Nadia's network after a suspicious death is flagged').",
+        "Nadia Cole calls Priya Anand to warn her — Priya Anand is already aware and is preparing to request a transfer to a different office to avoid scrutiny, which would weaken the network.",
+        "Nadia Cole decides to proceed with the execution despite the detective's interest — she tells Sasha Okafor and Wren Delgado to tighten operations and avoid any digital footprint.",
+        "The chapter ends with Nadia Cole alone, writing Detective Marcus Webb's name in her notes and asking Wren Delgado to run a background check — a precaution that feels increasingly necessary."
+      ],
+      "must_not": [
+        "Do NOT reveal that Detective Marcus Webb is a red herring — the reader should believe he is a real threat.",
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on the new external threat and the network's response.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is paranoia and cold calculation."
+      ],
+      "opens_with": "\"The new timeline was tight. Seventy-two hours meant no room for error, no room for the unexpected. But the unexpected had already arrived.\" — Nadia Cole, internal, as she reviews the execution plan on her laptop.",
+      "cliffhanger": "Nadia Cole closes her laptop and stares at the name she wrote in her notebook: 'Detective Marcus Webb.' She whispers: 'Who sent you?' The question hangs in the dark room, unanswered.",
+      "signature_detail_hint": "The suspicious death that flagged the detective is a house fire — the victim was a known drug dealer with no connection to Nadia Cole or Victor Rhodes, making the detective's review of Priya Anand's signatures a coincidence that feels like a threat.",
+      "emotional_beat": "Paranoia — a new external threat (the detective) tests Nadia Cole's composure, but she channels it into cold calculation and precaution.",
+      "spice": 1,
+      "spice_note": "No romance; tension is plot-driven paranoia and the tightening net around the network.",
+      "chapter_task": "Write 1600-1900 words. Show the accelerated execution plan finalization. Plant RH01 (detective Marcus Webb circling the network after a suspicious death) via Sasha Okafor's police contact call. Show Nadia Cole's decision to proceed despite the new threat. Do not reveal that the detective is a red herring. End with Nadia Cole's suspicion and the unanswered question.",
+      "carries_to_next": "RH01 is planted — the detective thread begins. The execution plan is accelerated to 72 hours. The network is under pressure from both Victor Rhodes's leaks and the new external investigation. Chapter 13 will continue the Act 2 complications."
+    }
+  ]
+}

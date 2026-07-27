@@ -1,5 +1,6 @@
 """Tests for concept → direction/manifest sync."""
 
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -128,6 +129,41 @@ class WorkspaceMetadataTests(unittest.TestCase):
             d = yaml.safe_load((ws / "direction.yaml").read_text(encoding="utf-8"))
             self.assertEqual(d["narrative_profile"], "gothic_psychological_horror")
             self.assertIn("dread", d["goal"].lower())
+
+    def test_anti_romance_thriller_infers_thriller_not_romance(self) -> None:
+        from factory.engine.lib.workspace_metadata import (
+            infer_narrative_profile_from_concept,
+            resolve_narrative_profile,
+        )
+
+        concept = {
+            "title": "The Cold Case Girl",
+            "author_directive": (
+                "GENRE: feminist good for her revenge thriller. "
+                "Romance never drives the plot."
+            ),
+            "must_avoid": [
+                "Romance subplot driving the plot",
+                "Standalone romance thread",
+            ],
+            "surface_plot": "A podcaster hunts a killer in a two-way hunt.",
+            "true_plot": "Anti-hero executioner; procedural thriller.",
+        }
+        self.assertEqual(infer_narrative_profile_from_concept(concept), "thriller")
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "ccg"
+            ws.mkdir()
+            (ws / "concept.yaml").write_text(
+                yaml.dump(concept, allow_unicode=True), encoding="utf-8"
+            )
+            narr = ws / "bible" / "narrative"
+            narr.mkdir(parents=True)
+            (narr / "kernel.json").write_text(
+                json.dumps({"narrative_profile": "romance_thriller"}),
+                encoding="utf-8",
+            )
+            # Stale romance kernel must lose to anti-romance concept.
+            self.assertEqual(resolve_narrative_profile(ws, concept), "thriller")
 
 
 if __name__ == "__main__":

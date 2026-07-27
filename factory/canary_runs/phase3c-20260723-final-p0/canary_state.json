@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "kind": "canary_state",
+  "run_id": "phase3c-20260723-final-p0",
+  "completed_steps": [
+    "baseline",
+    "fresh_generation",
+    "repair_canary",
+    "execute"
+  ],
+  "current_case": null,
+  "current_book": null,
+  "current_chapter": null,
+  "source_digests": {},
+  "successful_role_calls": [],
+  "cached_outputs": {},
+  "pending_operator_action": null,
+  "failure_reason": null,
+  "git_head_at_start": "7db5ff4fac29e8612653b2b29fccc9ff44c14f2d",
+  "git_provenance": null,
+  "generation": {
+    "status": "attempted"
+  },
+  "updated_at": "2026-07-23T12:28:52Z"
+}

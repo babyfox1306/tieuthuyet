@@ -321,7 +321,34 @@ def chapter_list(workspace_id: str, book: int = 1) -> list[dict]:
     return items
 
 
+def _chapter_writable_path(
+    workspace_id: str, book: int, ch: int
+) -> tuple[Path | None, str, bool]:
+    """Path to rewrite in place. Returns (path, source, is_catalog_md)."""
+    ws = workspace_dir(workspace_id)
+    cat = _catalog_chapter_path(workspace_id, book, ch)
+    if cat and cat.exists():
+        return cat, "catalog", True
+    for bucket in ("ready", "needs_review", "needs_fix", "draft"):
+        p = chapter_pipeline_path(ws, book, bucket, ch)
+        if p.exists():
+            return p, bucket, False
+    return None, "none", False
+
+
+def _append_markdown_fix_log(ws: Path, book: int, entry: dict) -> Path:
+    log_dir = book_workspace_dir(ws, book) / "pipeline"
+    log_dir.mkdir(parents=True, exist_ok=True)
+    path = log_dir / "markdown_fix_log.jsonl"
+    row = {"ts": datetime.now(timezone.utc).isoformat(), **entry}
+    with path.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    return path
+
+
 def chapter_get(workspace_id: str, ch: int, book: int = 1) -> dict:
+    from factory.engine.lib.prose_sanitize import find_markdown_leaks
+
     ws = workspace_dir(workspace_id)
     text, source = _chapter_text(ws, book, ch)
     plan = load_chapter_plan(ws, book, ch)
@@ -346,6 +373,130 @@ def chapter_get(workspace_id: str, ch: int, book: int = 1) -> dict:
         "reason_summary": block["reason_summary"],
         "issues": block["issues"],
         "qc": block["qc"],
+        "markdown_leaks": find_markdown_leaks(text or ""),
+    }
+
+
+def chapter_markdown_fix(
+    workspace_id: str,
+    ch: int,
+    book: int = 1,
+    *,
+    mode: str,
+    hit_id: int | None = None,
+    apply_all: bool = False,
+) -> dict:
+    """Operator-chosen markdown leak fix — pipeline-only.
+
+    Never mutates catalog, spot_check, or promoted markers.
+    """
+    from factory.engine.lib.prose_sanitize import apply_markdown_leak_fix, find_markdown_leaks
+
+    ws = workspace_dir(workspace_id)
+    if (
+        promoted_marker(ws, book, ch).exists()
+        or _catalog_has_chapter(workspace_id, book, ch)
+    ):
+        return {
+            "ok": False,
+            "code": "REFUSE_MARKDOWN_FIX_PROMOTED_CHAPTER",
+            "error": (
+                "REFUSE_MARKDOWN_FIX_PROMOTED_CHAPTER: markdown fix is pipeline-only; "
+                "catalog mutation requires an audited workflow"
+            ),
+            "reasons": [
+                {
+                    "code": "REFUSE_MARKDOWN_FIX_PROMOTED_CHAPTER",
+                    "message": "chapter is promoted/catalogued",
+                },
+                {
+                    "code": "CATALOG_MUTATION_REQUIRES_AUDITED_WORKFLOW",
+                    "message": "direct catalog/spot_check writes are refused",
+                },
+            ],
+            **chapter_get(workspace_id, ch, book),
+        }
+
+    path, source, is_catalog = _chapter_writable_path(workspace_id, book, ch)
+    if path is None:
+        return {
+            "ok": False,
+            "code": "MARKDOWN_FIX_NO_PIPELINE_PROSE",
+            "error": "không có file pipeline để sửa",
+        }
+    if is_catalog:
+        return {
+            "ok": False,
+            "code": "REFUSE_MARKDOWN_FIX_PROMOTED_CHAPTER",
+            "error": (
+                "REFUSE_MARKDOWN_FIX_PROMOTED_CHAPTER: CATALOG_MUTATION_REQUIRES_AUDITED_WORKFLOW"
+            ),
+            "reasons": [
+                {
+                    "code": "CATALOG_MUTATION_REQUIRES_AUDITED_WORKFLOW",
+                    "message": "refused catalog write",
+                }
+            ],
+            **chapter_get(workspace_id, ch, book),
+        }
+
+    raw = path.read_text(encoding="utf-8")
+    before_leaks = find_markdown_leaks(raw)
+    if not before_leaks:
+        return {
+            "ok": True,
+            "changed": False,
+            "message": "không còn markdown leak",
+            **chapter_get(workspace_id, ch, book),
+        }
+
+    hit_ids = None if apply_all else ([int(hit_id)] if hit_id is not None else None)
+    if not apply_all and hit_ids is None:
+        return {
+            "ok": False,
+            "code": "MARKDOWN_FIX_NEEDS_TARGET",
+            "error": "cần hit_id hoặc apply_all",
+        }
+
+    new_body, changelog = apply_markdown_leak_fix(
+        raw, mode=mode, hit_ids=hit_ids, apply_all=apply_all  # type: ignore[arg-type]
+    )
+    if not changelog:
+        return {
+            "ok": False,
+            "code": "MARKDOWN_FIX_HIT_MISMATCH",
+            "error": f"hit_id không khớp (còn {len(before_leaks)} leak)",
+            **chapter_get(workspace_id, ch, book),
+        }
+
+    path.write_text(new_body if new_body.endswith("\n") else new_body + "\n", encoding="utf-8")
+
+    log_path = _append_markdown_fix_log(
+        ws,
+        book,
+        {
+            "workspace": workspace_id,
+            "book": book,
+            "chapter": ch,
+            "source": source,
+            "path": str(path),
+            "mode": mode,
+            "apply_all": bool(apply_all),
+            "hit_id": hit_id,
+            "changes": changelog,
+        },
+    )
+    after = find_markdown_leaks(new_body)
+    return {
+        "ok": True,
+        "changed": True,
+        "mode": mode,
+        "apply_all": bool(apply_all),
+        "changes": changelog,
+        "log": str(log_path),
+        "markdown_leaks": after,
+        "remaining_count": len(after),
+        **chapter_get(workspace_id, ch, book),
     }
 
 
@@ -574,7 +725,8 @@ def run_pipeline_step(workspace_id: str, action: str, book: int = 1) -> dict:
         if action == "init-canon-registry":
             from factory.engine.lib.canon_registry import scaffold_canon_registry
 
-            result = scaffold_canon_registry(ws, force=False)
+            # Explicit button: always rebuild from latest concept + bible.
+            result = scaffold_canon_registry(ws, force=True)
             return {**result, **pipeline_status(workspace_id, book)}
 
         if action == "plan":

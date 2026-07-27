@@ -211,7 +211,7 @@ def lead_names(bible: dict) -> tuple[str, str]:
     return f, m
 
 
-def validate_bible(bible: dict) -> list[str]:
+def validate_bible(bible: dict, *, concept: dict | None = None) -> list[str]:
     """Trả list lỗi. Rỗng = pass schema + luật bất biến."""
     errors: list[str] = []
 
@@ -286,6 +286,83 @@ def validate_bible(bible: dict) -> list[str]:
     if not isinstance(wr, list) or len(wr) < 1:
         errors.append("empty:world_rules")
 
+    if concept:
+        errors.extend(_deferred_leak_lock_errors(bible, concept))
+        errors.extend(_anti_romance_genre_errors(bible, concept))
+
+    return errors
+
+
+_LEAK_SECRET_LOCK_RE = re.compile(
+    r"\bis the leak\b|\bthe leak who\b|\bbetrays?\b|\bmole who\b",
+    re.I,
+)
+# Proper-name capture must stay case-sensitive — IGNORECASE would match
+# ``network fractures`` as a fake two-token name.
+_NAMED_BETRAY_IN_ARC_RE = re.compile(
+    r"\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\b.{0,48}\bbetrays?\b|"
+    r"\bwhen\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)\s+betrays?\b",
+)
+
+
+def _concept_defers_leak(concept: dict) -> bool:
+    blob = "\n".join(
+        [
+            str(concept.get("author_directive") or ""),
+            str(concept.get("notes") or ""),
+            "\n".join(str(x) for x in (concept.get("must_include") or [])),
+        ]
+    )
+    return bool(
+        re.search(
+            r"decide\s+which.{0,80}plan|"
+            r"decide.{0,40}at\s+plan\s*time|"
+            r"leak.{0,120}decide\s+which|"
+            r"THE LEAK:.{0,200}decide",
+            blob,
+            re.I | re.DOTALL,
+        )
+    )
+
+
+def _deferred_leak_lock_errors(bible: dict, concept: dict) -> list[str]:
+    if not _concept_defers_leak(concept):
+        return []
+    errors: list[str] = []
+    for i, row in enumerate(bible.get("supporting_cast") or []):
+        if not isinstance(row, dict):
+            continue
+        secret = str(row.get("secret") or "")
+        if _LEAK_SECRET_LOCK_RE.search(secret):
+            errors.append(
+                f"supporting_cast[{i}]:premature_leak_lock:"
+                f"{row.get('name') or i} — concept keeps leak open until plan"
+            )
+    for i, arc in enumerate(bible.get("series_arc") or []):
+        if not isinstance(arc, dict):
+            continue
+        for key in ("thesis", "ending_hook"):
+            text = str(arc.get(key) or "")
+            if _NAMED_BETRAY_IN_ARC_RE.search(text):
+                errors.append(
+                    f"series_arc[{i}].{key}:named_betrayer_locked — "
+                    "use 'a network member betrays' until plan decides"
+                )
+    return errors
+
+
+def _anti_romance_genre_errors(bible: dict, concept: dict) -> list[str]:
+    from factory.engine.lib.workspace_metadata import concept_forbids_romance
+
+    if not concept_forbids_romance(concept):
+        return []
+    errors: list[str] = []
+    genre = str((bible.get("meta") or {}).get("genre") or "").lower()
+    niche = str(bible.get("sub_niche") or "").lower()
+    if "romance" in genre:
+        errors.append(f"meta.genre:romance_forbidden_for_concept:{genre}")
+    if "romance" in niche:
+        errors.append(f"sub_niche:romance_forbidden_for_concept:{niche}")
     return errors
 
 
@@ -317,7 +394,7 @@ def render_bible_block(
             f"> Nếu hai nhân vật chính cùng giọng, hoặc {fn} mềm yếu cầu xin, "
             f"hoặc {mn} nói dài giải thích — SAI bible."
         )
-        alive_yes, alive_no = "còn sống", "đã mất / không xác nhận"
+        alive_yes, alive_no = "còn sống", "đã mất"
         reveal_note = "Chỉ tiết lộ đầy đủ đáp án tại chương"
         answer_redacted = (
             "Đáp án canon: [REDACTED — chưa tới chương reveal. "
@@ -334,27 +411,78 @@ def render_bible_block(
             f"> If both leads sound alike, or {fn} begs weakly, "
             f"or {mn} over-explains — bible violation."
         )
-        alive_yes, alive_no = "alive", "deceased / unknown"
+        alive_yes, alive_no = "alive", "deceased"
         reveal_note = "Full answer reveal only at chapter"
         answer_redacted = (
             "Canon answer: [REDACTED — before reveal chapter. "
             "Do not spoil or invent the answer.]"
         )
 
-    def fmt_lead(lead: dict) -> str:
-        tics = ", ".join(str(t) for t in (lead.get("tics") or []))
-        boundary = lead.get("boundary", "")
-        internal = lead.get("internal_voice", "")
-        extra = f" Nội tâm: {internal}." if internal and lang == "vi" else ""
-        extra_en = f" Internal: {internal}." if internal and lang != "vi" else ""
-        return (
-            f"### {lead.get('name', '?')} ({lead.get('age', '?')}): "
-            f"{lead.get('voice', '')}. "
-            f"{'Tật' if lang == 'vi' else 'Tics'}: {tics}. "
-            f"{'Lằn ranh' if lang == 'vi' else 'Boundary'}: {boundary}.{extra or extra_en}"
-        )
+    def _prompt_safe_internal(text: str) -> str:
+        """Drop end-state arc wording from chapter prompts (planning-only)."""
+        raw = str(text or "").strip()
+        if not raw:
+            return ""
+        low = raw.lower()
+        if any(
+            m in low
+            for m in (
+                "finally ",
+                "cuối cùng",
+                "rejects the false",
+                "rejecting the false",
+                "fully resolves",
+                "completely resolved",
+            )
+        ):
+            return ""
+        return raw
 
-    lines = [heading, "", leads_heading, fmt_lead(f_lead), fmt_lead(m_lead), "", voice_note]
+    def fmt_lead(lead: dict) -> str:
+        from factory.engine.lib.canon_registry import is_absent_male_lead
+
+        name = str(lead.get("name") or "").strip() or "?"
+        if is_absent_male_lead(name):
+            return (
+                f"### {name}: no romantic male lead — do not invent one."
+                if lang != "vi"
+                else f"### {name}: không có male lead lãng mạn — cấm bịa."
+            )
+        age = lead.get("age", "")
+        voice = str(lead.get("voice") or "").strip()
+        tics = ", ".join(str(t) for t in (lead.get("tics") or []) if str(t).strip())
+        boundary = str(lead.get("boundary") or "").strip()
+        internal = _prompt_safe_internal(str(lead.get("internal_voice") or ""))
+        bits: list[str] = []
+        head = f"### {name}"
+        if age not in ("", "?", None):
+            head += f" ({age})"
+        head += ":"
+        bits.append(head)
+        if voice:
+            bits.append(voice)
+        if tics:
+            bits.append(f"{'Tật' if lang == 'vi' else 'Tics'}: {tics}.")
+        if boundary:
+            bits.append(f"{'Lằn ranh' if lang == 'vi' else 'Boundary'}: {boundary}.")
+        if internal:
+            bits.append(
+                f"{'Nội tâm' if lang == 'vi' else 'Internal'}: {internal}."
+            )
+        if len(bits) == 1:
+            bits.append("Use locked intent traits; do not invent a new personality.")
+        return " ".join(bits)
+
+    lines = [heading, "", leads_heading, fmt_lead(f_lead)]
+    # Skip empty/absent male lead noise when book has no romantic ML
+    from factory.engine.lib.canon_registry import is_absent_male_lead
+
+    if not is_absent_male_lead(str(mn)):
+        lines.append(fmt_lead(m_lead))
+        lines.extend(["", voice_note])
+    else:
+        lines.append(fmt_lead(m_lead))
+        lines.append("")
 
     cast = bible.get("supporting_cast", [])
     if cast:
@@ -365,12 +493,16 @@ def render_bible_block(
             alive = alive_yes if c.get("alive", True) else alive_no
             secret = c.get("secret", "")
             sec_part = f" | {'Bí mật' if lang == 'vi' else 'Secret'}: {secret}" if secret else ""
-            lines.append(
-                f"- **{c.get('name', '?')}** — "
-                f"{'quan hệ' if lang == 'vi' else 'relation'}: {c.get('relation_type', '?')} "
-                f"{'của' if lang == 'vi' else 'of'} {c.get('relation_to', '?')} "
-                f"({alive}){sec_part}"
-            )
+            rel_type = str(c.get("relation_type") or "?").strip()
+            rel_to = str(c.get("relation_to") or "").strip()
+            if rel_to:
+                rel_bit = (
+                    f"{'quan hệ' if lang == 'vi' else 'role'}: {rel_type}; "
+                    f"{'với' if lang == 'vi' else 'tied to'} {rel_to}"
+                )
+            else:
+                rel_bit = f"{'quan hệ' if lang == 'vi' else 'role'}: {rel_type}"
+            lines.append(f"- **{c.get('name', '?')}** — {rel_bit} ({alive}){sec_part}")
 
     bl = bible.get("bloodline", {})
     if bl:

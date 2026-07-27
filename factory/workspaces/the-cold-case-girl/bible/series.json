@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "series_id": "the-cold-case-girl",
+    "genre": "thriller",
+    "target_language": "en"
+  },
+  "title": "The Cold Case Girl",
+  "sub_niche": "thriller",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "The true-crime podcaster who executes the guilty must destroy a man who knows her secret — before he destroys her first.",
+  "tropes": [
+    "Anti-hero protagonist",
+    "Two-way hunt",
+    "Hidden network of women",
+    "Origin wound",
+    "Competence as appeal",
+    "Dead-man's-switch"
+  ],
+  "leads": {
+    "female": {
+      "name": "Nadia Cole",
+      "age": 32,
+      "voice": "Warm and articulate in public, cold and precise in private. 'The system failed her. I won't.'",
+      "tics": [
+        "Runs her thumb over her left palm when stressed",
+        "Never raises her voice during a confrontation"
+      ],
+      "boundary": "She will only kill the provably guilty — an innocent is off-limits, and this line will be tested.",
+      "internal_voice": "Methodical, clinical, but with a deep well of grief for Mara."
+    },
+    "male": {
+      "name": "Victor Rhodes",
+      "age": 45,
+      "voice": "Calm, measured, almost friendly. 'You think you're the only one who studies people, Nadia?'",
+      "tics": [
+        "Tilts his head when he's about to lie",
+        "Speaks slowly, never rushed"
+      ],
+      "boundary": "He will not kill directly — he uses information and leverage to destroy.",
+      "wound": "Once a nobody, now obsessed with control; he cannot stand being hunted."
+    }
+  },
+  "supporting_cast": [
+    {
+      "name": "Sasha Okafor",
+      "relation_to": "Nadia Cole",
+      "relation_type": "defense lawyer and network member",
+      "alive": true,
+      "secret": "Knows which guilty men walked free; provides legal cover."
+    },
+    {
+      "name": "Priya Anand",
+      "relation_to": "Nadia Cole",
+      "relation_type": "medical examiner and network member",
+      "alive": true,
+      "secret": "Reads or adjusts cause of death to protect Nadia's work."
+    },
+    {
+      "name": "Wren Delgado",
+      "relation_to": "Nadia Cole",
+      "relation_type": "hacker and network member",
+      "alive": true,
+      "secret": "Pulls digital trails and covers tracks for the network."
+    },
+    {
+      "name": "Mara Cole",
+      "relation_to": "Nadia Cole",
+      "relation_type": "younger sister (deceased)",
+      "alive": false,
+      "secret": "Her murder is Nadia's origin wound; killer walked free."
+    },
+    {
+      "name": "Julian Croft",
+      "relation_to": "Nadia Cole",
+      "relation_type": "Mara's murderer (Nadia's first kill)",
+      "alive": false,
+      "secret": "Nadia's first kill; his death is the evidence Rhodes uses."
+    },
+    {
+      "name": "Elise Marchetti",
+      "relation_to": "Victor Rhodes",
+      "relation_type": "murder victim (cold case)",
+      "alive": false,
+      "secret": "Her murder is the podcast case that brings Nadia to Rhodes."
+    }
+  ],
+  "central_mystery": {
+    "question": "Can Nadia Cole execute Victor Rhodes and escape justice, or will her own buried first kill surface and destroy everything she built?",
+    "answer": "Nadia Cole is the executioner. She kills guilty men the system failed to punish. Victor Rhodes is her current target — he is not only guilty of the murder she's investigating, but he has figured out her true nature and is building a case against her, including evidence of her very first kill (Julian Croft). The two-way hunt ends with Rhodes's death, but his dead-man's-switch surfaces the first-kill evidence to an unknown third party, leaving Nadia on a leash.",
+    "reveal_chapter": 38
+  },
+  "bloodline": {
+    "description": "Nadia and Victor Rhodes are unrelated by blood. Nadia's only blood relative is her deceased sister Mara. Victor has no known children or siblings in the story.",
+    "hard_rules": [
+      "female_lead and male_lead are not blood-related",
+      "no incest or familial romantic connection",
+      "all blood relationships are explicitly stated (Mara is Nadia's sister)"
+    ],
+    "lead_relation": "hunter and hunted (non-romantic)"
+  },
+  "world_rules": [
+    "No supernatural elements. Everything is grounded in modern procedural reality.",
+    "Podcast production, forensics, and digital trails are accurate to real-world practices.",
+    "The legal system is shown as genuinely broken for victims without money or connections.",
+    "Nadia's network operates in secrecy; each member has a distinct skill and risk profile.",
+    "Victories are earned through physical evidence and competence, not confession monologues."
+  ],
+  "series_arc": [
+    {
+      "book": 1,
+      "thesis": "Nadia Cole, a true-crime podcaster, targets Victor Rhodes, a man who walked free for murder. But Rhodes is not a passive target — he figures out what she is and turns the hunt into a two-way game. Nadia's network fractures when a network member betrays her. In the end, Nadia kills Rhodes, but his dead-man's-switch surfaces evidence of her first kill (Julian Croft) to an unknown third party, leaving her exposed.",
+      "ending_hook": "Book 1 closes the Rhodes case: the man who walked free is finished, and the podcast frames it publicly as justice finally served. Nadia survives, her network mostly intact, her method proven. But she is no longer invisible — the two-way hunt cost her the one thing she guarded most: secrecy."
+    }
+  ],
+  "content_rules": [
+    "No explicit sexual content (spice level 1). Charged tension is allowed but never drives the plot.",
+    "No children in danger or on-page sexual violence.",
+    "All killings are off-page or implied; focus is on the investigation and psychological tension.",
+    "Every 3-4 chapters must include a reveal, a reversal, or a rise in threat.",
+    "Character names are fixed and must not drift across chapters.",
+    "Nadia is not an unreliable narrator — the reader knows she kills from chapter 1."
+  ],
+  "bible_status": "approved"
+}

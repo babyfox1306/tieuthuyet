@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "kind": "story_contract_manifest",
+  "book": 1,
+  "mode": "shadow",
+  "source_digests": {
+    "concept": "9bcc9153d929bd8d",
+    "series_contract": "",
+    "series_bible_snapshot": "",
+    "canon_snapshot": ""
+  },
+  "compiler_schema_version": 1,
+  "candidate_digest": "40185ca64d64fdf4",
+  "approved_digest": "",
+  "created_at": "2026-07-23T12:25:20Z",
+  "updated_at": "2026-07-23T12:25:20Z"
+}

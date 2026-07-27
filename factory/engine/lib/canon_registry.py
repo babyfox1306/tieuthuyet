@@ -465,7 +465,10 @@ def sync_bible_leads_from_registry(ws: Path, book: int = 1) -> dict[str, Any]:
 
 
 def _norm_name(name: str) -> str:
-    return re.sub(r"\s+", " ", str(name or "").strip()).lower()
+    # Narrative JSON commonly uses identifier keys (``victor_rhodes``) for the
+    # same character whose display/canon name is ``Victor Rhodes``.
+    text = str(name or "").strip().replace("_", " ")
+    return re.sub(r"\s+", " ", text).lower()
 
 
 def _first_token(name: str) -> str:
@@ -564,19 +567,32 @@ def collect_allowed_cast_names(ws: Path, book: int = 1) -> set[str]:
         from factory.engine.lib.prompt_builder import load_series_bible
 
         bible = load_series_bible(ws)
-        for cast in bible.get("supporting_cast") or []:
-            if isinstance(cast, dict):
-                allowed |= _name_tokens_for_allowlist(str(cast.get("name") or ""))
+        for key in ("supporting_cast", "cast"):
+            for cast in bible.get(key) or []:
+                if isinstance(cast, dict):
+                    allowed |= _name_tokens_for_allowlist(str(cast.get("name") or ""))
+                elif isinstance(cast, str):
+                    allowed |= _name_tokens_for_allowlist(cast)
+        leads = bible.get("leads") if isinstance(bible.get("leads"), dict) else {}
+        for lead in leads.values():
+            if isinstance(lead, dict):
+                allowed |= _name_tokens_for_allowlist(str(lead.get("name") or ""))
+            elif isinstance(lead, str):
+                allowed |= _name_tokens_for_allowlist(lead)
     except Exception:
         pass
 
     try:
+        from factory.engine.lib.intent_manifest import _infer_cast
         from factory.engine.lib.narrative_schema import load_concept
 
         concept = load_concept(ws)
+        directive = str(concept.get("author_directive") or "")
+        for name in _infer_cast(concept, directive):
+            allowed |= _name_tokens_for_allowlist(name)
         blob = "\n".join(
             [
-                str(concept.get("author_directive") or ""),
+                directive,
                 str(concept.get("notes") or ""),
                 "\n".join(str(x) for x in (concept.get("must_include") or [])),
                 "\n".join(str(x) for x in (concept.get("must_avoid") or [])),
@@ -591,10 +607,313 @@ def collect_allowed_cast_names(ws: Path, book: int = 1) -> set[str]:
             re.M,
         ):
             allowed |= _name_tokens_for_allowlist(m.group(1))
+        # Locked role declarations: ``- ORIGIN KILLER (...): Julian Croft —``.
+        # The generic bullet matcher above sees the role label, not the name.
+        for m in re.finditer(
+            r"^\s*[-*]\s+[^:\n]{1,100}:\s*"
+            r"([A-Z][A-Za-z.'’\-]+(?:\s+[A-Z][A-Za-z.'’\-]+){1,2})"
+            r"(?=\s+(?:—|-)|\s*\(|\s*$)",
+            blob,
+            re.M,
+        ):
+            allowed |= _name_tokens_for_allowlist(m.group(1))
     except Exception:
         pass
 
     return {a for a in allowed if a and not is_absent_male_lead(a)}
+
+
+_PLAN_PERSON_NAME_RE = re.compile(
+    r"\b([A-Z][A-Za-zÀ-ÖØ-öø-ÿ'’\-]+"
+    r"(?:\s+[A-Z][A-Za-zÀ-ÖØ-öø-ÿ'’\-]+){1,2})\b"
+)
+_NON_PERSON_NAME_SUFFIXES = frozenset(
+    {
+        "company", "corporation", "corp", "inc", "llc", "ltd", "holdings",
+        "group", "foundation", "institute", "university", "hospital", "clinic",
+        "department", "agency", "bureau", "office", "street", "road", "avenue",
+        "city", "county", "district", "river", "lake", "mountain", "hotel",
+        "warehouse", "marina", "network", "podcast", "case", "file",
+    }
+)
+_PERSON_CONTEXT_RE = re.compile(
+    r"\b(?:named|victim|woman|girl|man|boy|person|mother|father|sister|brother|"
+    r"daughter|son|wife|husband|friend|lawyer|doctor|detective|killer|murderer|"
+    r"witness|suspect|podcaster|coroner|hacker|intermediary|member)\b",
+    re.I,
+)
+_NAME_LEADING_CONTEXT = frozenset(
+    {
+        "as", "when", "while", "after", "before", "during", "then", "later",
+        "inside", "outside", "once", "because", "although", "if",
+        # Imperatives in chapter_task are not part of a person's name.
+        "show", "include", "stage", "have", "keep", "let",
+    }
+)
+_PERSON_ROLE_PREFIXES = frozenset(
+    {
+        "detective", "officer", "agent", "attorney", "lawyer", "doctor",
+        "dr", "mr", "mrs", "ms", "professor", "judge",
+    }
+)
+
+
+def _clean_plan_person_candidate(raw: str) -> tuple[str, bool]:
+    text = str(raw or "").strip()
+    possessive = bool(re.search(r"['’]s$", text, flags=re.I))
+    text = re.sub(r"['’]s$", "", text, flags=re.I).strip()
+    words = text.split()
+    while len(words) >= 3 and (
+        words[0].lower().rstrip(".") in _NAME_LEADING_CONTEXT
+        or words[0].lower().rstrip(".") in _PERSON_ROLE_PREFIXES
+    ):
+        words = words[1:]
+    return " ".join(words), possessive
+
+
+def _full_person_name_allowed(name: str, allowed: set[str]) -> bool:
+    """Require the full proper name, not a coincidental shared first/surname."""
+    norm = _norm_name(
+        re.sub(r"^(?:Dr|Mr|Mrs|Ms|Miss)\.?\s+", "", str(name), flags=re.I)
+    )
+    return norm in {
+        _norm_name(re.sub(r"^(?:Dr|Mr|Mrs|Ms|Miss)\.?\s+", "", a, flags=re.I))
+        for a in allowed
+        if " " in re.sub(r"^(?:Dr|Mr|Mrs|Ms|Miss)\.?\s+", "", a, flags=re.I).strip()
+    }
+
+
+def _looks_like_person_mention(
+    text: str,
+    start: int,
+    end: int,
+    name: str,
+    *,
+    possessive: bool = False,
+) -> bool:
+    """Conservative person-vs-texture classifier for plan proper nouns."""
+    words = name.lower().split()
+    if words[-1].rstrip(".") in _NON_PERSON_NAME_SUFFIXES:
+        return False
+    if words[0] in {
+        "the", "must", "write", "chapter", "act", "intent", "clue",
+        "payoff", "reveal", "isolation",
+    }:
+        return False
+    window = text[max(0, start - 70): min(len(text), end + 70)]
+    after = text[end: min(len(text), end + 3)]
+    return bool(
+        _PERSON_CONTEXT_RE.search(window)
+        or possessive
+        or re.match(r"['’]s\b", after)
+        or re.search(
+            re.escape(name)
+            + r"\s+(?:says?|said|asks?|asked|walks?|looks?|calls?|confesses?|"
+            r"admits?|knows?|learns?|finds?|killed|murdered|died|vanished)\b",
+            window,
+        )
+    )
+
+
+def find_recurring_invented_plan_characters(
+    plans: list[dict],
+    allowed: set[str],
+    *,
+    min_chapters: int = 2,
+) -> list[dict[str, Any]]:
+    """WARN-only recurring person names absent from upstream cast.
+
+    Requiring person context and recurrence across distinct chapters keeps
+    one-off texture (companies, places, chapter titles) quiet.
+    """
+    chapters_by_name: dict[str, set[int]] = {}
+    display_by_norm: dict[str, str] = {}
+    for plan in plans:
+        ch = int(plan.get("chapter") or 0)
+        text = _plan_text_blob(plan)
+        seen_here: set[str] = set()
+        for match in _PLAN_PERSON_NAME_RE.finditer(text):
+            name, possessive = _clean_plan_person_candidate(match.group(1))
+            if len(name.split()) < 2:
+                continue
+            norm = _norm_name(name)
+            if norm in seen_here or _full_person_name_allowed(name, allowed):
+                continue
+            if not _looks_like_person_mention(
+                text,
+                match.start(1),
+                match.end(1),
+                name,
+                possessive=possessive,
+            ):
+                continue
+            seen_here.add(norm)
+            display_by_norm.setdefault(norm, name)
+            chapters_by_name.setdefault(norm, set()).add(ch)
+    warnings: list[dict[str, Any]] = []
+    for norm, chapters in chapters_by_name.items():
+        valid_chapters = sorted(ch for ch in chapters if ch > 0)
+        if len(valid_chapters) < min_chapters:
+            continue
+        warnings.append(
+            {
+                "code": "outliner_invented_recurring_character",
+                "name": display_by_norm[norm],
+                "chapter": valid_chapters[0],
+                "chapters": valid_chapters,
+            }
+        )
+    return sorted(warnings, key=lambda item: (item["chapter"], item["name"]))
+
+
+def scrub_recurring_invented_plan_characters(
+    plans: list[dict],
+    allowed: set[str],
+) -> tuple[list[dict], list[str]]:
+    """Replace recurring undeclared proper names with an unnamed role.
+
+    This is the deterministic counterpart to the cast allowlist.  The model may
+    invent texture, but a person recurring across chapters must be declared
+    upstream.  Narrative metadata is compiler-owned and is therefore untouched.
+    """
+    warnings = find_recurring_invented_plan_characters(plans, allowed)
+    names = sorted(
+        {str(item.get("name") or "") for item in warnings if item.get("name")},
+        key=len,
+        reverse=True,
+    )
+    if not names:
+        return plans, []
+
+    all_text = "\n".join(_plan_text_blob(plan) for plan in plans)
+
+    def replacement_for(name: str) -> str:
+        titled = re.search(
+            rf"\b(Detective|Officer|Agent|Attorney|Lawyer|Doctor|Dr\.?|"
+            rf"Judge)\s+{re.escape(name)}\b",
+            all_text,
+            re.I,
+        )
+        if titled:
+            role = titled.group(1).lower().rstrip(".")
+            if role == "dr":
+                role = "doctor"
+            return f"the unnamed {role}"
+        return "the unnamed contact"
+
+    replacements = {name: replacement_for(name) for name in names}
+
+    def scrub_value(value: Any) -> Any:
+        if isinstance(value, str):
+            out = value
+            for name, replacement in replacements.items():
+                # Consume an optional role prefix so we never produce
+                # "Detective the unnamed detective".
+                out = re.sub(
+                    rf"\b(?:Detective|Officer|Agent|Attorney|Lawyer|Doctor|"
+                    rf"Dr\.?|Judge)\s+{re.escape(name)}\b",
+                    replacement,
+                    out,
+                    flags=re.I,
+                )
+                out = re.sub(
+                    rf"\b{re.escape(name)}\b",
+                    replacement,
+                    out,
+                    flags=re.I,
+                )
+            return out
+        if isinstance(value, list):
+            return [scrub_value(item) for item in value]
+        if isinstance(value, dict):
+            return {
+                key: val if key == "narrative" else scrub_value(val)
+                for key, val in value.items()
+            }
+        return value
+
+    out = [scrub_value(dict(plan)) for plan in plans]
+    notes = [f"{name}->{replacements[name]}" for name in names]
+    return out, notes
+
+
+def warn_invented_plan_characters(
+    ws: Path,
+    plans: list[dict],
+    book: int = 1,
+) -> list[dict[str, Any]]:
+    """Print operator-facing WARNs; never block or auto-register names."""
+    from factory.engine.lib.catalog import safe_print
+
+    warnings = find_recurring_invented_plan_characters(
+        plans, collect_allowed_cast_names(ws, book)
+    )
+    for warning in warnings:
+        chapters = ",".join(f"ch{ch}" for ch in warning["chapters"])
+        safe_print(
+            f"  [plan-cast WARN] Outliner invented: {warning['name']} "
+            f"@ ch{warning['chapter']} (recurs {chapters}) — "
+            "operator duyệt hoặc khóa vào concept."
+        )
+    return warnings
+
+
+def locked_cast_payload(ws: Path, book: int = 1) -> list[dict[str, str]]:
+    """Named cast Outliner may use — concept.characters + bible + leads."""
+    from factory.engine.lib.narrative_schema import load_concept, normalize_concept_characters
+
+    rows: list[dict[str, str]] = []
+    seen: set[str] = set()
+
+    def _add(name: str, role: str = "") -> None:
+        name = str(name or "").strip()
+        if not name or is_absent_male_lead(name):
+            return
+        key = _norm_name(name)
+        if key in seen:
+            return
+        seen.add(key)
+        rows.append({"name": name, "role": str(role or "").strip()})
+
+    try:
+        concept = load_concept(ws)
+        for row in normalize_concept_characters(concept.get("characters")):
+            _add(row.get("name", ""), row.get("role", ""))
+        directive = str(concept.get("author_directive") or "")
+        for m in re.finditer(
+            r"^\s*[-*]\s+([^:\n]{1,80}):\s*"
+            r"([A-ZÀ-ÖØ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’\-]+"
+            r"(?:\s+[A-ZÀ-ÖØ-Þ][A-Za-zÀ-ÖØ-öø-ÿ'’\-]+){1,2})",
+            directive,
+            re.M,
+        ):
+            _add(m.group(2), m.group(1))
+    except Exception:
+        pass
+
+    try:
+        bible = load_series_bible(ws)
+        leads = bible.get("leads") if isinstance(bible.get("leads"), dict) else {}
+        female = leads.get("female") if isinstance(leads.get("female"), dict) else {}
+        male = leads.get("male") if isinstance(leads.get("male"), dict) else {}
+        _add(str(female.get("name") or ""), "female_lead")
+        _add(str(male.get("name") or ""), "male_lead")
+        for cast in list(bible.get("supporting_cast") or []) + list(bible.get("cast") or []):
+            if isinstance(cast, dict):
+                _add(str(cast.get("name") or ""), str(cast.get("relation_type") or ""))
+            elif isinstance(cast, str):
+                _add(cast, "")
+    except Exception:
+        pass
+
+    try:
+        registry = build_canon_registry(ws, book)
+        for role in LEAD_ROLES:
+            _add(registry.characters[role].canonical, role)
+    except Exception:
+        pass
+
+    return rows
 
 
 def _name_allowed(name: str, allowed: set[str]) -> bool:
@@ -1358,6 +1677,22 @@ def validate_plan_against_canon_registry(ws: Path, book: int = 1) -> list[dict[s
                     "detail": "named doctor not declared upstream — do not invent cast",
                 }
             )
+
+    # Recurring undeclared people (Elise class) — BLOCK approve until operator locks name.
+    for warning in find_recurring_invented_plan_characters(plans, allowed):
+        chapters = ",".join(f"ch{c}" for c in warning["chapters"])
+        conflicts.append(
+            {
+                "code": "outliner_invented_recurring_character",
+                "source": f"master_plan.json:ch{warning['chapter']}",
+                "value": warning["name"],
+                "expected": "concept.characters / LOCKED CAST / bible supporting_cast",
+                "detail": (
+                    f"recurs {chapters} — khóa tên vào Cast UI hoặc concept trước approve; "
+                    "không để Outliner bịa vai plot"
+                ),
+            }
+        )
 
     conflicts.extend(validate_narrative_cast(ws, book))
     state_path = book_workspace_dir(ws, book) / "state.json"

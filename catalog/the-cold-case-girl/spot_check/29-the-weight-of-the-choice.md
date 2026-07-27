@@ -1,0 +1,111 @@
+---
+series: the-cold-case-girl
+book: 1
+chapter: 29
+title: The Weight of the Choice
+spice: 1
+word_count: 788
+status: draft
+needs_fix: []
+promoted_at: '2026-07-27T02:53:31Z'
+---
+
+"Two release packages," Sasha said. "One clock. One family signer. That is not the same as no way out."
+
+The three of us sat in the safe house with Wren's confession frozen on the laptop. Priya had joined by an audio-only line from a phone that had never touched the old archive.
+
+"C-010 goes through Gerald Vance," I said. "C-011 sits under family control. Evelyn Shaw connects them."
+
+"And Evelyn sells access," Sasha said. "That means whatever she gives you can be sold again."
+
+"Wren warned us."
+
+"I am warning you now."
+
+Priya cleared her throat. "Before you make another plan around me, the audit is closed. The complaint was real, but it was about a coding error. Rhodes didn't create it."
+
+"He exploited it," I said.
+
+"Through Wren."
+
+The name changed the air.
+
+Priya had listened to the confession twice. She knew why Wren broke and knew that Wren had still chosen the material she sent.
+
+"I keep thinking I should hate her," Priya said. "Mostly I keep imagining her looking at a photograph of my daughter and deciding which file would buy us one more day."
+
+"She doesn't come back inside," Sasha said.
+
+"No," I agreed. "The replacement archive stays offline. Two keys for every index. No single administrator."
+
+It was the first rule of whatever survived us.
+
+After the call, Sasha opened Vance's professional history. Disciplinary complaints, clients, business partners, property. All public. None of it explained how to stop a private instruction held in his safe.
+
+"We can attack the messenger," she said, "but if the instruction is lawful on its face, he can still send the package."
+
+"Then we show him what carrying it will cost."
+
+"We need the contents first."
+
+Which brought us back to Evelyn.
+
+I had met her five years before Mara died, when a source on a corporate corruption story vanished with records that could save three whistleblowers. Evelyn found the source, moved his family, and delivered the records. She charged more than my newspaper could pay. I gave her a piece of information instead: the name of the executive preparing to blame her for the extraction.
+
+Before we parted, she had said I could ask for one return.
+
+I had never used it.
+
+I took a blank phone from the steel box and typed the number Wren had left in her confession. The reply came before I finished wondering whether it still belonged to Evelyn.
+
+One favor. The old place. Midnight.
+
+Sasha read the message over my shoulder. "She knows who is asking."
+
+"She always did."
+
+"That should not comfort you."
+
+It did not.
+
+I spent the remaining hours reading the Croft sample Rhodes had sent. The pages contained proof of my proximity and method, but they also contained his annotations. He had mapped my grief as carefully as he mapped the crime. He had written beside Mara's name: initiating wound.
+
+I closed the file.
+
+Mara was not a wound he owned. She was my sister. She hated licorice, rescued spiders from bathtubs, and laughed before she reached the punch line of every joke. Rhodes had reduced her to a switch he could press.
+
+Killing him would not restore her. Letting him live would not absolve me.
+
+The choice in front of me was narrower: whether I would let him use the living people around me as the price of my secret.
+
+At eleven thirty, Sasha handed me a paper envelope.
+
+"Copies of the Meridian transfers, Vance's intimidation filings, and the certified access log tying Rhodes to Croft," she said. "Nothing from the new archive."
+
+"If I don't call by one?"
+
+"I do not send Wren. I do not touch the old system. I take this to Detective Holt."
+
+"Who?"
+
+"The state investigator who questioned Priya. Marcus Holt. He is still following the contractor that accessed her records. He may be the least compromised law-enforcement option we have."
+
+The name had first emerged from the badge request. Its larger function was only now becoming clear. Someone outside our circle was already tracing the same market Rhodes had used.
+
+"If Evelyn asks who knows I'm meeting her?"
+
+"Tell her a lawyer with instructions."
+
+"You don't have instructions."
+
+Sasha almost smiled. "She doesn't know that."
+
+I put the envelope inside my coat and drove to the old diner alone.
+
+The sign had lost two more letters since my last visit. Rain silvered the parking lot. Through the window, I saw a woman with gray-streaked hair seated beneath the dead bulb, a cup of coffee untouched before her.
+
+Evelyn Shaw looked up before I reached the door.
+
+She did not wave.
+
+She simply checked her watch, as if the first term of our negotiation had been whether I arrived on time.

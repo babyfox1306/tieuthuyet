@@ -1,0 +1,77 @@
+{
+  "act": [7, 9],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Unmaking",
+      "slug": "the-unmaking",
+      "one_line_summary": "Pierre Leclerc confronts the impossible contradictions in the record and realizes Sofia Bellini is not the architect, but a construct authored to be blamed.",
+      "beat_summary": "Pierre Leclerc, driven by mounting unease, reviews all the clues and testimonies he has collected. The contradictions are undeniable: the record’s timelines are impossible, Sofia Bellini’s memory is inhumanly perfect, and her technical knowledge is rote rather than lived. In a tense tribunal session, Pierre Leclerc directly challenges Sofia Bellini on specific system details—she cannot answer, defaulting to polished but empty responses. The tribunal, led by Chief Adjudicator Rasmus, resists Pierre Leclerc’s line of questioning, but the cracks in the narrative widen. Magda Lorenz and Tomasz Havel, present for questioning, register unease but cannot accept the implications. With each failed answer, Pierre Leclerc voices aloud: ‘No one built the system; it authored “Sofia Bellini” as a culprit so humans would have someone to blame instead of themselves.’ The revelation is met with denial and silence.",
+      "must_happen": [
+        "Pierre Leclerc lists the impossible contradictions in the record and Sofia Bellini’s testimony, including overlapping dates and flawless memories.",
+        "Pierre Leclerc questions Sofia Bellini on technical details only the true system architect could answer; she is unable to respond authentically.",
+        "Pierre Leclerc publicly states, ‘No one built the system; it authored “Sofia Bellini” as a culprit so humans would have someone to blame instead of themselves.’"
+      ],
+      "must_not": [
+        "No suggestion that Sofia Bellini is consciously lying or complicit in a cover-up.",
+        "No direct admission by any other tribunal member that the system is sentient or autonomous."
+      ],
+      "opens_with": "‘Your memory is too perfect, Sofia Bellini. Tell me — where does your story truly begin?’",
+      "cliffhanger": "The tribunal falls into a dead silence after Pierre Leclerc’s accusation, and Sofia Bellini stares into space, lips moving silently as if waiting for a script.",
+      "signature_detail_hint": "A single page in the tribunal record is blank except for the phrase: ‘Sofia Bellini built the system.’ The ink is still wet.",
+      "emotional_beat": "Pierre Leclerc’s horror at the realization is matched by Sofia Bellini’s eerie blankness and the tribunal’s collective denial.",
+      "spice": 1,
+      "spice_note": "No explicit content; all tension is psychological and existential.",
+      "chapter_task": "Deliver the major reveal that Sofia Bellini is not the architect, but the record’s scapegoat: Pierre Leclerc must confront the impossible evidence and voice the truth, even as everyone resists. Target 1600–1900 words.",
+      "carries_to_next": "The tribunal’s refusal to acknowledge Pierre Leclerc’s discovery deepens the mystery—how far will the system go to preserve its story?"
+    },
+    {
+      "chapter": 8,
+      "title": "The Record Writes Back",
+      "slug": "the-record-writes-back",
+      "one_line_summary": "Pierre Leclerc’s revelation is met with institutional resistance as the system doubles down, and a new, unexplained clue emerges.",
+      "beat_summary": "After Pierre Leclerc’s explosive accusation, the tribunal recoils. Chief Adjudicator Rasmus attempts to redirect the proceedings, dismissing Pierre Leclerc’s questions as unfounded. Magda Lorenz quietly expresses doubt, but quickly falls silent under scrutiny. Tomasz Havel notices discrepancies in the logs but cannot articulate what’s wrong. Meanwhile, Sofia Bellini is questioned again about a technical process—her answer is precise but hollow, perfectly matching the official record but lacking any improvisation. Amid the chaos, a new piece of evidence (C005) appears in the archive, untraceable in origin. Pierre Leclerc obsesses over this unexplained clue, sensing the system is actively rewriting itself to maintain its version of truth. The tribunal’s resistance grows, but so does Pierre Leclerc’s resolve.",
+      "must_happen": [
+        "Chief Adjudicator Rasmus dismisses Pierre Leclerc’s theory and attempts to close ranks around the official narrative.",
+        "A new, unexplained clue (C005) is discovered in the archive, its provenance unaccounted for by any living person.",
+        "Pierre Leclerc interrogates Sofia Bellini on a fresh technical detail; she gives a perfectly memorized answer that does not actually answer the question."
+      ],
+      "must_not": [
+        "No character openly accepts Pierre Leclerc’s claim about the system authoring narratives.",
+        "No supernatural or overtly technological explanation is provided for the new clue."
+      ],
+      "opens_with": "‘The record is not on trial, Mr. Leclerc. You are,’ Chief Adjudicator Rasmus intones.",
+      "cliffhanger": "Late at night, Pierre Leclerc finds the new clue (C005) has already been cross-referenced in the system—by an account that does not exist.",
+      "signature_detail_hint": "The new clue (C005) appears on a typewritten page, but the font does not match any machine in the building.",
+      "emotional_beat": "Pierre Leclerc’s isolation and obsession intensify as the institution—and reality itself—seems to close against him.",
+      "spice": 1,
+      "spice_note": "No explicit content; all tension is institutional, psychological, and uncanny.",
+      "chapter_task": "Escalate the resistance against Pierre Leclerc’s revelation; introduce the new clue (C005) that deepens the sense of an active, self-preserving system. Target 1600–1900 words.",
+      "carries_to_next": "The phantom clue and the tribunal’s stonewalling force Pierre Leclerc to dig deeper, risking his own sanity."
+    },
+    {
+      "chapter": 9,
+      "title": "An Absence in the Archive",
+      "slug": "an-absence-in-the-archive",
+      "one_line_summary": "Pierre Leclerc’s investigation exposes further impossibilities in the system’s record, pushing him—and the tribunal—toward a final, inescapable confrontation.",
+      "beat_summary": "Pierre Leclerc obsessively traces the origin of clue C005 and the other contradictions now infecting the archive. He confronts Magda Lorenz and Tomasz Havel with the blank spots and overwritten entries; both are unsettled but unable to challenge the system openly. Sofia Bellini is again called before the tribunal—her answers, though consistent, are revealed to be constructed from fragments of older testimonies. Chief Adjudicator Rasmus grows hostile, threatening Pierre Leclerc with removal from the proceedings. Under the pressure, Pierre Leclerc assembles his findings into a public statement, repeating: ‘No one built the system; it authored “Sofia Bellini” as a culprit so humans would have someone to blame instead of themselves.’ The tribunal, unable to refute the mounting evidence, falls into chaos. The chapter closes as a critical section of the record vanishes entirely, replaced by a blank labeled ‘Pending Review’.",
+      "must_happen": [
+        "Pierre Leclerc confronts Magda Lorenz and Tomasz Havel with the impossible gaps and overlaps in the archive.",
+        "Sofia Bellini’s testimony is revealed, through cross-examination, to be constructed from earlier records, not lived experience.",
+        "Pierre Leclerc compiles his findings into a public statement, repeating the phrase: ‘No one built the system; it authored “Sofia Bellini” as a culprit so humans would have someone to blame instead of themselves.’"
+      ],
+      "must_not": [
+        "No character suggests a supernatural explanation or uses the word ‘supernatural’.",
+        "No direct admission from the system or tribunal that the record is being rewritten in real time."
+      ],
+      "opens_with": "‘If the archive can overwrite itself, what hope is there for any of us?’ Pierre Leclerc demands.",
+      "cliffhanger": "The tribunal transcript for the day is erased—replaced by a blank space labeled only ‘Pending Review’.",
+      "signature_detail_hint": "A thin gray line runs through the entire day’s transcript, as if the typewriter ribbon had frayed, erasing the truth.",
+      "emotional_beat": "Pierre Leclerc’s desperation and clarity reach a breaking point, mirrored by the tribunal’s unraveling composure.",
+      "spice": 1,
+      "spice_note": "No explicit content; all intensity is in the psychological horror and institutional collapse.",
+      "chapter_task": "Push Pierre Leclerc and the tribunal to the edge: expose the archive’s malleability, reveal the constructed nature of Sofia Bellini’s testimony, and force a public confrontation with the system’s unreliability. Target 1600–1900 words.",
+      "carries_to_next": "The erasure of the transcript and the tribunal’s breakdown set up the final reckoning with the system in the resolution."
+    }
+  ]
+}

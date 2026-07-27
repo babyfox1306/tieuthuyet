@@ -1,0 +1,86 @@
+{
+  "act": [1, 3],
+  "chapter_plans": [
+    {
+      "chapter": 1,
+      "title": "The Interview",
+      "slug": "the-interview",
+      "one_line_summary": "The housekeeper (unnamed narrator) arrives at Blackwood Estate, meets the controlling husband Julian and the fragile wife Nora, and senses the wife knows more about her than she should.",
+      "beat_summary": "The housekeeper (unnamed narrator) arrives for a live-in housekeeper job. Julian Blackwood interviews her with cold politeness, establishing house rules. He introduces his wife, Nora, who seems frail and anxious. During a private moment, Nora makes a cryptic comment that suggests she knows the housekeeper's past. The housekeeper files Julian as a potential threat and Nora as someone to watch.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) drives up to Blackwood Estate and counts the steps from the gate to the front door (compulsive counting established).",
+        "Julian Blackwood interviews the housekeeper in his study, emphasizing his wife's fragility and the need for patience. He straightens his tie twice during the interview.",
+        "The housekeeper meets Nora Blackwood in the sunroom. Nora is pale, dressed in white, and seems nervous. She touches the housekeeper's hand and says, 'You've done this before, haven't you? Taken care of someone like me.' The housekeeper feels exposed.",
+        "During a tour of the house, the housekeeper notices a locked door at the end of the second-floor hallway and asks about it. Julian deflects smoothly.",
+        "The housekeeper lies about her references, touching her left earlobe. Nora watches her do it and smiles faintly."
+      ],
+      "must_not": [
+        "Do not reveal that Nora is the architect of the frame job.",
+        "Do not reveal the housekeeper's full criminal history or her specific plan to rob/blackmail the family.",
+        "Do not show the contents of the locked room."
+      ],
+      "opens_with": "\"You've done this before,\" the woman in white said, and my hand froze on the teapot handle.",
+      "cliffhanger": "That night, as the housekeeper unpacks in her attic room, she finds a small envelope under the mattress. Inside is a single key — and a note that reads: 'For the locked door. Come at midnight.'",
+      "signature_detail_hint": "The housekeeper counts the steps from the gate to the front door (exactly 47), a ritual she performs at every new job.",
+      "emotional_beat": "The housekeeper feels a mix of arrogance (she can con these people) and unease (Nora sees through her).",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter.",
+      "chapter_task": "Write 1600-1900 words establishing the housekeeper's voice, the Blackwood Estate, and the tension between Julian's control and Nora's watchfulness. Plant clue C001 (the key/note), C010 (Nora's cryptic comment about the housekeeper's past), C011 (the locked door).",
+      "carries_to_next": "The housekeeper now has a key to the locked door and a midnight invitation from Nora. She must decide whether to trust the wife or the husband."
+    },
+    {
+      "chapter": 2,
+      "title": "The Key",
+      "slug": "the-key",
+      "one_line_summary": "The housekeeper settles in as live-in help, Nora presents herself as a prisoner in her own home, and a small kindness from the housekeeper will later read as the beginning of recruitment.",
+      "beat_summary": "The housekeeper decides to use the key. She enters the locked room at midnight and finds old photographs, a journal, and evidence that someone else lived here before — a previous housekeeper named Clara Higgins. The next morning, Nora acts as if nothing happened but asks the housekeeper to bring her tea in the sunroom. The housekeeper notices bruises on Nora's wrist. She feels protective and begins to see Julian as the clear villain. She offers Nora a small comfort — a blanket, a kind word — which Nora accepts with tears.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) uses the key at midnight. She enters the locked room and finds a box containing a journal, old photographs of a woman who looks like Nora but with different hair, and a newspaper clipping about a 'missing housekeeper' from two years ago.",
+        "The next morning, the housekeeper brings Nora tea in the sunroom. Nora's hands shake. The housekeeper notices faint purple bruises on Nora's inner wrist, half-hidden by a sleeve.",
+        "The housekeeper covers Nora with a blanket and says, 'You're safe now.' Nora cries silently. The housekeeper feels a surge of protectiveness.",
+        "Julian returns from a business call and finds them together. His expression is cold. He reminds the housekeeper of the house rules: 'My wife needs rest. Not conversation.'",
+        "The housekeeper lies to Julian about what she did the previous night, touching her earlobe. Nora watches and says nothing."
+      ],
+      "must_not": [
+        "Do not reveal that Clara Higgins was Nora's first attempt at a frame job.",
+        "Do not reveal that Nora's bruises are self-inflicted to manipulate the housekeeper.",
+        "Do not reveal the housekeeper's true name or criminal record."
+      ],
+      "opens_with": "The key turned in the lock with a click that echoed down the empty hallway.",
+      "cliffhanger": "Later that night, the housekeeper hears footsteps outside her door. She opens it to find no one — but a second note lies on the floor. It says: 'She's not who you think. Meet me in the garden. — J.'",
+      "signature_detail_hint": "The housekeeper counts the steps from her attic room to the locked door: 23 steps exactly.",
+      "emotional_beat": "The housekeeper's confidence shifts into genuine empathy for Nora, clouding her original con. She starts to see herself as a rescuer.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. Emotional intimacy between the housekeeper and Nora is platonic but loaded with future potential.",
+      "chapter_task": "Write 1600-1900 words deepening the housekeeper's protective feelings toward Nora while planting clue C002 (the journal/photos in the locked room) and C013 (Nora's self-inflicted bruises). Maintain the unreliable narrator's voice — the reader should believe Nora is a victim.",
+      "carries_to_next": "The housekeeper now has two conflicting narratives: Nora's silent plea for help and Julian's note claiming she is not who she seems. The con is already splitting."
+    },
+    {
+      "chapter": 3,
+      "title": "The Rules",
+      "slug": "the-rules",
+      "one_line_summary": "Julian asserts household rules with menace but no clear crime, and the housekeeper files him as the threat — while Nora's behavior grows more erratic, deepening the housekeeper's resolve to protect her.",
+      "beat_summary": "The housekeeper meets Julian in the garden at his request. He warns her that Nora is manipulative and has a history of 'accusations.' He does not raise his voice, but his calm control is chilling. The housekeeper dismisses his words as gaslighting. Back inside, Nora has a 'bad episode' — she screams, breaks a vase, and claims Julian locked her in her room. The housekeeper calms her down and promises to keep her safe. That night, the housekeeper begins planning how to get Nora out of the house — and how to bleed Julian dry in the process.",
+      "must_happen": [
+        "The housekeeper (unnamed narrator) meets Julian in the garden at midnight. He tells her that Nora has 'episodes' where she accuses him of terrible things. He says, 'I'm not the monster she paints me to be. But I am the one who keeps her safe.' He straightens his tie.",
+        "The next afternoon, Nora screams from her room. The housekeeper finds her on the floor, surrounded by shattered porcelain. Nora claims Julian locked her in and left her. She shows the housekeeper a fresh bruise on her arm.",
+        "The housekeeper helps Nora clean up the broken vase. Nora whispers, 'Please don't leave me alone with him.' The housekeeper promises she won't.",
+        "Julian returns and sees the mess. He does not yell. He simply says, 'I see my wife has had another episode. I'll call Dr. Ellis.' His calm terrifies the housekeeper more than anger would.",
+        "That night, the housekeeper writes in her hidden journal: 'He's the threat. She's the victim. I'll get her out — and I'll make sure he pays.'"
+      ],
+      "must_not": [
+        "Do not reveal that Nora staged the 'episode' and the broken vase to manipulate the housekeeper.",
+        "Do not reveal that Julian's warning about Nora's manipulative nature is true.",
+        "Do not reveal the housekeeper's full plan to rob the family — only hint at it."
+      ],
+      "opens_with": "\"She's not who you think she is,\" Julian said, and the garden shadows made his face look like a skull.",
+      "cliffhanger": "The housekeeper goes to check on Nora one last time before bed. Through the crack in the door, she sees Nora standing perfectly still, staring at herself in the mirror — and smiling. Not the smile of a victim. The smile of someone who has won.",
+      "signature_detail_hint": "The housekeeper counts the steps from the garden to Nora's room: 74. She memorizes every route in the house.",
+      "emotional_beat": "The housekeeper's protectiveness hardens into a mission. She is fully committed to saving Nora, which blinds her to the truth.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The emotional bond between the housekeeper and Nora is deepening but remains one-sided (the housekeeper believes she is the protector).",
+      "chapter_task": "Write 1600-1900 words solidifying the surface plot: Julian as the villain, Nora as the victim, the housekeeper as the reluctant hero. Plant clue C003 (Nora's smile in the mirror — a hint that she is not what she seems) and C015 (the housekeeper's journal entry, which will later be used as evidence against her).",
+      "carries_to_next": "The housekeeper is now fully committed to saving Nora and ruining Julian. But Nora's final smile suggests the housekeeper is being played. The con is now a two-way street."
+    }
+  ]
+}

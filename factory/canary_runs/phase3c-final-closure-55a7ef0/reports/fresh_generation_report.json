@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "kind": "fresh_generation_report",
+  "run_id": "phase3c-final-closure-55a7ef0",
+  "generation_status": "blocked_live_route",
+  "failure_reason": "ROUTING_FREE_ROUTE_UNAVAILABLE",
+  "required_roles": [
+    "writer",
+    "qc",
+    "state_updater",
+    "integrity_extractor",
+    "integrity_verifier",
+    "contract_compliance_evaluator",
+    "quality_evaluator",
+    "story_contract_compiler"
+  ],
+  "missing_roles": [
+    "integrity_extractor",
+    "contract_compliance_evaluator",
+    "story_contract_compiler"
+  ],
+  "static_routes": [
+    {
+      "role": "writer",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-reasoning",
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/best-coding",
+        "auto/fast"
+      ]
+    },
+    {
+      "role": "qc",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-fast",
+      "final_resolved_chain": [
+        "auto/best-fast",
+        "auto/fast"
+      ]
+    },
+    {
+      "role": "state_updater",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-fast",
+      "final_resolved_chain": [
+        "auto/best-fast",
+        "auto/fast"
+      ]
+    },
+    {
+      "role": "integrity_extractor",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-reasoning",
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ]
+    },
+    {
+      "role": "integrity_verifier",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-reasoning",
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ]
+    },
+    {
+      "role": "contract_compliance_evaluator",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-reasoning",
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ]
+    },
+    {
+      "role": "quality_evaluator",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-fast",
+      "final_resolved_chain": [
+        "auto/best-fast",
+        "auto/fast"
+      ]
+    },
+    {
+      "role": "story_contract_compiler",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-reasoning",
+      "final_resolved_chain": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ]
+    }
+  ],
+  "live_probes": [
+    {
+      "role": "writer",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-fast",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/best-coding",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 77,
+      "latency_seconds": 50.8,
+      "cache_hit": false,
+      "at": "2026-07-23T13:22:20Z"
+    },
+    {
+      "role": "qc",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-fast",
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 37,
+      "latency_seconds": 8.589,
+      "cache_hit": false,
+      "at": "2026-07-23T13:22:28Z"
+    },
+    {
+      "role": "state_updater",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-fast",
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 57,
+      "latency_seconds": 6.288,
+      "cache_hit": false,
+      "at": "2026-07-23T13:22:35Z"
+    },
+    {
+      "role": "integrity_extractor",
+      "success": false,
+      "code": "ROUTE_CALL_FAILED",
+      "message": "All models failed (['auto/best-reasoning', 'auto/best-fast', 'auto/fast']): Error code: 400 - {'error': {'message': '[400]: Invalid model. Please select a different model to continue.', 'type': 'invalid_request_error', 'code': 'bad_request'}}",
+      "resolved_route": "auto/best-reasoning",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 0,
+      "latency_seconds": 82.443,
+      "cache_hit": false,
+      "at": "2026-07-23T13:23:57Z"
+    },
+    {
+      "role": "integrity_verifier",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-fast",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 13,
+      "latency_seconds": 33.138,
+      "cache_hit": false,
+      "at": "2026-07-23T13:24:30Z"
+    },
+    {
+      "role": "contract_compliance_evaluator",
+      "success": false,
+      "code": "ROUTE_CALL_FAILED",
+      "message": "All models failed (['auto/best-reasoning', 'auto/best-fast', 'auto/fast']): Error code: 400 - {'error': {'message': '[400]: Invalid model. Please select a different model to continue.', 'type': 'invalid_request_error', 'code': 'bad_request'}}",
+      "resolved_route": "auto/best-reasoning",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 0,
+      "latency_seconds": 25.164,
+      "cache_hit": false,
+      "at": "2026-07-23T13:24:55Z"
+    },
+    {
+      "role": "quality_evaluator",
+      "success": true,
+      "code": "OK",
+      "resolved_route": "auto/best-fast",
+      "attempted_routes": [
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 93,
+      "latency_seconds": 11.368,
+      "cache_hit": false,
+      "at": "2026-07-23T13:25:07Z"
+    },
+    {
+      "role": "story_contract_compiler",
+      "success": false,
+      "code": "ROUTE_CALL_FAILED",
+      "message": "All models failed (['auto/best-reasoning', 'auto/best-fast', 'auto/fast']): Error code: 400 - {'error': {'message': '[400]: Invalid model. Please select a different model to continue.', 'type': 'invalid_request_error', 'code': 'bad_request'}}",
+      "resolved_route": "auto/best-reasoning",
+      "attempted_routes": [
+        "auto/best-reasoning",
+        "auto/best-fast",
+        "auto/fast"
+      ],
+      "input_chars": 35,
+      "output_chars": 0,
+      "latency_seconds": 8.61,
+      "cache_hit": false,
+      "at": "2026-07-23T13:25:15Z"
+    }
+  ],
+  "blocked": true,
+  "fresh_generation_allowed": false,
+  "cases": {
+    "bell": {
+      "copy_exists": true,
+      "generation_status": "blocked_live_route",
+      "fresh_generation_allowed": false,
+      "note": "Authoritative status is canary_state.json generation.status. Blocked statuses refuse fresh sequential writing."
+    },
+    "standalone": {
+      "copy_exists": true,
+      "generation_status": "blocked_live_route",
+      "fresh_generation_allowed": false,
+      "note": "Authoritative status is canary_state.json generation.status. Blocked statuses refuse fresh sequential writing."
+    },
+    "series": {
+      "copy_exists": true,
+      "generation_status": "blocked_live_route",
+      "fresh_generation_allowed": false,
+      "note": "Authoritative status is canary_state.json generation.status. Blocked statuses refuse fresh sequential writing."
+    }
+  },
+  "created_at": "2026-07-23T13:25:15Z",
+  "note": "Authoritative generation status lives in canary_state.json. This report only summarizes that state. No paid fallback. Resume must not duplicate successful model calls when digest identity matches."
+}

@@ -1,0 +1,83 @@
+{
+  "description": "Knowledge matrix for The Things I Let Him See, Book 1. Tracks what each character knows, when they know it, and what they must not know before certain milestones. Milestones derived from total_chapters=18: 5 slots at approximately 2%, 20%, 50%, 72%, 100% → [1, 4, 9, 13, 18].",
+  "target_language": "en",
+  "milestones": [
+    1,
+    4,
+    9,
+    13,
+    18
+  ],
+  "characters": {
+    "Calder Reed": {
+      "ch1": "Knows: Grant hired him for 21-day surveillance; he retains unedited originals and field notebook; Lena is the target; Grant claims Lena is unstable.",
+      "ch4": "Knows: Lena's visible routines (courtyard, mailbox, walks); she sometimes looks toward his window; Grant's reports match his own observations so far; no proof of manipulation yet.",
+      "ch9": "Knows: Grant entered Lena's apartment with master credential (Ch7 evidence); Lena confronted him, knows his surname, inferred Grant hired her; she tests whether he keeps originals; Calder learns she is aware of surveillance.",
+      "ch13": "Knows: Lena's doorframe seals and paper planner exist (shown Ch11); certified envelope was mailed (Ch8); Grant used 'Friday key return' phrase (Ch12); Mae printed audit (Ch13); Lena controls what he sees but not the full extent.",
+      "ch18": "Knows: Lena's complete strategy (Ch14 reveal); evidence transferred to Cross (Ch15); Grant's false chain exposed (Ch17); Lena asks him to return without recording equipment (Ch18); romance chosen after all dependencies end.",
+      "must_not_know_before": {
+        "ch4": "That Lena is aware of surveillance.",
+        "ch9": "The full extent of Lena's diagnostic tests or the honeytoken purpose.",
+        "ch13": "That Lena knew the envelope theft was recorded (she didn't).",
+        "ch18": "Whether Lena will resume the relationship after the settlement."
+      },
+      "hidden_truth": "Calder believes observation gives him ownership of Lena's reality until Ch14. He does not know Lena controlled the decisive visible sequence until she reveals it."
+    },
+    "Lena Hart": {
+      "ch1": "Knows: Grant is manipulating her environment (displaced objects, missing mail, deleted portal entries); she has no independent witness or reliable digital record; she begins building physical evidence (seals, planner, red receipts).",
+      "ch4": "Knows: Someone is watching her from across the courtyard (reflected status light); Grant's messages coincide with her observations; she infers Grant hired an observer but does not know identity or loyalty; she begins diagnostic tests.",
+      "ch9": "Knows: Calder's surname is Reed (from lobby package); he keeps unedited originals (confirmed in confrontation); she sets terms for alliance; she knows Grant entered her apartment (seal evidence) but not that Calder recorded it.",
+      "ch13": "Knows: Certified envelope was intercepted (Grant used the phrase); Calder recorded the envelope removal (unknown when she mailed it); Mae printed the audit; she withholds full strategy from Calder until Ch14.",
+      "ch18": "Knows: Grant's manipulation fully exposed; she retains apartment; Calder transferred evidence and obeys her limits; she chooses to invite him back without recording equipment.",
+      "must_not_know_before": {
+        "ch4": "Calder's full identity or that he keeps originals.",
+        "ch9": "That Calder recorded Grant's entry (she infers but doesn't confirm until later).",
+        "ch13": "The exact contents of Mae's audit (she learns in Ch13).",
+        "ch18": "Whether Calder will accept her terms after the settlement."
+      },
+      "hidden_truth": "Lena has been designing what Calder sees since Ch3, but does not know every result in advance. She withholds the full strategy until Ch14."
+    },
+    "Grant Hart": {
+      "ch1": "Knows: Calder accepted the contract; can observe Lena's courtyard-facing rooms; Lena is noticing displaced objects and missing mail; Mae expressed uncertainty; reports support instability; deadline nears.",
+      "ch4": "Knows: Calder submits usable reports; Lena remains; Mae still uncertain; his manipulation continues via duplicate key, master credential, admin access, portal edits, timed messages.",
+      "ch9": "Knows: Calder still submits reports; Lena remains; may be packing; Mae supports her; Calder refuses to enter apartment; envelope holds false checklist and 'Friday key return' phrase (he stole it).",
+      "ch13": "Knows: Mae accessed the terminal; Calder's reports are thinner; Lena remains; Calder will attend the session; Grant holds the envelope and false checklist; edited dashboard no longer shows his entries.",
+      "ch18": "Knows: His false chain of custody was contradicted by footage, audit, notebook, planner, contract; he lost admin access; settlement halted; he does not confess to stealing the envelope.",
+      "must_not_know_before": {
+        "ch4": "That Calder keeps unedited originals.",
+        "ch9": "That Calder recorded the Ch7 entry or the envelope removal.",
+        "ch13": "That Mae printed the audit or where it is hidden.",
+        "ch18": "The full extent of Lena's planning or Calder's alliance with her."
+      },
+      "hidden_truth": "Grant believes Calder is a controllable paid observer. He does not know Calder stopped serving his objective in Ch7. He proceeds believing all digital records remain his and Calder's financial dependence outweighs any attachment."
+    },
+    "Mae Hart": {
+      "ch1": "Knows: Lena may be stressed; Grant's systems appear accurate; she trusts Grant's board role and the edited dashboard.",
+      "ch4": "Knows: Lena reports disturbances; Grant expresses concern; she has no reason to doubt Grant's version.",
+      "ch9": "Knows: Lena remains in the apartment; Grant is concerned; Calder is the operative; she supports Lena but still trusts Grant's systems.",
+      "ch13": "Knows: She printed the local credential audit from the board terminal; she hides it in a cookbook; she now has independent physical evidence that Grant's access was used during deleted intervals.",
+      "ch18": "Knows: The audit was used to expose Grant; she gives Lena a sealed archived complaint from another condominium (Book 2 hook).",
+      "must_not_know_before": {
+        "ch4": "That Grant is actively manipulating Lena's environment.",
+        "ch9": "The full extent of Grant's access or the deleted intervals.",
+        "ch13": "That the audit will be decisive evidence (she prints it but doesn't know its full significance yet).",
+        "ch18": "The contents of the archived complaint (she gives it sealed)."
+      },
+      "hidden_truth": "Mae changes her belief after printing the audit in Ch13. She initially trusts Grant's systems and only discovers the manipulation through independent physical evidence."
+    },
+    "Detective Cross": {
+      "ch1": "Knows: Nothing about the case. Not yet involved.",
+      "ch4": "Knows: Nothing about the case.",
+      "ch9": "Knows: Nothing about the case.",
+      "ch13": "Knows: Nothing about the case. Calder has not yet contacted her.",
+      "ch18": "Knows: Received evidence index and encrypted duplicate (Ch15); attended settlement (Ch17); confirms material establishes offenses but requires independent verification; takes custody of originals.",
+      "must_not_know_before": {
+        "ch4": "Everything about the case.",
+        "ch9": "Everything about the case.",
+        "ch13": "Everything about the case.",
+        "ch18": "The full chain of custody before verification."
+      },
+      "hidden_truth": "Cross refuses to treat one accusation as sufficient. She requires independent verification before any official action."
+    }
+  }
+}

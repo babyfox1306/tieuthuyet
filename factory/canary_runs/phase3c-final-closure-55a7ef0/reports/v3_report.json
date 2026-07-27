@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "kind": "v3_report",
+  "run_id": "phase3c-final-closure-55a7ef0",
+  "tracks": {
+    "evaluation": "completed",
+    "fresh_generation": "blocked_live_route"
+  },
+  "repair_canary": {
+    "skipped": true,
+    "reason": "fresh_generation_blocked",
+    "generation_status": "blocked_live_route"
+  },
+  "release_gate_verdict": "CONDITIONAL_PASS",
+  "created_at": "2026-07-23T13:25:30Z"
+}

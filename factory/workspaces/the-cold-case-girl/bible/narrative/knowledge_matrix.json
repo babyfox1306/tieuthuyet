@@ -1,0 +1,426 @@
+{
+  "description": "Knowledge matrix for The Cold Case Girl, Book 1. Tracks what each major character knows at each milestone, ensuring consistent information flow and protecting key reveals until their payoff chapters. Milestones are derived from total_chapters=38.",
+  "target_language": "en",
+  "milestones": [
+    1,
+    8,
+    19,
+    27,
+    38
+  ],
+  "characters": {
+    "Nadia Cole": {
+      "ch1": {
+        "knows": [
+          "She is the executioner who kills guilty men the system failed to punish.",
+          "Her first kill was Julian Croft (staged boating accident) — she knows the full truth.",
+          "Her sister Mara was murdered by Croft; he walked free.",
+          "Her network exists: Sasha, Priya, Wren.",
+          "She is reopening the Elise Marchetti case as her new podcast season.",
+          "Victor Rhodes is the prime suspect who walked free.",
+          "Her rule: never kill an innocent.",
+          "She has a thumb-tap tic when making decisions."
+        ],
+        "must_not_know_before": [],
+        "hidden_truth": "None — Nadia is the protagonist; the reader knows what she knows from ch1."
+      },
+      "ch8": {
+        "knows": [
+          "Everything from ch1.",
+          "Rhodes has left a voicemail with phrasing from her private notes — she suspects he knows more than he should.",
+          "Priya's signature anomaly on a recent death certificate — she worries about network exposure.",
+          "The network is operational and loyal (so far).",
+          "The podcast season is gaining traction; Elise Marchetti's family has reached out."
+        ],
+        "must_not_know_before": [
+          "Rhodes's full counter-investigation (he is building a case on her first kill).",
+          "The network betrayal (not yet active).",
+          "The dead-man's-switch (not yet planted)."
+        ],
+        "hidden_truth": "She does not yet know Rhodes has figured out her true nature (revealed at ch10)."
+      },
+      "ch19": {
+        "knows": [
+          "Everything from ch8.",
+          "Rhodes knows she is the executioner — he has confronted her indirectly (ch10 reveal).",
+          "Rhodes has researched 'podcaster + unsolved murder + boating accident' — linking him to Julian Croft's case (C004, planted ch14).",
+          "The two-way hunt is active; she is both hunter and hunted.",
+          "Network is under pressure; one member is acting suspiciously (not yet identified).",
+          "She has begun to suspect the network has a leak."
+        ],
+        "must_not_know_before": [
+          "The identity of the betrayer (revealed ch28).",
+          "The full extent of Rhodes's dead-man's-switch (planted ch30).",
+          "The third party who will receive the evidence (revealed ch38)."
+        ],
+        "hidden_truth": "She does not know that Rhodes has already built a file on her first kill (C011, planted ch36, payoff ch38)."
+      },
+      "ch27": {
+        "knows": [
+          "Everything from ch19.",
+          "The betrayer is leaking information — she has concrete evidence (C008, C009).",
+          "She suspects Wren (due to the 3 AM download) but is not certain.",
+          "The network is fractured; trust is eroding.",
+          "Rhodes is closing in on her first kill evidence.",
+          "She has a plan to finish Rhodes and deal with the betrayer."
+        ],
+        "must_not_know_before": [
+          "The full identity of the betrayer (revealed ch28).",
+          "The dead-man's-switch details (planted ch30, payoff ch38).",
+          "The third party (revealed ch38)."
+        ],
+        "hidden_truth": "She does not know that Rhodes has already sent the dead-man's-switch instructions to his attorney (C010, planted ch30)."
+      },
+      "ch38": {
+        "knows": [
+          "Everything from ch27.",
+          "The betrayer's identity (revealed ch28).",
+          "The full origin of her first kill has been paid off (ch34).",
+          "Rhodes is dead; the cold case is publicly solved.",
+          "Rhodes's dead-man's-switch has triggered — evidence of her first kill has surfaced to an unknown third party.",
+          "The third party does not want money or a story — they want her to work for them.",
+          "She is now on a leash."
+        ],
+        "must_not_know_before": [],
+        "hidden_truth": "None — all major reveals have been paid off by ch38. The third party's identity is the Book 2 hook."
+      }
+    },
+    "Victor Rhodes": {
+      "ch1": {
+        "knows": [
+          "He killed Elise Marchetti and walked free.",
+          "Nadia Cole is reopening the case via her podcast.",
+          "He is intelligent, patient, and believes he is untouchable.",
+          "He has a network of his own (attorney, contacts).",
+          "He does not yet know Nadia is the executioner."
+        ],
+        "must_not_know_before": [
+          "Nadia's true nature (revealed to him at ch10).",
+          "Nadia's first kill (Julian Croft) — he begins researching this after ch10.",
+          "The full extent of Nadia's network."
+        ],
+        "hidden_truth": "He is guilty of murder but has never been caught."
+      },
+      "ch8": {
+        "knows": [
+          "Everything from ch1.",
+          "Nadia's podcast is gaining traction; public pressure is building.",
+          "He has left a voicemail to test her reaction (C003).",
+          "He suspects Nadia is more than a podcaster — her precision is unusual."
+        ],
+        "must_not_know_before": [
+          "Nadia's true nature (revealed ch10).",
+          "Nadia's first kill (not yet).",
+          "The network members (not yet identified)."
+        ],
+        "hidden_truth": "He is beginning to suspect Nadia is dangerous, but has no proof."
+      },
+      "ch19": {
+        "knows": [
+          "Everything from ch8.",
+          "Nadia is the executioner — he has confirmed it (ch10 reveal).",
+          "He has researched 'podcaster + unsolved murder + boating accident' (C004).",
+          "He has identified Julian Croft's death as suspicious and linked it to Nadia.",
+          "He is building a case on Nadia's first kill.",
+          "He has a contact within Nadia's network (the leak, identity unknown to reader at this point)."
+        ],
+        "must_not_know_before": [
+          "The full names of all network members (he may know one).",
+          "The exact method of Nadia's first kill (he has suspicions but not proof).",
+          "The dead-man's-switch is not yet fully formed."
+        ],
+        "hidden_truth": "He is using the leak to gather information and build a file on Nadia's first kill."
+      },
+      "ch27": {
+        "knows": [
+          "Everything from ch19.",
+          "He has a full file on Nadia's first kill (C011, planted ch36, payoff ch38 — but he has it now).",
+          "He has set up a dead-man's-switch with his attorney (C010, planted ch30).",
+          "He knows the identity of the leak (consistent with plan).",
+          "He knows Nadia is planning to kill him.",
+          "He is preparing a counter-move."
+        ],
+        "must_not_know_before": [
+          "Nadia's exact plan for his death (she will adapt).",
+          "The third party who will receive the dead-man's-switch (it is his attorney)."
+        ],
+        "hidden_truth": "He has already sent the dead-man's-switch instructions; his death will trigger the release."
+      },
+      "ch38": {
+        "knows": [
+          "Everything from ch27.",
+          "He is dead — this knowledge is posthumous (reader knows his dead-man's-switch activated)."
+        ],
+        "must_not_know_before": [],
+        "hidden_truth": "His dead-man's-switch has successfully surfaced evidence to an unknown third party, fulfilling his goal even in death."
+      }
+    },
+    "Sasha Okafor": {
+      "ch1": {
+        "knows": [
+          "She is a defense lawyer who keeps a private ledger of guilty men who walked free.",
+          "She is part of Nadia's network.",
+          "She knows Nadia is the executioner.",
+          "She has fed Nadia information on past targets.",
+          "She knows Victor Rhodes walked free for Elise Marchetti's murder."
+        ],
+        "must_not_know_before": [
+          "The full details of Nadia's first kill (Julian Croft).",
+          "Rhodes's counter-investigation (not yet active)."
+        ],
+        "hidden_truth": "She has a personal stake: a guilty man she defended walked free and later killed again — she works with Nadia to atone."
+      },
+      "ch8": {
+        "knows": [
+          "Everything from ch1.",
+          "Nadia's podcast on Elise Marchetti is underway.",
+          "She has provided legal insights on Rhodes's past cases.",
+          "She is loyal to Nadia (so far)."
+        ],
+        "must_not_know_before": [
+          "Rhodes's voicemail to Nadia (C003).",
+          "The network leak (not yet active)."
+        ],
+        "hidden_truth": "She carries guilt for past cases but has not shared the full extent with Nadia."
+      },
+      "ch19": {
+        "knows": [
+          "Everything from ch8.",
+          "Rhodes is hunting Nadia — the two-way hunt is active.",
+          "The network is under pressure.",
+          "She is aware that one of the three may be compromised (but does not know who)."
+        ],
+        "must_not_know_before": [
+          "The identity of the betrayer (if she is not the betrayer).",
+          "Rhodes's full file on Nadia's first kill."
+        ],
+        "hidden_truth": "If she is the betrayer: she has been leaking information to Rhodes since ch14-16. If she is not: she is loyal and suspects Wren or Priya."
+      },
+      "ch27": {
+        "knows": [
+          "Everything from ch19.",
+          "If she is the betrayer: she has provided critical information to Rhodes and is preparing to sever ties. If not: she is helping Nadia identify the leak."
+        ],
+        "must_not_know_before": [
+          "The dead-man's-switch (not yet revealed to network).",
+          "The third party (Book 2 hook)."
+        ],
+        "hidden_truth": "Her loyalty or betrayal is fully revealed at ch28."
+      },
+      "ch38": {
+        "knows": [
+          "Everything from ch27.",
+          "If she is the betrayer: she has been dealt with (killed, exiled, or turned). If not: she is shaken but loyal.",
+          "Rhodes is dead; the case is closed.",
+          "The dead-man's-switch has triggered — she knows Nadia is now vulnerable.",
+          "She does not know the third party's identity."
+        ],
+        "must_not_know_before": [],
+        "hidden_truth": "If she survived the betrayal arc, she carries the scar of broken trust. If she was the betrayer, her fate is sealed."
+      }
+    },
+    "Priya Anand": {
+      "ch1": {
+        "knows": [
+          "She is a medical examiner who has altered cause-of-death records for Nadia twice.",
+          "She is part of Nadia's network.",
+          "She knows Nadia is the executioner.",
+          "She knows the details of the two deaths she altered."
+        ],
+        "must_not_know_before": [
+          "The full details of Nadia's first kill (Julian Croft).",
+          "Rhodes's counter-investigation."
+        ],
+        "hidden_truth": "She altered records for Nadia out of a sense of justice, but also because she was once failed by the system (a personal case)."
+      },
+      "ch8": {
+        "knows": [
+          "Everything from ch1.",
+          "Her office is being audited (RH03) — she is nervous but the audit is routine.",
+          "She has signed a recent death certificate with a slightly different signature (C006) — a vulnerability."
+        ],
+        "must_not_know_before": [
+          "Rhodes's voicemail (C003).",
+          "The network leak."
+        ],
+        "hidden_truth": "She is the most vulnerable network member due to her professional exposure."
+      },
+      "ch19": {
+        "knows": [
+          "Everything from ch8.",
+          "The two-way hunt is active.",
+          "She is worried about the audit and the signature anomaly.",
+          "She is loyal to Nadia (so far)."
+        ],
+        "must_not_know_before": [
+          "The identity of the betrayer (if she is not the betrayer).",
+          "Rhodes's full file."
+        ],
+        "hidden_truth": "If she is the betrayer: she leaked information under duress (the audit threatened her career). If not: she is loyal but fragile."
+      },
+      "ch27": {
+        "knows": [
+          "Everything from ch19.",
+          "If she is the betrayer: she has been feeding Rhodes information. If not: she is helping Nadia."
+        ],
+        "must_not_know_before": [
+          "The dead-man's-switch.",
+          "The third party."
+        ],
+        "hidden_truth": "Her role in the betrayal is revealed at ch28."
+      },
+      "ch38": {
+        "knows": [
+          "Everything from ch27.",
+          "If she is the betrayer: she has been dealt with. If not: she is shaken but loyal.",
+          "Rhodes is dead; the case is closed.",
+          "The dead-man's-switch has triggered — she knows Nadia is vulnerable."
+        ],
+        "must_not_know_before": [],
+        "hidden_truth": "If she survived, her professional vulnerability remains a ticking bomb for future books."
+      }
+    },
+    "Wren Delgado": {
+      "ch1": {
+        "knows": [
+          "She is a hacker who pulls digital trails and deletes evidence for Nadia.",
+          "She is part of Nadia's network.",
+          "She knows Nadia is the executioner.",
+          "She has a personal vendetta against a corporate predator (not yet specified)."
+        ],
+        "must_not_know_before": [
+          "The full details of Nadia's first kill (Julian Croft).",
+          "Rhodes's counter-investigation."
+        ],
+        "hidden_truth": "She is the most technically skilled but also the most reckless — she leaves digital footprints."
+      },
+      "ch8": {
+        "knows": [
+          "Everything from ch1.",
+          "She has pulled digital trails on Rhodes for Nadia.",
+          "She is loyal (so far)."
+        ],
+        "must_not_know_before": [
+          "Rhodes's voicemail (C003).",
+          "The network leak."
+        ],
+        "hidden_truth": "She has a side operation: she is using her skills to investigate the corporate predator who wronged her, which could expose the network."
+      },
+      "ch19": {
+        "knows": [
+          "Everything from ch8.",
+          "The two-way hunt is active.",
+          "She has noticed unusual access logs on her own system (C009) — someone may be using her credentials.",
+          "She suspects a leak but does not know who."
+        ],
+        "must_not_know_before": [
+          "The identity of the betrayer (if she is not the betrayer).",
+          "Rhodes's full file."
+        ],
+        "hidden_truth": "If she is the betrayer: she has been leaking information to Rhodes for personal gain (or under duress). If not: the 3 AM download was a frame by the real betrayer."
+      },
+      "ch27": {
+        "knows": [
+          "Everything from ch19.",
+          "If she is the betrayer: she is preparing to cover her tracks. If not: she is helping Nadia identify the leak."
+        ],
+        "must_not_know_before": [
+          "The dead-man's-switch.",
+          "The third party."
+        ],
+        "hidden_truth": "Her side operation is at risk of exposure, which could compromise the network."
+      },
+      "ch38": {
+        "knows": [
+          "Everything from ch27.",
+          "If she is the betrayer: she has been dealt with. If not: she is shaken but loyal.",
+          "Rhodes is dead; the case is closed.",
+          "The dead-man's-switch has triggered — she knows Nadia is vulnerable."
+        ],
+        "must_not_know_before": [],
+        "hidden_truth": "If she survived, her side operation remains a loose end for future books."
+      }
+    },
+    "Elise Marchetti": {
+      "ch1": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "She is dead — no knowledge. Her case is the cold case Nadia reopens."
+      },
+      "ch8": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "Deceased."
+      },
+      "ch19": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "Deceased."
+      },
+      "ch27": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "Deceased."
+      },
+      "ch38": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "Deceased. Her case is publicly solved."
+      }
+    },
+    "Mara Cole": {
+      "ch1": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "She is dead — no knowledge. Her murder is Nadia's origin wound."
+      },
+      "ch8": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "Deceased."
+      },
+      "ch19": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "Deceased."
+      },
+      "ch27": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "Deceased."
+      },
+      "ch38": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "Deceased. Her diary (C005) was used in the origin reveal (ch34)."
+      }
+    },
+    "Julian Croft": {
+      "ch1": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "He is dead — no knowledge. He is Nadia's first kill."
+      },
+      "ch8": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "Deceased."
+      },
+      "ch19": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "Deceased."
+      },
+      "ch27": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "Deceased."
+      },
+      "ch38": {
+        "knows": [],
+        "must_not_know_before": [],
+        "hidden_truth": "Deceased. His death is the evidence Rhodes used to build the case on Nadia."
+      }
+    }
+  }
+}

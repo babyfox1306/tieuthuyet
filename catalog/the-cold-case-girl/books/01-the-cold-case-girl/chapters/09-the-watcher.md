@@ -1,0 +1,165 @@
+---
+series: the-cold-case-girl
+book: 1
+chapter: 9
+title: The Watcher
+spice: 1
+word_count: 1544
+status: draft
+needs_fix: []
+promoted_at: '2026-07-26T10:55:42Z'
+---
+
+Thursday night. That was the window we had chosen to finish him and disappear.
+
+The timeline was spread across three screens in Sasha's basement office—her husband thought she was working on a pro bono case. I traced the sequence with my finger, accounting for every minute. The brake-line tampering at 10:42 PM, while Rhodes sat at his Thursday poker game. The scheduled podcast upload at 11:15, creating a digital marker at home without pretending it proved I was there. Priya would do nothing unless the body reached her office and the injuries matched the crash.
+
+Controlled. Precise. Invisible.
+
+"The problem isn't the plan," Sasha said, her voice low. She was standing by the door, arms crossed. "It's the aftermath. When they find the body, someone's going to look at the car. They're going to find the cut line."
+
+"The curve limits what survives." I pulled up the road survey. "If the fitting fails under a hard application, the car may pull wide into the weakened railing. Recovery would take time, but the fitting could still be found. We have to assume it will be."
+
+Sasha studied the image. Her jaw tightened. "That's a lot of variables."
+
+"That's why we have Priya. The police reconstruct the crash. If the body reaches her office and the injuries match that reconstruction, she certifies the cause without creating a second line of inquiry."
+
+"And if the crash reconstruction identifies sabotage?"
+
+"Then the plan fails. Priya cannot contradict mechanical evidence."
+
+"And family?"
+
+I looked at her. "His brother is the only likely objection, and they barely speak. That still makes him a variable. If David Rhodes requests an autopsy or an independent inspection, we stop treating this as controllable."
+
+Sasha held my gaze for a long moment. Then she nodded. "Thursday night. I'll document the production schedule before then, but do not call it an alibi. A scheduled upload does not prove you were home."
+
+"Thank you."
+
+"Don't thank me yet." She unlocked her phone and showed me a message from Priya. "She's nervous about the death certificate signature from last month. The one she signed off on for that overdose case in the county. Someone in the clerk's office flagged it — the body was cremated before the secondary review."
+
+A cold thread twisted in my stomach. "When was this?"
+
+"Three days ago. She says it's probably nothing, standard paperwork review, but she wanted us to know."
+
+"Probably nothing" was the phrase that got people caught. I made a mental note to check in with Priya after the meeting. The network was only as strong as its weakest seam, and that seam was fraying.
+
+"Handle it," I said. "Quietly. If the clerk pushes, have your office send a standard confirmation. Priya's signature is valid—the case was legitimate."
+
+Sasha typed a response and pocketed her phone. "The plan holds. But Nadia — after this, we need to go dormant. No more contracts for at least six months."
+
+"Agreed."
+
+She studied me. "You sound like you mean it."
+
+"I do." I closed the laptop. "Victor Rhodes is the end of a chapter. After him, I finish the podcast season, I let the public attention die down, and I disappear into my life. No one will connect the podcaster who exposed the man responsible for Elise Marchetti's murder to the woman who killed him."
+
+"You're sure about that?"
+
+I wasn't. But I smiled anyway, because that was what Nadia Cole did—she reassured people. "I've been invisible for three years. I can be invisible for three more."
+
+Sasha didn't look convinced, but she didn't push. She knew me well enough to know when I was lying, and she also knew me well enough to know when to let it go.
+
+I left her office at 9 PM, the plan locked in my head like a blueprint. The night air was cold against my skin, and I pulled my jacket tighter as I walked to my car. The street was quiet, residential, the kind of neighborhood where nothing ever happened. I liked that. I liked being surrounded by normalcy while I carried what I was about to do.
+
+My phone buzzed as I reached the driver's side door. Unknown number. I hesitated, then let it go to voicemail. I didn't answer unknown numbers the night before a plan goes active. Too many variables.
+
+The car started. The heater hummed to life. I pulled away from the curb and headed home, the streetlights sliding past in a rhythm that should have been calming but wasn't.
+
+At 9:47 PM, I was in my apartment, the door locked, the deadbolt engaged. I poured a glass of water and stood by the window, looking out at the city lights. I imagined Victor under the same sky, counting the same hours. Imagination was not evidence, but it kept borrowing his face.
+
+He didn't know what was coming.
+
+I checked my phone. One new voicemail. Unknown number.
+
+I almost deleted it. I almost let it dissolve into the digital ether, unplayed, unremembered. But something stopped me — a flicker of instinct, the same instinct that had kept me alive for three years. I pressed play.
+
+The voice was calm. Measured. Almost friendly.
+
+"Hi, Nadia. This is Victor Rhodes. I hope you don't mind me reaching out directly — I got your number from the podcast's business line. I've been following your work for a long time, and I wanted to say I'm impressed. The episode on Elise Marchetti — it's thorough. Clean. You have a real talent for finding the truth."
+
+My hand tightened around the phone.
+
+"I know we're technically on opposite sides, but I'd love to talk. Maybe over coffee? I think we'd find we have more in common than you'd expect. You have a gift for finishing what you start, Nadia. I recognize that in you. Give me a call when you have a moment. I'd love to hear your voice."
+
+The line went dead.
+
+I played it again.
+
+"Hi, Nadia. This is Victor Rhodes."
+
+Again.
+
+"You have a gift for finishing what you start."
+
+Again.
+
+"Clean."
+
+The word hit me like a punch to the chest. Clean. That was the word I had used in the operational record after Julian Croft. I had never put it in a podcast script, said it aloud, or published it. Clean finish. The phrase existed only in the encrypted archive Wren had built for the network, buried behind layers of obfuscation and a root key I controlled.
+
+He used that word.
+
+Not "thorough." Not "precise." That word.
+
+I played the message a third time, listening for tone, for subtext, for the spaces between his words. He sounded casual. Friendly. Like a fan reaching out to a podcaster he admired. But the phrasing was wrong. The precision was wrong. He was not a fan—he was a predator testing his prey.
+
+He knew.
+
+I didn't know how he knew, but he knew. He had been watching me longer than I'd been watching him. The voicemail wasn't a fan message—it was a challenge. A declaration. He was telling me he saw me, and he wasn't afraid.
+
+I called Sasha.
+
+She picked up on the first ring. "Tell me you're home."
+
+"The plan is compromised."
+
+Silence. Then: "What?"
+
+"Victor Rhodes left me a voicemail. He used a phrase from our private archive. A phrase I've never said aloud. He knows, Sasha. He knows what we recorded."
+
+"Are you sure?"
+
+"He said 'clean.' That's the word in our archive. The one Wren administers. No one outside the network should be able to see it."
+
+More silence. I could hear her breathing, processing, calculating.
+
+"We proceed anyway," she said finally. "We're too far in to pull back."
+
+"No."
+
+"Nadia —"
+
+"I said no." My voice was flat. Final. "The network goes dark. All of it. No contact, no contracts, no communication until I figure out how much he knows."
+
+"And if he goes to the police?"
+
+"He won't. If he had evidence, he wouldn't have left a voicemail. He's playing a game, and I need to understand the rules before I make the next move."
+
+Sasha exhaled slowly. "How long?"
+
+"I don't know. A week. Maybe two. Tell Priya and Wren to go dark. No new signatures, no data pulls, nothing that could be traced back to us."
+
+"You're asking us to disappear."
+
+"I'm asking you to survive."
+
+She was quiet for a long moment. Then: "Be careful, Nadia. He's not Julian Croft. He's not any of the others. He knows what we do, and he's not afraid of us."
+
+"I know."
+
+I ended the call and set the phone on the counter. The apartment felt smaller now, the walls closer. I walked to the window and looked out at the city, but the lights didn't comfort me anymore.
+
+He was out there. Watching. Waiting.
+
+I played the voicemail one more time. Victor Rhodes's voice filled the room, calm and unhurried, like he had all the time in the world.
+
+"I'd love to hear your voice, Nadia."
+
+I gripped the edge of the counter until it hurt.
+
+I was no longer invisible.
+
+The hunter was now the hunted.
+
+And for the first time in three years, I didn't know if I was going to survive.

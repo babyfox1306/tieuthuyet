@@ -1,0 +1,128 @@
+{
+  "main_mystery": "Why did Sloane hire Lucian to shoot Mara, erase her own memories, and order Lucian to kill her if those memories returned?",
+  "truth": "Sloane discovered that Cassian had used her assassination system to eliminate seven innocent witnesses, so she staged Mara's death as bait, hid Cassian's complete transaction ledger inside her own conditioned firing sequence, erased her conscious memory to survive interrogation, and ordered Lucian to kill her if Cassian successfully restored the obedient identity he had created.",
+  "canonical_reveal_chapter": 13,
+  "red_herrings": [
+    {
+      "id": "RH001",
+      "description": "Lucian is Rook's puppet; the whole rooftop trap is Lucian's plan to silence Sloane for Rook.",
+      "plant_chapter": 4,
+      "debunk_chapter": 13
+    },
+    {
+      "id": "RH002",
+      "description": "Mara's shooting is real; the blood on the opposite roof is proof she is dead.",
+      "plant_chapter": 1,
+      "debunk_chapter": 11
+    },
+    {
+      "id": "RH003",
+      "description": "The blood-signed contract is a forgery; Sloane never wrote it.",
+      "plant_chapter": 2,
+      "debunk_chapter": 6
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "MR001",
+      "description": "Sloane hears her own voice ordering the contract — she hired Lucian willingly.",
+      "chapter": 2,
+      "required_clues": [
+        "C002"
+      ],
+      "reveal_weight": "minor"
+    },
+    {
+      "id": "MR002",
+      "description": "Sloane recognizes the intimate name Lucian calls her, restoring the first sealed memory fragment.",
+      "chapter": 6,
+      "required_clues": [
+        "C002",
+        "C003"
+      ]
+    },
+    {
+      "id": "MR003",
+      "description": "Sloane removes Lucian's mask and sees the face of the man she once loved; the second sealed recording unlocks, containing her command never to trust her restored self.",
+      "chapter": 9,
+      "required_clues": [
+        "C001",
+        "C002"
+      ]
+    },
+    {
+      "id": "MR004",
+      "description": "Sloane spots Rook's reflection in the camera of every target file, revealing his manipulation.",
+      "chapter": 10,
+      "required_clues": [
+        "C001",
+        "C004"
+      ]
+    },
+    {
+      "id": "MR005",
+      "description": "Sloane completes the conditioned firing sequence, unlocking the transaction ledger inside the optic; the full truth becomes visible.",
+      "chapter": 13,
+      "required_clues": [
+        "C004",
+        "C005"
+      ]
+    },
+    {
+      "id": "MR006",
+      "description": "All three recordings and seven names are recovered; her present self overrides Rook's final command, proving conditioned obedience is broken.",
+      "chapter": 14,
+      "required_clues": [
+        "C002",
+        "C005"
+      ]
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "type": "physical",
+      "description": "Seven lines etched inside the rifle magazine, representing the seven targets Lucian killed under Sloane's orders.",
+      "plant_chapter": 3,
+      "payoff_chapter": 13,
+      "discovered_by": "Sloane",
+      "note": "First concrete evidence of a pattern; significance not understood until the full list of names surfaces."
+    },
+    {
+      "id": "C002",
+      "type": "recorded",
+      "description": "A recording in which Sloane's recorded self traces the same wrist circle she makes when frightened — the first motion of the conditioned firing sequence.",
+      "plant_chapter": 2,
+      "payoff_chapter": 12,
+      "discovered_by": "Sloane",
+      "note": "Links her present reflexive gesture to her past; becomes the key to unlocking the ledger."
+    },
+    {
+      "id": "C003",
+      "type": "physical",
+      "description": "Scars on Lucian's back and shoulders made by Sloane's fingernails during a former intimate encounter; reveals their past relationship.",
+      "plant_chapter": 6,
+      "payoff_chapter": 6,
+      "discovered_by": "Sloane",
+      "note": "Triggers the first memory fragment — the intimate name Lucian calls her."
+    },
+    {
+      "id": "C004",
+      "type": "visual",
+      "description": "The same faint reflection of Rook behind the camera in every target file Lucian used.",
+      "plant_chapter": 10,
+      "payoff_chapter": 13,
+      "discovered_by": "Sloane",
+      "note": "Confirms Rook was present at every kill; connects him directly to the target selection."
+    },
+    {
+      "id": "C005",
+      "type": "device",
+      "description": "The transaction ledger remains locked under the optic; it can only be opened by Sloane's blood-authenticated firing sequence (the wrist circle + trigger pull).",
+      "plant_chapter": 12,
+      "payoff_chapter": 13,
+      "discovered_by": "Sloane",
+      "note": "The final piece — Sloane completes the sequence and retrieves Rook's entire ledger, exposing his network."
+    }
+  ]
+}

@@ -180,6 +180,76 @@ class TestRenderLockedCanonBlock(unittest.TestCase):
         self.assertIn("NO first-person", block)
         self.assertIn("MAX level 1", block)
 
+    def test_first_person_does_not_ban_i_my_me(self) -> None:
+        reg = CanonRegistry(
+            workspace_id="test",
+            book=1,
+            book_slug="01-test",
+            chapter_count=10,
+            target_language="en",
+            pov_mode="first_person",
+            spice_max=0,
+            characters={
+                "female_lead": CharacterCanon(
+                    role="female_lead",
+                    canonical="Clara Vale",
+                    allowed_aliases=["Clara"],
+                    forbidden_aliases=[],
+                ),
+                "male_lead": CharacterCanon(
+                    role="male_lead",
+                    canonical="Unassigned (no male lead)",
+                    allowed_aliases=[],
+                    forbidden_aliases=[],
+                ),
+            },
+        )
+        block = render_locked_canon_block(reg)
+        self.assertIn("POV: first_person", block)
+        self.assertIn("using I/my/me", block)
+        self.assertNotIn("NO first-person", block)
+        self.assertNotIn("Third-person limited locked", block)
+        self.assertIn("MAX level 0", block)
+        self.assertNotIn("Fade to black beyond kiss", block)
+        self.assertNotIn("Never write: (none)", block)
+
+    def test_must_include_not_under_must_avoid(self) -> None:
+        reg = CanonRegistry(
+            workspace_id="test",
+            book=1,
+            book_slug="01-test",
+            chapter_count=10,
+            target_language="en",
+            pov_mode="first_person",
+            spice_max=0,
+            characters={
+                "female_lead": CharacterCanon(
+                    role="female_lead",
+                    canonical="Clara Vale",
+                    allowed_aliases=["Clara"],
+                    forbidden_aliases=[],
+                ),
+                "male_lead": CharacterCanon(
+                    role="male_lead",
+                    canonical="Unassigned (no male lead)",
+                    allowed_aliases=[],
+                    forbidden_aliases=[],
+                ),
+            },
+        )
+        block = render_locked_canon_block(
+            reg,
+            content_boundaries=["Romance", "Sexual content"],
+            must_include=["Clara hears the ninth bell."],
+        )
+        avoid_i = block.index("MUST AVOID")
+        include_i = block.index("MUST INCLUDE")
+        self.assertLess(avoid_i, include_i)
+        avoid_section = block[avoid_i:include_i]
+        self.assertNotIn("Clara hears the ninth bell", avoid_section)
+        self.assertIn("Clara hears the ninth bell", block[include_i:])
+        self.assertNotIn("Fade to black beyond kiss", block)
+
 
 class TestSanitizeText(unittest.TestCase):
     def test_jude_to_elias(self) -> None:

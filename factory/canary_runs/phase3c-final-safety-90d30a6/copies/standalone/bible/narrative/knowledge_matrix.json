@@ -1,0 +1,49 @@
+{
+  "description": "Knowledge matrix for His Final Target Book 1, tracking character knowledge states across the narrative.",
+  "target_language": "en",
+  "milestones": [
+    1,
+    3,
+    8,
+    12,
+    17
+  ],
+  "characters": {
+    "Sloane": {
+      "ch1": "Has no memory of the past 3 months, knows only her identity as a firearms investigator and that her sister Mara was just shot.",
+      "ch3": "Has discovered seven lines inside the rifle magazine and heard a recording of her own voice tracing the wrist circle; suspects a past connection but cannot remember specifics.",
+      "ch8": "Has seen Lucian's scars and recognized him as her former lover; retrieved the second recording where she ordered him not to trust her restored self; knows she issued the contract for her own memory erasure and the staged shooting.",
+      "ch12": "Has identified Rook's reflection in target files and is in the process of unlocking the ledger; remembers all seven condemned names but has not yet read the ledger contents that fully expose Rook's manipulation.",
+      "ch17": "Has possessed the complete truth since chapter 13; released the ledger and her own contracts; is arrested and accepts the consequences of her actions.",
+      "must_not_know_before": 13,
+      "hidden_truth": "Her conditioned muscle memory (the wrist circle) is the only key to unlocking Rook's complete transaction ledger."
+    },
+    "Lucian": {
+      "ch1": "Knows the full contract terms, that the shooting is staged, that he killed seven people under Sloane's orders, and that Sloane's memory was erased; does not yet know that the seven targets were innocent witnesses manipulated by Rook.",
+      "ch3": "Has shown Sloane the contract and the rifle; begins to question the nature of the kills as Sloane starts recovering fragments.",
+      "ch8": "Has allowed Sloane to see his face and has been intimate; his emotional conflict deepens; still unaware of Rook's corruption of the target list.",
+      "ch12": "Witnesses Sloane unlocking the ledger; learns the truth about Rook's manipulation as the contents become accessible.",
+      "ch17": "Knows the complete truth; refuses the escape route and stands with Sloane at dawn.",
+      "must_not_know_before": 13,
+      "hidden_truth": "He possesses the unedited recordings of Sloane issuing the seven execution orders and knows the sunrise clause of the contract that requires him to kill her if conditions are not met."
+    },
+    "Mara": {
+      "ch1": "Knows she consented to the staged shooting and is alive; understands her role as bait in Sloane's plan to expose Rook.",
+      "ch3": "Remains off the grid, in hiding; knows the plan and her later signaling role.",
+      "ch8": "Has not yet made contact; maintains her apparent death.",
+      "ch12": "Signals Sloane with hand rhythm showing the true firing sequence; knows the ledger is being unlocked.",
+      "ch17": "Is alive; releases the ledger to the authorities as part of the exposure.",
+      "must_not_know_before": 13,
+      "hidden_truth": "She consented to the staged shooting and knows that Sloane's memory erasure and the contract are part of a trap to expose Rook, but hides her survival to keep Sloane in the dark until the truth is assembled."
+    },
+    "Rook": {
+      "ch1": "Knows everything: he corrupted the target list, used Sloane's system to kill witnesses, and is manipulating events from off-roof.",
+      "ch3": "Contacts the roof; continues his manipulation, lying to Sloane and Lucian.",
+      "ch8": "Is still alive and active; observes Sloane's progress, plans to capture Mara.",
+      "ch12": "Knows Sloane is unlocking the ledger; attempts to intervene via the blind interval and his control of the surveillance room.",
+      "ch17": "Is dead, killed while reaching for the rifle at chapter 17; his network is exposed by the released ledger.",
+      "must_not_know_before": 1,
+      "hidden_truth": "He hid the transaction ledger inside Sloane's conditioned firing sequence and knows that if she completes the sequence, his entire weapons network will be exposed."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "act": [16, 18],
+  "chapter_plans": [
+    {
+      "chapter": 16,
+      "title": "The Clean Kill Setup",
+      "slug": "the-clean-kill-setup",
+      "one_line_summary": "Elle Reyes meticulously plans a clean kill on Damien Kroll, but a single detail from the watcher makes her question whether she is the hunter or the hunted.",
+      "beat_summary": "Elle Reyes, having seen Kroll's estate and his locked study, decides the only way to end this is to kill him and destroy the dead man's switch simultaneously. She begins meticulous prep: she maps the estate's blind spots, procures a sedative that mimics a heart attack, and enlists Wren to disable the security cameras for a twelve-minute window. But during a final check, she receives a text from the watcher: 'The study has a floor safe behind the painting. Don't bother with the lock — it's booby-trapped.' The watcher is helping her, not hindering her. Elle Reyes realizes the watcher is not Kroll's ally — they are someone playing their own game. She proceeds with the plan, but her trust in her own intelligence is shaken.",
+      "must_happen": [
+        "Elle Reyes maps Kroll's estate using satellite imagery and her memory from the visit, identifying three blind spots in the security coverage.",
+        "Elle Reyes procures a sedative that mimics a heart attack from a veterinary supply contact — a clean, untraceable method.",
+        "Elle Reyes enlists Wren to disable Kroll's security cameras for a twelve-minute window; Wren agrees but avoids eye contact.",
+        "Elle Reyes receives a text from the watcher: 'The study has a floor safe behind the painting. Don't bother with the lock — it's booby-trapped.' — the watcher is helping her, not Kroll.",
+        "Elle Reyes realizes the watcher is an independent player, not Kroll's ally, and this changes her understanding of the game."
+      ],
+      "must_not": [
+        "Do not reveal the watcher's identity or motive — only that they are not working for Kroll.",
+        "Do not show the kill attempt happening — only the meticulous preparation."
+      ],
+      "opens_with": "\"'Twelve minutes. That's all you get. After that, the cameras come back online and every alarm in the county goes off.' Wren's voice was flat. I didn't ask why she wouldn't look at me.\"",
+      "cliffhanger": "Elle Reyes stares at the watcher's text. The floor safe behind the painting — the same painting she noticed was slightly askew during her visit. The watcher has been inside Kroll's study. She types back: 'Who are you?' The reply comes instantly: 'The one who's going to make sure you don't die tonight.'",
+      "signature_detail_hint": "The sedative Elle Reyes procures is stored in a vial originally used for horse tranquilizers — the label is partially scratched off, but the manufacturer's logo (a rearing stallion) is still visible.",
+      "emotional_beat": "Cold, methodical focus undercut by the unsettling realization that the watcher is not an enemy but an unknown ally — and unknown allies are the most dangerous kind.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. Elle Reyes is fully operational, planning a kill.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Show the meticulous prep for the kill and the watcher's unexpected intervention. Touch threads T01, T02, T03, T05, T06, T07.",
+      "carries_to_next": "The kill plan is set; the watcher is revealed as an independent player; Wren's avoidance deepens the suspicion; Elle Reyes enters the kill phase with unknown variables."
+    },
+    {
+      "chapter": 17,
+      "title": "The Trap",
+      "slug": "the-trap",
+      "one_line_summary": "Elle Reyes executes the kill plan — but it is a trap; Kroll expected her, and she barely escapes with her life.",
+      "beat_summary": "Elle Reyes executes the plan: she breaches Kroll's estate during the twelve-minute window, sedates him in his bedroom, and moves to the study to retrieve the dead man's switch. But when she opens the floor safe, she finds not a hard drive but a single photograph: herself, at the riverbank, with the witness. The safe is empty of evidence. Kroll was not sedated — the man in the bed was a decoy. Elle Reyes realizes the trap too late. Alarms blare. She runs through the estate as security closes in, barely escaping through a window into the garden. She hides in a drainage ditch as Kroll's men search the grounds. She escapes, but she is wounded — a deep cut on her arm from the window glass. She returns to her apartment to find a text from Kroll: 'I told you I knew what you were. Now everyone will.'",
+      "must_happen": [
+        "Elle Reyes breaches Kroll's estate during the twelve-minute security window, sedates the man in Kroll's bed (a decoy), and moves to the study.",
+        "Elle Reyes opens the floor safe and finds a single photograph: herself at the riverbank with the witness — no hard drive, no evidence.",
+        "Alarms blare; Elle Reyes realizes the trap and runs; she is wounded by broken glass as she escapes through a window.",
+        "Elle Reyes hides in a drainage ditch outside the estate as Kroll's security team searches the grounds; she escapes after an hour.",
+        "Elle Reyes returns to her apartment and finds a text from Kroll: 'I told you I knew what you were. Now everyone will.'"
+      ],
+      "must_not": [
+        "Do not show Kroll's full evidence package being released — only that Kroll claims he will release it.",
+        "Do not show Elle Reyes being captured or seriously injured — only a cut on her arm and a narrow escape."
+      ],
+      "opens_with": "\"'Twelve minutes.' I whispered it like a prayer as I slipped through the gap in the fence. I had nine left.\"",
+      "cliffhanger": "Elle Reyes stands in her apartment, blood dripping from her arm onto the floor. Her phone buzzes. A text from Kroll: 'I told you I knew what you were. Now everyone will.' She looks up. Her laptop screen is on. A video is uploading to YouTube. The title: 'The Quiet Ones: The Truth About Elle Reyes.'",
+      "signature_detail_hint": "The photograph in the safe was not printed on standard photo paper — it was printed on matte canvas, the kind used for art reproductions, suggesting Kroll had it made specially to fit the safe's dimensions.",
+      "emotional_beat": "Cold fury mixed with the sick realization that she walked into a trap she should have seen coming — and now her secret is about to go public.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is pure action and survival.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Execute the trap and the narrow escape. Touch threads T01, T02, T03, T05, T06, T07.",
+      "carries_to_next": "The kill attempt failed; Kroll has photographic evidence of Elle at the riverbank; a video is uploading; Elle's secret is about to go public; the network is in crisis."
+    },
+    {
+      "chapter": 18,
+      "title": "The Fallout",
+      "slug": "the-fallout",
+      "one_line_summary": "Kroll releases the video, exposing Elle Reyes's secret to the world — and her network fractures under the pressure, forcing her to make an impossible choice.",
+      "beat_summary": "Kroll releases the video: a compilation of Elle Reyes at the riverbank meeting the witness, plus leaked audio of her private conversation with Sasha about 'finishing' Kroll. The podcast network drops her. The press camps outside her building. Detective Marcus Cole opens an investigation. Elle Reyes calls an emergency network meeting, but only Sasha and Dr. Lin come — Wren is missing. Sasha reveals that Wren's gambling debts were paid off by Kroll, and Wren has disappeared. The network is fracturing. Elle Reyes makes an impossible choice: she will go public with a confession — not of murder, but of being a vigilante investigator who bends the law — and use her platform to frame Kroll so thoroughly that the public will see him as the monster he is, even if she goes down. The chapter ends with Elle Reyes recording a new podcast episode, her voice steady, as she begins to dismantle Kroll publicly — and herself along with him. Clue C006 is planted: a single detail in the video Kroll released — a reflection in a window — shows a figure watching the riverbank meeting that is not Kroll's PI, but someone else.",
+      "must_happen": [
+        "Kroll releases a video compilation: Elle Reyes at the riverbank meeting the witness, plus leaked audio of her conversation with Sasha about 'finishing' Kroll.",
+        "Elle Reyes's podcast network drops her; the press camps outside her building; Detective Marcus Cole opens an investigation into her activities.",
+        "Elle Reyes calls an emergency network meeting; only Sasha and Dr. Lin come — Wren is missing, and Sasha reveals Wren's gambling debts were paid off by Kroll.",
+        "Elle Reyes makes an impossible choice: she will go public with a limited confession — being a vigilante investigator — and use her platform to frame Kroll as a murderer.",
+        "Elle Reyes records a new podcast episode, her voice steady, as she begins to dismantle Kroll publicly — and herself along with him. Clue C006 is planted: a reflection in the video shows a figure watching the riverbank meeting that is not Kroll's PI."
+      ],
+      "must_not": [
+        "Do not show the full contents of Elle's confession — only that she begins recording it.",
+        "Do not reveal the identity of the figure in the reflection (C006) — only that it is someone other than Kroll's PI."
+      ],
+      "opens_with": "\"'Elle Reyes: Vigilante or Victim?' I read the headline on my phone while the video of me at the riverbank played on loop. My thumb started tapping before I could stop it.\"",
+      "cliffhanger": "Elle Reyes presses record on her microphone. She takes a breath. 'My name is Elle Reyes. And I am not just a podcaster. I am the person who finishes what the system leaves behind.' She pauses. 'And I have proof that Damien Kroll murdered Lucia Vega.' The chapter ends as her finger hovers over the 'Publish' button.",
+      "signature_detail_hint": "In the video Kroll released, a reflection in a car window shows a figure in a dark coat standing behind a tree — the figure is holding a Black Serpent cigarette, unlit.",
+      "emotional_beat": "Cold resolve mixed with the bitter knowledge that she is sacrificing her anonymity to save herself — and that her network will never be the same.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is existential: Elle Reyes is about to destroy her own life to save it.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Show the fallout from Kroll's video and Elle's decision to go public. Plant clue C006. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "The public war is now total; Wren is missing and compromised; clue C006 is planted; Elle Reyes is about to publish a confession that will change everything; the network is fractured but Elle is fighting back."
+    }
+  ]
+}

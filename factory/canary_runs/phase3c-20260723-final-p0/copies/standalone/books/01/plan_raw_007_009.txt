@@ -1,0 +1,213 @@
+{
+  "act": [
+    7,
+    9
+  ],
+  "chapter_plans": [
+    {
+      "chapter": 7,
+      "title": "The Voice in the Warehouse",
+      "slug": "the-voice-in-the-warehouse",
+      "one_line_summary": "Sloane Mercer and Lucian Vey enter the River Road warehouse to find Mara Mercer, but the apparent hostage call leads them into a trap built from Sloane Mercer's own contingency plans.",
+      "beat_summary": "Sloane Mercer and Lucian Vey enter the River Road warehouse through separate access points and discover that Mara Mercer's plea for help is a manipulated recording transmitted through the building's steel supports. Sloane Mercer recognizes the trap's ballistic geometry and takes control of their route, while an involuntary circle against her left wrist helps her identify a concealed pressure trigger without revealing why the motion matters. [ROMANCE] When the warehouse doors lock and a suspended load drops, Lucian Vey shields Sloane Mercer with his body, and their silent recognition of how instinctively they protect each other deepens the dangerous intimacy between them. Sloane Mercer disables the trap and finds a sealed case addressed in her own handwriting, proving that her forgotten self expected Lucian Vey to bring her here.",
+      "must_happen": [
+        "Sloane Mercer and Lucian Vey enter the River Road warehouse while knowingly treating the unknown message about Mara Mercer as a trap rather than a reliable rescue lead.",
+        "Sloane Mercer determines that Mara Mercer's apparent cries are assembled from old audio fragments and transmitted through a vibration speaker attached to a steel support column.",
+        "Sloane Mercer uses firearms-investigation knowledge to identify overlapping firing lanes and forces Lucian Vey to follow her route through the warehouse.",
+        "Sloane Mercer traces a small circle against the inside of her left wrist and, through conditioned motor instinct she does not understand, stops Lucian Vey from stepping on a concealed pressure trigger.",
+        "[ROMANCE] Lucian Vey covers Sloane Mercer with his body when a suspended pallet drops, and Sloane Mercer keeps one hand against Lucian Vey's back a moment longer than survival requires before ordering him to move.",
+        "Sloane Mercer disables the pressure trigger and recovers a sealed impact-resistant case marked with Sloane Mercer's own handwriting and instructions that only Lucian Vey may open it."
+      ],
+      "must_not": [
+        "Mara Mercer must not appear physically, make genuine contact, or reveal that Mara Mercer survived the rooftop shooting.",
+        "Sloane Mercer must not learn that the wrist-circle motion is the key to Cassian Rook's complete transaction ledger.",
+        "Lucian Vey must not disclose the sunrise clause or reveal the existence of the unedited recordings of all seven execution orders.",
+        "Cassian Rook must not physically enter the warehouse or be captured."
+      ],
+      "opens_with": "\"Don't take another step.\" Sloane Mercer seized the back of Lucian Vey's jacket as Mara Mercer's recorded scream vibrated through the steel beneath their feet.",
+      "cliffhanger": "Lucian Vey opens the case and finds a bloodstained shirt cut open along the spine, while a device beneath it activates in Sloane Mercer's recorded voice: \"Make her look at your scars, Lucian Vey. If Sloane Mercer still cannot remember what she did to you, play the second file.\"",
+      "signature_detail_hint": "Mara Mercer's false voice comes from a coin-sized vibration transducer bolted to a support column, turning the entire corrugated wall into a speaker and making the plea seem to move whenever Sloane Mercer moves.",
+      "emotional_beat": "Sloane Mercer's controlling suspicion shifts into reluctant trust, while Lucian Vey's protective instinct exposes tenderness and unresolved attraction neither can safely name.",
+      "spice": 0,
+      "spice_note": "The intimacy remains limited to protective contact, charged proximity, and Sloane Mercer's growing awareness that Lucian Vey's body remembers protecting her even when her mind does not remember loving him.",
+      "chapter_task": "Write a 1600-1900 word chapter that continues directly from the River Road message, turns the warehouse into a specific mechanical trap, keeps Sloane Mercer active as the person who reads and defeats it, repeats the unexplained wrist-circle clue without paying it off, and closes on the demand that Sloane Mercer examine Lucian Vey's scars.",
+      "carries_to_next": "Sloane Mercer must examine Lucian Vey's scars and hear the second recording while the warehouse remains locked, placing their forgotten intimacy and Sloane Mercer's warning about her restored self at the center of the next confrontation.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "thread_contract",
+          "thread_memory"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer has discovered seven lines inside the rifle magazine and heard a recording of Sloane Mercer's own voice referring to the wrist movement.",
+            "Sloane Mercer suspects a past connection with Lucian Vey but cannot remember its full nature.",
+            "Lucian Vey has shown Sloane Mercer the contract and the rifle and is questioning the true purpose of Sloane Mercer's fragmented plan.",
+            "Mara Mercer remains off the grid and maintains the appearance of being dead.",
+            "Cassian Rook remains off-site, manipulates the warehouse remotely, and knows that the conditioned firing sequence protects the transaction ledger."
+          ],
+          "must_not_know": [
+            "Sloane Mercer must not know that the wrist-circle motion is the only key to unlocking Cassian Rook's complete transaction ledger.",
+            "Sloane Mercer must not know that Lucian Vey possesses the unedited recordings of the seven execution orders or knows the full sunrise clause.",
+            "Lucian Vey must not receive definitive new proof in this chapter explaining Cassian Rook's corruption of the target files.",
+            "Sloane Mercer and Lucian Vey must not know that Mara Mercer consented to the staged shooting and remains alive."
+          ],
+          "effective_milestone": 3
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "The Scars She Left",
+      "slug": "the-scars-she-left",
+      "one_line_summary": "Sloane Mercer recognizes Lucian Vey as her former lover through the scars on his body, retrieves her warning not to trust her restored self, and survives Cassian Rook's shot only because Lucian Vey reads the attack first.",
+      "beat_summary": "Trapped inside the warehouse, Sloane Mercer cuts away Lucian Vey's bloodstained shirt and recognizes a pattern of scars from fragmented memories of treating the same wounds in bed. [ROMANCE] Their examination becomes a steamy, consensual encounter driven by Sloane Mercer's need to test what her body remembers, and the contact restores flashes confirming that Sloane Mercer and Lucian Vey were lovers before the contract. The physical memory gives Sloane Mercer the hand sequence needed to unlock the second recording, in which her past self orders Lucian Vey not to trust Sloane Mercer's restored identity. Before they can interpret the warning, Lucian Vey notices a targeting shimmer and throws Sloane Mercer aside as Cassian Rook fires through the warehouse wall, grazing Sloane Mercer and destroying their cover.",
+      "must_happen": [
+        "Sloane Mercer removes Lucian Vey's damaged shirt to inspect the scars identified by Sloane Mercer's recorded instruction, and several scar locations trigger sensory fragments of Sloane Mercer treating Lucian Vey after an earlier mission.",
+        "[ROMANCE] Sloane Mercer explicitly asks Lucian Vey for permission to touch and kiss him as a memory test; Lucian Vey gives clear consent, and their steamy contact reveals mutual desire, anger, and the bodily familiarity of former lovers.",
+        "Sloane Mercer recognizes Lucian Vey as the man Sloane Mercer once loved, but Sloane Mercer recovers only fractured images rather than a complete history of their relationship.",
+        "The memory fragments guide Sloane Mercer through a palm-and-finger input on the device, allowing Sloane Mercer to retrieve the second recording.",
+        "The second recording states that Lucian Vey must not trust Sloane Mercer's restored self, but it does not explain what identity might be restored or why it would be dangerous.",
+        "Lucian Vey spots a targeting shimmer on a hanging sheet of clear plastic, turns the rifle's focus ring one quarter rotation away from clarity, and moves Sloane Mercer just before Cassian Rook fires.",
+        "Cassian Rook's round grazes Sloane Mercer and ruptures a pipe or control line, forcing Sloane Mercer and Lucian Vey to abandon the case and move deeper into the warehouse."
+      ],
+      "must_not": [
+        "The steamy encounter between Sloane Mercer and Lucian Vey must not become explicit intercourse or occupy the chapter like a spice-3 scene.",
+        "Sloane Mercer must not recover the complete reason for the memory erasure, staged shooting, firing sequence, or self-execution order.",
+        "Sloane Mercer must not learn that the wrist-circle motion unlocks the transaction ledger.",
+        "Lucian Vey must not reveal the full sunrise clause or the complete set of unedited execution recordings.",
+        "Cassian Rook must not enter the warehouse physically or succeed in killing Sloane Mercer."
+      ],
+      "opens_with": "\"Take off your shirt,\" Sloane Mercer ordered, holding Sloane Mercer's knife against the seam while Lucian Vey stared at the device speaking in Sloane Mercer's forgotten voice.",
+      "cliffhanger": "Bleeding from Cassian Rook's grazing shot, Sloane Mercer drags Lucian Vey behind a concrete press as the second recording continues from the fallen device: \"If Sloane Mercer starts the sequence, Lucian Vey has exactly one chance to decide which version of Sloane Mercer survives.\"",
+      "signature_detail_hint": "A sheet of clear warehouse strip-curtain plastic briefly shows the incoming targeting beam as a thin red fracture, giving Lucian Vey less than a second to recognize Cassian Rook's firing line.",
+      "emotional_beat": "Sloane Mercer's attraction becomes vulnerable recognition, while Lucian Vey experiences the painful tenderness of being remembered by touch but not yet fully remembered by choice.",
+      "spice": 2,
+      "spice_note": "Use a steamy, consensual scene built around Sloane Mercer examining Lucian Vey's scars, asking permission before escalating contact, and recovering sensory fragments of their former relationship. The scene may include intense kissing, bare skin, and near-loss of control, but Cassian Rook's attack interrupts before explicit sex; the intimacy must unlock the physical input for the second recording.",
+      "chapter_task": "Write a 1600-1900 word chapter in which Sloane Mercer recognizes Lucian Vey as a former lover through scars and consensual physical memory, unlocks the second recording, and survives Cassian Rook's canon-locked shot. Balance the spice-2 encounter with immediate thriller pressure and preserve the mystery behind the warning about Sloane Mercer's restored self.",
+      "carries_to_next": "Sloane Mercer knows that Sloane Mercer and Lucian Vey were lovers and that Sloane Mercer's past self feared a restored version of Sloane Mercer, while Cassian Rook's attack forces both leads toward the sealed room where the original memory procedure occurred.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "thread_contract",
+          "thread_memory"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer has seen Lucian Vey's scars, recognized Lucian Vey as a former lover, and retrieved the second recording warning Lucian Vey not to trust Sloane Mercer's restored self.",
+            "Sloane Mercer knows that Sloane Mercer issued the contract for the memory erasure and staged shooting but does not know the complete purpose behind either order.",
+            "Lucian Vey has allowed Sloane Mercer to see the scars and test their former intimacy, deepening Lucian Vey's emotional conflict.",
+            "Mara Mercer has not made genuine contact and continues to maintain the appearance of being dead.",
+            "Cassian Rook remains alive, observes Sloane Mercer's progress, and fires on Sloane Mercer from outside the warehouse."
+          ],
+          "must_not_know": [
+            "Sloane Mercer must not know that conditioned motor memory is the only key to unlocking Cassian Rook's complete transaction ledger.",
+            "Sloane Mercer must not know that Lucian Vey possesses the unedited recordings of all seven execution orders or knows the complete sunrise clause.",
+            "Lucian Vey must not receive definitive proof in this chapter of how Cassian Rook altered the seven target files.",
+            "Sloane Mercer and Lucian Vey must not know that Mara Mercer consented to the staged shooting and remains alive."
+          ],
+          "effective_milestone": 8
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 9,
+      "title": "The Self Beneath Her Skin",
+      "slug": "the-self-beneath-her-skin",
+      "one_line_summary": "Inside the room where her memories were erased, Sloane Mercer recovers proof that her warning concerned a conditioned identity Cassian Rook could reactivate, not the amnesiac woman Lucian Vey now protects.",
+      "beat_summary": "Sloane Mercer and Lucian Vey retreat from Cassian Rook's firing line into a sealed treatment room hidden behind the warehouse press. Sloane Mercer recognizes the restraints and uses physical evidence, including Sloane Mercer's dental impression and blood beneath a wrist cuff, to establish that this was the site of Sloane Mercer's memory erasure. [ROMANCE] Lucian Vey braces Sloane Mercer through a procedural flashback, and Sloane Mercer chooses Lucian Vey's hand without being instructed, showing trust that belongs to Sloane Mercer's present self. By reenacting part of the restraint position without completing the firing sequence, Sloane Mercer triggers a recovered memory and major reveal MR003: Sloane Mercer's past warning referred to an obedient identity Cassian Rook had conditioned and could attempt to restore. Sloane Mercer then finds evidence that the room was built to transmit the next stage of the procedure to the original rooftop, forcing Sloane Mercer and Lucian Vey to return there.",
+      "must_happen": [
+        "Sloane Mercer leads Lucian Vey through a maintenance opening behind the concrete press while Cassian Rook continues firing calculated suppression shots through the warehouse exterior.",
+        "Sloane Mercer discovers a restraint chair, a used dental bite block bearing Sloane Mercer's molar impression, and dried blood beneath the left wrist cuff, physically proving that Sloane Mercer's memory erasure occurred in this room.",
+        "[ROMANCE] During a violent procedural flashback, Lucian Vey offers Sloane Mercer an open hand instead of restraining Sloane Mercer, and Sloane Mercer deliberately takes Lucian Vey's hand, exposing trust and vulnerability amid the threat.",
+        "Sloane Mercer traces the wrist circle against the damaged cuff and experiences a fragment in which Sloane Mercer's former self warns Lucian Vey about an obedient identity Cassian Rook could restore.",
+        "Major reveal MR003 occurs through physical reenactment and recovered memory: the dangerous restored self is a conditioned version of Sloane Mercer trained to obey Cassian Rook, not simply Sloane Mercer with ordinary memories returned.",
+        "Sloane Mercer stops the reenactment before completing the unknown sequence, preserving the later payoff of the wrist-circle clue and preventing an early ledger reveal.",
+        "Lucian Vey admits that Lucian Vey witnessed part of the erasure procedure but refuses to disclose the sealed contract terms that governed what Lucian Vey would do if the conditioned identity returned.",
+        "Sloane Mercer identifies a hardwired transmitter route from the treatment chair to equipment on the original rooftop and decides that returning to the rooftop is the only way to recover the next part of Sloane Mercer's plan."
+      ],
+      "must_not": [
+        "Sloane Mercer must not learn that the conditioned firing sequence contains or unlocks Cassian Rook's complete transaction ledger.",
+        "The chapter must not reveal the complete central mystery, including why Mara Mercer consented to the staged shooting or why Sloane Mercer ordered Lucian Vey to kill Sloane Mercer.",
+        "Lucian Vey must not state the complete sunrise clause or play the unedited recordings of the seven execution orders.",
+        "Mara Mercer must not appear, contact Sloane Mercer, or reveal survival.",
+        "Cassian Rook must not be captured, killed, or physically confronted inside the treatment room."
+      ],
+      "opens_with": "\"That chair is mine.\" Sloane Mercer shoved Lucian Vey's weapon aside and pointed at the restraint cuff, where Sloane Mercer's dried blood still marked the shape of a struggling wrist.",
+      "cliffhanger": "Sloane Mercer powers the hardwired transmitter, and the monitor displays a live feed of the original rooftop with Lucian Vey's rifle already mounted there; then Sloane Mercer's forgotten voice says, \"Return before dawn, or Cassian Rook will finish restoring the woman who obeys him.\"",
+      "signature_detail_hint": "The dental bite block still holds a tiny crescent chip from Sloane Mercer's back molar, allowing Sloane Mercer to verify the room's purpose through an injury Sloane Mercer can feel but cannot remember receiving.",
+      "emotional_beat": "Sloane Mercer's fear of losing autonomy collides with vulnerable trust in Lucian Vey, while Lucian Vey's attraction becomes a conscious choice to protect Sloane Mercer's present identity from the woman Sloane Mercer was conditioned to become.",
+      "spice": 0,
+      "spice_note": "Keep the intimacy nonsexual but charged: Sloane Mercer voluntarily takes Lucian Vey's hand during the flashback, and Lucian Vey responds with restrained tenderness instead of control.",
+      "chapter_task": "Write a 1600-1900 word chapter that reveals MR003 through physical evidence, procedural memory, and action rather than explanatory dialogue. Establish that Cassian Rook could restore a conditioned obedient identity inside Sloane Mercer, preserve the later ledger and firing-sequence reveals, include the romance micro-beat of chosen contact, and drive Sloane Mercer and Lucian Vey back toward the rooftop.",
+      "carries_to_next": "Sloane Mercer and Lucian Vey must return to the original rooftop before dawn to interrupt Cassian Rook's restoration process, investigate the waiting rifle, and determine whether Sloane Mercer's present identity can survive the next recovered memory.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [
+          {
+            "id": "MR003",
+            "reveal": "Sloane Mercer's warning about Sloane Mercer's restored self refers to a conditioned identity trained to obey Cassian Rook, not merely the return of Sloane Mercer's erased autobiographical memories.",
+            "impact": "Sloane Mercer realizes that memory recovery carries the concrete risk of restoring Cassian Rook's control, while Lucian Vey must distinguish loyalty to Sloane Mercer's old contract from loyalty to Sloane Mercer's present choices.",
+            "reveal_weight": "major",
+            "required_clues": [],
+            "min_clues_required": 2
+          }
+        ],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "thread_contract",
+          "thread_memory"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Sloane Mercer",
+            "Lucian Vey",
+            "Mara Mercer",
+            "Cassian Rook"
+          ],
+          "may_know": [
+            "Sloane Mercer has recognized Lucian Vey as a former lover and knows that the second recording warned Lucian Vey not to trust Sloane Mercer's restored self.",
+            "Sloane Mercer knows that the feared restored self is a conditioned identity Cassian Rook may be able to reactivate.",
+            "Lucian Vey knows Sloane Mercer has begun distinguishing present choices from conditioned behavior, but Lucian Vey remains bound by undisclosed contract terms.",
+            "Mara Mercer has not made contact and continues to maintain the appearance of being dead.",
+            "Cassian Rook remains alive, monitors the warehouse, and intends to exploit Sloane Mercer's conditioning."
+          ],
+          "must_not_know": [
+            "Sloane Mercer must not know that the wrist-circle motion is the only key to unlocking Cassian Rook's complete transaction ledger.",
+            "Sloane Mercer must not know that Lucian Vey possesses all unedited execution-order recordings or knows the full sunrise clause.",
+            "Sloane Mercer and Lucian Vey must not know the complete purpose of Mara Mercer's staged death or that Mara Mercer remains alive.",
+            "The complete answer to why Sloane Mercer erased Sloane Mercer's memories and ordered Lucian Vey to kill Sloane Mercer must remain hidden until chapter 13."
+          ],
+          "effective_milestone": 8
+        },
+        "clue_beats": {
+          "MR003": "Use the restraint chair, Sloane Mercer's matching dental impression, blood beneath the wrist cuff, the involuntary wrist circle, and a brief recovered procedural memory to establish the conditioned identity without explaining the ledger or the complete firing sequence."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "act": [16, 18],
+  "chapter_plans": [
+    {
+      "chapter": 16,
+      "title": "The Setup",
+      "slug": "the-setup",
+      "one_line_summary": "Nadia Cole meticulously prepares a clean kill on Victor Rhodes, but a subtle sign of network fraying leaves her doubting whether she can trust the only people who know her plan.",
+      "beat_summary": "Nadia Cole selects the kill site: a secluded stretch of road where Victor Rhodes drives home alone after his weekly poker game. She reviews the timeline with Sasha Okafor — alibi, phone pings, the tampered brake line. Nadia Cole calls Wren Delgado to confirm the GPS spoofing script is ready; Wren Delgado confirms but is unusually terse, ending the call before Nadia Cole can ask a follow-up question. Nadia Cole notes the terseness but files it under pressure. She calls Priya Anand to check on the audit — Priya Anand says it's ongoing but routine, though her voice carries a tremor. Nadia Cole isolates in her apartment, reviewing the final checklist. She opens the storage box with Julian Croft's file one more time, running her thumb over the tampered fuel line photograph. She closes the box and texts Victor Rhodes: 'Tomorrow. 11 PM. The old pier.' The chapter ends with Nadia Cole staring at her phone, waiting for a reply that does not come.",
+      "must_happen": [
+        "Nadia Cole selects the kill site: a secluded stretch of road where Victor Rhodes drives home alone after his weekly poker game — she reviews the timeline and alibi with Sasha Okafor, confirming the tampered brake line plan.",
+        "Nadia Cole calls Wren Delgado to confirm the GPS spoofing script is ready — Wren Delgado confirms but is unusually terse, ending the call before Nadia Cole can ask a follow-up question, a subtle sign of network fraying.",
+        "Nadia Cole calls Priya Anand to check on the audit — Priya Anand says it's ongoing but routine, though her voice carries a tremor, revealing her fear.",
+        "Nadia Cole isolates in her apartment, reviewing the final checklist — she opens the storage box with Julian Croft's file and runs her thumb over the tampered fuel line photograph, a moment of cold reflection.",
+        "Nadia Cole texts Victor Rhodes: 'Tomorrow. 11 PM. The old pier.' — she stares at her phone, waiting for a reply that does not come, the calm before the trap."
+      ],
+      "must_not": [
+        "Do NOT reveal that Wren Delgado is the leak — her terseness is subtle and could be read as pressure, not betrayal.",
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on Nadia Cole's meticulous prep and the network's subtle fraying.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is cold precision and paranoia."
+      ],
+      "opens_with": "\"The road was perfect. No cameras. No streetlights. A single curve where a brake failure would send a car into the railing and then the water below. I'd driven it three times that week, timing every second.\" — Nadia Cole, internal, as she surveys the kill site from her car.",
+      "cliffhanger": "Nadia Cole's phone remains dark. No reply from Victor Rhodes. She sets the phone face-down on her desk and whispers: 'He knows. But he'll still come.' The silence is louder than any answer.",
+      "signature_detail_hint": "Nadia Cole runs her thumb over the tampered fuel line photograph in Julian Croft's file — the same motion she uses when stressed, a ritual that connects the first kill to the next.",
+      "emotional_beat": "Cold precision mixed with paranoia — Nadia Cole trusts her plan but doubts her network, a fracture that mirrors the fraying loyalty.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show Nadia Cole's meticulous preparation for the kill: site selection, alibi review, GPS spoofing confirmation. Show the network fraying subtly through Wren Delgado's terseness and Priya Anand's tremor. End with Nadia Cole texting Victor Rhodes and waiting for a reply that does not come. Do not expose Wren Delgado as the leak.",
+      "carries_to_next": "The trap is set. Nadia Cole has initiated the kill attempt. Chapter 17 will show the trap springing and failing."
+    },
+    {
+      "chapter": 17,
+      "title": "The Trap",
+      "slug": "the-trap",
+      "one_line_summary": "Nadia Cole's kill attempt on Victor Rhodes is a trap — he expected her move, and she barely escapes with her life, realizing the hunter has become the hunted.",
+      "beat_summary": "Nadia Cole positions herself at the kill site, watching from a ridge as Victor Rhodes's car approaches the curve. She triggers the GPS spoofing script to delay emergency response. Victor Rhodes's car enters the curve — but instead of losing control, the car slows smoothly. Victor Rhodes steps out, unharmed, and looks directly at Nadia Cole's position. He raises his phone and takes a photograph of her. Nadia Cole realizes the brake line was never tampered — Rhodes had it inspected and replaced. She runs, abandoning her car and fleeing on foot through the woods. Victor Rhodes does not pursue; instead, he sends a text: 'I told you I studied people, Nadia. Better luck next time.' Nadia Cole reaches a safe house, bleeding from a cut on her arm from a fall. She calls Sasha Okafor and Wren Delgado, telling them the plan is compromised. The chapter ends with Nadia Cole alone in the safe house, staring at the photograph Victor Rhodes took of her — proof that he now has visual evidence of her at the scene.",
+      "must_happen": [
+        "Nadia Cole positions herself at the kill site and triggers the GPS spoofing script — she watches Victor Rhodes's car approach the curve, expecting the brake failure.",
+        "Victor Rhodes's car slows smoothly instead of crashing — he steps out unharmed and looks directly at Nadia Cole's position, raising his phone to take a photograph of her, revealing he expected the trap.",
+        "Nadia Cole realizes the brake line was never tampered — Victor Rhodes had it inspected and replaced, confirming he knew her plan in advance.",
+        "Nadia Cole runs, abandoning her car and fleeing on foot through the woods — she sustains a cut on her arm from a fall but reaches a safe house.",
+        "Victor Rhodes sends a text: 'I told you I studied people, Nadia. Better luck next time.' — Nadia Cole calls Sasha Okafor and Wren Delgado to report the compromise.",
+        "The chapter ends with Nadia Cole alone in the safe house, staring at the photograph Victor Rhodes took of her — proof that he now has visual evidence of her at the scene."
+      ],
+      "must_not": [
+        "Do NOT reveal that Wren Delgado is the leak — the compromised plan is attributed to Victor Rhodes's counter-investigation, not a network betrayal.",
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on Nadia Cole's escape and the realization that the hunter has become the hunted.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is survival and cold fear."
+      ],
+      "opens_with": "\"The car hit the curve at exactly 11:02 PM. I held my breath, waiting for the screech of metal, the splash of water. Instead, the car slowed. Smoothly. Deliberately. And then Victor Rhodes stepped out and looked straight at me.\" — Nadia Cole, internal, as she watches the trap fail.",
+      "cliffhanger": "Nadia Cole's phone buzzes. A new message from Victor Rhodes: an attachment — the photograph of her, taken from the ridge. His caption: 'For my files. See you soon, Nadia.' She drops the phone, her thumb pressed to her palm, the cut on her arm still bleeding.",
+      "signature_detail_hint": "The photograph Victor Rhodes takes of Nadia Cole is framed perfectly — he knew exactly where she would be standing, a sign of meticulous counter-surveillance.",
+      "emotional_beat": "Cold fear mixed with survival — Nadia Cole's plan has failed, and she is now the one being hunted, her invisibility shattered.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show the kill attempt failing: Victor Rhodes expects the trap, steps out unharmed, and photographs Nadia Cole. Show Nadia Cole's escape through the woods and her arrival at the safe house. End with the photograph as proof that Victor Rhodes now has visual evidence of her at the scene. Do not expose Wren Delgado as the leak.",
+      "carries_to_next": "The kill attempt has failed. Victor Rhodes now has photographic evidence of Nadia Cole at the scene. Chapter 18 will show the aftermath: Nadia Cole's regrouping and the planting of C007."
+    },
+    {
+      "chapter": 18,
+      "title": "The Aftermath",
+      "slug": "the-aftermath",
+      "one_line_summary": "Nadia Cole regroups after the failed kill attempt, plants a clue about Julian Croft's yacht as a contingency, and faces the widening crack in her network.",
+      "beat_summary": "Nadia Cole tends to her wound in the safe house — a shallow cut that she stitches herself. She calls Sasha Okafor to assess the legal exposure: Victor Rhodes has a photograph of her at the scene, but no direct evidence of tampering. Sasha Okafor advises caution but says the photograph alone is not enough to charge her. Nadia Cole calls Wren Delgado to scrub her digital footprint from the kill site — Wren Delgado confirms the GPS spoofing script self-deleted but notes that Victor Rhodes's phone pinged a nearby tower at the exact time, which could be used to place him at the scene. Nadia Cole realizes Victor Rhodes intentionally exposed himself to create mutual vulnerability — he has a photograph of her, but she can place him at the scene too. Nadia Cole decides to plant a contingency: she retrieves a photograph of Julian Croft's yacht from her storage box — the one showing the recently replaced fuel line (C007 planted — exact semantic: 'A photograph of Julian Croft's yacht shows a fuel line that looks recently replaced — a visual clue to the staged accident'). She gives it to Sasha Okafor with instructions to hold it in a sealed envelope, to be released only if Nadia Cole is arrested or killed. The chapter ends with Nadia Cole alone, reviewing the photograph, her thumb pressed to her palm. The network is fraying, and she knows the next move is not hers — it is Victor Rhodes's.",
+      "must_happen": [
+        "Nadia Cole tends to her wound in the safe house — a shallow cut on her arm that she stitches herself, a physical reminder of the failed kill attempt.",
+        "Nadia Cole calls Sasha Okafor to assess the legal exposure — Sasha Okafor confirms the photograph alone is not enough to charge her but advises caution and a temporary pause on operations.",
+        "Nadia Cole calls Wren Delgado to scrub her digital footprint — Wren Delgado confirms the GPS spoofing script self-deleted but notes that Victor Rhodes's phone pinged a nearby tower at the exact time, creating mutual vulnerability.",
+        "Nadia Cole decides to plant a contingency: she retrieves a photograph of Julian Croft's yacht from her storage box — the one showing the recently replaced fuel line (C007 planted — exact semantic: 'A photograph of Julian Croft's yacht shows a fuel line that looks recently replaced — a visual clue to the staged accident').",
+        "Nadia Cole gives the photograph to Sasha Okafor with instructions to hold it in a sealed envelope, to be released only if Nadia Cole is arrested or killed — a contingency that ties the first kill to the current case.",
+        "The chapter ends with Nadia Cole alone, reviewing the photograph, her thumb pressed to her palm — she knows the next move is Victor Rhodes's."
+      ],
+      "must_not": [
+        "Do NOT reveal that Wren Delgado is the leak — her report on the phone ping is accurate, and her loyalty is not questioned in this chapter.",
+        "Do NOT show Victor Rhodes's perspective in this chapter — the focus is on Nadia Cole's regrouping and the contingency planting.",
+        "Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is cold calculation and the weight of the origin wound."
+      ],
+      "opens_with": "\"The needle went through my skin with a small, wet sound. I'd done this before — three times, to be exact. Each time, the wound healed. Each time, I learned something. This time, I learned that Victor Rhodes was faster than me.\" — Nadia Cole, internal, as she stitches her arm in the safe house.",
+      "cliffhanger": "Nadia Cole seals the envelope containing the photograph of Julian Croft's yacht and hands it to Sasha Okafor. She watches Sasha Okafor leave, then looks at her phone. No new messages from Victor Rhodes. The silence is worse than a threat.",
+      "signature_detail_hint": "Nadia Cole stitches her own wound with a curved needle from a sewing kit — the same type of needle she used on the first kill's boating accident report, a ritual of control.",
+      "emotional_beat": "Cold calculation mixed with the weight of the origin wound — Nadia Cole's method is fraying, and she is forced to plant a contingency that ties her first kill to her present.",
+      "spice": 0,
+      "spice_note": "No romance; tension is plot-driven.",
+      "chapter_task": "Write 1600-1900 words. Show Nadia Cole's aftermath: tending to her wound, assessing legal exposure with Sasha Okafor, and scrubbing her digital footprint with Wren Delgado. Plant C007 (exact semantic from clue_catalog: 'A photograph of Julian Croft's yacht shows a fuel line that looks recently replaced — a visual clue to the staged accident') via the contingency envelope. End with Nadia Cole alone, knowing the next move is Victor Rhodes's.",
+      "carries_to_next": "C007 is planted. The failed kill attempt has created mutual vulnerability. Nadia Cole's network is fraying, and Victor Rhodes now holds the initiative. Chapter 19 will escalate the pressure on Nadia Cole as Victor Rhodes makes his next move."
+    }
+  ]
+}

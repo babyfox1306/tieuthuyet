@@ -67,6 +67,16 @@
     .reason-box strong { color: var(--warn); }
     .reason-box ul { margin: .35rem 0 0 1.1rem; padding: 0; }
     .reason-box li { margin: .2rem 0; }
+    .md-leak-box { display: none; margin: 0 0 .75rem; padding: .65rem .85rem; border-radius: var(--radius); border: 1px solid var(--accent); background: #151a28; font-size: .82rem; }
+    .md-leak-box h3 { margin: 0 0 .4rem; font-size: .85rem; color: var(--accent); }
+    .md-leak-box .hint { color: var(--muted); margin: 0 0 .6rem; font-size: .78rem; }
+    .md-leak { border-top: 1px solid var(--border); padding: .55rem 0; }
+    .md-leak:first-of-type { border-top: none; }
+    .md-leak .ctx { font-family: Consolas, "Courier New", monospace; white-space: pre-wrap; word-break: break-word; margin: .25rem 0 .4rem; line-height: 1.35; }
+    .md-leak .ctx mark { background: #5a3a10; color: #ffd9a0; padding: 0 .1em; border-radius: 2px; }
+    .md-leak .hit-actions { display: flex; flex-wrap: wrap; gap: .35rem; align-items: center; }
+    .md-leak .hit-actions button { font-size: .75rem; padding: .3rem .55rem; }
+    .md-leak .kind { color: var(--muted); font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; }
     .meta-line { font-size: .8rem; color: var(--muted); margin-bottom: .5rem; }
     .spinner { display: inline-block; width: 1em; height: 1em; border: 2px solid var(--muted); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; vertical-align: middle; margin-right: .35rem; }
     @keyframes spin { to { transform: rotate(360deg); } }
@@ -185,7 +195,7 @@
           <button class="btn-ghost" data-action="architect">Architect (bible, optional)</button>
           <button class="btn-ghost" data-action="validate-bible">Kiểm tra bible</button>
           <button class="btn-ghost" data-action="approve-bible">Duyệt bible</button>
-          <button class="btn-primary" data-action="init-canon-registry" title="Tạo canon_registry.yaml từ concept + bible (bắt buộc trước approve-plan)">Tạo canon registry</button>
+          <button class="btn-primary" data-action="init-canon-registry" title="Ghi đè canon_registry.yaml từ concept + bible mới nhất (bắt buộc trước approve-plan)">Tạo canon registry</button>
           <button class="btn-primary" data-action="plan" title="Sinh plan — chỉ đọc intent (+ narrative đã khóa)">Plan chương</button>
           <button class="btn-ghost" data-action="replan" title="Xóa master_plan hiện tại và sinh lại toàn bộ từ đầu">Tạo lại plan</button>
           <button class="btn-ghost" data-action="fix-plans">Fix plans</button>
@@ -213,6 +223,7 @@
           <div>
             <div class="meta-line" id="chMeta">Chọn một chương</div>
             <div class="reason-box" id="reasonBox"></div>
+            <div class="md-leak-box" id="mdLeakBox"></div>
             <div class="actions" id="chActions" style="margin-bottom:.75rem">
               <button class="btn-primary" id="btnWrite" disabled>✍ Viết chương (AI)</button>
               <button class="btn-success" id="btnApprove" disabled>✓ Duyệt → catalog</button>
@@ -536,6 +547,105 @@
       box.innerHTML = `<strong>${label}</strong><ul>${reasons.map(r => `<li>${escapeHtml(r)}</li>`).join("")}</ul>`;
     }
 
+    function formatEngineError(data, fallback) {
+      if (!data || typeof data !== "object") return fallback || "failed";
+      const code = data.code || data.error_code || (data.error && data.error.code);
+      const msg =
+        (typeof data.error === "string" ? data.error : null) ||
+        data.message ||
+        fallback ||
+        "failed";
+      const parts = [];
+      if (code && String(msg).indexOf(String(code)) < 0) parts.push(String(code));
+      parts.push(typeof msg === "string" ? msg : JSON.stringify(msg));
+      const reasons = data.reasons || data.blockers || data.export_gate_reasons || [];
+      if (Array.isArray(reasons) && reasons.length) {
+        const bits = reasons.slice(0, 6).map((r) => {
+          if (typeof r === "string") return r;
+          if (r && typeof r === "object") {
+            return (r.code ? r.code + ": " : "") + (r.message || r.reason || JSON.stringify(r));
+          }
+          return String(r);
+        });
+        parts.push(bits.join(" · "));
+      }
+      return parts.filter(Boolean).join(" — ");
+    }
+
+    function renderMarkdownLeaks(data) {
+      const box = $("mdLeakBox");
+      const leaks = data.markdown_leaks || [];
+      if (!leaks.length) {
+        box.style.display = "none";
+        box.innerHTML = "";
+        return;
+      }
+      box.style.display = "block";
+      const rows = leaks.map((h) => {
+        const ctx =
+          escapeHtml(h.context_prefix || "") +
+          "<mark>" + escapeHtml(h.match || "") + "</mark>" +
+          escapeHtml(h.context_suffix || "");
+        return `<div class="md-leak" data-hit="${h.id}">
+          <div class="kind">${escapeHtml(h.kind)} · id ${h.id}</div>
+          <div class="ctx">${ctx}</div>
+          <div class="hit-actions">
+            <button type="button" class="btn-primary" data-md-mode="quotes" data-hit="${h.id}">Use quotes " "</button>
+            <button type="button" class="btn-ghost" data-md-mode="strip" data-hit="${h.id}">Just strip the asterisks</button>
+            <button type="button" class="btn-warn" data-md-mode="quotes" data-hit="${h.id}" data-all="1" title="Áp dụng quotes cho mọi hit còn lại">quotes → all remaining</button>
+            <button type="button" class="btn-warn" data-md-mode="strip" data-hit="${h.id}" data-all="1" title="Strip mọi hit còn lại">strip → all remaining</button>
+          </div>
+        </div>`;
+      }).join("");
+      box.innerHTML =
+        `<h3>Markdown leak advisor (${leaks.length}) — không chặn Duyệt</h3>` +
+        `<p class="hint">Chọn quotes hoặc strip. Không đổi file cho đến khi bạn bấm. Export EG-06 vẫn bắt nếu còn sót.</p>` +
+        rows;
+      box.querySelectorAll("button[data-md-mode]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          applyMarkdownFix({
+            mode: btn.dataset.mdMode,
+            hitId: parseInt(btn.dataset.hit, 10),
+            applyAll: btn.dataset.all === "1",
+          });
+        });
+      });
+    }
+
+    async function applyMarkdownFix({ mode, hitId, applyAll }) {
+      if (!selectedCh) return;
+      const label = applyAll
+        ? `Áp dụng «${mode}» cho TẤT CẢ leak còn lại trong ch${selectedCh}?`
+        : `Áp dụng «${mode}» cho hit #${hitId}?`;
+      if (!confirm(label + "\n\nFile sẽ được ghi ngay.")) return;
+      showStatus(`<span class="spinner"></span> Markdown fix (${mode})…`, "warn");
+      try {
+        const data = await api(`/api/chapters/${ws()}/${selectedCh}/markdown-fix`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: apiBody({
+            mode,
+            hit_id: applyAll ? undefined : hitId,
+            apply_all: !!applyAll,
+          }),
+        });
+        if (!data.ok) {
+          showStatus("Markdown fix lỗi: " + formatEngineError(data, "failed"), "bad");
+          return;
+        }
+        const n = (data.changes || []).length;
+        const left = (data.markdown_leaks || []).length;
+        showStatus(
+          `Đã sửa ${n} chỗ (${mode}) trên pipeline. Còn ${left} leak. Log: ${data.log || "pipeline/markdown_fix_log.jsonl"}`,
+          "ok"
+        );
+        await selectChapter(selectedCh);
+        await loadChapters();
+      } catch (e) {
+        showStatus("Lỗi: " + e.message, "bad");
+      }
+    }
+
     async function loadChapters() {
       const data = await api(`/api/chapters/${ws()}?book=${book()}`);
       const grid = $("chGrid");
@@ -556,11 +666,12 @@
     async function selectChapter(ch) {
       selectedCh = ch;
       await loadChapters();
-      const data = await api(`/api/chapters/${ws()}/${ch}`);
+      const data = await api(`/api/chapters/${ws()}/${ch}?book=${book()}`);
       const displayStatus = data.in_catalog || data.status === "catalog" ? "catalog" : data.status;
       const reasonBit = data.reason_summary ? ` · ${data.reason_summary}` : "";
       $("chMeta").textContent = `Chương ${ch}: ${data.title || data.plan_summary || ""} · ${displayStatus} · ${data.word_count || 0} từ${reasonBit}`;
       renderReasonBox(data);
+      renderMarkdownLeaks(data);
       $("proseBox").textContent = data.prose || "(chưa có nội dung — bấm Viết chương)";
       const canWrite = data.status === "missing" || data.status === "prompt_only" || data.status === "needs_fix";
       const canApprove =

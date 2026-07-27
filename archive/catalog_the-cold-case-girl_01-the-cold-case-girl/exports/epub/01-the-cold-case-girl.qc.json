@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "passed": true,
+  "exit_code": 0,
+  "epub_path": "D:\\tieuthuyet\\tieuthuyet\\catalog\\the-cold-case-girl\\books\\01-the-cold-case-girl\\exports\\epub\\01-the-cold-case-girl.epub",
+  "epubcheck_jar": "F:\\phanmem\\epubcheck-5.3.0\\epubcheck.jar",
+  "checked_at": "2026-07-27T07:47:31.008310+00:00",
+  "duration_sec": 15.9,
+  "counts": {
+    "fatals": 0,
+    "errors": 0,
+    "warnings": 0,
+    "infos": 0
+  },
+  "messages": [],
+  "epub_version": "3.3",
+  "raw_tail": "Validating using EPUB version 3.3 rules.\nNo errors or warnings detected.\nMessages: 0 fatals / 0 errors / 0 warnings / 0 infos\n\nEPUBCheck completed\n"
+}

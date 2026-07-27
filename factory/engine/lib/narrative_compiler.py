@@ -540,11 +540,8 @@ def _network_cast_candidates(ws: Path) -> list[str]:
     return names
 
 
-def _extract_deferred_global_choices(
-    ws: Path,
-    ledger: dict[str, Any],
-) -> list[dict[str, Any]]:
-    """Plan-time choices the Outliner must resolve once and keep consistent."""
+def deferred_choice_defs(ws: Path, ledger: dict[str, Any]) -> list[dict[str, Any]]:
+    """Plan-time choices that must be resolved BEFORE the Outliner runs."""
     from factory.engine.lib.narrative_schema import load_concept
 
     choices: list[dict[str, Any]] = []
@@ -575,19 +572,78 @@ def _extract_deferred_global_choices(
         choices.append(
             {
                 "id": "network_leak",
+                "label": "network leak / betrayer",
+                "candidates": candidates,
+                "cardinality": 1,
+            }
+        )
+    return choices
+
+
+def _extract_deferred_global_choices(
+    ws: Path,
+    ledger: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Resolved plan-time choices for the Outliner payload.
+
+    The Outliner never picks: ``plan_choices.yaml`` holds the decision and the
+    payload states both the chosen name and the explicit non-candidates, so a
+    'second leak' has no room to appear.
+    """
+    from factory.engine.lib.plan_choices import load_plan_choices
+
+    defs = deferred_choice_defs(ws, ledger)
+    if not defs:
+        return []
+    resolved = load_plan_choices(ws)
+    out: list[dict[str, Any]] = []
+    for spec in defs:
+        cid = str(spec.get("id"))
+        candidates = list(spec.get("candidates") or [])
+        entry = resolved.get(cid) if isinstance(resolved, dict) else None
+        value = str((entry or {}).get("value") or "").strip()
+        if value:
+            others = [c for c in candidates if c.strip().lower() != value.lower()]
+            out.append(
+                {
+                    "id": cid,
+                    "status": "resolved",
+                    "value": value,
+                    "non_leaks": others,
+                    "cardinality": 1,
+                    "resolved_by": (entry or {}).get("resolved_by", "auto"),
+                    "constraint": (
+                        f"{value} IS the one and only leak/betrayer for the whole "
+                        "book. "
+                        + (
+                            f"{', '.join(others)} are NOT leaks and never betray "
+                            "the protagonist. "
+                            if others
+                            else "No other character betrays the protagonist. "
+                        )
+                        + "FORBIDDEN: a 'second leak', another mole, a deeper leak, "
+                        "an infrastructure leak, or re-assigning the betrayal to "
+                        "anyone else. Before the reveal chapter, refer to the "
+                        "unknown betrayer as 'the leak' without naming a different "
+                        "person."
+                    ),
+                }
+            )
+            continue
+        out.append(
+            {
+                "id": cid,
                 "status": "unresolved_at_plan",
                 "candidates": candidates,
                 "cardinality": 1,
                 "constraint": (
-                    "Choose exactly ONE network member as the leak/betrayer on first "
-                    "concrete betrayal beat; lock that name for the rest of the book. "
-                    "NEVER invent a second leak, alternate mole, or 'also betrayed' "
-                    "character. Until chosen, refer to the role as 'the leak' without "
-                    "naming extras outside candidates."
+                    "Choose exactly ONE candidate as the leak/betrayer and lock that "
+                    "name for the rest of the book. NEVER invent a second leak, "
+                    "alternate mole, or 'also betrayed' character."
                 ),
             }
         )
-    return choices
+    return out
 
 
 def _plot_boundary_payload(ws: Path, ledger: dict[str, Any]) -> dict[str, Any]:
@@ -876,13 +932,166 @@ def narrative_block_for_plan(compiled: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+_ID_TOKEN_RE = re.compile(r"\b(?:C\d{3}|MR\d{2,3}|R\d{3})\b")
+_ID_MARKER_RE = re.compile(
+    r"\[\s*(?:CLUE|PAYOFF|REVEAL)\s+(?:C\d{3}|MR\d{2,3}|R\d{3})\s*\]\s*",
+    re.IGNORECASE,
+)
+_SEMANTIC_STOPWORDS = frozenset(
+    {"that", "with", "from", "this", "have", "been", "into", "when", "what", "which", "about"}
+)
+
+
+def _semantic_keywords(content: str) -> list[str]:
+    return [
+        w
+        for w in re.findall(r"[a-zà-ỹ'\-]{4,}", (content or "").lower())
+        if w not in _SEMANTIC_STOPWORDS
+    ]
+
+
+def semantic_present(text: str, content: str) -> bool:
+    """True when ``text`` actually carries the canonical ledger meaning."""
+    blob = (text or "").lower()
+    c = (content or "").lower().strip()
+    if not c or not blob:
+        return False
+    if len(c) >= 12 and c[:36] in blob:
+        return True
+    words = _semantic_keywords(c)
+    if not words:
+        return False
+    probe = words[:8]
+    hits = sum(1 for w in probe if w in blob)
+    return hits >= max(2, (len(probe) + 2) // 3)
+
+
+def _strip_ids(text: str, ids: set[str]) -> str:
+    """Remove ID markers/tokens the chapter is not scheduled to fire."""
+    if not ids:
+        return text
+
+    def _drop_marker(match: re.Match[str]) -> str:
+        token = _ID_TOKEN_RE.search(match.group(0))
+        return "" if token and token.group(0) in ids else match.group(0)
+
+    def _drop_token(match: re.Match[str]) -> str:
+        return "" if match.group(0) in ids else match.group(0)
+
+    out = _ID_MARKER_RE.sub(_drop_marker, text)
+    out = _ID_TOKEN_RE.sub(_drop_token, out)
+    out = re.sub(r"\b(?:is|are)\s+(?:paid off|planted|revealed)\s*:\s*", "", out)
+    out = re.sub(r"\(\s*(?:plants?|pays? off)?\s*\)", "", out)
+    out = re.sub(r"\s{2,}", " ", out).strip(" ;:,-—")
+    return out
+
+
+def seal_chapter_semantics(compiled: dict[str, Any], plan: dict) -> tuple[dict, list[str]]:
+    """Compiler owns clue/reveal meaning: repair or strip whatever the model wrote.
+
+    * scheduled ID whose prose contradicts the ledger → line replaced by canonical text
+    * ID referenced but not scheduled this chapter → token stripped (prose kept)
+    """
+    notes: list[str] = []
+    out = dict(plan)
+    details = compiled.get("clue_details") or {}
+    plant = [str(c) for c in (compiled.get("clues_plant") or [])]
+    payoff = [str(c) for c in (compiled.get("clues_payoff") or [])]
+    reveals = {
+        str(r.get("id")): r for r in (compiled.get("reveals") or []) if isinstance(r, dict)
+    }
+    scheduled = set(plant) | set(payoff) | set(reveals)
+
+    canonical: dict[str, str] = {}
+    for cid in plant:
+        content = str((details.get(cid) or {}).get("content") or "").strip()
+        if content:
+            canonical[cid] = f"[CLUE {cid}] {content}"
+    for cid in payoff:
+        content = str((details.get(cid) or {}).get("content") or "").strip()
+        if content:
+            canonical.setdefault(cid, f"[PAYOFF {cid}] {content}")
+    for rid, rev in reveals.items():
+        text = str(rev.get("reveal") or "").strip()
+        if text:
+            canonical[rid] = f"[REVEAL {rid}] {text}"
+
+    def _content_for(_id: str) -> str:
+        if _id in details:
+            return str((details.get(_id) or {}).get("content") or "")
+        return str((reveals.get(_id) or {}).get("reveal") or "")
+
+    ch = plan.get("chapter")
+    mh_in = [str(x) for x in (out.get("must_happen") or [])]
+    mh_out: list[str] = []
+    repaired: set[str] = set()
+    for line in mh_in:
+        ids = set(_ID_TOKEN_RE.findall(line))
+        if not ids:
+            mh_out.append(line)
+            continue
+        sched_here = {i for i in ids if i in scheduled}
+        unsched = ids - scheduled
+        if sched_here:
+            target = sorted(sched_here)[0]
+            content = _content_for(target)
+            if content and not semantic_present(line, content):
+                if target in canonical and target not in repaired:
+                    mh_out.append(canonical[target])
+                    repaired.add(target)
+                    notes.append(f"ch{ch}:{target}:replaced_mismatched_beat")
+                else:
+                    notes.append(f"ch{ch}:{target}:dropped_duplicate_mismatch")
+                continue
+            repaired.add(target)
+            mh_out.append(line)
+            continue
+        cleaned = _strip_ids(line, unsched)
+        if cleaned:
+            notes.append(f"ch{ch}:{','.join(sorted(unsched))}:stripped_unscheduled_id")
+            mh_out.append(cleaned)
+        else:
+            notes.append(f"ch{ch}:{','.join(sorted(unsched))}:dropped_empty_after_strip")
+    out["must_happen"] = mh_out
+
+    for field in ("beat_summary", "chapter_task", "one_line_summary", "carries_to_next", "cliffhanger"):
+        val = out.get(field)
+        if not isinstance(val, str) or not val:
+            continue
+        unsched = {i for i in _ID_TOKEN_RE.findall(val) if i not in scheduled}
+        if unsched:
+            out[field] = _strip_ids(val, unsched)
+            notes.append(f"ch{ch}:{field}:stripped_unscheduled_id")
+
+    return out, notes
+
+
+def seal_plan_semantics(ws: Path, plans: list[dict]) -> tuple[list[dict], list[str]]:
+    """Apply the semantic seal to a freshly generated chunk (pre-merge)."""
+    if not narrative_compiler_enabled(ws):
+        return plans, []
+    ledger = load_ledger(ws)
+    matrix = load_knowledge_matrix(ws)
+    threads_data = load_threads(ws)
+    out: list[dict] = []
+    notes: list[str] = []
+    for plan in plans:
+        ch = int(plan.get("chapter") or 0)
+        if plan.get("locked") or ch <= 0:
+            out.append(plan)
+            continue
+        compiled = compile_chapter_narrative(ledger, matrix, threads_data, ch)
+        sealed, plan_notes = seal_chapter_semantics(compiled, plan)
+        notes.extend(plan_notes)
+        out.append(sealed)
+    return out, notes
+
+
 def merge_narrative_into_plans(ws: Path, plans: list[dict]) -> list[dict]:
     """Attach compiler narrative to each plan. Skips locked and archive workspaces.
 
-    Also injects ``[CLUE id]`` / ``[PAYOFF id]`` into must_happen when the ledger
-    schedules a plant/payoff for that chapter but the outliner beat text does not
-    yet reference it — so approve/QC does not fail purely because planning ran
-    before narrative assets were attached.
+    The seal runs first, so an ID is never attached to prose that contradicts the
+    ledger; only then are missing scheduled beats appended.
     """
     if not narrative_compiler_enabled(ws):
         return plans
@@ -899,7 +1108,7 @@ def merge_narrative_into_plans(ws: Path, plans: list[dict]) -> list[dict]:
             out.append(plan)
             continue
         compiled = compile_chapter_narrative(ledger, matrix, threads_data, ch)
-        merged = dict(plan)
+        merged, _ = seal_chapter_semantics(compiled, plan)
         merged["narrative"] = narrative_block_for_plan(compiled)
         merged["must_happen"] = _ensure_clue_beats_in_must_happen(
             list(merged.get("must_happen") or []),
@@ -922,15 +1131,9 @@ def _ensure_clue_beats_in_must_happen(
     details = compiled.get("clue_details") or {}
 
     def _already(cid: str, content: str) -> bool:
-        if cid.lower() in blob:
-            return True
-        c = (content or "").lower().strip()
-        if len(c) >= 12 and c[:36] in blob:
-            return True
-        words = [w for w in re.findall(r"[a-zà-ỹ']{4,}", c) if w not in {"that", "with", "from", "this"}]
-        if words and sum(1 for w in words[:6] if w in blob) >= 2:
-            return True
-        return False
+        # ID presence alone is NOT proof — the model often stamps the right ID on
+        # invented prose. Only canonical meaning counts.
+        return semantic_present(blob, content)
 
     for cid in compiled.get("clues_plant") or []:
         cid_s = str(cid)

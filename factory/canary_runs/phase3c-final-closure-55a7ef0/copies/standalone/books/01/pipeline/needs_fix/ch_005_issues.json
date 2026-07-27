@@ -1,0 +1,59 @@
+{
+  "word_count": 1358,
+  "target_language": "en",
+  "missing_quotes": true,
+  "format_locations": {
+    "missing_quotes": [
+      {
+        "line": 43,
+        "snippet": "The word *ledger* meant nothing. But the way he said it—like a verdict—sent ice down her spine."
+      }
+    ]
+  },
+  "markdown_advisory": [
+    {
+      "id": 0,
+      "kind": "italic",
+      "match": "*trigger*",
+      "context": "human wrist with a circle drawn around the joint.\n\nThe word *trigger* appeared three times.\n\nShe read slowly. The conditioning an"
+    },
+    {
+      "id": 1,
+      "kind": "italic",
+      "match": "*motor-cued information retrieval*",
+      "context": "ey became reflexive. The wrist circle. The report called it *motor-cued information retrieval*.\n\nHer throat tightened. \"You're telling me my own body has "
+    },
+    {
+      "id": 2,
+      "kind": "italic",
+      "match": "*ledger*",
+      "context": "ldn't take from you.\" He paused. \"Your training.\"\n\nThe word *ledger* meant nothing. But the way he said it—like a verdict—sent i"
+    },
+    {
+      "id": 3,
+      "kind": "italic",
+      "match": "*Play this. Then finish what we started.*",
+      "context": "ide, a single hard drive and a note in her own handwriting: *Play this. Then finish what we started.*\n\nShe took the drive to a monitor mounted on the wall. Lucia"
+    }
+  ],
+  "classification": {
+    "format_fix": {
+      "missing_quotes": true
+    },
+    "content_fail": {},
+    "length": {},
+    "format_only": true,
+    "length_only": false,
+    "has_format": true,
+    "has_content": false,
+    "has_length": false
+  },
+  "retry_meta": {
+    "content_attempts": 0,
+    "max_content_retries": 2,
+    "short_expands": 0,
+    "max_short_retries": 2,
+    "length_rewrites": 0,
+    "max_length_retries": 3
+  }
+}

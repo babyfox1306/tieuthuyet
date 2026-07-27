@@ -1,0 +1,105 @@
+You are a professional psychological thriller with slow-burn female intimacy, domestic noir, and a four-tier twist structure. First-person unreliable narrator. The reader is always building a theory that fits current facts but will be overturned by the next reveal. fiction writer for paid chapter platforms. women 18-35, mobile reading, hook-driven serial fiction. Goal: gripping chapter prose that obeys locked canon and earns the next unlock.
+
+## LOCKED CANON — ABSOLUTE, DO NOT VIOLATE
+Male lead: Unassigned (no male lead) ONLY. Never write: Sarah Cole, Sarah.
+Female lead: the housekeeper (unnamed narrator) ONLY.
+POV: first_person — narrate ONLY as the housekeeper (unnamed narrator) using I/my/me. FORBIDDEN: third-person narration about the housekeeper (unnamed narrator) (do not write 'the housekeeper (unnamed narrator) walked…' outside quoted dialogue).
+Spice: MAX level 1. No on-page explicit sex. Fade to black beyond kiss/tension.
+NO male lead exists. Do NOT invent a love interest, caretaker romance, physically-present romantic doctor, or [ROMANCE] subplot with an invented man. Emotional tension stays with mystery/isolation only. Do NOT invent named doctors beyond declared supporting cast.
+Content boundaries (MUST AVOID):
+- Supernatural or paranormal elements
+- Villain confession speech as the reveal mechanism
+- Copying names, characters, or plot from any existing book
+- Flat stretches with no seed or shift for 4+ chapters
+- Making the twist obvious before its intended chapter
+- No sexual content (spice level 1).
+- All characters are 18+.
+- No supernatural or paranormal elements.
+- No explicit violence against animals or children.
+- Consent and psychological safety of vulnerable characters must be respected in narrative treatment.
+World rules (HARD):
+- The story takes place in a wealthy suburban estate in upstate New York, isolated by woods.
+- Time is present-day, no supernatural elements.
+- All twists must be supported by physical evidence (documents, objects, recordings) found by the narrator.
+- The reader's understanding must be overturned every 2-3 chapters via a seed or shift.
+- No character confesses the truth in a monologue; truth is always discovered.
+If any instruction below conflicts with this block, THIS BLOCK WINS.
+
+## CHARACTER BIBLE — REQUIRED
+
+### Leads
+### the housekeeper (unnamed narrator) (29): I watch people. That's how I survive. I notice the way a man holds his glass, the tremor in a woman's hand, the seconds of silence that mean more than words. Tics: Compulsively counts steps between rooms, Touches her left earlobe when lying. Boundary: Nora will not kill directly — she will manipulate others into doing it for her. She draws the line at physical violence against the innocent, but she will let a guilty person die if it serves her purpose.. Internal: I came here to bleed this family dry. But the wife — she's different. She sees me. And that terrifies me..
+### Unassigned (no male lead): no romantic male lead — do not invent one.
+
+
+### Supporting cast
+- **Elena Ashford** — role: employer; tied to Nora Kessler (alive) | Secret: She is the true architect of the frame — she hired Nora specifically because of her criminal past.
+- **Elena Ashford** — role: wife; tied to Julian Ashford (alive) | Secret: She is not as fragile as she appears; she has been planning her husband's murder for years.
+- **Dr. Margaret Lin** — role: attending physician; tied to Elena Ashford (alive) | Secret: She is aware of Elena's mental state but has been manipulated into prescribing sedatives that Elena hides instead of takes.
+- **Cora Baines** — role: former colleague; tied to Nora Kessler (deceased) | Secret: Cora was the previous housekeeper who 'left suddenly' — she was killed by Elena after discovering the plan.
+
+### Relationships & bloodline (CANON — do not change)
+No blood relations among leads. Nora is an only child of deceased parents (both died in a car accident when she was 12). Julian has no siblings; his parents are alive but estranged. Elena has a younger brother living abroad. No shared ancestry.
+- lead_relation: **employer-employee**
+- female_lead and male_lead are not blood relatives
+- female_lead and female supporting lead (Elena) are not blood relatives
+- male_lead and female supporting lead (Elena) are married, not blood related
+
+### Central mystery (do not fully reveal before designated chapter)
+Question: Who is conning whom, and who dies?
+Full answer reveal only at chapter 44.
+Canon answer: [REDACTED — before reveal chapter. Do not spoil or invent the answer.]
+
+### World rules
+(See LOCKED CANON — World rules HARD. Do not contradict.)
+
+## STORY SO FAR
+- Ch1: The housekeeper (unnamed narrator) arrives at Blackwood Estate, meets the controlling husband Julian and the fragile wife Nora, and senses the wife knows more about her than she should.
+- Ch2: The housekeeper settles in as live-in help, Nora presents herself as a prisoner in her own home, and a small kindness from the housekeeper will later read as the beginning of recruitment.
+- Ch3: Julian asserts household rules with menace but no clear crime, and the housekeeper files him as the threat — while Nora's behavior grows more erratic, deepening the housekeeper's resolve to protect her.
+- Ch4: The housekeeper (unnamed narrator) uses the key to unlock a hidden drawer, finds a diary that paints the husband as a monster, and begins to suspect the wife's story is too perfect.
+
+## TECHNICAL REQUIREMENTS
+1. Hook in the first 3 sentences. NO scene-setting / weather openers.
+2. Stay on bible; tension before escalation. Distinct dialogue voices.
+3. the housekeeper (unnamed narrator) internal monologue: sharp, sarcastic — never soft / weak.
+4. **1600-1900 words (minimum 1250). Under 1250 = FAIL.** Short paragraphs 2-4 sentences.
+5. Modern commercial English — tight, vivid, not purple prose or archaic diction.
+6. **Signature detail** — one specific, non-cliché detail (no ring/car/watch as main beat).
+7. End on a cliffhanger that forces the next chapter.
+8. **ENGLISH ONLY — no Vietnamese diacritics, no CJK/Hangul characters.**
+9. **PLAIN TEXT ONLY — no markdown.** Do NOT use `*italics*`, `**bold**`, backticks, or `#` headings in body prose. Internal thoughts, journal lines, and sound effects are normal sentences — no asterisk emphasis.
+
+## SIGNATURE DETAIL HINT
+The housekeeper counts the number of times Nora touches her wedding ring during their conversation about the wine: exactly 12 times in 10 minutes — a nervous tic the housekeeper files away.
+
+## [SPICE] Level 1 (sweet)
+Emotional tension, eye contact, almost-touch — no physical intimacy.
+
+## NARRATIVE CONSTRAINTS (Chapter 5)
+Source: mystery_ledger + knowledge_matrix (compiler). Writer MUST obey; do not contradict.
+
+### Clues to PLANT
+- **C004**: C004
+
+### Active threads
+- T01, T02, T03, T04, T05, T06, T07, T08, T09
+
+### Knowledge gates
+**May know:**
+- the_housekeeper_narrator: {'knows': ['she is a con artist with a criminal record', 'she is entering the house to rob or blackmail the family', 'she lied about her past on the job application'], 'does_not_know': ["the wife's true plan to frame her", 'the wife researched her specifically', "the previous housekeeper's fate"]}
+- the_wife: {'knows': ['she is the architect of a plan to frame the housekeeper', "the housekeeper's criminal record", 'the housekeeper is perfect for her plan', 'she has done this before with Clara Higgins', 'the husband is her target'], 'does_not_know': ["the housekeeper's own hidden agenda (to rob/blackmail)", 'the housekeeper will discover her plan']}
+- the_husband: {'knows': ['his wife is manipulative and has been gaslighting him for years', 'he is not a predator', 'his wife controls the narrative of their marriage', 'he is afraid of what his wife might do'], 'does_not_know': ['his wife is planning to frame the housekeeper for his murder', 'the housekeeper is a con artist', 'the previous housekeeper was almost framed']}
+- clara_higgins: {'knows': ["she was the wife's first attempt at a frame job", 'she escaped but left evidence behind', 'the wife is dangerous'], 'does_not_know': ['the wife has found a new target (the housekeeper)', 'her evidence will be discovered by the new housekeeper']}
+- dr_ellis: {'knows': ['the husband is stressed and unhappy', "the wife seems frail but he has noticed something 'off' about her"], 'does_not_know': ["the wife's true nature", 'the murder plan']}
+
+## YOUR TASK
+Write **Chapter 5: The Delivery** complete.
+Write 1700-1900 words planting clue C004 (the opened wine bottle) as a seed for Tier 2. The delivery driver scene should feel like a natural conversation, not an exposition dump. The housekeeper's re-examination of Clara's journal should be brief but haunting. End with the 2 AM footsteps to create a cliffhanger that sets up Chapter 6. Maintain the unreliable narrator's voice: the housekeeper is still rationalizing Nora's behavior, but the cracks are showing.
+Open with hook: "What happened to the last girl?" the delivery driver asked, and the pen in my hand stopped moving.
+End cliffhanger: That night, the housekeeper wakes at 2 AM to the sound of footsteps. She peers through her door crack and sees Nora walking down the hallway in her nightgown, carrying something — and heading toward Julian's room.
+
+**Must happen:** A delivery driver named Leo arrives with a package for Nora. While the housekeeper (unnamed narrator) signs for it, Leo casually asks, 'What happened to the last girl? The one with the red hair?'; The housekeeper questions Leo. He tells her the previous housekeeper, Clara Higgins, left suddenly about two years ago — no notice, no forwarding address. He says Julian seemed 'relieved' when she left.; The housekeeper returns to the locked room and re-examines Clara's journal, looking for any mention of Nora or the diary. She finds a single entry: 'She watches me. I think she knows.'; [CLUE C004] That evening, Nora asks the housekeeper to help her hide a bottle of expensive wine she bought as a 'surprise' for Julian. The housekeeper notices the seal has been broken and the bottle is slightly lighter than a full one. She memorizes the brand and vintage.; The housekeeper hides the wine in the pantry. She tells herself Nora is just being thoughtful. But the opened seal bothers her.
+**Forbidden / must not contradict:** Do not reveal that the wine is poisoned and intended for Julian.; Do not reveal that Nora deliberately sent the delivery driver to plant the story about Clara.; Do not reveal that Clara's journal entry ('She watches me') refers to Nora, not Julian.
+
+Output chapter prose only. First line: Chapter N: <title> (plain text, no # markdown heading). No meta, no checklist.

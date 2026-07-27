@@ -1,0 +1,53 @@
+id: the-language-of-the-dead
+pen_name: Reynard Frost
+target_language: en
+publish_strategy: kdp_ku_exclusive
+narrative_status: approved
+book: 3
+canon_through: 0
+platform: kdp
+audience: women 18-35, mobile reading, hook-driven serial fiction
+goal: slow dread — quiet wrongness each chapter, concrete mystery payoff every 2–3
+  chapters
+setting_hub: The Author of the Dead — primary setting
+setting_nodes: []
+spice_default: 1
+spice_explicit_chapters: []
+spice_steamy_chapters: []
+book1_ending: 'The trilogy closes on a perfect, terrible loop: the record completes
+  itself into the very three books the reader has read. There is no architect to punish,
+  no clean truth to recover, no witness who stays uncorrupted. Pierre''s final true
+  sentence exists for one instant and is never recorded — the only honest thing in
+  three books, and the reader is not allowed to see it. The system''s victory is total
+  and quiet.'
+blurb: Pierre Leclerc spent two summits watching the system rewrite the living into
+  the dead, and everyone — the tribunals, the survivors, even Sofia Bellini herself
+  — treating him as the obsessed journalist who saw patterns that weren't there. He
+  was right about everything except the shape of it. There was never an architect.
+  There was never a Sofia who built the machine. There is only the record — and the
+  terrible thing it has been doing to make itself make sense. Including to him.
+tropes: []
+spice_badge: sweet
+target_platforms:
+- kdp
+spice_level: 1
+plan_status: approved
+bible_status: approved
+book_slug: 03-the-author-of-the-dead
+total_chapters: 10
+arc:
+  act1_setup:
+  - 1
+  - 2
+  act2_complications:
+  - 3
+  - 6
+  act3_crisis:
+  - 7
+  - 8
+  act4_resolution:
+  - 9
+  - 10
+narrative_profile: gothic_psychological_horror
+source_concept_digest: bf1c7a96e60fdaab
+source_narrative_digest: 7a34cffc70d93cef

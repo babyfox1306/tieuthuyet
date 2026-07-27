@@ -1,0 +1,266 @@
+{
+  "main_mystery": "Who is conning whom, and who dies?",
+  "truth": "The wife engineered the entire hire to frame the housekeeper for the husband's murder, choosing her precisely because her criminal past makes her disposable and believable as a killer. The husband is not the predator; he is the target. The housekeeper is also running a con (she came to rob or blackmail this family), but the wife's con is deeper and older. The deepest betrayal: the one ally the housekeeper (and the reader) trusted most is the trap.",
+  "canonical_reveal_chapter": 44,
+  "red_herrings": [
+    {
+      "id": "RH01",
+      "description": "The husband is the predator / murderer of the previous housekeeper",
+      "plant_chapter": 1,
+      "payoff_chapter": 25,
+      "status": "false_answer_overturned_at_26"
+    },
+    {
+      "id": "RH02",
+      "description": "The husband's locked office contains evidence of his crimes",
+      "plant_chapter": 5,
+      "payoff_chapter": 32,
+      "status": "false_answer_overturned_at_32"
+    },
+    {
+      "id": "RH03",
+      "description": "The previous housekeeper was murdered by the husband",
+      "plant_chapter": 3,
+      "payoff_chapter": 28,
+      "status": "false_answer_overturned_at_28"
+    }
+  ],
+  "major_reveals": [
+    {
+      "id": "MR01",
+      "name": "Tier 1 False Answer Established",
+      "chapter": 12,
+      "description": "Reader fully believes the husband is the threat. The wife is a fragile prisoner. The housekeeper is an innocent victim.",
+      "required_clues": [
+        "C001",
+        "C002",
+        "C003",
+        "C004"
+      ],
+      "type": "false_answer"
+    },
+    {
+      "id": "MR02",
+      "name": "Tier 2 False Answer: Husband Murdered Previous Housekeeper",
+      "chapter": 25,
+      "description": "Reader concludes the husband murdered Clara Higgins. Evidence points hard at him. Housekeeper commits to protecting the wife.",
+      "required_clues": [
+        "C005",
+        "C006",
+        "C007",
+        "C008",
+        "C009"
+      ],
+      "type": "false_answer"
+    },
+    {
+      "id": "MR03",
+      "name": "Tier 3 First Real Lift: Housekeeper Is Also a Con Artist",
+      "chapter": 30,
+      "description": "The housekeeper's hidden agenda is revealed to the reader. Her 'innocence' was a performance. The reader must re-read every earlier action as consistent with a con.",
+      "required_clues": [
+        "C010",
+        "C011",
+        "C012"
+      ],
+      "type": "true_reveal_partial"
+    },
+    {
+      "id": "MR04",
+      "name": "Tier 3 First Real Lift: Wife Is the Architect",
+      "chapter": 35,
+      "description": "The wife is revealed as the architect of everything. Her fragility was a performance. The reader must re-read every earlier kindness as manipulation.",
+      "required_clues": [
+        "C013",
+        "C014",
+        "C015",
+        "C016"
+      ],
+      "type": "true_reveal_partial"
+    },
+    {
+      "id": "MR05",
+      "name": "Tier 4 True Reveal: The Frame Job",
+      "chapter": 44,
+      "description": "The wife engineered the entire hire to frame the housekeeper for the husband's murder. Physical evidence proves it. The husband is the target, not the predator.",
+      "required_clues": [
+        "C017",
+        "C018",
+        "C019",
+        "C020",
+        "C021"
+      ],
+      "type": "true_reveal_full"
+    }
+  ],
+  "clues": [
+    {
+      "id": "C001",
+      "description": "The husband speaks to the wife in a cold, condescending tone. He controls her medications and visitors.",
+      "plant_chapter": 1,
+      "payoff_chapter": 12,
+      "type": "seed_for_tier1",
+      "note": "Re-read: This is the husband's genuine frustration with his wife's manipulation, not control."
+    },
+    {
+      "id": "C002",
+      "description": "The wife has a bruise on her wrist that she claims is from the husband.",
+      "plant_chapter": 2,
+      "payoff_chapter": 12,
+      "type": "seed_for_tier1",
+      "note": "Re-read: The wife inflicted this on herself to maintain the fragile victim facade."
+    },
+    {
+      "id": "C003",
+      "description": "The wife knows too much about the housekeeper's past — mentions her hometown and a specific job she had five years ago.",
+      "plant_chapter": 3,
+      "payoff_chapter": 35,
+      "type": "seed_for_tier3",
+      "note": "Re-read: The wife researched the housekeeper thoroughly before hiring her."
+    },
+    {
+      "id": "C004",
+      "description": "The locked room at the end of the hall. The wife says it's the husband's office and he keeps it locked.",
+      "plant_chapter": 5,
+      "payoff_chapter": 32,
+      "type": "seed_for_tier2",
+      "note": "Re-read: The wife controls access to this room. It contains her planning materials."
+    },
+    {
+      "id": "C005",
+      "description": "A neighbor mentions the previous housekeeper, Clara Higgins, 'left suddenly' and 'was never the same after working there.'",
+      "plant_chapter": 6,
+      "payoff_chapter": 25,
+      "type": "seed_for_tier2",
+      "note": "Re-read: Clara left because she discovered the wife's plan and fled."
+    },
+    {
+      "id": "C006",
+      "description": "The housekeeper finds a photograph of Clara hidden in a drawer. Clara looks scared. The husband is in the background.",
+      "plant_chapter": 8,
+      "payoff_chapter": 25,
+      "type": "seed_for_tier2",
+      "note": "Re-read: The wife planted this photo to implicate the husband."
+    },
+    {
+      "id": "C007",
+      "description": "The husband has a violent temper — he throws a glass against the wall during a dinner party argument.",
+      "plant_chapter": 10,
+      "payoff_chapter": 25,
+      "type": "seed_for_tier2",
+      "note": "Re-read: The husband's temper is real, but it's a reaction to his wife's long-term gaslighting."
+    },
+    {
+      "id": "C008",
+      "description": "The housekeeper overhears the husband on the phone saying 'She's getting too close. We need to handle it.'",
+      "plant_chapter": 12,
+      "payoff_chapter": 25,
+      "type": "seed_for_tier2",
+      "note": "Re-read: The husband is talking about his wife's manipulation, not the housekeeper."
+    },
+    {
+      "id": "C009",
+      "description": "A police detective visits the house asking about Clara Higgins. The husband is evasive. The wife is visibly nervous.",
+      "plant_chapter": 14,
+      "payoff_chapter": 25,
+      "type": "seed_for_tier2",
+      "note": "Re-read: The wife is nervous because she planted evidence against the husband that might be discovered."
+    },
+    {
+      "id": "C010",
+      "description": "The housekeeper pockets a small silver spoon from the kitchen on her first day.",
+      "plant_chapter": 1,
+      "payoff_chapter": 30,
+      "type": "seed_for_tier3",
+      "note": "Re-read: This is the first sign of her hidden agenda. She is a thief."
+    },
+    {
+      "id": "C011",
+      "description": "The housekeeper lies about her criminal record on the job application. She claims she's never been arrested.",
+      "plant_chapter": 1,
+      "payoff_chapter": 30,
+      "type": "seed_for_tier3",
+      "note": "Re-read: She has a history of fraud and theft. The wife knew this when she hired her."
+    },
+    {
+      "id": "C012",
+      "description": "The housekeeper snoops through the husband's study when he's away, looking for financial documents or valuables.",
+      "plant_chapter": 4,
+      "payoff_chapter": 30,
+      "type": "seed_for_tier3",
+      "note": "Re-read: She is there to rob or blackmail the family, not to save the wife."
+    },
+    {
+      "id": "C013",
+      "description": "The wife asks the housekeeper very specific questions about her past, her skills, and her fears — framed as 'getting to know you.'",
+      "plant_chapter": 2,
+      "payoff_chapter": 35,
+      "type": "seed_for_tier3",
+      "note": "Re-read: The wife is assessing the housekeeper's suitability as a patsy."
+    },
+    {
+      "id": "C014",
+      "description": "The wife has a hidden drawer in her bedroom with a ledger of names, dates, and amounts of money.",
+      "plant_chapter": 9,
+      "payoff_chapter": 35,
+      "type": "seed_for_tier3",
+      "note": "Re-read: The ledger contains the names of past targets and the housekeeper's name with a date."
+    },
+    {
+      "id": "C015",
+      "description": "The wife's 'fragility' seems to fluctuate. She is weak when the husband is home, but strong and sharp when he is away.",
+      "plant_chapter": 3,
+      "payoff_chapter": 35,
+      "type": "seed_for_tier3",
+      "note": "Re-read: The wife's fragility is a performance for the husband and the housekeeper."
+    },
+    {
+      "id": "C016",
+      "description": "The wife tells the housekeeper a story about a woman she knew who was framed by her husband. The details are eerily specific.",
+      "plant_chapter": 11,
+      "payoff_chapter": 35,
+      "type": "seed_for_tier3",
+      "note": "Re-read: The wife is describing her own plan to the housekeeper, testing her reaction."
+    },
+    {
+      "id": "C017",
+      "description": "The housekeeper finds a copy of her own criminal record in the locked room, with notes in the wife's handwriting.",
+      "plant_chapter": 32,
+      "payoff_chapter": 44,
+      "type": "seed_for_tier4",
+      "note": "This is the first piece of physical evidence that proves the wife's plan."
+    },
+    {
+      "id": "C018",
+      "description": "A knife from the kitchen has the housekeeper's fingerprints on it. The housekeeper never used that knife.",
+      "plant_chapter": 7,
+      "payoff_chapter": 44,
+      "type": "seed_for_tier4",
+      "note": "The wife planted the housekeeper's fingerprints on the murder weapon early in the story."
+    },
+    {
+      "id": "C019",
+      "description": "The housekeeper finds a letter, apparently written by her, confessing to a plan to kill the husband. The handwriting is forged.",
+      "plant_chapter": 36,
+      "payoff_chapter": 44,
+      "type": "seed_for_tier4",
+      "note": "The wife forged the letter. It is planted in the housekeeper's room."
+    },
+    {
+      "id": "C020",
+      "description": "The wife's diary, hidden in the locked room, details her plan: 'Subject 7 is perfect. Disposable. Believable. The police will see her record and stop looking.'",
+      "plant_chapter": 38,
+      "payoff_chapter": 44,
+      "type": "seed_for_tier4",
+      "note": "This is the definitive physical evidence. The wife's own words prove the con."
+    },
+    {
+      "id": "C021",
+      "description": "A bank statement shows a large withdrawal from the wife's account on the day the housekeeper was hired — payment for the forged documents and the planted evidence.",
+      "plant_chapter": 40,
+      "payoff_chapter": 44,
+      "type": "seed_for_tier4",
+      "note": "This confirms the wife's financial investment in the frame job."
+    }
+  ]
+}

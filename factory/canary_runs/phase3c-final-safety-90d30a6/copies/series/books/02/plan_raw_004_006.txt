@@ -1,0 +1,82 @@
+{
+  "act": [4, 6],
+  "chapter_plans": [
+    {
+      "chapter": 4,
+      "title": "Beneath the Transcript",
+      "slug": "beneath-the-transcript",
+      "one_line_summary": "Sofia Bellini’s interventions escalate as the tribunal ignores warning signs, and Elias van Doren begins to doubt the safety of every word recorded.",
+      "beat_summary": "Sofia Bellini continues to gently reframe other witnesses' statements, her guidance always received as benevolent by the tribunal. Elias van Doren, growing more anxious, quietly compares his memory to the official transcript and notices subtle discrepancies. The tribunal, shaken by mounting deaths, clings to Sofia Bellini’s apparent composure, while Pierre Leclerc’s skepticism sharpens. The chapter closes as Elias van Doren voices his fear that the system itself is dangerous—right as a new correction appears in the record, not matching anyone’s recollection.",
+      "must_happen": [
+        "Sofia Bellini subtly alters the phrasing of another witness’s testimony during tribunal proceedings, de-escalating conflict.",
+        "Elias van Doren compares his notes with the transcript and discovers inconsistencies, growing more unsettled.",
+        "The tribunal debates whether the recent death was due to stress or a transcription error, ultimately dismissing deeper investigation.",
+        "[ROMANCE] Sofia Bellini meets Elias van Doren’s gaze after a tense exchange, silently reaffirming trust despite rising fear."
+      ],
+      "must_not": [
+        "Reveal or suggest that Sofia Bellini is Nadia Petrescu’s daughter or the architect of the system.",
+        "Allow any character to explicitly question Sofia Bellini’s innocence or cooperative role."
+      ],
+      "opens_with": "\"That’s not what I wrote,\" Elias van Doren says, his voice barely above a whisper as the transcript is projected on the wall.",
+      "cliffhanger": "A tribunal official quietly hands Sofia Bellini a revised transcript—one line has changed since the hearing, and no one claims responsibility.",
+      "signature_detail_hint": "A faint scent of ozone lingers around the transcript printer, strongest whenever a correction appears.",
+      "emotional_beat": "Paranoia and fragile trust—Sofia Bellini and Elias van Doren share an unspoken alliance as reality grows unstable.",
+      "spice": 1,
+      "spice_note": "Psychological intimacy and silent understanding between Sofia Bellini and Elias van Doren; no explicit content.",
+      "chapter_task": "Deepen the growing sense of mistrust toward the system; spotlight Sofia Bellini's influence and Elias van Doren’s unease; escalate the tribunal’s refusal to see the danger. Target length: 1600-1900 words.",
+      "carries_to_next": "Sofia Bellini and Elias van Doren resolve to privately compare all their records, searching for the source and intent behind the transcript changes."
+    },
+    {
+      "chapter": 5,
+      "title": "The Kindness Algorithm",
+      "slug": "the-kindness-algorithm",
+      "one_line_summary": "Sofia Bellini’s surface ‘kindness’ grows more strategic as Elias van Doren’s suspicions intensify, while tribunal trust begins to erode.",
+      "beat_summary": "Sofia Bellini’s rapport with Elias van Doren deepens as she offers reassurance in the tribunal chamber, yet she studies his reactions with increasing intensity. Elias van Doren, loyal yet unsettled, senses something unsettling beneath Sofia Bellini’s helpfulness but cannot articulate it. The tribunal, facing more unexplained deaths, questions the system’s clarifications but ultimately accepts Sofia Bellini’s narrative. Pierre Leclerc scours the archives for a pattern, while fragments of Nadia Petrescu’s file surface but yield no clear answers. The chapter closes as Elias van Doren is asked to vouch for Sofia Bellini’s reliability in front of the entire tribunal.",
+      "must_happen": [
+        "Sofia Bellini reassures a panicked official, her gentle intervention restoring order but tightening her perceived control.",
+        "Elias van Doren is called to speak on Sofia Bellini’s behalf, wrestling with his growing doubts and his lingering emotional loyalty.",
+        "[ROMANCE] During the testimony, Sofia Bellini’s gaze lingers on Elias van Doren, communicating trust and dependency in front of all.",
+        "Fragments of Nadia Petrescu’s file are passed to Elias van Doren, but their deeper significance remains hidden.",
+        "Pierre Leclerc presents a surface-level finding from the system’s archive, but the tribunal dismisses it as irrelevant."
+      ],
+      "must_not": [
+        "Suggest or reveal any connection between Sofia Bellini and Nadia Petrescu beyond official records.",
+        "Reveal or state Sofia Bellini’s authorship or secret role in the system."
+      ],
+      "opens_with": "\"Would you trust her with your life?\" the chief adjudicator asks Elias van Doren, the tribunal chamber silent and expectant.",
+      "cliffhanger": "Elias van Doren is left alone with the fragments of Nadia Petrescu’s file—one page is missing, and only Sofia Bellini notices.",
+      "signature_detail_hint": "A single hairline crack runs through the glass of the tribunal’s evidence case, widening with each hearing.",
+      "emotional_beat": "Suspicion and longing—Elias van Doren’s fear is masked by his desire to protect Sofia Bellini, even as her influence grows.",
+      "spice": 1,
+      "spice_note": "Subtle emotional tension and longing between Sofia Bellini and Elias van Doren; no explicit content.",
+      "chapter_task": "Show Sofia Bellini’s growing control of the tribunal through kindness; explore Elias van Doren’s conflicted loyalty and suspicion; introduce surface clues from the archive. Target length: 1600-1900 words.",
+      "carries_to_next": "Elias van Doren and Sofia Bellini agree to investigate the system and its archive, searching for the missing piece in Nadia Petrescu’s file."
+    },
+    {
+      "chapter": 6,
+      "title": "Archive Fault",
+      "slug": "archive-fault",
+      "one_line_summary": "Sofia Bellini and Elias van Doren’s alliance deepens as they uncover a planted clue in the archive, but their bond is tested by new doubts.",
+      "beat_summary": "Sofia Bellini and Elias van Doren meet privately to examine the tribunal’s archive, their trust deepened but fraught with tension. They discover a cryptic entry (C004) that appears recently inserted but matches no known testimony. Sofia Bellini’s mask of kindness is more deliberate than ever, her every word measured as tribunal deaths continue. Elias van Doren grows increasingly uneasy with Sofia Bellini’s interventions but remains emotionally loyal. Pierre Leclerc shadows their investigation, suspecting only that the system itself is flawed. The chapter ends as Sofia Bellini is summoned back to the tribunal, the mysterious clue in hand.",
+      "must_happen": [
+        "Sofia Bellini and Elias van Doren secretly investigate the archive and find an unexplained, newly planted document (C004).",
+        "Pierre Leclerc tries to observe their meeting, suspecting only system malfunction.",
+        "[ROMANCE] When Elias van Doren expresses his fear, Sofia Bellini gently reassures him by touching his hand—a gesture of both comfort and control.",
+        "The tribunal discusses mounting deaths but continues to trust Sofia Bellini’s clarifications.",
+        "Sofia Bellini is called to return to the tribunal with the new clue, tension rising."
+      ],
+      "must_not": [
+        "Reveal or suggest Sofia Bellini’s authorship of the system or any connection to Nadia Petrescu beyond public record.",
+        "Allow any character to articulate the true purpose or meaning of the planted clue."
+      ],
+      "opens_with": "\"I found something—they say it shouldn’t exist,\" Elias van Doren whispers as he passes the document to Sofia Bellini in the archive alcove.",
+      "cliffhanger": "As Sofia Bellini re-enters the tribunal chamber, the lights flicker—the system has flagged her name for review.",
+      "signature_detail_hint": "A faint thumbprint, perfectly preserved in dust, marks the corner of the mysterious document.",
+      "emotional_beat": "Fragile alliance and dread—Sofia Bellini and Elias van Doren are bound by trust and mutual uncertainty as they face the tribunal.",
+      "spice": 1,
+      "spice_note": "Micro-beat of touch and reassurance between Sofia Bellini and Elias van Doren; no explicit content.",
+      "chapter_task": "Advance the archive investigation; plant clue C004; test the trust and alliance between Sofia Bellini and Elias van Doren; sustain tribunal tension. Target length: 1600-1900 words.",
+      "carries_to_next": "Sofia Bellini must answer for the newly discovered document as the tribunal’s suspicion and the system’s scrutiny intensify."
+    }
+  ]
+}

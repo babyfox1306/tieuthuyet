@@ -1,0 +1,60 @@
+{
+  "description": "Key threads for The Bell Names the Dead: Each thread tracks a core element of the investigation, loop mechanics, human antagonism, and Elena’s emotional journey. Threads are built around the victim loop, escalating supernatural compulsion, the physical evidence trail, Ada and Gideon’s roles, the restoration of the children’s names, and the larger consequences for Morrow Wick.",
+  "threads": [
+    {
+      "id": "T1",
+      "name": "The Victim Loop and Bell Rule Investigation",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "resolved",
+      "book1_resolution": "Elena fully deciphers the pattern: each victim is compelled to reenact the prior victim’s final hours, with each cycle introducing a deliberate deviation that reveals a fragment of the 1974 fire. She confirms that the bell does not choose at random—the chain is driven by unfinished testimony of the erased children. Elena completes the chain by recording all seven names in the death register and reading them aloud under the empty bell frame. The bell falls silent.",
+      "book2_promise": "A new cycle is hinted at in Saint Agnes, Black Fen, with a reference to eleven unreturned names.",
+      "book1_payoff": "The full loop rules are exposed, the supernatural mechanism is understood, and the deaths stop after Elena's intervention.",
+      "note": "The thread is built on escalating repetition and deviation, with all rules physically evidenced."
+    },
+    {
+      "id": "T2",
+      "name": "Restoration of the Seven Erased Children",
+      "opened_chapter": 2,
+      "must_close_by": 10,
+      "status": "resolved",
+      "book1_resolution": "Elena recovers the attendance ledger, Ada’s correction page, and the physical remains of the seven children. She formally enters their names into the town death register, restoring their identities. The children’s deaths are officially acknowledged.",
+      "book2_promise": "The discovery of a wet-ink entry referencing more missing children at Saint Agnes in Black Fen.",
+      "book1_payoff": "The erased children are finally named and recorded, granting them posthumous justice.",
+      "note": "This thread ties the supernatural compulsion to concrete records and the emotional core of the story."
+    },
+    {
+      "id": "T3",
+      "name": "Gideon Rusk’s Sabotage and Cover-up",
+      "opened_chapter": 2,
+      "must_close_by": 10,
+      "status": "resolved",
+      "book1_resolution": "Gideon attempts to destroy the evidence and physically attacks Elena in the sealed chamber. He is arrested after the children’s names are restored and his role in the suppression is exposed.",
+      "book2_promise": "After Gideon's arrest, the focus shifts to the wider pattern of erased names beyond Morrow Wick.",
+      "book1_payoff": "Gideon’s obstruction is overcome, his motives revealed, and he faces justice.",
+      "note": "Gideon’s true knowledge and Ada’s intervention are not revealed until the locked chapters (8–10)."
+    },
+    {
+      "id": "T4",
+      "name": "Ada Voss’s Secret and Elena’s Emotional Dilemma",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "resolved",
+      "book1_resolution": "Elena discovers Ada’s alteration of the register and her reasons for concealing the truth. Elena must choose between protecting her mother’s reputation and restoring the children’s names. She chooses to complete the chain, exposing Ada’s role.",
+      "book2_promise": "Elena’s willingness to confront uncomfortable truths opens the door to facing new mysteries.",
+      "book1_payoff": "Ada’s secret is revealed, and Elena’s emotional arc closes with her decision to prioritize justice over family legacy.",
+      "note": "The full truth about Ada is locked until Chapter 9."
+    },
+    {
+      "id": "T5",
+      "name": "Physical Evidence and Escalating Deviation",
+      "opened_chapter": 1,
+      "must_close_by": 10,
+      "status": "resolved",
+      "book1_resolution": "Every supernatural revelation is corroborated by physical evidence—records, architecture, and recurring objects. Each victim’s deviation leads Elena to a new piece of the 1974 event, culminating in the discovery of the sealed chamber.",
+      "book2_promise": "The same evidentiary logic must be applied to the new case in Black Fen.",
+      "book1_payoff": "Every supernatural clue is shown to have a factual basis; nothing is invented or unsupported.",
+      "note": "No magical artifact or new fact is introduced in the final two chapters."
+    }
+  ]
+}

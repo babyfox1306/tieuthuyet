@@ -1,0 +1,196 @@
+```json
+{
+  "act": [19, 21],
+  "chapter_plans": [
+    {
+      "chapter": 19,
+      "title": "The Project Phoenix File",
+      "slug": "the-project-phoenix-file",
+      "one_line_summary": "Elle Reyes discovers that Damien Kroll has compiled a file on her first kill — codenamed Project Phoenix — and realizes she is no longer the hunter but the hunted.",
+      "beat_summary": "In the aftermath of her failed confession recording, Elle Reyes receives a encrypted file from an unknown sender — the watcher. The file is labeled 'Project Phoenix' and contains detailed evidence of her first kill: photographs, witness statements, DNA analysis of the hair left at the scene. Elle Reyes realizes Kroll has been building this case against her since before she even announced his name on her podcast. She is not hunting him — she has been walking into his trap from the very beginning. The chapter ends with Elle Reyes staring at her own photograph in Kroll's evidence file, her thumb tapping her ring finger three times, as she accepts the new reality: she must find and destroy the dead man's switch before Kroll releases everything.",
+      "must_happen": [
+        "Elle Reyes receives an encrypted file from the watcher labeled 'Project Phoenix' — it contains detailed evidence of her first kill, including photographs and DNA analysis.",
+        "Elle Reyes realizes Kroll has been building this case against her since before she announced his name on her podcast — she has been walking into a trap from the beginning.",
+        "Elle Reyes identifies the source of the DNA evidence: a single hair from the Maya crime scene that matches her profile, confirming Kroll has a forensic link to her first kill.",
+        "Elle Reyes calls Sasha and Dr. Lin to inform them of the Project Phoenix file; she tells them she must find and destroy the dead man's switch before Kroll releases everything.",
+        "Elle Reyes receives a text from the watcher: 'The dead man's switch is not digital. It's physical. Find it before he uses it.' — confirming the switch is a physical object, not a server."
+      ],
+      "must_not": [
+        "Do not reveal the identity of the watcher — only that they are an independent player with access to Kroll's files.",
+        "Do not show Elle Reyes panicking or freezing — she is calculating, adapting, and methodical despite the gravity of the discovery."
+      ],
+      "opens_with": "\"'Project Phoenix.' I read the file name twice before I opened it. The first photograph was of Maya's crime scene. The second was of me.\"",
+      "cliffhanger": "Elle Reyes closes the file and stares at her reflection in the black screen of her laptop. Her thumb taps her ring finger three times. She picks up her phone and dials the watcher's number — for the first time, she is calling them, not the other way around. The line rings once, twice, three times. Then a voice answers: 'I was wondering when you'd call.'",
+      "signature_detail_hint": "The Project Phoenix file is timestamped with a date three weeks before Elle Reyes first mentioned Kroll's name on her podcast — meaning Kroll started building his counter-case before she even began her investigation.",
+      "emotional_beat": "Cold, methodical acceptance of a devastating truth — she has been outmaneuvered from the start, but she is not defeated; she is recalculating.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. Elle Reyes is fully operational, processing a strategic setback.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Reveal the Project Phoenix file and shift Elle's understanding of the game. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "The Project Phoenix file is revealed; the dead man's switch is confirmed as physical; Elle Reyes is now actively hunting the switch while being hunted by Kroll; the watcher is now a direct contact.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elle Reyes",
+            "Damien Kroll",
+            "Sasha (Lawyer)",
+            "Dr. Lin (Coroner)",
+            "Wren (Hacker)",
+            "Detective Marcus Cole"
+          ],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Kroll has compiled a file on her first kill (Project Phoenix)', 'The dead man\\'s switch is physical, not digital', 'She has been walking into a trap from the beginning', 'The watcher is an independent player with access to Kroll\\'s files'], 'does_not_know_yet': ['The physical location of the dead man\\'s switch', 'Wren is the leak', 'The watcher\\'s true identity']}",
+            "Damien Kroll: {'knows': ['He has compiled Project Phoenix', 'Elle is aware of the file now', 'She will try to find the dead man\\'s switch', 'Wren is compromised'], 'does_not_know_yet': ['The watcher is helping Elle', 'Elle has made contact with the watcher', 'His own death is imminent']}",
+            "Sasha (Lawyer): {'knows': ['Kroll has a file on Elle\\'s first kill', 'The network is in greater danger than she thought', 'Elle is planning to find the dead man\\'s switch'], 'does_not_know_yet': ['Wren is the leak', 'The watcher is helping Elle', 'The full contents of Project Phoenix']}",
+            "Dr. Lin (Coroner): {'knows': ['Kroll has a file on Elle\\'s first kill', 'The network is in greater danger than she thought', 'Elle is planning to find the dead man\\'s switch'], 'does_not_know_yet': ['Wren is the leak', 'The watcher is helping Elle', 'The full contents of Project Phoenix']}",
+            "Wren (Hacker): {'knows': ['Kroll has Project Phoenix', 'She has been feeding Kroll information', 'Elle is now aware of the file', 'Her betrayal is about to be discovered'], 'does_not_know_yet': ['The watcher is helping Elle', 'Elle has made contact with the watcher', 'The consequences of her actions']}",
+            "Detective Marcus Cole: {'knows': ['Multiple deaths connected to Elle\\'s investigations are suspicious', 'Kroll is under pressure from Elle', 'He is building a case against Elle (circumstantial)'], 'does_not_know_yet': ['Elle\\'s method', 'Her network', 'The dead man\\'s switch']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 19
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 20,
+      "title": "The Origin Wound",
+      "slug": "the-origin-wound",
+      "one_line_summary": "As Elle Reyes scrambles to find the dead man's switch, fragments of her origin wound surface — the night she killed for the first time, and why she started.",
+      "beat_summary": "The pressure of the Project Phoenix file triggers a cascade of memories for Elle Reyes. She flashes back to the night of her first kill — not Maya's murderer, but the man who killed her sister, years ago. The reader learns that Elle's origin is not a cold case she stumbled upon, but a personal wound: her sister was murdered, the system failed, and Elle executed the killer herself. She has been doing this for years, not for justice, but for vengeance disguised as justice. The chapter intercuts between the present (Elle searching for the dead man's switch) and the past (the first kill), revealing that her rule — only the guilty — is a lie she tells herself. She killed her sister's murderer, and she has been chasing that feeling ever since. The chapter ends with Elle Reyes, in the present, finding a clue to the dead man's switch location: a storage unit rental receipt in Kroll's name, dated the same week she first contacted him.",
+      "must_happen": [
+        "Elle Reyes experiences a flashback to the night of her first kill — not Maya's murderer, but the man who killed her sister years ago, revealing her true origin.",
+        "The reader learns that Elle's sister was murdered, the system failed, and Elle executed the killer herself — her rule of 'only the guilty' is a rationalization for vengeance.",
+        "In the present, Elle Reyes searches through Kroll's public records and financials, looking for any clue to the physical location of the dead man's switch.",
+        "Elle Reyes finds a storage unit rental receipt in Kroll's name, dated the same week she first contacted him — the dead man's switch is likely stored there.",
+        "Elle Reyes calls Sasha to tell her she has a lead on the dead man's switch, but does not reveal the location — she is keeping it secret even from her network."
+      ],
+      "must_not": [
+        "Do not reveal the full details of Elle's sister's murder — only that it happened, the system failed, and Elle killed the perpetrator.",
+        "Do not show Elle Reyes visiting the storage unit — only that she has found the receipt and plans to go."
+      ],
+      "opens_with": "\"I don't remember deciding to kill him. I remember the feel of the rope in my hands, and the look in his eyes when he realized I wasn't going to stop.\"",
+      "cliffhanger": "Elle Reyes stares at the storage unit receipt. The address is in a town she has never visited, but the rental date — three weeks before she first mentioned Kroll's name — confirms he has been planning this longer than she knew. She grabs her keys. Her phone buzzes. A text from the watcher: 'The storage unit is a decoy. The real switch is in his study. But you already knew that, didn't you?'",
+      "signature_detail_hint": "The storage unit receipt is signed with a flourish that matches the handwriting on the witness statement from the Vega case — the same 'X' that was coached by Kroll's lawyer.",
+      "emotional_beat": "Cold resolve undercut by the raw wound of her origin — she is not a crusader for justice; she is a woman driven by grief and vengeance, and she is only now admitting it to herself.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The focus is on Elle's psychological origin and the strategic hunt for the dead man's switch.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV, with flashback sequences to her first kill. Reveal her origin wound and the storage unit lead. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "Elle's origin wound is revealed; the storage unit lead is found but potentially a decoy; the watcher confirms the real switch is in Kroll's study; Elle must now plan a second breach of Kroll's estate.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elle Reyes",
+            "Damien Kroll",
+            "Sasha (Lawyer)",
+            "Dr. Lin (Coroner)",
+            "Wren (Hacker)",
+            "Detective Marcus Cole"
+          ],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Her origin wound: her sister was murdered and she killed the perpetrator', 'The dead man\\'s switch is likely in Kroll\\'s study (watcher confirmation)', 'The storage unit is a decoy', 'She must breach Kroll\\'s estate again'], 'does_not_know_yet': ['The exact location of the switch within the study', 'Wren is the leak', 'The watcher\\'s true identity']}",
+            "Damien Kroll: {'knows': ['Elle is searching for the dead man\\'s switch', 'She has found the storage unit decoy', 'She will likely try to breach his estate again', 'Wren is compromised'], 'does_not_know_yet': ['The watcher is helping Elle', 'Elle has discovered her origin wound in the process', 'His own death is imminent']}",
+            "Sasha (Lawyer): {'knows': ['Elle has a lead on the dead man\\'s switch', 'Elle is keeping the location secret', 'The network is under pressure'], 'does_not_know_yet': ['Wren is the leak', 'The watcher is helping Elle', 'Elle\\'s full origin story']}",
+            "Dr. Lin (Coroner): {'knows': ['Elle has a lead on the dead man\\'s switch', 'Elle is keeping the location secret', 'The network is under pressure'], 'does_not_know_yet': ['Wren is the leak', 'The watcher is helping Elle', 'Elle\\'s full origin story']}",
+            "Wren (Hacker): {'knows': ['Elle is searching for the dead man\\'s switch', 'She has found the storage unit decoy', 'She is planning to breach Kroll\\'s estate again', 'Her betrayal is about to be discovered'], 'does_not_know_yet': ['The watcher is helping Elle', 'Elle has discovered her origin wound', 'The consequences of her actions']}",
+            "Detective Marcus Cole: {'knows': ['Multiple deaths connected to Elle\\'s investigations are suspicious', 'Kroll is under pressure from Elle', 'He is building a case against Elle (circumstantial)'], 'does_not_know_yet': ['Elle\\'s method', 'Her network', 'The dead man\\'s switch']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 19
+        },
+        "clue_beats": {}
+      }
+    },
+    {
+      "chapter": 21,
+      "title": "The Second Breach",
+      "slug": "the-second-breach",
+      "one_line_summary": "Elle Reyes breaches Kroll's estate a second time to find the dead man's switch — but Wren's betrayal is revealed, and Elle must choose between the switch and saving her network.",
+      "beat_summary": "Elle Reyes plans a second breach of Kroll's estate, this time with a new strategy: she will enter through the garden during a scheduled security patrol gap, bypass the study's booby-trapped safe, and find the physical dead man's switch. She executes the plan, reaching the study undetected. She finds the switch — a small fireproof safe hidden behind a loose floorboard. But before she can open it, her phone buzzes with a text from Sasha: 'Wren is gone. She took the network files. Kroll has everything.' Elle Reyes faces an impossible choice: open the safe and destroy the switch, or leave immediately to protect her network. She opens the safe. Inside is not the switch, but a single photograph of Wren with Kroll, shaking hands. The switch is elsewhere. Elle Reyes realizes Wren has been the leak all along, and Kroll has moved the switch to a location only Wren knows. The chapter ends with Elle Reyes fleeing the estate, her network fractured, and a text from Kroll: 'You should have chosen your people, Elle. Now you have neither.'",
+      "must_happen": [
+        "Elle Reyes plans and executes a second breach of Kroll's estate through the garden during a security patrol gap, bypassing the study's booby-trapped safe.",
+        "Elle Reyes finds the physical dead man's switch — a fireproof safe hidden under a loose floorboard in the study — but before she can open it, she receives a text from Sasha: 'Wren is gone. She took the network files.'",
+        "Elle Reyes opens the safe and finds not the switch, but a single photograph of Wren shaking hands with Kroll — confirming Wren's betrayal.",
+        "Elle Reyes realizes Kroll has moved the switch to a location only Wren knows, and that Wren has been the leak since the beginning.",
+        "Elle Reyes flees the estate, her network fractured, and receives a text from Kroll: 'You should have chosen your people, Elle. Now you have neither.'"
+      ],
+      "must_not": [
+        "Do not reveal the location of the dead man's switch — only that Kroll has moved it to a location known only to Wren.",
+        "Do not show Elle Reyes being captured or seriously injured — only that she escapes but loses the race for the switch."
+      ],
+      "opens_with": "\"'The garden gate has a thirty-second gap in the patrol rotation. That's all I need.' I said it to myself as I slipped through the hedge. I had twenty-eight seconds left.\"",
+      "cliffhanger": "Elle Reyes stands in the rain outside Kroll's estate, the photograph of Wren and Kroll clutched in her hand. Her phone buzzes. A text from Wren: 'I'm sorry, Elle. He has my family. I had no choice. The switch is at the riverbank. Where it all started.' Elle Reyes stares at the message. The riverbank — where Lucia Vega's body was found. She runs.",
+      "signature_detail_hint": "The photograph of Wren and Kroll is dated three weeks before Elle first contacted Kroll — meaning Wren has been compromised since before the investigation even began.",
+      "emotional_beat": "Cold fury mixed with the bitter taste of betrayal — her network is shattered, Wren is the leak, and Kroll has outmaneuvered her again, but she is not done yet.",
+      "spice": 0,
+      "spice_note": "No romance or physical intimacy in this chapter. The tension is pure action and betrayal.",
+      "chapter_task": "Write 1700-1900 words in first-person past tense from Elle Reyes's POV. Execute the second breach, reveal Wren's betrayal, and set up the race for the dead man's switch at the riverbank. Touch threads T01, T02, T03, T04, T05, T06, T07.",
+      "carries_to_next": "Wren's betrayal is confirmed; the dead man's switch is at the riverbank (Lucia Vega's body site); Elle Reyes must race to the riverbank to find the switch before Kroll releases it; the network is fractured but Elle is still fighting.",
+      "narrative": {
+        "clues_plant": [],
+        "clues_payoff": [],
+        "reveals": [],
+        "red_herrings_plant": [],
+        "red_herrings_dispel": [],
+        "threads_touch": [
+          "T01",
+          "T02",
+          "T03",
+          "T04",
+          "T05",
+          "T06",
+          "T07"
+        ],
+        "knowledge": {
+          "pov_characters": [
+            "Elle Reyes",
+            "Damien Kroll",
+            "Sasha (Lawyer)",
+            "Dr. Lin (Coroner)",
+            "Wren (Hacker)",
+            "Detective Marcus Cole"
+          ],
+          "may_know": [
+            "Elle Reyes: {'knows': ['Wren is the leak', 'Wren has been compromised since before the investigation began', 'The dead man\\'s switch is at the riverbank (Lucia Vega\\'s body site)', 'She must race to the riverbank to find the switch'], 'does_not_know_yet': ['The exact location of the switch at the riverbank', 'Whether Wren will help or hinder her', 'The watcher\\'s true identity']}",
+            "Damien Kroll: {'knows': ['Wren has been revealed as the leak', 'Elle knows the switch is at the riverbank', 'Elle is racing to find it', 'He has moved the switch to a location only Wren knows'], 'does_not_know_yet': ['That Elle has made contact with the watcher', 'That the watcher may help Elle find the switch', 'His own death is imminent']}",
+            "Sasha (Lawyer): {'knows': ['Wren is the leak', 'The network is compromised', 'Elle is racing to find the dead man\\'s switch at the riverbank'], 'does_not_know_yet': ['The exact location of the switch', 'The watcher\\'s involvement', 'Whether Elle will succeed']}",
+            "Dr. Lin (Coroner): {'knows': ['Wren is the leak', 'The network is compromised', 'Elle is racing to find the dead man\\'s switch at the riverbank'], 'does_not_know_yet': ['The exact location of the switch', 'The watcher\\'s involvement', 'Whether Elle will succeed']}",
+            "Wren (Hacker): {'knows': ['Her betrayal has been revealed', 'She has told Elle the switch is at the riverbank', 'Kroll will likely dispose of her now that she is no longer useful', 'Her family is still in danger'], 'does_not_know_yet': ['Whether Elle will forgive her', 'The watcher\\'s involvement', 'The consequences of her actions']}",
+            "Detective Marcus Cole: {'knows': ['Multiple deaths connected to Elle\\'s investigations are suspicious', 'Kroll is under pressure from Elle', 'He is building a case against Elle (circumstantial)'], 'does_not_know_yet': ['Elle\\'s method', 'Her network', 'The dead man\\'s switch']}"
+          ],
+          "must_not_know": [],
+          "effective_milestone": 19
+        },
+        "clue_beats": {}
+      }
+    }
+  ]
+}
+```

@@ -1,0 +1,117 @@
+You are a professional paid-chapter romance writer (GoodNovel / Dreame / Vella style). women 18-35, mobile reading, hook-driven serial fiction. ONLY goal: make readers unlock the next chapter.
+
+## LOCKED CANON — ABSOLUTE, DO NOT VIOLATE
+Male lead: Unassigned (no male lead) ONLY. Never write: Dr. Lin, Dr..
+Female lead: Elle Reyes ONLY.
+POV: first_person — narrate ONLY as Elle Reyes using I/my/me. FORBIDDEN: third-person narration about Elle Reyes (do not write 'Elle Reyes walked…' outside quoted dialogue).
+Spice: MAX level 1. No on-page explicit sex. Fade to black beyond kiss/tension.
+NO male ROMANCE lead / love interest. Do NOT invent a caretaker romance, physically-present romantic doctor, or [ROMANCE] subplot with an invented man. Named male characters who are husband / target / victim / antagonist are ALLOWED when listed under LOCKED NAMES (use that exact name — do not invent a second name). Emotional tension stays with mystery/isolation (no romance subplot). Do NOT invent named doctors beyond declared supporting cast.
+Content boundaries (MUST AVOID):
+- Unreliable narrator hiding the killing from the reader
+- Cartoon villain or confession-monologue reveal
+- Children in danger or on-page sexual violence
+- Copying any existing advice-columnist-vigilante book
+- Romance subplot driving the plot
+- Supernatural or paranormal elements
+- Flat stretches with no reveal or reversal for 4+ chapters
+- Character name drift across chapters
+- No children in danger or on-page sexual violence.
+- No supernatural or paranormal elements.
+- No romance subplot driving the plot.
+- Spice level 1 — charged tension allowed, no explicit content.
+- All characters are 18+.
+- Consent is implied in all interpersonal dynamics.
+World rules (HARD):
+- Grounded, modern, procedural — no supernatural elements.
+- The justice system is portrayed as genuinely broken for certain victims (especially women).
+- Physical evidence and competence drive all victories; no confession monologues.
+- The reader knows from chapter 1 that Elle kills; she is not an unreliable narrator hiding it.
+- Every 3-4 chapters must contain a reveal, a reversal, or a rise in threat.
+- Names are fixed and canonical — no drift across chapters.
+If any instruction below conflicts with this block, THIS BLOCK WINS.
+
+## CHARACTER BIBLE — REQUIRED
+
+### Leads
+### Elle Reyes (32): Warm, articulate, crusading in public; cold, methodical, precise in private. Tics: taps her ring finger twice before making a decision, never leaves a room without checking the exits, speaks in complete sentences even under duress. Boundary: She will only kill the provably guilty; an innocent is absolutely off-limits, and this rule will be tested.. Internal: I am not a monster. I am the last appeal. The system failed them — I don't..
+### Unassigned (no male lead): no romantic male lead — do not invent one.
+
+
+### Supporting cast
+- **Sasha Okafor** — role: network member (lawyer); tied to Elle Reyes (alive) | Secret: Knows which guilty men walked free; later becomes the leak who betrays Elle to protect her own family.
+- **Priya Anand** — role: network member (coroner); tied to Elle Reyes (alive) | Secret: Has adjusted cause of death on at least two of Elle's previous cases.
+- **Wren Delgado** — role: network member (hacker); tied to Elle Reyes (alive) | Secret: Pulls digital trails; has a personal vendetta against a corporation that protected a killer.
+- **Mara Reyes** — role: younger sister (deceased); tied to Elle Reyes (deceased) | Secret: Her murder and the killer walking free is Elle's origin wound; the killer's identity is revealed in Book 1 to be connected to Damien Kroll.
+
+### Relationships & bloodline (CANON — do not change)
+Elle Reyes and Damien Kroll are unrelated by blood. Elle's sister Mara is deceased, no other blood relatives appear in Book 1. The network members are not blood-related to Elle.
+- lead_relation: **hunter_and_prey**
+- female_lead and male_lead are not blood relatives
+- no incest or familial romantic relationships
+- all romantic tension is non-blood-related
+
+### Central mystery (do not fully reveal before designated chapter)
+Question: Will Elle Reyes survive the two-way hunt with Damien Kroll, and will her secret life as a vigilante executioner be exposed?
+Full answer reveal only at chapter 38.
+Canon answer: [REDACTED — before reveal chapter. Do not spoil or invent the answer.]
+
+### World rules
+(See LOCKED CANON — World rules HARD. Do not contradict.)
+
+## STORY SO FAR
+- Ch1: Elle Reyes finishes a target — a man who walked free for murder — and the reader learns she is an executioner, not just a podcaster.
+- Ch2: The kill lands publicly as an accident; Elle Reyes performs grief on her podcast while privately she moves on to her next target.
+
+## TECHNICAL REQUIREMENTS
+1. Hook in the first 3 sentences. NO scene-setting / weather openers.
+2. Stay on bible; tension before escalation. Distinct dialogue voices.
+3. Elle Reyes internal monologue: sharp, sarcastic — never soft / weak.
+4. **1600-1900 words (minimum 1250). Under 1250 = FAIL.** Short paragraphs 2-4 sentences.
+5. Modern commercial English — tight, vivid, not purple prose or archaic diction.
+6. **Signature detail** — one specific, non-cliché detail (no ring/car/watch as main beat).
+7. End on a cliffhanger that forces the next chapter.
+8. **ENGLISH ONLY — no Vietnamese diacritics, no CJK/Hangul characters.**
+9. **PLAIN TEXT ONLY — no markdown.** Do NOT use `*italics*`, `**bold**`, backticks, or `#` headings in body prose. Internal thoughts, journal lines, and sound effects are normal sentences — no asterisk emphasis.
+
+## SIGNATURE DETAIL HINT
+Kroll's office has a single photograph on his desk — a young woman with the same birthmark as Lucia Vega, but the photo is old, faded, and the woman's face is scratched out.
+
+## [SPICE] Level 1 (sweet)
+Emotional tension, eye contact, almost-touch — no physical intimacy.
+
+## NARRATIVE CONSTRAINTS (Chapter 3)
+Source: mystery_ledger + knowledge_matrix (compiler). Writer MUST obey; do not contradict.
+
+### Clues to PLANT
+- **C002**: C002
+
+### Active threads
+- T01, T03, T04, T06
+
+### Knowledge gates
+**May know:**
+- Elle Reyes: {'known_facts': ['She is a vigilante executioner who kills guilty men the system failed to punish.', 'Her public identity is a famous true-crime podcaster.', 'Her origin wound: her sister Mara Reyes was murdered by a man who walked free.', 'Her first kill was the man who murdered Mara — a staged car accident.', 'She has a hidden network: Sasha Okafor (lawyer), Priya Anand (coroner), Wren Delgado (hacker).', 'Her new target is Damien Kroll, guilty of a cold-case murder.'], 'must_not_know_before': [], 'hidden_truth': 'Damien Kroll will figure out what she is by chapter 8.'}
+- Damien Kroll: {'known_facts': ['He is guilty of the cold-case murder Elle is reopening.', 'He walked free once already, using money and connections.', 'He is intelligent, patient, and information-driven.', 'He knows Elle is a famous podcaster investigating him.'], 'must_not_know_before': ['Elle is a vigilante executioner (he figures this out by ch8).'], 'hidden_truth': 'Elle is not just a podcaster — she is the executioner.'}
+- Sasha Okafor: {'known_facts': ["She is a defense lawyer and part of Elle's hidden network.", 'She knows which guilty men walked free.', 'She feeds Elle names and case details.', 'She is loyal to Elle (not the leak).'], 'must_not_know_before': ['Elle is a vigilante executioner (she knows Elle is a podcaster, not a killer).', 'Priya is the leak (unknown until ch28).'], 'hidden_truth': 'Elle is a killer, not just a crusading journalist.'}
+- Priya Anand: {'known_facts': ["She is a medical examiner and part of Elle's hidden network.", 'She can read or adjust cause of death.', 'She is loyal to Elle (not yet the leak).', 'She knows Elle is a vigilante executioner (she has helped stage accidents).'], 'must_not_know_before': ['Kroll will threaten her family (this happens in ch14).'], 'hidden_truth': 'She will become the leak under coercion.'}
+- Wren Delgado: {'known_facts': ["He is a hacker and part of Elle's hidden network.", 'He pulls digital trails for Elle.', 'He is loyal to Elle (not the leak).', 'He knows Elle is a vigilante executioner (he has helped cover digital traces).'], 'must_not_know_before': ['Kroll has figured out Elle is a killer (unknown to Wren).', 'Priya is the leak (unknown until ch28).'], 'hidden_truth': "Wren's loyalty is real, and he will be a key emotional support for Elle."}
+- Detective Marcus Holt: {'known_facts': ['He is a detective investigating cold cases.', 'He knows Elle Reyes as a famous true-crime podcaster.', 'He is professional and suspicious by nature.', "He has no knowledge of Elle's vigilantism."], 'must_not_know_before': ['Elle is a vigilante executioner (unknown until ch9).', "Kroll's guilt (unknown until later)."], 'hidden_truth': 'He will begin to suspect Elle in ch9.'}
+
+## YOUR TASK
+Write **Chapter 3: The Cold Case** complete.
+Write 1700-1900 words in first-person past tense from Elle Reyes's POV, with a brief POV shift to Kroll (third-person limited) for his reaction. Establish Kroll as a formidable opponent. Touch threads T01, T02, T03, T06, T07.
+Open with hook: "This is The Quiet Ones, and I'm Elle Reyes. Today, we open a case the system closed."
+End cliffhanger: Kroll closes his laptop after watching Elle's podcast and smiles. 'She's the one,' he says to someone off-screen. 'Find me everything.'
+
+## MUST HAPPEN — LOCKED CONTRACT (do not betray)
+These beats were machine-generated at plan time. Realize EVERY item as on-page scene — do not drop, swap, or invent a different plot branch.
+**Must happen:**
+1. Elle Reyes records and publishes the first episode of her investigation into Lucia Vega's murder, naming Damien Kroll as the prime suspect who walked free.
+2. Damien Kroll issues a public statement through his lawyer, denying all allegations and threatening legal action.
+3. Elle Reyes receives a private message from Kroll: 'You're making a mistake. I know more about you than you think.'
+4. Kroll, in private, watches Elle Reyes's podcast and recognizes the pattern — she's not just a journalist. He calls a private investigator to dig into her past.
+5. [CLUE C002] During the podcast recording, Elle deliberately mentions a small, specific detail about the crime scene — a detail that was never released to the public, and that only the killer would know. She does this to bait Kroll into revealing himself.
+6. Elle Reyes meets Wren (her hacker) to discuss Kroll's digital footprint; Wren mentions her gambling debts are 'under control' — a first hint of vulnerability.
+**Forbidden / must not contradict:** Do not reveal Kroll's full knowledge of Elle Reyes's vigilante activities — he only suspects at this point.; Do not show Wren's gambling debts being exploited yet — only hint that she is vulnerable.; Do not reveal what the specific crime scene detail is — only that Elle planted it as bait.
+
+Output chapter prose only. First line: Chapter N: <title> (plain text, no # markdown heading). No meta, no checklist.

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "contract_validation_report",
+  "book": 1,
+  "mode": "off",
+  "source_digest": "9bcc9153d929bd8d",
+  "candidate_digest": "40185ca64d64fdf4",
+  "ok": true,
+  "code": "OK",
+  "errors": [],
+  "warnings": [],
+  "stale_source_digest": false,
+  "provenance_failures": [],
+  "inheritance_conflicts": [],
+  "approval_eligibility": {
+    "auto_safe_ids": [
+      "obl_include_sloane_gave_the_seven_orders_the_reveal_explains",
+      "obl_include_the_dead_stay_dead_mara_s_shooting_is_staged_but",
+      "obl_include_nobody_explains_the_mystery_in_dialogue_sloane_a",
+      "obl_include_rook_is_alive_from_chapter_1_and_dies_at_chapter",
+      "obl_include_only_two_supporting_characters_mara_and_rook_bot",
+      "obl_include_every_spice_scene_changes_the_plot_ch06_restores",
+      "obl_include_count_the_vice_on_the_page_3_recordings_7_names_",
+      "obl_include_sloane_moves_the_power_herself_at_ch12_she_is_ne",
+      "obl_include_the_wrist_circle_appears_in_every_act_it_is_the_",
+      "cst_avoid_any_beat_where_a_character_explains_the_mystery_",
+      "cst_avoid_any_beat_that_hands_sloane_her_innocence_back",
+      "cst_avoid_a_third_supporting_character",
+      "cst_avoid_sloane_being_rescued_by_lucian_at_the_climax",
+      "cst_avoid_head_hopping_outside_sloane_and_lucian",
+      "cst_avoid_spice_scenes_that_change_nothing",
+      "cst_avoid_rook_appearing_as_a_corpse_or_ghost_before_chapt",
+      "cst_avoid_real_people_real_organizations_anyone_under_18",
+      "event_ending_book",
+      "obl_hook_book2"
+    ],
+    "needs_review_ids": [],
+    "invalid_ids": []
+  },
+  "created_at": "2026-07-23T13:21:28Z"
+}

@@ -1,0 +1,110 @@
+concept_status: ready
+target_language: en
+title: The Language of the Dead
+logline: Twelve students from twelve countries are trapped in a sealed European summit
+  when the building's translation system begins replaying their words each dawn —
+  every language twisting the meaning a little further — and whoever's voice is bent
+  the most does not live to hear the final translation. To survive, they must stop
+  speaking. To save the boy she loves, she speaks for him. That is the mistake that
+  kills.
+author_directive: 'LEADS:
+
+  - Sofia Bellini (female, 18, Italian, speaks four languages). The group''s natural
+  spokesperson. Her instinct to "help others say it clearly" is exactly the instinct
+  that kills in this system. Arc: from translating for everyone → realizing her own
+  act of speaking-for-others is what drives Elias toward death.
+
+  - Elias van Doren (male, 18, Belgian, stutters under stress). The one person Sofia
+  must NOT speak for. Before the event, she was the only one who waited for him to
+  finish his own sentences — that is why he quietly loves her. Tragedy: when fear
+  peaks, she starts speaking for him to "protect" him — and each time she does, his
+  count in the system rises.
+
+
+  CENTRAL MYSTERY (single answer, not an array):
+
+  The true law = the system kills whoever has been SPOKEN FOR / re-interpreted by
+  others the most, NOT whoever is mistranslated. Origin: the disciplinary hearing
+  records of Nadia Petrescu. Reveal at chapter 8.
+
+
+  REVEAL CADENCE (spread evenly, one layer every ~2 chapters):
+
+  - Ch2: the group realizes there is a law; guesses "if you''re mistranslated you
+  die" (WRONG).
+
+  - Ch4: they act on the wrong law (go silent, speak in fragments) → someone still
+  dies → the wrong guess is exposed.
+
+  - Ch6: Nadia clue surfaces (an old name in the system log, a hearing transcript).
+
+  - Ch8: TWIST — the true law is revealed. Sofia understands that her speaking for
+  Elias is his death sentence.
+
+  - Ch9-10: the reckoning.
+
+
+  SPICE MAP (seasoning, not the main course):
+
+  - Default spice 1 (tension, closeness, not explicit).
+
+  - Peak spice 3 ONLY in ch6-7: the two are forced into a narrow interpreter booth
+  during a blackout and must communicate by touch and breath instead of words (because
+  speaking aloud = danger). Physical intimacy erupts exactly when fear peaks, then
+  cuts off hard, snapping back to horror when the speakers begin the morning translation.
+
+  - Spice must ALWAYS be tied to the mechanism: they are close because they are forced
+  into silence, not because a sex scene was pasted'
+surface_plot: 'A locked-room supernatural death-game: a translation system kills whoever''s
+  words get distorted most each morning, so the group falls silent, rations speech,
+  and turns on anyone who "mistranslates" — a survival puzzle about controlling language
+  to stay alive.'
+true_plot: The system does not punish being mistranslated. It punishes being SPOKEN
+  FOR. It was trained on the disciplinary hearing of Nadia Petrescu, a refugee student
+  whose testimony was repeatedly "clarified" by teachers, lawyers and interpreters
+  until the official record was perfectly coherent — and contained not one sentence
+  that was actually hers. She died erased from her own words. The entity now kills
+  whoever a group has most quietly rewritten into a cleaner, easier-to-understand
+  version of themselves. Every act of "helping someone say it better" feeds the machine
+  a new victim.
+must_include:
+- The sentence "That is not what I said" appears in the final translation
+- Nadia Petrescu appears only through logs/files, never as a visible ghost
+- Sofia speaking for Elias = the act that drives him toward death
+- The true-law twist detonates at chapter 8
+- Peak spice in ch6-7 inside the interpreter booth during a blackout
+must_avoid:
+- An invented second male lead
+- A traditional visible ghost
+- An ancient hundred-year school curse
+- The true law revealed before chapter 8
+ending_book1: 'Sofia understands the true law, but too late for Elias — or she saves
+  him the only way left: by giving him back the right to speak for himself, even when
+  that means letting him say the thing that could kill her instead. Case closed: the
+  law is solved, Nadia is "heard" for the first time. The surviving group escapes.'
+hook_book2: 'The survivors leave Brussels and discover the translation system was
+  not the only one — the same "reinterpret-the-human" software was sold elsewhere:
+  a courtroom, a hospital, a platform. Each place is a new way people get rewritten
+  into an easier-to-swallow version.'
+notes: 10 chapters
+chapter_count: 10
+concept_schema_version: 2
+forbidden_phrases:
+- Vance
+- Thorne
+- Blackwood
+- Elara
+- Clara
+- cursed academy
+- ancient curse
+surface_order:
+  event_id: translation_law
+  exact_text: The system kills whoever's words are mistranslated the most.
+  visible_from_chapter: 2
+  appears_unconditional: true
+binding_condition:
+  event_id: translation_law
+  canonical_text: The system kills whoever has been spoken for the most — trained
+    on Nadia Petrescu's rewritten testimony.
+  reveal_chapter: 8
+  exact_wording_required_when_explicitly_stated: true

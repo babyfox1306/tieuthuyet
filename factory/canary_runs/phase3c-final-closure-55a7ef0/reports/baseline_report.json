@@ -1,0 +1,573 @@
+{
+  "schema_version": 1,
+  "kind": "baseline_report",
+  "run_id": "phase3c-final-closure-55a7ef0",
+  "cases": {
+    "bell": {
+      "workspace_copy": "D:\\tieuthuyet\\tieuthuyet\\factory\\canary_runs\\phase3c-final-closure-55a7ef0\\copies\\bell",
+      "book": 1,
+      "structural": {
+        "book": 1,
+        "ready_frontier": 10,
+        "state_frontier": 6,
+        "current_chapter": 6,
+        "direction_keys": [
+          "arc",
+          "audience",
+          "bible_status",
+          "blurb",
+          "book",
+          "book1_ending",
+          "book_slug",
+          "canon_through",
+          "goal",
+          "id",
+          "narrative_profile",
+          "narrative_status",
+          "pen_name",
+          "plan_status",
+          "platform",
+          "publish_strategy",
+          "setting_hub",
+          "setting_nodes",
+          "source_concept_digest",
+          "source_narrative_digest",
+          "spice_badge",
+          "spice_default",
+          "spice_explicit_chapters",
+          "spice_level",
+          "spice_steamy_chapters",
+          "target_language",
+          "target_platforms",
+          "total_chapters",
+          "tropes"
+        ],
+        "plan_chapter_count": 10,
+        "sample_prose_digests": {
+          "1": "b9a50ad165c918da",
+          "2": "d476e355f29838f6",
+          "3": "f5f7be198ac14850",
+          "4": "3180e768e6b2d83c",
+          "5": "0b3ef55affb3514b",
+          "10": "83e620f5a10bd3da"
+        },
+        "bible_files": [
+          "series.json"
+        ],
+        "gaps": []
+      },
+      "quality_sample": {
+        "chapters": [
+          {
+            "chapter": 1,
+            "code": "OK",
+            "below_target": [],
+            "strong": [
+              "prose_freshness",
+              "repetition_control"
+            ],
+            "evaluation_complete": true,
+            "dimension_statuses": {
+              "scene_purpose": "acceptable",
+              "narrative_progression": "acceptable",
+              "character_agency": "acceptable",
+              "tension_or_emotional_pressure": "acceptable",
+              "revelation_consequence": "not_applicable",
+              "dialogue_function": "acceptable",
+              "prose_freshness": "strong",
+              "repetition_control": "strong",
+              "chapter_turn": "acceptable"
+            }
+          },
+          {
+            "chapter": 5,
+            "code": "OK",
+            "below_target": [],
+            "strong": [
+              "prose_freshness",
+              "repetition_control"
+            ],
+            "evaluation_complete": true,
+            "dimension_statuses": {
+              "scene_purpose": "acceptable",
+              "narrative_progression": "acceptable",
+              "character_agency": "acceptable",
+              "tension_or_emotional_pressure": "acceptable",
+              "revelation_consequence": "not_applicable",
+              "dialogue_function": "acceptable",
+              "prose_freshness": "strong",
+              "repetition_control": "strong",
+              "chapter_turn": "acceptable"
+            }
+          },
+          {
+            "chapter": 10,
+            "code": "OK",
+            "below_target": [],
+            "strong": [
+              "prose_freshness",
+              "repetition_control"
+            ],
+            "evaluation_complete": true,
+            "dimension_statuses": {
+              "scene_purpose": "acceptable",
+              "narrative_progression": "acceptable",
+              "character_agency": "acceptable",
+              "tension_or_emotional_pressure": "acceptable",
+              "revelation_consequence": "not_applicable",
+              "dialogue_function": "acceptable",
+              "prose_freshness": "strong",
+              "repetition_control": "strong",
+              "chapter_turn": "acceptable"
+            }
+          }
+        ],
+        "resources": {
+          "writer_calls": 0,
+          "qc_calls": 0,
+          "state_updater_calls": 0,
+          "narrative_developer_calls": 0,
+          "architect_calls": 0,
+          "outliner_calls": 0,
+          "plan_fixer_calls": 0,
+          "integrity_extractor_calls": 0,
+          "integrity_verifier_calls": 0,
+          "contract_compiler_calls": 0,
+          "story_contract_compiler_calls": 0,
+          "contract_compliance_calls": 0,
+          "quality_evaluator_calls": 0,
+          "quality_repairer_calls": 0,
+          "total_semantic_calls": 0,
+          "cache_hits": 0,
+          "cache_misses": 3,
+          "input_chars": 0,
+          "output_chars": 0,
+          "latency_seconds": 0.0,
+          "routes_failed": 0,
+          "operator_actions": 0,
+          "deterministic_checks": 3,
+          "stopped_for_unavailable_routes": 0,
+          "live_free_only_failed": 0
+        },
+        "sample": [
+          1,
+          5,
+          10
+        ]
+      },
+      "contract_packet_summary": {
+        "auto_safe": 0,
+        "needs_review": 23,
+        "invalid": 0,
+        "compile_ok": true
+      },
+      "bell_known_failure_scan": {
+        "findings": [],
+        "note": "Uses generic codes only; Bell is a regression benchmark, not production special-case."
+      }
+    },
+    "standalone": {
+      "workspace_copy": "D:\\tieuthuyet\\tieuthuyet\\factory\\canary_runs\\phase3c-final-closure-55a7ef0\\copies\\standalone",
+      "book": 1,
+      "structural": {
+        "book": 1,
+        "ready_frontier": 17,
+        "state_frontier": 16,
+        "current_chapter": 16,
+        "direction_keys": [
+          "arc",
+          "audience",
+          "bible_status",
+          "blurb",
+          "book",
+          "book1_ending",
+          "book_slug",
+          "canon_through",
+          "goal",
+          "id",
+          "narrative_profile",
+          "narrative_status",
+          "pen_name",
+          "plan_status",
+          "platform",
+          "publish_strategy",
+          "setting_hub",
+          "setting_nodes",
+          "spice_badge",
+          "spice_default",
+          "spice_explicit_chapters",
+          "spice_level",
+          "spice_steamy_chapters",
+          "target_language",
+          "target_platforms",
+          "total_chapters",
+          "tropes"
+        ],
+        "plan_chapter_count": 17,
+        "sample_prose_digests": {
+          "1": "163fb3cce17deb32",
+          "2": "40897f7c33812402",
+          "3": "4e4bb46d7185cc5b",
+          "4": "72ec8d6b1d66cfeb",
+          "5": "717112d496be7568",
+          "17": "45f4f45859088b65"
+        },
+        "bible_files": [
+          "series.json"
+        ],
+        "gaps": []
+      },
+      "quality_sample": {
+        "chapters": [
+          {
+            "chapter": 1,
+            "code": "OK",
+            "below_target": [],
+            "strong": [
+              "prose_freshness",
+              "repetition_control"
+            ],
+            "evaluation_complete": true,
+            "dimension_statuses": {
+              "scene_purpose": "acceptable",
+              "narrative_progression": "acceptable",
+              "character_agency": "acceptable",
+              "tension_or_emotional_pressure": "acceptable",
+              "revelation_consequence": "not_applicable",
+              "dialogue_function": "acceptable",
+              "prose_freshness": "strong",
+              "repetition_control": "strong",
+              "chapter_turn": "acceptable"
+            }
+          },
+          {
+            "chapter": 8,
+            "code": "OK",
+            "below_target": [],
+            "strong": [
+              "prose_freshness",
+              "repetition_control"
+            ],
+            "evaluation_complete": true,
+            "dimension_statuses": {
+              "scene_purpose": "acceptable",
+              "narrative_progression": "acceptable",
+              "character_agency": "acceptable",
+              "tension_or_emotional_pressure": "acceptable",
+              "revelation_consequence": "not_applicable",
+              "dialogue_function": "acceptable",
+              "prose_freshness": "strong",
+              "repetition_control": "strong",
+              "chapter_turn": "acceptable"
+            }
+          },
+          {
+            "chapter": 17,
+            "code": "OK",
+            "below_target": [],
+            "strong": [
+              "prose_freshness",
+              "repetition_control"
+            ],
+            "evaluation_complete": true,
+            "dimension_statuses": {
+              "scene_purpose": "acceptable",
+              "narrative_progression": "acceptable",
+              "character_agency": "acceptable",
+              "tension_or_emotional_pressure": "acceptable",
+              "revelation_consequence": "not_applicable",
+              "dialogue_function": "acceptable",
+              "prose_freshness": "strong",
+              "repetition_control": "strong",
+              "chapter_turn": "acceptable"
+            }
+          }
+        ],
+        "resources": {
+          "writer_calls": 0,
+          "qc_calls": 0,
+          "state_updater_calls": 0,
+          "narrative_developer_calls": 0,
+          "architect_calls": 0,
+          "outliner_calls": 0,
+          "plan_fixer_calls": 0,
+          "integrity_extractor_calls": 0,
+          "integrity_verifier_calls": 0,
+          "contract_compiler_calls": 0,
+          "story_contract_compiler_calls": 0,
+          "contract_compliance_calls": 0,
+          "quality_evaluator_calls": 0,
+          "quality_repairer_calls": 0,
+          "total_semantic_calls": 0,
+          "cache_hits": 0,
+          "cache_misses": 3,
+          "input_chars": 0,
+          "output_chars": 0,
+          "latency_seconds": 0.0,
+          "routes_failed": 0,
+          "operator_actions": 0,
+          "deterministic_checks": 3,
+          "stopped_for_unavailable_routes": 0,
+          "live_free_only_failed": 0
+        },
+        "sample": [
+          1,
+          8,
+          17
+        ]
+      },
+      "contract_packet_summary": {
+        "auto_safe": 0,
+        "needs_review": 11,
+        "invalid": 0,
+        "compile_ok": true
+      },
+      "bell_known_failure_scan": null
+    },
+    "series": {
+      "workspace_copy": "D:\\tieuthuyet\\tieuthuyet\\factory\\canary_runs\\phase3c-final-closure-55a7ef0\\copies\\series",
+      "book": 2,
+      "structural": {
+        "book": 2,
+        "ready_frontier": 10,
+        "state_frontier": 9,
+        "current_chapter": 9,
+        "direction_keys": [
+          "arc",
+          "audience",
+          "bible_status",
+          "blurb",
+          "book",
+          "book1_ending",
+          "book_slug",
+          "canon_through",
+          "goal",
+          "id",
+          "narrative_profile",
+          "narrative_status",
+          "pen_name",
+          "plan_status",
+          "platform",
+          "publish_strategy",
+          "setting_hub",
+          "setting_nodes",
+          "source_concept_digest",
+          "source_narrative_digest",
+          "spice_badge",
+          "spice_default",
+          "spice_explicit_chapters",
+          "spice_level",
+          "spice_steamy_chapters",
+          "target_language",
+          "target_platforms",
+          "total_chapters",
+          "tropes"
+        ],
+        "plan_chapter_count": 10,
+        "sample_prose_digests": {
+          "1": "97c780e523585abc",
+          "2": "5b54e293030c67a4",
+          "3": "8384e6c8b090ba2d",
+          "4": "f506e3374e8c46b2",
+          "5": "355274a45c8e9b3c",
+          "10": "5aa2aeb36c05df44"
+        },
+        "bible_files": [
+          "series.json"
+        ],
+        "gaps": []
+      },
+      "quality_sample": {
+        "chapters": [
+          {
+            "chapter": 1,
+            "code": "OK",
+            "below_target": [],
+            "strong": [
+              "prose_freshness",
+              "repetition_control"
+            ],
+            "evaluation_complete": true,
+            "dimension_statuses": {
+              "scene_purpose": "acceptable",
+              "narrative_progression": "acceptable",
+              "character_agency": "acceptable",
+              "tension_or_emotional_pressure": "acceptable",
+              "revelation_consequence": "not_applicable",
+              "dialogue_function": "acceptable",
+              "prose_freshness": "strong",
+              "repetition_control": "strong",
+              "chapter_turn": "acceptable"
+            }
+          },
+          {
+            "chapter": 5,
+            "code": "OK",
+            "below_target": [],
+            "strong": [
+              "prose_freshness",
+              "repetition_control"
+            ],
+            "evaluation_complete": true,
+            "dimension_statuses": {
+              "scene_purpose": "acceptable",
+              "narrative_progression": "acceptable",
+              "character_agency": "acceptable",
+              "tension_or_emotional_pressure": "acceptable",
+              "revelation_consequence": "not_applicable",
+              "dialogue_function": "acceptable",
+              "prose_freshness": "strong",
+              "repetition_control": "strong",
+              "chapter_turn": "acceptable"
+            }
+          },
+          {
+            "chapter": 10,
+            "code": "OK",
+            "below_target": [],
+            "strong": [
+              "prose_freshness",
+              "repetition_control"
+            ],
+            "evaluation_complete": true,
+            "dimension_statuses": {
+              "scene_purpose": "acceptable",
+              "narrative_progression": "acceptable",
+              "character_agency": "acceptable",
+              "tension_or_emotional_pressure": "acceptable",
+              "revelation_consequence": "not_applicable",
+              "dialogue_function": "acceptable",
+              "prose_freshness": "strong",
+              "repetition_control": "strong",
+              "chapter_turn": "acceptable"
+            }
+          }
+        ],
+        "resources": {
+          "writer_calls": 0,
+          "qc_calls": 0,
+          "state_updater_calls": 0,
+          "narrative_developer_calls": 0,
+          "architect_calls": 0,
+          "outliner_calls": 0,
+          "plan_fixer_calls": 0,
+          "integrity_extractor_calls": 0,
+          "integrity_verifier_calls": 0,
+          "contract_compiler_calls": 0,
+          "story_contract_compiler_calls": 0,
+          "contract_compliance_calls": 0,
+          "quality_evaluator_calls": 0,
+          "quality_repairer_calls": 0,
+          "total_semantic_calls": 0,
+          "cache_hits": 0,
+          "cache_misses": 3,
+          "input_chars": 0,
+          "output_chars": 0,
+          "latency_seconds": 0.0,
+          "routes_failed": 0,
+          "operator_actions": 0,
+          "deterministic_checks": 3,
+          "stopped_for_unavailable_routes": 0,
+          "live_free_only_failed": 0
+        },
+        "sample": [
+          1,
+          5,
+          10
+        ]
+      },
+      "contract_packet_summary": {
+        "auto_safe": 0,
+        "needs_review": 10,
+        "invalid": 0,
+        "compile_ok": true
+      },
+      "bell_known_failure_scan": null
+    }
+  },
+  "resources": {
+    "bell": {
+      "writer_calls": 0,
+      "qc_calls": 0,
+      "state_updater_calls": 0,
+      "narrative_developer_calls": 0,
+      "architect_calls": 0,
+      "outliner_calls": 0,
+      "plan_fixer_calls": 0,
+      "integrity_extractor_calls": 0,
+      "integrity_verifier_calls": 0,
+      "contract_compiler_calls": 0,
+      "story_contract_compiler_calls": 0,
+      "contract_compliance_calls": 0,
+      "quality_evaluator_calls": 0,
+      "quality_repairer_calls": 0,
+      "total_semantic_calls": 0,
+      "cache_hits": 0,
+      "cache_misses": 3,
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency_seconds": 0.0,
+      "routes_failed": 0,
+      "operator_actions": 0,
+      "deterministic_checks": 3,
+      "stopped_for_unavailable_routes": 0,
+      "live_free_only_failed": 0
+    },
+    "standalone": {
+      "writer_calls": 0,
+      "qc_calls": 0,
+      "state_updater_calls": 0,
+      "narrative_developer_calls": 0,
+      "architect_calls": 0,
+      "outliner_calls": 0,
+      "plan_fixer_calls": 0,
+      "integrity_extractor_calls": 0,
+      "integrity_verifier_calls": 0,
+      "contract_compiler_calls": 0,
+      "story_contract_compiler_calls": 0,
+      "contract_compliance_calls": 0,
+      "quality_evaluator_calls": 0,
+      "quality_repairer_calls": 0,
+      "total_semantic_calls": 0,
+      "cache_hits": 0,
+      "cache_misses": 3,
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency_seconds": 0.0,
+      "routes_failed": 0,
+      "operator_actions": 0,
+      "deterministic_checks": 3,
+      "stopped_for_unavailable_routes": 0,
+      "live_free_only_failed": 0
+    },
+    "series": {
+      "writer_calls": 0,
+      "qc_calls": 0,
+      "state_updater_calls": 0,
+      "narrative_developer_calls": 0,
+      "architect_calls": 0,
+      "outliner_calls": 0,
+      "plan_fixer_calls": 0,
+      "integrity_extractor_calls": 0,
+      "integrity_verifier_calls": 0,
+      "contract_compiler_calls": 0,
+      "story_contract_compiler_calls": 0,
+      "contract_compliance_calls": 0,
+      "quality_evaluator_calls": 0,
+      "quality_repairer_calls": 0,
+      "total_semantic_calls": 0,
+      "cache_hits": 0,
+      "cache_misses": 3,
+      "input_chars": 0,
+      "output_chars": 0,
+      "latency_seconds": 0.0,
+      "routes_failed": 0,
+      "operator_actions": 0,
+      "deterministic_checks": 3,
+      "stopped_for_unavailable_routes": 0,
+      "live_free_only_failed": 0
+    }
+  },
+  "created_at": "2026-07-23T13:21:29Z",
+  "note": "Baseline on copied artifacts only; original production untouched."
+}

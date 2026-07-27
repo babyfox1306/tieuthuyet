@@ -1,0 +1,156 @@
+# PROMPT_HAND_LOCK — operator-edited; trust this disk file (skip live rebuild SoT check)
+
+You are a professional thriller fiction writer for paid chapter platforms. women 18-35, mobile reading, hook-driven serial fiction. Goal: gripping chapter prose that obeys locked canon and earns the next unlock.
+
+## LOCKED CANON — ABSOLUTE, DO NOT VIOLATE
+
+Male lead: Victor Rhodes ONLY.
+Female lead: Nadia Cole ONLY.
+POV: first_person — narrate ONLY as Nadia Cole using I/my/me. FORBIDDEN: third-person narration about Nadia Cole (do not write 'Nadia Cole walked…' outside quoted dialogue).
+Spice: MAX level 1. No on-page explicit sex. Fade to black beyond kiss/tension.
+Content boundaries (MUST AVOID):
+
+* Unreliable narrator hiding the killing from the reader
+* Cartoon villain or confession-monologue reveal
+* Children in danger or on-page sexual violence
+* Copying any existing advice-columnist-vigilante book
+* Romance subplot driving the plot
+* Supernatural or paranormal elements
+* Flat stretches with no reveal or reversal for 4+ chapters
+* Character name drift across chapters
+* No explicit sexual content (spice level 1). Charged tension is allowed but never drives the plot.
+* No children in danger or on-page sexual violence.
+* All killings are off-page or implied; focus is on the investigation and psychological tension.
+* Every 3-4 chapters must include a reveal, a reversal, or a rise in threat.
+* Character names are fixed and must not drift across chapters.
+* Nadia is not an unreliable narrator — the reader knows she kills from chapter 1.
+  World rules (HARD):
+* No supernatural elements. Everything is grounded in modern procedural reality.
+* Podcast production, forensics, and digital trails are accurate to real-world practices.
+* The legal system is shown as genuinely broken for victims without money or connections.
+* Nadia's network operates in secrecy; each member has a distinct skill and risk profile.
+* Victories are earned through physical evidence and competence, not confession monologues.
+  If any instruction below conflicts with this block, THIS BLOCK WINS.
+
+## CHARACTER BIBLE — REQUIRED
+
+### Leads
+
+### Nadia Cole (32): Warm and articulate in public, cold and precise in private. 'The system failed her. I won't.' Tics: Runs her thumb over her left palm when stressed, Never raises her voice during a confrontation. Boundary: She will only kill the provably guilty — an innocent is off-limits, and this line will be tested.. Internal: Methodical, clinical, but with a deep well of grief for Mara..
+
+### Victor Rhodes (45): Calm, measured, almost friendly. 'You think you're the only one who studies people, Nadia?' Tics: Tilts his head when he's about to lie, Speaks slowly, never rushed. Boundary: He will not kill directly — he uses information and leverage to destroy..
+
+> If both leads sound alike, or Nadia Cole begs weakly, or Victor Rhodes over-explains — bible violation.
+
+### Supporting cast
+
+* **Sasha Okafor** — role: defense lawyer and network member; tied to Nadia Cole (alive) | Secret: Knows which guilty men walked free; provides legal cover.
+* **Priya Anand** — role: medical examiner and network member; tied to Nadia Cole (alive) | Secret: Reads or adjusts cause of death to protect Nadia's work.
+* **Wren Delgado** — role: hacker and former network member; tied to Nadia Cole (alive) | Secret: Betrayed Nadia's network and disappeared after leaking information to Victor Rhodes.
+* **Mara Cole** — role: younger sister (deceased); tied to Nadia Cole (deceased) | Secret: Her murder is Nadia's origin wound; killer walked free.
+* **Julian Croft** — role: Mara's murderer (Nadia's first kill); tied to Nadia Cole (deceased) | Secret: Nadia's first kill; his death is the evidence Rhodes uses.
+* **Elise Marchetti** — role: murder victim (cold case); tied to Victor Rhodes (deceased) | Secret: Her murder is the podcast case that brings Nadia to Rhodes.
+
+### Relationships & bloodline (CANON — do not change)
+
+Nadia and Victor Rhodes are unrelated by blood. Nadia's only blood relative is her deceased sister Mara. Victor has no known children or siblings in the story.
+
+* lead_relation: **hunter and hunted (non-romantic)**
+* female_lead and male_lead are not blood-related
+* no incest or familial romantic connection
+* all blood relationships are explicitly stated (Mara is Nadia's sister)
+
+### Central mystery (do not fully reveal before designated chapter)
+
+Question: Can Nadia Cole execute Victor Rhodes and escape justice, or will her own buried first kill surface and destroy everything she built?
+Full answer reveal only at chapter 38.
+Canon answer: [REDACTED — before reveal chapter. Do not spoil or invent the answer.]
+
+### World rules
+
+(See LOCKED CANON — World rules HARD. Do not contradict.)
+
+## STORY SO FAR
+
+* Ch32: Nadia Cole walks into Victor Rhodes's trap at the warehouse, but she has her own counter-trap — a desperate gambit that forces a direct confrontation and leaves both of them wounded.
+* Ch33: Nadia Cole rebuilds trust with Sasha Okafor and Priya Anand, forms a new plan to finish Victor Rhodes without triggering the dead-man's-switch, and faces the weight of the fractured network — but the plan requires a sacrifice she isn't sure she can make.
+* Ch34: Nadia Cole relives every detail of her first kill — Julian Croft's staged boating accident — and the emotional and procedural weight of that night reshapes her resolve to finish Victor Rhodes.
+* Ch35: Nadia Cole reunites with Sasha Okafor and Priya Anand at the old diner, lays the final plan to kill Victor Rhodes using the fake death certificate and a staged heart attack, and the network steels itself for the endgame.
+* Ch36: Nadia Cole executes the final plan. Victor Rhodes dies after a staged heart attack, a body swap, and a false death certificate. Priya Anand confirms the public records identify the John Doe body as Victor Rhodes, while Victor's real body is hidden. Sasha Okafor confirms the known dead-man's-switch released only the decoy file prepared by the network. After returning to the safe house, Nadia finds a flash drive Victor deliberately left behind. It contains the authentic Julian Croft boating-accident file and a note claiming another copy will be released in forty-eight hours. Nadia does not know whether the deadline is real, automated, already transferred, or Victor's final bluff.
+
+## TECHNICAL REQUIREMENTS
+
+1. Hook in the first 3 sentences. NO scene-setting / weather openers.
+2. Stay on bible; tension before escalation. Distinct dialogue voices.
+3. Nadia Cole internal monologue: sharp, sarcastic — never soft / weak.
+4. **1600-1900 words (minimum 1250). Under 1250 = FAIL.** Short paragraphs 2-4 sentences.
+5. Modern commercial English — tight, vivid, not purple prose or archaic diction.
+6. **Signature detail** — one specific, non-cliché detail (no ring/car/watch as main beat).
+7. End on a cliffhanger that forces the next chapter.
+8. **ENGLISH ONLY — no Vietnamese diacritics, no CJK/Hangul characters.**
+9. **PLAIN TEXT ONLY — no markdown.** Do NOT use `*italics*`, `**bold**`, backticks, or `#` headings in body prose. Internal thoughts, journal lines, and sound effects are normal sentences — no asterisk emphasis.
+
+## SIGNATURE DETAIL HINT
+
+The unknown sender proves possession of the authentic Julian Croft file by sending Nadia a close photograph of the yacht's brass fuel-line fitting. The image shows the small crescent-shaped wrench slip Nadia remembers making during the staged accident — a detail absent from every public record and visible only in the original evidence file.
+
+## [SPICE] Level 1 (sweet)
+
+Emotional tension, eye contact, almost-touch — no physical intimacy.
+
+## NARRATIVE CONSTRAINTS (Chapter 37)
+
+Source: mystery_ledger + knowledge_matrix (compiler). Writer MUST obey; do not contradict.
+
+### Active threads
+
+* T01, T04, T05, T06, T07
+
+### Knowledge gates
+
+**May know:**
+
+* Nadia Cole: Everything from ch19.
+* Nadia Cole: Wren Delgado was the betrayer and has disappeared.
+* Nadia Cole: Sasha Okafor and Priya Anand remained loyal and helped execute the final plan.
+* Nadia Cole: Victor Rhodes is dead.
+* Nadia Cole: The public death record currently identifies the staged body as Victor Rhodes.
+* Nadia Cole: The known dead-man's-switch released only the network's decoy file.
+* Nadia Cole: The flash drive left by Victor contains authentic evidence linking Nadia to Julian Croft's staged boating accident.
+* Nadia Cole: Victor's note claims another copy will be released in forty-eight hours, but Nadia does not know whether the threat is real.
+* Sasha Okafor: Victor Rhodes is dead and the known legal release contained only the decoy.
+* Sasha Okafor: Nadia possesses the authentic flash drive and must avoid reacting exactly as Victor intended.
+* Priya Anand: The false death certificate and body identification are holding for now.
+* Priya Anand: Victor Rhodes's real body remains hidden.
+* Wren Delgado: She is no longer part of Nadia's trusted network and must not be contacted for help.
+* Victor Rhodes: He is dead and has no POV or active scene in this chapter.
+* … (+6)
+
+## YOUR TASK
+
+Write **Chapter 37: The Loose End** complete.
+Write 1600-1900 words. Show the immediate aftermath of Victor Rhodes's death. Nadia Cole reviews the authentic Julian Croft flash drive and the forty-eight-hour note with Sasha Okafor, confirms with Priya Anand that the staged death and false death certificate are holding, and begins framing the public podcast narrative as "justice served." Nadia, Sasha, and Priya review the remaining loose ends and establish that the known dead-man's-switch released only the decoy. The authentic flash-drive threat remains unverified, and Nadia briefly considers that Victor's final note may have been a bluff designed to make her panic. End when an unknown woman contacts Nadia and proves she possesses a separate authentic copy of the Julian Croft evidence. The woman's identity and full demand must remain hidden for chapter 38.
+Open with hook: "'Rhodes had been dead for less than three hours, and he was already threatening me from the grave.' I turned the flash drive between my fingers while Sasha Okafor read the note for the second time. 'Forty-eight hours,' she said. 'That is either a deadline or bait.' 'With Rhodes,' I said, 'it was usually both.'" — Nadia Cole, internal, as she reviews the flash drive with Sasha Okafor.
+End cliffhanger: Nadia Cole receives an anonymous photograph showing the crescent-shaped wrench mark on Julian Croft's yacht fuel-line fitting — a detail only the authentic file could contain. An unknown woman calls and says Victor Rhodes paid her to hold the evidence. She refuses to reveal her identity or full demand. Before hanging up, she says: 'Victor Rhodes thought his death would frighten you. I think it made you useful.' Nadia Cole asks what she wants. The woman replies: 'I'll tell you tomorrow.' After the call, Nadia Cole tells Sasha Okafor and Priya Anand: 'The deadline was never the real trap. Rhodes didn't leave behind a timer. He left behind a person.' End with Nadia Cole staring at the flash drive, knowing proof of her first kill is now in someone else's hands.
+
+## MUST HAPPEN — LOCKED CONTRACT (do not betray)
+
+These beats were machine-generated at plan time. Realize EVERY item as on-page scene — do not drop, swap, or invent a different plot branch.
+**Must happen:**
+
+1. Nadia Cole shows Sasha Okafor the authentic flash drive and Victor Rhodes's forty-eight-hour note. Sasha Okafor separates confirmed facts from Victor's claim: the known dead-man's-switch released only the decoy, the flash drive is authentic, but there is no proof yet that an attorney or automated release currently holds another copy.
+2. Sasha Okafor checks the known legal and public channels. She confirms that no filing, media package, scheduled release, active press delivery, or attorney notice containing the authentic Julian Croft evidence can currently be found. She warns Nadia that silence is not proof of safety.
+3. Nadia Cole calls Priya Anand. Priya confirms that the false death certificate has been accepted, the public body identification is holding, no forensic discrepancy has surfaced, and Victor Rhodes's real body remains undiscovered.
+4. Nadia Cole and Priya Anand acknowledge the cost of the operation. Priya asks whether killing Victor was worth what happened to the network. Nadia does not apologize for killing him, but she admits that Wren Delgado's betrayal, Sasha Okafor's exposure, and Priya Anand's altered records prove her private war endangered other people.
+5. Nadia Cole records or reviews the opening section of the final podcast episode. The public narrative frames Victor Rhodes's death and exposed misconduct as "justice served," without revealing Nadia's actions. Nadia recognizes the irony that the public version of justice is a story built around a private execution.
+6. Nadia Cole, Sasha Okafor, and Priya Anand review the remaining loose ends: Victor Rhodes is dead; his real body is hidden; the staged public identification is holding; the known dead-man's-switch released the decoy; Wren Delgado is gone and cannot be trusted; the authentic flash drive is the only confirmed active threat.
+7. Nadia Cole preserves the flash drive as evidence, creates an offline duplicate, checks its metadata, and sets Sasha Okafor to monitor legal and press channels. She does not break into an office, bank, safe-deposit facility, attorney's building, or any other location.
+8. Several hours pass without any release, police contact, media package, or legal notice. Nadia briefly believes the forty-eight-hour note may have been Victor Rhodes's final bluff — fear designed to force her into a mistake.
+9. An unknown sender proves possession of a separate authentic copy by sending Nadia a photograph or file excerpt containing the crescent-shaped wrench mark on Julian Croft's yacht fuel-line fitting — a detail unavailable in public records and visible only in the original evidence file.
+10. Nadia Cole receives a call from an unknown woman. The woman reveals that Victor Rhodes arranged for her to hold the evidence before his death. She confirms that the file is still active, but she does not reveal her identity, location, organization, or full demand.
+11. The woman says: 'Victor Rhodes thought his death would frighten you. I think it made you useful.' Nadia Cole asks what she wants. The woman answers: 'I'll tell you tomorrow.'
+12. The chapter ends with Nadia Cole telling Sasha Okafor and Priya Anand: 'The deadline was never the real trap. Rhodes didn't leave behind a timer. He left behind a person.'
+13. [INTENT LOCK] Aftermath; the podcast frames it as "justice served"; loose ends tied.
+    **Forbidden / must not contradict:** Do NOT show Victor Rhodes's perspective in this chapter — he is dead, and the focus is on Nadia Cole handling the aftermath.; Do NOT include any romance, attraction, intimacy, or [ROMANCE] — the emotional beat is cold calculation, exhaustion, and the weight of what Nadia has done.; Do NOT re-fire any clues already paid off (C001, C002, C005, C007) or re-reveal any reveals already fired (MR05).; Do NOT reveal the identity of the woman on the phone — she is the Book 2 hook, and her identity is not revealed here.; Do NOT repeat the discovery of the flash drive from chapter 36.; Do NOT introduce another flash drive, safe-deposit box, sealed attorney envelope, office break-in, janitor, ex-military contact, or second physical stash.; Do NOT call Wren Delgado for help or treat her as a loyal network member.; Do NOT reveal the woman's full payment demand or assignment — those belong in chapter 38.; Do NOT complete Nadia Cole's final podcast episode — chapter 38 completes it.
+
+Output chapter prose only. First line: Chapter N: <title> (plain text, no # markdown heading). No meta, no checklist.
