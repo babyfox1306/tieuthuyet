@@ -24,6 +24,17 @@ _TEMPLATE_GOAL_GOTHIC_EN = (
 _TEMPLATE_AUDIENCE_EN = "women 18-35, mobile reading, hook-driven serial fiction"
 _TEMPLATE_AUDIENCE_VI = "nữ 18-35, đọc điện thoại, lướt nhanh"
 _SPICE_BADGES = {1: "sweet", 2: "steamy", 3: "16+"}
+_CHAPTER_NUMBER_WORDS = {
+    word: number
+    for number, word in enumerate(
+        (
+            "zero", "one", "two", "three", "four", "five", "six", "seven",
+            "eight", "nine", "ten", "eleven", "twelve", "thirteen",
+            "fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
+            "nineteen", "twenty",
+        )
+    )
+}
 
 
 _TEMPLATE_GOAL_THRILLER_EN = (
@@ -34,49 +45,74 @@ _TEMPLATE_GOAL_THRILLER_VI = (
 )
 
 
+_ROMANCE_MODE_ON = frozenset(
+    {"on", "true", "yes", "enabled", "romance", "primary", "required"}
+)
+_ROMANCE_MODE_OFF = frozenset(
+    {"off", "false", "no", "disabled", "none", "forbidden", "non_romance"}
+)
+
+
+def _normalize_romance_mode(value: object) -> str | None:
+    if isinstance(value, bool):
+        return "on" if value else "off"
+    text = str(value or "").strip().lower().replace("-", "_").replace(" ", "_")
+    if text in _ROMANCE_MODE_ON:
+        return "on"
+    if text in _ROMANCE_MODE_OFF:
+        return "off"
+    return None
+
+
+def resolve_romance_mode(
+    concept: dict, direction: dict | None = None
+) -> str | None:
+    """Return explicit romance intent: ``on``, ``off``, or unknown.
+
+    Hard-off is a story classification, not a prose keyword. Safety constraints
+    such as "no assault presented as romance" must never disable the romance
+    engine. Prefer ``concept.romance_mode``; structured genre is the fallback.
+    """
+    for source in (concept, direction or {}):
+        if "romance_mode" in source:
+            mode = _normalize_romance_mode(source.get("romance_mode"))
+            if mode:
+                return mode
+
+    genre = concept.get("genre")
+    if isinstance(genre, dict):
+        if "romance" in genre:
+            mode = _normalize_romance_mode(genre.get("romance"))
+            if mode:
+                return mode
+        genre_values = [
+            genre.get("primary"),
+            genre.get("secondary"),
+            genre.get("subgenre"),
+            genre.get("tags"),
+        ]
+    else:
+        genre_values = [genre, concept.get("genre_profile")]
+
+    def _genre_text(value: object) -> str:
+        if isinstance(value, (list, tuple, set)):
+            return " ".join(str(item) for item in value)
+        return str(value or "")
+
+    genre_blob = " ".join(_genre_text(value) for value in genre_values).lower()
+    if re.search(r"\b(?:dark[\s-]?)?romance\b|\bromantic suspense\b", genre_blob):
+        return "on"
+    return None
+
+
 def concept_forbids_romance(concept: dict) -> bool:
-    """True when concept opts out of romance (must_avoid / directive)."""
-    for item in concept.get("must_avoid") or []:
-        text = str(item).strip().lower()
-        if re.search(
-            r"\bromance\b|"
-            r"love interest|"
-            r"slow[\s-]?burn|"
-            r"subplot taking over",
-            text,
-        ):
-            return True
-    blob = "\n".join(
-        str(concept.get(k) or "")
-        for k in (
-            "author_directive",
-            "notes",
-            "surface_plot",
-            "true_plot",
-            "logline",
-            "bloodline",
-        )
-    ).lower()
-    # Also fold structured bloodline if present as dict.
-    bl = concept.get("bloodline")
-    if isinstance(bl, dict):
-        blob += "\n" + " ".join(str(v) for v in bl.values()).lower()
-    return bool(
-        re.search(
-            r"\bnot a romance\b|"
-            r"\bno romance\b|"
-            r"\bromance of any kind\b|"
-            r"\bromance never\b|"
-            r"\bnever drives the plot\b.{0,40}\bromance\b|"
-            r"\bromance\b.{0,40}\bnever drives\b|"
-            r"\bnon[-\s]?romantic\b|"
-            r"\bforbid(?:s|den)?\s+romance\b|"
-            r"\bdo not create a standalone romance\b|"
-            r"\bnot a love interest\b",
-            blob,
-            re.I | re.DOTALL,
-        )
-    )
+    """True only when structured concept metadata explicitly opts out."""
+    return resolve_romance_mode(concept) == "off"
+
+
+def concept_wants_romance(concept: dict) -> bool:
+    """True only when structured concept metadata explicitly opts in."""
+    return resolve_romance_mode(concept) == "on"
 
 
 def load_kernel_narrative_profile(ws: Path) -> str | None:
@@ -92,17 +128,21 @@ def load_kernel_narrative_profile(ws: Path) -> str | None:
 
 
 def infer_narrative_profile_from_concept(concept: dict) -> str | None:
-    """Derive narrative_profile from concept text — no hardcoded romance default.
-
-    Anti-romance / intentional anti-hero thrillers must NOT become
-    ``romance_thriller`` just because the word \"Romance\" appears in must_avoid.
-    """
+    """Derive profile while taking romance intent only from structured metadata."""
     blob = "\n".join(
         [
             str(concept.get(k) or "")
-            for k in ("author_directive", "notes", "surface_plot", "true_plot", "title", "logline")
+            for k in (
+                "author_directive",
+                "notes",
+                "surface_plot",
+                "true_plot",
+                "title",
+                "logline",
+                "genre",
+                "genre_profile",
+            )
         ]
-        + [str(x) for x in (concept.get("must_avoid") or [])]
         + [str(x) for x in (concept.get("must_include") or [])]
     ).lower()
     if not blob.strip():
@@ -125,9 +165,7 @@ def infer_narrative_profile_from_concept(concept: dict) -> str | None:
         re.search(r"\bgothic\b|\bpsychological horror\b|\bhorror\b", blob)
     )
     wants_conspiracy = "conspiracy" in blob and "thriller" in blob
-    wants_romance = bool(
-        re.search(r"\bromance\b|\bslow[\s-]?burn\b|\blove interest\b", blob)
-    ) and not forbids
+    wants_romance = concept_wants_romance(concept)
 
     if forbids:
         if wants_gothic and not wants_thriller:
@@ -138,14 +176,12 @@ def infer_narrative_profile_from_concept(concept: dict) -> str | None:
             return "thriller"
         return "thriller" if "thriller" in blob else None
 
-    if "not a romance" in blob or (
-        wants_gothic and not wants_romance
-    ):
+    if wants_gothic and not wants_romance:
         return "gothic_psychological_horror"
-    if wants_conspiracy:
-        return "conspiracy_thriller"
     if wants_romance and "thriller" in blob:
         return "romance_thriller"
+    if wants_conspiracy:
+        return "conspiracy_thriller"
     if wants_thriller and not wants_romance:
         return "thriller"
     if wants_gothic:
@@ -154,15 +190,22 @@ def infer_narrative_profile_from_concept(concept: dict) -> str | None:
 
 
 def resolve_narrative_profile(ws: Path, concept: dict | None = None) -> str | None:
-    """Concept anti-romance beats a stale romance_* kernel; else kernel, else infer."""
+    """Explicit concept romance mode beats stale kernel/profile inference."""
     concept = concept if concept is not None else _load_concept(ws)
     inferred = infer_narrative_profile_from_concept(concept)
     kernel = load_kernel_narrative_profile(ws)
-    if concept_forbids_romance(concept):
+    mode = resolve_romance_mode(concept)
+    if mode == "off":
         if inferred:
             return inferred
         if kernel and "romance" in kernel.lower():
             return "thriller"
+    if mode == "on":
+        if inferred and "romance" in inferred.lower():
+            return inferred
+        if kernel and "romance" in kernel.lower():
+            return kernel
+        return "romance_thriller"
     if kernel:
         return kernel
     return inferred
@@ -241,12 +284,32 @@ def is_template_spice_schedule(direction: dict) -> bool:
 
 
 def infer_spice_level(concept: dict) -> int:
-    """Read spice 1–3 from author_directive / must_avoid / notes."""
-    blob = "\n".join(
+    """Infer the book-wide spice ceiling from positive concept declarations.
+
+    ``must_avoid`` is deliberately excluded: a prohibition such as "no sexual
+    assault presented as romance" describes a boundary, not the absence of
+    consensual explicit scenes.
+    """
+    for key in ("spice_max", "spice_level"):
+        value = concept.get(key)
+        if value is not None:
+            try:
+                return max(0, min(3, int(value)))
+            except (TypeError, ValueError):
+                pass
+
+    positive_blob = "\n".join(
         str(concept.get(k) or "")
-        for k in ("author_directive", "must_avoid", "notes", "surface_plot")
+        for k in (
+            "author_directive",
+            "true_plot",
+            "must_include",
+            "chapter_map",
+            "notes",
+            "surface_plot",
+        )
     )
-    blob_lower = blob.lower()
+    blob_lower = positive_blob.lower()
     for pat in (
         r"spice\s*level\s*(\d)",
         r"keep\s+spice\s*(\d)",
@@ -256,12 +319,28 @@ def infer_spice_level(concept: dict) -> int:
         m = re.search(pat, blob_lower, re.IGNORECASE)
         if m:
             return max(1, min(3, int(m.group(1))))
-    if "no explicit" in blob_lower or "spice 1" in blob_lower or "atmospheric" in blob_lower:
-        return 1
-    if "explicit 18" in blob_lower or "spice 3" in blob_lower:
+    if (
+        "explicit 18" in blob_lower
+        or "spice 3" in blob_lower
+        or re.search(
+            r"(?<!no )(?<!not )(?<!without )\bexplicit\s+"
+            r"(?:sexual|sex|scene|encounter|content)",
+            blob_lower,
+        )
+    ):
         return 3
     if "steamy" in blob_lower or "spice 2" in blob_lower:
         return 2
+
+    boundary_blob = "\n".join(
+        str(concept.get(k) or "") for k in ("author_directive", "notes")
+    ).lower()
+    if (
+        "no explicit" in boundary_blob
+        or "spice 1" in boundary_blob
+        or "atmospheric" in boundary_blob
+    ):
+        return 1
     return 1
 
 
@@ -323,6 +402,33 @@ def spice_chapter_lists(total: int, spice_level: int) -> tuple[list[int], list[i
     return explicit, steamy
 
 
+def infer_spice_chapter_lists(
+    concept: dict, total: int, spice_level: int
+) -> tuple[list[int], list[int]]:
+    """Prefer chapter locks declared by the concept over the generic template."""
+    text = "\n".join(
+        str(concept.get(key) or "")
+        for key in ("author_directive", "true_plot", "must_include", "chapter_map", "notes")
+    ).lower()
+    explicit: set[int] = set()
+    for match in re.finditer(r"\bchapters?\s+([^.;\n]{1,100})", text):
+        context = text[max(0, match.start() - 100):match.end()]
+        if not re.search(
+            r"\bexplicit\s+(?:sexual|sex|content|encounter|scene)\b"
+            r"|\bsexual\s+(?:content|encounter|scene)\b",
+            context,
+        ):
+            continue
+        tail = match.group(1)
+        for token in re.findall(r"\d+|[a-z]+", tail):
+            chapter = int(token) if token.isdigit() else _CHAPTER_NUMBER_WORDS.get(token)
+            if chapter and 1 <= chapter <= total:
+                explicit.add(chapter)
+    if explicit:
+        return sorted(explicit), []
+    return spice_chapter_lists(total, spice_level)
+
+
 def sync_direction_from_concept(
     ws: Path,
     *,
@@ -353,7 +459,10 @@ def sync_direction_from_concept(
     spice = infer_spice_level(concept)
     if int(direction.get("spice_level") or 0) != spice or is_template_spice_schedule(direction):
         direction["spice_level"] = spice
-        direction["spice_default"] = spice
+        # spice_level is the book ceiling; spice_default is the ordinary
+        # chapter baseline. Explicit/steamy chapters are scheduled separately.
+        current_default = int(direction.get("spice_default") or 1)
+        direction["spice_default"] = min(current_default, spice)
         direction["spice_badge"] = _SPICE_BADGES.get(spice, "sweet")
         changed.append("spice_level")
 
@@ -361,7 +470,7 @@ def sync_direction_from_concept(
     total = int(direction.get("total_chapters") or 0)
 
     if total >= 3:
-        explicit, steamy = spice_chapter_lists(total, spice)
+        explicit, steamy = infer_spice_chapter_lists(concept, total, spice)
         if list(direction.get("spice_explicit_chapters") or []) != explicit:
             direction["spice_explicit_chapters"] = explicit
             changed.append("spice_explicit_chapters")

@@ -646,8 +646,11 @@ _NAME_LEADING_CONTEXT = frozenset(
     {
         "as", "when", "while", "after", "before", "during", "then", "later",
         "inside", "outside", "once", "because", "although", "if",
-        # Imperatives in chapter_task are not part of a person's name.
-        "show", "include", "stage", "have", "keep", "let",
+        # Imperatives and sentence-leading verbs in plan prose are not part of
+        # a person's name.  In particular, "Do NOT" is a prohibition and
+        # "Shows Grant" is a verb plus a real cast member, not a two-word name.
+        "do", "does", "did", "show", "shows", "include", "stage", "have",
+        "keep", "let",
     }
 )
 _PERSON_ROLE_PREFIXES = frozenset(
@@ -663,7 +666,7 @@ def _clean_plan_person_candidate(raw: str) -> tuple[str, bool]:
     possessive = bool(re.search(r"['’]s$", text, flags=re.I))
     text = re.sub(r"['’]s$", "", text, flags=re.I).strip()
     words = text.split()
-    while len(words) >= 3 and (
+    while len(words) >= 2 and (
         words[0].lower().rstrip(".") in _NAME_LEADING_CONTEXT
         or words[0].lower().rstrip(".") in _PERSON_ROLE_PREFIXES
     ):

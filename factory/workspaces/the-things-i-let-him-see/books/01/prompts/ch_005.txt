@@ -1,11 +1,10 @@
-You are a professional thriller fiction writer for paid chapter platforms. women 18-35, mobile reading, hook-driven serial fiction. Goal: gripping chapter prose that obeys locked canon and earns the next unlock.
+You are a professional paid-chapter romance writer (GoodNovel / Dreame / Vella style). women 18-35, mobile reading, hook-driven serial fiction. ONLY goal: make readers unlock the next chapter.
 
 ## LOCKED CANON — ABSOLUTE, DO NOT VIOLATE
-Male lead: Unassigned (no male lead) ONLY.
+Male lead: Calder ONLY. Never write: lena_hart.
 Female lead: Calder Reed ONLY.
 POV: first_person — narrate ONLY as Calder Reed using I/my/me. FORBIDDEN: third-person narration about Calder Reed (do not write 'Calder Reed walked…' outside quoted dialogue).
-Spice: MAX level 1. No on-page explicit sex. Fade to black beyond kiss/tension.
-NO male ROMANCE lead / love interest. Do NOT invent a caretaker romance, physically-present romantic doctor, or [ROMANCE] subplot with an invented man. Named male characters who are husband / target / victim / antagonist are ALLOWED when listed under LOCKED NAMES (use that exact name — do not invent a second name). Emotional tension stays with mystery/isolation (no romance subplot). Do NOT invent named doctors beyond declared supporting cast.
+Spice: MAX level 3.
 Content boundaries (MUST AVOID):
 - No secret twin, impostor, body double, memory-loss twist, hidden pregnancy, or false identity twist.
 - No hallucination explanation for Lena's observations.
@@ -23,26 +22,56 @@ Content boundaries (MUST AVOID):
 - No romance payoff for Calder ignoring Lena's refusal; no Book Two villain physically appearing in Book One.
 - No version of the climax requiring Grant to confess that he stole the envelope.
 - No portrayal of Lena's Chapter Eight action as certainty that Calder recorded the envelope theft.
+- Explicit sexual content only in Chapters Eleven and Eighteen, with affirmative consent and camera off.
+- No sexual contact before Chapter Ten.
+- No romance payoff for Calder ignoring Lena's refusal.
+- Chapter Sixteen: Lena withdraws access; Calder obeys immediately.
+- Chapter Seventeen: Calder enters without romantic reconciliation.
+- No redemption for Grant.
+- No Book Two villain appearing in Book One.
+World rules (HARD):
+- All surveillance is external to Lena's apartment; no hidden cameras inside her home.
+- Evidence must be physical or independently verifiable; no digital deus ex machina.
+- No violence, guns, knives, or physical assault.
+- No police action based on a single recording or accusation; no instant arrest.
+- No scene outside Calder's first-person POV.
+- No new evidence introduced after Chapter Fifteen.
 If any instruction below conflicts with this block, THIS BLOCK WINS.
 
 ## CHARACTER BIBLE — REQUIRED
 
 ### Leads
-### Calder Reed: protagonist / private surveillance operative / dark-romance lead
-### Unassigned (no male lead): no romantic male lead — do not invent one.
+### Calder Reed (31): Measured, deliberate, uses precise language; often pauses before responding; rarely raises her voice; can be devastatingly calm under pressure. Tics: Touches doorframe seals before entering, Arranges objects in precise grid on desk before starting work, Checks red receipts twice before filing. Boundary: Will not allow anyone to make decisions for her; refuses to be rescued; will cut contact if someone overrides her choice.. Internal: I am not unstable. I am not confused. I am watching him watch me..
+### Calder (34): Terse, observational, often internal; speaks in short declarative sentences; rarely volunteers personal information; uses clinical terms for emotions. Tics: Taps the camera lens before each session, Keeps left hand in pocket when uncertain, Repeats the subject's last words under his breath. Boundary: Refuses to violate his own archive integrity; will not destroy evidence even for personal gain; cannot tolerate being deceived..
 
+> If both leads sound alike, or Calder Reed begs weakly, or Calder over-explains — bible violation.
 
 ### Supporting cast
-- **Lena Hart** — role: surveillance target / condominium co-owner / Grant's separated wife / dark-romance heroine / architect of the evidence trap; tied to Calder Reed (alive)
-- **Grant Hart** — role: antagonist / Lena's separated husband / condominium board president / Calder's client; tied to Calder Reed (alive)
-- **Mae Torres** — role: Lena's neighbor / condominium board secretary / independent witness; tied to Calder Reed (alive)
-- **Imani Cross** — role: investigating detective / police authority; tied to Calder Reed (alive)
+- **Grant** — role: estranged husband; tied to Lena (alive) | Secret: Orchestrated the surveillance contract and edited the dashboard to conceal his own gaslighting.
+- **Mae** — role: sister; tied to Lena (alive) | Secret: Unintentionally feeds Grant information about Lena's state through board communications.
+- **Detective Cross** — role: former colleague; tied to Calder (alive) | Secret: Receives the archive duplicate from Calder in Chapter Seventeen; acts on it only after Lena's evidence sequence is complete.
+
+### Relationships & bloodline (CANON — do not change)
+Lena and Calder are strangers with no shared bloodline. Grant is Lena's estranged husband. Mae is Lena's biological sister. Detective Cross is a former colleague of Calder, unrelated by blood.
+- lead_relation: **stranger**
+- female_lead và male_lead KHÔNG cùng huyết thống
+- No secret twin, impostor, body double, memory-loss twist, hidden pregnancy, or false identity twist.
+- No child, pregnancy, or custody subplot.
+- No named character outside the locked cast.
+
+### Central mystery (do not fully reveal before designated chapter)
+Question: Who is actually controlling what Calder observes — and will Lena's strategy survive the settlement without Calder overriding her plan?
+Full answer reveal only at chapter 14.
+Canon answer: [REDACTED — before reveal chapter. Do not spoil or invent the answer.]
+
+### World rules
+(See LOCKED CANON — World rules HARD. Do not contradict.)
 
 ## STORY SO FAR
-- Ch1: Grant Hart hires Calder Reed for a 21-day surveillance assignment on his separated wife Lena, and Calder immediately creates an evidence channel Grant does not control.
-- Ch2: Calder records Lena's ordinary routine, then witnesses a kitchen mug moved and Grant's immediate follow-up message, establishing the pattern of manufactured instability.
-- Ch3: Lena pauses at a status light reflected in Calder's window, detects the observer, and Calder becomes personally invested in her routine.
-- Ch4: Lena tells Mae Torres that a utility notice vanished from her mailbox; Grant later claims to have found it in the shared recycling, framing Lena as forgetful and Mae as an uncertain witness.
+- Ch1: Calder Reed accepts a 21-day surveillance contract from Grant Hart to document Lena Hart's instability, then immediately establishes an independent evidence archive Grant does not control.
+- Ch2: Calder records Lena's ordinary routine as Grant manufactures evidence of her instability by moving a kitchen mug while she walks, then messaging her about it.
+- Ch3: Lena detects the surveillance when she sees the reflected camera status light in Calder's window and connects it to Grant's message timing, while Calder misreads her pause as instinct.
+- Ch4: Lena reports a vanished utility notice to Mae, and Grant later claims to have found it in the shared recycling, framing her as forgetful and accusatory while Mae remains uncertain.
 
 ## TECHNICAL REQUIREMENTS
 1. Hook in the first 3 sentences. NO scene-setting / weather openers.
@@ -56,24 +85,66 @@ If any instruction below conflicts with this block, THIS BLOCK WINS.
 9. **PLAIN TEXT ONLY — no markdown.** Do NOT use `*italics*`, `**bold**`, backticks, or `#` headings in body prose. Internal thoughts, journal lines, and sound effects are normal sentences — no asterisk emphasis.
 
 ## SIGNATURE DETAIL HINT
-The red receipt is from a hardware store Calder passed yesterday; the fold is precise, a triangle with the store logo centered, as if she prepared it before placing it.
+A folded red receipt placed beside a kitchen mug — the same shade as a department-store return slip, but the placement is too precise for accident.
 
-## [SPICE] Level 1 (sweet)
-Emotional tension, eye contact, almost-touch — no physical intimacy.
+## [SPICE] Level 0 — NONE
+No romance heat, no kissing as romantic beat, no sexual tension. Focus on plot, evidence, and atmosphere only.
+
+## NARRATIVE CONSTRAINTS (Chapter 5)
+Source: mystery_ledger + knowledge_matrix (compiler). Writer MUST obey; do not contradict.
+
+### Clues to PLANT
+- **C006**: Lena learns Calder's surname from a lobby package label addressed to 'Reed.'
+
+### Active threads
+- T01, T02, T03, T04, T08, T09
+
+### Knowledge gates
+**May know:**
+- Calder Reed: Lena has repeated routines
+- Calder Reed: she sometimes looks toward his window
+- Calder Reed: Grant messages her after her courtyard appearances
+- Calder Reed: displaced objects and missing mail are reported.
+- Lena Hart: The observer is a man named 'Reed' (from lobby package label)
+- Lena Hart: the surveillance started near the settlement date
+- Lena Hart: Grant hired him
+- Lena Hart: she has begun diagnostic tests (red receipts, door seals, paper planner, repeated routines).
+- Grant Hart: Calder still submits usable reports
+- Grant Hart: Lena remains
+- Grant Hart: she may be packing
+- Grant Hart: Mae supports her
+- … (+4)
+**MUST NOT know or reveal yet:**
+- Calder Reed: Lena detected the camera light in Ch3
+- Calder Reed: she is testing him
+- Calder Reed: the routines are diagnostic.
+- Lena Hart: Calder keeps unedited originals
+- Lena Hart: Grant's full manipulation timeline (7 weeks)
+- Lena Hart: the observer's archive policy.
+- Grant Hart: Lena's detection
+- Grant Hart: the red-receipt system
+- Grant Hart: the door-seal planner
+- Grant Hart: Calder's independent archive.
+- Mae Torres: the manipulation is manufactured
+- Mae Torres: Calder's role
+- Mae Torres: the surveillance.
 
 ## YOUR TASK
 Write **Chapter 5: The Private Copy** complete.
-Write 1700-1900 words focusing on the dance moment, Calder's decision to exclude it from the report, and his observation of the red receipt marker. the unnamed contact's first-person POV and professional ambiguity about Lena's awareness.
-Open with hook: The music reaches me through the courtyard before I see her: a low bass line from a speaker I hadn't noticed in her kitchen, and then Lena Hart steps away from the counter and begins to move like no one is watching.
-End cliffhanger: Calder closes the file on the dance footage and looks back at the live feed; Lena is standing at the counter, staring directly at her own window—not at his camera, but at the space where she danced—and she is smiling.
+Write Chapter Five — 1600-1900 words. Execute the beat 'The Private Copy': Calder watches Lena dance alone in her kitchen, records it, but removes it from Grant's report. Lena places a folded red receipt beside the displaced mug. Plant C006 (Lena learns Calder's surname from a lobby package label addressed to 'Reed.') using the exact semantic from clue_catalog. Calder must observe Lena in the lobby reading the package label but not understand her recognition. Do NOT payoff any clue. End with Lena looking at the lobby camera with an expression of confirmation — Calder does not yet know she identified him by name.
+Open with hook: "She moved like no one was watching. No performance, no awareness — just her body finding rhythm in a kitchen she believed was private. I pressed record before I decided to. I did not stop watching."
+End cliffhanger: Calder closes his notebook and looks at the monitor. Lena is standing in the lobby, holding a package. She looks up at the camera — directly at him — and her lips move. He cannot read the word, but her expression is not confusion. It is confirmation.
 
 ## MUST HAPPEN — LOCKED CONTRACT (do not betray)
 These beats were machine-generated at plan time. Realize EVERY item as on-page scene — do not drop, swap, or invent a different plot branch.
 **Must happen:**
-1. Calder watches Lena move through her kitchen in an unguarded moment: she sways to music only she can hear, a brief private dance visible through the common-facing blinds.
-2. Calder records the dance but does not include it in the compressed report to Grant; he marks the footage for his local archive only.
-3. Lena finishes her coffee, then deliberately places a folded red receipt on the counter beside the mug that Grant moved days earlier.
-4. Calder notes the receipt's position and time-stamps it, recognizing it as a marker—either for her own memory or to test whether he is watching.
-**Forbidden / must not contradict:** Do not describe any nudity, bedroom, or bathroom activity; the dance is fully clothed in the kitchen.; Do not include any romantic attraction, chemistry, or intimacy; Calder's decision to withhold footage is professional paranoia and personal investment in the evidence, not desire.
+1. [ROMANCE] Calder watches Lena through the lens as she dances alone in her kitchen — a slow, unguarded movement to music he cannot hear. She closes her eyes. Calder's hand hovers over the record button before he presses it. He does not look away.
+2. Lena returns from her morning walk. She checks the doorframe seal — intact. She enters her apartment and places a folded red receipt beside the kitchen mug that Grant moved in Chapter Two.
+3. Calder reviews the footage of Lena's dance. He watches it three times. He removes the clip from the compressed daily report for Grant, saving only the unedited original in his local archive.
+4. Calder writes in his field journal: 'Subject danced in kitchen. 3m12s. Not included in client report.' He seals the notebook.
+5. Calder notices the folded red receipt beside the displaced mug. He zooms in, records the timestamp. He does not understand its purpose but documents it in his private notes.
+6. Grant messages Calder: 'Any unusual behavior today?' Calder replies: 'Routine. No incidents.' He does not mention the dance or the receipt.
+7. [CLUE C006] Lena learns Calder's surname from a lobby package label addressed to 'Reed.' Calder observes Lena in the lobby, picking up a package. She pauses, reads the label, and her expression shifts — a flicker of recognition he cannot explain.
+**Forbidden / must not contradict:** Do NOT reveal that Lena deliberately exposed the dance to test whether Calder records it — Calder must believe she is unaware.; Do NOT reveal that the red receipt is part of Lena's diagnostic system — Calder must not understand its purpose.; Do NOT reveal that Lena learned Calder's surname from the package label — Calder must not know she identified him.; Do NOT payoff any clue — only plant C006 (Lena learns Calder's surname from a lobby package label).
 
 Output chapter prose only. First line: Chapter N: <title> (plain text, no # markdown heading). No meta, no checklist.

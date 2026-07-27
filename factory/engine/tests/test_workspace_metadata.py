@@ -9,6 +9,7 @@ import yaml
 
 from factory.engine.lib.workspace_metadata import (
     infer_setting_from_concept,
+    infer_spice_chapter_lists,
     infer_spice_level,
     is_template_setting,
     scale_act_arc,
@@ -27,6 +28,36 @@ class WorkspaceMetadataTests(unittest.TestCase):
         hub, nodes = infer_setting_from_concept(concept)
         self.assertIn("house", hub.lower())
         self.assertEqual(nodes, [])
+
+    def test_infer_spice_uses_positive_explicit_lock_not_must_avoid(self) -> None:
+        concept = {
+            "must_include": [
+                "Explicit sexual content occurs only in Chapters Eleven and Eighteen."
+            ],
+            "must_avoid": [
+                "No sexual assault presented as romance.",
+                "No romance payoff for ignoring refusal.",
+            ],
+        }
+        self.assertEqual(infer_spice_level(concept), 3)
+
+    def test_infer_spice_honors_structured_ceiling(self) -> None:
+        concept = {
+            "spice_level": 2,
+            "must_avoid": ["No explicit content."],
+        }
+        self.assertEqual(infer_spice_level(concept), 2)
+
+    def test_infer_explicit_chapters_from_concept_lock(self) -> None:
+        concept = {
+            "must_include": [
+                "Explicit sexual content occurs only in Chapters Eleven and Eighteen."
+            ]
+        }
+        self.assertEqual(
+            infer_spice_chapter_lists(concept, 18, 3),
+            ([11, 18], []),
+        )
 
     def test_scale_arc_ten_chapters(self) -> None:
         arc = scale_act_arc(10)
@@ -103,6 +134,7 @@ class WorkspaceMetadataTests(unittest.TestCase):
             ws.mkdir()
             concept = {
                 "target_language": "en",
+                "romance_mode": "off",
                 "logline": "Lake house gothic dread.",
                 "author_directive": "Gothic psychological horror — not a romance.",
                 "notes": "30 chapters",
@@ -138,6 +170,7 @@ class WorkspaceMetadataTests(unittest.TestCase):
 
         concept = {
             "title": "The Cold Case Girl",
+            "romance_mode": "off",
             "author_directive": (
                 "GENRE: feminist good for her revenge thriller. "
                 "Romance never drives the plot."
@@ -164,6 +197,29 @@ class WorkspaceMetadataTests(unittest.TestCase):
             )
             # Stale romance kernel must lose to anti-romance concept.
             self.assertEqual(resolve_narrative_profile(ws, concept), "thriller")
+
+    def test_dark_romance_safety_constraints_infer_romance_profile(self) -> None:
+        from factory.engine.lib.workspace_metadata import (
+            concept_forbids_romance,
+            infer_narrative_profile_from_concept,
+        )
+
+        concept = {
+            "romance_mode": "on",
+            "genre": {
+                "primary": "dark romance",
+                "secondary": ["psychological thriller"],
+            },
+            "author_directive": "An 18+ consent-driven dark-romance thriller.",
+            "must_avoid": [
+                "No sexual assault presented as romance",
+                "No romance payoff for ignoring refusal",
+            ],
+        }
+        self.assertFalse(concept_forbids_romance(concept))
+        self.assertEqual(
+            infer_narrative_profile_from_concept(concept), "romance_thriller"
+        )
 
 
 if __name__ == "__main__":

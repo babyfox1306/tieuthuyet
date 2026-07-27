@@ -1,14 +1,26 @@
 {
   "running": false,
-  "phase": "prep",
+  "phase": "autopilot",
   "step": "",
-  "ok": true,
-  "error": null,
+  "ok": false,
+  "error": "approve-plan blocked",
   "log": [
     "▶ compile-intent...",
-    "✓ compile-intent",
+    "✓ compile-intent (18 ch map)",
     "▶ approve-intent...",
     "✓ approve-intent",
+    "▶ develop-narrative...",
+    "✓ develop-narrative",
+    "▶ validate-narrative...",
+    "✓ validate-narrative",
+    "▶ approve-narrative...",
+    "✓ approve-narrative",
+    "▶ architect...",
+    "✓ architect",
+    "▶ validate-bible...",
+    "✓ validate-bible",
+    "▶ approve-bible...",
+    "✓ approve-bible",
     "▶ init-canon-registry...",
     "✓ init-canon-registry",
     "▶ plan...",
@@ -16,9 +28,7 @@
     "▶ fix-plans...",
     "✓ fix-plans",
     "▶ approve-plan...",
-    "✓ approve-plan",
-    "▶ render-prompts...",
-    "✓ render-prompts (18 prompts)"
+    "✗ approve-plan: approve-plan blocked — DỪNG (gate chặn, không force)"
   ],
-  "updated_at": "2026-07-27T12:04:36.169513+00:00"
+  "updated_at": "2026-07-27T23:11:53.845928+00:00"
 }

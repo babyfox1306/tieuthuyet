@@ -2,18 +2,18 @@
   "book_number": 1,
   "total_chapters": 18,
   "target_language": "en",
-  "case_closed": "Grant's manipulation is exposed at the settlement via contradictory evidence (envelope chain of custody, unedited footage, access audit, field notebook, planner, contract). Lena retains her apartment; Grant loses admin access; evidence enters official custody; legal proceedings continue but Grant no longer controls Lena's environment.",
-  "case_open": "Grant Hart has manufactured a pattern of instability around Lena for seven weeks before Chapter One via duplicate mailbox key, master-access credential, admin control of footage and incident records, and timed environmental disturbances. Calder is hired for 21 days of surveillance and independently retains unedited originals. Lena detects Calder in Chapter Three, controls what he sees via diagnostic tests (folded red receipts, doorframe seals, paper planner, repeated routines, certified honeytoken envelope), and builds an evidence chain that culminates in Grant exposing his own false chain of custody at the settlement. Calder's attraction develops through observation; Lena's attraction begins only after confrontation and negotiated consent in Chapters Nine–Ten. The romance is earned only after the surveillance contract, evidence dependency, and immediate threat end — Lena asks Calder to return without recording equipment after he has transferred evidence out of his sole custody and accepted her refusal to let him decide for her.",
+  "case_closed": true,
+  "case_open": "Grant's manipulation is exposed through the false chain of custody trap; the settlement is halted; Grant loses admin access; the evidence enters official custody for investigation. Lena retains possession of the apartment.",
   "lead_internal_arc": {
     "calder_reed": {
-      "starting_belief": "Sustained observation gives ownership of Lena's reality; he is a neutral instrument serving a legitimate contract.",
-      "ending_belief": "Observing someone does not entitle him to decide for them; preserving evidence and obeying her limits is the only way to earn chosen access.",
-      "arc_summary": "Calder begins believing his hidden gaze grants him superior knowledge and a form of possession. Through Lena's detection, confrontation, controlled visibility, and eventual consent, he learns that attention without consent is violation, and that the only intimacy worth having is one he cannot engineer or control. His final act is to give up sole custody of the evidence and accept Lena's refusal to let him decide for her."
+      "starting_belief": "Sustained observation gives him ownership of Lena's reality. He believes she is an unaware target whose attraction grows because he watches, and that his hidden knowledge makes him superior to both Grant and Lena.",
+      "internal_conflict": "Desire for possession vs. recognition that his surveillance is a violation. He must reconcile his professional identity as a watcher with his growing attachment to the woman he watches, and eventually accept that he cannot own what he observes.",
+      "end_state": "Accepts that Lena's choice is genuine only when he has no leverage. He gives up sole custody of evidence, exposes his own misconduct, and obeys her withdrawal of consent. He enters the ending with no guarantee of romantic reconciliation, only the possibility of chosen visibility."
     },
     "lena_hart": {
-      "starting_belief": "She is isolated, her environment is being manipulated, and she can trust no one — but she can test and document.",
-      "ending_belief": "She can design her own visibility, choose whom to trust, and defeat control without being rescued — and she can grant conditional access to a man who has proven he will obey her limits.",
-      "arc_summary": "Lena begins as a target of manufactured instability, responding with diagnostic tests and physical records. She detects Calder, uses his observation as an evidence channel, confronts him, and negotiates terms. She controls the decisive sequence of events, defeats Grant at the settlement, and — after Calder has proven he will obey her refusal — chooses to let him return without recording equipment, on her terms."
+      "starting_belief": "She is being manipulated by Grant but lacks independent proof. She suspects an observer exists but does not know his identity, loyalty, or recording method. She treats her environment as hostile and begins building diagnostic tests.",
+      "internal_conflict": "Need for independent evidence vs. distrust of anyone connected to Grant. She must decide whether Calder can be trusted as a witness without becoming another controlling presence in her life. She must maintain the appearance of instability while building a counterstrategy.",
+      "end_state": "Retains control of her apartment and her choices. She defeats Grant without physical rescue, using planning and corroboration. She chooses Calder only after all dependencies end, granting him no unrestricted access and setting the terms of their continued contact."
     }
   },
   "act_structure": [
@@ -21,5 +21,9 @@
     "act2_complications",
     "act3_crisis",
     "act4_resolution"
-  ]
+  ],
+  "book1_promise": "Lena defeats Grant's control without being physically rescued and remains in her apartment. Calder gives up sole custody of the evidence, exposes his own conduct to Detective Cross, and accepts Lena's refusal to let him decide for her. After those actions can no longer benefit her case, Lena asks Calder to return without recording equipment; she grants no unrestricted access and chooses when he enters, when he watches, and when the curtain closes.",
+  "reader_payoff_book1": "The thriller question is resolved: Lena, not Calder or Grant, controlled the decisive sequence of visible events. The romance question is answered: Lena chooses Calder only after she no longer needs him, and he accepts her terms. The emotional payoff is chosen visibility rather than enforced observation.",
+  "series_door_opened": "Mae gives Lena a sealed archived complaint from another condominium that used the same security vendor. The complaint predates Grant's board position and describes short camera gaps paired with resident instability reports. Lena does not open it during Book One. The hook offers a future choice: leave the surveillance world behind, or examine whether the mechanism existed before Grant learned to exploit it.",
+  "book2_hook": "Mae gives Lena a sealed archived complaint from another condominium that used the same security vendor. The complaint predates Grant's board position and describes short camera gaps paired with resident instability reports. Lena does not open it during Book One. Grant remains defeated and does not secretly control the new problem; no replacement antagonist appears on-page."
 }

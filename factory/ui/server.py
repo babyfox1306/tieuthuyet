@@ -111,6 +111,7 @@ CONCEPT_KNOWN_METADATA_KEYS = frozenset(
     {
         "concept_status",
         "target_language",
+        "romance_mode",
         "chapter_count",
         "genre",
         "genre_profile",

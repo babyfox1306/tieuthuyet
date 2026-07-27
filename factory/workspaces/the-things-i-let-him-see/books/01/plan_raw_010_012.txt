@@ -1,3 +1,4 @@
+```json
 {
   "act": [10, 12],
   "chapter_plans": [
@@ -5,76 +6,95 @@
       "chapter": 10,
       "title": "The Terms",
       "slug": "the-terms",
-      "one_line_summary": "Lena explains Grant is manufacturing evidence to force her out before the settlement and sets explicit rules for Calder's access; Calder agrees, keeps sending Grant edited reports of staged behavior.",
-      "beat_summary": "Lena explains Grant is manufacturing evidence to force her out before the settlement. Rules: no recording device in her apartment; the courtyard camera never records nudity or sex; Calder disables and covers it before entering; no physical contact without a direct yes; no private image to Grant; no decisions on her behalf; consent withdrawable without negotiation; preserve but never fabricate evidence; Lena controls when the alliance ends. Calder agrees, keeps sending Grant edited reports of staged behavior. Primary turn: relationship shifts from unilateral surveillance to negotiated access.",
+      "one_line_summary": "Lena explains Grant is manufacturing evidence to force her out before the settlement and sets explicit, revocable rules for Calder's access, forming a negotiated alliance.",
+      "beat_summary": "Lena invites Calder to the courtyard bench, away from microphones. She explains Grant's strategy: he is manufacturing evidence of instability, not documenting it. She sets rules: no recording device in her apartment; Calder disables and covers the courtyard camera before entering; no physical contact without a direct yes; no private image to Grant; no decisions on her behalf; consent withdrawable without negotiation; preserve but never fabricate evidence; Lena controls when the alliance ends. Calder agrees. He keeps sending Grant edited reports of staged behavior. Primary turn: relationship shifts from unilateral surveillance to negotiated access.",
       "must_happen": [
-        "Lena explains that Grant has been manufacturing evidence — moving objects, altering the thermostat, removing mail — to build a record that she cannot safely maintain the jointly owned apartment before the settlement.",
-        "Lena states the rules for any ongoing contact: no recording device inside her apartment, the courtyard camera must never record nudity or sex, Calder must disable and cover the lens before entering, no physical contact without a direct verbal yes, no private image to Grant, no decisions on her behalf, consent withdrawable without negotiation, preserve but never fabricate evidence, and she controls when the alliance ends.",
-        "Calder agrees to the terms; he composes a compressed report for Grant showing staged behavior (a harmless visible packing action) and omits any reference to the confrontation or the new rules.",
-        "Calder disables the courtyard camera's audio feed and covers the lens with a lens cap before entering Lena's apartment for the first time under the new terms; Lena verifies no device is active."
+        "[ROMANCE] Lena meets Calder on the courtyard bench. She sits close enough that her shoulder almost touches his. 'You kept the originals,' she says. 'That is the only reason we are having this conversation.' Calder feels the weight of her attention — not as a target, but as someone who chose to speak to him. He does not move closer. He does not move away.",
+        "Lena explains Grant's manufacturing strategy: 'He is not documenting instability. He is creating it. Every missing object, every forgotten task, every confused moment — he enters during my walks and changes something, then deletes the footage.' Calder listens, processing the full scope of what he witnessed in Chapter Seven.",
+        "Lena sets explicit rules for Calder's access: 'No recording device inside my apartment. You disable and cover the courtyard camera before you enter. No physical contact without a direct yes from me. No private image to Grant. No decisions on my behalf. Consent is withdrawable without negotiation. You preserve evidence but never fabricate it. I control when this ends.'",
+        "Calder agrees to each rule. 'I keep sending Grant edited reports of staged behavior. He still believes I am reliable.' Lena nods. 'Good. Let him think that.'",
+        "Calder asks: 'What about the envelope?' Lena shakes her head. 'Not yet. When I need you to know, I will tell you.' Calder does not press.",
+        "Lena stands. 'You can come inside tomorrow. After you stop the courtyard recording, disconnect the power, cover the lens, leave your devices outside, and let me verify none are active.' She walks away without waiting for confirmation.",
+        "Calder submits a routine report to Grant: 'Subject calm. No unusual behavior. Routine morning walk. No visitors.' He does not mention the conversation."
       ],
       "must_not": [
-        "Do not include any romantic attraction, chemistry, or intimacy; the scene is a tactical negotiation, not a romantic confession.",
-        "Do not reveal the envelope's contents or the 'Friday key return' phrase; that remains for Chapter 12."
+        "Do NOT reveal the envelope's contents or purpose — Lena does not explain the honeytoken strategy.",
+        "Do NOT reveal that Calder recorded the envelope removal — Lena does not know this yet.",
+        "Do NOT reveal the full extent of Lena's controlled visibility — she reveals only Grant's manufacturing, not her diagnostic tests.",
+        "Do NOT reveal that Calder's agreement is motivated by romance — the alliance is conditional and evidence-driven."
       ],
-      "opens_with": "\"You think he's just forgetful, don't you?\" Lena Hart says, standing in her own kitchen with her arms crossed, the red receipt still visible on the counter beside the thermostat. \"He's not forgetful, Calder. He's manufacturing.\"",
-      "cliffhanger": "Calder steps back into the hallway, the door clicking shut behind him, and realizes that for the first time in seven weeks he entered Lena's apartment not to watch her but because she chose to let him — and that she verified his equipment was off before he crossed the threshold.",
-      "signature_detail_hint": "Lena keeps a small brass key — the duplicate mailbox key — on a red lanyard hung from the edge of her planner, visible but never mentioned aloud.",
-      "emotional_beat": "Calder experiences a cold, tactical clarity: he has chosen against his client and must now manage Grant's expectations while preserving the evidence chain; there is no relief, only the weight of the decision.",
-      "spice": 0,
-      "spice_note": "No romance; tension is plot-driven.",
-      "chapter_task": "Write 1700-1900 words depicting the rule-setting conversation, Calder's agreement, and his first entry into Lena's apartment under the new terms. the unnamed contact's first-person POV and professional detachment.",
-      "carries_to_next": "Calder has accepted Lena's terms and entered her apartment under negotiated access; he continues sending Grant edited reports of staged behavior; the envelope's contents remain unknown."
+      "opens_with": "\"'He is not documenting instability. He is creating it.' Lena's voice was low, controlled, the same tone she used when she touched the doorframe seal. We were on the courtyard bench, visible from both our windows, and I understood why — she wanted Grant to see us talking, to read it as neighborly, to never suspect what she was telling me.\"",
+      "cliffhanger": "Calder closes his notebook and looks at the monitor. Lena is standing at her kitchen window, her planner open. She writes something, then looks directly at his dark window. She does not smile. She does not look away. She holds the gaze for five seconds, then closes the planner. Calder realizes: she is not waiting for his answer. She has already decided that he will agree. The question is whether he will keep his promise.",
+      "signature_detail_hint": "Lena's paper planner has a small coffee-ring stain on the cover — the same shape as the one on Calder's field notebook. He notices it but does not mention it.",
+      "emotional_beat": "Calder feels the shift from watcher to witness — he is no longer observing; he is being trusted with the truth, and the weight of that trust is heavier than any surveillance equipment.",
+      "spice": 1,
+      "spice_note": "No explicit content. The intimacy is in the proximity, the shared knowledge, and the unspoken acknowledgment of what is forming between them. A shoulder almost touching, a held gaze, the vulnerability of telling the truth.",
+      "chapter_task": "Write Chapter Ten — 1600-1900 words. Execute the beat 'The Terms': Lena explains Grant is manufacturing evidence to force her out before the settlement. She sets explicit, revocable rules for Calder's access. Calder agrees and continues sending Grant edited reports of staged behavior. Do NOT reveal the envelope's contents or purpose. Do NOT reveal the full extent of Lena's controlled visibility. Do NOT plant or payoff any clue. End with Lena looking at Calder's window after writing in her planner — Calder understands she has already decided he will agree, and the question is whether he will keep his promise.",
+      "carries_to_next": "Lena has explained Grant's manufacturing strategy and set explicit rules for Calder's access. Calder has agreed to the terms and submitted a routine report to Grant. The relationship has shifted from unilateral surveillance to negotiated access. Calder will enter Lena's apartment in Chapter Eleven, after disabling the courtyard recording. Lena still controls the timing and conditions of the alliance."
     },
     {
       "chapter": 11,
       "title": "Inside",
       "slug": "inside",
-      "one_line_summary": "Lena invites Calder in after he stops the courtyard recording, disconnects power, covers the lens, leaves devices outside, and lets her verify none are active; afterward she shows the doorframe seals, red receipts, planner, and break dates.",
-      "beat_summary": "Lena invites Calder in after he stops the courtyard recording, disconnects power, covers the lens, leaves devices outside, and lets her verify none are active. Their first explicit encounter occurs only after affirmative consent, Lena directing pace and boundaries. Afterward she shows the doorframe seals, red receipts, planner, and break dates — but not the envelope contents, the phrase, the full staging, or her climax plan. Primary turn: Calder gains intimacy but discovers access stays conditional.",
+      "one_line_summary": "Calder enters Lena's apartment after stopping the courtyard recording and letting her verify no devices are active; their first explicit encounter occurs under Lena's direction, and afterward she reveals her diagnostic tools but not the envelope contents.",
+      "beat_summary": "Calder stops the courtyard recording, disconnects power, covers the lens, leaves his devices outside, and lets Lena verify none are active. She invites him inside. Their first explicit encounter occurs only after affirmative consent, with Lena directing pace and boundaries. Afterward, she shows him the doorframe seals, red receipts, planner, and break dates — but not the envelope contents, the phrase, the full staging, or her climax plan. Primary turn: Calder gains intimacy but discovers access stays conditional.",
       "must_happen": [
-        "Calder stops the courtyard recording, disconnects power, covers the lens with a lens cap, leaves his recording devices in the hallway, and lets Lena verify none are active before entering her apartment.",
-        "Lena gives affirmative verbal consent for physical contact; she directs the pace and boundaries of their first explicit encounter.",
-        "Afterward, Lena shows Calder the doorframe seals she uses to detect entry, the red receipts she places beside disturbed objects as markers, her paper planner with recorded tracking numbers and break dates, and the break-in dates she documented — but she does not reveal the envelope's contents, the 'Friday key return' phrase, the full staging of the evidence trap, or her climax plan for the settlement.",
-        "Calder realizes that while he has gained physical access, Lena's strategic plan remains opaque; access stays conditional on his continued compliance with her terms."
+        "[ROMANCE] Calder stops the courtyard recording, disconnects the power, covers the lens with a lens cap, and leaves his phone and recording devices outside Lena's door. She opens it, checks his pockets, runs a small detector over his clothing. 'You kept your promise,' she says. 'That is the only reason you are inside.' She steps back, and he enters. The door closes behind him.",
+        "Lena directs the pace and boundaries of their first explicit encounter: 'Say yes or no. Do not make me guess.' Calder says yes. She guides his hands, his mouth, his weight. He follows her lead. The encounter is explicit but not recorded — no camera, no phone, no audio.",
+        "[ROMANCE] Afterward, Lena does not move away. She stays close, her hand on his chest, her breathing slow. 'You are still inside my apartment,' she says. 'That does not mean you own anything here.' Calder nods. He does not argue. He does not reach for her again without permission.",
+        "Lena shows Calder the doorframe seals she has been using: 'Every morning before my walk. Every time I return, I check. If the seal is broken, I know he entered.' She shows him the log in her planner.",
+        "Lena shows Calder the folded red receipts beside the displaced mug and other objects: 'Each one marks a confirmed entry. I place them after I verify the seal was broken. The timeline is in my planner.'",
+        "Lena shows Calder her planner entries — the timestamps, the receipt placements, the seal checks. 'This is my record. It cannot be remotely altered. If anything happens to me, Mae knows where to find it.'",
+        "Lena shows Calder the break dates she has marked: 'The settlement is in twelve days. That is when he will try to use the envelope.' She does not explain the envelope's contents.",
+        "Calder does not ask about the envelope contents, the phrase, the full staging, or her climax plan. He accepts the conditional access."
       ],
       "must_not": [
-        "Do not depict any nudity, bedroom, or bathroom activity; the explicit encounter occurs with full clothing and is described only through implication and boundary-setting.",
-        "Do not include any romantic attraction, chemistry, or intimacy; the encounter is a tactical negotiation of physical boundaries, not a romantic confession."
+        "Do NOT reveal the envelope's contents or purpose — Lena does not explain the honeytoken strategy.",
+        "Do NOT reveal the full staging or the climax plan — Lena controls what Calder learns.",
+        "Do NOT reveal that Calder's access remains conditional — he must not assume intimacy grants ownership.",
+        "Do NOT plant or payoff any clue — C011, C012, C013 are shown but not paid off as clues."
       ],
-      "opens_with": "\"The hallway floor is clear. Leave your bag there.\" Lena Hart gestures to the spot beside her door, and Calder sets down the equipment case he has carried through every observation shift for seven weeks.",
-      "cliffhanger": "Calder lies in the dark of Lena's apartment, listening to her breathe, and understands that she has shown him only what she chose to show — and that the part of her plan he cannot see is the part that matters most.",
-      "signature_detail_hint": "Lena's planner has a small brass key — the duplicate mailbox key — clipped to the spiral binding on a red lanyard; Calder notices it but does not ask.",
-      "emotional_beat": "Calder feels a cold, tactical clarity: he has traded one form of observation for another, and Lena's trust is conditional on his continued usefulness, not on any bond between them.",
-      "spice": 0,
-      "spice_note": "No romance; tension is plot-driven.",
-      "chapter_task": "Write 1700-1900 words depicting the verification process, the explicit encounter under Lena's terms, and the subsequent tour of her evidence markers. the unnamed contact's first-person POV and the realization that access is conditional.",
-      "carries_to_next": "Calder has gained physical access to Lena's apartment but not to her full plan; she has shown him the markers and planner but withheld the envelope contents and climax strategy; Grant remains unaware of the alliance."
+      "opens_with": "\"'Show me your hands.' I held them out, palms up. Lena ran her palms over my sleeves, my waistband, my pockets. She found nothing. She stepped back and looked at me — not with trust, but with acknowledgment. 'You kept your promise. That is the only reason you are inside.' She opened the door wider, and I crossed the threshold I had watched for eleven days.\"",
+      "cliffhanger": "Calder lies in Lena's bed, watching her sleep. The courtyard camera is covered. His phone is outside. He has no recording, no evidence, no report to file. He is just a man in a woman's apartment, and he does not know what he is allowed to keep. Lena stirs, opens her eyes, and looks at him. 'You are still here,' she says. It is not a question. It is a test.",
+      "signature_detail_hint": "Lena's nightstand has a small ceramic dish holding three red receipts — the same shape as the ones she places beside disturbed objects. Calder recognizes them but does not ask.",
+      "emotional_beat": "Calder feels the vulnerability of being inside without equipment — he is no longer the watcher; he is the one being watched, and he does not know if he will be allowed to stay.",
+      "spice": 3,
+      "spice_note": "Explicit consent-driven encounter. Lena directs pace and boundaries. Calder follows her lead. No recording, no camera, no phone. The scene includes explicit physical intimacy but is framed by Lena's control and Calder's submission to her terms. Approximately 40% of the chapter focuses on the encounter and its immediate aftermath.",
+      "chapter_task": "Write Chapter Eleven — 1600-1900 words. Execute the beat 'Inside': Calder enters Lena's apartment after stopping the courtyard recording and letting her verify no devices are active. Their first explicit encounter occurs under Lena's direction, with affirmative consent. Afterward, Lena shows Calder the doorframe seals, red receipts, planner, and break dates — but not the envelope contents, the phrase, the full staging, or her climax plan. Do NOT plant or payoff any clue. Do NOT reveal the envelope's contents or purpose. End with Lena waking to find Calder still in her bed — a test of whether he understands that access remains conditional.",
+      "carries_to_next": "Calder has entered Lena's apartment under her explicit terms. They have had their first explicit encounter, with Lena directing pace and boundaries. Lena has shown Calder her diagnostic tools — doorframe seals, red receipts, planner, break dates — but not the envelope contents or the full staging. Calder's access remains conditional. Grant still believes Calder is reliable. The settlement is in twelve days."
     },
     {
       "chapter": 12,
       "title": "The Returned Phrase",
       "slug": "the-returned-phrase",
-      "one_line_summary": "Grant tells Calder to watch for packing and asks if Lena seems ready for a 'Friday key return'; Lena shows Calder the false checklist with the same phrase, confirming Grant intercepted the envelope; Calder's footage adds physical corroboration.",
-      "beat_summary": "Grant tells Calder to watch for packing and asks if Lena seems ready for a 'Friday key return.' Calder has never heard the phrase; when he repeats it to Lena she shows the false checklist she sealed in the envelope — the phrase exists only there. She now knows Grant intercepted and read it. Calder tells her his footage also shows Grant taking the envelope; the test gains a second layer. Grant separately orders Calder to photograph unsafe interior conditions; Calder refuses, claiming exterior observation is more credible; Lena stages one harmless visible packing action to preserve Grant's confidence. Primary turn: the envelope proves theft, then gains physical corroboration.",
+      "one_line_summary": "Grant tells Calder to watch for a 'Friday key return,' the exact phrase from the sealed envelope; Lena confirms mail interception and learns Calder's footage also shows Grant taking the envelope.",
+      "beat_summary": "Grant messages Calder: 'She seems calm. Watch for packing. Has she mentioned a Friday key return?' Calder has never heard the phrase. He repeats it to Lena, who shows him the false checklist she sealed in the envelope — the phrase exists only there. She now knows Grant intercepted and read it. Calder tells her his footage also shows Grant taking the envelope from her mailbox; the test gains a second layer. Grant separately orders Calder to photograph unsafe interior conditions; Calder refuses, claiming exterior observation is more credible. Lena stages one harmless visible packing action to preserve Grant's confidence. Primary turn: the envelope proves theft, then gains physical corroboration.",
       "must_happen": [
-        "Grant messages Calder: 'Watch for packing. Does she seem ready for a Friday key return?' Calder has never heard the phrase and notes it in his notebook.",
-        "Calder repeats the phrase to Lena; she retrieves the clipped envelope from her planner, removes the false checklist, and shows him the exact phrase printed on the document — 'Friday key return' — confirming Grant intercepted and read the sealed envelope.",
-        "Calder tells Lena that his unedited lobby footage also shows Grant removing the clipped envelope from her mailbox with the duplicate key, providing physical corroboration beyond the phrase itself.",
-        "Grant separately orders Calder to photograph unsafe interior conditions inside Lena's apartment; Calder refuses, claiming exterior observation is more credible; Lena stages one harmless visible packing action (folding a box in the kitchen) to preserve Grant's confidence that Calder is still reporting."
+        "[ROMANCE] Calder meets Lena in the courtyard after Grant's message. He repeats the phrase: 'Friday key return.' Lena's expression does not change, but her hand stills on the bench. 'That is the phrase,' she says. 'The one I sealed in the envelope.' Calder watches her process the confirmation — she knew Grant would intercept it, but hearing the proof is different from planning for it. He does not reach for her. He waits.",
+        "Grant messages Calder: 'She seems calm. Watch for packing. Has she mentioned a Friday key return?' Calder reads the message twice. He has never heard the phrase before. He does not reply immediately.",
+        "Calder repeats the phrase to Lena in her apartment. She retrieves her planner and shows him the entry: the tracking number, the clip mark, the unique phrase. 'This is the only copy. The phrase exists nowhere else. Grant read the envelope.'",
+        "Calder tells Lena: 'My unedited lobby footage shows Grant removing the same clipped envelope from your mailbox. I recorded it.' Lena pauses, then nods. 'That is the second layer. I did not know you had that when I mailed it.'",
+        "Grant separately orders Calder to photograph unsafe interior conditions in Lena's apartment. Calder refuses: 'Exterior observation is more credible for the settlement. Interior photos would compromise my position.' Grant accepts the refusal.",
+        "Lena stages one harmless visible packing action — a cardboard box in the living room, visible through the courtyard window — to preserve Grant's confidence. Calder photographs it for his report.",
+        "[PLANT C008] Grant tells Calder to watch for a 'Friday key return.' The exact phrase from the sealed envelope.",
+        "[PAYOFF C008] Grant tells Calder to watch for a 'Friday key return.' The exact phrase from the sealed envelope.",
+        "[REVEAL MR05] Grant repeats the unique phrase 'Friday key return.' This proves mail interception without requiring video evidence."
       ],
       "must_not": [
-        "Do not reveal the full contents of the envelope beyond the false checklist and the phrase; the packing checklist is a prop, not the complete evidence trap.",
-        "Do not include any romantic attraction, chemistry, or intimacy; the scene is a tactical debrief and countermeasure, not a romantic moment."
+        "Do NOT reveal the full staging or the climax plan — Lena still controls what Calder learns.",
+        "Do NOT reveal that the envelope footage is the final evidence — Lena and Calder both know it exists, but the settlement strategy is not yet disclosed.",
+        "Do NOT reveal that Calder's refusal to photograph interior conditions is part of the alliance — Grant must read it as professional caution.",
+        "Do NOT reveal the envelope's full contents — Lena shows only the phrase and the checklist, not the false packing list or the key-return plan."
       ],
-      "opens_with": "\"Does she seem ready for a Friday key return?\" I read the message aloud, and Lena Hart's face goes still in a way I have not seen before — not fear, not anger, but the stillness of a trap closing.",
-      "cliffhanger": "Lena places the false checklist back into the envelope, clips it shut, and looks at Calder: 'He has the phrase. Now we know he stole it. And your footage shows him taking it. But he still doesn't know you're working for me.'",
-      "signature_detail_hint": "The false checklist is printed on standard copy paper with a faint watermark from the condominium's shared printer — a detail Grant would recognize but cannot explain having seen.",
-      "emotional_beat": "Calder experiences a cold, tactical satisfaction: the honeytoken has worked exactly as Lena designed, and his own footage has given the proof a second, independent layer.",
-      "spice": 0,
-      "spice_note": "No romance; tension is plot-driven.",
-      "chapter_task": "Write 1700-1900 words depicting Grant's message, Lena's reveal of the phrase, Calder's disclosure of the lobby footage, and the staged packing action. the unnamed contact's first-person POV and the growing weight of the evidence chain.",
-      "carries_to_next": "The envelope theft is confirmed by both the phrase and Calder's footage; Grant believes Calder is still reporting; Lena stages one visible packing action to maintain Grant's confidence; Calder has refused to photograph unsafe interior conditions, preserving his credibility as an exterior observer."
+      "opens_with": "\"'Friday key return.' I said the words aloud before I understood what they meant. Lena's hand stopped mid-motion — she had been reaching for her planner, but her fingers froze above the cover. 'Say that again.' I did. She opened the planner to a marked page and held it up. The same phrase, written in her handwriting, dated the day she mailed the envelope. 'That is the phrase I sealed inside. He read it.'\"",
+      "cliffhanger": "Calder closes his notebook and looks at the monitor. Lena is sitting at her kitchen table, her planner open to the honeytoken entry. She writes something in the margin, then looks up at his window. She holds his gaze for three seconds, then returns to her writing. Calder realizes: she knew Grant would intercept the envelope. She planned for this moment. And she still has not told him what happens next.",
+      "signature_detail_hint": "Lena's planner entry for the honeytoken includes a small sketch of a key with an X through it — Calder notices it but does not understand its meaning until later.",
+      "emotional_beat": "Calder feels the weight of Lena's preparation — she planned for this moment before she knew he would help her, and the depth of her strategy is both impressive and unsettling.",
+      "spice": 1,
+      "spice_note": "No explicit content. The intimacy is in the shared knowledge and the quiet acknowledgment between them. A hand stilling on a bench, a held gaze, the vulnerability of revealing the proof of theft.",
+      "chapter_task": "Write Chapter Twelve — 1600-1900 words. Execute the beat 'The Returned Phrase': Grant tells Calder to watch for a 'Friday key return.' The exact phrase from the sealed envelope. Plant and payoff C008 using the exact semantic from clue_catalog. Fire MR05: Grant repeats the unique phrase 'Friday key return.' This proves mail interception without requiring video evidence. Lena confirms the interception and learns Calder's footage shows Grant taking the envelope. Calder refuses Grant's order to photograph interior conditions. Lena stages one harmless visible packing action to preserve Grant's confidence. Do NOT reveal the full staging or climax plan. End with Lena writing in her planner after confirming the interception — Calder realizes she planned for this moment and still controls what happens next.",
+      "carries_to_next": "Grant has repeated the unique phrase from the sealed envelope, proving mail interception. Lena knows Grant read the envelope. Calder has told Lena his footage shows Grant taking the envelope, giving the honeytoken a second layer. Calder has refused Grant's order to photograph interior conditions. Lena has staged one harmless visible packing action to preserve Grant's confidence. The settlement is in eleven days. Lena still controls the full strategy."
     }
   ]
 }
+```

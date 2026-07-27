@@ -2,16 +2,18 @@ id: the-things-i-let-him-see
 pen_name: Nix Vale
 target_language: en
 publish_strategy: kdp_ku_exclusive
-narrative_status: draft
+narrative_status: approved
 book: 1
 canon_through: 0
 platform: kdp
 audience: women 18-35, mobile reading, hook-driven serial fiction
-goal: end-of-chapter hooks — procedural thriller pace, no romance engine
+goal: end-of-chapter hooks — international thriller-romance pace
 setting_hub: The Things I Let Him See — primary setting
 setting_nodes: []
 spice_default: 1
-spice_explicit_chapters: []
+spice_explicit_chapters:
+- 11
+- 18
 spice_steamy_chapters: []
 book1_ending: 'Central question: once Lena no longer needs Calder as a witness, is
   anything between them chosen
@@ -51,12 +53,12 @@ blurb: 'A surveillance operative hired to prove a separated wife unstable become
 
   his gaze or preserve the evidence that will return her life to her.'
 tropes: []
-spice_badge: sweet
+spice_badge: 16+
 target_platforms:
 - kdp
-spice_level: 1
-plan_status: approved
-bible_status: draft
+spice_level: 3
+plan_status: draft
+bible_status: approved
 book_slug: 01-the-things-i-let-him-see
 total_chapters: 18
 arc:
@@ -72,9 +74,11 @@ arc:
   act4_resolution:
   - 16
   - 18
-narrative_profile: thriller
+narrative_profile: dark psychological thriller-romance, single first-person POV, surveillance
+  cat-and-mouse, domestic gaslighting, slow-burn romance with explicit consent, no
+  violence, no police procedural, no hacker or tech deus ex machina, evidence-driven
+  climax
 intent_status: approved
-intent_digest: 2f4468b6acd5d9b5
+intent_digest: 8fa9fbe4ca9a4975
 intent_concept_digest: dbedf9351e51f420
 pov_mode: first_person
-plan_intent_digest: 2f4468b6acd5d9b5

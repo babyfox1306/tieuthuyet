@@ -5,77 +5,86 @@
     {
       "chapter": 1,
       "title": "The Contract",
-      "slug": "ch01-the-contract",
-      "one_line_summary": "Grant Hart hires Calder Reed for a 21-day surveillance assignment on his separated wife Lena, and Calder immediately creates an evidence channel Grant does not control.",
-      "beat_summary": "Grant hires Calder for a 21-day surveillance assignment ending on the settlement date; provides common-area camera access and the courtyard apartment. Calder activates his local archive and handwritten notebook; Grant receives only compressed reports. Primary turn: Calder accepts and creates an evidence channel Grant does not fully control.",
+      "slug": "the-contract",
+      "one_line_summary": "Calder Reed accepts a 21-day surveillance contract from Grant Hart to document Lena Hart's instability, then immediately establishes an independent evidence archive Grant does not control.",
+      "beat_summary": "Grant hires Calder for a 21-day assignment ending on the settlement date; provides common-area camera access and the courtyard apartment. Calder activates his local archive and handwritten notebook; Grant receives only compressed reports. Primary turn: Calder accepts and creates an evidence channel Grant does not fully control.",
       "must_happen": [
-        "Grant explains his concern about Lena's instability and shows Calder the condominium layout, common-area camera feeds, and the courtyard-facing apartment.",
-        "Calder accepts the assignment, sets up recording equipment in the apartment, and activates his local archive system and handwritten field notebook.",
-        "Calder reviews Grant's written instructions and compresses the first daily report from test footage, establishing that Grant will not receive the unedited originals.",
-        "Calder observes the empty courtyard and notes the position of Lena's apartment windows, mentally marking the sightlines."
+        "[ROMANCE] Calder watches Lena Hart through the courtyard window for the first time — a single, unguarded moment where she touches the doorframe seal before entering her apartment, and he repeats the gesture under his breath without understanding why.",
+        "Grant Hart and Calder Reed meet at the condominium lobby. Grant explains the assignment: document confusion, unsafe behavior, unusual visitors, intent to abandon. He provides common-area camera credentials and the key to the courtyard-facing apartment.",
+        "Calder activates his local recording system and opens a handwritten field notebook. He writes the first entry with a timestamp, noting Grant's instructions verbatim.",
+        "Grant specifies that he receives only compressed daily reports and selected stills. Calder does not disclose that he retains unedited originals.",
+        "Calder observes Lena Hart's first morning routine from the courtyard apartment window. He records her precise movements: coffee, window check, doorframe touch, departure.",
+        "Calder writes Grant's instructions into his notebook and adds a private note: 'Client does not know about local archive.' He seals the notebook in a fireproof envelope."
       ],
       "must_not": [
-        "Do not reveal Lena's awareness of the surveillance or any suspicion about Calder's presence.",
-        "Do not include any romantic attraction, chemistry, or intimacy between Calder and Lena, even in thought or anticipation."
+        "Do NOT reveal that Lena detects the surveillance in this chapter.",
+        "Do NOT show Grant entering Lena's apartment or manipulating her environment — that occurs off-screen before Chapter One.",
+        "Do NOT introduce any named character outside the locked cast (Calder Reed, Lena Hart, Grant Hart, Mae Torres, Imani Cross)."
       ],
-      "opens_with": "\"You want to know if she's losing her mind, or if I'm making her lose it.\" Grant Hart slides a manila envelope across the conference table without waiting for my answer.",
-      "cliffhanger": "Calder watches the courtyard from his dark apartment; a light switches on in Lena's kitchen, and through the gap in her curtains he sees her silhouette moving with deliberate, unhurried precision.",
-      "signature_detail_hint": "Calder notices that Grant's hands are steady, but the gold wedding band on his left hand is turned inward, the engraved surface facing his palm.",
-      "emotional_beat": "Calder feels a cold satisfaction at having the leverage of unedited originals, a professional reflex honed by years of distrusting clients.",
-      "spice": 0,
-      "spice_note": "No romance; tension is plot-driven.",
-      "chapter_task": "Write 1600-1900 words establishing Grant's manipulation, Calder's professional paranoia, and the setup of the surveillance operation. Focus on the contract negotiation and Calder's private recording decision. No romantic or intimate content.",
-      "carries_to_next": "Calder has established his baseline recording setup and local archive; Grant has delivered his narrative of Lena's instability; the surveillance is active."
+      "opens_with": "\"She touches the doorframe seal every time she leaves. Not a tap — a deliberate press, as if checking whether the glass is still there.\"",
+      "cliffhanger": "Calder watches Lena pause in the courtyard, her eyes lifting directly toward his dark window — not quite seeing him, but pausing long enough that he stops breathing.",
+      "signature_detail_hint": "Calder's field notebook is a black Moleskine with a torn corner on page seven. He writes with a Fisher space pen he's had since his first surveillance job. He dates every entry, including the time he sharpens the pencil.",
+      "emotional_beat": "Calder feels a flicker of something unnamed as Lena touches the doorframe — he mirrors the gesture, then catches himself, unsettled by his own body's response.",
+      "spice": 1,
+      "spice_note": "No physical contact. A single charged glance and Calder's involuntary mirroring of Lena's gesture creates the first micro-beat of attraction.",
+      "chapter_task": "Write Chapter One — 1600-1900 words. Establish Calder's POV, the surveillance setup, Grant's instructions, and Calder's independent archive. Plant C001 (reflected camera status light visible from Lena's courtyard position), C002 (message timing correlation — Grant messages Lena within minutes of her courtyard appearance), and C020 (the surveillance contract with Grant's instructions). Plant RH01 (Lena's visible forgetfulness appears genuine). Keep Lena's detection of surveillance completely hidden from Calder's view.",
+      "carries_to_next": "Calder has established his observation post and begun recording. Lena's morning routine is documented. The first compressed report is due to Grant. Calder is unaware that Lena's pause in the courtyard was not random."
     },
     {
       "chapter": 2,
       "title": "The Baseline",
-      "slug": "ch02-the-baseline",
-      "one_line_summary": "Calder records Lena's ordinary routine, then witnesses a kitchen mug moved and Grant's immediate follow-up message, establishing the pattern of manufactured instability.",
+      "slug": "the-baseline",
+      "one_line_summary": "Calder records Lena's ordinary routine as Grant manufactures evidence of her instability by moving a kitchen mug while she walks, then messaging her about it.",
       "beat_summary": "Calder records Lena's ordinary routine. After her walk she finds a kitchen mug moved; Grant messages moments later asking if she forgot something. Primary turn: Grant establishes Lena's alleged instability as Calder's baseline.",
       "must_happen": [
-        "Calder tracks Lena's morning routine from first light: she makes coffee, leaves for a walk at the same time, returns after exactly 28 minutes.",
-        "Through the common-area camera feed, Calder sees Lena return, pause in the kitchen, and stare at a mug that has been moved from its usual position on the counter.",
-        "Calder's phone buzzes with a compressed report from Grant: a screenshot of Lena's text asking if she forgot to put the mug away, and Grant's reply asking if she's been sleeping.",
-        "Calder reviews his unedited footage and notes that the mug was in its original position when Lena left; no one entered the apartment during her walk, meaning Grant has another access method."
+        "[ROMANCE] Calder watches Lena through the lens as she returns from her walk. She stops at the kitchen counter, sees the displaced mug, and her hand hovers over it. Calder's thumb taps the camera body — a rhythm he cannot stop.",
+        "Calder observes Lena's morning walk: same route, same pace, same pause at the courtyard bench. He notes the precision in his field journal.",
+        "Lena returns to her apartment. Calder watches her notice the kitchen mug has been moved from its usual position beside the coffee maker to the opposite counter.",
+        "Lena's phone vibrates. She reads a message from Grant: 'Did you forget something again?' Her expression shifts — Calder cannot read it from this distance.",
+        "Calder reviews his recorded footage. He notices the mug was in its original position when Lena left. No one entered the apartment on his footage. He notes the discrepancy in his journal but does not yet connect it to Grant.",
+        "Calder compiles his first compressed daily report for Grant: three stills of Lena's routine, a brief note that she appeared confused by the mug placement. He does not include his private notation about the discrepancy."
       ],
       "must_not": [
-        "Do not show Grant entering the apartment or explain how the mug was moved; keep the method ambiguous to Calder.",
-        "Do not include any romantic attraction or personal interest in Lena beyond professional observation."
+        "Do NOT reveal that Grant entered Lena's apartment during her walk — the entry occurs during a deleted interval Calder cannot see.",
+        "Do NOT reveal that Lena knows she is being watched — Calder still believes she is unaware.",
+        "Do NOT payoff any clue — only plant C014 (Lena's repeated routines as diagnostic tests, visible only in retrospect)."
       ],
-      "opens_with": "At 6:47 AM, Lena Hart steps into her kitchen and pours coffee into the same ceramic mug she used yesterday, and I mark it as my first baseline data point.",
-      "cliffhanger": "Lena looks directly at the moved mug, then at her phone, then at the window—not at my window, but at the camera in the hallway corner above her door, and her expression shifts from confusion to something colder.",
-      "signature_detail_hint": "Calder notes that the moved mug is the only object out of place in the entire apartment; everything else—the folded dish towel, the aligned coasters, the single orchid on the windowsill—is undisturbed.",
-      "emotional_beat": "Calder experiences a prickle of professional unease: the mug displacement is too precise, too isolated, to be simple forgetfulness, and Grant's timing is too convenient.",
-      "spice": 0,
-      "spice_note": "No romance; tension is plot-driven.",
-      "chapter_task": "Write 1600-1900 words depicting Lena's routine, the mug incident, and Calder's growing suspicion that Grant is manufacturing the instability. Maintain Calder's first-person POV and professional detachment. No romantic content.",
-      "carries_to_next": "Calder has witnessed Grant's manipulation but cannot prove it; Lena has shown the first sign of detecting the surveillance; Calder's baseline is contaminated by his own suspicion of the client."
+      "opens_with": "\"'Did you forget something again?' I read the message over her shoulder through the lens. She didn't forget. I saw the mug where it belonged twenty minutes ago.\"",
+      "cliffhanger": "Calver closes his notebook and looks up — Lena is standing at her kitchen window, staring directly at his apartment. Not toward the courtyard. At him.",
+      "signature_detail_hint": "The displaced mug is a matte ceramic with a hairline crack along the handle. Calder photographs it from three angles before Lena touches it. He does not include these stills in Grant's report.",
+      "emotional_beat": "Calder feels the first quiet pull of unease — not about Lena's stability, but about the gap between what Grant claims and what Calder's own footage shows.",
+      "spice": 1,
+      "spice_note": "No physical contact. The charged moment is Calder's thumb tapping the camera body as he watches Lena's hand hover over the mug — a rhythm he cannot stop, a mirror of her hesitation.",
+      "chapter_task": "Write Chapter Two — 1600-1900 words. Show Calder recording Lena's routine and the displaced mug incident. Plant C014 (Lena's repeated routines as diagnostic tests, visible only in retrospect). Plant RH02 (Lena's routines appear to be compulsion or stress behavior). Calder must not yet understand that Grant is manufacturing evidence. End with Lena staring directly at Calder's apartment — ambiguous to Calder but planting the first seed of doubt.",
+      "carries_to_next": "Calder has documented the first incident of apparent instability. He has noted the discrepancy between his footage and Grant's claim. Lena's direct stare at his window is unexplained. The pattern is beginning."
     },
     {
       "chapter": 3,
       "title": "The Reflection",
-      "slug": "ch03-the-reflection",
-      "one_line_summary": "Lena pauses at a status light reflected in Calder's window, detects the observer, and Calder becomes personally invested in her routine.",
+      "slug": "the-reflection",
+      "one_line_summary": "Lena detects the surveillance when she sees the reflected camera status light in Calder's window and connects it to Grant's message timing, while Calder misreads her pause as instinct.",
       "beat_summary": "The status light from Calder's courtyard camera reflects in his dark window. Lena pauses, looks first at the visible camera then at Calder's window, and continues. Canonical: Lena detects the observer here; prose does not explain it. Primary turn: Calder reads her pause as instinct and becomes personally invested.",
       "must_happen": [
-        "Calder continues recording Lena's routine; she follows the same schedule as the previous day, including the morning walk.",
-        "During Lena's return, the status light from Calder's courtyard camera reflects in his dark window; Lena stops, turns her head deliberately toward the visible hallway camera, then toward Calder's window, holds for three seconds, and continues into her apartment.",
-        "Calder rewinds the footage, watches the pause repeatedly, and cannot decide whether she saw the reflection or sensed something else.",
-        "Calder notes that after the pause, Lena changes one small behavior: she closes her kitchen curtains fully before making coffee, which she did not do on the previous day."
+        "[ROMANCE] Lena pauses in the courtyard at dusk. The status light from Calder's camera reflects in his dark window — a small red glow. She looks at the camera, then at his window. Calder feels the weight of her gaze like a hand on his chest.",
+        "Calder positions his camera for the evening observation. He notices the status light is visible in the reflection of his own window when the courtyard lights are on.",
+        "Lena exits her apartment for an evening walk. She pauses in the courtyard, looks up at the camera, then directly at Calder's dark window. She holds the look for three seconds before continuing.",
+        "Calder's phone buzzes. Grant messages: 'She just stopped in the courtyard. Did you see her? Is she talking to herself?' Calder checks his footage — Lena did not speak.",
+        "Calder reviews the footage of Lena's pause. He replays it three times, studying her face. He cannot tell what she saw. He writes in his notebook: 'Subject paused at courtyard. Eye contact with camera. No visible trigger.'",
+        "Calder notices the red status light is visible in his window's reflection from Lena's position. He adjusts the camera angle to eliminate the reflection, but the moment has passed."
       ],
       "must_not": [
-        "Do not reveal Lena's internal reasoning or confirm that she detected Calder; the prose must remain in Calder's uncertain POV.",
-        "Do not include any romantic attraction or personal desire; Calder's investment must be professional obsession and paranoia, not romantic interest."
+        "Do NOT reveal that Lena has detected the surveillance — the prose must show only what Calder sees, not Lena's internal reasoning.",
+        "Do NOT reveal that Lena is beginning to design what Calder sees — that is the Chapter 14 reveal.",
+        "Do NOT reveal Calder's surname to Lena — she does not learn 'Reed' until Chapter Five."
       ],
-      "opens_with": "The red status light on my camera glows for exactly three seconds during the power cycle, and I see it catch in my own window glass at the same moment Lena Hart turns her head.",
-      "cliffhanger": "Calder watches the closed kitchen curtains and realizes that Lena has just given him the first deliberate signal of her awareness—but whether it means she knows about him or simply dislikes being watched by the hallway camera, he cannot tell.",
-      "signature_detail_hint": "The status light reflection appears not on the glass itself but on a thin layer of condensation, creating a ghost image that hovers in the air between Calder and the courtyard.",
-      "emotional_beat": "Calder feels a cold thrill of recognition: Lena is not the passive subject he assumed, and the surveillance has just become a contest he may not be winning.",
-      "spice": 0,
-      "spice_note": "No romance; tension is plot-driven.",
-      "chapter_task": "Write 1600-1900 words focusing on the moment of detection, Calder's analysis of the footage, and his shift from passive observer to engaged participant. Maintain uncertainty about Lena's knowledge. No romantic content.",
-      "carries_to_next": "Lena has detected the surveillance (canonical); Calder knows she changed her behavior but cannot confirm her awareness; the power dynamic has shifted, and Calder is now personally invested in watching her response."
+      "opens_with": "\"The red light was small — smaller than a pencil eraser — but in the dark window it looked like a watchful eye. She saw it. I saw her see it. Neither of us moved.\"",
+      "cliffhanger": "Calder adjusts the camera angle to hide the reflection. When he looks back through the lens, Lena is standing at her kitchen counter, placing a folded red receipt beside the displaced mug. She does not look up again.",
+      "signature_detail_hint": "The folded red receipt is from a grocery store two blocks away. Lena places it beside the mug with the crease facing the window — a deliberate orientation Calder does not yet understand.",
+      "emotional_beat": "Calder feels the first true crack in his professional detachment — Lena's pause was not random, and the red receipt feels like a message he cannot read. He is no longer just watching; he is being watched back, and he does not know if he wants to look away.",
+      "spice": 1,
+      "spice_note": "No physical contact. The charged moment is Lena's three-second gaze — Calder feels the weight of it 'like a hand on his chest.' The receipt placement is the first hint of her control.",
+      "chapter_task": "Write Chapter Three — 1600-1900 words. Execute MR01: Lena detects the surveillance. Payoff C001 (reflected camera status light) and C002 (message timing correlation) — both must use the exact semantic from clue_catalog. Plant C012 (folded red receipts placed beside disturbed objects). Plant RH03 (Lena's direct looks appear unconscious or flirtatious). Calder must misread Lena's pause as instinct. The chapter must end with Lena placing the red receipt — a detail Calder does not understand. Do NOT reveal Lena's internal reasoning.",
+      "carries_to_next": "Lena has detected the surveillance and placed her first red receipt. Calder has misread the pause and adjusted his equipment. The surveillance dynamic has shifted — Calder does not yet know he is now the watched."
     }
   ]
 }

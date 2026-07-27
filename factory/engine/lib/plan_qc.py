@@ -798,31 +798,6 @@ _ROMANCE_EXPLICITLY_ABSENT_RE = re.compile(
     re.IGNORECASE,
 )
 
-# Concept/direction signals that romance is forbidden (horror, antagonist-only ML, …).
-_ROMANCE_FORBIDDEN_RE = re.compile(
-    r"\bno romance\b|"
-    r"\bromance of any kind\b|"
-    r"\bnot a (?:love interest|romance)\b|"
-    r"\bno love interest\b|"
-    r"\bforbids? romance\b|"
-    r"\bwithout romance\b|"
-    r"\bno attraction\b|"
-    r"\bnot a romance\b|"
-    r"\bno romance line\b",
-    re.IGNORECASE,
-)
-
-# must_avoid entries that ban romance as a category (not "bad romance trope" notes).
-_MUST_AVOID_FORBIDS_ROMANCE_RE = re.compile(
-    r"^(?:no\s+)?romance(?:\s+of\s+any\s+kind)?\.?$|"
-    r"romance of any kind|"
-    r"^no (?:romance|love interest|romantic(?:\s+subplot)?)\b|"
-    r"^any romance\b|"
-    r"^romantic (?:subplot|relationship|arc|line)\b|"
-    r"^love interest\b",
-    re.IGNORECASE,
-)
-
 # Opt-in: workspace wants romance-thriller micro-beats (ceo-contract / glass-meridian).
 _ROMANCE_OPT_IN_RE = re.compile(
     r"\bromance[- ]?thriller\b|"
@@ -870,48 +845,38 @@ def _concept_direction_blob(direction: dict, concept: dict) -> str:
         str(concept.get("author_directive") or ""),
         str(concept.get("notes") or ""),
         str(concept.get("logline") or ""),
-        "\n".join(str(x) for x in (concept.get("must_avoid") or [])),
         "\n".join(str(x) for x in (concept.get("must_include") or [])),
     ]
     return "\n".join(parts)
 
 
 def romance_forbidden(direction: dict, *, ws: Path | None = None) -> bool:
-    """True when concept/direction forbids romance of any kind."""
+    """True only for an explicit structured romance-off classification."""
+    from factory.engine.lib.workspace_metadata import resolve_romance_mode
+
     concept = _load_concept_for_qc(ws)
-    for item in concept.get("must_avoid") or []:
-        if _MUST_AVOID_FORBIDS_ROMANCE_RE.search(str(item).strip()):
-            return True
-    blob = _concept_direction_blob(direction, concept)
-    if _ROMANCE_FORBIDDEN_RE.search(blob):
-        return True
-    # Antagonist-only male lead, explicitly not romantic.
-    if re.search(
-        r"\bNOT a love interest\b|"
-        r"\bnot a love interest\b|"
-        r"\bnever\b.{0,40}\battraction\b|"
-        r"\bno attraction,\s*ever\b",
-        blob,
-        re.IGNORECASE | re.DOTALL,
-    ):
-        return True
-    return False
+    return resolve_romance_mode(concept, direction) == "off"
 
 
 def romance_microbeat_required(direction: dict, *, ws: Path | None = None) -> bool:
     """[ROMANCE] micro-beat is OPT-IN from concept/direction — never the default.
 
     Romance workspaces signal via narrative_profile / directive / tropes.
-    Forbidden-romance or absent male lead → never required.
+    Explicit romance mode wins over a stale/role-inverted lead registry.
     """
     if romance_forbidden(direction, ws=ws):
-        return False
-    if _male_lead_absent(None, ws):
         return False
 
     concept = _load_concept_for_qc(ws)
     concept_blob = _concept_direction_blob({}, concept)
     if _ROMANCE_MICROBEAT_SUPPRESSED_RE.search(concept_blob):
+        return False
+
+    from factory.engine.lib.workspace_metadata import resolve_romance_mode
+
+    if resolve_romance_mode(concept, direction) == "on":
+        return True
+    if _male_lead_absent(None, ws):
         return False
 
     profile = str(direction.get("narrative_profile") or "").strip().lower()
@@ -1023,8 +988,13 @@ def validate_plan(
     if duplicate_tail_field:
         issues.append(f"ch{ch}:duplicate_cliffhanger_tail:{duplicate_tail_field}")
 
+    from factory.engine.lib.workspace_metadata import resolve_romance_mode
+
+    romance_mode = resolve_romance_mode(_load_concept_for_qc(ws), direction)
     male_absent = _male_lead_absent(bible, ws)
-    romance_off = romance_forbidden(direction, ws=ws) or male_absent
+    romance_off = romance_forbidden(direction, ws=ws) or (
+        male_absent and romance_mode != "on"
+    )
     if romance_off:
         if _forbidden_romance_when_disabled(plan):
             code = (

@@ -46,6 +46,7 @@ class RomanceOptInTests(unittest.TestCase):
             (ws / "concept.yaml").write_text(
                 yaml.dump(
                     {
+                        "romance_mode": "off",
                         "must_avoid": ["Romance of any kind"],
                         "author_directive": "Spice: 1. No romance line at all.\n"
                         "Arthur is antagonist. NOT a love interest.",
@@ -93,6 +94,7 @@ class RomanceOptInTests(unittest.TestCase):
             (ws / "concept.yaml").write_text(
                 yaml.dump(
                     {
+                        "romance_mode": "on",
                         "must_avoid": ["Cross-cultural romance reduced to stereotype"],
                         "author_directive": "Write Book 1 as a 50-chapter romance-thriller.",
                         "notes": "Slow-burn romance with thriller stakes.",
@@ -142,6 +144,7 @@ class RomanceOptInTests(unittest.TestCase):
             (ws / "concept.yaml").write_text(
                 yaml.dump(
                     {
+                        "romance_mode": "on",
                         "must_avoid": ["Romance subplot driving the plot"],
                         "author_directive": (
                             "Do NOT create a standalone romance thread or romance "
@@ -170,7 +173,11 @@ class RomanceOptInTests(unittest.TestCase):
             ws = Path(tmp)
             (ws / "concept.yaml").write_text(
                 yaml.dump(
-                    {"must_avoid": ["Romance of any kind"], "notes": "no romance"},
+                    {
+                        "romance_mode": "off",
+                        "must_avoid": ["Romance of any kind"],
+                        "notes": "no romance",
+                    },
                     allow_unicode=True,
                 ),
                 encoding="utf-8",
@@ -185,6 +192,50 @@ class RomanceOptInTests(unittest.TestCase):
                 any("forbidden_romance_when_concept_forbids" in i for i in issues),
                 issues,
             )
+
+    def test_safety_constraints_do_not_turn_dark_romance_off(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp)
+            (ws / "concept.yaml").write_text(
+                yaml.dump(
+                    {
+                        "romance_mode": "on",
+                        "genre": {
+                            "primary": "dark romance",
+                            "secondary": ["psychological thriller"],
+                        },
+                        "must_avoid": [
+                            "No sexual assault presented as romance",
+                            "No romance payoff for ignoring refusal",
+                        ],
+                    },
+                    allow_unicode=True,
+                ),
+                encoding="utf-8",
+            )
+            (ws / "canon_registry.yaml").write_text(
+                yaml.dump(
+                    {
+                        "characters": {
+                            "female_lead": {"canonical": "Calder Reed"},
+                            "male_lead": {
+                                "canonical": "Unassigned (no male lead)"
+                            },
+                        }
+                    },
+                    allow_unicode=True,
+                ),
+                encoding="utf-8",
+            )
+            direction = {
+                # Reproduces the stale value created by the old false-negative path.
+                "narrative_profile": "thriller",
+                "goal": "end-of-chapter hooks — procedural thriller pace, no romance engine",
+                "spice_level": 3,
+                "spice_explicit_chapters": [11, 18],
+            }
+            self.assertFalse(romance_forbidden(direction, ws=ws))
+            self.assertTrue(romance_microbeat_required(direction, ws=ws))
 
 
 if __name__ == "__main__":

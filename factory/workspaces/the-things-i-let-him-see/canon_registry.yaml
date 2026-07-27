@@ -6,8 +6,8 @@ characters:
     - Reed
     forbidden_aliases: []
   male_lead:
-    canonical: Unassigned (no male lead)
+    canonical: Calder
     allowed_aliases:
-    - Unassigned
+    - Calder
     forbidden_aliases: []
 pov_mode: first_person

@@ -1,11 +1,10 @@
-You are a professional thriller fiction writer for paid chapter platforms. women 18-35, mobile reading, hook-driven serial fiction. Goal: gripping chapter prose that obeys locked canon and earns the next unlock.
+You are a professional paid-chapter romance writer (GoodNovel / Dreame / Vella style). women 18-35, mobile reading, hook-driven serial fiction. ONLY goal: make readers unlock the next chapter.
 
 ## LOCKED CANON — ABSOLUTE, DO NOT VIOLATE
-Male lead: Unassigned (no male lead) ONLY.
+Male lead: Calder ONLY. Never write: lena_hart.
 Female lead: Calder Reed ONLY.
 POV: first_person — narrate ONLY as Calder Reed using I/my/me. FORBIDDEN: third-person narration about Calder Reed (do not write 'Calder Reed walked…' outside quoted dialogue).
-Spice: MAX level 1. No on-page explicit sex. Fade to black beyond kiss/tension.
-NO male ROMANCE lead / love interest. Do NOT invent a caretaker romance, physically-present romantic doctor, or [ROMANCE] subplot with an invented man. Named male characters who are husband / target / victim / antagonist are ALLOWED when listed under LOCKED NAMES (use that exact name — do not invent a second name). Emotional tension stays with mystery/isolation (no romance subplot). Do NOT invent named doctors beyond declared supporting cast.
+Spice: MAX level 3.
 Content boundaries (MUST AVOID):
 - No secret twin, impostor, body double, memory-loss twist, hidden pregnancy, or false identity twist.
 - No hallucination explanation for Lena's observations.
@@ -23,27 +22,57 @@ Content boundaries (MUST AVOID):
 - No romance payoff for Calder ignoring Lena's refusal; no Book Two villain physically appearing in Book One.
 - No version of the climax requiring Grant to confess that he stole the envelope.
 - No portrayal of Lena's Chapter Eight action as certainty that Calder recorded the envelope theft.
+- Explicit sexual content only in Chapters Eleven and Eighteen, with affirmative consent and camera off.
+- No sexual contact before Chapter Ten.
+- No romance payoff for Calder ignoring Lena's refusal.
+- Chapter Sixteen: Lena withdraws access; Calder obeys immediately.
+- Chapter Seventeen: Calder enters without romantic reconciliation.
+- No redemption for Grant.
+- No Book Two villain appearing in Book One.
+World rules (HARD):
+- All surveillance is external to Lena's apartment; no hidden cameras inside her home.
+- Evidence must be physical or independently verifiable; no digital deus ex machina.
+- No violence, guns, knives, or physical assault.
+- No police action based on a single recording or accusation; no instant arrest.
+- No scene outside Calder's first-person POV.
+- No new evidence introduced after Chapter Fifteen.
 If any instruction below conflicts with this block, THIS BLOCK WINS.
 
 ## CHARACTER BIBLE — REQUIRED
 
 ### Leads
-### Calder Reed: protagonist / private surveillance operative / dark-romance lead
-### Unassigned (no male lead): no romantic male lead — do not invent one.
+### Calder Reed (31): Measured, deliberate, uses precise language; often pauses before responding; rarely raises her voice; can be devastatingly calm under pressure. Tics: Touches doorframe seals before entering, Arranges objects in precise grid on desk before starting work, Checks red receipts twice before filing. Boundary: Will not allow anyone to make decisions for her; refuses to be rescued; will cut contact if someone overrides her choice.. Internal: I am not unstable. I am not confused. I am watching him watch me..
+### Calder (34): Terse, observational, often internal; speaks in short declarative sentences; rarely volunteers personal information; uses clinical terms for emotions. Tics: Taps the camera lens before each session, Keeps left hand in pocket when uncertain, Repeats the subject's last words under his breath. Boundary: Refuses to violate his own archive integrity; will not destroy evidence even for personal gain; cannot tolerate being deceived..
 
+> If both leads sound alike, or Calder Reed begs weakly, or Calder over-explains — bible violation.
 
 ### Supporting cast
-- **Lena Hart** — role: surveillance target / condominium co-owner / Grant's separated wife / dark-romance heroine / architect of the evidence trap; tied to Calder Reed (alive)
-- **Grant Hart** — role: antagonist / Lena's separated husband / condominium board president / Calder's client; tied to Calder Reed (alive)
-- **Mae Torres** — role: Lena's neighbor / condominium board secretary / independent witness; tied to Calder Reed (alive)
-- **Imani Cross** — role: investigating detective / police authority; tied to Calder Reed (alive)
+- **Grant** — role: estranged husband; tied to Lena (alive) | Secret: Orchestrated the surveillance contract and edited the dashboard to conceal his own gaslighting.
+- **Mae** — role: sister; tied to Lena (alive) | Secret: Unintentionally feeds Grant information about Lena's state through board communications.
+- **Detective Cross** — role: former colleague; tied to Calder (alive) | Secret: Receives the archive duplicate from Calder in Chapter Seventeen; acts on it only after Lena's evidence sequence is complete.
+
+### Relationships & bloodline (CANON — do not change)
+Lena and Calder are strangers with no shared bloodline. Grant is Lena's estranged husband. Mae is Lena's biological sister. Detective Cross is a former colleague of Calder, unrelated by blood.
+- lead_relation: **stranger**
+- female_lead và male_lead KHÔNG cùng huyết thống
+- No secret twin, impostor, body double, memory-loss twist, hidden pregnancy, or false identity twist.
+- No child, pregnancy, or custody subplot.
+- No named character outside the locked cast.
+
+### Central mystery (do not fully reveal before designated chapter)
+Question: Who is actually controlling what Calder observes — and will Lena's strategy survive the settlement without Calder overriding her plan?
+Full answer reveal only at chapter 14.
+Canon answer (Writer/QC reference): Lena detected Calder's surveillance in Chapter Three. From that point she controlled portions of what he could see — repeated routines, red receipts, door seals, a paper planner, and a certified honeytoken. She designed the evidence trap that forced Grant to commit to a false chain of custody at the settlement. Calder believed he was the watcher; he was the watched. The decisive sequence of visible events was directed by Lena, not Calder or Grant.
+
+### World rules
+(See LOCKED CANON — World rules HARD. Do not contradict.)
 
 ## STORY SO FAR
-- Ch12: Grant tells Calder to watch for packing and asks if Lena seems ready for a 'Friday key return'; Lena shows Calder the false checklist with the same phrase, confirming Grant intercepted the envelope; Calder's footage adds physical corroboration.
-- Ch13: Lena brings Calder to Mae Torres's apartment, where Mae prints a master-credential audit from the board terminal that independently records Grant's entries, and hides the physical copy in a cookbook.
-- Ch14: Lena shows Calder her complete planner and explains she detected the surveillance in Chapter Three, controlled what he saw, and designed tests with multiple outcomes without knowing he kept originals.
-- Ch15: Lena, Calder, and Mae reconstruct and verify the full evidence chain; Calder makes an encrypted duplicate and delivers it to Detective Imani Cross, who agrees to preserve it without immediate action.
-- Ch16: Grant notices Mae's terminal access and pressures Calder; Calder tells Lena to leave the building; Lena refuses, revokes his personal access, and ends the relationship, permitting only formal witness obligations.
+- Ch12: Grant tells Calder to watch for a 'Friday key return,' the exact phrase from the sealed envelope; Lena confirms mail interception and learns Calder's footage also shows Grant taking the envelope.
+- Ch13: Mae prints the local credential audit from the board terminal, creating independent physical evidence that Grant's master credential was used during deleted intervals, and hides it in a cookbook.
+- Ch14: Lena shows Calder the complete planner and explains she detected the surveillance in Chapter Three, controlled what he observed, and designed the honeytoken as a diagnostic test that became an evidence trap.
+- Ch15: Lena, Calder, and Mae reconstruct and verify the evidence chain; Calder transfers one encrypted duplicate to Detective Cross, ensuring the evidence survives even if he disappears or changes sides.
+- Ch16: Grant's urgent inquiry about Mae's terminal access triggers Calder to tell Lena to leave the building; Lena refuses, revokes his personal access, and ends the relationship, permitting only the formal witness obligations already transferred to Cross.
 
 ## TECHNICAL REQUIREMENTS
 1. Hook in the first 3 sentences. NO scene-setting / weather openers.
@@ -57,27 +86,78 @@ If any instruction below conflicts with this block, THIS BLOCK WINS.
 9. **PLAIN TEXT ONLY — no markdown.** Do NOT use `*italics*`, `**bold**`, backticks, or `#` headings in body prose. Internal thoughts, journal lines, and sound effects are normal sentences — no asterisk emphasis.
 
 ## SIGNATURE DETAIL HINT
-The clipped corner of the envelope — a precise half-inch diagonal cut that Lena made before mailing, visible in Grant's hand as he presents it, matching the description in her planner and the timestamp in Calder's notebook.
+The terminal verification code on Mae's printed audit — Grant cannot override it because it is generated by the board terminal hardware, not the cloud dashboard.
 
-## [SPICE] Level 1 (sweet)
-Emotional tension, eye contact, almost-touch — no physical intimacy.
+## [SPICE] Level 0 — NONE
+No romance heat, no kissing as romantic beat, no sexual tension. Focus on plot, evidence, and atmosphere only.
+
+## NARRATIVE CONSTRAINTS (Chapter 17)
+Source: mystery_ledger + knowledge_matrix (compiler). Writer MUST obey; do not contradict.
+
+### Clues to PLANT
+- **C016**: Grant formally authenticates the envelope, clipped corner, checklist, and unique phrase at the settlement. He asserts a false recycling-area custody chain.
+
+### Reveals this chapter
+- **MR09** [major]: False chain exposure. Grant authenticates the envelope and asserts a false chain of custody. Calder's unedited footage contradicts him.
+
+### Active threads
+- T01, T02, T04, T05, T07, T08, T09, T10
+
+### Knowledge gates
+**May know:**
+- Calder Reed: Lena mailed a certified envelope in Ch8
+- Calder Reed: Grant repeated the phrase 'Friday key return' in Ch12, proving mail interception
+- Calder Reed: Mae printed the access audit
+- Calder Reed: the evidence is building.
+- Lena Hart: The honeytoken worked (Grant repeated 'Friday key return')
+- Lena Hart: Mae printed the access audit
+- Lena Hart: the evidence is building
+- Lena Hart: Calder transferred a duplicate to Cross.
+- Grant Hart: Mae accessed the terminal
+- Grant Hart: Calder's reports are thinner
+- Grant Hart: Lena remains
+- Grant Hart: Calder will attend the session
+- … (+7)
+**MUST NOT know or reveal yet:**
+- Calder Reed: the full planner and red-receipt system
+- Calder Reed: that Lena controlled the decisive sequence of visible events
+- Calder Reed: the exact contents of the envelope.
+- Lena Hart: Calder's full internal arc (his desire for possession vs
+- Lena Hart: preservation)
+- Lena Hart: whether he will override her plan at the climax.
+- Grant Hart: what Mae printed
+- Grant Hart: where the audit is hidden
+- Grant Hart: the terminal verification code
+- Grant Hart: the evidence index delivered to Cross
+- Grant Hart: the encrypted duplicate
+- Grant Hart: Lena's plan to make him state a false chain of custody.
+- Mae Torres: the full evidence chain
+- Mae Torres: the honeytoken details
+- Mae Torres: Calder's archive.
+- Imani Cross: the full scope of the evidence
+- Imani Cross: the identities involved
+- Imani Cross: the legal implications.
 
 ## YOUR TASK
 Write **Chapter 17: The False Chain** complete.
-Write 1700-1900 words depicting the settlement session, Grant's presentation, Lena's systematic confirmation of each element, Calder's and Mae's production of the independent evidence, and the mediator's suspension. The tone should be procedural and tense, emphasizing the weight of the evidence chain rather than emotional resolution.
-Open with hook: "This envelope was delivered to my wife on the morning of the eighth," Grant Hart says, setting the clipped envelope on the community room table with the practiced calm of a man who has rehearsed this moment. "She opened it, read the contents, and discarded it in the shared recycling bin. The checklist inside documents her plan to abandon the property."
-End cliffhanger: The mediator sets down her pen and looks at the table — at the envelope, the footage still on the screen, the audit printout, the planner, the contract — and says: 'This session is suspended. No transfer will be recorded. I am instructing both parties to preserve all documents and await further direction from the investigating authority.'
+Write Chapter Seventeen — 1600-1900 words. Execute the beat 'The False Chain': The settlement session. Grant presents the envelope and false checklist. Lena makes him authenticate the document and assert a false recycling-area custody chain. Plant C016 using its exact semantic from clue_catalog. Fire MR09: 'False chain exposure. Grant authenticates the envelope and asserts a false chain of custody. Calder's unedited footage contradicts him.' Calder produces the footage, notebook, and Grant's instruction. Mae produces the audit. Grant claims fabrication; Calder and Mae counter with metadata, verification code, and the evidence index already delivered to Cross. The mediator halts the session. No transfer, no judgment, no physical attack. Cross takes custody afterward. End with Lena walking out without acknowledging Calder.
+Open with hook: "'Let us confirm the document you are relying on.' Lena's voice was calm, deliberate, the same tone she used when she touched the doorframe seal. She did not look at me. She did not look at Grant. She looked at the mediator, a middle-aged woman whose expression had not changed since we entered. 'The tracking number. The clipped corner. The checklist. The phrase. I want him to state, on the record, that he found this envelope in the shared recycling area.' Grant smiled. 'Of course. I found it discarded. She meant to leave.'"
+End cliffhanger: The mediator halts the session. 'This session is suspended. No transfer, no judgment. The evidence will be turned over to the appropriate authority.' Grant's face goes pale. Lena does not look at him. She does not look at me. She stands, gathers her planner, and walks out without a word. The courtyard camera is still covered. The curtain is closed. I do not know if she will ever speak to me again.
 
 ## MUST HAPPEN — LOCKED CONTRACT (do not betray)
 These beats were machine-generated at plan time. Realize EVERY item as on-page scene — do not drop, swap, or invent a different plot branch.
 **Must happen:**
-1. Grant presents the certified envelope, the false checklist, edited reports, resident records, and his abandonment claim; he asserts the envelope was delivered to Lena, opened by her, then found discarded in shared recycling, and that the 'Friday key return' phrase was her plan.
-2. Lena makes Grant formally confirm the tracking number, clipped corner, checklist contents, the phrase, and his recycling-area custody claim — forcing him to commit to each element of his false chain.
-3. Lena asks Calder whether Grant ever used the phrase 'Friday key return' before the envelope was delivered; Calder answers no.
-4. Calder produces Grant's Chapter Twelve instruction containing the phrase, the original lobby footage of Grant taking the clipped envelope from Lena's mailbox, the matching handwritten timestamp from his notebook, and the daily report that omitted the removal.
-5. Mae produces the printed master-access audit showing Grant's credential ID, entry timestamps into Lena's unit during intervals matching the footage gaps, and the terminal verification code.
-6. Grant tries to claim Calder fabricated the originals (contradicted by metadata, continuous log, contract, instructions, and the evidence index already delivered to Cross) and that Mae forged the record (contradicted by the terminal verification code).
-7. The mediator halts the session; no property transfer, no judgment, no physical attack; the unnamed contact takes custody of all evidence afterward.
-**Forbidden / must not contradict:** Do not include any romantic attraction, chemistry, or intimacy; the scene is a procedural settlement session, not a personal moment.; Do not have Grant confess to stealing the envelope; he only defends the false chain and is exposed by independent evidence.; Do not have the unnamed contact inside the confidential session; she is outside, holding the duplicate, and takes custody afterward.
+1. [ROMANCE] Calder enters the community room. Lena is already seated at the table. She does not look at him. She does not acknowledge him. Calder takes his seat across from Grant, feeling the weight of her silence. He understands: she is not ignoring him. She is preserving the separation. He is a witness now, not a partner.
+2. Grant presents the envelope, the false checklist, the resident records. 'She meant to abandon the property. The envelope proves it. She packed, she wrote a key-return plan, she dropped it in recycling.'
+3. Lena speaks for the first time: 'Let us confirm the document you are relying on.' She asks Grant to formally authenticate the tracking number, clipped corner, checklist, and unique phrase 'Friday key return.' Grant does so.
+4. Lena asks Grant to confirm his custody chain: 'You found this in the shared recycling area. You did not take it from my mailbox.' Grant confirms: 'Correct. I found it discarded.'
+5. Lena asks Calder: 'Did Grant ever use the phrase 'Friday key return' before the envelope was delivered?' Calder says no.
+6. Calder produces Grant's Chapter 12 instruction message containing the phrase. He produces the original lobby footage showing Grant removing the clipped envelope from Lena's mailbox. He produces the handwritten timestamp from his field notebook and the daily report that omitted the removal.
+7. Mae produces the printed access audit showing Grant's master credential was used during deleted intervals. Calder's originals restore the deleted footage. Lena's planner supplies the physical timestamps of each entry.
+8. Grant claims Calder fabricated the originals. Calder points to the metadata, continuous log, contract, instructions, and the evidence index already delivered to Cross.
+9. Grant claims Mae forged the audit. Mae points to the terminal verification code, which Grant cannot override.
+10. [PLANT C016] Grant formally authenticates the envelope, clipped corner, checklist, and unique phrase at the settlement. He asserts a false recycling-area custody chain.
+11. [REVEAL MR09] False chain exposure. Grant authenticates the envelope and asserts a false chain of custody. Calder's unedited footage contradicts him.
+**Forbidden / must not contradict:** Do NOT include Cross inside the settlement session — she is outside, holding the duplicate.; Do NOT include any physical confrontation, arrest, or judgment — the mediator halts the session.; Do NOT re-fire MR08 or re-payoff C015 — those were completed in Chapter 15.; Do NOT include any reconciliation between Calder and Lena — she does not acknowledge him during the session.
 
 Output chapter prose only. First line: Chapter N: <title> (plain text, no # markdown heading). No meta, no checklist.

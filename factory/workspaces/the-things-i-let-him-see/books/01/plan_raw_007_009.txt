@@ -5,76 +5,99 @@
       "chapter": 7,
       "title": "The Deleted Minutes",
       "slug": "the-deleted-minutes",
-      "one_line_summary": "Calder witnesses Grant enter Lena's apartment during her walk and delete the dashboard interval; Calder preserves the original footage and omits it from the report, confirming Grant is manufacturing the instability.",
-      "beat_summary": "Grant deletes a short dashboard interval; Calder's local original preserves it, showing Grant entering Lena's apartment with the master credential while she walks. Calder omits it from Grant's report, notes it in his notebook. Primary turn: Calder learns Grant is manufacturing the instability.",
+      "one_line_summary": "Calder's unedited camera captures Grant entering Lena's apartment with a master credential during a deleted interval, proving Grant manufactures the instability.",
+      "beat_summary": "Calder reviews his unedited footage and discovers Grant entering Lena's apartment with a master credential during a deleted interval. Grant deletes the dashboard interval but Calder's local original preserves it. Calder omits it from Grant's report, notes it in his notebook. Primary turn: Calder learns Grant is manufacturing the instability.",
       "must_happen": [
-        "Calder watches Lena leave for her morning walk at 6:52; the common-area feed shows Grant enter the building with a keycard, access Lena's door with a key, and exit five minutes later.",
-        "Calder's dashboard feed briefly goes dark for a two-minute interval covering Grant's entry; Calder checks his local archive and confirms the original footage is intact and unaltered.",
-        "Calder reviews the preserved footage: Grant enters Lena's apartment, moves a thermostat setting, and exits; Calder compares this with Grant's earlier message asking Lena if she forgot to adjust the heat.",
-        "Calder does not include the Grant-entry footage in his compressed report; he records the observation in his handwritten notebook and marks the original file as evidence."
+        "[ROMANCE] Calder watches Lena through the lens as she leaves for her morning walk. She touches the doorframe seal — a gesture he now recognizes — and his thumb taps the camera body. He does not stop the rhythm.",
+        "Calder reviews his unedited footage from the previous day. He notices a gap in the common-area camera feed — a deleted interval that does not appear in the dashboard logs Grant controls.",
+        "Calder examines his local original recording. The unedited footage shows Grant Hart using a master credential to enter Lena's apartment during the deleted interval. Grant is inside for approximately four minutes.",
+        "Calder writes the timestamp of Grant's entry in his field notebook: handwritten, independent of digital deletion. He notes: 'Client entered subject's apartment. 4m12s. No report submitted.'",
+        "Calder omits the entry footage from Grant's compressed daily report. He submits only routine observations: Lena's walk, her return, her check of the doorframe seal.",
+        "Grant messages Calder: 'Any unusual behavior today? She seemed agitated on the phone.' Calder replies: 'Routine. No incidents.' He does not mention the entry.",
+        "[CLUE C003] Calder's unedited camera records Grant entering Lena's apartment with a master credential during a deleted interval.",
+        "[CLUE C004] Calder's field notebook timestamp of the entry. Handwritten record independent of digital deletion.",
+        "[CLUE C019] Calder's field notebook with timestamps of Grant's entry and envelope removal."
       ],
       "must_not": [
-        "Do not reveal Grant's internal reasoning or show him tampering with anything other than the thermostat and dashboard feed.",
-        "Do not include any romantic attraction, chemistry, or intimacy; Calder's decision to preserve the footage is professional paranoia and growing suspicion, not personal desire."
+        "Do NOT reveal that Lena knows about Grant's entry — she does not discover it until later.",
+        "Do NOT reveal that Calder's refusal to enter Lena's apartment is based on this discovery — Grant must read it as professional caution (RH05).",
+        "Do NOT payoff C004 or C019 — they pay off in Chapter 18.",
+        "Do NOT reveal that Calder has begun keeping independent originals — the prose must show only his private notation, not a declaration."
       ],
-      "opens_with": "\"The feed dropped for exactly one hundred and seventeen seconds.\" I say it aloud to no one, because speaking makes it real, and I need this to be real before I decide what it means.",
-      "cliffhanger": "Calder closes the original file and looks at the live feed; Lena returns from her walk, checks the thermostat, and stands motionless for ten seconds before reaching into her pocket and placing a folded red receipt beside the thermostat—her second deliberate marker.",
-      "signature_detail_hint": "The thermostat's digital display shows 68°F when Lena left; after Grant's entry it reads 72°F; Lena adjusts it back to 68°F without checking the time, as if she already knew the change was coming.",
-      "emotional_beat": "Cold fury and professional betrayal: Calder realizes Grant has been manufacturing the instability he was hired to document, and Calder's own surveillance has been the tool.",
+      "opens_with": "\"The footage was there. Then it was not. A gap in the dashboard timeline — three minutes and forty-seven seconds — where the common-area camera feed simply stopped. Grant's system deleted it. My local archive did not.\"",
+      "cliffhanger": "Calder closes his notebook and looks at the monitor. Lena is standing at her kitchen counter, her planner open. She writes something, then looks directly at his window — not toward the courtyard, but at him. She holds the look for three seconds, then returns to her writing. Calder does not understand what she knows, but he knows one thing: he just watched her husband break into her home, and he did not tell her.",
+      "signature_detail_hint": "The master credential light on the apartment door blinks green for exactly 0.3 seconds — a detail Calder catches only by slowing the footage to frame-by-frame.",
+      "emotional_beat": "Calder experiences a cold, clinical horror as he watches Grant enter Lena's apartment — the violation is methodical, not violent, which makes it worse. He feels complicity.",
       "spice": 0,
-      "spice_note": "No romance; tension is plot-driven.",
-      "chapter_task": "Write 1700-1900 words depicting the feed dropout, Calder's discovery of the preserved footage, and his decision to withhold the evidence from Grant. the unnamed contact's first-person POV and cold professional anger.",
-      "carries_to_next": "Calder now possesses irrefutable proof that Grant is entering Lena's apartment and altering details; Lena has placed a second red receipt as a marker; Calder's private archive has become a weapon against his client."
+      "spice_note": "",
+      "chapter_task": "Write Chapter Seven — 1600-1900 words. Execute the beat 'The Deleted Minutes': Calder's unedited camera records Grant entering Lena's apartment with a master credential during a deleted interval. Payoff C003 using the exact semantic from clue_catalog: 'Calder's unedited camera records Grant entering Lena's apartment with a master credential during a deleted interval.' Plant C004 and C019 using their exact semantics. Calder must omit the footage from Grant's report and note it in his notebook. Do NOT reveal Lena's knowledge of the entry. End with Calder looking at Lena through the lens after writing the timestamp — she looks toward his window, and he feels complicity.",
+      "carries_to_next": "Calder has witnessed Grant's unauthorized entry and preserved the evidence in his local archive and field notebook. He has omitted the footage from Grant's report. Grant believes Calder is still reliable. Lena continues her diagnostic tests, unaware that Calder now holds proof of Grant's manipulation. Calder's complicity in the surveillance feels heavier."
     },
     {
       "chapter": 8,
       "title": "The Honeytoken",
       "slug": "the-honeytoken",
-      "one_line_summary": "Calder follows Lena to a postal kiosk where she mails a certified envelope to herself; after delivery, Calder's lobby footage records Grant removing the clipped envelope with his duplicate key.",
+      "one_line_summary": "Lena mails a certified envelope containing a false checklist and unique phrase to herself, then Calder's lobby footage records Grant removing the clipped envelope from her mailbox.",
       "beat_summary": "Calder follows Lena to a postal kiosk; she mails a certified envelope to herself, clips the lower-right corner, records the tracking number, folds a red receipt into her planner. After delivery, Calder's lobby footage records Grant removing the clipped envelope with the duplicate key; Grant opens it off-camera. Lena makes no accusation and does not know the removal was recorded. Primary turn: Lena creates an information-leak test whose full value neither she nor Calder yet grasps.",
       "must_happen": [
-        "Calder follows Lena as she leaves the condominium and walks to a postal kiosk; she fills out a certified mail form, mails a standard business envelope to her own address, clips the lower-right corner with small scissors from her bag, and records the tracking number in her paper planner.",
-        "Calder returns to his apartment and reviews the lobby camera feed; after the mail delivery, Grant enters the lobby with his keycard, opens Lena's mailbox with a key, removes the clipped envelope, and exits toward the basement.",
-        "Calder notes the envelope's clipped corner in his notebook and time-stamps the removal; he does not know the envelope's contents or Lena's purpose, but he recognizes the clip as a deliberate marker.",
-        "Lena collects the delivered envelope from her mailbox later that day; she checks the lower-right corner, confirms the clip is intact, and places the envelope unopened into her planner without visible reaction."
+        "[ROMANCE] Calder watches Lena through the lens as she leaves her apartment with a thick envelope. She pauses at the courtyard, looks toward his window — not a challenge, but a moment of shared awareness. Calder's hand hovers over the record button. He does not press it. He wants to see what she is doing, not record it for Grant.",
+        "Calder observes Lena leaving the condominium with a thick envelope. He switches to the lobby camera feed and watches her exit toward the postal kiosk.",
+        "At the postal kiosk, Lena fills out a certified mail form, seals the envelope, clips the lower-right corner with small scissors from her bag, and records the tracking number in her paper planner.",
+        "Calder reviews the lobby footage after delivery. He watches Grant Hart enter the lobby with a mailbox key, open Lena's mailbox, remove the same clipped envelope, and leave.",
+        "Calder notes the timestamp of the envelope removal in his field notebook. He does not report it to Grant.",
+        "Grant messages Calder: 'She mailed something today. Any idea what?' Calder replies: 'I saw her at the postal kiosk. Envelope. Could be personal.' He does not mention the clipping, the tracking number, or the removal.",
+        "[CLUE C005] Certified envelope with false checklist and unique phrase 'Friday key return.' Lena mails it to herself, clips the lower-right corner, and records tracking.",
+        "[CLUE C009] Lena's planner entry recording the unique phrase and tracking number. Establishes the phrase was in the envelope before Grant repeated it.",
+        "[CLUE C017] Calder's unedited lobby footage shows Grant removing the same clipped envelope from Lena's mailbox.",
+        "[CLUE C018] Postal tracking record for the certified envelope. Shows delivery to Lena's mailbox, not the recycling area."
       ],
       "must_not": [
-        "Do not reveal the envelope's contents or Lena's intent; the prose must remain in Calder's uncertain POV.",
-        "Do not include any romantic attraction, chemistry, or intimacy; Calder's observation is professional and paranoid, not personal."
+        "Do NOT reveal that the envelope contains false information — Calder must not know its purpose.",
+        "Do NOT reveal that Lena knows Grant removed the envelope — she does not confirm interception until Chapter Twelve.",
+        "Do NOT payoff any clue — C005, C009, C017, and C018 are planted in this chapter and pay off later.",
+        "Do NOT reveal that Calder recorded the envelope removal — Lena does not learn this until Chapter Nine."
       ],
-      "opens_with": "Lena Hart steps out of the condominium lobby at 9:14 AM wearing a rain jacket she did not need—the sky is clear—and carrying a small padded envelope that was not in her hand five minutes ago.",
-      "cliffhanger": "Calder watches the lobby feed again and realizes that Grant removed the envelope with the same key he used to enter Lena's apartment, and that Calder's footage now connects Grant to two separate breaches—but he still does not know what is in the envelope or why Lena clipped the corner.",
-      "signature_detail_hint": "The tracking number on Lena's certified receipt is 7013 1020 0001 2345; Calder memorizes it because the sequence is too orderly to be random, and he wonders whether Lena chose the number deliberately.",
-      "emotional_beat": "Professional curiosity sharpening into respect: Calder watches Lena build a trap he cannot yet see, and he begins to understand that she is not a victim waiting to be rescued.",
+      "opens_with": "\"She carried the envelope like it was nothing. A thick manila rectangle tucked under her arm, the same way she carried her planner. But she did not take it to her apartment. She took it to the postal kiosk, and she did not look back.\"",
+      "cliffhanger": "Calder closes his notebook and looks at the monitor. Lena is sitting at her kitchen table, her planner open to a new page. She writes something, then looks up at his window. She does not smile. She does not look away. She holds his gaze for five seconds, then closes the planner. Calder realizes: she knows he saw her mail the envelope. She does not know he saw Grant take it.",
+      "signature_detail_hint": "The small scissors Lena uses to clip the envelope's lower-right corner are the same ones she uses to trim the doorframe seals — a consistency Calder notices but does not understand.",
+      "emotional_beat": "Calder feels a strange pride watching Lena execute her plan — she is competent, precise, and she is testing the system. He also feels guilt: he is complicit in Grant's theft, even if he did not cause it.",
       "spice": 0,
-      "spice_note": "No romance; tension is plot-driven.",
-      "chapter_task": "Write 1700-1900 words depicting the postal kiosk trip, the lobby footage of Grant's removal, and Calder's growing recognition that Lena is running a parallel operation. the unnamed contact's first-person POV and uncertainty about the envelope's purpose.",
-      "carries_to_next": "Calder has recorded Grant stealing Lena's mail; Lena has confirmed the clip is intact and knows the envelope was tampered with; Calder still does not know the contents or Lena's full plan, but he now has two pieces of physical evidence connecting Grant to deliberate interference."
+      "spice_note": "",
+      "chapter_task": "Write Chapter Eight — 1600-1900 words. Execute the beat 'The Honeytoken': Lena mails a certified envelope containing a false checklist and unique phrase to herself. Calder's lobby footage records Grant removing the clipped envelope from her mailbox. Plant C005, C009, C017, and C018 using their exact semantics from clue_catalog. Do NOT payoff any clue. Calder must observe the mailing and the removal but not understand the honeytoken strategy. End with Lena looking at Calder's window after writing in her planner — she knows he saw her mail the envelope, but does not know he recorded Grant's theft.",
+      "carries_to_next": "Lena has mailed the certified honeytoken and recorded its details in her planner. Grant has stolen the envelope from her mailbox, believing it contains a genuine packing checklist and key-return plan. Calder has recorded both the mailing and the theft in his unedited footage and field notebook. Neither Lena nor Calder yet understands the full value of the evidence chain. The confrontation is imminent."
     },
     {
       "chapter": 9,
       "title": "The Originals",
       "slug": "the-originals",
-      "one_line_summary": "In the laundry room, Lena holds a note toward the camera confirming Calder keeps originals; in the stairwell she confronts him, states Grant hired him, and offers a choice: keep serving Grant, preserve the truth without controlling her plan, or walk away.",
-      "beat_summary": "In the laundry room Lena holds a handwritten note toward the camera: \"You keep the originals. Good.\" In the stairwell she states Grant hired him (part inference, part test); Calder confirms Grant gets only selected reports. She does not reveal the envelope's contents or purpose. She offers a choice: keep serving Grant, preserve the truth without taking control of her plan, or walk away. Primary turn: Calder and Lena acknowledge the surveillance and form a conditional alliance.",
+      "one_line_summary": "Lena confronts Calder in the laundry room, confirming she knows his surname, his role, and that he keeps originals, and forms a conditional alliance with explicit limits.",
+      "beat_summary": "In the laundry room Lena holds a handwritten note toward the camera: 'You keep the originals. Good.' In the stairwell she states Grant hired him (part inference, part test); Calder confirms Grant gets only selected reports. She does not reveal the envelope's contents or purpose. She offers a choice: keep serving Grant, preserve the truth without taking control of her plan, or walk away. Primary turn: Calder and Lena acknowledge the surveillance and form a conditional alliance.",
       "must_happen": [
-        "Calder watches Lena enter the basement laundry room with her laundry basket; she positions herself directly in front of the common-area camera, holds a handwritten note reading \"You keep the originals. Good.\" for five seconds, then folds it into her pocket.",
-        "Later that evening, Lena exits the stairwell door onto Calder's floor and confronts him in the hallway; she states that Grant hired him, that she inferred his surname from a lobby package label, and that she knows Calder keeps original footage Grant does not see.",
-        "Calder confirms that Grant receives only compressed reports and selected stills; Lena does not reveal the envelope's contents or her plan, but she states she needs a witness who preserves the truth without deciding what she should do with it.",
-        "Lena offers Calder three choices: continue serving Grant and report everything, preserve the evidence without controlling her decisions, or walk away entirely; Calder chooses to preserve the truth without taking control of her plan."
+        "[ROMANCE] Lena meets Calder in the laundry room. She stands close enough that he can see the pulse in her throat. She does not touch him, but she does not step back. 'You kept the originals,' she says. 'That is the only reason we are having this conversation.' Calder feels the weight of her attention — not as a target, but as someone who chose to speak to him.",
+        "Calder notices a handwritten note taped to the laundry room wall. In Lena's handwriting: 'You keep the originals. Good.' He removes the note and pockets it before anyone else sees it.",
+        "Lena enters the laundry room as Calder is leaving. She blocks the door. 'Calder Reed,' she says. 'Grant hired you. You have been watching me for eight days. You keep unedited originals.' She does not ask — she states.",
+        "Calder confirms: Grant receives only selected reports and compressed stills. He does not know about the local archive. Lena nods, processing the information.",
+        "Lena offers Calder a choice: 'Keep serving Grant. Preserve the truth without taking control of my plan. Or walk away. Those are the options. You do not get to decide what happens next.'",
+        "Calder chooses to preserve the truth. He does not ask about the envelope. He does not ask about her plan. He agrees to her terms.",
+        "[PAYOFF C006] Lena learns Calder's surname from a lobby package label addressed to 'Reed.'",
+        "[PAYOFF C007] Lena infers Grant hired Calder from the timing of the surveillance start relative to the settlement date.",
+        "[DISPEL RH03] Lena's direct looks toward Calder's window were deliberate detection, not unconscious flirtation.",
+        "[DISPEL RH05] Calder's refusal to enter Lena's apartment was based on preserving independent evidence, not professional caution."
       ],
       "must_not": [
-        "Do not reveal the envelope's contents or Lena's full plan; the confrontation establishes the alliance but withholds strategic details.",
-        "Do not include any romantic attraction, chemistry, or intimacy; the confrontation is tactical and professional, not personal or romantic."
+        "Do NOT reveal the envelope's contents or purpose — Lena does not explain the honeytoken strategy.",
+        "Do NOT reveal that Calder recorded Grant's envelope removal — Lena does not know this yet.",
+        "Do NOT reveal the full extent of Lena's controlled visibility — she reveals only what is necessary for the alliance.",
+        "Do NOT reveal that Calder's choice is motivated by romance — the alliance is conditional and evidence-driven."
       ],
-      "opens_with": "\"You keep the originals. Good.\" The words are written in black ink on a torn piece of notebook paper, and Lena Hart holds them flat against the camera lens in the laundry room as if she is showing a child how to read.",
-      "cliffhanger": "Lena turns to leave the stairwell, then pauses and says without turning around: \"If you choose to stay, you will learn what is in the envelope. But not tonight. Tonight you sit with the fact that you chose to stop working for Grant before you knew what I was asking.\"",
-      "signature_detail_hint": "The note is written on paper torn from the same planner Lena uses for her daily entries; the tear line matches the spiral-bound perforation, and Calder recognizes the paper stock from his earlier observations.",
-      "emotional_beat": "Relief and unease: Calder is no longer alone in his suspicion, but he has just committed to a path whose full cost he cannot calculate, and Lena has made it clear she will not explain until he proves his choice.",
+      "opens_with": "\"'You keep the originals. Good.' The note was taped to the laundry room wall, in handwriting I had watched for eight days. I removed it before I understood what it meant. By the time I did, she was already behind me.\"",
+      "cliffhanger": "Lena steps back and looks at Calder. 'You recorded Grant entering my apartment,' she says. It is not a question. Calder does not confirm or deny. She nods. 'Good. That means you have something worth preserving. Do not tell me what it is. Do not tell me anything about the envelope. When I need you, I will tell you.' She turns and walks out of the laundry room. Calder stands alone, holding the note, realizing that she has been directing him since the moment he arrived.",
+      "signature_detail_hint": "The laundry room has a single fluorescent bulb that flickers — Calder notices Lena stands directly under the steady part of the light, as if she planned the positioning.",
+      "emotional_beat": "Calder experiences a profound shift: he is no longer the watcher. He has been seen, named, and given a choice. Lena's calm precision is both terrifying and magnetic — she does not need him, but she is willing to use him on her terms.",
       "spice": 0,
-      "spice_note": "No romance; tension is plot-driven.",
-      "chapter_task": "Write 1800-1900 words depicting the laundry room note, the stairwell confrontation, and Calder's decision to align with Lena. the unnamed contact's first-person POV and the weight of choosing against his client.",
-      "carries_to_next": "Calder has acknowledged the surveillance to Lena and chosen to preserve the evidence; Lena has confirmed his role and set the terms of their conditional alliance; the envelope's contents remain unknown to Calder, and the next phase of the plan begins."
+      "spice_note": "",
+      "chapter_task": "Write Chapter Nine — 1600-1900 words. Execute the beat 'The Originals': Lena confronts Calder in the laundry room. Payoff C006 and C007 using their exact semantics from clue_catalog. Dispel RH03 and RH05. MR04 must fire: Lena confronts Calder, confirms his surname, his role, and that he keeps originals. She offers a choice: keep serving Grant, preserve the truth without taking control of her plan, or walk away. Calder chooses to preserve the truth. Do NOT reveal the envelope's contents or purpose. Do NOT reveal the full extent of Lena's controlled visibility. End with Lena walking out of the laundry room, leaving Calder with the note and the realization that she has been directing him.",
+      "carries_to_next": "Lena and Calder have formed a conditional alliance. Calder has confirmed he keeps originals and will preserve the truth under Lena's explicit limits. Lena knows about Grant's entry but does not know Calder recorded the envelope removal. Calder knows about the envelope but does not know its contents or purpose. The surveillance dynamic has fundamentally shifted: Calder is now working with Lena, not Grant, but under her terms. Grant believes Calder is still reliable."
     }
   ]
 }

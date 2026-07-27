@@ -75,6 +75,33 @@ class CanonNameNormalizationTests(unittest.TestCase):
         self.assertIn("Victor Rhodes", blob)
         self.assertEqual(notes, ["Marcus Webb->the unnamed detective"])
 
+    def test_plan_cast_scrub_does_not_replace_prohibitions_or_leading_verbs(self) -> None:
+        allowed = {"Lena Hart", "Grant Hart"}
+        plans = [
+            {
+                "chapter": 1,
+                "must_not": [
+                    "Do NOT reveal the victim's identity.",
+                    "Do not show Grant entering Lena Hart's apartment.",
+                ],
+                "must_happen": ["Shows Grant removing the envelope."],
+            },
+            {
+                "chapter": 2,
+                "must_not": [
+                    "Do NOT include a suspect confession.",
+                    "Do not reveal the witness.",
+                ],
+                "must_happen": ["Shows Grant using his master credential."],
+            },
+        ]
+
+        warnings = find_recurring_invented_plan_characters(plans, allowed)
+        self.assertEqual(warnings, [])
+        scrubbed, notes = scrub_recurring_invented_plan_characters(plans, allowed)
+        self.assertEqual(scrubbed, plans)
+        self.assertEqual(notes, [])
+
 
 def _copy_second_shadow_fixture(dst: Path) -> None:
     """Copy minimal Second Shadow assets into an isolated temp workspace."""

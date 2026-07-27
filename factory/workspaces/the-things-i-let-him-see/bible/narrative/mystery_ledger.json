@@ -1,222 +1,302 @@
 {
-  "main_mystery": "Who is truly controlling what Calder observes, and is Lena's apparent instability real or manufactured?",
-  "truth": "Lena detected Calder's surveillance in Chapter Three and has been designing what he sees ever since. Grant has been manufacturing a pattern of instability around Lena for seven weeks before Chapter One. Calder's observation is the lens through which both manipulations are revealed, but Lena is the one who controls the decisive visible sequence.",
+  "main_mystery": "Who is actually controlling what Calder observes — and will Lena's strategy survive the settlement without Calder overriding her plan?",
+  "truth": "Lena detected Calder's surveillance in Chapter Three. From that point she controlled portions of what he could see — repeated routines, red receipts, door seals, a paper planner, and a certified honeytoken. She designed the evidence trap that forced Grant to commit to a false chain of custody at the settlement. Calder believed he was the watcher; he was the watched. The decisive sequence of visible events was directed by Lena, not Calder or Grant.",
   "canonical_reveal_chapter": 14,
   "red_herrings": [
     {
       "id": "RH01",
-      "description": "Lena's repeated routines and misplaced objects appear to confirm Grant's claim of instability. The reader (and Calder) initially believe these are genuine signs of deterioration.",
-      "plant_chapter": 2,
+      "description": "Lena's visible forgetfulness and paranoia in Chapters 1-2 appear to be genuine deterioration. The reader (and Calder) are led to believe Grant may be telling the truth about her instability.",
+      "plant_chapter": 1,
       "payoff_chapter": 14,
-      "note": "Revealed as controlled diagnostic tests, not deterioration."
+      "note": "Revealed as manufactured by Grant's manipulation and Lena's controlled visibility."
     },
     {
       "id": "RH02",
-      "description": "Grant's concerned messages and requests for Mae to check on Lena appear to be those of a worried husband. The reader may initially sympathize with Grant's apparent concern.",
-      "plant_chapter": 1,
-      "payoff_chapter": 7,
-      "note": "Revealed as part of the manipulation campaign when Calder records Grant entering the apartment."
+      "description": "Lena's repeated routines appear to be compulsion or stress behavior. Calder interprets them as evidence of deterioration.",
+      "plant_chapter": 2,
+      "payoff_chapter": 14,
+      "note": "Revealed as diagnostic tests: each routine was designed to test what reaches Grant and what Calder records."
     },
     {
       "id": "RH03",
-      "description": "Calder's growing attraction to Lena appears to develop naturally from observation. The reader may believe this is a genuine connection that predates her awareness.",
-      "plant_chapter": 4,
+      "description": "Lena's direct looks toward Calder's window appear unconscious or flirtatious. Calder believes she is unaware and attracted.",
+      "plant_chapter": 3,
       "payoff_chapter": 9,
-      "note": "Revealed as one-sided until Lena confronts Calder and sets terms."
+      "note": "Revealed as deliberate detection: she identified the reflected status light and message timing."
     },
     {
       "id": "RH04",
-      "description": "The certified envelope appears to be a genuine packing checklist and key-return plan. The reader may believe Lena is actually preparing to leave.",
+      "description": "The envelope Lena mails in Chapter Eight appears to be a genuine packing checklist and key-return plan. Grant believes it proves she intends to abandon the property.",
       "plant_chapter": 8,
-      "payoff_chapter": 12,
-      "note": "Revealed as a honeytoken when Grant uses the unique phrase 'Friday key return.'"
+      "payoff_chapter": 18,
+      "note": "Revealed as a certified honeytoken containing false information and a unique phrase designed to expose mail interception."
+    },
+    {
+      "id": "RH05",
+      "description": "Calder's refusal to enter Lena's apartment before Chapter Eleven appears to be professional caution. Grant reads it as continued reliability.",
+      "plant_chapter": 7,
+      "payoff_chapter": 9,
+      "note": "Revealed as Calder's decision to preserve independent evidence after witnessing Grant's recorded entry."
     }
   ],
   "major_reveals": [
     {
       "id": "MR01",
-      "chapter": 7,
-      "description": "Calder's unedited footage records Grant entering Lena's apartment with a master credential during a deleted interval. Calder learns Grant is manufacturing evidence, not documenting genuine instability.",
+      "description": "Lena detects the surveillance. She identifies Calder's reflected camera status light and connects it to Grant's message timing.",
+      "chapter": 3,
       "required_clues": [
-        "C002",
-        "C003"
+        "C001",
+        "C002"
       ],
-      "note": "This is the first proof that Grant is actively manipulating Lena's environment."
+      "note": "Partial reveal — Lena knows she is watched but not Calder's identity, loyalty, or recording method."
     },
     {
       "id": "MR02",
-      "chapter": 9,
-      "description": "Lena confronts Calder in the laundry room. She knows his surname, infers Grant hired him, and tests whether he keeps originals. Calder learns Lena is aware of the surveillance.",
+      "description": "Grant's recorded entry. Calder's unedited camera captures Grant using a master credential to enter Lena's apartment during a deleted interval.",
+      "chapter": 7,
       "required_clues": [
-        "C004",
-        "C005"
+        "C003",
+        "C004"
       ],
-      "note": "The confrontation changes the power dynamic. Lena now knows Calder's role; Calder knows she knows."
+      "note": "Calder learns Grant manufactures evidence. Calder begins keeping independent originals."
     },
     {
       "id": "MR03",
-      "chapter": 12,
-      "description": "Grant tells Calder to watch for a 'Friday key return' — the exact unique phrase from inside Lena's certified envelope. This proves Grant intercepted the mail, even without video evidence of the theft.",
+      "description": "The certified honeytoken is mailed. Lena mails a false checklist and unique phrase to herself.",
+      "chapter": 8,
+      "required_clues": [
+        "C005"
+      ],
+      "note": "Lena begins the evidence trap. Grant does not yet know the envelope's contents are false."
+    },
+    {
+      "id": "MR04",
+      "description": "Lena confronts Calder. She knows his surname, his role, and that he keeps originals. She tests his archive policy.",
+      "chapter": 9,
       "required_clues": [
         "C006",
         "C007"
       ],
-      "note": "Value One of the honeytoken pays off: information leak confirmed without camera footage."
-    },
-    {
-      "id": "MR04",
-      "chapter": 14,
-      "description": "Lena reveals her complete strategy: the doorframe seals, paper planner, folded red receipts, repeated routines, and certified envelope were all diagnostic tests. She controlled what Calder could observe without knowing every result in advance.",
-      "required_clues": [
-        "C008",
-        "C009",
-        "C010",
-        "C011"
-      ],
-      "note": "The central reversal: the watcher was watched, predicted, and directed."
+      "note": "Surveillance alliance begins. Calder changes allegiance under explicit limits set by Lena."
     },
     {
       "id": "MR05",
-      "chapter": 17,
-      "description": "At the settlement, Grant authenticates the envelope, clipped corner, checklist, and unique phrase, asserting a false recycling-area custody claim. Calder then produces the unedited lobby footage showing Grant removing the same clipped envelope from Lena's mailbox. Access audit, field notebook, planner, contract, and originals establish the broader pattern.",
+      "description": "Grant repeats the unique phrase 'Friday key return.' This proves mail interception without requiring video evidence.",
+      "chapter": 12,
       "required_clues": [
+        "C008",
+        "C009"
+      ],
+      "note": "Value One of the honeytoken pays off. Lena learns Grant intercepted the envelope."
+    },
+    {
+      "id": "MR06",
+      "description": "Mae prints the local credential audit. Independent physical evidence survives digital deletion.",
+      "chapter": 13,
+      "required_clues": [
+        "C010"
+      ],
+      "note": "The audit corroborates Grant's pattern of unauthorized entry and footage deletion."
+    },
+    {
+      "id": "MR07",
+      "description": "Full control reveal. Lena explains the planner, red receipts, door seals, and honeytoken strategy. Calder learns he was watched, predicted, and directed.",
+      "chapter": 14,
+      "required_clues": [
+        "C011",
         "C012",
         "C013",
-        "C014",
-        "C015",
+        "C014"
+      ],
+      "note": "The central mystery is resolved. The decisive sequence of visible events was controlled by Lena."
+    },
+    {
+      "id": "MR08",
+      "description": "Evidence transfer. Calder transfers one encrypted duplicate of the original surveillance archive to Detective Cross.",
+      "chapter": 15,
+      "required_clues": [
+        "C015"
+      ],
+      "note": "Evidence no longer depends on Calder's loyalty or survival."
+    },
+    {
+      "id": "MR09",
+      "description": "False chain exposure. Grant authenticates the envelope and asserts a false chain of custody. Calder's unedited footage contradicts him.",
+      "chapter": 17,
+      "required_clues": [
         "C016",
         "C017",
-        "C018"
+        "C018",
+        "C019",
+        "C020",
+        "C021"
       ],
-      "note": "Grant loses because he commits to a calculated lie that contradicts independent evidence — not because he confesses."
+      "note": "The climax. Grant loses because he commits to a calculated lie that contradicts independent evidence."
+    },
+    {
+      "id": "MR10",
+      "description": "Lena chooses Calder without dependencies. She asks him to return without recording equipment after the settlement.",
+      "chapter": 18,
+      "required_clues": [
+        "C022"
+      ],
+      "note": "The romance payoff. Lena chooses Calder only after she no longer needs him as a witness."
     }
   ],
   "clues": [
     {
       "id": "C001",
-      "description": "Reflected camera status light in Calder's dark window, visible from Lena's courtyard-facing rooms.",
+      "description": "Reflected camera status light in Calder's window. Lena notices a small red glow that appears only when she is in the courtyard during specific hours.",
       "plant_chapter": 1,
       "payoff_chapter": 3,
-      "note": "Lena first notices the light in Chapter 1, but does not interpret it until Chapter 3 when it coincides with a Grant message."
+      "note": "First clue that Lena detects surveillance. The light is visible only from her courtyard position."
     },
     {
       "id": "C002",
-      "description": "Calder's unedited local recording of the common-area feed and courtyard camera, independently retained from Chapter 1.",
+      "description": "Message timing correlation. Grant messages Lena about something she just noticed within minutes of her courtyard appearance.",
       "plant_chapter": 1,
-      "payoff_chapter": 7,
-      "note": "Calder keeps originals as standard practice. Grant does not know they exist."
+      "payoff_chapter": 3,
+      "note": "Lena connects the message timing to the camera light. She infers Grant is receiving reports."
     },
     {
       "id": "C003",
-      "description": "Grant enters Lena's apartment using a master credential during a deleted interval. Calder's unedited footage captures the entry.",
+      "description": "Calder's unedited camera records Grant entering Lena's apartment with a master credential during a deleted interval.",
       "plant_chapter": 7,
       "payoff_chapter": 7,
-      "note": "Calder learns Grant is manufacturing evidence. This is the first proof of active manipulation."
+      "note": "Calder learns Grant manufactures evidence. The footage is the first independent proof of unauthorized entry."
     },
     {
       "id": "C004",
-      "description": "Lena learns the surname 'Reed' from a lobby package label addressed to Calder.",
-      "plant_chapter": 3,
-      "payoff_chapter": 9,
-      "note": "Lena uses this to confirm Calder's identity before confronting him."
+      "description": "Calder's field notebook timestamp of the entry. Handwritten record independent of digital deletion.",
+      "plant_chapter": 7,
+      "payoff_chapter": 18,
+      "note": "Corroborates the unedited footage. Establishes a physical record of Grant's entry."
     },
     {
       "id": "C005",
-      "description": "Lena infers Grant hired Calder based on the timing of the surveillance starting just before the settlement deadline.",
-      "plant_chapter": 3,
-      "payoff_chapter": 9,
-      "note": "Inference, not confirmation, until the confrontation."
+      "description": "Certified envelope with false checklist and unique phrase 'Friday key return.' Lena mails it to herself, clips the lower-right corner, and records tracking.",
+      "plant_chapter": 8,
+      "payoff_chapter": 18,
+      "note": "The honeytoken. Value One (information leak) pays off in Ch12. Value Two (physical corroboration) pays off in Ch17."
     },
     {
       "id": "C006",
-      "description": "Certified envelope with false packing checklist and unique phrase 'Friday key return,' mailed by Lena to herself in Chapter 8. Lower-right corner clipped; tracking number recorded in planner.",
-      "plant_chapter": 8,
-      "payoff_chapter": 12,
-      "note": "Value One: information leak. Grant uses the phrase, proving mail interception."
+      "description": "Lena learns Calder's surname from a lobby package label addressed to 'Reed.'",
+      "plant_chapter": 5,
+      "payoff_chapter": 9,
+      "note": "Lena identifies Calder by name before the confrontation."
     },
     {
       "id": "C007",
-      "description": "Grant tells Calder to watch for a 'Friday key return' in Chapter 12, repeating the exact phrase from inside the sealed envelope.",
-      "plant_chapter": 12,
-      "payoff_chapter": 12,
-      "note": "Direct proof of mail interception without camera footage of the theft."
+      "description": "Lena infers Grant hired Calder from the timing of the surveillance start relative to the settlement date.",
+      "plant_chapter": 6,
+      "payoff_chapter": 9,
+      "note": "Lena confirms Calder's role as Grant's operative before confronting him."
     },
     {
       "id": "C008",
-      "description": "Clear doorframe seals placed by Lena after Chapter 3 to detect entries during her morning walks.",
-      "plant_chapter": 5,
-      "payoff_chapter": 14,
-      "note": "Lena shows these to Calder in Chapter 11; their full significance is explained in Chapter 14."
+      "description": "Grant tells Calder to watch for a 'Friday key return.' The exact phrase from the sealed envelope.",
+      "plant_chapter": 12,
+      "payoff_chapter": 12,
+      "note": "Value One of the honeytoken. Proves mail interception without video evidence."
     },
     {
       "id": "C009",
-      "description": "Paper planner kept by Lena, recording timestamps, seal breaks, red receipt placements, and the honeytoken tracking number. Cannot be remotely altered.",
-      "plant_chapter": 5,
-      "payoff_chapter": 14,
-      "note": "Physical record that survives any digital manipulation."
+      "description": "Lena's planner entry recording the unique phrase and tracking number. Establishes the phrase was in the envelope before Grant repeated it.",
+      "plant_chapter": 8,
+      "payoff_chapter": 18,
+      "note": "Corroborates the honeytoken chain. Lena's physical record proves the phrase was sealed."
     },
     {
       "id": "C010",
-      "description": "Folded red receipts placed beside disturbed objects to build a physical timeline of Grant's entries.",
-      "plant_chapter": 3,
-      "payoff_chapter": 14,
-      "note": "Appears in Chapters 3, 5, 8, 11, and 14. Full explanation in Chapter 14."
+      "description": "Mae prints the local credential audit from the board terminal. Shows Grant's master credential was used during deleted intervals.",
+      "plant_chapter": 13,
+      "payoff_chapter": 18,
+      "note": "Independent physical evidence that survives digital deletion. Corroborates the broader pattern."
     },
     {
       "id": "C011",
-      "description": "Lena's repeated visible routines — designed to test what reaches Grant through Calder's reports.",
-      "plant_chapter": 2,
+      "description": "Lena's paper planner with timestamps, red-receipt placements, and door-seal checks. Cannot be remotely altered.",
+      "plant_chapter": 4,
       "payoff_chapter": 14,
-      "note": "Lena withholds certain behaviors and repeats others to map the limits of Calder's observation."
+      "note": "Lena's primary record of her controlled visibility. Revealed to Calder in Ch14."
     },
     {
       "id": "C012",
-      "description": "Calder's field notebook with handwritten timestamps from Chapter 1, documenting all observed events.",
-      "plant_chapter": 1,
-      "payoff_chapter": 18,
-      "note": "Used to establish timeline of Grant's entries and Calder's observations at the settlement."
+      "description": "Folded red receipts placed beside disturbed objects. Build a physical timeline of Grant's entries.",
+      "plant_chapter": 3,
+      "payoff_chapter": 14,
+      "note": "Lena's method of tracking environmental disturbances. Each receipt marks a confirmed entry."
     },
     {
       "id": "C013",
-      "description": "Printed master-access audit from the board terminal, obtained by Mae in Chapter 13 and hidden in a cookbook.",
-      "plant_chapter": 13,
-      "payoff_chapter": 18,
-      "note": "Independent physical evidence that survives digital deletion. Grant knows the terminal was accessed but not what was printed."
+      "description": "Clear doorframe seals. Lena places them before her morning walks and checks them upon return.",
+      "plant_chapter": 4,
+      "payoff_chapter": 14,
+      "note": "Detects unauthorized entry during her absence. Each broken seal is a confirmed entry."
     },
     {
       "id": "C014",
-      "description": "Surveillance contract signed by Grant and Calder in Chapter 1, establishing Grant's instructions and timeline.",
-      "plant_chapter": 1,
-      "payoff_chapter": 18,
-      "note": "Calder prints one copy in Chapter 16 before meeting Cross."
+      "description": "Lena's repeated routines are revealed as diagnostic tests, not compulsion. Each test was designed to map what reaches Grant and what Calder records.",
+      "plant_chapter": 2,
+      "payoff_chapter": 14,
+      "note": "The central reframe. Calder learns the visible behavior was controlled, not symptomatic."
     },
     {
       "id": "C015",
-      "description": "Grant's edited daily reports, created by Calder from Chapter 1, showing only what Grant expects to see.",
-      "plant_chapter": 1,
-      "payoff_chapter": 18,
-      "note": "Presented at the settlement; timestamps compared with originals to show editing pattern."
+      "description": "Calder transfers one encrypted duplicate of the original surveillance archive to Detective Cross. The evidence index is also delivered.",
+      "plant_chapter": 15,
+      "payoff_chapter": 15,
+      "note": "Evidence no longer depends on Calder's loyalty or survival. Cross now holds an independent copy."
     },
     {
       "id": "C016",
-      "description": "Unedited lobby footage from Calder's archive, showing Grant removing the clipped certified envelope from Lena's mailbox.",
-      "plant_chapter": 7,
+      "description": "Grant formally authenticates the envelope, clipped corner, checklist, and unique phrase at the settlement. He asserts a false recycling-area custody chain.",
+      "plant_chapter": 17,
       "payoff_chapter": 18,
-      "note": "Contradicts Grant's false recycling-area custody claim at the settlement."
+      "note": "Grant commits to a calculated lie. He does NOT state he took the envelope."
     },
     {
       "id": "C017",
-      "description": "Postal tracking record for the certified envelope, showing delivery to Lena's mailbox and no return to sender.",
+      "description": "Calder's unedited lobby footage shows Grant removing the same clipped envelope from Lena's mailbox.",
       "plant_chapter": 8,
       "payoff_chapter": 18,
-      "note": "Independent of Calder's footage; establishes the envelope's chain of custody."
+      "note": "Contradicts Grant's false chain of custody. The footage establishes Grant stole the envelope."
     },
     {
       "id": "C018",
-      "description": "Evidence index and encrypted duplicate of the archive, transferred to Detective Cross in Chapter 15.",
-      "plant_chapter": 15,
+      "description": "Postal tracking record for the certified envelope. Shows delivery to Lena's mailbox, not the recycling area.",
+      "plant_chapter": 8,
       "payoff_chapter": 18,
-      "note": "Evidence no longer depends on Calder's loyalty or survival."
+      "note": "Corroborates the footage. The envelope was delivered to Lena's mailbox, not discarded."
+    },
+    {
+      "id": "C019",
+      "description": "Calder's field notebook with timestamps of Grant's entry and envelope removal.",
+      "plant_chapter": 7,
+      "payoff_chapter": 18,
+      "note": "Handwritten record independent of digital deletion. Corroborates the footage."
+    },
+    {
+      "id": "C020",
+      "description": "The surveillance contract with Grant's instructions. Establishes Grant hired Calder to document instability.",
+      "plant_chapter": 1,
+      "payoff_chapter": 18,
+      "note": "Establishes Grant's motive and method. Shows the scope of Calder's assignment."
+    },
+    {
+      "id": "C021",
+      "description": "Mae's printed credential audit. Shows Grant's master credential was used during the intervals when footage was deleted.",
+      "plant_chapter": 13,
+      "payoff_chapter": 18,
+      "note": "Corroborates the broader pattern of unauthorized entry and footage deletion."
+    },
+    {
+      "id": "C022",
+      "description": "Lena asks Calder to return without recording equipment. She grants no unrestricted access and chooses when he enters, when he watches, and when the curtain closes.",
+      "plant_chapter": 18,
+      "payoff_chapter": 18,
+      "note": "The romance payoff. Lena chooses Calder only after all dependencies end."
     }
   ]
 }

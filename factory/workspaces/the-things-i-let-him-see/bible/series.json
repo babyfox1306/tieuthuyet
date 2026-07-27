@@ -1,84 +1,112 @@
 {
+  "meta": {
+    "series_id": "the-things-i-let-him-see",
+    "genre": "dark psychological thriller-romance",
+    "target_language": "en"
+  },
   "title": "The Things I Let Him See",
-  "logline": "A surveillance operative hired to prove a separated wife unstable becomes\nobsessed with her ordinary routines, unaware that she identified him almost\nimmediately and has begun designing what he sees.\n\nWhen her husband's domestic gaslighting escalates toward a forced property\nsettlement, the watcher must decide whether to possess the woman directing\nhis gaze or preserve the evidence that will return her life to her.",
-  "bible_status": "draft",
-  "spice_max": 0,
+  "sub_niche": "dark psychological thriller-romance, single first-person POV, surveillance cat-and-mouse, domestic gaslighting, slow-burn romance with explicit consent",
+  "spice_level": 1,
+  "planned_books": 5,
+  "hook_central": "A surveillance operative hired to prove a separated wife unstable becomes obsessed with her ordinary routines, unaware that she identified him almost immediately and has begun designing what he sees.",
+  "tropes": [
+    "Slow Burn",
+    "Cat-and-Mouse",
+    "Gaslighting",
+    "First Person POV",
+    "Surveillance Romance",
+    "Domestic Thriller",
+    "Consent Negotiation"
+  ],
   "leads": {
     "female": {
       "name": "Calder Reed",
-      "age": "",
-      "voice": "protagonist / private surveillance operative / dark-romance lead",
-      "tics": [],
-      "boundary": "",
-      "internal_voice": ""
+      "age": 31,
+      "voice": "Measured, deliberate, uses precise language; often pauses before responding; rarely raises her voice; can be devastatingly calm under pressure.",
+      "tics": [
+        "Touches doorframe seals before entering",
+        "Arranges objects in precise grid on desk before starting work",
+        "Checks red receipts twice before filing"
+      ],
+      "boundary": "Will not allow anyone to make decisions for her; refuses to be rescued; will cut contact if someone overrides her choice.",
+      "internal_voice": "I am not unstable. I am not confused. I am watching him watch me."
     },
     "male": {
-      "name": "Unassigned (no male lead)"
+      "name": "Calder",
+      "age": 34,
+      "voice": "Terse, observational, often internal; speaks in short declarative sentences; rarely volunteers personal information; uses clinical terms for emotions.",
+      "tics": [
+        "Taps the camera lens before each session",
+        "Keeps left hand in pocket when uncertain",
+        "Repeats the subject's last words under his breath"
+      ],
+      "boundary": "Refuses to violate his own archive integrity; will not destroy evidence even for personal gain; cannot tolerate being deceived.",
+      "wound": "His previous surveillance contract ended in a false report that ruined an innocent subject; he never verified before submitting."
     }
   },
   "supporting_cast": [
     {
-      "name": "Lena Hart",
-      "relation_type": "surveillance target / condominium co-owner / Grant's separated wife / dark-romance heroine / architect of the evidence trap",
-      "relation_to": "Calder Reed",
-      "alive": true
+      "name": "Grant",
+      "relation_to": "Lena",
+      "relation_type": "estranged husband",
+      "alive": true,
+      "secret": "Orchestrated the surveillance contract and edited the dashboard to conceal his own gaslighting."
     },
     {
-      "name": "Grant Hart",
-      "relation_type": "antagonist / Lena's separated husband / condominium board president / Calder's client",
-      "relation_to": "Calder Reed",
-      "alive": true
+      "name": "Mae",
+      "relation_to": "Lena",
+      "relation_type": "sister",
+      "alive": true,
+      "secret": "Unintentionally feeds Grant information about Lena's state through board communications."
     },
     {
-      "name": "Mae Torres",
-      "relation_type": "Lena's neighbor / condominium board secretary / independent witness",
-      "relation_to": "Calder Reed",
-      "alive": true
-    },
-    {
-      "name": "Imani Cross",
-      "relation_type": "investigating detective / police authority",
-      "relation_to": "Calder Reed",
-      "alive": true
+      "name": "Detective Cross",
+      "relation_to": "Calder",
+      "relation_type": "former colleague",
+      "alive": true,
+      "secret": "Receives the archive duplicate from Calder in Chapter Seventeen; acts on it only after Lena's evidence sequence is complete."
     }
   ],
-  "cast": [
+  "central_mystery": {
+    "question": "Who is actually controlling what Calder observes — and will Lena's strategy survive the settlement without Calder overriding her plan?",
+    "answer": "Lena detected Calder's surveillance in Chapter Three. From that point she controlled portions of what he could see — repeated routines, red receipts, door seals, a paper planner, and a certified honeytoken. She designed the evidence trap that forced Grant to commit to a false chain of custody at the settlement. Calder believed he was the watcher; he was the watched. The decisive sequence of visible events was directed by Lena, not Calder or Grant.",
+    "reveal_chapter": 14
+  },
+  "bloodline": {
+    "description": "Lena and Calder are strangers with no shared bloodline. Grant is Lena's estranged husband. Mae is Lena's biological sister. Detective Cross is a former colleague of Calder, unrelated by blood.",
+    "hard_rules": [
+      "female_lead và male_lead KHÔNG cùng huyết thống",
+      "No secret twin, impostor, body double, memory-loss twist, hidden pregnancy, or false identity twist.",
+      "No child, pregnancy, or custody subplot.",
+      "No named character outside the locked cast."
+    ],
+    "lead_relation": "stranger"
+  },
+  "world_rules": [
+    "All surveillance is external to Lena's apartment; no hidden cameras inside her home.",
+    "Evidence must be physical or independently verifiable; no digital deus ex machina.",
+    "No violence, guns, knives, or physical assault.",
+    "No police action based on a single recording or accusation; no instant arrest.",
+    "No scene outside Calder's first-person POV.",
+    "No new evidence introduced after Chapter Fifteen."
+  ],
+  "series_arc": [
     {
-      "name": "Calder Reed"
-    },
-    {
-      "name": "Lena Hart"
-    },
-    {
-      "name": "Grant Hart"
-    },
-    {
-      "name": "Mae Torres"
-    },
-    {
-      "name": "Imani Cross"
+      "book": 1,
+      "thesis": "Calder is hired to observe Lena and report instability, but Lena detects him and begins controlling what he sees. Grant escalates gaslighting toward a forced property settlement. Calder must decide between possession and preservation of evidence.",
+      "ending_hook": "Lena asks Calder to return without recording equipment. She chooses when he enters, when he watches, and when the curtain closes. The thriller question is resolved: Lena controlled the decisive sequence. The romance question remains: once no longer useful, does she want him?"
     }
   ],
-  "world_rules": [],
   "content_rules": [
-    "No secret twin, impostor, body double, memory-loss twist, hidden pregnancy, or false identity twist.",
+    "Explicit sexual content only in Chapters Eleven and Eighteen, with affirmative consent and camera off.",
+    "No sexual contact before Chapter Ten.",
+    "No portrayal of Lena's Chapter Eight action as certainty that Calder recorded the envelope theft.",
+    "No romance payoff for Calder ignoring Lena's refusal.",
+    "Chapter Sixteen: Lena withdraws access; Calder obeys immediately.",
+    "Chapter Seventeen: Calder enters without romantic reconciliation.",
     "No hallucination explanation for Lena's observations.",
-    "No hidden camera inside Lena's apartment; no bedroom or bathroom recording; no recording of nudity or sexual activity.",
-    "No sexual assault presented as romance; no sexual contact before the Chapter Ten rules.",
-    "No gun, knife, kidnapping, physical assault, chase climax, or violent rescue.",
-    "No hacker friend, secret server, unexplained cloud backup, mystery USB drive, or surprise forensic device.",
-    "No new evidence introduced after Chapter Fifteen.",
-    "No scene outside Calder's POV; no omniscient action by Grant or Lena.",
-    "No police action based on one recording or accusation; no detective attending the confidential settlement without a declared legal reason; no instant arrest during the settlement scene.",
-    "No instant divorce judgment, property transfer, or criminal conviction.",
-    "No named character outside the locked cast; no child, pregnancy, or custody subplot.",
-    "No mafia, organized crime, billionaire fantasy, cult, or international conspiracy.",
-    "No redemption for Grant; no revelation that Calder designed Lena's counterstrategy.",
-    "No romance payoff for Calder ignoring Lena's refusal; no Book Two villain physically appearing in Book One.",
-    "No version of the climax requiring Grant to confess that he stole the envelope.",
-    "No portrayal of Lena's Chapter Eight action as certainty that Calder recorded the envelope theft."
+    "No redemption for Grant.",
+    "No Book Two villain appearing in Book One."
   ],
-  "meta": {
-    "source": "intent_manifest_stub"
-  }
+  "bible_status": "approved"
 }

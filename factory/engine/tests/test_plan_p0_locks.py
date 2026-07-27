@@ -366,6 +366,13 @@ class PlanChunkWiringTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             ws = Path(tmp) / "cold-case"
             shutil.copytree(self.SOURCE, ws)
+            concept_path = ws / "concept.yaml"
+            concept = yaml.safe_load(concept_path.read_text(encoding="utf-8"))
+            concept["romance_mode"] = "off"
+            concept_path.write_text(
+                yaml.dump(concept, allow_unicode=True, sort_keys=False),
+                encoding="utf-8",
+            )
             calls: list[dict] = []
 
             def fake_router(role, payload, **kwargs):
