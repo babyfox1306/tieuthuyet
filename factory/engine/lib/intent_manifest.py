@@ -568,12 +568,17 @@ def derive_must_include_requirements(
                 "global_invariant",
                 "chapter_specific",
                 "chapter_range",
+                "chapter_allowlist",
                 "ending_only",
                 "full_book_audit_only",
             }:
                 continue
             item = {"text": text, "scope": scope}
             if scope == "chapter_specific":
+                item["chapters"] = [
+                    int(ch) for ch in (raw.get("chapters") or []) if int(ch) > 0
+                ]
+            elif scope == "chapter_allowlist":
                 item["chapters"] = [
                     int(ch) for ch in (raw.get("chapters") or []) if int(ch) > 0
                 ]
@@ -595,10 +600,21 @@ def derive_must_include_requirements(
                 ch for ch in _chapter_mentions(clause) if ch <= chapter_count
             ]
             if chapters:
+                # "Only in" is a placement boundary, not an instruction to
+                # force the item into every named chapter.  Preserve the
+                # allowlist for whole-book audit without projecting it into
+                # chapter prompts or G3's required-occurrence checks.
+                allowlist = bool(
+                    re.search(
+                        r"\b(?:appears?|occurs?|may\s+appear|may\s+occur)\s+only\s+in\b",
+                        clause,
+                        re.I,
+                    )
+                )
                 out.append(
                     {
                         "text": clause,
-                        "scope": "chapter_specific",
+                        "scope": "chapter_allowlist" if allowlist else "chapter_specific",
                         "chapters": chapters,
                     }
                 )

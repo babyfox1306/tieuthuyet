@@ -148,6 +148,7 @@ class IntentManifestTests(unittest.TestCase):
             18,
         )
         self.assertEqual(requirements[0]["chapters"], [3, 5, 14])
+        self.assertEqual(requirements[0]["scope"], "chapter_allowlist")
         self.assertEqual(requirements[1]["scope"], "ending_only")
         self.assertEqual(requirements[2]["scope"], "full_book_audit_only")
         manifest = {
@@ -156,7 +157,10 @@ class IntentManifestTests(unittest.TestCase):
             "must_include_requirements": requirements,
         }
         self.assertEqual(must_include_for_chapter(manifest, 2), ["POV remains Calder"])
-        self.assertIn("Receipt appears only", must_include_for_chapter(manifest, 14)[0])
+        self.assertNotIn(
+            "Receipt appears only in Chapters Three, Five, and Fourteen.",
+            must_include_for_chapter(manifest, 14),
+        )
         self.assertIn("Evidence handoff", must_include_for_chapter(manifest, 14))
         self.assertIn(
             "The final curtain image must represent chosen visibility.",
