@@ -99,7 +99,7 @@ class RevealTimelineGateTests(unittest.TestCase):
             }
         )
         prose = (
-            "Calder compares the evidence: tracking number, clipped corner, "
+            "Calder's evidence inventory compares the tracking number, clipped corner, "
             "honeytoken phrase, Grant's instruction, and original lobby footage."
         )
         self.assertEqual(_issues(12, prose, ledger), [])

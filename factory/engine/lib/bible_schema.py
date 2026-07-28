@@ -671,11 +671,11 @@ def _mystery_fact_match(
         "name", "child", "children", "voice", "room", "hotel", "family",
         "summer", "years", "year", "said", "says", "including", "through",
     } | {name for name in name_stop if name}
-    tokens = [
-        token
-        for token in re.findall(r"[a-zÀ-Ỹà-ỹ']{5,}", fact_lower)
-        if token not in stop
-    ]
+    tokens = []
+    for token in re.findall(r"[a-zÀ-Ỹà-ỹ']{5,}", fact_lower):
+        possessive_base = token[:-2] if token.endswith("'s") else token
+        if token not in stop and possessive_base not in stop:
+            tokens.append(token)
     unique: list[str] = []
     seen: set[str] = set()
     for token in tokens:
