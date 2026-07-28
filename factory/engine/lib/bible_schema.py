@@ -638,6 +638,122 @@ def _plan_affirmative_blob(plan: dict) -> str:
     return " ".join(p for p in parts if p).lower()
 
 
+def _mystery_fact_match(
+    fact: str,
+    blob: str,
+    bible: dict[str, Any],
+) -> tuple[bool, int | None]:
+    """Match one reveal fact without weakening the established seven-token bar."""
+    fact_lower = str(fact or "").lower().strip()
+    if not fact_lower:
+        return False, None
+    if len(fact_lower) > 20:
+        snippet = fact_lower[: min(40, len(fact_lower))]
+        if snippet in blob:
+            return True, None
+
+    name_stop = {
+        str(female_lead(bible).get("name") or "").lower().split()[0]
+        if female_lead(bible).get("name")
+        else "",
+        str(male_lead(bible).get("name") or "").lower().split()[0]
+        if male_lead(bible).get("name")
+        else "",
+    }
+    for cast_member in bible.get("supporting_cast", []) or []:
+        if isinstance(cast_member, dict) and cast_member.get("name"):
+            name_stop.update(str(cast_member["name"]).lower().split())
+    stop = {
+        "the", "and", "was", "were", "that", "with", "from", "her", "his",
+        "she", "who", "had", "for", "are", "this", "they", "been", "have",
+        "into", "only", "also", "while", "after", "before", "their", "them",
+        "a", "an", "of", "to", "in", "on", "as", "by", "or", "it", "is",
+        "name", "child", "children", "voice", "room", "hotel", "family",
+        "summer", "years", "year", "said", "says", "including", "through",
+    } | {name for name in name_stop if name}
+    tokens = [
+        token
+        for token in re.findall(r"[a-zÀ-Ỹà-ỹ']{5,}", fact_lower)
+        if token not in stop
+    ]
+    unique: list[str] = []
+    seen: set[str] = set()
+    for token in tokens:
+        if token not in seen:
+            seen.add(token)
+            unique.append(token)
+    fingerprint = unique[:16]
+    hits = sum(1 for token in fingerprint if token in blob)
+    density = hits / max(1, len(fingerprint))
+    # Seven shared nouns can still join two different evidence beats. Require
+    # the cluster to cover most of this specific reveal fact as well.
+    return hits >= 7 and density >= 0.60, hits
+
+
+def mystery_reveal_timing_issues(
+    plan: dict[str, Any],
+    bible: dict[str, Any],
+    *,
+    ledger: dict[str, Any] | None = None,
+) -> list[str]:
+    """Validate plan prose only against reveal facts still hidden this chapter."""
+    from factory.engine.lib.narrative_compiler import (
+        hidden_reveal_facts_at_chapter,
+    )
+
+    chapter = int(plan.get("chapter") or 0)
+    central = bible.get("central_mystery") or {}
+    answer = str(central.get("answer") or "").strip()
+    reveal_chapter = int(central.get("reveal_chapter") or 0)
+    if not answer:
+        return []
+
+    timeline = hidden_reveal_facts_at_chapter(
+        ledger or {},
+        chapter,
+        fallback_answer=answer,
+        fallback_reveal_chapter=reveal_chapter,
+    )
+    blob = _plan_affirmative_blob(plan)
+    issues: list[str] = []
+    for fact in timeline["hidden"]:
+        matched, hits = _mystery_fact_match(str(fact.get("text") or ""), blob, bible)
+        if not matched:
+            continue
+        suffix = "" if hits is None else f":token_hits_{hits}"
+        issues.append(
+            f"ch{chapter}:canon:mystery_reveal_too_early:"
+            f"{fact.get('id')}:before_ch{int(fact.get('chapter') or reveal_chapter)}"
+            f"{suffix}"
+        )
+
+    # Unmapped summary prose stays hidden until the canonical chapter. A match
+    # fails loudly instead of silently assuming that the fragment is already open.
+    for fact in timeline["unmapped"]:
+        fact_chapter = int(fact.get("chapter") or reveal_chapter)
+        if fact_chapter <= chapter or not fact.get("text"):
+            continue
+        matched, hits = _mystery_fact_match(str(fact["text"]), blob, bible)
+        if not matched:
+            continue
+        suffix = "" if hits is None else f":token_hits_{hits}"
+        issues.append(
+            f"ch{chapter}:canon:mystery_answer_fragment_unmapped:"
+            f"{fact.get('id')}:before_ch{fact_chapter}{suffix}"
+        )
+
+    if timeline["hidden"]:
+        next_hidden_chapter = min(int(fact["chapter"]) for fact in timeline["hidden"])
+        for negation in (r"không phải", r"thực ra là", r"sự thật là"):
+            question = str(central.get("question") or "").lower()[:15]
+            if re.search(negation, blob) and question and question in blob:
+                issues.append(
+                    f"ch{chapter}:canon:mystery_alternate_reveal:"
+                    f"before_ch{next_hidden_chapter}"
+                )
+    return issues
+
+
 def _both_leads_near(text: str, name_a: str, name_b: str, window: int = 80) -> bool:
     if not name_a or not name_b:
         return False
@@ -656,6 +772,7 @@ def validate_plan_against_canon(
     bible: dict,
     *,
     all_plans: list[dict] | None = None,
+    ledger: dict[str, Any] | None = None,
 ) -> list[str]:
     """QC canon từ bible — không hardcode tên cuốn."""
     issues: list[str] = []
@@ -717,60 +834,8 @@ def validate_plan_against_canon(
             if len(types) > 1:
                 issues.append(f"ch{ch}:canon:identity_drift_across_plans:{name}:{sorted(types)}")
 
-    # 3 & 4. Mystery single-version + reveal timing (affirmative beats only).
-    cm = bible.get("central_mystery", {})
-    answer = str(cm.get("answer", "")).strip()
-    reveal_ch = int(cm.get("reveal_chapter", 999) or 999)
-    blob = _plan_affirmative_blob(plan)
-    if answer:
-        ans_lower = answer.lower()
-        if ch < reveal_ch and len(ans_lower) > 20:
-            snippet = ans_lower[: min(40, len(ans_lower))]
-            if snippet in blob:
-                issues.append(f"ch{ch}:canon:mystery_reveal_too_early:before_ch{reveal_ch}")
-            else:
-                # Cast/first names appear in every mystery plant — exclude from fingerprint.
-                name_stop = {
-                    str(female_lead(bible).get("name") or "").lower().split()[0]
-                    if female_lead(bible).get("name")
-                    else "",
-                    str(male_lead(bible).get("name") or "").lower().split()[0]
-                    if male_lead(bible).get("name")
-                    else "",
-                }
-                for c in cast:
-                    if isinstance(c, dict) and c.get("name"):
-                        parts_n = str(c["name"]).lower().split()
-                        name_stop.update(parts_n)
-                stop = {
-                    "the", "and", "was", "were", "that", "with", "from", "her", "his",
-                    "she", "who", "had", "for", "are", "this", "they", "been", "have",
-                    "into", "only", "also", "while", "after", "before", "their", "them",
-                    "a", "an", "of", "to", "in", "on", "as", "by", "or", "it", "is",
-                    "name", "child", "children", "voice", "room", "hotel", "family",
-                    "summer", "years", "year", "said", "says", "including", "through",
-                } | {n for n in name_stop if n}
-                tokens = [
-                    t for t in re.findall(r"[a-zà-ỹ']{5,}", ans_lower)
-                    if t not in stop
-                ]
-                uniq: list[str] = []
-                seen: set[str] = set()
-                for t in tokens:
-                    if t not in seen:
-                        seen.add(t)
-                        uniq.append(t)
-                # Need a dense cluster of distinctive answer tokens — planting clues is OK.
-                hits = sum(1 for t in uniq[:16] if t in blob)
-                if hits >= 7:
-                    issues.append(
-                        f"ch{ch}:canon:mystery_reveal_too_early:before_ch{reveal_ch}"
-                        f":token_hits_{hits}"
-                    )
-        if ch < reveal_ch:
-            for neg in (r"không phải", r"thực ra là", r"sự thật là"):
-                if re.search(neg, blob) and cm.get("question", "").lower()[:15] in blob:
-                    issues.append(f"ch{ch}:canon:mystery_alternate_reveal_before_ch{reveal_ch}")
+    # 3 & 4. Mystery single-version + chapter-scoped reveal timing.
+    issues.extend(mystery_reveal_timing_issues(plan, bible, ledger=ledger))
 
     issues.extend(validate_plan_world_rules(plan, bible))
     return issues

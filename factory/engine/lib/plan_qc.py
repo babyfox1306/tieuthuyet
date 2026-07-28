@@ -1047,7 +1047,20 @@ def validate_plan(
     if bible:
         from factory.engine.lib.bible_schema import validate_plan_against_canon
 
-        issues.extend(validate_plan_against_canon(plan, bible, all_plans=all_plans))
+        canon_ledger = None
+        if ws is not None:
+            try:
+                canon_ledger = load_ledger(ws)
+            except (OSError, TypeError, ValueError):
+                canon_ledger = None
+        issues.extend(
+            validate_plan_against_canon(
+                plan,
+                bible,
+                all_plans=all_plans,
+                ledger=canon_ledger,
+            )
+        )
 
     lang = target_language(direction)
     issues.extend(validate_plan_language(plan, lang))

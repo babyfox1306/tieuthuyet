@@ -523,6 +523,143 @@ def build_reveal_catalog(ledger: dict[str, Any]) -> dict[str, dict[str, Any]]:
     return catalog
 
 
+_REVEAL_MAPPING_STOPWORDS = frozenset(
+    {
+        "about",
+        "after",
+        "before",
+        "chapter",
+        "from",
+        "have",
+        "into",
+        "only",
+        "that",
+        "their",
+        "then",
+        "there",
+        "these",
+        "they",
+        "this",
+        "through",
+        "what",
+        "when",
+        "where",
+        "which",
+        "while",
+        "with",
+    }
+)
+
+
+def _reveal_mapping_words(text: str) -> set[str]:
+    return {
+        word
+        for word in re.findall(r"[a-zA-ZÀ-Ỹà-ỹ']{5,}", str(text or "").lower())
+        if word not in _REVEAL_MAPPING_STOPWORDS
+    }
+
+
+def _answer_fragments(answer: str) -> list[str]:
+    return [
+        fragment.strip()
+        for fragment in re.split(r"(?<=[.!?])\s+", str(answer or "").strip())
+        if fragment.strip()
+    ]
+
+
+def hidden_reveal_facts_at_chapter(
+    ledger: dict[str, Any],
+    chapter: int,
+    *,
+    fallback_answer: str = "",
+    fallback_reveal_chapter: int | None = None,
+) -> dict[str, list[dict[str, Any]]]:
+    """Return opened/hidden reveal facts from the canonical ledger timeline.
+
+    ``central_mystery.answer`` is a derived summary and may combine facts opened
+    in different chapters.  Multi-reveal books therefore use each ledger reveal
+    description as the timing contract.  Answer fragments not represented by any
+    reveal remain conservative fallback facts and are labelled ``unmapped`` so a
+    matching plan fails loudly instead of silently passing.
+
+    Legacy books with zero or one structured reveal retain the old single-answer
+    behavior.
+    """
+    current = int(chapter or 0)
+    canonical = int(
+        fallback_reveal_chapter
+        or ledger.get("canonical_reveal_chapter")
+        or 0
+    )
+    reveals: list[dict[str, Any]] = []
+    diagnostics: list[dict[str, Any]] = []
+    for index, reveal in enumerate(ledger.get("major_reveals") or [], start=1):
+        if not isinstance(reveal, dict):
+            diagnostics.append(
+                {
+                    "id": f"MR_INDEX_{index}",
+                    "chapter": canonical,
+                    "text": "",
+                    "reason": "invalid_reveal_object",
+                }
+            )
+            continue
+        rid = str(reveal.get("id") or f"MR_INDEX_{index}")
+        reveal_ch = int(reveal.get("chapter") or 0)
+        text = reveal_semantic_text(reveal)
+        if reveal_ch <= 0 or not text:
+            diagnostics.append(
+                {
+                    "id": rid,
+                    "chapter": reveal_ch or canonical,
+                    "text": text,
+                    "reason": (
+                        "missing_reveal_chapter"
+                        if reveal_ch <= 0
+                        else "missing_reveal_text"
+                    ),
+                }
+            )
+            continue
+        reveals.append({"id": rid, "chapter": reveal_ch, "text": text})
+
+    if len(reveals) <= 1:
+        reveal_ch = reveals[0]["chapter"] if reveals else canonical
+        text = str(fallback_answer or "").strip()
+        if not text and reveals:
+            text = reveals[0]["text"]
+        facts = (
+            [{"id": reveals[0]["id"] if reveals else "CENTRAL", "chapter": reveal_ch, "text": text}]
+            if text and reveal_ch > 0
+            else []
+        )
+        return {
+            "opened": [fact for fact in facts if fact["chapter"] <= current],
+            "hidden": [fact for fact in facts if fact["chapter"] > current],
+            "unmapped": diagnostics,
+        }
+
+    opened = [fact for fact in reveals if fact["chapter"] <= current]
+    hidden = [fact for fact in reveals if fact["chapter"] > current]
+
+    reveal_word_sets = [_reveal_mapping_words(fact["text"]) for fact in reveals]
+    for index, fragment in enumerate(_answer_fragments(fallback_answer), start=1):
+        words = _reveal_mapping_words(fragment)
+        mapped = any(len(words & reveal_words) >= 2 for reveal_words in reveal_word_sets)
+        if mapped:
+            continue
+        diagnostics.append(
+            {
+                "id": f"ANSWER_FRAGMENT_{index}",
+                "chapter": canonical,
+                "text": fragment,
+                "reason": "answer_fragment_unmapped",
+            }
+        )
+
+    return {"opened": opened, "hidden": hidden, "unmapped": diagnostics}
+
+
 def build_red_herring_catalog(ledger: dict[str, Any]) -> dict[str, dict[str, Any]]:
     catalog: dict[str, dict[str, Any]] = {}
     for rh in ledger.get("red_herrings") or []:
