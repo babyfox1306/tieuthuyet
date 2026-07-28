@@ -20,6 +20,7 @@ from factory.engine.lib.intent_manifest import (
     approve_intent,
     compile_and_save_intent,
     compile_intent_manifest,
+    derive_must_include_requirements,
     infer_canonical_reveal_chapter,
     locked_pack_for_outliner,
     must_include_for_chapter,
@@ -125,6 +126,64 @@ def _write_ws(root: Path) -> Path:
 
 
 class IntentManifestTests(unittest.TestCase):
+    def test_must_include_scope_taxonomy_projects_only_applicable_items(self) -> None:
+        requirements = derive_must_include_requirements(
+            {
+                "must_include": [
+                    "Receipt appears only in Chapters Three, Five, and Fourteen.",
+                    "The final curtain image must represent chosen visibility.",
+                    "Preserve the evidentiary theme across the whole book.",
+                    {
+                        "text": "POV remains Calder",
+                        "scope": "global_invariant",
+                    },
+                    {
+                        "text": "Evidence handoff",
+                        "scope": "chapter_range",
+                        "start_chapter": 14,
+                        "end_chapter": 15,
+                    },
+                ]
+            },
+            18,
+        )
+        self.assertEqual(requirements[0]["chapters"], [3, 5, 14])
+        self.assertEqual(requirements[1]["scope"], "ending_only")
+        self.assertEqual(requirements[2]["scope"], "full_book_audit_only")
+        manifest = {
+            "chapter_count": 18,
+            "must_include_by_chapter": {},
+            "must_include_requirements": requirements,
+        }
+        self.assertEqual(must_include_for_chapter(manifest, 2), ["POV remains Calder"])
+        self.assertIn("Receipt appears only", must_include_for_chapter(manifest, 14)[0])
+        self.assertIn("Evidence handoff", must_include_for_chapter(manifest, 14))
+        self.assertIn(
+            "The final curtain image must represent chosen visibility.",
+            must_include_for_chapter(manifest, 18),
+        )
+        self.assertNotIn(
+            "Preserve the evidentiary theme across the whole book.",
+            must_include_for_chapter(manifest, 18),
+        )
+
+    def test_bible_copy_of_book_requirement_is_not_a_world_rule(self) -> None:
+        from factory.engine.lib.prompt_builder import _world_rules_for_chapter
+
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = _write_ws(Path(tmp))
+            approve_intent(ws, book=1)
+            bible = {
+                "world_rules": [
+                    "Cliffhanger every chapter",
+                    "Gravity remains constant.",
+                ]
+            }
+            self.assertEqual(
+                _world_rules_for_chapter(ws, bible, 1),
+                ["Gravity remains constant."],
+            )
+
     def test_canonical_reveal_is_derived_from_affirmative_chapter_map(self) -> None:
         concept = {
             "chapter_map": {

@@ -500,6 +500,115 @@ def _must_include_by_chapter(
     return out
 
 
+_NUMBERED_CHAPTER_WORDS = {
+    "one": 1,
+    "two": 2,
+    "three": 3,
+    "four": 4,
+    "five": 5,
+    "six": 6,
+    "seven": 7,
+    "eight": 8,
+    "nine": 9,
+    "ten": 10,
+    "eleven": 11,
+    "twelve": 12,
+    "thirteen": 13,
+    "fourteen": 14,
+    "fifteen": 15,
+    "sixteen": 16,
+    "seventeen": 17,
+    "eighteen": 18,
+}
+
+
+def _chapter_mentions(text: str) -> list[int]:
+    chapters: list[int] = []
+    word_tokens = "|".join(
+        sorted(_NUMBERED_CHAPTER_WORDS, key=len, reverse=True)
+    )
+    chapter_token = rf"(?:\d{{1,3}}|{word_tokens})"
+    separator = r"(?:\s*,\s*(?:and\s+)?|\s+(?:and|&|to|through)\s+|\s*-\s*)"
+    for match in re.finditer(
+        rf"\bCh(?:apter)?s?\s+(?P<values>{chapter_token}"
+        rf"(?:{separator}{chapter_token})*)\b",
+        str(text or ""),
+        flags=re.IGNORECASE,
+    ):
+        values = re.findall(
+            rf"\b(?:\d{{1,3}}|{word_tokens})\b",
+            match.group("values").lower(),
+        )
+        for value in values:
+            chapter = int(value) if value.isdigit() else _NUMBERED_CHAPTER_WORDS[value]
+            if chapter not in chapters:
+                chapters.append(chapter)
+    return chapters
+
+
+def derive_must_include_requirements(
+    concept: dict[str, Any],
+    chapter_count: int,
+) -> list[dict[str, Any]]:
+    """Give flat legacy requirements an explicit projection scope.
+
+    Structured objects are authoritative. Legacy strings are split at
+    semicolons; explicit chapter annotations and ending language are safe to
+    derive, while ambiguous prose remains full-book-audit-only.
+    """
+    out: list[dict[str, Any]] = []
+    raw_items = concept.get("must_include") or []
+    if not isinstance(raw_items, list):
+        return out
+    for raw in raw_items:
+        if isinstance(raw, dict):
+            text = str(raw.get("text") or raw.get("requirement") or "").strip()
+            scope = str(raw.get("scope") or "").strip()
+            if not text or scope not in {
+                "global_invariant",
+                "chapter_specific",
+                "chapter_range",
+                "ending_only",
+                "full_book_audit_only",
+            }:
+                continue
+            item = {"text": text, "scope": scope}
+            if scope == "chapter_specific":
+                item["chapters"] = [
+                    int(ch) for ch in (raw.get("chapters") or []) if int(ch) > 0
+                ]
+            elif scope == "chapter_range":
+                item["start_chapter"] = int(raw.get("start_chapter") or 1)
+                item["end_chapter"] = int(
+                    raw.get("end_chapter") or chapter_count
+                )
+            out.append(item)
+            continue
+
+        clauses = [
+            clause.strip()
+            for clause in re.split(r"\s*;\s*", str(raw or ""))
+            if clause.strip()
+        ]
+        for clause in clauses:
+            chapters = [
+                ch for ch in _chapter_mentions(clause) if ch <= chapter_count
+            ]
+            if chapters:
+                out.append(
+                    {
+                        "text": clause,
+                        "scope": "chapter_specific",
+                        "chapters": chapters,
+                    }
+                )
+            elif re.search(r"\b(?:final|ending|aftermath)\b", clause, re.I):
+                out.append({"text": clause, "scope": "ending_only"})
+            else:
+                out.append({"text": clause, "scope": "full_book_audit_only"})
+    return out
+
+
 def compile_intent_manifest(ws: Path, book: int | None = None) -> dict[str, Any]:
     """Python-only compile. Raises ValueError with joined errors if incomplete."""
     concept = load_concept(ws)
@@ -557,6 +666,10 @@ def compile_intent_manifest(ws: Path, book: int | None = None) -> dict[str, Any]
         "must_include_by_chapter": must_by_ch,
         "must_avoid": _as_str_list(concept.get("must_avoid")),
         "must_include_book": _as_str_list(concept.get("must_include")),
+        "must_include_requirements": derive_must_include_requirements(
+            concept,
+            chapter_count,
+        ),
         "ending_book1": str(concept.get("ending_book1") or "").strip(),
         "hook_book2": str(concept.get("hook_book2") or "").strip(),
         "surface_plot": _surface_plot(concept),
@@ -771,7 +884,30 @@ def chapter_entry(manifest: dict, chapter: int) -> dict[str, Any]:
 
 def must_include_for_chapter(manifest: dict, chapter: int) -> list[str]:
     by = manifest.get("must_include_by_chapter") or {}
-    return list(by.get(str(chapter)) or by.get(chapter) or [])
+    out = list(by.get(str(chapter)) or by.get(chapter) or [])
+    total = int(manifest.get("chapter_count") or 0)
+    for requirement in manifest.get("must_include_requirements") or []:
+        if not isinstance(requirement, dict):
+            continue
+        text = str(requirement.get("text") or "").strip()
+        scope = str(requirement.get("scope") or "")
+        applies = (
+            scope == "global_invariant"
+            or (
+                scope == "chapter_specific"
+                and chapter in [int(ch) for ch in requirement.get("chapters") or []]
+            )
+            or (
+                scope == "chapter_range"
+                and int(requirement.get("start_chapter") or 1)
+                <= chapter
+                <= int(requirement.get("end_chapter") or total)
+            )
+            or (scope == "ending_only" and total > 0 and chapter == total)
+        )
+        if applies and text and text not in out:
+            out.append(text)
+    return out
 
 
 def locked_pack_for_outliner(ws: Path, book: int, act_from: int, act_to: int) -> dict[str, Any]:

@@ -234,6 +234,18 @@ def _world_rules_for_chapter(
     man = load_intent_manifest(ws)
     if not man or man.get("status") != "approved":
         return rules
+    book_requirements = {
+        re.sub(r"\s+", " ", str(item)).strip().casefold()
+        for item in (man.get("must_include_book") or [])
+        if str(item).strip()
+    }
+    # Narrative/bible generation may mirror the legacy flat list into
+    # world_rules. Those copies are audit inputs, not global chapter rules.
+    rules = [
+        rule
+        for rule in rules
+        if re.sub(r"\s+", " ", rule).strip().casefold() not in book_requirements
+    ]
     true = str(man.get("true_plot") or "").lower()
     surface = str(man.get("surface_plot") or "").lower()
     if not true or chapter >= int(man.get("chapter_count") or 99):
