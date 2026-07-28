@@ -408,23 +408,53 @@ def qc_and_fix_plans(ws: Path, book: int, *, use_llm: bool = True) -> dict[int, 
         ch = int(p.get("chapter") or 0)
         p = apply_deterministic_plan_fixes(p, direction)
         issues = validate_plan(p, direction, bible=bible, all_plans=plans, ws=ws)
-        if issues and use_llm:
+        source_conflicts = [
+            issue for issue in issues if _soft_intentional_early_reveal(ws, str(issue))
+        ]
+        fixable_issues = [issue for issue in issues if issue not in source_conflicts]
+        if source_conflicts:
             safe_print(
-                f"[fix-plans] ch{ch} ({done}/{total}): {len(issues)} issue(s) → plan_fixer…"
+                f"[fix-plans] ch{ch}: unresolved source conflict; "
+                "concept/intent permits the reader reveal but derived bible metadata "
+                f"disagrees — no LLM ({' | '.join(sorted(source_conflicts))})"
+            )
+        if fixable_issues and use_llm:
+            before_signature = tuple(sorted(str(issue) for issue in fixable_issues))
+            before_content = json.dumps(
+                normalize_chapter_plan(p), ensure_ascii=False, sort_keys=True
+            )
+            safe_print(
+                f"[fix-plans] ch{ch} ({done}/{total}): "
+                f"{len(fixable_issues)} issue(s) → plan_fixer…"
             )
             try:
                 p = normalize_chapter_plan(
-                    merge_narrative_into_plans(ws, [fix_plan_with_llm(ws, book, p, issues)])[0]
+                    merge_narrative_into_plans(
+                        ws, [fix_plan_with_llm(ws, book, p, fixable_issues)]
+                    )[0]
                 )
                 p = apply_deterministic_plan_fixes(p, direction)
                 issues = validate_plan(p, direction, bible=bible, all_plans=plans, ws=ws)
                 if issues:
-                    safe_print(f"[fix-plans] ch{ch}: still {len(issues)} issue(s) after fixer")
+                    after_signature = tuple(sorted(str(issue) for issue in issues))
+                    after_content = json.dumps(
+                        normalize_chapter_plan(p), ensure_ascii=False, sort_keys=True
+                    )
+                    if after_signature == before_signature and after_content == before_content:
+                        safe_print(
+                            f"[fix-plans] ch{ch}: NO-PROGRESS "
+                            f"signature unchanged={after_signature}; plan unchanged; stop"
+                        )
+                    else:
+                        safe_print(
+                            f"[fix-plans] ch{ch}: still {len(issues)} issue(s) after fixer; "
+                            f"before={before_signature}; after={after_signature}"
+                        )
                 else:
                     safe_print(f"[fix-plans] ch{ch}: fixed")
             except Exception as exc:
                 safe_print(f"[fix-plans] ch{ch}: fixer failed — {exc}")
-        elif issues:
+        elif fixable_issues:
             safe_print(f"[fix-plans] ch{ch} ({done}/{total}): {len(issues)} issue(s) (no LLM)")
         plans[i] = p
         if issues:

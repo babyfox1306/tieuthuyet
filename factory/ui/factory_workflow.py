@@ -749,7 +749,6 @@ def run_pipeline_step(workspace_id: str, action: str, book: int = 1) -> dict:
                 # If bible file exists but not approved, still allow when intent ok
                 require_bible = False
             plan_book(ws, book, require_bible=False)
-            fix_plans(ws, book, use_llm=True)
             return {"ok": True, **pipeline_status(workspace_id, book)}
 
         if action == "replan":
@@ -765,7 +764,6 @@ def run_pipeline_step(workspace_id: str, action: str, book: int = 1) -> dict:
             if not canon_registry_path(ws).exists():
                 scaffold_canon_registry(ws, force=False)
             plan_book(ws, book, force_replan=True, require_bible=False)
-            fix_plans(ws, book, use_llm=True)
             return {"ok": True, "replanned": True, **pipeline_status(workspace_id, book)}
 
         if action == "fix-plans":
