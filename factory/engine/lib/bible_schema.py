@@ -685,9 +685,31 @@ def _mystery_fact_match(
     fingerprint = unique[:16]
     hits = sum(1 for token in fingerprint if token in blob)
     density = hits / max(1, len(fingerprint))
+    # A later reveal often inventories evidence introduced by earlier reveals.
+    # Shared objects alone (envelope, tracking number, honeytoken, footage, ...)
+    # do not assert the later conclusion.  Require at least one early
+    # discriminative predicate/state token from the reveal description.
+    generic_subjects = {
+        "evidence",
+        "clue",
+        "clues",
+        "record",
+        "records",
+        "document",
+        "documents",
+        "footage",
+        "chapter",
+    }
+    predicate_anchors = [
+        token for token in fingerprint[:4] if token not in generic_subjects
+    ]
+    has_predicate_anchor = (
+        not predicate_anchors
+        or any(token in blob for token in predicate_anchors)
+    )
     # Seven shared nouns can still join two different evidence beats. Require
     # the cluster to cover most of this specific reveal fact as well.
-    return hits >= 7 and density >= 0.60, hits
+    return hits >= 7 and density >= 0.60 and has_predicate_anchor, hits
 
 
 def mystery_reveal_timing_issues(

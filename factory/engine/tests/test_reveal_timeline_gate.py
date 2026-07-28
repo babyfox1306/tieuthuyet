@@ -84,6 +84,40 @@ class RevealTimelineGateTests(unittest.TestCase):
         )
         self.assertEqual(_issues(10, prose, _ledger()), [])
 
+    def test_shared_evidence_inventory_does_not_assert_later_transfer(self) -> None:
+        ledger = _ledger()
+        ledger["major_reveals"].append(
+            {
+                "id": "MR15",
+                "chapter": 15,
+                "description": (
+                    "Evidence transferred out of Calder's sole custody. Lena, Calder, "
+                    "and Mae reconstruct and verify the evidence chain using tracking "
+                    "number, clipped corner, honeytoken phrase, Grant's instruction, "
+                    "original lobby footage, notebook timestamp, and door seals."
+                ),
+            }
+        )
+        prose = (
+            "Calder compares the evidence: tracking number, clipped corner, "
+            "honeytoken phrase, Grant's instruction, and original lobby footage."
+        )
+        self.assertEqual(_issues(12, prose, ledger), [])
+
+    def test_later_transfer_conclusion_still_flags(self) -> None:
+        ledger = _ledger()
+        fact = (
+            "Evidence transferred out of Calder's sole custody as Lena and Calder "
+            "reconstruct and verify the evidence chain using the tracking number, "
+            "clipped corner, honeytoken phrase, and original lobby footage."
+        )
+        ledger["major_reveals"].append(
+            {"id": "MR15", "chapter": 15, "description": fact}
+        )
+        self.assertTrue(
+            any("MR15:before_ch15" in issue for issue in _issues(12, fact, ledger))
+        )
+
     def test_legacy_single_reveal_keeps_answer_gate(self) -> None:
         answer = "The archivist forged every timestamp receipt ledger signature and camera record."
         ledger = {
