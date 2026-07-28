@@ -1,0 +1,17 @@
+title: Technical Reference Regression
+target_language: en
+chapter_count: 15
+pov:
+  character: Calder Reed
+  mode: first_person
+  tense: past
+  single_pov: true
+characters:
+  - name: Calder Reed
+    role: male lead
+  - name: Lena Hart
+    role: heroine
+chapter_map:
+  9: "Day eight. Subject Hart identifies the watcher."
+  12: "Day ten. Grant sends the instruction."
+  15: "Day thirteen. Target Reed reconstructs the Chapter Twelve message."

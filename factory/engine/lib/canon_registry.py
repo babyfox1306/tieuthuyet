@@ -728,6 +728,7 @@ _PERSON_ROLE_PREFIXES = frozenset(
         "dr", "mr", "mrs", "ms", "professor", "judge",
     }
 )
+_REFERENCE_ROLE_PREFIXES = frozenset({"subject", "target", "contact"})
 
 
 def _clean_plan_person_candidate(raw: str) -> tuple[str, bool]:
@@ -735,6 +736,12 @@ def _clean_plan_person_candidate(raw: str) -> tuple[str, bool]:
     possessive = bool(re.search(r"['’]s$", text, flags=re.I))
     text = re.sub(r"['’]s$", "", text, flags=re.I).strip()
     words = text.split()
+    # Plan shorthand such as "Subject Hart", "Target Reed", or
+    # "Contact Lena Hart" identifies an already-declared role/name reference.
+    # It is not a newly invented person.  Fail safe: uncertain references stay
+    # untouched instead of becoming the destructive "unnamed contact" token.
+    if words and words[0].lower().rstrip(".") in _REFERENCE_ROLE_PREFIXES:
+        return "", possessive
     while len(words) >= 2 and (
         words[0].lower().rstrip(".") in _NAME_LEADING_CONTEXT
         or words[0].lower().rstrip(".") in _PERSON_ROLE_PREFIXES

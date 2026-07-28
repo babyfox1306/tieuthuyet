@@ -14,6 +14,7 @@ from factory.engine.lib.language import _VN_LETTER_RE, target_language
 from factory.engine.lib.machine_qc import word_count_vi
 from factory.engine.lib.prose_sanitize import find_markdown_artifacts, sanitize_prose
 from factory.engine.lib.prompt_builder import load_direction
+from factory.engine.lib.technical_refs import find_technical_chapter_reference
 from factory.engine.paths import book_catalog_dir, load_config, workspace_dir
 
 CHAPTER_HEADING_LINE = re.compile(
@@ -73,6 +74,7 @@ PROMOTE_RULES = frozenset(
         "EG-11",
         "EG-12",
         "EG-13",
+        "EG-19",
         "EG-16",
         "EG-16b",
     }
@@ -81,7 +83,7 @@ FULL_RULES = frozenset(
     {
         "EG-01", "EG-02", "EG-03", "EG-04", "EG-05", "EG-06", "EG-07", "EG-08",
         "EG-09", "EG-10", "EG-11", "EG-12", "EG-13", "EG-14", "EG-15", "EG-16",
-        "EG-16b", "EG-18",
+        "EG-16b", "EG-18", "EG-19",
     }
 )
 
@@ -1167,6 +1169,21 @@ def check_eg13_engine_tokens(body: str, chapter: int) -> list[dict[str, Any]]:
     return found
 
 
+def check_eg19_technical_chapter_reference(body: str, chapter: int) -> dict[str, Any]:
+    """Block non-diegetic planning labels that leaked into prose."""
+    hit = find_technical_chapter_reference(body)
+    if hit:
+        return _check(
+            "EG-19",
+            "error",
+            False,
+            chapter=chapter,
+            detail="technical Chapter N reference in body prose",
+            snippet=hit[:120],
+        )
+    return _check("EG-19", "error", True, chapter=chapter)
+
+
 def check_eg12_needs_fix(meta: dict, chapter: int, *, severity: str = "error") -> dict[str, Any]:
     """Flag non-empty catalog needs_fix.
 
@@ -1519,6 +1536,7 @@ def check_chapter_for_promote(
     if workspace_id:
         checks.append(check_eg11_generic_title(meta, lang, workspace_id, chapter))
     checks.extend(check_eg13_engine_tokens(body, chapter))
+    checks.append(check_eg19_technical_chapter_reference(body, chapter))
     eg12_sev = "error" if gcfg["publish_mode"] else "warn"
     checks.append(check_eg12_needs_fix(meta, chapter, severity=eg12_sev))
     checks.extend(check_eg16_duplicate_block(body, chapter))
@@ -1577,6 +1595,8 @@ def run_export_gate(
             checks.append(check_eg11_generic_title(meta, lang, workspace_id, ch_num))
         if "EG-13" in active:
             checks.extend(check_eg13_engine_tokens(body, ch_num))
+        if "EG-19" in active:
+            checks.append(check_eg19_technical_chapter_reference(body, ch_num))
         if "EG-12" in active:
             eg12_sev = "error" if gcfg["publish_mode"] else "warn"
             checks.append(check_eg12_needs_fix(meta, ch_num, severity=eg12_sev))

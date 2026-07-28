@@ -1,0 +1,8 @@
+characters:
+  female_lead:
+    canonical: Lena Hart
+    allowed_aliases: []
+  male_lead:
+    canonical: Calder Reed
+    allowed_aliases: []
+pov_mode: first_person

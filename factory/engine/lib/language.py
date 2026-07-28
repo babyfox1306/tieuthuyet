@@ -43,7 +43,8 @@ LANGUAGE_PROFILES: dict[str, dict[str, Any]] = {
         "must_not_label": "Cấm / không được mâu thuẫn",
         "output_instruction": (
             "Chỉ output nội dung chương. Dòng đầu: Chương N: <tiêu đề> (văn bản thường, không dùng # markdown). "
-            "Không meta, không checklist."
+            "Không meta, không checklist. Nhãn kỹ thuật Chapter N/ChN chỉ là metadata: "
+            "cấm đưa vào thân truyện; dùng ngày hoặc mốc thời gian nội truyện."
         ),
         "word_count_patch": "Target 1600-1900 chữ <<language_label>> — dưới 1250 = fail.",
         "role_header_genre": (
@@ -89,7 +90,8 @@ LANGUAGE_PROFILES: dict[str, dict[str, Any]] = {
         "must_not_label": "Forbidden / must not contradict",
         "output_instruction": (
             "Output chapter prose only. First line: Chapter N: <title> (plain text, no # markdown heading). "
-            "No meta, no checklist."
+            "No meta, no checklist. Technical Chapter N/ChN labels are metadata only: "
+            "never put them in body prose; use the in-story day or event anchor."
         ),
         "word_count_patch": "Target 1600-1900 <<language_label>> words — under 1250 = fail.",
         "spice": {

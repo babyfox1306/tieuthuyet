@@ -1,0 +1,67 @@
+{
+  "book": 1,
+  "total_chapters": 15,
+  "chapter_plans": [
+    {
+      "chapter": 9,
+      "title": "The Watcher",
+      "slug": "the-watcher",
+      "one_line_summary": "Lena identifies the watcher.",
+      "beat_summary": "Day eight. Subject Hart confronts Calder.",
+      "must_happen": [
+        "Subject Hart states what she observed."
+      ],
+      "must_not": [],
+      "opens_with": "Day eight. 06:14. Lena knocked.",
+      "cliffhanger": "Calder keeps the original.",
+      "signature_detail_hint": "A broken access-log line.",
+      "emotional_beat": "Recognition.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write the confrontation on day eight.",
+      "carries_to_next": "Lena controls the next disclosure."
+    },
+    {
+      "chapter": 12,
+      "title": "The Returned Phrase",
+      "slug": "the-returned-phrase",
+      "one_line_summary": "Grant repeats the phrase.",
+      "beat_summary": "Day ten. Grant sends the instruction.",
+      "must_happen": [
+        "Target Reed preserves Grant's exact message."
+      ],
+      "must_not": [],
+      "opens_with": "Day ten. 06:14. Grant's message arrived.",
+      "cliffhanger": "The phrase matches the notebook.",
+      "signature_detail_hint": "A timestamped message.",
+      "emotional_beat": "Confirmation.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Write Grant's message on day ten.",
+      "carries_to_next": "Calder preserves the message."
+    },
+    {
+      "chapter": 15,
+      "title": "The Chain",
+      "slug": "the-chain",
+      "one_line_summary": "Calder reconstructs the evidence chain.",
+      "beat_summary": "Day thirteen. The evidence leaves Calder's custody.",
+      "must_happen": [
+        "Use Grant's Chapter Twelve instruction.",
+        "Explain what Lena learned in Chapter Nine.",
+        "Preserve Subject Hart and Target Reed as plan references."
+      ],
+      "must_not": [
+        "Do not contradict the Chapter Twelve message."
+      ],
+      "opens_with": "Day thirteen. 07:03. The evidence drive was sealed.",
+      "cliffhanger": "Cross leaves with the evidence.",
+      "signature_detail_hint": "The page from Chapter Twelve.",
+      "emotional_beat": "Trust.",
+      "spice": 0,
+      "spice_note": "",
+      "chapter_task": "Reconstruct Grant's Ch12 message without using a technical chapter label.",
+      "carries_to_next": "The chain is distributed."
+    }
+  ]
+}

@@ -19,6 +19,7 @@ from factory.engine.lib.narrative_schema import (
     clue_plant_chapter,
     narrative_dir,
 )
+from factory.engine.lib.technical_refs import project_technical_chapter_refs
 from factory.engine.paths import workspace_dir
 
 # Profiles whose required_files include mystery ledger + knowledge matrix.
@@ -967,9 +968,19 @@ def format_narrative_constraints_block(
     *,
     lang: str = "en",
     locked_plan: bool = False,
+    chapter_days: dict[int, str] | None = None,
 ) -> str:
     """Render NARRATIVE CONSTRAINTS for Writer prompt — source is compiler only."""
     ch = compiled.get("chapter", 0)
+    chapter_days = chapter_days or {}
+
+    def writer_projection(value: Any) -> str:
+        return project_technical_chapter_refs(
+            str(value or ""),
+            chapter_days,
+            current_chapter=int(ch or 0),
+        )
+
     vi = lang == "vi"
     heading = (
         f"## RÀNG BUỘC NARRATIVE (Chương {ch})"
@@ -1008,7 +1019,7 @@ def format_narrative_constraints_block(
     plant_lines = []
     for cid in compiled.get("clues_plant") or []:
         d = details.get(cid, {})
-        content = d.get("content") or cid
+        content = writer_projection(d.get("content") or cid)
         plant_lines.append(f"**{cid}**: {content}")
     _section(
         "Clues to PLANT" if not vi else "Manh mối PHẢI GIEO",
@@ -1018,8 +1029,8 @@ def format_narrative_constraints_block(
     payoff_lines = []
     for cid in compiled.get("clues_payoff") or []:
         d = details.get(cid, {})
-        content = d.get("content") or cid
-        true_meaning = d.get("true_meaning", "")
+        content = writer_projection(d.get("content") or cid)
+        true_meaning = writer_projection(d.get("true_meaning", ""))
         line = f"**{cid}**: {content}"
         if true_meaning:
             line += f" → ({true_meaning})"
@@ -1033,7 +1044,7 @@ def format_narrative_constraints_block(
     for rev in compiled.get("reveals") or []:
         rid = rev.get("id", "")
         weight = rev.get("reveal_weight", REVEAL_WEIGHT_MAJOR)
-        text = rev.get("reveal", "")
+        text = writer_projection(rev.get("reveal", ""))
         reveal_lines.append(f"**{rid}** [{weight}]: {text}")
     _section(
         "Reveals this chapter" if not vi else "Hé lộ chương này",
@@ -1074,7 +1085,7 @@ def format_narrative_constraints_block(
         if may:
             lines.append("**" + ("May know" if not vi else "Được biết") + ":**")
             for m in may[:12]:
-                lines.append(f"- {m}")
+                lines.append(f"- {writer_projection(m)}")
             if len(may) > 12:
                 lines.append(f"- … (+{len(may) - 12})")
         if must_not:
@@ -1109,6 +1120,7 @@ def narrative_constraints_block_for_prompt(
     *,
     lang: str = "en",
     locked_plan: bool = False,
+    chapter_days: dict[int, str] | None = None,
 ) -> str:
     """Prompt block from compiler; empty string if compiler off or no constraints."""
     if not narrative_compiler_enabled(ws):
@@ -1145,7 +1157,10 @@ def narrative_constraints_block_for_prompt(
     except (OSError, TypeError, ValueError):
         pass
     return format_narrative_constraints_block(
-        compiled, lang=lang, locked_plan=locked_plan
+        compiled,
+        lang=lang,
+        locked_plan=locked_plan,
+        chapter_days=chapter_days,
     )
 
 

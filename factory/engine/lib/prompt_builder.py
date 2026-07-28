@@ -27,6 +27,10 @@ from factory.engine.lib.plan_normalize import (
     normalize_chapter_plan,
     normalize_chapter_plans,
 )
+from factory.engine.lib.technical_refs import (
+    derive_chapter_day_map,
+    project_technical_chapter_refs,
+)
 from factory.engine.paths import bible_path, book_workspace_dir, load_config, workspace_dir
 
 if TYPE_CHECKING:
@@ -508,6 +512,15 @@ def build_chapter_prompt(
     cfg = cfg or load_config()
     lang = target_language(direction, cfg)
     plan = normalize_chapter_plan(plan)
+    chapter_days = derive_chapter_day_map([*prior_plans, plan])
+
+    def writer_projection(value: str) -> str:
+        return project_technical_chapter_refs(
+            value,
+            chapter_days,
+            current_chapter=chapter,
+        )
+
     prof = language_profile(lang)
 
     registry: CanonRegistry | None = None
@@ -580,7 +593,9 @@ def build_chapter_prompt(
         max_chapters=int(cfg.get("story_so_far_max_chapters", 5) or 0) or None,
         registry=registry,
     )
+    prior = writer_projection(prior)
     must_not = coerce_text_list(plan.get("must_not", []))
+    must_not = [writer_projection(item) for item in must_not]
     opaque_knowledge_bans: list[str] = []
     visible_must_not: list[str] = []
     for item in must_not:
@@ -600,21 +615,26 @@ def build_chapter_prompt(
             visible_must_not.append(str(item))
     must_not = list(dict.fromkeys(visible_must_not + opaque_knowledge_bans))
     must_happen = coerce_text_list(plan.get("must_happen", []))
+    must_happen = [writer_projection(item) for item in must_happen]
     opens = plan.get("opens_with", plan.get("hook_hint", ""))
     if not isinstance(opens, str):
         opens = coerce_text_field(opens)
+    opens = writer_projection(opens)
     cliff = plan.get("cliffhanger", "")
     if not isinstance(cliff, str):
         cliff = coerce_text_field(cliff)
+    cliff = writer_projection(cliff)
     sig = plan.get("signature_detail_hint", "")
     if not isinstance(sig, str):
         sig = coerce_text_field(sig)
+    sig = writer_projection(sig)
     title = plan.get("title", f"Chương {chapter}")
     if not isinstance(title, str):
         title = coerce_text_field(title)
     task_body = plan.get("chapter_task") or plan.get("beat_summary", "")
     if not isinstance(task_body, str):
         task_body = coerce_text_field(task_body)
+    task_body = writer_projection(task_body)
 
     must_block = ""
     if must_happen:
@@ -681,6 +701,7 @@ def build_chapter_prompt(
             chapter,
             lang=lang,
             locked_plan=bool(plan.get("locked")),
+            chapter_days=chapter_days,
         )
         if narrative_block:
             parts.extend(["", narrative_block])

@@ -102,6 +102,29 @@ class CanonNameNormalizationTests(unittest.TestCase):
         self.assertEqual(scrubbed, plans)
         self.assertEqual(notes, [])
 
+    def test_plan_cast_scrub_ignores_role_surname_references(self) -> None:
+        allowed = {"Lena Hart", "Calder Reed"}
+        plans = [
+            {
+                "chapter": 1,
+                "opens_with": "Subject Hart, Lena. Status: unaware.",
+                "must_happen": ["Target Reed checks the camera."],
+            },
+            {
+                "chapter": 2,
+                "opens_with": "Subject Hart, Lena. Status: aware.",
+                "must_happen": ["Target Reed preserves the originals."],
+            },
+        ]
+
+        warnings = find_recurring_invented_plan_characters(plans, allowed)
+        scrubbed, notes = scrub_recurring_invented_plan_characters(plans, allowed)
+
+        self.assertEqual(warnings, [])
+        self.assertEqual(scrubbed, plans)
+        self.assertEqual(notes, [])
+        self.assertNotIn("unnamed contact", json.dumps(scrubbed).lower())
+
 
 def _copy_second_shadow_fixture(dst: Path) -> None:
     """Copy minimal Second Shadow assets into an isolated temp workspace."""
