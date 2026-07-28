@@ -101,6 +101,15 @@ def develop_pass(ws: Path, pass_name: str) -> Path:
         pass
 
     prior = _load_prior(nd, PASS_DEPS.get(pass_name, []))
+    from factory.engine.lib.intent_manifest import (
+        infer_canonical_reveal_chapter,
+        load_intent_manifest,
+    )
+
+    intent = load_intent_manifest(ws, int(direction.get("book") or 1))
+    canonical_reveal = intent.get("canonical_reveal_chapter")
+    if canonical_reveal is None:
+        canonical_reveal = infer_canonical_reveal_chapter(concept)
     book = int(direction.get("book") or 1)
     total_chapters = get_total_chapters(ws.name, book)
     payload = {
@@ -112,6 +121,10 @@ def develop_pass(ws: Path, pass_name: str) -> Path:
         "prior_narrative": prior,
         "series_bible": bible if bible else None,
         "output_file": PASS_TO_FILE[pass_name],
+        "intent_reveal_policy": {
+            "canonical_reveal_chapter": canonical_reveal,
+            "authority": "concept/approved intent; derived narrative must match",
+        },
     }
 
     raw, log = call_9router(
@@ -125,6 +138,8 @@ def develop_pass(ws: Path, pass_name: str) -> Path:
         from factory.engine.lib.chapter_derivation import normalize_narrative_pass
 
         data = normalize_narrative_pass(pass_name, data, total_chapters, book)
+        if pass_name == "mystery_ledger" and canonical_reveal is not None:
+            data["canonical_reveal_chapter"] = int(canonical_reveal)
     if pass_name == "book_arc" and isinstance(data, dict):
         data["total_chapters"] = total_chapters
         data["book_number"] = book

@@ -175,6 +175,63 @@ def _normalize_structured_chapter_map(raw: Any) -> dict[int, dict[str, Any]]:
     return out
 
 
+_CANONICAL_REVEAL_MARKERS = (
+    "reader learn",
+    "reader discovers",
+    "reader learns",
+    "full control reveal",
+    "control reveal",
+    "complete method",
+    "complete planner",
+    "full interpretation",
+    "full truth reveal",
+    "reveals the full truth",
+)
+
+
+def infer_canonical_reveal_chapter(
+    concept: dict[str, Any],
+    chapter_map: dict[int, dict[str, Any]] | None = None,
+) -> int | None:
+    """Derive the reader-facing mystery reveal from the highest intent sources.
+
+    Explicit structured metadata wins. Otherwise, inspect affirmative chapter-map
+    beats only; ``must_not_reveal`` and end-of-book payoff language are not
+    candidates. This keeps a legal/evidence payoff from being mistaken for the
+    first reader reveal.
+    """
+    for key in ("mystery_reveal_chapter", "canonical_reveal_chapter"):
+        value = concept.get(key)
+        if value is not None:
+            try:
+                chapter = int(value)
+            except (TypeError, ValueError):
+                continue
+            if chapter > 0:
+                return chapter
+
+    normalized = chapter_map
+    if normalized is None:
+        normalized = _normalize_structured_chapter_map(concept.get("chapter_map"))
+    scored: list[tuple[int, int]] = []
+    for chapter, entry in (normalized or {}).items():
+        affirmative = " ".join(
+            [
+                str(entry.get("title") or ""),
+                str(entry.get("beat") or ""),
+                " ".join(_as_str_list(entry.get("must_happen"))),
+                " ".join(_as_str_list(entry.get("must_include"))),
+            ]
+        ).lower()
+        score = sum(1 for marker in _CANONICAL_REVEAL_MARKERS if marker in affirmative)
+        if score:
+            scored.append((score, int(chapter)))
+    if scored:
+        best_score = max(score for score, _ in scored)
+        return min(chapter for score, chapter in scored if score == best_score)
+    return None
+
+
 def _infer_pov(concept: dict, directive: str) -> str:
     raw = concept.get("pov") or concept.get("point_of_view")
     if isinstance(raw, dict):
@@ -401,6 +458,7 @@ def compile_intent_manifest(ws: Path, book: int | None = None) -> dict[str, Any]
     concept_reveal = _normalize_reveal_ladder(concept.get("reveal_ladder"))
 
     chapter_map_list = [chapter_map[ch] for ch in sorted(chapter_map.keys())]
+    canonical_reveal_chapter = infer_canonical_reveal_chapter(concept, chapter_map)
     manifest: dict[str, Any] = {
         "version": MANIFEST_VERSION,
         "book": book_num,
@@ -425,6 +483,7 @@ def compile_intent_manifest(ws: Path, book: int | None = None) -> dict[str, Any]
         "genre_profile": genre,
         "language": language,
         "reveal_ladder": _build_reveal_ladder(chapter_map, concept_reveal, cast=cast),
+        "canonical_reveal_chapter": canonical_reveal_chapter,
     }
     manifest["manifest_digest"] = digest_obj(
         {k: v for k, v in manifest.items() if k not in ("status", "manifest_digest", "approved_at")}

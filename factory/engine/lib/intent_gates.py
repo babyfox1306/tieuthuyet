@@ -113,6 +113,20 @@ def g1_narrative_fidelity_errors(ws: Path, book: int | None = None) -> list[str]
         true = str(man.get("true_plot") or "")
 
     nd = narrative_dir(ws)
+    ledger_path = nd / "mystery_ledger.json"
+    if man and ledger_path.exists():
+        ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+        expected_reveal = man.get("canonical_reveal_chapter")
+        actual_reveal = ledger.get("canonical_reveal_chapter")
+        if (
+            expected_reveal is not None
+            and actual_reveal is not None
+            and int(expected_reveal) != int(actual_reveal)
+        ):
+            errors.append(
+                "narrative:G1:canonical_reveal_mismatch:"
+                f"intent_ch{int(expected_reveal)}!=ledger_ch{int(actual_reveal)}"
+            )
     kernel_path = nd / "kernel.json"
     if kernel_path.exists():
         kernel = json.loads(kernel_path.read_text(encoding="utf-8"))
@@ -128,7 +142,6 @@ def g1_narrative_fidelity_errors(ws: Path, book: int | None = None) -> list[str]
 
     # Chapter map vs book_arc / ledger plant chapters — detect relocated locked beats
     if man and (man.get("chapter_map") or []):
-        ledger_path = nd / "mystery_ledger.json"
         if ledger_path.exists():
             ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
             # If a map beat for chapter N is strongly unique and only appears in ledger at far chapter, flag

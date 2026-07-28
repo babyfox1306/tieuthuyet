@@ -893,7 +893,7 @@ def _prep_steps(status: dict, *, prompts_ready: bool = False) -> list[str]:
     ):
         return []
     steps: list[str] = []
-    if g.get("intent", {}).get("status") != "approved":
+    if not g.get("intent", {}).get("ok"):
         steps.extend(["compile-intent", "approve-intent"])
     # Do NOT auto-run develop/approve-narrative or architect/approve-bible
     if not g.get("canon", {}).get("ok"):
@@ -928,7 +928,7 @@ def _autopilot_steps(status: dict, *, prompts_ready: bool = False) -> list[str]:
     if not g.get("concept", {}).get("ok"):
         return []
     steps: list[str] = []
-    if g.get("intent", {}).get("status") != "approved":
+    if not g.get("intent", {}).get("ok"):
         steps.extend(["compile-intent", "approve-intent"])
 
     has_profile = bool((status.get("direction") or {}).get("narrative_profile"))

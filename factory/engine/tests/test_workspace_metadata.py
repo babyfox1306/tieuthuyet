@@ -128,6 +128,53 @@ class WorkspaceMetadataTests(unittest.TestCase):
             d = yaml.safe_load((ws / "direction.yaml").read_text(encoding="utf-8"))
             self.assertEqual(d["total_chapters"], 10)
 
+    def test_changed_concept_invalidates_derived_gates(self) -> None:
+        from factory.engine.lib.intent_manifest import concept_digest
+
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "stale-intent"
+            (ws / "books" / "01").mkdir(parents=True)
+            old_concept = {"title": "Old", "notes": "10 chapters"}
+            new_concept = {"title": "New", "notes": "10 chapters"}
+            (ws / "concept.yaml").write_text(
+                yaml.dump(new_concept), encoding="utf-8"
+            )
+            (ws / "direction.yaml").write_text(
+                yaml.dump(
+                    {
+                        "book": 1,
+                        "total_chapters": 10,
+                        "intent_status": "approved",
+                        "narrative_status": "approved",
+                        "bible_status": "approved",
+                        "plan_status": "approved",
+                    }
+                ),
+                encoding="utf-8",
+            )
+            intent_path = ws / "books" / "01" / "intent_manifest.json"
+            intent_path.write_text(
+                json.dumps(
+                    {
+                        "status": "approved",
+                        "concept_digest": concept_digest(old_concept),
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            result = sync_direction_from_concept(ws)
+
+            self.assertIn("derived_gates_invalidated", result["changed"])
+            direction = yaml.safe_load(
+                (ws / "direction.yaml").read_text(encoding="utf-8")
+            )
+            self.assertEqual(direction["narrative_status"], "draft")
+            self.assertEqual(direction["bible_status"], "draft")
+            self.assertEqual(direction["plan_status"], "draft")
+            intent = json.loads(intent_path.read_text(encoding="utf-8"))
+            self.assertEqual(intent["status"], "draft")
+
     def test_sync_sets_narrative_profile_from_concept(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             ws = Path(tmp) / "the-blue-hour"

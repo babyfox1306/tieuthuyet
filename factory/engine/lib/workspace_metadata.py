@@ -515,6 +515,29 @@ def sync_direction_from_concept(
             if key in direction:
                 direction[key] = "draft"
 
+    # A saved/imported concept invalidates every derived storytelling layer.
+    # Preserve statuses only while the approved intent digest still matches.
+    try:
+        from factory.engine.lib.intent_manifest import concept_digest, intent_manifest_path
+
+        book = int(direction.get("book") or 1)
+        intent_path = intent_manifest_path(ws, book)
+        if intent_path.exists():
+            intent = json.loads(intent_path.read_text(encoding="utf-8")) or {}
+            if intent.get("concept_digest") != concept_digest(concept):
+                intent["status"] = "draft"
+                intent.pop("approved_at", None)
+                intent_path.write_text(
+                    json.dumps(intent, indent=2, ensure_ascii=False) + "\n",
+                    encoding="utf-8",
+                )
+                direction["intent_status"] = "draft"
+                for key in ("narrative_status", "bible_status", "plan_status"):
+                    direction[key] = "draft"
+                changed.append("derived_gates_invalidated")
+    except (OSError, TypeError, ValueError, json.JSONDecodeError):
+        pass
+
     _save_yaml(ws / "direction.yaml", direction)
     sync_manifest_from_direction(ws)
     return {"ok": True, "changed": changed, "total_chapters": total, "spice_level": spice}

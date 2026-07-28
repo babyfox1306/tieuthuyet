@@ -128,23 +128,49 @@ def _load_mystery_ledger(ws: Path) -> dict[str, Any]:
 
 
 def seed_central_mystery_from_ledger(bible: dict[str, Any], ledger: dict[str, Any]) -> bool:
-    """Fill missing central_mystery from narrative mystery_ledger when present."""
+    """Align derived central_mystery with the canonical narrative ledger."""
     if not ledger:
-        return False
-    cm = bible.get("central_mystery")
-    if isinstance(cm, dict) and (cm.get("question") or "").strip() and (cm.get("answer") or "").strip():
         return False
     question = (ledger.get("main_mystery") or "").strip()
     answer = (ledger.get("truth") or "").strip()
     reveal = ledger.get("canonical_reveal_chapter")
     if not question or not answer:
         return False
-    bible["central_mystery"] = {
+    canonical = {
         "question": question,
         "answer": answer,
         "reveal_chapter": int(reveal) if reveal is not None else 1,
     }
-    return True
+    changed = bible.get("central_mystery") != canonical
+    bible["central_mystery"] = canonical
+    return changed
+
+
+def lock_bible_lead_names(
+    bible: dict[str, Any],
+    locked_leads: dict[str, str],
+) -> bool:
+    """Force Architect output to retain positive concept-declared lead names."""
+    if not isinstance(locked_leads, dict):
+        return False
+    leads = bible.setdefault("leads", {})
+    if not isinstance(leads, dict):
+        leads = {}
+        bible["leads"] = leads
+
+    changed = False
+    for side in ("female", "male"):
+        canonical = str(locked_leads.get(side) or "").strip()
+        if not canonical:
+            continue
+        block = leads.setdefault(side, {})
+        if not isinstance(block, dict):
+            block = {}
+            leads[side] = block
+        if str(block.get("name") or "").strip() != canonical:
+            block["name"] = canonical
+            changed = True
+    return changed
 
 
 def build_architect_payload(ws: Path, *, cfg: dict | None = None) -> dict[str, Any]:

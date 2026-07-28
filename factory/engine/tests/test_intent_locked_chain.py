@@ -20,6 +20,7 @@ from factory.engine.lib.intent_manifest import (
     approve_intent,
     compile_and_save_intent,
     compile_intent_manifest,
+    infer_canonical_reveal_chapter,
     locked_pack_for_outliner,
     must_include_for_chapter,
 )
@@ -124,6 +125,39 @@ def _write_ws(root: Path) -> Path:
 
 
 class IntentManifestTests(unittest.TestCase):
+    def test_canonical_reveal_is_derived_from_affirmative_chapter_map(self) -> None:
+        concept = {
+            "chapter_map": {
+                14: (
+                    "What She Let Him See. Lena shows the complete planner. "
+                    "Calder and reader learn she controlled the surveillance."
+                ),
+                18: "Verified aftermath and legal payoff.",
+            }
+        }
+        self.assertEqual(infer_canonical_reveal_chapter(concept), 14)
+
+    def test_intentional_reader_reveal_never_softens_writer_spoiler(self) -> None:
+        from factory.engine.lib.master_plan import _soft_intentional_early_reveal
+
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "policy"
+            ws.mkdir()
+            (ws / "concept.yaml").write_text(
+                yaml.dump({"intentional_early_reveal": True}),
+                encoding="utf-8",
+            )
+            self.assertTrue(
+                _soft_intentional_early_reveal(
+                    ws, "ch14:canon:mystery_reveal_too_early:before_ch18"
+                )
+            )
+            self.assertFalse(
+                _soft_intentional_early_reveal(
+                    ws, "prompt:G4:true_plot_spoil_early:ch1"
+                )
+            )
+
     def test_intent_seal_restores_missing_chapter_beat(self):
         with tempfile.TemporaryDirectory() as tmp:
             ws = _write_ws(Path(tmp))
@@ -431,6 +465,26 @@ class PrepStepsTests(unittest.TestCase):
         self.assertNotIn("approve-narrative", steps)
         self.assertNotIn("approve-bible", steps)
         self.assertNotIn("develop-narrative", steps)
+
+    def test_prep_recompiles_stale_approved_intent(self):
+        from factory.ui.factory_workflow import _prep_steps
+
+        status = {
+            "gates": {
+                "concept": {"ok": True, "status": "ready"},
+                "intent": {"ok": False, "status": "approved"},
+                "canon": {"ok": True, "status": "ready"},
+                "plan": {
+                    "ok": False,
+                    "status": "draft",
+                    "chapters_planned": 0,
+                    "total": 18,
+                },
+            }
+        }
+        steps = _prep_steps(status, prompts_ready=False)
+        self.assertIn("compile-intent", steps)
+        self.assertIn("approve-intent", steps)
 
 
 if __name__ == "__main__":
