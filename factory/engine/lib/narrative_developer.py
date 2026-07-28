@@ -42,6 +42,92 @@ MAX_TOKENS = {
     "knowledge_matrix": 8192,
 }
 
+OUTPUT_SCHEMAS: dict[str, dict[str, Any]] = {
+    "kernel": {
+        "required_fields": [
+            "narrative_profile",
+            "target_language",
+            "title_working",
+            "surface_case",
+            "true_case",
+            "core_question",
+            "emotional_question",
+            "book1_promise",
+            "case_closed",
+            "series_door_opened",
+            "book2_hook",
+            "book1_ending_type",
+            "reader_payoff_book1",
+        ]
+    },
+    "book_arc": {
+        "required_fields": [
+            "book_number",
+            "total_chapters",
+            "target_language",
+            "case_closed",
+            "case_open",
+            "lead_internal_arc",
+            "act_structure",
+        ]
+    },
+    "threads": {
+        "required_fields": ["description", "threads"],
+        "thread_fields": [
+            "id",
+            "name",
+            "opened_chapter",
+            "status",
+            "book1_resolution",
+            "book2_promise",
+        ],
+    },
+    "mystery_ledger": {
+        "required_fields": [
+            "main_mystery",
+            "truth",
+            "canonical_reveal_chapter",
+            "red_herrings",
+            "major_reveals",
+            "clues",
+        ],
+        "clue": {
+            "id": "C-prefix only, e.g. C001",
+            "fields": [
+                "id",
+                "chapter_planted",
+                "chapter_payoff",
+                "description",
+                "type",
+                "noticed_by",
+            ],
+        },
+        "major_reveal": {
+            "id": "MR-prefix only, e.g. MR01",
+            "fields": [
+                "id",
+                "chapter",
+                "description",
+                "required_clues",
+                "prerequisite_reveals",
+            ],
+            "required_clues": "List of clue IDs only (C-prefix). Never put MR IDs here.",
+            "prerequisite_reveals": (
+                "List of earlier major-reveal IDs only (MR-prefix). Use this when "
+                "a later reveal depends on earlier reveals having occurred."
+            ),
+        },
+    },
+    "knowledge_matrix": {
+        "required_fields": [
+            "description",
+            "target_language",
+            "milestones",
+            "characters",
+        ]
+    },
+}
+
 
 def _author_directive(concept: dict) -> str:
     parts: list[str] = []
@@ -120,6 +206,7 @@ def develop_pass(ws: Path, pass_name: str) -> Path:
         "total_chapters": total_chapters,
         "prior_narrative": prior,
         "series_bible": bible if bible else None,
+        "output_schema": OUTPUT_SCHEMAS[pass_name],
         "output_file": PASS_TO_FILE[pass_name],
         "intent_reveal_policy": {
             "canonical_reveal_chapter": canonical_reveal,

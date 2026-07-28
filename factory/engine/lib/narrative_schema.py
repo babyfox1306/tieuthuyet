@@ -115,12 +115,14 @@ def validate_narrative_assets(ws: Path, direction: dict) -> list[str]:
                 errors.append(f"mystery_ledger:payoff_before_plant:{cid}")
 
         reveal_ids: set[str] = set()
+        reveal_chapters: dict[str, int] = {}
         for rev in ledger.get("major_reveals") or []:
             if not isinstance(rev, dict):
                 continue
             rid = str(rev.get("id") or "").strip()
             if rid:
                 reveal_ids.add(rid)
+                reveal_chapters[rid] = int(rev.get("chapter") or 0)
 
         for rev in ledger.get("major_reveals") or []:
             if not isinstance(rev, dict):
@@ -129,9 +131,40 @@ def validate_narrative_assets(ws: Path, direction: dict) -> list[str]:
             required = [str(x).strip() for x in (rev.get("required_clues") or []) if str(x).strip()]
             for cid in required:
                 if cid in reveal_ids:
-                    errors.append(f"mystery_ledger:required_clue_is_reveal:{rid}:{cid}")
+                    errors.append(
+                        "mystery_ledger:required_clue_is_reveal:"
+                        f"{rid}:{cid}:move_to_prerequisite_reveals"
+                    )
                 elif cid not in clue_ids:
                     errors.append(f"mystery_ledger:required_clue_unknown:{rid}:{cid}")
+            prerequisites = [
+                str(x).strip()
+                for x in (rev.get("prerequisite_reveals") or [])
+                if str(x).strip()
+            ]
+            current_chapter = reveal_chapters.get(rid, 0)
+            for prerequisite_id in prerequisites:
+                if prerequisite_id == rid:
+                    errors.append(
+                        f"mystery_ledger:prerequisite_reveal_self:{rid}:{prerequisite_id}"
+                    )
+                elif prerequisite_id not in reveal_ids:
+                    errors.append(
+                        "mystery_ledger:prerequisite_reveal_unknown:"
+                        f"{rid}:{prerequisite_id}"
+                    )
+                else:
+                    prerequisite_chapter = reveal_chapters.get(prerequisite_id, 0)
+                    if (
+                        current_chapter
+                        and prerequisite_chapter
+                        and prerequisite_chapter >= current_chapter
+                    ):
+                        errors.append(
+                            "mystery_ledger:prerequisite_reveal_not_earlier:"
+                            f"{rid}:ch{current_chapter}:{prerequisite_id}:"
+                            f"ch{prerequisite_chapter}"
+                        )
 
     threads_path = nd / "threads.json"
     if threads_path.exists():

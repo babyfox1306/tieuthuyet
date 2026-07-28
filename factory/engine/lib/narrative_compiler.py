@@ -271,6 +271,9 @@ def _reveals_for_chapter(ledger: dict[str, Any], chapter: int) -> list[dict[str,
                 "note": str(rev.get("note") or "").strip(),
                 "reveal_weight": weight,
                 "required_clues": list(rev.get("required_clues") or []),
+                "prerequisite_reveals": list(
+                    rev.get("prerequisite_reveals") or []
+                ),
                 "min_clues_required": min_clues_for_reveal(weight),
             }
         )
@@ -507,6 +510,9 @@ def build_reveal_catalog(ledger: dict[str, Any]) -> dict[str, dict[str, Any]]:
             "impact": _first_text(rev, "impact", "note"),
             "note": str(rev.get("note") or "").strip(),
             "required_clues": list(rev.get("required_clues") or []),
+            "prerequisite_reveals": list(
+                rev.get("prerequisite_reveals") or []
+            ),
             "reveal_weight": str(rev.get("reveal_weight") or REVEAL_WEIGHT_MAJOR).lower(),
         }
     return catalog
@@ -964,6 +970,9 @@ def narrative_block_for_plan(compiled: dict[str, Any]) -> dict[str, Any]:
                 "id": rev.get("id", ""),
                 "reveal_weight": rev.get("reveal_weight", REVEAL_WEIGHT_MAJOR),
                 "required_clues": list(rev.get("required_clues") or []),
+                "prerequisite_reveals": list(
+                    rev.get("prerequisite_reveals") or []
+                ),
                 "min_clues_required": rev.get(
                     "min_clues_required",
                     min_clues_for_reveal(str(rev.get("reveal_weight", REVEAL_WEIGHT_MAJOR))),

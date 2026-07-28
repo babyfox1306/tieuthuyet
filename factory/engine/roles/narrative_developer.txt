@@ -14,6 +14,10 @@ Input JSON gồm:
 3. `author_directive` là nguồn sự thật — nếu conflict với guess của model, **theo author_directive**.
 4. Phải có **surface plot** (vỏ) và **true plot** (lõi) rõ ràng ở kernel.
 5. Mystery: mỗi clue có plant_chapter + payoff_chapter; reveal lớn có required_clues.
+   - `required_clues` CHỈ nhận ID clue tiền tố `C` (ví dụ `C004`). CẤM đặt ID `MR` vào đây.
+   - Nếu reveal muộn phụ thuộc reveal sớm đã xảy ra, dùng `prerequisite_reveals`
+     với ID tiền tố `MR` (ví dụ `["MR06", "MR07"]`).
+   - Mỗi `prerequisite_reveals` phải tồn tại và có chapter nhỏ hơn chapter của reveal phụ thuộc.
 6. Thread: mỗi thread có opened_chapter, status, book1_resolution hoặc book2_promise.
 7. Knowledge: milestones derived from `total_chapters` (5 slots: ~2%, 20%, 50%, 72%, 100% of N). Character keys `ch{milestone}` — never use fixed [1,10,25,36,50].
 8. Mọi số chương (plant, payoff, reveal, thread close, act bounds) PHẢI nằm trong [1, total_chapters]. Đọc `total_chapters` từ input — không hardcode 50.
@@ -36,6 +40,9 @@ Bắt buộc có thread romance slow burn nếu profile romance_*.
 ## PASS = mystery_ledger
 Xuất mystery_ledger.json:
 main_mystery, truth, canonical_reveal_chapter, red_herrings[], major_reveals[], clues[] (id C001…)
+Mỗi major_reveals item:
+{ id: "MR01", chapter, description, required_clues: ["C..."], prerequisite_reveals: ["MR..."] }
+`required_clues` và `prerequisite_reveals` là hai quan hệ khác nhau, không trộn ID.
 Khớp central_mystery trong series_bible nếu có.
 
 ## PASS = knowledge_matrix
