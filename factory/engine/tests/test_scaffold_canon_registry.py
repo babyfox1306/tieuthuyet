@@ -12,6 +12,7 @@ import yaml
 
 from factory.engine.lib.canon_registry import (
     _parse_lead_from_concept_text,
+    concept_lead_names,
     lead_name_aliases,
     locked_canon_names_payload,
     resolve_lead_names_for_registry,
@@ -23,6 +24,55 @@ from factory.engine.lib.master_plan import build_outliner_payload
 
 
 class ScaffoldCanonRegistryTests(unittest.TestCase):
+    def test_structured_roles_keep_male_pov_out_of_female_slot(self) -> None:
+        concept = {
+            "pov": {
+                "character": "Calder Reed",
+                "mode": "first_person",
+                "single_pov": True,
+            },
+            "characters": [
+                {
+                    "name": "Calder Reed",
+                    "role": "protagonist / private operative / dark-romance lead",
+                },
+                {
+                    "name": "Lena Hart",
+                    "role": "surveillance target / dark-romance heroine",
+                },
+            ],
+        }
+        self.assertEqual(concept_lead_names(concept), ("Lena Hart", "Calder Reed"))
+
+    def test_structured_roles_override_architect_name_drift(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "ws"
+            ws.mkdir()
+            (ws / "concept.yaml").write_text(
+                yaml.dump(
+                    {
+                        "pov": {"character": "Calder Reed", "mode": "first_person"},
+                        "characters": [
+                            {
+                                "name": "Calder Reed",
+                                "role": "protagonist / dark-romance lead",
+                            },
+                            {"name": "Lena Hart", "role": "dark-romance heroine"},
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (ws / "bible").mkdir()
+            (ws / "bible" / "series.json").write_text(
+                '{"leads":{"female":{"name":"Lena Hart"},'
+                '"male":{"name":"Calder Ash"}}}',
+                encoding="utf-8",
+            )
+            female, male = resolve_lead_names_for_registry(ws)
+            self.assertEqual(female, "Lena Hart")
+            self.assertEqual(male, "Calder Reed")
+
     def test_scaffold_from_concept_and_bible(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             ws = Path(tmp) / "ws"
@@ -78,7 +128,7 @@ class ScaffoldCanonRegistryTests(unittest.TestCase):
             ):
                 f, m = resolve_lead_names_for_registry(ws)
             self.assertEqual(f, "Elena March")
-            self.assertEqual(m, "Male Lead")
+            self.assertEqual(m, "Unassigned (no male lead)")
 
     def test_titled_three_token_male_keeps_surname(self) -> None:
         raw = "Male lead: Dr. Alistair Finch (29), clinic director."

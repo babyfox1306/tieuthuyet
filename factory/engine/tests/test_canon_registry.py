@@ -411,6 +411,18 @@ characters:
             (ws / "bible" / "narrative").mkdir()
             book_dir = ws / "books" / "01"
             book_dir.mkdir(parents=True)
+            (book_dir / "intent_manifest.json").write_text(
+                json.dumps(
+                    {
+                        "status": "approved",
+                        "chapter_count": 1,
+                        "chapter_map": [],
+                        "must_avoid": [],
+                        "ending_book1": "",
+                    }
+                ),
+                encoding="utf-8",
+            )
             (book_dir / "master_plan.json").write_text(
                 json.dumps(
                     {

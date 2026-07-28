@@ -11,12 +11,52 @@ from unittest.mock import patch
 import yaml
 
 from factory.engine.lib.bible_architect import (
+    build_architect_payload,
     generate_bible_with_retry,
+    lock_bible_lead_names,
     seed_central_mystery_from_ledger,
 )
 
 
 class BibleArchitectTests(unittest.TestCase):
+    def test_architect_uses_and_enforces_structured_lead_names(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "ws"
+            ws.mkdir()
+            concept = {
+                "title": "T",
+                "pov": {"character": "Calder Reed", "mode": "first_person"},
+                "characters": [
+                    {
+                        "name": "Calder Reed",
+                        "role": "protagonist / dark-romance lead",
+                    },
+                    {"name": "Lena Hart", "role": "dark-romance heroine"},
+                ],
+            }
+            (ws / "concept.yaml").write_text(yaml.dump(concept), encoding="utf-8")
+            (ws / "direction.yaml").write_text(
+                "target_language: en\nnarrative_profile: dark_romance\n",
+                encoding="utf-8",
+            )
+
+            payload = build_architect_payload(ws, cfg={"spice_level": 1})
+            self.assertEqual(
+                payload["locked_lead_names"],
+                {"female": "Lena Hart", "male": "Calder Reed"},
+            )
+
+            bible = {
+                "leads": {
+                    "female": {"name": "Calder Reed", "voice": "Lena voice"},
+                    "male": {"name": "Calder Ash", "voice": "Calder voice"},
+                }
+            }
+            self.assertTrue(lock_bible_lead_names(bible, payload["locked_lead_names"]))
+            self.assertEqual(bible["leads"]["female"]["name"], "Lena Hart")
+            self.assertEqual(bible["leads"]["male"]["name"], "Calder Reed")
+            self.assertEqual(bible["leads"]["male"]["voice"], "Calder voice")
+
     def test_seed_central_mystery_from_ledger(self) -> None:
         bible: dict = {"title": "X"}
         ledger = {

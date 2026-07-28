@@ -244,16 +244,84 @@ def _parse_lead_from_concept_text(text: str, *, side: str) -> str | None:
     return None
 
 
+_FEMALE_ROLE_RE = re.compile(
+    r"\b(?:female[\s_-]*lead|heroine|female[\s_-]*protagonist|fmc)\b",
+    re.IGNORECASE,
+)
+_MALE_ROLE_RE = re.compile(
+    r"\b(?:male[\s_-]*lead|hero(?!ine)|male[\s_-]*protagonist|mmc)\b",
+    re.IGNORECASE,
+)
+_GENERIC_LEAD_ROLE_RE = re.compile(
+    r"\b(?:lead|protagonist|main[\s_-]*character)\b",
+    re.IGNORECASE,
+)
+
+
+def concept_lead_names(concept: dict[str, Any]) -> tuple[str, str]:
+    """Resolve female/male leads from positive structured concept declarations.
+
+    ``pov.character`` identifies the viewpoint lead, not the lead's gender.
+    Explicit role text identifies heroine/hero first. If only one side is
+    explicit, a distinct POV character marked as a generic lead fills the
+    other side.
+    """
+    raw_characters = concept.get("characters")
+    if not isinstance(raw_characters, list):
+        return "", ""
+
+    rows: list[tuple[str, str]] = []
+    for item in raw_characters:
+        if not isinstance(item, dict):
+            continue
+        name = str(item.get("name") or "").strip()
+        role = str(item.get("role") or "").strip()
+        if name:
+            rows.append((name, role))
+
+    female = next((name for name, role in rows if _FEMALE_ROLE_RE.search(role)), "")
+    male = next((name for name, role in rows if _MALE_ROLE_RE.search(role)), "")
+
+    pov_raw = concept.get("pov")
+    pov_name = ""
+    if isinstance(pov_raw, dict):
+        pov_name = str(pov_raw.get("character") or pov_raw.get("name") or "").strip()
+    pov_role = next(
+        (role for name, role in rows if _norm_name(name) == _norm_name(pov_name)),
+        "",
+    )
+
+    if pov_name and _FEMALE_ROLE_RE.search(pov_role):
+        female = female or pov_name
+    elif pov_name and _MALE_ROLE_RE.search(pov_role):
+        male = male or pov_name
+
+    # "dark-romance lead" is gender-neutral. The explicitly declared opposite
+    # side (e.g. heroine) lets us assign this distinct POV lead safely.
+    if (
+        pov_name
+        and _GENERIC_LEAD_ROLE_RE.search(pov_role)
+        and not _FEMALE_ROLE_RE.search(pov_role)
+        and not _MALE_ROLE_RE.search(pov_role)
+    ):
+        if female and _norm_name(pov_name) != _norm_name(female):
+            male = male or pov_name
+        elif male and _norm_name(pov_name) != _norm_name(male):
+            female = female or pov_name
+
+    return female, male
+
+
 def resolve_lead_names_for_registry(ws: Path) -> tuple[str, str]:
     """Female/male canonical names: intent → structured cast → directive → bible."""
     from factory.engine.lib.intent_manifest import load_intent_manifest
     from factory.engine.lib.narrative_schema import load_concept
 
     concept = load_concept(ws)
-    female = ""
-    male = ""
+    female, male = concept_lead_names(concept)
 
-    # 1) Approved / compiled IntentManifest cast + POV
+    # Approved / compiled IntentManifest cast + POV is a legacy fallback.
+    # Structured role declarations above win; POV alone never declares gender.
     try:
         man = load_intent_manifest(ws, 1)
     except (OSError, TypeError, ValueError):
@@ -261,10 +329,10 @@ def resolve_lead_names_for_registry(ws: Path) -> tuple[str, str]:
     if man:
         pov = str(man.get("pov") or "")
         cast = [str(x).strip() for x in (man.get("cast") or []) if str(x).strip()]
-        # POV character is female lead when named first in "Name | first_person"
         pov_name = pov.split("|")[0].split(",")[0].strip()
         if (
-            pov_name
+            not female
+            and pov_name
             and len(pov_name) < 80
             and pov_name.lower() not in {"first_person", "third_person", "past", "present"}
             and ( " " in pov_name or pov_name[0].isupper())
@@ -274,9 +342,10 @@ def resolve_lead_names_for_registry(ws: Path) -> tuple[str, str]:
             if not female:
                 female = cast[0]
             # Gothic / single-POV: no romantic male lead unless clearly labeled
-            male = "Unassigned (no male lead)"
+            if not male:
+                male = "Unassigned (no male lead)"
 
-    # 2) Structured concept.characters / pov.character
+    # Legacy structured concepts without useful role labels.
     if not female:
         pov_raw = concept.get("pov")
         if isinstance(pov_raw, dict):
@@ -1270,6 +1339,7 @@ def _supporting_cast_names(bible: dict) -> set[str]:
 def _names_from_narrative(
     ws: Path,
     female_canonical: str,
+    male_canonical: str,
     *,
     supporting_cast: set[str] | None = None,
     male_absent: bool = False,
@@ -1283,6 +1353,7 @@ def _names_from_narrative(
     male_names: set[str] = set()
     female_names: set[str] = set()
     female_norm = _norm_name(female_canonical)
+    male_norm = _norm_name(male_canonical)
     cast = supporting_cast or set()
 
     arc_path = nd / "book_arc.json"
@@ -1306,6 +1377,8 @@ def _names_from_narrative(
                     continue
                 if _norm_name(k) == female_norm:
                     female_names.add(k)
+                elif _norm_name(k) == male_norm:
+                    male_names.add(k)
                 elif male_absent or _name_in_cast(k, cast):
                     # Twin / supporting / secondary arcs — not male lead.
                     continue
@@ -1456,6 +1529,7 @@ def _collect_source_lead_names(ws: Path, book: int, registry: CanonRegistry) -> 
     narr = _names_from_narrative(
         ws,
         female_canonical,
+        male_canonical,
         supporting_cast=cast,
         male_absent=male_absent,
     )

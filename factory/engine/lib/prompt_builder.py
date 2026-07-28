@@ -47,6 +47,30 @@ def load_direction(ws: Path) -> dict:
     return {}
 
 
+def _pov_character_for_prompt(ws: Path, registry: CanonRegistry) -> str:
+    """Read POV identity from concept/intent instead of assuming female lead."""
+    try:
+        from factory.engine.lib.narrative_schema import load_concept
+
+        raw = load_concept(ws).get("pov")
+        if isinstance(raw, dict):
+            name = str(raw.get("character") or raw.get("name") or "").strip()
+            if name:
+                return name
+    except (OSError, TypeError, ValueError):
+        pass
+    try:
+        from factory.engine.lib.intent_manifest import load_intent_manifest
+
+        pov = str(load_intent_manifest(ws, 1).get("pov") or "")
+        name = pov.split("|")[0].split(",")[0].strip()
+        if name:
+            return name
+    except (OSError, TypeError, ValueError):
+        pass
+    return registry.characters["female_lead"].canonical
+
+
 def prompts_dir(ws: Path, book: int) -> Path:
     p = book_workspace_dir(ws, book) / "prompts"
     p.mkdir(parents=True, exist_ok=True)
@@ -236,6 +260,7 @@ def render_locked_canon_block(
     registry: CanonRegistry,
     *,
     lang: str = "en",
+    pov_character: str | None = None,
     content_boundaries: list[str] | None = None,
     must_include: list[str] | None = None,
     world_rules: list[str] | None = None,
@@ -246,6 +271,7 @@ def render_locked_canon_block(
 
     male = registry.characters["male_lead"]
     female = registry.characters["female_lead"]
+    pov_name = str(pov_character or female.canonical).strip()
     male_forbidden = ", ".join(male.forbidden_aliases) if male.forbidden_aliases else ""
     female_forbidden = (
         ", ".join(female.forbidden_aliases) if female.forbidden_aliases else ""
@@ -322,25 +348,25 @@ def render_locked_canon_block(
     if "first" in pov_mode:
         if lang == "vi":
             pov_line = (
-                f"POV: first_person — ngôi 1 khóa vào {female.canonical}. "
-                f"Toàn bộ narration dùng Tôi/I. CẤM ngôi 3 kể về {female.canonical} "
-                f"(không viết '{female.canonical} đã…' ngoài dialogue)."
+                f"POV: first_person — ngôi 1 khóa vào {pov_name}. "
+                f"Toàn bộ narration dùng Tôi/I. CẤM ngôi 3 kể về {pov_name} "
+                f"(không viết '{pov_name} đã…' ngoài dialogue)."
             )
         else:
             pov_line = (
-                f"POV: first_person — narrate ONLY as {female.canonical} using I/my/me. "
-                f"FORBIDDEN: third-person narration about {female.canonical} "
-                f"(do not write '{female.canonical} walked…' outside quoted dialogue)."
+                f"POV: first_person — narrate ONLY as {pov_name} using I/my/me. "
+                f"FORBIDDEN: third-person narration about {pov_name} "
+                f"(do not write '{pov_name} walked…' outside quoted dialogue)."
             )
     else:
         if lang == "vi":
             pov_line = (
-                f"POV: {pov_mode}. Ngôi 3 hạn chế khóa vào {female.canonical}. "
+                f"POV: {pov_mode}. Ngôi 3 hạn chế khóa vào {pov_name}. "
                 'CẤM ngôi 1 ("tôi/I/my/me") ngoài thoại trong ngoặc kép.'
             )
         else:
             pov_line = (
-                f"POV: {pov_mode}. Third-person limited locked to {female.canonical}. "
+                f"POV: {pov_mode}. Third-person limited locked to {pov_name}. "
                 'NO first-person ("I/my/me") narration outside quoted dialogue.'
             )
 
@@ -463,6 +489,7 @@ def build_chapter_prompt(
         locked_canon_block = render_locked_canon_block(
             registry,
             lang=lang,
+            pov_character=_pov_character_for_prompt(ws, registry),
             content_boundaries=boundaries,
             must_include=chapter_must_include,
             world_rules=world_rules,

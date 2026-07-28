@@ -178,6 +178,14 @@ def build_architect_payload(ws: Path, *, cfg: dict | None = None) -> dict[str, A
     direction = load_direction(ws)
     concept = load_concept(ws)
     ledger = _load_mystery_ledger(ws)
+    from factory.engine.lib.canon_registry import concept_lead_names
+
+    female_lead, male_lead = concept_lead_names(concept)
+    locked_leads = {
+        side: name
+        for side, name in (("female", female_lead), ("male", male_lead))
+        if name
+    }
     payload: dict[str, Any] = {
         "genre": direction.get("narrative_profile") or "fiction",
         "sub_niche": direction.get("narrative_profile") or concept.get("title") or "series",
@@ -193,6 +201,9 @@ def build_architect_payload(ws: Path, *, cfg: dict | None = None) -> dict[str, A
         "ending_book1": concept.get("ending_book1"),
         "must_include": concept.get("must_include") or [],
         "must_avoid": concept.get("must_avoid") or [],
+        "concept_pov": concept.get("pov") or {},
+        "concept_characters": concept.get("characters") or [],
+        "locked_lead_names": locked_leads,
     }
     if ledger:
         payload["mystery_ledger"] = {
@@ -256,6 +267,10 @@ def generate_bible_with_retry(
             continue
 
         seeded = seed_central_mystery_from_ledger(bible, ledger)
+        names_locked = lock_bible_lead_names(
+            bible,
+            base_payload.get("locked_lead_names") or {},
+        )
         concept = load_concept(ws)
         scrub_notes = scrub_premature_leak_lock(bible, concept)
         # Align genre labels with direction when concept forbids romance.
@@ -275,6 +290,7 @@ def generate_bible_with_retry(
                 "attempt": attempt,
                 "errors": list(errors),
                 "seeded_central_mystery": seeded,
+                "locked_lead_names": names_locked,
                 "scrub_notes": scrub_notes,
                 "usage": log.get("usage"),
             }

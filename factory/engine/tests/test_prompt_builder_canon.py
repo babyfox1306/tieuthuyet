@@ -213,6 +213,32 @@ class TestRenderLockedCanonBlock(unittest.TestCase):
         self.assertNotIn("Fade to black beyond kiss", block)
         self.assertNotIn("Never write: (none)", block)
 
+    def test_pov_character_can_be_male_lead(self) -> None:
+        reg = CanonRegistry(
+            workspace_id="test",
+            book=1,
+            book_slug="01-test",
+            chapter_count=18,
+            target_language="en",
+            pov_mode="first_person",
+            spice_max=3,
+            characters={
+                "female_lead": CharacterCanon(
+                    role="female_lead",
+                    canonical="Lena Hart",
+                ),
+                "male_lead": CharacterCanon(
+                    role="male_lead",
+                    canonical="Calder Reed",
+                ),
+            },
+        )
+        block = render_locked_canon_block(reg, pov_character="Calder Reed")
+        self.assertIn("Male lead: Calder Reed ONLY", block)
+        self.assertIn("Female lead: Lena Hart ONLY", block)
+        self.assertIn("narrate ONLY as Calder Reed", block)
+        self.assertNotIn("narrate ONLY as Lena Hart", block)
+
     def test_must_include_not_under_must_avoid(self) -> None:
         reg = CanonRegistry(
             workspace_id="test",
