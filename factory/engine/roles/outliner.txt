@@ -24,14 +24,16 @@ Input JSON: series_bible, direction (gồm **target_language**: vi|en), book_num
 **Narrative OS (khi có `narrative_constraints` / `narrative_lock` trong input):**
 - `narrative_constraints.chapters` = ràng buộc clue/knowledge/reveal **đã khóa bởi compiler** cho từng chương trong act.
 - `narrative_constraints.clue_catalog` = **FULL semantic** từng clue (`content`/`description`) — KHÔNG chỉ ID.
-- `narrative_constraints.reveal_catalog` = **FULL semantic** từng major reveal — KHÔNG chỉ ID + chapter.
+- `narrative_constraints.reveal_catalog` chỉ chứa semantic của reveal đã mở hoặc
+  mở trong chapter call hiện tại. Reveal tương lai bị loại khỏi payload; CẤM tự suy phần bị loại.
 - `narrative_constraints.red_herring_catalog` = mô tả false lead (nếu có).
 - `narrative_constraints.plot_boundary` = `true_plot` / `truth` fence — **CẤM** mở conspiracy / serial-killer / victim mới ngoài phạm vi này.
 - `narrative_constraints.global_choices` = lựa chọn plan-time (vd. leak). Nếu `cardinality: 1` → chọn **đúng 1** candidate, khóa xuyên suốt, **CẤM** second leak.
 - `semantic_lock`: khi plant/payoff `C00x` / reveal `MRxx`, nội dung trong must_happen/beat **PHẢI** khớp catalog text (thumb-tap ≠ boat watcher; yacht fuel-line ≠ Lena Hart photo).
 - KHÔNG đổi timing clue (`clues_plant` / `clues_payoff` / `reveals`) — compiler đã gán.
 - PHẢI thể hiện clue trong `must_happen` / `beat_summary` bằng đúng semantic catalog (có thể thêm `narrative.clue_beats`).
-- Tôn trọng `knowledge.must_not_know` — không payoff/reveal sớm hơn ledger.
+- `knowledge.opaque_prohibitions` là lệnh closed-world: chỉ dùng `may_know` và
+  quan sát/clue được schedule cho chapter hiện tại. CẤM tự suy nguyên nhân ẩn hoặc fact tương lai.
 
 **Ngôn ngữ:** mọi text trong chapter_plans (title, summary, beat, opens_with, cliff…) phải viết bằng `direction.target_language`. vi = tiếng Việt; en = English.
 

@@ -869,15 +869,71 @@ def compile_act_constraints(ws: Path, act_from: int, act_to: int) -> dict[str, A
         str(ch): compile_chapter_narrative(ledger, matrix, threads_data, ch)
         for ch in range(act_from, act_to + 1)
     }
+    try:
+        from factory.engine.lib.narrative_schema import load_concept
+
+        concept = load_concept(ws)
+        pov = concept.get("pov") if isinstance(concept.get("pov"), dict) else {}
+        pov_character = str((pov or {}).get("character") or "").strip()
+    except (OSError, TypeError, ValueError):
+        pov_character = ""
+    for compiled in chapters.values():
+        knowledge = dict(compiled.get("knowledge") or {})
+        if pov_character:
+            prefix = pov_character.casefold() + ":"
+            knowledge["pov_characters"] = [pov_character]
+            knowledge["may_know"] = [
+                item
+                for item in (knowledge.get("may_know") or [])
+                if str(item).casefold().startswith(prefix)
+            ]
+        restricted = list(knowledge.get("prompt_restricted_characters") or [])
+        knowledge["must_not_know"] = []
+        knowledge["opaque_prohibitions"] = [
+            (
+                f"{character}: closed-world knowledge — use only may_know and "
+                "direct observations scheduled for this chapter; do not infer "
+                "hidden causes, secret plans, or future discoveries."
+            )
+            for character in restricted
+            if not pov_character
+            or str(character).casefold() == pov_character.casefold()
+        ]
+        compiled["knowledge"] = knowledge
+
+    clue_catalog = {
+        cid: item
+        for cid, item in build_clue_catalog(ledger).items()
+        if int(item.get("plant_chapter") or 0) <= act_to
+    }
+    reveal_catalog = {
+        rid: item
+        for rid, item in build_reveal_catalog(ledger).items()
+        if int(item.get("chapter") or 0) <= act_to
+    }
+    active_red_herrings = {
+        str(rid)
+        for compiled in chapters.values()
+        for key in ("red_herrings_plant", "red_herrings_dispel")
+        for rid in (compiled.get(key) or [])
+    }
+    red_herring_catalog = {
+        rid: item
+        for rid, item in build_red_herring_catalog(ledger).items()
+        if rid in active_red_herrings
+    }
+    plot_boundary = _plot_boundary_payload(ws, ledger)
+    plot_boundary.pop("truth", None)
+    plot_boundary.pop("true_plot", None)
     return {
         "act_range": [act_from, act_to],
         "target_language": direction.get("target_language", "en"),
         "chapters": chapters,
-        "clue_catalog": build_clue_catalog(ledger),
-        "reveal_catalog": build_reveal_catalog(ledger),
-        "red_herring_catalog": build_red_herring_catalog(ledger),
+        "clue_catalog": clue_catalog,
+        "reveal_catalog": reveal_catalog,
+        "red_herring_catalog": red_herring_catalog,
         "canonical_reveal_chapter": ledger.get("canonical_reveal_chapter"),
-        "plot_boundary": _plot_boundary_payload(ws, ledger),
+        "plot_boundary": plot_boundary,
         "global_choices": _extract_deferred_global_choices(ws, ledger),
         "semantic_lock": (
             "Clue/reveal IDs in chapters[] are schedules only. "

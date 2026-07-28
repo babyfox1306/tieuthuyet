@@ -476,7 +476,7 @@ def _resolve_total(ws: Path, direction: dict) -> int:
     return get_total_chapters(ws.name, book)
 
 
-def chapter_chunks(direction: dict, chunk_size: int = 3, *, ws: Path | None = None) -> list[tuple[int, int, str]]:
+def chapter_chunks(direction: dict, chunk_size: int = 1, *, ws: Path | None = None) -> list[tuple[int, int, str]]:
     """Smaller chunks = JSON ổn định hơn từ 9router."""
     canon = int(direction.get("canon_through", 0))
     total = _resolve_total(ws, direction) if ws else int(direction.get("total_chapters", 50))
@@ -834,7 +834,7 @@ def plan_book(
     book: int,
     *,
     acts: str = "all",
-    chunk_size: int = 3,
+    chunk_size: int = 1,
     force_replan: bool = False,
     require_bible: bool = True,
 ) -> tuple[Path, int]:

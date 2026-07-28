@@ -970,6 +970,39 @@ def _forbidden_romance_when_disabled(plan: dict) -> bool:
 _forbidden_romance_when_no_male_lead = _forbidden_romance_when_disabled
 
 
+def _pov_uses_closed_world_knowledge(
+    direction: dict,
+    ws: Path | None,
+) -> bool:
+    mode = str(direction.get("pov_mode") or "").lower().replace("-", "_")
+    if "first_person" in mode or "limited" in mode:
+        return True
+    if ws is None:
+        return False
+    concept = _load_concept_for_qc(ws)
+    pov = concept.get("pov") if isinstance(concept.get("pov"), dict) else {}
+    mode = str((pov or {}).get("mode") or "").lower().replace("-", "_")
+    single = (pov or {}).get("single_pov")
+    return bool(single) or "first_person" in mode or "limited" in mode
+
+
+def _scope_hidden_reveal_issues(
+    issues: list[str],
+    direction: dict,
+    ws: Path | None,
+) -> list[str]:
+    """Reader cadence may warn; a limited-POV hidden fact always hard-fails."""
+    if not _pov_uses_closed_world_knowledge(direction, ws):
+        return issues
+    return [
+        issue.replace(
+            ":canon:mystery_reveal_too_early:",
+            ":NC-06:pov_hidden_fact_leak:",
+        )
+        for issue in issues
+    ]
+
+
 def validate_plan(
     plan: dict,
     direction: dict,
@@ -1053,12 +1086,17 @@ def validate_plan(
                 canon_ledger = load_ledger(ws)
             except (OSError, TypeError, ValueError):
                 canon_ledger = None
-        issues.extend(
-            validate_plan_against_canon(
+        canon_issues = validate_plan_against_canon(
                 plan,
                 bible,
                 all_plans=all_plans,
                 ledger=canon_ledger,
+            )
+        issues.extend(
+            _scope_hidden_reveal_issues(
+                canon_issues,
+                direction,
+                ws,
             )
         )
 

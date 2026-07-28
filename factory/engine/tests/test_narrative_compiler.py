@@ -377,7 +377,7 @@ class TestClueCatalog(unittest.TestCase):
 
 
 class TestColdCaseLedgerSemantics(unittest.TestCase):
-    def test_cold_case_compiler_payload_has_full_semantics(self):
+    def test_cold_case_compiler_payload_hides_future_semantics(self):
         ws = Path("factory/workspaces/the-cold-case-girl")
         if not (ws / "bible" / "narrative" / "mystery_ledger.json").exists():
             self.skipTest("cold-case workspace missing")
@@ -385,13 +385,10 @@ class TestColdCaseLedgerSemantics(unittest.TestCase):
         c001 = act["clue_catalog"]["C001"]["content"].lower()
         self.assertIn("thumb-tap", c001)
         self.assertNotIn("boat watcher", c001)
-        c007 = act["clue_catalog"]["C007"]["content"].lower()
-        self.assertIn("yacht", c007)
-        self.assertIn("fuel", c007)
-        mr05 = act["reveal_catalog"]["MR05"]["reveal"].lower()
-        self.assertIn("julian", mr05)
-        self.assertIn("boating", mr05)
-        self.assertTrue(act["plot_boundary"]["true_plot"])
+        self.assertNotIn("C007", act["clue_catalog"])
+        self.assertNotIn("MR05", act["reveal_catalog"])
+        self.assertNotIn("true_plot", act["plot_boundary"])
+        self.assertNotIn("truth", act["plot_boundary"])
         choices = act["global_choices"]
         self.assertTrue(any(c.get("id") == "network_leak" for c in choices))
         leak = next(c for c in choices if c["id"] == "network_leak")
@@ -427,6 +424,14 @@ class TestWorkspaceIntegration(unittest.TestCase):
             self.assertEqual(act["act_range"], [1, 3])
             self.assertIn("1", act["chapters"])
             self.assertIn("C001", act["clue_catalog"])
+            self.assertIn("C002", act["clue_catalog"])
+            self.assertNotIn("C005", act["clue_catalog"])
+            self.assertNotIn("R001", act["reveal_catalog"])
+            self.assertNotIn("true_plot", act["plot_boundary"])
+            self.assertNotIn("truth", act["plot_boundary"])
+            knowledge = act["chapters"]["1"]["knowledge"]
+            self.assertEqual(knowledge["must_not_know"], [])
+            self.assertTrue(knowledge["opaque_prohibitions"])
             self.assertEqual(act["canonical_reveal_chapter"], 42)
 
     def test_narrative_compiler_enabled(self):

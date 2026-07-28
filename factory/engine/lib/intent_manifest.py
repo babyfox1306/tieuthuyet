@@ -793,8 +793,6 @@ def locked_pack_for_outliner(ws: Path, book: int, act_from: int, act_to: int) ->
             "genre_profile": manifest.get("genre_profile"),
             "language": manifest.get("language"),
             "must_avoid": manifest.get("must_avoid"),
-            "ending_book1": manifest.get("ending_book1"),
-            "true_plot": manifest.get("true_plot"),
             "surface_plot": manifest.get("surface_plot"),
             "chapter_map_slice": [
                 chapter_entry(manifest, ch) for ch in range(act_from, act_to + 1)
@@ -805,6 +803,10 @@ def locked_pack_for_outliner(ws: Path, book: int, act_from: int, act_to: int) ->
             },
         }
     }
+    # Each Outliner request is a chapter-scoped execution context. Future
+    # truth/ending prose is not context for an earlier chapter.
+    if act_to >= int(manifest.get("chapter_count") or 0):
+        pack["intent_manifest"]["ending_book1"] = manifest.get("ending_book1")
     if narrative_is_approved(direction):
         from factory.engine.lib.narrative_compiler import (
             compile_act_constraints,

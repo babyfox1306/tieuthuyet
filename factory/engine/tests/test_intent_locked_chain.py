@@ -138,7 +138,11 @@ class IntentManifestTests(unittest.TestCase):
         self.assertEqual(infer_canonical_reveal_chapter(concept), 14)
 
     def test_intentional_reader_reveal_never_softens_writer_spoiler(self) -> None:
-        from factory.engine.lib.master_plan import _soft_intentional_early_reveal
+        from factory.engine.lib.master_plan import (
+            _soft_intentional_early_reveal,
+            chapter_chunks,
+        )
+        from factory.engine.lib.plan_qc import _scope_hidden_reveal_issues
 
         with tempfile.TemporaryDirectory() as tmp:
             ws = Path(tmp) / "policy"
@@ -156,6 +160,23 @@ class IntentManifestTests(unittest.TestCase):
                 _soft_intentional_early_reveal(
                     ws, "prompt:G4:true_plot_spoil_early:ch1"
                 )
+            )
+            scoped = _scope_hidden_reveal_issues(
+                ["ch2:canon:mystery_reveal_too_early:MR02:before_ch7"],
+                {"pov_mode": "first_person"},
+                ws,
+            )
+            self.assertEqual(
+                scoped,
+                ["ch2:NC-06:pov_hidden_fact_leak:MR02:before_ch7"],
+            )
+            self.assertFalse(_soft_intentional_early_reveal(ws, scoped[0]))
+            self.assertEqual(
+                chapter_chunks(
+                    {"canon_through": 0, "total_chapters": 3},
+                    ws=None,
+                ),
+                [(1, 1, "ch01-01"), (2, 2, "ch02-02"), (3, 3, "ch03-03")],
             )
 
     def test_intent_seal_restores_missing_chapter_beat(self):
@@ -317,7 +338,7 @@ class IntentManifestTests(unittest.TestCase):
             blob = json.dumps(body)
             self.assertNotIn("concept.yaml", blob)
             self.assertNotIn("author_directive", blob)
-            # Locked pack may include true_plot — that is intentional authority, not raw concept dump.
+            self.assertNotIn("true_plot", body["locked_pack"]["intent_manifest"])
             self.assertIn("intent_manifest", blob)
 
     def test_i_write_disk_digest(self):
