@@ -211,17 +211,23 @@ def _world_rules_for_chapter(
     if not man or man.get("status") != "approved":
         return rules
     true = str(man.get("true_plot") or "").lower()
+    surface = str(man.get("surface_plot") or "").lower()
     if not true or chapter >= int(man.get("chapter_count") or 99):
         return rules
-    # Drop rules that heavily overlap true_plot before late chapters
-    reveal_from = max(3, int(man.get("chapter_count") or 10) - 2)
+    # Drop rules that expose true_plot before the canonical reader reveal.
+    reveal_from = int(
+        man.get("canonical_reveal_chapter")
+        or max(3, int(man.get("chapter_count") or 10) - 2)
+    )
     if chapter >= reveal_from:
         return rules
     filtered: list[str] = []
     true_tokens = set(re.findall(r"[a-zA-Zà-ỹÀ-Ỹ']{4,}", true))
+    surface_tokens = set(re.findall(r"[a-zA-Zà-ỹÀ-Ỹ']{4,}", surface))
+    hidden_tokens = true_tokens - surface_tokens
     for r in rules:
         rt = set(re.findall(r"[a-zA-Zà-ỹÀ-Ỹ']{4,}", r.lower()))
-        if true_tokens and len(rt & true_tokens) / max(1, len(true_tokens)) >= 0.35:
+        if hidden_tokens and len(rt & hidden_tokens) / max(1, len(rt)) >= 0.50:
             continue
         filtered.append(r)
     return filtered
@@ -512,6 +518,24 @@ def build_chapter_prompt(
         registry=registry,
     )
     must_not = coerce_text_list(plan.get("must_not", []))
+    opaque_knowledge_bans: list[str] = []
+    visible_must_not: list[str] = []
+    for item in must_not:
+        match = re.match(
+            r"^\s*([^:.;]{2,80}?)\s+must\s+not\s+"
+            r"(?:know|learn|discover|realize|understand)\b",
+            str(item),
+            re.I,
+        )
+        if match:
+            character = match.group(1).strip()
+            opaque_knowledge_bans.append(
+                f"{character}: knowledge is closed-world; use only direct observations "
+                "and scheduled chapter facts. Do not infer hidden causes or future discoveries."
+            )
+        else:
+            visible_must_not.append(str(item))
+    must_not = list(dict.fromkeys(visible_must_not + opaque_knowledge_bans))
     must_happen = coerce_text_list(plan.get("must_happen", []))
     opens = plan.get("opens_with", plan.get("hook_hint", ""))
     if not isinstance(opens, str):

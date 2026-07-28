@@ -352,8 +352,8 @@ def intentional_early_reveal(
 ) -> bool:
     """True when concept opts into intentional early reader-knowledge (anti-hero).
 
-    Softens only ``true_plot_spoil_early`` and ``mystery_reveal_too_early``
-    at approve-plan (BLOCK → WARN). Default / absent = False (keep BLOCK).
+    Softens only reader-facing reveal cadence at approve-plan (BLOCK → WARN).
+    It never relaxes writer-prompt confidentiality. Default / absent = False.
     """
     if concept is None:
         if ws is None:

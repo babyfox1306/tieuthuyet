@@ -64,7 +64,8 @@ class TestNarrativePromptInjection(unittest.TestCase):
             self.assertIn("C001", prompt)
             self.assertIn("Thick contract", prompt)
             self.assertIn("MUST NOT know", prompt)
-            self.assertIn("Glass Meridian exists", prompt)
+            self.assertNotIn("Glass Meridian exists", prompt)
+            self.assertIn("closed-world knowledge", prompt)
 
     def test_ignores_plan_narrative_field(self):
         """Block must come from compiler, not master_plan.narrative."""

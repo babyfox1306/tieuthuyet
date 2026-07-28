@@ -417,6 +417,7 @@ def _knowledge_for_chapter(
     pov: list[str] = []
     may_know: list[str] = []
     must_not_know: list[str] = []
+    prompt_restricted_characters: list[str] = []
 
     for char_name, data in (matrix.get("characters") or {}).items():
         if not isinstance(data, dict):
@@ -429,9 +430,13 @@ def _knowledge_for_chapter(
                 may_know.append(f"{char_name}: {k}")
             for nk in not_knows:
                 must_not_know.append(f"{char_name}: {nk}")
+                if str(char_name) not in prompt_restricted_characters:
+                    prompt_restricted_characters.append(str(char_name))
         for fact, threshold in iter_must_not_know_before(data):
             if threshold > chapter:
                 must_not_know.append(f"{char_name}: {fact}")
+                if str(char_name) not in prompt_restricted_characters:
+                    prompt_restricted_characters.append(str(char_name))
             else:
                 may_know.append(f"{char_name}: {fact}")
 
@@ -439,6 +444,9 @@ def _knowledge_for_chapter(
         "pov_characters": pov,
         "may_know": may_know,
         "must_not_know": must_not_know,
+        # Writer-facing prohibition is intentionally opaque. The semantic facts
+        # above remain available to deterministic plan/QC checks only.
+        "prompt_restricted_characters": prompt_restricted_characters,
         "effective_milestone": eff,
     }
 
@@ -847,6 +855,15 @@ def format_narrative_constraints_block(
     knowledge = compiled.get("knowledge") or {}
     may = knowledge.get("may_know") or []
     must_not = knowledge.get("must_not_know") or []
+    restricted = list(knowledge.get("prompt_restricted_characters") or [])
+    if must_not and not restricted:
+        restricted = list(
+            dict.fromkeys(
+                str(item).split(":", 1)[0].strip()
+                for item in must_not
+                if str(item).split(":", 1)[0].strip()
+            )
+        )
     if may or must_not:
         lines.append("")
         lines.append("### " + ("Knowledge gates" if not vi else "Cổng tri thức"))
@@ -862,8 +879,19 @@ def format_narrative_constraints_block(
                 + ("MUST NOT know or reveal yet" if not vi else "TUYỆT ĐỐI chưa được biết/hé")
                 + ":**"
             )
-            for m in must_not:
-                lines.append(f"- {m}")
+            for character in restricted:
+                if vi:
+                    lines.append(
+                        f"- {character}: tri thức đóng — chỉ dùng mục Được biết và "
+                        "quan sát trực tiếp trong chương; không suy ra hoặc hé lộ "
+                        "nguyên nhân ẩn, kế hoạch bí mật hay phát hiện tương lai."
+                    )
+                else:
+                    lines.append(
+                        f"- {character}: closed-world knowledge — use only May know "
+                        "facts and direct chapter observations; do not infer or reveal "
+                        "hidden causes, secret plans, or future discoveries."
+                    )
 
     if len(lines) <= 2 and not plant_lines and not payoff_lines and not reveal_lines:
         return ""
@@ -884,6 +912,34 @@ def narrative_constraints_block_for_prompt(
     compiled = compile_chapter_for_workspace(ws, chapter)
     if not compiled:
         return ""
+    # Writer sees only the active POV character's knowledge. Other characters'
+    # private knowledge is future-story data, not writing context for this scene.
+    try:
+        from factory.engine.lib.narrative_schema import load_concept
+
+        concept = load_concept(ws)
+        pov = concept.get("pov") if isinstance(concept.get("pov"), dict) else {}
+        pov_character = str((pov or {}).get("character") or "").strip()
+        if pov_character:
+            knowledge = dict(compiled.get("knowledge") or {})
+            prefix = pov_character.lower() + ":"
+            knowledge["pov_characters"] = [pov_character]
+            knowledge["may_know"] = [
+                item
+                for item in (knowledge.get("may_know") or [])
+                if str(item).lower().startswith(prefix)
+            ]
+            knowledge["must_not_know"] = [
+                item
+                for item in (knowledge.get("must_not_know") or [])
+                if str(item).lower().startswith(prefix)
+            ]
+            knowledge["prompt_restricted_characters"] = (
+                [pov_character] if knowledge["must_not_know"] else []
+            )
+            compiled = {**compiled, "knowledge": knowledge}
+    except (OSError, TypeError, ValueError):
+        pass
     return format_narrative_constraints_block(
         compiled, lang=lang, locked_plan=locked_plan
     )

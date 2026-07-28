@@ -928,14 +928,11 @@ def fix_plans(ws: Path, book: int, *, use_llm: bool = True) -> tuple[dict[int, l
     return remaining, n
 
 
-_EARLY_REVEAL_SOFT_MARKERS = (
-    "true_plot_spoil_early",
-    "mystery_reveal_too_early",
-)
+_EARLY_REVEAL_SOFT_MARKERS = ("mystery_reveal_too_early",)
 
 
 def _soft_intentional_early_reveal(ws: Path, issue: str) -> bool:
-    """When concept.intentional_early_reveal, demote two reveal gates to WARN."""
+    """Demote only reader-facing reveal cadence; never writer confidentiality."""
     from factory.engine.lib.narrative_schema import intentional_early_reveal
 
     if not intentional_early_reveal(ws=ws):

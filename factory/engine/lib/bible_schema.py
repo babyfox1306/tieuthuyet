@@ -418,6 +418,18 @@ def render_bible_block(
             "Do not spoil or invent the answer.]"
         )
 
+    cm = bible.get("central_mystery", {})
+    reveal = reveal_chapter if reveal_chapter is not None else cm.get("reveal_chapter", "?")
+    try:
+        reveal_int = int(reveal)
+    except (TypeError, ValueError):
+        reveal_int = None
+    redact = (
+        chapter is not None
+        and reveal_int is not None
+        and int(chapter) < reveal_int
+    )
+
     def _prompt_safe_internal(text: str) -> str:
         """Drop end-state arc wording from chapter prompts (planning-only)."""
         raw = str(text or "").strip()
@@ -452,7 +464,11 @@ def render_bible_block(
         voice = str(lead.get("voice") or "").strip()
         tics = ", ".join(str(t) for t in (lead.get("tics") or []) if str(t).strip())
         boundary = str(lead.get("boundary") or "").strip()
-        internal = _prompt_safe_internal(str(lead.get("internal_voice") or ""))
+        internal = (
+            ""
+            if redact
+            else _prompt_safe_internal(str(lead.get("internal_voice") or ""))
+        )
         bits: list[str] = []
         head = f"### {name}"
         if age not in ("", "?", None):
@@ -491,7 +507,7 @@ def render_bible_block(
             if not isinstance(c, dict):
                 continue
             alive = alive_yes if c.get("alive", True) else alive_no
-            secret = c.get("secret", "")
+            secret = "" if redact else c.get("secret", "")
             sec_part = f" | {'Bí mật' if lang == 'vi' else 'Secret'}: {secret}" if secret else ""
             rel_type = str(c.get("relation_type") or "?").strip()
             rel_to = str(c.get("relation_to") or "").strip()
@@ -511,18 +527,7 @@ def render_bible_block(
         for rule in bl.get("hard_rules", []):
             lines.append(f"- {rule}")
 
-    cm = bible.get("central_mystery", {})
     if cm:
-        reveal = reveal_chapter if reveal_chapter is not None else cm.get("reveal_chapter", "?")
-        try:
-            reveal_int = int(reveal)
-        except (TypeError, ValueError):
-            reveal_int = None
-        redact = (
-            chapter is not None
-            and reveal_int is not None
-            and int(chapter) < reveal_int
-        )
         lines.extend(
             [
                 "",
