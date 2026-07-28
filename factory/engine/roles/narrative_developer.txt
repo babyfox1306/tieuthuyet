@@ -7,6 +7,8 @@ Input JSON gồm:
 - `prior_narrative`: file đã sinh ở pass trước (nếu có)
 - `series_bible`: series.json hiện có (nếu có) — phải khớp, không mâu thuẫn bloodline/mystery
 - `output_schema`: mô tả schema file cần xuất
+- `required_reveal_schedule`: lịch semantic bắt buộc từ concept/intent. ID `RS...`
+  ổn định theo concept; không phải ID reveal do model tự đặt.
 
 ## QUY TẮC
 1. Output **JSON ONLY** — không markdown, không giải thích ngoài JSON.
@@ -14,6 +16,10 @@ Input JSON gồm:
 3. `author_directive` là nguồn sự thật — nếu conflict với guess của model, **theo author_directive**.
 4. Phải có **surface plot** (vỏ) và **true plot** (lõi) rõ ràng ở kernel.
 5. Mystery: mỗi clue có plant_chapter + payoff_chapter; reveal lớn có required_clues.
+   - Với pass `mystery_ledger`, PHẢI phủ đủ mọi item trong `required_reveal_schedule`.
+     Ghi các `ref` đã phủ vào `major_reveals[].schedule_refs`.
+   - Reveal mang một `schedule_ref` PHẢI ở đúng chapter đã khóa của ref đó.
+     Có thể gom nhiều ref vào một reveal chỉ khi chúng cùng chapter; cấm gom beat khác chapter.
    - `required_clues` CHỈ nhận ID clue tiền tố `C` (ví dụ `C004`). CẤM đặt ID `MR` vào đây.
    - Nếu reveal muộn phụ thuộc reveal sớm đã xảy ra, dùng `prerequisite_reveals`
      với ID tiền tố `MR` (ví dụ `["MR06", "MR07"]`).
@@ -41,7 +47,7 @@ Bắt buộc có thread romance slow burn nếu profile romance_*.
 Xuất mystery_ledger.json:
 main_mystery, truth, canonical_reveal_chapter, red_herrings[], major_reveals[], clues[] (id C001…)
 Mỗi major_reveals item:
-{ id: "MR01", chapter, description, required_clues: ["C..."], prerequisite_reveals: ["MR..."] }
+{ id: "MR01", chapter, description, required_clues: ["C..."], prerequisite_reveals: ["MR..."], schedule_refs: ["RS..."] }
 `required_clues` và `prerequisite_reveals` là hai quan hệ khác nhau, không trộn ID.
 Khớp central_mystery trong series_bible nếu có.
 

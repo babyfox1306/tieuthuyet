@@ -85,6 +85,85 @@ def normalize_mystery_ledger_schedule(ledger: dict[str, Any]) -> dict[str, Any]:
     return ledger
 
 
+def reveal_schedule_fidelity_errors(
+    ledger: dict[str, Any],
+    required_schedule: list[dict[str, Any]],
+) -> list[str]:
+    """Require semantic schedule refs without depending on generated MR IDs."""
+    required: dict[str, int] = {}
+    for item in required_schedule:
+        if not isinstance(item, dict):
+            continue
+        ref = str(item.get("ref") or "").strip()
+        try:
+            chapter = int(item.get("chapter") or 0)
+        except (TypeError, ValueError):
+            chapter = 0
+        if ref and chapter > 0:
+            required[ref] = chapter
+    if not required:
+        return []
+
+    covered: dict[str, list[tuple[str, int]]] = {}
+    errors: list[str] = []
+    for reveal in ledger.get("major_reveals") or []:
+        if not isinstance(reveal, dict):
+            continue
+        rid = str(reveal.get("id") or "?").strip()
+        try:
+            chapter = int(reveal.get("chapter") or 0)
+        except (TypeError, ValueError):
+            chapter = 0
+        refs = reveal.get("schedule_refs") or []
+        if not isinstance(refs, list):
+            errors.append(f"mystery_ledger:schedule_refs_not_list:{rid}")
+            continue
+        for raw_ref in refs:
+            ref = str(raw_ref).strip()
+            if not ref:
+                continue
+            if ref not in required:
+                errors.append(f"mystery_ledger:unknown_schedule_ref:{rid}:{ref}")
+                continue
+            covered.setdefault(ref, []).append((rid, chapter))
+            expected = required[ref]
+            if chapter != expected:
+                errors.append(
+                    "mystery_ledger:reveal_schedule_chapter_mismatch:"
+                    f"{ref}:expected_ch{expected}:{rid}:ch{chapter}"
+                )
+    for ref, chapter in required.items():
+        if ref not in covered:
+            errors.append(
+                f"mystery_ledger:required_reveal_missing:{ref}:ch{chapter}"
+            )
+    return errors
+
+
+def project_required_reveal_semantics(
+    ledger: dict[str, Any],
+    required_schedule: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """Attach canonical intent text to generated reveals by stable schedule ref."""
+    requirements = {
+        str(item.get("ref") or "").strip(): dict(item)
+        for item in required_schedule
+        if isinstance(item, dict) and str(item.get("ref") or "").strip()
+    }
+    for reveal in ledger.get("major_reveals") or []:
+        if not isinstance(reveal, dict):
+            continue
+        refs = reveal.get("schedule_refs") or []
+        if not isinstance(refs, list):
+            continue
+        reveal["required_semantics"] = [
+            requirements[str(ref).strip()]
+            for ref in refs
+            if str(ref).strip() in requirements
+        ]
+    return ledger
+
+
 def required_files(profile: str) -> list[str]:
     return list(PROFILE_REQUIRED.get(profile, PROFILE_REQUIRED["romance_thriller"]))
 
@@ -135,6 +214,15 @@ def validate_narrative_assets(ws: Path, direction: dict) -> list[str]:
         import json
 
         ledger = json.loads(ledger_path.read_text(encoding="utf-8"))
+        intent_path = ws / "books" / str(int(direction.get("book") or 1)).zfill(2) / "intent_manifest.json"
+        if intent_path.exists():
+            intent = json.loads(intent_path.read_text(encoding="utf-8"))
+            errors.extend(
+                reveal_schedule_fidelity_errors(
+                    ledger,
+                    list(intent.get("required_reveal_schedule") or []),
+                )
+            )
         clues = ledger.get("clues") or []
         seen: set[str] = set()
         clue_ids: set[str] = set()

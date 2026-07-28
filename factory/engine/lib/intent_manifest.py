@@ -367,6 +367,90 @@ def _build_reveal_ladder(
     return ladder
 
 
+def derive_required_reveal_schedule(
+    concept: dict[str, Any],
+) -> list[dict[str, Any]]:
+    """Derive stable reveal requirements from an explicit concept schedule.
+
+    A structured ``required_reveal_schedule`` wins.  Legacy CLEAR concepts may
+    instead carry the schedule in a ``TIME ANCHOR`` directive sentence such as
+    ``Ch3 first detection; Ch7 first proof; ...``.  We intentionally parse only
+    a sentence containing at least two chapter anchors: isolated ``ChN``
+    references elsewhere are prose context, not a reveal contract.
+    """
+    raw = concept.get("required_reveal_schedule") or concept.get("reveal_schedule")
+    items: list[tuple[int, str, str]] = []
+    if isinstance(raw, dict):
+        raw = [
+            {"chapter": key, "description": value}
+            if not isinstance(value, dict)
+            else {"chapter": key, **value}
+            for key, value in raw.items()
+        ]
+    if isinstance(raw, list):
+        for index, item in enumerate(raw, start=1):
+            if not isinstance(item, dict):
+                continue
+            try:
+                chapter = int(item.get("chapter") or 0)
+            except (TypeError, ValueError):
+                continue
+            description = str(
+                item.get("description")
+                or item.get("beat")
+                or item.get("meaning")
+                or ""
+            ).strip()
+            if chapter > 0 and description:
+                ref = str(item.get("ref") or item.get("id") or f"RS{index:03d}").strip()
+                items.append((chapter, description, ref))
+
+    if not items:
+        directive = str(concept.get("author_directive") or "")
+        anchor = re.search(
+            r"TIME\s+ANCHOR\b(?P<body>.*?)(?=\n\s*P\d+\s*[—-]|\Z)",
+            directive,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        if anchor:
+            sentences = re.split(r"(?<=[.!?])\s+", anchor.group("body"))
+            schedule_sentence = max(
+                sentences,
+                key=lambda sentence: len(
+                    re.findall(r"\bCh(?:apter)?\s*\d+\b", sentence, re.I)
+                ),
+                default="",
+            )
+            if len(
+                re.findall(r"\bCh(?:apter)?\s*\d+\b", schedule_sentence, re.I)
+            ) < 2:
+                schedule_sentence = ""
+            for match in re.finditer(
+                r"\bCh(?:apter)?\s*(?P<chapter>\d+)\s+"
+                r"(?P<description>[^;,.]+(?:,[^;.]*)?)",
+                schedule_sentence,
+                flags=re.IGNORECASE,
+            ):
+                chapter = int(match.group("chapter"))
+                description = re.sub(r"\s+", " ", match.group("description")).strip()
+                if chapter > 0 and description:
+                    items.append((chapter, description, ""))
+
+    chapter_map = _normalize_structured_chapter_map(concept.get("chapter_map"))
+    out: list[dict[str, Any]] = []
+    for index, (chapter, description, ref) in enumerate(items, start=1):
+        requirement = {
+            "ref": ref or f"RS{index:03d}",
+            "chapter": chapter,
+            "description": description,
+        }
+        source_beat = str((chapter_map.get(chapter) or {}).get("beat") or "").strip()
+        if source_beat:
+            requirement["source_beat"] = source_beat
+        out.append(requirement)
+    return out
+
+
 def _surface_plot(concept: dict) -> str:
     return str(
         concept.get("surface_plot")
@@ -483,6 +567,7 @@ def compile_intent_manifest(ws: Path, book: int | None = None) -> dict[str, Any]
         "genre_profile": genre,
         "language": language,
         "reveal_ladder": _build_reveal_ladder(chapter_map, concept_reveal, cast=cast),
+        "required_reveal_schedule": derive_required_reveal_schedule(concept),
         "canonical_reveal_chapter": canonical_reveal_chapter,
     }
     manifest["manifest_digest"] = digest_obj(

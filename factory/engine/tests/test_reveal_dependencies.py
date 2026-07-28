@@ -14,8 +14,11 @@ from factory.engine.lib.narrative_compiler import (
 from factory.engine.lib.narrative_developer import OUTPUT_SCHEMAS
 from factory.engine.lib.narrative_schema import (
     normalize_mystery_ledger_schedule,
+    project_required_reveal_semantics,
+    reveal_schedule_fidelity_errors,
     validate_narrative_assets,
 )
+from factory.engine.lib.intent_manifest import derive_required_reveal_schedule
 from factory.engine.paths import ENGINE
 
 
@@ -65,6 +68,97 @@ def _validate_ledger(ledger: dict) -> list[str]:
 
 
 class RevealDependencyTests(unittest.TestCase):
+    def test_time_anchor_derives_stable_semantic_schedule(self) -> None:
+        concept = {
+            "author_directive": (
+                "P5 — TIME ANCHOR. Story begins before Ch1; active story lasts 21 days. "
+                "Ch3 first detection; Ch7 first proof of entry; Ch14 full control reveal; "
+                "Ch18 verified aftermath.\n"
+                "P6 — AFTERMATH LOGIC. No instant conviction."
+            )
+        }
+        self.assertEqual(
+            derive_required_reveal_schedule(concept),
+            [
+                {"ref": "RS001", "chapter": 3, "description": "first detection"},
+                {"ref": "RS002", "chapter": 7, "description": "first proof of entry"},
+                {"ref": "RS003", "chapter": 14, "description": "full control reveal"},
+                {"ref": "RS004", "chapter": 18, "description": "verified aftermath"},
+            ],
+        )
+
+    def test_structured_schedule_wins_over_directive(self) -> None:
+        concept = {
+            "required_reveal_schedule": [
+                {"ref": "CONTROL", "chapter": 14, "description": "Complete design"}
+            ],
+            "author_directive": "TIME ANCHOR. Ch3 detection; Ch18 aftermath.",
+        }
+        self.assertEqual(
+            derive_required_reveal_schedule(concept),
+            [{"ref": "CONTROL", "chapter": 14, "description": "Complete design"}],
+        )
+
+    def test_schedule_fidelity_is_id_agnostic_but_chapter_locked(self) -> None:
+        schedule = [
+            {"ref": "RS001", "chapter": 3, "description": "Detection"},
+            {"ref": "RS002", "chapter": 14, "description": "Control reveal"},
+        ]
+        ledger = {
+            "major_reveals": [
+                {"id": "WHATEVER", "chapter": 3, "schedule_refs": ["RS001"]},
+                {"id": "MR99", "chapter": 14, "schedule_refs": ["RS002"]},
+            ]
+        }
+        self.assertEqual(reveal_schedule_fidelity_errors(ledger, schedule), [])
+
+        ledger["major_reveals"][1]["chapter"] = 17
+        errors = reveal_schedule_fidelity_errors(ledger, schedule)
+        self.assertIn(
+            "mystery_ledger:reveal_schedule_chapter_mismatch:"
+            "RS002:expected_ch14:MR99:ch17",
+            errors,
+        )
+
+    def test_schedule_fidelity_fails_loud_on_missing_or_unknown_ref(self) -> None:
+        schedule = [{"ref": "RS001", "chapter": 8, "description": "Honeytoken"}]
+        ledger = {
+            "major_reveals": [
+                {"id": "MR01", "chapter": 8, "schedule_refs": ["RS999"]}
+            ]
+        }
+        errors = reveal_schedule_fidelity_errors(ledger, schedule)
+        self.assertIn("mystery_ledger:unknown_schedule_ref:MR01:RS999", errors)
+        self.assertIn(
+            "mystery_ledger:required_reveal_missing:RS001:ch8",
+            errors,
+        )
+
+    def test_schedule_ref_projects_canonical_semantics_into_ledger(self) -> None:
+        schedule = [
+            {
+                "ref": "RS001",
+                "chapter": 8,
+                "description": "honeytoken mailing",
+                "source_beat": "The clipped envelope is mailed and its removal recorded.",
+            }
+        ]
+        ledger = {
+            "major_reveals": [
+                {
+                    "id": "ANY-ID",
+                    "chapter": 8,
+                    "description": "Model-authored wording.",
+                    "schedule_refs": ["RS001"],
+                }
+            ]
+        }
+        project_required_reveal_semantics(ledger, schedule)
+        self.assertEqual(
+            ledger["major_reveals"][0]["required_semantics"],
+            schedule,
+        )
+
     def test_earlier_reveal_dependency_is_valid_and_preserved(self) -> None:
         ledger = _ledger([], ["MR01"])
         self.assertEqual(_validate_ledger(ledger), [])
@@ -106,6 +200,8 @@ class RevealDependencyTests(unittest.TestCase):
             encoding="utf-8"
         )
         self.assertIn("prerequisite_reveals", role)
+        self.assertIn("required_reveal_schedule", role)
+        self.assertIn("schedule_refs", schema["fields"])
         self.assertIn("required_clues` CHỈ nhận ID clue", role)
 
     def test_generator_contract_uses_canonical_clue_schedule_fields(self) -> None:

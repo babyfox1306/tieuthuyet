@@ -111,11 +111,16 @@ OUTPUT_SCHEMAS: dict[str, dict[str, Any]] = {
                 "description",
                 "required_clues",
                 "prerequisite_reveals",
+                "schedule_refs",
             ],
             "required_clues": "List of clue IDs only (C-prefix). Never put MR IDs here.",
             "prerequisite_reveals": (
                 "List of earlier major-reveal IDs only (MR-prefix). Use this when "
                 "a later reveal depends on earlier reveals having occurred."
+            ),
+            "schedule_refs": (
+                "List of required_reveal_schedule refs covered by this reveal. "
+                "Every ref must be covered at exactly its locked chapter."
             ),
         },
     },
@@ -214,6 +219,10 @@ def develop_pass(ws: Path, pass_name: str) -> Path:
             "authority": "concept/approved intent; derived narrative must match",
         },
     }
+    if pass_name == "mystery_ledger":
+        payload["required_reveal_schedule"] = list(
+            intent.get("required_reveal_schedule") or []
+        )
 
     raw, log = call_9router(
         "narrative_developer",
@@ -227,6 +236,19 @@ def develop_pass(ws: Path, pass_name: str) -> Path:
 
         if pass_name == "mystery_ledger":
             data = normalize_mystery_ledger_schedule(data)
+            from factory.engine.lib.narrative_schema import (
+                project_required_reveal_semantics,
+                reveal_schedule_fidelity_errors,
+            )
+
+            required_schedule = list(intent.get("required_reveal_schedule") or [])
+            fidelity_errors = reveal_schedule_fidelity_errors(
+                data,
+                required_schedule,
+            )
+            if fidelity_errors:
+                raise ValueError("; ".join(fidelity_errors))
+            data = project_required_reveal_semantics(data, required_schedule)
         data = normalize_narrative_pass(pass_name, data, total_chapters, book)
         if pass_name == "mystery_ledger" and canonical_reveal is not None:
             data["canonical_reveal_chapter"] = int(canonical_reveal)
