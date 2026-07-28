@@ -1812,6 +1812,30 @@ def replacement_patterns(registry: CanonRegistry) -> list[tuple[re.Pattern[str],
             else:
                 pat = re.compile(rf"\b{re.escape(a)}\b", re.IGNORECASE)
             pairs.append((pat, canonical))
+
+    # Catch a generated surname swap even when that exact bad full name was
+    # never seen before (for example "Calder Hart" when canon is
+    # "Calder Reed").  Only unique lead given names are eligible, and only a
+    # capitalized surname token is replaced, so ordinary uses of the given name
+    # remain untouched.
+    given_names: dict[str, list[str]] = {}
+    for role in LEAD_ROLES:
+        canonical = strip_lead_honorific(registry.characters[role].canonical)
+        parts = canonical.split()
+        if len(parts) < 2 or canonical.lower().startswith("unassigned"):
+            continue
+        given_names.setdefault(parts[0].casefold(), []).append(canonical)
+    for candidates in given_names.values():
+        if len(candidates) != 1:
+            continue
+        canonical = candidates[0]
+        parts = canonical.split()
+        given, surname = parts[0], parts[-1]
+        pat = re.compile(
+            rf"\b{re.escape(given)}\s+(?!{re.escape(surname)}\b)"
+            rf"[A-Z][A-Za-z'.-]+\b"
+        )
+        pairs.append((pat, canonical))
     return pairs
 
 
@@ -1823,3 +1847,17 @@ def sanitize_text_for_registry(text: str, registry: CanonRegistry) -> str:
     for pat, canonical in replacement_patterns(registry):
         out = pat.sub(canonical, out)
     return out
+
+
+def sanitize_json_for_registry(value: Any, registry: CanonRegistry) -> Any:
+    """Recursively seal generated JSON prose to canonical lead names."""
+    if isinstance(value, str):
+        return sanitize_text_for_registry(value, registry)
+    if isinstance(value, list):
+        return [sanitize_json_for_registry(item, registry) for item in value]
+    if isinstance(value, dict):
+        return {
+            key: sanitize_json_for_registry(item, registry)
+            for key, item in value.items()
+        }
+    return value

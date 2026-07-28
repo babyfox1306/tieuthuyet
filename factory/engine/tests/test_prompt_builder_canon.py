@@ -292,6 +292,12 @@ class TestSanitizeText(unittest.TestCase):
         self.assertIn("Elias Crane", out)
         self.assertNotIn("Asher", out)
 
+    def test_unseen_wrong_surname_uses_unique_canonical_given_name(self) -> None:
+        reg = _registry_with_forbidden()
+        out = sanitize_text_for_registry("Elias Vale stood in the doorway.", reg)
+        self.assertIn("Elias Crane", out)
+        self.assertNotIn("Elias Vale", out)
+
 
 class TestFormatPriorSummaries(unittest.TestCase):
     def test_story_so_far_sanitizes_jude(self) -> None:
