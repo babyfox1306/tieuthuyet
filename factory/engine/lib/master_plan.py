@@ -562,11 +562,11 @@ def save_master_plan(ws: Path, book: int, data: dict) -> Path:
     if intent_is_approved(ws, book, direction):
         allowed = collect_allowed_cast_names(ws, book)
         plans, _ = scrub_recurring_invented_plan_characters(plans, allowed)
-
-    # Generated plan prose is untrusted at the surname level too.  Seal
-    # unambiguous lead-name drift before validation and prompt rendering.
-    registry = build_canon_registry(ws, book)
-    plans = sanitize_json_for_registry(plans, registry)
+        # Generated plan prose is untrusted at the surname level too.  Seal
+        # unambiguous lead-name drift before validation and prompt rendering.
+        # Minimal draft/config workspaces do not yet have a complete registry.
+        registry = build_canon_registry(ws, book)
+        plans = sanitize_json_for_registry(plans, registry)
 
     data["chapter_plans"] = normalize_chapter_plans(plans)
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
