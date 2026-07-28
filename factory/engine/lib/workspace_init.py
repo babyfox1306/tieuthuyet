@@ -146,7 +146,13 @@ def _write_default_direction(
     spice = infer_spice_level(concept)
     hub, nodes = infer_setting_from_concept(concept)
     from factory.engine.lib.workspace_metadata import infer_spice_chapter_lists
+    from factory.engine.lib.workspace_metadata import (
+        infer_spice_default,
+        normalize_spice_schedule,
+    )
 
+    schedule = normalize_spice_schedule(concept, total or 0, spice)
+    spice_default = infer_spice_default(concept, spice)
     explicit, steamy = (
         infer_spice_chapter_lists(concept, total, spice) if total else ([], [])
     )
@@ -174,7 +180,8 @@ def _write_default_direction(
         "setting_nodes": nodes,
         # The inferred level is a ceiling. Ordinary chapters stay at the
         # baseline; explicit/steamy chapters are listed separately below.
-        "spice_default": min(1, spice),
+        "spice_default": spice_default,
+        "spice_schedule": schedule,
         "spice_explicit_chapters": explicit,
         "spice_steamy_chapters": steamy,
         "book1_ending": concept.get("ending_book1", ""),

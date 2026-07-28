@@ -11,6 +11,7 @@ from factory.engine.lib.workspace_metadata import (
     infer_setting_from_concept,
     infer_spice_chapter_lists,
     infer_spice_level,
+    normalize_spice_schedule,
     is_template_setting,
     scale_act_arc,
     sync_direction_from_concept,
@@ -58,6 +59,63 @@ class WorkspaceMetadataTests(unittest.TestCase):
             infer_spice_chapter_lists(concept, 18, 3),
             ([11, 18], []),
         )
+
+    def test_per_chapter_spice_schedule_wins_over_explicit_list(self) -> None:
+        concept = {
+            "spice_level": 3,
+            "spice_default": 0,
+            "spice_explicit_chapters": [11, 18],
+            "spice_schedule": {11: 3, 18: 2},
+        }
+        self.assertEqual(normalize_spice_schedule(concept, 18, 3), {11: 3, 18: 2})
+        self.assertEqual(
+            infer_spice_chapter_lists(concept, 18, 3),
+            ([11, 18], []),
+        )
+
+    def test_spice_schedule_fails_loud_on_missing_or_above_ceiling(self) -> None:
+        with self.assertRaisesRegex(ValueError, "explicit but has no"):
+            normalize_spice_schedule(
+                {
+                    "spice_explicit_chapters": [11, 18],
+                    "spice_schedule": {11: 3},
+                },
+                18,
+                3,
+            )
+        with self.assertRaisesRegex(ValueError, "exceeds ceiling"):
+            normalize_spice_schedule(
+                {"spice_schedule": {18: 3}},
+                18,
+                2,
+            )
+
+    def test_sync_persists_spice_schedule_to_direction(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp) / "scheduled-spice"
+            ws.mkdir()
+            concept = {
+                "spice_level": 3,
+                "spice_default": 0,
+                "spice_explicit_chapters": [11, 18],
+                "spice_schedule": {11: 3, 18: 2},
+            }
+            (ws / "concept.yaml").write_text(
+                yaml.dump(concept, sort_keys=False),
+                encoding="utf-8",
+            )
+            (ws / "direction.yaml").write_text(
+                yaml.dump({"book": 1, "total_chapters": 18}),
+                encoding="utf-8",
+            )
+            (ws / "manifest.yaml").write_text("id: scheduled-spice\n", encoding="utf-8")
+            sync_direction_from_concept(ws)
+            direction = yaml.safe_load(
+                (ws / "direction.yaml").read_text(encoding="utf-8")
+            )
+            self.assertEqual(direction["spice_schedule"], {11: 3, 18: 2})
+            self.assertEqual(direction["spice_explicit_chapters"], [11, 18])
+            self.assertEqual(direction["spice_default"], 0)
 
     def test_scale_arc_ten_chapters(self) -> None:
         arc = scale_act_arc(10)

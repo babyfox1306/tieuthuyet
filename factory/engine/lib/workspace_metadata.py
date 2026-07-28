@@ -344,6 +344,94 @@ def infer_spice_level(concept: dict) -> int:
     return 1
 
 
+def infer_spice_default(concept: dict, ceiling: int) -> int:
+    raw = concept.get("spice_default")
+    if raw is None:
+        return min(1, ceiling)
+    if isinstance(raw, bool):
+        raise ValueError("spice_default must be integer 0..3")
+    try:
+        level = int(raw)
+    except (TypeError, ValueError) as exc:
+        raise ValueError("spice_default must be integer 0..3") from exc
+    if level < 0 or level > 3 or level > ceiling:
+        raise ValueError(
+            f"spice_default {level} exceeds valid book ceiling {ceiling}"
+        )
+    return level
+
+
+def spice_schedule_errors(
+    concept: dict,
+    total: int,
+    ceiling: int,
+) -> list[str]:
+    raw = concept.get("spice_schedule")
+    if raw is None:
+        return []
+    if not isinstance(raw, dict):
+        return ["spice_schedule: must be a chapter-to-level map"]
+    errors: list[str] = []
+    scheduled: set[int] = set()
+    for raw_chapter, raw_level in raw.items():
+        try:
+            chapter = int(str(raw_chapter).lstrip("chCH"))
+        except (TypeError, ValueError):
+            errors.append(f"spice_schedule.{raw_chapter}: chapter must be a positive integer")
+            continue
+        if chapter <= 0 or (total > 0 and chapter > total):
+            errors.append(
+                f"spice_schedule.{raw_chapter}: chapter outside 1..{total}"
+            )
+        if isinstance(raw_level, bool) or not isinstance(raw_level, int):
+            errors.append(f"spice_schedule.{raw_chapter}: level must be integer 0..3")
+            continue
+        level = raw_level
+        if level < 0 or level > 3:
+            errors.append(f"spice_schedule.{raw_chapter}: level must be within 0..3")
+        elif level > ceiling:
+            errors.append(
+                f"spice_schedule.{raw_chapter}: level {level} exceeds ceiling {ceiling}"
+            )
+        scheduled.add(chapter)
+    explicit = concept.get("spice_explicit_chapters")
+    if explicit is not None:
+        if not isinstance(explicit, list):
+            errors.append("spice_explicit_chapters: must be a list")
+        else:
+            for raw_chapter in explicit:
+                try:
+                    chapter = int(raw_chapter)
+                except (TypeError, ValueError):
+                    errors.append(
+                        f"spice_explicit_chapters: invalid chapter {raw_chapter!r}"
+                    )
+                    continue
+                if chapter not in scheduled:
+                    errors.append(
+                        "spice_schedule:"
+                        f" chapter {chapter} is explicit but has no per-chapter level"
+                    )
+    return errors
+
+
+def normalize_spice_schedule(
+    concept: dict,
+    total: int,
+    ceiling: int,
+) -> dict[int, int]:
+    errors = spice_schedule_errors(concept, total, ceiling)
+    if errors:
+        raise ValueError("; ".join(errors))
+    raw = concept.get("spice_schedule")
+    if not isinstance(raw, dict):
+        return {}
+    return {
+        int(str(chapter).lstrip("chCH")): int(level)
+        for chapter, level in raw.items()
+    }
+
+
 def parse_chapter_count_from_concept(concept: dict) -> int | None:
     from factory.engine.lib.operator_sync import parse_chapter_count_from_concept as _parse
 
@@ -406,6 +494,26 @@ def infer_spice_chapter_lists(
     concept: dict, total: int, spice_level: int
 ) -> tuple[list[int], list[int]]:
     """Prefer chapter locks declared by the concept over the generic template."""
+    schedule = normalize_spice_schedule(concept, total, spice_level)
+    if schedule:
+        explicit_raw = concept.get("spice_explicit_chapters")
+        if isinstance(explicit_raw, list):
+            return sorted({int(ch) for ch in explicit_raw}), []
+        return (
+            sorted(ch for ch, level in schedule.items() if level >= 3),
+            sorted(ch for ch, level in schedule.items() if level == 2),
+        )
+    explicit_raw = concept.get("spice_explicit_chapters")
+    if isinstance(explicit_raw, list) and explicit_raw:
+        explicit = sorted(
+            {
+                int(ch)
+                for ch in explicit_raw
+                if str(ch).strip().lstrip("-").isdigit()
+                and 1 <= int(ch) <= total
+            }
+        )
+        return explicit, []
     text = "\n".join(
         str(concept.get(key) or "")
         for key in ("author_directive", "true_plot", "must_include", "chapter_map", "notes")
@@ -457,19 +565,23 @@ def sync_direction_from_concept(
         changed.append("target_language")
 
     spice = infer_spice_level(concept)
+    spice_default = infer_spice_default(concept, spice)
     if int(direction.get("spice_level") or 0) != spice or is_template_spice_schedule(direction):
         direction["spice_level"] = spice
-        # spice_level is the book ceiling; spice_default is the ordinary
-        # chapter baseline. Explicit/steamy chapters are scheduled separately.
-        current_default = int(direction.get("spice_default") or 1)
-        direction["spice_default"] = min(current_default, spice)
         direction["spice_badge"] = _SPICE_BADGES.get(spice, "sweet")
         changed.append("spice_level")
+    if int(direction.get("spice_default") if direction.get("spice_default") is not None else -1) != spice_default:
+        direction["spice_default"] = spice_default
+        changed.append("spice_default")
 
     # Chapter count: operator sets via UI (direction.yaml). Concept save must not override.
     total = int(direction.get("total_chapters") or 0)
 
     if total >= 3:
+        schedule = normalize_spice_schedule(concept, total, spice)
+        if direction.get("spice_schedule") != schedule:
+            direction["spice_schedule"] = schedule
+            changed.append("spice_schedule")
         explicit, steamy = infer_spice_chapter_lists(concept, total, spice)
         if list(direction.get("spice_explicit_chapters") or []) != explicit:
             direction["spice_explicit_chapters"] = explicit
@@ -483,6 +595,7 @@ def sync_direction_from_concept(
             direction["arc"] = arc
             changed.append("arc")
     else:
+        direction["spice_schedule"] = {}
         explicit, steamy = [], []
         if list(direction.get("spice_explicit_chapters") or []) != explicit:
             direction["spice_explicit_chapters"] = explicit
@@ -582,8 +695,11 @@ def rescale_direction_arc(ws: Path, total: int) -> None:
     total = max(3, int(total))
     direction["total_chapters"] = total
     direction["arc"] = scale_act_arc(total)
-    spice = int(direction.get("spice_level") or infer_spice_level(_load_concept(ws)))
-    explicit, steamy = spice_chapter_lists(total, spice)
+    concept = _load_concept(ws)
+    spice = int(direction.get("spice_level") or infer_spice_level(concept))
+    schedule = normalize_spice_schedule(concept, total, spice)
+    explicit, steamy = infer_spice_chapter_lists(concept, total, spice)
+    direction["spice_schedule"] = schedule
     direction["spice_explicit_chapters"] = explicit
     direction["spice_steamy_chapters"] = steamy
     _save_yaml(ws / "direction.yaml", direction)

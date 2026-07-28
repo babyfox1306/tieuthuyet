@@ -170,6 +170,10 @@ class ConceptRoundTripTests(unittest.TestCase):
             "concept_status": "draft",
             "target_language": "en",
             "chapter_count": 2,
+            "spice_level": 3,
+            "spice_default": 0,
+            "spice_explicit_chapters": [1, 2],
+            "spice_schedule": {1: 3, 2: 2},
             "title": "The Test",
             "pen_name": "N. Vale",
             "logline": "Line one.\nLine two.\n",
@@ -239,6 +243,18 @@ class ConceptRoundTripTests(unittest.TestCase):
         self.assertIn("must_include", joined)
         self.assertIn("single_pov", joined)
 
+    def test_import_rejects_invalid_spice_schedule(self):
+        raw = self._valid_import()
+        raw["spice_schedule"] = {1: 3}
+        result = self.server.parse_concept_yaml(
+            yaml.dump(raw, allow_unicode=True, sort_keys=False),
+            fallback_language="en",
+        )
+        self.assertFalse(result["ok"])
+        self.assertTrue(
+            any("explicit but has no" in error for error in result["errors"])
+        )
+
     def test_unknown_key_warns_and_survives_import_export(self):
         raw = self._valid_import()
         raw["future_metadata"] = {"keep": True}
@@ -287,6 +303,7 @@ class ConceptRoundTripTests(unittest.TestCase):
         for key in self.server.CONCEPT_FORM_KEYS:
             self.assertEqual(imported["concept"][key], original[key], key)
         self.assertEqual(imported["passthrough"]["chapter_count"], 2)
+        self.assertEqual(imported["passthrough"]["spice_schedule"], {1: 3, 2: 2})
 
 
 class UnnamedPlotRoleGateTests(unittest.TestCase):

@@ -112,6 +112,11 @@ CONCEPT_KNOWN_METADATA_KEYS = frozenset(
         "concept_status",
         "target_language",
         "romance_mode",
+        "spice_level",
+        "spice_default",
+        "spice_schedule",
+        "spice_explicit_chapters",
+        "spice_steamy_chapters",
         "chapter_count",
         "genre",
         "genre_profile",
@@ -318,6 +323,48 @@ def validate_imported_concept(data: object, *, fallback_language: str = "vi") ->
 
     if "chapter_map" in data:
         errors.extend(_validate_chapter_map(data["chapter_map"]))
+
+    for key in ("spice_level", "spice_default"):
+        if key in data and (
+            isinstance(data[key], bool)
+            or not isinstance(data[key], int)
+            or not 0 <= data[key] <= 3
+        ):
+            errors.append(f"{key}: phải là integer 0..3")
+    if (
+        isinstance(data.get("spice_default"), int)
+        and not isinstance(data.get("spice_default"), bool)
+        and isinstance(data.get("spice_level"), int)
+        and not isinstance(data.get("spice_level"), bool)
+        and data["spice_default"] > data["spice_level"]
+    ):
+        errors.append("spice_default: không được vượt spice_level ceiling")
+    for key in ("spice_explicit_chapters", "spice_steamy_chapters"):
+        if key in data and (
+            not isinstance(data[key], list)
+            or any(
+                isinstance(ch, bool) or not isinstance(ch, int) or ch <= 0
+                for ch in data[key]
+            )
+        ):
+            errors.append(f"{key}: phải là list số chương dương")
+    if "spice_schedule" in data:
+        from factory.engine.lib.workspace_metadata import spice_schedule_errors
+
+        total = int(data.get("chapter_count") or 0)
+        if not total and isinstance(data.get("chapter_map"), dict):
+            chapters = []
+            for raw_chapter in data["chapter_map"]:
+                try:
+                    chapters.append(int(str(raw_chapter).lstrip("chCH")))
+                except (TypeError, ValueError):
+                    pass
+            total = max(chapters or [0])
+        ceiling = int(data.get("spice_level") or 0)
+        if ceiling <= 0:
+            errors.append("spice_schedule: cần spice_level ceiling rõ ràng")
+        else:
+            errors.extend(spice_schedule_errors(data, total, ceiling))
 
     known = CONCEPT_REQUIRED_IMPORT_KEYS | CONCEPT_KNOWN_METADATA_KEYS
     unknown = sorted(str(key) for key in set(data) - known)

@@ -9,7 +9,11 @@ from pathlib import Path
 
 import yaml
 
-from factory.engine.lib.prompt_builder import build_chapter_prompt, render_all_prompts
+from factory.engine.lib.prompt_builder import (
+    build_chapter_prompt,
+    render_all_prompts,
+    spice_for_chapter,
+)
 from factory.engine.tests.test_narrative_compiler import (
     SAMPLE_LEDGER,
     SAMPLE_MATRIX,
@@ -41,6 +45,30 @@ MINIMAL_PLAN = {
 
 
 class TestNarrativePromptInjection(unittest.TestCase):
+    def test_spice_schedule_is_per_chapter_and_beats_legacy_list(self):
+        direction = {
+            "spice_level": 3,
+            "spice_default": 0,
+            "spice_explicit_chapters": [11, 18],
+            "spice_schedule": {11: 3, 18: 2},
+        }
+        self.assertEqual(spice_for_chapter(direction, 11), 3)
+        self.assertEqual(spice_for_chapter(direction, 18), 2)
+        self.assertEqual(spice_for_chapter(direction, 10), 0)
+
+    def test_legacy_explicit_list_uses_book_ceiling(self):
+        self.assertEqual(
+            spice_for_chapter(
+                {
+                    "spice_level": 3,
+                    "spice_default": 0,
+                    "spice_explicit_chapters": [11, 18],
+                },
+                18,
+            ),
+            3,
+        )
+
     def _direction(self) -> dict:
         return {
             "target_language": "en",

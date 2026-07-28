@@ -82,10 +82,34 @@ def master_plan_path(ws: Path, book: int) -> Path:
 
 
 def spice_for_chapter(direction: dict, chapter: int) -> int:
+    schedule = direction.get("spice_schedule")
+    if isinstance(schedule, dict) and schedule:
+        raw = schedule.get(chapter, schedule.get(str(chapter)))
+        if raw is not None:
+            level = int(raw)
+            ceiling = int(
+                direction.get("spice_max")
+                if direction.get("spice_max") is not None
+                else direction.get("spice_level") or 3
+            )
+            if level < 0 or level > 3 or level > ceiling:
+                raise ValueError(
+                    f"spice_schedule ch{chapter}={level} exceeds valid ceiling {ceiling}"
+                )
+            return level
+        if chapter in direction.get("spice_explicit_chapters", []):
+            raise ValueError(
+                f"spice_schedule missing level for explicit chapter {chapter}"
+            )
+    ceiling = int(
+        direction.get("spice_max")
+        if direction.get("spice_max") is not None
+        else direction.get("spice_level") or 3
+    )
     if chapter in direction.get("spice_explicit_chapters", []):
-        return 3
+        return ceiling
     if chapter in direction.get("spice_steamy_chapters", []):
-        return 2
+        return min(2, ceiling)
     # Respect spice_max=0 books (gothic / no-romance); do not default them to sweet.
     if "spice_default" in direction:
         return int(direction.get("spice_default") or 0)

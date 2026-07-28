@@ -652,6 +652,19 @@ def compile_intent_manifest(ws: Path, book: int | None = None) -> dict[str, Any]
 
     chapter_map_list = [chapter_map[ch] for ch in sorted(chapter_map.keys())]
     canonical_reveal_chapter = infer_canonical_reveal_chapter(concept, chapter_map)
+    from factory.engine.lib.workspace_metadata import (
+        infer_spice_default,
+        infer_spice_level,
+        normalize_spice_schedule,
+    )
+
+    spice_level = infer_spice_level(concept)
+    spice_default = infer_spice_default(concept, spice_level)
+    spice_schedule = normalize_spice_schedule(
+        concept,
+        chapter_count,
+        spice_level,
+    )
     manifest: dict[str, Any] = {
         "version": MANIFEST_VERSION,
         "book": book_num,
@@ -679,6 +692,9 @@ def compile_intent_manifest(ws: Path, book: int | None = None) -> dict[str, Any]
         ).strip(),
         "genre_profile": genre,
         "language": language,
+        "spice_level": spice_level,
+        "spice_default": spice_default,
+        "spice_schedule": spice_schedule,
         "reveal_ladder": _build_reveal_ladder(chapter_map, concept_reveal, cast=cast),
         "required_reveal_schedule": derive_required_reveal_schedule(concept),
         "canonical_reveal_chapter": canonical_reveal_chapter,
