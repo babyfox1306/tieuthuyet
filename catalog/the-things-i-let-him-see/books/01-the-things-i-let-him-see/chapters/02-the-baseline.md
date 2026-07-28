@@ -1,0 +1,147 @@
+---
+series: the-things-i-let-him-see
+book: 1
+chapter: 2
+title: The Baseline
+spice: 0
+word_count: 1510
+status: draft
+needs_fix: []
+promoted_at: '2026-07-28T05:54:00Z'
+---
+
+The first full day of surveillance begins at 06:14," I wrote, and the pen scratched louder than I expected in the silent apartment. "Subject: Hart, Lena. Location: 4B. Status: unaware." I underlined "unaware" before I could stop myself.
+
+The courtyard apartment smelled like bleach and stale air. A rental unit the building manager thought he was leasing to a freelance photographer on a month-to-month—Grant's paperwork, Grant's alias, Grant's money. I'd slept four hours on a cot I'd brought myself, my laptop charging on a counter that had never held food, the telephoto lens aimed through a gap in the blinds that I'd calibrated at 02:00 when the courtyard lights were lowest.
+
+The camera was recording. The backup drive was synced. The field notebook was open to page one, and I'd already written my name in the cover in black ink, the way my father taught me: "Evidence is only as good as the chain that carries it."
+
+I checked the feed. Her apartment was dark, curtains drawn. The bedroom light flicked on at 06:22.
+
+I wrote that down.
+
+At 06:31, the bathroom light. At 06:47, the kitchen. Her silhouette moved behind the frosted glass of her balcony door—small, deliberate, unhurried. She wasn't stumbling through a hangover or rushing to medicate a panic. She was moving like someone who owned the morning.
+
+At 06:52, she stepped onto the balcony.
+
+I adjusted the focus. The lens pulled her into clarity: dark hair twisted into a loose knot, a grey sweater that hung past her hips, bare feet on the cold tile. She raised her arms above her head and stretched, her spine bowing backward, her face tilting toward the weak morning sun.
+
+I wrote: "06:52—Subject exits to balcony. Morning stretch routine. Appears calm. No visible distress indicators."
+
+Then she lowered her arms, turned her head, and looked directly at my window.
+
+Not a glance. Not a scan. Her eyes found the gap in my blinds like she'd known exactly where to aim, like she'd rehearsed this moment and I was late to my mark.
+
+My hand froze over the notebook. The pen hovered, ink beading at the tip, ready to fall.
+
+I forgot to breathe.
+
+She held the look for two seconds—I counted them, because that's what I do, I count things, I measure things, I turn instinct into data—and then she turned away, stretching to the left as if she'd only been loosening her neck.
+
+I exhaled.
+
+I wrote: "06:53—Subject appears to orient toward observation point. Possible coincidence. No verbal acknowledgment. No gesture."
+
+I underlined "possible coincidence" and then crossed it out. That wasn't evidence. That was me trying to convince myself.
+
+At 07:15, she left the apartment.
+
+I watched her cross the courtyard through the wide-angle lens, her walking shoes silent on the pavers, a small canvas bag slung over one shoulder. She didn't check her phone. She didn't look back at her window. She walked to the street with the easy rhythm of someone who took the same route every day, and I tracked her until she disappeared behind the hedge at the corner.
+
+I wrote: "07:15—Subject departs on foot, direction east. Estimated return: 30-45 minutes based on pace and lack of bag weight."
+
+I was wrong. She came back at 07:53, and she came back different.
+
+She stopped at the threshold of her apartment door—the one she'd left unlocked, which I'd noted because Grant had told me she was paranoid about locks, that she checked them three times before bed—and she didn't go in. She stood in the hallway, her hand on the frame, her head tilted like she was listening to something I couldn't hear.
+
+Then she stepped inside.
+
+I watched through the kitchen window view. She walked to the counter, set down her bag, and stopped.
+
+She stared at the coffee mug.
+
+It was a plain ceramic thing, cream-colored, sitting on the marble counter beside the sink. I'd seen it there at 06:47, when she'd poured herself coffee and drunk it standing up, rinsing the mug and leaving it on the drying mat beside the faucet.
+
+The mug was now on the other side of the sink.
+
+Approximately two inches displaced. Not enough to be random. Not precise enough to be accidental.
+
+She stood there for twelve seconds—I counted—her eyes fixed on the mug. Her breathing didn't change. Her posture didn't tighten. She looked like a chess player studying a board, calculating three moves ahead while her opponent thought she was still deciding.
+
+My phone buzzed.
+
+Grant: "She find the mug? I moved it last night. Wanted to see if she'd notice. Did she look confused? Forget something?"
+
+I stared at the message. Three sentences, no punctuation anxiety, no attempt to sound concerned. He'd moved it himself. He'd come into her apartment—while she slept, while I set up my equipment—and he'd moved a coffee mug two inches, and then he'd texted me to ask if she'd noticed, like I was reporting on a lab experiment.
+
+I wrote in my notebook: "07:55—Subject returns from walk. Pauses at kitchen counter. Object displacement observed: coffee mug moved approximately 2 inches from original position. Source of displacement: Grant Hart (self-reported via text at 07:54). Subject response: extended visual examination, no verbal reaction, no visible distress."
+
+I wrote it neutral. I wrote it flat. I wrote it the way I'd been trained to write crime scene notes, the way my father taught me: "Observation first. Interpretation later. Never let your conclusion write the sentence for you."
+
+But the conclusion was already forming, settling into my chest like a weight I couldn't name.
+
+Grant Hart had broken into his separated wife's apartment to move a coffee mug.
+
+And Lena Hart had noticed.
+
+She picked up the mug. Turned it in her hands. Set it back exactly where she'd found it—not where she'd left it, not where it belonged, but where Grant had placed it. She adjusted it a quarter-inch to the left, aligning it with an invisible grid only she could see.
+
+Then she walked to her bedroom and closed the door.
+
+I wrote: "07:58—Subject returns mug to displaced position. Does not restore original placement. Logical inference: subject is documenting the alteration, not correcting it."
+
+At 08:30, Grant texted again: "Well?"
+
+I typed back: "She noticed. No visible confusion. No visible distress. She returned the mug to the position you placed it."
+
+Three dots appeared. Disappeared. Appeared again.
+
+Grant: "Good. Keep watching."
+
+I didn't write that down. I didn't know why.
+
+The morning passed in increments. I logged her movements: breakfast at 09:15 (toast, no plate, eaten standing), laundry at 10:00 (one load, she folded each shirt into identical rectangles), a phone call at 10:30 (I couldn't hear the words, but her voice was calm, unhurried, the rhythm of someone talking to a friend).
+
+At 11:20, she returned to the kitchen.
+
+She picked up the mug again. Held it to the light. Ran her thumb along the rim, once, twice, a gesture that looked almost tender.
+
+Then she put it in the sink and turned on the faucet.
+
+I watched the water run over the ceramic, watched her hands still beneath the stream, watched her stare at nothing the way people do when they're thinking too hard to see.
+
+She dried the mug. Opened the cabinet. Placed it on the second shelf, between a matching cream bowl and a stack of white plates.
+
+Home. She'd put it home.
+
+I wrote: "11:22—Subject restores mug to original cabinet position. 2 hours 24 minutes after displacement detection. Decision-making interval suggests deliberate processing, not instinctive correction."
+
+At 13:00, I ate a protein bar and checked the footage.
+
+I started from 06:47, when she'd last touched the mug before leaving. I watched her rinse it, place it on the drying mat, walk away. Then I skipped to 07:55, her return, the pause, the stare.
+
+I zoomed in on her face.
+
+The feed was clean—good light, steady angle, the telephoto pulling her into frame like a portrait. I expected confusion. I expected the slight furrow of a brow, the lip-press of someone trying to remember if she'd moved it herself.
+
+What I saw was nothing.
+
+No confusion. No distress. No uncertainty.
+
+She looked at the displaced mug the way a woman looks at a photograph of an ex-lover: with recognition, with distance, with the quiet knowledge that she'd known this moment was coming.
+
+I zoomed in closer.
+
+The corner of her mouth moved. A fraction of a centimeter. The smallest curve, the beginning of a smile, the kind you make when you've been waiting for someone to prove you right.
+
+I sat back.
+
+The apartment was silent. The camera hummed. My hand was still holding the pen, and the ink had dried on the page, leaving a sentence unfinished.
+
+I looked at the freeze-frame on my screen—her face, perfectly centered, the mug two inches from where she'd left it.
+
+And there, at the corner of her mouth, the smallest curve.
+
+Not confusion. Not distress.
+
+The beginning of a smile, as if she'd just confirmed something she already knew.

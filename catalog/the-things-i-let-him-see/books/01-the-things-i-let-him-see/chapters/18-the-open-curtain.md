@@ -1,0 +1,217 @@
+---
+series: the-things-i-let-him-see
+book: 1
+chapter: 18
+title: The Open Curtain
+spice: 2
+word_count: 2039
+status: draft
+needs_fix: []
+promoted_at: '2026-07-28T06:23:38Z'
+---
+
+Day sixteen. 08:47. I sat across from Detective Imani Cross in an interview room that smelled of coffee and stale air, and I told her everything. Not because the law required it — though it did — but because Lena Hart had taught me that the truth, once chosen, cannot be un-chosen. I told Cross about the contract, the camera, the deleted intervals, the envelope, the planner, the audit, the rules, the night I crossed the line I had drawn for myself. I told her about Lena. Every part of it. And when I finished, I had nothing left to hold but the weight of having said it aloud.
+
+Cross leaned back in her chair. The fluorescent light caught the edge of her badge, and she turned it between her fingers like she was weighing something heavier than metal.
+
+"You understand what you're admitting," she said. It wasn't a question.
+
+"Yes."
+
+"You withheld material from a paying client. You entered the subject's apartment without the client's knowledge. You formed a personal relationship with the surveillance target. You destroyed the operational chain of custody by handing evidence directly to the subject."
+
+"I know."
+
+Cross set the badge down. "And you're telling me this without a lawyer present, without a deal, without any guarantee that I won't use every word you just said against you."
+
+I looked at the table. The surface was scratched, marked by years of interviews that had gone differently than the speakers expected. "I'm telling you because the evidence needs to survive. Not me. Not my reputation. The evidence."
+
+She studied me for a long moment. Then she opened the file folder on the table and began checking items against a list I couldn't see.
+
+"The unedited lobby footage. Date-stamped, continuous, showing Grant Hart accessing mailbox 4C with a key that matches the duplicate you identified."
+
+"Yes."
+
+"The text message from Grant Hart using the phrase 'Friday key return,' time-stamped day ten, 06:14."
+
+"Yes."
+
+"The printed three-page master-access audit from the board terminal. Mae Torres's signature at the bottom, terminal verification code visible."
+
+"Yes."
+
+"The evidence index and encrypted duplicate you delivered on day fifteen."
+
+"Yes."
+
+"Your field notebook. Handwritten timestamps for every observation, including the entry for the deleted interval."
+
+I felt my throat tighten. "Yes."
+
+"The original surveillance contract between Grant Hart and Calder Reed, including written instructions to document 'signs of instability, abandonment intent, and packing activity.'"
+
+"Yes."
+
+"Your unedited archive of the deleted interval. 08:12:47 to 08:16:03, day six. Showing Grant Hart entering Lena Hart's apartment with the master credential, opening the kitchen drawer, and removing objects."
+
+Cross closed the folder. She didn't look satisfied. She looked like someone who had just been handed a puzzle she hadn't known existed, and the pieces were heavier than she had expected.
+
+"I'll need to verify the chain of custody on each item," she said. "The encrypted duplicate goes to the department's evidence unit. Mae Torres will need to confirm the audit print was done under her supervision. Your footage will be reviewed by a forensic video analyst."
+
+"I understand."
+
+"You'll be asked to provide a sworn statement. Every detail. No omissions."
+
+"I will."
+
+Cross stood. She paused at the door and looked back at me. "You know this doesn't end well for you, right? Even if everything you've told me checks out, you're looking at losing your license. Possibly worse."
+
+I nodded. "I know."
+
+"Why?"
+
+The question hung in the air. I thought about Lena's apartment, the way she had looked at me when she said the test worked. I thought about her planner, the crossed-out days, the margin note she had written before she understood what it meant. I thought about the moment she had kissed me, and how I had felt seen for the first time in years.
+
+"Because I stopped being a witness," I said. "I started being someone who needed her to be safe. And that changed everything."
+
+Cross held my gaze for a moment, then opened the door and walked out.
+
+---
+
+Day seventeen. I didn't call. I didn't text. I didn't walk past the building, didn't check the courtyard, didn't raise a single camera. I stayed in my apartment — the one I had before I knew her name — and I let the silence stretch.
+
+The phone stayed dark. The notebook stayed closed. The external drive sat in a drawer, disconnected, useless.
+
+I told myself I was giving her space. I told myself she needed time to process what had happened, to decide what she wanted without me hovering at the edge of her field of view. But the truth was simpler and harder: I had nothing left to offer. No evidence she hadn't already seen. No plan she hadn't already designed. No permission she hadn't already given or withheld.
+
+I was a man who had been seen and sent away.
+
+Day eighteen. Day nineteen. I watched the light change through my window and tried not to calculate how many days it had been since I had heard her voice.
+
+---
+
+Day twenty. 14:23. My phone vibrated once.
+
+Not a message from Cross. Not a notification from the precinct. A single word on the screen, from a number I had not saved because I had memorized it:
+
+"Come."
+
+I didn't reply. I didn't ask for clarification. I grabbed my jacket, left my phone on the counter, and walked out the door.
+
+---
+
+She met me at the entrance to her building. Not in the courtyard, not at the window. She stood in the lobby, arms crossed, watching me approach through the glass. When I reached the door, she didn't open it immediately. She looked at my hands, my pockets, my jacket.
+
+"Empty," I said. "No phone. No notebook. No recording equipment. Nothing."
+
+She studied me for a long moment. Then she unlocked the door and stepped aside.
+
+I followed her up the stairs. The hallway smelled the same — cleaning solution, old wood, the faint trace of coffee from her apartment. She stopped at her door and turned to face me.
+
+"The courtyard camera is disconnected," she said. "I checked. I'll check again after you leave. If I find it reconnected, you don't come back."
+
+I nodded.
+
+She opened the door and let me in.
+
+The apartment looked different. Not because anything had changed — the kitchen counter was clear, the paper planner was gone, the drawer beside the refrigerator was closed. But the light was different. Softer. The blinds were adjusted at an angle I hadn't seen before, cutting the afternoon sun into thin strips that fell across the floor like a grid.
+
+Lena walked to the kitchen and leaned against the counter. She didn't offer me coffee. She didn't tell me to sit. She just watched me, her arms folded, her expression unreadable.
+
+"I don't know what I want yet," she said. "I know what I don't want. I don't want you to decide for me. I don't want you to watch me without my permission. I don't want you to keep secrets I didn't ask you to hold."
+
+"I understand."
+
+"I'm not offering forgiveness. I'm not offering a promise. I'm offering a door that's open, and a curtain that stays open for as long as I choose to leave it that way."
+
+I didn't move. "What do you want me to do?"
+
+She tilted her head, considering. Then she said, "Sit."
+
+I sat at the kitchen table. She sat across from me. The silence stretched, but it wasn't uncomfortable. It was the silence of two people who had stopped pretending.
+
+"Cross called me," she said. "She told me you gave a full statement. That you admitted everything."
+
+"Yes."
+
+"She said you didn't ask for immunity. You didn't try to negotiate."
+
+"Nothing to negotiate."
+
+Lena's eyes stayed on mine. "Why?"
+
+I thought about the answer I had given Cross. It was true, but it wasn't the whole truth. The whole truth was harder to say.
+
+"Because I wanted you to be free of me," I said. "Not because I stopped wanting to be near you. Because I wanted you to choose. And you couldn't choose if I was still holding something over you."
+
+She didn't respond immediately. She unfolded her arms and placed her hands flat on the table, palms down. "I chose. I texted you."
+
+"Yes."
+
+"That doesn't mean I trust you. It means I'm willing to see if trust is possible."
+
+"I understand."
+
+"Then come here."
+
+I stood. I walked around the table. She didn't stand, didn't reach for me. She looked up, and her eyes were steady, deliberate, precise.
+
+"Look at me," she said.
+
+Not a command. An invitation.
+
+I looked.
+
+She reached up and touched my jaw, her fingers cool against my skin. She pulled me down, slowly, and kissed me. It was different from the first time. That kiss had been a test, a declaration, a lock clicking into place. This one was a question. A door held open.
+
+When she pulled back, she said, "You can stay. But you follow my rules. You leave when I tell you. You watch only what I show you. You don't ask for more."
+
+"I won't."
+
+She stood, took my hand, and led me to the bedroom. She closed the door behind us, but she didn't lock it. She pulled the curtain across the window — not all the way, leaving a strip of light — and turned to face me.
+
+"Undress me," she said.
+
+I did. Slowly. Each button, each layer, each piece of fabric that fell to the floor. She watched me the entire time, her eyes never leaving mine.
+
+When she was bare, she stepped back and looked at me. "Your turn."
+
+I undressed. She didn't help. She watched, and in her watching there was no judgment, no assessment, no documentation. Just presence.
+
+She reached out and placed her palm against my chest. Her hand was warm. Steady.
+
+"I want you to touch me," she said. "But only where I guide you. Only for as long as I let you."
+
+I nodded.
+
+She took my hand and placed it on her waist. Then her hip. Then the curve of her spine. Each movement was deliberate, measured, chosen. She decided when I stayed and when I moved. She decided how long each touch lasted.
+
+When she pulled me onto the bed, she was the one who set the rhythm. She was the one who decided when the kiss deepened and when it softened. She was the one who closed her eyes first, and when she did, I felt something shift — not surrender, but trust. A door left unlatched.
+
+Afterward, we lay in the strip of light from the window. Her head rested on my chest. My hand rested on her back. Neither of us spoke.
+
+Then she said, "Mae came by yesterday."
+
+I waited.
+
+"She gave me something. A sealed archived complaint. From another condominium. Same security vendor. Predates Grant's board role."
+
+"What was in it?"
+
+She was quiet for a moment. "I didn't open it."
+
+"Why not?"
+
+"Because I'm not ready to know what's inside. Because some doors don't need to be opened yet. Because I've spent the last three weeks reading every piece of paper that crossed my path, and I'm tired of evidence."
+
+I didn't argue. I didn't ask. I held her, and she let me.
+
+Later, she got up and walked to the kitchen. I followed. She opened the drawer beside the refrigerator — the same drawer Grant had left gaping on day six. She placed the sealed complaint inside, next to the envelope she had used to trap him. Then she closed the drawer.
+
+She turned to me. "The curtain stays open tonight. But I choose when it closes."
+
+I sat at the kitchen table. I didn't reach for my notebook. I didn't reach for my phone. I sat in the silence of her kitchen, holding nothing, and waited to be seen.
+
+She walked to the window and adjusted the blind. Not closed. Not open. Exactly where she wanted it.
+
+Then she sat across from me, and the light fell across her face, and I understood that this was the only permission I would ever need.

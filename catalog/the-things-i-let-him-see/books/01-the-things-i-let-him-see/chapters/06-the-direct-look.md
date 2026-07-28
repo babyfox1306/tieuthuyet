@@ -1,0 +1,139 @@
+---
+series: the-things-i-let-him-see
+book: 1
+chapter: 6
+title: The Direct Look
+spice: 0
+word_count: 1641
+status: draft
+needs_fix: []
+promoted_at: '2026-07-28T05:56:33Z'
+---
+
+Day five. 06:14. Lena. Status: unaware. I wrote the words and stared at them until the ink dried. The private dance footage was still open on my monitor, paused on a frame where her face was soft and unguarded. I closed the file before I could watch it again. The lie was already wearing thin.
+
+I saved the notebook entry and switched to the live feed. The kitchen camera showed an empty room. The common-area camera showed an empty courtyard. The bedroom blinds were still closed, no light behind them yet. I adjusted the focus on each feed, checked the camera status lights, then checked them again. The routine was automatic by now, muscle memory, but my thumb kept running along the edge of the notebook longer than necessary.
+
+The silence in my apartment felt different today. Heavier. Like the walls were leaning in.
+
+I opened the private archive and stared at the file list. Day one. Day two. Day three. Day four. Each folder contained footage Grant would never see, observations I'd never report. The envelope comparison screenshot. The three-second pause at the threshold. The dance.
+
+I closed the archive without opening any of them.
+
+06:32. The bedroom light turned on behind the blinds. I leaned forward, my hand finding the notebook again, pen ready. The shadow moved across the window—shoulder, arm, head tilted to the side. Same silhouette as every other morning. Same pace. Same placement in front of the mirror.
+
+But I watched differently now. I watched for the things I'd been missing.
+
+The shadow paused. Not at the mirror—at the window. One hand rose and touched the blinds, pushing a slat aside just enough to let a sliver of morning light through. She stood there for a moment, her face invisible, her body still, and I felt my breath catch in my throat.
+
+Then she let the slat fall back into place and disappeared from view.
+
+I wrote: "06:33—Subject paused at bedroom window. Adjusted blind. No visible trigger."
+
+But I didn't believe it.
+
+06:41. The apartment door opened, and Lena stepped into the hallway in her walking clothes. Gray leggings. Black jacket. Same running shoes. She closed the door behind her, locked it, tested the handle, and turned toward the courtyard exit. I tracked her through the common-area camera, watching her cross the tiled floor with the same measured steps.
+
+She was moving differently today. Not faster. Not slower. But there was a precision to her movements that I hadn't noticed before—or hadn't wanted to notice. Each step landed exactly where the previous step had landed. Her arms swung at the same angle. Her head held at the same height.
+
+She reached the entrance threshold and stopped.
+
+Three seconds. Four seconds. Five seconds.
+
+She stood at the edge of the building, one foot in the courtyard light and one foot still in the shadow of the hallway, and she did not move. Her hands hung at her sides. Her shoulders rose and fell with a single deep breath. And then she turned her head—slow, deliberate, cinematic—and looked directly at the courtyard-facing window of my apartment.
+
+Not at the camera mounted above the entrance. Not at the reflected light on the glass. At the window itself.
+
+I froze.
+
+Her eyes were too far away for me to read their expression, but I didn't need to see them. The angle of her face, the tilt of her chin, the stillness of her body—everything about the gesture said she was looking at something specific. Something she knew was there.
+
+Three seconds. I counted each one.
+
+One. My hand hovered over the notebook, pen suspended above the page.
+
+Two. My chest locked, air trapped somewhere between my lungs and my throat.
+
+Three. She turned back, stepped through the threshold, and walked into the courtyard without looking back.
+
+I exhaled. The sound came out ragged, uneven, and I realized I'd been gripping the edge of the desk hard enough to whiten my knuckles.
+
+I wrote: "06:42—Subject paused at entrance threshold. Directed gaze toward courtyard window. Duration: three seconds. Possible awareness of observation."
+
+The words sat on the page, clinical and safe. But my hand was shaking as I wrote them.
+
+I pulled up the footage from the common-area camera and rewound to the moment she paused. I watched it at normal speed. Then half speed. Then frame by frame. Her head turned. Her eyes found the window. Her face remained neutral—no confusion, no fear, no sign of instability.
+
+Just knowing.
+
+She looked like someone who had found what she was looking for.
+
+I saved the clip to the private archive, created a new folder labeled "Day Five—Direct Gaze," and stared at the thumbnail. It was just a face in a window, too pixelated to reveal anything definitive. But I knew what I'd seen. I knew the difference between a glance and a look.
+
+That was a look.
+
+I spent the next hour watching the live feed, waiting for her to return. The courtyard stayed empty. The morning light shifted across the tiles, tracing the same path it had traced every day. I checked the camera status lights again, ran my thumb along the edge of the notebook, and tried to convince myself I was overanalyzing.
+
+But the image of her face—turned toward my window, held for three seconds—kept cycling through my mind.
+
+07:19. She reappeared in the courtyard. Same walking clothes. Same measured pace. But this time she crossed directly to the entrance without pausing at the threshold. No hesitation. No glance. She walked through the door and disappeared into the hallway.
+
+I watched her apartment door on the camera feed. She unlocked it, stepped inside, and closed it behind her. The deadbolt clicked into place.
+
+Then she did something she hadn't done before.
+
+She walked to her kitchen window, reached up, and adjusted the blinds. Not closed—adjusted. She moved the slats so they tilted slightly upward, creating a gap at the bottom. Then she turned away and began her morning routine.
+
+I zoomed in on the gap. Through it, I could see the kitchen counter. The utility envelope was still there, pristine and unopened. Beside it, the red receipt I'd noticed on day three. Both aligned with the tile grid, exactly as they'd been the day before.
+
+And next to them, something new.
+
+A single sheet of paper, folded in half, propped against the salt shaker.
+
+I couldn't read what was written on it. The angle was wrong, the light was low, and the gap in the blinds was too narrow for a clear view. But she had never placed anything against the salt shaker before. Every object on that counter was arranged in a specific pattern, a grid she maintained with obsessive precision.
+
+This was a deviation.
+
+I zoomed in as far as the camera would allow, adjusted the focus, and tried to read the paper. Nothing. Just a white rectangle catching the morning light.
+
+I checked the feed Grant received. The common-area camera showed the courtyard. The bedroom camera showed the closed blinds. The kitchen camera feed was compressed, grainy, useless at this distance. Grant would see her moving in the kitchen, would see the counter, but he wouldn't see the paper. He wouldn't see the gap in the blinds.
+
+He wouldn't see what I was seeing.
+
+I opened my phone and stared at the screen, waiting. Grant usually messaged by mid-morning, asking for a summary, checking if I'd noticed anything unusual. I could already predict his question. Did she seem off today? Did she forget anything? Did she look unstable?
+
+But he didn't message.
+
+The morning stretched into afternoon. I watched her move through her apartment, performing her routine with the same unnatural precision I'd observed all week. Every gesture identical. Every placement exact. She ate lunch at the same time. She washed her dishes in the same order. She sat in the living room and read a book, turning pages at regular intervals.
+
+It was too perfect.
+
+I wrote in my notebook: "Subject's morning routine shows no deviation from established baseline. However, the precision of repeated actions suggests choreography rather than habit."
+
+The word sat on the page. Choreography.
+
+She was performing. Not for Grant. Not for a camera. For someone she knew was watching.
+
+I closed the notebook and looked at the monitor, where the frozen frame of her direct gaze still waited in the private archive. I ran my thumb along the edge of the notebook, unable to write what I was thinking.
+
+My phone buzzed.
+
+Grant: "Did she seem like she was performing for someone today? I can't tell from the feed. Let me know what you see."
+
+I read the message once. Twice. Three times.
+
+He couldn't tell from the feed. He received a compressed, grainy version of what I saw. He reacted to summaries, to reports, to the words I chose to type. He didn't see the direct gaze. He didn't see the gap in the blinds. He didn't see the paper propped against the salt shaker.
+
+He saw what I let him see.
+
+I typed my response: "No notable deviations in morning routine. Subject appears consistent."
+
+The lie was automatic now.
+
+I set the phone down and opened the private archive. I pulled up the clip of her direct gaze, zoomed in on her face, and studied every pixel. No confusion. No fear. No instability. Just stillness. Deliberate, knowing stillness.
+
+I froze the frame on her face—three seconds of direct, deliberate stillness aimed at my window. Not at the camera. Not at the light. At me.
+
+I closed my notebook, ran my thumb along the edge, and whispered into the empty apartment: "She knows. And she's not performing for Grant. She's performing for me."
+
+The words hung in the air, and I had no idea whether I was terrified or relieved.
