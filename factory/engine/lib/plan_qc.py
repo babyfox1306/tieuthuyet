@@ -467,6 +467,33 @@ def _fact_appears_in_text(fact: str, text: str) -> bool:
     return needle in text
 
 
+def _character_exposed_in_text(character: str, text: str) -> bool:
+    """Return true only when a restricted character is present in affirmative prose.
+
+    A possessive source reference (``Grant Hart's instruction``) does not place
+    Grant in the scene and therefore cannot prove that Grant learns the fact.
+    Full names are preferred; an unambiguous first-name action is also accepted
+    because Outliner prose commonly switches to first names after introduction.
+    """
+    full_name = str(character or "").strip()
+    names = full_name.split()
+    candidates: list[tuple[str, str]] = [(full_name, "")]
+    first = names[0] if names else ""
+    if len(first) >= 4 and first.casefold() != full_name.casefold():
+        surname_tail = r"\s+" + r"\s+".join(re.escape(x.lower()) for x in names[1:])
+        candidates.append((first, rf"(?!{surname_tail}\b)"))
+
+    for name, full_name_guard in candidates:
+        # Do not treat attribution/source possessives as character presence.
+        pattern = (
+            rf"\b{re.escape(name.lower())}\b"
+            rf"{full_name_guard}(?!['’]s\b)"
+        )
+        if re.search(pattern, text):
+            return True
+    return False
+
+
 def validate_narrative_plan(
     plan: dict,
     ws: Path,
@@ -569,8 +596,8 @@ def validate_narrative_plan(
 
     # NC-06 — knowledge gates in plan prose / reveals (affirmative only).
     blob = _strip_prohibition_clauses(_plan_narrative_blob(plan)).lower()
-    for _char, fact in _forbidden_knowledge_at(matrix, ch):
-        if _fact_appears_in_text(fact, blob):
+    for char, fact in _forbidden_knowledge_at(matrix, ch):
+        if _fact_appears_in_text(fact, blob) and _character_exposed_in_text(char, blob):
             issues.append(f"ch{ch}:NC-06:knowledge_violation:{fact[:48]}")
 
     # NC-07 — clue plant/payoff must appear in story beats (must_happen / beat_summary)

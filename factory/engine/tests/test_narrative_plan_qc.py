@@ -153,10 +153,27 @@ class TestNarrativePlanQC(unittest.TestCase):
     def test_nc06_knowledge_violation_in_must_happen(self):
         plans = merge_narrative_into_plans(self.ws, [_full_plan(5)])
         plans[0]["must_happen"] = list(plans[0]["must_happen"]) + [
-            "Adrian chose her because of mother's file"
+            "Lin Wei learns that Adrian chose her because of mother's file"
         ]
         issues = validate_narrative_plan(plans[0], self.ws, all_plans=plans)
         self.assertTrue(any("NC-06:knowledge_violation" in i for i in issues))
+
+    def test_nc06_fact_may_be_discussed_without_restricted_character(self):
+        plans = merge_narrative_into_plans(self.ws, [_full_plan(5)])
+        plans[0]["must_happen"] = list(plans[0]["must_happen"]) + [
+            "Adrian and Mara discuss why Adrian chose her because of mother's file"
+        ]
+        issues = validate_narrative_plan(plans[0], self.ws, all_plans=plans)
+        self.assertFalse([i for i in issues if "NC-06:knowledge_violation" in i], issues)
+
+    def test_nc06_possessive_source_is_not_character_exposure(self):
+        plans = merge_narrative_into_plans(self.ws, [_full_plan(5)])
+        plans[0]["must_happen"] = list(plans[0]["must_happen"]) + [
+            "Mara reads the proof that Adrian chose her because of mother's file "
+            "beside Lin Wei's sealed notebook"
+        ]
+        issues = validate_narrative_plan(plans[0], self.ws, all_plans=plans)
+        self.assertFalse([i for i in issues if "NC-06:knowledge_violation" in i], issues)
 
     def test_locked_plan_skips_narrative_qc(self):
         plan = _full_plan(1, locked=True)
