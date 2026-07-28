@@ -7,9 +7,15 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from factory.engine.lib.narrative_compiler import build_reveal_catalog
+from factory.engine.lib.narrative_compiler import (
+    build_reveal_catalog,
+    compile_chapter_narrative,
+)
 from factory.engine.lib.narrative_developer import OUTPUT_SCHEMAS
-from factory.engine.lib.narrative_schema import validate_narrative_assets
+from factory.engine.lib.narrative_schema import (
+    normalize_mystery_ledger_schedule,
+    validate_narrative_assets,
+)
 from factory.engine.paths import ENGINE
 
 
@@ -101,6 +107,42 @@ class RevealDependencyTests(unittest.TestCase):
         )
         self.assertIn("prerequisite_reveals", role)
         self.assertIn("required_clues` CHỈ nhận ID clue", role)
+
+    def test_generator_contract_uses_canonical_clue_schedule_fields(self) -> None:
+        fields = OUTPUT_SCHEMAS["mystery_ledger"]["clue"]["fields"]
+        self.assertIn("plant_chapter", fields)
+        self.assertIn("payoff_chapter", fields)
+        self.assertNotIn("chapter_planted", fields)
+        self.assertNotIn("chapter_payoff", fields)
+
+    def test_legacy_schedule_aliases_normalize_and_compile(self) -> None:
+        ledger = _ledger([], ["MR01"])
+        clue = ledger["clues"][0]
+        clue["chapter_planted"] = clue.pop("plant_chapter")
+        clue["chapter_payoff"] = clue.pop("payoff_chapter")
+
+        compiled_legacy = compile_chapter_narrative(ledger, {}, {}, 1)
+        self.assertEqual(compiled_legacy["clues_plant"], ["C001"])
+
+        normalize_mystery_ledger_schedule(ledger)
+        self.assertEqual(clue["plant_chapter"], 1)
+        self.assertEqual(clue["payoff_chapter"], 4)
+        self.assertNotIn("chapter_planted", clue)
+        self.assertNotIn("chapter_payoff", clue)
+
+    def test_missing_clue_schedule_fails_loud(self) -> None:
+        ledger = _ledger([], ["MR01"])
+        ledger["clues"][0].pop("plant_chapter")
+        ledger["clues"][0].pop("payoff_chapter")
+        errors = _validate_ledger(ledger)
+        self.assertIn(
+            "mystery_ledger:clue_missing_plant_chapter:C001",
+            errors,
+        )
+        self.assertIn(
+            "mystery_ledger:clue_missing_payoff_chapter:C001",
+            errors,
+        )
 
 
 if __name__ == "__main__":

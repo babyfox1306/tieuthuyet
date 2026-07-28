@@ -13,6 +13,7 @@ from factory.engine.lib.narrative_schema import (
     concept_is_ready,
     load_concept,
     narrative_dir,
+    normalize_mystery_ledger_schedule,
 )
 from factory.engine.lib.book_config import get_total_chapters, sync_book_arc_total_chapters
 from factory.engine.lib.prompt_builder import load_direction, load_series_bible
@@ -95,8 +96,8 @@ OUTPUT_SCHEMAS: dict[str, dict[str, Any]] = {
             "id": "C-prefix only, e.g. C001",
             "fields": [
                 "id",
-                "chapter_planted",
-                "chapter_payoff",
+                "plant_chapter",
+                "payoff_chapter",
                 "description",
                 "type",
                 "noticed_by",
@@ -224,6 +225,8 @@ def develop_pass(ws: Path, pass_name: str) -> Path:
     if isinstance(data, dict):
         from factory.engine.lib.chapter_derivation import normalize_narrative_pass
 
+        if pass_name == "mystery_ledger":
+            data = normalize_mystery_ledger_schedule(data)
         data = normalize_narrative_pass(pass_name, data, total_chapters, book)
         if pass_name == "mystery_ledger" and canonical_reveal is not None:
             data["canonical_reveal_chapter"] = int(canonical_reveal)

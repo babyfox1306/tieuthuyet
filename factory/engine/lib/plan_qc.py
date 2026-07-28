@@ -21,6 +21,10 @@ from factory.engine.lib.narrative_compiler import (
     min_clues_for_reveal,
     narrative_compiler_enabled,
 )
+from factory.engine.lib.narrative_schema import (
+    clue_payoff_chapter,
+    clue_plant_chapter,
+)
 from factory.engine.lib.prompt_builder import spice_for_chapter
 
 import yaml
@@ -429,7 +433,7 @@ def _clue_planted_at_or_before(
 ) -> bool:
     clues = _ledger_clue_index(ledger)
     meta = clues.get(clue_id, {})
-    plant_ch = int(meta.get("plant_chapter") or 0)
+    plant_ch = clue_plant_chapter(meta)
     if plant_ch <= 0:
         return False
     if plant_ch > payoff_ch:
@@ -490,8 +494,12 @@ def validate_narrative_plan(
 
     issues: list[str] = []
     clues_idx = _ledger_clue_index(ledger)
-    plant_scheduled = {cid for cid, c in clues_idx.items() if int(c.get("plant_chapter") or 0) == ch}
-    payoff_scheduled = {cid for cid, c in clues_idx.items() if int(c.get("payoff_chapter") or 0) == ch}
+    plant_scheduled = {
+        cid for cid, c in clues_idx.items() if clue_plant_chapter(c) == ch
+    }
+    payoff_scheduled = {
+        cid for cid, c in clues_idx.items() if clue_payoff_chapter(c) == ch
+    }
     actual_plant = set(narr.get("clues_plant") or [])
     actual_payoff = set(narr.get("clues_payoff") or [])
 
@@ -508,8 +516,8 @@ def validate_narrative_plan(
     # NC-03
     for cid in actual_payoff:
         meta = clues_idx.get(cid, {})
-        plant_ch = int(meta.get("plant_chapter") or 0)
-        pay_ch = int(meta.get("payoff_chapter") or 0)
+        plant_ch = clue_plant_chapter(meta)
+        pay_ch = clue_payoff_chapter(meta)
         if plant_ch and pay_ch and pay_ch < plant_ch:
             issues.append(f"ch{ch}:NC-03:payoff_before_plant:{cid}")
         elif not _clue_planted_at_or_before(all_plans, cid, ledger, ch):

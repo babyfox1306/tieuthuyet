@@ -13,7 +13,12 @@ from typing import Any
 
 import yaml
 
-from factory.engine.lib.narrative_schema import PROFILE_REQUIRED, narrative_dir
+from factory.engine.lib.narrative_schema import (
+    PROFILE_REQUIRED,
+    clue_payoff_chapter,
+    clue_plant_chapter,
+    narrative_dir,
+)
 from factory.engine.paths import workspace_dir
 
 # Profiles whose required_files include mystery ledger + knowledge matrix.
@@ -227,8 +232,8 @@ def _clues_for_chapter(ledger: dict[str, Any], chapter: int) -> tuple[list[str],
         cid = clue.get("id")
         if not cid:
             continue
-        pc = int(clue.get("plant_chapter") or 0)
-        pay = int(clue.get("payoff_chapter") or 0)
+        pc = clue_plant_chapter(clue)
+        pay = clue_payoff_chapter(clue)
         semantic = clue_semantic_text(clue)
         entry = {
             "id": cid,
@@ -487,8 +492,8 @@ def build_clue_catalog(ledger: dict[str, Any]) -> dict[str, dict[str, Any]]:
             "content": semantic,
             "description": semantic,
             "type": clue.get("type", ""),
-            "plant_chapter": int(clue.get("plant_chapter") or 0),
-            "payoff_chapter": int(clue.get("payoff_chapter") or 0),
+            "plant_chapter": clue_plant_chapter(clue),
+            "payoff_chapter": clue_payoff_chapter(clue),
             "misdirection": clue.get("misdirection", ""),
             "true_meaning": _first_text(clue, "true_meaning", "note"),
             "note": str(clue.get("note") or "").strip(),

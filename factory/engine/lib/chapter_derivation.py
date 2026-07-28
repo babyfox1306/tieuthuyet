@@ -290,12 +290,19 @@ def rescale_mystery_ledger(
             for field in (
                 "planted_chapter",
                 "plant_chapter",
+                "chapter_planted",
                 "debunked_chapter",
                 "reveal_chapter",
                 "payoff_chapter",
+                "chapter_payoff",
             ):
                 if field in item:
-                    end = field in ("reveal_chapter", "payoff_chapter", "debunked_chapter")
+                    end = field in (
+                        "reveal_chapter",
+                        "payoff_chapter",
+                        "chapter_payoff",
+                        "debunked_chapter",
+                    )
                     item[field] = rescale_chapter_optional(
                         item[field], from_total, to_total, end_of_book=end
                     )

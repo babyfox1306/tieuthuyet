@@ -46,6 +46,45 @@ def narrative_dir(ws: Path) -> Path:
     return ws / "bible" / "narrative"
 
 
+def clue_plant_chapter(clue: dict[str, Any]) -> int:
+    """Canonical clue plant chapter with legacy generator-alias support."""
+    return int(
+        clue.get("plant_chapter")
+        or clue.get("chapter_planted")
+        or clue.get("planted_chapter")
+        or 0
+    )
+
+
+def clue_payoff_chapter(clue: dict[str, Any]) -> int:
+    """Canonical clue payoff chapter with legacy generator-alias support."""
+    return int(
+        clue.get("payoff_chapter")
+        or clue.get("chapter_payoff")
+        or 0
+    )
+
+
+def normalize_mystery_ledger_schedule(ledger: dict[str, Any]) -> dict[str, Any]:
+    """Normalize LLM clue schedule aliases at the generation boundary."""
+    clues = ledger.get("clues")
+    if not isinstance(clues, list):
+        return ledger
+    for clue in clues:
+        if not isinstance(clue, dict):
+            continue
+        plant = clue_plant_chapter(clue)
+        payoff = clue_payoff_chapter(clue)
+        if plant:
+            clue["plant_chapter"] = plant
+        if payoff:
+            clue["payoff_chapter"] = payoff
+        clue.pop("chapter_planted", None)
+        clue.pop("planted_chapter", None)
+        clue.pop("chapter_payoff", None)
+    return ledger
+
+
 def required_files(profile: str) -> list[str]:
     return list(PROFILE_REQUIRED.get(profile, PROFILE_REQUIRED["romance_thriller"]))
 
@@ -109,8 +148,16 @@ def validate_narrative_assets(ws: Path, direction: dict) -> list[str]:
                 errors.append(f"mystery_ledger:duplicate_clue:{cid}")
             seen.add(cid)
             clue_ids.add(cid)
-            plant = int(c.get("plant_chapter") or 0)
-            payoff = int(c.get("payoff_chapter") or 0)
+            plant = clue_plant_chapter(c)
+            payoff = clue_payoff_chapter(c)
+            if not plant:
+                errors.append(
+                    f"mystery_ledger:clue_missing_plant_chapter:{cid}"
+                )
+            if not payoff:
+                errors.append(
+                    f"mystery_ledger:clue_missing_payoff_chapter:{cid}"
+                )
             if plant and payoff and payoff < plant:
                 errors.append(f"mystery_ledger:payoff_before_plant:{cid}")
 
