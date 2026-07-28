@@ -42,6 +42,35 @@ def save_state(ws: Path, book: int, state: dict) -> None:
     path.write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
+def record_approved_chapter(ws: Path, chapter_num: int, book: int = 1) -> dict:
+    """Keep lightweight UI approval state structurally aligned.
+
+    UI approval intentionally does not call the LLM state updater.  It must
+    still record a labeled timeline marker, otherwise EG-15 sees the approved
+    chapter counter advance while the timeline remains at chapter zero.
+    """
+    state = load_state(ws, book)
+    state["current_book"] = book
+    state["current_chapter"] = max(
+        int(state.get("current_chapter") or 0),
+        int(chapter_num),
+    )
+    timeline = state.get("timeline")
+    if not isinstance(timeline, list):
+        timeline = []
+    if not any(
+        (match := _TIMELINE_CH_RE.search(str(entry)))
+        and int(match.group(1)) == int(chapter_num)
+        for entry in timeline
+    ):
+        timeline.append(
+            f"Ch{int(chapter_num)}: approved via UI (state summary deferred)"
+        )
+    state["timeline"] = timeline
+    save_state(ws, book, state)
+    return state
+
+
 def last_timeline_chapter(state: dict) -> int:
     """Highest chapter number referenced in timeline entries (0 if none/unlabeled)."""
     highest = 0

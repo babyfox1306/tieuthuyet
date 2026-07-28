@@ -573,16 +573,12 @@ def chapter_approve(workspace_id: str, ch: int, book: int = 1) -> dict:
             **meta,
         }
 
-    # Lightweight state bump only (no LLM). Full catch-up is optional offline.
+    # Lightweight state alignment only (no LLM). Full semantic catch-up is
+    # optional offline, but EG-15 still requires a labeled approval marker.
     try:
-        from factory.engine.lib.state_updater import load_state, save_state
+        from factory.engine.lib.state_updater import record_approved_chapter
 
-        st = load_state(ws, book)
-        cur = int(st.get("current_chapter") or 0)
-        if ch > cur:
-            st["current_chapter"] = ch
-            st["current_book"] = book
-            save_state(ws, book, st)
+        record_approved_chapter(ws, ch, book)
     except Exception as exc:
         safe_print = __import__(
             "factory.engine.lib.catalog", fromlist=["safe_print"]
