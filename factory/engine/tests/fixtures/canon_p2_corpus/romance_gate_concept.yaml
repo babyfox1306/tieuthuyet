@@ -1,0 +1,108 @@
+concept_status: ready
+schema_version: '1.0'
+target_language: en
+title: Romance Gate
+pen_name: P2 Fixture
+chapter_count: 3
+logline: Two keepers renegotiate a locked gate without inventing crimes.
+author_directive: Follow the locked chapter map. No invented names. No medical claims.
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+surface_plot: Lina and Cole reopen a sealed garden gate under watch.
+true_plot: The gate was never broken; the lock log was delayed on purpose.
+intentional_early_reveal: false
+pov:
+  character: Lina Reed
+  mode: third_limited
+  tense: past
+  single_pov: true
+characters:
+- name: Lina Reed
+  role: protagonist
+- name: Cole Hart
+  role: love_interest
+chapter_map:
+  '1':
+    title: The Latch
+    day_or_time_anchor: Evening one
+    pov_knows_at_start:
+    - The garden gate is sealed.
+    may_observe:
+    - Cole arrives with the spare key card.
+    must_happen:
+    - Lina Reed inventories the latch without forcing it.
+    must_not:
+    - Invent unsupported medical diagnosis.
+    must_not_happen:
+    - Invent unsupported medical diagnosis.
+    reveal_ids_opened: []
+    clue_ids_planted: []
+    clue_ids_paid_off: []
+    prop_actions: []
+    relationship_turn: Caution softens into shared duty.
+    primary_turn: The latch is logged, not broken.
+    spice_level: 0
+  '2':
+    title: Shared Watch
+    day_or_time_anchor: Morning two
+    pov_knows_at_start:
+    - The latch log is incomplete.
+    may_observe:
+    - Cole Hart waits without touching the gate.
+    must_happen:
+    - Lina Reed and Cole Hart compare key-card times.
+    must_not:
+    - They leave the garden.
+    must_not_happen:
+    - They leave the garden.
+    reveal_ids_opened:
+    - RG1
+    clue_ids_planted: []
+    clue_ids_paid_off: []
+    prop_actions: []
+    relationship_turn: Trust is provisional and earned.
+    primary_turn: The delayed log becomes visible.
+    spice_level: 0
+  '3':
+    title: Open Air
+    day_or_time_anchor: Dusk three
+    pov_knows_at_start:
+    - The delay was deliberate.
+    may_observe:
+    - The gate opens on schedule.
+    must_happen:
+    - Lina Reed records the on-time open with Cole Hart present.
+    must_not:
+    - They invent a third keeper.
+    must_not_happen:
+    - They invent a third keeper.
+    reveal_ids_opened: []
+    clue_ids_planted: []
+    clue_ids_paid_off: []
+    prop_actions: []
+    relationship_turn: Duty becomes chosen closeness.
+    primary_turn: The garden opens without a crime story.
+    spice_level: 1
+required_reveal_schedule:
+- id: RG1
+  fact: The lock log was delayed on purpose by the prior keeper.
+  reader_reveal_chapter: 2
+  pov_knows_chapter: 2
+  reveal_type: observation
+  prerequisite_reveals: []
+  required_clues: []
+  must_remain_hidden_before: 1
+  allowed_foreshadowing_before: incomplete log mention
+ending_book1: The garden opens on the recorded schedule.
+hook_book2: A second delayed log appears elsewhere.
+must_include:
+- Evidence remains observable.
+must_avoid:
+- Unsupported diagnosis.
+- Invented proper nouns.
+notes: Zero-Trust Romance lite fixture for P2 golden.
+romance_doctrine:
+  rules:
+  - Competence over confession
+  - Zero-Trust Romance
+  forbidden_framings:
+  - Rescue fantasy

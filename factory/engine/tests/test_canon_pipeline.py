@@ -1141,5 +1141,57 @@ class P1CustodyBeliefStrategyTests(unittest.TestCase):
         )
 
 
+class P2HarnessTests(unittest.TestCase):
+    """P2 golden/budget/kill-point/lock smoke (no LLM)."""
+
+    def test_romance_and_mystery_lite_compile(self) -> None:
+        from factory.engine.lib.p2_fixtures import (
+            MYSTERY_LITE_CONCEPT,
+            ROMANCE_GATE_CONCEPT,
+        )
+
+        romance = compile_canonical_ir(ROMANCE_GATE_CONCEPT)
+        mystery = compile_canonical_ir(MYSTERY_LITE_CONCEPT)
+        self.assertTrue(romance.get("ir_digest"))
+        self.assertTrue(mystery.get("ir_digest"))
+        self.assertGreaterEqual(len(mystery.get("reveal_schedule") or []), 2)
+
+    def test_call_budget_zero_on_canon_fail(self) -> None:
+        from factory.engine.lib.canon_ops import should_skip_literary_fixer
+        from factory.engine.lib.p2_harness import (
+            assert_canon_fail_budget_zero,
+            get_call_budget,
+            reset_call_budget,
+        )
+
+        reset_call_budget()
+        self.assertTrue(
+            should_skip_literary_fixer(
+                {"status": "fail", "violations": [{"reason": "x"}]}
+            )
+        )
+        assert_canon_fail_budget_zero()
+        self.assertEqual(get_call_budget()["literary_qc_calls"], 0)
+
+    def test_killpoint_and_write_lock(self) -> None:
+        from factory.engine.lib.p2_harness import (
+            assert_no_incomplete_seal_promoted,
+            begin_seal_journal,
+            book_write_lock,
+            complete_seal_journal,
+        )
+
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp)
+            begin_seal_journal(ws, 1, 2, "plan")
+            with self.assertRaises(RuntimeError):
+                assert_no_incomplete_seal_promoted(ws, 1, 2)
+            complete_seal_journal(ws, 1, 2)
+            assert_no_incomplete_seal_promoted(ws, 1, 2)
+            with book_write_lock(ws, 1):
+                lock = ws / ".canon_write_locks" / "book_01.lock"
+                self.assertTrue(lock.exists())
+
+
 if __name__ == "__main__":
     unittest.main()

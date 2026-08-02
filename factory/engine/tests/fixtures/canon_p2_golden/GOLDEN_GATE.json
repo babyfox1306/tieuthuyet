@@ -1,0 +1,39 @@
+{
+  "golden_titles": [
+    "zero_day",
+    "romance_gate"
+  ],
+  "deterministic_rerun": true,
+  "llm_used": false,
+  "results": {
+    "zero_day": {
+      "mode": "ok",
+      "ir_digest": "e8e620ddc60b4ec8c93436cab3f05807e9641ed149bcff53412b368819a6c3e0",
+      "chapters": {
+        "2": {
+          "contract_digest": "7f6e1855ed40655a74b5a18e02fe401fdeca1b4b1ae52bdebcffff61f8c0886c",
+          "packet_digest": "0506bc7d1da4a25f95f2aa1dd79a509677c205b612c46f2a1f6a4d675e84b010"
+        },
+        "3": {
+          "contract_digest": "9cda78f73f34fb275083e3955a0b6162f117789d96fb68bcf5ce5f13fcc888ab",
+          "packet_digest": "75695f824fc1de977e4b580af40dd4b4274960aa1344db902c8428341aa6743f"
+        }
+      }
+    },
+    "romance_gate": {
+      "mode": "ok",
+      "ir_digest": "bd7b8baf777a1692d729380fce34bd0ed41a381ed818ecf7a89396bbfe05dd2e",
+      "chapters": {
+        "1": {
+          "contract_digest": "cea1d5767b79e3a6d19895109592087903df423a829371b8c40ecf85cf4c47e0",
+          "packet_digest": "8c7d96e8f05d728ae80879546b321575dc81dec2927365625d2ade6f91b429ea"
+        },
+        "2": {
+          "contract_digest": "1d2122fbea7a437e3d3334da195c87f5ea8302c5b96fd87b60311be7ca67dec8",
+          "packet_digest": "c051da070681f3e41578a24cdc62d5cdaddd60190ffaa270242f81ee09c1eb79"
+        }
+      }
+    }
+  },
+  "pass": true
+}

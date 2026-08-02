@@ -112,3 +112,11 @@ def should_skip_literary_fixer(canon_qc: dict[str, Any] | None) -> bool:
     if canon_qc.get("violations"):
         return True
     return False
+
+
+def record_canon_fail_skip() -> dict[str, int]:
+    """P2: document that literary/fixer/settlement LLM stayed at 0 on canon fail."""
+    from factory.engine.lib.p2_harness import assert_canon_fail_budget_zero, get_call_budget
+
+    assert_canon_fail_budget_zero()
+    return get_call_budget()

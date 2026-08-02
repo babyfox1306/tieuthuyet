@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "commit": "f87c6c52f6254c43d3ffac11b4a8e5f8680338b0",
+    "branch": "experiment/ce-canon-provenance",
+    "workspace": "D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces\\_canon_p2_mutation_verify"
+  },
+  "mutation_cases": {
+    "M0-name": true,
+    "M0-reveal": true,
+    "M0-schema": true,
+    "M0-stale": true,
+    "M0-texture": true,
+    "M0-motive": true,
+    "M0-spec": true,
+    "M1-mem-future": true,
+    "M1-mem-reader": true,
+    "M1-mem-poison": true,
+    "M1-cust-holder": true,
+    "M1-cust-action": true,
+    "CTRL-cust-allowed": true,
+    "M1-belief-orphan": true,
+    "M1-belief-alias": true,
+    "M1-strat-missing": true,
+    "M1-strat-future": true,
+    "M1-strat-actor": true,
+    "M1-strat-prop": true,
+    "CTRL-strat-builtin": true,
+    "M1-live-digest": true,
+    "M0-ops-budget": true,
+    "M0-killpoint": true,
+    "CORPUS-romance-ingest": true,
+    "CORPUS-mystery-lite-ingest": true
+  },
+  "all_cases_pass": true,
+  "pass_reason_match_ok": true,
+  "control_no_false_positive": true,
+  "p2_mutation_battery_complete": true,
+  "case_count": 25
+}

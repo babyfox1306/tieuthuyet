@@ -1,0 +1,30 @@
+{
+  "zero_day_infection_pass": true,
+  "romance_gate_pass": true,
+  "mystery_lite_pass": true,
+  "results": {
+    "zero_day_infection": {
+      "B_invented_name_in_dialogue": true,
+      "C_future_fact_no_new_name": true,
+      "D_generic_texture": true,
+      "A_canon_name_in_dialogue": true
+    },
+    "romance_gate": {
+      "ingest_ok": true,
+      "ir_digest": "bd7b8baf777a1692d729380fce34bd0ed41a381ed818ecf7a89396bbfe05dd2e",
+      "contract_digest": "cea1d5767b79e3a6d19895109592087903df423a829371b8c40ecf85cf4c47e0",
+      "has_reveal_schedule": true,
+      "pass": true
+    },
+    "mystery_lite": {
+      "ingest_ok": true,
+      "ir_digest": "7b35f991b722d0cc63b155679bdd24873ea12f78eaedcebe4298afe84132b877",
+      "reveal_count": 2,
+      "ml2_clamped_at_ch2": true,
+      "plan2_status": "sealed",
+      "pass": true
+    }
+  },
+  "p2_corpus_complete": true,
+  "llm_used": false
+}

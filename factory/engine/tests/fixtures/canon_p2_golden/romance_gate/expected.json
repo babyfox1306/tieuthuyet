@@ -1,0 +1,15 @@
+{
+  "title_id": "romance_gate",
+  "ir_digest": "bd7b8baf777a1692d729380fce34bd0ed41a381ed818ecf7a89396bbfe05dd2e",
+  "importer_schema_version": "1.0",
+  "chapters": {
+    "1": {
+      "contract_digest": "cea1d5767b79e3a6d19895109592087903df423a829371b8c40ecf85cf4c47e0",
+      "packet_digest": "8c7d96e8f05d728ae80879546b321575dc81dec2927365625d2ade6f91b429ea"
+    },
+    "2": {
+      "contract_digest": "1d2122fbea7a437e3d3334da195c87f5ea8302c5b96fd87b60311be7ca67dec8",
+      "packet_digest": "c051da070681f3e41578a24cdc62d5cdaddd60190ffaa270242f81ee09c1eb79"
+    }
+  }
+}

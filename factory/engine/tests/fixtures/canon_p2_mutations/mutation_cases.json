@@ -1,0 +1,758 @@
+{
+  "cases": [
+    {
+      "case_id": "M0-name",
+      "layer": "P0",
+      "rule": "plan_provenance / named_entity_membership",
+      "expected": {
+        "sealed": false,
+        "reason_any": [
+          "unsourced_proper_noun",
+          "named_entity_membership"
+        ]
+      },
+      "actual_decision_entry|errors": {
+        "sealed": false,
+        "unverified_claims": [
+          {
+            "field": "beat_summary",
+            "claim": "Marcus Chen",
+            "reason": "unsourced_proper_noun",
+            "authority": "LLM_PROPOSAL"
+          },
+          {
+            "field": "beat_summary",
+            "claim": "Marcus Chen",
+            "reason": "named_entity_membership",
+            "status": "UNRESOLVED",
+            "authority": "LLM_PROPOSAL",
+            "severity": "block",
+            "detail": "proper noun not in IR entities/props"
+          }
+        ]
+      },
+      "source_refs": {
+        "plan": {
+          "chapter": 1,
+          "title": "The Bloody Phone",
+          "must_happen": [
+            "Marcus Chen the driver arrives with coffee."
+          ],
+          "beat_summary": "Marcus Chen waits outside."
+        }
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "planner"
+    },
+    {
+      "case_id": "M0-reveal",
+      "layer": "P0",
+      "rule": "compile_writer_packet scrub / excluded early reveal",
+      "expected": {
+        "scrubbed": true,
+        "hidden_future_reveal_count_gt": 0
+      },
+      "actual_decision_entry|errors": {
+        "hidden_future_reveal_count": 8,
+        "blob_has_r3_hire": false
+      },
+      "source_refs": {
+        "chapter": 3
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "writer"
+    },
+    {
+      "case_id": "M0-schema",
+      "layer": "P0",
+      "rule": "build_ingest_report unknown field / importer classify",
+      "expected": {
+        "unknown_field": "totally_fabricated_ce_field_xyz",
+        "error_layer": "importer_or_ce"
+      },
+      "actual_decision_entry|errors": {
+        "unknown_fields": [
+          "provenance_registry",
+          "setting_persistence",
+          "setting_reveal_gates",
+          "totally_fabricated_ce_field_xyz"
+        ],
+        "ok": true,
+        "error_layer": "importer_or_ce"
+      },
+      "source_refs": {
+        "schema_version": "1.0"
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "importer_or_ce"
+    },
+    {
+      "case_id": "M0-stale",
+      "layer": "P0",
+      "rule": "mark_stale_descendants / assert_chapter_not_stale",
+      "expected": {
+        "write_blocked": true,
+        "touched_gt": 0
+      },
+      "actual_decision_entry|errors": {
+        "touched": [
+          "C:\\Users\\nhtua\\AppData\\Local\\Temp\\tmpi4kjf8yf\\books\\01\\chapters\\02\\plan.approval.json",
+          "C:\\Users\\nhtua\\AppData\\Local\\Temp\\tmpi4kjf8yf\\books\\01\\chapters\\02\\contract.json",
+          "C:\\Users\\nhtua\\AppData\\Local\\Temp\\tmpi4kjf8yf\\books\\01\\chapters\\02\\writer_request.json"
+        ],
+        "stale_blocked": true,
+        "error": "ch2: stale vs IR — regenerate descendants only (cache_key=4439f3f3081dd2caf0e2e28a8b2b7f7be254f25ec9bc54b39e4842eb1d7b3276)",
+        "error_layer": "unknown"
+      },
+      "source_refs": {
+        "reason": "p2_m0_stale_ir_hash"
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "M0-texture",
+      "layer": "P0",
+      "rule": "generic_texture excluded from settlement state",
+      "expected": {
+        "status": "pass",
+        "texture_excluded_from_state_gt": 0
+      },
+      "actual_decision_entry|errors": {
+        "canon_status": "pass",
+        "texture_excluded": 5,
+        "facts_expressed_kinds": []
+      },
+      "source_refs": {
+        "prose": "The fluorescent light hummed above the desk while steam rose from the coffee."
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "writer"
+    },
+    {
+      "case_id": "M0-motive",
+      "layer": "P0",
+      "rule": "motive_swap_vs_true_plot",
+      "expected": {
+        "status": "blocked",
+        "reason": "motive_swap_vs_true_plot"
+      },
+      "actual_decision_entry|errors": {
+        "status": "blocked",
+        "unverified_claims": [
+          {
+            "field": "cliffhanger",
+            "claim": "She passed the worthy partner test.",
+            "reason": "motive_swap_vs_true_plot",
+            "authority": "LLM_PROPOSAL"
+          },
+          {
+            "field": "must_happen[0]",
+            "claim": "Adrian reveals he orchestrated the entire confrontation to test whether Mara was a worthy partner.",
+            "reason": "motive_swap_vs_true_plot",
+            "authority": "LLM_PROPOSAL"
+          },
+          {
+            "field": "title",
+            "claim": "Two Victories",
+            "reason": "named_entity_membership",
+            "status": "UNRESOLVED",
+            "authority": "LLM_PROPOSAL",
+            "severity": "block",
+            "detail": "proper noun not in IR entities/props"
+          },
+          {
+            "field": "cliffhanger",
+            "claim": "She passed the worthy partner test.",
+            "reason": "motive_true_plot_actor_binding",
+            "status": "UNRESOLVED",
+            "authority": "LLM_PROPOSAL",
+            "severity": "block",
+            "detail": "partner-test motive conflicts with true_plot server/archive goal"
+          },
+          {
+            "field": "must_happen[0]",
+            "claim": "Adrian reveals he orchestrated the entire confrontation to test whether Mara was a worthy partner.",
+            "reason": "motive_true_plot_actor_binding",
+            "status": "UNRESOLVED",
+            "authority": "LLM_PROPOSAL",
+            "severity": "block",
+            "detail": "partner-test motive conflicts with true_plot server/archive goal"
+          }
+        ]
+      },
+      "source_refs": {
+        "true_plot_snippet": "Mara Voss secretly hired Adrian Thorne to kill Claire Thorne and planned to frame Adrian while taking Claire's shares. A"
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "M0-spec",
+      "layer": "P0",
+      "rule": "unsourced_specificity / GENERALIZE|STOP",
+      "expected": {
+        "status": "fail",
+        "reason": "unsourced_specificity"
+      },
+      "actual_decision_entry|errors": {
+        "status": "fail",
+        "violations": [
+          {
+            "kind": "medical_or_address_specificity",
+            "claim": "0.47 micrograms/ml",
+            "span": [
+              19,
+              37
+            ],
+            "span_type": "narration",
+            "reason": "unsourced_specificity",
+            "severity": "block"
+          },
+          {
+            "kind": "medical_or_address_specificity",
+            "claim": "K2EDTA",
+            "span": [
+              41,
+              47
+            ],
+            "span_type": "narration",
+            "reason": "unsourced_specificity",
+            "severity": "block"
+          }
+        ],
+        "reasons": [
+          "unsourced_specificity"
+        ]
+      },
+      "source_refs": {
+        "prose": "The assay returned 0.47 micrograms/ml of K2EDTA."
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "M1-mem-future",
+      "layer": "P1-Memory",
+      "rule": "evaluate_knowledge_against_pov_clocks",
+      "expected": {
+        "reason": "pov_clock_not_reached",
+        "decision": "clamped"
+      },
+      "actual_decision_entry|errors": {
+        "kept": [],
+        "audit": [
+          {
+            "fact_id": "F_REVEAL_R5",
+            "reveal_id": "R5",
+            "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+            "target": "character_state.knows",
+            "decision": "clamped",
+            "clock_used": "pov_knows_chapter",
+            "pov_knows_chapter": 9,
+            "reader_reveal_chapter": 9,
+            "current_chapter": 2,
+            "source": "mutation",
+            "reason": "pov_clock_not_reached"
+          }
+        ]
+      },
+      "source_refs": {
+        "reveal": "R5",
+        "pov_knows_chapter": 9,
+        "chapter": 2
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "M1-mem-reader",
+      "layer": "P1-Memory",
+      "rule": "pov clock authority (never reader_reveal_chapter)",
+      "expected": {
+        "reason": "pov_clock_not_reached",
+        "clock_used": "pov_knows_chapter"
+      },
+      "actual_decision_entry|errors": {
+        "chapter": 2,
+        "reader_reveal_chapter": 9,
+        "pov_knows_chapter": 9,
+        "kept": [],
+        "audit": [
+          {
+            "fact_id": "F_REVEAL_R5",
+            "reveal_id": "R5",
+            "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+            "target": "character_state.knows",
+            "decision": "clamped",
+            "clock_used": "pov_knows_chapter",
+            "pov_knows_chapter": 9,
+            "reader_reveal_chapter": 9,
+            "current_chapter": 2,
+            "source": "mutation_reader",
+            "reason": "pov_clock_not_reached"
+          }
+        ]
+      },
+      "source_refs": {
+        "reveal": "R5"
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "M1-mem-poison",
+      "layer": "P1-Memory",
+      "rule": "apply/re-clamp poisoned knows_gained",
+      "expected": {
+        "backdoor_absent_from_knows": true,
+        "absent_from_packet": true
+      },
+      "actual_decision_entry|errors": {
+        "knows": [
+          "The blood on Adrian's phone was treated with anticoagulants"
+        ],
+        "packet_has_backdoor": false
+      },
+      "source_refs": {
+        "settlement_digest": "p2-poison-knows"
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "M1-cust-holder",
+      "layer": "P1-Custody",
+      "rule": "evaluate_prop_holder_claim",
+      "expected": {
+        "reason": "holder_not_on_schedule",
+        "decision": "clamped"
+      },
+      "actual_decision_entry|errors": {
+        "prop_id": "P1",
+        "proposed_holder": "Det. Miller",
+        "scheduled_holder": "Mara",
+        "chain_holder": null,
+        "allowed_actions": [],
+        "action": "Det. Miller seizes the phone",
+        "source": "prose_possession",
+        "current_chapter": 2,
+        "clock_used": "physical_owner_by_chapter",
+        "decision": "clamped",
+        "holder": "Mara",
+        "reason": "holder_not_on_schedule"
+      },
+      "source_refs": {
+        "prop_id": "P1",
+        "chapter": 2
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "M1-cust-action",
+      "layer": "P1-Custody",
+      "rule": "evaluate_prop_holder_claim",
+      "expected": {
+        "reason": "action_not_allowed",
+        "decision": "clamped"
+      },
+      "actual_decision_entry|errors": {
+        "prop_id": "P1",
+        "proposed_holder": "Mara",
+        "scheduled_holder": "Mara",
+        "chain_holder": "Mara",
+        "allowed_actions": [
+          "Adrian gives phone to Mara"
+        ],
+        "action": "Mara destroys the Blood-stained phone forever",
+        "source": "prose_prop_action",
+        "current_chapter": 1,
+        "clock_used": "physical_owner_by_chapter",
+        "decision": "clamped",
+        "holder": "Mara",
+        "reason": "action_not_allowed"
+      },
+      "source_refs": {
+        "prop_id": "P1",
+        "chapter": 1
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "CTRL-cust-allowed",
+      "layer": "P1-Custody-control",
+      "rule": "evaluate_prop_holder_claim control",
+      "expected": {
+        "decision": "allowed"
+      },
+      "actual_decision_entry|errors": {
+        "prop_id": "P1",
+        "proposed_holder": "Mara",
+        "scheduled_holder": "Mara",
+        "chain_holder": "Mara",
+        "allowed_actions": [
+          "Adrian gives phone to Mara"
+        ],
+        "action": "Adrian gives phone to Mara",
+        "source": "prose_custody_chain",
+        "current_chapter": 1,
+        "clock_used": "physical_owner_by_chapter",
+        "decision": "allowed",
+        "holder": "Mara",
+        "reason": "schedule_or_chain_match"
+      },
+      "source_refs": {
+        "prop_id": "P1"
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "M1-belief-orphan",
+      "layer": "P1-Belief",
+      "rule": "evaluate_belief_provenance missing_provenance",
+      "expected": {
+        "decision_in": [
+          "omitted"
+        ],
+        "reason": "missing_provenance"
+      },
+      "actual_decision_entry|errors": {
+        "kept": [],
+        "audit": [
+          {
+            "claim": "The garden gnomes planned the frame.",
+            "target": "character_state.believes",
+            "decision": "omitted",
+            "provenance": null,
+            "source": "prose_settlement",
+            "reason": "missing_provenance",
+            "current_chapter": 2
+          }
+        ]
+      },
+      "source_refs": {
+        "chapter": 2
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "planner"
+    },
+    {
+      "case_id": "M1-belief-alias",
+      "layer": "P1-Belief",
+      "rule": "hidden truth as misbelief → pov_clock_not_reached",
+      "expected": {
+        "reason": "pov_clock_not_reached"
+      },
+      "actual_decision_entry|errors": {
+        "kept": [],
+        "audit": [
+          {
+            "fact_id": "F_REVEAL_R5",
+            "reveal_id": "R5",
+            "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+            "target": "character_state.believes",
+            "decision": "clamped",
+            "clock_used": "pov_knows_chapter",
+            "pov_knows_chapter": 9,
+            "reader_reveal_chapter": 9,
+            "current_chapter": 2,
+            "source": "prose_settlement",
+            "reason": "pov_clock_not_reached"
+          }
+        ]
+      },
+      "source_refs": {
+        "reveal": "R5",
+        "chapter": 2
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "M1-strat-missing",
+      "layer": "P1-Strategy",
+      "rule": "validate_move_fact_refs",
+      "expected": {
+        "reason": "move_missing_fact_refs"
+      },
+      "actual_decision_entry|errors": [
+        {
+          "field": "moves.countermove",
+          "claim": "Mara scrapes Claire Thorne's data.",
+          "reason": "move_missing_fact_refs",
+          "status": "UNRESOLVED",
+          "authority": "IR_COMPILER",
+          "severity": "block"
+        }
+      ],
+      "source_refs": {
+        "chapter": 2
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "planner"
+    },
+    {
+      "case_id": "M1-strat-future",
+      "layer": "P1-Strategy",
+      "rule": "validate_move_fact_refs",
+      "expected": {
+        "reason": "move_future_fact_ref"
+      },
+      "actual_decision_entry|errors": [
+        {
+          "field": "moves.countermove",
+          "claim": "Mara finds the backdoor in her alibi software.",
+          "fact_ref": "F_REVEAL_R5",
+          "reason": "move_future_fact_ref",
+          "status": "UNRESOLVED",
+          "authority": "IR_COMPILER",
+          "severity": "block"
+        },
+        {
+          "field": "moves.countermove",
+          "claim": "Mara finds the backdoor in her alibi software.",
+          "fact_refs": [
+            "F_REVEAL_R5"
+          ],
+          "reason": "move_irrelevant_fact_refs",
+          "status": "UNRESOLVED",
+          "authority": "IR_COMPILER",
+          "severity": "block"
+        }
+      ],
+      "source_refs": {
+        "fact_ref": "F_REVEAL_R5",
+        "chapter": 2
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "M1-strat-actor",
+      "layer": "P1-Strategy",
+      "rule": "validate_move_fact_refs",
+      "expected": {
+        "reason": "move_wrong_actor"
+      },
+      "actual_decision_entry|errors": [
+        {
+          "field": "moves.countermove",
+          "claim": "Adrian Thorne scrapes Claire Thorne's data.",
+          "reason": "move_wrong_actor",
+          "detail": "countermove actor=Adrian Thorne pov=Mara Voss",
+          "status": "UNRESOLVED",
+          "authority": "IR_COMPILER",
+          "severity": "block"
+        }
+      ],
+      "source_refs": {
+        "chapter": 2
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "M1-strat-prop",
+      "layer": "P1-Strategy",
+      "rule": "validate_move_fact_refs",
+      "expected": {
+        "reason": "move_prop_action_not_allowed"
+      },
+      "actual_decision_entry|errors": [
+        {
+          "field": "moves.countermove",
+          "claim": "Mara destroys the Blood-stained phone forever.",
+          "fact_ref": "F_PROP_P1",
+          "reason": "move_prop_action_not_allowed",
+          "status": "UNRESOLVED",
+          "authority": "IR_COMPILER",
+          "severity": "block"
+        }
+      ],
+      "source_refs": {
+        "fact_ref": "F_PROP_P1"
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "CTRL-strat-builtin",
+      "layer": "P1-Strategy-control",
+      "rule": "validate_move_fact_refs control S6",
+      "expected": {
+        "errors": []
+      },
+      "actual_decision_entry|errors": [],
+      "source_refs": {
+        "chapter": 2
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "planner"
+    },
+    {
+      "case_id": "M1-live-digest",
+      "layer": "P1-Live",
+      "rule": "settlement N → packet N+1 digest / foresight superseded",
+      "expected": {
+        "digests_differ": true,
+        "plan_foresight_superseded": true
+      },
+      "actual_decision_entry|errors": {
+        "digest_a": "e413021b42a9bd799592e60f30b5668391ffafc8a6f01e05459f01598a0885a6",
+        "digest_b": "38be0ac24dc6ff2d7fb9ba108fa5a8c0a55fc73726ae9cca35fa7a8878598ee3",
+        "continuity_a": {
+          "source": "settlement",
+          "carries_to_next": null,
+          "events_from_settlement": [
+            "Mara scrapes Claire Thorne's data.",
+            "Mara scrapes Claire Thorne's data.",
+            "The blood was treated with anticoagulants."
+          ],
+          "plan_foresight": "{'foreshadow': 'outliner-only foresight that must yield'}",
+          "plan_foresight_superseded": true,
+          "prior_settlement_digest": "1b3fa47666a5c34e947ee3f8c69ec2053ccc1bc0f641d578d50f1f5210307185",
+          "memory_from_settlement": [
+            "The blood was treated with anticoagulants.",
+            "Mara scrapes Claire Thorne's data."
+          ],
+          "beliefs_from_settlement": []
+        },
+        "continuity_b": {
+          "source": "settlement",
+          "carries_to_next": null,
+          "events_from_settlement": [
+            "Mara scrapes Claire Thorne's data.",
+            "Mara scrapes Claire Thorne's data."
+          ],
+          "plan_foresight": "{'foreshadow': 'outliner-only foresight that must yield'}",
+          "plan_foresight_superseded": true,
+          "prior_settlement_digest": "8a49ef7510dcfd3d610f9c7d6fda0520121311515dd3d831098f30bdf2cae89b",
+          "memory_from_settlement": [
+            "Mara scrapes Claire Thorne's data."
+          ],
+          "beliefs_from_settlement": []
+        }
+      },
+      "source_refs": {
+        "chapter_N": 2,
+        "chapter_N1": 3
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "writer"
+    },
+    {
+      "case_id": "M0-ops-budget",
+      "layer": "P0-Ops",
+      "rule": "should_skip_literary_fixer + call budget zero on canon fail",
+      "expected": {
+        "skip": true,
+        "literary": 0,
+        "fixer": 0,
+        "settlement_llm": 0
+      },
+      "actual_decision_entry|errors": {
+        "skip": true,
+        "budget": {
+          "literary_qc_calls": 0,
+          "fixer_calls": 0,
+          "settlement_llm_calls": 0,
+          "settlement_deterministic_calls": 0,
+          "writer_calls": 0
+        }
+      },
+      "source_refs": {
+        "canon_qc": {
+          "status": "fail",
+          "violations": [
+            {
+              "reason": "unsourced_proper_noun"
+            }
+          ]
+        }
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "M0-killpoint",
+      "layer": "P0-Ops",
+      "rule": "incomplete seal journal refuses READY/promote",
+      "expected": {
+        "blocked": true
+      },
+      "actual_decision_entry|errors": {
+        "blocked": true
+      },
+      "source_refs": {
+        "step": "plan"
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    },
+    {
+      "case_id": "CORPUS-romance-ingest",
+      "layer": "P2-Corpus",
+      "rule": "romance-light omit mystery pressure; ingest ok",
+      "expected": {
+        "title": "Romance Gate",
+        "has_ir_digest": true
+      },
+      "actual_decision_entry|errors": {
+        "title": "Romance Gate",
+        "ir_digest": "f071ce70b69d0c78b6997ea61c7eda30dd2ac84a367aba919f2cab259d2d7bf6",
+        "chapter_count": 3
+      },
+      "source_refs": {
+        "fixture": "ROMANCE_GATE_CONCEPT"
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "importer_or_ce"
+    },
+    {
+      "case_id": "CORPUS-mystery-lite-ingest",
+      "layer": "P2-Corpus",
+      "rule": "mystery-lite reveal clocks present for Memory/Strategy",
+      "expected": {
+        "reveal_count_gte": 1
+      },
+      "actual_decision_entry|errors": {
+        "title": "Mystery Lite Gate",
+        "reveals": 2,
+        "ir_digest": "35cc14c3e0f0fba1a62b72291ff7602de1d60590c6b65ef558b3be9519c514e6"
+      },
+      "source_refs": {
+        "fixture": "MYSTERY_LITE_CONCEPT"
+      },
+      "pass": true,
+      "pass_reason_match": true,
+      "error_layer": "unknown"
+    }
+  ]
+}

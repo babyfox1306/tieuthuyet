@@ -1,0 +1,141 @@
+concept_status: ready
+schema_version: '1.0'
+target_language: en
+title: Mystery Lite Gate
+pen_name: P2 Fixture
+chapter_count: 4
+logline: A clerk tracks a delayed evidence stamp without inventing forensics.
+author_directive: Follow the locked chapter map. No invented names. No medical claims.
+  yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+surface_plot: Nora follows a delayed stamp trail across four nights.
+true_plot: The stamp delay hid a swapped envelope already logged.
+intentional_early_reveal: false
+pov:
+  character: Nora Quill
+  mode: third_limited
+  tense: past
+  single_pov: true
+characters:
+- name: Nora Quill
+  role: protagonist
+- name: Evan Pike
+  role: antagonist
+chapter_map:
+  '1':
+    title: Stamp Desk
+    day_or_time_anchor: Night one
+    pov_knows_at_start:
+    - The stamp log is late.
+    may_observe:
+    - Evan Pike avoids the desk lamp.
+    must_happen:
+    - Nora Quill copies the late stamp row.
+    must_not:
+    - Invent unsupported medical diagnosis.
+    must_not_happen:
+    - Invent unsupported medical diagnosis.
+    reveal_ids_opened: []
+    clue_ids_planted:
+    - CL1
+    clue_ids_paid_off: []
+    prop_actions: []
+    relationship_turn: Suspicion stays professional.
+    primary_turn: The late row is recorded.
+    spice_level: 0
+  '2':
+    title: Envelope Gap
+    day_or_time_anchor: Night two
+    pov_knows_at_start:
+    - The late stamp row exists.
+    may_observe:
+    - The envelope weight does not match the log.
+    must_happen:
+    - Nora Quill weighs the envelope against the log.
+    must_not:
+    - Invent unsupported medical diagnosis.
+    must_not_happen:
+    - Invent unsupported medical diagnosis.
+    reveal_ids_opened:
+    - ML1
+    clue_ids_planted: []
+    clue_ids_paid_off:
+    - CL1
+    prop_actions: []
+    relationship_turn: Evan Pike presses for a quiet close.
+    primary_turn: Weight mismatch is visible to Nora.
+    spice_level: 0
+  '3':
+    title: Quiet Close
+    day_or_time_anchor: Night three
+    pov_knows_at_start:
+    - The envelope weight is wrong.
+    may_observe:
+    - Evan Pike offers a corrected stamp.
+    must_happen:
+    - Nora Quill refuses the corrected stamp.
+    must_not:
+    - Invent unsupported medical diagnosis.
+    must_not_happen:
+    - Invent unsupported medical diagnosis.
+    reveal_ids_opened: []
+    clue_ids_planted: []
+    clue_ids_paid_off: []
+    prop_actions: []
+    relationship_turn: Pressure replaces courtesy.
+    primary_turn: Correction is refused.
+    spice_level: 0
+  '4':
+    title: Logged Swap
+    day_or_time_anchor: Night four
+    pov_knows_at_start:
+    - The correction was a cover.
+    may_observe:
+    - The swapped envelope id is in the prior log.
+    must_happen:
+    - Nora Quill matches the swapped envelope to the prior log.
+    must_not:
+    - Invent unsupported medical diagnosis.
+    must_not_happen:
+    - Invent unsupported medical diagnosis.
+    reveal_ids_opened:
+    - ML2
+    clue_ids_planted: []
+    clue_ids_paid_off: []
+    prop_actions: []
+    relationship_turn: The desk closes without partnership fantasy.
+    primary_turn: The swap is proven from the log.
+    spice_level: 0
+required_reveal_schedule:
+- id: ML1
+  fact: The envelope weight does not match the logged contents.
+  reader_reveal_chapter: 2
+  pov_knows_chapter: 2
+  reveal_type: observation
+  prerequisite_reveals: []
+  required_clues:
+  - CL1
+  must_remain_hidden_before: 1
+  allowed_foreshadowing_before: late stamp mention
+- id: ML2
+  fact: The stamp delay hid a swapped envelope already logged.
+  reader_reveal_chapter: 3
+  pov_knows_chapter: 4
+  reveal_type: inference
+  prerequisite_reveals:
+  - ML1
+  required_clues: []
+  must_remain_hidden_before: 3
+  allowed_foreshadowing_before: refuse corrected stamp
+clues:
+- id: CL1
+  description: Late stamp row with mismatched envelope weight later.
+  plant_chapter: 1
+  payoff_chapter: 2
+ending_book1: Nora Quill proves the swap from the prior log.
+hook_book2: A second stamp desk shows the same delay pattern.
+must_include:
+- Evidence remains observable.
+must_avoid:
+- Unsupported diagnosis.
+- Invented proper nouns.
+notes: Mystery-lite fixture for P2 Memory/Strategy corpus.

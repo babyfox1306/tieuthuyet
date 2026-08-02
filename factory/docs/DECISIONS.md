@@ -1,6 +1,6 @@
 # Decisions
 
-## P0 / P1 Canon verdict
+## P0 / P1 / P2 Canon verdict
 
 Branch: `experiment/ce-canon-provenance`.
 
@@ -11,17 +11,20 @@ P1 Custody: COMPLETE
 P1 Belief: COMPLETE
 P1 Strategy: COMPLETE
 P1 overall: COMPLETE — by reproducible raw-evidence harness at commit 6e141f7+
+P2 harness: COMPLETE — golden + mutation battery + corpus + budget + CI gate
 ```
 
 Authoritative closeout:
 
 > **P1 overall complete by reproducible raw-evidence harness at commit `6e141f7` (exporter/fixtures follow-up on same tag line). Independent artifact inspection remains optional, not a known blocker.**
 
+> **P2 harness complete** when `verify_p2_ci.py` is green: golden digests (≥2 titles, dual-run identical), mutation battery expect-fail đúng reason/layer (`RAW_MUTATION_GATE.json`), infection + synthetic corpus, call/token budget docs + canon-fail counters = 0, kill-point seal + local write lock.
+
 Caveat (release note):
 
-> P1 does **not** guarantee the Writer produces clean prose on the first pass. It guarantees cognition, belief, custody, and strategy **must not enter packet/state** when they contradict Canonical IR.
+> P1 does **not** guarantee the Writer produces clean prose on the first pass. It guarantees cognition, belief, custody, and strategy **must not enter packet/state** when they contradict Canonical IR. P2 does **not** open new intelligence — it proves the sealed stack stays stable.
 
-Do not expand P1 further unless a raw artifact directly exposes a false PASS. Next: P2.
+Do not expand P1 further unless a raw artifact directly exposes a false PASS. Do not reopen P1 from P2 unless mutation battery shows a false PASS.
 
 ---
 
@@ -78,7 +81,7 @@ Canonical IR
 - Wired into `compile_chapter_contract`.
 - **Status: COMPLETE.**
 
-### Evidence harness
+### Evidence harness (P1)
 
 - Exporter: `factory/engine/scripts/export_p1_raw_evidence.py`
 - Gate: `factory/workspaces/_canon_p1_raw_evidence/RAW_EVIDENCE_GATE.json`
@@ -86,3 +89,19 @@ Canonical IR
 - Structure: positive + negative + poisoned + control + live packet diff + reproducible exporter.
 - Memory-only prior evidence: `_canon_p1_memory_clamp_verify/`
 - Overall summary prior: `_canon_p1_overall_verify/`
+
+---
+
+## P2 Harness (stability)
+
+P2 hardens P0+P1 — **no** new SoT, **no** validator redesign unless false PASS.
+
+| Slice | Entry |
+|-------|--------|
+| Golden | `verify_p2_golden.py` + `fixtures/canon_p2_golden/` |
+| Mutation | `export_p2_mutation_evidence.py` + `RAW_MUTATION_GATE.json` |
+| Corpus | `verify_p2_corpus.py` + infection + romance/mystery-lite |
+| Budget | `factory/docs/P2_BUDGET.md` + `p2_harness` counters / kill-point / write lock |
+| CI | `verify_p2_ci.py` → tag `canon-p2-harness-complete` |
+
+Export still requires `canon_qc: pass` + sealed ancestors (P0 invariant).

@@ -1053,7 +1053,11 @@ def write_one_chapter(
 
         canon = run_prose_claim_gate(ws, book, ch, chapter, ir)
         if canon.get("status") != "pass":
+            from factory.engine.lib.p2_harness import assert_canon_fail_budget_zero
+
             _ = should_skip_literary_fixer(canon)
+            # P2 budget: canon-fail path must not invoke literary/fixer/settlement LLM.
+            assert_canon_fail_budget_zero()
             chapter_pipeline_path(ws, book, "needs_fix", ch).write_text(
                 chapter, encoding="utf-8"
             )
@@ -1063,6 +1067,7 @@ def write_one_chapter(
                     "canon_qc": canon,
                     "error_layer": classify_error_layer("canon_qc fail"),
                     "skip_literary_fixer": True,
+                    "p2_budget": {"literary_qc_calls": 0, "fixer_calls": 0, "settlement_llm_calls": 0},
                 },
             )
             viol = [
@@ -1072,6 +1077,9 @@ def write_one_chapter(
             safe_print(f"  ch_{ch:03d} NEEDS_FIX — canon_qc: {'; '.join(viol)}")
             return ch, "needs_fix"
 
+    from factory.engine.lib.p2_harness import record_call
+
+    record_call("literary_qc_calls")
     qc_raw, _ = call_9router("qc", build_qc_payload(ws, book, chapter, ch), max_tokens=4096, direction=direction)
     time.sleep(cfg.get("throttle_seconds", 4))
     try:
@@ -1104,6 +1112,8 @@ def write_one_chapter(
 
         prior = load_settlement(ws, book, ch - 1)
         intel = compile_chapter_intelligence(ir, ch, prior_settlement=prior)
+        from factory.engine.lib.p2_harness import record_call
+
         settlement = build_settlement(
             chapter=ch,
             canon_qc=canon,
@@ -1111,6 +1121,8 @@ def write_one_chapter(
             prose_len=len(chapter),
             ir=ir,
         )
+        # Deterministic settlement on canon-pass path (no LLM settlement by default).
+        record_call("settlement_deterministic_calls")
         write_settlement(ws, book, ch, settlement)
 
     chapter_pipeline_path(ws, book, "ready", ch).write_text(chapter, encoding="utf-8")

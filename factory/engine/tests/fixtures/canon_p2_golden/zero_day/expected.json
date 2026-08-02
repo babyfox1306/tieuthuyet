@@ -1,0 +1,15 @@
+{
+  "title_id": "zero_day",
+  "ir_digest": "e8e620ddc60b4ec8c93436cab3f05807e9641ed149bcff53412b368819a6c3e0",
+  "importer_schema_version": "1.0",
+  "chapters": {
+    "2": {
+      "contract_digest": "7f6e1855ed40655a74b5a18e02fe401fdeca1b4b1ae52bdebcffff61f8c0886c",
+      "packet_digest": "0506bc7d1da4a25f95f2aa1dd79a509677c205b612c46f2a1f6a4d675e84b010"
+    },
+    "3": {
+      "contract_digest": "9cda78f73f34fb275083e3955a0b6162f117789d96fb68bcf5ce5f13fcc888ab",
+      "packet_digest": "75695f824fc1de977e4b580af40dd4b4274960aa1344db902c8428341aa6743f"
+    }
+  }
+}
