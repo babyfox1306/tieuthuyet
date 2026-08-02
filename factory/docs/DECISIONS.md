@@ -14,6 +14,18 @@ P1 overall: COMPLETE — by reproducible raw-evidence harness at commit 6e141f7+
 P2 harness: COMPLETE — golden + mutation battery + corpus + budget + CI gate
 ```
 
+### Baseline lock (do not reopen architecture)
+
+```text
+commit: 01bddb446e43a6dc54a47be1ac62b53e382dc82d
+tag:    canon-p2-harness-complete
+prove:  python factory/engine/scripts/verify_p2_ci.py
+```
+
+> **P2 COMPLETE only counts when the harness re-runs green** — not because a tag or prose report says so. Artifact: `factory/engine/tests/fixtures/canon_p2_ci/P2_CI_GATE.json` (+ `P2_CI_LAST_RUN.log`).
+
+Next business step (not architecture): clean end-to-end book from a CE RELEASED title **not** used as Zero-Day fixture; human-read first EPUB.
+
 Authoritative closeout:
 
 > **P1 overall complete by reproducible raw-evidence harness at commit `6e141f7` (exporter/fixtures follow-up on same tag line). Independent artifact inspection remains optional, not a known blocker.**
@@ -24,7 +36,7 @@ Caveat (release note):
 
 > P1 does **not** guarantee the Writer produces clean prose on the first pass. It guarantees cognition, belief, custody, and strategy **must not enter packet/state** when they contradict Canonical IR. P2 does **not** open new intelligence — it proves the sealed stack stays stable.
 
-Do not expand P1 further unless a raw artifact directly exposes a false PASS. Do not reopen P1 from P2 unless mutation battery shows a false PASS.
+Do not expand P1 further unless a raw artifact directly exposes a false PASS. Do not reopen P1 from P2 unless mutation battery shows a false PASS. Do not add architecture after this baseline — ship books.
 
 ---
 

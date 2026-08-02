@@ -20,14 +20,16 @@ from factory.engine.lib.canonical_ir import (  # noqa: E402
     compile_canonical_ir,
     ingest_concept_to_workspace,
 )
-from factory.engine.lib.p2_fixtures import MYSTERY_LITE_CONCEPT, ROMANCE_GATE_CONCEPT  # noqa: E402
+from factory.engine.lib.p2_fixtures import (  # noqa: E402
+    MYSTERY_LITE_CONCEPT,
+    ROMANCE_GATE_CONCEPT,
+    zero_day_concept_path,
+)
 from factory.engine.lib.p2_harness import concept_to_workspace, seal_minimal_chapter  # noqa: E402
 from factory.engine.lib.plan_provenance import validate_plan_against_ir  # noqa: E402
 from factory.engine.lib.prose_claim_gate import validate_prose_against_ir  # noqa: E402
 from factory.engine.lib.prose_settlement import build_settlement  # noqa: E402
 
-CE = Path(r"D:\tieuthuyet\Concept ETL\output\concepts\the-zero-day-alibi\concept.yaml")
-CE_FALLBACK = ROOT / "factory" / "workspaces" / "the-zero-day-alibi" / "concept.yaml"
 WS_ROOT = ROOT / "factory" / "workspaces" / "_canon_p2_corpus_verify"
 FIXTURES = ROOT / "factory" / "engine" / "tests" / "fixtures" / "canon_p2_corpus"
 
@@ -66,11 +68,7 @@ INFECTION_CASES = {
 
 
 def _ce_path() -> Path:
-    if CE.exists():
-        return CE
-    if CE_FALLBACK.exists():
-        return CE_FALLBACK
-    raise FileNotFoundError("Zero-Day concept.yaml not found")
+    return zero_day_concept_path()
 
 
 def main() -> int:

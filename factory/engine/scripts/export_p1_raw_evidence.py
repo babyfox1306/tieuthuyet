@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT))
 
+from factory.engine.lib.p2_fixtures import zero_day_concept_path  # noqa: E402
 from factory.engine.lib.canonical_ir import (  # noqa: E402
     ingest_concept_to_workspace,
     load_canonical_ir,
@@ -34,7 +35,7 @@ from factory.engine.lib.story_intelligence import (  # noqa: E402
     validate_move_fact_refs,
 )
 
-CE = Path(r"D:\tieuthuyet\Concept ETL\output\concepts\the-zero-day-alibi\concept.yaml")
+CE = zero_day_concept_path()
 WS = ROOT / "factory" / "workspaces" / "_canon_p1_raw_evidence"
 
 

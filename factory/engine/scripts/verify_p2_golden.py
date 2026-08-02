@@ -17,7 +17,7 @@ import yaml
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT))
 
-from factory.engine.lib.p2_fixtures import ROMANCE_GATE_CONCEPT  # noqa: E402
+from factory.engine.lib.p2_fixtures import ROMANCE_GATE_CONCEPT, zero_day_concept_path  # noqa: E402
 from factory.engine.lib.p2_harness import (  # noqa: E402
     compare_golden,
     concept_to_workspace,
@@ -26,19 +26,11 @@ from factory.engine.lib.p2_harness import (  # noqa: E402
 )
 
 FIXTURES = ROOT / "factory" / "engine" / "tests" / "fixtures" / "canon_p2_golden"
-ZERO_DAY_CE = Path(
-    r"D:\tieuthuyet\Concept ETL\output\concepts\the-zero-day-alibi\concept.yaml"
-)
-ZERO_DAY_FALLBACK = ROOT / "factory" / "workspaces" / "the-zero-day-alibi" / "concept.yaml"
 WS_ROOT = ROOT / "factory" / "workspaces" / "_canon_p2_golden_verify"
 
 
 def _zd_concept() -> Path:
-    if ZERO_DAY_CE.exists():
-        return ZERO_DAY_CE
-    if ZERO_DAY_FALLBACK.exists():
-        return ZERO_DAY_FALLBACK
-    raise FileNotFoundError("Zero-Day concept.yaml not found")
+    return zero_day_concept_path()
 
 
 def _run_zero_day(ws: Path) -> dict:

@@ -41,6 +41,7 @@ from factory.engine.lib.canon_ops import (
     classify_error_layer,
     should_skip_literary_fixer,
 )
+from factory.engine.lib.p2_fixtures import ZERO_DAY_FIXTURE, zero_day_concept_path
 from factory.engine.lib.prose_settlement import (
     build_settlement,
     continuity_from_prior,
@@ -48,9 +49,10 @@ from factory.engine.lib.prose_settlement import (
     write_settlement,
 )
 
-CE_CONCEPT = Path(
-    r"D:\tieuthuyet\Concept ETL\output\concepts\the-zero-day-alibi\concept.yaml"
-)
+try:
+    CE_CONCEPT = zero_day_concept_path()
+except FileNotFoundError:
+    CE_CONCEPT = ZERO_DAY_FIXTURE
 
 
 def _load_ce() -> dict:

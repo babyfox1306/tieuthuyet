@@ -1,5 +1,37 @@
 """Minimal romance-light + mystery-lite concepts for P2 golden/corpus."""
 
+from pathlib import Path
+
+_ROOT = Path(__file__).resolve().parents[3]
+ZERO_DAY_FIXTURE = (
+    _ROOT
+    / "factory"
+    / "engine"
+    / "tests"
+    / "fixtures"
+    / "canon_p2_golden"
+    / "zero_day"
+    / "concept.yaml"
+)
+ZERO_DAY_CE = Path(
+    r"D:\tieuthuyet\Concept ETL\output\concepts\the-zero-day-alibi\concept.yaml"
+)
+ZERO_DAY_WORKSPACE = _ROOT / "factory" / "workspaces" / "the-zero-day-alibi" / "concept.yaml"
+
+
+def zero_day_concept_path() -> Path:
+    """Prefer committed fixture so clean-clone CI does not need CE install."""
+    if ZERO_DAY_FIXTURE.exists():
+        return ZERO_DAY_FIXTURE
+    if ZERO_DAY_CE.exists():
+        return ZERO_DAY_CE
+    if ZERO_DAY_WORKSPACE.exists():
+        return ZERO_DAY_WORKSPACE
+    raise FileNotFoundError(
+        "Zero-Day concept.yaml not found (fixture/CE/workspace)"
+    )
+
+
 ROMANCE_GATE_CONCEPT = {
     "concept_status": "ready",
     "schema_version": "1.0",

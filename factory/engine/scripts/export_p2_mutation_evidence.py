@@ -38,12 +38,15 @@ from factory.engine.lib.chapter_contract import (  # noqa: E402
     compile_chapter_contract,
     compile_writer_packet,
 )
-from factory.engine.lib.p2_fixtures import MYSTERY_LITE_CONCEPT, ROMANCE_GATE_CONCEPT  # noqa: E402
+from factory.engine.lib.p2_fixtures import (  # noqa: E402
+    MYSTERY_LITE_CONCEPT,
+    ROMANCE_GATE_CONCEPT,
+    zero_day_concept_path,
+)
 from factory.engine.lib.p2_harness import (  # noqa: E402
     assert_canon_fail_budget_zero,
     assert_no_incomplete_seal_promoted,
     begin_seal_journal,
-    concept_to_workspace,
     get_call_budget,
     record_call,
     reset_call_budget,
@@ -65,8 +68,7 @@ from factory.engine.lib.story_intelligence import (  # noqa: E402
     validate_move_fact_refs,
 )
 
-CE = Path(r"D:\tieuthuyet\Concept ETL\output\concepts\the-zero-day-alibi\concept.yaml")
-CE_FALLBACK = ROOT / "factory" / "workspaces" / "the-zero-day-alibi" / "concept.yaml"
+CE = zero_day_concept_path()
 WS = ROOT / "factory" / "workspaces" / "_canon_p2_mutation_verify"
 FIXTURES = ROOT / "factory" / "engine" / "tests" / "fixtures" / "canon_p2_mutations"
 
@@ -81,10 +83,7 @@ def _git(args: list[str]) -> str:
 
 
 def _ce_bytes() -> bytes:
-    path = CE if CE.exists() else CE_FALLBACK
-    if not path.exists():
-        raise FileNotFoundError("Zero-Day concept.yaml not found")
-    return path.read_bytes()
+    return zero_day_concept_path().read_bytes()
 
 
 def _dump(name: str, payload: object) -> Path:

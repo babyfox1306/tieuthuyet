@@ -1,4 +1,12 @@
 {
+  "meta": {
+    "commit": "01bddb446e43a6dc54a47be1ac62b53e382dc82d",
+    "branch": "experiment/ce-canon-provenance",
+    "tag_p2": "01bddb446e43a6dc54a47be1ac62b53e382dc82d",
+    "baseline_declared": "01bddb446e43a6dc54a47be1ac62b53e382dc82d",
+    "ran_at_utc": "2026-08-02T12:23:26.922525+00:00",
+    "clean_checkout_capable": true
+  },
   "steps": [
     {
       "name": "golden",
@@ -10,7 +18,7 @@
       "name": "mutation_battery",
       "ok": true,
       "code": 0,
-      "tail": "{\n  \"meta\": {\n    \"commit\": \"f87c6c52f6254c43d3ffac11b4a8e5f8680338b0\",\n    \"branch\": \"experiment/ce-canon-provenance\",\n    \"workspace\": \"D:\\\\tieuthuyet\\\\tieuthuyet\\\\factory\\\\workspaces\\\\_canon_p2_mutation_verify\"\n  },\n  \"mutation_cases\": {\n    \"M0-name\": true,\n    \"M0-reveal\": true,\n    \"M0-schema\": true,\n    \"M0-stale\": true,\n    \"M0-texture\": true,\n    \"M0-motive\": true,\n    \"M0-spec\": true,\n    \"M1-mem-future\": true,\n    \"M1-mem-reader\": true,\n    \"M1-mem-poison\": true,\n    \"M1-cust-holder\": true,\n    \"M1-cust-action\": true,\n    \"CTRL-cust-allowed\": true,\n    \"M1-belief-orphan\": true,\n    \"M1-belief-alias\": true,\n    \"M1-strat-missing\": true,\n    \"M1-strat-future\": true,\n    \"M1-strat-actor\": true,\n    \"M1-strat-prop\": true,\n    \"CTRL-strat-builtin\": true,\n    \"M1-live-digest\": true,\n    \"M0-ops-budget\": true,\n    \"M0-killpoint\": true,\n    \"CORPUS-romance-ingest\": true,\n    \"CORPUS-mystery-lite-ingest\": true\n  },\n  \"all_cases_pass\": true,\n  \"pass_reason_match_ok\": true,\n  \"control_no_false_positive\": true,\n  \"p2_mutation_battery_complete\": true,\n  \"case_count\": 25\n}"
+      "tail": "{\n  \"meta\": {\n    \"commit\": \"01bddb446e43a6dc54a47be1ac62b53e382dc82d\",\n    \"branch\": \"experiment/ce-canon-provenance\",\n    \"workspace\": \"D:\\\\tieuthuyet\\\\tieuthuyet\\\\factory\\\\workspaces\\\\_canon_p2_mutation_verify\"\n  },\n  \"mutation_cases\": {\n    \"M0-name\": true,\n    \"M0-reveal\": true,\n    \"M0-schema\": true,\n    \"M0-stale\": true,\n    \"M0-texture\": true,\n    \"M0-motive\": true,\n    \"M0-spec\": true,\n    \"M1-mem-future\": true,\n    \"M1-mem-reader\": true,\n    \"M1-mem-poison\": true,\n    \"M1-cust-holder\": true,\n    \"M1-cust-action\": true,\n    \"CTRL-cust-allowed\": true,\n    \"M1-belief-orphan\": true,\n    \"M1-belief-alias\": true,\n    \"M1-strat-missing\": true,\n    \"M1-strat-future\": true,\n    \"M1-strat-actor\": true,\n    \"M1-strat-prop\": true,\n    \"CTRL-strat-builtin\": true,\n    \"M1-live-digest\": true,\n    \"M0-ops-budget\": true,\n    \"M0-killpoint\": true,\n    \"CORPUS-romance-ingest\": true,\n    \"CORPUS-mystery-lite-ingest\": true\n  },\n  \"all_cases_pass\": true,\n  \"pass_reason_match_ok\": true,\n  \"control_no_false_positive\": true,\n  \"p2_mutation_battery_complete\": true,\n  \"case_count\": 25\n}"
     },
     {
       "name": "corpus",
@@ -37,7 +45,8 @@
       "gates": {
         "GOLDEN_GATE": true,
         "RAW_MUTATION_GATE": true,
-        "CORPUS_GATE": true
+        "CORPUS_GATE": true,
+        "ZERO_DAY_CONCEPT": true
       }
     },
     {
@@ -47,5 +56,5 @@
   ],
   "pass": true,
   "p2_harness_complete": true,
-  "note": "Full non-canon suite regressions are classified separately; this gate does not skip failing harness steps."
+  "note": "Full non-canon suite regressions are classified separately; this gate does not skip failing harness steps. P2 COMPLETE is only meaningful when this script is green."
 }
