@@ -1,0 +1,1870 @@
+{
+  "status": "pass",
+  "canon_qc": "pass",
+  "claims": [
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        46,
+        59
+      ],
+      "span_type": "dialogue"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        97,
+        110
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        249,
+        262
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        290,
+        303
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        419,
+        432
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        460,
+        473
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        589,
+        602
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        630,
+        643
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        759,
+        772
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        800,
+        813
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        929,
+        942
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        970,
+        983
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        1099,
+        1112
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        1140,
+        1153
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        1269,
+        1282
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        1310,
+        1323
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        1439,
+        1452
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        1480,
+        1493
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        1609,
+        1622
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        1650,
+        1663
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        1779,
+        1792
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        1820,
+        1833
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        1949,
+        1962
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        1990,
+        2003
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        2119,
+        2132
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        2160,
+        2173
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        2289,
+        2302
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        2330,
+        2343
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        2459,
+        2472
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        2500,
+        2513
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        2629,
+        2642
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        2670,
+        2683
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        2799,
+        2812
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        2840,
+        2853
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        2969,
+        2982
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        3010,
+        3023
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        3139,
+        3152
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        3180,
+        3193
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        3309,
+        3322
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        3350,
+        3363
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        3479,
+        3492
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        3520,
+        3533
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        3649,
+        3662
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        3690,
+        3703
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        3819,
+        3832
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        3860,
+        3873
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        3989,
+        4002
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        4030,
+        4043
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        4159,
+        4172
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        4200,
+        4213
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        4329,
+        4342
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        4370,
+        4383
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        4499,
+        4512
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        4540,
+        4553
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        4669,
+        4682
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        4710,
+        4723
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        4839,
+        4852
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        4880,
+        4893
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        5009,
+        5022
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        5050,
+        5063
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        5179,
+        5192
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        5220,
+        5233
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        5349,
+        5362
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        5390,
+        5403
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        5519,
+        5532
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        5560,
+        5573
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        5689,
+        5702
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        5730,
+        5743
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        5859,
+        5872
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        5900,
+        5913
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        6029,
+        6042
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        6070,
+        6083
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        6199,
+        6212
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        6240,
+        6253
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        6369,
+        6382
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        6410,
+        6423
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        6539,
+        6552
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        6580,
+        6593
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        6709,
+        6722
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        6750,
+        6763
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        6879,
+        6892
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        6920,
+        6933
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        7049,
+        7062
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        7090,
+        7103
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        7219,
+        7232
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        7260,
+        7273
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        7389,
+        7402
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        7430,
+        7443
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        7559,
+        7572
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        7600,
+        7613
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Adrian Thorne",
+      "span": [
+        7729,
+        7742
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        7770,
+        7783
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        82,
+        86
+      ],
+      "span_type": "dialogue",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        243,
+        247
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        413,
+        417
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        583,
+        587
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        753,
+        757
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        923,
+        927
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        1093,
+        1097
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        1263,
+        1267
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        1433,
+        1437
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        1603,
+        1607
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        1773,
+        1777
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        1943,
+        1947
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        2113,
+        2117
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        2283,
+        2287
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        2453,
+        2457
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        2623,
+        2627
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        2793,
+        2797
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        2963,
+        2967
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        3133,
+        3137
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        3303,
+        3307
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        3473,
+        3477
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        3643,
+        3647
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        3813,
+        3817
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        3983,
+        3987
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        4153,
+        4157
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        4323,
+        4327
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        4493,
+        4497
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        4663,
+        4667
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        4833,
+        4837
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        5003,
+        5007
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        5173,
+        5177
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        5343,
+        5347
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        5513,
+        5517
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        5683,
+        5687
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        5853,
+        5857
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        6023,
+        6027
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        6193,
+        6197
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        6363,
+        6367
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        6533,
+        6537
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        6703,
+        6707
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        6873,
+        6877
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        7043,
+        7047
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        7213,
+        7217
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        7383,
+        7387
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        7553,
+        7557
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        7723,
+        7727
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    }
+  ],
+  "spans": [
+    {
+      "span_type": "narration",
+      "start": 0,
+      "end": 45,
+      "text": "I kept the phone flat on the blotting paper. "
+    },
+    {
+      "span_type": "dialogue",
+      "start": 45,
+      "end": 88,
+      "text": "\"Adrian Thorne, put the phone on the desk,\""
+    },
+    {
+      "span_type": "narration",
+      "start": 88,
+      "end": 7875,
+      "text": " I said. Claire Thorne's traces filled the scrape window. Anticoagulant treatment marked the blood as staged. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office.  I stayed at the desk. Adrian Thorne watched the scrape window. Claire Thorne remained a data problem under anticoagulant treatment evidence. I did not leave the office."
+    }
+  ],
+  "violations": [],
+  "chapter": 2,
+  "texture_claims_excluded_from_state": [
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        82,
+        86
+      ],
+      "span_type": "dialogue",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        243,
+        247
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        413,
+        417
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        583,
+        587
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        753,
+        757
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        923,
+        927
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        1093,
+        1097
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        1263,
+        1267
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        1433,
+        1437
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        1603,
+        1607
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        1773,
+        1777
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        1943,
+        1947
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        2113,
+        2117
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        2283,
+        2287
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        2453,
+        2457
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        2623,
+        2627
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        2793,
+        2797
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        2963,
+        2967
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        3133,
+        3137
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        3303,
+        3307
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        3473,
+        3477
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        3643,
+        3647
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        3813,
+        3817
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        3983,
+        3987
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        4153,
+        4157
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        4323,
+        4327
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        4493,
+        4497
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        4663,
+        4667
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        4833,
+        4837
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        5003,
+        5007
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        5173,
+        5177
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        5343,
+        5347
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        5513,
+        5517
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        5683,
+        5687
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        5853,
+        5857
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        6023,
+        6027
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        6193,
+        6197
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        6363,
+        6367
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        6533,
+        6537
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        6703,
+        6707
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        6873,
+        6877
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        7043,
+        7047
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        7213,
+        7217
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        7383,
+        7387
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        7553,
+        7557
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        7723,
+        7727
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    }
+  ]
+}

@@ -1,0 +1,742 @@
+title: The Zero-Day Alibi
+pen_name: Nix Vale
+romance_mode: 'on'
+spice_level: 0
+spice_default: 0
+spice_schedule: {}
+pov:
+  character: Mara Voss
+  mode: first_person
+  tense: past
+  single_pov: true
+canonical_reveal_chapter: 9
+corpse_reveal_chapter: 5
+chapter_count: 12
+intentional_early_reveal: true
+author_directive: 'Tone: clinical, hyper-competent, cold to the point of pain. Every chapter is a counter-move.'
+logline: When an expert who creates alibis from ordinary digital traces is forced to conceal a murder
+  for a mysterious client, she discovers that she is the mastermind who hired him—and that he knew from
+  the beginning and took the bait to seize her black-data vault.
+surface_plot: Mara believes Adrian killed Claire Thorne and is using a Crisis Management contract to force
+  Mara to create an alibi, with twenty-four hours before police discover Claire's death.
+true_plot: Mara Voss secretly hired Adrian Thorne to kill Claire Thorne and planned to frame Adrian while
+  taking Claire's shares. Adrian knew Mara was the mastermind before entering the office and needs Mara
+  to open the Zero-Day Server. Both believe they hold the final leverage.
+ending_book1: Claire's death remains an open homicide investigation because the ghost vehicle and altered
+  smartwatch prevent a suicide ruling. No arrest is made yet; Mara and Adrian enter a conditional partnership
+  while both remain exposed.
+hook_book2: Det. Miller escalates the unresolved homicide inquiry after finding a second inconsistency
+  in Claire's smartwatch log, forcing Mara and Adrian to coordinate their next counter-move.
+psychological_condition:
+  canonical: prolonged acute stress under cortisol and sleep deprivation
+  observable_effects:
+  - shaking hands during loss of control
+  - dry-heaving under adrenaline
+  - heart rate reaching 160
+  - blurred vision and bloodshot eyes
+  must_not_be_described_as:
+  - shaking from romantic feeling
+  - physical knife wounds
+character_psychology:
+- character: Mara Voss
+  core_traits:
+  - Alibi Architect and hidden mastermind
+  - Clinically hyper-competent and cold
+  - Overconfident in OSINT skill
+  core_need: To maintain absolute control over her constructed reality
+  core_fear: That her control is an illusion, that she has been a tool rather than the architect
+  coping_mechanism: Systematic compartmentalization and technical precision to mask psychological fragility
+  stress_responses:
+  - Cortisol-induced physical stress
+  - Sleep deprivation
+  - Shaking hands
+  - Vomiting
+  - Arrhythmic heart rate
+  cognitive_dissonance: Believes Adrian is a tool while being used by him as a predator
+  behavioral_constraints:
+  - Does not use physical violence
+  - Does not leave the office during the 24-hour story
+  - Data vault is not physically destroyed
+  - Shaking always signifies loss of control, never romantic emotion
+  reveal_gated_fields: []
+villain_ledger:
+- action: In the opening stretch Adrian knows Mara is the mastermind but does not know she shifted the
+    time of death.
+- action: In the middle stretch Adrian knows Mara is building the ghost-vehicle frame and deliberately
+    lets it run because he retains a signed forensic snapshot proving her workstation generated it; he
+    withholds that countermeasure until it can force her to open the Zero-Day Server.
+- action: In the final stretch Adrian knows Mara found the backdoor but does not know she will offer partnership.
+characters:
+- name: Mara Voss
+  role: protagonist / Alibi Architect / hidden mastermind
+- name: Adrian Thorne
+  role: antagonist and love interest / Claire's husband / digital predator
+- name: Claire Thorne
+  role: victim / Adrian's wife / absent corpse
+- name: Det. Miller
+  role: incidental investigator / alibi verifier / Book 2 hook
+reveal_schedule:
+- id: R1
+  fact: Adrian Thorne killed Claire Thorne
+  reader_reveal_chapter: 5
+  pov_knows_chapter: 1
+  reveal_type: footage
+  prerequisite_reveals: []
+  required_clues:
+  - C1
+  - C2
+  must_remain_hidden_before: 4
+  allowed_foreshadowing_before: camera API vulnerability mention
+- id: R2
+  fact: Adrian knew Mara was the mastermind before entering her office in Chapter 1
+  reader_reveal_chapter: 7
+  pov_knows_chapter: 7
+  reveal_type: digital
+  prerequisite_reveals:
+  - R1
+  required_clues:
+  - C3
+  must_remain_hidden_before: 6
+  allowed_foreshadowing_before: proxy email IP mention
+- id: R3
+  fact: Mara secretly hired Adrian to kill Claire Thorne
+  reader_reveal_chapter: 9
+  pov_knows_chapter: 1
+  reveal_type: confession
+  prerequisite_reveals:
+  - R1
+  - R2
+  required_clues:
+  - C4
+  must_remain_hidden_before: 8
+  allowed_foreshadowing_before: metadata leak patterns
+- id: R4
+  fact: The blood on Adrian's phone was treated with anticoagulants
+  reader_reveal_chapter: 2
+  pov_knows_chapter: 2
+  reveal_type: observation
+  prerequisite_reveals: []
+  required_clues:
+  - C5
+  must_remain_hidden_before: 1
+  allowed_foreshadowing_before: blood on phone mention
+- id: R5
+  fact: Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server
+  reader_reveal_chapter: 9
+  pov_knows_chapter: 9
+  reveal_type: digital
+  prerequisite_reveals:
+  - R2
+  required_clues:
+  - C6
+  must_remain_hidden_before: 8
+  allowed_foreshadowing_before: software behavior anomalies
+- id: R6
+  fact: Mara created a ghost vehicle evidence showing Adrian's car at crime scene at 8 PM
+  reader_reveal_chapter: 6
+  pov_knows_chapter: 5
+  reveal_type: digital
+  prerequisite_reveals:
+  - R1
+  required_clues:
+  - C7
+  must_remain_hidden_before: 5
+  allowed_foreshadowing_before: traffic camera manipulation setup
+- id: R7
+  fact: Mara pushed Claire's time of death forward by 2 hours
+  reader_reveal_chapter: 6
+  pov_knows_chapter: 5
+  reveal_type: digital
+  prerequisite_reveals:
+  - R1
+  required_clues:
+  - C8
+  must_remain_hidden_before: 5
+  allowed_foreshadowing_before: smartwatch data manipulation
+- id: R8
+  fact: Mara ties server decryption key to her unique heartbeat pattern with dead man's switch
+  reader_reveal_chapter: 10
+  pov_knows_chapter: 10
+  reveal_type: digital
+  prerequisite_reveals:
+  - R5
+  required_clues:
+  - C9
+  must_remain_hidden_before: 9
+  allowed_foreshadowing_before: heartbeat monitoring setup
+- id: R9
+  fact: Adrian's true goal is to force Mara to open Zero-Day Server, not get alibi
+  reader_reveal_chapter: 8
+  pov_knows_chapter: 8
+  reveal_type: confession
+  prerequisite_reveals:
+  - R2
+  required_clues:
+  - C10
+  must_remain_hidden_before: 7
+  allowed_foreshadowing_before: server mentions, data vault references
+clues:
+- id: C1
+  description: Camera API vulnerability at exact time of Claire's death
+  plant_chapter: 5
+  payoff_chapter: 5
+  owner_reveal: R1
+  observed_by:
+  - Mara Voss
+  interpretation_at_plant: Security flaw showing Adrian at crime scene
+  true_meaning_at_payoff: Adrian was physically present when Claire died
+  physical_or_digital: digital
+  custody: city traffic camera system
+  may_be_destroyed: false
+- id: C2
+  description: Adrian's vehicle captured by traffic cameras at crime scene
+  plant_chapter: 5
+  payoff_chapter: 5
+  owner_reveal: R1
+  observed_by:
+  - Mara Voss
+  interpretation_at_plant: Direct evidence of Adrian's presence
+  true_meaning_at_payoff: Adrian committed the murder
+  physical_or_digital: digital
+  custody: traffic camera database
+  may_be_destroyed: false
+- id: C3
+  description: Proxy email IP traces back to Adrian's office
+  plant_chapter: 7
+  payoff_chapter: 7
+  owner_reveal: R2
+  observed_by:
+  - Mara Voss
+  interpretation_at_plant: Adrian sent hiring email from his office
+  true_meaning_at_payoff: Adrian knew about Mara's involvement from start
+  physical_or_digital: digital
+  custody: email server logs
+  may_be_destroyed: false
+- id: C4
+  description: Pattern in Mara's alibi creation matches her signature methods
+  plant_chapter: 9
+  payoff_chapter: 9
+  owner_reveal: R3
+  observed_by:
+  - Adrian Thorne
+  interpretation_at_plant: Unique alibi construction pattern
+  true_meaning_at_payoff: Mara created the original murder plan
+  physical_or_digital: digital
+  custody: Adrian's analysis notes
+  may_be_destroyed: false
+- id: C5
+  description: Blood on Adrian's phone treated with anticoagulants
+  plant_chapter: 1
+  payoff_chapter: 2
+  owner_reveal: R4
+  observed_by:
+  - Mara Voss
+  interpretation_at_plant: Suspicious blood evidence
+  true_meaning_at_payoff: Blood was prepared in advance, not from fresh wound
+  physical_or_digital: physical
+  custody: Mara's lab analysis
+  may_be_destroyed: true
+- id: C6
+  description: Metadata from Mara's scraping software sent to unknown server
+  plant_chapter: 1
+  payoff_chapter: 9
+  owner_reveal: R5
+  observed_by:
+  - Mara Voss
+  interpretation_at_plant: Software bug or data leak
+  true_meaning_at_payoff: Adrian's backdoor capturing Mara's activities
+  physical_or_digital: digital
+  custody: Mara's network logs
+  may_be_destroyed: false
+- id: C7
+  description: Ghost vehicle evidence in traffic camera system
+  plant_chapter: 3
+  payoff_chapter: 6
+  owner_reveal: R6
+  observed_by:
+  - Det. Miller
+  - Mara Voss
+  interpretation_at_plant: Adrian's car at crime scene at 8 PM
+  true_meaning_at_payoff: Mara fabricated evidence to trap Adrian
+  physical_or_digital: digital
+  custody: traffic camera database
+  may_be_destroyed: true
+- id: C8
+  description: Claire's smartwatch shows time of death at 8 PM instead of 10 PM
+  plant_chapter: 5
+  payoff_chapter: 6
+  owner_reveal: R7
+  observed_by:
+  - Det. Miller
+  - Mara Voss
+  interpretation_at_plant: Evidence of earlier time of death
+  true_meaning_at_payoff: Mara manipulated time of death evidence
+  physical_or_digital: digital
+  custody: smartwatch data
+  may_be_destroyed: true
+- id: C9
+  description: Heartbeat monitoring system with unique pattern recognition
+  plant_chapter: 10
+  payoff_chapter: 10
+  owner_reveal: R8
+  observed_by:
+  - Mara Voss
+  - Adrian Thorne
+  interpretation_at_plant: Security system tied to Mara's physiology
+  true_meaning_at_payoff: Mutual assured destruction through biometric lock
+  physical_or_digital: digital
+  custody: Mara's smartwatch and server
+  may_be_destroyed: false
+- id: C10
+  description: Adrian's knowledge of Zero-Day Server existence and value
+  plant_chapter: 8
+  payoff_chapter: 8
+  owner_reveal: R9
+  observed_by:
+  - Mara Voss
+  interpretation_at_plant: Adrian's unusual interest in server access
+  true_meaning_at_payoff: Adrian's true goal is blackmail data, not alibi
+  physical_or_digital: digital
+  custody: conversation record
+  may_be_destroyed: false
+props:
+- id: P1
+  name: Blood-stained phone
+  created_by: Adrian
+  recorded_by: Mara
+  subject_of_record: Murder weapon or evidence
+  purpose: Metadata analysis, blood forensics
+  first_appearance_chapter: 1
+  verification_method: Metadata analysis, blood forensics
+  custody_chain:
+  - chapter: 1
+    holder: Mara
+    action: Adrian gives phone to Mara
+  - chapter: 4
+    holder: Mara
+    action: Mara analyzes metadata
+  - chapter: 12
+    holder: Adrian
+    action: Mara returns phone with decryption key
+  payoff_chapter: 12
+  must_not_be_confused_with: Adrian actually killed Claire (blood could be staged)
+  physical_owner_by_chapter:
+    1: Mara
+    4: Mara
+    12: Adrian
+  access_events: []
+- id: P2
+  name: Zero-Day Server
+  created_by: Mara
+  recorded_by: Mara
+  subject_of_record: Blackmail data vault
+  purpose: Access logs, encryption keys
+  first_appearance_chapter: 1
+  verification_method: Access logs, encryption keys
+  custody_chain:
+  - chapter: 1
+    holder: Mara
+    action: Mara maintains admin control
+  - chapter: 2
+    holder: Mara
+    action: retains custody
+  - chapter: 3
+    holder: Mara
+    action: retains custody
+  - chapter: 4
+    holder: Mara
+    action: retains custody
+  - chapter: 5
+    holder: Mara
+    action: retains custody
+  - chapter: 6
+    holder: Mara
+    action: retains custody
+  - chapter: 7
+    holder: Mara
+    action: retains custody
+  - chapter: 8
+    holder: Mara
+    action: Mara forced to open server
+  - chapter: 9
+    holder: Adrian
+    action: Adrian gains access via backdoor
+  - chapter: 10
+    holder: Shared with conditions
+    action: Heartbeat key installed
+  - chapter: 11
+    holder: Shared with conditions
+    action: retains custody
+  - chapter: 12
+    holder: Shared with conditions
+    action: Conditional access granted
+  payoff_chapter: 12
+  must_not_be_confused_with: Contents are authentic (could be fabricated)
+  physical_owner_by_chapter:
+    1: Mara
+    2: Mara
+    3: Mara
+    4: Mara
+    5: Mara
+    6: Mara
+    7: Mara
+    8: Mara
+    9: Adrian
+    10: Shared with conditions
+    11: Shared with conditions
+    12: Shared with conditions
+  access_events: []
+- id: P3
+  name: Claire's smartwatch data
+  created_by: Claire Thorne
+  recorded_by: Mara
+  subject_of_record: Time of death evidence
+  purpose: Forensic data analysis
+  first_appearance_chapter: 5
+  verification_method: Forensic data analysis
+  custody_chain:
+  - chapter: 5
+    holder: Police evidence
+    action: Collected as evidence
+  - chapter: 6
+    holder: Mara (manipulated)
+    action: Mara manipulates time data
+  payoff_chapter: 6
+  must_not_be_confused_with: Actual time of death (data can be manipulated)
+  physical_owner_by_chapter:
+    5: Police evidence
+    6: Mara (manipulated)
+  access_events: []
+honeytoken:
+  phrase_creator: Mara
+  delivery_method: khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian
+  people_who_know_before_delivery:
+  - Mara
+  interception_method: 'text_ref: /honeytoken/delivery_method'
+  first_illicit_reuse_by: Adrian
+  reuse_chapter: 8
+  evidentiary_value:
+    information_leak: Adrian đe dọa (đọc đúng mật khẩu thời thơ ấu từ metadata ảnh).
+    physical_corroboration: Mara phát hiện cửa hậu Adrian cài từ Ch1 (metadata leak khi scrape dữ liệu).
+    false_chain_of_custody_claim: ''
+  villain_must_not_say: []
+  proof_sequence:
+  - 'text_ref: /honeytoken/delivery_method'
+  - 'text_ref: /honeytoken/evidentiary_value/information_leak'
+  - 'text_ref: /honeytoken/evidentiary_value/physical_corroboration'
+  failure_conditions: []
+chapter_map:
+  1:
+    title: The Bloody Phone
+    day_or_time_anchor: 24h
+    pov_knows_at_start:
+    - Mara knows she hired Adrian.
+    may_observe:
+    - Adrian throws down a bloody phone.
+    must_happen:
+    - Mara accepts the contract and observes unexplained metadata behavior consistent with a software
+      bug or data leak.
+    - 'Threshold event 1: first_threshold (see siblings/threshold_events.yaml)'
+    reveal_ids_opened: []
+    clue_ids_planted:
+    - C5
+    - C6
+    clue_ids_paid_off: []
+    prop_actions:
+    - prop_id: P1
+      action: Adrian gives phone to Mara
+    - prop_id: P2
+      action: Mara maintains admin control
+    relationship_turn: Mara treats Adrian as a tool.
+    primary_turn: The crisis contract begins.
+    must_not_happen:
+    - Mara leaves the office.
+    spice_level: 0
+  2:
+    title: Anticoagulant
+    day_or_time_anchor: 24h
+    pov_knows_at_start: []
+    may_observe:
+    - The blood was treated with anticoagulants.
+    must_happen:
+    - Mara scrapes Claire Thorne's data.
+    reveal_ids_opened:
+    - R4
+    clue_ids_planted: []
+    clue_ids_paid_off:
+    - C5
+    prop_actions:
+    - prop_id: P2
+      action: retains custody
+    relationship_turn: Professional suspicion sharpens.
+    primary_turn: The first leak opens.
+    must_not_happen:
+    - Mara leaves the office.
+    spice_level: 0
+  3:
+    title: Synthetic Alibi
+    day_or_time_anchor: 24h
+    pov_knows_at_start: []
+    may_observe:
+    - Strava, Uber, and traffic-camera traces.
+    must_happen:
+    - Mara creates the false alibi.
+    reveal_ids_opened: []
+    clue_ids_planted:
+    - C7
+    clue_ids_paid_off: []
+    prop_actions:
+    - prop_id: P2
+      action: retains custody
+    relationship_turn: Adrian cooperates perfectly.
+    primary_turn: The alibi becomes operational.
+    must_not_happen:
+    - Physical violence between Mara and Adrian.
+    spice_level: 0
+  4:
+    title: Hidden Call Log
+    day_or_time_anchor: 24h
+    pov_knows_at_start: []
+    may_observe:
+    - A hidden call log in the phone metadata.
+    must_happen:
+    - Mara mistakes the pattern for evidence of Adrian's affair.
+    reveal_ids_opened: []
+    clue_ids_planted: []
+    clue_ids_paid_off: []
+    prop_actions:
+    - prop_id: P1
+      action: Mara analyzes metadata
+    - prop_id: P2
+      action: retains custody
+    relationship_turn: Mara believes she has found Adrian's weakness.
+    primary_turn: A false interpretation takes hold.
+    must_not_happen:
+    - Mara learns Adrian's complete goal.
+    spice_level: 0
+  5:
+    title: Camera API
+    day_or_time_anchor: 24h
+    pov_knows_at_start: []
+    may_observe:
+    - Adrian appears at the scene at Claire's time of death.
+    must_happen:
+    - 'reveal_foreshadow_ref: R6 — traffic camera manipulation setup'
+    - 'Threshold event 2: repeat (see siblings/threshold_events.yaml)'
+    reveal_ids_opened:
+    - R1
+    clue_ids_planted:
+    - C1
+    - C2
+    - C8
+    clue_ids_paid_off:
+    - C1
+    - C2
+    prop_actions:
+    - prop_id: P2
+      action: retains custody
+    - prop_id: P3
+      action: Collected as evidence
+    relationship_turn: Mara turns the alibi into a trap.
+    primary_turn: The reverse frame begins.
+    must_not_happen:
+    - Adrian is physically attacked.
+    spice_level: 0
+  6:
+    title: The Interview
+    day_or_time_anchor: 24h
+    pov_knows_at_start: []
+    may_observe:
+    - Det. Miller questions Adrian.
+    must_happen:
+    - The ghost vehicle crosses the scene at 8 PM while the ten-o'clock alibi works.
+    reveal_ids_opened:
+    - R6
+    - R7
+    clue_ids_planted: []
+    clue_ids_paid_off:
+    - C7
+    - C8
+    prop_actions:
+    - prop_id: P2
+      action: retains custody
+    - prop_id: P3
+      action: Mara manipulates time data
+    relationship_turn: Mara believes her frame is closing.
+    primary_turn: The homicide-directed evidence becomes visible.
+    must_not_happen:
+    - The two plot contradictions are silently repaired.
+    spice_level: 0
+  7:
+    title: Proxy Origin
+    day_or_time_anchor: 24h
+    pov_knows_at_start: []
+    may_observe:
+    - The proxy email traces to Adrian's office.
+    must_happen:
+    - Mara learns Adrian knew she was the mastermind.
+    - 'Threshold event 3: repeat (see siblings/threshold_events.yaml)'
+    reveal_ids_opened:
+    - R2
+    clue_ids_planted:
+    - C3
+    clue_ids_paid_off:
+    - C3
+    prop_actions:
+    - prop_id: P2
+      action: retains custody
+    relationship_turn: The predator becomes visible.
+    primary_turn: Mara's blind layer breaks.
+    must_not_happen:
+    - Mara gains emotional certainty.
+    spice_level: 0
+  8:
+    title: Open the Server
+    day_or_time_anchor: 24h
+    pov_knows_at_start: []
+    may_observe:
+    - Adrian reads the childhood password from image metadata.
+    - 'clue_ref: C6 — Metadata from Mara''s scraping software sent to unknown server; surface_interpretation:
+      Software bug or data leak'
+    - 'Setting mechanism in play: mechanism_admin_rights'
+    - 'Software administrative privileges (key holder: Mara; defeats: Standard user access)'
+    must_happen:
+    - Mara opens the Zero-Day Server.
+    - 'setting_opportunity_ref: opp_access_escalation'
+    reveal_ids_opened:
+    - R9
+    clue_ids_planted:
+    - C10
+    clue_ids_paid_off:
+    - C10
+    prop_actions:
+    - prop_id: P2
+      action: Mara forced to open server
+    relationship_turn: Adrian takes operational control.
+    primary_turn: The data vault opens.
+    must_not_happen:
+    - Adrian threatens to kill Mara.
+    spice_level: 0
+  9:
+    title: The Backdoor
+    day_or_time_anchor: 24h
+    pov_knows_at_start: []
+    may_observe:
+    - Metadata leaked during public-data scraping.
+    - 'Setting mechanism in play: mechanism_backdoor'
+    - 'text_ref: /chapter_map/8/may_observe/2'
+    - 'text_ref: /chapter_map/8/may_observe/3'
+    - 'Hidden software backdoor (key holder: Adrian; defeats: mechanism_admin_rights)'
+    must_happen:
+    - Mara discovers Adrian's backdoor and his blackmail-data goal.
+    - 'setting_opportunity_ref: opp_access_escalation'
+    reveal_ids_opened:
+    - R3
+    - R5
+    clue_ids_planted:
+    - C4
+    clue_ids_paid_off:
+    - C4
+    - C6
+    prop_actions:
+    - prop_id: P2
+      action: Adrian gains access via backdoor
+    relationship_turn: Control becomes mutually destructive.
+    primary_turn: Adrian's true objective is exposed.
+    must_not_happen:
+    - The server is physically destroyed.
+    spice_level: 0
+  10:
+    title: Heartbeat Key
+    day_or_time_anchor: 24h
+    pov_knows_at_start: []
+    may_observe:
+    - Mara's unique heartbeat pattern.
+    - 'Setting mechanism in play: mechanism_heartbeat_key'
+    - 'Decryption bound to Mara''s heartbeat (key holder: Mara; defeats: mechanism_backdoor)'
+    must_happen:
+    - Mara binds decryption to her heartbeat and a dead man's switch.
+    - 'setting_opportunity_ref: opp_access_limitation'
+    - 'Threshold event 4: repeat (see siblings/threshold_events.yaml)'
+    reveal_ids_opened:
+    - R8
+    clue_ids_planted:
+    - C9
+    clue_ids_paid_off:
+    - C9
+    prop_actions:
+    - prop_id: P2
+      action: Heartbeat key installed
+    relationship_turn: Mara restores conditional leverage.
+    primary_turn: Her body becomes part of the key.
+    must_not_happen:
+    - Physical violence.
+    spice_level: 0
+  11:
+    title: Two Victories
+    day_or_time_anchor: 24h
+    pov_knows_at_start: []
+    may_observe:
+    - Adrian admits he knew from the beginning.
+    must_happen:
+    - Adrian says Mara won the murder and he won the data.
+    - Adrian produces the retained forensic snapshot that can attribute the ghost vehicle to Mara's workstation,
+      revealing why he allowed the frame to proceed.
+    reveal_ids_opened: []
+    clue_ids_planted: []
+    clue_ids_paid_off: []
+    prop_actions:
+    - prop_id: P2
+      action: retains custody
+    relationship_turn: Neither predator can claim total control.
+    primary_turn: The double game becomes explicit.
+    must_not_happen:
+    - A confession substitutes for the digital proof.
+    spice_level: 0
+  12:
+    title: Conditional Partnership
+    day_or_time_anchor: 24h
+    pov_knows_at_start: []
+    may_observe:
+    - Both are exhausted, bloodshot, and shaking.
+    - 'text_ref: /chapter_map/10/may_observe/1'
+    - 'text_ref: /chapter_map/10/may_observe/2'
+    must_happen:
+    - Mara grants conditional admin access and Adrian deletes the backdoor.
+    - 'setting_opportunity_ref: opp_access_limitation'
+    - 'Threshold event 5: repeat (see siblings/threshold_events.yaml)'
+    reveal_ids_opened: []
+    clue_ids_planted: []
+    clue_ids_paid_off: []
+    prop_actions:
+    - prop_id: P1
+      action: Mara returns phone with decryption key
+    - prop_id: P2
+      action: Conditional access granted
+    relationship_turn: They become partners in crime.
+    primary_turn: Mutual assured destruction becomes alliance.
+    must_not_happen:
+    - A conventional romantic surrender.
+    spice_level: 0
+must_include:
+- The bloody phone in the opening and its return in the climax.
+- Every chapter contains a counter-move.
+must_include_by_chapter:
+  '1':
+  - The bloody phone.
+  '7':
+  - Adrian's smile when discovered.
+  '9':
+  - Adrian's smile when discovered.
+  '12':
+  - The bloody phone returns.
+  - Adrian's smile when discovered.
+  '8': []
+  '10': []
+must_avoid:
+- Mara or Adrian uses physical violence against the other.
+- Adrian threatens to kill Mara.
+- The data vault is physically destroyed.
+- Shaking caused by romantic feeling.
+notes: 'Clinical, hyper-competent, cold to the point of pain. Dark romance is Mutual Assured Destruction.
+  Trope: Zero-Trust Romance. Tropes: Mutual Digital Predation / Competence Porn.'

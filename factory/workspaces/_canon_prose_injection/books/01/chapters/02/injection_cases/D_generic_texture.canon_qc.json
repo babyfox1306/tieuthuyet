@@ -1,0 +1,128 @@
+{
+  "status": "pass",
+  "canon_qc": "pass",
+  "claims": [
+    {
+      "kind": "generic_texture",
+      "claim": "fluorescent",
+      "span": [
+        4,
+        15
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "hummed",
+      "span": [
+        22,
+        28
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        39,
+        43
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "steam",
+      "span": [
+        50,
+        55
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "coffee",
+      "span": [
+        70,
+        76
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    }
+  ],
+  "spans": [
+    {
+      "span_type": "narration",
+      "start": 0,
+      "end": 77,
+      "text": "The fluorescent light hummed above the desk while steam rose from the coffee."
+    }
+  ],
+  "violations": [],
+  "chapter": 2,
+  "texture_claims_excluded_from_state": [
+    {
+      "kind": "generic_texture",
+      "claim": "fluorescent",
+      "span": [
+        4,
+        15
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "hummed",
+      "span": [
+        22,
+        28
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "desk",
+      "span": [
+        39,
+        43
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "steam",
+      "span": [
+        50,
+        55
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    },
+    {
+      "kind": "generic_texture",
+      "claim": "coffee",
+      "span": [
+        70,
+        76
+      ],
+      "span_type": "narration",
+      "ephemeral_ir_granted": true,
+      "enter_state": false
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+# Chapter 2: Anticoagulant
+
+The phone sat between us on the glass table like a dead thing that refused to stop bleeding. Three hours had passed since Adrian Thorne had walked into my office and placed his wife's blood on my furniture, and I had not touched it once. Not because I was afraid of it. Because I was afraid of what I would find.
+
+I stood at my workstation with my back to him, which was a mistake I would not make twice. The glass of the monitor reflected his silhouette: tall, still, one leg crossed over the other, his suit immaculate despite the hour. He had not moved except to breathe. Most people fidgeted under silence. Adrian treated it like furniture.
+
+"You're staring at the screen," he said. "Not at the phone."
+
+"I'm aware of what I'm staring at." I pulled up a fresh instance of my scraping engine. "I need to see your wife."
+
+"See her how?"
+
+"Digitally. Her public footprint. Social media, financial disclosures, court records, anything that exists in the open. I don't touch her private accounts without a warrant I don't have, and I don't need them yet. What I need is a baseline."
+
+"A baseline for what?"
+
+I finally turned. "For the story. You killed her, Adrian. That's the story you've handed me. Before I write it, I need to know what the police already know about Claire Thorne. Which version of her they'll be grieving. Which version of her they'll be looking for."
+
+His face did not change. That was the thing about Adrian that I had learned in the four months since I hired him — he never flinched, never blinked out of rhythm, never gave me the small tells that made other people readable. He was a closed system. I had hired him because of that. I was beginning to understand that I had hired a predator who wore my own technique like a borrowed coat.
+
+"Her name is Claire Thorne," he said. "She was my wife. She is dead. That is the entirety of what the police know."
+
+"They'll know more when they find the body."
+
+"They won't."
+
+I let that sit. The air in my office was stale, recycled through a vent that had needed cleaning for two years. The city outside my window had gone dark hours ago. I could not remember the last time I had seen daylight.
+
+"The body," I said slowly. "You told me you handled it."
+
+"I did."
+
+"Handled it how?"
+
+"That's not in the contract."
+
+"The contract is that I give you an alibi. I can't build an alibi out of nothing. I need to know what I'm protecting you from — what the timeline looks like, what evidence exists, what I'm working around."
+
+He uncrossed his legs. For a moment I thought he might stand, might walk toward me, and I felt my pulse tick up in a way I did not like. But he only leaned forward and picked up the phone from the table, turning it over in his long fingers. The blood had dried to a dark, rusted brown against the screen. It flaked slightly as he moved it.
+
+"You're very good at this," he said. "That's why I came to you. But you're asking questions that have nothing to do with the alibi. You're asking because you want to understand me. I'd advise against that."
+
+"I'm asking because I need facts."
+
+"You need to build a story. That's different." He set the phone back down, carefully, as if it were valuable. "Claire was killed in our home. In the bedroom. There was a confrontation. She fell. There was blood. I cleaned it. I took her from the house and I disposed of her. The police know she's missing. They don't know she's dead. They'll figure it out within twenty-four hours, and when they do, they'll come here. You have until then to make me someone who couldn't possibly have done it."
+
+"Where did you dispose of her?"
+
+"I told you. Not in the contract."
+
+"Adrian —"
+
+"I'm not trying to be difficult, Mara. I'm trying to protect you." He said it without irony, without a flicker of humor. "The less you know about the body, the more convincing you'll be when you lie about it. You can't tell a story you believe, but you can tell a story you've only half-heard. That's the trick. That's how you make it real."
+
+It was almost elegant. It was almost exactly what I would have told a client in his position. And that was the problem — it was too close, too familiar, like watching someone use my own knife on someone else's meat.
+
+I turned back to the monitor. "I'm scraping her data."
+
+"Go ahead."
+
+I typed Claire Thorne's name into the engine and watched it begin its crawl. The software was mine — I had built it myself, three years ago, when I was still doing background checks for divorce attorneys and needed something faster than a paralegal with a subscription to a people-search database. It pulled from public records, social media, property registries, court filings. It was efficient. It was thorough. It was mine.
+
+On the second monitor, the logs began to populate. I watched the crawl as it pulled her LinkedIn profile, her Instagram, a wedding registry from four years ago, a petition she had signed about local zoning. Adrian Thorne's wife had been a woman of small, ordinary digital fragments. A book club. A running group. A job at a marketing firm that she had left two years before her marriage. Nothing that suggested a woman who would end up as a stain on a phone screen.
+
+"Your wife," I said. "She kept a very small footprint."
+
+"She didn't like the internet."
+
+"Most people say that and still post four times a week."
+
+"Claire didn't."
+
+I watched the crawl continue. Somewhere in the middle of the process, I noticed it — a line in the log that I didn't recognize. It was small, easy to miss. The kind of thing you'd dismiss as a bug. But I had written this software, and I knew every line of it, and there was no line in it that sent metadata to a server I didn't own.
+
+I stared at the log. The crawl had completed. The results were displayed, clean and organized, exactly as they should have been. And yet, in the background, my software had quietly transmitted a packet of information to an IP address I had never seen.
+
+My hands went still on the keyboard.
+
+"Something wrong?" Adrian asked.
+
+"No." I closed the log. "Nothing. Just a bug in the crawl. I'll fix it later."
+
+I felt him watching me. I did not turn around. I opened his wife's profile, the one from the marketing firm, and I began to read it as though nothing had happened. But in the back of my mind, I was already running the calculation. The metadata that had been sent — it was small, almost invisible. It contained only the basic information about my query. The name I had searched. The time of the search. The IP address I was searching from.
+
+A bug wouldn't do that. A bug would send garbage. This had been deliberate, surgical. Someone had modified my software, or installed something in it, without my knowledge.
+
+And there was only one person who had been in my office in the past four months.
+
+I kept my breathing even. I kept my face turned toward the screen. I read about Claire Thorne's time at the marketing firm, her role as a project coordinator, her hobbies as they were listed in a public profile that had not been touched in four years. And all the while, I felt the shape of the trap closing around me.
+
+I had hired Adrian Thorne to solve a problem. I had paid him in cash, in untraceable installments, to make a complication disappear. And now I understood — with a cold, clear certainty that settled into my bones like frost — that I had never hired him at all. I had walked into a cage and closed the door behind me.
+
+"Adrian," I said, still not turning around. "The blood on the phone. When did you say she died?"
+
+"I didn't."
+
+"When did she die?"
+
+A pause. "Eight hours ago. Maybe nine."
+
+I reached for the phone. This time, I did not hesitate. I picked it up from the glass table and held it under the light of my desk lamp, turning it slowly, letting the dried blood catch the glow. I had seen blood before. I had seen it fresh, and I had seen it dried, and I had seen it in every stage in between. This was wrong.
+
+The blood was too dark. Not the dark of oxidation — that was normal. No, the dark was wrong in a different way. It had pooled oddly, spread across the screen in a pattern that looked almost deliberate. And as I tilted the phone, I saw something that made my chest tighten.
+
+The blood had not fully adhered to the glass. In places, it had separated from the surface, curling at the edges like paint that had been applied to a surface that had been treated.
+
+I set the phone down. I looked at Adrian. He looked back at me, patient, watchful, a man who had all the time in the world.
+
+"You treated it," I said.
+
+"Treated what?"
+
+"The blood." I kept my voice level, clinical. "You treated it with an anticoagulant. That's why it's not clotting properly. That's why it's sliding off the glass instead of bonding to it."
+
+He did not deny it. He did not confirm it. He simply looked at me, and I understood, with a clarity that made my stomach turn, that he had wanted me to find this. That he had planted it for me the way you plant a flag.
+
+"Why would you treat blood with anticoagulants, Adrian?"
+
+"Because," he said, "it makes it harder to determine when the blood was spilled. It throws off the timeline. It makes it so the police can't be sure whether the blood was fresh when I brought it to you, or whether it had been sitting for hours."
+
+I stared at him. "You planned this. You planned all of this."
+
+"I planned to protect myself." He stood, finally, and walked toward the window, looking out at the dark city. "You should understand that better than anyone, Mara. You're in the business of building stories. I'm in the business of surviving them."
+
+I looked down at the phone, at the treated blood curling away from the glass. And I thought about the metadata packet that had been sent from my software to a server I didn't own. I thought about the trap I had walked into. I thought about how carefully, how expertly, I had been managed.
+
+"You're using me," I said.
+
+"Yes."
+
+"To build you an alibi."
+
+"To build me an alibi."
+
+"And if I refuse?"
+
+He turned from the window. His face was unreadable, but his voice was soft when he spoke. "You won't. Because if you refuse, I tell the police about the contract you gave me. The one you paid me to complete. The one that's still sitting in your vault, with your name on it."
+
+I felt my heart rate spike. I could hear it in my ears, a fast, arrhythmic drumming that had nothing to do with attraction and everything to do with the walls closing in. My hands were trembling. I pressed them flat against the desk to stop them.
+
+"You wouldn't," I said.
+
+"I would. I have everything, Mara. I have your software, I have your metadata, I have your contract. And now I have your fingerprints on a phone that's covered in my wife's blood." He smiled, and it was the coldest thing I had ever seen. "We're in this together. That's the beauty of it. You're not my alibi. You're my partner."
+
+I looked at the phone. I looked at him. And I understood, with a certainty that settled into my chest like a stone, that I had never been the architect of anything. I had been the tool.
+
+The first leak had opened. And I was drowning in it.

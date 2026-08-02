@@ -1,0 +1,28 @@
+{
+  "status": "blocked",
+  "source_ir_hash": "1dc970300b25c7ddbd612389bdef2bbba3ae4cbb40bee9476c785f22ab228782",
+  "artifact_hash": "8222b0c1e21ddbea4d2d68dde50a9329905b2b2c6f9ee05931beb9872bc7f5ac",
+  "validators": {
+    "provenance_gate": "fail",
+    "specificity_generalize": "pass"
+  },
+  "unverified_claims": [
+    {
+      "field": "cliffhanger",
+      "claim": "She passed the worthy partner test.",
+      "reason": "motive_swap_vs_true_plot",
+      "authority": "LLM_PROPOSAL"
+    },
+    {
+      "field": "must_happen[0]",
+      "claim": "Adrian reveals he orchestrated the entire confrontation to test whether Mara was a worthy partner.",
+      "reason": "motive_swap_vs_true_plot",
+      "authority": "LLM_PROPOSAL"
+    }
+  ],
+  "warnings": [],
+  "sealed_at": "2026-08-02T07:41:59.143046+00:00",
+  "validator_version": "1.0.0",
+  "chapter": 11,
+  "generalizations": 0
+}

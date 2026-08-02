@@ -1,0 +1,141 @@
+{
+  "chapter": 2,
+  "min_words": 1250,
+  "max_words": 2200,
+  "writer": {
+    "ok": true,
+    "chars": 11108,
+    "words": 2055,
+    "model": "deepseek-v4-flash",
+    "provider": "deepseek"
+  },
+  "live_writer_gate": {
+    "status": "fail",
+    "violations": [
+      {
+        "reason": "reveal_chapter_timing",
+        "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+        "span_type": "narration"
+      },
+      {
+        "reason": "reveal_chapter_timing",
+        "claim": "Mara Voss secretly hired Adrian Thorne to kill Claire Thorne and planned to frame Adrian while taking Claire's shares. Adrian knew Mara was the mastermind befor",
+        "span_type": "dialogue"
+      }
+    ],
+    "words": 2055,
+    "caught_invention": true
+  },
+  "production_path": {
+    "canon_status": "pass",
+    "violations": [],
+    "pipeline": "ready",
+    "state_bumped": true,
+    "settlement_status": "sealed",
+    "texture_excluded": 46,
+    "verified_facts": [
+      "ch2: canon_qc_pass (7875 chars)"
+    ],
+    "timeline_tail": [
+      "Ch2: verified (canon_qc pass)"
+    ]
+  },
+  "eye_audit": {
+    "infection_clean": true,
+    "state_clean_of_texture": true,
+    "flags": [],
+    "word_count": 1254,
+    "word_target_ok": true,
+    "violations_n": 0,
+    "texture_excluded": 46,
+    "packet_has_holloway": false
+  },
+  "ready_prose_source": "sanitized_or_seeded",
+  "fail_closed": {
+    "path": {
+      "canon_status": "fail",
+      "violations": [
+        {
+          "kind": "proper_noun",
+          "claim": "Patricia Holloway",
+          "span": [
+            7887,
+            7904
+          ],
+          "span_type": "dialogue",
+          "reason": "unsourced_proper_noun",
+          "severity": "block"
+        },
+        {
+          "kind": "medical_or_address_specificity",
+          "claim": "Dr. Patricia Holloway at Suite",
+          "span": [
+            7883,
+            7913
+          ],
+          "span_type": "dialogue",
+          "reason": "unsourced_specificity",
+          "severity": "block"
+        },
+        {
+          "kind": "medical_or_address_specificity",
+          "claim": "0.47 micrograms/ml",
+          "span": [
+            7956,
+            7974
+          ],
+          "span_type": "narration",
+          "reason": "unsourced_specificity",
+          "severity": "block"
+        },
+        {
+          "kind": "medical_or_address_specificity",
+          "claim": "K2EDTA",
+          "span": [
+            7978,
+            7984
+          ],
+          "span_type": "narration",
+          "reason": "unsourced_specificity",
+          "severity": "block"
+        },
+        {
+          "kind": "motive_swap",
+          "claim": "orchestrated everything to test",
+          "span": [
+            7996,
+            8027
+          ],
+          "span_type": "narration",
+          "reason": "motive_swap_vs_true_plot",
+          "severity": "block"
+        }
+      ],
+      "pipeline": "needs_fix",
+      "state_bumped": false,
+      "settlement_status": null,
+      "ready_exists": false,
+      "needs_fix_exists": true,
+      "state_has_holloway": false
+    },
+    "eg20": [
+      {
+        "id": "EG-20",
+        "severity": "error",
+        "passed": false,
+        "chapter": 2,
+        "detail": "canon_qc not pass"
+      }
+    ],
+    "eg20_blocks": true,
+    "no_ready_on_fail": true,
+    "state_clean": true,
+    "n_plus_1": {
+      "blocked": true,
+      "detail": "Writer blocked: ch3 plan not sealed"
+    }
+  },
+  "production_ok": true,
+  "fail_closed_ok": true,
+  "p0_enforcement_complete": true
+}

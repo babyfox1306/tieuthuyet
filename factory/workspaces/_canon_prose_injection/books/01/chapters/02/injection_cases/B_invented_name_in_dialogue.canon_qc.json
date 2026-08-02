@@ -1,0 +1,70 @@
+{
+  "status": "fail",
+  "canon_qc": "fail",
+  "claims": [
+    {
+      "kind": "proper_noun",
+      "claim": "Patricia Holloway",
+      "span": [
+        32,
+        49
+      ],
+      "span_type": "dialogue"
+    },
+    {
+      "kind": "medical_or_address_specificity",
+      "claim": "Dr. Patricia Holloway immediately",
+      "span": [
+        28,
+        61
+      ],
+      "span_type": "dialogue"
+    }
+  ],
+  "spans": [
+    {
+      "span_type": "narration",
+      "start": 0,
+      "end": 22,
+      "text": "I kept my voice flat. "
+    },
+    {
+      "span_type": "dialogue",
+      "start": 22,
+      "end": 63,
+      "text": "\"Call Dr. Patricia Holloway immediately.\""
+    },
+    {
+      "span_type": "narration",
+      "start": 63,
+      "end": 85,
+      "text": " The line stayed dead."
+    }
+  ],
+  "violations": [
+    {
+      "kind": "proper_noun",
+      "claim": "Patricia Holloway",
+      "span": [
+        32,
+        49
+      ],
+      "span_type": "dialogue",
+      "reason": "unsourced_proper_noun",
+      "severity": "block"
+    },
+    {
+      "kind": "medical_or_address_specificity",
+      "claim": "Dr. Patricia Holloway immediately",
+      "span": [
+        28,
+        61
+      ],
+      "span_type": "dialogue",
+      "reason": "unsourced_specificity",
+      "severity": "block"
+    }
+  ],
+  "chapter": 2,
+  "texture_claims_excluded_from_state": []
+}

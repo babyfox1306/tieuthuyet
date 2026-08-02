@@ -1,0 +1,31 @@
+{
+  "status": "blocked",
+  "source_ir_hash": "1dc970300b25c7ddbd612389bdef2bbba3ae4cbb40bee9476c785f22ab228782",
+  "artifact_hash": "e25b8adf877221ddbb4191f0f831362152714ebfcb97764acfccf8c94779fc2e",
+  "validators": {
+    "provenance_gate": "fail",
+    "specificity_generalize": "pass"
+  },
+  "unverified_claims": [
+    {
+      "field": "beat_summary",
+      "claim": "Patricia Holloway",
+      "reason": "unsourced_proper_noun",
+      "authority": "LLM_PROPOSAL"
+    },
+    {
+      "field": "must_happen[0]",
+      "claim": "Mara recalls Dr. Patricia Holloway at Suite 401 after eleven months of therapy.",
+      "reason": "unsourced_proper_noun",
+      "authority": "LLM_PROPOSAL"
+    }
+  ],
+  "warnings": [
+    "must_happen[0]: generalized->a clinician",
+    "must_happen[0]: generalized->an office suite"
+  ],
+  "sealed_at": "2026-08-02T07:41:59.138048+00:00",
+  "validator_version": "1.0.0",
+  "chapter": 2,
+  "generalizations": 1
+}

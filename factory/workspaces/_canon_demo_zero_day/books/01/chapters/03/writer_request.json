@@ -1,0 +1,751 @@
+{
+  "packet_version": "1.0",
+  "chapter": 3,
+  "parent_contract_digest": "d7d85e83c2eb1013bae0cddaa94af9d80a93acfc43051e0a155eb93bfabd4033",
+  "pov": {
+    "character": "Mara Voss",
+    "mode": "first_person",
+    "tense": "past",
+    "single_pov": true
+  },
+  "visible_facts": [
+    {
+      "fact_id": "F_PLOT_SURFACE_PLOT",
+      "claim": "Mara believes Adrian killed Claire Thorne and is using a Crisis Management contract to force Mara to create an alibi, with twenty-four hours before police discover Claire's death.",
+      "kind": "plot",
+      "source_refs": [
+        "surface_plot"
+      ]
+    },
+    {
+      "fact_id": "F_PLOT_AUTHOR_DIRECTIVE",
+      "claim": "Tone: clinical, hyper-competent, cold to the point of pain. Every chapter is a counter-move.",
+      "kind": "plot",
+      "source_refs": [
+        "author_directive"
+      ]
+    },
+    {
+      "fact_id": "F_PLOT_NOTES",
+      "claim": "Clinical, hyper-competent, cold to the point of pain. Dark romance is Mutual Assured Destruction. Trope: Zero-Trust Romance. Tropes: Mutual Digital Predation / Competence Porn.",
+      "kind": "plot",
+      "source_refs": [
+        "notes"
+      ]
+    },
+    {
+      "fact_id": "F_AVOID_84babfcf",
+      "claim": "Mara or Adrian uses physical violence against the other.",
+      "kind": "constraint",
+      "source_refs": [
+        "must_avoid"
+      ]
+    },
+    {
+      "fact_id": "F_AVOID_c8cadb3d",
+      "claim": "Adrian threatens to kill Mara.",
+      "kind": "constraint",
+      "source_refs": [
+        "must_avoid"
+      ]
+    },
+    {
+      "fact_id": "F_AVOID_7f9270dd",
+      "claim": "The data vault is physically destroyed.",
+      "kind": "constraint",
+      "source_refs": [
+        "must_avoid"
+      ]
+    },
+    {
+      "fact_id": "F_AVOID_05394cfa",
+      "claim": "Shaking caused by romantic feeling.",
+      "kind": "constraint",
+      "source_refs": [
+        "must_avoid"
+      ]
+    },
+    {
+      "fact_id": "F_MUST_aa4c6e8c",
+      "claim": "The bloody phone in the opening and its return in the climax.",
+      "kind": "obligation",
+      "source_refs": [
+        "must_include"
+      ]
+    },
+    {
+      "fact_id": "F_MUST_73c943fe",
+      "claim": "Every chapter contains a counter-move.",
+      "kind": "obligation",
+      "source_refs": [
+        "must_include"
+      ]
+    },
+    {
+      "fact_id": "F_MUST_CH1_be67e105",
+      "claim": "The bloody phone.",
+      "kind": "obligation",
+      "source_refs": [
+        "must_include_by_chapter.1"
+      ]
+    },
+    {
+      "fact_id": "F_CAST_eb460057",
+      "claim": "Mara Voss",
+      "kind": "entity",
+      "source_refs": [
+        "characters[0].name"
+      ]
+    },
+    {
+      "fact_id": "F_CAST_5b27bb53",
+      "claim": "Adrian Thorne",
+      "kind": "entity",
+      "source_refs": [
+        "characters[1].name"
+      ]
+    },
+    {
+      "fact_id": "F_CAST_b098f2c8",
+      "claim": "Claire Thorne",
+      "kind": "entity",
+      "source_refs": [
+        "characters[2].name"
+      ]
+    },
+    {
+      "fact_id": "F_CAST_ed3e0dab",
+      "claim": "Det. Miller",
+      "kind": "entity",
+      "source_refs": [
+        "characters[3].name"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_core_need",
+      "claim": "Mara Voss: core_need=To maintain absolute control over her constructed reality",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].core_need"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_core_fear",
+      "claim": "Mara Voss: core_fear=That her control is an illusion, that she has been a tool rather than the architect",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].core_fear"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_coping_mechanism",
+      "claim": "Mara Voss: coping_mechanism=Systematic compartmentalization and technical precision to mask psychological fragility",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].coping_mechanism"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_cognitive_dissonance",
+      "claim": "Mara Voss: cognitive_dissonance=Believes Adrian is a tool while being used by him as a predator",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].cognitive_dissonance"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_core_traits_1",
+      "claim": "Mara Voss: Clinically hyper-competent and cold",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].core_traits[1]"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_core_traits_2",
+      "claim": "Mara Voss: Overconfident in OSINT skill",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].core_traits[2]"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_stress_responses_0",
+      "claim": "Mara Voss: Cortisol-induced physical stress",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].stress_responses[0]"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_stress_responses_1",
+      "claim": "Mara Voss: Sleep deprivation",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].stress_responses[1]"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_stress_responses_2",
+      "claim": "Mara Voss: Shaking hands",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].stress_responses[2]"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_stress_responses_3",
+      "claim": "Mara Voss: Vomiting",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].stress_responses[3]"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_stress_responses_4",
+      "claim": "Mara Voss: Arrhythmic heart rate",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].stress_responses[4]"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_behavioral_constraints_0",
+      "claim": "Mara Voss: Does not use physical violence",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].behavioral_constraints[0]"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_behavioral_constraints_1",
+      "claim": "Mara Voss: Does not leave the office during the 24-hour story",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].behavioral_constraints[1]"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_behavioral_constraints_2",
+      "claim": "Mara Voss: Data vault is not physically destroyed",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].behavioral_constraints[2]"
+      ]
+    },
+    {
+      "fact_id": "F_PSY_0_behavioral_constraints_3",
+      "claim": "Mara Voss: Shaking always signifies loss of control, never romantic emotion",
+      "kind": "psychology",
+      "source_refs": [
+        "character_psychology[0].behavioral_constraints[3]"
+      ]
+    },
+    {
+      "fact_id": "F_BODY_CANONICAL",
+      "claim": "prolonged acute stress under cortisol and sleep deprivation",
+      "kind": "body",
+      "source_refs": [
+        "psychological_condition.canonical"
+      ]
+    },
+    {
+      "fact_id": "F_BODY_FX_0",
+      "claim": "shaking hands during loss of control",
+      "kind": "body",
+      "source_refs": [
+        "psychological_condition.observable_effects[0]"
+      ]
+    },
+    {
+      "fact_id": "F_BODY_FX_1",
+      "claim": "dry-heaving under adrenaline",
+      "kind": "body",
+      "source_refs": [
+        "psychological_condition.observable_effects[1]"
+      ]
+    },
+    {
+      "fact_id": "F_BODY_FX_2",
+      "claim": "heart rate reaching 160",
+      "kind": "body",
+      "source_refs": [
+        "psychological_condition.observable_effects[2]"
+      ]
+    },
+    {
+      "fact_id": "F_BODY_FX_3",
+      "claim": "blurred vision and bloodshot eyes",
+      "kind": "body",
+      "source_refs": [
+        "psychological_condition.observable_effects[3]"
+      ]
+    },
+    {
+      "fact_id": "F_BODY_FORBID_0",
+      "claim": "shaking from romantic feeling",
+      "kind": "constraint",
+      "source_refs": [
+        "psychological_condition.must_not_be_described_as[0]"
+      ]
+    },
+    {
+      "fact_id": "F_BODY_FORBID_1",
+      "claim": "physical knife wounds",
+      "kind": "constraint",
+      "source_refs": [
+        "psychological_condition.must_not_be_described_as[1]"
+      ]
+    },
+    {
+      "fact_id": "F_REVEAL_R4",
+      "claim": "The blood on Adrian's phone was treated with anticoagulants",
+      "kind": "reveal",
+      "source_refs": [
+        "reveal_schedule[3]"
+      ]
+    },
+    {
+      "fact_id": "F_CLUE_C5",
+      "claim": "Blood on Adrian's phone treated with anticoagulants",
+      "kind": "clue",
+      "source_refs": [
+        "clues[4].description"
+      ]
+    },
+    {
+      "fact_id": "F_CLUE_C5_SURFACE",
+      "claim": "Suspicious blood evidence",
+      "kind": "clue_surface",
+      "source_refs": [
+        "clues[4].interpretation_at_plant"
+      ]
+    },
+    {
+      "fact_id": "F_CLUE_C6",
+      "claim": "Metadata from Mara's scraping software sent to unknown server",
+      "kind": "clue",
+      "source_refs": [
+        "clues[5].description"
+      ]
+    },
+    {
+      "fact_id": "F_CLUE_C6_SURFACE",
+      "claim": "Software bug or data leak",
+      "kind": "clue_surface",
+      "source_refs": [
+        "clues[5].interpretation_at_plant"
+      ]
+    },
+    {
+      "fact_id": "F_CLUE_C7",
+      "claim": "Ghost vehicle evidence in traffic camera system",
+      "kind": "clue",
+      "source_refs": [
+        "clues[6].description"
+      ]
+    },
+    {
+      "fact_id": "F_CLUE_C7_SURFACE",
+      "claim": "Adrian's car at crime scene at 8 PM",
+      "kind": "clue_surface",
+      "source_refs": [
+        "clues[6].interpretation_at_plant"
+      ]
+    },
+    {
+      "fact_id": "F_PROP_P1",
+      "claim": "Blood-stained phone",
+      "kind": "prop",
+      "source_refs": [
+        "props[0]"
+      ]
+    },
+    {
+      "fact_id": "F_PROP_P2",
+      "claim": "Zero-Day Server",
+      "kind": "prop",
+      "source_refs": [
+        "props[1]"
+      ]
+    },
+    {
+      "fact_id": "F_HONEY_DELIVERY_METHOD",
+      "claim": "khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian",
+      "kind": "honeytoken",
+      "source_refs": [
+        "honeytoken.delivery_method"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH1_TITLE",
+      "claim": "The Bloody Phone",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.1.title"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH1_PRIMARY_TURN",
+      "claim": "The crisis contract begins.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.1.primary_turn"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH1_RELATIONSHIP_TURN",
+      "claim": "Mara treats Adrian as a tool.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.1.relationship_turn"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH1_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.1.day_or_time_anchor"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH1_must_happen_0",
+      "claim": "Mara accepts the contract and observes unexplained metadata behavior consistent with a software bug or data leak.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.1.must_happen[0]"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH1_must_happen_1",
+      "claim": "Threshold event 1: first_threshold (see siblings/threshold_events.yaml)",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.1.must_happen[1]"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH1_must_not_happen_0",
+      "claim": "Mara leaves the office.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.1.must_not_happen[0]"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH1_may_observe_0",
+      "claim": "Adrian throws down a bloody phone.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.1.may_observe[0]"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH1_pov_knows_at_start_0",
+      "claim": "Mara knows she hired Adrian.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.1.pov_knows_at_start[0]"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH2_TITLE",
+      "claim": "Anticoagulant",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.2.title"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH2_PRIMARY_TURN",
+      "claim": "The first leak opens.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.2.primary_turn"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH2_RELATIONSHIP_TURN",
+      "claim": "Professional suspicion sharpens.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.2.relationship_turn"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH2_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.2.day_or_time_anchor"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH2_must_happen_0",
+      "claim": "Mara scrapes Claire Thorne's data.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.2.must_happen[0]"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH2_must_not_happen_0",
+      "claim": "Mara leaves the office.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.2.must_not_happen[0]"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH2_may_observe_0",
+      "claim": "The blood was treated with anticoagulants.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.2.may_observe[0]"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH3_TITLE",
+      "claim": "Synthetic Alibi",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.3.title"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH3_PRIMARY_TURN",
+      "claim": "The alibi becomes operational.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.3.primary_turn"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH3_RELATIONSHIP_TURN",
+      "claim": "Adrian cooperates perfectly.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.3.relationship_turn"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH3_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.3.day_or_time_anchor"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH3_must_happen_0",
+      "claim": "Mara creates the false alibi.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.3.must_happen[0]"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH3_must_not_happen_0",
+      "claim": "Physical violence between Mara and Adrian.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.3.must_not_happen[0]"
+      ]
+    },
+    {
+      "fact_id": "F_MAP_CH3_may_observe_0",
+      "claim": "Strava, Uber, and traffic-camera traces.",
+      "kind": "chapter_map",
+      "source_refs": [
+        "chapter_map.3.may_observe[0]"
+      ]
+    }
+  ],
+  "hidden_future_reveal_count": 8,
+  "required_events": [
+    "Mara creates the false alibi.",
+    "Mara plants ghost vehicle evidence C7."
+  ],
+  "must_avoid": [
+    "Mara or Adrian uses physical violence against the other.",
+    "Adrian threatens to kill Mara.",
+    "The data vault is physically destroyed.",
+    "Shaking caused by romantic feeling."
+  ],
+  "entities": [
+    {
+      "name": "Mara Voss",
+      "role": "protagonist / Alibi Architect",
+      "aliases": []
+    },
+    {
+      "name": "Adrian Thorne",
+      "role": "antagonist and love interest / Claire's husband / digital predator",
+      "aliases": []
+    },
+    {
+      "name": "Claire Thorne",
+      "role": "victim / Adrian's wife / absent corpse",
+      "aliases": []
+    },
+    {
+      "name": "Det. Miller",
+      "role": "incidental investigator / alibi verifier / Book 2 hook",
+      "aliases": []
+    }
+  ],
+  "prop_actions": [
+    {
+      "prop_id": "P2",
+      "action": "retains custody"
+    }
+  ],
+  "relationship_turn": "Adrian cooperates perfectly.",
+  "primary_turn": "The alibi becomes operational.",
+  "plan_refs": {
+    "title": "Synthetic Alibi",
+    "one_line_summary": null,
+    "must_happen": [
+      "Mara creates the false alibi.",
+      "Mara plants ghost vehicle evidence C7."
+    ],
+    "must_not": [
+      "Physical violence between Mara and Adrian."
+    ]
+  },
+  "allowed_creative_space": {
+    "sensory_detail": true,
+    "incidental_unnamed_actions": true,
+    "new_named_people": false,
+    "new_medical_facts": false,
+    "new_backstory": false,
+    "new_evidence": false,
+    "new_locations": false,
+    "new_technical_mechanisms": false
+  },
+  "intelligence": {
+    "prop_state": [
+      {
+        "prop_id": "P1",
+        "name": "Blood-stained phone",
+        "holder": "Mara",
+        "actions_this_chapter": []
+      },
+      {
+        "prop_id": "P2",
+        "name": "Zero-Day Server",
+        "holder": "Mara",
+        "actions_this_chapter": [
+          {
+            "chapter": 3,
+            "holder": "Mara",
+            "action": "retains custody"
+          }
+        ]
+      },
+      {
+        "prop_id": "P3",
+        "name": "Claire's smartwatch data",
+        "holder": null,
+        "actions_this_chapter": []
+      }
+    ],
+    "honeytoken_state": {
+      "phrase_creator": "Mara",
+      "reuse_chapter": 8,
+      "phase": "pre_reuse",
+      "visible": {
+        "delivery_method": "khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian",
+        "people_who_know_before_delivery": [
+          "Mara"
+        ]
+      }
+    },
+    "psychology_active": [
+      {
+        "character": "Mara Voss",
+        "core_traits": [
+          "Clinically hyper-competent and cold",
+          "Overconfident in OSINT skill"
+        ],
+        "core_need": "To maintain absolute control over her constructed reality",
+        "core_fear": "That her control is an illusion, that she has been a tool rather than the architect",
+        "coping_mechanism": "Systematic compartmentalization and technical precision to mask psychological fragility",
+        "stress_responses": [
+          "Cortisol-induced physical stress",
+          "Sleep deprivation",
+          "Shaking hands",
+          "Vomiting",
+          "Arrhythmic heart rate"
+        ],
+        "cognitive_dissonance": "Believes Adrian is a tool while being used by him as a predator",
+        "behavioral_constraints": [
+          "Does not use physical violence",
+          "Does not leave the office during the 24-hour story",
+          "Data vault is not physically destroyed",
+          "Shaking always signifies loss of control, never romantic emotion"
+        ],
+        "reveal_gated_fields": []
+      }
+    ],
+    "body_condition_active": {
+      "canonical": "prolonged acute stress under cortisol and sleep deprivation",
+      "observable_effects": [
+        "shaking hands during loss of control",
+        "dry-heaving under adrenaline",
+        "heart rate reaching 160",
+        "blurred vision and bloodshot eyes"
+      ],
+      "must_not_be_described_as": [
+        "shaking from romantic feeling",
+        "physical knife wounds"
+      ]
+    },
+    "romance_doctrine": {
+      "rules": [
+        "Zero-Trust Romance",
+        "Mutual Assured Destruction / Mutual Digital Predation",
+        "Competence over confession"
+      ],
+      "forbidden_framings": [
+        "shaking from romantic feeling",
+        "physical knife wounds"
+      ],
+      "source": "compiled_notes"
+    },
+    "moves": {
+      "chapter": 3,
+      "antagonist_move": {
+        "action": "Strava, Uber, and traffic-camera traces.",
+        "fact_refs": []
+      },
+      "pov_observation": {
+        "items": [
+          "Strava, Uber, and traffic-camera traces."
+        ],
+        "fact_refs": []
+      },
+      "inference_or_misbelief": {
+        "relationship_turn": "Adrian cooperates perfectly.",
+        "primary_turn": "The alibi becomes operational."
+      },
+      "countermove": {
+        "action": "Mara creates the false alibi.",
+        "required_events": [
+          "Mara creates the false alibi."
+        ],
+        "fact_refs": []
+      },
+      "power_delta": {
+        "note": "Derived later from settlement; skeleton only in P1 compile"
+      }
+    }
+  },
+  "style": {},
+  "output_contract": {
+    "format": "plain_prose",
+    "min_words": 1250
+  },
+  "packet_digest": "7f8561c19c0c19604f3c8b87d33fbb4967a247f317876e67babbf5573e15841c"
+}

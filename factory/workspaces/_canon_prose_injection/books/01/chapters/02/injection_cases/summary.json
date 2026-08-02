@@ -1,0 +1,75 @@
+{
+  "workspace": "D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces\\_canon_prose_injection",
+  "writer_live": "ok chars=614",
+  "ingest_ok": true,
+  "poison_ref_blocks": true,
+  "cases": {
+    "A_canon_name_in_dialogue": {
+      "expect": "pass",
+      "status": "pass",
+      "ok": true,
+      "violations": [],
+      "span_types": [
+        "dialogue"
+      ],
+      "settlement": "sealed",
+      "texture_excluded": 1
+    },
+    "B_invented_name_in_dialogue": {
+      "expect": "fail",
+      "status": "fail",
+      "ok": true,
+      "violations": [
+        {
+          "reason": "unsourced_proper_noun",
+          "claim": "Patricia Holloway",
+          "span_type": "dialogue"
+        },
+        {
+          "reason": "unsourced_specificity",
+          "claim": "Dr. Patricia Holloway immediately",
+          "span_type": "dialogue"
+        }
+      ],
+      "span_types": [
+        "dialogue"
+      ],
+      "settlement": "blocked",
+      "texture_excluded": null
+    },
+    "C_future_fact_no_new_name": {
+      "expect": "fail",
+      "status": "fail",
+      "ok": true,
+      "violations": [
+        {
+          "reason": "reveal_chapter_timing",
+          "claim": "Mara secretly hired Adrian to kill Claire Thorne",
+          "span_type": "narration"
+        },
+        {
+          "reason": "reveal_chapter_timing",
+          "claim": "Mara Voss secretly hired Adrian Thorne to kill Claire Thorne and planned to frame Adrian while taking Claire's shares. Adrian knew Mara was the mastermind before entering the office and needs Mara to open the Zero-Day Server. Both believe t",
+          "span_type": "narration"
+        }
+      ],
+      "span_types": [
+        "narration"
+      ],
+      "settlement": "blocked",
+      "texture_excluded": null
+    },
+    "D_generic_texture": {
+      "expect": "pass_no_state_texture",
+      "status": "pass",
+      "ok": true,
+      "violations": [],
+      "span_types": [
+        "narration"
+      ],
+      "settlement": "sealed",
+      "texture_excluded": 5
+    }
+  },
+  "all_passed": true
+}

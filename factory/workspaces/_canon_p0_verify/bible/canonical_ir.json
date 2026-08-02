@@ -1,0 +1,5739 @@
+{
+  "schema_version": "1.0",
+  "importer_version": "1.0.0",
+  "source_path": "D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces\\_canon_p0_verify\\concept.yaml",
+  "source_sha256": "af020f3b53fe76c19e469ffa108d4d552901513e8e0465c2dd002f5fa3e8f5e5",
+  "concept_status": null,
+  "title": "The Zero-Day Alibi",
+  "pen_name": "Nix Vale",
+  "target_language": "en",
+  "chapter_count": 12,
+  "pov": {
+    "character": "Mara Voss",
+    "mode": "first_person",
+    "tense": "past",
+    "single_pov": true
+  },
+  "romance_mode": "on",
+  "spice_level": 0,
+  "spice_default": 0,
+  "spice_schedule": {},
+  "canonical_reveal_chapter": 9,
+  "corpse_reveal_chapter": 5,
+  "intentional_early_reveal": true,
+  "plots": {
+    "logline": "When an expert who creates alibis from ordinary digital traces is forced to conceal a murder for a mysterious client, she discovers that she is the mastermind who hired him—and that he knew from the beginning and took the bait to seize her black-data vault.",
+    "surface_plot": "Mara believes Adrian killed Claire Thorne and is using a Crisis Management contract to force Mara to create an alibi, with twenty-four hours before police discover Claire's death.",
+    "true_plot": "Mara Voss secretly hired Adrian Thorne to kill Claire Thorne and planned to frame Adrian while taking Claire's shares. Adrian knew Mara was the mastermind before entering the office and needs Mara to open the Zero-Day Server. Both believe they hold the final leverage.",
+    "ending_book1": "Claire's death remains an open homicide investigation because the ghost vehicle and altered smartwatch prevent a suicide ruling. No arrest is made yet; Mara and Adrian enter a conditional partnership while both remain exposed.",
+    "hook_book2": "Det. Miller escalates the unresolved homicide inquiry after finding a second inconsistency in Claire's smartwatch log, forcing Mara and Adrian to coordinate their next counter-move.",
+    "author_directive": "Tone: clinical, hyper-competent, cold to the point of pain. Every chapter is a counter-move.",
+    "notes": "Clinical, hyper-competent, cold to the point of pain. Dark romance is Mutual Assured Destruction. Trope: Zero-Trust Romance. Tropes: Mutual Digital Predation / Competence Porn."
+  },
+  "entities": [
+    {
+      "name": "Mara Voss",
+      "role": "protagonist / Alibi Architect / hidden mastermind",
+      "aliases": []
+    },
+    {
+      "name": "Adrian Thorne",
+      "role": "antagonist and love interest / Claire's husband / digital predator",
+      "aliases": []
+    },
+    {
+      "name": "Claire Thorne",
+      "role": "victim / Adrian's wife / absent corpse",
+      "aliases": []
+    },
+    {
+      "name": "Det. Miller",
+      "role": "incidental investigator / alibi verifier / Book 2 hook",
+      "aliases": []
+    }
+  ],
+  "character_psychology": [
+    {
+      "character": "Mara Voss",
+      "core_traits": [
+        "Alibi Architect and hidden mastermind",
+        "Clinically hyper-competent and cold",
+        "Overconfident in OSINT skill"
+      ],
+      "core_need": "To maintain absolute control over her constructed reality",
+      "core_fear": "That her control is an illusion, that she has been a tool rather than the architect",
+      "coping_mechanism": "Systematic compartmentalization and technical precision to mask psychological fragility",
+      "stress_responses": [
+        "Cortisol-induced physical stress",
+        "Sleep deprivation",
+        "Shaking hands",
+        "Vomiting",
+        "Arrhythmic heart rate"
+      ],
+      "cognitive_dissonance": "Believes Adrian is a tool while being used by him as a predator",
+      "behavioral_constraints": [
+        "Does not use physical violence",
+        "Does not leave the office during the 24-hour story",
+        "Data vault is not physically destroyed",
+        "Shaking always signifies loss of control, never romantic emotion"
+      ],
+      "reveal_gated_fields": []
+    }
+  ],
+  "psychological_condition": {
+    "canonical": "prolonged acute stress under cortisol and sleep deprivation",
+    "observable_effects": [
+      "shaking hands during loss of control",
+      "dry-heaving under adrenaline",
+      "heart rate reaching 160",
+      "blurred vision and bloodshot eyes"
+    ],
+    "must_not_be_described_as": [
+      "shaking from romantic feeling",
+      "physical knife wounds"
+    ]
+  },
+  "villain_ledger": [
+    {
+      "action": "In the opening stretch Adrian knows Mara is the mastermind but does not know she shifted the time of death."
+    },
+    {
+      "action": "In the middle stretch Adrian knows Mara is building the ghost-vehicle frame and deliberately lets it run because he retains a signed forensic snapshot proving her workstation generated it; he withholds that countermeasure until it can force her to open the Zero-Day Server."
+    },
+    {
+      "action": "In the final stretch Adrian knows Mara found the backdoor but does not know she will offer partnership."
+    }
+  ],
+  "reveal_schedule": [
+    {
+      "id": "R1",
+      "fact": "Adrian Thorne killed Claire Thorne",
+      "reader_reveal_chapter": 5,
+      "pov_knows_chapter": 1,
+      "reveal_type": "footage",
+      "prerequisite_reveals": [],
+      "required_clues": [
+        "C1",
+        "C2"
+      ],
+      "must_remain_hidden_before": 4,
+      "allowed_foreshadowing_before": "camera API vulnerability mention"
+    },
+    {
+      "id": "R2",
+      "fact": "Adrian knew Mara was the mastermind before entering her office in Chapter 1",
+      "reader_reveal_chapter": 7,
+      "pov_knows_chapter": 7,
+      "reveal_type": "digital",
+      "prerequisite_reveals": [
+        "R1"
+      ],
+      "required_clues": [
+        "C3"
+      ],
+      "must_remain_hidden_before": 6,
+      "allowed_foreshadowing_before": "proxy email IP mention"
+    },
+    {
+      "id": "R3",
+      "fact": "Mara secretly hired Adrian to kill Claire Thorne",
+      "reader_reveal_chapter": 9,
+      "pov_knows_chapter": 1,
+      "reveal_type": "confession",
+      "prerequisite_reveals": [
+        "R1",
+        "R2"
+      ],
+      "required_clues": [
+        "C4"
+      ],
+      "must_remain_hidden_before": 8,
+      "allowed_foreshadowing_before": "metadata leak patterns"
+    },
+    {
+      "id": "R4",
+      "fact": "The blood on Adrian's phone was treated with anticoagulants",
+      "reader_reveal_chapter": 2,
+      "pov_knows_chapter": 2,
+      "reveal_type": "observation",
+      "prerequisite_reveals": [],
+      "required_clues": [
+        "C5"
+      ],
+      "must_remain_hidden_before": 1,
+      "allowed_foreshadowing_before": "blood on phone mention"
+    },
+    {
+      "id": "R5",
+      "fact": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+      "reader_reveal_chapter": 9,
+      "pov_knows_chapter": 9,
+      "reveal_type": "digital",
+      "prerequisite_reveals": [
+        "R2"
+      ],
+      "required_clues": [
+        "C6"
+      ],
+      "must_remain_hidden_before": 8,
+      "allowed_foreshadowing_before": "software behavior anomalies"
+    },
+    {
+      "id": "R6",
+      "fact": "Mara created a ghost vehicle evidence showing Adrian's car at crime scene at 8 PM",
+      "reader_reveal_chapter": 6,
+      "pov_knows_chapter": 5,
+      "reveal_type": "digital",
+      "prerequisite_reveals": [
+        "R1"
+      ],
+      "required_clues": [
+        "C7"
+      ],
+      "must_remain_hidden_before": 5,
+      "allowed_foreshadowing_before": "traffic camera manipulation setup"
+    },
+    {
+      "id": "R7",
+      "fact": "Mara pushed Claire's time of death forward by 2 hours",
+      "reader_reveal_chapter": 6,
+      "pov_knows_chapter": 5,
+      "reveal_type": "digital",
+      "prerequisite_reveals": [
+        "R1"
+      ],
+      "required_clues": [
+        "C8"
+      ],
+      "must_remain_hidden_before": 5,
+      "allowed_foreshadowing_before": "smartwatch data manipulation"
+    },
+    {
+      "id": "R8",
+      "fact": "Mara ties server decryption key to her unique heartbeat pattern with dead man's switch",
+      "reader_reveal_chapter": 10,
+      "pov_knows_chapter": 10,
+      "reveal_type": "digital",
+      "prerequisite_reveals": [
+        "R5"
+      ],
+      "required_clues": [
+        "C9"
+      ],
+      "must_remain_hidden_before": 9,
+      "allowed_foreshadowing_before": "heartbeat monitoring setup"
+    },
+    {
+      "id": "R9",
+      "fact": "Adrian's true goal is to force Mara to open Zero-Day Server, not get alibi",
+      "reader_reveal_chapter": 8,
+      "pov_knows_chapter": 8,
+      "reveal_type": "confession",
+      "prerequisite_reveals": [
+        "R2"
+      ],
+      "required_clues": [
+        "C10"
+      ],
+      "must_remain_hidden_before": 7,
+      "allowed_foreshadowing_before": "server mentions, data vault references"
+    }
+  ],
+  "clues": [
+    {
+      "id": "C1",
+      "description": "Camera API vulnerability at exact time of Claire's death",
+      "plant_chapter": 5,
+      "payoff_chapter": 5,
+      "owner_reveal": "R1",
+      "observed_by": [
+        "Mara Voss"
+      ],
+      "interpretation_at_plant": "Security flaw showing Adrian at crime scene",
+      "true_meaning_at_payoff": "Adrian was physically present when Claire died",
+      "physical_or_digital": "digital",
+      "custody": "city traffic camera system",
+      "may_be_destroyed": false
+    },
+    {
+      "id": "C2",
+      "description": "Adrian's vehicle captured by traffic cameras at crime scene",
+      "plant_chapter": 5,
+      "payoff_chapter": 5,
+      "owner_reveal": "R1",
+      "observed_by": [
+        "Mara Voss"
+      ],
+      "interpretation_at_plant": "Direct evidence of Adrian's presence",
+      "true_meaning_at_payoff": "Adrian committed the murder",
+      "physical_or_digital": "digital",
+      "custody": "traffic camera database",
+      "may_be_destroyed": false
+    },
+    {
+      "id": "C3",
+      "description": "Proxy email IP traces back to Adrian's office",
+      "plant_chapter": 7,
+      "payoff_chapter": 7,
+      "owner_reveal": "R2",
+      "observed_by": [
+        "Mara Voss"
+      ],
+      "interpretation_at_plant": "Adrian sent hiring email from his office",
+      "true_meaning_at_payoff": "Adrian knew about Mara's involvement from start",
+      "physical_or_digital": "digital",
+      "custody": "email server logs",
+      "may_be_destroyed": false
+    },
+    {
+      "id": "C4",
+      "description": "Pattern in Mara's alibi creation matches her signature methods",
+      "plant_chapter": 9,
+      "payoff_chapter": 9,
+      "owner_reveal": "R3",
+      "observed_by": [
+        "Adrian Thorne"
+      ],
+      "interpretation_at_plant": "Unique alibi construction pattern",
+      "true_meaning_at_payoff": "Mara created the original murder plan",
+      "physical_or_digital": "digital",
+      "custody": "Adrian's analysis notes",
+      "may_be_destroyed": false
+    },
+    {
+      "id": "C5",
+      "description": "Blood on Adrian's phone treated with anticoagulants",
+      "plant_chapter": 1,
+      "payoff_chapter": 2,
+      "owner_reveal": "R4",
+      "observed_by": [
+        "Mara Voss"
+      ],
+      "interpretation_at_plant": "Suspicious blood evidence",
+      "true_meaning_at_payoff": "Blood was prepared in advance, not from fresh wound",
+      "physical_or_digital": "physical",
+      "custody": "Mara's lab analysis",
+      "may_be_destroyed": true
+    },
+    {
+      "id": "C6",
+      "description": "Metadata from Mara's scraping software sent to unknown server",
+      "plant_chapter": 1,
+      "payoff_chapter": 9,
+      "owner_reveal": "R5",
+      "observed_by": [
+        "Mara Voss"
+      ],
+      "interpretation_at_plant": "Software bug or data leak",
+      "true_meaning_at_payoff": "Adrian's backdoor capturing Mara's activities",
+      "physical_or_digital": "digital",
+      "custody": "Mara's network logs",
+      "may_be_destroyed": false
+    },
+    {
+      "id": "C7",
+      "description": "Ghost vehicle evidence in traffic camera system",
+      "plant_chapter": 3,
+      "payoff_chapter": 6,
+      "owner_reveal": "R6",
+      "observed_by": [
+        "Det. Miller",
+        "Mara Voss"
+      ],
+      "interpretation_at_plant": "Adrian's car at crime scene at 8 PM",
+      "true_meaning_at_payoff": "Mara fabricated evidence to trap Adrian",
+      "physical_or_digital": "digital",
+      "custody": "traffic camera database",
+      "may_be_destroyed": true
+    },
+    {
+      "id": "C8",
+      "description": "Claire's smartwatch shows time of death at 8 PM instead of 10 PM",
+      "plant_chapter": 5,
+      "payoff_chapter": 6,
+      "owner_reveal": "R7",
+      "observed_by": [
+        "Det. Miller",
+        "Mara Voss"
+      ],
+      "interpretation_at_plant": "Evidence of earlier time of death",
+      "true_meaning_at_payoff": "Mara manipulated time of death evidence",
+      "physical_or_digital": "digital",
+      "custody": "smartwatch data",
+      "may_be_destroyed": true
+    },
+    {
+      "id": "C9",
+      "description": "Heartbeat monitoring system with unique pattern recognition",
+      "plant_chapter": 10,
+      "payoff_chapter": 10,
+      "owner_reveal": "R8",
+      "observed_by": [
+        "Mara Voss",
+        "Adrian Thorne"
+      ],
+      "interpretation_at_plant": "Security system tied to Mara's physiology",
+      "true_meaning_at_payoff": "Mutual assured destruction through biometric lock",
+      "physical_or_digital": "digital",
+      "custody": "Mara's smartwatch and server",
+      "may_be_destroyed": false
+    },
+    {
+      "id": "C10",
+      "description": "Adrian's knowledge of Zero-Day Server existence and value",
+      "plant_chapter": 8,
+      "payoff_chapter": 8,
+      "owner_reveal": "R9",
+      "observed_by": [
+        "Mara Voss"
+      ],
+      "interpretation_at_plant": "Adrian's unusual interest in server access",
+      "true_meaning_at_payoff": "Adrian's true goal is blackmail data, not alibi",
+      "physical_or_digital": "digital",
+      "custody": "conversation record",
+      "may_be_destroyed": false
+    }
+  ],
+  "props": [
+    {
+      "id": "P1",
+      "name": "Blood-stained phone",
+      "created_by": "Adrian",
+      "recorded_by": "Mara",
+      "subject_of_record": "Murder weapon or evidence",
+      "purpose": "Metadata analysis, blood forensics",
+      "first_appearance_chapter": 1,
+      "verification_method": "Metadata analysis, blood forensics",
+      "custody_chain": [
+        {
+          "chapter": 1,
+          "holder": "Mara",
+          "action": "Adrian gives phone to Mara"
+        },
+        {
+          "chapter": 4,
+          "holder": "Mara",
+          "action": "Mara analyzes metadata"
+        },
+        {
+          "chapter": 12,
+          "holder": "Adrian",
+          "action": "Mara returns phone with decryption key"
+        }
+      ],
+      "payoff_chapter": 12,
+      "must_not_be_confused_with": "Adrian actually killed Claire (blood could be staged)",
+      "physical_owner_by_chapter": {
+        "1": "Mara",
+        "4": "Mara",
+        "12": "Adrian"
+      },
+      "access_events": []
+    },
+    {
+      "id": "P2",
+      "name": "Zero-Day Server",
+      "created_by": "Mara",
+      "recorded_by": "Mara",
+      "subject_of_record": "Blackmail data vault",
+      "purpose": "Access logs, encryption keys",
+      "first_appearance_chapter": 1,
+      "verification_method": "Access logs, encryption keys",
+      "custody_chain": [
+        {
+          "chapter": 1,
+          "holder": "Mara",
+          "action": "Mara maintains admin control"
+        },
+        {
+          "chapter": 2,
+          "holder": "Mara",
+          "action": "retains custody"
+        },
+        {
+          "chapter": 3,
+          "holder": "Mara",
+          "action": "retains custody"
+        },
+        {
+          "chapter": 4,
+          "holder": "Mara",
+          "action": "retains custody"
+        },
+        {
+          "chapter": 5,
+          "holder": "Mara",
+          "action": "retains custody"
+        },
+        {
+          "chapter": 6,
+          "holder": "Mara",
+          "action": "retains custody"
+        },
+        {
+          "chapter": 7,
+          "holder": "Mara",
+          "action": "retains custody"
+        },
+        {
+          "chapter": 8,
+          "holder": "Mara",
+          "action": "Mara forced to open server"
+        },
+        {
+          "chapter": 9,
+          "holder": "Adrian",
+          "action": "Adrian gains access via backdoor"
+        },
+        {
+          "chapter": 10,
+          "holder": "Shared with conditions",
+          "action": "Heartbeat key installed"
+        },
+        {
+          "chapter": 11,
+          "holder": "Shared with conditions",
+          "action": "retains custody"
+        },
+        {
+          "chapter": 12,
+          "holder": "Shared with conditions",
+          "action": "Conditional access granted"
+        }
+      ],
+      "payoff_chapter": 12,
+      "must_not_be_confused_with": "Contents are authentic (could be fabricated)",
+      "physical_owner_by_chapter": {
+        "1": "Mara",
+        "2": "Mara",
+        "3": "Mara",
+        "4": "Mara",
+        "5": "Mara",
+        "6": "Mara",
+        "7": "Mara",
+        "8": "Mara",
+        "9": "Adrian",
+        "10": "Shared with conditions",
+        "11": "Shared with conditions",
+        "12": "Shared with conditions"
+      },
+      "access_events": []
+    },
+    {
+      "id": "P3",
+      "name": "Claire's smartwatch data",
+      "created_by": "Claire Thorne",
+      "recorded_by": "Mara",
+      "subject_of_record": "Time of death evidence",
+      "purpose": "Forensic data analysis",
+      "first_appearance_chapter": 5,
+      "verification_method": "Forensic data analysis",
+      "custody_chain": [
+        {
+          "chapter": 5,
+          "holder": "Police evidence",
+          "action": "Collected as evidence"
+        },
+        {
+          "chapter": 6,
+          "holder": "Mara (manipulated)",
+          "action": "Mara manipulates time data"
+        }
+      ],
+      "payoff_chapter": 6,
+      "must_not_be_confused_with": "Actual time of death (data can be manipulated)",
+      "physical_owner_by_chapter": {
+        "5": "Police evidence",
+        "6": "Mara (manipulated)"
+      },
+      "access_events": []
+    }
+  ],
+  "honeytoken": {
+    "phrase_creator": "Mara",
+    "delivery_method": "khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian",
+    "people_who_know_before_delivery": [
+      "Mara"
+    ],
+    "interception_method": "khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian",
+    "first_illicit_reuse_by": "Adrian",
+    "reuse_chapter": 8,
+    "evidentiary_value": {
+      "information_leak": "Adrian đe dọa (đọc đúng mật khẩu thời thơ ấu từ metadata ảnh).",
+      "physical_corroboration": "Mara phát hiện cửa hậu Adrian cài từ Ch1 (metadata leak khi scrape dữ liệu).",
+      "false_chain_of_custody_claim": ""
+    },
+    "villain_must_not_say": [],
+    "proof_sequence": [
+      "khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian",
+      "Adrian đe dọa (đọc đúng mật khẩu thời thơ ấu từ metadata ảnh).",
+      "Mara phát hiện cửa hậu Adrian cài từ Ch1 (metadata leak khi scrape dữ liệu)."
+    ],
+    "failure_conditions": []
+  },
+  "chapter_map": {
+    "1": {
+      "title": "The Bloody Phone",
+      "day_or_time_anchor": "24h",
+      "pov_knows_at_start": [
+        "Mara knows she hired Adrian."
+      ],
+      "may_observe": [
+        "Adrian throws down a bloody phone."
+      ],
+      "must_happen": [
+        "Mara accepts the contract and observes unexplained metadata behavior consistent with a software bug or data leak.",
+        "Threshold event 1: first_threshold (see siblings/threshold_events.yaml)"
+      ],
+      "reveal_ids_opened": [],
+      "clue_ids_planted": [
+        "C5",
+        "C6"
+      ],
+      "clue_ids_paid_off": [],
+      "prop_actions": [
+        {
+          "prop_id": "P1",
+          "action": "Adrian gives phone to Mara"
+        },
+        {
+          "prop_id": "P2",
+          "action": "Mara maintains admin control"
+        }
+      ],
+      "relationship_turn": "Mara treats Adrian as a tool.",
+      "primary_turn": "The crisis contract begins.",
+      "must_not_happen": [
+        "Mara leaves the office."
+      ],
+      "spice_level": 0
+    },
+    "2": {
+      "title": "Anticoagulant",
+      "day_or_time_anchor": "24h",
+      "pov_knows_at_start": [],
+      "may_observe": [
+        "The blood was treated with anticoagulants."
+      ],
+      "must_happen": [
+        "Mara scrapes Claire Thorne's data."
+      ],
+      "reveal_ids_opened": [
+        "R4"
+      ],
+      "clue_ids_planted": [],
+      "clue_ids_paid_off": [
+        "C5"
+      ],
+      "prop_actions": [
+        {
+          "prop_id": "P2",
+          "action": "retains custody"
+        }
+      ],
+      "relationship_turn": "Professional suspicion sharpens.",
+      "primary_turn": "The first leak opens.",
+      "must_not_happen": [
+        "Mara leaves the office."
+      ],
+      "spice_level": 0
+    },
+    "3": {
+      "title": "Synthetic Alibi",
+      "day_or_time_anchor": "24h",
+      "pov_knows_at_start": [],
+      "may_observe": [
+        "Strava, Uber, and traffic-camera traces."
+      ],
+      "must_happen": [
+        "Mara creates the false alibi."
+      ],
+      "reveal_ids_opened": [],
+      "clue_ids_planted": [
+        "C7"
+      ],
+      "clue_ids_paid_off": [],
+      "prop_actions": [
+        {
+          "prop_id": "P2",
+          "action": "retains custody"
+        }
+      ],
+      "relationship_turn": "Adrian cooperates perfectly.",
+      "primary_turn": "The alibi becomes operational.",
+      "must_not_happen": [
+        "Physical violence between Mara and Adrian."
+      ],
+      "spice_level": 0
+    },
+    "4": {
+      "title": "Hidden Call Log",
+      "day_or_time_anchor": "24h",
+      "pov_knows_at_start": [],
+      "may_observe": [
+        "A hidden call log in the phone metadata."
+      ],
+      "must_happen": [
+        "Mara mistakes the pattern for evidence of Adrian's affair."
+      ],
+      "reveal_ids_opened": [],
+      "clue_ids_planted": [],
+      "clue_ids_paid_off": [],
+      "prop_actions": [
+        {
+          "prop_id": "P1",
+          "action": "Mara analyzes metadata"
+        },
+        {
+          "prop_id": "P2",
+          "action": "retains custody"
+        }
+      ],
+      "relationship_turn": "Mara believes she has found Adrian's weakness.",
+      "primary_turn": "A false interpretation takes hold.",
+      "must_not_happen": [
+        "Mara learns Adrian's complete goal."
+      ],
+      "spice_level": 0
+    },
+    "5": {
+      "title": "Camera API",
+      "day_or_time_anchor": "24h",
+      "pov_knows_at_start": [],
+      "may_observe": [
+        "Adrian appears at the scene at Claire's time of death."
+      ],
+      "must_happen": [
+        "reveal_foreshadow_ref: R6 — traffic camera manipulation setup",
+        "Threshold event 2: repeat (see siblings/threshold_events.yaml)"
+      ],
+      "reveal_ids_opened": [
+        "R1"
+      ],
+      "clue_ids_planted": [
+        "C1",
+        "C2",
+        "C8"
+      ],
+      "clue_ids_paid_off": [
+        "C1",
+        "C2"
+      ],
+      "prop_actions": [
+        {
+          "prop_id": "P2",
+          "action": "retains custody"
+        },
+        {
+          "prop_id": "P3",
+          "action": "Collected as evidence"
+        }
+      ],
+      "relationship_turn": "Mara turns the alibi into a trap.",
+      "primary_turn": "The reverse frame begins.",
+      "must_not_happen": [
+        "Adrian is physically attacked."
+      ],
+      "spice_level": 0
+    },
+    "6": {
+      "title": "The Interview",
+      "day_or_time_anchor": "24h",
+      "pov_knows_at_start": [],
+      "may_observe": [
+        "Det. Miller questions Adrian."
+      ],
+      "must_happen": [
+        "The ghost vehicle crosses the scene at 8 PM while the ten-o'clock alibi works."
+      ],
+      "reveal_ids_opened": [
+        "R6",
+        "R7"
+      ],
+      "clue_ids_planted": [],
+      "clue_ids_paid_off": [
+        "C7",
+        "C8"
+      ],
+      "prop_actions": [
+        {
+          "prop_id": "P2",
+          "action": "retains custody"
+        },
+        {
+          "prop_id": "P3",
+          "action": "Mara manipulates time data"
+        }
+      ],
+      "relationship_turn": "Mara believes her frame is closing.",
+      "primary_turn": "The homicide-directed evidence becomes visible.",
+      "must_not_happen": [
+        "The two plot contradictions are silently repaired."
+      ],
+      "spice_level": 0
+    },
+    "7": {
+      "title": "Proxy Origin",
+      "day_or_time_anchor": "24h",
+      "pov_knows_at_start": [],
+      "may_observe": [
+        "The proxy email traces to Adrian's office."
+      ],
+      "must_happen": [
+        "Mara learns Adrian knew she was the mastermind.",
+        "Threshold event 3: repeat (see siblings/threshold_events.yaml)"
+      ],
+      "reveal_ids_opened": [
+        "R2"
+      ],
+      "clue_ids_planted": [
+        "C3"
+      ],
+      "clue_ids_paid_off": [
+        "C3"
+      ],
+      "prop_actions": [
+        {
+          "prop_id": "P2",
+          "action": "retains custody"
+        }
+      ],
+      "relationship_turn": "The predator becomes visible.",
+      "primary_turn": "Mara's blind layer breaks.",
+      "must_not_happen": [
+        "Mara gains emotional certainty."
+      ],
+      "spice_level": 0
+    },
+    "8": {
+      "title": "Open the Server",
+      "day_or_time_anchor": "24h",
+      "pov_knows_at_start": [],
+      "may_observe": [
+        "Adrian reads the childhood password from image metadata.",
+        "clue_ref: C6 — Metadata from Mara's scraping software sent to unknown server; surface_interpretation: Software bug or data leak",
+        "Setting mechanism in play: mechanism_admin_rights",
+        "Software administrative privileges (key holder: Mara; defeats: Standard user access)"
+      ],
+      "must_happen": [
+        "Mara opens the Zero-Day Server.",
+        "setting_opportunity_ref: opp_access_escalation"
+      ],
+      "reveal_ids_opened": [
+        "R9"
+      ],
+      "clue_ids_planted": [
+        "C10"
+      ],
+      "clue_ids_paid_off": [
+        "C10"
+      ],
+      "prop_actions": [
+        {
+          "prop_id": "P2",
+          "action": "Mara forced to open server"
+        }
+      ],
+      "relationship_turn": "Adrian takes operational control.",
+      "primary_turn": "The data vault opens.",
+      "must_not_happen": [
+        "Adrian threatens to kill Mara."
+      ],
+      "spice_level": 0
+    },
+    "9": {
+      "title": "The Backdoor",
+      "day_or_time_anchor": "24h",
+      "pov_knows_at_start": [],
+      "may_observe": [
+        "Metadata leaked during public-data scraping.",
+        "Setting mechanism in play: mechanism_backdoor",
+        "Setting mechanism in play: mechanism_admin_rights",
+        "Software administrative privileges (key holder: Mara; defeats: Standard user access)",
+        "Hidden software backdoor (key holder: Adrian; defeats: mechanism_admin_rights)"
+      ],
+      "must_happen": [
+        "Mara discovers Adrian's backdoor and his blackmail-data goal.",
+        "setting_opportunity_ref: opp_access_escalation"
+      ],
+      "reveal_ids_opened": [
+        "R3",
+        "R5"
+      ],
+      "clue_ids_planted": [
+        "C4"
+      ],
+      "clue_ids_paid_off": [
+        "C4",
+        "C6"
+      ],
+      "prop_actions": [
+        {
+          "prop_id": "P2",
+          "action": "Adrian gains access via backdoor"
+        }
+      ],
+      "relationship_turn": "Control becomes mutually destructive.",
+      "primary_turn": "Adrian's true objective is exposed.",
+      "must_not_happen": [
+        "The server is physically destroyed."
+      ],
+      "spice_level": 0
+    },
+    "10": {
+      "title": "Heartbeat Key",
+      "day_or_time_anchor": "24h",
+      "pov_knows_at_start": [],
+      "may_observe": [
+        "Mara's unique heartbeat pattern.",
+        "Setting mechanism in play: mechanism_heartbeat_key",
+        "Decryption bound to Mara's heartbeat (key holder: Mara; defeats: mechanism_backdoor)"
+      ],
+      "must_happen": [
+        "Mara binds decryption to her heartbeat and a dead man's switch.",
+        "setting_opportunity_ref: opp_access_limitation",
+        "Threshold event 4: repeat (see siblings/threshold_events.yaml)"
+      ],
+      "reveal_ids_opened": [
+        "R8"
+      ],
+      "clue_ids_planted": [
+        "C9"
+      ],
+      "clue_ids_paid_off": [
+        "C9"
+      ],
+      "prop_actions": [
+        {
+          "prop_id": "P2",
+          "action": "Heartbeat key installed"
+        }
+      ],
+      "relationship_turn": "Mara restores conditional leverage.",
+      "primary_turn": "Her body becomes part of the key.",
+      "must_not_happen": [
+        "Physical violence."
+      ],
+      "spice_level": 0
+    },
+    "11": {
+      "title": "Two Victories",
+      "day_or_time_anchor": "24h",
+      "pov_knows_at_start": [],
+      "may_observe": [
+        "Adrian admits he knew from the beginning."
+      ],
+      "must_happen": [
+        "Adrian says Mara won the murder and he won the data.",
+        "Adrian produces the retained forensic snapshot that can attribute the ghost vehicle to Mara's workstation, revealing why he allowed the frame to proceed."
+      ],
+      "reveal_ids_opened": [],
+      "clue_ids_planted": [],
+      "clue_ids_paid_off": [],
+      "prop_actions": [
+        {
+          "prop_id": "P2",
+          "action": "retains custody"
+        }
+      ],
+      "relationship_turn": "Neither predator can claim total control.",
+      "primary_turn": "The double game becomes explicit.",
+      "must_not_happen": [
+        "A confession substitutes for the digital proof."
+      ],
+      "spice_level": 0
+    },
+    "12": {
+      "title": "Conditional Partnership",
+      "day_or_time_anchor": "24h",
+      "pov_knows_at_start": [],
+      "may_observe": [
+        "Both are exhausted, bloodshot, and shaking.",
+        "Setting mechanism in play: mechanism_heartbeat_key",
+        "Decryption bound to Mara's heartbeat (key holder: Mara; defeats: mechanism_backdoor)"
+      ],
+      "must_happen": [
+        "Mara grants conditional admin access and Adrian deletes the backdoor.",
+        "setting_opportunity_ref: opp_access_limitation",
+        "Threshold event 5: repeat (see siblings/threshold_events.yaml)"
+      ],
+      "reveal_ids_opened": [],
+      "clue_ids_planted": [],
+      "clue_ids_paid_off": [],
+      "prop_actions": [
+        {
+          "prop_id": "P1",
+          "action": "Mara returns phone with decryption key"
+        },
+        {
+          "prop_id": "P2",
+          "action": "Conditional access granted"
+        }
+      ],
+      "relationship_turn": "They become partners in crime.",
+      "primary_turn": "Mutual assured destruction becomes alliance.",
+      "must_not_happen": [
+        "A conventional romantic surrender."
+      ],
+      "spice_level": 0
+    }
+  },
+  "must_include": [
+    "The bloody phone in the opening and its return in the climax.",
+    "Every chapter contains a counter-move."
+  ],
+  "must_include_by_chapter": {
+    "1": [
+      "The bloody phone."
+    ],
+    "7": [
+      "Adrian's smile when discovered."
+    ],
+    "9": [
+      "Adrian's smile when discovered."
+    ],
+    "12": [
+      "The bloody phone returns.",
+      "Adrian's smile when discovered."
+    ],
+    "8": [],
+    "10": []
+  },
+  "must_avoid": [
+    "Mara or Adrian uses physical violence against the other.",
+    "Adrian threatens to kill Mara.",
+    "The data vault is physically destroyed.",
+    "Shaking caused by romantic feeling."
+  ],
+  "romance_doctrine": {},
+  "threshold_events": [],
+  "arc_shape": {},
+  "setting_graph": {},
+  "facts": [
+    {
+      "fact_id": "F_PLOT_LOGLINE",
+      "claim": "When an expert who creates alibis from ordinary digital traces is forced to conceal a murder for a mysterious client, she discovers that she is the mastermind who hired him—and that he knew from the beginning and took the bait to seize her black-data vault.",
+      "source_refs": [
+        "logline"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "plot"
+    },
+    {
+      "fact_id": "F_PLOT_SURFACE_PLOT",
+      "claim": "Mara believes Adrian killed Claire Thorne and is using a Crisis Management contract to force Mara to create an alibi, with twenty-four hours before police discover Claire's death.",
+      "source_refs": [
+        "surface_plot"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "plot"
+    },
+    {
+      "fact_id": "F_PLOT_TRUE_PLOT",
+      "claim": "Mara Voss secretly hired Adrian Thorne to kill Claire Thorne and planned to frame Adrian while taking Claire's shares. Adrian knew Mara was the mastermind before entering the office and needs Mara to open the Zero-Day Server. Both believe they hold the final leverage.",
+      "source_refs": [
+        "true_plot"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "plot"
+    },
+    {
+      "fact_id": "F_PLOT_ENDING_BOOK1",
+      "claim": "Claire's death remains an open homicide investigation because the ghost vehicle and altered smartwatch prevent a suicide ruling. No arrest is made yet; Mara and Adrian enter a conditional partnership while both remain exposed.",
+      "source_refs": [
+        "ending_book1"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "plot"
+    },
+    {
+      "fact_id": "F_PLOT_HOOK_BOOK2",
+      "claim": "Det. Miller escalates the unresolved homicide inquiry after finding a second inconsistency in Claire's smartwatch log, forcing Mara and Adrian to coordinate their next counter-move.",
+      "source_refs": [
+        "hook_book2"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "plot"
+    },
+    {
+      "fact_id": "F_PLOT_AUTHOR_DIRECTIVE",
+      "claim": "Tone: clinical, hyper-competent, cold to the point of pain. Every chapter is a counter-move.",
+      "source_refs": [
+        "author_directive"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "plot"
+    },
+    {
+      "fact_id": "F_PLOT_NOTES",
+      "claim": "Clinical, hyper-competent, cold to the point of pain. Dark romance is Mutual Assured Destruction. Trope: Zero-Trust Romance. Tropes: Mutual Digital Predation / Competence Porn.",
+      "source_refs": [
+        "notes"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "plot"
+    },
+    {
+      "fact_id": "F_AVOID_84babfcf",
+      "claim": "Mara or Adrian uses physical violence against the other.",
+      "source_refs": [
+        "must_avoid"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "constraint",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_AVOID_c8cadb3d",
+      "claim": "Adrian threatens to kill Mara.",
+      "source_refs": [
+        "must_avoid"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "constraint",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_AVOID_7f9270dd",
+      "claim": "The data vault is physically destroyed.",
+      "source_refs": [
+        "must_avoid"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "constraint",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_AVOID_05394cfa",
+      "claim": "Shaking caused by romantic feeling.",
+      "source_refs": [
+        "must_avoid"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "constraint",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_MUST_aa4c6e8c",
+      "claim": "The bloody phone in the opening and its return in the climax.",
+      "source_refs": [
+        "must_include"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "obligation"
+    },
+    {
+      "fact_id": "F_MUST_73c943fe",
+      "claim": "Every chapter contains a counter-move.",
+      "source_refs": [
+        "must_include"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "obligation"
+    },
+    {
+      "fact_id": "F_MUST_CH1_be67e105",
+      "claim": "The bloody phone.",
+      "source_refs": [
+        "must_include_by_chapter.1"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "obligation"
+    },
+    {
+      "fact_id": "F_MUST_CH7_577f0ea4",
+      "claim": "Adrian's smile when discovered.",
+      "source_refs": [
+        "must_include_by_chapter.7"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "obligation"
+    },
+    {
+      "fact_id": "F_MUST_CH9_577f0ea4",
+      "claim": "Adrian's smile when discovered.",
+      "source_refs": [
+        "must_include_by_chapter.9"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "obligation"
+    },
+    {
+      "fact_id": "F_MUST_CH12_d4521852",
+      "claim": "The bloody phone returns.",
+      "source_refs": [
+        "must_include_by_chapter.12"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "obligation"
+    },
+    {
+      "fact_id": "F_MUST_CH12_577f0ea4",
+      "claim": "Adrian's smile when discovered.",
+      "source_refs": [
+        "must_include_by_chapter.12"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "obligation"
+    },
+    {
+      "fact_id": "F_CAST_eb460057",
+      "claim": "Mara Voss — protagonist / Alibi Architect / hidden mastermind",
+      "source_refs": [
+        "characters[0].name"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "entity",
+      "meta": {
+        "name": "Mara Voss",
+        "role": "protagonist / Alibi Architect / hidden mastermind"
+      }
+    },
+    {
+      "fact_id": "F_CAST_5b27bb53",
+      "claim": "Adrian Thorne — antagonist and love interest / Claire's husband / digital predator",
+      "source_refs": [
+        "characters[1].name"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "entity",
+      "meta": {
+        "name": "Adrian Thorne",
+        "role": "antagonist and love interest / Claire's husband / digital predator"
+      }
+    },
+    {
+      "fact_id": "F_CAST_b098f2c8",
+      "claim": "Claire Thorne — victim / Adrian's wife / absent corpse",
+      "source_refs": [
+        "characters[2].name"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "entity",
+      "meta": {
+        "name": "Claire Thorne",
+        "role": "victim / Adrian's wife / absent corpse"
+      }
+    },
+    {
+      "fact_id": "F_CAST_ed3e0dab",
+      "claim": "Det. Miller — incidental investigator / alibi verifier / Book 2 hook",
+      "source_refs": [
+        "characters[3].name"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "entity",
+      "meta": {
+        "name": "Det. Miller",
+        "role": "incidental investigator / alibi verifier / Book 2 hook"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_core_need",
+      "claim": "Mara Voss: core_need=To maintain absolute control over her constructed reality",
+      "source_refs": [
+        "character_psychology[0].core_need"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "core_need"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_core_fear",
+      "claim": "Mara Voss: core_fear=That her control is an illusion, that she has been a tool rather than the architect",
+      "source_refs": [
+        "character_psychology[0].core_fear"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "core_fear"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_coping_mechanism",
+      "claim": "Mara Voss: coping_mechanism=Systematic compartmentalization and technical precision to mask psychological fragility",
+      "source_refs": [
+        "character_psychology[0].coping_mechanism"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "coping_mechanism"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_cognitive_dissonance",
+      "claim": "Mara Voss: cognitive_dissonance=Believes Adrian is a tool while being used by him as a predator",
+      "source_refs": [
+        "character_psychology[0].cognitive_dissonance"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "cognitive_dissonance"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_core_traits_0",
+      "claim": "Mara Voss: Alibi Architect and hidden mastermind",
+      "source_refs": [
+        "character_psychology[0].core_traits[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "core_traits"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_core_traits_1",
+      "claim": "Mara Voss: Clinically hyper-competent and cold",
+      "source_refs": [
+        "character_psychology[0].core_traits[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "core_traits"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_core_traits_2",
+      "claim": "Mara Voss: Overconfident in OSINT skill",
+      "source_refs": [
+        "character_psychology[0].core_traits[2]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "core_traits"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_stress_responses_0",
+      "claim": "Mara Voss: Cortisol-induced physical stress",
+      "source_refs": [
+        "character_psychology[0].stress_responses[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "stress_responses"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_stress_responses_1",
+      "claim": "Mara Voss: Sleep deprivation",
+      "source_refs": [
+        "character_psychology[0].stress_responses[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "stress_responses"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_stress_responses_2",
+      "claim": "Mara Voss: Shaking hands",
+      "source_refs": [
+        "character_psychology[0].stress_responses[2]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "stress_responses"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_stress_responses_3",
+      "claim": "Mara Voss: Vomiting",
+      "source_refs": [
+        "character_psychology[0].stress_responses[3]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "stress_responses"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_stress_responses_4",
+      "claim": "Mara Voss: Arrhythmic heart rate",
+      "source_refs": [
+        "character_psychology[0].stress_responses[4]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "stress_responses"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_behavioral_constraints_0",
+      "claim": "Mara Voss: Does not use physical violence",
+      "source_refs": [
+        "character_psychology[0].behavioral_constraints[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "behavioral_constraints"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_behavioral_constraints_1",
+      "claim": "Mara Voss: Does not leave the office during the 24-hour story",
+      "source_refs": [
+        "character_psychology[0].behavioral_constraints[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "behavioral_constraints"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_behavioral_constraints_2",
+      "claim": "Mara Voss: Data vault is not physically destroyed",
+      "source_refs": [
+        "character_psychology[0].behavioral_constraints[2]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "behavioral_constraints"
+      }
+    },
+    {
+      "fact_id": "F_PSY_0_behavioral_constraints_3",
+      "claim": "Mara Voss: Shaking always signifies loss of control, never romantic emotion",
+      "source_refs": [
+        "character_psychology[0].behavioral_constraints[3]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "behavioral_constraints"
+      }
+    },
+    {
+      "fact_id": "F_BODY_CANONICAL",
+      "claim": "prolonged acute stress under cortisol and sleep deprivation",
+      "source_refs": [
+        "psychological_condition.canonical"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "body"
+    },
+    {
+      "fact_id": "F_BODY_FX_0",
+      "claim": "shaking hands during loss of control",
+      "source_refs": [
+        "psychological_condition.observable_effects[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "body"
+    },
+    {
+      "fact_id": "F_BODY_FX_1",
+      "claim": "dry-heaving under adrenaline",
+      "source_refs": [
+        "psychological_condition.observable_effects[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "body"
+    },
+    {
+      "fact_id": "F_BODY_FX_2",
+      "claim": "heart rate reaching 160",
+      "source_refs": [
+        "psychological_condition.observable_effects[2]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "body"
+    },
+    {
+      "fact_id": "F_BODY_FX_3",
+      "claim": "blurred vision and bloodshot eyes",
+      "source_refs": [
+        "psychological_condition.observable_effects[3]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "body"
+    },
+    {
+      "fact_id": "F_BODY_FORBID_0",
+      "claim": "shaking from romantic feeling",
+      "source_refs": [
+        "psychological_condition.must_not_be_described_as[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "constraint",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_BODY_FORBID_1",
+      "claim": "physical knife wounds",
+      "source_refs": [
+        "psychological_condition.must_not_be_described_as[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "constraint",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_VILLAIN_0",
+      "claim": "In the opening stretch Adrian knows Mara is the mastermind but does not know she shifted the time of death.",
+      "source_refs": [
+        "villain_ledger[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "villain"
+    },
+    {
+      "fact_id": "F_VILLAIN_1",
+      "claim": "In the middle stretch Adrian knows Mara is building the ghost-vehicle frame and deliberately lets it run because he retains a signed forensic snapshot proving her workstation generated it; he withholds that countermeasure until it can force her to open the Zero-Day Server.",
+      "source_refs": [
+        "villain_ledger[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "villain"
+    },
+    {
+      "fact_id": "F_VILLAIN_2",
+      "claim": "In the final stretch Adrian knows Mara found the backdoor but does not know she will offer partnership.",
+      "source_refs": [
+        "villain_ledger[2]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "villain"
+    },
+    {
+      "fact_id": "F_REVEAL_R1",
+      "claim": "Adrian Thorne killed Claire Thorne",
+      "source_refs": [
+        "reveal_schedule[0]"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R1",
+        "reader_reveal_chapter": 5,
+        "pov_knows_chapter": 1
+      }
+    },
+    {
+      "fact_id": "F_REVEAL_R2",
+      "claim": "Adrian knew Mara was the mastermind before entering her office in Chapter 1",
+      "source_refs": [
+        "reveal_schedule[1]"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R2",
+        "reader_reveal_chapter": 7,
+        "pov_knows_chapter": 7
+      }
+    },
+    {
+      "fact_id": "F_REVEAL_R3",
+      "claim": "Mara secretly hired Adrian to kill Claire Thorne",
+      "source_refs": [
+        "reveal_schedule[2]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R3",
+        "reader_reveal_chapter": 9,
+        "pov_knows_chapter": 1
+      }
+    },
+    {
+      "fact_id": "F_REVEAL_R4",
+      "claim": "The blood on Adrian's phone was treated with anticoagulants",
+      "source_refs": [
+        "reveal_schedule[3]"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R4",
+        "reader_reveal_chapter": 2,
+        "pov_knows_chapter": 2
+      }
+    },
+    {
+      "fact_id": "F_REVEAL_R5",
+      "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+      "source_refs": [
+        "reveal_schedule[4]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R5",
+        "reader_reveal_chapter": 9,
+        "pov_knows_chapter": 9
+      }
+    },
+    {
+      "fact_id": "F_REVEAL_R6",
+      "claim": "Mara created a ghost vehicle evidence showing Adrian's car at crime scene at 8 PM",
+      "source_refs": [
+        "reveal_schedule[5]"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R6",
+        "reader_reveal_chapter": 6,
+        "pov_knows_chapter": 5
+      }
+    },
+    {
+      "fact_id": "F_REVEAL_R7",
+      "claim": "Mara pushed Claire's time of death forward by 2 hours",
+      "source_refs": [
+        "reveal_schedule[6]"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R7",
+        "reader_reveal_chapter": 6,
+        "pov_knows_chapter": 5
+      }
+    },
+    {
+      "fact_id": "F_REVEAL_R8",
+      "claim": "Mara ties server decryption key to her unique heartbeat pattern with dead man's switch",
+      "source_refs": [
+        "reveal_schedule[7]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R8",
+        "reader_reveal_chapter": 10,
+        "pov_knows_chapter": 10
+      }
+    },
+    {
+      "fact_id": "F_REVEAL_R9",
+      "claim": "Adrian's true goal is to force Mara to open Zero-Day Server, not get alibi",
+      "source_refs": [
+        "reveal_schedule[8]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R9",
+        "reader_reveal_chapter": 8,
+        "pov_knows_chapter": 8
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C1",
+      "claim": "Camera API vulnerability at exact time of Claire's death",
+      "source_refs": [
+        "clues[0].description"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C1",
+        "plant_chapter": 5,
+        "payoff_chapter": 5,
+        "interpretation_at_plant": "Security flaw showing Adrian at crime scene",
+        "true_meaning_at_payoff": "Adrian was physically present when Claire died"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C1_SURFACE",
+      "claim": "Security flaw showing Adrian at crime scene",
+      "source_refs": [
+        "clues[0].interpretation_at_plant"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C1"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C2",
+      "claim": "Adrian's vehicle captured by traffic cameras at crime scene",
+      "source_refs": [
+        "clues[1].description"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C2",
+        "plant_chapter": 5,
+        "payoff_chapter": 5,
+        "interpretation_at_plant": "Direct evidence of Adrian's presence",
+        "true_meaning_at_payoff": "Adrian committed the murder"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C2_SURFACE",
+      "claim": "Direct evidence of Adrian's presence",
+      "source_refs": [
+        "clues[1].interpretation_at_plant"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C2"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C3",
+      "claim": "Proxy email IP traces back to Adrian's office",
+      "source_refs": [
+        "clues[2].description"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C3",
+        "plant_chapter": 7,
+        "payoff_chapter": 7,
+        "interpretation_at_plant": "Adrian sent hiring email from his office",
+        "true_meaning_at_payoff": "Adrian knew about Mara's involvement from start"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C3_SURFACE",
+      "claim": "Adrian sent hiring email from his office",
+      "source_refs": [
+        "clues[2].interpretation_at_plant"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C3"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C4",
+      "claim": "Pattern in Mara's alibi creation matches her signature methods",
+      "source_refs": [
+        "clues[3].description"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C4",
+        "plant_chapter": 9,
+        "payoff_chapter": 9,
+        "interpretation_at_plant": "Unique alibi construction pattern",
+        "true_meaning_at_payoff": "Mara created the original murder plan"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C4_SURFACE",
+      "claim": "Unique alibi construction pattern",
+      "source_refs": [
+        "clues[3].interpretation_at_plant"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C4"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C5",
+      "claim": "Blood on Adrian's phone treated with anticoagulants",
+      "source_refs": [
+        "clues[4].description"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C5",
+        "plant_chapter": 1,
+        "payoff_chapter": 2,
+        "interpretation_at_plant": "Suspicious blood evidence",
+        "true_meaning_at_payoff": "Blood was prepared in advance, not from fresh wound"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C5_SURFACE",
+      "claim": "Suspicious blood evidence",
+      "source_refs": [
+        "clues[4].interpretation_at_plant"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C5"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C6",
+      "claim": "Metadata from Mara's scraping software sent to unknown server",
+      "source_refs": [
+        "clues[5].description"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C6",
+        "plant_chapter": 1,
+        "payoff_chapter": 9,
+        "interpretation_at_plant": "Software bug or data leak",
+        "true_meaning_at_payoff": "Adrian's backdoor capturing Mara's activities"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C6_SURFACE",
+      "claim": "Software bug or data leak",
+      "source_refs": [
+        "clues[5].interpretation_at_plant"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C6"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C7",
+      "claim": "Ghost vehicle evidence in traffic camera system",
+      "source_refs": [
+        "clues[6].description"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C7",
+        "plant_chapter": 3,
+        "payoff_chapter": 6,
+        "interpretation_at_plant": "Adrian's car at crime scene at 8 PM",
+        "true_meaning_at_payoff": "Mara fabricated evidence to trap Adrian"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C7_SURFACE",
+      "claim": "Adrian's car at crime scene at 8 PM",
+      "source_refs": [
+        "clues[6].interpretation_at_plant"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C7"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C8",
+      "claim": "Claire's smartwatch shows time of death at 8 PM instead of 10 PM",
+      "source_refs": [
+        "clues[7].description"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C8",
+        "plant_chapter": 5,
+        "payoff_chapter": 6,
+        "interpretation_at_plant": "Evidence of earlier time of death",
+        "true_meaning_at_payoff": "Mara manipulated time of death evidence"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C8_SURFACE",
+      "claim": "Evidence of earlier time of death",
+      "source_refs": [
+        "clues[7].interpretation_at_plant"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C8"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C9",
+      "claim": "Heartbeat monitoring system with unique pattern recognition",
+      "source_refs": [
+        "clues[8].description"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C9",
+        "plant_chapter": 10,
+        "payoff_chapter": 10,
+        "interpretation_at_plant": "Security system tied to Mara's physiology",
+        "true_meaning_at_payoff": "Mutual assured destruction through biometric lock"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C9_SURFACE",
+      "claim": "Security system tied to Mara's physiology",
+      "source_refs": [
+        "clues[8].interpretation_at_plant"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C9"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C10",
+      "claim": "Adrian's knowledge of Zero-Day Server existence and value",
+      "source_refs": [
+        "clues[9].description"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C10",
+        "plant_chapter": 8,
+        "payoff_chapter": 8,
+        "interpretation_at_plant": "Adrian's unusual interest in server access",
+        "true_meaning_at_payoff": "Adrian's true goal is blackmail data, not alibi"
+      }
+    },
+    {
+      "fact_id": "F_CLUE_C10_SURFACE",
+      "claim": "Adrian's unusual interest in server access",
+      "source_refs": [
+        "clues[9].interpretation_at_plant"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C10"
+      }
+    },
+    {
+      "fact_id": "F_PROP_P1",
+      "claim": "Blood-stained phone",
+      "source_refs": [
+        "props[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "prop",
+      "meta": {
+        "prop_id": "P1",
+        "prop": {
+          "id": "P1",
+          "name": "Blood-stained phone",
+          "created_by": "Adrian",
+          "recorded_by": "Mara",
+          "subject_of_record": "Murder weapon or evidence",
+          "purpose": "Metadata analysis, blood forensics",
+          "first_appearance_chapter": 1,
+          "verification_method": "Metadata analysis, blood forensics",
+          "custody_chain": [
+            {
+              "chapter": 1,
+              "holder": "Mara",
+              "action": "Adrian gives phone to Mara"
+            },
+            {
+              "chapter": 4,
+              "holder": "Mara",
+              "action": "Mara analyzes metadata"
+            },
+            {
+              "chapter": 12,
+              "holder": "Adrian",
+              "action": "Mara returns phone with decryption key"
+            }
+          ],
+          "payoff_chapter": 12,
+          "must_not_be_confused_with": "Adrian actually killed Claire (blood could be staged)",
+          "physical_owner_by_chapter": {
+            "1": "Mara",
+            "4": "Mara",
+            "12": "Adrian"
+          },
+          "access_events": []
+        }
+      }
+    },
+    {
+      "fact_id": "F_PROP_P2",
+      "claim": "Zero-Day Server",
+      "source_refs": [
+        "props[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "prop",
+      "meta": {
+        "prop_id": "P2",
+        "prop": {
+          "id": "P2",
+          "name": "Zero-Day Server",
+          "created_by": "Mara",
+          "recorded_by": "Mara",
+          "subject_of_record": "Blackmail data vault",
+          "purpose": "Access logs, encryption keys",
+          "first_appearance_chapter": 1,
+          "verification_method": "Access logs, encryption keys",
+          "custody_chain": [
+            {
+              "chapter": 1,
+              "holder": "Mara",
+              "action": "Mara maintains admin control"
+            },
+            {
+              "chapter": 2,
+              "holder": "Mara",
+              "action": "retains custody"
+            },
+            {
+              "chapter": 3,
+              "holder": "Mara",
+              "action": "retains custody"
+            },
+            {
+              "chapter": 4,
+              "holder": "Mara",
+              "action": "retains custody"
+            },
+            {
+              "chapter": 5,
+              "holder": "Mara",
+              "action": "retains custody"
+            },
+            {
+              "chapter": 6,
+              "holder": "Mara",
+              "action": "retains custody"
+            },
+            {
+              "chapter": 7,
+              "holder": "Mara",
+              "action": "retains custody"
+            },
+            {
+              "chapter": 8,
+              "holder": "Mara",
+              "action": "Mara forced to open server"
+            },
+            {
+              "chapter": 9,
+              "holder": "Adrian",
+              "action": "Adrian gains access via backdoor"
+            },
+            {
+              "chapter": 10,
+              "holder": "Shared with conditions",
+              "action": "Heartbeat key installed"
+            },
+            {
+              "chapter": 11,
+              "holder": "Shared with conditions",
+              "action": "retains custody"
+            },
+            {
+              "chapter": 12,
+              "holder": "Shared with conditions",
+              "action": "Conditional access granted"
+            }
+          ],
+          "payoff_chapter": 12,
+          "must_not_be_confused_with": "Contents are authentic (could be fabricated)",
+          "physical_owner_by_chapter": {
+            "1": "Mara",
+            "2": "Mara",
+            "3": "Mara",
+            "4": "Mara",
+            "5": "Mara",
+            "6": "Mara",
+            "7": "Mara",
+            "8": "Mara",
+            "9": "Adrian",
+            "10": "Shared with conditions",
+            "11": "Shared with conditions",
+            "12": "Shared with conditions"
+          },
+          "access_events": []
+        }
+      }
+    },
+    {
+      "fact_id": "F_PROP_P3",
+      "claim": "Claire's smartwatch data",
+      "source_refs": [
+        "props[2]"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "prop",
+      "meta": {
+        "prop_id": "P3",
+        "prop": {
+          "id": "P3",
+          "name": "Claire's smartwatch data",
+          "created_by": "Claire Thorne",
+          "recorded_by": "Mara",
+          "subject_of_record": "Time of death evidence",
+          "purpose": "Forensic data analysis",
+          "first_appearance_chapter": 5,
+          "verification_method": "Forensic data analysis",
+          "custody_chain": [
+            {
+              "chapter": 5,
+              "holder": "Police evidence",
+              "action": "Collected as evidence"
+            },
+            {
+              "chapter": 6,
+              "holder": "Mara (manipulated)",
+              "action": "Mara manipulates time data"
+            }
+          ],
+          "payoff_chapter": 6,
+          "must_not_be_confused_with": "Actual time of death (data can be manipulated)",
+          "physical_owner_by_chapter": {
+            "5": "Police evidence",
+            "6": "Mara (manipulated)"
+          },
+          "access_events": []
+        }
+      }
+    },
+    {
+      "fact_id": "F_HONEY_DELIVERY_METHOD",
+      "claim": "khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian",
+      "source_refs": [
+        "honeytoken.delivery_method"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "honeytoken"
+    },
+    {
+      "fact_id": "F_HONEY_INTERCEPTION_METHOD",
+      "claim": "khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian",
+      "source_refs": [
+        "honeytoken.interception_method"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "honeytoken"
+    },
+    {
+      "fact_id": "F_HONEY_PHRASE_CREATOR",
+      "claim": "Mara",
+      "source_refs": [
+        "honeytoken.phrase_creator"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "honeytoken"
+    },
+    {
+      "fact_id": "F_HONEY_FIRST_ILLICIT_REUSE_BY",
+      "claim": "Adrian",
+      "source_refs": [
+        "honeytoken.first_illicit_reuse_by"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "honeytoken"
+    },
+    {
+      "fact_id": "F_HONEY_EV_information_leak",
+      "claim": "Adrian đe dọa (đọc đúng mật khẩu thời thơ ấu từ metadata ảnh).",
+      "source_refs": [
+        "honeytoken.evidentiary_value.information_leak"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "honeytoken"
+    },
+    {
+      "fact_id": "F_HONEY_EV_physical_corroboration",
+      "claim": "Mara phát hiện cửa hậu Adrian cài từ Ch1 (metadata leak khi scrape dữ liệu).",
+      "source_refs": [
+        "honeytoken.evidentiary_value.physical_corroboration"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "honeytoken"
+    },
+    {
+      "fact_id": "F_MAP_CH1_TITLE",
+      "claim": "The Bloody Phone",
+      "source_refs": [
+        "chapter_map.1.title"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH1_PRIMARY_TURN",
+      "claim": "The crisis contract begins.",
+      "source_refs": [
+        "chapter_map.1.primary_turn"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH1_RELATIONSHIP_TURN",
+      "claim": "Mara treats Adrian as a tool.",
+      "source_refs": [
+        "chapter_map.1.relationship_turn"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH1_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.1.day_or_time_anchor"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH1_must_happen_0",
+      "claim": "Mara accepts the contract and observes unexplained metadata behavior consistent with a software bug or data leak.",
+      "source_refs": [
+        "chapter_map.1.must_happen[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH1_must_happen_1",
+      "claim": "Threshold event 1: first_threshold (see siblings/threshold_events.yaml)",
+      "source_refs": [
+        "chapter_map.1.must_happen[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH1_must_not_happen_0",
+      "claim": "Mara leaves the office.",
+      "source_refs": [
+        "chapter_map.1.must_not_happen[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_MAP_CH1_may_observe_0",
+      "claim": "Adrian throws down a bloody phone.",
+      "source_refs": [
+        "chapter_map.1.may_observe[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH1_pov_knows_at_start_0",
+      "claim": "Mara knows she hired Adrian.",
+      "source_refs": [
+        "chapter_map.1.pov_knows_at_start[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH2_TITLE",
+      "claim": "Anticoagulant",
+      "source_refs": [
+        "chapter_map.2.title"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH2_PRIMARY_TURN",
+      "claim": "The first leak opens.",
+      "source_refs": [
+        "chapter_map.2.primary_turn"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH2_RELATIONSHIP_TURN",
+      "claim": "Professional suspicion sharpens.",
+      "source_refs": [
+        "chapter_map.2.relationship_turn"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH2_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.2.day_or_time_anchor"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH2_must_happen_0",
+      "claim": "Mara scrapes Claire Thorne's data.",
+      "source_refs": [
+        "chapter_map.2.must_happen[0]"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH2_must_not_happen_0",
+      "claim": "Mara leaves the office.",
+      "source_refs": [
+        "chapter_map.2.must_not_happen[0]"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_MAP_CH2_may_observe_0",
+      "claim": "The blood was treated with anticoagulants.",
+      "source_refs": [
+        "chapter_map.2.may_observe[0]"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH3_TITLE",
+      "claim": "Synthetic Alibi",
+      "source_refs": [
+        "chapter_map.3.title"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH3_PRIMARY_TURN",
+      "claim": "The alibi becomes operational.",
+      "source_refs": [
+        "chapter_map.3.primary_turn"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH3_RELATIONSHIP_TURN",
+      "claim": "Adrian cooperates perfectly.",
+      "source_refs": [
+        "chapter_map.3.relationship_turn"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH3_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.3.day_or_time_anchor"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH3_must_happen_0",
+      "claim": "Mara creates the false alibi.",
+      "source_refs": [
+        "chapter_map.3.must_happen[0]"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH3_must_not_happen_0",
+      "claim": "Physical violence between Mara and Adrian.",
+      "source_refs": [
+        "chapter_map.3.must_not_happen[0]"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_MAP_CH3_may_observe_0",
+      "claim": "Strava, Uber, and traffic-camera traces.",
+      "source_refs": [
+        "chapter_map.3.may_observe[0]"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH4_TITLE",
+      "claim": "Hidden Call Log",
+      "source_refs": [
+        "chapter_map.4.title"
+      ],
+      "available_from_chapter": 4,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH4_PRIMARY_TURN",
+      "claim": "A false interpretation takes hold.",
+      "source_refs": [
+        "chapter_map.4.primary_turn"
+      ],
+      "available_from_chapter": 4,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH4_RELATIONSHIP_TURN",
+      "claim": "Mara believes she has found Adrian's weakness.",
+      "source_refs": [
+        "chapter_map.4.relationship_turn"
+      ],
+      "available_from_chapter": 4,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH4_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.4.day_or_time_anchor"
+      ],
+      "available_from_chapter": 4,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH4_must_happen_0",
+      "claim": "Mara mistakes the pattern for evidence of Adrian's affair.",
+      "source_refs": [
+        "chapter_map.4.must_happen[0]"
+      ],
+      "available_from_chapter": 4,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH4_must_not_happen_0",
+      "claim": "Mara learns Adrian's complete goal.",
+      "source_refs": [
+        "chapter_map.4.must_not_happen[0]"
+      ],
+      "available_from_chapter": 4,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_MAP_CH4_may_observe_0",
+      "claim": "A hidden call log in the phone metadata.",
+      "source_refs": [
+        "chapter_map.4.may_observe[0]"
+      ],
+      "available_from_chapter": 4,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH5_TITLE",
+      "claim": "Camera API",
+      "source_refs": [
+        "chapter_map.5.title"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH5_PRIMARY_TURN",
+      "claim": "The reverse frame begins.",
+      "source_refs": [
+        "chapter_map.5.primary_turn"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH5_RELATIONSHIP_TURN",
+      "claim": "Mara turns the alibi into a trap.",
+      "source_refs": [
+        "chapter_map.5.relationship_turn"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH5_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.5.day_or_time_anchor"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH5_must_happen_0",
+      "claim": "reveal_foreshadow_ref: R6 — traffic camera manipulation setup",
+      "source_refs": [
+        "chapter_map.5.must_happen[0]"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH5_must_happen_1",
+      "claim": "Threshold event 2: repeat (see siblings/threshold_events.yaml)",
+      "source_refs": [
+        "chapter_map.5.must_happen[1]"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH5_must_not_happen_0",
+      "claim": "Adrian is physically attacked.",
+      "source_refs": [
+        "chapter_map.5.must_not_happen[0]"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_MAP_CH5_may_observe_0",
+      "claim": "Adrian appears at the scene at Claire's time of death.",
+      "source_refs": [
+        "chapter_map.5.may_observe[0]"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH6_TITLE",
+      "claim": "The Interview",
+      "source_refs": [
+        "chapter_map.6.title"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH6_PRIMARY_TURN",
+      "claim": "The homicide-directed evidence becomes visible.",
+      "source_refs": [
+        "chapter_map.6.primary_turn"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH6_RELATIONSHIP_TURN",
+      "claim": "Mara believes her frame is closing.",
+      "source_refs": [
+        "chapter_map.6.relationship_turn"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH6_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.6.day_or_time_anchor"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH6_must_happen_0",
+      "claim": "The ghost vehicle crosses the scene at 8 PM while the ten-o'clock alibi works.",
+      "source_refs": [
+        "chapter_map.6.must_happen[0]"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH6_must_not_happen_0",
+      "claim": "The two plot contradictions are silently repaired.",
+      "source_refs": [
+        "chapter_map.6.must_not_happen[0]"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_MAP_CH6_may_observe_0",
+      "claim": "Det. Miller questions Adrian.",
+      "source_refs": [
+        "chapter_map.6.may_observe[0]"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH7_TITLE",
+      "claim": "Proxy Origin",
+      "source_refs": [
+        "chapter_map.7.title"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH7_PRIMARY_TURN",
+      "claim": "Mara's blind layer breaks.",
+      "source_refs": [
+        "chapter_map.7.primary_turn"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH7_RELATIONSHIP_TURN",
+      "claim": "The predator becomes visible.",
+      "source_refs": [
+        "chapter_map.7.relationship_turn"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH7_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.7.day_or_time_anchor"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH7_must_happen_0",
+      "claim": "Mara learns Adrian knew she was the mastermind.",
+      "source_refs": [
+        "chapter_map.7.must_happen[0]"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH7_must_happen_1",
+      "claim": "Threshold event 3: repeat (see siblings/threshold_events.yaml)",
+      "source_refs": [
+        "chapter_map.7.must_happen[1]"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH7_must_not_happen_0",
+      "claim": "Mara gains emotional certainty.",
+      "source_refs": [
+        "chapter_map.7.must_not_happen[0]"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_MAP_CH7_may_observe_0",
+      "claim": "The proxy email traces to Adrian's office.",
+      "source_refs": [
+        "chapter_map.7.may_observe[0]"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH8_TITLE",
+      "claim": "Open the Server",
+      "source_refs": [
+        "chapter_map.8.title"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH8_PRIMARY_TURN",
+      "claim": "The data vault opens.",
+      "source_refs": [
+        "chapter_map.8.primary_turn"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH8_RELATIONSHIP_TURN",
+      "claim": "Adrian takes operational control.",
+      "source_refs": [
+        "chapter_map.8.relationship_turn"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH8_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.8.day_or_time_anchor"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH8_must_happen_0",
+      "claim": "Mara opens the Zero-Day Server.",
+      "source_refs": [
+        "chapter_map.8.must_happen[0]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH8_must_happen_1",
+      "claim": "setting_opportunity_ref: opp_access_escalation",
+      "source_refs": [
+        "chapter_map.8.must_happen[1]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH8_must_not_happen_0",
+      "claim": "Adrian threatens to kill Mara.",
+      "source_refs": [
+        "chapter_map.8.must_not_happen[0]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_MAP_CH8_may_observe_0",
+      "claim": "Adrian reads the childhood password from image metadata.",
+      "source_refs": [
+        "chapter_map.8.may_observe[0]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH8_may_observe_1",
+      "claim": "clue_ref: C6 — Metadata from Mara's scraping software sent to unknown server; surface_interpretation: Software bug or data leak",
+      "source_refs": [
+        "chapter_map.8.may_observe[1]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH8_may_observe_2",
+      "claim": "Setting mechanism in play: mechanism_admin_rights",
+      "source_refs": [
+        "chapter_map.8.may_observe[2]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH8_may_observe_3",
+      "claim": "Software administrative privileges (key holder: Mara; defeats: Standard user access)",
+      "source_refs": [
+        "chapter_map.8.may_observe[3]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH9_TITLE",
+      "claim": "The Backdoor",
+      "source_refs": [
+        "chapter_map.9.title"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH9_PRIMARY_TURN",
+      "claim": "Adrian's true objective is exposed.",
+      "source_refs": [
+        "chapter_map.9.primary_turn"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH9_RELATIONSHIP_TURN",
+      "claim": "Control becomes mutually destructive.",
+      "source_refs": [
+        "chapter_map.9.relationship_turn"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH9_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.9.day_or_time_anchor"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH9_must_happen_0",
+      "claim": "Mara discovers Adrian's backdoor and his blackmail-data goal.",
+      "source_refs": [
+        "chapter_map.9.must_happen[0]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH9_must_happen_1",
+      "claim": "setting_opportunity_ref: opp_access_escalation",
+      "source_refs": [
+        "chapter_map.9.must_happen[1]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH9_must_not_happen_0",
+      "claim": "The server is physically destroyed.",
+      "source_refs": [
+        "chapter_map.9.must_not_happen[0]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_MAP_CH9_may_observe_0",
+      "claim": "Metadata leaked during public-data scraping.",
+      "source_refs": [
+        "chapter_map.9.may_observe[0]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH9_may_observe_1",
+      "claim": "Setting mechanism in play: mechanism_backdoor",
+      "source_refs": [
+        "chapter_map.9.may_observe[1]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH9_may_observe_2",
+      "claim": "Setting mechanism in play: mechanism_admin_rights",
+      "source_refs": [
+        "chapter_map.9.may_observe[2]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH9_may_observe_3",
+      "claim": "Software administrative privileges (key holder: Mara; defeats: Standard user access)",
+      "source_refs": [
+        "chapter_map.9.may_observe[3]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH9_may_observe_4",
+      "claim": "Hidden software backdoor (key holder: Adrian; defeats: mechanism_admin_rights)",
+      "source_refs": [
+        "chapter_map.9.may_observe[4]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH10_TITLE",
+      "claim": "Heartbeat Key",
+      "source_refs": [
+        "chapter_map.10.title"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH10_PRIMARY_TURN",
+      "claim": "Her body becomes part of the key.",
+      "source_refs": [
+        "chapter_map.10.primary_turn"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH10_RELATIONSHIP_TURN",
+      "claim": "Mara restores conditional leverage.",
+      "source_refs": [
+        "chapter_map.10.relationship_turn"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH10_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.10.day_or_time_anchor"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH10_must_happen_0",
+      "claim": "Mara binds decryption to her heartbeat and a dead man's switch.",
+      "source_refs": [
+        "chapter_map.10.must_happen[0]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH10_must_happen_1",
+      "claim": "setting_opportunity_ref: opp_access_limitation",
+      "source_refs": [
+        "chapter_map.10.must_happen[1]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH10_must_happen_2",
+      "claim": "Threshold event 4: repeat (see siblings/threshold_events.yaml)",
+      "source_refs": [
+        "chapter_map.10.must_happen[2]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH10_must_not_happen_0",
+      "claim": "Physical violence.",
+      "source_refs": [
+        "chapter_map.10.must_not_happen[0]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_MAP_CH10_may_observe_0",
+      "claim": "Mara's unique heartbeat pattern.",
+      "source_refs": [
+        "chapter_map.10.may_observe[0]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH10_may_observe_1",
+      "claim": "Setting mechanism in play: mechanism_heartbeat_key",
+      "source_refs": [
+        "chapter_map.10.may_observe[1]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH10_may_observe_2",
+      "claim": "Decryption bound to Mara's heartbeat (key holder: Mara; defeats: mechanism_backdoor)",
+      "source_refs": [
+        "chapter_map.10.may_observe[2]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH11_TITLE",
+      "claim": "Two Victories",
+      "source_refs": [
+        "chapter_map.11.title"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH11_PRIMARY_TURN",
+      "claim": "The double game becomes explicit.",
+      "source_refs": [
+        "chapter_map.11.primary_turn"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH11_RELATIONSHIP_TURN",
+      "claim": "Neither predator can claim total control.",
+      "source_refs": [
+        "chapter_map.11.relationship_turn"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH11_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.11.day_or_time_anchor"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH11_must_happen_0",
+      "claim": "Adrian says Mara won the murder and he won the data.",
+      "source_refs": [
+        "chapter_map.11.must_happen[0]"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH11_must_happen_1",
+      "claim": "Adrian produces the retained forensic snapshot that can attribute the ghost vehicle to Mara's workstation, revealing why he allowed the frame to proceed.",
+      "source_refs": [
+        "chapter_map.11.must_happen[1]"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH11_must_not_happen_0",
+      "claim": "A confession substitutes for the digital proof.",
+      "source_refs": [
+        "chapter_map.11.must_not_happen[0]"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_MAP_CH11_may_observe_0",
+      "claim": "Adrian admits he knew from the beginning.",
+      "source_refs": [
+        "chapter_map.11.may_observe[0]"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH12_TITLE",
+      "claim": "Conditional Partnership",
+      "source_refs": [
+        "chapter_map.12.title"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH12_PRIMARY_TURN",
+      "claim": "Mutual assured destruction becomes alliance.",
+      "source_refs": [
+        "chapter_map.12.primary_turn"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH12_RELATIONSHIP_TURN",
+      "claim": "They become partners in crime.",
+      "source_refs": [
+        "chapter_map.12.relationship_turn"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH12_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.12.day_or_time_anchor"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH12_must_happen_0",
+      "claim": "Mara grants conditional admin access and Adrian deletes the backdoor.",
+      "source_refs": [
+        "chapter_map.12.must_happen[0]"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH12_must_happen_1",
+      "claim": "setting_opportunity_ref: opp_access_limitation",
+      "source_refs": [
+        "chapter_map.12.must_happen[1]"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH12_must_happen_2",
+      "claim": "Threshold event 5: repeat (see siblings/threshold_events.yaml)",
+      "source_refs": [
+        "chapter_map.12.must_happen[2]"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH12_must_not_happen_0",
+      "claim": "A conventional romantic surrender.",
+      "source_refs": [
+        "chapter_map.12.must_not_happen[0]"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    {
+      "fact_id": "F_MAP_CH12_may_observe_0",
+      "claim": "Both are exhausted, bloodshot, and shaking.",
+      "source_refs": [
+        "chapter_map.12.may_observe[0]"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH12_may_observe_1",
+      "claim": "Setting mechanism in play: mechanism_heartbeat_key",
+      "source_refs": [
+        "chapter_map.12.may_observe[1]"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    {
+      "fact_id": "F_MAP_CH12_may_observe_2",
+      "claim": "Decryption bound to Mara's heartbeat (key holder: Mara; defeats: mechanism_backdoor)",
+      "source_refs": [
+        "chapter_map.12.may_observe[2]"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    }
+  ],
+  "fact_index": {
+    "F_PLOT_LOGLINE": {
+      "fact_id": "F_PLOT_LOGLINE",
+      "claim": "When an expert who creates alibis from ordinary digital traces is forced to conceal a murder for a mysterious client, she discovers that she is the mastermind who hired him—and that he knew from the beginning and took the bait to seize her black-data vault.",
+      "source_refs": [
+        "logline"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "plot"
+    },
+    "F_PLOT_SURFACE_PLOT": {
+      "fact_id": "F_PLOT_SURFACE_PLOT",
+      "claim": "Mara believes Adrian killed Claire Thorne and is using a Crisis Management contract to force Mara to create an alibi, with twenty-four hours before police discover Claire's death.",
+      "source_refs": [
+        "surface_plot"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "plot"
+    },
+    "F_PLOT_TRUE_PLOT": {
+      "fact_id": "F_PLOT_TRUE_PLOT",
+      "claim": "Mara Voss secretly hired Adrian Thorne to kill Claire Thorne and planned to frame Adrian while taking Claire's shares. Adrian knew Mara was the mastermind before entering the office and needs Mara to open the Zero-Day Server. Both believe they hold the final leverage.",
+      "source_refs": [
+        "true_plot"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "plot"
+    },
+    "F_PLOT_ENDING_BOOK1": {
+      "fact_id": "F_PLOT_ENDING_BOOK1",
+      "claim": "Claire's death remains an open homicide investigation because the ghost vehicle and altered smartwatch prevent a suicide ruling. No arrest is made yet; Mara and Adrian enter a conditional partnership while both remain exposed.",
+      "source_refs": [
+        "ending_book1"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "plot"
+    },
+    "F_PLOT_HOOK_BOOK2": {
+      "fact_id": "F_PLOT_HOOK_BOOK2",
+      "claim": "Det. Miller escalates the unresolved homicide inquiry after finding a second inconsistency in Claire's smartwatch log, forcing Mara and Adrian to coordinate their next counter-move.",
+      "source_refs": [
+        "hook_book2"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "plot"
+    },
+    "F_PLOT_AUTHOR_DIRECTIVE": {
+      "fact_id": "F_PLOT_AUTHOR_DIRECTIVE",
+      "claim": "Tone: clinical, hyper-competent, cold to the point of pain. Every chapter is a counter-move.",
+      "source_refs": [
+        "author_directive"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "plot"
+    },
+    "F_PLOT_NOTES": {
+      "fact_id": "F_PLOT_NOTES",
+      "claim": "Clinical, hyper-competent, cold to the point of pain. Dark romance is Mutual Assured Destruction. Trope: Zero-Trust Romance. Tropes: Mutual Digital Predation / Competence Porn.",
+      "source_refs": [
+        "notes"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "plot"
+    },
+    "F_AVOID_84babfcf": {
+      "fact_id": "F_AVOID_84babfcf",
+      "claim": "Mara or Adrian uses physical violence against the other.",
+      "source_refs": [
+        "must_avoid"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "constraint",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_AVOID_c8cadb3d": {
+      "fact_id": "F_AVOID_c8cadb3d",
+      "claim": "Adrian threatens to kill Mara.",
+      "source_refs": [
+        "must_avoid"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "constraint",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_AVOID_7f9270dd": {
+      "fact_id": "F_AVOID_7f9270dd",
+      "claim": "The data vault is physically destroyed.",
+      "source_refs": [
+        "must_avoid"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "constraint",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_AVOID_05394cfa": {
+      "fact_id": "F_AVOID_05394cfa",
+      "claim": "Shaking caused by romantic feeling.",
+      "source_refs": [
+        "must_avoid"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "constraint",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_MUST_aa4c6e8c": {
+      "fact_id": "F_MUST_aa4c6e8c",
+      "claim": "The bloody phone in the opening and its return in the climax.",
+      "source_refs": [
+        "must_include"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "obligation"
+    },
+    "F_MUST_73c943fe": {
+      "fact_id": "F_MUST_73c943fe",
+      "claim": "Every chapter contains a counter-move.",
+      "source_refs": [
+        "must_include"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "obligation"
+    },
+    "F_MUST_CH1_be67e105": {
+      "fact_id": "F_MUST_CH1_be67e105",
+      "claim": "The bloody phone.",
+      "source_refs": [
+        "must_include_by_chapter.1"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "obligation"
+    },
+    "F_MUST_CH7_577f0ea4": {
+      "fact_id": "F_MUST_CH7_577f0ea4",
+      "claim": "Adrian's smile when discovered.",
+      "source_refs": [
+        "must_include_by_chapter.7"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "obligation"
+    },
+    "F_MUST_CH9_577f0ea4": {
+      "fact_id": "F_MUST_CH9_577f0ea4",
+      "claim": "Adrian's smile when discovered.",
+      "source_refs": [
+        "must_include_by_chapter.9"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "obligation"
+    },
+    "F_MUST_CH12_d4521852": {
+      "fact_id": "F_MUST_CH12_d4521852",
+      "claim": "The bloody phone returns.",
+      "source_refs": [
+        "must_include_by_chapter.12"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "obligation"
+    },
+    "F_MUST_CH12_577f0ea4": {
+      "fact_id": "F_MUST_CH12_577f0ea4",
+      "claim": "Adrian's smile when discovered.",
+      "source_refs": [
+        "must_include_by_chapter.12"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "obligation"
+    },
+    "F_CAST_eb460057": {
+      "fact_id": "F_CAST_eb460057",
+      "claim": "Mara Voss — protagonist / Alibi Architect / hidden mastermind",
+      "source_refs": [
+        "characters[0].name"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "entity",
+      "meta": {
+        "name": "Mara Voss",
+        "role": "protagonist / Alibi Architect / hidden mastermind"
+      }
+    },
+    "F_CAST_5b27bb53": {
+      "fact_id": "F_CAST_5b27bb53",
+      "claim": "Adrian Thorne — antagonist and love interest / Claire's husband / digital predator",
+      "source_refs": [
+        "characters[1].name"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "entity",
+      "meta": {
+        "name": "Adrian Thorne",
+        "role": "antagonist and love interest / Claire's husband / digital predator"
+      }
+    },
+    "F_CAST_b098f2c8": {
+      "fact_id": "F_CAST_b098f2c8",
+      "claim": "Claire Thorne — victim / Adrian's wife / absent corpse",
+      "source_refs": [
+        "characters[2].name"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "entity",
+      "meta": {
+        "name": "Claire Thorne",
+        "role": "victim / Adrian's wife / absent corpse"
+      }
+    },
+    "F_CAST_ed3e0dab": {
+      "fact_id": "F_CAST_ed3e0dab",
+      "claim": "Det. Miller — incidental investigator / alibi verifier / Book 2 hook",
+      "source_refs": [
+        "characters[3].name"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "entity",
+      "meta": {
+        "name": "Det. Miller",
+        "role": "incidental investigator / alibi verifier / Book 2 hook"
+      }
+    },
+    "F_PSY_0_core_need": {
+      "fact_id": "F_PSY_0_core_need",
+      "claim": "Mara Voss: core_need=To maintain absolute control over her constructed reality",
+      "source_refs": [
+        "character_psychology[0].core_need"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "core_need"
+      }
+    },
+    "F_PSY_0_core_fear": {
+      "fact_id": "F_PSY_0_core_fear",
+      "claim": "Mara Voss: core_fear=That her control is an illusion, that she has been a tool rather than the architect",
+      "source_refs": [
+        "character_psychology[0].core_fear"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "core_fear"
+      }
+    },
+    "F_PSY_0_coping_mechanism": {
+      "fact_id": "F_PSY_0_coping_mechanism",
+      "claim": "Mara Voss: coping_mechanism=Systematic compartmentalization and technical precision to mask psychological fragility",
+      "source_refs": [
+        "character_psychology[0].coping_mechanism"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "coping_mechanism"
+      }
+    },
+    "F_PSY_0_cognitive_dissonance": {
+      "fact_id": "F_PSY_0_cognitive_dissonance",
+      "claim": "Mara Voss: cognitive_dissonance=Believes Adrian is a tool while being used by him as a predator",
+      "source_refs": [
+        "character_psychology[0].cognitive_dissonance"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "cognitive_dissonance"
+      }
+    },
+    "F_PSY_0_core_traits_0": {
+      "fact_id": "F_PSY_0_core_traits_0",
+      "claim": "Mara Voss: Alibi Architect and hidden mastermind",
+      "source_refs": [
+        "character_psychology[0].core_traits[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "core_traits"
+      }
+    },
+    "F_PSY_0_core_traits_1": {
+      "fact_id": "F_PSY_0_core_traits_1",
+      "claim": "Mara Voss: Clinically hyper-competent and cold",
+      "source_refs": [
+        "character_psychology[0].core_traits[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "core_traits"
+      }
+    },
+    "F_PSY_0_core_traits_2": {
+      "fact_id": "F_PSY_0_core_traits_2",
+      "claim": "Mara Voss: Overconfident in OSINT skill",
+      "source_refs": [
+        "character_psychology[0].core_traits[2]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "core_traits"
+      }
+    },
+    "F_PSY_0_stress_responses_0": {
+      "fact_id": "F_PSY_0_stress_responses_0",
+      "claim": "Mara Voss: Cortisol-induced physical stress",
+      "source_refs": [
+        "character_psychology[0].stress_responses[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "stress_responses"
+      }
+    },
+    "F_PSY_0_stress_responses_1": {
+      "fact_id": "F_PSY_0_stress_responses_1",
+      "claim": "Mara Voss: Sleep deprivation",
+      "source_refs": [
+        "character_psychology[0].stress_responses[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "stress_responses"
+      }
+    },
+    "F_PSY_0_stress_responses_2": {
+      "fact_id": "F_PSY_0_stress_responses_2",
+      "claim": "Mara Voss: Shaking hands",
+      "source_refs": [
+        "character_psychology[0].stress_responses[2]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "stress_responses"
+      }
+    },
+    "F_PSY_0_stress_responses_3": {
+      "fact_id": "F_PSY_0_stress_responses_3",
+      "claim": "Mara Voss: Vomiting",
+      "source_refs": [
+        "character_psychology[0].stress_responses[3]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "stress_responses"
+      }
+    },
+    "F_PSY_0_stress_responses_4": {
+      "fact_id": "F_PSY_0_stress_responses_4",
+      "claim": "Mara Voss: Arrhythmic heart rate",
+      "source_refs": [
+        "character_psychology[0].stress_responses[4]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "stress_responses"
+      }
+    },
+    "F_PSY_0_behavioral_constraints_0": {
+      "fact_id": "F_PSY_0_behavioral_constraints_0",
+      "claim": "Mara Voss: Does not use physical violence",
+      "source_refs": [
+        "character_psychology[0].behavioral_constraints[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "behavioral_constraints"
+      }
+    },
+    "F_PSY_0_behavioral_constraints_1": {
+      "fact_id": "F_PSY_0_behavioral_constraints_1",
+      "claim": "Mara Voss: Does not leave the office during the 24-hour story",
+      "source_refs": [
+        "character_psychology[0].behavioral_constraints[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "behavioral_constraints"
+      }
+    },
+    "F_PSY_0_behavioral_constraints_2": {
+      "fact_id": "F_PSY_0_behavioral_constraints_2",
+      "claim": "Mara Voss: Data vault is not physically destroyed",
+      "source_refs": [
+        "character_psychology[0].behavioral_constraints[2]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "behavioral_constraints"
+      }
+    },
+    "F_PSY_0_behavioral_constraints_3": {
+      "fact_id": "F_PSY_0_behavioral_constraints_3",
+      "claim": "Mara Voss: Shaking always signifies loss of control, never romantic emotion",
+      "source_refs": [
+        "character_psychology[0].behavioral_constraints[3]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "psychology",
+      "meta": {
+        "character": "Mara Voss",
+        "field": "behavioral_constraints"
+      }
+    },
+    "F_BODY_CANONICAL": {
+      "fact_id": "F_BODY_CANONICAL",
+      "claim": "prolonged acute stress under cortisol and sleep deprivation",
+      "source_refs": [
+        "psychological_condition.canonical"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "body"
+    },
+    "F_BODY_FX_0": {
+      "fact_id": "F_BODY_FX_0",
+      "claim": "shaking hands during loss of control",
+      "source_refs": [
+        "psychological_condition.observable_effects[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "body"
+    },
+    "F_BODY_FX_1": {
+      "fact_id": "F_BODY_FX_1",
+      "claim": "dry-heaving under adrenaline",
+      "source_refs": [
+        "psychological_condition.observable_effects[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "body"
+    },
+    "F_BODY_FX_2": {
+      "fact_id": "F_BODY_FX_2",
+      "claim": "heart rate reaching 160",
+      "source_refs": [
+        "psychological_condition.observable_effects[2]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "body"
+    },
+    "F_BODY_FX_3": {
+      "fact_id": "F_BODY_FX_3",
+      "claim": "blurred vision and bloodshot eyes",
+      "source_refs": [
+        "psychological_condition.observable_effects[3]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "body"
+    },
+    "F_BODY_FORBID_0": {
+      "fact_id": "F_BODY_FORBID_0",
+      "claim": "shaking from romantic feeling",
+      "source_refs": [
+        "psychological_condition.must_not_be_described_as[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "constraint",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_BODY_FORBID_1": {
+      "fact_id": "F_BODY_FORBID_1",
+      "claim": "physical knife wounds",
+      "source_refs": [
+        "psychological_condition.must_not_be_described_as[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "constraint",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_VILLAIN_0": {
+      "fact_id": "F_VILLAIN_0",
+      "claim": "In the opening stretch Adrian knows Mara is the mastermind but does not know she shifted the time of death.",
+      "source_refs": [
+        "villain_ledger[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "villain"
+    },
+    "F_VILLAIN_1": {
+      "fact_id": "F_VILLAIN_1",
+      "claim": "In the middle stretch Adrian knows Mara is building the ghost-vehicle frame and deliberately lets it run because he retains a signed forensic snapshot proving her workstation generated it; he withholds that countermeasure until it can force her to open the Zero-Day Server.",
+      "source_refs": [
+        "villain_ledger[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "villain"
+    },
+    "F_VILLAIN_2": {
+      "fact_id": "F_VILLAIN_2",
+      "claim": "In the final stretch Adrian knows Mara found the backdoor but does not know she will offer partnership.",
+      "source_refs": [
+        "villain_ledger[2]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "villain"
+    },
+    "F_REVEAL_R1": {
+      "fact_id": "F_REVEAL_R1",
+      "claim": "Adrian Thorne killed Claire Thorne",
+      "source_refs": [
+        "reveal_schedule[0]"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R1",
+        "reader_reveal_chapter": 5,
+        "pov_knows_chapter": 1
+      }
+    },
+    "F_REVEAL_R2": {
+      "fact_id": "F_REVEAL_R2",
+      "claim": "Adrian knew Mara was the mastermind before entering her office in Chapter 1",
+      "source_refs": [
+        "reveal_schedule[1]"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R2",
+        "reader_reveal_chapter": 7,
+        "pov_knows_chapter": 7
+      }
+    },
+    "F_REVEAL_R3": {
+      "fact_id": "F_REVEAL_R3",
+      "claim": "Mara secretly hired Adrian to kill Claire Thorne",
+      "source_refs": [
+        "reveal_schedule[2]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R3",
+        "reader_reveal_chapter": 9,
+        "pov_knows_chapter": 1
+      }
+    },
+    "F_REVEAL_R4": {
+      "fact_id": "F_REVEAL_R4",
+      "claim": "The blood on Adrian's phone was treated with anticoagulants",
+      "source_refs": [
+        "reveal_schedule[3]"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R4",
+        "reader_reveal_chapter": 2,
+        "pov_knows_chapter": 2
+      }
+    },
+    "F_REVEAL_R5": {
+      "fact_id": "F_REVEAL_R5",
+      "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+      "source_refs": [
+        "reveal_schedule[4]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R5",
+        "reader_reveal_chapter": 9,
+        "pov_knows_chapter": 9
+      }
+    },
+    "F_REVEAL_R6": {
+      "fact_id": "F_REVEAL_R6",
+      "claim": "Mara created a ghost vehicle evidence showing Adrian's car at crime scene at 8 PM",
+      "source_refs": [
+        "reveal_schedule[5]"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R6",
+        "reader_reveal_chapter": 6,
+        "pov_knows_chapter": 5
+      }
+    },
+    "F_REVEAL_R7": {
+      "fact_id": "F_REVEAL_R7",
+      "claim": "Mara pushed Claire's time of death forward by 2 hours",
+      "source_refs": [
+        "reveal_schedule[6]"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R7",
+        "reader_reveal_chapter": 6,
+        "pov_knows_chapter": 5
+      }
+    },
+    "F_REVEAL_R8": {
+      "fact_id": "F_REVEAL_R8",
+      "claim": "Mara ties server decryption key to her unique heartbeat pattern with dead man's switch",
+      "source_refs": [
+        "reveal_schedule[7]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R8",
+        "reader_reveal_chapter": 10,
+        "pov_knows_chapter": 10
+      }
+    },
+    "F_REVEAL_R9": {
+      "fact_id": "F_REVEAL_R9",
+      "claim": "Adrian's true goal is to force Mara to open Zero-Day Server, not get alibi",
+      "source_refs": [
+        "reveal_schedule[8]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "reveal",
+      "meta": {
+        "reveal_id": "R9",
+        "reader_reveal_chapter": 8,
+        "pov_knows_chapter": 8
+      }
+    },
+    "F_CLUE_C1": {
+      "fact_id": "F_CLUE_C1",
+      "claim": "Camera API vulnerability at exact time of Claire's death",
+      "source_refs": [
+        "clues[0].description"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C1",
+        "plant_chapter": 5,
+        "payoff_chapter": 5,
+        "interpretation_at_plant": "Security flaw showing Adrian at crime scene",
+        "true_meaning_at_payoff": "Adrian was physically present when Claire died"
+      }
+    },
+    "F_CLUE_C1_SURFACE": {
+      "fact_id": "F_CLUE_C1_SURFACE",
+      "claim": "Security flaw showing Adrian at crime scene",
+      "source_refs": [
+        "clues[0].interpretation_at_plant"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C1"
+      }
+    },
+    "F_CLUE_C2": {
+      "fact_id": "F_CLUE_C2",
+      "claim": "Adrian's vehicle captured by traffic cameras at crime scene",
+      "source_refs": [
+        "clues[1].description"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C2",
+        "plant_chapter": 5,
+        "payoff_chapter": 5,
+        "interpretation_at_plant": "Direct evidence of Adrian's presence",
+        "true_meaning_at_payoff": "Adrian committed the murder"
+      }
+    },
+    "F_CLUE_C2_SURFACE": {
+      "fact_id": "F_CLUE_C2_SURFACE",
+      "claim": "Direct evidence of Adrian's presence",
+      "source_refs": [
+        "clues[1].interpretation_at_plant"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C2"
+      }
+    },
+    "F_CLUE_C3": {
+      "fact_id": "F_CLUE_C3",
+      "claim": "Proxy email IP traces back to Adrian's office",
+      "source_refs": [
+        "clues[2].description"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C3",
+        "plant_chapter": 7,
+        "payoff_chapter": 7,
+        "interpretation_at_plant": "Adrian sent hiring email from his office",
+        "true_meaning_at_payoff": "Adrian knew about Mara's involvement from start"
+      }
+    },
+    "F_CLUE_C3_SURFACE": {
+      "fact_id": "F_CLUE_C3_SURFACE",
+      "claim": "Adrian sent hiring email from his office",
+      "source_refs": [
+        "clues[2].interpretation_at_plant"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C3"
+      }
+    },
+    "F_CLUE_C4": {
+      "fact_id": "F_CLUE_C4",
+      "claim": "Pattern in Mara's alibi creation matches her signature methods",
+      "source_refs": [
+        "clues[3].description"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C4",
+        "plant_chapter": 9,
+        "payoff_chapter": 9,
+        "interpretation_at_plant": "Unique alibi construction pattern",
+        "true_meaning_at_payoff": "Mara created the original murder plan"
+      }
+    },
+    "F_CLUE_C4_SURFACE": {
+      "fact_id": "F_CLUE_C4_SURFACE",
+      "claim": "Unique alibi construction pattern",
+      "source_refs": [
+        "clues[3].interpretation_at_plant"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C4"
+      }
+    },
+    "F_CLUE_C5": {
+      "fact_id": "F_CLUE_C5",
+      "claim": "Blood on Adrian's phone treated with anticoagulants",
+      "source_refs": [
+        "clues[4].description"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C5",
+        "plant_chapter": 1,
+        "payoff_chapter": 2,
+        "interpretation_at_plant": "Suspicious blood evidence",
+        "true_meaning_at_payoff": "Blood was prepared in advance, not from fresh wound"
+      }
+    },
+    "F_CLUE_C5_SURFACE": {
+      "fact_id": "F_CLUE_C5_SURFACE",
+      "claim": "Suspicious blood evidence",
+      "source_refs": [
+        "clues[4].interpretation_at_plant"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C5"
+      }
+    },
+    "F_CLUE_C6": {
+      "fact_id": "F_CLUE_C6",
+      "claim": "Metadata from Mara's scraping software sent to unknown server",
+      "source_refs": [
+        "clues[5].description"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C6",
+        "plant_chapter": 1,
+        "payoff_chapter": 9,
+        "interpretation_at_plant": "Software bug or data leak",
+        "true_meaning_at_payoff": "Adrian's backdoor capturing Mara's activities"
+      }
+    },
+    "F_CLUE_C6_SURFACE": {
+      "fact_id": "F_CLUE_C6_SURFACE",
+      "claim": "Software bug or data leak",
+      "source_refs": [
+        "clues[5].interpretation_at_plant"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C6"
+      }
+    },
+    "F_CLUE_C7": {
+      "fact_id": "F_CLUE_C7",
+      "claim": "Ghost vehicle evidence in traffic camera system",
+      "source_refs": [
+        "clues[6].description"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C7",
+        "plant_chapter": 3,
+        "payoff_chapter": 6,
+        "interpretation_at_plant": "Adrian's car at crime scene at 8 PM",
+        "true_meaning_at_payoff": "Mara fabricated evidence to trap Adrian"
+      }
+    },
+    "F_CLUE_C7_SURFACE": {
+      "fact_id": "F_CLUE_C7_SURFACE",
+      "claim": "Adrian's car at crime scene at 8 PM",
+      "source_refs": [
+        "clues[6].interpretation_at_plant"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C7"
+      }
+    },
+    "F_CLUE_C8": {
+      "fact_id": "F_CLUE_C8",
+      "claim": "Claire's smartwatch shows time of death at 8 PM instead of 10 PM",
+      "source_refs": [
+        "clues[7].description"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C8",
+        "plant_chapter": 5,
+        "payoff_chapter": 6,
+        "interpretation_at_plant": "Evidence of earlier time of death",
+        "true_meaning_at_payoff": "Mara manipulated time of death evidence"
+      }
+    },
+    "F_CLUE_C8_SURFACE": {
+      "fact_id": "F_CLUE_C8_SURFACE",
+      "claim": "Evidence of earlier time of death",
+      "source_refs": [
+        "clues[7].interpretation_at_plant"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C8"
+      }
+    },
+    "F_CLUE_C9": {
+      "fact_id": "F_CLUE_C9",
+      "claim": "Heartbeat monitoring system with unique pattern recognition",
+      "source_refs": [
+        "clues[8].description"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C9",
+        "plant_chapter": 10,
+        "payoff_chapter": 10,
+        "interpretation_at_plant": "Security system tied to Mara's physiology",
+        "true_meaning_at_payoff": "Mutual assured destruction through biometric lock"
+      }
+    },
+    "F_CLUE_C9_SURFACE": {
+      "fact_id": "F_CLUE_C9_SURFACE",
+      "claim": "Security system tied to Mara's physiology",
+      "source_refs": [
+        "clues[8].interpretation_at_plant"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C9"
+      }
+    },
+    "F_CLUE_C10": {
+      "fact_id": "F_CLUE_C10",
+      "claim": "Adrian's knowledge of Zero-Day Server existence and value",
+      "source_refs": [
+        "clues[9].description"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "clue",
+      "meta": {
+        "clue_id": "C10",
+        "plant_chapter": 8,
+        "payoff_chapter": 8,
+        "interpretation_at_plant": "Adrian's unusual interest in server access",
+        "true_meaning_at_payoff": "Adrian's true goal is blackmail data, not alibi"
+      }
+    },
+    "F_CLUE_C10_SURFACE": {
+      "fact_id": "F_CLUE_C10_SURFACE",
+      "claim": "Adrian's unusual interest in server access",
+      "source_refs": [
+        "clues[9].interpretation_at_plant"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "clue_surface",
+      "meta": {
+        "clue_id": "C10"
+      }
+    },
+    "F_PROP_P1": {
+      "fact_id": "F_PROP_P1",
+      "claim": "Blood-stained phone",
+      "source_refs": [
+        "props[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "prop",
+      "meta": {
+        "prop_id": "P1",
+        "prop": {
+          "id": "P1",
+          "name": "Blood-stained phone",
+          "created_by": "Adrian",
+          "recorded_by": "Mara",
+          "subject_of_record": "Murder weapon or evidence",
+          "purpose": "Metadata analysis, blood forensics",
+          "first_appearance_chapter": 1,
+          "verification_method": "Metadata analysis, blood forensics",
+          "custody_chain": [
+            {
+              "chapter": 1,
+              "holder": "Mara",
+              "action": "Adrian gives phone to Mara"
+            },
+            {
+              "chapter": 4,
+              "holder": "Mara",
+              "action": "Mara analyzes metadata"
+            },
+            {
+              "chapter": 12,
+              "holder": "Adrian",
+              "action": "Mara returns phone with decryption key"
+            }
+          ],
+          "payoff_chapter": 12,
+          "must_not_be_confused_with": "Adrian actually killed Claire (blood could be staged)",
+          "physical_owner_by_chapter": {
+            "1": "Mara",
+            "4": "Mara",
+            "12": "Adrian"
+          },
+          "access_events": []
+        }
+      }
+    },
+    "F_PROP_P2": {
+      "fact_id": "F_PROP_P2",
+      "claim": "Zero-Day Server",
+      "source_refs": [
+        "props[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "prop",
+      "meta": {
+        "prop_id": "P2",
+        "prop": {
+          "id": "P2",
+          "name": "Zero-Day Server",
+          "created_by": "Mara",
+          "recorded_by": "Mara",
+          "subject_of_record": "Blackmail data vault",
+          "purpose": "Access logs, encryption keys",
+          "first_appearance_chapter": 1,
+          "verification_method": "Access logs, encryption keys",
+          "custody_chain": [
+            {
+              "chapter": 1,
+              "holder": "Mara",
+              "action": "Mara maintains admin control"
+            },
+            {
+              "chapter": 2,
+              "holder": "Mara",
+              "action": "retains custody"
+            },
+            {
+              "chapter": 3,
+              "holder": "Mara",
+              "action": "retains custody"
+            },
+            {
+              "chapter": 4,
+              "holder": "Mara",
+              "action": "retains custody"
+            },
+            {
+              "chapter": 5,
+              "holder": "Mara",
+              "action": "retains custody"
+            },
+            {
+              "chapter": 6,
+              "holder": "Mara",
+              "action": "retains custody"
+            },
+            {
+              "chapter": 7,
+              "holder": "Mara",
+              "action": "retains custody"
+            },
+            {
+              "chapter": 8,
+              "holder": "Mara",
+              "action": "Mara forced to open server"
+            },
+            {
+              "chapter": 9,
+              "holder": "Adrian",
+              "action": "Adrian gains access via backdoor"
+            },
+            {
+              "chapter": 10,
+              "holder": "Shared with conditions",
+              "action": "Heartbeat key installed"
+            },
+            {
+              "chapter": 11,
+              "holder": "Shared with conditions",
+              "action": "retains custody"
+            },
+            {
+              "chapter": 12,
+              "holder": "Shared with conditions",
+              "action": "Conditional access granted"
+            }
+          ],
+          "payoff_chapter": 12,
+          "must_not_be_confused_with": "Contents are authentic (could be fabricated)",
+          "physical_owner_by_chapter": {
+            "1": "Mara",
+            "2": "Mara",
+            "3": "Mara",
+            "4": "Mara",
+            "5": "Mara",
+            "6": "Mara",
+            "7": "Mara",
+            "8": "Mara",
+            "9": "Adrian",
+            "10": "Shared with conditions",
+            "11": "Shared with conditions",
+            "12": "Shared with conditions"
+          },
+          "access_events": []
+        }
+      }
+    },
+    "F_PROP_P3": {
+      "fact_id": "F_PROP_P3",
+      "claim": "Claire's smartwatch data",
+      "source_refs": [
+        "props[2]"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "prop",
+      "meta": {
+        "prop_id": "P3",
+        "prop": {
+          "id": "P3",
+          "name": "Claire's smartwatch data",
+          "created_by": "Claire Thorne",
+          "recorded_by": "Mara",
+          "subject_of_record": "Time of death evidence",
+          "purpose": "Forensic data analysis",
+          "first_appearance_chapter": 5,
+          "verification_method": "Forensic data analysis",
+          "custody_chain": [
+            {
+              "chapter": 5,
+              "holder": "Police evidence",
+              "action": "Collected as evidence"
+            },
+            {
+              "chapter": 6,
+              "holder": "Mara (manipulated)",
+              "action": "Mara manipulates time data"
+            }
+          ],
+          "payoff_chapter": 6,
+          "must_not_be_confused_with": "Actual time of death (data can be manipulated)",
+          "physical_owner_by_chapter": {
+            "5": "Police evidence",
+            "6": "Mara (manipulated)"
+          },
+          "access_events": []
+        }
+      }
+    },
+    "F_HONEY_DELIVERY_METHOD": {
+      "fact_id": "F_HONEY_DELIVERY_METHOD",
+      "claim": "khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian",
+      "source_refs": [
+        "honeytoken.delivery_method"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "honeytoken"
+    },
+    "F_HONEY_INTERCEPTION_METHOD": {
+      "fact_id": "F_HONEY_INTERCEPTION_METHOD",
+      "claim": "khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian",
+      "source_refs": [
+        "honeytoken.interception_method"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "honeytoken"
+    },
+    "F_HONEY_PHRASE_CREATOR": {
+      "fact_id": "F_HONEY_PHRASE_CREATOR",
+      "claim": "Mara",
+      "source_refs": [
+        "honeytoken.phrase_creator"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "honeytoken"
+    },
+    "F_HONEY_FIRST_ILLICIT_REUSE_BY": {
+      "fact_id": "F_HONEY_FIRST_ILLICIT_REUSE_BY",
+      "claim": "Adrian",
+      "source_refs": [
+        "honeytoken.first_illicit_reuse_by"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "honeytoken"
+    },
+    "F_HONEY_EV_information_leak": {
+      "fact_id": "F_HONEY_EV_information_leak",
+      "claim": "Adrian đe dọa (đọc đúng mật khẩu thời thơ ấu từ metadata ảnh).",
+      "source_refs": [
+        "honeytoken.evidentiary_value.information_leak"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "honeytoken"
+    },
+    "F_HONEY_EV_physical_corroboration": {
+      "fact_id": "F_HONEY_EV_physical_corroboration",
+      "claim": "Mara phát hiện cửa hậu Adrian cài từ Ch1 (metadata leak khi scrape dữ liệu).",
+      "source_refs": [
+        "honeytoken.evidentiary_value.physical_corroboration"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "honeytoken"
+    },
+    "F_MAP_CH1_TITLE": {
+      "fact_id": "F_MAP_CH1_TITLE",
+      "claim": "The Bloody Phone",
+      "source_refs": [
+        "chapter_map.1.title"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH1_PRIMARY_TURN": {
+      "fact_id": "F_MAP_CH1_PRIMARY_TURN",
+      "claim": "The crisis contract begins.",
+      "source_refs": [
+        "chapter_map.1.primary_turn"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH1_RELATIONSHIP_TURN": {
+      "fact_id": "F_MAP_CH1_RELATIONSHIP_TURN",
+      "claim": "Mara treats Adrian as a tool.",
+      "source_refs": [
+        "chapter_map.1.relationship_turn"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH1_DAY_OR_TIME_ANCHOR": {
+      "fact_id": "F_MAP_CH1_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.1.day_or_time_anchor"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH1_must_happen_0": {
+      "fact_id": "F_MAP_CH1_must_happen_0",
+      "claim": "Mara accepts the contract and observes unexplained metadata behavior consistent with a software bug or data leak.",
+      "source_refs": [
+        "chapter_map.1.must_happen[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH1_must_happen_1": {
+      "fact_id": "F_MAP_CH1_must_happen_1",
+      "claim": "Threshold event 1: first_threshold (see siblings/threshold_events.yaml)",
+      "source_refs": [
+        "chapter_map.1.must_happen[1]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH1_must_not_happen_0": {
+      "fact_id": "F_MAP_CH1_must_not_happen_0",
+      "claim": "Mara leaves the office.",
+      "source_refs": [
+        "chapter_map.1.must_not_happen[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_MAP_CH1_may_observe_0": {
+      "fact_id": "F_MAP_CH1_may_observe_0",
+      "claim": "Adrian throws down a bloody phone.",
+      "source_refs": [
+        "chapter_map.1.may_observe[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH1_pov_knows_at_start_0": {
+      "fact_id": "F_MAP_CH1_pov_knows_at_start_0",
+      "claim": "Mara knows she hired Adrian.",
+      "source_refs": [
+        "chapter_map.1.pov_knows_at_start[0]"
+      ],
+      "available_from_chapter": 1,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH2_TITLE": {
+      "fact_id": "F_MAP_CH2_TITLE",
+      "claim": "Anticoagulant",
+      "source_refs": [
+        "chapter_map.2.title"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH2_PRIMARY_TURN": {
+      "fact_id": "F_MAP_CH2_PRIMARY_TURN",
+      "claim": "The first leak opens.",
+      "source_refs": [
+        "chapter_map.2.primary_turn"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH2_RELATIONSHIP_TURN": {
+      "fact_id": "F_MAP_CH2_RELATIONSHIP_TURN",
+      "claim": "Professional suspicion sharpens.",
+      "source_refs": [
+        "chapter_map.2.relationship_turn"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH2_DAY_OR_TIME_ANCHOR": {
+      "fact_id": "F_MAP_CH2_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.2.day_or_time_anchor"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH2_must_happen_0": {
+      "fact_id": "F_MAP_CH2_must_happen_0",
+      "claim": "Mara scrapes Claire Thorne's data.",
+      "source_refs": [
+        "chapter_map.2.must_happen[0]"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH2_must_not_happen_0": {
+      "fact_id": "F_MAP_CH2_must_not_happen_0",
+      "claim": "Mara leaves the office.",
+      "source_refs": [
+        "chapter_map.2.must_not_happen[0]"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_MAP_CH2_may_observe_0": {
+      "fact_id": "F_MAP_CH2_may_observe_0",
+      "claim": "The blood was treated with anticoagulants.",
+      "source_refs": [
+        "chapter_map.2.may_observe[0]"
+      ],
+      "available_from_chapter": 2,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH3_TITLE": {
+      "fact_id": "F_MAP_CH3_TITLE",
+      "claim": "Synthetic Alibi",
+      "source_refs": [
+        "chapter_map.3.title"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH3_PRIMARY_TURN": {
+      "fact_id": "F_MAP_CH3_PRIMARY_TURN",
+      "claim": "The alibi becomes operational.",
+      "source_refs": [
+        "chapter_map.3.primary_turn"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH3_RELATIONSHIP_TURN": {
+      "fact_id": "F_MAP_CH3_RELATIONSHIP_TURN",
+      "claim": "Adrian cooperates perfectly.",
+      "source_refs": [
+        "chapter_map.3.relationship_turn"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH3_DAY_OR_TIME_ANCHOR": {
+      "fact_id": "F_MAP_CH3_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.3.day_or_time_anchor"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH3_must_happen_0": {
+      "fact_id": "F_MAP_CH3_must_happen_0",
+      "claim": "Mara creates the false alibi.",
+      "source_refs": [
+        "chapter_map.3.must_happen[0]"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH3_must_not_happen_0": {
+      "fact_id": "F_MAP_CH3_must_not_happen_0",
+      "claim": "Physical violence between Mara and Adrian.",
+      "source_refs": [
+        "chapter_map.3.must_not_happen[0]"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_MAP_CH3_may_observe_0": {
+      "fact_id": "F_MAP_CH3_may_observe_0",
+      "claim": "Strava, Uber, and traffic-camera traces.",
+      "source_refs": [
+        "chapter_map.3.may_observe[0]"
+      ],
+      "available_from_chapter": 3,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH4_TITLE": {
+      "fact_id": "F_MAP_CH4_TITLE",
+      "claim": "Hidden Call Log",
+      "source_refs": [
+        "chapter_map.4.title"
+      ],
+      "available_from_chapter": 4,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH4_PRIMARY_TURN": {
+      "fact_id": "F_MAP_CH4_PRIMARY_TURN",
+      "claim": "A false interpretation takes hold.",
+      "source_refs": [
+        "chapter_map.4.primary_turn"
+      ],
+      "available_from_chapter": 4,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH4_RELATIONSHIP_TURN": {
+      "fact_id": "F_MAP_CH4_RELATIONSHIP_TURN",
+      "claim": "Mara believes she has found Adrian's weakness.",
+      "source_refs": [
+        "chapter_map.4.relationship_turn"
+      ],
+      "available_from_chapter": 4,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH4_DAY_OR_TIME_ANCHOR": {
+      "fact_id": "F_MAP_CH4_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.4.day_or_time_anchor"
+      ],
+      "available_from_chapter": 4,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH4_must_happen_0": {
+      "fact_id": "F_MAP_CH4_must_happen_0",
+      "claim": "Mara mistakes the pattern for evidence of Adrian's affair.",
+      "source_refs": [
+        "chapter_map.4.must_happen[0]"
+      ],
+      "available_from_chapter": 4,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH4_must_not_happen_0": {
+      "fact_id": "F_MAP_CH4_must_not_happen_0",
+      "claim": "Mara learns Adrian's complete goal.",
+      "source_refs": [
+        "chapter_map.4.must_not_happen[0]"
+      ],
+      "available_from_chapter": 4,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_MAP_CH4_may_observe_0": {
+      "fact_id": "F_MAP_CH4_may_observe_0",
+      "claim": "A hidden call log in the phone metadata.",
+      "source_refs": [
+        "chapter_map.4.may_observe[0]"
+      ],
+      "available_from_chapter": 4,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH5_TITLE": {
+      "fact_id": "F_MAP_CH5_TITLE",
+      "claim": "Camera API",
+      "source_refs": [
+        "chapter_map.5.title"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH5_PRIMARY_TURN": {
+      "fact_id": "F_MAP_CH5_PRIMARY_TURN",
+      "claim": "The reverse frame begins.",
+      "source_refs": [
+        "chapter_map.5.primary_turn"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH5_RELATIONSHIP_TURN": {
+      "fact_id": "F_MAP_CH5_RELATIONSHIP_TURN",
+      "claim": "Mara turns the alibi into a trap.",
+      "source_refs": [
+        "chapter_map.5.relationship_turn"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH5_DAY_OR_TIME_ANCHOR": {
+      "fact_id": "F_MAP_CH5_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.5.day_or_time_anchor"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH5_must_happen_0": {
+      "fact_id": "F_MAP_CH5_must_happen_0",
+      "claim": "reveal_foreshadow_ref: R6 — traffic camera manipulation setup",
+      "source_refs": [
+        "chapter_map.5.must_happen[0]"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH5_must_happen_1": {
+      "fact_id": "F_MAP_CH5_must_happen_1",
+      "claim": "Threshold event 2: repeat (see siblings/threshold_events.yaml)",
+      "source_refs": [
+        "chapter_map.5.must_happen[1]"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH5_must_not_happen_0": {
+      "fact_id": "F_MAP_CH5_must_not_happen_0",
+      "claim": "Adrian is physically attacked.",
+      "source_refs": [
+        "chapter_map.5.must_not_happen[0]"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_MAP_CH5_may_observe_0": {
+      "fact_id": "F_MAP_CH5_may_observe_0",
+      "claim": "Adrian appears at the scene at Claire's time of death.",
+      "source_refs": [
+        "chapter_map.5.may_observe[0]"
+      ],
+      "available_from_chapter": 5,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH6_TITLE": {
+      "fact_id": "F_MAP_CH6_TITLE",
+      "claim": "The Interview",
+      "source_refs": [
+        "chapter_map.6.title"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH6_PRIMARY_TURN": {
+      "fact_id": "F_MAP_CH6_PRIMARY_TURN",
+      "claim": "The homicide-directed evidence becomes visible.",
+      "source_refs": [
+        "chapter_map.6.primary_turn"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH6_RELATIONSHIP_TURN": {
+      "fact_id": "F_MAP_CH6_RELATIONSHIP_TURN",
+      "claim": "Mara believes her frame is closing.",
+      "source_refs": [
+        "chapter_map.6.relationship_turn"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH6_DAY_OR_TIME_ANCHOR": {
+      "fact_id": "F_MAP_CH6_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.6.day_or_time_anchor"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH6_must_happen_0": {
+      "fact_id": "F_MAP_CH6_must_happen_0",
+      "claim": "The ghost vehicle crosses the scene at 8 PM while the ten-o'clock alibi works.",
+      "source_refs": [
+        "chapter_map.6.must_happen[0]"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH6_must_not_happen_0": {
+      "fact_id": "F_MAP_CH6_must_not_happen_0",
+      "claim": "The two plot contradictions are silently repaired.",
+      "source_refs": [
+        "chapter_map.6.must_not_happen[0]"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_MAP_CH6_may_observe_0": {
+      "fact_id": "F_MAP_CH6_may_observe_0",
+      "claim": "Det. Miller questions Adrian.",
+      "source_refs": [
+        "chapter_map.6.may_observe[0]"
+      ],
+      "available_from_chapter": 6,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH7_TITLE": {
+      "fact_id": "F_MAP_CH7_TITLE",
+      "claim": "Proxy Origin",
+      "source_refs": [
+        "chapter_map.7.title"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH7_PRIMARY_TURN": {
+      "fact_id": "F_MAP_CH7_PRIMARY_TURN",
+      "claim": "Mara's blind layer breaks.",
+      "source_refs": [
+        "chapter_map.7.primary_turn"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH7_RELATIONSHIP_TURN": {
+      "fact_id": "F_MAP_CH7_RELATIONSHIP_TURN",
+      "claim": "The predator becomes visible.",
+      "source_refs": [
+        "chapter_map.7.relationship_turn"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH7_DAY_OR_TIME_ANCHOR": {
+      "fact_id": "F_MAP_CH7_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.7.day_or_time_anchor"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH7_must_happen_0": {
+      "fact_id": "F_MAP_CH7_must_happen_0",
+      "claim": "Mara learns Adrian knew she was the mastermind.",
+      "source_refs": [
+        "chapter_map.7.must_happen[0]"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH7_must_happen_1": {
+      "fact_id": "F_MAP_CH7_must_happen_1",
+      "claim": "Threshold event 3: repeat (see siblings/threshold_events.yaml)",
+      "source_refs": [
+        "chapter_map.7.must_happen[1]"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH7_must_not_happen_0": {
+      "fact_id": "F_MAP_CH7_must_not_happen_0",
+      "claim": "Mara gains emotional certainty.",
+      "source_refs": [
+        "chapter_map.7.must_not_happen[0]"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_MAP_CH7_may_observe_0": {
+      "fact_id": "F_MAP_CH7_may_observe_0",
+      "claim": "The proxy email traces to Adrian's office.",
+      "source_refs": [
+        "chapter_map.7.may_observe[0]"
+      ],
+      "available_from_chapter": 7,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH8_TITLE": {
+      "fact_id": "F_MAP_CH8_TITLE",
+      "claim": "Open the Server",
+      "source_refs": [
+        "chapter_map.8.title"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH8_PRIMARY_TURN": {
+      "fact_id": "F_MAP_CH8_PRIMARY_TURN",
+      "claim": "The data vault opens.",
+      "source_refs": [
+        "chapter_map.8.primary_turn"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH8_RELATIONSHIP_TURN": {
+      "fact_id": "F_MAP_CH8_RELATIONSHIP_TURN",
+      "claim": "Adrian takes operational control.",
+      "source_refs": [
+        "chapter_map.8.relationship_turn"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH8_DAY_OR_TIME_ANCHOR": {
+      "fact_id": "F_MAP_CH8_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.8.day_or_time_anchor"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH8_must_happen_0": {
+      "fact_id": "F_MAP_CH8_must_happen_0",
+      "claim": "Mara opens the Zero-Day Server.",
+      "source_refs": [
+        "chapter_map.8.must_happen[0]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH8_must_happen_1": {
+      "fact_id": "F_MAP_CH8_must_happen_1",
+      "claim": "setting_opportunity_ref: opp_access_escalation",
+      "source_refs": [
+        "chapter_map.8.must_happen[1]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH8_must_not_happen_0": {
+      "fact_id": "F_MAP_CH8_must_not_happen_0",
+      "claim": "Adrian threatens to kill Mara.",
+      "source_refs": [
+        "chapter_map.8.must_not_happen[0]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_MAP_CH8_may_observe_0": {
+      "fact_id": "F_MAP_CH8_may_observe_0",
+      "claim": "Adrian reads the childhood password from image metadata.",
+      "source_refs": [
+        "chapter_map.8.may_observe[0]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH8_may_observe_1": {
+      "fact_id": "F_MAP_CH8_may_observe_1",
+      "claim": "clue_ref: C6 — Metadata from Mara's scraping software sent to unknown server; surface_interpretation: Software bug or data leak",
+      "source_refs": [
+        "chapter_map.8.may_observe[1]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH8_may_observe_2": {
+      "fact_id": "F_MAP_CH8_may_observe_2",
+      "claim": "Setting mechanism in play: mechanism_admin_rights",
+      "source_refs": [
+        "chapter_map.8.may_observe[2]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH8_may_observe_3": {
+      "fact_id": "F_MAP_CH8_may_observe_3",
+      "claim": "Software administrative privileges (key holder: Mara; defeats: Standard user access)",
+      "source_refs": [
+        "chapter_map.8.may_observe[3]"
+      ],
+      "available_from_chapter": 8,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH9_TITLE": {
+      "fact_id": "F_MAP_CH9_TITLE",
+      "claim": "The Backdoor",
+      "source_refs": [
+        "chapter_map.9.title"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH9_PRIMARY_TURN": {
+      "fact_id": "F_MAP_CH9_PRIMARY_TURN",
+      "claim": "Adrian's true objective is exposed.",
+      "source_refs": [
+        "chapter_map.9.primary_turn"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH9_RELATIONSHIP_TURN": {
+      "fact_id": "F_MAP_CH9_RELATIONSHIP_TURN",
+      "claim": "Control becomes mutually destructive.",
+      "source_refs": [
+        "chapter_map.9.relationship_turn"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH9_DAY_OR_TIME_ANCHOR": {
+      "fact_id": "F_MAP_CH9_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.9.day_or_time_anchor"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH9_must_happen_0": {
+      "fact_id": "F_MAP_CH9_must_happen_0",
+      "claim": "Mara discovers Adrian's backdoor and his blackmail-data goal.",
+      "source_refs": [
+        "chapter_map.9.must_happen[0]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH9_must_happen_1": {
+      "fact_id": "F_MAP_CH9_must_happen_1",
+      "claim": "setting_opportunity_ref: opp_access_escalation",
+      "source_refs": [
+        "chapter_map.9.must_happen[1]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH9_must_not_happen_0": {
+      "fact_id": "F_MAP_CH9_must_not_happen_0",
+      "claim": "The server is physically destroyed.",
+      "source_refs": [
+        "chapter_map.9.must_not_happen[0]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_MAP_CH9_may_observe_0": {
+      "fact_id": "F_MAP_CH9_may_observe_0",
+      "claim": "Metadata leaked during public-data scraping.",
+      "source_refs": [
+        "chapter_map.9.may_observe[0]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH9_may_observe_1": {
+      "fact_id": "F_MAP_CH9_may_observe_1",
+      "claim": "Setting mechanism in play: mechanism_backdoor",
+      "source_refs": [
+        "chapter_map.9.may_observe[1]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH9_may_observe_2": {
+      "fact_id": "F_MAP_CH9_may_observe_2",
+      "claim": "Setting mechanism in play: mechanism_admin_rights",
+      "source_refs": [
+        "chapter_map.9.may_observe[2]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH9_may_observe_3": {
+      "fact_id": "F_MAP_CH9_may_observe_3",
+      "claim": "Software administrative privileges (key holder: Mara; defeats: Standard user access)",
+      "source_refs": [
+        "chapter_map.9.may_observe[3]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH9_may_observe_4": {
+      "fact_id": "F_MAP_CH9_may_observe_4",
+      "claim": "Hidden software backdoor (key holder: Adrian; defeats: mechanism_admin_rights)",
+      "source_refs": [
+        "chapter_map.9.may_observe[4]"
+      ],
+      "available_from_chapter": 9,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH10_TITLE": {
+      "fact_id": "F_MAP_CH10_TITLE",
+      "claim": "Heartbeat Key",
+      "source_refs": [
+        "chapter_map.10.title"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH10_PRIMARY_TURN": {
+      "fact_id": "F_MAP_CH10_PRIMARY_TURN",
+      "claim": "Her body becomes part of the key.",
+      "source_refs": [
+        "chapter_map.10.primary_turn"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH10_RELATIONSHIP_TURN": {
+      "fact_id": "F_MAP_CH10_RELATIONSHIP_TURN",
+      "claim": "Mara restores conditional leverage.",
+      "source_refs": [
+        "chapter_map.10.relationship_turn"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH10_DAY_OR_TIME_ANCHOR": {
+      "fact_id": "F_MAP_CH10_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.10.day_or_time_anchor"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH10_must_happen_0": {
+      "fact_id": "F_MAP_CH10_must_happen_0",
+      "claim": "Mara binds decryption to her heartbeat and a dead man's switch.",
+      "source_refs": [
+        "chapter_map.10.must_happen[0]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH10_must_happen_1": {
+      "fact_id": "F_MAP_CH10_must_happen_1",
+      "claim": "setting_opportunity_ref: opp_access_limitation",
+      "source_refs": [
+        "chapter_map.10.must_happen[1]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH10_must_happen_2": {
+      "fact_id": "F_MAP_CH10_must_happen_2",
+      "claim": "Threshold event 4: repeat (see siblings/threshold_events.yaml)",
+      "source_refs": [
+        "chapter_map.10.must_happen[2]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH10_must_not_happen_0": {
+      "fact_id": "F_MAP_CH10_must_not_happen_0",
+      "claim": "Physical violence.",
+      "source_refs": [
+        "chapter_map.10.must_not_happen[0]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_MAP_CH10_may_observe_0": {
+      "fact_id": "F_MAP_CH10_may_observe_0",
+      "claim": "Mara's unique heartbeat pattern.",
+      "source_refs": [
+        "chapter_map.10.may_observe[0]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH10_may_observe_1": {
+      "fact_id": "F_MAP_CH10_may_observe_1",
+      "claim": "Setting mechanism in play: mechanism_heartbeat_key",
+      "source_refs": [
+        "chapter_map.10.may_observe[1]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH10_may_observe_2": {
+      "fact_id": "F_MAP_CH10_may_observe_2",
+      "claim": "Decryption bound to Mara's heartbeat (key holder: Mara; defeats: mechanism_backdoor)",
+      "source_refs": [
+        "chapter_map.10.may_observe[2]"
+      ],
+      "available_from_chapter": 10,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH11_TITLE": {
+      "fact_id": "F_MAP_CH11_TITLE",
+      "claim": "Two Victories",
+      "source_refs": [
+        "chapter_map.11.title"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH11_PRIMARY_TURN": {
+      "fact_id": "F_MAP_CH11_PRIMARY_TURN",
+      "claim": "The double game becomes explicit.",
+      "source_refs": [
+        "chapter_map.11.primary_turn"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH11_RELATIONSHIP_TURN": {
+      "fact_id": "F_MAP_CH11_RELATIONSHIP_TURN",
+      "claim": "Neither predator can claim total control.",
+      "source_refs": [
+        "chapter_map.11.relationship_turn"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH11_DAY_OR_TIME_ANCHOR": {
+      "fact_id": "F_MAP_CH11_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.11.day_or_time_anchor"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH11_must_happen_0": {
+      "fact_id": "F_MAP_CH11_must_happen_0",
+      "claim": "Adrian says Mara won the murder and he won the data.",
+      "source_refs": [
+        "chapter_map.11.must_happen[0]"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH11_must_happen_1": {
+      "fact_id": "F_MAP_CH11_must_happen_1",
+      "claim": "Adrian produces the retained forensic snapshot that can attribute the ghost vehicle to Mara's workstation, revealing why he allowed the frame to proceed.",
+      "source_refs": [
+        "chapter_map.11.must_happen[1]"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH11_must_not_happen_0": {
+      "fact_id": "F_MAP_CH11_must_not_happen_0",
+      "claim": "A confession substitutes for the digital proof.",
+      "source_refs": [
+        "chapter_map.11.must_not_happen[0]"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_MAP_CH11_may_observe_0": {
+      "fact_id": "F_MAP_CH11_may_observe_0",
+      "claim": "Adrian admits he knew from the beginning.",
+      "source_refs": [
+        "chapter_map.11.may_observe[0]"
+      ],
+      "available_from_chapter": 11,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH12_TITLE": {
+      "fact_id": "F_MAP_CH12_TITLE",
+      "claim": "Conditional Partnership",
+      "source_refs": [
+        "chapter_map.12.title"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH12_PRIMARY_TURN": {
+      "fact_id": "F_MAP_CH12_PRIMARY_TURN",
+      "claim": "Mutual assured destruction becomes alliance.",
+      "source_refs": [
+        "chapter_map.12.primary_turn"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH12_RELATIONSHIP_TURN": {
+      "fact_id": "F_MAP_CH12_RELATIONSHIP_TURN",
+      "claim": "They become partners in crime.",
+      "source_refs": [
+        "chapter_map.12.relationship_turn"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH12_DAY_OR_TIME_ANCHOR": {
+      "fact_id": "F_MAP_CH12_DAY_OR_TIME_ANCHOR",
+      "claim": "24h",
+      "source_refs": [
+        "chapter_map.12.day_or_time_anchor"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH12_must_happen_0": {
+      "fact_id": "F_MAP_CH12_must_happen_0",
+      "claim": "Mara grants conditional admin access and Adrian deletes the backdoor.",
+      "source_refs": [
+        "chapter_map.12.must_happen[0]"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH12_must_happen_1": {
+      "fact_id": "F_MAP_CH12_must_happen_1",
+      "claim": "setting_opportunity_ref: opp_access_limitation",
+      "source_refs": [
+        "chapter_map.12.must_happen[1]"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH12_must_happen_2": {
+      "fact_id": "F_MAP_CH12_must_happen_2",
+      "claim": "Threshold event 5: repeat (see siblings/threshold_events.yaml)",
+      "source_refs": [
+        "chapter_map.12.must_happen[2]"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH12_must_not_happen_0": {
+      "fact_id": "F_MAP_CH12_must_not_happen_0",
+      "claim": "A conventional romantic surrender.",
+      "source_refs": [
+        "chapter_map.12.must_not_happen[0]"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map",
+      "meta": {
+        "polarity": "forbidden"
+      }
+    },
+    "F_MAP_CH12_may_observe_0": {
+      "fact_id": "F_MAP_CH12_may_observe_0",
+      "claim": "Both are exhausted, bloodshot, and shaking.",
+      "source_refs": [
+        "chapter_map.12.may_observe[0]"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH12_may_observe_1": {
+      "fact_id": "F_MAP_CH12_may_observe_1",
+      "claim": "Setting mechanism in play: mechanism_heartbeat_key",
+      "source_refs": [
+        "chapter_map.12.may_observe[1]"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    },
+    "F_MAP_CH12_may_observe_2": {
+      "fact_id": "F_MAP_CH12_may_observe_2",
+      "claim": "Decryption bound to Mara's heartbeat (key holder: Mara; defeats: mechanism_backdoor)",
+      "source_refs": [
+        "chapter_map.12.may_observe[2]"
+      ],
+      "available_from_chapter": 12,
+      "canon_class": "source_explicit",
+      "kind": "chapter_map"
+    }
+  },
+  "ir_digest": "98879b1c0618c3dff78ad4db151d7a46acbcf8252ded5a134a89cc9d5fff5d0b"
+}

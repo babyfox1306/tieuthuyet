@@ -1,0 +1,15 @@
+{
+  "status": "sealed",
+  "source_ir_hash": "98879b1c0618c3dff78ad4db151d7a46acbcf8252ded5a134a89cc9d5fff5d0b",
+  "artifact_hash": "a0481d6f3c72609957a193ace8e0c83d35dcb33d0a1573043c84c1a01ffddb5a",
+  "validators": {
+    "provenance_gate": "pass",
+    "specificity_generalize": "pass"
+  },
+  "unverified_claims": [],
+  "warnings": [],
+  "sealed_at": "2026-08-02T08:07:59.616678+00:00",
+  "validator_version": "1.0.0",
+  "chapter": 2,
+  "generalizations": 0
+}

@@ -1,0 +1,2450 @@
+{
+  "importer_version": "1.0.0",
+  "schema_version": "1.0",
+  "path_coverage": {
+    "coverage": [
+      {
+        "source_path": "author_directive",
+        "status": "consumed",
+        "target_path": "ir.author_directive",
+        "value_preview": "Tone: clinical, hyper-competent, cold to the point of pain. Every chapter is a counter-move."
+      },
+      {
+        "source_path": "canonical_reveal_chapter",
+        "status": "consumed",
+        "target_path": "ir.canonical_reveal_chapter",
+        "value_preview": "9"
+      },
+      {
+        "source_path": "chapter_count",
+        "status": "consumed",
+        "target_path": "ir.chapter_count",
+        "value_preview": "12"
+      },
+      {
+        "source_path": "chapter_map",
+        "status": "consumed",
+        "target_path": "ir.chapter_map",
+        "value_preview": "{\"1\": {\"title\": \"The Bloody Phone\", \"day_or_time_anchor\": \"24h\", \"pov_knows_at_start\": [\"Mara knows she hired Adrian.\"], \"may_observe\": [\"Adrian throws down a b"
+      },
+      {
+        "source_path": "chapter_map.1",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.1"
+      },
+      {
+        "source_path": "chapter_map.1.title",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.1.title"
+      },
+      {
+        "source_path": "chapter_map.1.day_or_time_anchor",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.1.day_or_time_anchor"
+      },
+      {
+        "source_path": "chapter_map.1.pov_knows_at_start",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.1.pov_knows_at_start"
+      },
+      {
+        "source_path": "chapter_map.1.may_observe",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.1.may_observe"
+      },
+      {
+        "source_path": "chapter_map.1.must_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.1.must_happen"
+      },
+      {
+        "source_path": "chapter_map.1.reveal_ids_opened",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.1.reveal_ids_opened"
+      },
+      {
+        "source_path": "chapter_map.1.clue_ids_planted",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.1.clue_ids_planted"
+      },
+      {
+        "source_path": "chapter_map.1.clue_ids_paid_off",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.1.clue_ids_paid_off"
+      },
+      {
+        "source_path": "chapter_map.1.prop_actions",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.1.prop_actions"
+      },
+      {
+        "source_path": "chapter_map.1.relationship_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.1.relationship_turn"
+      },
+      {
+        "source_path": "chapter_map.1.primary_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.1.primary_turn"
+      },
+      {
+        "source_path": "chapter_map.1.must_not_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.1.must_not_happen"
+      },
+      {
+        "source_path": "chapter_map.1.spice_level",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.1.spice_level"
+      },
+      {
+        "source_path": "chapter_map.2",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.2"
+      },
+      {
+        "source_path": "chapter_map.2.title",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.2.title"
+      },
+      {
+        "source_path": "chapter_map.2.day_or_time_anchor",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.2.day_or_time_anchor"
+      },
+      {
+        "source_path": "chapter_map.2.pov_knows_at_start",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.2.pov_knows_at_start"
+      },
+      {
+        "source_path": "chapter_map.2.may_observe",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.2.may_observe"
+      },
+      {
+        "source_path": "chapter_map.2.must_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.2.must_happen"
+      },
+      {
+        "source_path": "chapter_map.2.reveal_ids_opened",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.2.reveal_ids_opened"
+      },
+      {
+        "source_path": "chapter_map.2.clue_ids_planted",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.2.clue_ids_planted"
+      },
+      {
+        "source_path": "chapter_map.2.clue_ids_paid_off",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.2.clue_ids_paid_off"
+      },
+      {
+        "source_path": "chapter_map.2.prop_actions",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.2.prop_actions"
+      },
+      {
+        "source_path": "chapter_map.2.relationship_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.2.relationship_turn"
+      },
+      {
+        "source_path": "chapter_map.2.primary_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.2.primary_turn"
+      },
+      {
+        "source_path": "chapter_map.2.must_not_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.2.must_not_happen"
+      },
+      {
+        "source_path": "chapter_map.2.spice_level",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.2.spice_level"
+      },
+      {
+        "source_path": "chapter_map.3",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.3"
+      },
+      {
+        "source_path": "chapter_map.3.title",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.3.title"
+      },
+      {
+        "source_path": "chapter_map.3.day_or_time_anchor",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.3.day_or_time_anchor"
+      },
+      {
+        "source_path": "chapter_map.3.pov_knows_at_start",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.3.pov_knows_at_start"
+      },
+      {
+        "source_path": "chapter_map.3.may_observe",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.3.may_observe"
+      },
+      {
+        "source_path": "chapter_map.3.must_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.3.must_happen"
+      },
+      {
+        "source_path": "chapter_map.3.reveal_ids_opened",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.3.reveal_ids_opened"
+      },
+      {
+        "source_path": "chapter_map.3.clue_ids_planted",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.3.clue_ids_planted"
+      },
+      {
+        "source_path": "chapter_map.3.clue_ids_paid_off",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.3.clue_ids_paid_off"
+      },
+      {
+        "source_path": "chapter_map.3.prop_actions",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.3.prop_actions"
+      },
+      {
+        "source_path": "chapter_map.3.relationship_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.3.relationship_turn"
+      },
+      {
+        "source_path": "chapter_map.3.primary_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.3.primary_turn"
+      },
+      {
+        "source_path": "chapter_map.3.must_not_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.3.must_not_happen"
+      },
+      {
+        "source_path": "chapter_map.3.spice_level",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.3.spice_level"
+      },
+      {
+        "source_path": "chapter_map.4",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.4"
+      },
+      {
+        "source_path": "chapter_map.4.title",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.4.title"
+      },
+      {
+        "source_path": "chapter_map.4.day_or_time_anchor",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.4.day_or_time_anchor"
+      },
+      {
+        "source_path": "chapter_map.4.pov_knows_at_start",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.4.pov_knows_at_start"
+      },
+      {
+        "source_path": "chapter_map.4.may_observe",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.4.may_observe"
+      },
+      {
+        "source_path": "chapter_map.4.must_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.4.must_happen"
+      },
+      {
+        "source_path": "chapter_map.4.reveal_ids_opened",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.4.reveal_ids_opened"
+      },
+      {
+        "source_path": "chapter_map.4.clue_ids_planted",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.4.clue_ids_planted"
+      },
+      {
+        "source_path": "chapter_map.4.clue_ids_paid_off",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.4.clue_ids_paid_off"
+      },
+      {
+        "source_path": "chapter_map.4.prop_actions",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.4.prop_actions"
+      },
+      {
+        "source_path": "chapter_map.4.relationship_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.4.relationship_turn"
+      },
+      {
+        "source_path": "chapter_map.4.primary_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.4.primary_turn"
+      },
+      {
+        "source_path": "chapter_map.4.must_not_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.4.must_not_happen"
+      },
+      {
+        "source_path": "chapter_map.4.spice_level",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.4.spice_level"
+      },
+      {
+        "source_path": "chapter_map.5",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.5"
+      },
+      {
+        "source_path": "chapter_map.5.title",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.5.title"
+      },
+      {
+        "source_path": "chapter_map.5.day_or_time_anchor",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.5.day_or_time_anchor"
+      },
+      {
+        "source_path": "chapter_map.5.pov_knows_at_start",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.5.pov_knows_at_start"
+      },
+      {
+        "source_path": "chapter_map.5.may_observe",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.5.may_observe"
+      },
+      {
+        "source_path": "chapter_map.5.must_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.5.must_happen"
+      },
+      {
+        "source_path": "chapter_map.5.reveal_ids_opened",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.5.reveal_ids_opened"
+      },
+      {
+        "source_path": "chapter_map.5.clue_ids_planted",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.5.clue_ids_planted"
+      },
+      {
+        "source_path": "chapter_map.5.clue_ids_paid_off",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.5.clue_ids_paid_off"
+      },
+      {
+        "source_path": "chapter_map.5.prop_actions",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.5.prop_actions"
+      },
+      {
+        "source_path": "chapter_map.5.relationship_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.5.relationship_turn"
+      },
+      {
+        "source_path": "chapter_map.5.primary_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.5.primary_turn"
+      },
+      {
+        "source_path": "chapter_map.5.must_not_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.5.must_not_happen"
+      },
+      {
+        "source_path": "chapter_map.5.spice_level",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.5.spice_level"
+      },
+      {
+        "source_path": "chapter_map.6",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.6"
+      },
+      {
+        "source_path": "chapter_map.6.title",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.6.title"
+      },
+      {
+        "source_path": "chapter_map.6.day_or_time_anchor",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.6.day_or_time_anchor"
+      },
+      {
+        "source_path": "chapter_map.6.pov_knows_at_start",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.6.pov_knows_at_start"
+      },
+      {
+        "source_path": "chapter_map.6.may_observe",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.6.may_observe"
+      },
+      {
+        "source_path": "chapter_map.6.must_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.6.must_happen"
+      },
+      {
+        "source_path": "chapter_map.6.reveal_ids_opened",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.6.reveal_ids_opened"
+      },
+      {
+        "source_path": "chapter_map.6.clue_ids_planted",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.6.clue_ids_planted"
+      },
+      {
+        "source_path": "chapter_map.6.clue_ids_paid_off",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.6.clue_ids_paid_off"
+      },
+      {
+        "source_path": "chapter_map.6.prop_actions",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.6.prop_actions"
+      },
+      {
+        "source_path": "chapter_map.6.relationship_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.6.relationship_turn"
+      },
+      {
+        "source_path": "chapter_map.6.primary_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.6.primary_turn"
+      },
+      {
+        "source_path": "chapter_map.6.must_not_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.6.must_not_happen"
+      },
+      {
+        "source_path": "chapter_map.6.spice_level",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.6.spice_level"
+      },
+      {
+        "source_path": "chapter_map.7",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.7"
+      },
+      {
+        "source_path": "chapter_map.7.title",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.7.title"
+      },
+      {
+        "source_path": "chapter_map.7.day_or_time_anchor",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.7.day_or_time_anchor"
+      },
+      {
+        "source_path": "chapter_map.7.pov_knows_at_start",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.7.pov_knows_at_start"
+      },
+      {
+        "source_path": "chapter_map.7.may_observe",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.7.may_observe"
+      },
+      {
+        "source_path": "chapter_map.7.must_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.7.must_happen"
+      },
+      {
+        "source_path": "chapter_map.7.reveal_ids_opened",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.7.reveal_ids_opened"
+      },
+      {
+        "source_path": "chapter_map.7.clue_ids_planted",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.7.clue_ids_planted"
+      },
+      {
+        "source_path": "chapter_map.7.clue_ids_paid_off",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.7.clue_ids_paid_off"
+      },
+      {
+        "source_path": "chapter_map.7.prop_actions",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.7.prop_actions"
+      },
+      {
+        "source_path": "chapter_map.7.relationship_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.7.relationship_turn"
+      },
+      {
+        "source_path": "chapter_map.7.primary_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.7.primary_turn"
+      },
+      {
+        "source_path": "chapter_map.7.must_not_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.7.must_not_happen"
+      },
+      {
+        "source_path": "chapter_map.7.spice_level",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.7.spice_level"
+      },
+      {
+        "source_path": "chapter_map.8",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.8"
+      },
+      {
+        "source_path": "chapter_map.8.title",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.8.title"
+      },
+      {
+        "source_path": "chapter_map.8.day_or_time_anchor",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.8.day_or_time_anchor"
+      },
+      {
+        "source_path": "chapter_map.8.pov_knows_at_start",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.8.pov_knows_at_start"
+      },
+      {
+        "source_path": "chapter_map.8.may_observe",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.8.may_observe"
+      },
+      {
+        "source_path": "chapter_map.8.must_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.8.must_happen"
+      },
+      {
+        "source_path": "chapter_map.8.reveal_ids_opened",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.8.reveal_ids_opened"
+      },
+      {
+        "source_path": "chapter_map.8.clue_ids_planted",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.8.clue_ids_planted"
+      },
+      {
+        "source_path": "chapter_map.8.clue_ids_paid_off",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.8.clue_ids_paid_off"
+      },
+      {
+        "source_path": "chapter_map.8.prop_actions",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.8.prop_actions"
+      },
+      {
+        "source_path": "chapter_map.8.relationship_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.8.relationship_turn"
+      },
+      {
+        "source_path": "chapter_map.8.primary_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.8.primary_turn"
+      },
+      {
+        "source_path": "chapter_map.8.must_not_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.8.must_not_happen"
+      },
+      {
+        "source_path": "chapter_map.8.spice_level",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.8.spice_level"
+      },
+      {
+        "source_path": "chapter_map.9",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.9"
+      },
+      {
+        "source_path": "chapter_map.9.title",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.9.title"
+      },
+      {
+        "source_path": "chapter_map.9.day_or_time_anchor",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.9.day_or_time_anchor"
+      },
+      {
+        "source_path": "chapter_map.9.pov_knows_at_start",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.9.pov_knows_at_start"
+      },
+      {
+        "source_path": "chapter_map.9.may_observe",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.9.may_observe"
+      },
+      {
+        "source_path": "chapter_map.9.must_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.9.must_happen"
+      },
+      {
+        "source_path": "chapter_map.9.reveal_ids_opened",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.9.reveal_ids_opened"
+      },
+      {
+        "source_path": "chapter_map.9.clue_ids_planted",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.9.clue_ids_planted"
+      },
+      {
+        "source_path": "chapter_map.9.clue_ids_paid_off",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.9.clue_ids_paid_off"
+      },
+      {
+        "source_path": "chapter_map.9.prop_actions",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.9.prop_actions"
+      },
+      {
+        "source_path": "chapter_map.9.relationship_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.9.relationship_turn"
+      },
+      {
+        "source_path": "chapter_map.9.primary_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.9.primary_turn"
+      },
+      {
+        "source_path": "chapter_map.9.must_not_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.9.must_not_happen"
+      },
+      {
+        "source_path": "chapter_map.9.spice_level",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.9.spice_level"
+      },
+      {
+        "source_path": "chapter_map.10",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.10"
+      },
+      {
+        "source_path": "chapter_map.10.title",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.10.title"
+      },
+      {
+        "source_path": "chapter_map.10.day_or_time_anchor",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.10.day_or_time_anchor"
+      },
+      {
+        "source_path": "chapter_map.10.pov_knows_at_start",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.10.pov_knows_at_start"
+      },
+      {
+        "source_path": "chapter_map.10.may_observe",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.10.may_observe"
+      },
+      {
+        "source_path": "chapter_map.10.must_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.10.must_happen"
+      },
+      {
+        "source_path": "chapter_map.10.reveal_ids_opened",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.10.reveal_ids_opened"
+      },
+      {
+        "source_path": "chapter_map.10.clue_ids_planted",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.10.clue_ids_planted"
+      },
+      {
+        "source_path": "chapter_map.10.clue_ids_paid_off",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.10.clue_ids_paid_off"
+      },
+      {
+        "source_path": "chapter_map.10.prop_actions",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.10.prop_actions"
+      },
+      {
+        "source_path": "chapter_map.10.relationship_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.10.relationship_turn"
+      },
+      {
+        "source_path": "chapter_map.10.primary_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.10.primary_turn"
+      },
+      {
+        "source_path": "chapter_map.10.must_not_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.10.must_not_happen"
+      },
+      {
+        "source_path": "chapter_map.10.spice_level",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.10.spice_level"
+      },
+      {
+        "source_path": "chapter_map.11",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.11"
+      },
+      {
+        "source_path": "chapter_map.11.title",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.11.title"
+      },
+      {
+        "source_path": "chapter_map.11.day_or_time_anchor",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.11.day_or_time_anchor"
+      },
+      {
+        "source_path": "chapter_map.11.pov_knows_at_start",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.11.pov_knows_at_start"
+      },
+      {
+        "source_path": "chapter_map.11.may_observe",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.11.may_observe"
+      },
+      {
+        "source_path": "chapter_map.11.must_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.11.must_happen"
+      },
+      {
+        "source_path": "chapter_map.11.reveal_ids_opened",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.11.reveal_ids_opened"
+      },
+      {
+        "source_path": "chapter_map.11.clue_ids_planted",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.11.clue_ids_planted"
+      },
+      {
+        "source_path": "chapter_map.11.clue_ids_paid_off",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.11.clue_ids_paid_off"
+      },
+      {
+        "source_path": "chapter_map.11.prop_actions",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.11.prop_actions"
+      },
+      {
+        "source_path": "chapter_map.11.relationship_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.11.relationship_turn"
+      },
+      {
+        "source_path": "chapter_map.11.primary_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.11.primary_turn"
+      },
+      {
+        "source_path": "chapter_map.11.must_not_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.11.must_not_happen"
+      },
+      {
+        "source_path": "chapter_map.11.spice_level",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.11.spice_level"
+      },
+      {
+        "source_path": "chapter_map.12",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.12"
+      },
+      {
+        "source_path": "chapter_map.12.title",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.12.title"
+      },
+      {
+        "source_path": "chapter_map.12.day_or_time_anchor",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.12.day_or_time_anchor"
+      },
+      {
+        "source_path": "chapter_map.12.pov_knows_at_start",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.12.pov_knows_at_start"
+      },
+      {
+        "source_path": "chapter_map.12.may_observe",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.12.may_observe"
+      },
+      {
+        "source_path": "chapter_map.12.must_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.12.must_happen"
+      },
+      {
+        "source_path": "chapter_map.12.reveal_ids_opened",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.12.reveal_ids_opened"
+      },
+      {
+        "source_path": "chapter_map.12.clue_ids_planted",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.12.clue_ids_planted"
+      },
+      {
+        "source_path": "chapter_map.12.clue_ids_paid_off",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.12.clue_ids_paid_off"
+      },
+      {
+        "source_path": "chapter_map.12.prop_actions",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.12.prop_actions"
+      },
+      {
+        "source_path": "chapter_map.12.relationship_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.12.relationship_turn"
+      },
+      {
+        "source_path": "chapter_map.12.primary_turn",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.12.primary_turn"
+      },
+      {
+        "source_path": "chapter_map.12.must_not_happen",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.12.must_not_happen"
+      },
+      {
+        "source_path": "chapter_map.12.spice_level",
+        "status": "consumed",
+        "target_path": "ir.chapter_map.12.spice_level"
+      },
+      {
+        "source_path": "character_psychology",
+        "status": "consumed",
+        "target_path": "ir.character_psychology",
+        "value_preview": "[{\"character\": \"Mara Voss\", \"core_traits\": [\"Alibi Architect and hidden mastermind\", \"Clinically hyper-competent and cold\", \"Overconfident in OSINT skill\"], \"co"
+      },
+      {
+        "source_path": "characters",
+        "status": "consumed",
+        "target_path": "ir.characters",
+        "value_preview": "[{\"name\": \"Mara Voss\", \"role\": \"protagonist / Alibi Architect / hidden mastermind\"}, {\"name\": \"Adrian Thorne\", \"role\": \"antagonist and love interest / Claire's "
+      },
+      {
+        "source_path": "clues",
+        "status": "consumed",
+        "target_path": "ir.clues",
+        "value_preview": "[{\"id\": \"C1\", \"description\": \"Camera API vulnerability at exact time of Claire's death\", \"plant_chapter\": 5, \"payoff_chapter\": 5, \"owner_reveal\": \"R1\", \"observe"
+      },
+      {
+        "source_path": "corpse_reveal_chapter",
+        "status": "consumed",
+        "target_path": "ir.corpse_reveal_chapter",
+        "value_preview": "5"
+      },
+      {
+        "source_path": "ending_book1",
+        "status": "consumed",
+        "target_path": "ir.ending_book1",
+        "value_preview": "Claire's death remains an open homicide investigation because the ghost vehicle and altered smartwatch prevent a suicide ruling. No arrest is made yet; Mara and"
+      },
+      {
+        "source_path": "honeytoken",
+        "status": "consumed",
+        "target_path": "ir.honeytoken",
+        "value_preview": "{\"phrase_creator\": \"Mara\", \"delivery_method\": \"khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian\", \"people_who_know_before_deliv"
+      },
+      {
+        "source_path": "honeytoken.phrase_creator",
+        "status": "consumed",
+        "target_path": "ir.honeytoken.phrase_creator"
+      },
+      {
+        "source_path": "honeytoken.delivery_method",
+        "status": "consumed",
+        "target_path": "ir.honeytoken.delivery_method"
+      },
+      {
+        "source_path": "honeytoken.people_who_know_before_delivery",
+        "status": "consumed",
+        "target_path": "ir.honeytoken.people_who_know_before_delivery"
+      },
+      {
+        "source_path": "honeytoken.interception_method",
+        "status": "consumed",
+        "target_path": "ir.honeytoken.interception_method"
+      },
+      {
+        "source_path": "honeytoken.first_illicit_reuse_by",
+        "status": "consumed",
+        "target_path": "ir.honeytoken.first_illicit_reuse_by"
+      },
+      {
+        "source_path": "honeytoken.reuse_chapter",
+        "status": "consumed",
+        "target_path": "ir.honeytoken.reuse_chapter"
+      },
+      {
+        "source_path": "honeytoken.evidentiary_value",
+        "status": "consumed",
+        "target_path": "ir.honeytoken.evidentiary_value"
+      },
+      {
+        "source_path": "honeytoken.evidentiary_value.information_leak",
+        "status": "consumed",
+        "target_path": "ir.honeytoken.evidentiary_value.information_leak"
+      },
+      {
+        "source_path": "honeytoken.evidentiary_value.physical_corroboration",
+        "status": "consumed",
+        "target_path": "ir.honeytoken.evidentiary_value.physical_corroboration"
+      },
+      {
+        "source_path": "honeytoken.evidentiary_value.false_chain_of_custody_claim",
+        "status": "consumed",
+        "target_path": "ir.honeytoken.evidentiary_value.false_chain_of_custody_claim"
+      },
+      {
+        "source_path": "honeytoken.villain_must_not_say",
+        "status": "consumed",
+        "target_path": "ir.honeytoken.villain_must_not_say"
+      },
+      {
+        "source_path": "honeytoken.proof_sequence",
+        "status": "consumed",
+        "target_path": "ir.honeytoken.proof_sequence"
+      },
+      {
+        "source_path": "honeytoken.failure_conditions",
+        "status": "consumed",
+        "target_path": "ir.honeytoken.failure_conditions"
+      },
+      {
+        "source_path": "hook_book2",
+        "status": "consumed",
+        "target_path": "ir.hook_book2",
+        "value_preview": "Det. Miller escalates the unresolved homicide inquiry after finding a second inconsistency in Claire's smartwatch log, forcing Mara and Adrian to coordinate the"
+      },
+      {
+        "source_path": "intentional_early_reveal",
+        "status": "consumed",
+        "target_path": "ir.intentional_early_reveal",
+        "value_preview": "True"
+      },
+      {
+        "source_path": "logline",
+        "status": "consumed",
+        "target_path": "ir.logline",
+        "value_preview": "When an expert who creates alibis from ordinary digital traces is forced to conceal a murder for a mysterious client, she discovers that she is the mastermind w"
+      },
+      {
+        "source_path": "must_avoid",
+        "status": "consumed",
+        "target_path": "ir.must_avoid",
+        "value_preview": "[\"Mara or Adrian uses physical violence against the other.\", \"Adrian threatens to kill Mara.\", \"The data vault is physically destroyed.\", \"Shaking caused by rom"
+      },
+      {
+        "source_path": "must_include",
+        "status": "consumed",
+        "target_path": "ir.must_include",
+        "value_preview": "[\"The bloody phone in the opening and its return in the climax.\", \"Every chapter contains a counter-move.\"]"
+      },
+      {
+        "source_path": "must_include_by_chapter",
+        "status": "consumed",
+        "target_path": "ir.must_include_by_chapter",
+        "value_preview": "{\"1\": [\"The bloody phone.\"], \"7\": [\"Adrian's smile when discovered.\"], \"9\": [\"Adrian's smile when discovered.\"], \"12\": [\"The bloody phone returns.\", \"Adrian's s"
+      },
+      {
+        "source_path": "must_include_by_chapter.1",
+        "status": "consumed",
+        "target_path": "ir.must_include_by_chapter.1"
+      },
+      {
+        "source_path": "must_include_by_chapter.7",
+        "status": "consumed",
+        "target_path": "ir.must_include_by_chapter.7"
+      },
+      {
+        "source_path": "must_include_by_chapter.9",
+        "status": "consumed",
+        "target_path": "ir.must_include_by_chapter.9"
+      },
+      {
+        "source_path": "must_include_by_chapter.12",
+        "status": "consumed",
+        "target_path": "ir.must_include_by_chapter.12"
+      },
+      {
+        "source_path": "must_include_by_chapter.8",
+        "status": "consumed",
+        "target_path": "ir.must_include_by_chapter.8"
+      },
+      {
+        "source_path": "must_include_by_chapter.10",
+        "status": "consumed",
+        "target_path": "ir.must_include_by_chapter.10"
+      },
+      {
+        "source_path": "notes",
+        "status": "consumed",
+        "target_path": "ir.notes",
+        "value_preview": "Clinical, hyper-competent, cold to the point of pain. Dark romance is Mutual Assured Destruction. Trope: Zero-Trust Romance. Tropes: Mutual Digital Predation / "
+      },
+      {
+        "source_path": "pen_name",
+        "status": "consumed",
+        "target_path": "ir.pen_name",
+        "value_preview": "Nix Vale"
+      },
+      {
+        "source_path": "pov",
+        "status": "consumed",
+        "target_path": "ir.pov",
+        "value_preview": "{\"character\": \"Mara Voss\", \"mode\": \"first_person\", \"tense\": \"past\", \"single_pov\": true}"
+      },
+      {
+        "source_path": "pov.character",
+        "status": "consumed",
+        "target_path": "ir.pov.character"
+      },
+      {
+        "source_path": "pov.mode",
+        "status": "consumed",
+        "target_path": "ir.pov.mode"
+      },
+      {
+        "source_path": "pov.tense",
+        "status": "consumed",
+        "target_path": "ir.pov.tense"
+      },
+      {
+        "source_path": "pov.single_pov",
+        "status": "consumed",
+        "target_path": "ir.pov.single_pov"
+      },
+      {
+        "source_path": "props",
+        "status": "consumed",
+        "target_path": "ir.props",
+        "value_preview": "[{\"id\": \"P1\", \"name\": \"Blood-stained phone\", \"created_by\": \"Adrian\", \"recorded_by\": \"Mara\", \"subject_of_record\": \"Murder weapon or evidence\", \"purpose\": \"Metada"
+      },
+      {
+        "source_path": "psychological_condition",
+        "status": "consumed",
+        "target_path": "ir.psychological_condition",
+        "value_preview": "{\"canonical\": \"prolonged acute stress under cortisol and sleep deprivation\", \"observable_effects\": [\"shaking hands during loss of control\", \"dry-heaving under a"
+      },
+      {
+        "source_path": "psychological_condition.canonical",
+        "status": "consumed",
+        "target_path": "ir.psychological_condition.canonical"
+      },
+      {
+        "source_path": "psychological_condition.observable_effects",
+        "status": "consumed",
+        "target_path": "ir.psychological_condition.observable_effects"
+      },
+      {
+        "source_path": "psychological_condition.must_not_be_described_as",
+        "status": "consumed",
+        "target_path": "ir.psychological_condition.must_not_be_described_as"
+      },
+      {
+        "source_path": "reveal_schedule",
+        "status": "consumed",
+        "target_path": "ir.reveal_schedule",
+        "value_preview": "[{\"id\": \"R1\", \"fact\": \"Adrian Thorne killed Claire Thorne\", \"reader_reveal_chapter\": 5, \"pov_knows_chapter\": 1, \"reveal_type\": \"footage\", \"prerequisite_reveals\""
+      },
+      {
+        "source_path": "romance_mode",
+        "status": "consumed",
+        "target_path": "ir.romance_mode",
+        "value_preview": "on"
+      },
+      {
+        "source_path": "spice_default",
+        "status": "consumed",
+        "target_path": "ir.spice_default",
+        "value_preview": "0"
+      },
+      {
+        "source_path": "spice_level",
+        "status": "consumed",
+        "target_path": "ir.spice_level",
+        "value_preview": "0"
+      },
+      {
+        "source_path": "spice_schedule",
+        "status": "consumed",
+        "target_path": "ir.spice_schedule",
+        "note": "empty"
+      },
+      {
+        "source_path": "surface_plot",
+        "status": "consumed",
+        "target_path": "ir.surface_plot",
+        "value_preview": "Mara believes Adrian killed Claire Thorne and is using a Crisis Management contract to force Mara to create an alibi, with twenty-four hours before police disco"
+      },
+      {
+        "source_path": "title",
+        "status": "consumed",
+        "target_path": "ir.title",
+        "value_preview": "The Zero-Day Alibi"
+      },
+      {
+        "source_path": "true_plot",
+        "status": "consumed",
+        "target_path": "ir.true_plot",
+        "value_preview": "Mara Voss secretly hired Adrian Thorne to kill Claire Thorne and planned to frame Adrian while taking Claire's shares. Adrian knew Mara was the mastermind befor"
+      },
+      {
+        "source_path": "villain_ledger",
+        "status": "consumed",
+        "target_path": "ir.villain_ledger",
+        "value_preview": "[{\"action\": \"In the opening stretch Adrian knows Mara is the mastermind but does not know she shifted the time of death.\"}, {\"action\": \"In the middle stretch Ad"
+      }
+    ],
+    "unknown_fields": [],
+    "blocking_errors": [],
+    "ok": true
+  },
+  "reference_resolution": {
+    "rows": [
+      {
+        "source_path": "text_ref: /honeytoken/delivery_method",
+        "occurrence": "honeytoken.interception_method",
+        "status": "resolved",
+        "severity": "info",
+        "affects_contract": true,
+        "note": "inlined",
+        "value_preview": "khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian"
+      },
+      {
+        "source_path": "text_ref: /honeytoken/delivery_method",
+        "occurrence": "honeytoken.proof_sequence[0]",
+        "status": "resolved",
+        "severity": "info",
+        "affects_contract": true,
+        "note": "inlined",
+        "value_preview": "khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian"
+      },
+      {
+        "source_path": "text_ref: /honeytoken/evidentiary_value/information_leak",
+        "occurrence": "honeytoken.proof_sequence[1]",
+        "status": "resolved",
+        "severity": "info",
+        "affects_contract": true,
+        "note": "inlined",
+        "value_preview": "Adrian đe dọa (đọc đúng mật khẩu thời thơ ấu từ metadata ảnh)."
+      },
+      {
+        "source_path": "text_ref: /honeytoken/evidentiary_value/physical_corroboration",
+        "occurrence": "honeytoken.proof_sequence[2]",
+        "status": "resolved",
+        "severity": "info",
+        "affects_contract": true,
+        "note": "inlined",
+        "value_preview": "Mara phát hiện cửa hậu Adrian cài từ Ch1 (metadata leak khi scrape dữ liệu)."
+      },
+      {
+        "source_path": "text_ref: /chapter_map/8/may_observe/2",
+        "occurrence": "chapter_map.9.may_observe[2]",
+        "status": "resolved",
+        "severity": "info",
+        "affects_contract": true,
+        "note": "inlined",
+        "value_preview": "Setting mechanism in play: mechanism_admin_rights"
+      },
+      {
+        "source_path": "text_ref: /chapter_map/8/may_observe/3",
+        "occurrence": "chapter_map.9.may_observe[3]",
+        "status": "resolved",
+        "severity": "info",
+        "affects_contract": true,
+        "note": "inlined",
+        "value_preview": "Software administrative privileges (key holder: Mara; defeats: Standard user access)"
+      },
+      {
+        "source_path": "text_ref: /chapter_map/10/may_observe/1",
+        "occurrence": "chapter_map.12.may_observe[1]",
+        "status": "resolved",
+        "severity": "info",
+        "affects_contract": true,
+        "note": "inlined",
+        "value_preview": "Setting mechanism in play: mechanism_heartbeat_key"
+      },
+      {
+        "source_path": "text_ref: /chapter_map/10/may_observe/2",
+        "occurrence": "chapter_map.12.may_observe[2]",
+        "status": "resolved",
+        "severity": "info",
+        "affects_contract": true,
+        "note": "inlined",
+        "value_preview": "Decryption bound to Mara's heartbeat (key holder: Mara; defeats: mechanism_backdoor)"
+      }
+    ],
+    "blocking_errors": [],
+    "ok": true
+  },
+  "coverage": [
+    {
+      "source_path": "author_directive",
+      "status": "consumed",
+      "target_path": "ir.author_directive",
+      "value_preview": "Tone: clinical, hyper-competent, cold to the point of pain. Every chapter is a counter-move."
+    },
+    {
+      "source_path": "canonical_reveal_chapter",
+      "status": "consumed",
+      "target_path": "ir.canonical_reveal_chapter",
+      "value_preview": "9"
+    },
+    {
+      "source_path": "chapter_count",
+      "status": "consumed",
+      "target_path": "ir.chapter_count",
+      "value_preview": "12"
+    },
+    {
+      "source_path": "chapter_map",
+      "status": "consumed",
+      "target_path": "ir.chapter_map",
+      "value_preview": "{\"1\": {\"title\": \"The Bloody Phone\", \"day_or_time_anchor\": \"24h\", \"pov_knows_at_start\": [\"Mara knows she hired Adrian.\"], \"may_observe\": [\"Adrian throws down a b"
+    },
+    {
+      "source_path": "chapter_map.1",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.1"
+    },
+    {
+      "source_path": "chapter_map.1.title",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.1.title"
+    },
+    {
+      "source_path": "chapter_map.1.day_or_time_anchor",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.1.day_or_time_anchor"
+    },
+    {
+      "source_path": "chapter_map.1.pov_knows_at_start",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.1.pov_knows_at_start"
+    },
+    {
+      "source_path": "chapter_map.1.may_observe",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.1.may_observe"
+    },
+    {
+      "source_path": "chapter_map.1.must_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.1.must_happen"
+    },
+    {
+      "source_path": "chapter_map.1.reveal_ids_opened",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.1.reveal_ids_opened"
+    },
+    {
+      "source_path": "chapter_map.1.clue_ids_planted",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.1.clue_ids_planted"
+    },
+    {
+      "source_path": "chapter_map.1.clue_ids_paid_off",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.1.clue_ids_paid_off"
+    },
+    {
+      "source_path": "chapter_map.1.prop_actions",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.1.prop_actions"
+    },
+    {
+      "source_path": "chapter_map.1.relationship_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.1.relationship_turn"
+    },
+    {
+      "source_path": "chapter_map.1.primary_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.1.primary_turn"
+    },
+    {
+      "source_path": "chapter_map.1.must_not_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.1.must_not_happen"
+    },
+    {
+      "source_path": "chapter_map.1.spice_level",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.1.spice_level"
+    },
+    {
+      "source_path": "chapter_map.2",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.2"
+    },
+    {
+      "source_path": "chapter_map.2.title",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.2.title"
+    },
+    {
+      "source_path": "chapter_map.2.day_or_time_anchor",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.2.day_or_time_anchor"
+    },
+    {
+      "source_path": "chapter_map.2.pov_knows_at_start",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.2.pov_knows_at_start"
+    },
+    {
+      "source_path": "chapter_map.2.may_observe",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.2.may_observe"
+    },
+    {
+      "source_path": "chapter_map.2.must_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.2.must_happen"
+    },
+    {
+      "source_path": "chapter_map.2.reveal_ids_opened",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.2.reveal_ids_opened"
+    },
+    {
+      "source_path": "chapter_map.2.clue_ids_planted",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.2.clue_ids_planted"
+    },
+    {
+      "source_path": "chapter_map.2.clue_ids_paid_off",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.2.clue_ids_paid_off"
+    },
+    {
+      "source_path": "chapter_map.2.prop_actions",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.2.prop_actions"
+    },
+    {
+      "source_path": "chapter_map.2.relationship_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.2.relationship_turn"
+    },
+    {
+      "source_path": "chapter_map.2.primary_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.2.primary_turn"
+    },
+    {
+      "source_path": "chapter_map.2.must_not_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.2.must_not_happen"
+    },
+    {
+      "source_path": "chapter_map.2.spice_level",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.2.spice_level"
+    },
+    {
+      "source_path": "chapter_map.3",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.3"
+    },
+    {
+      "source_path": "chapter_map.3.title",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.3.title"
+    },
+    {
+      "source_path": "chapter_map.3.day_or_time_anchor",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.3.day_or_time_anchor"
+    },
+    {
+      "source_path": "chapter_map.3.pov_knows_at_start",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.3.pov_knows_at_start"
+    },
+    {
+      "source_path": "chapter_map.3.may_observe",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.3.may_observe"
+    },
+    {
+      "source_path": "chapter_map.3.must_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.3.must_happen"
+    },
+    {
+      "source_path": "chapter_map.3.reveal_ids_opened",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.3.reveal_ids_opened"
+    },
+    {
+      "source_path": "chapter_map.3.clue_ids_planted",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.3.clue_ids_planted"
+    },
+    {
+      "source_path": "chapter_map.3.clue_ids_paid_off",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.3.clue_ids_paid_off"
+    },
+    {
+      "source_path": "chapter_map.3.prop_actions",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.3.prop_actions"
+    },
+    {
+      "source_path": "chapter_map.3.relationship_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.3.relationship_turn"
+    },
+    {
+      "source_path": "chapter_map.3.primary_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.3.primary_turn"
+    },
+    {
+      "source_path": "chapter_map.3.must_not_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.3.must_not_happen"
+    },
+    {
+      "source_path": "chapter_map.3.spice_level",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.3.spice_level"
+    },
+    {
+      "source_path": "chapter_map.4",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.4"
+    },
+    {
+      "source_path": "chapter_map.4.title",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.4.title"
+    },
+    {
+      "source_path": "chapter_map.4.day_or_time_anchor",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.4.day_or_time_anchor"
+    },
+    {
+      "source_path": "chapter_map.4.pov_knows_at_start",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.4.pov_knows_at_start"
+    },
+    {
+      "source_path": "chapter_map.4.may_observe",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.4.may_observe"
+    },
+    {
+      "source_path": "chapter_map.4.must_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.4.must_happen"
+    },
+    {
+      "source_path": "chapter_map.4.reveal_ids_opened",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.4.reveal_ids_opened"
+    },
+    {
+      "source_path": "chapter_map.4.clue_ids_planted",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.4.clue_ids_planted"
+    },
+    {
+      "source_path": "chapter_map.4.clue_ids_paid_off",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.4.clue_ids_paid_off"
+    },
+    {
+      "source_path": "chapter_map.4.prop_actions",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.4.prop_actions"
+    },
+    {
+      "source_path": "chapter_map.4.relationship_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.4.relationship_turn"
+    },
+    {
+      "source_path": "chapter_map.4.primary_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.4.primary_turn"
+    },
+    {
+      "source_path": "chapter_map.4.must_not_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.4.must_not_happen"
+    },
+    {
+      "source_path": "chapter_map.4.spice_level",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.4.spice_level"
+    },
+    {
+      "source_path": "chapter_map.5",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.5"
+    },
+    {
+      "source_path": "chapter_map.5.title",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.5.title"
+    },
+    {
+      "source_path": "chapter_map.5.day_or_time_anchor",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.5.day_or_time_anchor"
+    },
+    {
+      "source_path": "chapter_map.5.pov_knows_at_start",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.5.pov_knows_at_start"
+    },
+    {
+      "source_path": "chapter_map.5.may_observe",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.5.may_observe"
+    },
+    {
+      "source_path": "chapter_map.5.must_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.5.must_happen"
+    },
+    {
+      "source_path": "chapter_map.5.reveal_ids_opened",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.5.reveal_ids_opened"
+    },
+    {
+      "source_path": "chapter_map.5.clue_ids_planted",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.5.clue_ids_planted"
+    },
+    {
+      "source_path": "chapter_map.5.clue_ids_paid_off",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.5.clue_ids_paid_off"
+    },
+    {
+      "source_path": "chapter_map.5.prop_actions",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.5.prop_actions"
+    },
+    {
+      "source_path": "chapter_map.5.relationship_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.5.relationship_turn"
+    },
+    {
+      "source_path": "chapter_map.5.primary_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.5.primary_turn"
+    },
+    {
+      "source_path": "chapter_map.5.must_not_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.5.must_not_happen"
+    },
+    {
+      "source_path": "chapter_map.5.spice_level",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.5.spice_level"
+    },
+    {
+      "source_path": "chapter_map.6",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.6"
+    },
+    {
+      "source_path": "chapter_map.6.title",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.6.title"
+    },
+    {
+      "source_path": "chapter_map.6.day_or_time_anchor",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.6.day_or_time_anchor"
+    },
+    {
+      "source_path": "chapter_map.6.pov_knows_at_start",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.6.pov_knows_at_start"
+    },
+    {
+      "source_path": "chapter_map.6.may_observe",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.6.may_observe"
+    },
+    {
+      "source_path": "chapter_map.6.must_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.6.must_happen"
+    },
+    {
+      "source_path": "chapter_map.6.reveal_ids_opened",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.6.reveal_ids_opened"
+    },
+    {
+      "source_path": "chapter_map.6.clue_ids_planted",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.6.clue_ids_planted"
+    },
+    {
+      "source_path": "chapter_map.6.clue_ids_paid_off",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.6.clue_ids_paid_off"
+    },
+    {
+      "source_path": "chapter_map.6.prop_actions",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.6.prop_actions"
+    },
+    {
+      "source_path": "chapter_map.6.relationship_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.6.relationship_turn"
+    },
+    {
+      "source_path": "chapter_map.6.primary_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.6.primary_turn"
+    },
+    {
+      "source_path": "chapter_map.6.must_not_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.6.must_not_happen"
+    },
+    {
+      "source_path": "chapter_map.6.spice_level",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.6.spice_level"
+    },
+    {
+      "source_path": "chapter_map.7",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.7"
+    },
+    {
+      "source_path": "chapter_map.7.title",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.7.title"
+    },
+    {
+      "source_path": "chapter_map.7.day_or_time_anchor",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.7.day_or_time_anchor"
+    },
+    {
+      "source_path": "chapter_map.7.pov_knows_at_start",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.7.pov_knows_at_start"
+    },
+    {
+      "source_path": "chapter_map.7.may_observe",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.7.may_observe"
+    },
+    {
+      "source_path": "chapter_map.7.must_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.7.must_happen"
+    },
+    {
+      "source_path": "chapter_map.7.reveal_ids_opened",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.7.reveal_ids_opened"
+    },
+    {
+      "source_path": "chapter_map.7.clue_ids_planted",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.7.clue_ids_planted"
+    },
+    {
+      "source_path": "chapter_map.7.clue_ids_paid_off",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.7.clue_ids_paid_off"
+    },
+    {
+      "source_path": "chapter_map.7.prop_actions",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.7.prop_actions"
+    },
+    {
+      "source_path": "chapter_map.7.relationship_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.7.relationship_turn"
+    },
+    {
+      "source_path": "chapter_map.7.primary_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.7.primary_turn"
+    },
+    {
+      "source_path": "chapter_map.7.must_not_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.7.must_not_happen"
+    },
+    {
+      "source_path": "chapter_map.7.spice_level",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.7.spice_level"
+    },
+    {
+      "source_path": "chapter_map.8",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.8"
+    },
+    {
+      "source_path": "chapter_map.8.title",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.8.title"
+    },
+    {
+      "source_path": "chapter_map.8.day_or_time_anchor",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.8.day_or_time_anchor"
+    },
+    {
+      "source_path": "chapter_map.8.pov_knows_at_start",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.8.pov_knows_at_start"
+    },
+    {
+      "source_path": "chapter_map.8.may_observe",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.8.may_observe"
+    },
+    {
+      "source_path": "chapter_map.8.must_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.8.must_happen"
+    },
+    {
+      "source_path": "chapter_map.8.reveal_ids_opened",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.8.reveal_ids_opened"
+    },
+    {
+      "source_path": "chapter_map.8.clue_ids_planted",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.8.clue_ids_planted"
+    },
+    {
+      "source_path": "chapter_map.8.clue_ids_paid_off",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.8.clue_ids_paid_off"
+    },
+    {
+      "source_path": "chapter_map.8.prop_actions",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.8.prop_actions"
+    },
+    {
+      "source_path": "chapter_map.8.relationship_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.8.relationship_turn"
+    },
+    {
+      "source_path": "chapter_map.8.primary_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.8.primary_turn"
+    },
+    {
+      "source_path": "chapter_map.8.must_not_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.8.must_not_happen"
+    },
+    {
+      "source_path": "chapter_map.8.spice_level",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.8.spice_level"
+    },
+    {
+      "source_path": "chapter_map.9",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.9"
+    },
+    {
+      "source_path": "chapter_map.9.title",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.9.title"
+    },
+    {
+      "source_path": "chapter_map.9.day_or_time_anchor",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.9.day_or_time_anchor"
+    },
+    {
+      "source_path": "chapter_map.9.pov_knows_at_start",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.9.pov_knows_at_start"
+    },
+    {
+      "source_path": "chapter_map.9.may_observe",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.9.may_observe"
+    },
+    {
+      "source_path": "chapter_map.9.must_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.9.must_happen"
+    },
+    {
+      "source_path": "chapter_map.9.reveal_ids_opened",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.9.reveal_ids_opened"
+    },
+    {
+      "source_path": "chapter_map.9.clue_ids_planted",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.9.clue_ids_planted"
+    },
+    {
+      "source_path": "chapter_map.9.clue_ids_paid_off",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.9.clue_ids_paid_off"
+    },
+    {
+      "source_path": "chapter_map.9.prop_actions",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.9.prop_actions"
+    },
+    {
+      "source_path": "chapter_map.9.relationship_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.9.relationship_turn"
+    },
+    {
+      "source_path": "chapter_map.9.primary_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.9.primary_turn"
+    },
+    {
+      "source_path": "chapter_map.9.must_not_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.9.must_not_happen"
+    },
+    {
+      "source_path": "chapter_map.9.spice_level",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.9.spice_level"
+    },
+    {
+      "source_path": "chapter_map.10",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.10"
+    },
+    {
+      "source_path": "chapter_map.10.title",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.10.title"
+    },
+    {
+      "source_path": "chapter_map.10.day_or_time_anchor",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.10.day_or_time_anchor"
+    },
+    {
+      "source_path": "chapter_map.10.pov_knows_at_start",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.10.pov_knows_at_start"
+    },
+    {
+      "source_path": "chapter_map.10.may_observe",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.10.may_observe"
+    },
+    {
+      "source_path": "chapter_map.10.must_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.10.must_happen"
+    },
+    {
+      "source_path": "chapter_map.10.reveal_ids_opened",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.10.reveal_ids_opened"
+    },
+    {
+      "source_path": "chapter_map.10.clue_ids_planted",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.10.clue_ids_planted"
+    },
+    {
+      "source_path": "chapter_map.10.clue_ids_paid_off",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.10.clue_ids_paid_off"
+    },
+    {
+      "source_path": "chapter_map.10.prop_actions",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.10.prop_actions"
+    },
+    {
+      "source_path": "chapter_map.10.relationship_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.10.relationship_turn"
+    },
+    {
+      "source_path": "chapter_map.10.primary_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.10.primary_turn"
+    },
+    {
+      "source_path": "chapter_map.10.must_not_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.10.must_not_happen"
+    },
+    {
+      "source_path": "chapter_map.10.spice_level",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.10.spice_level"
+    },
+    {
+      "source_path": "chapter_map.11",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.11"
+    },
+    {
+      "source_path": "chapter_map.11.title",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.11.title"
+    },
+    {
+      "source_path": "chapter_map.11.day_or_time_anchor",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.11.day_or_time_anchor"
+    },
+    {
+      "source_path": "chapter_map.11.pov_knows_at_start",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.11.pov_knows_at_start"
+    },
+    {
+      "source_path": "chapter_map.11.may_observe",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.11.may_observe"
+    },
+    {
+      "source_path": "chapter_map.11.must_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.11.must_happen"
+    },
+    {
+      "source_path": "chapter_map.11.reveal_ids_opened",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.11.reveal_ids_opened"
+    },
+    {
+      "source_path": "chapter_map.11.clue_ids_planted",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.11.clue_ids_planted"
+    },
+    {
+      "source_path": "chapter_map.11.clue_ids_paid_off",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.11.clue_ids_paid_off"
+    },
+    {
+      "source_path": "chapter_map.11.prop_actions",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.11.prop_actions"
+    },
+    {
+      "source_path": "chapter_map.11.relationship_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.11.relationship_turn"
+    },
+    {
+      "source_path": "chapter_map.11.primary_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.11.primary_turn"
+    },
+    {
+      "source_path": "chapter_map.11.must_not_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.11.must_not_happen"
+    },
+    {
+      "source_path": "chapter_map.11.spice_level",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.11.spice_level"
+    },
+    {
+      "source_path": "chapter_map.12",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.12"
+    },
+    {
+      "source_path": "chapter_map.12.title",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.12.title"
+    },
+    {
+      "source_path": "chapter_map.12.day_or_time_anchor",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.12.day_or_time_anchor"
+    },
+    {
+      "source_path": "chapter_map.12.pov_knows_at_start",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.12.pov_knows_at_start"
+    },
+    {
+      "source_path": "chapter_map.12.may_observe",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.12.may_observe"
+    },
+    {
+      "source_path": "chapter_map.12.must_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.12.must_happen"
+    },
+    {
+      "source_path": "chapter_map.12.reveal_ids_opened",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.12.reveal_ids_opened"
+    },
+    {
+      "source_path": "chapter_map.12.clue_ids_planted",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.12.clue_ids_planted"
+    },
+    {
+      "source_path": "chapter_map.12.clue_ids_paid_off",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.12.clue_ids_paid_off"
+    },
+    {
+      "source_path": "chapter_map.12.prop_actions",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.12.prop_actions"
+    },
+    {
+      "source_path": "chapter_map.12.relationship_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.12.relationship_turn"
+    },
+    {
+      "source_path": "chapter_map.12.primary_turn",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.12.primary_turn"
+    },
+    {
+      "source_path": "chapter_map.12.must_not_happen",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.12.must_not_happen"
+    },
+    {
+      "source_path": "chapter_map.12.spice_level",
+      "status": "consumed",
+      "target_path": "ir.chapter_map.12.spice_level"
+    },
+    {
+      "source_path": "character_psychology",
+      "status": "consumed",
+      "target_path": "ir.character_psychology",
+      "value_preview": "[{\"character\": \"Mara Voss\", \"core_traits\": [\"Alibi Architect and hidden mastermind\", \"Clinically hyper-competent and cold\", \"Overconfident in OSINT skill\"], \"co"
+    },
+    {
+      "source_path": "characters",
+      "status": "consumed",
+      "target_path": "ir.characters",
+      "value_preview": "[{\"name\": \"Mara Voss\", \"role\": \"protagonist / Alibi Architect / hidden mastermind\"}, {\"name\": \"Adrian Thorne\", \"role\": \"antagonist and love interest / Claire's "
+    },
+    {
+      "source_path": "clues",
+      "status": "consumed",
+      "target_path": "ir.clues",
+      "value_preview": "[{\"id\": \"C1\", \"description\": \"Camera API vulnerability at exact time of Claire's death\", \"plant_chapter\": 5, \"payoff_chapter\": 5, \"owner_reveal\": \"R1\", \"observe"
+    },
+    {
+      "source_path": "corpse_reveal_chapter",
+      "status": "consumed",
+      "target_path": "ir.corpse_reveal_chapter",
+      "value_preview": "5"
+    },
+    {
+      "source_path": "ending_book1",
+      "status": "consumed",
+      "target_path": "ir.ending_book1",
+      "value_preview": "Claire's death remains an open homicide investigation because the ghost vehicle and altered smartwatch prevent a suicide ruling. No arrest is made yet; Mara and"
+    },
+    {
+      "source_path": "honeytoken",
+      "status": "consumed",
+      "target_path": "ir.honeytoken",
+      "value_preview": "{\"phrase_creator\": \"Mara\", \"delivery_method\": \"khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian\", \"people_who_know_before_deliv"
+    },
+    {
+      "source_path": "honeytoken.phrase_creator",
+      "status": "consumed",
+      "target_path": "ir.honeytoken.phrase_creator"
+    },
+    {
+      "source_path": "honeytoken.delivery_method",
+      "status": "consumed",
+      "target_path": "ir.honeytoken.delivery_method"
+    },
+    {
+      "source_path": "honeytoken.people_who_know_before_delivery",
+      "status": "consumed",
+      "target_path": "ir.honeytoken.people_who_know_before_delivery"
+    },
+    {
+      "source_path": "honeytoken.interception_method",
+      "status": "consumed",
+      "target_path": "ir.honeytoken.interception_method"
+    },
+    {
+      "source_path": "honeytoken.first_illicit_reuse_by",
+      "status": "consumed",
+      "target_path": "ir.honeytoken.first_illicit_reuse_by"
+    },
+    {
+      "source_path": "honeytoken.reuse_chapter",
+      "status": "consumed",
+      "target_path": "ir.honeytoken.reuse_chapter"
+    },
+    {
+      "source_path": "honeytoken.evidentiary_value",
+      "status": "consumed",
+      "target_path": "ir.honeytoken.evidentiary_value"
+    },
+    {
+      "source_path": "honeytoken.evidentiary_value.information_leak",
+      "status": "consumed",
+      "target_path": "ir.honeytoken.evidentiary_value.information_leak"
+    },
+    {
+      "source_path": "honeytoken.evidentiary_value.physical_corroboration",
+      "status": "consumed",
+      "target_path": "ir.honeytoken.evidentiary_value.physical_corroboration"
+    },
+    {
+      "source_path": "honeytoken.evidentiary_value.false_chain_of_custody_claim",
+      "status": "consumed",
+      "target_path": "ir.honeytoken.evidentiary_value.false_chain_of_custody_claim"
+    },
+    {
+      "source_path": "honeytoken.villain_must_not_say",
+      "status": "consumed",
+      "target_path": "ir.honeytoken.villain_must_not_say"
+    },
+    {
+      "source_path": "honeytoken.proof_sequence",
+      "status": "consumed",
+      "target_path": "ir.honeytoken.proof_sequence"
+    },
+    {
+      "source_path": "honeytoken.failure_conditions",
+      "status": "consumed",
+      "target_path": "ir.honeytoken.failure_conditions"
+    },
+    {
+      "source_path": "hook_book2",
+      "status": "consumed",
+      "target_path": "ir.hook_book2",
+      "value_preview": "Det. Miller escalates the unresolved homicide inquiry after finding a second inconsistency in Claire's smartwatch log, forcing Mara and Adrian to coordinate the"
+    },
+    {
+      "source_path": "intentional_early_reveal",
+      "status": "consumed",
+      "target_path": "ir.intentional_early_reveal",
+      "value_preview": "True"
+    },
+    {
+      "source_path": "logline",
+      "status": "consumed",
+      "target_path": "ir.logline",
+      "value_preview": "When an expert who creates alibis from ordinary digital traces is forced to conceal a murder for a mysterious client, she discovers that she is the mastermind w"
+    },
+    {
+      "source_path": "must_avoid",
+      "status": "consumed",
+      "target_path": "ir.must_avoid",
+      "value_preview": "[\"Mara or Adrian uses physical violence against the other.\", \"Adrian threatens to kill Mara.\", \"The data vault is physically destroyed.\", \"Shaking caused by rom"
+    },
+    {
+      "source_path": "must_include",
+      "status": "consumed",
+      "target_path": "ir.must_include",
+      "value_preview": "[\"The bloody phone in the opening and its return in the climax.\", \"Every chapter contains a counter-move.\"]"
+    },
+    {
+      "source_path": "must_include_by_chapter",
+      "status": "consumed",
+      "target_path": "ir.must_include_by_chapter",
+      "value_preview": "{\"1\": [\"The bloody phone.\"], \"7\": [\"Adrian's smile when discovered.\"], \"9\": [\"Adrian's smile when discovered.\"], \"12\": [\"The bloody phone returns.\", \"Adrian's s"
+    },
+    {
+      "source_path": "must_include_by_chapter.1",
+      "status": "consumed",
+      "target_path": "ir.must_include_by_chapter.1"
+    },
+    {
+      "source_path": "must_include_by_chapter.7",
+      "status": "consumed",
+      "target_path": "ir.must_include_by_chapter.7"
+    },
+    {
+      "source_path": "must_include_by_chapter.9",
+      "status": "consumed",
+      "target_path": "ir.must_include_by_chapter.9"
+    },
+    {
+      "source_path": "must_include_by_chapter.12",
+      "status": "consumed",
+      "target_path": "ir.must_include_by_chapter.12"
+    },
+    {
+      "source_path": "must_include_by_chapter.8",
+      "status": "consumed",
+      "target_path": "ir.must_include_by_chapter.8"
+    },
+    {
+      "source_path": "must_include_by_chapter.10",
+      "status": "consumed",
+      "target_path": "ir.must_include_by_chapter.10"
+    },
+    {
+      "source_path": "notes",
+      "status": "consumed",
+      "target_path": "ir.notes",
+      "value_preview": "Clinical, hyper-competent, cold to the point of pain. Dark romance is Mutual Assured Destruction. Trope: Zero-Trust Romance. Tropes: Mutual Digital Predation / "
+    },
+    {
+      "source_path": "pen_name",
+      "status": "consumed",
+      "target_path": "ir.pen_name",
+      "value_preview": "Nix Vale"
+    },
+    {
+      "source_path": "pov",
+      "status": "consumed",
+      "target_path": "ir.pov",
+      "value_preview": "{\"character\": \"Mara Voss\", \"mode\": \"first_person\", \"tense\": \"past\", \"single_pov\": true}"
+    },
+    {
+      "source_path": "pov.character",
+      "status": "consumed",
+      "target_path": "ir.pov.character"
+    },
+    {
+      "source_path": "pov.mode",
+      "status": "consumed",
+      "target_path": "ir.pov.mode"
+    },
+    {
+      "source_path": "pov.tense",
+      "status": "consumed",
+      "target_path": "ir.pov.tense"
+    },
+    {
+      "source_path": "pov.single_pov",
+      "status": "consumed",
+      "target_path": "ir.pov.single_pov"
+    },
+    {
+      "source_path": "props",
+      "status": "consumed",
+      "target_path": "ir.props",
+      "value_preview": "[{\"id\": \"P1\", \"name\": \"Blood-stained phone\", \"created_by\": \"Adrian\", \"recorded_by\": \"Mara\", \"subject_of_record\": \"Murder weapon or evidence\", \"purpose\": \"Metada"
+    },
+    {
+      "source_path": "psychological_condition",
+      "status": "consumed",
+      "target_path": "ir.psychological_condition",
+      "value_preview": "{\"canonical\": \"prolonged acute stress under cortisol and sleep deprivation\", \"observable_effects\": [\"shaking hands during loss of control\", \"dry-heaving under a"
+    },
+    {
+      "source_path": "psychological_condition.canonical",
+      "status": "consumed",
+      "target_path": "ir.psychological_condition.canonical"
+    },
+    {
+      "source_path": "psychological_condition.observable_effects",
+      "status": "consumed",
+      "target_path": "ir.psychological_condition.observable_effects"
+    },
+    {
+      "source_path": "psychological_condition.must_not_be_described_as",
+      "status": "consumed",
+      "target_path": "ir.psychological_condition.must_not_be_described_as"
+    },
+    {
+      "source_path": "reveal_schedule",
+      "status": "consumed",
+      "target_path": "ir.reveal_schedule",
+      "value_preview": "[{\"id\": \"R1\", \"fact\": \"Adrian Thorne killed Claire Thorne\", \"reader_reveal_chapter\": 5, \"pov_knows_chapter\": 1, \"reveal_type\": \"footage\", \"prerequisite_reveals\""
+    },
+    {
+      "source_path": "romance_mode",
+      "status": "consumed",
+      "target_path": "ir.romance_mode",
+      "value_preview": "on"
+    },
+    {
+      "source_path": "spice_default",
+      "status": "consumed",
+      "target_path": "ir.spice_default",
+      "value_preview": "0"
+    },
+    {
+      "source_path": "spice_level",
+      "status": "consumed",
+      "target_path": "ir.spice_level",
+      "value_preview": "0"
+    },
+    {
+      "source_path": "spice_schedule",
+      "status": "consumed",
+      "target_path": "ir.spice_schedule",
+      "note": "empty"
+    },
+    {
+      "source_path": "surface_plot",
+      "status": "consumed",
+      "target_path": "ir.surface_plot",
+      "value_preview": "Mara believes Adrian killed Claire Thorne and is using a Crisis Management contract to force Mara to create an alibi, with twenty-four hours before police disco"
+    },
+    {
+      "source_path": "title",
+      "status": "consumed",
+      "target_path": "ir.title",
+      "value_preview": "The Zero-Day Alibi"
+    },
+    {
+      "source_path": "true_plot",
+      "status": "consumed",
+      "target_path": "ir.true_plot",
+      "value_preview": "Mara Voss secretly hired Adrian Thorne to kill Claire Thorne and planned to frame Adrian while taking Claire's shares. Adrian knew Mara was the mastermind befor"
+    },
+    {
+      "source_path": "villain_ledger",
+      "status": "consumed",
+      "target_path": "ir.villain_ledger",
+      "value_preview": "[{\"action\": \"In the opening stretch Adrian knows Mara is the mastermind but does not know she shifted the time of death.\"}, {\"action\": \"In the middle stretch Ad"
+    },
+    {
+      "source_path": "text_ref: /honeytoken/delivery_method",
+      "status": "resolved",
+      "severity": "info",
+      "note": "inlined",
+      "value_preview": "khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian"
+    },
+    {
+      "source_path": "text_ref: /honeytoken/delivery_method",
+      "status": "resolved",
+      "severity": "info",
+      "note": "inlined",
+      "value_preview": "khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian"
+    },
+    {
+      "source_path": "text_ref: /honeytoken/evidentiary_value/information_leak",
+      "status": "resolved",
+      "severity": "info",
+      "note": "inlined",
+      "value_preview": "Adrian đe dọa (đọc đúng mật khẩu thời thơ ấu từ metadata ảnh)."
+    },
+    {
+      "source_path": "text_ref: /honeytoken/evidentiary_value/physical_corroboration",
+      "status": "resolved",
+      "severity": "info",
+      "note": "inlined",
+      "value_preview": "Mara phát hiện cửa hậu Adrian cài từ Ch1 (metadata leak khi scrape dữ liệu)."
+    },
+    {
+      "source_path": "text_ref: /chapter_map/8/may_observe/2",
+      "status": "resolved",
+      "severity": "info",
+      "note": "inlined",
+      "value_preview": "Setting mechanism in play: mechanism_admin_rights"
+    },
+    {
+      "source_path": "text_ref: /chapter_map/8/may_observe/3",
+      "status": "resolved",
+      "severity": "info",
+      "note": "inlined",
+      "value_preview": "Software administrative privileges (key holder: Mara; defeats: Standard user access)"
+    },
+    {
+      "source_path": "text_ref: /chapter_map/10/may_observe/1",
+      "status": "resolved",
+      "severity": "info",
+      "note": "inlined",
+      "value_preview": "Setting mechanism in play: mechanism_heartbeat_key"
+    },
+    {
+      "source_path": "text_ref: /chapter_map/10/may_observe/2",
+      "status": "resolved",
+      "severity": "info",
+      "note": "inlined",
+      "value_preview": "Decryption bound to Mara's heartbeat (key holder: Mara; defeats: mechanism_backdoor)"
+    }
+  ],
+  "unknown_fields": [],
+  "blocking_errors": [],
+  "ok": true
+}

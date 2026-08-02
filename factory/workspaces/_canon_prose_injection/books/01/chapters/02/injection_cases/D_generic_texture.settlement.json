@@ -1,0 +1,129 @@
+{
+  "status": "sealed",
+  "chapter": 2,
+  "events_realized": [],
+  "facts_expressed": [],
+  "new_claims": [],
+  "character_updates": {
+    "psychology_active": [
+      {
+        "character": "Mara Voss",
+        "core_traits": [
+          "Alibi Architect and hidden mastermind",
+          "Clinically hyper-competent and cold",
+          "Overconfident in OSINT skill"
+        ],
+        "core_need": "To maintain absolute control over her constructed reality",
+        "core_fear": "That her control is an illusion, that she has been a tool rather than the architect",
+        "coping_mechanism": "Systematic compartmentalization and technical precision to mask psychological fragility",
+        "stress_responses": [
+          "Cortisol-induced physical stress",
+          "Sleep deprivation",
+          "Shaking hands",
+          "Vomiting",
+          "Arrhythmic heart rate"
+        ],
+        "cognitive_dissonance": "Believes Adrian is a tool while being used by him as a predator",
+        "behavioral_constraints": [
+          "Does not use physical violence",
+          "Does not leave the office during the 24-hour story",
+          "Data vault is not physically destroyed",
+          "Shaking always signifies loss of control, never romantic emotion"
+        ],
+        "reveal_gated_fields": []
+      }
+    ],
+    "villain_knowledge": {
+      "phase": "opening",
+      "chapter": 2,
+      "knows": [
+        "Mara is the mastermind"
+      ],
+      "does_not_know": [
+        "she shifted the time of death"
+      ],
+      "wants_pov_to_believe": [],
+      "withholds": [],
+      "allowed_moves": [],
+      "actions": [
+        "In the opening stretch Adrian knows Mara is the mastermind but does not know she shifted the time of death."
+      ]
+    }
+  },
+  "prop_updates": [
+    {
+      "prop_id": "P1",
+      "name": "Blood-stained phone",
+      "holder": "Mara",
+      "actions_this_chapter": []
+    },
+    {
+      "prop_id": "P2",
+      "name": "Zero-Day Server",
+      "holder": "Mara",
+      "actions_this_chapter": [
+        {
+          "chapter": 2,
+          "holder": "Mara",
+          "action": "retains custody"
+        }
+      ]
+    },
+    {
+      "prop_id": "P3",
+      "name": "Claire's smartwatch data",
+      "holder": null,
+      "actions_this_chapter": []
+    }
+  ],
+  "honeytoken_state": {
+    "phrase_creator": "Mara",
+    "reuse_chapter": 8,
+    "phase": "pre_reuse",
+    "visible": {
+      "delivery_method": "khi Mara scrape dữ liệu công khai, phần mềm tự động gửi metadata về server Adrian",
+      "people_who_know_before_delivery": [
+        "Mara"
+      ]
+    },
+    "hidden": {
+      "evidentiary_value": {
+        "information_leak": "Adrian đe dọa (đọc đúng mật khẩu thời thơ ấu từ metadata ảnh).",
+        "physical_corroboration": "Mara phát hiện cửa hậu Adrian cài từ Ch1 (metadata leak khi scrape dữ liệu).",
+        "false_chain_of_custody_claim": ""
+      },
+      "first_illicit_reuse_by": "Adrian"
+    }
+  },
+  "relationship_delta": {
+    "chapter": 2,
+    "antagonist_move": {
+      "action": "The blood was treated with anticoagulants.",
+      "fact_refs": []
+    },
+    "pov_observation": {
+      "items": [
+        "The blood was treated with anticoagulants."
+      ],
+      "fact_refs": []
+    },
+    "inference_or_misbelief": {
+      "relationship_turn": "Professional suspicion sharpens.",
+      "primary_turn": "The first leak opens."
+    },
+    "countermove": {
+      "action": "Mara scrapes Claire Thorne's data.",
+      "required_events": [
+        "Mara scrapes Claire Thorne's data."
+      ],
+      "fact_refs": []
+    },
+    "power_delta": {
+      "note": "Derived later from settlement; skeleton only in P1 compile"
+    }
+  },
+  "prose_len": 77,
+  "texture_excluded_from_state": 5,
+  "violations": [],
+  "settlement_digest": "d53cacb786e61a1a6d0c1ed4b337af89b144b765b17c29fd264d4236e8b9adba"
+}

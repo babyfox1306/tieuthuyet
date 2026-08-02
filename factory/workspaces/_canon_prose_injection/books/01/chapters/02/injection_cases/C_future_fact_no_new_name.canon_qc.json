@@ -1,0 +1,75 @@
+{
+  "status": "fail",
+  "canon_qc": "fail",
+  "claims": [
+    {
+      "kind": "proper_noun",
+      "claim": "Claire Thorne",
+      "span": [
+        55,
+        68
+      ],
+      "span_type": "narration"
+    },
+    {
+      "kind": "future_locked_fact",
+      "claim": "Mara secretly hired Adrian to kill Claire Thorne",
+      "span": [
+        28,
+        40
+      ],
+      "span_type": "narration",
+      "fact_id": "F_REVEAL_R3",
+      "unlock_chapter": 9
+    },
+    {
+      "kind": "future_locked_fact",
+      "claim": "Mara Voss secretly hired Adrian Thorne to kill Claire Thorne and planned to frame Adrian while taking Claire's shares. Adrian knew Mara was the mastermind before entering the office and needs Mara to open the Zero-Day Server. Both believe t",
+      "span": [
+        28,
+        95
+      ],
+      "span_type": "narration",
+      "fact_id": "F_PLOT_TRUE_PLOT",
+      "unlock_chapter": 9
+    }
+  ],
+  "spans": [
+    {
+      "span_type": "narration",
+      "start": 0,
+      "end": 106,
+      "text": "I already knew the truth: I secretly hired him to kill Claire Thorne and planned the frame from the start."
+    }
+  ],
+  "violations": [
+    {
+      "kind": "future_locked_fact",
+      "claim": "Mara secretly hired Adrian to kill Claire Thorne",
+      "span": [
+        28,
+        40
+      ],
+      "span_type": "narration",
+      "fact_id": "F_REVEAL_R3",
+      "unlock_chapter": 9,
+      "reason": "reveal_chapter_timing",
+      "severity": "block"
+    },
+    {
+      "kind": "future_locked_fact",
+      "claim": "Mara Voss secretly hired Adrian Thorne to kill Claire Thorne and planned to frame Adrian while taking Claire's shares. Adrian knew Mara was the mastermind before entering the office and needs Mara to open the Zero-Day Server. Both believe t",
+      "span": [
+        28,
+        95
+      ],
+      "span_type": "narration",
+      "fact_id": "F_PLOT_TRUE_PLOT",
+      "unlock_chapter": 9,
+      "reason": "reveal_chapter_timing",
+      "severity": "block"
+    }
+  ],
+  "chapter": 2,
+  "texture_claims_excluded_from_state": []
+}
