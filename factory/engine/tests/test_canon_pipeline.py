@@ -27,7 +27,25 @@ from factory.engine.lib.plan_provenance import (
     validate_plan_against_ir,
 )
 from factory.engine.lib.prose_claim_gate import validate_prose_against_ir
-from factory.engine.lib.prose_settlement import build_settlement
+from factory.engine.lib.story_intelligence import (
+    compile_chapter_intelligence,
+    move_fact_ref_errors,
+    project_character_cognition,
+    project_honeytoken_state,
+    project_prop_state,
+    project_villain_knowledge,
+)
+from factory.engine.lib.canon_ops import (
+    cache_key_for_chapter,
+    classify_error_layer,
+    should_skip_literary_fixer,
+)
+from factory.engine.lib.prose_settlement import (
+    build_settlement,
+    continuity_from_prior,
+    load_settlement,
+    write_settlement,
+)
 
 CE_CONCEPT = Path(
     r"D:\tieuthuyet\Concept ETL\output\concepts\the-zero-day-alibi\concept.yaml"
@@ -311,18 +329,259 @@ class TestProseClaimGate(unittest.TestCase):
             )
         )
 
+
 @unittest.skipUnless(CE_CONCEPT.exists(), "CE Zero-Day concept missing")
-class TestSettlementP0(unittest.TestCase):
+class TestStoryIntelligenceP1(unittest.TestCase):
+    def setUp(self) -> None:
+        self.ir = compile_canonical_ir(_load_ce())
+
+    def test_villain_knowledge_phase(self) -> None:
+        opening = project_villain_knowledge(self.ir, 2)
+        self.assertEqual(opening["phase"], "opening")
+        self.assertTrue(opening["actions"] or opening["knows"])
+        final = project_villain_knowledge(self.ir, 12)
+        self.assertEqual(final["phase"], "final")
+
+    def test_prop_holder_by_chapter(self) -> None:
+        props = {p["prop_id"]: p for p in project_prop_state(self.ir, 1)}
+        self.assertEqual(props["P1"]["holder"], "Mara")
+        self.assertIn("allowed_actions", props["P1"])
+        props12 = {p["prop_id"]: p for p in project_prop_state(self.ir, 12)}
+        self.assertEqual(props12["P1"]["holder"], "Adrian")
+
+    def test_honeytoken_pre_vs_post_reuse(self) -> None:
+        pre = project_honeytoken_state(self.ir, 3)
+        self.assertEqual(pre["phase"], "pre_reuse")
+        self.assertIn("hidden", pre)
+        post = project_honeytoken_state(self.ir, 8)
+        self.assertEqual(post["phase"], "at_or_after_reuse")
+        self.assertIn("evidentiary_value", post.get("visible") or {})
+
+    def test_character_cognition_fields(self) -> None:
+        rows = project_character_cognition(self.ir, 2)
+        self.assertTrue(rows)
+        mara = next(r for r in rows if "Mara" in str(r.get("character") or ""))
+        self.assertTrue(mara.get("goal_now"))
+        self.assertTrue(mara.get("fear_active"))
+        self.assertTrue(mara.get("coping_active"))
+        self.assertTrue(mara.get("misbeliefs"))
+
+    def test_moves_have_fact_refs(self) -> None:
+        intel = compile_chapter_intelligence(self.ir, 2)
+        moves = intel["moves"]
+        self.assertTrue(moves["antagonist_move"].get("fact_refs"))
+        self.assertTrue(moves["countermove"].get("fact_refs"))
+        self.assertEqual(move_fact_ref_errors(moves), [])
+
+    def test_missing_fact_refs_stop(self) -> None:
+        bad = {
+            "countermove": {
+                "action": "Invented unsupported action with no IR source",
+                "fact_refs": [],
+                "ephemeral_safe": False,
+            }
+        }
+        errs = move_fact_ref_errors(bad)
+        self.assertTrue(errs)
+        self.assertEqual(errs[0]["reason"], "move_missing_fact_refs")
+
+    def test_compile_intelligence_bundle(self) -> None:
+        intel = compile_chapter_intelligence(self.ir, 8)
+        self.assertIn("moves", intel)
+        self.assertIn("psychology_active", intel)
+        self.assertIn("prop_state", intel)
+        self.assertIn("character_cognition", intel)
+        self.assertIn("character_state", intel)
+        self.assertIn("relationship_delta_target", intel)
+
+
+@unittest.skipUnless(CE_CONCEPT.exists(), "CE Zero-Day concept missing")
+class TestSettlementAndOpsP1P2(unittest.TestCase):
+    def setUp(self) -> None:
+        self.ir = compile_canonical_ir(_load_ce())
+
     def test_settlement_requires_canon_pass(self) -> None:
         bad = build_settlement(chapter=2, canon_qc={"status": "fail"})
         self.assertEqual(bad["status"], "blocked")
         good = build_settlement(
             chapter=2,
-            canon_qc={"status": "pass", "claims": []},
+            canon_qc={
+                "status": "pass",
+                "claims": [
+                    {
+                        "claim": "Mara scrapes Claire Thorne's data.",
+                        "kind": "event",
+                    }
+                ],
+            },
+            intelligence=compile_chapter_intelligence(self.ir, 2),
             prose_len=100,
         )
         self.assertEqual(good["status"], "sealed")
         self.assertIn("settlement_digest", good)
+        self.assertTrue(good.get("events_realized"))
+        self.assertIsNotNone((good.get("power_delta") or {}).get("realized"))
+
+    def test_settlement_feeds_next_chapter_packet(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp)
+            (ws / "concept.yaml").write_text(
+                yaml.safe_dump(_load_ce(), allow_unicode=True),
+                encoding="utf-8",
+            )
+            ingest_concept_to_workspace(ws)
+            ir = load_canonical_ir(ws)
+            settle = build_settlement(
+                chapter=2,
+                canon_qc={
+                    "status": "pass",
+                    "claims": [
+                        {
+                            "claim": "Mara scrapes Claire Thorne's data.",
+                            "kind": "event",
+                        }
+                    ],
+                },
+                intelligence=compile_chapter_intelligence(ir, 2),
+                prose_len=50,
+            )
+            write_settlement(ws, 1, 2, settle)
+            loaded = load_settlement(ws, 1, 2)
+            self.assertEqual(loaded["settlement_digest"], settle["settlement_digest"])
+
+            plan3 = {
+                "chapter": 3,
+                "title": "Next",
+                "must_happen": ["Mara reviews the scraped Claire Thorne data."],
+                "beat_summary": "Mara reviews Claire Thorne data already scraped.",
+                "must_not": ["Mara leaves the office."],
+                "carries_to_next": "Outliner foresight that should lose to settlement",
+            }
+            sealed2 = seal_chapter_plan(
+                ws,
+                1,
+                {
+                    "chapter": 2,
+                    "title": "Anticoagulant",
+                    "must_happen": [
+                        "Mara observes anticoagulant treatment on the blood-stained phone."
+                    ],
+                    "beat_summary": "She scrapes Claire Thorne data and confirms anticoagulant staging.",
+                    "must_not": ["Mara leaves the office."],
+                },
+            )
+            self.assertTrue(sealed2["sealed"], sealed2)
+            build_and_seal_chapter_artifacts(
+                ws,
+                1,
+                2,
+                sealed2["repaired_plan"],
+                intelligence=compile_chapter_intelligence(ir, 2),
+            )
+            sealed3 = seal_chapter_plan(ws, 1, plan3)
+            self.assertTrue(sealed3["sealed"], sealed3)
+            built3 = build_and_seal_chapter_artifacts(
+                ws,
+                1,
+                3,
+                sealed3["repaired_plan"],
+                # omit intelligence so compiler loads settlement N-1
+            )
+            packet = built3["packet"]
+            prior = packet.get("prior_settlement") or {}
+            self.assertEqual(prior.get("settlement_digest"), settle["settlement_digest"])
+            continuity = packet.get("continuity") or {}
+            self.assertEqual(continuity.get("source"), "settlement")
+            self.assertTrue(continuity.get("plan_foresight_superseded"))
+            # Mutate settlement → packet digest must change when rebuilt.
+            settle2 = dict(settle)
+            settle2["events_realized"] = list(settle.get("events_realized") or []) + [
+                {"action": "extra realized beat", "kind": "test"}
+            ]
+            from factory.engine.lib.canonical_ir import sha256_obj
+
+            settle2["settlement_digest"] = sha256_obj(
+                {k: v for k, v in settle2.items() if k != "settlement_digest"}
+            )
+            write_settlement(ws, 1, 2, settle2)
+            rebuilt = build_and_seal_chapter_artifacts(
+                ws, 1, 3, sealed3["repaired_plan"]
+            )
+            self.assertNotEqual(
+                (rebuilt["packet"].get("prior_settlement") or {}).get(
+                    "settlement_digest"
+                ),
+                settle["settlement_digest"],
+            )
+
+    def test_continuity_settlement_overrides_foresight(self) -> None:
+        prior = {
+            "status": "sealed",
+            "settlement_digest": "abc",
+            "events_realized": [{"action": "Phone returned to Mara"}],
+        }
+        cont = continuity_from_prior(
+            {"carries_to_next": "Outliner invents a yacht chase"},
+            prior,
+        )
+        self.assertEqual(cont["source"], "settlement")
+        self.assertTrue(cont["plan_foresight_superseded"])
+        self.assertIsNone(cont["carries_to_next"])
+
+    def test_cache_key_stable(self) -> None:
+        a = cache_key_for_chapter("ir1", "p1", "c1")
+        b = cache_key_for_chapter("ir1", "p1", "c1")
+        c = cache_key_for_chapter("ir2", "p1", "c1")
+        self.assertEqual(a, b)
+        self.assertNotEqual(a, c)
+
+    def test_classify_error_layer(self) -> None:
+        self.assertEqual(classify_error_layer("canonical_ir ingest blocked"), "importer_or_ce")
+        self.assertEqual(classify_error_layer("plan_provenance_fail"), "planner")
+        self.assertEqual(classify_error_layer("move_missing_fact_refs"), "planner")
+        self.assertEqual(classify_error_layer("canon_qc fail"), "writer")
+        self.assertTrue(should_skip_literary_fixer({"status": "fail", "violations": [1]}))
+
+    def test_golden_ir_digest_stable(self) -> None:
+        a = compile_canonical_ir(_load_ce())["ir_digest"]
+        b = compile_canonical_ir(_load_ce())["ir_digest"]
+        self.assertEqual(a, b)
+
+    def test_packet_has_structured_intelligence(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp)
+            (ws / "concept.yaml").write_text(
+                yaml.safe_dump(_load_ce(), allow_unicode=True),
+                encoding="utf-8",
+            )
+            ingest_concept_to_workspace(ws)
+            plan = {
+                "chapter": 2,
+                "title": "Anticoagulant",
+                "must_happen": [
+                    "Mara observes anticoagulant treatment on the blood-stained phone."
+                ],
+                "beat_summary": "She scrapes Claire Thorne data and confirms anticoagulant staging.",
+                "must_not": ["Mara leaves the office."],
+            }
+            sealed = seal_chapter_plan(ws, 1, plan)
+            self.assertTrue(sealed["sealed"], sealed)
+            built = build_and_seal_chapter_artifacts(
+                ws,
+                1,
+                2,
+                sealed["repaired_plan"],
+                intelligence=compile_chapter_intelligence(load_canonical_ir(ws), 2),
+            )
+            packet = built["packet"]
+            self.assertTrue(packet.get("character_state"))
+            self.assertTrue(packet.get("moves", {}).get("countermove", {}).get("fact_refs"))
+            self.assertTrue(packet.get("prop_state"))
+            self.assertTrue(packet.get("psychology_active"))
+            self.assertTrue(packet.get("relationship_delta_target"))
+            # Writer must not see honeytoken hidden pre-reuse block.
+            honey = packet.get("honeytoken_state") or {}
+            self.assertNotIn("hidden", honey)
 
     def test_end_to_end_seal_and_packet(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -348,6 +607,7 @@ class TestSettlementP0(unittest.TestCase):
                 1,
                 2,
                 sealed["repaired_plan"],
+                intelligence=compile_chapter_intelligence(load_canonical_ir(ws), 2),
             )
             self.assertIn("packet_digest", built["packet"])
             self.assertTrue(
