@@ -35,9 +35,12 @@ CONTENT_ISSUE_KEYS = frozenset(
         "pov_violation",
         "repeat",
         "invented_character",
+        "unsupported_case_fact",
         "bible_rule",
         "must_happen_miss",
         "cliffhanger_paste",
+        "publication_duplicate_block",
+        "technical_chapter_reference",
     }
 )
 
@@ -109,6 +112,120 @@ def _apply_locked_names_drift_checks(
         hits.append({"found": "Sarah Mills", "canonical": "Anna", "role": "narrator_alias"})
     if hits:
         issues["name_drift"] = list(issues.get("name_drift") or []) + hits
+
+
+def _workspace_has_canonical_ir(workspace_id: str | None) -> bool:
+    if not workspace_id:
+        return False
+    try:
+        from factory.engine.lib.canonical_ir import load_canonical_ir
+        from factory.engine.paths import workspace_dir
+
+        return load_canonical_ir(workspace_dir(workspace_id)) is not None
+    except Exception:
+        return False
+
+
+def _apply_closed_world_story_checks(
+    issues: dict,
+    text: str,
+    *,
+    workspace_id: str | None,
+    plan: dict | None,
+) -> None:
+    """Reject invented named cast and high-stakes case facts absent from plan."""
+    if not workspace_id or not text:
+        return
+    from factory.engine.lib.narrative_schema import load_concept
+    from factory.engine.paths import workspace_dir
+
+    ws = workspace_dir(workspace_id)
+    concept = load_concept(ws)
+    allowed = {
+        str(row.get("name") or "").strip().casefold()
+        for row in concept.get("characters") or []
+        if isinstance(row, dict) and str(row.get("name") or "").strip()
+    }
+    candidates: dict[str, int] = {}
+    for match in re.finditer(
+        r"\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)+)(?:'s)?\b",
+        text,
+    ):
+        name = match.group(1).strip()
+        candidates[name] = candidates.get(name, 0) + 1
+    invented = [
+        {"name": name, "occurrences": count}
+        for name, count in candidates.items()
+        if name.casefold() not in allowed
+        and not re.match(r"^(?:The|A|An)\s+", name)
+        and name.split()[-1].casefold()
+        not in {"server", "vault", "database", "system", "software", "camera"}
+        and (
+            # With Canonical IR, one unsourced proper noun is enough (Holloway case).
+            # Without IR, keep legacy threshold to limit false positives.
+            (count >= 1 if _workspace_has_canonical_ir(workspace_id) else count >= 2)
+            or re.search(rf"\bnamed\s+{re.escape(name)}\b", text)
+        )
+    ]
+    allowed_surnames = {
+        token.casefold()
+        for name in allowed
+        for token in name.split()
+    }
+    for match in re.finditer(
+        r"\b([A-Z][a-z]{2,})\s+"
+        r"(?:files?|dossier|transcripts?|recordings?|job)\b",
+        text,
+    ):
+        label = match.group(1)
+        if (
+            label.casefold() not in allowed_surnames
+            and label.casefold()
+            not in {"the", "every", "each", "these", "those", "this", "that", "my", "his", "her"}
+        ):
+            invented.append({"name": label, "occurrences": 1, "kind": "case_label"})
+    if invented:
+        issues["invented_character"] = invented[:10]
+
+    # Prefer Canonical IR allowlist over plan text (plan is not SoT).
+    authority = ""
+    if workspace_id:
+        try:
+            from factory.engine.lib.canonical_ir import (
+                allowed_claim_blob,
+                load_canonical_ir,
+            )
+
+            ir = load_canonical_ir(ws)
+            if ir:
+                authority = allowed_claim_blob(ir, 99)
+        except Exception:
+            authority = ""
+    if not authority:
+        authority = json.dumps(plan or {}, ensure_ascii=False, default=str).casefold()
+    marker_patterns = {
+        "autopsy report": r"\bautopsy(?:\s+report)?\b",
+        "coroner": r"\bcoroner\b",
+        "bank CCTV": r"\bbank(?:'s)?\s+CCTV\b",
+        "financial advisor": r"\bfinancial advisor\b",
+        "offshore accounts": r"\boffshore accounts?\b",
+        "shell companies": r"\bshell compan(?:y|ies)\b",
+        "calendar-year backstory": (
+            r"\b(?:built|founded|started|created)\b.{0,24}\b(?:19|20)\d{2}\b"
+        ),
+        "federal investigation": r"\bfederal investigation\b",
+        "Senate campaign": r"\bSenate campaign\b",
+        "invented training history": r"\bsystem admin who trained\b",
+        "invented planted file": r"\bfile I planted\b",
+    }
+    unsupported = [
+        label
+        for label, pattern in marker_patterns.items()
+        if re.search(pattern, text, re.IGNORECASE)
+        and not re.search(pattern, authority, re.IGNORECASE)
+    ]
+    if unsupported:
+        issues["unsupported_case_fact"] = unsupported
 
 
 _QUOTE_CHARS = ('"', "“", "”", "«", "»")
@@ -429,6 +546,22 @@ def find_must_happen_misses(
     misses: list[dict[str, Any]] = []
     for item in raw:
         beat = str(item or "").strip()
+        # Compiler pointer, not prose vocabulary. The executable threshold
+        # details are separately projected into the same plan/prompt and are
+        # still checked; requiring "siblings/threshold_events.yaml" on-page
+        # creates a guaranteed false negative after a correct scene.
+        if re.search(
+            r"\bsee\s+siblings/threshold_events\.ya?ml\b",
+            beat,
+            re.IGNORECASE,
+        ):
+            continue
+        # Seal marker is a planning-level turn label. Concrete must_happen
+        # rows in the same plan carry the on-page action; requiring the
+        # abstract label verbatim (e.g. "a false interpretation takes hold")
+        # rejects correct dramatization.
+        if beat.startswith("[INTENT LOCK]"):
+            continue
         if not beat or len(_tokens(beat)) < 5:
             continue
         ratio = _coverage_ratio(beat, prose)
@@ -456,6 +589,7 @@ def machine_qc(
     book: int = 1,
     chapter: int | None = None,
     plan: dict | None = None,
+    publication_safety: bool = False,
 ) -> dict:
     issues: dict = {}
     lang = target_lang or target_language(direction, cfg)
@@ -487,6 +621,13 @@ def machine_qc(
         from factory.engine.lib.catalog import chapter_beat_from_plan
 
         resolved_plan = chapter_beat_from_plan(workspace_id, book, chapter)
+
+    _apply_closed_world_story_checks(
+        issues,
+        text,
+        workspace_id=workspace_id,
+        plan=resolved_plan,
+    )
 
     mh_miss = find_must_happen_misses(text, resolved_plan)
     if mh_miss:
@@ -543,6 +684,36 @@ def machine_qc(
             for h in md_leaks[:20]
         ]
 
+    # Run publication-safety checks before labeling a chapter READY. These
+    # previously existed only at promote/export, creating misleading READY files
+    # that were guaranteed to fail in the next stage.
+    from factory.engine.lib.export_gate import check_eg16_duplicate_block
+    from factory.engine.lib.technical_refs import find_technical_chapter_reference
+
+    duplicate_failures = (
+        [
+            check
+            for check in check_eg16_duplicate_block(text, int(chapter or 0))
+            if not check.get("passed") and check.get("severity") == "error"
+        ]
+        if publication_safety
+        else []
+    )
+    if duplicate_failures:
+        issues["publication_duplicate_block"] = [
+            {
+                "code": check.get("code") or check.get("id"),
+                "detail": check.get("detail"),
+                "snippet": check.get("snippet"),
+            }
+            for check in duplicate_failures
+        ]
+    technical_ref = (
+        find_technical_chapter_reference(text) if publication_safety else None
+    )
+    if technical_ref:
+        issues["technical_chapter_reference"] = technical_ref
+
     issues["classification"] = classify_machine_issues(issues)
     return issues
 
@@ -579,6 +750,13 @@ def issues_to_needs_fix(issues: dict, extra: list[str] | None = None) -> list[st
             )
         else:
             flags.append("cliffhanger_paste")
+    if issues.get("publication_duplicate_block"):
+        flags.append("publication_duplicate_block")
+    if issues.get("technical_chapter_reference"):
+        flags.append(
+            "technical_chapter_reference:"
+            + str(issues["technical_chapter_reference"])[:48]
+        )
     # missing_quotes / quotes_advisory: never needs_fix (advisory forever)
     if "stray_whitespace" in issues:
         flags.append("stray_whitespace")
@@ -660,6 +838,18 @@ def format_machine_reasons(issues: dict) -> list[str]:
         )
     if "stray_whitespace" in issues:
         reasons.append("khoảng trắng thừa cuối dòng (stray whitespace)")
+
+    for hit in issues.get("publication_duplicate_block") or []:
+        if isinstance(hit, dict):
+            reasons.append(
+                "publication duplicate block: "
+                + str(hit.get("detail") or hit.get("snippet") or "")[:180]
+            )
+    if issues.get("technical_chapter_reference"):
+        reasons.append(
+            "technical chapter label in prose: "
+            + str(issues["technical_chapter_reference"])[:120]
+        )
 
     cls = issues.get("classification") or classify_machine_issues(issues)
     if cls.get("has_length"):

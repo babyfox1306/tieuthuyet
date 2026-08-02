@@ -147,9 +147,37 @@ def update_state_after_pass(
     chapter_text: str,
     book: int = 1,
 ) -> dict:
+    from factory.engine.lib.canonical_ir import load_canonical_ir
+    from factory.engine.lib.canon_artifacts import artifact_path, read_json
+    from factory.engine.lib.prose_claim_gate import verified_facts_for_state
+
     state = load_state(ws, book)
     direction = load_direction(ws)
-    # State dài → excerpt ngắn hơn để model còn token cho JSON output
+    ir = load_canonical_ir(ws)
+    if ir:
+        canon = read_json(artifact_path(ws, book, chapter_num, "canon_qc.json"))
+        if not canon or canon.get("status") != "pass":
+            raise RuntimeError(
+                f"state blocked: ch{chapter_num} missing canon_qc pass"
+            )
+        state = dict(state)
+        state["current_book"] = book
+        state["current_chapter"] = chapter_num
+        timeline = list(state.get("timeline") or [])
+        marker = f"Ch{chapter_num}: verified (canon_qc pass)"
+        if marker not in timeline:
+            timeline.append(marker)
+        state["timeline"] = timeline
+        verified = list(state.get("verified_facts") or [])
+        for item in verified_facts_for_state(canon, chapter_text):
+            if item not in verified:
+                verified.append(item)
+        state["verified_facts"] = verified
+        state["facts_established"] = list(verified)
+        save_state(ws, book, state)
+        return state
+
+    # Legacy path (no IR): previous LLM updater behaviour.
     payload = json.dumps(
         {
             "current_state": state,
