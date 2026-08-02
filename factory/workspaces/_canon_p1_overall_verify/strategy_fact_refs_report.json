@@ -1,0 +1,8 @@
+{
+  "status": "verified",
+  "missing_ref_blocked": true,
+  "irrelevant_ref_blocked": true,
+  "wrong_actor_blocked": true,
+  "future_ref_blocked": true,
+  "wrong_prop_action_blocked": true
+}

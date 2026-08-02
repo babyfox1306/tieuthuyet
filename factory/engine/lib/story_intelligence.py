@@ -538,26 +538,129 @@ def build_move_countermove_skeleton(
     return build_move_countermove(ir, chapter)
 
 
-def move_fact_ref_errors(moves: dict[str, Any] | None) -> list[dict[str, Any]]:
-    """STOP rows when a non-empty move branch lacks fact_refs and is not ephemeral_safe."""
+def _fact_by_id(ir: dict[str, Any], fact_id: str) -> dict[str, Any] | None:
+    for fact in ir.get("facts") or []:
+        if isinstance(fact, dict) and str(fact.get("fact_id") or "") == fact_id:
+            return fact
+    return None
+
+
+def _fact_available_at(ir: dict[str, Any], fact_id: str, chapter: int) -> bool:
+    available_ids = {
+        str(f.get("fact_id") or "") for f in facts_available_by_chapter(ir, chapter)
+    }
+    if fact_id in available_ids:
+        return True
+    # Explicit reveal clock: F_REVEAL_R* only after reader_reveal (availability)
+    # and must not be used as move support before that chapter.
+    fact = _fact_by_id(ir, fact_id)
+    if not fact:
+        return False
+    meta = fact.get("meta") or {}
+    for key in ("reader_reveal_chapter", "available_chapter", "chapter"):
+        if key in meta and meta.get(key) is not None:
+            try:
+                return int(meta.get(key)) <= chapter
+            except (TypeError, ValueError):
+                pass
+    return fact_id in {str(f.get("fact_id") or "") for f in (ir.get("facts") or [])}
+
+
+def _action_supported_by_fact(action: str, fact: dict[str, Any]) -> bool:
+    """Semantic support: action must share distinctive tokens with fact claim."""
+    claim = str(fact.get("claim") or "")
+    act_toks = _tokens(action)
+    claim_toks = _tokens(claim)
+    if not act_toks or not claim_toks:
+        return False
+    overlap = act_toks & claim_toks
+    need = 2 if len(claim_toks) >= 4 else 1
+    return len(overlap) >= need
+
+
+def _actor_from_action(action: str, ir: dict[str, Any]) -> str | None:
+    names = []
+    for ent in ir.get("entities") or []:
+        name = str(ent.get("name") or "").strip()
+        if name:
+            names.append(name)
+    pov = str((ir.get("pov") or {}).get("character") or "").strip()
+    if pov:
+        names.append(pov)
+    # Also accept first-token short forms (Mara from Mara Voss).
+    shorts = []
+    for name in list(names):
+        first = name.split()[0] if name.split() else ""
+        if first and len(first) >= 3:
+            shorts.append(first)
+    names = sorted(set(names + shorts), key=len, reverse=True)
+    for name in names:
+        if re.match(rf"^\s*{re.escape(name)}\b", action, re.I):
+            return name
+    cf = action.casefold()
+    for name in names:
+        if name.casefold() in cf:
+            return name
+    return None
+
+
+def _prop_id_from_fact(fact: dict[str, Any]) -> str | None:
+    fid = str(fact.get("fact_id") or "")
+    meta = fact.get("meta") or {}
+    if meta.get("prop_id"):
+        return str(meta.get("prop_id"))
+    if fid.startswith("F_PROP_"):
+        return fid[len("F_PROP_") :]
+    return None
+
+
+def _forbidden_event_hit(action: str, ir: dict[str, Any], chapter: int) -> bool:
+    cmap = ir.get("chapter_map") or {}
+    entry = cmap.get(chapter) or cmap.get(str(chapter)) or {}
+    blob = action.casefold()
+    for item in list(entry.get("must_not") or []) + list(ir.get("must_avoid") or []):
+        text = str(item or "").strip()
+        if not text:
+            continue
+        toks = _tokens(text)
+        if toks and len(toks & _tokens(blob)) >= max(2, len(toks) // 2):
+            return True
+    return False
+
+
+def validate_move_fact_refs(
+    moves: dict[str, Any] | None,
+    *,
+    ir: dict[str, Any] | None = None,
+    chapter: int | None = None,
+) -> list[dict[str, Any]]:
+    """STOP rows for missing or semantically unsupported move fact_refs."""
     if not isinstance(moves, dict):
         return []
     errors: list[dict[str, Any]] = []
-    for key in (
+    branch_keys = (
         "antagonist_move",
         "pov_observation",
         "inference_or_misbelief",
         "countermove",
         "cost",
-    ):
+    )
+    for key in branch_keys:
         branch = moves.get(key)
         if not isinstance(branch, dict):
             continue
         if branch.get("ephemeral_safe"):
             continue
-        refs = branch.get("fact_refs") or []
+        refs = [str(r) for r in (branch.get("fact_refs") or []) if str(r).strip()]
+        action = str(
+            branch.get("action")
+            or branch.get("relationship_turn")
+            or branch.get("description")
+            or (branch.get("items") or [""])[0]
+            or ""
+        ).strip()
         has_content = bool(
-            str(branch.get("action") or "").strip()
+            action
             or branch.get("items")
             or branch.get("relationship_turn")
             or branch.get("primary_turn")
@@ -568,20 +671,182 @@ def move_fact_ref_errors(moves: dict[str, Any] | None) -> list[dict[str, Any]]:
             errors.append(
                 {
                     "field": f"moves.{key}",
-                    "claim": str(
-                        branch.get("action")
-                        or branch.get("relationship_turn")
-                        or branch.get("description")
-                        or (branch.get("items") or [""])[0]
-                        or key
-                    )[:320],
+                    "claim": action[:320] or key,
                     "reason": "move_missing_fact_refs",
                     "status": "UNRESOLVED",
                     "authority": "IR_COMPILER",
                     "severity": "block",
                 }
             )
+            continue
+        if not ir or chapter is None or not refs or not action:
+            continue
+
+        # Semantic checks when IR context is available.
+        known = {str(f.get("fact_id") or "") for f in (ir.get("facts") or [])}
+        actor = _actor_from_action(action, ir)
+        any_support = False
+        for fid in refs:
+            if fid not in known:
+                errors.append(
+                    {
+                        "field": f"moves.{key}",
+                        "claim": action[:320],
+                        "fact_ref": fid,
+                        "reason": "move_unknown_fact_ref",
+                        "status": "UNRESOLVED",
+                        "authority": "IR_COMPILER",
+                        "severity": "block",
+                    }
+                )
+                continue
+            if not _fact_available_at(ir, fid, int(chapter)):
+                errors.append(
+                    {
+                        "field": f"moves.{key}",
+                        "claim": action[:320],
+                        "fact_ref": fid,
+                        "reason": "move_future_fact_ref",
+                        "status": "UNRESOLVED",
+                        "authority": "IR_COMPILER",
+                        "severity": "block",
+                    }
+                )
+                continue
+            fact = _fact_by_id(ir, fid) or {}
+            # Future reveal ids must not support moves early.
+            meta = fact.get("meta") or {}
+            reveal_ch = meta.get("reader_reveal_chapter") or meta.get("pov_knows_chapter")
+            if reveal_ch is not None:
+                try:
+                    if int(reveal_ch) > int(chapter):
+                        errors.append(
+                            {
+                                "field": f"moves.{key}",
+                                "claim": action[:320],
+                                "fact_ref": fid,
+                                "reason": "move_future_fact_ref",
+                                "status": "UNRESOLVED",
+                                "authority": "IR_COMPILER",
+                                "severity": "block",
+                            }
+                        )
+                        continue
+                except (TypeError, ValueError):
+                    pass
+
+            if _action_supported_by_fact(action, fact):
+                any_support = True
+
+            prop_id = _prop_id_from_fact(fact)
+            if prop_id:
+                from factory.engine.lib.prose_settlement import (
+                    _allowed_actions_at,
+                    _prop_by_id,
+                    scheduled_holder_at,
+                    _holders_compatible,
+                )
+
+                prop = _prop_by_id(ir, prop_id)
+                if prop:
+                    holder = scheduled_holder_at(prop, int(chapter))
+                    allowed = _allowed_actions_at(ir, prop, int(chapter))
+                    # Destroy/transfer verbs require matching allowed action + holder.
+                    destructive = bool(
+                        re.search(
+                            r"\b(destroys?|deletes?|wipes?|transfers?|gives?|hands?|"
+                            r"returns?|steals?|seizes?)\b",
+                            action,
+                            re.I,
+                        )
+                    )
+                    if destructive:
+                        if holder and actor and not _holders_compatible(actor, holder):
+                            errors.append(
+                                {
+                                    "field": f"moves.{key}",
+                                    "claim": action[:320],
+                                    "fact_ref": fid,
+                                    "reason": "move_wrong_prop_actor",
+                                    "detail": f"holder={holder} actor={actor}",
+                                    "status": "UNRESOLVED",
+                                    "authority": "IR_COMPILER",
+                                    "severity": "block",
+                                }
+                            )
+                        else:
+                            from factory.engine.lib.prose_settlement import (
+                                _action_permitted,
+                            )
+
+                            if not _action_permitted(action, allowed):
+                                errors.append(
+                                    {
+                                        "field": f"moves.{key}",
+                                        "claim": action[:320],
+                                        "fact_ref": fid,
+                                        "reason": "move_prop_action_not_allowed",
+                                        "status": "UNRESOLVED",
+                                        "authority": "IR_COMPILER",
+                                        "severity": "block",
+                                    }
+                                )
+
+        if refs and not any_support:
+            errors.append(
+                {
+                    "field": f"moves.{key}",
+                    "claim": action[:320],
+                    "fact_refs": refs,
+                    "reason": "move_irrelevant_fact_refs",
+                    "status": "UNRESOLVED",
+                    "authority": "IR_COMPILER",
+                    "severity": "block",
+                }
+            )
+        if action and _forbidden_event_hit(action, ir, int(chapter)):
+            errors.append(
+                {
+                    "field": f"moves.{key}",
+                    "claim": action[:320],
+                    "reason": "move_forbidden_event",
+                    "status": "UNRESOLVED",
+                    "authority": "IR_COMPILER",
+                    "severity": "block",
+                }
+            )
+        # Wrong actor vs POV-facing countermove: if countermove names antagonist
+        # as actor but required events are POV duties, flag when refs are POV-map
+        # facts and actor is clearly the antagonist while branch is countermove.
+        if key == "countermove" and actor:
+            pov = str((ir.get("pov") or {}).get("character") or "").strip()
+            if pov and actor.casefold() not in pov.casefold() and pov.casefold() not in actor.casefold():
+                # Only flag when action clearly attributes agency to non-POV.
+                if re.match(
+                    rf"^\s*{re.escape(actor)}\b", action, re.I
+                ):
+                    errors.append(
+                        {
+                            "field": f"moves.{key}",
+                            "claim": action[:320],
+                            "reason": "move_wrong_actor",
+                            "detail": f"countermove actor={actor} pov={pov}",
+                            "status": "UNRESOLVED",
+                            "authority": "IR_COMPILER",
+                            "severity": "block",
+                        }
+                    )
     return errors
+
+
+def move_fact_ref_errors(
+    moves: dict[str, Any] | None,
+    *,
+    ir: dict[str, Any] | None = None,
+    chapter: int | None = None,
+) -> list[dict[str, Any]]:
+    """STOP rows when move branches lack fact_refs or fail semantic support."""
+    return validate_move_fact_refs(moves, ir=ir, chapter=chapter)
 
 
 def compile_chapter_intelligence(

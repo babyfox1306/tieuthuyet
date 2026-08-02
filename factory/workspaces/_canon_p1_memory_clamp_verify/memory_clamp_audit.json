@@ -1,0 +1,193 @@
+{
+  "r4_allowed_entry": {
+    "fact_id": "F_REVEAL_R4",
+    "reveal_id": "R4",
+    "claim": "The blood was treated with anticoagulants.",
+    "target": "character_state.knows",
+    "decision": "allowed",
+    "clock_used": "pov_knows_chapter",
+    "pov_knows_chapter": 2,
+    "reader_reveal_chapter": 2,
+    "current_chapter": 2,
+    "source": "prose_settlement",
+    "reason": "pov_clock_reached"
+  },
+  "r5_clamped_entry": {
+    "fact_id": "F_REVEAL_R5",
+    "reveal_id": "R5",
+    "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+    "target": "character_state.knows",
+    "decision": "clamped",
+    "clock_used": "pov_knows_chapter",
+    "pov_knows_chapter": 9,
+    "reader_reveal_chapter": 9,
+    "current_chapter": 2,
+    "source": "prose_settlement",
+    "reason": "pov_clock_not_reached"
+  },
+  "divergence_entry": {
+    "fact_id": "F_REVEAL_R_DIVERGE",
+    "reveal_id": "R_DIVERGE",
+    "claim": "Synthetic diverge fact: the vault passphrase is heartbeat-locked.",
+    "target": "character_state.knows",
+    "decision": "clamped",
+    "clock_used": "pov_knows_chapter",
+    "pov_knows_chapter": 9,
+    "reader_reveal_chapter": 2,
+    "current_chapter": 2,
+    "source": "canonical_ir",
+    "reason": "pov_clock_not_reached"
+  },
+  "missing_pov_entry": {
+    "fact_id": "F_REVEAL_R_MISSING_POV",
+    "reveal_id": "R_MISSING_POV",
+    "claim": "Synthetic missing-pov fact about the ghost vehicle plate.",
+    "target": "character_state.knows",
+    "decision": "unresolved_clock",
+    "clock_used": "pov_knows_chapter",
+    "pov_knows_chapter": null,
+    "reader_reveal_chapter": 1,
+    "current_chapter": 2,
+    "source": "canonical_ir",
+    "reason": "missing_pov_knows_chapter"
+  },
+  "settlement_knowledge_audit": [
+    {
+      "fact_id": "F_REVEAL_R4",
+      "reveal_id": "R4",
+      "claim": "The blood was treated with anticoagulants.",
+      "target": "character_state.knows",
+      "decision": "allowed",
+      "clock_used": "pov_knows_chapter",
+      "pov_knows_chapter": 2,
+      "reader_reveal_chapter": 2,
+      "current_chapter": 2,
+      "source": "prose_settlement",
+      "reason": "pov_clock_reached"
+    },
+    {
+      "fact_id": "F_REVEAL_R5",
+      "reveal_id": "R5",
+      "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+      "target": "character_state.knows",
+      "decision": "clamped",
+      "clock_used": "pov_knows_chapter",
+      "pov_knows_chapter": 9,
+      "reader_reveal_chapter": 9,
+      "current_chapter": 2,
+      "source": "prose_settlement",
+      "reason": "pov_clock_not_reached"
+    }
+  ],
+  "apply_audit": [
+    {
+      "fact_id": "F_REVEAL_R5",
+      "reveal_id": "R5",
+      "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+      "target": "character_state.knows",
+      "decision": "clamped",
+      "clock_used": "pov_knows_chapter",
+      "pov_knows_chapter": 9,
+      "reader_reveal_chapter": 9,
+      "current_chapter": 3,
+      "source": "settlement",
+      "reason": "pov_clock_not_reached"
+    },
+    {
+      "fact_id": "F_REVEAL_R5",
+      "reveal_id": "R5",
+      "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+      "target": "events_realized",
+      "decision": "clamped",
+      "clock_used": "pov_knows_chapter",
+      "pov_knows_chapter": 9,
+      "reader_reveal_chapter": 9,
+      "current_chapter": 3,
+      "source": "settlement",
+      "reason": "pov_clock_not_reached"
+    },
+    {
+      "fact_id": "F_REVEAL_R5",
+      "reveal_id": "R5",
+      "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+      "target": "moves.prior_realized",
+      "decision": "clamped",
+      "clock_used": "pov_knows_chapter",
+      "pov_knows_chapter": 9,
+      "reader_reveal_chapter": 9,
+      "current_chapter": 3,
+      "source": "settlement",
+      "reason": "pov_clock_not_reached"
+    },
+    {
+      "fact_id": "F_REVEAL_R5",
+      "reveal_id": "R5",
+      "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+      "target": "moves.open_pressure",
+      "decision": "clamped",
+      "clock_used": "pov_knows_chapter",
+      "pov_knows_chapter": 9,
+      "reader_reveal_chapter": 9,
+      "current_chapter": 3,
+      "source": "settlement",
+      "reason": "pov_clock_not_reached"
+    }
+  ],
+  "call_path": {
+    "path": [
+      {
+        "step": 1,
+        "file": "factory/engine/lib/canonical_ir.py",
+        "function": "compile_canonical_ir / reveal_schedule ingest",
+        "role": "IR SoT; stores reader_reveal_chapter and pov_knows_chapter separately"
+      },
+      {
+        "step": 2,
+        "file": "factory/engine/lib/story_intelligence.py",
+        "function": "compile_chapter_intelligence",
+        "role": "Builds cognition/prop/moves from IR; then applies prior settlement",
+        "lines_note": "calls apply_settlement_to_intelligence when prior sealed"
+      },
+      {
+        "step": 3,
+        "file": "factory/engine/lib/prose_settlement.py",
+        "function": "build_settlement → derive_memory_deltas",
+        "role": "After canon_qc pass: extract knows candidates from claims/events"
+      },
+      {
+        "step": 4,
+        "file": "factory/engine/lib/prose_settlement.py",
+        "function": "evaluate_knowledge_against_pov_clocks",
+        "clock_read": "pov_knows_chapter (required); reader_reveal_chapter recorded only",
+        "fallback_to_reader": false,
+        "missing_pov_clock": "unresolved_clock → BLOCK from knows",
+        "when": "BEFORE knows_gained is written into settlement"
+      },
+      {
+        "step": 5,
+        "file": "factory/engine/lib/prose_settlement.py",
+        "function": "apply_settlement_to_intelligence",
+        "role": "Merge settlement into N+1 live character_state",
+        "reclamp": true,
+        "when": "AFTER settlement load, BEFORE packet compile; re-evaluates POV clock at target chapter"
+      },
+      {
+        "step": 6,
+        "file": "factory/engine/lib/chapter_contract.py",
+        "function": "compile_chapter_contract / compile_writer_packet / _writer_safe_intelligence",
+        "role": "Packet embeds character_state; villain_knowledge NOT projected to Writer",
+        "bypass_risk": "prior_settlement.character_updates may still contain clamped audit text — must check Writer packet scrub"
+      }
+    ],
+    "answers": {
+      "r4_allowed_in": "evaluate_knowledge_against_pov_clocks (decision=allowed)",
+      "r5_clamped_in": "evaluate_knowledge_against_pov_clocks (decision=clamped)",
+      "clock_helper": "evaluate_knowledge_against_pov_clocks / _all_reveal_rows",
+      "fallback_reader": false,
+      "missing_pov_policy": "unresolved_clock BLOCK",
+      "clamp_timing": "both: at settlement derive AND at apply merge",
+      "packet_bypass": "checked in verification — prior_settlement on packet may hold source text; Writer must not receive locked claim bodies",
+      "antagonist_direct": "villain_knowledge omitted from _writer_safe_intelligence"
+    }
+  }
+}

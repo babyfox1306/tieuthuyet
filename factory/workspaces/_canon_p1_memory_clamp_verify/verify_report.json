@@ -1,0 +1,475 @@
+{
+  "commit": "514291bd8ea231fc809865b369b832ee2fa72158",
+  "branch": "experiment/ce-canon-provenance",
+  "tag_p1_points_to": "514291bd8ea231fc809865b369b832ee2fa72158",
+  "note": "Tag is not evidence; runtime cases below are.",
+  "call_path": {
+    "path": [
+      {
+        "step": 1,
+        "file": "factory/engine/lib/canonical_ir.py",
+        "function": "compile_canonical_ir / reveal_schedule ingest",
+        "role": "IR SoT; stores reader_reveal_chapter and pov_knows_chapter separately"
+      },
+      {
+        "step": 2,
+        "file": "factory/engine/lib/story_intelligence.py",
+        "function": "compile_chapter_intelligence",
+        "role": "Builds cognition/prop/moves from IR; then applies prior settlement",
+        "lines_note": "calls apply_settlement_to_intelligence when prior sealed"
+      },
+      {
+        "step": 3,
+        "file": "factory/engine/lib/prose_settlement.py",
+        "function": "build_settlement → derive_memory_deltas",
+        "role": "After canon_qc pass: extract knows candidates from claims/events"
+      },
+      {
+        "step": 4,
+        "file": "factory/engine/lib/prose_settlement.py",
+        "function": "evaluate_knowledge_against_pov_clocks",
+        "clock_read": "pov_knows_chapter (required); reader_reveal_chapter recorded only",
+        "fallback_to_reader": false,
+        "missing_pov_clock": "unresolved_clock → BLOCK from knows",
+        "when": "BEFORE knows_gained is written into settlement"
+      },
+      {
+        "step": 5,
+        "file": "factory/engine/lib/prose_settlement.py",
+        "function": "apply_settlement_to_intelligence",
+        "role": "Merge settlement into N+1 live character_state",
+        "reclamp": true,
+        "when": "AFTER settlement load, BEFORE packet compile; re-evaluates POV clock at target chapter"
+      },
+      {
+        "step": 6,
+        "file": "factory/engine/lib/chapter_contract.py",
+        "function": "compile_chapter_contract / compile_writer_packet / _writer_safe_intelligence",
+        "role": "Packet embeds character_state; villain_knowledge NOT projected to Writer",
+        "bypass_risk": "prior_settlement.character_updates may still contain clamped audit text — must check Writer packet scrub"
+      }
+    ],
+    "answers": {
+      "r4_allowed_in": "evaluate_knowledge_against_pov_clocks (decision=allowed)",
+      "r5_clamped_in": "evaluate_knowledge_against_pov_clocks (decision=clamped)",
+      "clock_helper": "evaluate_knowledge_against_pov_clocks / _all_reveal_rows",
+      "fallback_reader": false,
+      "missing_pov_policy": "unresolved_clock BLOCK",
+      "clamp_timing": "both: at settlement derive AND at apply merge",
+      "packet_bypass": "Writer scrub via compile_writer_packet + locked-claim match; prior_settlement claim bodies not sent to Writer",
+      "antagonist_direct": "villain_knowledge omitted from _writer_safe_intelligence"
+    }
+  },
+  "memory_clamp": {
+    "status": "pass",
+    "r4_checked": true,
+    "r4_decision": "allowed",
+    "r4_clock_used": "pov_knows_chapter",
+    "r4_pov_knows": 2,
+    "r4_reader_reveal": 2,
+    "r4_current_chapter": 2,
+    "r4_entry": {
+      "fact_id": "F_REVEAL_R4",
+      "reveal_id": "R4",
+      "claim": "The blood was treated with anticoagulants.",
+      "target": "character_state.knows",
+      "decision": "allowed",
+      "clock_used": "pov_knows_chapter",
+      "pov_knows_chapter": 2,
+      "reader_reveal_chapter": 2,
+      "current_chapter": 2,
+      "source": "prose_settlement",
+      "reason": "pov_clock_reached"
+    },
+    "r5_checked": true,
+    "r5_decision": "clamped",
+    "r5_clock_used": "pov_knows_chapter",
+    "r5_pov_knows": 9,
+    "r5_reader_reveal": 9,
+    "r5_current_chapter": 2,
+    "r5_entry": {
+      "fact_id": "F_REVEAL_R5",
+      "reveal_id": "R5",
+      "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+      "target": "character_state.knows",
+      "decision": "clamped",
+      "clock_used": "pov_knows_chapter",
+      "pov_knows_chapter": 9,
+      "reader_reveal_chapter": 9,
+      "current_chapter": 2,
+      "source": "prose_settlement",
+      "reason": "pov_clock_not_reached"
+    },
+    "reader_pov_clock_divergence_test": "pass",
+    "missing_pov_clock_test": "pass",
+    "poisoned_settlement_reclamped": true,
+    "hidden_fact_absent_from_character_state": true,
+    "hidden_fact_absent_from_full_writer_packet": true,
+    "packet_leak_note": null,
+    "cases": {
+      "A": {
+        "kept": [
+          "The blood on Adrian's phone was treated with anticoagulants"
+        ],
+        "audit": [
+          {
+            "fact_id": "F_REVEAL_R4",
+            "reveal_id": "R4",
+            "claim": "The blood on Adrian's phone was treated with anticoagulants",
+            "target": "character_state.knows",
+            "decision": "allowed",
+            "clock_used": "pov_knows_chapter",
+            "pov_knows_chapter": 2,
+            "reader_reveal_chapter": 2,
+            "current_chapter": 2,
+            "source": "canonical_ir",
+            "reason": "pov_clock_reached"
+          }
+        ],
+        "r4_entry": {
+          "fact_id": "F_REVEAL_R4",
+          "reveal_id": "R4",
+          "claim": "The blood on Adrian's phone was treated with anticoagulants",
+          "target": "character_state.knows",
+          "decision": "allowed",
+          "clock_used": "pov_knows_chapter",
+          "pov_knows_chapter": 2,
+          "reader_reveal_chapter": 2,
+          "current_chapter": 2,
+          "source": "canonical_ir",
+          "reason": "pov_clock_reached"
+        },
+        "ok": true
+      },
+      "B": {
+        "kept": [],
+        "audit": [
+          {
+            "fact_id": "F_REVEAL_R5",
+            "reveal_id": "R5",
+            "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+            "target": "character_state.knows",
+            "decision": "clamped",
+            "clock_used": "pov_knows_chapter",
+            "pov_knows_chapter": 9,
+            "reader_reveal_chapter": 9,
+            "current_chapter": 2,
+            "source": "canonical_ir",
+            "reason": "pov_clock_not_reached"
+          }
+        ],
+        "r5_entry": {
+          "fact_id": "F_REVEAL_R5",
+          "reveal_id": "R5",
+          "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+          "target": "character_state.knows",
+          "decision": "clamped",
+          "clock_used": "pov_knows_chapter",
+          "pov_knows_chapter": 9,
+          "reader_reveal_chapter": 9,
+          "current_chapter": 2,
+          "source": "canonical_ir",
+          "reason": "pov_clock_not_reached"
+        },
+        "ok": true
+      },
+      "C": {
+        "poisoned_knows_in_settlement": [
+          "The blood on Adrian's phone was treated with anticoagulants",
+          "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server"
+        ],
+        "n1_knows": [
+          "The blood on Adrian's phone was treated with anticoagulants"
+        ],
+        "r4_in_knows": true,
+        "r5_in_knows": false,
+        "apply_audit": [
+          {
+            "fact_id": "F_REVEAL_R5",
+            "reveal_id": "R5",
+            "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+            "target": "character_state.knows",
+            "decision": "clamped",
+            "clock_used": "pov_knows_chapter",
+            "pov_knows_chapter": 9,
+            "reader_reveal_chapter": 9,
+            "current_chapter": 3,
+            "source": "settlement",
+            "reason": "pov_clock_not_reached"
+          },
+          {
+            "fact_id": "F_REVEAL_R5",
+            "reveal_id": "R5",
+            "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+            "target": "events_realized",
+            "decision": "clamped",
+            "clock_used": "pov_knows_chapter",
+            "pov_knows_chapter": 9,
+            "reader_reveal_chapter": 9,
+            "current_chapter": 3,
+            "source": "settlement",
+            "reason": "pov_clock_not_reached"
+          },
+          {
+            "fact_id": "F_REVEAL_R5",
+            "reveal_id": "R5",
+            "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+            "target": "moves.prior_realized",
+            "decision": "clamped",
+            "clock_used": "pov_knows_chapter",
+            "pov_knows_chapter": 9,
+            "reader_reveal_chapter": 9,
+            "current_chapter": 3,
+            "source": "settlement",
+            "reason": "pov_clock_not_reached"
+          },
+          {
+            "fact_id": "F_REVEAL_R5",
+            "reveal_id": "R5",
+            "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+            "target": "moves.open_pressure",
+            "decision": "clamped",
+            "clock_used": "pov_knows_chapter",
+            "pov_knows_chapter": 9,
+            "reader_reveal_chapter": 9,
+            "current_chapter": 3,
+            "source": "settlement",
+            "reason": "pov_clock_not_reached"
+          }
+        ],
+        "r5_reclamped": true,
+        "hidden_absent_from_character_state": true,
+        "hidden_absent_from_full_packet": true,
+        "packet_hits": [],
+        "backdoor_in_continuity_or_required_events": false,
+        "villain_knowledge_in_writer_packet": false,
+        "ok": true
+      },
+      "D": {
+        "reader_reveal_chapter": 2,
+        "pov_knows_chapter": 9,
+        "current_chapter": 2,
+        "entry": {
+          "fact_id": "F_REVEAL_R_DIVERGE",
+          "reveal_id": "R_DIVERGE",
+          "claim": "Synthetic diverge fact: the vault passphrase is heartbeat-locked.",
+          "target": "character_state.knows",
+          "decision": "clamped",
+          "clock_used": "pov_knows_chapter",
+          "pov_knows_chapter": 9,
+          "reader_reveal_chapter": 2,
+          "current_chapter": 2,
+          "source": "canonical_ir",
+          "reason": "pov_clock_not_reached"
+        },
+        "kept": [],
+        "ok": true
+      },
+      "E": {
+        "entry": {
+          "fact_id": "F_REVEAL_R_MISSING_POV",
+          "reveal_id": "R_MISSING_POV",
+          "claim": "Synthetic missing-pov fact about the ghost vehicle plate.",
+          "target": "character_state.knows",
+          "decision": "unresolved_clock",
+          "clock_used": "pov_knows_chapter",
+          "pov_knows_chapter": null,
+          "reader_reveal_chapter": 1,
+          "current_chapter": 2,
+          "source": "canonical_ir",
+          "reason": "missing_pov_knows_chapter"
+        },
+        "kept": [],
+        "ok": true,
+        "policy": "fail-closed: BLOCK from knows + unresolved_clock audit"
+      }
+    }
+  },
+  "settlement_override": {
+    "loaded": true,
+    "overrode_carries_to_next": true,
+    "override_reason_recorded": true,
+    "packet_digest_changed": true,
+    "continuity": {
+      "source": "settlement",
+      "carries_to_next": null,
+      "events_from_settlement": [
+        "Mara scrapes Claire Thorne's data.",
+        "Mara scrapes Claire Thorne's data.",
+        "The blood on Adrian's phone was treated with anticoagulants"
+      ],
+      "plan_foresight": "Mara does not know the blood was treated with anticoagulants.",
+      "plan_foresight_superseded": true,
+      "prior_settlement_digest": "22e1d6b9c8ad3ca0ac5a687b1bae0ebf03d25452100d335b274aff07d2b63614",
+      "memory_from_settlement": [
+        "The blood on Adrian's phone was treated with anticoagulants"
+      ],
+      "beliefs_from_settlement": []
+    },
+    "authority_order": [
+      "Canonical IR pov_knows_chapter",
+      "verified settlement (re-clamped)",
+      "carries_to_next / Outliner foresight"
+    ],
+    "r4_present_despite_outliner_denial": true,
+    "r5_blocked_despite_poison_and_outliner": true,
+    "ok": true
+  },
+  "belief_policy": {
+    "status": "partial",
+    "knowledge_clamped": true,
+    "belief_clamped_like_knows_when_matching_reveal": true,
+    "belief_requires_provenance": false,
+    "hidden_truth_alias_blocked_in_misbelief": true,
+    "psychology_misbelief_allowed": true,
+    "cases": {
+      "belief_observation_non_reveal": {
+        "text": "Professional suspicion sharpens.",
+        "kept": [
+          "Professional suspicion sharpens."
+        ],
+        "audit": []
+      },
+      "hidden_truth_as_misbelief": {
+        "kept": [],
+        "audit": [
+          {
+            "fact_id": "F_REVEAL_R5",
+            "reveal_id": "R5",
+            "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+            "target": "character_state.misbeliefs",
+            "decision": "clamped",
+            "clock_used": "pov_knows_chapter",
+            "pov_knows_chapter": 9,
+            "reader_reveal_chapter": 9,
+            "current_chapter": 2,
+            "source": "prose_settlement",
+            "reason": "pov_clock_not_reached"
+          }
+        ]
+      },
+      "psychology_dissonance": {
+        "kept": [
+          "Believes Adrian is a tool while being used by him as a predator"
+        ],
+        "audit": []
+      }
+    },
+    "known_gaps": [
+      "believes without reveal match are not provenance-gated (no observation→belief graph)",
+      "no typed BLOCK for belief-without-source unless it matches a locked reveal"
+    ],
+    "ok_for_memory_layer": true
+  },
+  "custody_clamp": {
+    "status": "gap",
+    "baseline_holder_ch2_P1": "Mara",
+    "wrong_holder_blocked": false,
+    "observed_holder_after_poison": "Det. Miller",
+    "disallowed_action_blocked": false,
+    "poisoned_settlement_blocked": false,
+    "verified_transfer_carries_to_next": true,
+    "known_gaps": [
+      "apply_settlement_to_intelligence accepts prose_* prop holder without re-validating IR physical_owner_by_chapter",
+      "no hard gate for prop action vs allowed_actions on move fact_refs"
+    ]
+  },
+  "strategy_fact_refs": {
+    "status": "partial",
+    "missing_ref_blocked": true,
+    "irrelevant_ref_blocked": false,
+    "wrong_actor_blocked": false,
+    "future_ref_blocked": false,
+    "current_behavior": "resolve_fact_refs uses token/id overlap; move_fact_ref_errors only blocks empty fact_refs on non-ephemeral branches",
+    "sample_countermove_refs": [
+      "F_MAP_CH2_must_happen_0",
+      "F_HONEY_DELIVERY_METHOD",
+      "F_PSY_0_behavioral_constraints_2",
+      "F_PLOT_TRUE_PLOT",
+      "F_PLOT_SURFACE_PLOT",
+      "F_MAP_CH1_must_happen_0",
+      "F_PSY_0_stress_responses_3",
+      "F_PSY_0_stress_responses_2",
+      "F_CLUE_C5",
+      "F_REVEAL_R4",
+      "F_PROP_P2"
+    ],
+    "known_gaps": [
+      "no semantic check that fact_ref supports the action",
+      "no actor match gate",
+      "no future-reveal fact_ref ban on moves beyond empty-ref STOP",
+      "prop-exists fact can appear via keyword overlap without proving custody action"
+    ]
+  },
+  "call_order": {
+    "canon_fail_skips_fixer": true,
+    "canon_fail_literary_calls": 0,
+    "canon_fail_fixer_calls": 0,
+    "canon_fail_settlement_calls": 0,
+    "evidence": "run_factory: run_prose_claim_gate before call_9router('qc'); on fail returns needs_fix with skip_literary_fixer; build_settlement only after pass",
+    "ok": true
+  },
+  "tests": {
+    "focused": {
+      "ran": 37,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "ok": true
+    },
+    "full": {
+      "ran": 456,
+      "failures": 5,
+      "errors": 1,
+      "skipped": 1,
+      "ok": false,
+      "failure_names": [
+        "test_omni_fail_jumps_to_external (test_call_9router.TestExternalFallback)",
+        "test_html_404_gateway_hint (test_call_9router.TestModelRouting)",
+        "test_loads_needs_fix (test_chapter_reasons.ChapterBlockInfoTests)",
+        "test_machine_short (test_chapter_reasons.FormatReasonsTests)",
+        "test_ch8_flags_duplicate_tail (test_locked_names_and_cliff_paste.CliffhangerPasteSecondWifeTests)"
+      ],
+      "error_names": [
+        "test_approve_plan_passes_clean_fixture (test_canon_registry.CanonRegistrySecondShadowTests)"
+      ]
+    },
+    "new_regressions": [],
+    "clamp_touching_tests": [
+      "test_settlement_clamps_knows_before_pov_clock",
+      "test_settlement_allows_knows_at_pov_clock",
+      "test_prose_changes_n1_memory_custody_strategy"
+    ],
+    "old_regressions": [
+      "test_omni_fail_jumps_to_external (test_call_9router.TestExternalFallback)",
+      "test_html_404_gateway_hint (test_call_9router.TestModelRouting)",
+      "test_loads_needs_fix (test_chapter_reasons.ChapterBlockInfoTests)",
+      "test_machine_short (test_chapter_reasons.FormatReasonsTests)",
+      "test_ch8_flags_duplicate_tail (test_locked_names_and_cliff_paste.CliffhangerPasteSecondWifeTests)",
+      "test_approve_plan_passes_clean_fixture (test_canon_registry.CanonRegistrySecondShadowTests)"
+    ],
+    "clamp_real_touch": [
+      "test_settlement_clamps_knows_before_pov_clock",
+      "test_r4_anticoagulant_allowed_at_ch2"
+    ],
+    "note": "Full suite 5 fail + 1 error are pre-existing non-canon (call_9router, chapter_reasons, cliff paste, approve_plan fixture). Focused canon_pipeline 37/37 pass."
+  },
+  "verdict": {
+    "p1_memory_complete": true,
+    "p1_custody_complete": false,
+    "p1_belief_policy_complete": false,
+    "p1_strategy_complete": false,
+    "p1_overall": "partial",
+    "label": "P1-Memory complete; P1 overall partial",
+    "known_gaps": [
+      "believes without reveal match are not provenance-gated (no observation→belief graph)",
+      "no typed BLOCK for belief-without-source unless it matches a locked reveal",
+      "apply_settlement_to_intelligence accepts prose_* prop holder without re-validating IR physical_owner_by_chapter",
+      "no hard gate for prop action vs allowed_actions on move fact_refs",
+      "no semantic check that fact_ref supports the action",
+      "no actor match gate",
+      "no future-reveal fact_ref ban on moves beyond empty-ref STOP",
+      "prop-exists fact can appear via keyword overlap without proving custody action"
+    ]
+  }
+}

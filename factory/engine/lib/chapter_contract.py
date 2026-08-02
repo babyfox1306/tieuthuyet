@@ -218,7 +218,9 @@ def compile_chapter_contract(
     }
     if intel:
         # Fail closed if move branches lack fact_refs on books with chapter_map content.
-        move_errs = move_fact_ref_errors(intel.get("moves"))
+        move_errs = move_fact_ref_errors(
+            intel.get("moves"), ir=ir, chapter=chapter
+        )
         if move_errs:
             raise RuntimeError(
                 "chapter contract blocked: "
@@ -271,6 +273,70 @@ def _scrub_psychology_for_writer(rows: Any) -> list[dict[str, Any]]:
     return out
 
 
+def _locked_reveal_rows(contract: dict[str, Any]) -> list[dict[str, Any]]:
+    """Excluded reveal rows used to scrub Writer-facing strings."""
+    rows: list[dict[str, Any]] = []
+    for row in contract.get("excluded_facts") or []:
+        if not isinstance(row, dict):
+            continue
+        rid = str(row.get("id") or "").strip()
+        fact = str(row.get("fact") or "").strip()
+        if not rid and not fact:
+            continue
+        rows.append({"reveal_id": rid, "claim": fact, "fact_id": f"F_REVEAL_{rid}" if rid else None})
+    return rows
+
+
+def _text_hits_locked(text: str, locked_rows: list[dict[str, Any]]) -> bool:
+    """True when text embeds a locked reveal id or states a locked claim."""
+    from factory.engine.lib.prose_settlement import _knowledge_matches_locked
+
+    blob = str(text or "").strip()
+    if not blob:
+        return False
+    cf = blob.casefold()
+    for row in locked_rows:
+        rid = str(row.get("reveal_id") or "").strip()
+        fid = str(row.get("fact_id") or "").strip()
+        if rid and (rid.casefold() == cf or f"[{rid.casefold()}]" in cf or f" {rid.casefold()} " in f" {cf} "):
+            return True
+        if fid and fid.casefold() in cf:
+            return True
+        if _knowledge_matches_locked(blob, row):
+            return True
+    return False
+
+
+def _scrub_string_list(items: Any, locked_rows: list[dict[str, Any]]) -> list[str]:
+    out: list[str] = []
+    for item in items or []:
+        text = str(item or "").strip()
+        if not text:
+            continue
+        if _text_hits_locked(text, locked_rows):
+            continue
+        out.append(text)
+    return out
+
+
+def _scrub_continuity_for_writer(
+    continuity: Any, locked_rows: list[dict[str, Any]]
+) -> dict[str, Any] | None:
+    if not isinstance(continuity, dict):
+        return None
+    row = deepcopy(continuity)
+    row["events_from_settlement"] = _scrub_string_list(
+        row.get("events_from_settlement"), locked_rows
+    )
+    row["memory_from_settlement"] = _scrub_string_list(
+        row.get("memory_from_settlement"), locked_rows
+    )
+    row["beliefs_from_settlement"] = _scrub_string_list(
+        row.get("beliefs_from_settlement"), locked_rows
+    )
+    return row
+
+
 def compile_writer_packet(
     contract: dict[str, Any],
     *,
@@ -280,6 +346,7 @@ def compile_writer_packet(
     chapter = int(contract.get("chapter") or 0)
     # Validator keeps excluded_facts on the contract; Writer must not see ids/text.
     hidden_count = len(contract.get("excluded_facts") or [])
+    locked_rows = _locked_reveal_rows(contract)
     entities = [
         _sanitize_entity_for_writer(e)
         for e in (contract.get("entities") or [])
@@ -288,6 +355,7 @@ def compile_writer_packet(
     safe_intel = _writer_safe_intelligence(
         contract.get("intelligence") or {},
         pov_character=str((contract.get("pov") or {}).get("character") or ""),
+        locked_rows=locked_rows,
     )
     packet = {
         "packet_version": "1.1",
@@ -297,14 +365,18 @@ def compile_writer_packet(
         "visible_facts": contract.get("visible_facts"),
         # Opaque count only — no reveal ids, no fact text, no spoilers.
         "hidden_future_reveal_count": hidden_count,
-        "required_events": contract.get("required_events"),
+        "required_events": _scrub_string_list(
+            contract.get("required_events"), locked_rows
+        ),
         "must_avoid": contract.get("must_avoid"),
         "entities": entities,
         "prop_actions": contract.get("prop_actions"),
         "relationship_turn": contract.get("relationship_turn"),
         "primary_turn": contract.get("primary_turn"),
         "plan_refs": contract.get("plan_refs"),
-        "continuity": contract.get("continuity"),
+        "continuity": _scrub_continuity_for_writer(
+            contract.get("continuity"), locked_rows
+        ),
         "allowed_creative_space": contract.get("allowed_creative_space"),
         "intelligence": safe_intel,
         "character_state": safe_intel.get("character_state"),
@@ -327,12 +399,30 @@ def compile_writer_packet(
     return packet
 
 
+def _scrub_prior_settlement_for_writer(prior: Any) -> dict[str, Any] | None:
+    """Opaque continuity metadata only — no locked claim bodies for Writer."""
+    if not isinstance(prior, dict):
+        return None
+    return {
+        "chapter": prior.get("chapter"),
+        "settlement_digest": prior.get("settlement_digest"),
+        "continuity_source": prior.get("continuity_source") or "settlement",
+        "applied_to_live_state": prior.get("applied_to_live_state"),
+        "applied_at_chapter": prior.get("applied_at_chapter"),
+        "events_realized_count": len(prior.get("events_realized") or []),
+        "knowledge_clamped_count": len(prior.get("knowledge_clamped_on_apply") or []),
+        # Live memory already merged into character_state; do not re-send deltas.
+    }
+
+
 def _writer_safe_cognition(
     rows: Any,
     *,
     pov_character: str = "",
+    locked_rows: list[dict[str, Any]] | None = None,
 ) -> list[dict[str, Any]]:
     """POV gets full cognition; others get visible-to-POV fields only."""
+    locked = locked_rows or []
     out: list[dict[str, Any]] = []
     for row in rows or []:
         if not isinstance(row, dict):
@@ -340,10 +430,14 @@ def _writer_safe_cognition(
         item = deepcopy(row)
         name = str(item.get("character") or "").strip()
         if pov_character and name and name != pov_character:
-            # Antagonist / others: no private knows beyond what POV may infer.
             item["knows"] = []
             item["model_of_opponent"] = []
-            # Keep misbeliefs/goals that drive observable behavior.
+        for field in ("knows", "believes", "misbeliefs", "model_of_opponent"):
+            if field in item:
+                item[field] = _scrub_string_list(item.get(field), locked)
+        # Never send clamp/audit claim bodies to Writer (may quote locked facts).
+        item.pop("knowledge_audit_on_apply", None)
+        item.pop("knowledge_clamped_on_apply", None)
         out.append(item)
     return out
 
@@ -352,14 +446,16 @@ def _writer_safe_intelligence(
     intel: dict[str, Any],
     *,
     pov_character: str = "",
+    locked_rows: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     """Drop fields that can re-introduce locked secrets into the Writer view."""
     if not intel:
         return {}
+    locked = locked_rows or []
     cognition = intel.get("character_state") or intel.get("character_cognition") or []
     safe = {
         "character_state": _writer_safe_cognition(
-            cognition, pov_character=pov_character
+            cognition, pov_character=pov_character, locked_rows=locked
         ),
         "prop_state": intel.get("prop_state"),
         "honeytoken_state": intel.get("honeytoken_state"),
@@ -368,7 +464,9 @@ def _writer_safe_intelligence(
         "romance_doctrine": intel.get("romance_doctrine"),
         "relationship_delta_target": intel.get("relationship_delta_target"),
         "moves": intel.get("moves"),
-        "prior_settlement": intel.get("prior_settlement"),
+        "prior_settlement": _scrub_prior_settlement_for_writer(
+            intel.get("prior_settlement")
+        ),
         "setting_threshold": intel.get("setting_threshold"),
         # Villain private knowledge stays on contract/validator side only.
     }
@@ -377,6 +475,25 @@ def _writer_safe_intelligence(
         honey = dict(honey)
         honey.pop("hidden", None)
         safe["honeytoken_state"] = honey
+    moves = safe.get("moves")
+    if isinstance(moves, dict):
+        moves = deepcopy(moves)
+        moves["prior_realized"] = _scrub_string_list(
+            moves.get("prior_realized"), locked
+        )
+        pov_obs = moves.get("pov_observation")
+        if isinstance(pov_obs, dict):
+            pov_obs = dict(pov_obs)
+            pov_obs["items"] = _scrub_string_list(pov_obs.get("items"), locked)
+            moves["pov_observation"] = pov_obs
+        for key in ("antagonist_move", "countermove", "ephemeral_safe_move"):
+            branch = moves.get(key)
+            if isinstance(branch, dict) and branch.get("action"):
+                if _text_hits_locked(str(branch.get("action")), locked):
+                    branch = dict(branch)
+                    branch["action"] = "[locked — omitted from writer packet]"
+                    moves[key] = branch
+        safe["moves"] = moves
     return safe
 
 

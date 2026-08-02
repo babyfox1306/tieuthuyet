@@ -1,0 +1,169 @@
+{
+  "commit": "514291bd8ea231fc809865b369b832ee2fa72158",
+  "branch": "experiment/ce-canon-provenance",
+  "custody_clamp": {
+    "status": "verified",
+    "correct_holder_action_pass": true,
+    "wrong_holder_blocked": true,
+    "disallowed_action_blocked": true,
+    "poisoned_settlement_blocked": true,
+    "verified_transfer_carries_to_next": true,
+    "audits": {
+      "ok_holder": {
+        "prop_id": "P1",
+        "proposed_holder": "Mara",
+        "scheduled_holder": "Mara",
+        "chain_holder": "Mara",
+        "allowed_actions": [
+          "Adrian gives phone to Mara"
+        ],
+        "action": "Adrian gives phone to Mara",
+        "source": "prose_custody_chain",
+        "current_chapter": 1,
+        "clock_used": "physical_owner_by_chapter",
+        "decision": "allowed",
+        "holder": "Mara",
+        "reason": "schedule_or_chain_match"
+      },
+      "bad_holder": {
+        "prop_id": "P1",
+        "proposed_holder": "Det. Miller",
+        "scheduled_holder": "Mara",
+        "chain_holder": null,
+        "allowed_actions": [],
+        "action": "Det. Miller seizes the phone",
+        "source": "prose_possession",
+        "current_chapter": 2,
+        "clock_used": "physical_owner_by_chapter",
+        "decision": "clamped",
+        "holder": "Mara",
+        "reason": "holder_not_on_schedule"
+      },
+      "bad_action": {
+        "prop_id": "P1",
+        "proposed_holder": "Mara",
+        "scheduled_holder": "Mara",
+        "chain_holder": "Mara",
+        "allowed_actions": [
+          "Adrian gives phone to Mara"
+        ],
+        "action": "Mara destroys the Blood-stained phone forever",
+        "source": "prose_prop_action",
+        "current_chapter": 1,
+        "clock_used": "physical_owner_by_chapter",
+        "decision": "clamped",
+        "holder": "Mara",
+        "reason": "action_not_allowed"
+      },
+      "poison_apply": [
+        {
+          "prop_id": "P1",
+          "proposed_holder": "Det. Miller",
+          "scheduled_holder": "Mara",
+          "chain_holder": null,
+          "allowed_actions": [],
+          "action": "fake",
+          "source": "prose_possession",
+          "current_chapter": 3,
+          "clock_used": "physical_owner_by_chapter",
+          "decision": "clamped",
+          "holder": "Mara",
+          "reason": "holder_not_on_schedule"
+        }
+      ],
+      "transfer": {
+        "prop_id": "P1",
+        "name": "Blood-stained phone",
+        "holder": "Adrian",
+        "allowed_actions": [
+          "Mara returns phone with decryption key"
+        ],
+        "actions_this_chapter": [
+          {
+            "chapter": 12,
+            "holder": "Adrian",
+            "action": "Mara returns phone with decryption key"
+          }
+        ],
+        "source": "prose_prop_action",
+        "evidence": "Mara returns phone with decryption key",
+        "holder_clamped": false,
+        "custody_audit": {
+          "prop_id": "P1",
+          "proposed_holder": "Adrian",
+          "scheduled_holder": "Adrian",
+          "chain_holder": "Adrian",
+          "allowed_actions": [
+            "Mara returns phone with decryption key"
+          ],
+          "action": "Mara returns phone with decryption key",
+          "source": "prose_prop_action",
+          "current_chapter": 12,
+          "clock_used": "physical_owner_by_chapter",
+          "decision": "allowed",
+          "holder": "Adrian",
+          "reason": "schedule_or_chain_match"
+        }
+      }
+    }
+  },
+  "belief_policy": {
+    "status": "verified",
+    "belief_with_provenance_pass": true,
+    "belief_missing_provenance_blocked": true,
+    "hidden_truth_alias_blocked_in_misbelief": true,
+    "psychology_misbelief_pass": true,
+    "knowledge_clamped": true
+  },
+  "strategy_fact_refs": {
+    "status": "verified",
+    "missing_ref_blocked": true,
+    "irrelevant_ref_blocked": true,
+    "wrong_actor_blocked": true,
+    "future_ref_blocked": true,
+    "wrong_prop_action_blocked": true
+  },
+  "live_n_to_n1": {
+    "settlement_loaded": true,
+    "continuity_source_settlement": true,
+    "r4_in_knows": true,
+    "illegal_p1_transfer_clamped": true,
+    "packet_digest": "321d78c2e0bbace344697bf7de8c01c949acd819c02e89b0de48fd2f1c405ded",
+    "ok": true
+  },
+  "tests": {
+    "focused": {
+      "ran": 51,
+      "failures": 0,
+      "errors": 0,
+      "ok": true,
+      "failure_names": [],
+      "error_names": []
+    },
+    "full": {
+      "ran": 470,
+      "failures": 5,
+      "errors": 1,
+      "skipped": 1,
+      "ok": false,
+      "failure_names": [
+        "test_omni_fail_jumps_to_external (test_call_9router.TestExternalFallback)",
+        "test_html_404_gateway_hint (test_call_9router.TestModelRouting)",
+        "test_loads_needs_fix (test_chapter_reasons.ChapterBlockInfoTests)",
+        "test_machine_short (test_chapter_reasons.FormatReasonsTests)",
+        "test_ch8_flags_duplicate_tail (test_locked_names_and_cliff_paste.CliffhangerPasteSecondWifeTests)"
+      ],
+      "error_names": [
+        "test_approve_plan_passes_clean_fixture (test_canon_registry.CanonRegistrySecondShadowTests)"
+      ]
+    }
+  },
+  "verdict": {
+    "p1_memory_complete": true,
+    "p1_custody_complete": true,
+    "p1_belief_policy_complete": true,
+    "p1_strategy_complete": true,
+    "p1_overall": "complete",
+    "label": "P1 overall complete"
+  }
+}

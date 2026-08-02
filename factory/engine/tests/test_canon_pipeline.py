@@ -34,6 +34,7 @@ from factory.engine.lib.story_intelligence import (
     project_honeytoken_state,
     project_prop_state,
     project_villain_knowledge,
+    validate_move_fact_refs,
 )
 from factory.engine.lib.canon_ops import (
     cache_key_for_chapter,
@@ -449,7 +450,9 @@ class TestSettlementAndOpsP1P2(unittest.TestCase):
         )
         self.assertTrue(
             any(
-                c.get("reason") == "pov_knows_chapter_clamp"
+                c.get("decision") == "clamped"
+                and c.get("clock_used") == "pov_knows_chapter"
+                and c.get("reason") == "pov_clock_not_reached"
                 and "backdoor" in str(c.get("claim") or "").casefold()
                 for c in clamped
             ),
@@ -673,7 +676,11 @@ class TestSettlementAndOpsP1P2(unittest.TestCase):
                 mara_b.get("knows"),
             )
             props_b = {p["prop_id"]: p for p in (packet_b.get("prop_state") or [])}
-            self.assertEqual(props_b["P1"]["holder"], "Adrian Thorne")
+            # Illegal early transfer: IR keeps P1 with Mara until ch12.
+            self.assertTrue(
+                "Mara" in str(props_b["P1"]["holder"]),
+                props_b["P1"],
+            )
             self.assertNotEqual(
                 packet_a.get("packet_digest"), packet_b.get("packet_digest")
             )
@@ -874,6 +881,264 @@ class TestSettlementAndOpsP1P2(unittest.TestCase):
             self.assertTrue(
                 (ws / "books" / "01" / "chapters" / "02" / "writer_request.json").exists()
             )
+
+
+class P1CustodyBeliefStrategyTests(unittest.TestCase):
+    """Runtime acceptance for the three remaining P1 layers."""
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.ir = compile_canonical_ir(_load_ce())
+
+    def test_custody_correct_holder_allowed(self) -> None:
+        from factory.engine.lib.prose_settlement import evaluate_prop_holder_claim
+
+        v = evaluate_prop_holder_claim(
+            ir=self.ir,
+            prop_id="P1",
+            chapter=1,
+            proposed_holder="Mara",
+            action="Adrian gives phone to Mara",
+            source="prose_custody_chain",
+        )
+        self.assertEqual(v["decision"], "allowed", v)
+
+    def test_custody_wrong_holder_blocked(self) -> None:
+        from factory.engine.lib.prose_settlement import evaluate_prop_holder_claim
+
+        v = evaluate_prop_holder_claim(
+            ir=self.ir,
+            prop_id="P1",
+            chapter=2,
+            proposed_holder="Det. Miller",
+            action="Det. Miller seizes the phone",
+            source="prose_possession",
+        )
+        self.assertEqual(v["decision"], "clamped", v)
+        self.assertEqual(v["reason"], "holder_not_on_schedule")
+
+    def test_custody_disallowed_action_blocked(self) -> None:
+        from factory.engine.lib.prose_settlement import evaluate_prop_holder_claim
+
+        v = evaluate_prop_holder_claim(
+            ir=self.ir,
+            prop_id="P1",
+            chapter=1,
+            proposed_holder="Mara",
+            action="Mara destroys the Blood-stained phone forever",
+            source="prose_prop_action",
+        )
+        self.assertEqual(v["decision"], "clamped", v)
+        self.assertEqual(v["reason"], "action_not_allowed")
+
+    def test_custody_poisoned_settlement_reclamped(self) -> None:
+        from factory.engine.lib.prose_settlement import apply_settlement_to_intelligence
+
+        poison = {
+            "status": "sealed",
+            "chapter": 2,
+            "settlement_digest": "poison-prop",
+            "events_realized": [],
+            "character_updates": {
+                "deltas": {"character": "Mara Voss", "knows_gained": []}
+            },
+            "prop_updates": [
+                {
+                    "prop_id": "P1",
+                    "name": "Blood-stained phone",
+                    "holder": "Det. Miller",
+                    "source": "prose_possession",
+                    "evidence": "fake seizure",
+                }
+            ],
+            "strategy_updates": {},
+        }
+        intel = apply_settlement_to_intelligence(
+            compile_chapter_intelligence(self.ir, 3),
+            poison,
+            chapter=3,
+            ir=self.ir,
+        )
+        p1 = next(p for p in intel["prop_state"] if p["prop_id"] == "P1")
+        self.assertIn("Mara", str(p1.get("holder")))
+        self.assertTrue(
+            any(
+                a.get("prop_id") == "P1" and a.get("decision") == "clamped"
+                for a in (intel.get("prop_custody_audit") or [])
+            ),
+            intel.get("prop_custody_audit"),
+        )
+
+    def test_custody_verified_transfer_carries(self) -> None:
+        settle = build_settlement(
+            chapter=12,
+            canon_qc={
+                "status": "pass",
+                "claims": [
+                    {
+                        "claim": "Mara returns phone with decryption key to Adrian.",
+                        "kind": "event",
+                    }
+                ],
+            },
+            intelligence=compile_chapter_intelligence(self.ir, 12),
+            ir=self.ir,
+        )
+        props = {p["prop_id"]: p for p in (settle.get("prop_updates") or [])}
+        self.assertIn("Adrian", str(props["P1"].get("holder")))
+        intel_next = compile_chapter_intelligence(
+            self.ir, 12, prior_settlement={**settle, "status": "sealed"}
+        )
+        # Applying at ch12 (same schedule) keeps Adrian.
+        p1 = next(p for p in intel_next["prop_state"] if p["prop_id"] == "P1")
+        self.assertIn("Adrian", str(p1.get("holder")))
+
+    def test_belief_with_observation_provenance_pass(self) -> None:
+        from factory.engine.lib.prose_settlement import evaluate_belief_provenance
+
+        kept, audit = evaluate_belief_provenance(
+            [
+                {
+                    "text": "Professional suspicion sharpens.",
+                    "provenance": "observation",
+                    "ref": "may_observe",
+                }
+            ],
+            self.ir,
+            2,
+        )
+        self.assertIn("Professional suspicion sharpens.", kept)
+        self.assertTrue(any(a.get("decision") == "allowed" for a in audit))
+
+    def test_belief_missing_provenance_omitted(self) -> None:
+        from factory.engine.lib.prose_settlement import evaluate_belief_provenance
+
+        kept, audit = evaluate_belief_provenance(
+            ["Orphan belief with no source at all."],
+            self.ir,
+            2,
+            source="unit_test",
+        )
+        self.assertEqual(kept, [])
+        self.assertTrue(
+            any(a.get("decision") == "omitted" for a in audit),
+            audit,
+        )
+
+    def test_hidden_truth_as_misbelief_blocked(self) -> None:
+        from factory.engine.lib.prose_settlement import evaluate_belief_provenance
+
+        r5 = next(r for r in self.ir["reveal_schedule"] if r.get("id") == "R5")
+        kept, audit = evaluate_belief_provenance(
+            [
+                {
+                    "text": r5["fact"],
+                    "provenance": "psychology",
+                }
+            ],
+            self.ir,
+            2,
+            target="character_state.misbeliefs",
+        )
+        self.assertNotIn(r5["fact"], kept)
+        self.assertTrue(
+            any(a.get("decision") == "clamped" for a in audit),
+            audit,
+        )
+
+    def test_psychology_misbelief_allowed(self) -> None:
+        from factory.engine.lib.prose_settlement import evaluate_belief_provenance
+
+        text = "Believes Adrian is a tool while being used by him as a predator"
+        kept, audit = evaluate_belief_provenance(
+            [{"text": text, "provenance": "psychology"}],
+            self.ir,
+            2,
+            target="character_state.misbeliefs",
+        )
+        self.assertIn(text, kept)
+
+    def test_strategy_missing_ref_stop(self) -> None:
+        errs = validate_move_fact_refs(
+            {
+                "countermove": {
+                    "action": "Mara scrapes Claire Thorne's data.",
+                    "fact_refs": [],
+                }
+            },
+            ir=self.ir,
+            chapter=2,
+        )
+        self.assertTrue(any(e["reason"] == "move_missing_fact_refs" for e in errs))
+
+    def test_strategy_irrelevant_ref_stop(self) -> None:
+        errs = validate_move_fact_refs(
+            {
+                "countermove": {
+                    "action": "Mara scrapes Claire Thorne's data.",
+                    "fact_refs": ["F_REVEAL_R8"],
+                }
+            },
+            ir=self.ir,
+            chapter=2,
+        )
+        reasons = {e["reason"] for e in errs}
+        self.assertTrue(
+            reasons & {"move_irrelevant_fact_refs", "move_future_fact_ref"},
+            errs,
+        )
+
+    def test_strategy_wrong_actor_stop(self) -> None:
+        errs = validate_move_fact_refs(
+            {
+                "countermove": {
+                    "action": "Adrian Thorne scrapes Claire Thorne's data.",
+                    "fact_refs": ["F_MAP_CH2_must_happen_0"],
+                }
+            },
+            ir=self.ir,
+            chapter=2,
+        )
+        self.assertTrue(
+            any(e["reason"] == "move_wrong_actor" for e in errs),
+            errs,
+        )
+
+    def test_strategy_future_ref_stop(self) -> None:
+        errs = validate_move_fact_refs(
+            {
+                "countermove": {
+                    "action": "Mara finds the backdoor in her alibi software.",
+                    "fact_refs": ["F_REVEAL_R5"],
+                }
+            },
+            ir=self.ir,
+            chapter=2,
+        )
+        self.assertTrue(
+            any(e["reason"] == "move_future_fact_ref" for e in errs),
+            errs,
+        )
+
+    def test_strategy_wrong_prop_action_stop(self) -> None:
+        errs = validate_move_fact_refs(
+            {
+                "countermove": {
+                    "action": "Mara destroys the Blood-stained phone forever.",
+                    "fact_refs": ["F_PROP_P1"],
+                }
+            },
+            ir=self.ir,
+            chapter=2,
+        )
+        self.assertTrue(
+            any(
+                e["reason"]
+                in {"move_prop_action_not_allowed", "move_irrelevant_fact_refs"}
+                for e in errs
+            ),
+            errs,
+        )
 
 
 if __name__ == "__main__":

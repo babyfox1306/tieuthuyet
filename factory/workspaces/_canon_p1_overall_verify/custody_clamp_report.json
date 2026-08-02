@@ -1,0 +1,106 @@
+{
+  "status": "verified",
+  "correct_holder_action_pass": true,
+  "wrong_holder_blocked": true,
+  "disallowed_action_blocked": true,
+  "poisoned_settlement_blocked": true,
+  "verified_transfer_carries_to_next": true,
+  "audits": {
+    "ok_holder": {
+      "prop_id": "P1",
+      "proposed_holder": "Mara",
+      "scheduled_holder": "Mara",
+      "chain_holder": "Mara",
+      "allowed_actions": [
+        "Adrian gives phone to Mara"
+      ],
+      "action": "Adrian gives phone to Mara",
+      "source": "prose_custody_chain",
+      "current_chapter": 1,
+      "clock_used": "physical_owner_by_chapter",
+      "decision": "allowed",
+      "holder": "Mara",
+      "reason": "schedule_or_chain_match"
+    },
+    "bad_holder": {
+      "prop_id": "P1",
+      "proposed_holder": "Det. Miller",
+      "scheduled_holder": "Mara",
+      "chain_holder": null,
+      "allowed_actions": [],
+      "action": "Det. Miller seizes the phone",
+      "source": "prose_possession",
+      "current_chapter": 2,
+      "clock_used": "physical_owner_by_chapter",
+      "decision": "clamped",
+      "holder": "Mara",
+      "reason": "holder_not_on_schedule"
+    },
+    "bad_action": {
+      "prop_id": "P1",
+      "proposed_holder": "Mara",
+      "scheduled_holder": "Mara",
+      "chain_holder": "Mara",
+      "allowed_actions": [
+        "Adrian gives phone to Mara"
+      ],
+      "action": "Mara destroys the Blood-stained phone forever",
+      "source": "prose_prop_action",
+      "current_chapter": 1,
+      "clock_used": "physical_owner_by_chapter",
+      "decision": "clamped",
+      "holder": "Mara",
+      "reason": "action_not_allowed"
+    },
+    "poison_apply": [
+      {
+        "prop_id": "P1",
+        "proposed_holder": "Det. Miller",
+        "scheduled_holder": "Mara",
+        "chain_holder": null,
+        "allowed_actions": [],
+        "action": "fake",
+        "source": "prose_possession",
+        "current_chapter": 3,
+        "clock_used": "physical_owner_by_chapter",
+        "decision": "clamped",
+        "holder": "Mara",
+        "reason": "holder_not_on_schedule"
+      }
+    ],
+    "transfer": {
+      "prop_id": "P1",
+      "name": "Blood-stained phone",
+      "holder": "Adrian",
+      "allowed_actions": [
+        "Mara returns phone with decryption key"
+      ],
+      "actions_this_chapter": [
+        {
+          "chapter": 12,
+          "holder": "Adrian",
+          "action": "Mara returns phone with decryption key"
+        }
+      ],
+      "source": "prose_prop_action",
+      "evidence": "Mara returns phone with decryption key",
+      "holder_clamped": false,
+      "custody_audit": {
+        "prop_id": "P1",
+        "proposed_holder": "Adrian",
+        "scheduled_holder": "Adrian",
+        "chain_holder": "Adrian",
+        "allowed_actions": [
+          "Mara returns phone with decryption key"
+        ],
+        "action": "Mara returns phone with decryption key",
+        "source": "prose_prop_action",
+        "current_chapter": 12,
+        "clock_used": "physical_owner_by_chapter",
+        "decision": "allowed",
+        "holder": "Adrian",
+        "reason": "schedule_or_chain_match"
+      }
+    }
+  }
+}

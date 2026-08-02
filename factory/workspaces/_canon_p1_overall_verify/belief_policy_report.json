@@ -1,0 +1,8 @@
+{
+  "status": "verified",
+  "belief_with_provenance_pass": true,
+  "belief_missing_provenance_blocked": true,
+  "hidden_truth_alias_blocked_in_misbelief": true,
+  "psychology_misbelief_pass": true,
+  "knowledge_clamped": true
+}
