@@ -1,0 +1,105 @@
+{
+  "packet_a_digest": "6dbea447df2dbb2e2f88617f22920cf0e04a66d61d3c50edd969d88857a73e22",
+  "packet_b_digest": "bccd27bc84e6ca6473bf670f0a9efcc52570e36c0c0d148fe9643fbb7c56f64a",
+  "digests_differ": true,
+  "contract_a_digest": "56e5a9b288850883dc7544464c550cb65d175d4873ff54caf37209565190c720",
+  "knows_a": [
+    "The blood was treated with anticoagulants.",
+    "Mara scrapes Claire Thorne's data."
+  ],
+  "knows_b": [
+    "Mara scrapes Claire Thorne's data."
+  ],
+  "prop_P1_a": {
+    "prop_id": "P1",
+    "name": "Blood-stained phone",
+    "holder": "Mara",
+    "actions_this_chapter": [],
+    "allowed_actions": []
+  },
+  "prop_P1_b": {
+    "prop_id": "P1",
+    "name": "Blood-stained phone",
+    "holder": "Mara",
+    "actions_this_chapter": [],
+    "allowed_actions": [],
+    "holder_source": "ir_schedule_clamp",
+    "clamp_reason": "action_not_allowed"
+  },
+  "prop_P2_a": {
+    "prop_id": "P2",
+    "name": "Zero-Day Server",
+    "holder": "Mara",
+    "actions_this_chapter": [
+      {
+        "chapter": 3,
+        "holder": "Mara",
+        "action": "retains custody"
+      }
+    ],
+    "allowed_actions": [
+      "retains custody"
+    ],
+    "holder_source": "prose_prop_action",
+    "holder_evidence": "retains custody"
+  },
+  "continuity_a": {
+    "source": "settlement",
+    "carries_to_next": null,
+    "events_from_settlement": [
+      "Mara scrapes Claire Thorne's data.",
+      "Mara scrapes Claire Thorne's data.",
+      "The blood was treated with anticoagulants."
+    ],
+    "plan_foresight": "Outliner invents a yacht chase Mara never saw",
+    "plan_foresight_superseded": true,
+    "prior_settlement_digest": "a8337f5aae2b3a1328f2f2946d0f5046d379273fa322bd132cacf077e466755b",
+    "memory_from_settlement": [
+      "The blood was treated with anticoagulants.",
+      "Mara scrapes Claire Thorne's data."
+    ],
+    "beliefs_from_settlement": []
+  },
+  "continuity_b": {
+    "source": "settlement",
+    "carries_to_next": null,
+    "events_from_settlement": [
+      "Mara scrapes Claire Thorne's data.",
+      "Mara scrapes Claire Thorne's data."
+    ],
+    "plan_foresight": "Outliner invents a yacht chase Mara never saw",
+    "plan_foresight_superseded": true,
+    "prior_settlement_digest": "474ba9529920dea400a3251f91af1b4b3ae73a9804cd6669014c370e4ea465f5",
+    "memory_from_settlement": [
+      "Mara scrapes Claire Thorne's data."
+    ],
+    "beliefs_from_settlement": []
+  },
+  "prior_settlement_a": {
+    "chapter": 2,
+    "settlement_digest": "a8337f5aae2b3a1328f2f2946d0f5046d379273fa322bd132cacf077e466755b",
+    "continuity_source": "settlement",
+    "applied_to_live_state": true,
+    "applied_at_chapter": 3,
+    "events_realized_count": 3,
+    "knowledge_clamped_count": 0
+  },
+  "prior_settlement_b": {
+    "chapter": 2,
+    "settlement_digest": "474ba9529920dea400a3251f91af1b4b3ae73a9804cd6669014c370e4ea465f5",
+    "continuity_source": "settlement",
+    "applied_to_live_state": true,
+    "applied_at_chapter": 3,
+    "events_realized_count": 2,
+    "knowledge_clamped_count": 0
+  },
+  "required_events_a": [
+    "Mara creates the false alibi.",
+    "Mara scrapes Claire Thorne's data.",
+    "The blood was treated with anticoagulants."
+  ],
+  "required_events_b": [
+    "Mara creates the false alibi.",
+    "Mara scrapes Claire Thorne's data."
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "layer": "strategy",
+  "rule_names": [
+    "validate_move_fact_refs",
+    "move_missing_fact_refs",
+    "move_irrelevant_fact_refs",
+    "move_wrong_actor",
+    "move_future_fact_ref",
+    "move_prop_action_not_allowed",
+    "move_forbidden_event"
+  ],
+  "source_refs": {
+    "chapter": 2,
+    "builtin_moves": {
+      "chapter": 2,
+      "antagonist_move": {
+        "action": "The blood was treated with anticoagulants.",
+        "fact_refs": [
+          "F_REVEAL_R4",
+          "F_MAP_CH2_may_observe_0",
+          "F_CLUE_C5",
+          "F_PROP_P1",
+          "F_CLUE_C5_SURFACE",
+          "F_PROP_P2"
+        ],
+        "ephemeral_safe": false
+      },
+      "pov_observation": {
+        "action": null,
+        "fact_refs": [
+          "F_REVEAL_R4",
+          "F_MAP_CH2_may_observe_0",
+          "F_CLUE_C5",
+          "F_PROP_P1",
+          "F_CLUE_C5_SURFACE",
+          "F_PROP_P2"
+        ],
+        "items": [
+          "The blood was treated with anticoagulants."
+        ],
+        "ephemeral_safe": false
+      },
+      "inference_or_misbelief": {
+        "relationship_turn": "Professional suspicion sharpens.",
+        "primary_turn": "The first leak opens.",
+        "fact_refs": [
+          "F_MAP_CH2_RELATIONSHIP_TURN",
+          "F_MAP_CH2_PRIMARY_TURN",
+          "F_CLUE_C6_SURFACE",
+          "F_CLUE_C5",
+          "F_REVEAL_R4",
+          "F_PROP_P2"
+        ],
+        "ephemeral_safe": false
+      },
+      "countermove": {
+        "action": "Mara scrapes Claire Thorne's data.",
+        "fact_refs": [
+          "F_MAP_CH2_must_happen_0",
+          "F_HONEY_DELIVERY_METHOD",
+          "F_PSY_0_behavioral_constraints_2",
+          "F_PLOT_TRUE_PLOT",
+          "F_PLOT_SURFACE_PLOT",
+          "F_MAP_CH1_must_happen_0",
+          "F_PSY_0_stress_responses_3",
+          "F_PSY_0_stress_responses_2",
+          "F_CLUE_C5",
+          "F_REVEAL_R4",
+          "F_PROP_P2"
+        ],
+        "required_events": [
+          "Mara scrapes Claire Thorne's data."
+        ],
+        "ephemeral_safe": false
+      },
+      "cost": {
+        "description": "The first leak opens.",
+        "fact_refs": [
+          "F_MAP_CH2_RELATIONSHIP_TURN",
+          "F_MAP_CH2_PRIMARY_TURN",
+          "F_CLUE_C6_SURFACE",
+          "F_CLUE_C5",
+          "F_REVEAL_R4",
+          "F_PROP_P2"
+        ],
+        "ephemeral_safe": false
+      },
+      "power_delta": {
+        "projected": "pressure",
+        "source": "chapter_map_phase",
+        "realized": null,
+        "note": "realized filled by settlement after canon_qc pass"
+      }
+    },
+    "R5_pov_knows_chapter": 9,
+    "F_REVEAL_R5_exists": true,
+    "F_PROP_P1_exists": true
+  },
+  "cases": [
+    {
+      "case_id": "S1_missing_ref",
+      "rule": "move_missing_fact_refs",
+      "expected": {
+        "error_reason": "move_missing_fact_refs",
+        "severity": "block"
+      },
+      "input": {
+        "countermove": {
+          "action": "Mara scrapes Claire Thorne's data.",
+          "fact_refs": []
+        }
+      },
+      "actual_errors": [
+        {
+          "field": "moves.countermove",
+          "claim": "Mara scrapes Claire Thorne's data.",
+          "reason": "move_missing_fact_refs",
+          "status": "UNRESOLVED",
+          "authority": "IR_COMPILER",
+          "severity": "block"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "case_id": "S2_irrelevant_or_future_ref",
+      "rule": "move_irrelevant_fact_refs | move_future_fact_ref",
+      "expected": {
+        "error_reason_in": [
+          "move_irrelevant_fact_refs",
+          "move_future_fact_ref"
+        ]
+      },
+      "input": {
+        "countermove": {
+          "action": "Mara scrapes Claire Thorne's data.",
+          "fact_refs": [
+            "F_REVEAL_R8"
+          ]
+        }
+      },
+      "actual_errors": [
+        {
+          "field": "moves.countermove",
+          "claim": "Mara scrapes Claire Thorne's data.",
+          "fact_ref": "F_REVEAL_R8",
+          "reason": "move_future_fact_ref",
+          "status": "UNRESOLVED",
+          "authority": "IR_COMPILER",
+          "severity": "block"
+        },
+        {
+          "field": "moves.countermove",
+          "claim": "Mara scrapes Claire Thorne's data.",
+          "fact_refs": [
+            "F_REVEAL_R8"
+          ],
+          "reason": "move_irrelevant_fact_refs",
+          "status": "UNRESOLVED",
+          "authority": "IR_COMPILER",
+          "severity": "block"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "case_id": "S3_wrong_actor",
+      "rule": "move_wrong_actor",
+      "expected": {
+        "error_reason": "move_wrong_actor"
+      },
+      "input": {
+        "countermove": {
+          "action": "Adrian Thorne scrapes Claire Thorne's data.",
+          "fact_refs": [
+            "F_MAP_CH2_must_happen_0"
+          ]
+        }
+      },
+      "actual_errors": [
+        {
+          "field": "moves.countermove",
+          "claim": "Adrian Thorne scrapes Claire Thorne's data.",
+          "reason": "move_wrong_actor",
+          "detail": "countermove actor=Adrian Thorne pov=Mara Voss",
+          "status": "UNRESOLVED",
+          "authority": "IR_COMPILER",
+          "severity": "block"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "case_id": "S4_future_ref",
+      "rule": "move_future_fact_ref",
+      "expected": {
+        "error_reason": "move_future_fact_ref",
+        "fact_ref": "F_REVEAL_R5",
+        "current_chapter": 2,
+        "pov_knows_chapter": 9
+      },
+      "input": {
+        "countermove": {
+          "action": "Mara finds the backdoor in her alibi software.",
+          "fact_refs": [
+            "F_REVEAL_R5"
+          ]
+        }
+      },
+      "actual_errors": [
+        {
+          "field": "moves.countermove",
+          "claim": "Mara finds the backdoor in her alibi software.",
+          "fact_ref": "F_REVEAL_R5",
+          "reason": "move_future_fact_ref",
+          "status": "UNRESOLVED",
+          "authority": "IR_COMPILER",
+          "severity": "block"
+        },
+        {
+          "field": "moves.countermove",
+          "claim": "Mara finds the backdoor in her alibi software.",
+          "fact_refs": [
+            "F_REVEAL_R5"
+          ],
+          "reason": "move_irrelevant_fact_refs",
+          "status": "UNRESOLVED",
+          "authority": "IR_COMPILER",
+          "severity": "block"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "case_id": "S5_wrong_prop_action",
+      "rule": "move_prop_action_not_allowed",
+      "expected": {
+        "error_reason": "move_prop_action_not_allowed"
+      },
+      "input": {
+        "countermove": {
+          "action": "Mara destroys the Blood-stained phone forever.",
+          "fact_refs": [
+            "F_PROP_P1"
+          ]
+        }
+      },
+      "actual_errors": [
+        {
+          "field": "moves.countermove",
+          "claim": "Mara destroys the Blood-stained phone forever.",
+          "fact_ref": "F_PROP_P1",
+          "reason": "move_prop_action_not_allowed",
+          "status": "UNRESOLVED",
+          "authority": "IR_COMPILER",
+          "severity": "block"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "case_id": "S6_builtin_ir_moves_no_false_positive",
+      "rule": "validate_move_fact_refs on compile_chapter_intelligence moves",
+      "expected": {
+        "errors": []
+      },
+      "actual_errors": [],
+      "pass": true
+    }
+  ],
+  "all_cases_pass": true
+}

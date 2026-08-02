@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "commit": "6e141f74993a482349d9ab255cf371395e77d56e",
+    "branch": "experiment/ce-canon-provenance",
+    "tag_canon_p1": "6e141f74993a482349d9ab255cf371395e77d56e",
+    "workspace": "D:\\tieuthuyet\\tieuthuyet\\factory\\workspaces\\_canon_p1_raw_evidence"
+  },
+  "custody_all_cases_pass": true,
+  "belief_all_cases_pass": true,
+  "strategy_all_cases_pass": true,
+  "live_all_cases_pass": true,
+  "override_trace_pass": true,
+  "case_pass_matrix": {
+    "custody": {
+      "C1_correct_holder_correct_action": true,
+      "C2_wrong_holder": true,
+      "C3_correct_holder_disallowed_action": true,
+      "C4_poisoned_settlement_reclamped": true,
+      "C5_verified_transfer_carries": true
+    },
+    "belief": {
+      "B1_belief_with_observation_provenance": true,
+      "B2_belief_missing_provenance": true,
+      "B3_hidden_truth_as_misbelief_before_clock": true,
+      "B4_psychology_misbelief_allowed": true
+    },
+    "strategy": {
+      "S1_missing_ref": true,
+      "S2_irrelevant_or_future_ref": true,
+      "S3_wrong_actor": true,
+      "S4_future_ref": true,
+      "S5_wrong_prop_action": true,
+      "S6_builtin_ir_moves_no_false_positive": true
+    },
+    "live": {
+      "L1_settlement_A_memory_and_override": true,
+      "L2_settlement_B_illegal_transfer_clamped": true,
+      "L3_packet_digest_changes_with_settlement": true
+    }
+  },
+  "p1_overall_complete_by_raw_evidence": true,
+  "files": [
+    "raw_custody_evidence.json",
+    "raw_belief_evidence.json",
+    "raw_strategy_evidence.json",
+    "raw_live_n1_evidence.json",
+    "raw_packet_diff.json",
+    "raw_settlement_override_trace.json",
+    "artifact_settlement_a.json",
+    "artifact_settlement_b.json",
+    "artifact_packet3_a.json",
+    "artifact_packet3_b.json",
+    "artifact_contract3_a_intelligence_prior.json"
+  ]
+}

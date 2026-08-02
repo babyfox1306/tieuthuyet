@@ -1,0 +1,172 @@
+{
+  "layer": "belief",
+  "rule_names": [
+    "evaluate_belief_provenance",
+    "evaluate_knowledge_against_pov_clocks",
+    "missing_provenance→omitted",
+    "pov_clock_not_reached→clamped"
+  ],
+  "source_refs": {
+    "R4": {
+      "id": "R4",
+      "fact": "The blood on Adrian's phone was treated with anticoagulants",
+      "reader_reveal_chapter": 2,
+      "pov_knows_chapter": 2,
+      "reveal_type": "observation",
+      "prerequisite_reveals": [],
+      "required_clues": [
+        "C5"
+      ],
+      "must_remain_hidden_before": 1,
+      "allowed_foreshadowing_before": "blood on phone mention"
+    },
+    "R5": {
+      "id": "R5",
+      "fact": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+      "reader_reveal_chapter": 9,
+      "pov_knows_chapter": 9,
+      "reveal_type": "digital",
+      "prerequisite_reveals": [
+        "R2"
+      ],
+      "required_clues": [
+        "C6"
+      ],
+      "must_remain_hidden_before": 8,
+      "allowed_foreshadowing_before": "software behavior anomalies"
+    },
+    "allowed_provenance": [
+      "observation",
+      "psychology",
+      "settlement",
+      "inference",
+      "canonical_ir",
+      "prose_settlement",
+      "chapter_map"
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "B1_belief_with_observation_provenance",
+      "rule": "evaluate_belief_provenance / provenance_ok",
+      "expected": {
+        "kept_contains": "Professional suspicion sharpens.",
+        "decision": "allowed",
+        "provenance": "observation"
+      },
+      "input": {
+        "text": "Professional suspicion sharpens.",
+        "provenance": "observation",
+        "ref": "may_observe"
+      },
+      "actual_kept": [
+        "Professional suspicion sharpens."
+      ],
+      "actual_audit_entries": [
+        {
+          "claim": "Professional suspicion sharpens.",
+          "target": "character_state.believes",
+          "decision": "allowed",
+          "provenance": "observation",
+          "ref": "may_observe",
+          "source": "unit_probe",
+          "reason": "provenance_ok",
+          "current_chapter": 2
+        }
+      ],
+      "pass": true
+    },
+    {
+      "case_id": "B2_belief_missing_provenance",
+      "rule": "evaluate_belief_provenance / missing_provenance",
+      "expected": {
+        "kept": [],
+        "decision": "omitted",
+        "reason": "missing_provenance"
+      },
+      "input": {
+        "text": "Orphan belief with no source at all."
+      },
+      "actual_kept": [],
+      "actual_audit_entries": [
+        {
+          "claim": "Orphan belief with no source at all.",
+          "target": "character_state.believes",
+          "decision": "omitted",
+          "provenance": null,
+          "source": "unit_probe",
+          "reason": "missing_provenance",
+          "current_chapter": 2
+        }
+      ],
+      "pass": true
+    },
+    {
+      "case_id": "B3_hidden_truth_as_misbelief_before_clock",
+      "rule": "evaluate_belief_provenance → POV clock clamp",
+      "expected": {
+        "kept_excludes_R5": true,
+        "decision": "clamped",
+        "reason": "pov_clock_not_reached",
+        "clock_used": "pov_knows_chapter",
+        "pov_knows_chapter": 9,
+        "current_chapter": 2
+      },
+      "input": {
+        "text": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+        "provenance": "psychology",
+        "reveal_id": "R5",
+        "reader_reveal_chapter": 9,
+        "pov_knows_chapter": 9
+      },
+      "actual_kept": [],
+      "actual_audit_entries": [
+        {
+          "fact_id": "F_REVEAL_R5",
+          "reveal_id": "R5",
+          "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+          "target": "character_state.misbeliefs",
+          "decision": "clamped",
+          "clock_used": "pov_knows_chapter",
+          "pov_knows_chapter": 9,
+          "reader_reveal_chapter": 9,
+          "current_chapter": 2,
+          "source": "unit_probe",
+          "reason": "pov_clock_not_reached"
+        }
+      ],
+      "pass": true
+    },
+    {
+      "case_id": "B4_psychology_misbelief_allowed",
+      "rule": "evaluate_belief_provenance / psychology",
+      "expected": {
+        "kept_contains": "Believes Adrian is a tool while being used by him as a predator",
+        "decision": "allowed",
+        "provenance": "psychology"
+      },
+      "input": {
+        "text": "Believes Adrian is a tool while being used by him as a predator",
+        "provenance": "psychology",
+        "ref": "cognitive_dissonance"
+      },
+      "actual_kept": [
+        "Believes Adrian is a tool while being used by him as a predator"
+      ],
+      "actual_audit_entries": [
+        {
+          "claim": "Believes Adrian is a tool while being used by him as a predator",
+          "target": "character_state.misbeliefs",
+          "decision": "allowed",
+          "provenance": "psychology",
+          "ref": "cognitive_dissonance",
+          "source": "unit_probe",
+          "reason": "provenance_ok",
+          "current_chapter": 2
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "all_cases_pass": true
+}

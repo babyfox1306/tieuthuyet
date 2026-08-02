@@ -1,0 +1,676 @@
+{
+  "rule": "continuity_from_prior: settlement > Outliner carries_to_next; IR schedule > settlement",
+  "plan_carries_to_next": "Outliner invents a yacht chase Mara never saw",
+  "settlement_a": {
+    "digest": "a8337f5aae2b3a1328f2f2946d0f5046d379273fa322bd132cacf077e466755b",
+    "character_updates": {
+      "deltas": {
+        "character": "Mara Voss",
+        "knows_gained": [
+          "The blood was treated with anticoagulants.",
+          "Mara scrapes Claire Thorne's data."
+        ],
+        "believes_gained": [],
+        "misbeliefs_active": [
+          "Believes Adrian is a tool while being used by him as a predator"
+        ],
+        "knows_clamped": [],
+        "believes_clamped": [],
+        "misbeliefs_clamped": [],
+        "knowledge_audit": [
+          {
+            "fact_id": "F_REVEAL_R4",
+            "reveal_id": "R4",
+            "claim": "The blood was treated with anticoagulants.",
+            "target": "character_state.knows",
+            "decision": "allowed",
+            "clock_used": "pov_knows_chapter",
+            "pov_knows_chapter": 2,
+            "reader_reveal_chapter": 2,
+            "current_chapter": 2,
+            "source": "prose_settlement",
+            "reason": "pov_clock_reached"
+          },
+          {
+            "claim": "Believes Adrian is a tool while being used by him as a predator",
+            "target": "character_state.misbeliefs",
+            "decision": "allowed",
+            "provenance": "psychology",
+            "ref": "cognitive_dissonance",
+            "source": "prose_settlement",
+            "reason": "provenance_ok",
+            "current_chapter": 2
+          }
+        ],
+        "source": "prose_settlement",
+        "authority_note": "knows_gained is clamped by pov_knows_chapter only; reader_reveal_chapter is never knowledge authority; believes/misbeliefs require provenance; settlement cannot mint early knowledge"
+      },
+      "psychology_active": [
+        {
+          "character": "Mara Voss",
+          "core_traits": [
+            "Alibi Architect",
+            "Clinically hyper-competent and cold",
+            "Overconfident in OSINT skill"
+          ],
+          "core_need": "To maintain absolute control over her constructed reality",
+          "core_fear": "That her control is an illusion, that she has been a tool rather than the architect",
+          "coping_mechanism": "Systematic compartmentalization and technical precision to mask psychological fragility",
+          "stress_responses": [
+            "Cortisol-induced physical stress",
+            "Sleep deprivation",
+            "Shaking hands",
+            "Vomiting",
+            "Arrhythmic heart rate"
+          ],
+          "cognitive_dissonance": "Believes Adrian is a tool while being used by him as a predator",
+          "behavioral_constraints": [
+            "Does not use physical violence",
+            "Does not leave the office during the 24-hour story",
+            "Data vault is not physically destroyed",
+            "Shaking always signifies loss of control, never romantic emotion"
+          ],
+          "reveal_gated_fields": []
+        },
+        {
+          "character": "Adrian Thorne",
+          "core_traits": [
+            "Digital predator",
+            "Cooperates perfectly with Mara's alibi creation, masking his true intentions",
+            "Smiles when his knowledge or control is discovered"
+          ],
+          "core_need": "To seize ultimate control by acquiring the black-data vault, proving his digital superiority.",
+          "core_fear": "That his true goal will be preempted, leaving him with only the alibi—a tool he never needed.",
+          "coping_mechanism": "Meticulous digital preparation and theatrical compliance, using staged evidence and withheld countermeasures to maintain psychological leverage.",
+          "stress_responses": [
+            "Cortisol-induced physical stress",
+            "Sleep deprivation",
+            "Exhaustion, bloodshot eyes",
+            "Shaking under sustained tension",
+            "Shaking hands (signifies loss of control)",
+            "Dry-heaving"
+          ],
+          "cognitive_dissonance": "Knows he is using Mara as a tool to access her vault, while allowing her to believe she is the architect trapping him.",
+          "behavioral_constraints": [
+            "Does not use physical violence against Mara",
+            "Does not threaten to kill Mara",
+            "Never leaves the office during the 24-hour story (implied co-presence)",
+            "Maintains perfect cooperation until the final leverage is revealed"
+          ],
+          "reveal_gated_fields": []
+        }
+      ],
+      "character_cognition_baseline": [
+        {
+          "character": "Mara Voss",
+          "knows": [],
+          "believes": [
+            "Adrian is a tool"
+          ],
+          "misbeliefs": [
+            "Believes Adrian is a tool while being used by him as a predator"
+          ],
+          "goal_now": "To maintain absolute control over her constructed reality",
+          "fear_active": "That her control is an illusion, that she has been a tool rather than the architect",
+          "coping_active": "Systematic compartmentalization and technical precision to mask psychological fragility",
+          "model_of_opponent": [],
+          "stress_responses": [
+            "Cortisol-induced physical stress",
+            "Sleep deprivation",
+            "Shaking hands",
+            "Vomiting",
+            "Arrhythmic heart rate"
+          ],
+          "behavioral_constraints": [
+            "Does not use physical violence",
+            "Does not leave the office during the 24-hour story",
+            "Data vault is not physically destroyed",
+            "Shaking always signifies loss of control, never romantic emotion"
+          ]
+        },
+        {
+          "character": "Adrian Thorne",
+          "knows": [],
+          "believes": [],
+          "misbeliefs": [
+            "Knows he is using Mara as a tool to access her vault, while allowing her to believe she is the architect trapping him."
+          ],
+          "goal_now": "To seize ultimate control by acquiring the black-data vault, proving his digital superiority.",
+          "fear_active": "That his true goal will be preempted, leaving him with only the alibi—a tool he never needed.",
+          "coping_active": "Meticulous digital preparation and theatrical compliance, using staged evidence and withheld countermeasures to maintain psychological leverage.",
+          "model_of_opponent": [],
+          "stress_responses": [
+            "Cortisol-induced physical stress",
+            "Sleep deprivation",
+            "Exhaustion, bloodshot eyes",
+            "Shaking under sustained tension",
+            "Shaking hands (signifies loss of control)",
+            "Dry-heaving"
+          ],
+          "behavioral_constraints": [
+            "Does not use physical violence against Mara",
+            "Does not threaten to kill Mara",
+            "Never leaves the office during the 24-hour story (implied co-presence)",
+            "Maintains perfect cooperation until the final leverage is revealed"
+          ]
+        }
+      ],
+      "villain_knowledge": {
+        "phase": "opening",
+        "chapter": 2,
+        "knows": [
+          "Mara is the mastermind"
+        ],
+        "does_not_know": [
+          "she shifted the time of death"
+        ],
+        "wants_pov_to_believe": [],
+        "withholds": [],
+        "allowed_moves": [],
+        "actions": [
+          "In the opening stretch Adrian knows Mara is the mastermind but does not know she shifted the time of death."
+        ]
+      }
+    },
+    "prop_updates": [
+      {
+        "prop_id": "P1",
+        "name": "Blood-stained phone",
+        "holder": "Mara",
+        "allowed_actions": [],
+        "actions_this_chapter": [],
+        "source": "ir_baseline",
+        "evidence": null,
+        "holder_clamped": false,
+        "custody_audit": {
+          "prop_id": "P1",
+          "proposed_holder": "Mara",
+          "scheduled_holder": "Mara",
+          "chain_holder": null,
+          "allowed_actions": [],
+          "action": null,
+          "source": "ir_baseline",
+          "current_chapter": 2,
+          "clock_used": "physical_owner_by_chapter",
+          "decision": "allowed",
+          "holder": "Mara",
+          "reason": "schedule_or_chain_match"
+        }
+      },
+      {
+        "prop_id": "P2",
+        "name": "Zero-Day Server",
+        "holder": "Mara",
+        "allowed_actions": [
+          "retains custody"
+        ],
+        "actions_this_chapter": [
+          {
+            "chapter": 2,
+            "holder": "Mara",
+            "action": "retains custody"
+          }
+        ],
+        "source": "prose_prop_action",
+        "evidence": "retains custody",
+        "holder_clamped": false,
+        "custody_audit": {
+          "prop_id": "P2",
+          "proposed_holder": "Mara",
+          "scheduled_holder": "Mara",
+          "chain_holder": "Mara",
+          "allowed_actions": [
+            "retains custody"
+          ],
+          "action": "retains custody",
+          "source": "prose_prop_action",
+          "current_chapter": 2,
+          "clock_used": "physical_owner_by_chapter",
+          "decision": "allowed",
+          "holder": "Mara",
+          "reason": "schedule_or_chain_match"
+        }
+      },
+      {
+        "prop_id": "P3",
+        "name": "Claire's smartwatch data",
+        "holder": null,
+        "allowed_actions": [],
+        "actions_this_chapter": [],
+        "source": "ir_baseline",
+        "evidence": null,
+        "holder_clamped": false,
+        "custody_audit": {
+          "prop_id": "P3",
+          "proposed_holder": null,
+          "scheduled_holder": null,
+          "chain_holder": null,
+          "allowed_actions": [],
+          "action": null,
+          "source": "ir_baseline",
+          "current_chapter": 2,
+          "clock_used": "physical_owner_by_chapter",
+          "decision": "allowed",
+          "holder": null,
+          "reason": "ir_baseline"
+        }
+      }
+    ],
+    "events_realized": [
+      {
+        "kind": "countermove",
+        "action": "Mara scrapes Claire Thorne's data.",
+        "fact_refs": [
+          "F_MAP_CH2_must_happen_0",
+          "F_HONEY_DELIVERY_METHOD",
+          "F_PSY_0_behavioral_constraints_2",
+          "F_PLOT_TRUE_PLOT",
+          "F_PLOT_SURFACE_PLOT",
+          "F_MAP_CH1_must_happen_0",
+          "F_PSY_0_stress_responses_3",
+          "F_PSY_0_stress_responses_2",
+          "F_CLUE_C5",
+          "F_REVEAL_R4",
+          "F_PROP_P2"
+        ]
+      },
+      {
+        "kind": "required_event",
+        "action": "Mara scrapes Claire Thorne's data.",
+        "fact_refs": [
+          "F_MAP_CH2_must_happen_0",
+          "F_HONEY_DELIVERY_METHOD",
+          "F_PSY_0_behavioral_constraints_2",
+          "F_PLOT_TRUE_PLOT",
+          "F_PLOT_SURFACE_PLOT",
+          "F_MAP_CH1_must_happen_0",
+          "F_PSY_0_stress_responses_3",
+          "F_PSY_0_stress_responses_2",
+          "F_CLUE_C5",
+          "F_REVEAL_R4",
+          "F_PROP_P2"
+        ]
+      },
+      {
+        "kind": "antagonist_move",
+        "action": "The blood was treated with anticoagulants.",
+        "fact_refs": [
+          "F_REVEAL_R4",
+          "F_MAP_CH2_may_observe_0",
+          "F_CLUE_C5",
+          "F_PROP_P1",
+          "F_CLUE_C5_SURFACE",
+          "F_PROP_P2"
+        ]
+      }
+    ],
+    "knowledge_audit": [
+      {
+        "fact_id": "F_REVEAL_R4",
+        "reveal_id": "R4",
+        "claim": "The blood was treated with anticoagulants.",
+        "target": "character_state.knows",
+        "decision": "allowed",
+        "clock_used": "pov_knows_chapter",
+        "pov_knows_chapter": 2,
+        "reader_reveal_chapter": 2,
+        "current_chapter": 2,
+        "source": "prose_settlement",
+        "reason": "pov_clock_reached"
+      },
+      {
+        "claim": "Believes Adrian is a tool while being used by him as a predator",
+        "target": "character_state.misbeliefs",
+        "decision": "allowed",
+        "provenance": "psychology",
+        "ref": "cognitive_dissonance",
+        "source": "prose_settlement",
+        "reason": "provenance_ok",
+        "current_chapter": 2
+      }
+    ]
+  },
+  "settlement_b": {
+    "digest": "474ba9529920dea400a3251f91af1b4b3ae73a9804cd6669014c370e4ea465f5",
+    "character_updates": {
+      "deltas": {
+        "character": "Mara Voss",
+        "knows_gained": [
+          "Mara scrapes Claire Thorne's data."
+        ],
+        "believes_gained": [],
+        "misbeliefs_active": [
+          "Believes Adrian is a tool while being used by him as a predator"
+        ],
+        "knows_clamped": [],
+        "believes_clamped": [],
+        "misbeliefs_clamped": [],
+        "knowledge_audit": [
+          {
+            "claim": "Believes Adrian is a tool while being used by him as a predator",
+            "target": "character_state.misbeliefs",
+            "decision": "allowed",
+            "provenance": "psychology",
+            "ref": "cognitive_dissonance",
+            "source": "prose_settlement",
+            "reason": "provenance_ok",
+            "current_chapter": 2
+          }
+        ],
+        "source": "prose_settlement",
+        "authority_note": "knows_gained is clamped by pov_knows_chapter only; reader_reveal_chapter is never knowledge authority; believes/misbeliefs require provenance; settlement cannot mint early knowledge"
+      },
+      "psychology_active": [
+        {
+          "character": "Mara Voss",
+          "core_traits": [
+            "Alibi Architect",
+            "Clinically hyper-competent and cold",
+            "Overconfident in OSINT skill"
+          ],
+          "core_need": "To maintain absolute control over her constructed reality",
+          "core_fear": "That her control is an illusion, that she has been a tool rather than the architect",
+          "coping_mechanism": "Systematic compartmentalization and technical precision to mask psychological fragility",
+          "stress_responses": [
+            "Cortisol-induced physical stress",
+            "Sleep deprivation",
+            "Shaking hands",
+            "Vomiting",
+            "Arrhythmic heart rate"
+          ],
+          "cognitive_dissonance": "Believes Adrian is a tool while being used by him as a predator",
+          "behavioral_constraints": [
+            "Does not use physical violence",
+            "Does not leave the office during the 24-hour story",
+            "Data vault is not physically destroyed",
+            "Shaking always signifies loss of control, never romantic emotion"
+          ],
+          "reveal_gated_fields": []
+        },
+        {
+          "character": "Adrian Thorne",
+          "core_traits": [
+            "Digital predator",
+            "Cooperates perfectly with Mara's alibi creation, masking his true intentions",
+            "Smiles when his knowledge or control is discovered"
+          ],
+          "core_need": "To seize ultimate control by acquiring the black-data vault, proving his digital superiority.",
+          "core_fear": "That his true goal will be preempted, leaving him with only the alibi—a tool he never needed.",
+          "coping_mechanism": "Meticulous digital preparation and theatrical compliance, using staged evidence and withheld countermeasures to maintain psychological leverage.",
+          "stress_responses": [
+            "Cortisol-induced physical stress",
+            "Sleep deprivation",
+            "Exhaustion, bloodshot eyes",
+            "Shaking under sustained tension",
+            "Shaking hands (signifies loss of control)",
+            "Dry-heaving"
+          ],
+          "cognitive_dissonance": "Knows he is using Mara as a tool to access her vault, while allowing her to believe she is the architect trapping him.",
+          "behavioral_constraints": [
+            "Does not use physical violence against Mara",
+            "Does not threaten to kill Mara",
+            "Never leaves the office during the 24-hour story (implied co-presence)",
+            "Maintains perfect cooperation until the final leverage is revealed"
+          ],
+          "reveal_gated_fields": []
+        }
+      ],
+      "character_cognition_baseline": [
+        {
+          "character": "Mara Voss",
+          "knows": [],
+          "believes": [
+            "Adrian is a tool"
+          ],
+          "misbeliefs": [
+            "Believes Adrian is a tool while being used by him as a predator"
+          ],
+          "goal_now": "To maintain absolute control over her constructed reality",
+          "fear_active": "That her control is an illusion, that she has been a tool rather than the architect",
+          "coping_active": "Systematic compartmentalization and technical precision to mask psychological fragility",
+          "model_of_opponent": [],
+          "stress_responses": [
+            "Cortisol-induced physical stress",
+            "Sleep deprivation",
+            "Shaking hands",
+            "Vomiting",
+            "Arrhythmic heart rate"
+          ],
+          "behavioral_constraints": [
+            "Does not use physical violence",
+            "Does not leave the office during the 24-hour story",
+            "Data vault is not physically destroyed",
+            "Shaking always signifies loss of control, never romantic emotion"
+          ]
+        },
+        {
+          "character": "Adrian Thorne",
+          "knows": [],
+          "believes": [],
+          "misbeliefs": [
+            "Knows he is using Mara as a tool to access her vault, while allowing her to believe she is the architect trapping him."
+          ],
+          "goal_now": "To seize ultimate control by acquiring the black-data vault, proving his digital superiority.",
+          "fear_active": "That his true goal will be preempted, leaving him with only the alibi—a tool he never needed.",
+          "coping_active": "Meticulous digital preparation and theatrical compliance, using staged evidence and withheld countermeasures to maintain psychological leverage.",
+          "model_of_opponent": [],
+          "stress_responses": [
+            "Cortisol-induced physical stress",
+            "Sleep deprivation",
+            "Exhaustion, bloodshot eyes",
+            "Shaking under sustained tension",
+            "Shaking hands (signifies loss of control)",
+            "Dry-heaving"
+          ],
+          "behavioral_constraints": [
+            "Does not use physical violence against Mara",
+            "Does not threaten to kill Mara",
+            "Never leaves the office during the 24-hour story (implied co-presence)",
+            "Maintains perfect cooperation until the final leverage is revealed"
+          ]
+        }
+      ],
+      "villain_knowledge": {
+        "phase": "opening",
+        "chapter": 2,
+        "knows": [
+          "Mara is the mastermind"
+        ],
+        "does_not_know": [
+          "she shifted the time of death"
+        ],
+        "wants_pov_to_believe": [],
+        "withholds": [],
+        "allowed_moves": [],
+        "actions": [
+          "In the opening stretch Adrian knows Mara is the mastermind but does not know she shifted the time of death."
+        ]
+      }
+    },
+    "prop_updates": [
+      {
+        "prop_id": "P1",
+        "name": "Blood-stained phone",
+        "holder": "Mara",
+        "allowed_actions": [],
+        "actions_this_chapter": [],
+        "source": "ir_schedule_clamp",
+        "evidence": "Adrian Thorne holds Blood-stained phone",
+        "holder_clamped": true,
+        "clamp_reason": "holder_not_on_schedule",
+        "custody_audit": {
+          "prop_id": "P1",
+          "proposed_holder": "Adrian Thorne",
+          "scheduled_holder": "Mara",
+          "chain_holder": null,
+          "allowed_actions": [],
+          "action": "Adrian Thorne holds Blood-stained phone",
+          "source": "prose_possession",
+          "current_chapter": 2,
+          "clock_used": "physical_owner_by_chapter",
+          "decision": "clamped",
+          "holder": "Mara",
+          "reason": "holder_not_on_schedule"
+        }
+      },
+      {
+        "prop_id": "P2",
+        "name": "Zero-Day Server",
+        "holder": "Mara",
+        "allowed_actions": [
+          "retains custody"
+        ],
+        "actions_this_chapter": [
+          {
+            "chapter": 2,
+            "holder": "Mara",
+            "action": "retains custody"
+          }
+        ],
+        "source": "ir_baseline",
+        "evidence": null,
+        "holder_clamped": false,
+        "custody_audit": {
+          "prop_id": "P2",
+          "proposed_holder": "Mara",
+          "scheduled_holder": "Mara",
+          "chain_holder": "Mara",
+          "allowed_actions": [
+            "retains custody"
+          ],
+          "action": null,
+          "source": "ir_baseline",
+          "current_chapter": 2,
+          "clock_used": "physical_owner_by_chapter",
+          "decision": "allowed",
+          "holder": "Mara",
+          "reason": "schedule_or_chain_match"
+        }
+      },
+      {
+        "prop_id": "P3",
+        "name": "Claire's smartwatch data",
+        "holder": null,
+        "allowed_actions": [],
+        "actions_this_chapter": [],
+        "source": "ir_baseline",
+        "evidence": null,
+        "holder_clamped": false,
+        "custody_audit": {
+          "prop_id": "P3",
+          "proposed_holder": null,
+          "scheduled_holder": null,
+          "chain_holder": null,
+          "allowed_actions": [],
+          "action": null,
+          "source": "ir_baseline",
+          "current_chapter": 2,
+          "clock_used": "physical_owner_by_chapter",
+          "decision": "allowed",
+          "holder": null,
+          "reason": "ir_baseline"
+        }
+      }
+    ],
+    "events_realized": [
+      {
+        "kind": "countermove",
+        "action": "Mara scrapes Claire Thorne's data.",
+        "fact_refs": [
+          "F_MAP_CH2_must_happen_0",
+          "F_HONEY_DELIVERY_METHOD",
+          "F_PSY_0_behavioral_constraints_2",
+          "F_PLOT_TRUE_PLOT",
+          "F_PLOT_SURFACE_PLOT",
+          "F_MAP_CH1_must_happen_0",
+          "F_PSY_0_stress_responses_3",
+          "F_PSY_0_stress_responses_2",
+          "F_CLUE_C5",
+          "F_REVEAL_R4",
+          "F_PROP_P2"
+        ]
+      },
+      {
+        "kind": "required_event",
+        "action": "Mara scrapes Claire Thorne's data.",
+        "fact_refs": [
+          "F_MAP_CH2_must_happen_0",
+          "F_HONEY_DELIVERY_METHOD",
+          "F_PSY_0_behavioral_constraints_2",
+          "F_PLOT_TRUE_PLOT",
+          "F_PLOT_SURFACE_PLOT",
+          "F_MAP_CH1_must_happen_0",
+          "F_PSY_0_stress_responses_3",
+          "F_PSY_0_stress_responses_2",
+          "F_CLUE_C5",
+          "F_REVEAL_R4",
+          "F_PROP_P2"
+        ]
+      }
+    ],
+    "p1_row": {
+      "prop_id": "P1",
+      "name": "Blood-stained phone",
+      "holder": "Mara",
+      "allowed_actions": [],
+      "actions_this_chapter": [],
+      "source": "ir_schedule_clamp",
+      "evidence": "Adrian Thorne holds Blood-stained phone",
+      "holder_clamped": true,
+      "clamp_reason": "holder_not_on_schedule",
+      "custody_audit": {
+        "prop_id": "P1",
+        "proposed_holder": "Adrian Thorne",
+        "scheduled_holder": "Mara",
+        "chain_holder": null,
+        "allowed_actions": [],
+        "action": "Adrian Thorne holds Blood-stained phone",
+        "source": "prose_possession",
+        "current_chapter": 2,
+        "clock_used": "physical_owner_by_chapter",
+        "decision": "clamped",
+        "holder": "Mara",
+        "reason": "holder_not_on_schedule"
+      }
+    }
+  },
+  "packet3_a_continuity": {
+    "source": "settlement",
+    "carries_to_next": null,
+    "events_from_settlement": [
+      "Mara scrapes Claire Thorne's data.",
+      "Mara scrapes Claire Thorne's data.",
+      "The blood was treated with anticoagulants."
+    ],
+    "plan_foresight": "Outliner invents a yacht chase Mara never saw",
+    "plan_foresight_superseded": true,
+    "prior_settlement_digest": "a8337f5aae2b3a1328f2f2946d0f5046d379273fa322bd132cacf077e466755b",
+    "memory_from_settlement": [
+      "The blood was treated with anticoagulants.",
+      "Mara scrapes Claire Thorne's data."
+    ],
+    "beliefs_from_settlement": []
+  },
+  "packet3_b_continuity": {
+    "source": "settlement",
+    "carries_to_next": null,
+    "events_from_settlement": [
+      "Mara scrapes Claire Thorne's data.",
+      "Mara scrapes Claire Thorne's data."
+    ],
+    "plan_foresight": "Outliner invents a yacht chase Mara never saw",
+    "plan_foresight_superseded": true,
+    "prior_settlement_digest": "474ba9529920dea400a3251f91af1b4b3ae73a9804cd6669014c370e4ea465f5",
+    "memory_from_settlement": [
+      "Mara scrapes Claire Thorne's data."
+    ],
+    "beliefs_from_settlement": []
+  },
+  "assertions": {
+    "settlement_supersedes_carries_to_next_a": true,
+    "r4_in_knows_a": true,
+    "illegal_p1_transfer_clamped_in_b": true,
+    "packet_digest_changed_when_settlement_changed": true
+  },
+  "pass": true
+}

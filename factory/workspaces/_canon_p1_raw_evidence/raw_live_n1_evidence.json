@@ -1,0 +1,150 @@
+{
+  "layer": "live_n_to_n1",
+  "rule_names": [
+    "build_settlement",
+    "write_settlement",
+    "compile_chapter_intelligence(prior_settlement)",
+    "apply_settlement_to_intelligence",
+    "continuity_from_prior",
+    "compile_writer_packet"
+  ],
+  "chapter_N": 2,
+  "chapter_N1": 3,
+  "plan_N1_carries_to_next": "Outliner invents a yacht chase Mara never saw",
+  "packet2_digest": "5a00550018aaae63640c3d351240e0decb1fded66e4ea153b3494f8fee23f291",
+  "cases": [
+    {
+      "case_id": "L1_settlement_A_memory_and_override",
+      "settlement_digest": "a8337f5aae2b3a1328f2f2946d0f5046d379273fa322bd132cacf077e466755b",
+      "continuity": {
+        "source": "settlement",
+        "carries_to_next": null,
+        "events_from_settlement": [
+          "Mara scrapes Claire Thorne's data.",
+          "Mara scrapes Claire Thorne's data.",
+          "The blood was treated with anticoagulants."
+        ],
+        "plan_foresight": "Outliner invents a yacht chase Mara never saw",
+        "plan_foresight_superseded": true,
+        "prior_settlement_digest": "a8337f5aae2b3a1328f2f2946d0f5046d379273fa322bd132cacf077e466755b",
+        "memory_from_settlement": [
+          "The blood was treated with anticoagulants.",
+          "Mara scrapes Claire Thorne's data."
+        ],
+        "beliefs_from_settlement": []
+      },
+      "mara_knows": [
+        "The blood was treated with anticoagulants.",
+        "Mara scrapes Claire Thorne's data."
+      ],
+      "prop_P1": {
+        "prop_id": "P1",
+        "name": "Blood-stained phone",
+        "holder": "Mara",
+        "actions_this_chapter": [],
+        "allowed_actions": []
+      },
+      "prop_P2": {
+        "prop_id": "P2",
+        "name": "Zero-Day Server",
+        "holder": "Mara",
+        "actions_this_chapter": [
+          {
+            "chapter": 3,
+            "holder": "Mara",
+            "action": "retains custody"
+          }
+        ],
+        "allowed_actions": [
+          "retains custody"
+        ],
+        "holder_source": "prose_prop_action",
+        "holder_evidence": "retains custody"
+      },
+      "prior_settlement_writer_facing": {
+        "chapter": 2,
+        "settlement_digest": "a8337f5aae2b3a1328f2f2946d0f5046d379273fa322bd132cacf077e466755b",
+        "continuity_source": "settlement",
+        "applied_to_live_state": true,
+        "applied_at_chapter": 3,
+        "events_realized_count": 3,
+        "knowledge_clamped_count": 0
+      },
+      "expected": {
+        "continuity.source": "settlement",
+        "carries_to_next": null,
+        "plan_foresight_superseded": true,
+        "knows_contains_anticoagulant": true
+      },
+      "pass": true
+    },
+    {
+      "case_id": "L2_settlement_B_illegal_transfer_clamped",
+      "settlement_digest": "474ba9529920dea400a3251f91af1b4b3ae73a9804cd6669014c370e4ea465f5",
+      "settlement_b_p1_row_full": {
+        "prop_id": "P1",
+        "name": "Blood-stained phone",
+        "holder": "Mara",
+        "allowed_actions": [],
+        "actions_this_chapter": [],
+        "source": "ir_schedule_clamp",
+        "evidence": "Adrian Thorne holds Blood-stained phone",
+        "holder_clamped": true,
+        "clamp_reason": "holder_not_on_schedule",
+        "custody_audit": {
+          "prop_id": "P1",
+          "proposed_holder": "Adrian Thorne",
+          "scheduled_holder": "Mara",
+          "chain_holder": null,
+          "allowed_actions": [],
+          "action": "Adrian Thorne holds Blood-stained phone",
+          "source": "prose_possession",
+          "current_chapter": 2,
+          "clock_used": "physical_owner_by_chapter",
+          "decision": "clamped",
+          "holder": "Mara",
+          "reason": "holder_not_on_schedule"
+        }
+      },
+      "continuity": {
+        "source": "settlement",
+        "carries_to_next": null,
+        "events_from_settlement": [
+          "Mara scrapes Claire Thorne's data.",
+          "Mara scrapes Claire Thorne's data."
+        ],
+        "plan_foresight": "Outliner invents a yacht chase Mara never saw",
+        "plan_foresight_superseded": true,
+        "prior_settlement_digest": "474ba9529920dea400a3251f91af1b4b3ae73a9804cd6669014c370e4ea465f5",
+        "memory_from_settlement": [
+          "Mara scrapes Claire Thorne's data."
+        ],
+        "beliefs_from_settlement": []
+      },
+      "mara_knows": [
+        "Mara scrapes Claire Thorne's data."
+      ],
+      "prop_P1": {
+        "prop_id": "P1",
+        "name": "Blood-stained phone",
+        "holder": "Mara",
+        "actions_this_chapter": [],
+        "allowed_actions": [],
+        "holder_source": "ir_schedule_clamp",
+        "clamp_reason": "action_not_allowed"
+      },
+      "expected": {
+        "P1_holder_contains": "Mara",
+        "reason": "illegal early transfer clamped by IR schedule"
+      },
+      "pass": true
+    },
+    {
+      "case_id": "L3_packet_digest_changes_with_settlement",
+      "packet_a_digest": "6dbea447df2dbb2e2f88617f22920cf0e04a66d61d3c50edd969d88857a73e22",
+      "packet_b_digest": "bccd27bc84e6ca6473bf670f0a9efcc52570e36c0c0d148fe9643fbb7c56f64a",
+      "pass": true
+    }
+  ],
+  "all_cases_pass": true
+}
