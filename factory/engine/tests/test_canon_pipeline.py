@@ -411,16 +411,171 @@ class TestSettlementAndOpsP1P2(unittest.TestCase):
                     {
                         "claim": "Mara scrapes Claire Thorne's data.",
                         "kind": "event",
-                    }
+                    },
+                    {
+                        "claim": "The blood was treated with anticoagulants.",
+                        "kind": "event",
+                    },
                 ],
             },
             intelligence=compile_chapter_intelligence(self.ir, 2),
             prose_len=100,
+            ir=self.ir,
         )
         self.assertEqual(good["status"], "sealed")
         self.assertIn("settlement_digest", good)
         self.assertTrue(good.get("events_realized"))
         self.assertIsNotNone((good.get("power_delta") or {}).get("realized"))
+        deltas = (good.get("character_updates") or {}).get("deltas") or {}
+        self.assertTrue(deltas.get("knows_gained"))
+        self.assertTrue(good.get("strategy_updates"))
+
+    def test_prose_changes_n1_memory_custody_strategy(self) -> None:
+        """Acceptance: real ch-N claims change live N+1 state — Outliner foresight loses."""
+        with tempfile.TemporaryDirectory() as tmp:
+            ws = Path(tmp)
+            (ws / "concept.yaml").write_text(
+                yaml.safe_dump(_load_ce(), allow_unicode=True),
+                encoding="utf-8",
+            )
+            ingest_concept_to_workspace(ws)
+            ir = load_canonical_ir(ws)
+
+            sealed2 = seal_chapter_plan(
+                ws,
+                1,
+                {
+                    "chapter": 2,
+                    "title": "Anticoagulant",
+                    "must_happen": [
+                        "Mara observes anticoagulant treatment on the blood-stained phone."
+                    ],
+                    "beat_summary": (
+                        "She scrapes Claire Thorne data and confirms anticoagulant staging."
+                    ),
+                    "must_not": ["Mara leaves the office."],
+                },
+            )
+            self.assertTrue(sealed2["sealed"], sealed2)
+            build_and_seal_chapter_artifacts(ws, 1, 2, sealed2["repaired_plan"])
+
+            # Prose A: observes anticoagulant + scrapes data (no transfer).
+            settle_a = build_settlement(
+                chapter=2,
+                canon_qc={
+                    "status": "pass",
+                    "claims": [
+                        {
+                            "claim": "The blood was treated with anticoagulants.",
+                            "kind": "event",
+                        },
+                        {
+                            "claim": "Mara scrapes Claire Thorne's data.",
+                            "kind": "event",
+                        },
+                        {
+                            "claim": "Mara retains custody of the Zero-Day Server.",
+                            "kind": "event",
+                        },
+                    ],
+                },
+                intelligence=compile_chapter_intelligence(ir, 2),
+                ir=ir,
+            )
+            write_settlement(ws, 1, 2, settle_a)
+            self.assertIn(
+                "The blood was treated with anticoagulants.",
+                (settle_a["character_updates"]["deltas"]["knows_gained"]),
+            )
+
+            plan3 = {
+                "chapter": 3,
+                "title": "Next",
+                "must_happen": ["Mara creates the false alibi."],
+                "beat_summary": "Mara creates the false alibi from scraped Claire Thorne data.",
+                "must_not": ["Mara leaves the office."],
+                "carries_to_next": "Outliner invents a yacht chase Mara never saw",
+            }
+            sealed3 = seal_chapter_plan(ws, 1, plan3)
+            self.assertTrue(sealed3["sealed"], sealed3)
+            built_a = build_and_seal_chapter_artifacts(ws, 1, 3, sealed3["repaired_plan"])
+            packet_a = built_a["packet"]
+            mara_a = next(
+                r
+                for r in (packet_a.get("character_state") or [])
+                if "Mara" in str(r.get("character") or "")
+            )
+            self.assertTrue(
+                any("anticoagulant" in k.casefold() for k in (mara_a.get("knows") or [])),
+                mara_a.get("knows"),
+            )
+            self.assertTrue(
+                any("scrapes" in k.casefold() for k in (mara_a.get("knows") or [])),
+                mara_a.get("knows"),
+            )
+            props_a = {p["prop_id"]: p for p in (packet_a.get("prop_state") or [])}
+            self.assertEqual(props_a["P2"]["holder"], "Mara")
+            self.assertTrue((packet_a.get("moves") or {}).get("prior_realized"))
+            self.assertEqual(
+                (packet_a.get("continuity") or {}).get("source"), "settlement"
+            )
+            self.assertTrue(
+                (packet_a.get("continuity") or {}).get("plan_foresight_superseded")
+            )
+            # Foresight may be retained for audit, but must not be active continuity.
+            self.assertIsNone((packet_a.get("continuity") or {}).get("carries_to_next"))
+            self.assertNotEqual(
+                (packet_a.get("continuity") or {}).get("source"), "plan_foresight"
+            )
+
+            # Prose B: different verified observation set → different N+1 memory.
+            settle_b = build_settlement(
+                chapter=2,
+                canon_qc={
+                    "status": "pass",
+                    "claims": [
+                        {
+                            "claim": "Mara scrapes Claire Thorne's data.",
+                            "kind": "event",
+                        },
+                        {
+                            "claim": (
+                                "Adrian Thorne takes the Blood-stained phone from the desk."
+                            ),
+                            "kind": "event",
+                        },
+                    ],
+                },
+                intelligence=compile_chapter_intelligence(ir, 2),
+                ir=ir,
+            )
+            write_settlement(ws, 1, 2, settle_b)
+            built_b = build_and_seal_chapter_artifacts(ws, 1, 3, sealed3["repaired_plan"])
+            packet_b = built_b["packet"]
+            mara_b = next(
+                r
+                for r in (packet_b.get("character_state") or [])
+                if "Mara" in str(r.get("character") or "")
+            )
+            # Anticoagulant observation absent from prose B → not forced into knows
+            # from settlement A (settlement replaced).
+            self.assertFalse(
+                any("anticoagulant" in k.casefold() for k in (mara_b.get("knows") or [])),
+                mara_b.get("knows"),
+            )
+            self.assertTrue(
+                any("scrapes" in k.casefold() for k in (mara_b.get("knows") or [])),
+                mara_b.get("knows"),
+            )
+            props_b = {p["prop_id"]: p for p in (packet_b.get("prop_state") or [])}
+            self.assertEqual(props_b["P1"]["holder"], "Adrian Thorne")
+            self.assertNotEqual(
+                packet_a.get("packet_digest"), packet_b.get("packet_digest")
+            )
+            # Outliner foresight still does not become continuity authority.
+            self.assertEqual(
+                (packet_b.get("continuity") or {}).get("source"), "settlement"
+            )
 
     def test_settlement_feeds_next_chapter_packet(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -444,6 +599,7 @@ class TestSettlementAndOpsP1P2(unittest.TestCase):
                 },
                 intelligence=compile_chapter_intelligence(ir, 2),
                 prose_len=50,
+                ir=ir,
             )
             write_settlement(ws, 1, 2, settle)
             loaded = load_settlement(ws, 1, 2)

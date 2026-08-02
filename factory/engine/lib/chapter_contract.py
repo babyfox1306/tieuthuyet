@@ -160,6 +160,9 @@ def compile_chapter_contract(
             "chapter": prior_slice.get("chapter"),
             "settlement_digest": prior_slice.get("settlement_digest"),
             "events_realized": prior_slice.get("events_realized") or [],
+            "character_updates": prior_slice.get("character_updates"),
+            "prop_updates": prior_slice.get("prop_updates"),
+            "strategy_updates": prior_slice.get("strategy_updates"),
         }
 
     continuity = continuity_from_prior(plan, prior_for_continuity)
@@ -423,21 +426,12 @@ def build_and_seal_chapter_artifacts(
         intelligence = compile_chapter_intelligence(
             ir, chapter, prior_settlement=prior
         )
-    elif intelligence.get("prior_settlement") is None and chapter > 1:
+    elif not (intelligence.get("prior_settlement") or {}).get("applied_to_live_state"):
         prior = load_settlement(ws, book, chapter - 1)
         if prior and prior.get("status") == "sealed":
-            intelligence = dict(intelligence)
-            intelligence["prior_settlement"] = {
-                "chapter": prior.get("chapter"),
-                "settlement_digest": prior.get("settlement_digest"),
-                "events_realized": prior.get("events_realized") or [],
-                "character_updates": prior.get("character_updates"),
-                "prop_updates": prior.get("prop_updates"),
-                "honeytoken_state": prior.get("honeytoken_state"),
-                "relationship_delta": prior.get("relationship_delta"),
-                "power_delta_realized": prior.get("power_delta"),
-                "continuity_source": "settlement",
-            }
+            intelligence = compile_chapter_intelligence(
+                ir, chapter, prior_settlement=prior
+            )
 
     contract = compile_chapter_contract(
         ir,

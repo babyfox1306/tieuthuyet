@@ -1,10 +1,8 @@
-"""P1 verification: intelligence graphs + settlement → N+1 continuity.
+"""P1 verification: prose N must change live N+1 memory/custody/strategy.
 
-Acceptance:
-- cognition / prop / honeytoken / moves.fact_refs present
-- move_missing_fact_refs would STOP
-- ch N+1 packet reads settlement N (overrides carries_to_next)
-- skip_literary_fixer on canon fail
+P0 proved invention cannot enter canon.
+P1 is complete only when verified chapter-N prose changes knows/believes,
+prop custody, and strategy in the chapter N+1 packet — without Outliner foresight.
 """
 from __future__ import annotations
 
@@ -21,13 +19,8 @@ sys.path.insert(0, str(ROOT))
 from factory.engine.lib.canonical_ir import (  # noqa: E402
     ingest_concept_to_workspace,
     load_canonical_ir,
-    sha256_obj,
 )
 from factory.engine.lib.chapter_contract import build_and_seal_chapter_artifacts  # noqa: E402
-from factory.engine.lib.canon_ops import (  # noqa: E402
-    classify_error_layer,
-    should_skip_literary_fixer,
-)
 from factory.engine.lib.plan_provenance import seal_chapter_plan  # noqa: E402
 from factory.engine.lib.prose_settlement import (  # noqa: E402
     build_settlement,
@@ -36,10 +29,6 @@ from factory.engine.lib.prose_settlement import (  # noqa: E402
 from factory.engine.lib.story_intelligence import (  # noqa: E402
     compile_chapter_intelligence,
     move_fact_ref_errors,
-    project_character_cognition,
-    project_honeytoken_state,
-    project_prop_state,
-    project_villain_knowledge,
 )
 
 CE = Path(r"D:\tieuthuyet\Concept ETL\output\concepts\the-zero-day-alibi\concept.yaml")
@@ -55,164 +44,161 @@ def _reset_ws() -> None:
     ingest_concept_to_workspace(WS)
 
 
+def _mara_knows(packet: dict) -> list[str]:
+    for row in packet.get("character_state") or []:
+        if "Mara" in str(row.get("character") or ""):
+            return list(row.get("knows") or [])
+    return []
+
+
 def main() -> int:
-    report: dict = {"p1_intelligence_complete": False, "checks": {}}
+    report: dict = {
+        "p1_intelligence_complete": False,
+        "acceptance": (
+            "prose N changes live memory/belief/custody/strategy in packet N+1; "
+            "Outliner foresight cannot override"
+        ),
+        "checks": {},
+    }
     if not CE.exists():
         report["error"] = f"CE missing: {CE}"
         OUT.parent.mkdir(parents=True, exist_ok=True)
         OUT.write_text(json.dumps(report, indent=2), encoding="utf-8")
-        print(json.dumps(report, indent=2))
         return 1
 
     _reset_ws()
     ir = load_canonical_ir(WS)
     assert ir
 
-    # --- graphs ---
-    cog = project_character_cognition(ir, 2)
-    report["checks"]["cognition"] = {
-        "ok": bool(cog and cog[0].get("goal_now") and cog[0].get("misbeliefs")),
-        "n": len(cog),
-    }
-    props = {p["prop_id"]: p for p in project_prop_state(ir, 1)}
-    report["checks"]["prop_holder"] = {
-        "ok": props.get("P1", {}).get("holder") == "Mara",
-        "holder": props.get("P1", {}).get("holder"),
-    }
-    honey = project_honeytoken_state(ir, 3)
-    report["checks"]["honeytoken_pre"] = {
-        "ok": honey.get("phase") == "pre_reuse" and "hidden" in honey,
-        "phase": honey.get("phase"),
-    }
-    villain = project_villain_knowledge(ir, 2)
-    report["checks"]["villain_phase"] = {
-        "ok": villain.get("phase") == "opening",
-        "phase": villain.get("phase"),
-    }
-
     intel2 = compile_chapter_intelligence(ir, 2)
-    move_errs = move_fact_ref_errors(intel2.get("moves"))
     report["checks"]["moves_fact_refs"] = {
-        "ok": not move_errs
-        and bool((intel2.get("moves") or {}).get("countermove", {}).get("fact_refs")),
-        "errors": move_errs,
-        "countermove_refs": (intel2.get("moves") or {})
-        .get("countermove", {})
-        .get("fact_refs", [])[:6],
-    }
-    report["checks"]["missing_refs_would_stop"] = {
-        "ok": bool(
-            move_fact_ref_errors(
-                {
-                    "countermove": {
-                        "action": "Unsupported invented beat",
-                        "fact_refs": [],
-                    }
-                }
-            )
-        )
+        "ok": not move_fact_ref_errors(intel2.get("moves"))
+        and bool((intel2.get("moves") or {}).get("countermove", {}).get("fact_refs"))
     }
 
-    # --- seal ch2 + settlement ---
-    plan2 = {
-        "chapter": 2,
-        "title": "Anticoagulant",
-        "must_happen": [
-            "Mara observes anticoagulant treatment on the blood-stained phone."
-        ],
-        "beat_summary": "She scrapes Claire Thorne data and confirms anticoagulant staging.",
-        "must_not": ["Mara leaves the office."],
-    }
-    sealed2 = seal_chapter_plan(WS, 1, plan2)
-    report["checks"]["seal_ch2"] = {"ok": bool(sealed2.get("sealed")), "detail": sealed2}
-    built2 = build_and_seal_chapter_artifacts(
-        WS, 1, 2, sealed2["repaired_plan"], intelligence=intel2
+    sealed2 = seal_chapter_plan(
+        WS,
+        1,
+        {
+            "chapter": 2,
+            "title": "Anticoagulant",
+            "must_happen": [
+                "Mara observes anticoagulant treatment on the blood-stained phone."
+            ],
+            "beat_summary": (
+                "She scrapes Claire Thorne data and confirms anticoagulant staging."
+            ),
+            "must_not": ["Mara leaves the office."],
+        },
     )
-    packet2 = built2["packet"]
-    report["checks"]["packet_structured"] = {
-        "ok": bool(
-            packet2.get("character_state")
-            and packet2.get("moves")
-            and packet2.get("prop_state")
-            and packet2.get("psychology_active")
-            and packet2.get("relationship_delta_target")
+    report["checks"]["seal_ch2"] = {"ok": bool(sealed2.get("sealed"))}
+    build_and_seal_chapter_artifacts(WS, 1, 2, sealed2["repaired_plan"])
+
+    # --- Prose A ---
+    settle_a = build_settlement(
+        chapter=2,
+        canon_qc={
+            "status": "pass",
+            "claims": [
+                {"claim": "The blood was treated with anticoagulants.", "kind": "event"},
+                {"claim": "Mara scrapes Claire Thorne's data.", "kind": "event"},
+                {
+                    "claim": "Mara retains custody of the Zero-Day Server.",
+                    "kind": "event",
+                },
+            ],
+        },
+        intelligence=intel2,
+        ir=ir,
+    )
+    write_settlement(WS, 1, 2, settle_a)
+    report["checks"]["settlement_a_memory"] = {
+        "ok": any(
+            "anticoagulant" in k.casefold()
+            for k in (settle_a.get("character_updates") or {})
+            .get("deltas", {})
+            .get("knows_gained", [])
         ),
-        "keys": sorted(k for k, v in packet2.items() if v),
+        "knows_gained": (settle_a.get("character_updates") or {})
+        .get("deltas", {})
+        .get("knows_gained"),
     }
 
-    settlement = build_settlement(
+    sealed3 = seal_chapter_plan(
+        WS,
+        1,
+        {
+            "chapter": 3,
+            "title": "Next",
+            "must_happen": ["Mara creates the false alibi."],
+            "beat_summary": "Mara creates the false alibi from scraped Claire Thorne data.",
+            "must_not": ["Mara leaves the office."],
+            "carries_to_next": "Outliner invents a yacht chase Mara never saw",
+        },
+    )
+    built_a = build_and_seal_chapter_artifacts(WS, 1, 3, sealed3["repaired_plan"])
+    packet_a = built_a["packet"]
+    knows_a = _mara_knows(packet_a)
+    props_a = {p["prop_id"]: p for p in (packet_a.get("prop_state") or [])}
+    cont_a = packet_a.get("continuity") or {}
+    report["checks"]["packet_a_live_memory"] = {
+        "ok": any("anticoagulant" in k.casefold() for k in knows_a)
+        and any("scrapes" in k.casefold() for k in knows_a),
+        "knows": knows_a,
+    }
+    report["checks"]["packet_a_custody"] = {
+        "ok": props_a.get("P2", {}).get("holder") == "Mara",
+        "P2": props_a.get("P2"),
+    }
+    report["checks"]["packet_a_strategy"] = {
+        "ok": bool((packet_a.get("moves") or {}).get("prior_realized")),
+        "prior_realized": (packet_a.get("moves") or {}).get("prior_realized"),
+        "power_incoming": ((packet_a.get("moves") or {}).get("power_delta") or {}).get(
+            "incoming"
+        ),
+    }
+    report["checks"]["outliner_foresight_loses"] = {
+        "ok": cont_a.get("source") == "settlement"
+        and cont_a.get("plan_foresight_superseded") is True
+        and cont_a.get("carries_to_next") is None,
+        "continuity": cont_a,
+    }
+
+    # --- Prose B: different verified claims → different live N+1 state ---
+    settle_b = build_settlement(
         chapter=2,
         canon_qc={
             "status": "pass",
             "claims": [
                 {"claim": "Mara scrapes Claire Thorne's data.", "kind": "event"},
                 {
-                    "claim": "The blood was treated with anticoagulants.",
+                    "claim": "Adrian Thorne takes the Blood-stained phone from the desk.",
                     "kind": "event",
                 },
             ],
         },
         intelligence=intel2,
-        prose_len=200,
+        ir=ir,
     )
-    write_settlement(WS, 1, 2, settlement)
-    report["checks"]["settlement_events"] = {
-        "ok": settlement.get("status") == "sealed"
-        and bool(settlement.get("events_realized")),
-        "events": settlement.get("events_realized"),
-        "power_delta": settlement.get("power_delta"),
+    write_settlement(WS, 1, 2, settle_b)
+    built_b = build_and_seal_chapter_artifacts(WS, 1, 3, sealed3["repaired_plan"])
+    packet_b = built_b["packet"]
+    knows_b = _mara_knows(packet_b)
+    props_b = {p["prop_id"]: p for p in (packet_b.get("prop_state") or [])}
+    report["checks"]["packet_b_memory_differs"] = {
+        "ok": (not any("anticoagulant" in k.casefold() for k in knows_b))
+        and any("scrapes" in k.casefold() for k in knows_b),
+        "knows": knows_b,
     }
-
-    # --- ch3 reads settlement ---
-    plan3 = {
-        "chapter": 3,
-        "title": "Next",
-        "must_happen": ["Mara reviews the scraped Claire Thorne data."],
-        "beat_summary": "Mara reviews Claire Thorne data already scraped.",
-        "must_not": ["Mara leaves the office."],
-        "carries_to_next": "Outliner foresight yacht chase that must lose",
+    report["checks"]["packet_b_custody_from_prose"] = {
+        "ok": props_b.get("P1", {}).get("holder") == "Adrian Thorne",
+        "P1": props_b.get("P1"),
     }
-    sealed3 = seal_chapter_plan(WS, 1, plan3)
-    built3 = build_and_seal_chapter_artifacts(WS, 1, 3, sealed3["repaired_plan"])
-    packet3 = built3["packet"]
-    prior = packet3.get("prior_settlement") or {}
-    continuity = packet3.get("continuity") or {}
-    report["checks"]["settlement_to_n1"] = {
-        "ok": prior.get("settlement_digest") == settlement.get("settlement_digest")
-        and continuity.get("source") == "settlement"
-        and continuity.get("plan_foresight_superseded") is True,
-        "prior_digest": prior.get("settlement_digest"),
-        "continuity": continuity,
+    report["checks"]["packets_differ"] = {
+        "ok": packet_a.get("packet_digest") != packet_b.get("packet_digest"),
+        "digest_a": packet_a.get("packet_digest"),
+        "digest_b": packet_b.get("packet_digest"),
     }
-
-    # mutate settlement → packet changes
-    mutated = dict(settlement)
-    mutated["events_realized"] = list(settlement.get("events_realized") or []) + [
-        {"action": "mutated continuity beat", "kind": "test"}
-    ]
-    mutated["settlement_digest"] = sha256_obj(
-        {k: v for k, v in mutated.items() if k != "settlement_digest"}
-    )
-    write_settlement(WS, 1, 2, mutated)
-    rebuilt = build_and_seal_chapter_artifacts(WS, 1, 3, sealed3["repaired_plan"])
-    report["checks"]["settlement_mutation_propagates"] = {
-        "ok": (rebuilt["packet"].get("prior_settlement") or {}).get("settlement_digest")
-        == mutated["settlement_digest"]
-        and mutated["settlement_digest"] != settlement["settlement_digest"],
-    }
-
-    report["checks"]["ops"] = {
-        "skip_fixer_on_fail": should_skip_literary_fixer(
-            {"status": "fail", "violations": [{"x": 1}]}
-        ),
-        "layer_planner": classify_error_layer("move_missing_fact_refs"),
-        "layer_writer": classify_error_layer("canon_qc fail"),
-    }
-    report["checks"]["ops"]["ok"] = (
-        report["checks"]["ops"]["skip_fixer_on_fail"]
-        and report["checks"]["ops"]["layer_planner"] == "planner"
-        and report["checks"]["ops"]["layer_writer"] == "writer"
-    )
 
     report["p1_intelligence_complete"] = all(
         bool((v or {}).get("ok")) for v in report["checks"].values() if isinstance(v, dict)

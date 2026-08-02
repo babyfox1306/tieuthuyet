@@ -75,10 +75,22 @@ def _schedule_by_ref(
     for row in reveal_schedule or []:
         if not isinstance(row, dict):
             continue
-        ref = str(row.get("ref") or "").strip()
-        if ref:
-            out[ref] = row
+        for key in ("ref", "id"):
+            token = str(row.get(key) or "").strip()
+            if token:
+                out[token] = row
     return out
+
+
+def _reveal_row_chapter(row: dict[str, Any]) -> int:
+    for key in ("chapter", "reader_reveal_chapter", "pov_knows_chapter"):
+        try:
+            ch = int(row.get(key) or 0)
+        except (TypeError, ValueError):
+            ch = 0
+        if ch > 0:
+            return ch
+    return 0
 
 
 def psychology_entry_meaningful(entry: dict[str, Any]) -> bool:
@@ -114,7 +126,7 @@ def character_psychology_errors(
     cast_set = set(cast)
     schedule = _schedule_by_ref(reveal_schedule)
     has_future_reveal = any(
-        int(row.get("chapter") or 0) > 1 for row in schedule.values()
+        _reveal_row_chapter(row) > 1 for row in schedule.values()
     )
     seen: set[str] = set()
 
@@ -296,7 +308,7 @@ def resolve_gate_chapter(
         row = _schedule_by_ref(reveal_schedule).get(unlock)
         if row is None:
             raise ValueError(f"unknown psychology unlock reveal ref: {unlock}")
-        chapter = int(row.get("chapter") or 0)
+        chapter = _reveal_row_chapter(row)
         if chapter <= 0:
             raise ValueError(f"psychology unlock reveal {unlock} has no chapter")
         if explicit is not None and int(explicit) != chapter:

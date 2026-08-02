@@ -608,17 +608,10 @@ def compile_chapter_intelligence(
     if setting:
         bundle["setting_threshold"] = setting
     if prior_settlement and prior_settlement.get("status") == "sealed":
-        bundle["prior_settlement"] = {
-            "chapter": prior_settlement.get("chapter"),
-            "settlement_digest": prior_settlement.get("settlement_digest"),
-            "events_realized": prior_settlement.get("events_realized") or [],
-            "character_updates": prior_settlement.get("character_updates"),
-            "prop_updates": prior_settlement.get("prop_updates"),
-            "honeytoken_state": prior_settlement.get("honeytoken_state"),
-            "relationship_delta": prior_settlement.get("relationship_delta"),
-            "power_delta_realized": prior_settlement.get("power_delta"),
-            "continuity_source": "settlement",
-        }
+        from factory.engine.lib.prose_settlement import apply_settlement_to_intelligence
+
+        # Live state must change: memory/belief/custody/strategy from prose N.
+        bundle = apply_settlement_to_intelligence(bundle, prior_settlement)
     else:
         bundle["prior_settlement"] = None
     return bundle

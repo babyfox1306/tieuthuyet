@@ -1,201 +1,62 @@
 {
   "p1_intelligence_complete": true,
+  "acceptance": "prose N changes live memory/belief/custody/strategy in packet N+1; Outliner foresight cannot override",
   "checks": {
-    "cognition": {
-      "ok": true,
-      "n": 1
-    },
-    "prop_holder": {
-      "ok": true,
-      "holder": "Mara"
-    },
-    "honeytoken_pre": {
-      "ok": true,
-      "phase": "pre_reuse"
-    },
-    "villain_phase": {
-      "ok": true,
-      "phase": "opening"
-    },
     "moves_fact_refs": {
-      "ok": true,
-      "errors": [],
-      "countermove_refs": [
-        "F_MAP_CH2_must_happen_0",
-        "F_PSY_0_behavioral_constraints_2",
-        "F_PLOT_TRUE_PLOT",
-        "F_PLOT_SURFACE_PLOT",
-        "F_MAP_CH1_must_happen_0",
-        "F_PSY_0_stress_responses_3"
-      ]
-    },
-    "missing_refs_would_stop": {
       "ok": true
     },
     "seal_ch2": {
-      "ok": true,
-      "detail": {
-        "approval": {
-          "status": "sealed",
-          "source_ir_hash": "e736f68cbb866ede70c4866e65b03e6f6d32b4a6b7c70693893dffa8bc4020f2",
-          "artifact_hash": "67f9fa247436abd82667d56639388914bd8a4afa1e45932bb6b354d776fb3415",
-          "validators": {
-            "provenance_gate": "pass",
-            "specificity_generalize": "pass"
-          },
-          "unverified_claims": [],
-          "warnings": [],
-          "sealed_at": "2026-08-02T08:25:08.651127+00:00",
-          "validator_version": "1.0.0",
-          "chapter": 2,
-          "generalizations": 0
-        },
-        "repaired_plan": {
-          "chapter": 2,
-          "title": "Anticoagulant",
-          "must_happen": [
-            "Mara observes anticoagulant treatment on the blood-stained phone."
-          ],
-          "beat_summary": "She scrapes Claire Thorne data and confirms anticoagulant staging.",
-          "must_not": [
-            "Mara leaves the office."
-          ]
-        },
-        "sealed": true,
-        "result": {
-          "status": "sealed",
-          "repaired_plan": {
-            "chapter": 2,
-            "title": "Anticoagulant",
-            "must_happen": [
-              "Mara observes anticoagulant treatment on the blood-stained phone."
-            ],
-            "beat_summary": "She scrapes Claire Thorne data and confirms anticoagulant staging.",
-            "must_not": [
-              "Mara leaves the office."
-            ]
-          },
-          "unverified_claims": [],
-          "warnings": [],
-          "generalizations": 0,
-          "claims_extracted": [
-            {
-              "claim_id": "CH2-title",
-              "field": "title",
-              "claim": "Anticoagulant",
-              "chapter": 2
-            },
-            {
-              "claim_id": "CH2-beat_summary",
-              "field": "beat_summary",
-              "claim": "She scrapes Claire Thorne data and confirms anticoagulant staging.",
-              "chapter": 2
-            },
-            {
-              "claim_id": "CH2-must_happen-0",
-              "field": "must_happen",
-              "claim": "Mara observes anticoagulant treatment on the blood-stained phone.",
-              "chapter": 2
-            },
-            {
-              "claim_id": "CH2-must_not-0",
-              "field": "must_not",
-              "claim": "Mara leaves the office.",
-              "chapter": 2
-            }
-          ]
-        }
-      }
+      "ok": true
     },
-    "packet_structured": {
+    "settlement_a_memory": {
       "ok": true,
-      "keys": [
-        "allowed_creative_space",
-        "body_condition_active",
-        "chapter",
-        "character_state",
-        "continuity",
-        "entities",
-        "hidden_future_reveal_count",
-        "honeytoken_state",
-        "intelligence",
-        "moves",
-        "must_avoid",
-        "output_contract",
-        "packet_digest",
-        "packet_version",
-        "parent_contract_digest",
-        "plan_refs",
-        "pov",
-        "primary_turn",
-        "prop_actions",
-        "prop_state",
-        "psychology_active",
-        "relationship_delta_target",
-        "relationship_turn",
-        "required_events",
-        "visible_facts"
+      "knows_gained": [
+        "The blood was treated with anticoagulants.",
+        "Mara scrapes Claire Thorne's data."
       ]
     },
-    "settlement_events": {
+    "packet_a_live_memory": {
       "ok": true,
-      "events": [
-        {
-          "kind": "countermove",
-          "action": "Mara scrapes Claire Thorne's data.",
-          "fact_refs": [
-            "F_MAP_CH2_must_happen_0",
-            "F_PSY_0_behavioral_constraints_2",
-            "F_PLOT_TRUE_PLOT",
-            "F_PLOT_SURFACE_PLOT",
-            "F_MAP_CH1_must_happen_0",
-            "F_PSY_0_stress_responses_3",
-            "F_PSY_0_stress_responses_2",
-            "F_PSY_0_stress_responses_1",
-            "F_CLUE_C5",
-            "F_REVEAL_R4",
-            "F_PROP_P2"
-          ]
-        },
-        {
-          "kind": "required_event",
-          "action": "Mara scrapes Claire Thorne's data.",
-          "fact_refs": [
-            "F_MAP_CH2_must_happen_0",
-            "F_PSY_0_behavioral_constraints_2",
-            "F_PLOT_TRUE_PLOT",
-            "F_PLOT_SURFACE_PLOT",
-            "F_MAP_CH1_must_happen_0",
-            "F_PSY_0_stress_responses_3",
-            "F_PSY_0_stress_responses_2",
-            "F_PSY_0_stress_responses_1",
-            "F_CLUE_C5",
-            "F_REVEAL_R4",
-            "F_PROP_P2"
-          ]
-        },
-        {
-          "kind": "antagonist_move",
-          "action": "The blood was treated with anticoagulants.",
-          "fact_refs": [
-            "F_REVEAL_R4",
-            "F_MAP_CH2_may_observe_0",
-            "F_CLUE_C5",
-            "F_PROP_P1",
-            "F_CLUE_C5_SURFACE",
-            "F_PROP_P2"
-          ]
-        }
-      ],
-      "power_delta": {
-        "projected": "pressure",
-        "realized": "gain",
-        "source": "settlement_from_claims"
+      "knows": [
+        "The blood was treated with anticoagulants.",
+        "Mara scrapes Claire Thorne's data."
+      ]
+    },
+    "packet_a_custody": {
+      "ok": true,
+      "P2": {
+        "prop_id": "P2",
+        "name": "Zero-Day Server",
+        "holder": "Mara",
+        "actions_this_chapter": [
+          {
+            "chapter": 3,
+            "holder": "Mara",
+            "action": "retains custody"
+          }
+        ],
+        "allowed_actions": [
+          "retains custody"
+        ],
+        "holder_source": "prose_prop_action",
+        "holder_evidence": "retains custody"
       }
     },
-    "settlement_to_n1": {
+    "packet_a_strategy": {
       "ok": true,
-      "prior_digest": "f79a5ce355e5f3fdabac31289a557ec3494862cc683f97f78fb07ffdb6f35051",
+      "prior_realized": [
+        "Mara scrapes Claire Thorne's data.",
+        "Mara scrapes Claire Thorne's data.",
+        "The blood was treated with anticoagulants."
+      ],
+      "power_incoming": {
+        "projected": "pressure",
+        "realized": "gain",
+        "source": "prose_settlement"
+      }
+    },
+    "outliner_foresight_loses": {
+      "ok": true,
       "continuity": {
         "source": "settlement",
         "carries_to_next": null,
@@ -204,19 +65,38 @@
           "Mara scrapes Claire Thorne's data.",
           "The blood was treated with anticoagulants."
         ],
-        "plan_foresight": "Outliner foresight yacht chase that must lose",
+        "plan_foresight": "Outliner invents a yacht chase Mara never saw",
         "plan_foresight_superseded": true,
-        "prior_settlement_digest": "f79a5ce355e5f3fdabac31289a557ec3494862cc683f97f78fb07ffdb6f35051"
+        "prior_settlement_digest": "e324074a930ecf7aeae8d3f80ba6390e4dd49197786de56a3f02367e2b678665",
+        "memory_from_settlement": [
+          "The blood was treated with anticoagulants.",
+          "Mara scrapes Claire Thorne's data."
+        ],
+        "beliefs_from_settlement": []
       }
     },
-    "settlement_mutation_propagates": {
-      "ok": true
+    "packet_b_memory_differs": {
+      "ok": true,
+      "knows": [
+        "Mara scrapes Claire Thorne's data."
+      ]
     },
-    "ops": {
-      "skip_fixer_on_fail": true,
-      "layer_planner": "planner",
-      "layer_writer": "writer",
-      "ok": true
+    "packet_b_custody_from_prose": {
+      "ok": true,
+      "P1": {
+        "prop_id": "P1",
+        "name": "Blood-stained phone",
+        "holder": "Adrian Thorne",
+        "actions_this_chapter": [],
+        "allowed_actions": [],
+        "holder_source": "prose_possession",
+        "holder_evidence": "Adrian Thorne holds Blood-stained phone"
+      }
+    },
+    "packets_differ": {
+      "ok": true,
+      "digest_a": "9b20249b18f2741196e66127ebb70002cef7462aae8a711f9ae78de66d55d342",
+      "digest_b": "0292baa3dc6ed4a6a7e2d4333155bb241e9a081fde377a8fdb1dc241d44cad97"
     }
   }
 }

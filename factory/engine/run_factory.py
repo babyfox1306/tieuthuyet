@@ -1109,6 +1109,7 @@ def write_one_chapter(
             canon_qc=canon,
             intelligence=intel,
             prose_len=len(chapter),
+            ir=ir,
         )
         write_settlement(ws, book, ch, settlement)
 
