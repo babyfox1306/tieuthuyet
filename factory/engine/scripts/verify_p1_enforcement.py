@@ -200,6 +200,70 @@ def main() -> int:
         "digest_b": packet_b.get("packet_digest"),
     }
 
+    # --- Reveal-clock clamp (settlement must not mint early knows) ---
+    early = (
+        "Adrian planted a backdoor in Mara's alibi software that leaks "
+        "metadata to his server"
+    )
+    settle_early = build_settlement(
+        chapter=2,
+        canon_qc={
+            "status": "pass",
+            "claims": [
+                {"claim": "The blood was treated with anticoagulants.", "kind": "event"},
+                {"claim": "Mara scrapes Claire Thorne's data.", "kind": "event"},
+                {"claim": early, "kind": "event"},
+            ],
+        },
+        intelligence={
+            **intel2,
+            "moves": {
+                **intel2["moves"],
+                "antagonist_move": {"action": early, "fact_refs": ["F_REVEAL_R5"]},
+            },
+        },
+        ir=ir,
+    )
+    deltas_e = (settle_early.get("character_updates") or {}).get("deltas") or {}
+    report["checks"]["settlement_pov_clock_clamp"] = {
+        "ok": (
+            any("anticoagulant" in k.casefold() for k in (deltas_e.get("knows_gained") or []))
+            and not any("backdoor" in k.casefold() for k in (deltas_e.get("knows_gained") or []))
+            and any(
+                c.get("reason") == "pov_knows_chapter_clamp"
+                for c in (deltas_e.get("knows_clamped") or [])
+            )
+        ),
+        "knows_gained": deltas_e.get("knows_gained"),
+        "knows_clamped": deltas_e.get("knows_clamped"),
+    }
+    poisoned = dict(settle_early)
+    poisoned["status"] = "sealed"
+    poisoned["character_updates"] = {
+        **(poisoned.get("character_updates") or {}),
+        "deltas": {
+            **deltas_e,
+            "knows_gained": list(deltas_e.get("knows_gained") or []) + [early],
+            "knows_clamped": [],
+        },
+    }
+    intel_poison = compile_chapter_intelligence(ir, 3, prior_settlement=poisoned)
+    mara_p = next(
+        (
+            r
+            for r in (intel_poison.get("character_state") or [])
+            if "Mara" in str(r.get("character") or "")
+        ),
+        {},
+    )
+    report["checks"]["apply_reclamp_blocks_poisoned_settlement"] = {
+        "ok": not any("backdoor" in k.casefold() for k in (mara_p.get("knows") or [])),
+        "knows": mara_p.get("knows"),
+        "clamped_on_apply": (intel_poison.get("prior_settlement") or {}).get(
+            "knowledge_clamped_on_apply"
+        ),
+    }
+
     report["p1_intelligence_complete"] = all(
         bool((v or {}).get("ok")) for v in report["checks"].values() if isinstance(v, dict)
     )

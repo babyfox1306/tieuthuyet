@@ -610,8 +610,14 @@ def compile_chapter_intelligence(
     if prior_settlement and prior_settlement.get("status") == "sealed":
         from factory.engine.lib.prose_settlement import apply_settlement_to_intelligence
 
-        # Live state must change: memory/belief/custody/strategy from prose N.
-        bundle = apply_settlement_to_intelligence(bundle, prior_settlement)
+        # Live state must change: memory/belief/custody/strategy from prose N,
+        # re-clamped to pov clocks at this chapter.
+        bundle = apply_settlement_to_intelligence(
+            bundle,
+            prior_settlement,
+            chapter=chapter,
+            ir=ir,
+        )
     else:
         bundle["prior_settlement"] = None
     return bundle

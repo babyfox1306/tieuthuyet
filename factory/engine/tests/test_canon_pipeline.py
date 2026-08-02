@@ -400,6 +400,111 @@ class TestSettlementAndOpsP1P2(unittest.TestCase):
     def setUp(self) -> None:
         self.ir = compile_canonical_ir(_load_ce())
 
+    def test_settlement_clamps_knows_before_pov_clock(self) -> None:
+        """Case-C-at-settlement: observation of locked reveal must not mint early knows."""
+        early = (
+            "Adrian planted a backdoor in Mara's alibi software that leaks "
+            "metadata to his server"
+        )
+        ok_obs = "The blood was treated with anticoagulants."
+        # Simulate settlement seeing both: surface-legal obs + early reveal text
+        # (over-inference). Prose may stay; knows must clamp.
+        settle = build_settlement(
+            chapter=2,
+            canon_qc={
+                "status": "pass",
+                "claims": [
+                    {"claim": ok_obs, "kind": "event"},
+                    {"claim": "Mara scrapes Claire Thorne's data.", "kind": "event"},
+                    {"claim": early, "kind": "event"},
+                ],
+            },
+            intelligence={
+                **compile_chapter_intelligence(self.ir, 2),
+                "moves": {
+                    **compile_chapter_intelligence(self.ir, 2)["moves"],
+                    "antagonist_move": {
+                        "action": early,
+                        "fact_refs": ["F_REVEAL_R5"],
+                    },
+                    "countermove": {
+                        "action": "Mara scrapes Claire Thorne's data.",
+                        "required_events": ["Mara scrapes Claire Thorne's data."],
+                        "fact_refs": ["F_MAP_CH2_must_happen_0"],
+                    },
+                },
+            },
+            ir=self.ir,
+        )
+        deltas = (settle.get("character_updates") or {}).get("deltas") or {}
+        knows = deltas.get("knows_gained") or []
+        clamped = deltas.get("knows_clamped") or []
+        self.assertTrue(
+            any("anticoagulant" in k.casefold() for k in knows),
+            knows,
+        )
+        self.assertFalse(
+            any("backdoor" in k.casefold() for k in knows),
+            knows,
+        )
+        self.assertTrue(
+            any(
+                c.get("reason") == "pov_knows_chapter_clamp"
+                and "backdoor" in str(c.get("claim") or "").casefold()
+                for c in clamped
+            ),
+            clamped,
+        )
+        # Defense in depth: poisoned settlement cannot smuggle into N+1.
+        poisoned = dict(settle)
+        poisoned["character_updates"] = {
+            **(poisoned.get("character_updates") or {}),
+            "deltas": {
+                **deltas,
+                "knows_gained": list(knows) + [early],
+                "knows_clamped": [],
+            },
+        }
+        intel3 = compile_chapter_intelligence(
+            self.ir, 3, prior_settlement=poisoned
+        )
+        mara = next(
+            r
+            for r in (intel3.get("character_state") or [])
+            if "Mara" in str(r.get("character") or "")
+        )
+        self.assertFalse(
+            any("backdoor" in k.casefold() for k in (mara.get("knows") or [])),
+            mara.get("knows"),
+        )
+        self.assertTrue(
+            any("anticoagulant" in k.casefold() for k in (mara.get("knows") or [])),
+            mara.get("knows"),
+        )
+
+    def test_settlement_allows_knows_at_pov_clock(self) -> None:
+        """R4 unlocks at pov_knows_chapter=2 — anticoagulant may enter knows at ch2."""
+        text = "The blood was treated with anticoagulants."
+        settle = build_settlement(
+            chapter=2,
+            canon_qc={
+                "status": "pass",
+                "claims": [{"claim": text, "kind": "event"}],
+            },
+            intelligence=compile_chapter_intelligence(self.ir, 2),
+            ir=self.ir,
+        )
+        deltas = (settle.get("character_updates") or {}).get("deltas") or {}
+        self.assertTrue(
+            any("anticoagulant" in k.casefold() for k in (deltas.get("knows_gained") or []))
+        )
+        self.assertFalse(
+            any(
+                "anticoagulant" in str(c.get("claim") or "").casefold()
+                for c in (deltas.get("knows_clamped") or [])
+            )
+        )
+
     def test_settlement_requires_canon_pass(self) -> None:
         bad = build_settlement(chapter=2, canon_qc={"status": "fail"})
         self.assertEqual(bad["status"], "blocked")

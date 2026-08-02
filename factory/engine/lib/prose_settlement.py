@@ -45,6 +45,137 @@ def _pov_name(ir: dict[str, Any]) -> str:
     return str((ir.get("pov") or {}).get("character") or "").strip()
 
 
+def pov_locked_knowledge_claims(
+    ir: dict[str, Any],
+    chapter: int,
+) -> list[dict[str, Any]]:
+    """Facts POV must not gain as *knowledge* before pov_knows_chapter.
+
+    Distinct from reader-locked claims: narration may foreshadow, but settlement
+    must not write early knows/believes into character_state.
+    """
+    out: list[dict[str, Any]] = []
+    for rev in ir.get("reveal_schedule") or []:
+        if not isinstance(rev, dict):
+            continue
+        fact = str(rev.get("fact") or "").strip()
+        if not fact:
+            continue
+        pov_ch = int(
+            rev.get("pov_knows_chapter")
+            or rev.get("reader_reveal_chapter")
+            or rev.get("chapter")
+            or 1
+        )
+        if pov_ch > chapter:
+            out.append(
+                {
+                    "fact_id": f"F_REVEAL_{rev.get('id')}",
+                    "claim": fact,
+                    "unlock_chapter": pov_ch,
+                    "kind": "reveal_pov_clock",
+                    "reveal_id": rev.get("id"),
+                }
+            )
+    for clue in ir.get("clues") or []:
+        if not isinstance(clue, dict):
+            continue
+        payoff = int(clue.get("payoff_chapter") or 0)
+        meaning = str(clue.get("true_meaning_at_payoff") or "").strip()
+        if meaning and payoff and payoff > chapter:
+            out.append(
+                {
+                    "fact_id": f"F_CLUE_{clue.get('id')}_TRUE",
+                    "claim": meaning,
+                    "unlock_chapter": payoff,
+                    "kind": "clue_true_meaning",
+                }
+            )
+    unlock = int(ir.get("canonical_reveal_chapter") or 0)
+    true_plot = str((ir.get("plots") or {}).get("true_plot") or "").strip()
+    if true_plot and unlock and chapter < unlock:
+        out.append(
+            {
+                "fact_id": "F_PLOT_TRUE_PLOT",
+                "claim": true_plot,
+                "unlock_chapter": unlock,
+                "kind": "plot",
+            }
+        )
+    return out
+
+
+def _knowledge_matches_locked(text: str, locked: dict[str, Any]) -> bool:
+    """True when candidate knowledge states a locked reveal/true-meaning claim."""
+    claim = str(locked.get("claim") or "").strip()
+    cand = str(text or "").strip()
+    if not claim or not cand:
+        return False
+    cf_claim = claim.casefold()
+    cf_cand = cand.casefold()
+    if cf_claim in cf_cand or cf_cand in cf_claim:
+        return True
+    drop = {
+        "that",
+        "with",
+        "from",
+        "this",
+        "into",
+        "have",
+        "been",
+        "will",
+        "when",
+        "mara",
+        "adrian",
+        "claire",
+    }
+    claim_toks = {
+        w for w in re.findall(r"[a-z0-9']{4,}", cf_claim) if w not in drop
+    }
+    cand_toks = {
+        w for w in re.findall(r"[a-z0-9']{4,}", cf_cand) if w not in drop
+    }
+    if not claim_toks:
+        return False
+    overlap = claim_toks & cand_toks
+    # Require strong overlap so surface observations do not false-positive.
+    need = 3 if len(claim_toks) >= 5 else max(2, (len(claim_toks) + 1) // 2)
+    return len(overlap) >= need
+
+
+def clamp_knowledge_to_reveal_clocks(
+    texts: list[str],
+    ir: dict[str, Any],
+    chapter: int,
+) -> tuple[list[str], list[dict[str, Any]]]:
+    """Keep prose; strip knowledge that unlocks after chapter (pov clock)."""
+    locked = pov_locked_knowledge_claims(ir, chapter)
+    kept: list[str] = []
+    clamped: list[dict[str, Any]] = []
+    for text in texts:
+        item = str(text or "").strip()
+        if not item:
+            continue
+        hit = None
+        for row in locked:
+            if _knowledge_matches_locked(item, row):
+                hit = row
+                break
+        if hit:
+            clamped.append(
+                {
+                    "claim": item,
+                    "reason": "pov_knows_chapter_clamp",
+                    "fact_id": hit.get("fact_id"),
+                    "unlock_chapter": hit.get("unlock_chapter"),
+                    "locked_claim": str(hit.get("claim") or "")[:240],
+                }
+            )
+            continue
+        _append_unique(kept, item)
+    return kept, clamped
+
+
 def _append_unique(bucket: list[str], text: str) -> None:
     text = str(text or "").strip()
     if text and text not in bucket:
@@ -59,7 +190,11 @@ def derive_memory_deltas(
     moves: dict[str, Any],
     events_realized: list[dict[str, Any]],
 ) -> dict[str, Any]:
-    """What POV now knows/believes because prose N expressed it (verified)."""
+    """What POV now knows/believes because prose N expressed it (verified).
+
+    Reveal-clock clamp: observation may appear in prose, but knows_gained must
+    not unlock facts before pov_knows_chapter.
+    """
     pov = _pov_name(ir)
     knows: list[str] = []
     believes: list[str] = []
@@ -102,16 +237,26 @@ def derive_memory_deltas(
         if dissonance and _event_realized(dissonance, claims_blob):
             _append_unique(misbeliefs, dissonance)
         elif dissonance:
-            # Still the standing misbelief entering the next chapter unless prose
-            # explicitly corrected it (handled by absence of correction claims).
+            # Standing misbelief entering next chapter unless prose corrected it.
             _append_unique(misbeliefs, dissonance)
+
+    knows, knows_clamped = clamp_knowledge_to_reveal_clocks(knows, ir, chapter)
+    believes, believes_clamped = clamp_knowledge_to_reveal_clocks(
+        believes, ir, chapter
+    )
 
     return {
         "character": pov,
         "knows_gained": knows,
         "believes_gained": believes,
         "misbeliefs_active": misbeliefs,
+        "knows_clamped": knows_clamped,
+        "believes_clamped": believes_clamped,
         "source": "prose_settlement",
+        "authority_note": (
+            "knows_gained is clamped by pov_knows_chapter; "
+            "settlement cannot mint early knowledge"
+        ),
     }
 
 
@@ -440,11 +585,27 @@ def continuity_from_prior(
 def apply_settlement_to_intelligence(
     bundle: dict[str, Any],
     prior_settlement: dict[str, Any],
+    *,
+    chapter: int | None = None,
+    ir: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    """Mutate N+1 intelligence so prose-N deltas become live state (not metadata)."""
+    """Mutate N+1 intelligence so prose-N deltas become live state (not metadata).
+
+    Defense in depth: re-clamp knows/believes against pov clocks at target chapter
+    so a stale settlement cannot smuggle early knowledge forward.
+    """
     out = deepcopy(bundle)
     deltas = (prior_settlement.get("character_updates") or {}).get("deltas") or {}
     pov = str(deltas.get("character") or "").strip()
+    target_ch = int(chapter or out.get("chapter") or (prior_settlement.get("chapter") or 0) + 1)
+
+    knows_in = [str(x) for x in (deltas.get("knows_gained") or [])]
+    believes_in = [str(x) for x in (deltas.get("believes_gained") or [])]
+    apply_clamped: list[dict[str, Any]] = []
+    if ir is not None:
+        knows_in, kc = clamp_knowledge_to_reveal_clocks(knows_in, ir, target_ch)
+        believes_in, bc = clamp_knowledge_to_reveal_clocks(believes_in, ir, target_ch)
+        apply_clamped = kc + bc
 
     cognition = deepcopy(
         out.get("character_state") or out.get("character_cognition") or []
@@ -458,9 +619,9 @@ def apply_settlement_to_intelligence(
         knows = list(row.get("knows") or [])
         believes = list(row.get("believes") or [])
         misbeliefs = list(row.get("misbeliefs") or [])
-        for item in deltas.get("knows_gained") or []:
+        for item in knows_in:
             _append_unique(knows, str(item))
-        for item in deltas.get("believes_gained") or []:
+        for item in believes_in:
             _append_unique(believes, str(item))
         for item in deltas.get("misbeliefs_active") or []:
             _append_unique(misbeliefs, str(item))
@@ -468,6 +629,8 @@ def apply_settlement_to_intelligence(
         row["believes"] = believes
         row["misbeliefs"] = misbeliefs
         row["continuity_source"] = "settlement"
+        if apply_clamped:
+            row["knowledge_clamped_on_apply"] = apply_clamped
     out["character_cognition"] = cognition
     out["character_state"] = cognition
 
@@ -538,6 +701,8 @@ def apply_settlement_to_intelligence(
         "power_delta_realized": prior_settlement.get("power_delta"),
         "continuity_source": "settlement",
         "applied_to_live_state": True,
+        "knowledge_clamped_on_apply": apply_clamped,
+        "applied_at_chapter": target_ch,
     }
     out["continuity_authority"] = "settlement"
     return out

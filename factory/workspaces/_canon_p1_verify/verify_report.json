@@ -67,7 +67,7 @@
         ],
         "plan_foresight": "Outliner invents a yacht chase Mara never saw",
         "plan_foresight_superseded": true,
-        "prior_settlement_digest": "e324074a930ecf7aeae8d3f80ba6390e4dd49197786de56a3f02367e2b678665",
+        "prior_settlement_digest": "c115237ef75a7f8bfb07c8351712d2a323797dae770ae206187e5e89eb2add84",
         "memory_from_settlement": [
           "The blood was treated with anticoagulants.",
           "Mara scrapes Claire Thorne's data."
@@ -95,8 +95,40 @@
     },
     "packets_differ": {
       "ok": true,
-      "digest_a": "9b20249b18f2741196e66127ebb70002cef7462aae8a711f9ae78de66d55d342",
-      "digest_b": "0292baa3dc6ed4a6a7e2d4333155bb241e9a081fde377a8fdb1dc241d44cad97"
+      "digest_a": "e927c3665b4a201370135ec642f2f18218659a5c19cb098063b5755125d6d1b4",
+      "digest_b": "0e03d58d24f2fb18c1d72f8826f393de1434471b0a39142bd6efc6bb6fceda66"
+    },
+    "settlement_pov_clock_clamp": {
+      "ok": true,
+      "knows_gained": [
+        "The blood was treated with anticoagulants.",
+        "Mara scrapes Claire Thorne's data."
+      ],
+      "knows_clamped": [
+        {
+          "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+          "reason": "pov_knows_chapter_clamp",
+          "fact_id": "F_REVEAL_R5",
+          "unlock_chapter": 9,
+          "locked_claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server"
+        }
+      ]
+    },
+    "apply_reclamp_blocks_poisoned_settlement": {
+      "ok": true,
+      "knows": [
+        "The blood was treated with anticoagulants.",
+        "Mara scrapes Claire Thorne's data."
+      ],
+      "clamped_on_apply": [
+        {
+          "claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server",
+          "reason": "pov_knows_chapter_clamp",
+          "fact_id": "F_REVEAL_R5",
+          "unlock_chapter": 9,
+          "locked_claim": "Adrian planted a backdoor in Mara's alibi software that leaks metadata to his server"
+        }
+      ]
     }
   }
 }
