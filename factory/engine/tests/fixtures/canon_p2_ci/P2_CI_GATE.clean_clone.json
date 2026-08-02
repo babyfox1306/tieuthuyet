@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "commit": "562a04d384b028f98d55726034c99b2cccc70cf0",
+    "branch": "experiment/ce-canon-provenance",
+    "tag_p2": "",
+    "baseline_declared": "01bddb446e43a6dc54a47be1ac62b53e382dc82d",
+    "ran_at_utc": "2026-08-02T12:25:56.264584+00:00",
+    "clean_checkout_capable": true
+  },
+  "steps": [
+    {
+      "name": "golden",
+      "ok": true,
+      "code": 0,
+      "tail": "{\n  \"golden_titles\": [\n    \"zero_day\",\n    \"romance_gate\"\n  ],\n  \"deterministic_rerun\": true,\n  \"llm_used\": false,\n  \"results\": {\n    \"zero_day\": {\n      \"mode\": \"ok\",\n      \"ir_digest\": \"e8e620ddc60b4ec8c93436cab3f05807e9641ed149bcff53412b368819a6c3e0\",\n      \"chapters\": {\n        \"2\": {\n          \"contract_digest\": \"7f6e1855ed40655a74b5a18e02fe401fdeca1b4b1ae52bdebcffff61f8c0886c\",\n          \"packet_digest\": \"0506bc7d1da4a25f95f2aa1dd79a509677c205b612c46f2a1f6a4d675e84b010\"\n        },\n        \"3\": {\n          \"contract_digest\": \"9cda78f73f34fb275083e3955a0b6162f117789d96fb68bcf5ce5f13fcc888ab\",\n          \"packet_digest\": \"75695f824fc1de977e4b580af40dd4b4274960aa1344db902c8428341aa6743f\"\n        }\n      }\n    },\n    \"romance_gate\": {\n      \"mode\": \"ok\",\n      \"ir_digest\": \"bd7b8baf777a1692d729380fce34bd0ed41a381ed818ecf7a89396bbfe05dd2e\",\n      \"chapters\": {\n        \"1\": {\n          \"contract_digest\": \"cea1d5767b79e3a6d19895109592087903df423a829371b8c40ecf85cf4c47e0\",\n          \"packet_digest\": \"8c7d96e8f05d728ae80879546b321575dc81dec2927365625d2ade6f91b429ea\"\n        },\n        \"2\": {\n          \"contract_digest\": \"1d2122fbea7a437e3d3334da195c87f5ea8302c5b96fd87b60311be7ca67dec8\",\n          \"packet_digest\": \"c051da070681f3e41578a24cdc62d5cdaddd60190ffaa270242f81ee09c1eb79\"\n        }\n      }\n    }\n  },\n  \"pass\": true\n}"
+    },
+    {
+      "name": "mutation_battery",
+      "ok": true,
+      "code": 0,
+      "tail": "{\n  \"meta\": {\n    \"commit\": \"562a04d384b028f98d55726034c99b2cccc70cf0\",\n    \"branch\": \"experiment/ce-canon-provenance\",\n    \"workspace\": \"C:\\\\Users\\\\nhtua\\\\AppData\\\\Local\\\\Temp\\\\p2_clean_clone_442323504\\\\factory\\\\workspaces\\\\_canon_p2_mutation_verify\"\n  },\n  \"mutation_cases\": {\n    \"M0-name\": true,\n    \"M0-reveal\": true,\n    \"M0-schema\": true,\n    \"M0-stale\": true,\n    \"M0-texture\": true,\n    \"M0-motive\": true,\n    \"M0-spec\": true,\n    \"M1-mem-future\": true,\n    \"M1-mem-reader\": true,\n    \"M1-mem-poison\": true,\n    \"M1-cust-holder\": true,\n    \"M1-cust-action\": true,\n    \"CTRL-cust-allowed\": true,\n    \"M1-belief-orphan\": true,\n    \"M1-belief-alias\": true,\n    \"M1-strat-missing\": true,\n    \"M1-strat-future\": true,\n    \"M1-strat-actor\": true,\n    \"M1-strat-prop\": true,\n    \"CTRL-strat-builtin\": true,\n    \"M1-live-digest\": true,\n    \"M0-ops-budget\": true,\n    \"M0-killpoint\": true,\n    \"CORPUS-romance-ingest\": true,\n    \"CORPUS-mystery-lite-ingest\": true\n  },\n  \"all_cases_pass\": true,\n  \"pass_reason_match_ok\": true,\n  \"control_no_false_positive\": true,\n  \"p2_mutation_battery_complete\": true,\n  \"case_count\": 25\n}"
+    },
+    {
+      "name": "corpus",
+      "ok": true,
+      "code": 0,
+      "tail": "{\n  \"zero_day_infection_pass\": true,\n  \"romance_gate_pass\": true,\n  \"mystery_lite_pass\": true,\n  \"results\": {\n    \"zero_day_infection\": {\n      \"B_invented_name_in_dialogue\": true,\n      \"C_future_fact_no_new_name\": true,\n      \"D_generic_texture\": true,\n      \"A_canon_name_in_dialogue\": true\n    },\n    \"romance_gate\": {\n      \"ingest_ok\": true,\n      \"ir_digest\": \"bd7b8baf777a1692d729380fce34bd0ed41a381ed818ecf7a89396bbfe05dd2e\",\n      \"contract_digest\": \"cea1d5767b79e3a6d19895109592087903df423a829371b8c40ecf85cf4c47e0\",\n      \"has_reveal_schedule\": true,\n      \"pass\": true\n    },\n    \"mystery_lite\": {\n      \"ingest_ok\": true,\n      \"ir_digest\": \"7b35f991b722d0cc63b155679bdd24873ea12f78eaedcebe4298afe84132b877\",\n      \"reveal_count\": 2,\n      \"ml2_clamped_at_ch2\": true,\n      \"plan2_status\": \"sealed\",\n      \"pass\": true\n    }\n  },\n  \"p2_corpus_complete\": true,\n  \"llm_used\": false\n}"
+    },
+    {
+      "name": "p1_raw_evidence",
+      "ok": true,
+      "code": 0,
+      "tail": "      \"C2_wrong_holder\": true,\n      \"C3_correct_holder_disallowed_action\": true,\n      \"C4_poisoned_settlement_reclamped\": true,\n      \"C5_verified_transfer_carries\": true\n    },\n    \"belief\": {\n      \"B1_belief_with_observation_provenance\": true,\n      \"B2_belief_missing_provenance\": true,\n      \"B3_hidden_truth_as_misbelief_before_clock\": true,\n      \"B4_psychology_misbelief_allowed\": true\n    },\n    \"strategy\": {\n      \"S1_missing_ref\": true,\n      \"S2_irrelevant_or_future_ref\": true,\n      \"S3_wrong_actor\": true,\n      \"S4_future_ref\": true,\n      \"S5_wrong_prop_action\": true,\n      \"S6_builtin_ir_moves_no_false_positive\": true\n    },\n    \"live\": {\n      \"L1_settlement_A_memory_and_override\": true,\n      \"L2_settlement_B_illegal_transfer_clamped\": true,\n      \"L3_packet_digest_changes_with_settlement\": true\n    }\n  },\n  \"p1_overall_complete_by_raw_evidence\": true,\n  \"files\": [\n    \"raw_custody_evidence.json\",\n    \"raw_belief_evidence.json\",\n    \"raw_strategy_evidence.json\",\n    \"raw_live_n1_evidence.json\",\n    \"raw_packet_diff.json\",\n    \"raw_settlement_override_trace.json\",\n    \"artifact_settlement_a.json\",\n    \"artifact_settlement_b.json\",\n    \"artifact_packet3_a.json\",\n    \"artifact_packet3_b.json\",\n    \"artifact_contract3_a_intelligence_prior.json\"\n  ]\n}"
+    },
+    {
+      "name": "test_canon_pipeline",
+      "ok": true,
+      "tests_run": 54,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "fixture_gates",
+      "ok": true,
+      "gates": {
+        "GOLDEN_GATE": true,
+        "RAW_MUTATION_GATE": true,
+        "CORPUS_GATE": true,
+        "ZERO_DAY_CONCEPT": true
+      }
+    },
+    {
+      "name": "P2_BUDGET.md",
+      "ok": true
+    }
+  ],
+  "pass": true,
+  "p2_harness_complete": true,
+  "note": "Full non-canon suite regressions are classified separately; this gate does not skip failing harness steps. P2 COMPLETE is only meaningful when this script is green."
+}
