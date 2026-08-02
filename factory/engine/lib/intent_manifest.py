@@ -629,6 +629,30 @@ def compile_intent_manifest(ws: Path, book: int | None = None) -> dict[str, Any]
     """Python-only compile. Raises ValueError with joined errors if incomplete."""
     concept = load_concept(ws)
     direction = load_direction(ws)
+    book_num_early = int(book if book is not None else direction.get("book") or 1)
+    # Canonical IR is SoT for provenance pipeline (legacy intent remains a view).
+    try:
+        from factory.engine.lib.canonical_ir import (
+            ingest_concept_to_workspace,
+            load_canonical_ir,
+        )
+        from factory.engine.lib.canon_artifacts import mark_stale_descendants
+
+        prev = None
+        try:
+            prev = load_canonical_ir(ws)
+        except Exception:
+            prev = None
+        ingested = ingest_concept_to_workspace(ws)
+        new_digest = str((ingested.get("ir") or {}).get("ir_digest") or "")
+        old_digest = str((prev or {}).get("ir_digest") or "")
+        if old_digest and new_digest and old_digest != new_digest:
+            mark_stale_descendants(ws, book_num_early, reason="canonical_ir_changed")
+    except Exception as exc:
+        import sys
+
+        print(f"  [canonical_ir] WARN: {exc}", file=sys.stderr)
+
     book_num = int(book if book is not None else direction.get("book") or 1)
     errors = validate_intent_inputs(concept, direction, ws=ws, book=book_num)
     if errors:
