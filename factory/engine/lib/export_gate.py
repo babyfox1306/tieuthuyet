@@ -83,7 +83,7 @@ FULL_RULES = frozenset(
     {
         "EG-01", "EG-02", "EG-03", "EG-04", "EG-05", "EG-06", "EG-07", "EG-08",
         "EG-09", "EG-10", "EG-11", "EG-12", "EG-13", "EG-14", "EG-15", "EG-16",
-        "EG-16b", "EG-18", "EG-19",
+        "EG-16b", "EG-18", "EG-19", "EG-20",
     }
 )
 
@@ -542,6 +542,53 @@ def check_eg14_pen_name(workspace_id: str) -> dict[str, Any]:
     if author:
         return _check("EG-14", "error", True, detail=f"pen_name={author!r}")
     return _check("EG-14", "error", False, detail=_EMPTY_PEN_NAME_MSG)
+
+
+def check_eg20_canon_sealed(
+    workspace_id: str,
+    book_slug: str,
+    chapter_nums: list[int],
+) -> list[dict[str, Any]]:
+    """When Canonical IR exists, every chapter must have sealed plan + canon_qc pass."""
+    from factory.engine.lib.canonical_ir import load_canonical_ir
+    from factory.engine.lib.canon_artifacts import is_sealed, read_json, artifact_path
+    from factory.engine.paths import resolve_book_number, workspace_dir
+
+    ws = workspace_dir(workspace_id)
+    ir = load_canonical_ir(ws)
+    if not ir:
+        return [_check("EG-20", "warn", True, detail="no canonical IR — skip")]
+    book = resolve_book_number(book_slug)
+    out: list[dict[str, Any]] = []
+    for ch in chapter_nums:
+        approval = read_json(artifact_path(ws, book, ch, "plan.approval.json"))
+        canon = read_json(artifact_path(ws, book, ch, "canon_qc.json"))
+        if not is_sealed(approval):
+            out.append(
+                _check(
+                    "EG-20",
+                    "error",
+                    False,
+                    chapter=ch,
+                    detail="plan not sealed against Canonical IR",
+                )
+            )
+            continue
+        if not canon or canon.get("status") != "pass":
+            out.append(
+                _check(
+                    "EG-20",
+                    "error",
+                    False,
+                    chapter=ch,
+                    detail="canon_qc not pass",
+                )
+            )
+            continue
+        out.append(_check("EG-20", "error", True, chapter=ch))
+    if not out:
+        out.append(_check("EG-20", "error", True, detail="no chapters"))
+    return out
 
 
 def check_eg15_state_timeline(
@@ -1626,6 +1673,9 @@ def run_export_gate(
 
     if "EG-15" in active:
         checks.append(check_eg15_state_timeline(workspace_id, book_slug))
+
+    if "EG-20" in active and chapter_nums:
+        checks.extend(check_eg20_canon_sealed(workspace_id, book_slug, chapter_nums))
 
     if "EG-18" in active and triples:
         checks.extend(
