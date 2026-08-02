@@ -168,8 +168,12 @@ def cmd_concept(args: argparse.Namespace) -> None:
 
 def cmd_compile_intent(args: argparse.Namespace) -> None:
     from factory.engine.lib.intent_manifest import compile_and_save_intent, intent_manifest_path
+    from factory.engine.lib.workspace_metadata import sync_direction_from_concept
 
     ws = workspace_dir(args.workspace)
+    # Importers may copy concept.yaml after creating a blank workspace.  Sync
+    # direction first so spice/language/profile cannot retain template defaults.
+    sync_direction_from_concept(ws, preserve_gate_status=True, force_setting=True)
     book = int(getattr(args, "book", None) or load_direction(ws).get("book") or 1)
     try:
         man = compile_and_save_intent(ws, book=book)
@@ -303,7 +307,7 @@ def cmd_architect(args: argparse.Namespace) -> None:
             f"[architect] OK -> {bible_path(ws)} "
             f"(attempts={result.get('attempts')})"
         )
-        print("[architect] Chạy tiếp: validate-bible → approve-bible → plan")
+        safe_print("[architect] Chạy tiếp: validate-bible → approve-bible → plan")
         return
     print(f"[architect] FAIL after {result.get('attempts')} attempts:")
     for e in result.get("errors") or []:
@@ -406,46 +410,83 @@ def _clear_chapter_pipeline(ws: Path, book: int, ch: int) -> None:
 
 
 def build_writer_payload(ws: Path, book: int, ch: int, cfg: dict) -> str:
-    """Writer authority = locked disk prompt (SoT). Optional live rebuild only if digest matches."""
+    """Writer authority = sealed writer_request.json when present; else legacy disk prompt."""
+    from factory.engine.lib.canonical_ir import load_canonical_ir
+    from factory.engine.lib.chapter_contract import (
+        assert_writer_artifacts_ready,
+        load_writer_packet,
+        render_writer_prompt_from_packet,
+    )
     from factory.engine.lib.intent_gates import (
         assert_prompt_matches_disk,
+        g4_prompt_errors,
         is_prompt_hand_locked,
         strip_prompt_hand_lock_banner,
     )
 
-    pp = prompt_path(ws, book, ch)
-    if not pp.exists():
-        raise FileNotFoundError(f"Missing prompt {pp} — chạy `plan` + `render-prompts` trước")
     direction = load_direction(ws)
     lang = target_language(direction, cfg)
-    disk_prompt = pp.read_text(encoding="utf-8")
-
-    # Hand-locked: operator owns disk; skip live rebuild equality.
-    if is_prompt_hand_locked(disk_prompt):
-        prompt = strip_prompt_hand_lock_banner(disk_prompt)
+    ir = load_canonical_ir(ws)
+    packet = load_writer_packet(ws, book, ch)
+    if ir and packet:
+        assert_writer_artifacts_ready(ws, book, ch, str(ir.get("ir_digest") or ""))
+        prompt = render_writer_prompt_from_packet(packet)
+        # Keep legacy disk prompt as debug companion when present.
+        pp = prompt_path(ws, book, ch)
+        if pp.exists():
+            prompt += (
+                "\n\n---\n## LEGACY PROMPT (debug only — packet is authority)\n"
+                + pp.read_text(encoding="utf-8")
+            )
     else:
-        # Verify live projection still matches disk (detect bible/registry drift).
-        plan = load_chapter_plan(ws, book, ch)
-        plan_path = book_workspace_dir(ws, book) / "master_plan.json"
-        data = json.loads(plan_path.read_text(encoding="utf-8"))
-        plans = normalize_chapter_plans(data.get("chapter_plans", data.get("chapter_beats", [])))
-        prior = [p for p in plans if p.get("chapter", 0) < ch]
-        live = build_chapter_prompt(
-            plan,
-            prior_plans=prior,
-            direction=direction,
-            chapter=ch,
-            cfg=cfg,
-            series_bible=load_series_bible(ws),
-            ws=ws,
-        )
-        assert_prompt_matches_disk(disk_prompt, live, ch)
-        prompt = disk_prompt
+        pp = prompt_path(ws, book, ch)
+        if not pp.exists():
+            raise FileNotFoundError(
+                f"Missing prompt {pp} — chạy `plan` + `render-prompts` trước"
+            )
+        disk_prompt = pp.read_text(encoding="utf-8")
+        if is_prompt_hand_locked(disk_prompt):
+            prompt = strip_prompt_hand_lock_banner(disk_prompt)
+        else:
+            plan = load_chapter_plan(ws, book, ch)
+            plan_path = book_workspace_dir(ws, book) / "master_plan.json"
+            data = json.loads(plan_path.read_text(encoding="utf-8"))
+            plans = normalize_chapter_plans(
+                data.get("chapter_plans", data.get("chapter_beats", []))
+            )
+            prior = [p for p in plans if p.get("chapter", 0) < ch]
+            live = build_chapter_prompt(
+                plan,
+                prior_plans=prior,
+                direction=direction,
+                chapter=ch,
+                cfg=cfg,
+                series_bible=load_series_bible(ws),
+                ws=ws,
+            )
+            assert_prompt_matches_disk(disk_prompt, live, ch)
+            prompt = disk_prompt
+
+        prompt_errors = g4_prompt_errors(ws, book, ch, prompt)
+        if prompt_errors:
+            raise RuntimeError(
+                "Writer prompt blocked by reveal/fidelity gate: "
+                + "; ".join(prompt_errors)
+            )
 
     excerpt = load_prior_chapter_excerpt(ws, book, ch)
     if excerpt:
         prompt += format_prior_excerpt_block(excerpt, lang=lang)
     state = load_state(ws, book)
+    # Only verified facts may appear as canon in state mirror.
+    verified = state.get("verified_facts") if isinstance(state, dict) else None
+    state_view = {
+        "current_chapter": state.get("current_chapter"),
+        "current_book": state.get("current_book"),
+        "verified_facts": verified or [],
+        "locked_names": state.get("locked_names") or {},
+        "open_threads": state.get("open_threads") or [],
+    }
     from factory.engine.lib.locked_names import (
         format_locked_names_block,
         merge_locked_names,
@@ -453,7 +494,6 @@ def build_writer_payload(ws: Path, book: int, ch: int, cfg: dict) -> str:
     )
     from factory.engine.lib.state_updater import save_state
 
-    # Ensure plan-derived husband/target locks exist before writer sees STORY_STATE
     seeded = seed_locked_names_from_plan(ws, book)
     if seeded:
         merged = merge_locked_names(state.get("locked_names"), seeded)
@@ -461,6 +501,7 @@ def build_writer_payload(ws: Path, book: int, ch: int, cfg: dict) -> str:
             state = dict(state)
             state["locked_names"] = merged
             save_state(ws, book, state)
+            state_view["locked_names"] = merged
 
     locked_block = format_locked_names_block(
         state.get("locked_names") if isinstance(state.get("locked_names"), dict) else {},
@@ -470,10 +511,10 @@ def build_writer_payload(ws: Path, book: int, ch: int, cfg: dict) -> str:
         prompt += "\n\n" + locked_block
     return (
         prompt
-        + "\n\n---\n## STORY_STATE (không được mâu thuẫn)\n```json\n"
+        + "\n\n---\n## STORY_STATE (verified only — không được mâu thuẫn)\n```json\n"
         + json.dumps(
             {
-                "story_state": state,
+                "story_state": state_view,
                 "banned_phrases": cfg.get("banned_phrases", []),
             },
             ensure_ascii=False,
@@ -646,6 +687,31 @@ def _content_fail_patch(lang: str, attempt: int, issues: dict) -> str:
                 f"[REVISION — attempt {attempt + 1}] Name drift ({sample}). "
                 "Use ONLY canonical names from LOCKED CANON; remove forbidden aliases."
             )
+    if "invented_character" in issues:
+        names = ", ".join(
+            str(hit.get("name") or hit)
+            for hit in (issues.get("invented_character") or [])[:5]
+        )
+        bits.append(
+            f"[REVISION — attempt {attempt + 1}] Remove invented characters "
+            f"({names}). Use only named cast in LOCKED CANON; unnamed incidental "
+            "roles are allowed only when the chapter contract requires them."
+        )
+    if "unsupported_case_fact" in issues:
+        facts = ", ".join(
+            str(item) for item in (issues.get("unsupported_case_fact") or [])[:8]
+        )
+        bits.append(
+            f"[REVISION — attempt {attempt + 1}] Remove unsupported case facts "
+            f"({facts}). Do not invent evidence, prior relationships, locations, "
+            "dates, money, investigations, or backstory absent from this chapter's "
+            "locked plan."
+        )
+        if False:  # unreachable legacy branch; kept out of retry output
+            bits.append(
+                f"[REVISION — attempt {attempt + 1}] Name drift ({sample}). "
+                "Use ONLY canonical names from LOCKED CANON; remove forbidden aliases."
+            )
     if "repeat" in issues:
         phrases = ", ".join(str(p) for p in (issues.get("repeat") or [])[:3])
         bits.append(
@@ -668,6 +734,27 @@ def _content_fail_patch(lang: str, attempt: int, issues: dict) -> str:
                 f"[REVISION — attempt {attempt + 1}] Missing locked MUST HAPPEN ({sample}). "
                 "Realize EVERY item as on-page scene — do not drop or swap branches."
             )
+    if "technical_chapter_reference" in issues:
+        hit = str(issues.get("technical_chapter_reference") or "")
+        bits.append(
+            f"[REVISION — attempt {attempt + 1}] Remove the non-diegetic planning "
+            f"label {hit!r}. Narration must refer to the actual event, evidence, "
+            "or elapsed time—never Chapter N."
+        )
+    if "publication_duplicate_block" in issues:
+        samples = []
+        for hit in (issues.get("publication_duplicate_block") or [])[:2]:
+            if isinstance(hit, dict):
+                samples.append(
+                    str(hit.get("snippet") or hit.get("detail") or "")[:120]
+                )
+        sample = " | ".join(samples)
+        bits.append(
+            f"[REVISION — attempt {attempt + 1}] Remove repeated prose blocks"
+            + (f" near: {sample}" if sample else "")
+            + ". Execute each reveal and cliffhanger once; do not restate an "
+            "earlier paragraph at the ending."
+        )
     # Generic content leftovers
     other = [
         k
@@ -794,6 +881,7 @@ def _draft_chapter_prose(
             workspace_id=ws.name,
             book=book,
             chapter=ch,
+            publication_safety=True,
         )
         cls = classify_machine_issues(m_issues)
         m_issues["classification"] = cls
@@ -954,12 +1042,53 @@ def write_one_chapter(
         safe_print(f"  ch_{ch:03d} NEEDS_REVIEW — {'; '.join(reasons) or qc.get('fail_reasons', [])}")
         return ch, "needs_review"
 
+    # Canon Prose Claim Gate (IR allowlist) — before READY / state.
+    from factory.engine.lib.canonical_ir import load_canonical_ir
+    from factory.engine.lib.prose_claim_gate import run_prose_claim_gate
+
+    ir = load_canonical_ir(ws)
+    if ir:
+        canon = run_prose_claim_gate(ws, book, ch, chapter, ir)
+        if canon.get("status") != "pass":
+            chapter_pipeline_path(ws, book, "needs_fix", ch).write_text(
+                chapter, encoding="utf-8"
+            )
+            save_json(qc_report_path(ws, book, "needs_fix", ch), {"canon_qc": canon, "qc": qc})
+            viol = [
+                f"{v.get('reason')}:{v.get('claim')}"
+                for v in (canon.get("violations") or [])[:5]
+            ]
+            safe_print(f"  ch_{ch:03d} NEEDS_FIX — canon_qc: {'; '.join(viol)}")
+            return ch, "needs_fix"
+        from factory.engine.lib.prose_settlement import build_settlement, write_settlement
+        try:
+            from factory.engine.lib.story_intelligence import (
+                compile_chapter_intelligence,
+            )
+            intel = compile_chapter_intelligence(ir, ch)
+        except Exception:
+            intel = None
+        settlement = build_settlement(
+            chapter=ch,
+            canon_qc=canon,
+            intelligence=intel,
+            prose_len=len(chapter),
+        )
+        write_settlement(ws, book, ch, settlement)
+
     chapter_pipeline_path(ws, book, "ready", ch).write_text(chapter, encoding="utf-8")
     save_json(qc_report_path(ws, book, "ready", ch), qc)
     if state_chain_complete(ws, book, ch):
         try:
             update_state_after_pass(ws, ch, chapter, book=book)
         except Exception as exc:
+            # Fail closed when IR provenance pipeline is active.
+            if ir:
+                chapter_pipeline_path(ws, book, "needs_fix", ch).write_text(
+                    chapter, encoding="utf-8"
+                )
+                safe_print(f"  ch_{ch:03d} NEEDS_FIX — state update failed (no fail-open): {exc}")
+                return ch, "needs_fix"
             safe_print(f"  ch_{ch:03d} WARN state update failed: {exc}")
     else:
         print(
