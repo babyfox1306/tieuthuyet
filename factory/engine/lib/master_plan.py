@@ -1083,7 +1083,80 @@ def approve_plan(ws: Path, book: int | None = None) -> None:
 
     path = ws / "direction.yaml"
     data_dir = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+
+    # Canon provenance: seal each chapter plan against Canonical IR, then
+    # compile writer packets. Blockers become approval conflicts.
+    from factory.engine.lib.canonical_ir import ensure_canonical_ir, load_canonical_ir
+    from factory.engine.lib.chapter_contract import build_and_seal_chapter_artifacts
+    from factory.engine.lib.plan_provenance import seal_chapter_plan
+    from factory.engine.lib.state_updater import load_state
+
+    try:
+        ir = ensure_canonical_ir(ws)
+    except Exception as exc:
+        raise CanonRegistryError(
+            [
+                {
+                    "code": "canonical_ir_missing",
+                    "source": "bible/canonical_ir.json",
+                    "value": str(exc),
+                    "expected": "ingest CE concept into canonical IR",
+                }
+            ]
+        ) from exc
+
+    try:
+        from factory.engine.lib.story_intelligence import compile_chapter_intelligence
+    except Exception:  # P1 module optional for P0 enforcement
+        compile_chapter_intelligence = None  # type: ignore
+
+    for plan in plans:
+        ch = int(plan.get("chapter") or 0)
+        if ch <= 0:
+            continue
+        sealed = seal_chapter_plan(ws, book_num, plan, ir=ir)
+        if not sealed.get("sealed"):
+            for row in (sealed.get("result") or {}).get("unverified_claims") or []:
+                conflicts.append(
+                    {
+                        "code": "plan_provenance_fail",
+                        "source": f"chapters/{ch:02d}/plan_proposal.json",
+                        "value": f"{row.get('reason')}: {row.get('claim')}",
+                        "expected": "every canon claim sourced from CE IR",
+                    }
+                )
+            continue
+        try:
+            intel = (
+                compile_chapter_intelligence(ir, ch)
+                if compile_chapter_intelligence
+                else None
+            )
+            build_and_seal_chapter_artifacts(
+                ws,
+                book_num,
+                ch,
+                sealed["repaired_plan"],
+                ir=ir,
+                verified_state=load_state(ws, book_num),
+                intelligence=intel,
+            )
+        except Exception as exc:
+            conflicts.append(
+                {
+                    "code": "chapter_contract_fail",
+                    "source": f"chapters/{ch:02d}/contract.json",
+                    "value": str(exc),
+                    "expected": "deterministic contract + writer_request.json",
+                }
+            )
+
+    if conflicts:
+        raise CanonRegistryError(conflicts)
+
     data_dir["plan_status"] = "approved"
+    ir_now = load_canonical_ir(ws) or {}
+    data_dir["plan_ir_digest"] = ir_now.get("ir_digest")
     if man:
         data_dir["plan_intent_digest"] = man.get("manifest_digest")
     path.write_text(
