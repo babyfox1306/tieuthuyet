@@ -20,10 +20,15 @@ from factory.engine.lib.prompt_builder import (
 )
 from factory.engine.lib.plan_qc import (
     apply_canon_plans,
+    apply_deterministic_duplicate_fixes,
     apply_deterministic_plan_fixes,
     chapter_plan_structurally_complete,
+    duplicate_cliffhanger_tail_field,
+    duplicate_must_happen_pair,
     ensure_task_word_count,
     prefer_richer_chapter_plan,
+    romance_microbeat_required,
+    tag_existing_romance_micro_beat,
     validate_plan,
 )
 from factory.engine.lib.narrative_compiler import (
@@ -319,7 +324,16 @@ def build_plan_fixer_payload(
     """Assemble plan_fixer request; adds narrative hints when compiler on."""
     slim_direction = {
         k: direction.get(k)
-        for k in ("target_language", "spice_level", "total_chapters", "blurb", "book1_ending")
+        for k in (
+            "target_language",
+            "spice_level",
+            "total_chapters",
+            "blurb",
+            "book1_ending",
+            "narrative_profile",
+            "romance_mode",
+            "goal",
+        )
         if direction.get(k) is not None
     }
     body: dict = {
@@ -328,6 +342,42 @@ def build_plan_fixer_payload(
         "prior_plans": prior,
         "direction": slim_direction,
     }
+    if any(str(issue).endswith(":missing_romance_micro_beat") for issue in issues):
+        body["machine_requirements"] = [
+            "Output must_happen must contain a concrete relationship beat whose "
+            "first non-whitespace characters are exactly [ROMANCE].",
+            "Do not merely mention romance in prose or another field; the literal "
+            "[ROMANCE] prefix in must_happen is required by plan_qc.",
+        ]
+    if any(":pov_relearns_known_reveal:" in str(issue) for issue in issues):
+        from factory.engine.lib.narrative_schema import load_concept
+
+        concept = load_concept(ws)
+        chapter = int(plan.get("chapter") or 0)
+        body["known_reveals"] = [
+            {
+                "id": row.get("id"),
+                "fact": row.get("fact"),
+                "pov_knows_chapter": row.get("pov_knows_chapter"),
+                "reader_reveal_chapter": row.get("reader_reveal_chapter"),
+            }
+            for row in concept.get("reveal_schedule") or []
+            if isinstance(row, dict)
+            and int(row.get("reader_reveal_chapter") or 0) == chapter
+            and int(row.get("pov_knows_chapter") or chapter) < chapter
+        ]
+        body.setdefault("machine_requirements", []).extend(
+            [
+                "Reader reveal is NOT a POV discovery. The POV already knows "
+                "each fact in known_reveals; expose it to the reader through "
+                "controlled confession/evidence while preserving prior knowledge.",
+                "Remove every claim that the POV discovers/learns the known fact, "
+                "cannot remember it, forgot authoring it, suffers amnesia, or has "
+                "an identity shatter from learning it.",
+                "Rewrite beat_summary, must_happen, must_not, cliffhanger, "
+                "chapter_task, and carries_to_next consistently.",
+            ]
+        )
     if narrative_compiler_enabled(ws):
         narr = plan.get("narrative") if isinstance(plan.get("narrative"), dict) else {}
         knowledge = narr.get("knowledge") if isinstance(narr.get("knowledge"), dict) else {}
@@ -410,6 +460,11 @@ def qc_and_fix_plans(ws: Path, book: int, *, use_llm: bool = True) -> dict[int, 
         done += 1
         ch = int(p.get("chapter") or 0)
         p = apply_deterministic_plan_fixes(p, direction)
+        from factory.engine.lib.plan_qc import repair_pov_relearning
+
+        p = repair_pov_relearning(p, ws)
+        if romance_microbeat_required(direction, ws=ws):
+            p = tag_existing_romance_micro_beat(p)
         issues = validate_plan(p, direction, bible=bible, all_plans=plans, ws=ws)
         source_conflicts = [
             issue for issue in issues if _soft_intentional_early_reveal(ws, str(issue))
@@ -437,6 +492,9 @@ def qc_and_fix_plans(ws: Path, book: int, *, use_llm: bool = True) -> dict[int, 
                     )[0]
                 )
                 p = apply_deterministic_plan_fixes(p, direction)
+                p = repair_pov_relearning(p, ws)
+                if romance_microbeat_required(direction, ws=ws):
+                    p = tag_existing_romance_micro_beat(p)
                 issues = validate_plan(p, direction, bible=bible, all_plans=plans, ws=ws)
                 if issues:
                     after_signature = tuple(sorted(str(issue) for issue in issues))
@@ -568,6 +626,9 @@ def save_master_plan(ws: Path, book: int, data: dict) -> Path:
         registry = build_canon_registry(ws, book)
         plans = sanitize_json_for_registry(plans, registry)
 
+    # Generated ending prose has one owner. This persistence boundary protects
+    # callers that bypass the normal outliner flow as well as plan_fixer output.
+    plans = [apply_deterministic_duplicate_fixes(plan) for plan in plans]
     data["chapter_plans"] = normalize_chapter_plans(plans)
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
     return path
@@ -743,36 +804,52 @@ def _fetch_act_plans(
             safe_print(f"  [romance-off] scrubbed {len(romance_notes)} spot(s)")
 
     new_plans = normalize_chapter_plans(merge_narrative_into_plans(ws, sealed))
+    for plan in new_plans:
+        ch = int(plan.get("chapter") or 0)
+        pair = duplicate_must_happen_pair(plan)
+        tail_field = duplicate_cliffhanger_tail_field(plan)
+        if pair:
+            violations.append(
+                f"ch{ch}: duplicate must_happen {pair[0]}:{pair[1]}"
+            )
+        if tail_field:
+            violations.append(f"ch{ch}: duplicated cliffhanger in {tail_field}")
+    new_plans = [apply_deterministic_duplicate_fixes(plan) for plan in new_plans]
     new_plans = filter_complete_chapter_plans(new_plans, lo=act_from, hi=act_to)
     return new_plans, log, violations
 
 
-ROMANCE_REGEN_ATTEMPTS = 2
+PLAN_REGEN_ATTEMPTS = 2
 
 
 def _fetch_act_plans_guarded(
     ws: Path, book: int, act_from: int, act_to: int, act_name: str
 ) -> tuple[list[dict], dict]:
-    """Generate a chunk; re-generate in place when romance semantics survive scrub."""
+    """Regenerate contract-breaking output before accepting a sealed fallback."""
     corrections: list[str] = []
     plans: list[dict] = []
     log: dict = {}
-    for attempt in range(1, ROMANCE_REGEN_ATTEMPTS + 1):
+    for attempt in range(1, PLAN_REGEN_ATTEMPTS + 1):
         plans, log, violations = _fetch_act_plans(
             ws, book, act_from, act_to, act_name, corrections=corrections or None
         )
         if not violations:
             return plans, log
         safe_print(
-            f"  [romance-off] ch{act_from}-{act_to} còn attraction semantics "
-            f"({len(violations)}) — re-gen {attempt}/{ROMANCE_REGEN_ATTEMPTS}"
+            f"  [plan-contract] ch{act_from}-{act_to} violated "
+            f"{len(violations)} rule(s) — re-gen {attempt}/{PLAN_REGEN_ATTEMPTS}"
         )
         corrections = [
-            "Bản trước VI PHẠM lệnh cấm romance. Sinh lại KHÔNG có bất kỳ attraction / "
-            "intimacy / chemistry / [ROMANCE] nào.",
-            *[f"vi phạm: {v}" for v in violations[:8]],
+            "Previous output violated hard plan contracts. Regenerate the affected "
+            "chapter plans. Exact cliffhanger wording may occur ONLY in cliffhanger; "
+            "must_happen and summaries describe setup/action without quoting or "
+            "closely restating the tail. Each distinct event appears once. If a "
+            "romance prohibition is listed below, remove those semantics too.",
+            *[f"violation: {v}" for v in violations[:8]],
         ]
-    safe_print("  [romance-off] hết lượt re-gen — giữ bản đã scrub (không chặn operator)")
+    safe_print(
+        "  [plan-contract] regeneration exhausted — using deterministic sealed output"
+    )
     return plans, log
 
 
@@ -849,7 +926,7 @@ def plan_book(
     require_bible: bool = True,
 ) -> tuple[Path, int]:
     from factory.engine.lib.canon_registry import sync_bible_leads_from_registry
-    from factory.engine.lib.intent_manifest import intent_is_approved
+    from factory.engine.lib.intent_manifest import intent_is_approved, load_intent_manifest
     from factory.engine.lib.plan_choices import resolve_plan_choices
 
     sync_bible_leads_from_registry(ws, book)
@@ -878,6 +955,16 @@ def plan_book(
         ranges = [(int(a), int(b), "custom")]
     else:
         ranges = chapter_chunks(direction, chunk_size=chunk_size)
+    manifest = load_intent_manifest(ws, book)
+    from factory.engine.lib.character_psychology import (
+        split_ranges_at_psychology_gates,
+    )
+
+    ranges = split_ranges_at_psychology_gates(
+        ranges,
+        manifest.get("character_psychology") or [],
+        manifest.get("required_reveal_schedule") or [],
+    )
 
     data = load_master_plan(ws, book)
     if not data.get("chapter_plans"):
@@ -1081,14 +1168,13 @@ def approve_plan(ws: Path, book: int | None = None) -> None:
     if conflicts:
         raise CanonRegistryError(conflicts)
 
-    path = ws / "direction.yaml"
-    data_dir = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
-
     # Canon provenance: seal each chapter plan against Canonical IR, then
     # compile writer packets. Blockers become approval conflicts.
     from factory.engine.lib.canonical_ir import ensure_canonical_ir, load_canonical_ir
     from factory.engine.lib.chapter_contract import build_and_seal_chapter_artifacts
     from factory.engine.lib.plan_provenance import seal_chapter_plan
+    from factory.engine.lib.prose_settlement import load_settlement
+    from factory.engine.lib.story_intelligence import compile_chapter_intelligence
     from factory.engine.lib.state_updater import load_state
 
     try:
@@ -1104,11 +1190,6 @@ def approve_plan(ws: Path, book: int | None = None) -> None:
                 }
             ]
         ) from exc
-
-    try:
-        from factory.engine.lib.story_intelligence import compile_chapter_intelligence
-    except Exception:  # P1 module optional for P0 enforcement
-        compile_chapter_intelligence = None  # type: ignore
 
     for plan in plans:
         ch = int(plan.get("chapter") or 0)
@@ -1127,10 +1208,9 @@ def approve_plan(ws: Path, book: int | None = None) -> None:
                 )
             continue
         try:
-            intel = (
-                compile_chapter_intelligence(ir, ch)
-                if compile_chapter_intelligence
-                else None
+            prior = load_settlement(ws, book_num, ch - 1)
+            intel = compile_chapter_intelligence(
+                ir, ch, prior_settlement=prior
             )
             build_and_seal_chapter_artifacts(
                 ws,
@@ -1154,15 +1234,21 @@ def approve_plan(ws: Path, book: int | None = None) -> None:
     if conflicts:
         raise CanonRegistryError(conflicts)
 
+    path = ws / "direction.yaml"
+    data_dir = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     data_dir["plan_status"] = "approved"
-    ir_now = load_canonical_ir(ws) or {}
-    data_dir["plan_ir_digest"] = ir_now.get("ir_digest")
     if man:
         data_dir["plan_intent_digest"] = man.get("manifest_digest")
+    ir_now = load_canonical_ir(ws) or {}
+    data_dir["plan_ir_digest"] = ir_now.get("ir_digest")
     path.write_text(
         yaml.dump(data_dir, allow_unicode=True, default_flow_style=False, sort_keys=False),
         encoding="utf-8",
     )
+    # Approval mutates direction.yaml, which is itself prompt input. Re-render
+    # from the final approved state so the disk SoT cannot immediately diverge
+    # from Writer's live rebuild after a successful approve-plan.
+    render_all_prompts(ws, book_num)
 
 
 def plan_is_approved(ws: Path) -> bool:

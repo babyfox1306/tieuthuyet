@@ -145,11 +145,31 @@ def compile_chapter_contract(
     verified_state: dict[str, Any] | None = None,
     intelligence: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
+    from factory.engine.lib.prose_settlement import continuity_from_prior
+    from factory.engine.lib.story_intelligence import move_fact_ref_errors
+
     entry = _chapter_map_entry(ir, chapter)
     visible = _visible_facts(ir, chapter)
     excluded = _excluded_reveals(ir, chapter)
+    intel = intelligence or {}
+    prior_slice = intel.get("prior_settlement")
+    prior_for_continuity = None
+    if isinstance(prior_slice, dict) and prior_slice.get("settlement_digest"):
+        prior_for_continuity = {
+            "status": "sealed",
+            "chapter": prior_slice.get("chapter"),
+            "settlement_digest": prior_slice.get("settlement_digest"),
+            "events_realized": prior_slice.get("events_realized") or [],
+        }
+
+    continuity = continuity_from_prior(plan, prior_for_continuity)
+    required = _required_events(ir, chapter, plan)
+    for ev in continuity.get("events_from_settlement") or []:
+        if ev and ev not in required:
+            required.append(ev)
+
     contract: dict[str, Any] = {
-        "contract_version": "1.0",
+        "contract_version": "1.1",
         "chapter": chapter,
         "parent_ir_digest": ir.get("ir_digest"),
         "pov": deepcopy(ir.get("pov") or {}),
@@ -164,7 +184,7 @@ def compile_chapter_contract(
             for f in visible
         ],
         "excluded_facts": excluded,
-        "required_events": _required_events(ir, chapter, plan),
+        "required_events": required,
         "must_avoid": deepcopy(ir.get("must_avoid") or []),
         "entities": deepcopy(ir.get("entities") or []),
         "prop_actions": deepcopy(entry.get("prop_actions") or []),
@@ -178,7 +198,9 @@ def compile_chapter_contract(
             "one_line_summary": plan.get("one_line_summary"),
             "must_happen": plan.get("must_happen"),
             "must_not": plan.get("must_not"),
+            "carries_to_next": plan.get("carries_to_next"),
         },
+        "continuity": continuity,
         "allowed_creative_space": {
             "sensory_detail": True,
             "incidental_unnamed_actions": True,
@@ -191,8 +213,17 @@ def compile_chapter_contract(
         },
         "verified_state_digest": sha256_obj(verified_state or {}),
     }
-    if intelligence:
-        contract["intelligence"] = intelligence
+    if intel:
+        # Fail closed if move branches lack fact_refs on books with chapter_map content.
+        move_errs = move_fact_ref_errors(intel.get("moves"))
+        if move_errs:
+            raise RuntimeError(
+                "chapter contract blocked: "
+                + "; ".join(
+                    f"{e.get('reason')}:{e.get('claim')}" for e in move_errs[:5]
+                )
+            )
+        contract["intelligence"] = intel
     contract["contract_digest"] = sha256_obj(
         {k: v for k, v in contract.items() if k != "contract_digest"}
     )
@@ -251,8 +282,12 @@ def compile_writer_packet(
         for e in (contract.get("entities") or [])
         if isinstance(e, dict)
     ]
+    safe_intel = _writer_safe_intelligence(
+        contract.get("intelligence") or {},
+        pov_character=str((contract.get("pov") or {}).get("character") or ""),
+    )
     packet = {
-        "packet_version": "1.0",
+        "packet_version": "1.1",
         "chapter": chapter,
         "parent_contract_digest": contract.get("contract_digest"),
         "pov": contract.get("pov"),
@@ -266,8 +301,17 @@ def compile_writer_packet(
         "relationship_turn": contract.get("relationship_turn"),
         "primary_turn": contract.get("primary_turn"),
         "plan_refs": contract.get("plan_refs"),
+        "continuity": contract.get("continuity"),
         "allowed_creative_space": contract.get("allowed_creative_space"),
-        "intelligence": _writer_safe_intelligence(contract.get("intelligence") or {}),
+        "intelligence": safe_intel,
+        "character_state": safe_intel.get("character_state"),
+        "moves": safe_intel.get("moves"),
+        "prop_state": safe_intel.get("prop_state"),
+        "honeytoken_state": safe_intel.get("honeytoken_state"),
+        "psychology_active": safe_intel.get("psychology_active"),
+        "body_condition_active": safe_intel.get("body_condition_active"),
+        "relationship_delta_target": safe_intel.get("relationship_delta_target"),
+        "prior_settlement": safe_intel.get("prior_settlement"),
         "style": style or {},
         "output_contract": {
             "format": "plain_prose",
@@ -280,17 +324,49 @@ def compile_writer_packet(
     return packet
 
 
-def _writer_safe_intelligence(intel: dict[str, Any]) -> dict[str, Any]:
+def _writer_safe_cognition(
+    rows: Any,
+    *,
+    pov_character: str = "",
+) -> list[dict[str, Any]]:
+    """POV gets full cognition; others get visible-to-POV fields only."""
+    out: list[dict[str, Any]] = []
+    for row in rows or []:
+        if not isinstance(row, dict):
+            continue
+        item = deepcopy(row)
+        name = str(item.get("character") or "").strip()
+        if pov_character and name and name != pov_character:
+            # Antagonist / others: no private knows beyond what POV may infer.
+            item["knows"] = []
+            item["model_of_opponent"] = []
+            # Keep misbeliefs/goals that drive observable behavior.
+        out.append(item)
+    return out
+
+
+def _writer_safe_intelligence(
+    intel: dict[str, Any],
+    *,
+    pov_character: str = "",
+) -> dict[str, Any]:
     """Drop fields that can re-introduce locked secrets into the Writer view."""
     if not intel:
         return {}
+    cognition = intel.get("character_state") or intel.get("character_cognition") or []
     safe = {
+        "character_state": _writer_safe_cognition(
+            cognition, pov_character=pov_character
+        ),
         "prop_state": intel.get("prop_state"),
         "honeytoken_state": intel.get("honeytoken_state"),
         "psychology_active": _scrub_psychology_for_writer(intel.get("psychology_active")),
         "body_condition_active": intel.get("body_condition_active"),
         "romance_doctrine": intel.get("romance_doctrine"),
+        "relationship_delta_target": intel.get("relationship_delta_target"),
         "moves": intel.get("moves"),
+        "prior_settlement": intel.get("prior_settlement"),
+        "setting_threshold": intel.get("setting_threshold"),
         # Villain private knowledge stays on contract/validator side only.
     }
     honey = safe.get("honeytoken_state")
@@ -328,6 +404,9 @@ def build_and_seal_chapter_artifacts(
     verified_state: dict[str, Any] | None = None,
     intelligence: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
+    from factory.engine.lib.prose_settlement import load_settlement
+    from factory.engine.lib.story_intelligence import compile_chapter_intelligence
+
     ir = ir or load_canonical_ir(ws)
     if not ir:
         raise RuntimeError("canonical IR missing")
@@ -339,6 +418,27 @@ def build_and_seal_chapter_artifacts(
         raise RuntimeError(f"ch{chapter}: plan approval stale vs IR")
 
     repaired = read_json(artifact_path(ws, book, chapter, "plan.repaired.json")) or plan
+    if intelligence is None:
+        prior = load_settlement(ws, book, chapter - 1)
+        intelligence = compile_chapter_intelligence(
+            ir, chapter, prior_settlement=prior
+        )
+    elif intelligence.get("prior_settlement") is None and chapter > 1:
+        prior = load_settlement(ws, book, chapter - 1)
+        if prior and prior.get("status") == "sealed":
+            intelligence = dict(intelligence)
+            intelligence["prior_settlement"] = {
+                "chapter": prior.get("chapter"),
+                "settlement_digest": prior.get("settlement_digest"),
+                "events_realized": prior.get("events_realized") or [],
+                "character_updates": prior.get("character_updates"),
+                "prop_updates": prior.get("prop_updates"),
+                "honeytoken_state": prior.get("honeytoken_state"),
+                "relationship_delta": prior.get("relationship_delta"),
+                "power_delta_realized": prior.get("power_delta"),
+                "continuity_source": "settlement",
+            }
+
     contract = compile_chapter_contract(
         ir,
         repaired,
