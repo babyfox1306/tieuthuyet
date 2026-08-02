@@ -68,7 +68,9 @@ def main() -> int:
     if WS.exists():
         shutil.rmtree(WS, ignore_errors=True)
     WS.mkdir(parents=True)
-    (WS / "concept.yaml").write_bytes(CE.read_bytes())
+    (WS / "concept.yaml").write_bytes(
+        CE.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    )
     ingest_concept_to_workspace(WS)
     ir = load_canonical_ir(WS)
     assert ir

@@ -83,7 +83,12 @@ def _git(args: list[str]) -> str:
 
 
 def _ce_bytes() -> bytes:
-    return zero_day_concept_path().read_bytes()
+    return (
+        zero_day_concept_path()
+        .read_bytes()
+        .replace(b"\r\n", b"\n")
+        .replace(b"\r", b"\n")
+    )
 
 
 def _dump(name: str, payload: object) -> Path:

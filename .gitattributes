@@ -1,0 +1,5 @@
+
+# P2 golden fixtures must stay LF for digest stability
+factory/engine/tests/fixtures/canon_p2_golden/**/*.yaml text eol=lf
+factory/engine/tests/fixtures/canon_p2_corpus/**/*.yaml text eol=lf
+

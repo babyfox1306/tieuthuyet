@@ -71,6 +71,12 @@ def _ce_path() -> Path:
     return zero_day_concept_path()
 
 
+def _ce_bytes() -> bytes:
+    return (
+        _ce_path().read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    )
+
+
 def main() -> int:
     if WS_ROOT.exists():
         shutil.rmtree(WS_ROOT, ignore_errors=True)
@@ -82,7 +88,7 @@ def main() -> int:
     # --- Infection corpus on Zero-Day (failing→fixed regressions) ---
     zd_ws = WS_ROOT / "zero_day_infection"
     zd_ws.mkdir()
-    (zd_ws / "concept.yaml").write_bytes(_ce_path().read_bytes())
+    (zd_ws / "concept.yaml").write_bytes(_ce_bytes())
     ingest_concept_to_workspace(zd_ws)
     from factory.engine.lib.canonical_ir import load_canonical_ir
 

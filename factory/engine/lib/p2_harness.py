@@ -157,11 +157,12 @@ def concept_to_workspace(ws: Path, concept: dict[str, Any] | Path) -> dict[str, 
 
     ws.mkdir(parents=True, exist_ok=True)
     if isinstance(concept, Path):
-        raw = concept.read_bytes()
+        raw = concept.read_bytes().replace(b"\r\n", b"\n").replace(b"\r", b"\n")
         (ws / "concept.yaml").write_bytes(raw)
         concept_obj, _ = load_yaml_concept(ws / "concept.yaml")
     else:
         raw = yaml.safe_dump(concept, allow_unicode=True, sort_keys=False).encode("utf-8")
+        raw = raw.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
         (ws / "concept.yaml").write_bytes(raw)
         concept_obj = concept
     # Stable path for digest — do not embed disposable workspace paths.
