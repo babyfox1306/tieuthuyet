@@ -1020,6 +1020,58 @@ def write_one_chapter(
         safe_print(f"  ch_{ch:03d} NEEDS_FIX — {'; '.join(reasons) or list(m_issues.keys())}")
         return ch, "needs_fix"
 
+    # P1: Machine Canon Claim Gate before literary QC / Fixer LLM.
+    from factory.engine.lib.canonical_ir import load_canonical_ir
+    from factory.engine.lib.prose_claim_gate import run_prose_claim_gate
+
+    ir = load_canonical_ir(ws)
+    canon = None
+    if ir:
+        from factory.engine.lib.canon_ops import (
+            assert_chapter_not_stale,
+            classify_error_layer,
+            should_skip_literary_fixer,
+        )
+
+        try:
+            assert_chapter_not_stale(ws, book, ch, str(ir.get("ir_digest") or ""))
+        except RuntimeError as exc:
+            chapter_pipeline_path(ws, book, "needs_fix", ch).write_text(
+                chapter, encoding="utf-8"
+            )
+            save_json(
+                qc_report_path(ws, book, "needs_fix", ch),
+                {
+                    "error_layer": classify_error_layer(str(exc)),
+                    "stale": True,
+                    "detail": str(exc),
+                    "skip_literary_fixer": True,
+                },
+            )
+            safe_print(f"  ch_{ch:03d} NEEDS_FIX — {exc}")
+            return ch, "needs_fix"
+
+        canon = run_prose_claim_gate(ws, book, ch, chapter, ir)
+        if canon.get("status") != "pass":
+            _ = should_skip_literary_fixer(canon)
+            chapter_pipeline_path(ws, book, "needs_fix", ch).write_text(
+                chapter, encoding="utf-8"
+            )
+            save_json(
+                qc_report_path(ws, book, "needs_fix", ch),
+                {
+                    "canon_qc": canon,
+                    "error_layer": classify_error_layer("canon_qc fail"),
+                    "skip_literary_fixer": True,
+                },
+            )
+            viol = [
+                f"{v.get('reason')}:{v.get('claim')}"
+                for v in (canon.get("violations") or [])[:5]
+            ]
+            safe_print(f"  ch_{ch:03d} NEEDS_FIX — canon_qc: {'; '.join(viol)}")
+            return ch, "needs_fix"
+
     qc_raw, _ = call_9router("qc", build_qc_payload(ws, book, chapter, ch), max_tokens=4096, direction=direction)
     time.sleep(cfg.get("throttle_seconds", 4))
     try:
@@ -1042,32 +1094,16 @@ def write_one_chapter(
         safe_print(f"  ch_{ch:03d} NEEDS_REVIEW — {'; '.join(reasons) or qc.get('fail_reasons', [])}")
         return ch, "needs_review"
 
-    # Canon Prose Claim Gate (IR allowlist) — before READY / state.
-    from factory.engine.lib.canonical_ir import load_canonical_ir
-    from factory.engine.lib.prose_claim_gate import run_prose_claim_gate
+    if ir and canon and canon.get("status") == "pass":
+        from factory.engine.lib.prose_settlement import (
+            build_settlement,
+            load_settlement,
+            write_settlement,
+        )
+        from factory.engine.lib.story_intelligence import compile_chapter_intelligence
 
-    ir = load_canonical_ir(ws)
-    if ir:
-        canon = run_prose_claim_gate(ws, book, ch, chapter, ir)
-        if canon.get("status") != "pass":
-            chapter_pipeline_path(ws, book, "needs_fix", ch).write_text(
-                chapter, encoding="utf-8"
-            )
-            save_json(qc_report_path(ws, book, "needs_fix", ch), {"canon_qc": canon, "qc": qc})
-            viol = [
-                f"{v.get('reason')}:{v.get('claim')}"
-                for v in (canon.get("violations") or [])[:5]
-            ]
-            safe_print(f"  ch_{ch:03d} NEEDS_FIX — canon_qc: {'; '.join(viol)}")
-            return ch, "needs_fix"
-        from factory.engine.lib.prose_settlement import build_settlement, write_settlement
-        try:
-            from factory.engine.lib.story_intelligence import (
-                compile_chapter_intelligence,
-            )
-            intel = compile_chapter_intelligence(ir, ch)
-        except Exception:
-            intel = None
+        prior = load_settlement(ws, book, ch - 1)
+        intel = compile_chapter_intelligence(ir, ch, prior_settlement=prior)
         settlement = build_settlement(
             chapter=ch,
             canon_qc=canon,
