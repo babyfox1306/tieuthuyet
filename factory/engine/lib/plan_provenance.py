@@ -305,6 +305,20 @@ def validate_plan_against_ir(
         seen.add(key)
         blockers.append(row)
 
+    # P1: move/counter-move branches compiled from IR must carry fact_refs.
+    from factory.engine.lib.story_intelligence import (
+        build_move_countermove,
+        move_fact_ref_errors,
+    )
+
+    moves = build_move_countermove(ir, int(repaired.get("chapter") or chapter or 0))
+    for row in move_fact_ref_errors(moves):
+        key = f"{row.get('reason')}:{row.get('claim')}"
+        if key in seen:
+            continue
+        seen.add(key)
+        blockers.append(row)
+
     status = "sealed" if not blockers else "blocked"
     return {
         "status": status,
